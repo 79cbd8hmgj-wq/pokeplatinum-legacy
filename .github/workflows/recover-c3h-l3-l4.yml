@@ -1,0 +1,76 @@
+name: Recover original C3H L3 L4 ledgers
+
+on:
+  push:
+    branches: [ overhaul/c3h-species-compat ]
+    paths:
+      - '.github/workflows/recover-c3h-l3-l4.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  recover:
+    if: github.event.head_commit.message != 'Recover original C3H L3 and L4 ledgers'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: overhaul/c3h-species-compat
+          fetch-depth: 0
+
+      - name: Decode historical embedded ledgers
+        run: |
+          python3 - <<'PY'
+          import ast, base64, gzip, json, re, subprocess
+          from pathlib import Path
+
+          HIST="dceb548782be5c3ed30afba39a8b5727fdd6716d"
+          text=subprocess.check_output(
+              ["git","show",f"{HIST}:.github/workflows/c3h-apply-species.yml"],
+              text=True
+          )
+          m=re.search(r'^\s*BLOBS=(\[.*\])\s*$', text, flags=re.M)
+          assert m, "historical BLOBS array not found"
+          blobs=ast.literal_eval(m.group(1))
+          assert len(blobs)==5, len(blobs)
+          ledgers=[json.loads(gzip.decompress(base64.b64decode(x))) for x in blobs]
+          counts=[len(x["changes"]) for x in ledgers]
+          assert counts==[67,27,40,53,38], counts
+          assert sum(counts)==225
+
+          out=Path("overhaul/ledgers")
+          out.mkdir(parents=True,exist_ok=True)
+          paths=[
+              out/"platinum_c3h_l3_gen2_guarded_ledger_v1_recovered.json",
+              out/"platinum_c3h_l4_gen3_guarded_ledger_v1_recovered.json",
+          ]
+          for ledger,path,expected in [
+              (ledgers[2],paths[0],40),
+              (ledgers[3],paths[1],53),
+          ]:
+              assert ledger.get("version")==1
+              assert ledger.get("domain")=="pokemon"
+              assert len(ledger["changes"])==expected
+              path.write_text(json.dumps(ledger,indent=2)+"\n",encoding="utf-8")
+
+          print(json.dumps({
+              "historical_commit":HIST,
+              "all_counts":counts,
+              "recovered":{
+                  str(paths[0]):len(ledgers[2]["changes"]),
+                  str(paths[1]):len(ledgers[3]["changes"]),
+              }
+          },indent=2))
+          PY
+          git diff --check
+
+      - name: Commit recovered ledgers
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add overhaul/ledgers/platinum_c3h_l3_gen2_guarded_ledger_v1_recovered.json
+          git add overhaul/ledgers/platinum_c3h_l4_gen3_guarded_ledger_v1_recovered.json
+          git diff --cached --check
+          git commit -m 'Recover original C3H L3 and L4 ledgers'
+          git push origin HEAD:overhaul/c3h-species-compat
