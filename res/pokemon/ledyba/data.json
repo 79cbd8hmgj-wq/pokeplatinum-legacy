@@ -7,7 +7,10 @@
         "special_attack": 40,
         "special_defense": 80
     },
-    "types": [ "TYPE_BUG", "TYPE_FLYING" ],
+    "types": [
+        "TYPE_BUG",
+        "TYPE_FLYING"
+    ],
     "catch_rate": 255,
     "base_exp_reward": 54,
     "ev_yields": {
@@ -26,27 +29,72 @@
     "hatch_cycles": 15,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_FAST",
-    "egg_groups": [ "EGG_GROUP_BUG", "EGG_GROUP_BUG" ],
-    "abilities": [ "ABILITY_SWARM", "ABILITY_EARLY_BIRD" ],
+    "egg_groups": [
+        "EGG_GROUP_BUG",
+        "EGG_GROUP_BUG"
+    ],
+    "abilities": [
+        "ABILITY_SWARM",
+        "ABILITY_EARLY_BIRD"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_RED",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_TACKLE" ],
-            [ 6, "MOVE_SUPERSONIC" ],
-            [ 9, "MOVE_COMET_PUNCH" ],
-            [ 14, "MOVE_LIGHT_SCREEN" ],
-            [ 14, "MOVE_REFLECT" ],
-            [ 14, "MOVE_SAFEGUARD" ],
-            [ 17, "MOVE_MACH_PUNCH" ],
-            [ 22, "MOVE_BATON_PASS" ],
-            [ 25, "MOVE_SILVER_WIND" ],
-            [ 30, "MOVE_AGILITY" ],
-            [ 33, "MOVE_SWIFT" ],
-            [ 38, "MOVE_DOUBLE_EDGE" ],
-            [ 41, "MOVE_BUG_BUZZ" ]
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                6,
+                "MOVE_SUPERSONIC"
+            ],
+            [
+                9,
+                "MOVE_COMET_PUNCH"
+            ],
+            [
+                14,
+                "MOVE_LIGHT_SCREEN"
+            ],
+            [
+                14,
+                "MOVE_REFLECT"
+            ],
+            [
+                14,
+                "MOVE_SAFEGUARD"
+            ],
+            [
+                17,
+                "MOVE_MACH_PUNCH"
+            ],
+            [
+                22,
+                "MOVE_BATON_PASS"
+            ],
+            [
+                25,
+                "MOVE_SILVER_WIND"
+            ],
+            [
+                30,
+                "MOVE_AGILITY"
+            ],
+            [
+                33,
+                "MOVE_SWIFT"
+            ],
+            [
+                38,
+                "MOVE_DOUBLE_EDGE"
+            ],
+            [
+                41,
+                "MOVE_BUG_BUZZ"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -57,7 +105,6 @@
             "TM17",
             "TM19",
             "TM20",
-            "TM21",
             "TM22",
             "TM27",
             "TM28",
@@ -77,7 +124,6 @@
             "TM62",
             "TM70",
             "TM75",
-            "TM78",
             "TM82",
             "TM83",
             "TM87",

@@ -7,7 +7,10 @@
         "special_attack": 30,
         "special_defense": 30
     },
-    "types": [ "TYPE_BUG", "TYPE_GHOST" ],
+    "types": [
+        "TYPE_BUG",
+        "TYPE_GHOST"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 95,
     "ev_yields": {
@@ -26,26 +29,68 @@
     "hatch_cycles": 15,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_ERRATIC",
-    "egg_groups": [ "EGG_GROUP_MINERAL", "EGG_GROUP_MINERAL" ],
-    "abilities": [ "ABILITY_WONDER_GUARD", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_MINERAL",
+        "EGG_GROUP_MINERAL"
+    ],
+    "abilities": [
+        "ABILITY_WONDER_GUARD",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_SCRATCH" ],
-            [ 1, "MOVE_HARDEN" ],
-            [ 5, "MOVE_LEECH_LIFE" ],
-            [ 9, "MOVE_SAND_ATTACK" ],
-            [ 14, "MOVE_FURY_SWIPES" ],
-            [ 19, "MOVE_MIND_READER" ],
-            [ 25, "MOVE_SPITE" ],
-            [ 31, "MOVE_CONFUSE_RAY" ],
-            [ 38, "MOVE_SHADOW_SNEAK" ],
-            [ 45, "MOVE_GRUDGE" ],
-            [ 52, "MOVE_HEAL_BLOCK" ],
-            [ 59, "MOVE_SHADOW_BALL" ]
+            [
+                1,
+                "MOVE_SCRATCH"
+            ],
+            [
+                1,
+                "MOVE_HARDEN"
+            ],
+            [
+                5,
+                "MOVE_LEECH_LIFE"
+            ],
+            [
+                9,
+                "MOVE_SAND_ATTACK"
+            ],
+            [
+                14,
+                "MOVE_FURY_SWIPES"
+            ],
+            [
+                19,
+                "MOVE_MIND_READER"
+            ],
+            [
+                25,
+                "MOVE_SPITE"
+            ],
+            [
+                31,
+                "MOVE_CONFUSE_RAY"
+            ],
+            [
+                38,
+                "MOVE_SHADOW_SNEAK"
+            ],
+            [
+                45,
+                "MOVE_GRUDGE"
+            ],
+            [
+                52,
+                "MOVE_HEAL_BLOCK"
+            ],
+            [
+                59,
+                "MOVE_SHADOW_BALL"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -54,7 +99,6 @@
             "TM15",
             "TM17",
             "TM19",
-            "TM21",
             "TM22",
             "TM27",
             "TM28",
@@ -89,7 +133,7 @@
             "MOVE_SUCKER_PUNCH"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_NINCADA",
     "footprint": {
         "has": true,

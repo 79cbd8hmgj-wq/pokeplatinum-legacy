@@ -7,7 +7,10 @@
         "special_attack": 40,
         "special_defense": 40
     },
-    "types": [ "TYPE_BUG", "TYPE_POISON" ],
+    "types": [
+        "TYPE_BUG",
+        "TYPE_POISON"
+    ],
     "catch_rate": 255,
     "base_exp_reward": 54,
     "ev_yields": {
@@ -26,28 +29,76 @@
     "hatch_cycles": 15,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_FAST",
-    "egg_groups": [ "EGG_GROUP_BUG", "EGG_GROUP_BUG" ],
-    "abilities": [ "ABILITY_SWARM", "ABILITY_INSOMNIA" ],
+    "egg_groups": [
+        "EGG_GROUP_BUG",
+        "EGG_GROUP_BUG"
+    ],
+    "abilities": [
+        "ABILITY_SWARM",
+        "ABILITY_INSOMNIA"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_GREEN",
     "flip_sprite": false,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_POISON_STING" ],
-            [ 1, "MOVE_STRING_SHOT" ],
-            [ 5, "MOVE_SCARY_FACE" ],
-            [ 8, "MOVE_CONSTRICT" ],
-            [ 12, "MOVE_LEECH_LIFE" ],
-            [ 15, "MOVE_NIGHT_SHADE" ],
-            [ 19, "MOVE_SHADOW_SNEAK" ],
-            [ 22, "MOVE_FURY_SWIPES" ],
-            [ 26, "MOVE_SUCKER_PUNCH" ],
-            [ 29, "MOVE_SPIDER_WEB" ],
-            [ 33, "MOVE_AGILITY" ],
-            [ 36, "MOVE_PIN_MISSILE" ],
-            [ 40, "MOVE_PSYCHIC" ],
-            [ 43, "MOVE_POISON_JAB" ]
+            [
+                1,
+                "MOVE_POISON_STING"
+            ],
+            [
+                1,
+                "MOVE_STRING_SHOT"
+            ],
+            [
+                5,
+                "MOVE_SCARY_FACE"
+            ],
+            [
+                8,
+                "MOVE_CONSTRICT"
+            ],
+            [
+                12,
+                "MOVE_LEECH_LIFE"
+            ],
+            [
+                15,
+                "MOVE_NIGHT_SHADE"
+            ],
+            [
+                19,
+                "MOVE_SHADOW_SNEAK"
+            ],
+            [
+                22,
+                "MOVE_FURY_SWIPES"
+            ],
+            [
+                26,
+                "MOVE_SUCKER_PUNCH"
+            ],
+            [
+                29,
+                "MOVE_SPIDER_WEB"
+            ],
+            [
+                33,
+                "MOVE_AGILITY"
+            ],
+            [
+                36,
+                "MOVE_PIN_MISSILE"
+            ],
+            [
+                40,
+                "MOVE_PSYCHIC"
+            ],
+            [
+                43,
+                "MOVE_POISON_JAB"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -55,7 +106,6 @@
             "TM11",
             "TM17",
             "TM19",
-            "TM21",
             "TM22",
             "TM27",
             "TM28",
@@ -69,7 +119,6 @@
             "TM46",
             "TM58",
             "TM70",
-            "TM78",
             "TM82",
             "TM83",
             "TM84",

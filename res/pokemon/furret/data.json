@@ -7,7 +7,10 @@
         "special_attack": 45,
         "special_defense": 55
     },
-    "types": [ "TYPE_NORMAL", "TYPE_NORMAL" ],
+    "types": [
+        "TYPE_NORMAL",
+        "TYPE_NORMAL"
+    ],
     "catch_rate": 90,
     "base_exp_reward": 116,
     "ev_yields": {
@@ -26,30 +29,84 @@
     "hatch_cycles": 15,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_RUN_AWAY", "ABILITY_KEEN_EYE" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_RUN_AWAY",
+        "ABILITY_KEEN_EYE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_SCRATCH" ],
-            [ 1, "MOVE_FORESIGHT" ],
-            [ 1, "MOVE_DEFENSE_CURL" ],
-            [ 1, "MOVE_QUICK_ATTACK" ],
-            [ 4, "MOVE_DEFENSE_CURL" ],
-            [ 7, "MOVE_QUICK_ATTACK" ],
-            [ 13, "MOVE_FURY_SWIPES" ],
-            [ 17, "MOVE_HELPING_HAND" ],
-            [ 21, "MOVE_FOLLOW_ME" ],
-            [ 28, "MOVE_SLAM" ],
-            [ 32, "MOVE_REST" ],
-            [ 36, "MOVE_SUCKER_PUNCH" ],
-            [ 42, "MOVE_AMNESIA" ],
-            [ 46, "MOVE_BATON_PASS" ],
-            [ 50, "MOVE_ME_FIRST" ],
-            [ 56, "MOVE_HYPER_VOICE" ]
+            [
+                1,
+                "MOVE_SCRATCH"
+            ],
+            [
+                1,
+                "MOVE_FORESIGHT"
+            ],
+            [
+                1,
+                "MOVE_DEFENSE_CURL"
+            ],
+            [
+                1,
+                "MOVE_QUICK_ATTACK"
+            ],
+            [
+                4,
+                "MOVE_DEFENSE_CURL"
+            ],
+            [
+                7,
+                "MOVE_QUICK_ATTACK"
+            ],
+            [
+                13,
+                "MOVE_FURY_SWIPES"
+            ],
+            [
+                17,
+                "MOVE_HELPING_HAND"
+            ],
+            [
+                21,
+                "MOVE_FOLLOW_ME"
+            ],
+            [
+                28,
+                "MOVE_SLAM"
+            ],
+            [
+                32,
+                "MOVE_REST"
+            ],
+            [
+                36,
+                "MOVE_SUCKER_PUNCH"
+            ],
+            [
+                42,
+                "MOVE_AMNESIA"
+            ],
+            [
+                46,
+                "MOVE_BATON_PASS"
+            ],
+            [
+                50,
+                "MOVE_ME_FIRST"
+            ],
+            [
+                56,
+                "MOVE_HYPER_VOICE"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -62,7 +119,6 @@
             "TM15",
             "TM17",
             "TM18",
-            "TM21",
             "TM22",
             "TM23",
             "TM24",
@@ -85,7 +141,6 @@
             "TM58",
             "TM65",
             "TM68",
-            "TM78",
             "TM82",
             "TM83",
             "TM86",
@@ -114,7 +169,7 @@
             "MOVE_UPROAR"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_SENTRET",
     "footprint": {
         "has": true,

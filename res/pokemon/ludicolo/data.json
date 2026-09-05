@@ -7,7 +7,10 @@
         "special_attack": 90,
         "special_defense": 100
     },
-    "types": [ "TYPE_WATER", "TYPE_GRASS" ],
+    "types": [
+        "TYPE_WATER",
+        "TYPE_GRASS"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 181,
     "ev_yields": {
@@ -26,18 +29,36 @@
     "hatch_cycles": 15,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_WATER_1", "EGG_GROUP_GRASS" ],
-    "abilities": [ "ABILITY_SWIFT_SWIM", "ABILITY_RAIN_DISH" ],
+    "egg_groups": [
+        "EGG_GROUP_WATER_1",
+        "EGG_GROUP_GRASS"
+    ],
+    "abilities": [
+        "ABILITY_SWIFT_SWIM",
+        "ABILITY_RAIN_DISH"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_GREEN",
     "flip_sprite": false,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_ASTONISH" ],
-            [ 1, "MOVE_GROWL" ],
-            [ 1, "MOVE_MEGA_DRAIN" ],
-            [ 1, "MOVE_NATURE_POWER" ]
+            [
+                1,
+                "MOVE_ASTONISH"
+            ],
+            [
+                1,
+                "MOVE_GROWL"
+            ],
+            [
+                1,
+                "MOVE_MEGA_DRAIN"
+            ],
+            [
+                1,
+                "MOVE_NATURE_POWER"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -53,7 +74,6 @@
             "TM17",
             "TM18",
             "TM19",
-            "TM21",
             "TM22",
             "TM27",
             "TM31",
@@ -71,7 +91,6 @@
             "TM68",
             "TM70",
             "TM75",
-            "TM78",
             "TM82",
             "TM83",
             "TM86",
@@ -97,7 +116,7 @@
             "MOVE_UPROAR"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_LOTAD",
     "footprint": {
         "has": true,

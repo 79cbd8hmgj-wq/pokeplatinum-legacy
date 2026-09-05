@@ -7,7 +7,10 @@
         "special_attack": 40,
         "special_defense": 40
     },
-    "types": [ "TYPE_STEEL", "TYPE_ROCK" ],
+    "types": [
+        "TYPE_STEEL",
+        "TYPE_ROCK"
+    ],
     "catch_rate": 180,
     "base_exp_reward": 96,
     "ev_yields": {
@@ -26,28 +29,76 @@
     "hatch_cycles": 35,
     "base_friendship": 35,
     "exp_rate": "EXP_RATE_SLOW",
-    "egg_groups": [ "EGG_GROUP_MONSTER", "EGG_GROUP_MONSTER" ],
-    "abilities": [ "ABILITY_STURDY", "ABILITY_ROCK_HEAD" ],
+    "egg_groups": [
+        "EGG_GROUP_MONSTER",
+        "EGG_GROUP_MONSTER"
+    ],
+    "abilities": [
+        "ABILITY_STURDY",
+        "ABILITY_ROCK_HEAD"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_GRAY",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_TACKLE" ],
-            [ 4, "MOVE_HARDEN" ],
-            [ 8, "MOVE_MUD_SLAP" ],
-            [ 11, "MOVE_HEADBUTT" ],
-            [ 15, "MOVE_METAL_CLAW" ],
-            [ 18, "MOVE_IRON_DEFENSE" ],
-            [ 22, "MOVE_ROAR" ],
-            [ 25, "MOVE_TAKE_DOWN" ],
-            [ 29, "MOVE_IRON_HEAD" ],
-            [ 32, "MOVE_PROTECT" ],
-            [ 36, "MOVE_METAL_SOUND" ],
-            [ 39, "MOVE_IRON_TAIL" ],
-            [ 43, "MOVE_DOUBLE_EDGE" ],
-            [ 46, "MOVE_METAL_BURST" ]
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                4,
+                "MOVE_HARDEN"
+            ],
+            [
+                8,
+                "MOVE_MUD_SLAP"
+            ],
+            [
+                11,
+                "MOVE_HEADBUTT"
+            ],
+            [
+                15,
+                "MOVE_METAL_CLAW"
+            ],
+            [
+                18,
+                "MOVE_IRON_DEFENSE"
+            ],
+            [
+                22,
+                "MOVE_ROAR"
+            ],
+            [
+                25,
+                "MOVE_TAKE_DOWN"
+            ],
+            [
+                29,
+                "MOVE_IRON_HEAD"
+            ],
+            [
+                32,
+                "MOVE_PROTECT"
+            ],
+            [
+                36,
+                "MOVE_METAL_SOUND"
+            ],
+            [
+                39,
+                "MOVE_IRON_TAIL"
+            ],
+            [
+                43,
+                "MOVE_DOUBLE_EDGE"
+            ],
+            [
+                46,
+                "MOVE_METAL_BURST"
+            ]
         ],
         "by_tm": [
             "TM03",
@@ -57,7 +108,6 @@
             "TM11",
             "TM17",
             "TM18",
-            "TM21",
             "TM23",
             "TM26",
             "TM27",
@@ -75,7 +125,6 @@
             "TM65",
             "TM69",
             "TM76",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",

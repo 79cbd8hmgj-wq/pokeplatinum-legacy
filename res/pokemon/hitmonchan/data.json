@@ -7,7 +7,10 @@
         "special_attack": 35,
         "special_defense": 110
     },
-    "types": [ "TYPE_FIGHTING", "TYPE_FIGHTING" ],
+    "types": [
+        "TYPE_FIGHTING",
+        "TYPE_FIGHTING"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 140,
     "ev_yields": {
@@ -26,30 +29,84 @@
     "hatch_cycles": 25,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_HUMAN_LIKE", "EGG_GROUP_HUMAN_LIKE" ],
-    "abilities": [ "ABILITY_KEEN_EYE", "ABILITY_IRON_FIST" ],
+    "egg_groups": [
+        "EGG_GROUP_HUMAN_LIKE",
+        "EGG_GROUP_HUMAN_LIKE"
+    ],
+    "abilities": [
+        "ABILITY_KEEN_EYE",
+        "ABILITY_IRON_FIST"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_REVENGE" ],
-            [ 1, "MOVE_COMET_PUNCH" ],
-            [ 6, "MOVE_AGILITY" ],
-            [ 11, "MOVE_PURSUIT" ],
-            [ 16, "MOVE_MACH_PUNCH" ],
-            [ 16, "MOVE_BULLET_PUNCH" ],
-            [ 21, "MOVE_FEINT" ],
-            [ 26, "MOVE_VACUUM_WAVE" ],
-            [ 31, "MOVE_THUNDER_PUNCH" ],
-            [ 31, "MOVE_ICE_PUNCH" ],
-            [ 31, "MOVE_FIRE_PUNCH" ],
-            [ 36, "MOVE_SKY_UPPERCUT" ],
-            [ 41, "MOVE_MEGA_PUNCH" ],
-            [ 46, "MOVE_DETECT" ],
-            [ 51, "MOVE_COUNTER" ],
-            [ 56, "MOVE_CLOSE_COMBAT" ]
+            [
+                1,
+                "MOVE_REVENGE"
+            ],
+            [
+                1,
+                "MOVE_COMET_PUNCH"
+            ],
+            [
+                6,
+                "MOVE_AGILITY"
+            ],
+            [
+                11,
+                "MOVE_PURSUIT"
+            ],
+            [
+                16,
+                "MOVE_MACH_PUNCH"
+            ],
+            [
+                16,
+                "MOVE_BULLET_PUNCH"
+            ],
+            [
+                21,
+                "MOVE_FEINT"
+            ],
+            [
+                26,
+                "MOVE_VACUUM_WAVE"
+            ],
+            [
+                31,
+                "MOVE_THUNDER_PUNCH"
+            ],
+            [
+                31,
+                "MOVE_ICE_PUNCH"
+            ],
+            [
+                31,
+                "MOVE_FIRE_PUNCH"
+            ],
+            [
+                36,
+                "MOVE_SKY_UPPERCUT"
+            ],
+            [
+                41,
+                "MOVE_MEGA_PUNCH"
+            ],
+            [
+                46,
+                "MOVE_DETECT"
+            ],
+            [
+                51,
+                "MOVE_COUNTER"
+            ],
+            [
+                56,
+                "MOVE_CLOSE_COMBAT"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -59,7 +116,6 @@
             "TM11",
             "TM17",
             "TM18",
-            "TM21",
             "TM26",
             "TM27",
             "TM31",
@@ -75,7 +131,6 @@
             "TM58",
             "TM60",
             "TM71",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",
@@ -96,7 +151,7 @@
             "MOVE_SWIFT"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_TYROGUE",
     "footprint": {
         "has": true,

@@ -7,7 +7,10 @@
         "special_attack": 90,
         "special_defense": 80
     },
-    "types": [ "TYPE_ELECTRIC", "TYPE_ELECTRIC" ],
+    "types": [
+        "TYPE_ELECTRIC",
+        "TYPE_ELECTRIC"
+    ],
     "catch_rate": 75,
     "base_exp_reward": 122,
     "ev_yields": {
@@ -26,18 +29,36 @@
     "hatch_cycles": 10,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_FAIRY" ],
-    "abilities": [ "ABILITY_STATIC", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_FAIRY"
+    ],
+    "abilities": [
+        "ABILITY_STATIC",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_YELLOW",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_THUNDER_SHOCK" ],
-            [ 1, "MOVE_TAIL_WHIP" ],
-            [ 1, "MOVE_QUICK_ATTACK" ],
-            [ 1, "MOVE_THUNDERBOLT" ]
+            [
+                1,
+                "MOVE_THUNDER_SHOCK"
+            ],
+            [
+                1,
+                "MOVE_TAIL_WHIP"
+            ],
+            [
+                1,
+                "MOVE_QUICK_ATTACK"
+            ],
+            [
+                1,
+                "MOVE_THUNDERBOLT"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -47,7 +68,6 @@
             "TM16",
             "TM17",
             "TM18",
-            "TM21",
             "TM23",
             "TM24",
             "TM25",
@@ -68,12 +88,12 @@
             "TM68",
             "TM70",
             "TM73",
-            "TM78",
             "TM82",
             "TM83",
             "TM86",
             "TM87",
             "TM90",
+            "TM91",
             "HM04",
             "HM06"
         ],
@@ -89,7 +109,7 @@
             "MOVE_SWIFT"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_PICHU",
     "footprint": {
         "has": true,

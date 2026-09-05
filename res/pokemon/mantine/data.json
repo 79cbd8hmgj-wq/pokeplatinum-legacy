@@ -7,7 +7,10 @@
         "special_attack": 80,
         "special_defense": 140
     },
-    "types": [ "TYPE_WATER", "TYPE_FLYING" ],
+    "types": [
+        "TYPE_WATER",
+        "TYPE_FLYING"
+    ],
     "catch_rate": 25,
     "base_exp_reward": 168,
     "ev_yields": {
@@ -26,32 +29,92 @@
     "hatch_cycles": 25,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_SLOW",
-    "egg_groups": [ "EGG_GROUP_WATER_1", "EGG_GROUP_WATER_1" ],
-    "abilities": [ "ABILITY_SWIFT_SWIM", "ABILITY_WATER_ABSORB" ],
+    "egg_groups": [
+        "EGG_GROUP_WATER_1",
+        "EGG_GROUP_WATER_1"
+    ],
+    "abilities": [
+        "ABILITY_SWIFT_SWIM",
+        "ABILITY_WATER_ABSORB"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_PURPLE",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_PSYBEAM" ],
-            [ 1, "MOVE_BULLET_SEED" ],
-            [ 1, "MOVE_SIGNAL_BEAM" ],
-            [ 1, "MOVE_TACKLE" ],
-            [ 1, "MOVE_BUBBLE" ],
-            [ 1, "MOVE_SUPERSONIC" ],
-            [ 1, "MOVE_BUBBLE_BEAM" ],
-            [ 4, "MOVE_SUPERSONIC" ],
-            [ 10, "MOVE_BUBBLE_BEAM" ],
-            [ 13, "MOVE_HEADBUTT" ],
-            [ 19, "MOVE_AGILITY" ],
-            [ 22, "MOVE_WING_ATTACK" ],
-            [ 28, "MOVE_WATER_PULSE" ],
-            [ 31, "MOVE_TAKE_DOWN" ],
-            [ 37, "MOVE_CONFUSE_RAY" ],
-            [ 40, "MOVE_BOUNCE" ],
-            [ 46, "MOVE_AQUA_RING" ],
-            [ 49, "MOVE_HYDRO_PUMP" ]
+            [
+                1,
+                "MOVE_PSYBEAM"
+            ],
+            [
+                1,
+                "MOVE_BULLET_SEED"
+            ],
+            [
+                1,
+                "MOVE_SIGNAL_BEAM"
+            ],
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                1,
+                "MOVE_BUBBLE"
+            ],
+            [
+                1,
+                "MOVE_SUPERSONIC"
+            ],
+            [
+                1,
+                "MOVE_BUBBLE_BEAM"
+            ],
+            [
+                4,
+                "MOVE_SUPERSONIC"
+            ],
+            [
+                10,
+                "MOVE_BUBBLE_BEAM"
+            ],
+            [
+                13,
+                "MOVE_HEADBUTT"
+            ],
+            [
+                19,
+                "MOVE_AGILITY"
+            ],
+            [
+                22,
+                "MOVE_WING_ATTACK"
+            ],
+            [
+                28,
+                "MOVE_WATER_PULSE"
+            ],
+            [
+                31,
+                "MOVE_TAKE_DOWN"
+            ],
+            [
+                37,
+                "MOVE_CONFUSE_RAY"
+            ],
+            [
+                40,
+                "MOVE_BOUNCE"
+            ],
+            [
+                46,
+                "MOVE_AQUA_RING"
+            ],
+            [
+                49,
+                "MOVE_HYDRO_PUMP"
+            ]
         ],
         "by_tm": [
             "TM03",
@@ -77,7 +140,6 @@
             "TM55",
             "TM58",
             "TM68",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",
@@ -114,7 +176,7 @@
             "MOVE_SPLASH"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_MANTYKE",
     "footprint": {
         "has": false,

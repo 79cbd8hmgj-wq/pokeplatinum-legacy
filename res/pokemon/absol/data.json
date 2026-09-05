@@ -7,7 +7,10 @@
         "special_attack": 75,
         "special_defense": 60
     },
-    "types": [ "TYPE_DARK", "TYPE_DARK" ],
+    "types": [
+        "TYPE_DARK",
+        "TYPE_DARK"
+    ],
     "catch_rate": 30,
     "base_exp_reward": 174,
     "ev_yields": {
@@ -26,32 +29,92 @@
     "hatch_cycles": 25,
     "base_friendship": 35,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_PRESSURE", "ABILITY_SUPER_LUCK" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_PRESSURE",
+        "ABILITY_SUPER_LUCK"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_WHITE",
     "flip_sprite": true,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_SCRATCH" ],
-            [ 1, "MOVE_FEINT" ],
-            [ 4, "MOVE_LEER" ],
-            [ 9, "MOVE_TAUNT" ],
-            [ 12, "MOVE_QUICK_ATTACK" ],
-            [ 17, "MOVE_RAZOR_WIND" ],
-            [ 20, "MOVE_PURSUIT" ],
-            [ 25, "MOVE_SWORDS_DANCE" ],
-            [ 28, "MOVE_BITE" ],
-            [ 33, "MOVE_DOUBLE_TEAM" ],
-            [ 36, "MOVE_SLASH" ],
-            [ 41, "MOVE_FUTURE_SIGHT" ],
-            [ 44, "MOVE_SUCKER_PUNCH" ],
-            [ 49, "MOVE_DETECT" ],
-            [ 52, "MOVE_NIGHT_SLASH" ],
-            [ 57, "MOVE_ME_FIRST" ],
-            [ 60, "MOVE_PSYCHO_CUT" ],
-            [ 65, "MOVE_PERISH_SONG" ]
+            [
+                1,
+                "MOVE_SCRATCH"
+            ],
+            [
+                1,
+                "MOVE_FEINT"
+            ],
+            [
+                4,
+                "MOVE_LEER"
+            ],
+            [
+                9,
+                "MOVE_TAUNT"
+            ],
+            [
+                12,
+                "MOVE_QUICK_ATTACK"
+            ],
+            [
+                17,
+                "MOVE_RAZOR_WIND"
+            ],
+            [
+                20,
+                "MOVE_PURSUIT"
+            ],
+            [
+                25,
+                "MOVE_SWORDS_DANCE"
+            ],
+            [
+                28,
+                "MOVE_BITE"
+            ],
+            [
+                33,
+                "MOVE_DOUBLE_TEAM"
+            ],
+            [
+                36,
+                "MOVE_SLASH"
+            ],
+            [
+                41,
+                "MOVE_FUTURE_SIGHT"
+            ],
+            [
+                44,
+                "MOVE_SUCKER_PUNCH"
+            ],
+            [
+                49,
+                "MOVE_DETECT"
+            ],
+            [
+                52,
+                "MOVE_NIGHT_SLASH"
+            ],
+            [
+                57,
+                "MOVE_ME_FIRST"
+            ],
+            [
+                60,
+                "MOVE_PSYCHO_CUT"
+            ],
+            [
+                65,
+                "MOVE_PERISH_SONG"
+            ]
         ],
         "by_tm": [
             "TM03",
@@ -66,7 +129,6 @@
             "TM15",
             "TM17",
             "TM18",
-            "TM21",
             "TM23",
             "TM24",
             "TM25",
@@ -98,7 +160,6 @@
             "TM73",
             "TM75",
             "TM77",
-            "TM78",
             "TM79",
             "TM80",
             "TM81",
@@ -139,7 +200,7 @@
             "MOVE_ME_FIRST"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_ABSOL",
     "footprint": {
         "has": true,

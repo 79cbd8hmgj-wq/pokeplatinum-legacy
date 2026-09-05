@@ -7,7 +7,10 @@
         "special_attack": 85,
         "special_defense": 70
     },
-    "types": [ "TYPE_POISON", "TYPE_POISON" ],
+    "types": [
+        "TYPE_POISON",
+        "TYPE_POISON"
+    ],
     "catch_rate": 60,
     "base_exp_reward": 173,
     "ev_yields": {
@@ -26,29 +29,80 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_AMORPHOUS", "EGG_GROUP_AMORPHOUS" ],
-    "abilities": [ "ABILITY_LEVITATE", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_AMORPHOUS",
+        "EGG_GROUP_AMORPHOUS"
+    ],
+    "abilities": [
+        "ABILITY_LEVITATE",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_PURPLE",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_POISON_GAS" ],
-            [ 1, "MOVE_TACKLE" ],
-            [ 1, "MOVE_SMOG" ],
-            [ 1, "MOVE_SMOKE_SCREEN" ],
-            [ 6, "MOVE_SMOG" ],
-            [ 10, "MOVE_SMOKE_SCREEN" ],
-            [ 15, "MOVE_ASSURANCE" ],
-            [ 19, "MOVE_SELFDESTRUCT" ],
-            [ 24, "MOVE_SLUDGE" ],
-            [ 28, "MOVE_HAZE" ],
-            [ 33, "MOVE_DOUBLE_HIT" ],
-            [ 40, "MOVE_EXPLOSION" ],
-            [ 48, "MOVE_SLUDGE_BOMB" ],
-            [ 55, "MOVE_DESTINY_BOND" ],
-            [ 63, "MOVE_MEMENTO" ]
+            [
+                1,
+                "MOVE_POISON_GAS"
+            ],
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                1,
+                "MOVE_SMOG"
+            ],
+            [
+                1,
+                "MOVE_SMOKE_SCREEN"
+            ],
+            [
+                6,
+                "MOVE_SMOG"
+            ],
+            [
+                10,
+                "MOVE_SMOKE_SCREEN"
+            ],
+            [
+                15,
+                "MOVE_ASSURANCE"
+            ],
+            [
+                19,
+                "MOVE_SELFDESTRUCT"
+            ],
+            [
+                24,
+                "MOVE_SLUDGE"
+            ],
+            [
+                28,
+                "MOVE_HAZE"
+            ],
+            [
+                33,
+                "MOVE_DOUBLE_HIT"
+            ],
+            [
+                40,
+                "MOVE_EXPLOSION"
+            ],
+            [
+                48,
+                "MOVE_SLUDGE_BOMB"
+            ],
+            [
+                55,
+                "MOVE_DESTINY_BOND"
+            ],
+            [
+                63,
+                "MOVE_MEMENTO"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -58,7 +112,6 @@
             "TM15",
             "TM17",
             "TM18",
-            "TM21",
             "TM24",
             "TM25",
             "TM27",
@@ -81,7 +134,6 @@
             "TM68",
             "TM70",
             "TM74",
-            "TM78",
             "TM79",
             "TM82",
             "TM83",
@@ -95,7 +147,7 @@
             "MOVE_UPROAR"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_KOFFING",
     "footprint": {
         "has": false,

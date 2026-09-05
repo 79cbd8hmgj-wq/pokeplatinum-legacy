@@ -7,7 +7,10 @@
         "special_attack": 116,
         "special_defense": 56
     },
-    "types": [ "TYPE_BUG", "TYPE_FLYING" ],
+    "types": [
+        "TYPE_BUG",
+        "TYPE_FLYING"
+    ],
     "catch_rate": 30,
     "base_exp_reward": 198,
     "ev_yields": {
@@ -26,34 +29,100 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_BUG", "EGG_GROUP_BUG" ],
-    "abilities": [ "ABILITY_SPEED_BOOST", "ABILITY_TINTED_LENS" ],
+    "egg_groups": [
+        "EGG_GROUP_BUG",
+        "EGG_GROUP_BUG"
+    ],
+    "abilities": [
+        "ABILITY_SPEED_BOOST",
+        "ABILITY_TINTED_LENS"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_GREEN",
     "flip_sprite": false,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_NIGHT_SLASH" ],
-            [ 1, "MOVE_BUG_BITE" ],
-            [ 1, "MOVE_TACKLE" ],
-            [ 1, "MOVE_FORESIGHT" ],
-            [ 1, "MOVE_QUICK_ATTACK" ],
-            [ 1, "MOVE_DOUBLE_TEAM" ],
-            [ 6, "MOVE_QUICK_ATTACK" ],
-            [ 11, "MOVE_DOUBLE_TEAM" ],
-            [ 14, "MOVE_SONIC_BOOM" ],
-            [ 17, "MOVE_DETECT" ],
-            [ 22, "MOVE_SUPERSONIC" ],
-            [ 27, "MOVE_UPROAR" ],
-            [ 30, "MOVE_PURSUIT" ],
-            [ 33, "MOVE_ANCIENT_POWER" ],
-            [ 38, "MOVE_FEINT" ],
-            [ 43, "MOVE_SLASH" ],
-            [ 46, "MOVE_SCREECH" ],
-            [ 49, "MOVE_U_TURN" ],
-            [ 54, "MOVE_AIR_SLASH" ],
-            [ 57, "MOVE_BUG_BUZZ" ]
+            [
+                1,
+                "MOVE_NIGHT_SLASH"
+            ],
+            [
+                1,
+                "MOVE_BUG_BITE"
+            ],
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                1,
+                "MOVE_FORESIGHT"
+            ],
+            [
+                1,
+                "MOVE_QUICK_ATTACK"
+            ],
+            [
+                1,
+                "MOVE_DOUBLE_TEAM"
+            ],
+            [
+                6,
+                "MOVE_QUICK_ATTACK"
+            ],
+            [
+                11,
+                "MOVE_DOUBLE_TEAM"
+            ],
+            [
+                14,
+                "MOVE_SONIC_BOOM"
+            ],
+            [
+                17,
+                "MOVE_DETECT"
+            ],
+            [
+                22,
+                "MOVE_SUPERSONIC"
+            ],
+            [
+                27,
+                "MOVE_UPROAR"
+            ],
+            [
+                30,
+                "MOVE_PURSUIT"
+            ],
+            [
+                33,
+                "MOVE_ANCIENT_POWER"
+            ],
+            [
+                38,
+                "MOVE_FEINT"
+            ],
+            [
+                43,
+                "MOVE_SLASH"
+            ],
+            [
+                46,
+                "MOVE_SCREECH"
+            ],
+            [
+                49,
+                "MOVE_U_TURN"
+            ],
+            [
+                54,
+                "MOVE_AIR_SLASH"
+            ],
+            [
+                57,
+                "MOVE_BUG_BUZZ"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -81,7 +150,6 @@
             "TM68",
             "TM70",
             "TM77",
-            "TM78",
             "TM82",
             "TM83",
             "TM85",
@@ -101,7 +169,7 @@
             "MOVE_UPROAR"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_YANMA",
     "footprint": {
         "has": true,

@@ -7,7 +7,10 @@
         "special_attack": 80,
         "special_defense": 80
     },
-    "types": [ "TYPE_WATER", "TYPE_WATER" ],
+    "types": [
+        "TYPE_WATER",
+        "TYPE_WATER"
+    ],
     "catch_rate": 30,
     "base_exp_reward": 165,
     "ev_yields": {
@@ -26,25 +29,64 @@
     "hatch_cycles": 40,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_SLOW",
-    "egg_groups": [ "EGG_GROUP_WATER_1", "EGG_GROUP_FAIRY" ],
-    "abilities": [ "ABILITY_HYDRATION", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_WATER_1",
+        "EGG_GROUP_FAIRY"
+    ],
+    "abilities": [
+        "ABILITY_HYDRATION",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BLUE",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_BUBBLE" ],
-            [ 1, "MOVE_WATER_SPORT" ],
-            [ 9, "MOVE_CHARM" ],
-            [ 16, "MOVE_SUPERSONIC" ],
-            [ 24, "MOVE_BUBBLE_BEAM" ],
-            [ 31, "MOVE_ACID_ARMOR" ],
-            [ 39, "MOVE_WHIRLPOOL" ],
-            [ 46, "MOVE_WATER_PULSE" ],
-            [ 54, "MOVE_AQUA_RING" ],
-            [ 61, "MOVE_DIVE" ],
-            [ 69, "MOVE_RAIN_DANCE" ]
+            [
+                1,
+                "MOVE_BUBBLE"
+            ],
+            [
+                1,
+                "MOVE_WATER_SPORT"
+            ],
+            [
+                9,
+                "MOVE_CHARM"
+            ],
+            [
+                16,
+                "MOVE_SUPERSONIC"
+            ],
+            [
+                24,
+                "MOVE_BUBBLE_BEAM"
+            ],
+            [
+                31,
+                "MOVE_ACID_ARMOR"
+            ],
+            [
+                39,
+                "MOVE_WHIRLPOOL"
+            ],
+            [
+                46,
+                "MOVE_WATER_PULSE"
+            ],
+            [
+                54,
+                "MOVE_AQUA_RING"
+            ],
+            [
+                61,
+                "MOVE_DIVE"
+            ],
+            [
+                69,
+                "MOVE_RAIN_DANCE"
+            ]
         ],
         "by_tm": [
             "TM03",
@@ -56,7 +98,6 @@
             "TM17",
             "TM18",
             "TM20",
-            "TM21",
             "TM27",
             "TM32",
             "TM42",
@@ -90,7 +131,7 @@
             "MOVE_UPROAR"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_PHIONE",
     "footprint": {
         "has": false,

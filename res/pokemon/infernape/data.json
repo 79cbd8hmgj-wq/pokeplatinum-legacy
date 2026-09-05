@@ -7,7 +7,10 @@
         "special_attack": 104,
         "special_defense": 71
     },
-    "types": [ "TYPE_FIRE", "TYPE_FIGHTING" ],
+    "types": [
+        "TYPE_FIRE",
+        "TYPE_FIGHTING"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 209,
     "ev_yields": {
@@ -26,29 +29,80 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_HUMAN_LIKE" ],
-    "abilities": [ "ABILITY_BLAZE", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_HUMAN_LIKE"
+    ],
+    "abilities": [
+        "ABILITY_BLAZE",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_SCRATCH" ],
-            [ 1, "MOVE_LEER" ],
-            [ 1, "MOVE_EMBER" ],
-            [ 1, "MOVE_TAUNT" ],
-            [ 7, "MOVE_EMBER" ],
-            [ 9, "MOVE_TAUNT" ],
-            [ 14, "MOVE_MACH_PUNCH" ],
-            [ 17, "MOVE_FURY_SWIPES" ],
-            [ 21, "MOVE_FLAME_WHEEL" ],
-            [ 29, "MOVE_FEINT" ],
-            [ 33, "MOVE_PUNISHMENT" ],
-            [ 41, "MOVE_CLOSE_COMBAT" ],
-            [ 45, "MOVE_FIRE_SPIN" ],
-            [ 53, "MOVE_CALM_MIND" ],
-            [ 57, "MOVE_FLARE_BLITZ" ]
+            [
+                1,
+                "MOVE_SCRATCH"
+            ],
+            [
+                1,
+                "MOVE_LEER"
+            ],
+            [
+                1,
+                "MOVE_EMBER"
+            ],
+            [
+                1,
+                "MOVE_TAUNT"
+            ],
+            [
+                7,
+                "MOVE_EMBER"
+            ],
+            [
+                9,
+                "MOVE_TAUNT"
+            ],
+            [
+                14,
+                "MOVE_MACH_PUNCH"
+            ],
+            [
+                17,
+                "MOVE_FURY_SWIPES"
+            ],
+            [
+                21,
+                "MOVE_FLAME_WHEEL"
+            ],
+            [
+                29,
+                "MOVE_FEINT"
+            ],
+            [
+                33,
+                "MOVE_PUNISHMENT"
+            ],
+            [
+                41,
+                "MOVE_CLOSE_COMBAT"
+            ],
+            [
+                45,
+                "MOVE_FIRE_SPIN"
+            ],
+            [
+                53,
+                "MOVE_CALM_MIND"
+            ],
+            [
+                57,
+                "MOVE_FLARE_BLITZ"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -61,7 +115,6 @@
             "TM12",
             "TM15",
             "TM17",
-            "TM21",
             "TM22",
             "TM23",
             "TM26",
@@ -88,7 +141,6 @@
             "TM71",
             "TM75",
             "TM76",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",
@@ -116,7 +168,7 @@
             "MOVE_SWIFT"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_CHIMCHAR",
     "footprint": {
         "has": true,

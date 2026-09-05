@@ -7,7 +7,10 @@
         "special_attack": 90,
         "special_defense": 72
     },
-    "types": [ "TYPE_GRASS", "TYPE_GRASS" ],
+    "types": [
+        "TYPE_GRASS",
+        "TYPE_GRASS"
+    ],
     "catch_rate": 200,
     "base_exp_reward": 164,
     "ev_yields": {
@@ -26,27 +29,72 @@
     "hatch_cycles": 25,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_SLOW",
-    "egg_groups": [ "EGG_GROUP_GRASS", "EGG_GROUP_GRASS" ],
-    "abilities": [ "ABILITY_LEVITATE", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_GRASS",
+        "EGG_GROUP_GRASS"
+    ],
+    "abilities": [
+        "ABILITY_LEVITATE",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 60,
     "body_color": "MON_COLOR_GREEN",
     "flip_sprite": false,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_BIND" ],
-            [ 1, "MOVE_GROWTH" ],
-            [ 7, "MOVE_BITE" ],
-            [ 11, "MOVE_VINE_WHIP" ],
-            [ 17, "MOVE_SWEET_SCENT" ],
-            [ 21, "MOVE_INGRAIN" ],
-            [ 27, "MOVE_FAINT_ATTACK" ],
-            [ 31, "MOVE_STOCKPILE" ],
-            [ 31, "MOVE_SPIT_UP" ],
-            [ 31, "MOVE_SWALLOW" ],
-            [ 37, "MOVE_CRUNCH" ],
-            [ 41, "MOVE_WRING_OUT" ],
-            [ 47, "MOVE_POWER_WHIP" ]
+            [
+                1,
+                "MOVE_BIND"
+            ],
+            [
+                1,
+                "MOVE_GROWTH"
+            ],
+            [
+                7,
+                "MOVE_BITE"
+            ],
+            [
+                11,
+                "MOVE_VINE_WHIP"
+            ],
+            [
+                17,
+                "MOVE_SWEET_SCENT"
+            ],
+            [
+                21,
+                "MOVE_INGRAIN"
+            ],
+            [
+                27,
+                "MOVE_FAINT_ATTACK"
+            ],
+            [
+                31,
+                "MOVE_STOCKPILE"
+            ],
+            [
+                31,
+                "MOVE_SPIT_UP"
+            ],
+            [
+                31,
+                "MOVE_SWALLOW"
+            ],
+            [
+                37,
+                "MOVE_CRUNCH"
+            ],
+            [
+                41,
+                "MOVE_WRING_OUT"
+            ],
+            [
+                47,
+                "MOVE_POWER_WHIP"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -56,7 +104,6 @@
             "TM15",
             "TM17",
             "TM19",
-            "TM21",
             "TM22",
             "TM27",
             "TM32",
@@ -73,7 +120,6 @@
             "TM68",
             "TM70",
             "TM75",
-            "TM78",
             "TM82",
             "TM83",
             "TM86",
@@ -101,7 +147,7 @@
             "MOVE_WORRY_SEED"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_CARNIVINE",
     "footprint": {
         "has": false,

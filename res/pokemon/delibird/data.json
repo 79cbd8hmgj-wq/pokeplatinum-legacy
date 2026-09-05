@@ -7,7 +7,10 @@
         "special_attack": 65,
         "special_defense": 45
     },
-    "types": [ "TYPE_ICE", "TYPE_FLYING" ],
+    "types": [
+        "TYPE_ICE",
+        "TYPE_FLYING"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 183,
     "ev_yields": {
@@ -26,15 +29,24 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_FAST",
-    "egg_groups": [ "EGG_GROUP_WATER_1", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_VITAL_SPIRIT", "ABILITY_HUSTLE" ],
+    "egg_groups": [
+        "EGG_GROUP_WATER_1",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_VITAL_SPIRIT",
+        "ABILITY_HUSTLE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_RED",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_PRESENT" ]
+            [
+                1,
+                "MOVE_PRESENT"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -60,7 +72,6 @@
             "TM58",
             "TM67",
             "TM72",
-            "TM78",
             "TM82",
             "TM83",
             "TM87",
@@ -90,7 +101,7 @@
             "MOVE_ICE_PUNCH"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_DELIBIRD",
     "footprint": {
         "has": true,

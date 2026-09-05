@@ -7,7 +7,10 @@
         "special_attack": 76,
         "special_defense": 96
     },
-    "types": [ "TYPE_NORMAL", "TYPE_FLYING" ],
+    "types": [
+        "TYPE_NORMAL",
+        "TYPE_FLYING"
+    ],
     "catch_rate": 90,
     "base_exp_reward": 162,
     "ev_yields": {
@@ -26,31 +29,88 @@
     "hatch_cycles": 15,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_FLYING", "EGG_GROUP_FLYING" ],
-    "abilities": [ "ABILITY_INSOMNIA", "ABILITY_KEEN_EYE" ],
+    "egg_groups": [
+        "EGG_GROUP_FLYING",
+        "EGG_GROUP_FLYING"
+    ],
+    "abilities": [
+        "ABILITY_INSOMNIA",
+        "ABILITY_KEEN_EYE"
+    ],
     "safari_flee_rate": 60,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_SKY_ATTACK" ],
-            [ 1, "MOVE_TACKLE" ],
-            [ 1, "MOVE_GROWL" ],
-            [ 1, "MOVE_FORESIGHT" ],
-            [ 1, "MOVE_HYPNOSIS" ],
-            [ 5, "MOVE_HYPNOSIS" ],
-            [ 9, "MOVE_PECK" ],
-            [ 13, "MOVE_UPROAR" ],
-            [ 17, "MOVE_REFLECT" ],
-            [ 22, "MOVE_CONFUSION" ],
-            [ 27, "MOVE_TAKE_DOWN" ],
-            [ 32, "MOVE_AIR_SLASH" ],
-            [ 37, "MOVE_ZEN_HEADBUTT" ],
-            [ 42, "MOVE_EXTRASENSORY" ],
-            [ 47, "MOVE_PSYCHO_SHIFT" ],
-            [ 52, "MOVE_ROOST" ],
-            [ 57, "MOVE_DREAM_EATER" ]
+            [
+                1,
+                "MOVE_SKY_ATTACK"
+            ],
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                1,
+                "MOVE_GROWL"
+            ],
+            [
+                1,
+                "MOVE_FORESIGHT"
+            ],
+            [
+                1,
+                "MOVE_HYPNOSIS"
+            ],
+            [
+                5,
+                "MOVE_HYPNOSIS"
+            ],
+            [
+                9,
+                "MOVE_PECK"
+            ],
+            [
+                13,
+                "MOVE_UPROAR"
+            ],
+            [
+                17,
+                "MOVE_REFLECT"
+            ],
+            [
+                22,
+                "MOVE_CONFUSION"
+            ],
+            [
+                27,
+                "MOVE_TAKE_DOWN"
+            ],
+            [
+                32,
+                "MOVE_AIR_SLASH"
+            ],
+            [
+                37,
+                "MOVE_ZEN_HEADBUTT"
+            ],
+            [
+                42,
+                "MOVE_EXTRASENSORY"
+            ],
+            [
+                47,
+                "MOVE_PSYCHO_SHIFT"
+            ],
+            [
+                52,
+                "MOVE_ROOST"
+            ],
+            [
+                57,
+                "MOVE_DREAM_EATER"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -78,7 +138,6 @@
             "TM67",
             "TM68",
             "TM77",
-            "TM78",
             "TM82",
             "TM83",
             "TM85",
@@ -99,7 +158,7 @@
             "MOVE_UPROAR"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_HOOTHOOT",
     "footprint": {
         "has": true,

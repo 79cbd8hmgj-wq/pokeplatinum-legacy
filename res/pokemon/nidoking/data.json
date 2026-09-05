@@ -7,7 +7,10 @@
         "special_attack": 85,
         "special_defense": 75
     },
-    "types": [ "TYPE_POISON", "TYPE_GROUND" ],
+    "types": [
+        "TYPE_POISON",
+        "TYPE_GROUND"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 195,
     "ev_yields": {
@@ -26,21 +29,48 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_MONSTER", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_POISON_POINT", "ABILITY_RIVALRY" ],
+    "egg_groups": [
+        "EGG_GROUP_MONSTER",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_POISON_POINT",
+        "ABILITY_RIVALRY"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_PURPLE",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_PECK" ],
-            [ 1, "MOVE_FOCUS_ENERGY" ],
-            [ 1, "MOVE_DOUBLE_KICK" ],
-            [ 1, "MOVE_POISON_STING" ],
-            [ 23, "MOVE_THRASH" ],
-            [ 43, "MOVE_EARTH_POWER" ],
-            [ 58, "MOVE_MEGAHORN" ]
+            [
+                1,
+                "MOVE_PECK"
+            ],
+            [
+                1,
+                "MOVE_FOCUS_ENERGY"
+            ],
+            [
+                1,
+                "MOVE_DOUBLE_KICK"
+            ],
+            [
+                1,
+                "MOVE_POISON_STING"
+            ],
+            [
+                23,
+                "MOVE_THRASH"
+            ],
+            [
+                43,
+                "MOVE_EARTH_POWER"
+            ],
+            [
+                58,
+                "MOVE_MEGAHORN"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -55,7 +85,6 @@
             "TM15",
             "TM17",
             "TM18",
-            "TM21",
             "TM23",
             "TM24",
             "TM25",
@@ -86,7 +115,6 @@
             "TM71",
             "TM72",
             "TM76",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",
@@ -116,7 +144,7 @@
             "MOVE_UPROAR"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_NIDORAN_M",
     "footprint": {
         "has": true,

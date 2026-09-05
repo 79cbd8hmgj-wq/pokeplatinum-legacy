@@ -7,7 +7,10 @@
         "special_attack": 70,
         "special_defense": 80
     },
-    "types": [ "TYPE_ROCK", "TYPE_BUG" ],
+    "types": [
+        "TYPE_ROCK",
+        "TYPE_BUG"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 199,
     "ev_yields": {
@@ -26,28 +29,76 @@
     "hatch_cycles": 30,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_ERRATIC",
-    "egg_groups": [ "EGG_GROUP_WATER_3", "EGG_GROUP_WATER_3" ],
-    "abilities": [ "ABILITY_BATTLE_ARMOR", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_WATER_3",
+        "EGG_GROUP_WATER_3"
+    ],
+    "abilities": [
+        "ABILITY_BATTLE_ARMOR",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_GRAY",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_SCRATCH" ],
-            [ 1, "MOVE_HARDEN" ],
-            [ 1, "MOVE_MUD_SPORT" ],
-            [ 1, "MOVE_WATER_GUN" ],
-            [ 7, "MOVE_MUD_SPORT" ],
-            [ 13, "MOVE_WATER_GUN" ],
-            [ 19, "MOVE_METAL_CLAW" ],
-            [ 25, "MOVE_PROTECT" ],
-            [ 31, "MOVE_ANCIENT_POWER" ],
-            [ 37, "MOVE_FURY_CUTTER" ],
-            [ 46, "MOVE_SLASH" ],
-            [ 55, "MOVE_ROCK_BLAST" ],
-            [ 67, "MOVE_CRUSH_CLAW" ],
-            [ 73, "MOVE_X_SCISSOR" ]
+            [
+                1,
+                "MOVE_SCRATCH"
+            ],
+            [
+                1,
+                "MOVE_HARDEN"
+            ],
+            [
+                1,
+                "MOVE_MUD_SPORT"
+            ],
+            [
+                1,
+                "MOVE_WATER_GUN"
+            ],
+            [
+                7,
+                "MOVE_MUD_SPORT"
+            ],
+            [
+                13,
+                "MOVE_WATER_GUN"
+            ],
+            [
+                19,
+                "MOVE_METAL_CLAW"
+            ],
+            [
+                25,
+                "MOVE_PROTECT"
+            ],
+            [
+                31,
+                "MOVE_ANCIENT_POWER"
+            ],
+            [
+                37,
+                "MOVE_FURY_CUTTER"
+            ],
+            [
+                46,
+                "MOVE_SLASH"
+            ],
+            [
+                55,
+                "MOVE_ROCK_BLAST"
+            ],
+            [
+                67,
+                "MOVE_CRUSH_CLAW"
+            ],
+            [
+                73,
+                "MOVE_X_SCISSOR"
+            ]
         ],
         "by_tm": [
             "TM03",
@@ -56,7 +107,6 @@
             "TM11",
             "TM15",
             "TM17",
-            "TM21",
             "TM23",
             "TM26",
             "TM27",
@@ -77,7 +127,6 @@
             "TM71",
             "TM75",
             "TM76",
-            "TM78",
             "TM80",
             "TM81",
             "TM82",
@@ -101,7 +150,7 @@
             "MOVE_KNOCK_OFF"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_ANORITH",
     "footprint": {
         "has": true,

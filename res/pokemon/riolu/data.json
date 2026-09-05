@@ -7,7 +7,10 @@
         "special_attack": 35,
         "special_defense": 40
     },
-    "types": [ "TYPE_FIGHTING", "TYPE_FIGHTING" ],
+    "types": [
+        "TYPE_FIGHTING",
+        "TYPE_FIGHTING"
+    ],
     "catch_rate": 75,
     "base_exp_reward": 72,
     "ev_yields": {
@@ -26,23 +29,56 @@
     "hatch_cycles": 25,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_UNDISCOVERED", "EGG_GROUP_UNDISCOVERED" ],
-    "abilities": [ "ABILITY_STEADFAST", "ABILITY_INNER_FOCUS" ],
+    "egg_groups": [
+        "EGG_GROUP_UNDISCOVERED",
+        "EGG_GROUP_UNDISCOVERED"
+    ],
+    "abilities": [
+        "ABILITY_STEADFAST",
+        "ABILITY_INNER_FOCUS"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BLUE",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_QUICK_ATTACK" ],
-            [ 1, "MOVE_FORESIGHT" ],
-            [ 1, "MOVE_ENDURE" ],
-            [ 6, "MOVE_COUNTER" ],
-            [ 11, "MOVE_FORCE_PALM" ],
-            [ 15, "MOVE_FEINT" ],
-            [ 19, "MOVE_REVERSAL" ],
-            [ 24, "MOVE_SCREECH" ],
-            [ 29, "MOVE_COPYCAT" ]
+            [
+                1,
+                "MOVE_QUICK_ATTACK"
+            ],
+            [
+                1,
+                "MOVE_FORESIGHT"
+            ],
+            [
+                1,
+                "MOVE_ENDURE"
+            ],
+            [
+                6,
+                "MOVE_COUNTER"
+            ],
+            [
+                11,
+                "MOVE_FORCE_PALM"
+            ],
+            [
+                15,
+                "MOVE_FEINT"
+            ],
+            [
+                19,
+                "MOVE_REVERSAL"
+            ],
+            [
+                24,
+                "MOVE_SCREECH"
+            ],
+            [
+                29,
+                "MOVE_COPYCAT"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -53,7 +89,6 @@
             "TM11",
             "TM17",
             "TM18",
-            "TM21",
             "TM23",
             "TM26",
             "TM27",
@@ -72,7 +107,6 @@
             "TM65",
             "TM66",
             "TM75",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",
@@ -112,7 +146,10 @@
         ]
     },
     "evolutions": [
-        [ "EVO_LEVEL_HAPPINESS_DAY", "SPECIES_LUCARIO" ]
+        [
+            "EVO_LEVEL_HAPPINESS_DAY",
+            "SPECIES_LUCARIO"
+        ]
     ],
     "offspring": "SPECIES_RIOLU",
     "footprint": {

@@ -7,7 +7,10 @@
         "special_attack": 50,
         "special_defense": 100
     },
-    "types": [ "TYPE_ROCK", "TYPE_ROCK" ],
+    "types": [
+        "TYPE_ROCK",
+        "TYPE_ROCK"
+    ],
     "catch_rate": 3,
     "base_exp_reward": 217,
     "ev_yields": {
@@ -26,27 +29,72 @@
     "hatch_cycles": 80,
     "base_friendship": 35,
     "exp_rate": "EXP_RATE_SLOW",
-    "egg_groups": [ "EGG_GROUP_UNDISCOVERED", "EGG_GROUP_UNDISCOVERED" ],
-    "abilities": [ "ABILITY_CLEAR_BODY", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_UNDISCOVERED",
+        "EGG_GROUP_UNDISCOVERED"
+    ],
+    "abilities": [
+        "ABILITY_CLEAR_BODY",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_EXPLOSION" ],
-            [ 1, "MOVE_STOMP" ],
-            [ 9, "MOVE_ROCK_THROW" ],
-            [ 17, "MOVE_CURSE" ],
-            [ 25, "MOVE_SUPERPOWER" ],
-            [ 33, "MOVE_ANCIENT_POWER" ],
-            [ 41, "MOVE_IRON_DEFENSE" ],
-            [ 49, "MOVE_CHARGE_BEAM" ],
-            [ 57, "MOVE_LOCK_ON" ],
-            [ 65, "MOVE_ZAP_CANNON" ],
-            [ 73, "MOVE_STONE_EDGE" ],
-            [ 81, "MOVE_HAMMER_ARM" ],
-            [ 89, "MOVE_HYPER_BEAM" ]
+            [
+                1,
+                "MOVE_EXPLOSION"
+            ],
+            [
+                1,
+                "MOVE_STOMP"
+            ],
+            [
+                9,
+                "MOVE_ROCK_THROW"
+            ],
+            [
+                17,
+                "MOVE_CURSE"
+            ],
+            [
+                25,
+                "MOVE_SUPERPOWER"
+            ],
+            [
+                33,
+                "MOVE_ANCIENT_POWER"
+            ],
+            [
+                41,
+                "MOVE_IRON_DEFENSE"
+            ],
+            [
+                49,
+                "MOVE_CHARGE_BEAM"
+            ],
+            [
+                57,
+                "MOVE_LOCK_ON"
+            ],
+            [
+                65,
+                "MOVE_ZAP_CANNON"
+            ],
+            [
+                73,
+                "MOVE_STONE_EDGE"
+            ],
+            [
+                81,
+                "MOVE_HAMMER_ARM"
+            ],
+            [
+                89,
+                "MOVE_HYPER_BEAM"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -56,7 +104,6 @@
             "TM15",
             "TM17",
             "TM20",
-            "TM21",
             "TM24",
             "TM25",
             "TM26",
@@ -104,7 +151,7 @@
             "MOVE_EARTH_POWER"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_REGIROCK",
     "footprint": {
         "has": true,

@@ -7,7 +7,10 @@
         "special_attack": 105,
         "special_defense": 85
     },
-    "types": [ "TYPE_GRASS", "TYPE_GRASS" ],
+    "types": [
+        "TYPE_GRASS",
+        "TYPE_GRASS"
+    ],
     "catch_rate": 120,
     "base_exp_reward": 146,
     "ev_yields": {
@@ -26,28 +29,76 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_GRASS", "EGG_GROUP_GRASS" ],
-    "abilities": [ "ABILITY_CHLOROPHYLL", "ABILITY_SOLAR_POWER" ],
+    "egg_groups": [
+        "EGG_GROUP_GRASS",
+        "EGG_GROUP_GRASS"
+    ],
+    "abilities": [
+        "ABILITY_CHLOROPHYLL",
+        "ABILITY_SOLAR_POWER"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_YELLOW",
     "flip_sprite": false,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_ABSORB" ],
-            [ 1, "MOVE_POUND" ],
-            [ 1, "MOVE_GROWTH" ],
-            [ 5, "MOVE_MEGA_DRAIN" ],
-            [ 9, "MOVE_INGRAIN" ],
-            [ 13, "MOVE_GRASS_WHISTLE" ],
-            [ 17, "MOVE_LEECH_SEED" ],
-            [ 21, "MOVE_BULLET_SEED" ],
-            [ 25, "MOVE_WORRY_SEED" ],
-            [ 29, "MOVE_RAZOR_LEAF" ],
-            [ 33, "MOVE_PETAL_DANCE" ],
-            [ 37, "MOVE_SUNNY_DAY" ],
-            [ 41, "MOVE_SOLAR_BEAM" ],
-            [ 43, "MOVE_LEAF_STORM" ]
+            [
+                1,
+                "MOVE_ABSORB"
+            ],
+            [
+                1,
+                "MOVE_POUND"
+            ],
+            [
+                1,
+                "MOVE_GROWTH"
+            ],
+            [
+                5,
+                "MOVE_MEGA_DRAIN"
+            ],
+            [
+                9,
+                "MOVE_INGRAIN"
+            ],
+            [
+                13,
+                "MOVE_GRASS_WHISTLE"
+            ],
+            [
+                17,
+                "MOVE_LEECH_SEED"
+            ],
+            [
+                21,
+                "MOVE_BULLET_SEED"
+            ],
+            [
+                25,
+                "MOVE_WORRY_SEED"
+            ],
+            [
+                29,
+                "MOVE_RAZOR_LEAF"
+            ],
+            [
+                33,
+                "MOVE_PETAL_DANCE"
+            ],
+            [
+                37,
+                "MOVE_SUNNY_DAY"
+            ],
+            [
+                41,
+                "MOVE_SOLAR_BEAM"
+            ],
+            [
+                43,
+                "MOVE_LEAF_STORM"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -59,7 +110,6 @@
             "TM17",
             "TM19",
             "TM20",
-            "TM21",
             "TM22",
             "TM27",
             "TM32",
@@ -73,7 +123,6 @@
             "TM68",
             "TM70",
             "TM75",
-            "TM78",
             "TM82",
             "TM83",
             "TM86",
@@ -90,7 +139,7 @@
             "MOVE_UPROAR"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_SUNKERN",
     "footprint": {
         "has": true,

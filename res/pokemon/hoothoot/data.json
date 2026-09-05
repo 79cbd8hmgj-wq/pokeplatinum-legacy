@@ -7,7 +7,10 @@
         "special_attack": 36,
         "special_defense": 56
     },
-    "types": [ "TYPE_NORMAL", "TYPE_FLYING" ],
+    "types": [
+        "TYPE_NORMAL",
+        "TYPE_FLYING"
+    ],
     "catch_rate": 255,
     "base_exp_reward": 58,
     "ev_yields": {
@@ -26,29 +29,80 @@
     "hatch_cycles": 15,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_FLYING", "EGG_GROUP_FLYING" ],
-    "abilities": [ "ABILITY_INSOMNIA", "ABILITY_KEEN_EYE" ],
+    "egg_groups": [
+        "EGG_GROUP_FLYING",
+        "EGG_GROUP_FLYING"
+    ],
+    "abilities": [
+        "ABILITY_INSOMNIA",
+        "ABILITY_KEEN_EYE"
+    ],
     "safari_flee_rate": 90,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_TACKLE" ],
-            [ 1, "MOVE_GROWL" ],
-            [ 1, "MOVE_FORESIGHT" ],
-            [ 5, "MOVE_HYPNOSIS" ],
-            [ 9, "MOVE_PECK" ],
-            [ 13, "MOVE_UPROAR" ],
-            [ 17, "MOVE_REFLECT" ],
-            [ 21, "MOVE_CONFUSION" ],
-            [ 25, "MOVE_TAKE_DOWN" ],
-            [ 29, "MOVE_AIR_SLASH" ],
-            [ 33, "MOVE_ZEN_HEADBUTT" ],
-            [ 37, "MOVE_EXTRASENSORY" ],
-            [ 41, "MOVE_PSYCHO_SHIFT" ],
-            [ 45, "MOVE_ROOST" ],
-            [ 49, "MOVE_DREAM_EATER" ]
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                1,
+                "MOVE_GROWL"
+            ],
+            [
+                1,
+                "MOVE_FORESIGHT"
+            ],
+            [
+                5,
+                "MOVE_HYPNOSIS"
+            ],
+            [
+                9,
+                "MOVE_PECK"
+            ],
+            [
+                13,
+                "MOVE_UPROAR"
+            ],
+            [
+                17,
+                "MOVE_REFLECT"
+            ],
+            [
+                21,
+                "MOVE_CONFUSION"
+            ],
+            [
+                25,
+                "MOVE_TAKE_DOWN"
+            ],
+            [
+                29,
+                "MOVE_AIR_SLASH"
+            ],
+            [
+                33,
+                "MOVE_ZEN_HEADBUTT"
+            ],
+            [
+                37,
+                "MOVE_EXTRASENSORY"
+            ],
+            [
+                41,
+                "MOVE_PSYCHO_SHIFT"
+            ],
+            [
+                45,
+                "MOVE_ROOST"
+            ],
+            [
+                49,
+                "MOVE_DREAM_EATER"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -74,7 +128,6 @@
             "TM62",
             "TM67",
             "TM77",
-            "TM78",
             "TM82",
             "TM83",
             "TM85",

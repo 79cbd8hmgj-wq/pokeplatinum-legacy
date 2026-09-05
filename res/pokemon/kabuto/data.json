@@ -7,7 +7,10 @@
         "special_attack": 55,
         "special_defense": 45
     },
-    "types": [ "TYPE_ROCK", "TYPE_WATER" ],
+    "types": [
+        "TYPE_ROCK",
+        "TYPE_WATER"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 99,
     "ev_yields": {
@@ -26,26 +29,68 @@
     "hatch_cycles": 30,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_WATER_1", "EGG_GROUP_WATER_3" ],
-    "abilities": [ "ABILITY_SWIFT_SWIM", "ABILITY_BATTLE_ARMOR" ],
+    "egg_groups": [
+        "EGG_GROUP_WATER_1",
+        "EGG_GROUP_WATER_3"
+    ],
+    "abilities": [
+        "ABILITY_SWIFT_SWIM",
+        "ABILITY_BATTLE_ARMOR"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_SCRATCH" ],
-            [ 1, "MOVE_HARDEN" ],
-            [ 6, "MOVE_ABSORB" ],
-            [ 11, "MOVE_LEER" ],
-            [ 16, "MOVE_MUD_SHOT" ],
-            [ 21, "MOVE_SAND_ATTACK" ],
-            [ 26, "MOVE_ENDURE" ],
-            [ 31, "MOVE_AQUA_JET" ],
-            [ 36, "MOVE_MEGA_DRAIN" ],
-            [ 41, "MOVE_METAL_SOUND" ],
-            [ 46, "MOVE_ANCIENT_POWER" ],
-            [ 51, "MOVE_WRING_OUT" ]
+            [
+                1,
+                "MOVE_SCRATCH"
+            ],
+            [
+                1,
+                "MOVE_HARDEN"
+            ],
+            [
+                6,
+                "MOVE_ABSORB"
+            ],
+            [
+                11,
+                "MOVE_LEER"
+            ],
+            [
+                16,
+                "MOVE_MUD_SHOT"
+            ],
+            [
+                21,
+                "MOVE_SAND_ATTACK"
+            ],
+            [
+                26,
+                "MOVE_ENDURE"
+            ],
+            [
+                31,
+                "MOVE_AQUA_JET"
+            ],
+            [
+                36,
+                "MOVE_MEGA_DRAIN"
+            ],
+            [
+                41,
+                "MOVE_METAL_SOUND"
+            ],
+            [
+                46,
+                "MOVE_ANCIENT_POWER"
+            ],
+            [
+                51,
+                "MOVE_WRING_OUT"
+            ]
         ],
         "by_tm": [
             "TM03",
@@ -57,7 +102,6 @@
             "TM17",
             "TM18",
             "TM19",
-            "TM21",
             "TM27",
             "TM28",
             "TM32",
@@ -72,7 +116,6 @@
             "TM58",
             "TM69",
             "TM76",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",

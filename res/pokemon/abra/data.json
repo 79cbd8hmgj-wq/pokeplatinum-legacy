@@ -7,7 +7,10 @@
         "special_attack": 105,
         "special_defense": 55
     },
-    "types": [ "TYPE_PSYCHIC", "TYPE_PSYCHIC" ],
+    "types": [
+        "TYPE_PSYCHIC",
+        "TYPE_PSYCHIC"
+    ],
     "catch_rate": 200,
     "base_exp_reward": 75,
     "ev_yields": {
@@ -26,15 +29,24 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_HUMAN_LIKE", "EGG_GROUP_HUMAN_LIKE" ],
-    "abilities": [ "ABILITY_SYNCHRONIZE", "ABILITY_INNER_FOCUS" ],
+    "egg_groups": [
+        "EGG_GROUP_HUMAN_LIKE",
+        "EGG_GROUP_HUMAN_LIKE"
+    ],
+    "abilities": [
+        "ABILITY_SYNCHRONIZE",
+        "ABILITY_INNER_FOCUS"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_TELEPORT" ]
+            [
+                1,
+                "MOVE_TELEPORT"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -47,7 +59,6 @@
             "TM17",
             "TM18",
             "TM20",
-            "TM21",
             "TM23",
             "TM27",
             "TM29",
@@ -73,7 +84,6 @@
             "TM70",
             "TM73",
             "TM77",
-            "TM78",
             "TM82",
             "TM83",
             "TM85",

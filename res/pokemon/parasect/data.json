@@ -7,7 +7,10 @@
         "special_attack": 60,
         "special_defense": 80
     },
-    "types": [ "TYPE_BUG", "TYPE_GRASS" ],
+    "types": [
+        "TYPE_BUG",
+        "TYPE_GRASS"
+    ],
     "catch_rate": 75,
     "base_exp_reward": 128,
     "ev_yields": {
@@ -26,28 +29,76 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_BUG", "EGG_GROUP_GRASS" ],
-    "abilities": [ "ABILITY_EFFECT_SPORE", "ABILITY_DRY_SKIN" ],
+    "egg_groups": [
+        "EGG_GROUP_BUG",
+        "EGG_GROUP_GRASS"
+    ],
+    "abilities": [
+        "ABILITY_EFFECT_SPORE",
+        "ABILITY_DRY_SKIN"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_RED",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_CROSS_POISON" ],
-            [ 1, "MOVE_SCRATCH" ],
-            [ 1, "MOVE_STUN_SPORE" ],
-            [ 1, "MOVE_POISON_POWDER" ],
-            [ 1, "MOVE_LEECH_LIFE" ],
-            [ 6, "MOVE_STUN_SPORE" ],
-            [ 6, "MOVE_POISON_POWDER" ],
-            [ 11, "MOVE_LEECH_LIFE" ],
-            [ 17, "MOVE_SPORE" ],
-            [ 22, "MOVE_SLASH" ],
-            [ 30, "MOVE_GROWTH" ],
-            [ 39, "MOVE_GIGA_DRAIN" ],
-            [ 47, "MOVE_AROMATHERAPY" ],
-            [ 55, "MOVE_X_SCISSOR" ]
+            [
+                1,
+                "MOVE_CROSS_POISON"
+            ],
+            [
+                1,
+                "MOVE_SCRATCH"
+            ],
+            [
+                1,
+                "MOVE_STUN_SPORE"
+            ],
+            [
+                1,
+                "MOVE_POISON_POWDER"
+            ],
+            [
+                1,
+                "MOVE_LEECH_LIFE"
+            ],
+            [
+                6,
+                "MOVE_STUN_SPORE"
+            ],
+            [
+                6,
+                "MOVE_POISON_POWDER"
+            ],
+            [
+                11,
+                "MOVE_LEECH_LIFE"
+            ],
+            [
+                17,
+                "MOVE_SPORE"
+            ],
+            [
+                22,
+                "MOVE_SLASH"
+            ],
+            [
+                30,
+                "MOVE_GROWTH"
+            ],
+            [
+                39,
+                "MOVE_GIGA_DRAIN"
+            ],
+            [
+                47,
+                "MOVE_AROMATHERAPY"
+            ],
+            [
+                55,
+                "MOVE_X_SCISSOR"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -57,7 +108,6 @@
             "TM15",
             "TM17",
             "TM19",
-            "TM21",
             "TM22",
             "TM27",
             "TM28",
@@ -76,7 +126,6 @@
             "TM68",
             "TM70",
             "TM75",
-            "TM78",
             "TM81",
             "TM82",
             "TM83",
@@ -94,7 +143,7 @@
             "MOVE_KNOCK_OFF"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_PARAS",
     "footprint": {
         "has": true,

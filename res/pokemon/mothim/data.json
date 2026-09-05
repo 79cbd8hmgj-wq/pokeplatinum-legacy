@@ -7,7 +7,10 @@
         "special_attack": 94,
         "special_defense": 50
     },
-    "types": [ "TYPE_BUG", "TYPE_FLYING" ],
+    "types": [
+        "TYPE_BUG",
+        "TYPE_FLYING"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 159,
     "ev_yields": {
@@ -26,27 +29,72 @@
     "hatch_cycles": 15,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_BUG", "EGG_GROUP_BUG" ],
-    "abilities": [ "ABILITY_SWARM", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_BUG",
+        "EGG_GROUP_BUG"
+    ],
+    "abilities": [
+        "ABILITY_SWARM",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_YELLOW",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_TACKLE" ],
-            [ 10, "MOVE_PROTECT" ],
-            [ 15, "MOVE_BUG_BITE" ],
-            [ 20, "MOVE_HIDDEN_POWER" ],
-            [ 23, "MOVE_CONFUSION" ],
-            [ 26, "MOVE_GUST" ],
-            [ 29, "MOVE_POISON_POWDER" ],
-            [ 32, "MOVE_PSYBEAM" ],
-            [ 35, "MOVE_CAMOUFLAGE" ],
-            [ 38, "MOVE_SILVER_WIND" ],
-            [ 41, "MOVE_AIR_SLASH" ],
-            [ 44, "MOVE_PSYCHIC" ],
-            [ 47, "MOVE_BUG_BUZZ" ]
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                10,
+                "MOVE_PROTECT"
+            ],
+            [
+                15,
+                "MOVE_BUG_BITE"
+            ],
+            [
+                20,
+                "MOVE_HIDDEN_POWER"
+            ],
+            [
+                23,
+                "MOVE_CONFUSION"
+            ],
+            [
+                26,
+                "MOVE_GUST"
+            ],
+            [
+                29,
+                "MOVE_POISON_POWDER"
+            ],
+            [
+                32,
+                "MOVE_PSYBEAM"
+            ],
+            [
+                35,
+                "MOVE_CAMOUFLAGE"
+            ],
+            [
+                38,
+                "MOVE_SILVER_WIND"
+            ],
+            [
+                41,
+                "MOVE_AIR_SLASH"
+            ],
+            [
+                44,
+                "MOVE_PSYCHIC"
+            ],
+            [
+                47,
+                "MOVE_BUG_BUZZ"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -77,7 +125,6 @@
             "TM68",
             "TM70",
             "TM77",
-            "TM78",
             "TM82",
             "TM83",
             "TM85",
@@ -96,7 +143,7 @@
             "MOVE_SWIFT"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_BURMY",
     "footprint": {
         "has": true,

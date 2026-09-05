@@ -7,7 +7,10 @@
         "special_attack": 45,
         "special_defense": 45
     },
-    "types": [ "TYPE_GROUND", "TYPE_ROCK" ],
+    "types": [
+        "TYPE_GROUND",
+        "TYPE_ROCK"
+    ],
     "catch_rate": 60,
     "base_exp_reward": 204,
     "ev_yields": {
@@ -26,28 +29,76 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_SLOW",
-    "egg_groups": [ "EGG_GROUP_MONSTER", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_LIGHTNING_ROD", "ABILITY_ROCK_HEAD" ],
+    "egg_groups": [
+        "EGG_GROUP_MONSTER",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_LIGHTNING_ROD",
+        "ABILITY_ROCK_HEAD"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_GRAY",
     "flip_sprite": false,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_HORN_ATTACK" ],
-            [ 1, "MOVE_TAIL_WHIP" ],
-            [ 1, "MOVE_STOMP" ],
-            [ 1, "MOVE_FURY_ATTACK" ],
-            [ 9, "MOVE_STOMP" ],
-            [ 13, "MOVE_FURY_ATTACK" ],
-            [ 21, "MOVE_SCARY_FACE" ],
-            [ 25, "MOVE_ROCK_BLAST" ],
-            [ 33, "MOVE_TAKE_DOWN" ],
-            [ 37, "MOVE_HORN_DRILL" ],
-            [ 42, "MOVE_HAMMER_ARM" ],
-            [ 45, "MOVE_STONE_EDGE" ],
-            [ 49, "MOVE_EARTHQUAKE" ],
-            [ 57, "MOVE_MEGAHORN" ]
+            [
+                1,
+                "MOVE_HORN_ATTACK"
+            ],
+            [
+                1,
+                "MOVE_TAIL_WHIP"
+            ],
+            [
+                1,
+                "MOVE_STOMP"
+            ],
+            [
+                1,
+                "MOVE_FURY_ATTACK"
+            ],
+            [
+                9,
+                "MOVE_STOMP"
+            ],
+            [
+                13,
+                "MOVE_FURY_ATTACK"
+            ],
+            [
+                21,
+                "MOVE_SCARY_FACE"
+            ],
+            [
+                25,
+                "MOVE_ROCK_BLAST"
+            ],
+            [
+                33,
+                "MOVE_TAKE_DOWN"
+            ],
+            [
+                37,
+                "MOVE_HORN_DRILL"
+            ],
+            [
+                42,
+                "MOVE_HAMMER_ARM"
+            ],
+            [
+                45,
+                "MOVE_STONE_EDGE"
+            ],
+            [
+                49,
+                "MOVE_EARTHQUAKE"
+            ],
+            [
+                57,
+                "MOVE_MEGAHORN"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -60,7 +111,6 @@
             "TM15",
             "TM17",
             "TM18",
-            "TM21",
             "TM23",
             "TM24",
             "TM25",
@@ -91,7 +141,6 @@
             "TM72",
             "TM75",
             "TM76",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",

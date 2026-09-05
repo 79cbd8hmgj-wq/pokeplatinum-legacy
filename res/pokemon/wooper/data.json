@@ -7,7 +7,10 @@
         "special_attack": 25,
         "special_defense": 25
     },
-    "types": [ "TYPE_WATER", "TYPE_GROUND" ],
+    "types": [
+        "TYPE_WATER",
+        "TYPE_GROUND"
+    ],
     "catch_rate": 255,
     "base_exp_reward": 52,
     "ev_yields": {
@@ -26,27 +29,72 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_WATER_1", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_DAMP", "ABILITY_WATER_ABSORB" ],
+    "egg_groups": [
+        "EGG_GROUP_WATER_1",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_DAMP",
+        "ABILITY_WATER_ABSORB"
+    ],
     "safari_flee_rate": 120,
     "body_color": "MON_COLOR_BLUE",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_WATER_GUN" ],
-            [ 1, "MOVE_TAIL_WHIP" ],
-            [ 5, "MOVE_MUD_SPORT" ],
-            [ 9, "MOVE_MUD_SHOT" ],
-            [ 15, "MOVE_SLAM" ],
-            [ 19, "MOVE_MUD_BOMB" ],
-            [ 23, "MOVE_AMNESIA" ],
-            [ 29, "MOVE_YAWN" ],
-            [ 33, "MOVE_EARTHQUAKE" ],
-            [ 37, "MOVE_RAIN_DANCE" ],
-            [ 43, "MOVE_MIST" ],
-            [ 43, "MOVE_HAZE" ],
-            [ 47, "MOVE_MUDDY_WATER" ]
+            [
+                1,
+                "MOVE_WATER_GUN"
+            ],
+            [
+                1,
+                "MOVE_TAIL_WHIP"
+            ],
+            [
+                5,
+                "MOVE_MUD_SPORT"
+            ],
+            [
+                9,
+                "MOVE_MUD_SHOT"
+            ],
+            [
+                15,
+                "MOVE_SLAM"
+            ],
+            [
+                19,
+                "MOVE_MUD_BOMB"
+            ],
+            [
+                23,
+                "MOVE_AMNESIA"
+            ],
+            [
+                29,
+                "MOVE_YAWN"
+            ],
+            [
+                33,
+                "MOVE_EARTHQUAKE"
+            ],
+            [
+                37,
+                "MOVE_RAIN_DANCE"
+            ],
+            [
+                43,
+                "MOVE_MIST"
+            ],
+            [
+                43,
+                "MOVE_HAZE"
+            ],
+            [
+                47,
+                "MOVE_MUDDY_WATER"
+            ]
         ],
         "by_tm": [
             "TM03",
@@ -57,7 +105,6 @@
             "TM14",
             "TM17",
             "TM18",
-            "TM21",
             "TM23",
             "TM26",
             "TM27",
@@ -71,7 +118,6 @@
             "TM45",
             "TM58",
             "TM70",
-            "TM78",
             "TM82",
             "TM83",
             "TM87",

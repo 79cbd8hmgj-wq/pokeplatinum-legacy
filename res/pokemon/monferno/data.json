@@ -7,7 +7,10 @@
         "special_attack": 78,
         "special_defense": 52
     },
-    "types": [ "TYPE_FIRE", "TYPE_FIGHTING" ],
+    "types": [
+        "TYPE_FIRE",
+        "TYPE_FIGHTING"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 142,
     "ev_yields": {
@@ -26,28 +29,76 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_HUMAN_LIKE" ],
-    "abilities": [ "ABILITY_BLAZE", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_HUMAN_LIKE"
+    ],
+    "abilities": [
+        "ABILITY_BLAZE",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": true,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_SCRATCH" ],
-            [ 1, "MOVE_LEER" ],
-            [ 1, "MOVE_EMBER" ],
-            [ 7, "MOVE_EMBER" ],
-            [ 9, "MOVE_TAUNT" ],
-            [ 14, "MOVE_MACH_PUNCH" ],
-            [ 16, "MOVE_FURY_SWIPES" ],
-            [ 19, "MOVE_FLAME_WHEEL" ],
-            [ 26, "MOVE_FEINT" ],
-            [ 29, "MOVE_TORMENT" ],
-            [ 36, "MOVE_CLOSE_COMBAT" ],
-            [ 39, "MOVE_FIRE_SPIN" ],
-            [ 46, "MOVE_SLACK_OFF" ],
-            [ 49, "MOVE_FLARE_BLITZ" ]
+            [
+                1,
+                "MOVE_SCRATCH"
+            ],
+            [
+                1,
+                "MOVE_LEER"
+            ],
+            [
+                1,
+                "MOVE_EMBER"
+            ],
+            [
+                7,
+                "MOVE_EMBER"
+            ],
+            [
+                9,
+                "MOVE_TAUNT"
+            ],
+            [
+                14,
+                "MOVE_MACH_PUNCH"
+            ],
+            [
+                16,
+                "MOVE_FURY_SWIPES"
+            ],
+            [
+                19,
+                "MOVE_FLAME_WHEEL"
+            ],
+            [
+                26,
+                "MOVE_FEINT"
+            ],
+            [
+                29,
+                "MOVE_TORMENT"
+            ],
+            [
+                36,
+                "MOVE_CLOSE_COMBAT"
+            ],
+            [
+                39,
+                "MOVE_FIRE_SPIN"
+            ],
+            [
+                46,
+                "MOVE_SLACK_OFF"
+            ],
+            [
+                49,
+                "MOVE_FLARE_BLITZ"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -57,7 +108,6 @@
             "TM11",
             "TM12",
             "TM17",
-            "TM21",
             "TM23",
             "TM27",
             "TM28",
@@ -80,7 +130,6 @@
             "TM65",
             "TM75",
             "TM76",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",

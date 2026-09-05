@@ -7,7 +7,10 @@
         "special_attack": 60,
         "special_defense": 70
     },
-    "types": [ "TYPE_FIGHTING", "TYPE_FIGHTING" ],
+    "types": [
+        "TYPE_FIGHTING",
+        "TYPE_FIGHTING"
+    ],
     "catch_rate": 75,
     "base_exp_reward": 149,
     "ev_yields": {
@@ -26,30 +29,84 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_VITAL_SPIRIT", "ABILITY_ANGER_POINT" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_VITAL_SPIRIT",
+        "ABILITY_ANGER_POINT"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_FLING" ],
-            [ 1, "MOVE_SCRATCH" ],
-            [ 1, "MOVE_LOW_KICK" ],
-            [ 1, "MOVE_LEER" ],
-            [ 1, "MOVE_FOCUS_ENERGY" ],
-            [ 9, "MOVE_FURY_SWIPES" ],
-            [ 13, "MOVE_KARATE_CHOP" ],
-            [ 17, "MOVE_SEISMIC_TOSS" ],
-            [ 21, "MOVE_SCREECH" ],
-            [ 25, "MOVE_ASSURANCE" ],
-            [ 28, "MOVE_RAGE" ],
-            [ 35, "MOVE_SWAGGER" ],
-            [ 41, "MOVE_CROSS_CHOP" ],
-            [ 47, "MOVE_THRASH" ],
-            [ 53, "MOVE_PUNISHMENT" ],
-            [ 59, "MOVE_CLOSE_COMBAT" ]
+            [
+                1,
+                "MOVE_FLING"
+            ],
+            [
+                1,
+                "MOVE_SCRATCH"
+            ],
+            [
+                1,
+                "MOVE_LOW_KICK"
+            ],
+            [
+                1,
+                "MOVE_LEER"
+            ],
+            [
+                1,
+                "MOVE_FOCUS_ENERGY"
+            ],
+            [
+                9,
+                "MOVE_FURY_SWIPES"
+            ],
+            [
+                13,
+                "MOVE_KARATE_CHOP"
+            ],
+            [
+                17,
+                "MOVE_SEISMIC_TOSS"
+            ],
+            [
+                21,
+                "MOVE_SCREECH"
+            ],
+            [
+                25,
+                "MOVE_ASSURANCE"
+            ],
+            [
+                28,
+                "MOVE_RAGE"
+            ],
+            [
+                35,
+                "MOVE_SWAGGER"
+            ],
+            [
+                41,
+                "MOVE_CROSS_CHOP"
+            ],
+            [
+                47,
+                "MOVE_THRASH"
+            ],
+            [
+                53,
+                "MOVE_PUNISHMENT"
+            ],
+            [
+                59,
+                "MOVE_CLOSE_COMBAT"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -61,7 +118,6 @@
             "TM15",
             "TM17",
             "TM18",
-            "TM21",
             "TM23",
             "TM24",
             "TM25",
@@ -84,7 +140,6 @@
             "TM66",
             "TM68",
             "TM71",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",
@@ -112,7 +167,7 @@
             "MOVE_UPROAR"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_MANKEY",
     "footprint": {
         "has": true,

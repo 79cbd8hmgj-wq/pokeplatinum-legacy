@@ -7,7 +7,10 @@
         "special_attack": 40,
         "special_defense": 70
     },
-    "types": [ "TYPE_NORMAL", "TYPE_NORMAL" ],
+    "types": [
+        "TYPE_NORMAL",
+        "TYPE_NORMAL"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 211,
     "ev_yields": {
@@ -26,27 +29,72 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_SLOW",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_INTIMIDATE", "ABILITY_ANGER_POINT" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_INTIMIDATE",
+        "ABILITY_ANGER_POINT"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_TACKLE" ],
-            [ 3, "MOVE_TAIL_WHIP" ],
-            [ 5, "MOVE_RAGE" ],
-            [ 8, "MOVE_HORN_ATTACK" ],
-            [ 11, "MOVE_SCARY_FACE" ],
-            [ 15, "MOVE_PURSUIT" ],
-            [ 19, "MOVE_REST" ],
-            [ 24, "MOVE_PAYBACK" ],
-            [ 29, "MOVE_ZEN_HEADBUTT" ],
-            [ 35, "MOVE_TAKE_DOWN" ],
-            [ 41, "MOVE_SWAGGER" ],
-            [ 48, "MOVE_THRASH" ],
-            [ 55, "MOVE_GIGA_IMPACT" ]
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                3,
+                "MOVE_TAIL_WHIP"
+            ],
+            [
+                5,
+                "MOVE_RAGE"
+            ],
+            [
+                8,
+                "MOVE_HORN_ATTACK"
+            ],
+            [
+                11,
+                "MOVE_SCARY_FACE"
+            ],
+            [
+                15,
+                "MOVE_PURSUIT"
+            ],
+            [
+                19,
+                "MOVE_REST"
+            ],
+            [
+                24,
+                "MOVE_PAYBACK"
+            ],
+            [
+                29,
+                "MOVE_ZEN_HEADBUTT"
+            ],
+            [
+                35,
+                "MOVE_TAKE_DOWN"
+            ],
+            [
+                41,
+                "MOVE_SWAGGER"
+            ],
+            [
+                48,
+                "MOVE_THRASH"
+            ],
+            [
+                55,
+                "MOVE_GIGA_IMPACT"
+            ]
         ],
         "by_tm": [
             "TM03",
@@ -58,7 +106,6 @@
             "TM15",
             "TM17",
             "TM18",
-            "TM21",
             "TM22",
             "TM23",
             "TM24",
@@ -79,7 +126,6 @@
             "TM66",
             "TM68",
             "TM71",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",
@@ -102,7 +148,7 @@
             "MOVE_UPROAR"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_TAUROS",
     "footprint": {
         "has": true,

@@ -7,7 +7,10 @@
         "special_attack": 100,
         "special_defense": 90
     },
-    "types": [ "TYPE_GRASS", "TYPE_POISON" ],
+    "types": [
+        "TYPE_GRASS",
+        "TYPE_POISON"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 184,
     "ev_yields": {
@@ -26,20 +29,44 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_GRASS", "EGG_GROUP_GRASS" ],
-    "abilities": [ "ABILITY_CHLOROPHYLL", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_GRASS",
+        "EGG_GROUP_GRASS"
+    ],
+    "abilities": [
+        "ABILITY_CHLOROPHYLL",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_RED",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_MEGA_DRAIN" ],
-            [ 1, "MOVE_AROMATHERAPY" ],
-            [ 1, "MOVE_STUN_SPORE" ],
-            [ 1, "MOVE_POISON_POWDER" ],
-            [ 53, "MOVE_PETAL_DANCE" ],
-            [ 65, "MOVE_SOLAR_BEAM" ]
+            [
+                1,
+                "MOVE_MEGA_DRAIN"
+            ],
+            [
+                1,
+                "MOVE_AROMATHERAPY"
+            ],
+            [
+                1,
+                "MOVE_STUN_SPORE"
+            ],
+            [
+                1,
+                "MOVE_POISON_POWDER"
+            ],
+            [
+                53,
+                "MOVE_PETAL_DANCE"
+            ],
+            [
+                65,
+                "MOVE_SOLAR_BEAM"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -49,7 +76,6 @@
             "TM15",
             "TM17",
             "TM19",
-            "TM21",
             "TM22",
             "TM27",
             "TM32",
@@ -65,7 +91,6 @@
             "TM68",
             "TM70",
             "TM75",
-            "TM78",
             "TM82",
             "TM83",
             "TM86",
@@ -80,7 +105,7 @@
             "MOVE_SEED_BOMB"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_ODDISH",
     "footprint": {
         "has": true,

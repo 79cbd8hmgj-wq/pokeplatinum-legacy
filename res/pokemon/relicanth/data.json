@@ -7,7 +7,10 @@
         "special_attack": 45,
         "special_defense": 65
     },
-    "types": [ "TYPE_WATER", "TYPE_ROCK" ],
+    "types": [
+        "TYPE_WATER",
+        "TYPE_ROCK"
+    ],
     "catch_rate": 25,
     "base_exp_reward": 198,
     "ev_yields": {
@@ -26,27 +29,72 @@
     "hatch_cycles": 40,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_SLOW",
-    "egg_groups": [ "EGG_GROUP_WATER_1", "EGG_GROUP_WATER_2" ],
-    "abilities": [ "ABILITY_SWIFT_SWIM", "ABILITY_ROCK_HEAD" ],
+    "egg_groups": [
+        "EGG_GROUP_WATER_1",
+        "EGG_GROUP_WATER_2"
+    ],
+    "abilities": [
+        "ABILITY_SWIFT_SWIM",
+        "ABILITY_ROCK_HEAD"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_GRAY",
     "flip_sprite": false,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_TACKLE" ],
-            [ 1, "MOVE_HARDEN" ],
-            [ 8, "MOVE_WATER_GUN" ],
-            [ 15, "MOVE_ROCK_TOMB" ],
-            [ 22, "MOVE_YAWN" ],
-            [ 29, "MOVE_TAKE_DOWN" ],
-            [ 36, "MOVE_MUD_SPORT" ],
-            [ 43, "MOVE_ANCIENT_POWER" ],
-            [ 50, "MOVE_DOUBLE_EDGE" ],
-            [ 57, "MOVE_DIVE" ],
-            [ 64, "MOVE_REST" ],
-            [ 71, "MOVE_HYDRO_PUMP" ],
-            [ 78, "MOVE_HEAD_SMASH" ]
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                1,
+                "MOVE_HARDEN"
+            ],
+            [
+                8,
+                "MOVE_WATER_GUN"
+            ],
+            [
+                15,
+                "MOVE_ROCK_TOMB"
+            ],
+            [
+                22,
+                "MOVE_YAWN"
+            ],
+            [
+                29,
+                "MOVE_TAKE_DOWN"
+            ],
+            [
+                36,
+                "MOVE_MUD_SPORT"
+            ],
+            [
+                43,
+                "MOVE_ANCIENT_POWER"
+            ],
+            [
+                50,
+                "MOVE_DOUBLE_EDGE"
+            ],
+            [
+                57,
+                "MOVE_DIVE"
+            ],
+            [
+                64,
+                "MOVE_REST"
+            ],
+            [
+                71,
+                "MOVE_HYDRO_PUMP"
+            ],
+            [
+                78,
+                "MOVE_HEAD_SMASH"
+            ]
         ],
         "by_tm": [
             "TM03",
@@ -60,7 +108,6 @@
             "TM17",
             "TM18",
             "TM20",
-            "TM21",
             "TM26",
             "TM27",
             "TM32",
@@ -77,7 +124,6 @@
             "TM71",
             "TM76",
             "TM77",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",
@@ -109,7 +155,7 @@
             "MOVE_MUD_SLAP"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_RELICANTH",
     "footprint": {
         "has": false,

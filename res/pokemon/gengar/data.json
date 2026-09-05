@@ -7,7 +7,10 @@
         "special_attack": 130,
         "special_defense": 75
     },
-    "types": [ "TYPE_GHOST", "TYPE_POISON" ],
+    "types": [
+        "TYPE_GHOST",
+        "TYPE_POISON"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 190,
     "ev_yields": {
@@ -26,30 +29,84 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_AMORPHOUS", "EGG_GROUP_AMORPHOUS" ],
-    "abilities": [ "ABILITY_LEVITATE", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_AMORPHOUS",
+        "EGG_GROUP_AMORPHOUS"
+    ],
+    "abilities": [
+        "ABILITY_LEVITATE",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_PURPLE",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_HYPNOSIS" ],
-            [ 1, "MOVE_LICK" ],
-            [ 1, "MOVE_SPITE" ],
-            [ 5, "MOVE_SPITE" ],
-            [ 8, "MOVE_MEAN_LOOK" ],
-            [ 12, "MOVE_CURSE" ],
-            [ 15, "MOVE_NIGHT_SHADE" ],
-            [ 19, "MOVE_CONFUSE_RAY" ],
-            [ 22, "MOVE_SUCKER_PUNCH" ],
-            [ 25, "MOVE_SHADOW_PUNCH" ],
-            [ 28, "MOVE_PAYBACK" ],
-            [ 33, "MOVE_SHADOW_BALL" ],
-            [ 39, "MOVE_DREAM_EATER" ],
-            [ 44, "MOVE_DARK_PULSE" ],
-            [ 50, "MOVE_DESTINY_BOND" ],
-            [ 55, "MOVE_NIGHTMARE" ]
+            [
+                1,
+                "MOVE_HYPNOSIS"
+            ],
+            [
+                1,
+                "MOVE_LICK"
+            ],
+            [
+                1,
+                "MOVE_SPITE"
+            ],
+            [
+                5,
+                "MOVE_SPITE"
+            ],
+            [
+                8,
+                "MOVE_MEAN_LOOK"
+            ],
+            [
+                12,
+                "MOVE_CURSE"
+            ],
+            [
+                15,
+                "MOVE_NIGHT_SHADE"
+            ],
+            [
+                19,
+                "MOVE_CONFUSE_RAY"
+            ],
+            [
+                22,
+                "MOVE_SUCKER_PUNCH"
+            ],
+            [
+                25,
+                "MOVE_SHADOW_PUNCH"
+            ],
+            [
+                28,
+                "MOVE_PAYBACK"
+            ],
+            [
+                33,
+                "MOVE_SHADOW_BALL"
+            ],
+            [
+                39,
+                "MOVE_DREAM_EATER"
+            ],
+            [
+                44,
+                "MOVE_DARK_PULSE"
+            ],
+            [
+                50,
+                "MOVE_DESTINY_BOND"
+            ],
+            [
+                55,
+                "MOVE_NIGHTMARE"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -61,7 +118,6 @@
             "TM17",
             "TM18",
             "TM19",
-            "TM21",
             "TM24",
             "TM25",
             "TM27",
@@ -90,7 +146,6 @@
             "TM66",
             "TM68",
             "TM77",
-            "TM78",
             "TM79",
             "TM82",
             "TM83",
@@ -116,7 +171,7 @@
             "MOVE_UPROAR"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_GASTLY",
     "footprint": {
         "has": true,

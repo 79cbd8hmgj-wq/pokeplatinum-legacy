@@ -7,7 +7,10 @@
         "special_attack": 30,
         "special_defense": 45
     },
-    "types": [ "TYPE_ROCK", "TYPE_GROUND" ],
+    "types": [
+        "TYPE_ROCK",
+        "TYPE_GROUND"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 108,
     "ev_yields": {
@@ -26,31 +29,88 @@
     "hatch_cycles": 25,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_MINERAL", "EGG_GROUP_MINERAL" ],
-    "abilities": [ "ABILITY_ROCK_HEAD", "ABILITY_STURDY" ],
+    "egg_groups": [
+        "EGG_GROUP_MINERAL",
+        "EGG_GROUP_MINERAL"
+    ],
+    "abilities": [
+        "ABILITY_ROCK_HEAD",
+        "ABILITY_STURDY"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_GRAY",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_MUD_SPORT" ],
-            [ 1, "MOVE_TACKLE" ],
-            [ 1, "MOVE_HARDEN" ],
-            [ 1, "MOVE_BIND" ],
-            [ 6, "MOVE_SCREECH" ],
-            [ 9, "MOVE_ROCK_THROW" ],
-            [ 14, "MOVE_RAGE" ],
-            [ 17, "MOVE_ROCK_TOMB" ],
-            [ 22, "MOVE_SANDSTORM" ],
-            [ 25, "MOVE_SLAM" ],
-            [ 30, "MOVE_ROCK_POLISH" ],
-            [ 33, "MOVE_DRAGON_BREATH" ],
-            [ 38, "MOVE_CURSE" ],
-            [ 41, "MOVE_IRON_TAIL" ],
-            [ 46, "MOVE_SAND_TOMB" ],
-            [ 49, "MOVE_DOUBLE_EDGE" ],
-            [ 54, "MOVE_STONE_EDGE" ]
+            [
+                1,
+                "MOVE_MUD_SPORT"
+            ],
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                1,
+                "MOVE_HARDEN"
+            ],
+            [
+                1,
+                "MOVE_BIND"
+            ],
+            [
+                6,
+                "MOVE_SCREECH"
+            ],
+            [
+                9,
+                "MOVE_ROCK_THROW"
+            ],
+            [
+                14,
+                "MOVE_RAGE"
+            ],
+            [
+                17,
+                "MOVE_ROCK_TOMB"
+            ],
+            [
+                22,
+                "MOVE_SANDSTORM"
+            ],
+            [
+                25,
+                "MOVE_SLAM"
+            ],
+            [
+                30,
+                "MOVE_ROCK_POLISH"
+            ],
+            [
+                33,
+                "MOVE_DRAGON_BREATH"
+            ],
+            [
+                38,
+                "MOVE_CURSE"
+            ],
+            [
+                41,
+                "MOVE_IRON_TAIL"
+            ],
+            [
+                46,
+                "MOVE_SAND_TOMB"
+            ],
+            [
+                49,
+                "MOVE_DOUBLE_EDGE"
+            ],
+            [
+                54,
+                "MOVE_STONE_EDGE"
+            ]
         ],
         "by_tm": [
             "TM05",
@@ -59,7 +119,6 @@
             "TM11",
             "TM12",
             "TM17",
-            "TM21",
             "TM23",
             "TM26",
             "TM27",
@@ -81,7 +140,6 @@
             "TM74",
             "TM76",
             "TM77",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",

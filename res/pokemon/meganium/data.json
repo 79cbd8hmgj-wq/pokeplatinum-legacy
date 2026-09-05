@@ -7,7 +7,10 @@
         "special_attack": 83,
         "special_defense": 100
     },
-    "types": [ "TYPE_GRASS", "TYPE_GRASS" ],
+    "types": [
+        "TYPE_GRASS",
+        "TYPE_GRASS"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 208,
     "ev_yields": {
@@ -26,31 +29,88 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_MONSTER", "EGG_GROUP_GRASS" ],
-    "abilities": [ "ABILITY_OVERGROW", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_MONSTER",
+        "EGG_GROUP_GRASS"
+    ],
+    "abilities": [
+        "ABILITY_OVERGROW",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_GREEN",
     "flip_sprite": false,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_TACKLE" ],
-            [ 1, "MOVE_GROWL" ],
-            [ 1, "MOVE_RAZOR_LEAF" ],
-            [ 1, "MOVE_POISON_POWDER" ],
-            [ 6, "MOVE_RAZOR_LEAF" ],
-            [ 9, "MOVE_POISON_POWDER" ],
-            [ 12, "MOVE_SYNTHESIS" ],
-            [ 18, "MOVE_REFLECT" ],
-            [ 22, "MOVE_MAGICAL_LEAF" ],
-            [ 26, "MOVE_NATURAL_GIFT" ],
-            [ 32, "MOVE_PETAL_DANCE" ],
-            [ 34, "MOVE_SWEET_SCENT" ],
-            [ 40, "MOVE_LIGHT_SCREEN" ],
-            [ 46, "MOVE_BODY_SLAM" ],
-            [ 54, "MOVE_SAFEGUARD" ],
-            [ 60, "MOVE_AROMATHERAPY" ],
-            [ 66, "MOVE_SOLAR_BEAM" ]
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                1,
+                "MOVE_GROWL"
+            ],
+            [
+                1,
+                "MOVE_RAZOR_LEAF"
+            ],
+            [
+                1,
+                "MOVE_POISON_POWDER"
+            ],
+            [
+                6,
+                "MOVE_RAZOR_LEAF"
+            ],
+            [
+                9,
+                "MOVE_POISON_POWDER"
+            ],
+            [
+                12,
+                "MOVE_SYNTHESIS"
+            ],
+            [
+                18,
+                "MOVE_REFLECT"
+            ],
+            [
+                22,
+                "MOVE_MAGICAL_LEAF"
+            ],
+            [
+                26,
+                "MOVE_NATURAL_GIFT"
+            ],
+            [
+                32,
+                "MOVE_PETAL_DANCE"
+            ],
+            [
+                34,
+                "MOVE_SWEET_SCENT"
+            ],
+            [
+                40,
+                "MOVE_LIGHT_SCREEN"
+            ],
+            [
+                46,
+                "MOVE_BODY_SLAM"
+            ],
+            [
+                54,
+                "MOVE_SAFEGUARD"
+            ],
+            [
+                60,
+                "MOVE_AROMATHERAPY"
+            ],
+            [
+                66,
+                "MOVE_SOLAR_BEAM"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -62,7 +122,6 @@
             "TM17",
             "TM19",
             "TM20",
-            "TM21",
             "TM22",
             "TM23",
             "TM26",
@@ -78,7 +137,6 @@
             "TM68",
             "TM70",
             "TM75",
-            "TM78",
             "TM82",
             "TM83",
             "TM86",
@@ -99,7 +157,7 @@
             "MOVE_SEED_BOMB"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_CHIKORITA",
     "footprint": {
         "has": true,

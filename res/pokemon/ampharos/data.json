@@ -7,7 +7,10 @@
         "special_attack": 115,
         "special_defense": 90
     },
-    "types": [ "TYPE_ELECTRIC", "TYPE_ELECTRIC" ],
+    "types": [
+        "TYPE_ELECTRIC",
+        "TYPE_ELECTRIC"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 194,
     "ev_yields": {
@@ -26,30 +29,84 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_MONSTER", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_STATIC", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_MONSTER",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_STATIC",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_YELLOW",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_FIRE_PUNCH" ],
-            [ 1, "MOVE_TACKLE" ],
-            [ 1, "MOVE_GROWL" ],
-            [ 1, "MOVE_THUNDER_SHOCK" ],
-            [ 1, "MOVE_THUNDER_WAVE" ],
-            [ 5, "MOVE_GROWL" ],
-            [ 10, "MOVE_THUNDER_SHOCK" ],
-            [ 14, "MOVE_THUNDER_WAVE" ],
-            [ 20, "MOVE_COTTON_SPORE" ],
-            [ 25, "MOVE_CHARGE" ],
-            [ 30, "MOVE_THUNDER_PUNCH" ],
-            [ 34, "MOVE_DISCHARGE" ],
-            [ 42, "MOVE_SIGNAL_BEAM" ],
-            [ 51, "MOVE_LIGHT_SCREEN" ],
-            [ 59, "MOVE_POWER_GEM" ],
-            [ 68, "MOVE_THUNDER" ]
+            [
+                1,
+                "MOVE_FIRE_PUNCH"
+            ],
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                1,
+                "MOVE_GROWL"
+            ],
+            [
+                1,
+                "MOVE_THUNDER_SHOCK"
+            ],
+            [
+                1,
+                "MOVE_THUNDER_WAVE"
+            ],
+            [
+                5,
+                "MOVE_GROWL"
+            ],
+            [
+                10,
+                "MOVE_THUNDER_SHOCK"
+            ],
+            [
+                14,
+                "MOVE_THUNDER_WAVE"
+            ],
+            [
+                20,
+                "MOVE_COTTON_SPORE"
+            ],
+            [
+                25,
+                "MOVE_CHARGE"
+            ],
+            [
+                30,
+                "MOVE_THUNDER_PUNCH"
+            ],
+            [
+                34,
+                "MOVE_DISCHARGE"
+            ],
+            [
+                42,
+                "MOVE_SIGNAL_BEAM"
+            ],
+            [
+                51,
+                "MOVE_LIGHT_SCREEN"
+            ],
+            [
+                59,
+                "MOVE_POWER_GEM"
+            ],
+            [
+                68,
+                "MOVE_THUNDER"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -59,7 +116,6 @@
             "TM16",
             "TM17",
             "TM18",
-            "TM21",
             "TM23",
             "TM24",
             "TM25",
@@ -97,7 +153,7 @@
             "MOVE_SWIFT"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_MAREEP",
     "footprint": {
         "has": true,

@@ -7,7 +7,10 @@
         "special_attack": 65,
         "special_defense": 70
     },
-    "types": [ "TYPE_ROCK", "TYPE_WATER" ],
+    "types": [
+        "TYPE_ROCK",
+        "TYPE_WATER"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 199,
     "ev_yields": {
@@ -26,31 +29,88 @@
     "hatch_cycles": 30,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_WATER_1", "EGG_GROUP_WATER_3" ],
-    "abilities": [ "ABILITY_SWIFT_SWIM", "ABILITY_BATTLE_ARMOR" ],
+    "egg_groups": [
+        "EGG_GROUP_WATER_1",
+        "EGG_GROUP_WATER_3"
+    ],
+    "abilities": [
+        "ABILITY_SWIFT_SWIM",
+        "ABILITY_BATTLE_ARMOR"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_FEINT" ],
-            [ 1, "MOVE_SCRATCH" ],
-            [ 1, "MOVE_HARDEN" ],
-            [ 1, "MOVE_ABSORB" ],
-            [ 1, "MOVE_LEER" ],
-            [ 6, "MOVE_ABSORB" ],
-            [ 11, "MOVE_LEER" ],
-            [ 16, "MOVE_MUD_SHOT" ],
-            [ 21, "MOVE_SAND_ATTACK" ],
-            [ 26, "MOVE_ENDURE" ],
-            [ 31, "MOVE_AQUA_JET" ],
-            [ 36, "MOVE_MEGA_DRAIN" ],
-            [ 40, "MOVE_SLASH" ],
-            [ 45, "MOVE_METAL_SOUND" ],
-            [ 54, "MOVE_ANCIENT_POWER" ],
-            [ 63, "MOVE_WRING_OUT" ],
-            [ 72, "MOVE_NIGHT_SLASH" ]
+            [
+                1,
+                "MOVE_FEINT"
+            ],
+            [
+                1,
+                "MOVE_SCRATCH"
+            ],
+            [
+                1,
+                "MOVE_HARDEN"
+            ],
+            [
+                1,
+                "MOVE_ABSORB"
+            ],
+            [
+                1,
+                "MOVE_LEER"
+            ],
+            [
+                6,
+                "MOVE_ABSORB"
+            ],
+            [
+                11,
+                "MOVE_LEER"
+            ],
+            [
+                16,
+                "MOVE_MUD_SHOT"
+            ],
+            [
+                21,
+                "MOVE_SAND_ATTACK"
+            ],
+            [
+                26,
+                "MOVE_ENDURE"
+            ],
+            [
+                31,
+                "MOVE_AQUA_JET"
+            ],
+            [
+                36,
+                "MOVE_MEGA_DRAIN"
+            ],
+            [
+                40,
+                "MOVE_SLASH"
+            ],
+            [
+                45,
+                "MOVE_METAL_SOUND"
+            ],
+            [
+                54,
+                "MOVE_ANCIENT_POWER"
+            ],
+            [
+                63,
+                "MOVE_WRING_OUT"
+            ],
+            [
+                72,
+                "MOVE_NIGHT_SLASH"
+            ]
         ],
         "by_tm": [
             "TM03",
@@ -63,7 +123,6 @@
             "TM17",
             "TM18",
             "TM19",
-            "TM21",
             "TM27",
             "TM28",
             "TM31",
@@ -83,7 +142,6 @@
             "TM71",
             "TM75",
             "TM76",
-            "TM78",
             "TM80",
             "TM81",
             "TM82",
@@ -111,7 +169,7 @@
             "MOVE_KNOCK_OFF"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_KABUTO",
     "footprint": {
         "has": true,

@@ -7,7 +7,10 @@
         "special_attack": 35,
         "special_defense": 110
     },
-    "types": [ "TYPE_FIGHTING", "TYPE_FIGHTING" ],
+    "types": [
+        "TYPE_FIGHTING",
+        "TYPE_FIGHTING"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 138,
     "ev_yields": {
@@ -26,28 +29,76 @@
     "hatch_cycles": 25,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_HUMAN_LIKE", "EGG_GROUP_HUMAN_LIKE" ],
-    "abilities": [ "ABILITY_INTIMIDATE", "ABILITY_TECHNICIAN" ],
+    "egg_groups": [
+        "EGG_GROUP_HUMAN_LIKE",
+        "EGG_GROUP_HUMAN_LIKE"
+    ],
+    "abilities": [
+        "ABILITY_INTIMIDATE",
+        "ABILITY_TECHNICIAN"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_REVENGE" ],
-            [ 1, "MOVE_ROLLING_KICK" ],
-            [ 6, "MOVE_FOCUS_ENERGY" ],
-            [ 10, "MOVE_PURSUIT" ],
-            [ 15, "MOVE_QUICK_ATTACK" ],
-            [ 19, "MOVE_TRIPLE_KICK" ],
-            [ 24, "MOVE_RAPID_SPIN" ],
-            [ 28, "MOVE_COUNTER" ],
-            [ 33, "MOVE_FEINT" ],
-            [ 37, "MOVE_AGILITY" ],
-            [ 42, "MOVE_GYRO_BALL" ],
-            [ 46, "MOVE_DETECT" ],
-            [ 51, "MOVE_CLOSE_COMBAT" ],
-            [ 55, "MOVE_ENDEAVOR" ]
+            [
+                1,
+                "MOVE_REVENGE"
+            ],
+            [
+                1,
+                "MOVE_ROLLING_KICK"
+            ],
+            [
+                6,
+                "MOVE_FOCUS_ENERGY"
+            ],
+            [
+                10,
+                "MOVE_PURSUIT"
+            ],
+            [
+                15,
+                "MOVE_QUICK_ATTACK"
+            ],
+            [
+                19,
+                "MOVE_TRIPLE_KICK"
+            ],
+            [
+                24,
+                "MOVE_RAPID_SPIN"
+            ],
+            [
+                28,
+                "MOVE_COUNTER"
+            ],
+            [
+                33,
+                "MOVE_FEINT"
+            ],
+            [
+                37,
+                "MOVE_AGILITY"
+            ],
+            [
+                42,
+                "MOVE_GYRO_BALL"
+            ],
+            [
+                46,
+                "MOVE_DETECT"
+            ],
+            [
+                51,
+                "MOVE_CLOSE_COMBAT"
+            ],
+            [
+                55,
+                "MOVE_ENDEAVOR"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -56,7 +107,6 @@
             "TM11",
             "TM17",
             "TM18",
-            "TM21",
             "TM26",
             "TM27",
             "TM28",
@@ -72,7 +122,6 @@
             "TM58",
             "TM71",
             "TM74",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",
@@ -93,7 +142,7 @@
             "MOVE_SWIFT"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_TYROGUE",
     "footprint": {
         "has": true,

@@ -7,7 +7,10 @@
         "special_attack": 110,
         "special_defense": 80
     },
-    "types": [ "TYPE_DARK", "TYPE_FIRE" ],
+    "types": [
+        "TYPE_DARK",
+        "TYPE_FIRE"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 204,
     "ev_yields": {
@@ -26,31 +29,88 @@
     "hatch_cycles": 20,
     "base_friendship": 35,
     "exp_rate": "EXP_RATE_SLOW",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_EARLY_BIRD", "ABILITY_FLASH_FIRE" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_EARLY_BIRD",
+        "ABILITY_FLASH_FIRE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BLACK",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_THUNDER_FANG" ],
-            [ 1, "MOVE_LEER" ],
-            [ 1, "MOVE_EMBER" ],
-            [ 1, "MOVE_HOWL" ],
-            [ 1, "MOVE_SMOG" ],
-            [ 4, "MOVE_HOWL" ],
-            [ 9, "MOVE_SMOG" ],
-            [ 14, "MOVE_ROAR" ],
-            [ 17, "MOVE_BITE" ],
-            [ 22, "MOVE_ODOR_SLEUTH" ],
-            [ 28, "MOVE_BEAT_UP" ],
-            [ 32, "MOVE_FIRE_FANG" ],
-            [ 38, "MOVE_FAINT_ATTACK" ],
-            [ 44, "MOVE_EMBARGO" ],
-            [ 48, "MOVE_FLAMETHROWER" ],
-            [ 54, "MOVE_CRUNCH" ],
-            [ 60, "MOVE_NASTY_PLOT" ]
+            [
+                1,
+                "MOVE_THUNDER_FANG"
+            ],
+            [
+                1,
+                "MOVE_LEER"
+            ],
+            [
+                1,
+                "MOVE_EMBER"
+            ],
+            [
+                1,
+                "MOVE_HOWL"
+            ],
+            [
+                1,
+                "MOVE_SMOG"
+            ],
+            [
+                4,
+                "MOVE_HOWL"
+            ],
+            [
+                9,
+                "MOVE_SMOG"
+            ],
+            [
+                14,
+                "MOVE_ROAR"
+            ],
+            [
+                17,
+                "MOVE_BITE"
+            ],
+            [
+                22,
+                "MOVE_ODOR_SLEUTH"
+            ],
+            [
+                28,
+                "MOVE_BEAT_UP"
+            ],
+            [
+                32,
+                "MOVE_FIRE_FANG"
+            ],
+            [
+                38,
+                "MOVE_FAINT_ATTACK"
+            ],
+            [
+                44,
+                "MOVE_EMBARGO"
+            ],
+            [
+                48,
+                "MOVE_FLAMETHROWER"
+            ],
+            [
+                54,
+                "MOVE_CRUNCH"
+            ],
+            [
+                60,
+                "MOVE_NASTY_PLOT"
+            ]
         ],
         "by_tm": [
             "TM05",
@@ -60,7 +120,6 @@
             "TM12",
             "TM15",
             "TM17",
-            "TM21",
             "TM22",
             "TM23",
             "TM27",
@@ -82,7 +141,6 @@
             "TM63",
             "TM66",
             "TM68",
-            "TM78",
             "TM79",
             "TM82",
             "TM83",
@@ -102,7 +160,7 @@
             "MOVE_UPROAR"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_HOUNDOUR",
     "footprint": {
         "has": true,
