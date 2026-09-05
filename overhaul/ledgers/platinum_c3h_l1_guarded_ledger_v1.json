@@ -1,0 +1,717 @@
+{
+  "version": 1,
+  "domain": "pokemon",
+  "changes": [
+    {
+      "species": "blastoise",
+      "source_sha256": "1bdd16687f75111a7aea1b8db08defe5628958e866afddd2bd723d616db636cf",
+      "operation": "set_base_stat",
+      "stat": "defense",
+      "from": 100,
+      "to": 110
+    },
+    {
+      "species": "blastoise",
+      "source_sha256": "1bdd16687f75111a7aea1b8db08defe5628958e866afddd2bd723d616db636cf",
+      "operation": "set_base_stat",
+      "stat": "speed",
+      "from": 78,
+      "to": 63
+    },
+    {
+      "species": "blastoise",
+      "source_sha256": "1bdd16687f75111a7aea1b8db08defe5628958e866afddd2bd723d616db636cf",
+      "operation": "set_base_stat",
+      "stat": "special_attack",
+      "from": 85,
+      "to": 90
+    },
+    {
+      "species": "blastoise",
+      "source_sha256": "1bdd16687f75111a7aea1b8db08defe5628958e866afddd2bd723d616db636cf",
+      "operation": "set_types",
+      "from": [
+        "TYPE_WATER",
+        "TYPE_WATER"
+      ],
+      "to": [
+        "TYPE_WATER",
+        "TYPE_GROUND"
+      ]
+    },
+    {
+      "species": "blastoise",
+      "source_sha256": "1bdd16687f75111a7aea1b8db08defe5628958e866afddd2bd723d616db636cf",
+      "operation": "insert_level_move",
+      "entry": [
+        37,
+        "MOVE_MUD_BOMB"
+      ]
+    },
+    {
+      "species": "blastoise",
+      "source_sha256": "1bdd16687f75111a7aea1b8db08defe5628958e866afddd2bd723d616db636cf",
+      "operation": "replace_level_move",
+      "from": [
+        53,
+        "MOVE_RAIN_DANCE"
+      ],
+      "to": [
+        53,
+        "MOVE_EARTH_POWER"
+      ]
+    },
+    {
+      "species": "raichu",
+      "source_sha256": "d6e4a6279261cdbd362e3f702f2c746162a1f7eb0d9393b320f759282b611f28",
+      "operation": "set_base_stat",
+      "stat": "attack",
+      "from": 90,
+      "to": 70
+    },
+    {
+      "species": "raichu",
+      "source_sha256": "d6e4a6279261cdbd362e3f702f2c746162a1f7eb0d9393b320f759282b611f28",
+      "operation": "set_base_stat",
+      "stat": "defense",
+      "from": 55,
+      "to": 75
+    },
+    {
+      "species": "raichu",
+      "source_sha256": "d6e4a6279261cdbd362e3f702f2c746162a1f7eb0d9393b320f759282b611f28",
+      "operation": "set_base_stat",
+      "stat": "speed",
+      "from": 100,
+      "to": 90
+    },
+    {
+      "species": "raichu",
+      "source_sha256": "d6e4a6279261cdbd362e3f702f2c746162a1f7eb0d9393b320f759282b611f28",
+      "operation": "set_base_stat",
+      "stat": "special_attack",
+      "from": 90,
+      "to": 100
+    },
+    {
+      "species": "raichu",
+      "source_sha256": "d6e4a6279261cdbd362e3f702f2c746162a1f7eb0d9393b320f759282b611f28",
+      "operation": "set_types",
+      "from": [
+        "TYPE_ELECTRIC",
+        "TYPE_ELECTRIC"
+      ],
+      "to": [
+        "TYPE_ELECTRIC",
+        "TYPE_STEEL"
+      ]
+    },
+    {
+      "species": "raichu",
+      "source_sha256": "d6e4a6279261cdbd362e3f702f2c746162a1f7eb0d9393b320f759282b611f28",
+      "operation": "insert_level_move",
+      "entry": [
+        1,
+        "MOVE_METAL_RAY"
+      ]
+    },
+    {
+      "species": "psyduck",
+      "source_sha256": "86d431c3bf1d4fc39ba04a0761e113ca308e122222b37a309e50db66933e149e",
+      "operation": "set_types",
+      "from": [
+        "TYPE_WATER",
+        "TYPE_WATER"
+      ],
+      "to": [
+        "TYPE_WATER",
+        "TYPE_PSYCHIC"
+      ]
+    },
+    {
+      "species": "psyduck",
+      "source_sha256": "86d431c3bf1d4fc39ba04a0761e113ca308e122222b37a309e50db66933e149e",
+      "operation": "replace_level_move",
+      "from": [
+        27,
+        "MOVE_FURY_SWIPES"
+      ],
+      "to": [
+        27,
+        "MOVE_PSYBEAM"
+      ]
+    },
+    {
+      "species": "psyduck",
+      "source_sha256": "86d431c3bf1d4fc39ba04a0761e113ca308e122222b37a309e50db66933e149e",
+      "operation": "replace_level_move",
+      "from": [
+        40,
+        "MOVE_ZEN_HEADBUTT"
+      ],
+      "to": [
+        40,
+        "MOVE_PSYCHIC"
+      ]
+    },
+    {
+      "species": "golduck",
+      "source_sha256": "1b70457344550d278921dc4912d881c310eeda5f3ddcad60a56304978831e6b5",
+      "operation": "set_types",
+      "from": [
+        "TYPE_WATER",
+        "TYPE_WATER"
+      ],
+      "to": [
+        "TYPE_WATER",
+        "TYPE_PSYCHIC"
+      ]
+    },
+    {
+      "species": "golduck",
+      "source_sha256": "1b70457344550d278921dc4912d881c310eeda5f3ddcad60a56304978831e6b5",
+      "operation": "replace_level_move",
+      "from": [
+        27,
+        "MOVE_FURY_SWIPES"
+      ],
+      "to": [
+        27,
+        "MOVE_PSYBEAM"
+      ]
+    },
+    {
+      "species": "golduck",
+      "source_sha256": "1b70457344550d278921dc4912d881c310eeda5f3ddcad60a56304978831e6b5",
+      "operation": "replace_level_move",
+      "from": [
+        44,
+        "MOVE_ZEN_HEADBUTT"
+      ],
+      "to": [
+        44,
+        "MOVE_PSYCHIC"
+      ]
+    },
+    {
+      "species": "farfetchd",
+      "source_sha256": "18e642317dd2e0240fa9c0cfe3553a614f7c532ce7a398f6c2ec2a4ed91c41dd",
+      "operation": "set_base_stat",
+      "stat": "hp",
+      "from": 52,
+      "to": 62
+    },
+    {
+      "species": "farfetchd",
+      "source_sha256": "18e642317dd2e0240fa9c0cfe3553a614f7c532ce7a398f6c2ec2a4ed91c41dd",
+      "operation": "set_base_stat",
+      "stat": "attack",
+      "from": 65,
+      "to": 95
+    },
+    {
+      "species": "farfetchd",
+      "source_sha256": "18e642317dd2e0240fa9c0cfe3553a614f7c532ce7a398f6c2ec2a4ed91c41dd",
+      "operation": "set_base_stat",
+      "stat": "defense",
+      "from": 55,
+      "to": 70
+    },
+    {
+      "species": "farfetchd",
+      "source_sha256": "18e642317dd2e0240fa9c0cfe3553a614f7c532ce7a398f6c2ec2a4ed91c41dd",
+      "operation": "set_base_stat",
+      "stat": "speed",
+      "from": 60,
+      "to": 70
+    },
+    {
+      "species": "farfetchd",
+      "source_sha256": "18e642317dd2e0240fa9c0cfe3553a614f7c532ce7a398f6c2ec2a4ed91c41dd",
+      "operation": "set_base_stat",
+      "stat": "special_defense",
+      "from": 62,
+      "to": 75
+    },
+    {
+      "species": "farfetchd",
+      "source_sha256": "18e642317dd2e0240fa9c0cfe3553a614f7c532ce7a398f6c2ec2a4ed91c41dd",
+      "operation": "set_types",
+      "from": [
+        "TYPE_NORMAL",
+        "TYPE_FLYING"
+      ],
+      "to": [
+        "TYPE_FIGHTING",
+        "TYPE_FLYING"
+      ]
+    },
+    {
+      "species": "farfetchd",
+      "source_sha256": "18e642317dd2e0240fa9c0cfe3553a614f7c532ce7a398f6c2ec2a4ed91c41dd",
+      "operation": "set_abilities",
+      "from": [
+        "ABILITY_KEEN_EYE",
+        "ABILITY_INNER_FOCUS"
+      ],
+      "to": [
+        "ABILITY_SUPER_LUCK",
+        "ABILITY_INNER_FOCUS"
+      ]
+    },
+    {
+      "species": "farfetchd",
+      "source_sha256": "18e642317dd2e0240fa9c0cfe3553a614f7c532ce7a398f6c2ec2a4ed91c41dd",
+      "operation": "replace_level_move",
+      "from": [
+        21,
+        "MOVE_AIR_CUTTER"
+      ],
+      "to": [
+        21,
+        "MOVE_STALK_SLASH"
+      ]
+    },
+    {
+      "species": "farfetchd",
+      "source_sha256": "18e642317dd2e0240fa9c0cfe3553a614f7c532ce7a398f6c2ec2a4ed91c41dd",
+      "operation": "replace_level_move",
+      "from": [
+        37,
+        "MOVE_AIR_SLASH"
+      ],
+      "to": [
+        37,
+        "MOVE_DRILL_PECK"
+      ]
+    },
+    {
+      "species": "farfetchd",
+      "source_sha256": "18e642317dd2e0240fa9c0cfe3553a614f7c532ce7a398f6c2ec2a4ed91c41dd",
+      "operation": "replace_level_move",
+      "from": [
+        43,
+        "MOVE_FEINT"
+      ],
+      "to": [
+        43,
+        "MOVE_CLOSE_COMBAT"
+      ]
+    },
+    {
+      "species": "electabuzz",
+      "source_sha256": "c458f1c7d1d9353dc953f527504f7461d67fe1ff867efa103f80c9096dfaf486",
+      "operation": "set_types",
+      "from": [
+        "TYPE_ELECTRIC",
+        "TYPE_ELECTRIC"
+      ],
+      "to": [
+        "TYPE_ELECTRIC",
+        "TYPE_FIGHTING"
+      ]
+    },
+    {
+      "species": "electivire",
+      "source_sha256": "a91c34fabc5b10900ed1694d395efb7d94ccf8eecd9a0367aa6fdced9eeec0a9",
+      "operation": "set_types",
+      "from": [
+        "TYPE_ELECTRIC",
+        "TYPE_ELECTRIC"
+      ],
+      "to": [
+        "TYPE_ELECTRIC",
+        "TYPE_FIGHTING"
+      ]
+    },
+    {
+      "species": "pinsir",
+      "source_sha256": "ac2384cd2c8dfd79effa4eef8db853626cb32c0fac9846f09df811e1b0e2a219",
+      "operation": "set_types",
+      "from": [
+        "TYPE_BUG",
+        "TYPE_BUG"
+      ],
+      "to": [
+        "TYPE_BUG",
+        "TYPE_FIGHTING"
+      ]
+    },
+    {
+      "species": "feraligatr",
+      "source_sha256": "2bba8c4e675c2abc497d68f9cb19c3f10df80ff72952b05e15ea27a33eafd9e9",
+      "operation": "set_types",
+      "from": [
+        "TYPE_WATER",
+        "TYPE_WATER"
+      ],
+      "to": [
+        "TYPE_WATER",
+        "TYPE_GROUND"
+      ]
+    },
+    {
+      "species": "feraligatr",
+      "source_sha256": "2bba8c4e675c2abc497d68f9cb19c3f10df80ff72952b05e15ea27a33eafd9e9",
+      "operation": "insert_level_move",
+      "entry": [
+        31,
+        "MOVE_RIPTIDE_RUSH"
+      ]
+    },
+    {
+      "species": "feraligatr",
+      "source_sha256": "2bba8c4e675c2abc497d68f9cb19c3f10df80ff72952b05e15ea27a33eafd9e9",
+      "operation": "replace_level_move",
+      "from": [
+        37,
+        "MOVE_SLASH"
+      ],
+      "to": [
+        37,
+        "MOVE_DIG"
+      ]
+    },
+    {
+      "species": "sceptile",
+      "source_sha256": "45e4e9331d866d833ee0d55aada1398ceb73af0108692ad2197c0a3af6551bd0",
+      "operation": "set_types",
+      "from": [
+        "TYPE_GRASS",
+        "TYPE_GRASS"
+      ],
+      "to": [
+        "TYPE_GRASS",
+        "TYPE_DRAGON"
+      ]
+    },
+    {
+      "species": "sceptile",
+      "source_sha256": "45e4e9331d866d833ee0d55aada1398ceb73af0108692ad2197c0a3af6551bd0",
+      "operation": "replace_level_move",
+      "from": [
+        43,
+        "MOVE_SLAM"
+      ],
+      "to": [
+        43,
+        "MOVE_DRAGON_PULSE"
+      ]
+    },
+    {
+      "species": "vigoroth",
+      "source_sha256": "1c9f7976f3805e14110ef1f32dce2048f8a14326a78cfa113ba291ab71a14381",
+      "operation": "set_types",
+      "from": [
+        "TYPE_NORMAL",
+        "TYPE_NORMAL"
+      ],
+      "to": [
+        "TYPE_NORMAL",
+        "TYPE_FIGHTING"
+      ]
+    },
+    {
+      "species": "vigoroth",
+      "source_sha256": "1c9f7976f3805e14110ef1f32dce2048f8a14326a78cfa113ba291ab71a14381",
+      "operation": "replace_level_move",
+      "from": [
+        25,
+        "MOVE_ENDURE"
+      ],
+      "to": [
+        25,
+        "MOVE_BRICK_BREAK"
+      ]
+    },
+    {
+      "species": "slaking",
+      "source_sha256": "b524e8fa2a3c6591cd2990acd2a42656ebe69323a5676c5e2df4ccc66fb07b04",
+      "operation": "set_types",
+      "from": [
+        "TYPE_NORMAL",
+        "TYPE_NORMAL"
+      ],
+      "to": [
+        "TYPE_NORMAL",
+        "TYPE_FIGHTING"
+      ]
+    },
+    {
+      "species": "slaking",
+      "source_sha256": "b524e8fa2a3c6591cd2990acd2a42656ebe69323a5676c5e2df4ccc66fb07b04",
+      "operation": "replace_level_move",
+      "from": [
+        37,
+        "MOVE_COUNTER"
+      ],
+      "to": [
+        37,
+        "MOVE_BRICK_BREAK"
+      ]
+    },
+    {
+      "species": "milotic",
+      "source_sha256": "6858d878fe2d7fbd9dc7b527f17749e8fd5edcbf8386cd82c32a8f8ed4f0a8da",
+      "operation": "set_types",
+      "from": [
+        "TYPE_WATER",
+        "TYPE_WATER"
+      ],
+      "to": [
+        "TYPE_WATER",
+        "TYPE_DRAGON"
+      ]
+    },
+    {
+      "species": "milotic",
+      "source_sha256": "6858d878fe2d7fbd9dc7b527f17749e8fd5edcbf8386cd82c32a8f8ed4f0a8da",
+      "operation": "replace_level_move",
+      "from": [
+        33,
+        "MOVE_RAIN_DANCE"
+      ],
+      "to": [
+        33,
+        "MOVE_DRAGON_PULSE"
+      ]
+    },
+    {
+      "species": "glalie",
+      "source_sha256": "f7c1ba77fc19b572aecd22530d8d633aeede4b889db500e4e1456193e0800736",
+      "operation": "set_base_stat",
+      "stat": "attack",
+      "from": 80,
+      "to": 90
+    },
+    {
+      "species": "glalie",
+      "source_sha256": "f7c1ba77fc19b572aecd22530d8d633aeede4b889db500e4e1456193e0800736",
+      "operation": "set_base_stat",
+      "stat": "defense",
+      "from": 80,
+      "to": 100
+    },
+    {
+      "species": "glalie",
+      "source_sha256": "f7c1ba77fc19b572aecd22530d8d633aeede4b889db500e4e1456193e0800736",
+      "operation": "set_base_stat",
+      "stat": "speed",
+      "from": 80,
+      "to": 50
+    },
+    {
+      "species": "glalie",
+      "source_sha256": "f7c1ba77fc19b572aecd22530d8d633aeede4b889db500e4e1456193e0800736",
+      "operation": "set_base_stat",
+      "stat": "special_attack",
+      "from": 80,
+      "to": 70
+    },
+    {
+      "species": "glalie",
+      "source_sha256": "f7c1ba77fc19b572aecd22530d8d633aeede4b889db500e4e1456193e0800736",
+      "operation": "set_base_stat",
+      "stat": "special_defense",
+      "from": 80,
+      "to": 90
+    },
+    {
+      "species": "glalie",
+      "source_sha256": "f7c1ba77fc19b572aecd22530d8d633aeede4b889db500e4e1456193e0800736",
+      "operation": "set_types",
+      "from": [
+        "TYPE_ICE",
+        "TYPE_ICE"
+      ],
+      "to": [
+        "TYPE_ICE",
+        "TYPE_STEEL"
+      ]
+    },
+    {
+      "species": "glalie",
+      "source_sha256": "f7c1ba77fc19b572aecd22530d8d633aeede4b889db500e4e1456193e0800736",
+      "operation": "insert_level_move",
+      "entry": [
+        43,
+        "MOVE_IRON_HEAD"
+      ]
+    },
+    {
+      "species": "glalie",
+      "source_sha256": "f7c1ba77fc19b572aecd22530d8d633aeede4b889db500e4e1456193e0800736",
+      "operation": "insert_level_move",
+      "entry": [
+        46,
+        "MOVE_FROST_RUSH"
+      ]
+    },
+    {
+      "species": "shinx",
+      "source_sha256": "4d16618a902b11086886a52df03546d0ab6ccf43784afe17c9cc1cfe95d18dcd",
+      "operation": "set_types",
+      "from": [
+        "TYPE_ELECTRIC",
+        "TYPE_ELECTRIC"
+      ],
+      "to": [
+        "TYPE_ELECTRIC",
+        "TYPE_DARK"
+      ]
+    },
+    {
+      "species": "luxio",
+      "source_sha256": "3a196fdf3df6f708238d05752aa0ed2f6d9e3afb3c2724d11ce63df123745fdd",
+      "operation": "set_types",
+      "from": [
+        "TYPE_ELECTRIC",
+        "TYPE_ELECTRIC"
+      ],
+      "to": [
+        "TYPE_ELECTRIC",
+        "TYPE_DARK"
+      ]
+    },
+    {
+      "species": "luxray",
+      "source_sha256": "0ea7a7f1975ffd4ad2539898e771d51289b69574fa10a88ab152690a223e2b7e",
+      "operation": "set_types",
+      "from": [
+        "TYPE_ELECTRIC",
+        "TYPE_ELECTRIC"
+      ],
+      "to": [
+        "TYPE_ELECTRIC",
+        "TYPE_DARK"
+      ]
+    },
+    {
+      "species": "banette",
+      "source_sha256": "803fd79a773a6ccd296b0f3a032f56cfc47df5e32e6a6d3f0030d4d2e2e07214",
+      "operation": "set_base_stat",
+      "stat": "hp",
+      "from": 64,
+      "to": 65
+    },
+    {
+      "species": "banette",
+      "source_sha256": "803fd79a773a6ccd296b0f3a032f56cfc47df5e32e6a6d3f0030d4d2e2e07214",
+      "operation": "set_base_stat",
+      "stat": "attack",
+      "from": 115,
+      "to": 125
+    },
+    {
+      "species": "banette",
+      "source_sha256": "803fd79a773a6ccd296b0f3a032f56cfc47df5e32e6a6d3f0030d4d2e2e07214",
+      "operation": "set_base_stat",
+      "stat": "defense",
+      "from": 65,
+      "to": 70
+    },
+    {
+      "species": "banette",
+      "source_sha256": "803fd79a773a6ccd296b0f3a032f56cfc47df5e32e6a6d3f0030d4d2e2e07214",
+      "operation": "set_base_stat",
+      "stat": "speed",
+      "from": 65,
+      "to": 75
+    },
+    {
+      "species": "banette",
+      "source_sha256": "803fd79a773a6ccd296b0f3a032f56cfc47df5e32e6a6d3f0030d4d2e2e07214",
+      "operation": "set_base_stat",
+      "stat": "special_attack",
+      "from": 83,
+      "to": 75
+    },
+    {
+      "species": "banette",
+      "source_sha256": "803fd79a773a6ccd296b0f3a032f56cfc47df5e32e6a6d3f0030d4d2e2e07214",
+      "operation": "set_base_stat",
+      "stat": "special_defense",
+      "from": 63,
+      "to": 70
+    },
+    {
+      "species": "banette",
+      "source_sha256": "803fd79a773a6ccd296b0f3a032f56cfc47df5e32e6a6d3f0030d4d2e2e07214",
+      "operation": "insert_level_move",
+      "entry": [
+        38,
+        "MOVE_CURSED_STITCH"
+      ]
+    },
+    {
+      "species": "banette",
+      "source_sha256": "803fd79a773a6ccd296b0f3a032f56cfc47df5e32e6a6d3f0030d4d2e2e07214",
+      "operation": "replace_level_move",
+      "from": [
+        42,
+        "MOVE_EMBARGO"
+      ],
+      "to": [
+        42,
+        "MOVE_SHADOW_CLAW"
+      ]
+    },
+    {
+      "species": "wigglytuff",
+      "source_sha256": "ef6ed2e1f7179de1bf735ae563d4eb9f4ab3f2c1764ce7d8192b06e2cbb4288e",
+      "operation": "set_base_stat",
+      "stat": "special_attack",
+      "from": 75,
+      "to": 85
+    },
+    {
+      "species": "wigglytuff",
+      "source_sha256": "ef6ed2e1f7179de1bf735ae563d4eb9f4ab3f2c1764ce7d8192b06e2cbb4288e",
+      "operation": "set_abilities",
+      "from": [
+        "ABILITY_CUTE_CHARM",
+        "ABILITY_NONE"
+      ],
+      "to": [
+        "ABILITY_CUTE_CHARM",
+        "ABILITY_SOUNDPROOF"
+      ]
+    },
+    {
+      "species": "wigglytuff",
+      "source_sha256": "ef6ed2e1f7179de1bf735ae563d4eb9f4ab3f2c1764ce7d8192b06e2cbb4288e",
+      "operation": "insert_level_move",
+      "entry": [
+        25,
+        "MOVE_UPROAR"
+      ]
+    },
+    {
+      "species": "wigglytuff",
+      "source_sha256": "ef6ed2e1f7179de1bf735ae563d4eb9f4ab3f2c1764ce7d8192b06e2cbb4288e",
+      "operation": "insert_level_move",
+      "entry": [
+        33,
+        "MOVE_REST"
+      ]
+    },
+    {
+      "species": "wigglytuff",
+      "source_sha256": "ef6ed2e1f7179de1bf735ae563d4eb9f4ab3f2c1764ce7d8192b06e2cbb4288e",
+      "operation": "insert_level_move",
+      "entry": [
+        41,
+        "MOVE_MIMIC"
+      ]
+    },
+    {
+      "species": "wigglytuff",
+      "source_sha256": "ef6ed2e1f7179de1bf735ae563d4eb9f4ab3f2c1764ce7d8192b06e2cbb4288e",
+      "operation": "insert_level_move",
+      "entry": [
+        45,
+        "MOVE_HYPER_VOICE"
+      ]
+    }
+  ]
+}
