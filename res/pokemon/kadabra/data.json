@@ -7,7 +7,10 @@
         "special_attack": 120,
         "special_defense": 70
     },
-    "types": [ "TYPE_PSYCHIC", "TYPE_PSYCHIC" ],
+    "types": [
+        "TYPE_PSYCHIC",
+        "TYPE_PSYCHIC"
+    ],
     "catch_rate": 100,
     "base_exp_reward": 145,
     "ev_yields": {
@@ -26,28 +29,76 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_HUMAN_LIKE", "EGG_GROUP_HUMAN_LIKE" ],
-    "abilities": [ "ABILITY_SYNCHRONIZE", "ABILITY_INNER_FOCUS" ],
+    "egg_groups": [
+        "EGG_GROUP_HUMAN_LIKE",
+        "EGG_GROUP_HUMAN_LIKE"
+    ],
+    "abilities": [
+        "ABILITY_SYNCHRONIZE",
+        "ABILITY_INNER_FOCUS"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_TELEPORT" ],
-            [ 1, "MOVE_KINESIS" ],
-            [ 1, "MOVE_CONFUSION" ],
-            [ 16, "MOVE_CONFUSION" ],
-            [ 18, "MOVE_DISABLE" ],
-            [ 22, "MOVE_MIRACLE_EYE" ],
-            [ 24, "MOVE_PSYBEAM" ],
-            [ 28, "MOVE_REFLECT" ],
-            [ 30, "MOVE_RECOVER" ],
-            [ 34, "MOVE_PSYCHO_CUT" ],
-            [ 36, "MOVE_ROLE_PLAY" ],
-            [ 40, "MOVE_PSYCHIC" ],
-            [ 42, "MOVE_FUTURE_SIGHT" ],
-            [ 46, "MOVE_TRICK" ]
+            [
+                1,
+                "MOVE_TELEPORT"
+            ],
+            [
+                1,
+                "MOVE_KINESIS"
+            ],
+            [
+                1,
+                "MOVE_CONFUSION"
+            ],
+            [
+                16,
+                "MOVE_CONFUSION"
+            ],
+            [
+                18,
+                "MOVE_DISABLE"
+            ],
+            [
+                22,
+                "MOVE_MIRACLE_EYE"
+            ],
+            [
+                24,
+                "MOVE_PSYBEAM"
+            ],
+            [
+                28,
+                "MOVE_REFLECT"
+            ],
+            [
+                30,
+                "MOVE_RECOVER"
+            ],
+            [
+                34,
+                "MOVE_PSYCHO_CUT"
+            ],
+            [
+                36,
+                "MOVE_ROLE_PLAY"
+            ],
+            [
+                40,
+                "MOVE_PSYCHIC"
+            ],
+            [
+                42,
+                "MOVE_FUTURE_SIGHT"
+            ],
+            [
+                46,
+                "MOVE_TRICK"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -60,7 +111,6 @@
             "TM17",
             "TM18",
             "TM20",
-            "TM21",
             "TM23",
             "TM27",
             "TM29",
@@ -86,7 +136,6 @@
             "TM70",
             "TM73",
             "TM77",
-            "TM78",
             "TM82",
             "TM83",
             "TM85",
@@ -107,7 +156,10 @@
         ]
     },
     "evolutions": [
-        [ "EVO_TRADE", "SPECIES_ALAKAZAM" ]
+        [
+            "EVO_TRADE",
+            "SPECIES_ALAKAZAM"
+        ]
     ],
     "offspring": "SPECIES_ABRA",
     "footprint": {

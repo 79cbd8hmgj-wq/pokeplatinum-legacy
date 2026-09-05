@@ -7,7 +7,10 @@
         "special_attack": 65,
         "special_defense": 65
     },
-    "types": [ "TYPE_NORMAL", "TYPE_NORMAL" ],
+    "types": [
+        "TYPE_NORMAL",
+        "TYPE_NORMAL"
+    ],
     "catch_rate": 90,
     "base_exp_reward": 148,
     "ev_yields": {
@@ -26,32 +29,92 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_LIMBER", "ABILITY_TECHNICIAN" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_LIMBER",
+        "ABILITY_TECHNICIAN"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_YELLOW",
     "flip_sprite": false,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_SWITCHEROO" ],
-            [ 1, "MOVE_SCRATCH" ],
-            [ 1, "MOVE_GROWL" ],
-            [ 1, "MOVE_BITE" ],
-            [ 1, "MOVE_FAKE_OUT" ],
-            [ 6, "MOVE_BITE" ],
-            [ 9, "MOVE_FAKE_OUT" ],
-            [ 14, "MOVE_FURY_SWIPES" ],
-            [ 17, "MOVE_SCREECH" ],
-            [ 22, "MOVE_FAINT_ATTACK" ],
-            [ 25, "MOVE_TAUNT" ],
-            [ 32, "MOVE_POWER_GEM" ],
-            [ 37, "MOVE_SLASH" ],
-            [ 44, "MOVE_NASTY_PLOT" ],
-            [ 49, "MOVE_ASSURANCE" ],
-            [ 56, "MOVE_CAPTIVATE" ],
-            [ 61, "MOVE_NIGHT_SLASH" ],
-            [ 68, "MOVE_FEINT" ]
+            [
+                1,
+                "MOVE_SWITCHEROO"
+            ],
+            [
+                1,
+                "MOVE_SCRATCH"
+            ],
+            [
+                1,
+                "MOVE_GROWL"
+            ],
+            [
+                1,
+                "MOVE_BITE"
+            ],
+            [
+                1,
+                "MOVE_FAKE_OUT"
+            ],
+            [
+                6,
+                "MOVE_BITE"
+            ],
+            [
+                9,
+                "MOVE_FAKE_OUT"
+            ],
+            [
+                14,
+                "MOVE_FURY_SWIPES"
+            ],
+            [
+                17,
+                "MOVE_SCREECH"
+            ],
+            [
+                22,
+                "MOVE_FAINT_ATTACK"
+            ],
+            [
+                25,
+                "MOVE_TAUNT"
+            ],
+            [
+                32,
+                "MOVE_POWER_GEM"
+            ],
+            [
+                37,
+                "MOVE_SLASH"
+            ],
+            [
+                44,
+                "MOVE_NASTY_PLOT"
+            ],
+            [
+                49,
+                "MOVE_ASSURANCE"
+            ],
+            [
+                56,
+                "MOVE_CAPTIVATE"
+            ],
+            [
+                61,
+                "MOVE_NIGHT_SLASH"
+            ],
+            [
+                68,
+                "MOVE_FEINT"
+            ]
         ],
         "by_tm": [
             "TM03",
@@ -63,7 +126,6 @@
             "TM15",
             "TM17",
             "TM18",
-            "TM21",
             "TM23",
             "TM24",
             "TM25",
@@ -110,7 +172,7 @@
             "MOVE_UPROAR"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_MEOWTH",
     "footprint": {
         "has": true,

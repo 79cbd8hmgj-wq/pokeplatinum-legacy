@@ -7,7 +7,10 @@
         "special_attack": 40,
         "special_defense": 50
     },
-    "types": [ "TYPE_ROCK", "TYPE_BUG" ],
+    "types": [
+        "TYPE_ROCK",
+        "TYPE_BUG"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 99,
     "ev_yields": {
@@ -26,26 +29,68 @@
     "hatch_cycles": 30,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_ERRATIC",
-    "egg_groups": [ "EGG_GROUP_WATER_3", "EGG_GROUP_WATER_3" ],
-    "abilities": [ "ABILITY_BATTLE_ARMOR", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_WATER_3",
+        "EGG_GROUP_WATER_3"
+    ],
+    "abilities": [
+        "ABILITY_BATTLE_ARMOR",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_GRAY",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_SCRATCH" ],
-            [ 1, "MOVE_HARDEN" ],
-            [ 7, "MOVE_MUD_SPORT" ],
-            [ 13, "MOVE_WATER_GUN" ],
-            [ 19, "MOVE_METAL_CLAW" ],
-            [ 25, "MOVE_PROTECT" ],
-            [ 31, "MOVE_ANCIENT_POWER" ],
-            [ 37, "MOVE_FURY_CUTTER" ],
-            [ 43, "MOVE_SLASH" ],
-            [ 49, "MOVE_ROCK_BLAST" ],
-            [ 55, "MOVE_CRUSH_CLAW" ],
-            [ 61, "MOVE_X_SCISSOR" ]
+            [
+                1,
+                "MOVE_SCRATCH"
+            ],
+            [
+                1,
+                "MOVE_HARDEN"
+            ],
+            [
+                7,
+                "MOVE_MUD_SPORT"
+            ],
+            [
+                13,
+                "MOVE_WATER_GUN"
+            ],
+            [
+                19,
+                "MOVE_METAL_CLAW"
+            ],
+            [
+                25,
+                "MOVE_PROTECT"
+            ],
+            [
+                31,
+                "MOVE_ANCIENT_POWER"
+            ],
+            [
+                37,
+                "MOVE_FURY_CUTTER"
+            ],
+            [
+                43,
+                "MOVE_SLASH"
+            ],
+            [
+                49,
+                "MOVE_ROCK_BLAST"
+            ],
+            [
+                55,
+                "MOVE_CRUSH_CLAW"
+            ],
+            [
+                61,
+                "MOVE_X_SCISSOR"
+            ]
         ],
         "by_tm": [
             "TM03",
@@ -53,7 +98,6 @@
             "TM10",
             "TM11",
             "TM17",
-            "TM21",
             "TM27",
             "TM28",
             "TM31",
@@ -70,7 +114,6 @@
             "TM69",
             "TM75",
             "TM76",
-            "TM78",
             "TM80",
             "TM81",
             "TM82",

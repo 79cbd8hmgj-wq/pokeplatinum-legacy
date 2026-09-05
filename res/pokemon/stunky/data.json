@@ -7,7 +7,10 @@
         "special_attack": 41,
         "special_defense": 41
     },
-    "types": [ "TYPE_POISON", "TYPE_DARK" ],
+    "types": [
+        "TYPE_POISON",
+        "TYPE_DARK"
+    ],
     "catch_rate": 225,
     "base_exp_reward": 79,
     "ev_yields": {
@@ -26,26 +29,68 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_STENCH", "ABILITY_AFTERMATH" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_STENCH",
+        "ABILITY_AFTERMATH"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_PURPLE",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_SCRATCH" ],
-            [ 1, "MOVE_FOCUS_ENERGY" ],
-            [ 4, "MOVE_POISON_GAS" ],
-            [ 7, "MOVE_SCREECH" ],
-            [ 10, "MOVE_FURY_SWIPES" ],
-            [ 14, "MOVE_SMOKE_SCREEN" ],
-            [ 18, "MOVE_FEINT" ],
-            [ 22, "MOVE_SLASH" ],
-            [ 27, "MOVE_TOXIC" ],
-            [ 32, "MOVE_NIGHT_SLASH" ],
-            [ 38, "MOVE_MEMENTO" ],
-            [ 44, "MOVE_EXPLOSION" ]
+            [
+                1,
+                "MOVE_SCRATCH"
+            ],
+            [
+                1,
+                "MOVE_FOCUS_ENERGY"
+            ],
+            [
+                4,
+                "MOVE_POISON_GAS"
+            ],
+            [
+                7,
+                "MOVE_SCREECH"
+            ],
+            [
+                10,
+                "MOVE_FURY_SWIPES"
+            ],
+            [
+                14,
+                "MOVE_SMOKE_SCREEN"
+            ],
+            [
+                18,
+                "MOVE_FEINT"
+            ],
+            [
+                22,
+                "MOVE_SLASH"
+            ],
+            [
+                27,
+                "MOVE_TOXIC"
+            ],
+            [
+                32,
+                "MOVE_NIGHT_SLASH"
+            ],
+            [
+                38,
+                "MOVE_MEMENTO"
+            ],
+            [
+                44,
+                "MOVE_EXPLOSION"
+            ]
         ],
         "by_tm": [
             "TM05",
@@ -55,7 +100,6 @@
             "TM12",
             "TM17",
             "TM18",
-            "TM21",
             "TM23",
             "TM27",
             "TM28",
@@ -75,7 +119,6 @@
             "TM64",
             "TM65",
             "TM66",
-            "TM78",
             "TM79",
             "TM82",
             "TM83",

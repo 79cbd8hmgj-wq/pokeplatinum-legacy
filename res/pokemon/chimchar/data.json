@@ -7,7 +7,10 @@
         "special_attack": 58,
         "special_defense": 44
     },
-    "types": [ "TYPE_FIRE", "TYPE_FIRE" ],
+    "types": [
+        "TYPE_FIRE",
+        "TYPE_FIRE"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 65,
     "ev_yields": {
@@ -26,26 +29,68 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_HUMAN_LIKE" ],
-    "abilities": [ "ABILITY_BLAZE", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_HUMAN_LIKE"
+    ],
+    "abilities": [
+        "ABILITY_BLAZE",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": true,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_SCRATCH" ],
-            [ 1, "MOVE_LEER" ],
-            [ 7, "MOVE_EMBER" ],
-            [ 9, "MOVE_TAUNT" ],
-            [ 15, "MOVE_FURY_SWIPES" ],
-            [ 17, "MOVE_FLAME_WHEEL" ],
-            [ 23, "MOVE_NASTY_PLOT" ],
-            [ 25, "MOVE_TORMENT" ],
-            [ 31, "MOVE_FACADE" ],
-            [ 33, "MOVE_FIRE_SPIN" ],
-            [ 39, "MOVE_SLACK_OFF" ],
-            [ 41, "MOVE_FLAMETHROWER" ]
+            [
+                1,
+                "MOVE_SCRATCH"
+            ],
+            [
+                1,
+                "MOVE_LEER"
+            ],
+            [
+                7,
+                "MOVE_EMBER"
+            ],
+            [
+                9,
+                "MOVE_TAUNT"
+            ],
+            [
+                15,
+                "MOVE_FURY_SWIPES"
+            ],
+            [
+                17,
+                "MOVE_FLAME_WHEEL"
+            ],
+            [
+                23,
+                "MOVE_NASTY_PLOT"
+            ],
+            [
+                25,
+                "MOVE_TORMENT"
+            ],
+            [
+                31,
+                "MOVE_FACADE"
+            ],
+            [
+                33,
+                "MOVE_FIRE_SPIN"
+            ],
+            [
+                39,
+                "MOVE_SLACK_OFF"
+            ],
+            [
+                41,
+                "MOVE_FLAMETHROWER"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -55,7 +100,6 @@
             "TM11",
             "TM12",
             "TM17",
-            "TM21",
             "TM23",
             "TM27",
             "TM28",
@@ -76,7 +120,6 @@
             "TM65",
             "TM75",
             "TM76",
-            "TM78",
             "TM82",
             "TM83",
             "TM86",

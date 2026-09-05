@@ -7,7 +7,10 @@
         "special_attack": 38,
         "special_defense": 42
     },
-    "types": [ "TYPE_GROUND", "TYPE_GROUND" ],
+    "types": [
+        "TYPE_GROUND",
+        "TYPE_GROUND"
+    ],
     "catch_rate": 140,
     "base_exp_reward": 95,
     "ev_yields": {
@@ -26,24 +29,60 @@
     "hatch_cycles": 30,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_SLOW",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_SAND_STREAM", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_SAND_STREAM",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_TACKLE" ],
-            [ 1, "MOVE_SAND_ATTACK" ],
-            [ 7, "MOVE_BITE" ],
-            [ 13, "MOVE_YAWN" ],
-            [ 19, "MOVE_TAKE_DOWN" ],
-            [ 25, "MOVE_SAND_TOMB" ],
-            [ 31, "MOVE_CRUNCH" ],
-            [ 37, "MOVE_EARTHQUAKE" ],
-            [ 44, "MOVE_DOUBLE_EDGE" ],
-            [ 50, "MOVE_FISSURE" ]
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                1,
+                "MOVE_SAND_ATTACK"
+            ],
+            [
+                7,
+                "MOVE_BITE"
+            ],
+            [
+                13,
+                "MOVE_YAWN"
+            ],
+            [
+                19,
+                "MOVE_TAKE_DOWN"
+            ],
+            [
+                25,
+                "MOVE_SAND_TOMB"
+            ],
+            [
+                31,
+                "MOVE_CRUNCH"
+            ],
+            [
+                37,
+                "MOVE_EARTHQUAKE"
+            ],
+            [
+                44,
+                "MOVE_DOUBLE_EDGE"
+            ],
+            [
+                50,
+                "MOVE_FISSURE"
+            ]
         ],
         "by_tm": [
             "TM03",
@@ -52,7 +91,6 @@
             "TM10",
             "TM11",
             "TM17",
-            "TM21",
             "TM23",
             "TM26",
             "TM27",
@@ -65,7 +103,6 @@
             "TM45",
             "TM58",
             "TM76",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",

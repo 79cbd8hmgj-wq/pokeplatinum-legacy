@@ -7,7 +7,10 @@
         "special_attack": 40,
         "special_defense": 55
     },
-    "types": [ "TYPE_BUG", "TYPE_POISON" ],
+    "types": [
+        "TYPE_BUG",
+        "TYPE_POISON"
+    ],
     "catch_rate": 190,
     "base_exp_reward": 75,
     "ev_yields": {
@@ -26,28 +29,76 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_BUG", "EGG_GROUP_BUG" ],
-    "abilities": [ "ABILITY_COMPOUND_EYES", "ABILITY_TINTED_LENS" ],
+    "egg_groups": [
+        "EGG_GROUP_BUG",
+        "EGG_GROUP_BUG"
+    ],
+    "abilities": [
+        "ABILITY_COMPOUND_EYES",
+        "ABILITY_TINTED_LENS"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_PURPLE",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_TACKLE" ],
-            [ 1, "MOVE_DISABLE" ],
-            [ 1, "MOVE_FORESIGHT" ],
-            [ 5, "MOVE_SUPERSONIC" ],
-            [ 11, "MOVE_CONFUSION" ],
-            [ 13, "MOVE_POISON_POWDER" ],
-            [ 17, "MOVE_LEECH_LIFE" ],
-            [ 23, "MOVE_STUN_SPORE" ],
-            [ 25, "MOVE_PSYBEAM" ],
-            [ 29, "MOVE_SLEEP_POWDER" ],
-            [ 35, "MOVE_SIGNAL_BEAM" ],
-            [ 37, "MOVE_ZEN_HEADBUTT" ],
-            [ 41, "MOVE_POISON_FANG" ],
-            [ 47, "MOVE_PSYCHIC" ]
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                1,
+                "MOVE_DISABLE"
+            ],
+            [
+                1,
+                "MOVE_FORESIGHT"
+            ],
+            [
+                5,
+                "MOVE_SUPERSONIC"
+            ],
+            [
+                11,
+                "MOVE_CONFUSION"
+            ],
+            [
+                13,
+                "MOVE_POISON_POWDER"
+            ],
+            [
+                17,
+                "MOVE_LEECH_LIFE"
+            ],
+            [
+                23,
+                "MOVE_STUN_SPORE"
+            ],
+            [
+                25,
+                "MOVE_PSYBEAM"
+            ],
+            [
+                29,
+                "MOVE_SLEEP_POWDER"
+            ],
+            [
+                35,
+                "MOVE_SIGNAL_BEAM"
+            ],
+            [
+                37,
+                "MOVE_ZEN_HEADBUTT"
+            ],
+            [
+                41,
+                "MOVE_POISON_FANG"
+            ],
+            [
+                47,
+                "MOVE_PSYCHIC"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -55,7 +106,6 @@
             "TM11",
             "TM17",
             "TM19",
-            "TM21",
             "TM22",
             "TM27",
             "TM29",
@@ -69,7 +119,6 @@
             "TM48",
             "TM58",
             "TM70",
-            "TM78",
             "TM82",
             "TM83",
             "TM87",

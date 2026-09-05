@@ -7,7 +7,10 @@
         "special_attack": 100,
         "special_defense": 60
     },
-    "types": [ "TYPE_GRASS", "TYPE_POISON" ],
+    "types": [
+        "TYPE_GRASS",
+        "TYPE_POISON"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 191,
     "ev_yields": {
@@ -26,23 +29,56 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_GRASS", "EGG_GROUP_GRASS" ],
-    "abilities": [ "ABILITY_CHLOROPHYLL", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_GRASS",
+        "EGG_GROUP_GRASS"
+    ],
+    "abilities": [
+        "ABILITY_CHLOROPHYLL",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_GREEN",
     "flip_sprite": false,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_STOCKPILE" ],
-            [ 1, "MOVE_SWALLOW" ],
-            [ 1, "MOVE_SPIT_UP" ],
-            [ 1, "MOVE_VINE_WHIP" ],
-            [ 1, "MOVE_SLEEP_POWDER" ],
-            [ 1, "MOVE_SWEET_SCENT" ],
-            [ 1, "MOVE_RAZOR_LEAF" ],
-            [ 47, "MOVE_LEAF_STORM" ],
-            [ 47, "MOVE_LEAF_BLADE" ]
+            [
+                1,
+                "MOVE_STOCKPILE"
+            ],
+            [
+                1,
+                "MOVE_SWALLOW"
+            ],
+            [
+                1,
+                "MOVE_SPIT_UP"
+            ],
+            [
+                1,
+                "MOVE_VINE_WHIP"
+            ],
+            [
+                1,
+                "MOVE_SLEEP_POWDER"
+            ],
+            [
+                1,
+                "MOVE_SWEET_SCENT"
+            ],
+            [
+                1,
+                "MOVE_RAZOR_LEAF"
+            ],
+            [
+                47,
+                "MOVE_LEAF_STORM"
+            ],
+            [
+                47,
+                "MOVE_LEAF_BLADE"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -52,7 +88,6 @@
             "TM15",
             "TM17",
             "TM19",
-            "TM21",
             "TM22",
             "TM27",
             "TM32",
@@ -67,7 +102,6 @@
             "TM68",
             "TM70",
             "TM75",
-            "TM78",
             "TM82",
             "TM83",
             "TM86",
@@ -84,7 +118,7 @@
             "MOVE_SUCKER_PUNCH"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_BELLSPROUT",
     "footprint": {
         "has": false,

@@ -7,7 +7,10 @@
         "special_attack": 60,
         "special_defense": 60
     },
-    "types": [ "TYPE_NORMAL", "TYPE_FLYING" ],
+    "types": [
+        "TYPE_NORMAL",
+        "TYPE_FLYING"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 158,
     "ev_yields": {
@@ -26,29 +29,80 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_FLYING", "EGG_GROUP_FLYING" ],
-    "abilities": [ "ABILITY_RUN_AWAY", "ABILITY_EARLY_BIRD" ],
+    "egg_groups": [
+        "EGG_GROUP_FLYING",
+        "EGG_GROUP_FLYING"
+    ],
+    "abilities": [
+        "ABILITY_RUN_AWAY",
+        "ABILITY_EARLY_BIRD"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_PLUCK" ],
-            [ 1, "MOVE_PECK" ],
-            [ 1, "MOVE_GROWL" ],
-            [ 1, "MOVE_QUICK_ATTACK" ],
-            [ 1, "MOVE_RAGE" ],
-            [ 5, "MOVE_QUICK_ATTACK" ],
-            [ 10, "MOVE_RAGE" ],
-            [ 14, "MOVE_FURY_ATTACK" ],
-            [ 19, "MOVE_PURSUIT" ],
-            [ 23, "MOVE_UPROAR" ],
-            [ 28, "MOVE_ACUPRESSURE" ],
-            [ 34, "MOVE_TRI_ATTACK" ],
-            [ 41, "MOVE_AGILITY" ],
-            [ 47, "MOVE_DRILL_PECK" ],
-            [ 54, "MOVE_ENDEAVOR" ]
+            [
+                1,
+                "MOVE_PLUCK"
+            ],
+            [
+                1,
+                "MOVE_PECK"
+            ],
+            [
+                1,
+                "MOVE_GROWL"
+            ],
+            [
+                1,
+                "MOVE_QUICK_ATTACK"
+            ],
+            [
+                1,
+                "MOVE_RAGE"
+            ],
+            [
+                5,
+                "MOVE_QUICK_ATTACK"
+            ],
+            [
+                10,
+                "MOVE_RAGE"
+            ],
+            [
+                14,
+                "MOVE_FURY_ATTACK"
+            ],
+            [
+                19,
+                "MOVE_PURSUIT"
+            ],
+            [
+                23,
+                "MOVE_UPROAR"
+            ],
+            [
+                28,
+                "MOVE_ACUPRESSURE"
+            ],
+            [
+                34,
+                "MOVE_TRI_ATTACK"
+            ],
+            [
+                41,
+                "MOVE_AGILITY"
+            ],
+            [
+                47,
+                "MOVE_DRILL_PECK"
+            ],
+            [
+                54,
+                "MOVE_ENDEAVOR"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -57,7 +111,6 @@
             "TM12",
             "TM15",
             "TM17",
-            "TM21",
             "TM27",
             "TM32",
             "TM40",
@@ -72,7 +125,6 @@
             "TM58",
             "TM66",
             "TM68",
-            "TM78",
             "TM82",
             "TM83",
             "TM87",
@@ -90,7 +142,7 @@
             "MOVE_UPROAR"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_DODUO",
     "footprint": {
         "has": true,

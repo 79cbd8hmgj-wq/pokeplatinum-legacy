@@ -7,7 +7,10 @@
         "special_attack": 60,
         "special_defense": 60
     },
-    "types": [ "TYPE_GRASS", "TYPE_FIGHTING" ],
+    "types": [
+        "TYPE_GRASS",
+        "TYPE_FIGHTING"
+    ],
     "catch_rate": 90,
     "base_exp_reward": 165,
     "ev_yields": {
@@ -26,30 +29,84 @@
     "hatch_cycles": 15,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_FLUCTUATING",
-    "egg_groups": [ "EGG_GROUP_FAIRY", "EGG_GROUP_GRASS" ],
-    "abilities": [ "ABILITY_EFFECT_SPORE", "ABILITY_POISON_HEAL" ],
+    "egg_groups": [
+        "EGG_GROUP_FAIRY",
+        "EGG_GROUP_GRASS"
+    ],
+    "abilities": [
+        "ABILITY_EFFECT_SPORE",
+        "ABILITY_POISON_HEAL"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_GREEN",
     "flip_sprite": false,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_ABSORB" ],
-            [ 1, "MOVE_TACKLE" ],
-            [ 1, "MOVE_STUN_SPORE" ],
-            [ 1, "MOVE_LEECH_SEED" ],
-            [ 5, "MOVE_TACKLE" ],
-            [ 9, "MOVE_STUN_SPORE" ],
-            [ 13, "MOVE_LEECH_SEED" ],
-            [ 17, "MOVE_MEGA_DRAIN" ],
-            [ 21, "MOVE_HEADBUTT" ],
-            [ 23, "MOVE_MACH_PUNCH" ],
-            [ 25, "MOVE_COUNTER" ],
-            [ 29, "MOVE_FORCE_PALM" ],
-            [ 33, "MOVE_SKY_UPPERCUT" ],
-            [ 37, "MOVE_MIND_READER" ],
-            [ 41, "MOVE_SEED_BOMB" ],
-            [ 45, "MOVE_DYNAMIC_PUNCH" ]
+            [
+                1,
+                "MOVE_ABSORB"
+            ],
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                1,
+                "MOVE_STUN_SPORE"
+            ],
+            [
+                1,
+                "MOVE_LEECH_SEED"
+            ],
+            [
+                5,
+                "MOVE_TACKLE"
+            ],
+            [
+                9,
+                "MOVE_STUN_SPORE"
+            ],
+            [
+                13,
+                "MOVE_LEECH_SEED"
+            ],
+            [
+                17,
+                "MOVE_MEGA_DRAIN"
+            ],
+            [
+                21,
+                "MOVE_HEADBUTT"
+            ],
+            [
+                23,
+                "MOVE_MACH_PUNCH"
+            ],
+            [
+                25,
+                "MOVE_COUNTER"
+            ],
+            [
+                29,
+                "MOVE_FORCE_PALM"
+            ],
+            [
+                33,
+                "MOVE_SKY_UPPERCUT"
+            ],
+            [
+                37,
+                "MOVE_MIND_READER"
+            ],
+            [
+                41,
+                "MOVE_SEED_BOMB"
+            ],
+            [
+                45,
+                "MOVE_DYNAMIC_PUNCH"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -62,7 +119,6 @@
             "TM17",
             "TM19",
             "TM20",
-            "TM21",
             "TM22",
             "TM23",
             "TM27",
@@ -84,7 +140,6 @@
             "TM70",
             "TM71",
             "TM75",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",
@@ -107,7 +162,7 @@
             "MOVE_SEED_BOMB"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_SHROOMISH",
     "footprint": {
         "has": true,

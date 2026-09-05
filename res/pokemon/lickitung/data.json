@@ -7,7 +7,10 @@
         "special_attack": 60,
         "special_defense": 75
     },
-    "types": [ "TYPE_NORMAL", "TYPE_NORMAL" ],
+    "types": [
+        "TYPE_NORMAL",
+        "TYPE_NORMAL"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 127,
     "ev_yields": {
@@ -26,28 +29,76 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_MONSTER", "EGG_GROUP_MONSTER" ],
-    "abilities": [ "ABILITY_OWN_TEMPO", "ABILITY_OBLIVIOUS" ],
+    "egg_groups": [
+        "EGG_GROUP_MONSTER",
+        "EGG_GROUP_MONSTER"
+    ],
+    "abilities": [
+        "ABILITY_OWN_TEMPO",
+        "ABILITY_OBLIVIOUS"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_PINK",
     "flip_sprite": false,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_LICK" ],
-            [ 5, "MOVE_SUPERSONIC" ],
-            [ 9, "MOVE_DEFENSE_CURL" ],
-            [ 13, "MOVE_KNOCK_OFF" ],
-            [ 17, "MOVE_WRAP" ],
-            [ 21, "MOVE_STOMP" ],
-            [ 25, "MOVE_DISABLE" ],
-            [ 29, "MOVE_SLAM" ],
-            [ 33, "MOVE_ROLLOUT" ],
-            [ 37, "MOVE_ME_FIRST" ],
-            [ 41, "MOVE_REFRESH" ],
-            [ 45, "MOVE_SCREECH" ],
-            [ 49, "MOVE_POWER_WHIP" ],
-            [ 53, "MOVE_WRING_OUT" ]
+            [
+                1,
+                "MOVE_LICK"
+            ],
+            [
+                5,
+                "MOVE_SUPERSONIC"
+            ],
+            [
+                9,
+                "MOVE_DEFENSE_CURL"
+            ],
+            [
+                13,
+                "MOVE_KNOCK_OFF"
+            ],
+            [
+                17,
+                "MOVE_WRAP"
+            ],
+            [
+                21,
+                "MOVE_STOMP"
+            ],
+            [
+                25,
+                "MOVE_DISABLE"
+            ],
+            [
+                29,
+                "MOVE_SLAM"
+            ],
+            [
+                33,
+                "MOVE_ROLLOUT"
+            ],
+            [
+                37,
+                "MOVE_ME_FIRST"
+            ],
+            [
+                41,
+                "MOVE_REFRESH"
+            ],
+            [
+                45,
+                "MOVE_SCREECH"
+            ],
+            [
+                49,
+                "MOVE_POWER_WHIP"
+            ],
+            [
+                53,
+                "MOVE_WRING_OUT"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -60,7 +111,6 @@
             "TM15",
             "TM17",
             "TM18",
-            "TM21",
             "TM22",
             "TM23",
             "TM24",
@@ -86,7 +136,6 @@
             "TM68",
             "TM75",
             "TM77",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",

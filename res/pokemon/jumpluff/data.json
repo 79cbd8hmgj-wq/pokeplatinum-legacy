@@ -7,7 +7,10 @@
         "special_attack": 55,
         "special_defense": 85
     },
-    "types": [ "TYPE_GRASS", "TYPE_FLYING" ],
+    "types": [
+        "TYPE_GRASS",
+        "TYPE_FLYING"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 176,
     "ev_yields": {
@@ -26,33 +29,96 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_FAIRY", "EGG_GROUP_GRASS" ],
-    "abilities": [ "ABILITY_CHLOROPHYLL", "ABILITY_LEAF_GUARD" ],
+    "egg_groups": [
+        "EGG_GROUP_FAIRY",
+        "EGG_GROUP_GRASS"
+    ],
+    "abilities": [
+        "ABILITY_CHLOROPHYLL",
+        "ABILITY_LEAF_GUARD"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BLUE",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_SPLASH" ],
-            [ 1, "MOVE_SYNTHESIS" ],
-            [ 1, "MOVE_TAIL_WHIP" ],
-            [ 1, "MOVE_TACKLE" ],
-            [ 4, "MOVE_SYNTHESIS" ],
-            [ 7, "MOVE_TAIL_WHIP" ],
-            [ 10, "MOVE_TACKLE" ],
-            [ 12, "MOVE_POISON_POWDER" ],
-            [ 14, "MOVE_STUN_SPORE" ],
-            [ 16, "MOVE_SLEEP_POWDER" ],
-            [ 20, "MOVE_BULLET_SEED" ],
-            [ 24, "MOVE_LEECH_SEED" ],
-            [ 28, "MOVE_MEGA_DRAIN" ],
-            [ 32, "MOVE_COTTON_SPORE" ],
-            [ 36, "MOVE_U_TURN" ],
-            [ 40, "MOVE_WORRY_SEED" ],
-            [ 44, "MOVE_GIGA_DRAIN" ],
-            [ 48, "MOVE_BOUNCE" ],
-            [ 52, "MOVE_MEMENTO" ]
+            [
+                1,
+                "MOVE_SPLASH"
+            ],
+            [
+                1,
+                "MOVE_SYNTHESIS"
+            ],
+            [
+                1,
+                "MOVE_TAIL_WHIP"
+            ],
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                4,
+                "MOVE_SYNTHESIS"
+            ],
+            [
+                7,
+                "MOVE_TAIL_WHIP"
+            ],
+            [
+                10,
+                "MOVE_TACKLE"
+            ],
+            [
+                12,
+                "MOVE_POISON_POWDER"
+            ],
+            [
+                14,
+                "MOVE_STUN_SPORE"
+            ],
+            [
+                16,
+                "MOVE_SLEEP_POWDER"
+            ],
+            [
+                20,
+                "MOVE_BULLET_SEED"
+            ],
+            [
+                24,
+                "MOVE_LEECH_SEED"
+            ],
+            [
+                28,
+                "MOVE_MEGA_DRAIN"
+            ],
+            [
+                32,
+                "MOVE_COTTON_SPORE"
+            ],
+            [
+                36,
+                "MOVE_U_TURN"
+            ],
+            [
+                40,
+                "MOVE_WORRY_SEED"
+            ],
+            [
+                44,
+                "MOVE_GIGA_DRAIN"
+            ],
+            [
+                48,
+                "MOVE_BOUNCE"
+            ],
+            [
+                52,
+                "MOVE_MEMENTO"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -62,7 +128,6 @@
             "TM15",
             "TM17",
             "TM19",
-            "TM21",
             "TM22",
             "TM27",
             "TM32",
@@ -77,7 +142,6 @@
             "TM68",
             "TM70",
             "TM75",
-            "TM78",
             "TM82",
             "TM83",
             "TM86",
@@ -93,7 +157,7 @@
             "MOVE_BOUNCE"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_HOPPIP",
     "footprint": {
         "has": true,

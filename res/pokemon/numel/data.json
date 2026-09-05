@@ -7,7 +7,10 @@
         "special_attack": 65,
         "special_defense": 45
     },
-    "types": [ "TYPE_FIRE", "TYPE_GROUND" ],
+    "types": [
+        "TYPE_FIRE",
+        "TYPE_GROUND"
+    ],
     "catch_rate": 255,
     "base_exp_reward": 88,
     "ev_yields": {
@@ -26,33 +29,74 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_OBLIVIOUS", "ABILITY_SIMPLE" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_OBLIVIOUS",
+        "ABILITY_SIMPLE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_YELLOW",
     "flip_sprite": false,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_GROWL" ],
-            [ 1, "MOVE_TACKLE" ],
-            [ 5, "MOVE_EMBER" ],
-            [ 11, "MOVE_MAGNITUDE" ],
-            [ 15, "MOVE_FOCUS_ENERGY" ],
-            [ 21, "MOVE_TAKE_DOWN" ],
-            [ 25, "MOVE_AMNESIA" ],
-            [ 31, "MOVE_LAVA_PLUME" ],
-            [ 35, "MOVE_EARTH_POWER" ],
-            [ 41, "MOVE_EARTHQUAKE" ],
-            [ 45, "MOVE_FLAMETHROWER" ],
-            [ 51, "MOVE_DOUBLE_EDGE" ]
+            [
+                1,
+                "MOVE_GROWL"
+            ],
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                5,
+                "MOVE_EMBER"
+            ],
+            [
+                11,
+                "MOVE_MAGNITUDE"
+            ],
+            [
+                15,
+                "MOVE_FOCUS_ENERGY"
+            ],
+            [
+                21,
+                "MOVE_TAKE_DOWN"
+            ],
+            [
+                25,
+                "MOVE_AMNESIA"
+            ],
+            [
+                31,
+                "MOVE_LAVA_PLUME"
+            ],
+            [
+                35,
+                "MOVE_EARTH_POWER"
+            ],
+            [
+                41,
+                "MOVE_EARTHQUAKE"
+            ],
+            [
+                45,
+                "MOVE_FLAMETHROWER"
+            ],
+            [
+                51,
+                "MOVE_DOUBLE_EDGE"
+            ]
         ],
         "by_tm": [
             "TM06",
             "TM10",
             "TM11",
             "TM17",
-            "TM21",
             "TM26",
             "TM27",
             "TM28",
@@ -69,7 +113,6 @@
             "TM58",
             "TM61",
             "TM76",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",

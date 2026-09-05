@@ -7,7 +7,10 @@
         "special_attack": 80,
         "special_defense": 80
     },
-    "types": [ "TYPE_FIRE", "TYPE_ROCK" ],
+    "types": [
+        "TYPE_FIRE",
+        "TYPE_ROCK"
+    ],
     "catch_rate": 75,
     "base_exp_reward": 154,
     "ev_yields": {
@@ -26,29 +29,80 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_AMORPHOUS", "EGG_GROUP_AMORPHOUS" ],
-    "abilities": [ "ABILITY_MAGMA_ARMOR", "ABILITY_FLAME_BODY" ],
+    "egg_groups": [
+        "EGG_GROUP_AMORPHOUS",
+        "EGG_GROUP_AMORPHOUS"
+    ],
+    "abilities": [
+        "ABILITY_MAGMA_ARMOR",
+        "ABILITY_FLAME_BODY"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_RED",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_YAWN" ],
-            [ 1, "MOVE_SMOG" ],
-            [ 1, "MOVE_EMBER" ],
-            [ 1, "MOVE_ROCK_THROW" ],
-            [ 8, "MOVE_EMBER" ],
-            [ 11, "MOVE_ROCK_THROW" ],
-            [ 16, "MOVE_HARDEN" ],
-            [ 23, "MOVE_RECOVER" ],
-            [ 26, "MOVE_ANCIENT_POWER" ],
-            [ 31, "MOVE_AMNESIA" ],
-            [ 40, "MOVE_LAVA_PLUME" ],
-            [ 45, "MOVE_ROCK_SLIDE" ],
-            [ 52, "MOVE_BODY_SLAM" ],
-            [ 61, "MOVE_FLAMETHROWER" ],
-            [ 66, "MOVE_EARTH_POWER" ]
+            [
+                1,
+                "MOVE_YAWN"
+            ],
+            [
+                1,
+                "MOVE_SMOG"
+            ],
+            [
+                1,
+                "MOVE_EMBER"
+            ],
+            [
+                1,
+                "MOVE_ROCK_THROW"
+            ],
+            [
+                8,
+                "MOVE_EMBER"
+            ],
+            [
+                11,
+                "MOVE_ROCK_THROW"
+            ],
+            [
+                16,
+                "MOVE_HARDEN"
+            ],
+            [
+                23,
+                "MOVE_RECOVER"
+            ],
+            [
+                26,
+                "MOVE_ANCIENT_POWER"
+            ],
+            [
+                31,
+                "MOVE_AMNESIA"
+            ],
+            [
+                40,
+                "MOVE_LAVA_PLUME"
+            ],
+            [
+                45,
+                "MOVE_POWER_GEM"
+            ],
+            [
+                52,
+                "MOVE_BODY_SLAM"
+            ],
+            [
+                61,
+                "MOVE_FLAMETHROWER"
+            ],
+            [
+                66,
+                "MOVE_EARTH_POWER"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -57,7 +111,6 @@
             "TM15",
             "TM16",
             "TM17",
-            "TM21",
             "TM22",
             "TM26",
             "TM27",
@@ -99,7 +152,7 @@
             "MOVE_HEAT_WAVE"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_SLUGMA",
     "footprint": {
         "has": false,

@@ -7,7 +7,10 @@
         "special_attack": 70,
         "special_defense": 45
     },
-    "types": [ "TYPE_PSYCHIC", "TYPE_FLYING" ],
+    "types": [
+        "TYPE_PSYCHIC",
+        "TYPE_FLYING"
+    ],
     "catch_rate": 190,
     "base_exp_reward": 73,
     "ev_yields": {
@@ -26,29 +29,80 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_FLYING", "EGG_GROUP_FLYING" ],
-    "abilities": [ "ABILITY_SYNCHRONIZE", "ABILITY_EARLY_BIRD" ],
+    "egg_groups": [
+        "EGG_GROUP_FLYING",
+        "EGG_GROUP_FLYING"
+    ],
+    "abilities": [
+        "ABILITY_SYNCHRONIZE",
+        "ABILITY_EARLY_BIRD"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_GREEN",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_PECK" ],
-            [ 1, "MOVE_LEER" ],
-            [ 6, "MOVE_NIGHT_SHADE" ],
-            [ 9, "MOVE_TELEPORT" ],
-            [ 12, "MOVE_LUCKY_CHANT" ],
-            [ 17, "MOVE_MIRACLE_EYE" ],
-            [ 20, "MOVE_ME_FIRST" ],
-            [ 23, "MOVE_CONFUSE_RAY" ],
-            [ 28, "MOVE_WISH" ],
-            [ 33, "MOVE_PSYCHO_SHIFT" ],
-            [ 36, "MOVE_FUTURE_SIGHT" ],
-            [ 39, "MOVE_OMINOUS_WIND" ],
-            [ 44, "MOVE_POWER_SWAP" ],
-            [ 44, "MOVE_GUARD_SWAP" ],
-            [ 47, "MOVE_PSYCHIC" ]
+            [
+                1,
+                "MOVE_PECK"
+            ],
+            [
+                1,
+                "MOVE_LEER"
+            ],
+            [
+                6,
+                "MOVE_NIGHT_SHADE"
+            ],
+            [
+                9,
+                "MOVE_TELEPORT"
+            ],
+            [
+                12,
+                "MOVE_LUCKY_CHANT"
+            ],
+            [
+                17,
+                "MOVE_MIRACLE_EYE"
+            ],
+            [
+                20,
+                "MOVE_ME_FIRST"
+            ],
+            [
+                23,
+                "MOVE_CONFUSE_RAY"
+            ],
+            [
+                28,
+                "MOVE_WISH"
+            ],
+            [
+                33,
+                "MOVE_PSYCHO_SHIFT"
+            ],
+            [
+                36,
+                "MOVE_FUTURE_SIGHT"
+            ],
+            [
+                39,
+                "MOVE_OMINOUS_WIND"
+            ],
+            [
+                44,
+                "MOVE_POWER_SWAP"
+            ],
+            [
+                44,
+                "MOVE_GUARD_SWAP"
+            ],
+            [
+                47,
+                "MOVE_PSYCHIC"
+            ]
         ],
         "by_tm": [
             "TM04",
@@ -80,7 +134,6 @@
             "TM70",
             "TM73",
             "TM77",
-            "TM78",
             "TM82",
             "TM83",
             "TM85",

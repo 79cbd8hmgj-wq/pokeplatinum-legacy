@@ -7,7 +7,10 @@
         "special_attack": 100,
         "special_defense": 80
     },
-    "types": [ "TYPE_FIRE", "TYPE_FIRE" ],
+    "types": [
+        "TYPE_FIRE",
+        "TYPE_FIRE"
+    ],
     "catch_rate": 75,
     "base_exp_reward": 213,
     "ev_yields": {
@@ -26,20 +29,44 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_SLOW",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_INTIMIDATE", "ABILITY_FLASH_FIRE" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_INTIMIDATE",
+        "ABILITY_FLASH_FIRE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_THUNDER_FANG" ],
-            [ 1, "MOVE_BITE" ],
-            [ 1, "MOVE_ROAR" ],
-            [ 1, "MOVE_FIRE_FANG" ],
-            [ 1, "MOVE_ODOR_SLEUTH" ],
-            [ 39, "MOVE_EXTREME_SPEED" ]
+            [
+                1,
+                "MOVE_THUNDER_FANG"
+            ],
+            [
+                1,
+                "MOVE_BITE"
+            ],
+            [
+                1,
+                "MOVE_ROAR"
+            ],
+            [
+                1,
+                "MOVE_FIRE_FANG"
+            ],
+            [
+                1,
+                "MOVE_ODOR_SLEUTH"
+            ],
+            [
+                39,
+                "MOVE_EXTREME_SPEED"
+            ]
         ],
         "by_tm": [
             "TM05",
@@ -48,7 +75,6 @@
             "TM11",
             "TM15",
             "TM17",
-            "TM21",
             "TM22",
             "TM23",
             "TM27",
@@ -67,7 +93,6 @@
             "TM59",
             "TM61",
             "TM68",
-            "TM78",
             "TM82",
             "TM83",
             "TM87",
@@ -85,7 +110,7 @@
             "MOVE_SWIFT"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_GROWLITHE",
     "footprint": {
         "has": true,

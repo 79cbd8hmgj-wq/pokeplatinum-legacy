@@ -7,7 +7,10 @@
         "special_attack": 55,
         "special_defense": 65
     },
-    "types": [ "TYPE_ROCK", "TYPE_GROUND" ],
+    "types": [
+        "TYPE_ROCK",
+        "TYPE_GROUND"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 177,
     "ev_yields": {
@@ -26,29 +29,80 @@
     "hatch_cycles": 15,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_MINERAL", "EGG_GROUP_MINERAL" ],
-    "abilities": [ "ABILITY_ROCK_HEAD", "ABILITY_STURDY" ],
+    "egg_groups": [
+        "EGG_GROUP_MINERAL",
+        "EGG_GROUP_MINERAL"
+    ],
+    "abilities": [
+        "ABILITY_ROCK_HEAD",
+        "ABILITY_STURDY"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_TACKLE" ],
-            [ 1, "MOVE_DEFENSE_CURL" ],
-            [ 1, "MOVE_MUD_SPORT" ],
-            [ 1, "MOVE_ROCK_POLISH" ],
-            [ 4, "MOVE_MUD_SPORT" ],
-            [ 8, "MOVE_ROCK_POLISH" ],
-            [ 11, "MOVE_ROCK_THROW" ],
-            [ 15, "MOVE_MAGNITUDE" ],
-            [ 18, "MOVE_SELFDESTRUCT" ],
-            [ 22, "MOVE_ROLLOUT" ],
-            [ 27, "MOVE_ROCK_BLAST" ],
-            [ 33, "MOVE_EARTHQUAKE" ],
-            [ 38, "MOVE_EXPLOSION" ],
-            [ 44, "MOVE_DOUBLE_EDGE" ],
-            [ 49, "MOVE_STONE_EDGE" ]
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                1,
+                "MOVE_DEFENSE_CURL"
+            ],
+            [
+                1,
+                "MOVE_MUD_SPORT"
+            ],
+            [
+                1,
+                "MOVE_ROCK_POLISH"
+            ],
+            [
+                4,
+                "MOVE_MUD_SPORT"
+            ],
+            [
+                8,
+                "MOVE_ROCK_POLISH"
+            ],
+            [
+                11,
+                "MOVE_ROCK_THROW"
+            ],
+            [
+                15,
+                "MOVE_MAGNITUDE"
+            ],
+            [
+                18,
+                "MOVE_SELFDESTRUCT"
+            ],
+            [
+                22,
+                "MOVE_ROLLOUT"
+            ],
+            [
+                27,
+                "MOVE_ROCK_BLAST"
+            ],
+            [
+                33,
+                "MOVE_EARTHQUAKE"
+            ],
+            [
+                38,
+                "MOVE_EXPLOSION"
+            ],
+            [
+                44,
+                "MOVE_DOUBLE_EDGE"
+            ],
+            [
+                49,
+                "MOVE_STONE_EDGE"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -58,7 +112,6 @@
             "TM11",
             "TM15",
             "TM17",
-            "TM21",
             "TM26",
             "TM27",
             "TM28",
@@ -81,7 +134,6 @@
             "TM71",
             "TM74",
             "TM76",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",
@@ -105,7 +157,7 @@
             "MOVE_SUCKER_PUNCH"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_GEODUDE",
     "footprint": {
         "has": true,

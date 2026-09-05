@@ -7,7 +7,10 @@
         "special_attack": 35,
         "special_defense": 75
     },
-    "types": [ "TYPE_DARK", "TYPE_ICE" ],
+    "types": [
+        "TYPE_DARK",
+        "TYPE_ICE"
+    ],
     "catch_rate": 60,
     "base_exp_reward": 132,
     "ev_yields": {
@@ -26,27 +29,72 @@
     "hatch_cycles": 20,
     "base_friendship": 35,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_INNER_FOCUS", "ABILITY_KEEN_EYE" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_INNER_FOCUS",
+        "ABILITY_KEEN_EYE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BLACK",
     "flip_sprite": true,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_SCRATCH" ],
-            [ 1, "MOVE_LEER" ],
-            [ 1, "MOVE_TAUNT" ],
-            [ 8, "MOVE_QUICK_ATTACK" ],
-            [ 10, "MOVE_SCREECH" ],
-            [ 14, "MOVE_FAINT_ATTACK" ],
-            [ 21, "MOVE_FURY_SWIPES" ],
-            [ 24, "MOVE_AGILITY" ],
-            [ 28, "MOVE_ICY_WIND" ],
-            [ 35, "MOVE_SLASH" ],
-            [ 38, "MOVE_BEAT_UP" ],
-            [ 42, "MOVE_METAL_CLAW" ],
-            [ 49, "MOVE_ICE_SHARD" ]
+            [
+                1,
+                "MOVE_SCRATCH"
+            ],
+            [
+                1,
+                "MOVE_LEER"
+            ],
+            [
+                1,
+                "MOVE_TAUNT"
+            ],
+            [
+                8,
+                "MOVE_QUICK_ATTACK"
+            ],
+            [
+                10,
+                "MOVE_SCREECH"
+            ],
+            [
+                14,
+                "MOVE_FAINT_ATTACK"
+            ],
+            [
+                21,
+                "MOVE_FURY_SWIPES"
+            ],
+            [
+                24,
+                "MOVE_AGILITY"
+            ],
+            [
+                28,
+                "MOVE_ICY_WIND"
+            ],
+            [
+                35,
+                "MOVE_SLASH"
+            ],
+            [
+                38,
+                "MOVE_BEAT_UP"
+            ],
+            [
+                42,
+                "MOVE_METAL_CLAW"
+            ],
+            [
+                49,
+                "MOVE_ICE_SHARD"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -60,7 +108,6 @@
             "TM14",
             "TM17",
             "TM18",
-            "TM21",
             "TM23",
             "TM27",
             "TM28",
@@ -84,7 +131,6 @@
             "TM72",
             "TM75",
             "TM77",
-            "TM78",
             "TM79",
             "TM81",
             "TM82",

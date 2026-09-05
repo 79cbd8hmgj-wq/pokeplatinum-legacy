@@ -7,7 +7,10 @@
         "special_attack": 110,
         "special_defense": 80
     },
-    "types": [ "TYPE_DRAGON", "TYPE_FLYING" ],
+    "types": [
+        "TYPE_DRAGON",
+        "TYPE_FLYING"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 218,
     "ev_yields": {
@@ -26,33 +29,96 @@
     "hatch_cycles": 40,
     "base_friendship": 35,
     "exp_rate": "EXP_RATE_SLOW",
-    "egg_groups": [ "EGG_GROUP_DRAGON", "EGG_GROUP_DRAGON" ],
-    "abilities": [ "ABILITY_INTIMIDATE", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_DRAGON",
+        "EGG_GROUP_DRAGON"
+    ],
+    "abilities": [
+        "ABILITY_INTIMIDATE",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BLUE",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_FIRE_FANG" ],
-            [ 1, "MOVE_THUNDER_FANG" ],
-            [ 1, "MOVE_RAGE" ],
-            [ 1, "MOVE_BITE" ],
-            [ 1, "MOVE_LEER" ],
-            [ 1, "MOVE_HEADBUTT" ],
-            [ 5, "MOVE_BITE" ],
-            [ 10, "MOVE_LEER" ],
-            [ 16, "MOVE_HEADBUTT" ],
-            [ 20, "MOVE_FOCUS_ENERGY" ],
-            [ 25, "MOVE_EMBER" ],
-            [ 30, "MOVE_PROTECT" ],
-            [ 32, "MOVE_DRAGON_BREATH" ],
-            [ 37, "MOVE_ZEN_HEADBUTT" ],
-            [ 43, "MOVE_SCARY_FACE" ],
-            [ 50, "MOVE_FLY" ],
-            [ 53, "MOVE_CRUNCH" ],
-            [ 61, "MOVE_DRAGON_CLAW" ],
-            [ 70, "MOVE_DOUBLE_EDGE" ]
+            [
+                1,
+                "MOVE_FIRE_FANG"
+            ],
+            [
+                1,
+                "MOVE_THUNDER_FANG"
+            ],
+            [
+                1,
+                "MOVE_RAGE"
+            ],
+            [
+                1,
+                "MOVE_BITE"
+            ],
+            [
+                1,
+                "MOVE_LEER"
+            ],
+            [
+                1,
+                "MOVE_HEADBUTT"
+            ],
+            [
+                5,
+                "MOVE_BITE"
+            ],
+            [
+                10,
+                "MOVE_LEER"
+            ],
+            [
+                16,
+                "MOVE_HEADBUTT"
+            ],
+            [
+                20,
+                "MOVE_FOCUS_ENERGY"
+            ],
+            [
+                25,
+                "MOVE_EMBER"
+            ],
+            [
+                30,
+                "MOVE_PROTECT"
+            ],
+            [
+                32,
+                "MOVE_DRAGON_BREATH"
+            ],
+            [
+                37,
+                "MOVE_ZEN_HEADBUTT"
+            ],
+            [
+                43,
+                "MOVE_SCARY_FACE"
+            ],
+            [
+                50,
+                "MOVE_FLY"
+            ],
+            [
+                53,
+                "MOVE_CRUNCH"
+            ],
+            [
+                61,
+                "MOVE_DRAGON_CLAW"
+            ],
+            [
+                70,
+                "MOVE_DOUBLE_EDGE"
+            ]
         ],
         "by_tm": [
             "TM02",
@@ -84,7 +150,6 @@
             "TM65",
             "TM68",
             "TM71",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",
@@ -111,7 +176,7 @@
             "MOVE_SWIFT"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_BAGON",
     "footprint": {
         "has": true,

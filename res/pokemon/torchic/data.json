@@ -7,7 +7,10 @@
         "special_attack": 70,
         "special_defense": 50
     },
-    "types": [ "TYPE_FIRE", "TYPE_FIRE" ],
+    "types": [
+        "TYPE_FIRE",
+        "TYPE_FIRE"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 65,
     "ev_yields": {
@@ -26,32 +29,70 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_BLAZE", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_BLAZE",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_RED",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_SCRATCH" ],
-            [ 1, "MOVE_GROWL" ],
-            [ 7, "MOVE_FOCUS_ENERGY" ],
-            [ 10, "MOVE_EMBER" ],
-            [ 16, "MOVE_PECK" ],
-            [ 19, "MOVE_SAND_ATTACK" ],
-            [ 25, "MOVE_FIRE_SPIN" ],
-            [ 28, "MOVE_QUICK_ATTACK" ],
-            [ 34, "MOVE_SLASH" ],
-            [ 37, "MOVE_MIRROR_MOVE" ],
-            [ 43, "MOVE_FLAMETHROWER" ]
+            [
+                1,
+                "MOVE_SCRATCH"
+            ],
+            [
+                1,
+                "MOVE_GROWL"
+            ],
+            [
+                7,
+                "MOVE_FOCUS_ENERGY"
+            ],
+            [
+                10,
+                "MOVE_EMBER"
+            ],
+            [
+                16,
+                "MOVE_PECK"
+            ],
+            [
+                19,
+                "MOVE_SAND_ATTACK"
+            ],
+            [
+                25,
+                "MOVE_FIRE_SPIN"
+            ],
+            [
+                28,
+                "MOVE_QUICK_ATTACK"
+            ],
+            [
+                34,
+                "MOVE_SLASH"
+            ],
+            [
+                37,
+                "MOVE_MIRROR_MOVE"
+            ],
+            [
+                43,
+                "MOVE_FLAMETHROWER"
+            ]
         ],
         "by_tm": [
             "TM06",
             "TM10",
             "TM11",
             "TM17",
-            "TM21",
             "TM27",
             "TM28",
             "TM32",
@@ -68,7 +109,6 @@
             "TM61",
             "TM65",
             "TM75",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",

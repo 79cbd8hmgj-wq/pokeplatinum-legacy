@@ -7,7 +7,10 @@
         "special_attack": 60,
         "special_defense": 60
     },
-    "types": [ "TYPE_BUG", "TYPE_POISON" ],
+    "types": [
+        "TYPE_BUG",
+        "TYPE_POISON"
+    ],
     "catch_rate": 90,
     "base_exp_reward": 134,
     "ev_yields": {
@@ -26,31 +29,88 @@
     "hatch_cycles": 15,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_FAST",
-    "egg_groups": [ "EGG_GROUP_BUG", "EGG_GROUP_BUG" ],
-    "abilities": [ "ABILITY_SWARM", "ABILITY_INSOMNIA" ],
+    "egg_groups": [
+        "EGG_GROUP_BUG",
+        "EGG_GROUP_BUG"
+    ],
+    "abilities": [
+        "ABILITY_SWARM",
+        "ABILITY_INSOMNIA"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_RED",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_BUG_BITE" ],
-            [ 1, "MOVE_POISON_STING" ],
-            [ 1, "MOVE_STRING_SHOT" ],
-            [ 1, "MOVE_SCARY_FACE" ],
-            [ 1, "MOVE_CONSTRICT" ],
-            [ 5, "MOVE_SCARY_FACE" ],
-            [ 8, "MOVE_CONSTRICT" ],
-            [ 12, "MOVE_LEECH_LIFE" ],
-            [ 15, "MOVE_NIGHT_SHADE" ],
-            [ 19, "MOVE_SHADOW_SNEAK" ],
-            [ 23, "MOVE_FURY_SWIPES" ],
-            [ 28, "MOVE_SUCKER_PUNCH" ],
-            [ 32, "MOVE_SPIDER_WEB" ],
-            [ 37, "MOVE_AGILITY" ],
-            [ 41, "MOVE_PIN_MISSILE" ],
-            [ 46, "MOVE_PSYCHIC" ],
-            [ 50, "MOVE_POISON_JAB" ]
+            [
+                1,
+                "MOVE_BUG_BITE"
+            ],
+            [
+                1,
+                "MOVE_POISON_STING"
+            ],
+            [
+                1,
+                "MOVE_STRING_SHOT"
+            ],
+            [
+                1,
+                "MOVE_SCARY_FACE"
+            ],
+            [
+                1,
+                "MOVE_CONSTRICT"
+            ],
+            [
+                5,
+                "MOVE_SCARY_FACE"
+            ],
+            [
+                8,
+                "MOVE_CONSTRICT"
+            ],
+            [
+                12,
+                "MOVE_LEECH_LIFE"
+            ],
+            [
+                15,
+                "MOVE_NIGHT_SHADE"
+            ],
+            [
+                19,
+                "MOVE_SHADOW_SNEAK"
+            ],
+            [
+                23,
+                "MOVE_BUG_BITE"
+            ],
+            [
+                28,
+                "MOVE_SUCKER_PUNCH"
+            ],
+            [
+                32,
+                "MOVE_SPIDER_WEB"
+            ],
+            [
+                37,
+                "MOVE_TOXIC_SPIKES"
+            ],
+            [
+                41,
+                "MOVE_PIN_MISSILE"
+            ],
+            [
+                46,
+                "MOVE_PSYCHIC"
+            ],
+            [
+                50,
+                "MOVE_POISON_JAB"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -59,7 +119,6 @@
             "TM15",
             "TM17",
             "TM19",
-            "TM21",
             "TM22",
             "TM27",
             "TM28",
@@ -74,7 +133,6 @@
             "TM58",
             "TM68",
             "TM70",
-            "TM78",
             "TM82",
             "TM83",
             "TM84",
@@ -87,7 +145,7 @@
             "MOVE_SUCKER_PUNCH"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_SPINARAK",
     "footprint": {
         "has": true,

@@ -7,7 +7,10 @@
         "special_attack": 92,
         "special_defense": 42
     },
-    "types": [ "TYPE_NORMAL", "TYPE_FLYING" ],
+    "types": [
+        "TYPE_NORMAL",
+        "TYPE_FLYING"
+    ],
     "catch_rate": 30,
     "base_exp_reward": 107,
     "ev_yields": {
@@ -26,26 +29,68 @@
     "hatch_cycles": 20,
     "base_friendship": 35,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_FLYING", "EGG_GROUP_FLYING" ],
-    "abilities": [ "ABILITY_KEEN_EYE", "ABILITY_TANGLED_FEET" ],
+    "egg_groups": [
+        "EGG_GROUP_FLYING",
+        "EGG_GROUP_FLYING"
+    ],
+    "abilities": [
+        "ABILITY_KEEN_EYE",
+        "ABILITY_TANGLED_FEET"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BLACK",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_PECK" ],
-            [ 5, "MOVE_GROWL" ],
-            [ 9, "MOVE_MIRROR_MOVE" ],
-            [ 13, "MOVE_SING" ],
-            [ 17, "MOVE_FURY_ATTACK" ],
-            [ 21, "MOVE_CHATTER" ],
-            [ 25, "MOVE_TAUNT" ],
-            [ 29, "MOVE_MIMIC" ],
-            [ 33, "MOVE_ROOST" ],
-            [ 37, "MOVE_UPROAR" ],
-            [ 41, "MOVE_FEATHER_DANCE" ],
-            [ 45, "MOVE_HYPER_VOICE" ]
+            [
+                1,
+                "MOVE_PECK"
+            ],
+            [
+                5,
+                "MOVE_GROWL"
+            ],
+            [
+                9,
+                "MOVE_MIRROR_MOVE"
+            ],
+            [
+                13,
+                "MOVE_SING"
+            ],
+            [
+                17,
+                "MOVE_AIR_CUTTER"
+            ],
+            [
+                21,
+                "MOVE_CHATTER"
+            ],
+            [
+                25,
+                "MOVE_TAUNT"
+            ],
+            [
+                29,
+                "MOVE_MIMIC"
+            ],
+            [
+                33,
+                "MOVE_ROOST"
+            ],
+            [
+                37,
+                "MOVE_UPROAR"
+            ],
+            [
+                41,
+                "MOVE_FEATHER_DANCE"
+            ],
+            [
+                45,
+                "MOVE_HYPER_VOICE"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -67,7 +112,6 @@
             "TM47",
             "TM51",
             "TM58",
-            "TM78",
             "TM82",
             "TM83",
             "TM87",
@@ -95,7 +139,7 @@
             "MOVE_SUPERSONIC"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_CHATOT",
     "footprint": {
         "has": true,

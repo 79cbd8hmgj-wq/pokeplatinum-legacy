@@ -7,7 +7,10 @@
         "special_attack": 59,
         "special_defense": 85
     },
-    "types": [ "TYPE_BUG", "TYPE_GROUND" ],
+    "types": [
+        "TYPE_BUG",
+        "TYPE_GROUND"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 159,
     "ev_yields": {
@@ -26,27 +29,72 @@
     "hatch_cycles": 15,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_BUG", "EGG_GROUP_BUG" ],
-    "abilities": [ "ABILITY_ANTICIPATION", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_BUG",
+        "EGG_GROUP_BUG"
+    ],
+    "abilities": [
+        "ABILITY_ANTICIPATION",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_GRAY",
     "flip_sprite": false,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_TACKLE" ],
-            [ 10, "MOVE_PROTECT" ],
-            [ 15, "MOVE_BUG_BITE" ],
-            [ 20, "MOVE_HIDDEN_POWER" ],
-            [ 23, "MOVE_CONFUSION" ],
-            [ 26, "MOVE_ROCK_BLAST" ],
-            [ 29, "MOVE_HARDEN" ],
-            [ 32, "MOVE_PSYBEAM" ],
-            [ 35, "MOVE_CAPTIVATE" ],
-            [ 38, "MOVE_FLAIL" ],
-            [ 41, "MOVE_ATTRACT" ],
-            [ 44, "MOVE_PSYCHIC" ],
-            [ 47, "MOVE_FISSURE" ]
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                10,
+                "MOVE_PROTECT"
+            ],
+            [
+                15,
+                "MOVE_BUG_BITE"
+            ],
+            [
+                20,
+                "MOVE_HIDDEN_POWER"
+            ],
+            [
+                23,
+                "MOVE_CONFUSION"
+            ],
+            [
+                26,
+                "MOVE_ROCK_BLAST"
+            ],
+            [
+                29,
+                "MOVE_HARDEN"
+            ],
+            [
+                32,
+                "MOVE_PSYBEAM"
+            ],
+            [
+                35,
+                "MOVE_CAPTIVATE"
+            ],
+            [
+                38,
+                "MOVE_FLAIL"
+            ],
+            [
+                41,
+                "MOVE_ATTRACT"
+            ],
+            [
+                44,
+                "MOVE_PSYCHIC"
+            ],
+            [
+                47,
+                "MOVE_FISSURE"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -56,7 +104,6 @@
             "TM17",
             "TM18",
             "TM20",
-            "TM21",
             "TM26",
             "TM27",
             "TM28",
@@ -75,7 +122,6 @@
             "TM68",
             "TM70",
             "TM77",
-            "TM78",
             "TM82",
             "TM83",
             "TM85",
@@ -93,5 +139,5 @@
             "MOVE_UPROAR"
         ]
     },
-    "evolutions": [  ]
+    "evolutions": []
 }

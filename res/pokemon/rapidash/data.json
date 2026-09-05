@@ -7,7 +7,10 @@
         "special_attack": 80,
         "special_defense": 80
     },
-    "types": [ "TYPE_FIRE", "TYPE_FIRE" ],
+    "types": [
+        "TYPE_FIRE",
+        "TYPE_FIRE"
+    ],
     "catch_rate": 60,
     "base_exp_reward": 192,
     "ev_yields": {
@@ -26,31 +29,88 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_RUN_AWAY", "ABILITY_FLASH_FIRE" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_RUN_AWAY",
+        "ABILITY_FLASH_FIRE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_YELLOW",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_POISON_JAB" ],
-            [ 1, "MOVE_MEGAHORN" ],
-            [ 1, "MOVE_GROWL" ],
-            [ 1, "MOVE_QUICK_ATTACK" ],
-            [ 1, "MOVE_TAIL_WHIP" ],
-            [ 1, "MOVE_EMBER" ],
-            [ 6, "MOVE_TAIL_WHIP" ],
-            [ 10, "MOVE_EMBER" ],
-            [ 15, "MOVE_FLAME_WHEEL" ],
-            [ 19, "MOVE_STOMP" ],
-            [ 24, "MOVE_FIRE_SPIN" ],
-            [ 28, "MOVE_TAKE_DOWN" ],
-            [ 33, "MOVE_AGILITY" ],
-            [ 37, "MOVE_FIRE_BLAST" ],
-            [ 40, "MOVE_FURY_ATTACK" ],
-            [ 47, "MOVE_BOUNCE" ],
-            [ 56, "MOVE_FLARE_BLITZ" ]
+            [
+                1,
+                "MOVE_POISON_JAB"
+            ],
+            [
+                1,
+                "MOVE_MEGAHORN"
+            ],
+            [
+                1,
+                "MOVE_GROWL"
+            ],
+            [
+                1,
+                "MOVE_QUICK_ATTACK"
+            ],
+            [
+                1,
+                "MOVE_TAIL_WHIP"
+            ],
+            [
+                1,
+                "MOVE_EMBER"
+            ],
+            [
+                6,
+                "MOVE_TAIL_WHIP"
+            ],
+            [
+                10,
+                "MOVE_EMBER"
+            ],
+            [
+                15,
+                "MOVE_FLAME_WHEEL"
+            ],
+            [
+                19,
+                "MOVE_STOMP"
+            ],
+            [
+                24,
+                "MOVE_FIRE_SPIN"
+            ],
+            [
+                28,
+                "MOVE_TAKE_DOWN"
+            ],
+            [
+                33,
+                "MOVE_AGILITY"
+            ],
+            [
+                37,
+                "MOVE_FIRE_BLAST"
+            ],
+            [
+                40,
+                "MOVE_FURY_ATTACK"
+            ],
+            [
+                47,
+                "MOVE_BOUNCE"
+            ],
+            [
+                56,
+                "MOVE_FLARE_BLITZ"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -58,7 +118,6 @@
             "TM11",
             "TM15",
             "TM17",
-            "TM21",
             "TM22",
             "TM23",
             "TM27",
@@ -73,7 +132,6 @@
             "TM58",
             "TM61",
             "TM68",
-            "TM78",
             "TM82",
             "TM83",
             "TM84",
@@ -88,7 +146,7 @@
             "MOVE_SWIFT"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_PONYTA",
     "footprint": {
         "has": true,

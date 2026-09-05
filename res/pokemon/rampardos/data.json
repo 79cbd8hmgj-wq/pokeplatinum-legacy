@@ -7,7 +7,10 @@
         "special_attack": 65,
         "special_defense": 50
     },
-    "types": [ "TYPE_ROCK", "TYPE_ROCK" ],
+    "types": [
+        "TYPE_ROCK",
+        "TYPE_ROCK"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 199,
     "ev_yields": {
@@ -26,26 +29,72 @@
     "hatch_cycles": 30,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_ERRATIC",
-    "egg_groups": [ "EGG_GROUP_MONSTER", "EGG_GROUP_MONSTER" ],
-    "abilities": [ "ABILITY_MOLD_BREAKER", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_MONSTER",
+        "EGG_GROUP_MONSTER"
+    ],
+    "abilities": [
+        "ABILITY_MOLD_BREAKER",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BLUE",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_HEADBUTT" ],
-            [ 1, "MOVE_LEER" ],
-            [ 6, "MOVE_FOCUS_ENERGY" ],
-            [ 10, "MOVE_PURSUIT" ],
-            [ 15, "MOVE_TAKE_DOWN" ],
-            [ 19, "MOVE_SCARY_FACE" ],
-            [ 24, "MOVE_ASSURANCE" ],
-            [ 28, "MOVE_ANCIENT_POWER" ],
-            [ 30, "MOVE_ENDEAVOR" ],
-            [ 36, "MOVE_ZEN_HEADBUTT" ],
-            [ 43, "MOVE_SCREECH" ],
-            [ 52, "MOVE_HEAD_SMASH" ]
+            [
+                1,
+                "MOVE_HEADBUTT"
+            ],
+            [
+                1,
+                "MOVE_LEER"
+            ],
+            [
+                6,
+                "MOVE_FOCUS_ENERGY"
+            ],
+            [
+                10,
+                "MOVE_PURSUIT"
+            ],
+            [
+                15,
+                "MOVE_TAKE_DOWN"
+            ],
+            [
+                19,
+                "MOVE_SCARY_FACE"
+            ],
+            [
+                24,
+                "MOVE_ASSURANCE"
+            ],
+            [
+                28,
+                "MOVE_ANCIENT_POWER"
+            ],
+            [
+                30,
+                "MOVE_ENDEAVOR"
+            ],
+            [
+                31,
+                "MOVE_ROCK_SLIDE"
+            ],
+            [
+                36,
+                "MOVE_ZEN_HEADBUTT"
+            ],
+            [
+                43,
+                "MOVE_SCREECH"
+            ],
+            [
+                52,
+                "MOVE_HEAD_SMASH"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -58,7 +107,6 @@
             "TM15",
             "TM17",
             "TM18",
-            "TM21",
             "TM23",
             "TM24",
             "TM25",
@@ -88,7 +136,6 @@
             "TM72",
             "TM75",
             "TM76",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",
@@ -116,7 +163,7 @@
             "MOVE_UPROAR"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_CRANIDOS",
     "footprint": {
         "has": true,
@@ -165,12 +212,18 @@
         "it": {
             "name": "RAMPARDOS",
             "category": "Pokémon Cranioso",
-            "entry_text": [ "Tira testate talmente potenti da\n", "frantumare anche oggetti durissimi." ]
+            "entry_text": [
+                "Tira testate talmente potenti da\n",
+                "frantumare anche oggetti durissimi."
+            ]
         },
         "es": {
             "name": "RAMPARDOS",
             "category": "Pokémon Cabezazo",
-            "entry_text": [ "Su potente cabezazo puede\n", "hacer a\u00f1icos cualquier cosa." ]
+            "entry_text": [
+                "Su potente cabezazo puede\n",
+                "hacer añicos cualquier cosa."
+            ]
         },
         "jp": {
             "name": "ラムパルド",

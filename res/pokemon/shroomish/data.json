@@ -7,7 +7,10 @@
         "special_attack": 40,
         "special_defense": 60
     },
-    "types": [ "TYPE_GRASS", "TYPE_GRASS" ],
+    "types": [
+        "TYPE_GRASS",
+        "TYPE_GRASS"
+    ],
     "catch_rate": 255,
     "base_exp_reward": 65,
     "ev_yields": {
@@ -26,26 +29,68 @@
     "hatch_cycles": 15,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_FLUCTUATING",
-    "egg_groups": [ "EGG_GROUP_FAIRY", "EGG_GROUP_GRASS" ],
-    "abilities": [ "ABILITY_EFFECT_SPORE", "ABILITY_POISON_HEAL" ],
+    "egg_groups": [
+        "EGG_GROUP_FAIRY",
+        "EGG_GROUP_GRASS"
+    ],
+    "abilities": [
+        "ABILITY_EFFECT_SPORE",
+        "ABILITY_POISON_HEAL"
+    ],
     "safari_flee_rate": 120,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_ABSORB" ],
-            [ 5, "MOVE_TACKLE" ],
-            [ 9, "MOVE_STUN_SPORE" ],
-            [ 13, "MOVE_LEECH_SEED" ],
-            [ 17, "MOVE_MEGA_DRAIN" ],
-            [ 21, "MOVE_HEADBUTT" ],
-            [ 25, "MOVE_POISON_POWDER" ],
-            [ 29, "MOVE_WORRY_SEED" ],
-            [ 33, "MOVE_GROWTH" ],
-            [ 37, "MOVE_GIGA_DRAIN" ],
-            [ 41, "MOVE_SEED_BOMB" ],
-            [ 45, "MOVE_SPORE" ]
+            [
+                1,
+                "MOVE_ABSORB"
+            ],
+            [
+                5,
+                "MOVE_TACKLE"
+            ],
+            [
+                9,
+                "MOVE_STUN_SPORE"
+            ],
+            [
+                13,
+                "MOVE_LEECH_SEED"
+            ],
+            [
+                17,
+                "MOVE_MEGA_DRAIN"
+            ],
+            [
+                21,
+                "MOVE_HEADBUTT"
+            ],
+            [
+                25,
+                "MOVE_POISON_POWDER"
+            ],
+            [
+                29,
+                "MOVE_WORRY_SEED"
+            ],
+            [
+                33,
+                "MOVE_GROWTH"
+            ],
+            [
+                37,
+                "MOVE_GIGA_DRAIN"
+            ],
+            [
+                41,
+                "MOVE_SEED_BOMB"
+            ],
+            [
+                45,
+                "MOVE_SPORE"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -55,7 +100,6 @@
             "TM17",
             "TM19",
             "TM20",
-            "TM21",
             "TM22",
             "TM27",
             "TM32",
@@ -69,7 +113,6 @@
             "TM58",
             "TM70",
             "TM75",
-            "TM78",
             "TM82",
             "TM83",
             "TM86",

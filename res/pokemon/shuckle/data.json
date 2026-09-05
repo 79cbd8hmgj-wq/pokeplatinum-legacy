@@ -7,7 +7,10 @@
         "special_attack": 10,
         "special_defense": 230
     },
-    "types": [ "TYPE_BUG", "TYPE_ROCK" ],
+    "types": [
+        "TYPE_BUG",
+        "TYPE_ROCK"
+    ],
     "catch_rate": 190,
     "base_exp_reward": 80,
     "ev_yields": {
@@ -26,24 +29,60 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_BUG", "EGG_GROUP_BUG" ],
-    "abilities": [ "ABILITY_STURDY", "ABILITY_GLUTTONY" ],
+    "egg_groups": [
+        "EGG_GROUP_BUG",
+        "EGG_GROUP_BUG"
+    ],
+    "abilities": [
+        "ABILITY_STURDY",
+        "ABILITY_GLUTTONY"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_YELLOW",
     "flip_sprite": false,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_WITHDRAW" ],
-            [ 1, "MOVE_CONSTRICT" ],
-            [ 1, "MOVE_BIDE" ],
-            [ 9, "MOVE_ENCORE" ],
-            [ 14, "MOVE_SAFEGUARD" ],
-            [ 22, "MOVE_WRAP" ],
-            [ 27, "MOVE_REST" ],
-            [ 35, "MOVE_GASTRO_ACID" ],
-            [ 40, "MOVE_BUG_BITE" ],
-            [ 48, "MOVE_POWER_TRICK" ]
+            [
+                1,
+                "MOVE_WITHDRAW"
+            ],
+            [
+                1,
+                "MOVE_CONSTRICT"
+            ],
+            [
+                1,
+                "MOVE_BIDE"
+            ],
+            [
+                9,
+                "MOVE_ENCORE"
+            ],
+            [
+                14,
+                "MOVE_SAFEGUARD"
+            ],
+            [
+                22,
+                "MOVE_WRAP"
+            ],
+            [
+                27,
+                "MOVE_REST"
+            ],
+            [
+                35,
+                "MOVE_GASTRO_ACID"
+            ],
+            [
+                40,
+                "MOVE_BUG_BITE"
+            ],
+            [
+                48,
+                "MOVE_POWER_TRICK"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -51,7 +90,6 @@
             "TM11",
             "TM17",
             "TM20",
-            "TM21",
             "TM26",
             "TM27",
             "TM28",
@@ -69,7 +107,6 @@
             "TM71",
             "TM74",
             "TM76",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",
@@ -96,7 +133,7 @@
             "MOVE_MUD_SLAP"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_SHUCKLE",
     "footprint": {
         "has": true,

@@ -7,7 +7,10 @@
         "special_attack": 50,
         "special_defense": 70
     },
-    "types": [ "TYPE_GROUND", "TYPE_GROUND" ],
+    "types": [
+        "TYPE_GROUND",
+        "TYPE_GROUND"
+    ],
     "catch_rate": 50,
     "base_exp_reward": 153,
     "ev_yields": {
@@ -26,31 +29,88 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_SAND_VEIL", "ABILITY_ARENA_TRAP" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_SAND_VEIL",
+        "ABILITY_ARENA_TRAP"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_NIGHT_SLASH" ],
-            [ 1, "MOVE_TRI_ATTACK" ],
-            [ 1, "MOVE_SCRATCH" ],
-            [ 1, "MOVE_SAND_ATTACK" ],
-            [ 1, "MOVE_GROWL" ],
-            [ 4, "MOVE_GROWL" ],
-            [ 7, "MOVE_ASTONISH" ],
-            [ 12, "MOVE_MAGNITUDE" ],
-            [ 15, "MOVE_MUD_SLAP" ],
-            [ 18, "MOVE_DIG" ],
-            [ 23, "MOVE_SUCKER_PUNCH" ],
-            [ 26, "MOVE_SAND_TOMB" ],
-            [ 28, "MOVE_EARTH_POWER" ],
-            [ 33, "MOVE_MUD_BOMB" ],
-            [ 40, "MOVE_SLASH" ],
-            [ 45, "MOVE_EARTHQUAKE" ],
-            [ 50, "MOVE_FISSURE" ]
+            [
+                1,
+                "MOVE_NIGHT_SLASH"
+            ],
+            [
+                1,
+                "MOVE_TRI_ATTACK"
+            ],
+            [
+                1,
+                "MOVE_SCRATCH"
+            ],
+            [
+                1,
+                "MOVE_SAND_ATTACK"
+            ],
+            [
+                1,
+                "MOVE_GROWL"
+            ],
+            [
+                4,
+                "MOVE_GROWL"
+            ],
+            [
+                7,
+                "MOVE_ASTONISH"
+            ],
+            [
+                12,
+                "MOVE_MAGNITUDE"
+            ],
+            [
+                15,
+                "MOVE_MUD_SLAP"
+            ],
+            [
+                18,
+                "MOVE_DIG"
+            ],
+            [
+                23,
+                "MOVE_SUCKER_PUNCH"
+            ],
+            [
+                26,
+                "MOVE_SAND_TOMB"
+            ],
+            [
+                28,
+                "MOVE_EARTH_POWER"
+            ],
+            [
+                33,
+                "MOVE_MUD_BOMB"
+            ],
+            [
+                40,
+                "MOVE_SLASH"
+            ],
+            [
+                45,
+                "MOVE_EARTHQUAKE"
+            ],
+            [
+                50,
+                "MOVE_FISSURE"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -58,7 +118,6 @@
             "TM11",
             "TM15",
             "TM17",
-            "TM21",
             "TM26",
             "TM27",
             "TM28",
@@ -77,7 +136,6 @@
             "TM68",
             "TM71",
             "TM76",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",
@@ -93,7 +151,7 @@
             "MOVE_SUCKER_PUNCH"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_DIGLETT",
     "footprint": {
         "has": false,

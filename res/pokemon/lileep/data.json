@@ -7,7 +7,10 @@
         "special_attack": 61,
         "special_defense": 87
     },
-    "types": [ "TYPE_ROCK", "TYPE_GRASS" ],
+    "types": [
+        "TYPE_ROCK",
+        "TYPE_GRASS"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 99,
     "ev_yields": {
@@ -26,27 +29,72 @@
     "hatch_cycles": 30,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_ERRATIC",
-    "egg_groups": [ "EGG_GROUP_WATER_3", "EGG_GROUP_WATER_3" ],
-    "abilities": [ "ABILITY_SUCTION_CUPS", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_WATER_3",
+        "EGG_GROUP_WATER_3"
+    ],
+    "abilities": [
+        "ABILITY_SUCTION_CUPS",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_PURPLE",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_ASTONISH" ],
-            [ 1, "MOVE_CONSTRICT" ],
-            [ 8, "MOVE_ACID" ],
-            [ 15, "MOVE_INGRAIN" ],
-            [ 22, "MOVE_CONFUSE_RAY" ],
-            [ 29, "MOVE_AMNESIA" ],
-            [ 36, "MOVE_GASTRO_ACID" ],
-            [ 43, "MOVE_ANCIENT_POWER" ],
-            [ 50, "MOVE_ENERGY_BALL" ],
-            [ 57, "MOVE_STOCKPILE" ],
-            [ 57, "MOVE_SPIT_UP" ],
-            [ 57, "MOVE_SWALLOW" ],
-            [ 64, "MOVE_WRING_OUT" ]
+            [
+                1,
+                "MOVE_ASTONISH"
+            ],
+            [
+                1,
+                "MOVE_CONSTRICT"
+            ],
+            [
+                8,
+                "MOVE_ACID"
+            ],
+            [
+                15,
+                "MOVE_INGRAIN"
+            ],
+            [
+                22,
+                "MOVE_CONFUSE_RAY"
+            ],
+            [
+                29,
+                "MOVE_AMNESIA"
+            ],
+            [
+                36,
+                "MOVE_GASTRO_ACID"
+            ],
+            [
+                43,
+                "MOVE_ANCIENT_POWER"
+            ],
+            [
+                50,
+                "MOVE_ENERGY_BALL"
+            ],
+            [
+                57,
+                "MOVE_STOCKPILE"
+            ],
+            [
+                57,
+                "MOVE_SPIT_UP"
+            ],
+            [
+                57,
+                "MOVE_SWALLOW"
+            ],
+            [
+                64,
+                "MOVE_WRING_OUT"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -55,7 +103,6 @@
             "TM11",
             "TM17",
             "TM19",
-            "TM21",
             "TM22",
             "TM27",
             "TM32",

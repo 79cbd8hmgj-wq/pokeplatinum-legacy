@@ -7,7 +7,10 @@
         "special_attack": 55,
         "special_defense": 80
     },
-    "types": [ "TYPE_STEEL", "TYPE_PSYCHIC" ],
+    "types": [
+        "TYPE_STEEL",
+        "TYPE_PSYCHIC"
+    ],
     "catch_rate": 3,
     "base_exp_reward": 153,
     "ev_yields": {
@@ -26,29 +29,80 @@
     "hatch_cycles": 40,
     "base_friendship": 35,
     "exp_rate": "EXP_RATE_SLOW",
-    "egg_groups": [ "EGG_GROUP_MINERAL", "EGG_GROUP_MINERAL" ],
-    "abilities": [ "ABILITY_CLEAR_BODY", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_MINERAL",
+        "EGG_GROUP_MINERAL"
+    ],
+    "abilities": [
+        "ABILITY_CLEAR_BODY",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BLUE",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_MAGNET_RISE" ],
-            [ 1, "MOVE_TAKE_DOWN" ],
-            [ 1, "MOVE_METAL_CLAW" ],
-            [ 1, "MOVE_CONFUSION" ],
-            [ 20, "MOVE_METAL_CLAW" ],
-            [ 20, "MOVE_CONFUSION" ],
-            [ 24, "MOVE_SCARY_FACE" ],
-            [ 28, "MOVE_PURSUIT" ],
-            [ 32, "MOVE_BULLET_PUNCH" ],
-            [ 36, "MOVE_PSYCHIC" ],
-            [ 40, "MOVE_IRON_DEFENSE" ],
-            [ 44, "MOVE_AGILITY" ],
-            [ 48, "MOVE_METEOR_MASH" ],
-            [ 52, "MOVE_ZEN_HEADBUTT" ],
-            [ 56, "MOVE_HYPER_BEAM" ]
+            [
+                1,
+                "MOVE_MAGNET_RISE"
+            ],
+            [
+                1,
+                "MOVE_TAKE_DOWN"
+            ],
+            [
+                1,
+                "MOVE_METAL_CLAW"
+            ],
+            [
+                1,
+                "MOVE_CONFUSION"
+            ],
+            [
+                20,
+                "MOVE_METAL_CLAW"
+            ],
+            [
+                20,
+                "MOVE_CONFUSION"
+            ],
+            [
+                24,
+                "MOVE_SCARY_FACE"
+            ],
+            [
+                28,
+                "MOVE_PURSUIT"
+            ],
+            [
+                32,
+                "MOVE_BULLET_PUNCH"
+            ],
+            [
+                36,
+                "MOVE_PSYCHIC"
+            ],
+            [
+                40,
+                "MOVE_IRON_DEFENSE"
+            ],
+            [
+                44,
+                "MOVE_AGILITY"
+            ],
+            [
+                48,
+                "MOVE_METEOR_MASH"
+            ],
+            [
+                52,
+                "MOVE_ZEN_HEADBUTT"
+            ],
+            [
+                56,
+                "MOVE_HYPER_BEAM"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -58,7 +112,6 @@
             "TM16",
             "TM17",
             "TM18",
-            "TM21",
             "TM26",
             "TM27",
             "TM29",

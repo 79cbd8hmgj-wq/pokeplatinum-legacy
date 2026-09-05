@@ -7,7 +7,10 @@
         "special_attack": 85,
         "special_defense": 60
     },
-    "types": [ "TYPE_FIRE", "TYPE_FIGHTING" ],
+    "types": [
+        "TYPE_FIRE",
+        "TYPE_FIGHTING"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 142,
     "ev_yields": {
@@ -26,29 +29,80 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_BLAZE", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_BLAZE",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_RED",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_SCRATCH" ],
-            [ 1, "MOVE_GROWL" ],
-            [ 1, "MOVE_FOCUS_ENERGY" ],
-            [ 1, "MOVE_EMBER" ],
-            [ 7, "MOVE_FOCUS_ENERGY" ],
-            [ 13, "MOVE_EMBER" ],
-            [ 16, "MOVE_DOUBLE_KICK" ],
-            [ 17, "MOVE_PECK" ],
-            [ 21, "MOVE_SAND_ATTACK" ],
-            [ 28, "MOVE_BULK_UP" ],
-            [ 32, "MOVE_QUICK_ATTACK" ],
-            [ 39, "MOVE_SLASH" ],
-            [ 43, "MOVE_MIRROR_MOVE" ],
-            [ 50, "MOVE_SKY_UPPERCUT" ],
-            [ 54, "MOVE_FLARE_BLITZ" ]
+            [
+                1,
+                "MOVE_SCRATCH"
+            ],
+            [
+                1,
+                "MOVE_GROWL"
+            ],
+            [
+                1,
+                "MOVE_FOCUS_ENERGY"
+            ],
+            [
+                1,
+                "MOVE_EMBER"
+            ],
+            [
+                7,
+                "MOVE_FOCUS_ENERGY"
+            ],
+            [
+                13,
+                "MOVE_EMBER"
+            ],
+            [
+                16,
+                "MOVE_DOUBLE_KICK"
+            ],
+            [
+                17,
+                "MOVE_PECK"
+            ],
+            [
+                21,
+                "MOVE_SAND_ATTACK"
+            ],
+            [
+                28,
+                "MOVE_BULK_UP"
+            ],
+            [
+                32,
+                "MOVE_QUICK_ATTACK"
+            ],
+            [
+                39,
+                "MOVE_SLASH"
+            ],
+            [
+                43,
+                "MOVE_MIRROR_MOVE"
+            ],
+            [
+                50,
+                "MOVE_SKY_UPPERCUT"
+            ],
+            [
+                54,
+                "MOVE_FLARE_BLITZ"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -57,7 +111,6 @@
             "TM10",
             "TM11",
             "TM17",
-            "TM21",
             "TM27",
             "TM28",
             "TM31",
@@ -77,7 +130,6 @@
             "TM61",
             "TM65",
             "TM75",
-            "TM78",
             "TM80",
             "TM82",
             "TM83",

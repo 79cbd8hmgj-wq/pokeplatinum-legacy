@@ -7,7 +7,10 @@
         "special_attack": 45,
         "special_defense": 55
     },
-    "types": [ "TYPE_GROUND", "TYPE_GROUND" ],
+    "types": [
+        "TYPE_GROUND",
+        "TYPE_GROUND"
+    ],
     "catch_rate": 90,
     "base_exp_reward": 163,
     "ev_yields": {
@@ -26,30 +29,84 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_SAND_VEIL", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_SAND_VEIL",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_YELLOW",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_SCRATCH" ],
-            [ 1, "MOVE_DEFENSE_CURL" ],
-            [ 1, "MOVE_SAND_ATTACK" ],
-            [ 3, "MOVE_DEFENSE_CURL" ],
-            [ 7, "MOVE_SAND_ATTACK" ],
-            [ 9, "MOVE_POISON_STING" ],
-            [ 13, "MOVE_RAPID_SPIN" ],
-            [ 15, "MOVE_SWIFT" ],
-            [ 19, "MOVE_FURY_SWIPES" ],
-            [ 21, "MOVE_ROLLOUT" ],
-            [ 22, "MOVE_CRUSH_CLAW" ],
-            [ 28, "MOVE_FURY_CUTTER" ],
-            [ 33, "MOVE_SAND_TOMB" ],
-            [ 40, "MOVE_SLASH" ],
-            [ 45, "MOVE_GYRO_BALL" ],
-            [ 52, "MOVE_SANDSTORM" ]
+            [
+                1,
+                "MOVE_SCRATCH"
+            ],
+            [
+                1,
+                "MOVE_DEFENSE_CURL"
+            ],
+            [
+                1,
+                "MOVE_SAND_ATTACK"
+            ],
+            [
+                3,
+                "MOVE_DEFENSE_CURL"
+            ],
+            [
+                7,
+                "MOVE_SAND_ATTACK"
+            ],
+            [
+                9,
+                "MOVE_POISON_STING"
+            ],
+            [
+                13,
+                "MOVE_RAPID_SPIN"
+            ],
+            [
+                15,
+                "MOVE_SWIFT"
+            ],
+            [
+                19,
+                "MOVE_FURY_SWIPES"
+            ],
+            [
+                21,
+                "MOVE_ROLLOUT"
+            ],
+            [
+                22,
+                "MOVE_CRUSH_CLAW"
+            ],
+            [
+                28,
+                "MOVE_FURY_CUTTER"
+            ],
+            [
+                33,
+                "MOVE_SAND_TOMB"
+            ],
+            [
+                40,
+                "MOVE_SLASH"
+            ],
+            [
+                45,
+                "MOVE_GYRO_BALL"
+            ],
+            [
+                52,
+                "MOVE_SANDSTORM"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -58,7 +115,6 @@
             "TM11",
             "TM15",
             "TM17",
-            "TM21",
             "TM23",
             "TM26",
             "TM27",
@@ -82,7 +138,6 @@
             "TM74",
             "TM75",
             "TM76",
-            "TM78",
             "TM80",
             "TM81",
             "TM82",
@@ -105,7 +160,7 @@
             "MOVE_SWIFT"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_SANDSHREW",
     "footprint": {
         "has": true,

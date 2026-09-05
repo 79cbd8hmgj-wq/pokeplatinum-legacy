@@ -7,7 +7,10 @@
         "special_attack": 85,
         "special_defense": 75
     },
-    "types": [ "TYPE_ELECTRIC", "TYPE_ELECTRIC" ],
+    "types": [
+        "TYPE_ELECTRIC",
+        "TYPE_ELECTRIC"
+    ],
     "catch_rate": 200,
     "base_exp_reward": 120,
     "ev_yields": {
@@ -26,30 +29,84 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_FAIRY", "EGG_GROUP_FAIRY" ],
-    "abilities": [ "ABILITY_PLUS", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_FAIRY",
+        "EGG_GROUP_FAIRY"
+    ],
+    "abilities": [
+        "ABILITY_PLUS",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_YELLOW",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_GROWL" ],
-            [ 3, "MOVE_THUNDER_WAVE" ],
-            [ 7, "MOVE_QUICK_ATTACK" ],
-            [ 10, "MOVE_HELPING_HAND" ],
-            [ 15, "MOVE_SPARK" ],
-            [ 17, "MOVE_ENCORE" ],
-            [ 21, "MOVE_FAKE_TEARS" ],
-            [ 24, "MOVE_COPYCAT" ],
-            [ 29, "MOVE_SWIFT" ],
-            [ 31, "MOVE_FAKE_TEARS" ],
-            [ 35, "MOVE_CHARGE" ],
-            [ 38, "MOVE_THUNDER" ],
-            [ 42, "MOVE_BATON_PASS" ],
-            [ 44, "MOVE_AGILITY" ],
-            [ 48, "MOVE_LAST_RESORT" ],
-            [ 51, "MOVE_NASTY_PLOT" ]
+            [
+                1,
+                "MOVE_GROWL"
+            ],
+            [
+                3,
+                "MOVE_THUNDER_WAVE"
+            ],
+            [
+                7,
+                "MOVE_QUICK_ATTACK"
+            ],
+            [
+                10,
+                "MOVE_HELPING_HAND"
+            ],
+            [
+                15,
+                "MOVE_SPARK"
+            ],
+            [
+                17,
+                "MOVE_ENCORE"
+            ],
+            [
+                21,
+                "MOVE_FAKE_TEARS"
+            ],
+            [
+                24,
+                "MOVE_COPYCAT"
+            ],
+            [
+                29,
+                "MOVE_SWIFT"
+            ],
+            [
+                31,
+                "MOVE_FAKE_TEARS"
+            ],
+            [
+                35,
+                "MOVE_CHARGE"
+            ],
+            [
+                38,
+                "MOVE_THUNDER"
+            ],
+            [
+                42,
+                "MOVE_BATON_PASS"
+            ],
+            [
+                44,
+                "MOVE_AGILITY"
+            ],
+            [
+                48,
+                "MOVE_LAST_RESORT"
+            ],
+            [
+                51,
+                "MOVE_NASTY_PLOT"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -57,7 +114,6 @@
             "TM16",
             "TM17",
             "TM18",
-            "TM21",
             "TM23",
             "TM24",
             "TM25",
@@ -73,7 +129,6 @@
             "TM58",
             "TM70",
             "TM73",
-            "TM78",
             "TM82",
             "TM83",
             "TM86",
@@ -99,7 +154,7 @@
             "MOVE_SWEET_KISS"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_PLUSLE",
     "footprint": {
         "has": true,

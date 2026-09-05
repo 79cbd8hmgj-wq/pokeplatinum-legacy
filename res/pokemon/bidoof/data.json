@@ -7,7 +7,10 @@
         "special_attack": 35,
         "special_defense": 40
     },
-    "types": [ "TYPE_NORMAL", "TYPE_NORMAL" ],
+    "types": [
+        "TYPE_NORMAL",
+        "TYPE_NORMAL"
+    ],
     "catch_rate": 255,
     "base_exp_reward": 58,
     "ev_yields": {
@@ -26,26 +29,68 @@
     "hatch_cycles": 15,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_WATER_1", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_SIMPLE", "ABILITY_UNAWARE" ],
+    "egg_groups": [
+        "EGG_GROUP_WATER_1",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_SIMPLE",
+        "ABILITY_UNAWARE"
+    ],
     "safari_flee_rate": 90,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_TACKLE" ],
-            [ 5, "MOVE_GROWL" ],
-            [ 9, "MOVE_DEFENSE_CURL" ],
-            [ 13, "MOVE_ROLLOUT" ],
-            [ 17, "MOVE_HEADBUTT" ],
-            [ 21, "MOVE_HYPER_FANG" ],
-            [ 25, "MOVE_YAWN" ],
-            [ 29, "MOVE_AMNESIA" ],
-            [ 33, "MOVE_TAKE_DOWN" ],
-            [ 37, "MOVE_SUPER_FANG" ],
-            [ 41, "MOVE_SUPERPOWER" ],
-            [ 45, "MOVE_CURSE" ]
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                5,
+                "MOVE_GROWL"
+            ],
+            [
+                9,
+                "MOVE_DEFENSE_CURL"
+            ],
+            [
+                13,
+                "MOVE_ROLLOUT"
+            ],
+            [
+                17,
+                "MOVE_HEADBUTT"
+            ],
+            [
+                21,
+                "MOVE_HYPER_FANG"
+            ],
+            [
+                25,
+                "MOVE_YAWN"
+            ],
+            [
+                29,
+                "MOVE_AMNESIA"
+            ],
+            [
+                33,
+                "MOVE_TAKE_DOWN"
+            ],
+            [
+                37,
+                "MOVE_SUPER_FANG"
+            ],
+            [
+                41,
+                "MOVE_SUPERPOWER"
+            ],
+            [
+                45,
+                "MOVE_CURSE"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -56,7 +101,6 @@
             "TM14",
             "TM17",
             "TM18",
-            "TM21",
             "TM23",
             "TM24",
             "TM25",
@@ -74,7 +118,6 @@
             "TM58",
             "TM73",
             "TM76",
-            "TM78",
             "TM82",
             "TM83",
             "TM86",

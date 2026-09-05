@@ -1,13 +1,16 @@
 {
     "base_stats": {
         "hp": 65,
-        "attack": 76,
+        "attack": 90,
         "defense": 84,
-        "speed": 105,
+        "speed": 111,
         "special_attack": 54,
         "special_defense": 96
     },
-    "types": [ "TYPE_NORMAL", "TYPE_NORMAL" ],
+    "types": [
+        "TYPE_NORMAL",
+        "TYPE_NORMAL"
+    ],
     "catch_rate": 60,
     "base_exp_reward": 178,
     "ev_yields": {
@@ -26,30 +29,84 @@
     "hatch_cycles": 20,
     "base_friendship": 140,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_HUMAN_LIKE" ],
-    "abilities": [ "ABILITY_CUTE_CHARM", "ABILITY_KLUTZ" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_HUMAN_LIKE"
+    ],
+    "abilities": [
+        "ABILITY_CUTE_CHARM",
+        "ABILITY_SCRAPPY"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_MIRROR_COAT" ],
-            [ 1, "MOVE_MAGIC_COAT" ],
-            [ 1, "MOVE_SPLASH" ],
-            [ 1, "MOVE_POUND" ],
-            [ 1, "MOVE_DEFENSE_CURL" ],
-            [ 1, "MOVE_FORESIGHT" ],
-            [ 6, "MOVE_ENDURE" ],
-            [ 13, "MOVE_RETURN" ],
-            [ 16, "MOVE_QUICK_ATTACK" ],
-            [ 23, "MOVE_JUMP_KICK" ],
-            [ 26, "MOVE_BATON_PASS" ],
-            [ 33, "MOVE_AGILITY" ],
-            [ 36, "MOVE_DIZZY_PUNCH" ],
-            [ 43, "MOVE_CHARM" ],
-            [ 46, "MOVE_BOUNCE" ],
-            [ 53, "MOVE_HEALING_WISH" ]
+            [
+                1,
+                "MOVE_MIRROR_COAT"
+            ],
+            [
+                1,
+                "MOVE_MAGIC_COAT"
+            ],
+            [
+                1,
+                "MOVE_SPLASH"
+            ],
+            [
+                1,
+                "MOVE_POUND"
+            ],
+            [
+                1,
+                "MOVE_DEFENSE_CURL"
+            ],
+            [
+                1,
+                "MOVE_FORESIGHT"
+            ],
+            [
+                6,
+                "MOVE_ENDURE"
+            ],
+            [
+                13,
+                "MOVE_RETURN"
+            ],
+            [
+                16,
+                "MOVE_QUICK_ATTACK"
+            ],
+            [
+                23,
+                "MOVE_JUMP_KICK"
+            ],
+            [
+                26,
+                "MOVE_BATON_PASS"
+            ],
+            [
+                33,
+                "MOVE_AGILITY"
+            ],
+            [
+                36,
+                "MOVE_DIZZY_PUNCH"
+            ],
+            [
+                43,
+                "MOVE_CHARM"
+            ],
+            [
+                46,
+                "MOVE_BOUNCE"
+            ],
+            [
+                53,
+                "MOVE_HEALING_WISH"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -62,7 +119,6 @@
             "TM15",
             "TM17",
             "TM18",
-            "TM21",
             "TM22",
             "TM23",
             "TM24",
@@ -83,7 +139,6 @@
             "TM60",
             "TM68",
             "TM73",
-            "TM78",
             "TM82",
             "TM83",
             "TM86",
@@ -108,7 +163,7 @@
             "MOVE_UPROAR"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_BUNEARY",
     "footprint": {
         "has": true,

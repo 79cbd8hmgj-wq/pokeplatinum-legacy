@@ -7,7 +7,10 @@
         "special_attack": 70,
         "special_defense": 80
     },
-    "types": [ "TYPE_POISON", "TYPE_FLYING" ],
+    "types": [
+        "TYPE_POISON",
+        "TYPE_FLYING"
+    ],
     "catch_rate": 90,
     "base_exp_reward": 204,
     "ev_yields": {
@@ -26,29 +29,80 @@
     "hatch_cycles": 15,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_FLYING", "EGG_GROUP_FLYING" ],
-    "abilities": [ "ABILITY_INNER_FOCUS", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_FLYING",
+        "EGG_GROUP_FLYING"
+    ],
+    "abilities": [
+        "ABILITY_INNER_FOCUS",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_PURPLE",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_CROSS_POISON" ],
-            [ 1, "MOVE_SCREECH" ],
-            [ 1, "MOVE_LEECH_LIFE" ],
-            [ 1, "MOVE_SUPERSONIC" ],
-            [ 1, "MOVE_ASTONISH" ],
-            [ 5, "MOVE_SUPERSONIC" ],
-            [ 9, "MOVE_ASTONISH" ],
-            [ 13, "MOVE_BITE" ],
-            [ 17, "MOVE_WING_ATTACK" ],
-            [ 21, "MOVE_CONFUSE_RAY" ],
-            [ 27, "MOVE_AIR_CUTTER" ],
-            [ 33, "MOVE_MEAN_LOOK" ],
-            [ 39, "MOVE_POISON_FANG" ],
-            [ 45, "MOVE_HAZE" ],
-            [ 51, "MOVE_AIR_SLASH" ]
+            [
+                1,
+                "MOVE_CROSS_POISON"
+            ],
+            [
+                1,
+                "MOVE_SCREECH"
+            ],
+            [
+                1,
+                "MOVE_LEECH_LIFE"
+            ],
+            [
+                1,
+                "MOVE_SUPERSONIC"
+            ],
+            [
+                1,
+                "MOVE_ASTONISH"
+            ],
+            [
+                5,
+                "MOVE_SUPERSONIC"
+            ],
+            [
+                9,
+                "MOVE_ASTONISH"
+            ],
+            [
+                13,
+                "MOVE_BITE"
+            ],
+            [
+                17,
+                "MOVE_WING_ATTACK"
+            ],
+            [
+                21,
+                "MOVE_CONFUSE_RAY"
+            ],
+            [
+                27,
+                "MOVE_AIR_CUTTER"
+            ],
+            [
+                33,
+                "MOVE_MEAN_LOOK"
+            ],
+            [
+                39,
+                "MOVE_POISON_FANG"
+            ],
+            [
+                45,
+                "MOVE_HAZE"
+            ],
+            [
+                51,
+                "MOVE_AIR_SLASH"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -77,7 +131,6 @@
             "TM58",
             "TM66",
             "TM68",
-            "TM78",
             "TM79",
             "TM81",
             "TM82",
@@ -100,7 +153,7 @@
             "MOVE_UPROAR"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_ZUBAT",
     "footprint": {
         "has": false,

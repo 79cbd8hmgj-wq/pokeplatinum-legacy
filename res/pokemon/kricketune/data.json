@@ -7,7 +7,10 @@
         "special_attack": 55,
         "special_defense": 51
     },
-    "types": [ "TYPE_BUG", "TYPE_BUG" ],
+    "types": [
+        "TYPE_BUG",
+        "TYPE_BUG"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 159,
     "ev_yields": {
@@ -26,27 +29,72 @@
     "hatch_cycles": 15,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_SLOW",
-    "egg_groups": [ "EGG_GROUP_BUG", "EGG_GROUP_BUG" ],
-    "abilities": [ "ABILITY_SWARM", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_BUG",
+        "EGG_GROUP_BUG"
+    ],
+    "abilities": [
+        "ABILITY_SWARM",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_RED",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_GROWL" ],
-            [ 1, "MOVE_BIDE" ],
-            [ 10, "MOVE_FURY_CUTTER" ],
-            [ 14, "MOVE_LEECH_LIFE" ],
-            [ 18, "MOVE_SING" ],
-            [ 22, "MOVE_FOCUS_ENERGY" ],
-            [ 26, "MOVE_SLASH" ],
-            [ 30, "MOVE_X_SCISSOR" ],
-            [ 34, "MOVE_SCREECH" ],
-            [ 38, "MOVE_TAUNT" ],
-            [ 42, "MOVE_NIGHT_SLASH" ],
-            [ 46, "MOVE_BUG_BUZZ" ],
-            [ 50, "MOVE_PERISH_SONG" ]
+            [
+                1,
+                "MOVE_GROWL"
+            ],
+            [
+                1,
+                "MOVE_BIDE"
+            ],
+            [
+                10,
+                "MOVE_FURY_CUTTER"
+            ],
+            [
+                14,
+                "MOVE_LEECH_LIFE"
+            ],
+            [
+                18,
+                "MOVE_SING"
+            ],
+            [
+                22,
+                "MOVE_FOCUS_ENERGY"
+            ],
+            [
+                26,
+                "MOVE_SLASH"
+            ],
+            [
+                30,
+                "MOVE_X_SCISSOR"
+            ],
+            [
+                34,
+                "MOVE_SCREECH"
+            ],
+            [
+                38,
+                "MOVE_TAUNT"
+            ],
+            [
+                42,
+                "MOVE_NIGHT_SLASH"
+            ],
+            [
+                46,
+                "MOVE_BUG_BUZZ"
+            ],
+            [
+                50,
+                "MOVE_PERISH_SONG"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -55,7 +103,6 @@
             "TM15",
             "TM17",
             "TM18",
-            "TM21",
             "TM27",
             "TM31",
             "TM32",
@@ -70,7 +117,6 @@
             "TM68",
             "TM70",
             "TM75",
-            "TM78",
             "TM81",
             "TM82",
             "TM83",
@@ -89,7 +135,7 @@
             "MOVE_UPROAR"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_KRICKETOT",
     "footprint": {
         "has": true,

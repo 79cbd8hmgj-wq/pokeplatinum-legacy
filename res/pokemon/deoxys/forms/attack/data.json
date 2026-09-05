@@ -7,7 +7,10 @@
         "special_attack": 180,
         "special_defense": 20
     },
-    "types": [ "TYPE_PSYCHIC", "TYPE_PSYCHIC" ],
+    "types": [
+        "TYPE_PSYCHIC",
+        "TYPE_PSYCHIC"
+    ],
     "catch_rate": 3,
     "base_exp_reward": 215,
     "ev_yields": {
@@ -26,28 +29,76 @@
     "hatch_cycles": 120,
     "base_friendship": 0,
     "exp_rate": "EXP_RATE_SLOW",
-    "egg_groups": [ "EGG_GROUP_UNDISCOVERED", "EGG_GROUP_UNDISCOVERED" ],
-    "abilities": [ "ABILITY_PRESSURE", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_UNDISCOVERED",
+        "EGG_GROUP_UNDISCOVERED"
+    ],
+    "abilities": [
+        "ABILITY_PRESSURE",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_RED",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_LEER" ],
-            [ 1, "MOVE_WRAP" ],
-            [ 9, "MOVE_NIGHT_SHADE" ],
-            [ 17, "MOVE_TELEPORT" ],
-            [ 25, "MOVE_TAUNT" ],
-            [ 33, "MOVE_PURSUIT" ],
-            [ 41, "MOVE_PSYCHIC" ],
-            [ 49, "MOVE_SUPERPOWER" ],
-            [ 57, "MOVE_PSYCHO_SHIFT" ],
-            [ 65, "MOVE_ZEN_HEADBUTT" ],
-            [ 73, "MOVE_COSMIC_POWER" ],
-            [ 81, "MOVE_ZAP_CANNON" ],
-            [ 89, "MOVE_PSYCHO_BOOST" ],
-            [ 97, "MOVE_HYPER_BEAM" ]
+            [
+                1,
+                "MOVE_LEER"
+            ],
+            [
+                1,
+                "MOVE_WRAP"
+            ],
+            [
+                9,
+                "MOVE_NIGHT_SHADE"
+            ],
+            [
+                17,
+                "MOVE_TELEPORT"
+            ],
+            [
+                25,
+                "MOVE_TAUNT"
+            ],
+            [
+                33,
+                "MOVE_PURSUIT"
+            ],
+            [
+                41,
+                "MOVE_PSYCHIC"
+            ],
+            [
+                49,
+                "MOVE_SUPERPOWER"
+            ],
+            [
+                57,
+                "MOVE_PSYCHO_SHIFT"
+            ],
+            [
+                65,
+                "MOVE_ZEN_HEADBUTT"
+            ],
+            [
+                73,
+                "MOVE_COSMIC_POWER"
+            ],
+            [
+                81,
+                "MOVE_ZAP_CANNON"
+            ],
+            [
+                89,
+                "MOVE_PSYCHO_BOOST"
+            ],
+            [
+                97,
+                "MOVE_HYPER_BEAM"
+            ]
         ],
         "by_tm": [
             "TM01",
@@ -63,7 +114,6 @@
             "TM17",
             "TM18",
             "TM20",
-            "TM21",
             "TM22",
             "TM24",
             "TM25",
@@ -118,5 +168,5 @@
             "MOVE_TRICK"
         ]
     },
-    "evolutions": [  ]
+    "evolutions": []
 }

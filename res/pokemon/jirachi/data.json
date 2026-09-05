@@ -7,7 +7,10 @@
         "special_attack": 100,
         "special_defense": 100
     },
-    "types": [ "TYPE_STEEL", "TYPE_PSYCHIC" ],
+    "types": [
+        "TYPE_STEEL",
+        "TYPE_PSYCHIC"
+    ],
     "catch_rate": 3,
     "base_exp_reward": 215,
     "ev_yields": {
@@ -26,30 +29,84 @@
     "hatch_cycles": 120,
     "base_friendship": 100,
     "exp_rate": "EXP_RATE_SLOW",
-    "egg_groups": [ "EGG_GROUP_UNDISCOVERED", "EGG_GROUP_UNDISCOVERED" ],
-    "abilities": [ "ABILITY_SERENE_GRACE", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_UNDISCOVERED",
+        "EGG_GROUP_UNDISCOVERED"
+    ],
+    "abilities": [
+        "ABILITY_SERENE_GRACE",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_YELLOW",
     "flip_sprite": false,
     "icon_palette": 0,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_WISH" ],
-            [ 1, "MOVE_CONFUSION" ],
-            [ 5, "MOVE_REST" ],
-            [ 10, "MOVE_SWIFT" ],
-            [ 15, "MOVE_HELPING_HAND" ],
-            [ 20, "MOVE_PSYCHIC" ],
-            [ 25, "MOVE_REFRESH" ],
-            [ 30, "MOVE_REST" ],
-            [ 35, "MOVE_ZEN_HEADBUTT" ],
-            [ 40, "MOVE_DOUBLE_EDGE" ],
-            [ 45, "MOVE_GRAVITY" ],
-            [ 50, "MOVE_HEALING_WISH" ],
-            [ 55, "MOVE_FUTURE_SIGHT" ],
-            [ 60, "MOVE_COSMIC_POWER" ],
-            [ 65, "MOVE_LAST_RESORT" ],
-            [ 70, "MOVE_DOOM_DESIRE" ]
+            [
+                1,
+                "MOVE_WISH"
+            ],
+            [
+                1,
+                "MOVE_CONFUSION"
+            ],
+            [
+                5,
+                "MOVE_REST"
+            ],
+            [
+                10,
+                "MOVE_SWIFT"
+            ],
+            [
+                15,
+                "MOVE_HELPING_HAND"
+            ],
+            [
+                20,
+                "MOVE_PSYCHIC"
+            ],
+            [
+                25,
+                "MOVE_REFRESH"
+            ],
+            [
+                30,
+                "MOVE_REST"
+            ],
+            [
+                35,
+                "MOVE_ZEN_HEADBUTT"
+            ],
+            [
+                40,
+                "MOVE_DOUBLE_EDGE"
+            ],
+            [
+                45,
+                "MOVE_GRAVITY"
+            ],
+            [
+                50,
+                "MOVE_HEALING_WISH"
+            ],
+            [
+                55,
+                "MOVE_FUTURE_SIGHT"
+            ],
+            [
+                60,
+                "MOVE_COSMIC_POWER"
+            ],
+            [
+                65,
+                "MOVE_LAST_RESORT"
+            ],
+            [
+                70,
+                "MOVE_DOOM_DESIRE"
+            ]
         ],
         "by_tm": [
             "TM03",
@@ -62,7 +119,6 @@
             "TM17",
             "TM18",
             "TM20",
-            "TM21",
             "TM24",
             "TM25",
             "TM27",
@@ -117,7 +173,7 @@
             "MOVE_UPROAR"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_JIRACHI",
     "footprint": {
         "has": true,

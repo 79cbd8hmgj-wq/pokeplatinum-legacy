@@ -7,7 +7,10 @@
         "special_attack": 50,
         "special_defense": 70
     },
-    "types": [ "TYPE_NORMAL", "TYPE_NORMAL" ],
+    "types": [
+        "TYPE_NORMAL",
+        "TYPE_NORMAL"
+    ],
     "catch_rate": 127,
     "base_exp_reward": 116,
     "ev_yields": {
@@ -26,31 +29,88 @@
     "hatch_cycles": 15,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_FIELD", "EGG_GROUP_FIELD" ],
-    "abilities": [ "ABILITY_RUN_AWAY", "ABILITY_GUTS" ],
+    "egg_groups": [
+        "EGG_GROUP_FIELD",
+        "EGG_GROUP_FIELD"
+    ],
+    "abilities": [
+        "ABILITY_RUN_AWAY",
+        "ABILITY_GUTS"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_BROWN",
     "flip_sprite": false,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_SWORDS_DANCE" ],
-            [ 1, "MOVE_TACKLE" ],
-            [ 1, "MOVE_TAIL_WHIP" ],
-            [ 1, "MOVE_QUICK_ATTACK" ],
-            [ 1, "MOVE_FOCUS_ENERGY" ],
-            [ 4, "MOVE_QUICK_ATTACK" ],
-            [ 7, "MOVE_FOCUS_ENERGY" ],
-            [ 10, "MOVE_BITE" ],
-            [ 13, "MOVE_PURSUIT" ],
-            [ 16, "MOVE_HYPER_FANG" ],
-            [ 19, "MOVE_SUCKER_PUNCH" ],
-            [ 20, "MOVE_SCARY_FACE" ],
-            [ 24, "MOVE_CRUNCH" ],
-            [ 29, "MOVE_ASSURANCE" ],
-            [ 34, "MOVE_SUPER_FANG" ],
-            [ 39, "MOVE_DOUBLE_EDGE" ],
-            [ 44, "MOVE_ENDEAVOR" ]
+            [
+                1,
+                "MOVE_SWORDS_DANCE"
+            ],
+            [
+                1,
+                "MOVE_TACKLE"
+            ],
+            [
+                1,
+                "MOVE_TAIL_WHIP"
+            ],
+            [
+                1,
+                "MOVE_QUICK_ATTACK"
+            ],
+            [
+                1,
+                "MOVE_FOCUS_ENERGY"
+            ],
+            [
+                4,
+                "MOVE_QUICK_ATTACK"
+            ],
+            [
+                7,
+                "MOVE_FOCUS_ENERGY"
+            ],
+            [
+                10,
+                "MOVE_BITE"
+            ],
+            [
+                13,
+                "MOVE_PURSUIT"
+            ],
+            [
+                16,
+                "MOVE_HYPER_FANG"
+            ],
+            [
+                19,
+                "MOVE_SUCKER_PUNCH"
+            ],
+            [
+                20,
+                "MOVE_SCARY_FACE"
+            ],
+            [
+                24,
+                "MOVE_CRUNCH"
+            ],
+            [
+                29,
+                "MOVE_ASSURANCE"
+            ],
+            [
+                34,
+                "MOVE_SUPER_FANG"
+            ],
+            [
+                39,
+                "MOVE_DOUBLE_EDGE"
+            ],
+            [
+                44,
+                "MOVE_ENDEAVOR"
+            ]
         ],
         "by_tm": [
             "TM05",
@@ -63,7 +123,6 @@
             "TM15",
             "TM17",
             "TM18",
-            "TM21",
             "TM23",
             "TM24",
             "TM25",
@@ -82,7 +141,6 @@
             "TM68",
             "TM73",
             "TM75",
-            "TM78",
             "TM82",
             "TM83",
             "TM86",
@@ -105,7 +163,7 @@
             "MOVE_SWIFT"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_RATTATA",
     "footprint": {
         "has": true,

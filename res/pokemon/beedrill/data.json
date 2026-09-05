@@ -7,7 +7,10 @@
         "special_attack": 45,
         "special_defense": 80
     },
-    "types": [ "TYPE_BUG", "TYPE_POISON" ],
+    "types": [
+        "TYPE_BUG",
+        "TYPE_POISON"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 159,
     "ev_yields": {
@@ -26,26 +29,68 @@
     "hatch_cycles": 15,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_BUG", "EGG_GROUP_BUG" ],
-    "abilities": [ "ABILITY_SWARM", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_BUG",
+        "EGG_GROUP_BUG"
+    ],
+    "abilities": [
+        "ABILITY_SWARM",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_YELLOW",
     "flip_sprite": false,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_FURY_ATTACK" ],
-            [ 10, "MOVE_FURY_ATTACK" ],
-            [ 13, "MOVE_FOCUS_ENERGY" ],
-            [ 16, "MOVE_TWINEEDLE" ],
-            [ 19, "MOVE_RAGE" ],
-            [ 22, "MOVE_PURSUIT" ],
-            [ 25, "MOVE_TOXIC_SPIKES" ],
-            [ 28, "MOVE_PIN_MISSILE" ],
-            [ 31, "MOVE_AGILITY" ],
-            [ 34, "MOVE_ASSURANCE" ],
-            [ 37, "MOVE_POISON_JAB" ],
-            [ 40, "MOVE_ENDEAVOR" ]
+            [
+                1,
+                "MOVE_FURY_ATTACK"
+            ],
+            [
+                10,
+                "MOVE_FURY_ATTACK"
+            ],
+            [
+                13,
+                "MOVE_FOCUS_ENERGY"
+            ],
+            [
+                16,
+                "MOVE_TWINEEDLE"
+            ],
+            [
+                19,
+                "MOVE_RAGE"
+            ],
+            [
+                22,
+                "MOVE_PURSUIT"
+            ],
+            [
+                25,
+                "MOVE_TOXIC_SPIKES"
+            ],
+            [
+                28,
+                "MOVE_PIN_MISSILE"
+            ],
+            [
+                31,
+                "MOVE_AGILITY"
+            ],
+            [
+                34,
+                "MOVE_CROSS_POISON"
+            ],
+            [
+                37,
+                "MOVE_POISON_JAB"
+            ],
+            [
+                40,
+                "MOVE_ENDEAVOR"
+            ]
         ],
         "by_tm": [
             "TM06",
@@ -54,7 +99,6 @@
             "TM15",
             "TM17",
             "TM19",
-            "TM21",
             "TM22",
             "TM27",
             "TM31",
@@ -74,7 +118,6 @@
             "TM68",
             "TM70",
             "TM75",
-            "TM78",
             "TM81",
             "TM82",
             "TM83",
@@ -96,7 +139,7 @@
             "MOVE_SWIFT"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_WEEDLE",
     "footprint": {
         "has": true,

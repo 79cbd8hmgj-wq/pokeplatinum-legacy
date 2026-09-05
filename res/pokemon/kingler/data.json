@@ -7,7 +7,10 @@
         "special_attack": 50,
         "special_defense": 50
     },
-    "types": [ "TYPE_WATER", "TYPE_WATER" ],
+    "types": [
+        "TYPE_WATER",
+        "TYPE_WATER"
+    ],
     "catch_rate": 60,
     "base_exp_reward": 206,
     "ev_yields": {
@@ -26,30 +29,84 @@
     "hatch_cycles": 20,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_WATER_3", "EGG_GROUP_WATER_3" ],
-    "abilities": [ "ABILITY_HYPER_CUTTER", "ABILITY_SHELL_ARMOR" ],
+    "egg_groups": [
+        "EGG_GROUP_WATER_3",
+        "EGG_GROUP_WATER_3"
+    ],
+    "abilities": [
+        "ABILITY_HYPER_CUTTER",
+        "ABILITY_SHELL_ARMOR"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_RED",
     "flip_sprite": true,
     "icon_palette": 2,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_MUD_SPORT" ],
-            [ 1, "MOVE_BUBBLE" ],
-            [ 1, "MOVE_VICE_GRIP" ],
-            [ 5, "MOVE_VICE_GRIP" ],
-            [ 9, "MOVE_LEER" ],
-            [ 11, "MOVE_HARDEN" ],
-            [ 15, "MOVE_BUBBLE_BEAM" ],
-            [ 19, "MOVE_MUD_SHOT" ],
-            [ 21, "MOVE_METAL_CLAW" ],
-            [ 25, "MOVE_STOMP" ],
-            [ 32, "MOVE_PROTECT" ],
-            [ 37, "MOVE_GUILLOTINE" ],
-            [ 44, "MOVE_SLAM" ],
-            [ 51, "MOVE_BRINE" ],
-            [ 56, "MOVE_CRABHAMMER" ],
-            [ 63, "MOVE_FLAIL" ]
+            [
+                1,
+                "MOVE_MUD_SPORT"
+            ],
+            [
+                1,
+                "MOVE_BUBBLE"
+            ],
+            [
+                1,
+                "MOVE_VICE_GRIP"
+            ],
+            [
+                5,
+                "MOVE_VICE_GRIP"
+            ],
+            [
+                9,
+                "MOVE_LEER"
+            ],
+            [
+                11,
+                "MOVE_HARDEN"
+            ],
+            [
+                15,
+                "MOVE_BUBBLE_BEAM"
+            ],
+            [
+                19,
+                "MOVE_MUD_SHOT"
+            ],
+            [
+                21,
+                "MOVE_METAL_CLAW"
+            ],
+            [
+                25,
+                "MOVE_STOMP"
+            ],
+            [
+                29,
+                "MOVE_RIPTIDE_RUSH"
+            ],
+            [
+                37,
+                "MOVE_GUILLOTINE"
+            ],
+            [
+                41,
+                "MOVE_CRABHAMMER"
+            ],
+            [
+                44,
+                "MOVE_SLAM"
+            ],
+            [
+                51,
+                "MOVE_BRINE"
+            ],
+            [
+                63,
+                "MOVE_FLAIL"
+            ]
         ],
         "by_tm": [
             "TM03",
@@ -61,7 +118,6 @@
             "TM15",
             "TM17",
             "TM18",
-            "TM21",
             "TM27",
             "TM28",
             "TM31",
@@ -78,7 +134,6 @@
             "TM58",
             "TM68",
             "TM75",
-            "TM78",
             "TM80",
             "TM81",
             "TM82",
@@ -102,7 +157,7 @@
             "MOVE_KNOCK_OFF"
         ]
     },
-    "evolutions": [  ],
+    "evolutions": [],
     "offspring": "SPECIES_KRABBY",
     "footprint": {
         "has": true,

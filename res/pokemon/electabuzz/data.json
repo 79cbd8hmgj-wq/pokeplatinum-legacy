@@ -7,7 +7,10 @@
         "special_attack": 95,
         "special_defense": 85
     },
-    "types": [ "TYPE_ELECTRIC", "TYPE_ELECTRIC" ],
+    "types": [
+        "TYPE_ELECTRIC",
+        "TYPE_FIGHTING"
+    ],
     "catch_rate": 45,
     "base_exp_reward": 156,
     "ev_yields": {
@@ -26,37 +29,82 @@
     "hatch_cycles": 25,
     "base_friendship": 70,
     "exp_rate": "EXP_RATE_MEDIUM_FAST",
-    "egg_groups": [ "EGG_GROUP_HUMAN_LIKE", "EGG_GROUP_HUMAN_LIKE" ],
-    "abilities": [ "ABILITY_STATIC", "ABILITY_NONE" ],
+    "egg_groups": [
+        "EGG_GROUP_HUMAN_LIKE",
+        "EGG_GROUP_HUMAN_LIKE"
+    ],
+    "abilities": [
+        "ABILITY_STATIC",
+        "ABILITY_NONE"
+    ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_YELLOW",
     "flip_sprite": true,
     "icon_palette": 1,
     "learnset": {
         "by_level": [
-            [ 1, "MOVE_QUICK_ATTACK" ],
-            [ 1, "MOVE_LEER" ],
-            [ 1, "MOVE_THUNDER_SHOCK" ],
-            [ 7, "MOVE_THUNDER_SHOCK" ],
-            [ 10, "MOVE_LOW_KICK" ],
-            [ 16, "MOVE_SWIFT" ],
-            [ 19, "MOVE_SHOCK_WAVE" ],
-            [ 25, "MOVE_LIGHT_SCREEN" ],
-            [ 28, "MOVE_THUNDER_PUNCH" ],
-            [ 37, "MOVE_DISCHARGE" ],
-            [ 43, "MOVE_THUNDERBOLT" ],
-            [ 52, "MOVE_SCREECH" ],
-            [ 58, "MOVE_THUNDER" ]
+            [
+                1,
+                "MOVE_QUICK_ATTACK"
+            ],
+            [
+                1,
+                "MOVE_LEER"
+            ],
+            [
+                1,
+                "MOVE_THUNDER_SHOCK"
+            ],
+            [
+                7,
+                "MOVE_THUNDER_SHOCK"
+            ],
+            [
+                10,
+                "MOVE_LOW_KICK"
+            ],
+            [
+                16,
+                "MOVE_SWIFT"
+            ],
+            [
+                19,
+                "MOVE_SHOCK_WAVE"
+            ],
+            [
+                25,
+                "MOVE_LIGHT_SCREEN"
+            ],
+            [
+                28,
+                "MOVE_THUNDER_PUNCH"
+            ],
+            [
+                37,
+                "MOVE_DISCHARGE"
+            ],
+            [
+                43,
+                "MOVE_THUNDERBOLT"
+            ],
+            [
+                52,
+                "MOVE_SCREECH"
+            ],
+            [
+                58,
+                "MOVE_THUNDER"
+            ]
         ],
         "by_tm": [
             "TM01",
             "TM06",
+            "TM08",
             "TM10",
             "TM15",
             "TM16",
             "TM17",
             "TM18",
-            "TM21",
             "TM23",
             "TM24",
             "TM25",
@@ -74,10 +122,10 @@
             "TM56",
             "TM57",
             "TM58",
+            "TM60",
             "TM68",
             "TM70",
             "TM73",
-            "TM78",
             "TM82",
             "TM83",
             "TM87",
