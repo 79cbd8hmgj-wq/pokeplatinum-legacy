@@ -1,14 +1,14 @@
 {
     "base_stats": {
-        "hp": 52,
-        "attack": 65,
-        "defense": 55,
-        "speed": 60,
+        "hp": 62,
+        "attack": 95,
+        "defense": 70,
+        "speed": 70,
         "special_attack": 58,
-        "special_defense": 62
+        "special_defense": 75
     },
     "types": [
-        "TYPE_NORMAL",
+        "TYPE_FIGHTING",
         "TYPE_FLYING"
     ],
     "catch_rate": 45,
@@ -34,7 +34,7 @@
         "EGG_GROUP_FIELD"
     ],
     "abilities": [
-        "ABILITY_KEEN_EYE",
+        "ABILITY_SUPER_LUCK",
         "ABILITY_INNER_FOCUS"
     ],
     "safari_flee_rate": 0,
@@ -81,7 +81,7 @@
             ],
             [
                 21,
-                "MOVE_AIR_CUTTER"
+                "MOVE_STALK_SLASH"
             ],
             [
                 25,
@@ -97,11 +97,11 @@
             ],
             [
                 37,
-                "MOVE_AIR_SLASH"
+                "MOVE_DRILL_PECK"
             ],
             [
                 43,
-                "MOVE_FEINT"
+                "MOVE_CLOSE_COMBAT"
             ],
             [
                 45,

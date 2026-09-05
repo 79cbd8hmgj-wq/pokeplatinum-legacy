@@ -1,11 +1,11 @@
 {
     "base_stats": {
-        "hp": 45,
-        "attack": 55,
-        "defense": 45,
-        "speed": 75,
-        "special_attack": 65,
-        "special_defense": 45
+        "hp": 60,
+        "attack": 80,
+        "defense": 55,
+        "speed": 110,
+        "special_attack": 80,
+        "special_defense": 55
     },
     "types": [
         "TYPE_ICE",
@@ -46,6 +46,50 @@
             [
                 1,
                 "MOVE_PRESENT"
+            ],
+            [
+                1,
+                "MOVE_POWDER_SNOW"
+            ],
+            [
+                7,
+                "MOVE_QUICK_ATTACK"
+            ],
+            [
+                12,
+                "MOVE_ICY_WIND"
+            ],
+            [
+                17,
+                "MOVE_ICE_SHARD"
+            ],
+            [
+                22,
+                "MOVE_AERIAL_ACE"
+            ],
+            [
+                27,
+                "MOVE_AURORA_BEAM"
+            ],
+            [
+                32,
+                "MOVE_FROST_RUSH"
+            ],
+            [
+                37,
+                "MOVE_AGILITY"
+            ],
+            [
+                42,
+                "MOVE_AIR_SLASH"
+            ],
+            [
+                47,
+                "MOVE_ICE_PUNCH"
+            ],
+            [
+                52,
+                "MOVE_DRILL_PECK"
             ]
         ],
         "by_tm": [

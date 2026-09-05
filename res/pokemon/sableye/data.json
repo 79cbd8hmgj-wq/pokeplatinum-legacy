@@ -1,11 +1,11 @@
 {
     "base_stats": {
-        "hp": 50,
-        "attack": 75,
-        "defense": 75,
+        "hp": 60,
+        "attack": 80,
+        "defense": 80,
         "speed": 50,
-        "special_attack": 65,
-        "special_defense": 65
+        "special_attack": 70,
+        "special_defense": 80
     },
     "types": [
         "TYPE_DARK",
@@ -109,7 +109,7 @@
             ],
             [
                 53,
-                "MOVE_SHADOW_BALL"
+                "MOVE_RECOVER"
             ],
             [
                 57,

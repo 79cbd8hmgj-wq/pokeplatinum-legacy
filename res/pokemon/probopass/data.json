@@ -1,11 +1,11 @@
 {
     "base_stats": {
-        "hp": 60,
+        "hp": 70,
         "attack": 55,
-        "defense": 145,
+        "defense": 140,
         "speed": 40,
         "special_attack": 75,
-        "special_defense": 150
+        "special_defense": 145
     },
     "types": [
         "TYPE_ROCK",
@@ -89,7 +89,7 @@
             ],
             [
                 37,
-                "MOVE_SANDSTORM"
+                "MOVE_MAGNET_VOLLEY"
             ],
             [
                 43,

@@ -1,15 +1,15 @@
 {
     "base_stats": {
         "hp": 80,
-        "attack": 80,
-        "defense": 80,
-        "speed": 80,
-        "special_attack": 80,
-        "special_defense": 80
+        "attack": 90,
+        "defense": 100,
+        "speed": 50,
+        "special_attack": 70,
+        "special_defense": 90
     },
     "types": [
         "TYPE_ICE",
-        "TYPE_ICE"
+        "TYPE_STEEL"
     ],
     "catch_rate": 75,
     "base_exp_reward": 187,
@@ -94,6 +94,14 @@
             [
                 40,
                 "MOVE_HAIL"
+            ],
+            [
+                43,
+                "MOVE_IRON_HEAD"
+            ],
+            [
+                46,
+                "MOVE_FROST_RUSH"
             ],
             [
                 51,

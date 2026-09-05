@@ -4,7 +4,7 @@
         "attack": 70,
         "defense": 45,
         "speed": 45,
-        "special_attack": 75,
+        "special_attack": 85,
         "special_defense": 50
     },
     "types": [
@@ -35,7 +35,7 @@
     ],
     "abilities": [
         "ABILITY_CUTE_CHARM",
-        "ABILITY_NONE"
+        "ABILITY_SOUNDPROOF"
     ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_PINK",
@@ -58,6 +58,22 @@
             [
                 1,
                 "MOVE_DOUBLE_SLAP"
+            ],
+            [
+                25,
+                "MOVE_UPROAR"
+            ],
+            [
+                33,
+                "MOVE_REST"
+            ],
+            [
+                41,
+                "MOVE_MIMIC"
+            ],
+            [
+                45,
+                "MOVE_HYPER_VOICE"
             ]
         ],
         "by_tm": [

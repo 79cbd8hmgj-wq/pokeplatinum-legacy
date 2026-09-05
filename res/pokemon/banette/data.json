@@ -1,11 +1,11 @@
 {
     "base_stats": {
-        "hp": 64,
-        "attack": 115,
-        "defense": 65,
-        "speed": 65,
-        "special_attack": 83,
-        "special_defense": 63
+        "hp": 65,
+        "attack": 125,
+        "defense": 70,
+        "speed": 75,
+        "special_attack": 75,
+        "special_defense": 70
     },
     "types": [
         "TYPE_GHOST",
@@ -60,12 +60,12 @@
                 "MOVE_CURSE"
             ],
             [
-                8,
-                "MOVE_SCREECH"
-            ],
-            [
                 5,
                 "MOVE_NIGHT_SHADE"
+            ],
+            [
+                8,
+                "MOVE_SCREECH"
             ],
             [
                 13,
@@ -96,8 +96,12 @@
                 "MOVE_SUCKER_PUNCH"
             ],
             [
+                38,
+                "MOVE_CURSED_STITCH"
+            ],
+            [
                 42,
-                "MOVE_EMBARGO"
+                "MOVE_SHADOW_CLAW"
             ],
             [
                 51,

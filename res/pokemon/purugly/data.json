@@ -1,11 +1,11 @@
 {
     "base_stats": {
-        "hp": 71,
-        "attack": 82,
-        "defense": 64,
-        "speed": 112,
-        "special_attack": 64,
-        "special_defense": 59
+        "hp": 80,
+        "attack": 95,
+        "defense": 70,
+        "speed": 115,
+        "special_attack": 55,
+        "special_defense": 65
     },
     "types": [
         "TYPE_NORMAL",
@@ -85,7 +85,7 @@
             ],
             [
                 32,
-                "MOVE_CAPTIVATE"
+                "MOVE_BODY_SLAM"
             ],
             [
                 37,
@@ -97,7 +97,7 @@
             ],
             [
                 45,
-                "MOVE_BODY_SLAM"
+                "MOVE_SUCKER_PUNCH"
             ],
             [
                 53,

@@ -1,15 +1,15 @@
 {
     "base_stats": {
         "hp": 60,
-        "attack": 90,
-        "defense": 55,
-        "speed": 100,
-        "special_attack": 90,
+        "attack": 70,
+        "defense": 75,
+        "speed": 90,
+        "special_attack": 100,
         "special_defense": 80
     },
     "types": [
         "TYPE_ELECTRIC",
-        "TYPE_ELECTRIC"
+        "TYPE_STEEL"
     ],
     "catch_rate": 75,
     "base_exp_reward": 122,
@@ -58,6 +58,10 @@
             [
                 1,
                 "MOVE_THUNDERBOLT"
+            ],
+            [
+                1,
+                "MOVE_METAL_RAY"
             ]
         ],
         "by_tm": [

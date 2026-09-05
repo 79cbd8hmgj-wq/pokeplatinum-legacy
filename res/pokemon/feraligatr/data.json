@@ -9,7 +9,7 @@
     },
     "types": [
         "TYPE_WATER",
-        "TYPE_WATER"
+        "TYPE_GROUND"
     ],
     "catch_rate": 45,
     "base_exp_reward": 210,
@@ -88,12 +88,16 @@
                 "MOVE_AGILITY"
             ],
             [
+                31,
+                "MOVE_RIPTIDE_RUSH"
+            ],
+            [
                 32,
                 "MOVE_CRUNCH"
             ],
             [
                 37,
-                "MOVE_SLASH"
+                "MOVE_DIG"
             ],
             [
                 45,

@@ -1,11 +1,11 @@
 {
     "base_stats": {
         "hp": 70,
-        "attack": 60,
-        "defense": 62,
-        "speed": 60,
-        "special_attack": 80,
-        "special_defense": 82
+        "attack": 50,
+        "defense": 70,
+        "speed": 85,
+        "special_attack": 100,
+        "special_defense": 85
     },
     "types": [
         "TYPE_BUG",
@@ -81,7 +81,7 @@
             ],
             [
                 26,
-                "MOVE_SCARY_FACE"
+                "MOVE_AIR_CUTTER"
             ],
             [
                 33,
@@ -100,7 +100,7 @@
                 "MOVE_WHIRLWIND"
             ],
             [
-                61,
+                54,
                 "MOVE_BUG_BUZZ"
             ]
         ],
