@@ -1,0 +1,138 @@
+name: Rebuild C3H L4 ledger
+
+on:
+  push:
+    branches: [overhaul/c3h-species-compat]
+    paths: ['.github/workflows/rebuild-c3h-l4.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    if: github.event.head_commit.message != 'Rebuild C3H L4 guarded ledger'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          ref: overhaul/c3h-species-compat
+      - name: Generate exact 53-op Gen III ledger
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,subprocess
+          from pathlib import Path
+          BASE='0fee7dc526f3220dc6a3b58986415446423f83de'
+          ops=[]
+          def add(species,operation,**kw): ops.append(dict(species=species,operation=operation,**kw))
+          def abilities(s,a,b): add(s,'set_abilities',**{'from':a,'to':b})
+          def stat(s,k,a,b): add(s,'set_base_stat',stat=k,**{'from':a,'to':b})
+          def repl(s,a,b): add(s,'replace_level_move',**{'from':a,'to':b})
+          def ins(s,e): add(s,'insert_level_move',entry=e)
+          def rem(s,e): add(s,'remove_level_move',entry=e)
+
+          # Pass B Gen III locked decisions: 6 ops
+          abilities('swellow',['ABILITY_GUTS','ABILITY_NONE'],['ABILITY_GUTS','ABILITY_SCRAPPY'])
+          abilities('pelipper',['ABILITY_KEEN_EYE','ABILITY_NONE'],['ABILITY_KEEN_EYE','ABILITY_RAIN_DISH'])
+          abilities('wailord',['ABILITY_WATER_VEIL','ABILITY_OBLIVIOUS'],['ABILITY_WATER_VEIL','ABILITY_PRESSURE'])
+          abilities('armaldo',['ABILITY_BATTLE_ARMOR','ABILITY_NONE'],['ABILITY_BATTLE_ARMOR','ABILITY_SWIFT_SWIM'])
+          stat('huntail','attack',104,114)
+          stat('huntail','special_attack',94,84)
+
+          # C3D8: 9 ops
+          repl('mightyena',[32,'MOVE_ASSURANCE'],[32,'MOVE_CRUNCH'])
+          repl('mightyena',[47,'MOVE_EMBARGO'],[47,'MOVE_SUCKER_PUNCH'])
+          rem('mightyena',[62,'MOVE_SUCKER_PUNCH'])
+          repl('beautifly',[31,'MOVE_ATTRACT'],[31,'MOVE_AIR_SLASH'])
+          repl('masquerain',[26,'MOVE_SCARY_FACE'],[26,'MOVE_AIR_CUTTER'])
+          repl('masquerain',[54,'MOVE_WHIRLWIND'],[54,'MOVE_BUG_BUZZ'])
+          rem('masquerain',[61,'MOVE_BUG_BUZZ'])
+          repl('exploud',[45,'MOVE_ROAR'],[45,'MOVE_HYPER_VOICE'])
+          rem('exploud',[63,'MOVE_HYPER_VOICE'])
+
+          # C3D9: 9 ops
+          repl('sableye',[53,'MOVE_SHADOW_BALL'],[53,'MOVE_RECOVER'])
+          repl('mawile',[21,'MOVE_VICE_GRIP'],[21,'MOVE_IRON_HEAD'])
+          repl('mawile',[56,'MOVE_IRON_HEAD'],[56,'MOVE_IRON_DEFENSE'])
+          repl('swalot',[26,'MOVE_BODY_SLAM'],[26,'MOVE_STOCKPILE'])
+          rem('swalot',[38,'MOVE_STOCKPILE'])
+          repl('grumpig',[26,'MOVE_ZEN_HEADBUTT'],[26,'MOVE_PSYCHIC'])
+          repl('grumpig',[37,'MOVE_PAYBACK'],[37,'MOVE_POWER_GEM'])
+          repl('grumpig',[47,'MOVE_PSYCHIC'],[47,'MOVE_CALM_MIND'])
+          rem('grumpig',[55,'MOVE_POWER_GEM'])
+
+          # C3D10: 8 ops
+          repl('cacturne',[29,'MOVE_FAINT_ATTACK'],[29,'MOVE_NEEDLE_ARM'])
+          repl('cacturne',[53,'MOVE_NEEDLE_ARM'],[53,'MOVE_DREAD_WAVE'])
+          repl('lunatone',[9,'MOVE_ROCK_THROW'],[9,'MOVE_ANCIENT_POWER'])
+          repl('lunatone',[31,'MOVE_EMBARGO'],[31,'MOVE_POWER_GEM'])
+          repl('solrock',[23,'MOVE_PSYWAVE'],[23,'MOVE_MIND_STRIKE'])
+          repl('solrock',[42,'MOVE_HEAL_BLOCK'],[42,'MOVE_ZEN_HEADBUTT'])
+          repl('whiscash',[51,'MOVE_FUTURE_SIGHT'],[51,'MOVE_RIPTIDE_RUSH'])
+          repl('crawdaunt',[30,'MOVE_SWIFT'],[30,'MOVE_RIPTIDE_RUSH'])
+
+          # C3D11 excluding Banette (owned by L1): 8 ops
+          repl('absol',[41,'MOVE_FUTURE_SIGHT'],[41,'MOVE_NIGHT_SLASH'])
+          repl('absol',[52,'MOVE_NIGHT_SLASH'],[52,'MOVE_PSYCHO_CUT'])
+          repl('absol',[60,'MOVE_PSYCHO_CUT'],[60,'MOVE_FUTURE_SIGHT'])
+          repl('relicanth',[36,'MOVE_MUD_SPORT'],[36,'MOVE_ROCK_SLIDE'])
+          repl('relicanth',[71,'MOVE_HYDRO_PUMP'],[71,'MOVE_HEAD_SMASH'])
+          rem('relicanth',[78,'MOVE_HEAD_SMASH'])
+          repl('torkoal',[52,'MOVE_FLAIL'],[52,'MOVE_YAWN'])
+          repl('seviper',[55,'MOVE_WRING_OUT'],[55,'MOVE_SLUDGE_BOMB'])
+
+          # C3D12: 13 ops
+          for e in ([25,'MOVE_BUBBLE_BEAM'],[31,'MOVE_GIGA_DRAIN'],[37,'MOVE_RAIN_DANCE'],[45,'MOVE_HYDRO_PUMP']): ins('ludicolo',e)
+          repl('shiftry',[1,'MOVE_FAINT_ATTACK'],[31,'MOVE_FAINT_ATTACK'])
+          ins('shiftry',[37,'MOVE_SEED_BOMB'])
+          ins('shiftry',[43,'MOVE_DREAD_WAVE'])
+          repl('swellow',[19,'MOVE_DOUBLE_TEAM'],[19,'MOVE_AERIAL_ACE'])
+          repl('swellow',[38,'MOVE_AERIAL_ACE'],[38,'MOVE_FACADE'])
+          repl('swellow',[61,'MOVE_AIR_SLASH'],[61,'MOVE_BRAVE_BIRD'])
+          repl('pelipper',[24,'MOVE_PAYBACK'],[24,'MOVE_AIR_CUTTER'])
+          repl('pelipper',[43,'MOVE_FLING'],[43,'MOVE_RAIN_DANCE'])
+          repl('breloom',[45,'MOVE_DYNAMIC_PUNCH'],[45,'MOVE_SPORE'])
+
+          assert len(ops)==53, len(ops)
+
+          cache={}
+          def source(species):
+              if species not in cache:
+                  raw=subprocess.check_output(['git','show',f'{BASE}:res/pokemon/{species}/data.json'])
+                  cache[species]=(hashlib.sha256(raw).hexdigest(),json.loads(raw))
+              return cache[species]
+
+          # Validate every before-state against the pinned source.
+          for op in ops:
+              sha,d=source(op['species'])
+              op['source_sha256']=sha
+              kind=op['operation']
+              if kind=='set_base_stat':
+                  assert d['base_stats'][op['stat']]==op['from'], (op,d['base_stats'])
+              elif kind=='set_abilities':
+                  assert d['abilities']==op['from'], (op,d['abilities'])
+              elif kind=='replace_level_move':
+                  assert op['from'] in d['learnset']['by_level'], (op,d['learnset']['by_level'])
+              elif kind=='remove_level_move':
+                  assert op['entry'] in d['learnset']['by_level'], (op,d['learnset']['by_level'])
+              elif kind=='insert_level_move':
+                  assert op['entry'] not in d['learnset']['by_level'], (op,d['learnset']['by_level'])
+
+          # Put source_sha256 immediately after species, matching existing ledger style.
+          changes=[]
+          for op in ops:
+              row={'species':op.pop('species'),'source_sha256':op.pop('source_sha256'),'operation':op.pop('operation')}
+              row.update(op); changes.append(row)
+
+          out={'version':1,'domain':'pokemon','changes':changes}
+          path=Path('overhaul_ledgers/platinum_c3h_l4_gen3_guarded_ledger_v1.json')
+          path.parent.mkdir(exist_ok=True)
+          path.write_text(json.dumps(out,indent=2)+'\n')
+          print(json.dumps({'operations':len(changes),'species':len(set(x['species'] for x in changes))},indent=2))
+          PY
+          git diff --check
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add overhaul_ledgers/platinum_c3h_l4_gen3_guarded_ledger_v1.json
+          git commit -m 'Rebuild C3H L4 guarded ledger'
+          git push origin HEAD:overhaul/c3h-species-compat
