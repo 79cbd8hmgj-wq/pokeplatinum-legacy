@@ -273,19 +273,12 @@ static void pack_extra_moves(void) {
 }
 
 static void prep_extra_scripts(void) {
-    // MATCH DETAIL: The retail game contains additional entries in the animation scripts archive that
-    // must be present to produce a binary match.
-    for (size_t i = 468; i <= 474; i++) {
-        order_subfile(".shared", "anim_0468_0474", f_anim_scripts);
-    }
-
-    for (size_t i = 475; i <= 500; i++) {
+    // MOD DETAIL: IDs 468-489 are now real moves. Preserve the retail padding only after them.
+    for (size_t i = 490; i <= 500; i++) {
         order_subfile(".shared", "anim_0475_0500", f_anim_scripts);
     }
 
-    // MATCH DETAIL: The retail game contains additional entries in the move scripts archive that
-    // must be present to produce a binary match.
-    for (size_t i = 468; i <= 500; i++) {
+    for (size_t i = 490; i <= 500; i++) {
         order_subfile(".shared", "script_0468_0500", f_move_scripts);
     }
 }
