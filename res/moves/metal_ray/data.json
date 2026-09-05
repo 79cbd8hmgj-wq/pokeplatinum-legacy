@@ -1,0 +1,28 @@
+{
+    "name": "Metal Ray",
+    "description": [
+        "The user fires a ray of\n",
+        "focused metallic energy\n",
+        "at the foe.\n"
+    ],
+    "class": "CLASS_SPECIAL",
+    "type": "TYPE_STEEL",
+    "power": 50,
+    "accuracy": 100,
+    "pp": 25,
+    "effect": {
+        "type": "BATTLE_EFFECT_HIT",
+        "chance": 0
+    },
+    "range": "RANGE_SINGLE_TARGET",
+    "priority": 0,
+    "flags": [
+        "MOVE_FLAG_CAN_PROTECT",
+        "MOVE_FLAG_CAN_MIRROR_MOVE",
+        "MOVE_FLAG_TRIGGERS_KINGS_ROCK"
+    ],
+    "contest": {
+        "effect": "CONTEST_EFFECT_FIRST_PERFORMANCE_ADVANTAGE",
+        "type": "CONTEST_TYPE_SMART"
+    }
+}

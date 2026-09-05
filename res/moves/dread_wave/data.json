@@ -1,0 +1,29 @@
+{
+    "name": "Dread Wave",
+    "description": [
+        "The user blasts the foe\n",
+        "with a wave of darkness.\n",
+        "It may lower the foe's\n",
+        "Sp. Def stat.\n"
+    ],
+    "class": "CLASS_SPECIAL",
+    "type": "TYPE_DARK",
+    "power": 60,
+    "accuracy": 100,
+    "pp": 20,
+    "effect": {
+        "type": "BATTLE_EFFECT_LOWER_SP_DEF_HIT",
+        "chance": 10
+    },
+    "range": "RANGE_SINGLE_TARGET",
+    "priority": 0,
+    "flags": [
+        "MOVE_FLAG_CAN_PROTECT",
+        "MOVE_FLAG_CAN_MIRROR_MOVE",
+        "MOVE_FLAG_TRIGGERS_KINGS_ROCK"
+    ],
+    "contest": {
+        "effect": "CONTEST_EFFECT_FIRST_PERFORMANCE_ADVANTAGE",
+        "type": "CONTEST_TYPE_COOL"
+    }
+}

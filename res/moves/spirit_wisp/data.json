@@ -1,0 +1,27 @@
+{
+    "name": "Spirit Wisp",
+    "description": [
+        "The user sends a ghostly\n",
+        "wisp at the foe.\n"
+    ],
+    "class": "CLASS_SPECIAL",
+    "type": "TYPE_GHOST",
+    "power": 50,
+    "accuracy": 100,
+    "pp": 25,
+    "effect": {
+        "type": "BATTLE_EFFECT_HIT",
+        "chance": 0
+    },
+    "range": "RANGE_SINGLE_TARGET",
+    "priority": 0,
+    "flags": [
+        "MOVE_FLAG_CAN_PROTECT",
+        "MOVE_FLAG_CAN_MIRROR_MOVE",
+        "MOVE_FLAG_TRIGGERS_KINGS_ROCK"
+    ],
+    "contest": {
+        "effect": "CONTEST_EFFECT_DOUBLE_NEXT_TURN",
+        "type": "CONTEST_TYPE_SMART"
+    }
+}

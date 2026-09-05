@@ -1,0 +1,29 @@
+{
+    "name": "Magnet Volley",
+    "description": [
+        "Three magnetic projectiles\n",
+        "strike the foe in a row.\n",
+        "The attack always hits\n",
+        "exactly three times.\n"
+    ],
+    "class": "CLASS_SPECIAL",
+    "type": "TYPE_STEEL",
+    "power": 25,
+    "accuracy": 100,
+    "pp": 10,
+    "effect": {
+        "type": "BATTLE_EFFECT_HIT_THREE_TIMES_EQUAL_POWER",
+        "chance": 0
+    },
+    "range": "RANGE_SINGLE_TARGET",
+    "priority": 0,
+    "flags": [
+        "MOVE_FLAG_CAN_PROTECT",
+        "MOVE_FLAG_CAN_MIRROR_MOVE",
+        "MOVE_FLAG_TRIGGERS_KINGS_ROCK"
+    ],
+    "contest": {
+        "effect": "CONTEST_EFFECT_BASIC",
+        "type": "CONTEST_TYPE_COOL"
+    }
+}

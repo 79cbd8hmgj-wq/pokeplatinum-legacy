@@ -1,0 +1,29 @@
+{
+    "name": "Frost Rush",
+    "description": [
+        "The user rushes the foe\n",
+        "while cloaked in biting\n",
+        "frost.\n"
+    ],
+    "class": "CLASS_PHYSICAL",
+    "type": "TYPE_ICE",
+    "power": 80,
+    "accuracy": 100,
+    "pp": 15,
+    "effect": {
+        "type": "BATTLE_EFFECT_HIT",
+        "chance": 0
+    },
+    "range": "RANGE_SINGLE_TARGET",
+    "priority": 0,
+    "flags": [
+        "MOVE_FLAG_MAKES_CONTACT",
+        "MOVE_FLAG_CAN_PROTECT",
+        "MOVE_FLAG_CAN_MIRROR_MOVE",
+        "MOVE_FLAG_TRIGGERS_KINGS_ROCK"
+    ],
+    "contest": {
+        "effect": "CONTEST_EFFECT_FIRST_NEXT_TURN",
+        "type": "CONTEST_TYPE_BEAUTY"
+    }
+}
