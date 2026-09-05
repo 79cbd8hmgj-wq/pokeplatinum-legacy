@@ -1,0 +1,132 @@
+name: C3H apply compatibility
+
+on:
+  push:
+    branches:
+      - overhaul/c3h-species-compat
+    paths:
+      - '.github/workflows/c3h-apply-compat.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.event.head_commit.message != 'Apply C3H TM compatibility rebuild'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: overhaul/c3h-species-compat
+          fetch-depth: 0
+
+      - name: Apply locked C3H compatibility
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          TM21 = {
+              "charizard","butterfree","pidgey","pidgeotto","pidgeot","zubat","golbat","farfetchd",
+              "scyther","articuno","moltres","dragonite","mew","crobat","hoothoot","noctowl","natu",
+              "xatu","yanma","murkrow","delibird","mantine","skarmory","lugia","ho_oh","taillow",
+              "swellow","wingull","pelipper","masquerain","beautifly","ninjask","tropius","swablu",
+              "altaria","salamence","rayquaza","mothim","vespiquen","drifloon","drifblim","honchkrow",
+              "chatot","mantyke","togetic","togekiss","yanmega","shaymin/forms/sky","arceus"
+          }
+          TM78 = {
+              "persian","staryu","starmie","mareep","flaaffy","ampharos","slowking","misdreavus",
+              "mismagius","corsola","nosepass","probopass","sableye","spoink","grumpig","vespiquen",
+              "omanyte","omastar","slugma","magcargo","lunatone","lileep","cradily","dialga","palkia",
+              "mew","arceus"
+          }
+          EXPLICIT = {
+              "farfetchd":["TM31","HM06"],
+              "electabuzz":["TM08","TM60"],
+              "electivire":["TM08","TM60"],
+              "vigoroth":["TM60"],
+              "slaking":["TM60"],
+              "shinx":["TM66"],
+              "luxio":["TM66"],
+              "luxray":["TM66"],
+              "raichu":["TM91"],
+          }
+
+          assert len(TM21) == 49
+          assert len(TM78) == 27
+          assert sum(len(v) for v in EXPLICIT.values()) == 12
+
+          root = Path("res/pokemon")
+          def key_for(path):
+              rel = path.relative_to(root)
+              return "/".join(rel.parts[:-1])
+
+          def sort_key(x):
+              if x.startswith("TM") and x[2:].isdigit(): return (0, int(x[2:]))
+              if x.startswith("HM") and x[2:].isdigit(): return (1, int(x[2:]))
+              return (2, x)
+
+          seen=set()
+          changed=0
+          added21=added78=explicit_added=0
+          final21=set()
+          final78=set()
+
+          for path in sorted(root.glob("**/data.json")):
+              data=json.loads(path.read_text(encoding="utf-8"))
+              learn=data.get("learnset")
+              if not isinstance(learn,dict) or "by_tm" not in learn:
+                  continue
+              key=key_for(path)
+              seen.add(key)
+              before=list(learn.get("by_tm") or [])
+              after=[x for x in before if x not in ("TM21","TM78")]
+
+              if key in TM21:
+                  after.append("TM21")
+                  if "TM21" not in before: added21 += 1
+              if key in TM78:
+                  after.append("TM78")
+                  if "TM78" not in before: added78 += 1
+
+              for item in EXPLICIT.get(key,[]):
+                  if item not in after:
+                      after.append(item)
+                      if item not in before: explicit_added += 1
+
+              after=sorted(set(after),key=sort_key)
+              learn["by_tm"]=after
+              if "TM21" in after: final21.add(key)
+              if "TM78" in after: final78.add(key)
+
+              if after != before:
+                  path.write_text(json.dumps(data,indent=4,ensure_ascii=False)+"\n",encoding="utf-8")
+                  changed += 1
+
+          missing={
+              "TM21":sorted(TM21-seen),
+              "TM78":sorted(TM78-seen),
+              "explicit":sorted(set(EXPLICIT)-seen),
+          }
+          assert not any(missing.values()), missing
+          assert final21 == TM21, (len(final21), sorted(final21 ^ TM21))
+          assert final78 == TM78, (len(final78), sorted(final78 ^ TM78))
+
+          print(json.dumps({
+              "files_changed":changed,
+              "final_tm21":len(final21),
+              "final_tm78":len(final78),
+              "tm21_newly_added":added21,
+              "tm78_newly_added":added78,
+              "explicit_newly_added":explicit_added,
+          },indent=2))
+          PY
+
+          git diff --check
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add res/pokemon
+          git diff --cached --check
+          git diff --cached --quiet && { echo "No compatibility changes required"; exit 0; }
+          git commit -m "Apply C3H TM compatibility rebuild"
+          git push origin HEAD:overhaul/c3h-species-compat
