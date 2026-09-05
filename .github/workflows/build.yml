@@ -15,8 +15,13 @@ env:
 
 jobs:
   build:
+    name: build (US rev ${{ matrix.revision }})
+    strategy:
+      fail-fast: false
+      matrix:
+        revision: [0, 1]
     permissions:
-      contents: write
+      contents: read
     runs-on: ubuntu-24.04
     steps:
       - name: Install Software
@@ -31,42 +36,20 @@ jobs:
         run: sudo make skrew
 
       - name: Configure Repo
-        run: make configure
+        run: make configure ROM_REVISION=${{ matrix.revision }}
 
-      - name: Build Repo
-        run: make check
-
-      - name: Checkout xMAP
-        if: ${{ github.event_name == 'push' }}
-        uses: actions/checkout@v6
-        with:
-          path: 'xmap'
-          ref: 'xmap'
-
-      - name: Move xMAP
-        if: ${{ github.event_name == 'push' }}
-        run: |
-          mkdir -p xmap
-          cp "$BUILD"/*.xMAP xmap/platinumus.xMAP
-          echo "XMAP_COMMIT_MSG=$( git log --format=%s ${GITHUB_SHA} )" >> $GITHUB_ENV
-
-      - name: Update xMAP
-        if: ${{ github.event_name == 'push' }}
-        uses: EndBug/add-and-commit@v10
-        with:
-          cwd: "./xmap"
-          add: "*.xMAP"
-          message: ${{ env.XMAP_COMMIT_MSG }}
+      - name: Build Modded ROM
+        run: make rom ROM_REVISION=${{ matrix.revision }}
 
       - name: Post error archive
         if: failure()
         continue-on-error: true
-        run: tar czf failure.tar.gz "$BUILD"
+        run: tar czf failure-rev${{ matrix.revision }}.tar.gz "$BUILD"
 
       - name: Post error upload
         if: failure()
         uses: actions/upload-artifact@v7
         with:
-          name: pokeplatinum-failure-${{ github.run_id }}
-          path: failure.tar.gz
+          name: pokeplatinum-failure-${{ github.run_id }}-rev${{ matrix.revision }}
+          path: failure-rev${{ matrix.revision }}.tar.gz
           retention-days: 1
