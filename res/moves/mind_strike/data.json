@@ -1,0 +1,29 @@
+{
+    "name": "Mind Strike",
+    "description": [
+        "The user reinforces a\n",
+        "physical strike with\n",
+        "psychic force. It may\n",
+        "confuse the target.\n"
+    ],
+    "class": "CLASS_PHYSICAL",
+    "type": "TYPE_PSYCHIC",
+    "power": 55,
+    "accuracy": 100,
+    "pp": 20,
+    "effect": {
+        "type": "BATTLE_EFFECT_CONFUSE_HIT",
+        "chance": 10
+    },
+    "range": "RANGE_SINGLE_TARGET",
+    "priority": 0,
+    "flags": [
+        "MOVE_FLAG_MAKES_CONTACT",
+        "MOVE_FLAG_CAN_PROTECT",
+        "MOVE_FLAG_CAN_MIRROR_MOVE"
+    ],
+    "contest": {
+        "effect": "CONTEST_EFFECT_LOW_VOLTAGE_ADVANTAGE",
+        "type": "CONTEST_TYPE_COOL"
+    }
+}

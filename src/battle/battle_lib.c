@@ -3483,6 +3483,7 @@ static u16 sSoundMoves[] = {
     MOVE_HYPER_VOICE,
     MOVE_BUG_BUZZ,
     MOVE_CHATTER,
+    MOVE_RESONANT_SLASH,
 };
 
 int BattleSystem_TriggerImmunityAbility(BattleContext *battleCtx, int attacker, int defender)
@@ -6578,7 +6579,8 @@ static const u16 sPunchingMoves[] = {
     MOVE_SHADOW_PUNCH,
     MOVE_DRAIN_PUNCH,
     MOVE_BULLET_PUNCH,
-    MOVE_SKY_UPPERCUT
+    MOVE_SKY_UPPERCUT,
+    MOVE_STAR_JAB
 };
 
 typedef struct DamageCalcParams {

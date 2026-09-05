@@ -1,0 +1,29 @@
+{
+    "name": "Static Strike",
+    "description": [
+        "The user strikes the foe\n",
+        "with electrified force.\n",
+        "It may also leave the\n",
+        "target with paralysis.\n"
+    ],
+    "class": "CLASS_PHYSICAL",
+    "type": "TYPE_ELECTRIC",
+    "power": 85,
+    "accuracy": 100,
+    "pp": 15,
+    "effect": {
+        "type": "BATTLE_EFFECT_PARALYZE_HIT",
+        "chance": 10
+    },
+    "range": "RANGE_SINGLE_TARGET",
+    "priority": 0,
+    "flags": [
+        "MOVE_FLAG_MAKES_CONTACT",
+        "MOVE_FLAG_CAN_PROTECT",
+        "MOVE_FLAG_CAN_MIRROR_MOVE"
+    ],
+    "contest": {
+        "effect": "CONTEST_EFFECT_FIRST_PERFORMANCE_ADVANTAGE",
+        "type": "CONTEST_TYPE_COOL"
+    }
+}
