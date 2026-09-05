@@ -1,0 +1,93 @@
+name: C3H apply species ledgers
+on:
+  push:
+    branches: [overhaul/c3h-species-compat]
+    paths: ['.github/workflows/c3h-apply-species.yml']
+permissions:
+  contents: write
+jobs:
+  apply:
+    if: github.event.head_commit.message != 'Apply C3H 225 species operations'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: overhaul/c3h-species-compat
+          fetch-depth: 0
+      - name: Apply semantic-guarded ledgers
+        shell: bash
+        run: |
+          cat > /tmp/apply.py <<'PY'
+          import base64,gzip,json
+          from pathlib import Path
+          BLOBS=["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"]
+          ledgers=[json.loads(gzip.decompress(base64.b64decode(x))) for x in BLOBS]
+          changes=[c for l in ledgers for c in l["changes"]]
+          assert [len(l["changes"]) for l in ledgers]==[67,27,40,53,38]
+          assert len(changes)==225
+          
+          root=Path("res/pokemon")
+          by_species={}
+          for c in changes:
+              by_species.setdefault(c["species"],[]).append(c)
+          
+          applied=0
+          for species, ops in by_species.items():
+              path=root/species/"data.json"
+              if not path.exists():
+                  raise SystemExit(f"missing species file: {species}")
+              d=json.loads(path.read_text(encoding="utf-8"))
+              level=d["learnset"]["by_level"]
+              for c in ops:
+                  kind=c["operation"]
+                  if kind=="set_base_stat":
+                      cur=d["base_stats"][c["stat"]]
+                      if cur==c["from"]:
+                          d["base_stats"][c["stat"]]=c["to"]; applied+=1
+                      elif cur!=c["to"]:
+                          raise AssertionError((species,kind,c["stat"],cur,c["from"],c["to"]))
+                  elif kind=="set_types":
+                      cur=d["types"]
+                      if cur==c["from"]:
+                          d["types"]=c["to"]; applied+=1
+                      elif cur!=c["to"]:
+                          raise AssertionError((species,kind,cur,c["from"],c["to"]))
+                  elif kind=="set_abilities":
+                      cur=d["abilities"]
+                      if cur==c["from"]:
+                          d["abilities"]=c["to"]; applied+=1
+                      elif cur!=c["to"]:
+                          raise AssertionError((species,kind,cur,c["from"],c["to"]))
+                  elif kind=="insert_level_move":
+                      e=c["entry"]
+                      if e not in level:
+                          level.append(e); applied+=1
+                  elif kind=="remove_level_move":
+                      e=c["entry"]
+                      if e in level:
+                          level.remove(e); applied+=1
+                  elif kind=="replace_level_move":
+                      a,b=c["from"],c["to"]
+                      if a in level:
+                          level[level.index(a)]=b; applied+=1
+                      elif b not in level:
+                          raise AssertionError((species,kind,a,b,level))
+                  else:
+                      raise AssertionError(("unknown op",kind))
+              level.sort(key=lambda x:x[0])
+              path.write_text(json.dumps(d,indent=4,ensure_ascii=False)+"\n",encoding="utf-8")
+          
+          print(json.dumps({"ledger_counts":[67,27,40,53,38],"total_ops":225,"operations_applied":applied,"species_touched":len(by_species)},indent=2))
+          
+          PY
+          python3 /tmp/apply.py
+          git diff --check
+      - name: Commit species source changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add res/pokemon
+          git diff --cached --check
+          git diff --cached --quiet && { echo 'No species changes to commit'; exit 0; }
+          git commit -m 'Apply C3H 225 species operations'
+          git push origin HEAD:overhaul/c3h-species-compat
