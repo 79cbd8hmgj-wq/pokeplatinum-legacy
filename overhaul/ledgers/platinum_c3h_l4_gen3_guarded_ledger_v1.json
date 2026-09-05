@@ -1,0 +1,545 @@
+{
+  "version": 1,
+  "domain": "pokemon",
+  "changes": [
+    {
+      "species": "mightyena",
+      "source_sha256": "2aa0928adaf587434635caf42d25db0b483c65cc8d113da2c24d9083d07da783",
+      "operation": "set_base_stat",
+      "stat": "attack",
+      "from": 90,
+      "to": 105
+    },
+    {
+      "species": "mightyena",
+      "source_sha256": "2aa0928adaf587434635caf42d25db0b483c65cc8d113da2c24d9083d07da783",
+      "operation": "set_base_stat",
+      "stat": "speed",
+      "from": 70,
+      "to": 85
+    },
+    {
+      "species": "mightyena",
+      "source_sha256": "2aa0928adaf587434635caf42d25db0b483c65cc8d113da2c24d9083d07da783",
+      "operation": "set_base_stat",
+      "stat": "special_attack",
+      "from": 60,
+      "to": 50
+    },
+    {
+      "species": "mightyena",
+      "source_sha256": "2aa0928adaf587434635caf42d25db0b483c65cc8d113da2c24d9083d07da783",
+      "operation": "set_base_stat",
+      "stat": "special_defense",
+      "from": 60,
+      "to": 70
+    },
+    {
+      "species": "beautifly",
+      "source_sha256": "93825d094e084504ea3b1bacf842254f581f0037b946fce158275d36b756553b",
+      "operation": "set_base_stat",
+      "stat": "attack",
+      "from": 70,
+      "to": 55
+    },
+    {
+      "species": "beautifly",
+      "source_sha256": "93825d094e084504ea3b1bacf842254f581f0037b946fce158275d36b756553b",
+      "operation": "set_base_stat",
+      "stat": "defense",
+      "from": 50,
+      "to": 55
+    },
+    {
+      "species": "beautifly",
+      "source_sha256": "93825d094e084504ea3b1bacf842254f581f0037b946fce158275d36b756553b",
+      "operation": "set_base_stat",
+      "stat": "speed",
+      "from": 65,
+      "to": 95
+    },
+    {
+      "species": "beautifly",
+      "source_sha256": "93825d094e084504ea3b1bacf842254f581f0037b946fce158275d36b756553b",
+      "operation": "set_base_stat",
+      "stat": "special_attack",
+      "from": 90,
+      "to": 110
+    },
+    {
+      "species": "beautifly",
+      "source_sha256": "93825d094e084504ea3b1bacf842254f581f0037b946fce158275d36b756553b",
+      "operation": "set_base_stat",
+      "stat": "special_defense",
+      "from": 50,
+      "to": 65
+    },
+    {
+      "species": "dustox",
+      "source_sha256": "964ba8072e41c1d8fd10c081aeb597cfa35290b05bb00c208d5022626e86932a",
+      "operation": "set_base_stat",
+      "stat": "hp",
+      "from": 60,
+      "to": 70
+    },
+    {
+      "species": "dustox",
+      "source_sha256": "964ba8072e41c1d8fd10c081aeb597cfa35290b05bb00c208d5022626e86932a",
+      "operation": "set_base_stat",
+      "stat": "attack",
+      "from": 50,
+      "to": 45
+    },
+    {
+      "species": "dustox",
+      "source_sha256": "964ba8072e41c1d8fd10c081aeb597cfa35290b05bb00c208d5022626e86932a",
+      "operation": "set_base_stat",
+      "stat": "defense",
+      "from": 70,
+      "to": 85
+    },
+    {
+      "species": "dustox",
+      "source_sha256": "964ba8072e41c1d8fd10c081aeb597cfa35290b05bb00c208d5022626e86932a",
+      "operation": "set_base_stat",
+      "stat": "speed",
+      "from": 65,
+      "to": 70
+    },
+    {
+      "species": "dustox",
+      "source_sha256": "964ba8072e41c1d8fd10c081aeb597cfa35290b05bb00c208d5022626e86932a",
+      "operation": "set_base_stat",
+      "stat": "special_attack",
+      "from": 50,
+      "to": 65
+    },
+    {
+      "species": "dustox",
+      "source_sha256": "964ba8072e41c1d8fd10c081aeb597cfa35290b05bb00c208d5022626e86932a",
+      "operation": "set_base_stat",
+      "stat": "special_defense",
+      "from": 90,
+      "to": 105
+    },
+    {
+      "species": "masquerain",
+      "source_sha256": "5ba4b8a726934557c327e8910ce79cbe9ac755d82323facd15e474e1131e0aad",
+      "operation": "set_base_stat",
+      "stat": "attack",
+      "from": 60,
+      "to": 50
+    },
+    {
+      "species": "masquerain",
+      "source_sha256": "5ba4b8a726934557c327e8910ce79cbe9ac755d82323facd15e474e1131e0aad",
+      "operation": "set_base_stat",
+      "stat": "defense",
+      "from": 62,
+      "to": 70
+    },
+    {
+      "species": "masquerain",
+      "source_sha256": "5ba4b8a726934557c327e8910ce79cbe9ac755d82323facd15e474e1131e0aad",
+      "operation": "set_base_stat",
+      "stat": "speed",
+      "from": 60,
+      "to": 85
+    },
+    {
+      "species": "masquerain",
+      "source_sha256": "5ba4b8a726934557c327e8910ce79cbe9ac755d82323facd15e474e1131e0aad",
+      "operation": "set_base_stat",
+      "stat": "special_attack",
+      "from": 80,
+      "to": 100
+    },
+    {
+      "species": "masquerain",
+      "source_sha256": "5ba4b8a726934557c327e8910ce79cbe9ac755d82323facd15e474e1131e0aad",
+      "operation": "set_base_stat",
+      "stat": "special_defense",
+      "from": 82,
+      "to": 85
+    },
+    {
+      "species": "sableye",
+      "source_sha256": "dec0cb475a93554b1c3c4e6847259cf6165472b37311a228f840992ac2cf9d14",
+      "operation": "set_base_stat",
+      "stat": "hp",
+      "from": 50,
+      "to": 60
+    },
+    {
+      "species": "sableye",
+      "source_sha256": "dec0cb475a93554b1c3c4e6847259cf6165472b37311a228f840992ac2cf9d14",
+      "operation": "set_base_stat",
+      "stat": "attack",
+      "from": 75,
+      "to": 80
+    },
+    {
+      "species": "sableye",
+      "source_sha256": "dec0cb475a93554b1c3c4e6847259cf6165472b37311a228f840992ac2cf9d14",
+      "operation": "set_base_stat",
+      "stat": "defense",
+      "from": 75,
+      "to": 80
+    },
+    {
+      "species": "sableye",
+      "source_sha256": "dec0cb475a93554b1c3c4e6847259cf6165472b37311a228f840992ac2cf9d14",
+      "operation": "set_base_stat",
+      "stat": "special_attack",
+      "from": 65,
+      "to": 70
+    },
+    {
+      "species": "sableye",
+      "source_sha256": "dec0cb475a93554b1c3c4e6847259cf6165472b37311a228f840992ac2cf9d14",
+      "operation": "set_base_stat",
+      "stat": "special_defense",
+      "from": 65,
+      "to": 80
+    },
+    {
+      "species": "mawile",
+      "source_sha256": "269810dd9d758993c4a74c993331936df47da4d6b813934406673a5866327235",
+      "operation": "set_base_stat",
+      "stat": "hp",
+      "from": 50,
+      "to": 60
+    },
+    {
+      "species": "mawile",
+      "source_sha256": "269810dd9d758993c4a74c993331936df47da4d6b813934406673a5866327235",
+      "operation": "set_base_stat",
+      "stat": "attack",
+      "from": 85,
+      "to": 100
+    },
+    {
+      "species": "mawile",
+      "source_sha256": "269810dd9d758993c4a74c993331936df47da4d6b813934406673a5866327235",
+      "operation": "set_base_stat",
+      "stat": "defense",
+      "from": 85,
+      "to": 100
+    },
+    {
+      "species": "mawile",
+      "source_sha256": "269810dd9d758993c4a74c993331936df47da4d6b813934406673a5866327235",
+      "operation": "set_base_stat",
+      "stat": "special_attack",
+      "from": 55,
+      "to": 45
+    },
+    {
+      "species": "mawile",
+      "source_sha256": "269810dd9d758993c4a74c993331936df47da4d6b813934406673a5866327235",
+      "operation": "set_base_stat",
+      "stat": "special_defense",
+      "from": 55,
+      "to": 75
+    },
+    {
+      "species": "mightyena",
+      "source_sha256": "2aa0928adaf587434635caf42d25db0b483c65cc8d113da2c24d9083d07da783",
+      "operation": "replace_level_move",
+      "from": [
+        32,
+        "MOVE_ASSURANCE"
+      ],
+      "to": [
+        32,
+        "MOVE_CRUNCH"
+      ]
+    },
+    {
+      "species": "mightyena",
+      "source_sha256": "2aa0928adaf587434635caf42d25db0b483c65cc8d113da2c24d9083d07da783",
+      "operation": "replace_level_move",
+      "from": [
+        47,
+        "MOVE_EMBARGO"
+      ],
+      "to": [
+        47,
+        "MOVE_SUCKER_PUNCH"
+      ]
+    },
+    {
+      "species": "beautifly",
+      "source_sha256": "93825d094e084504ea3b1bacf842254f581f0037b946fce158275d36b756553b",
+      "operation": "replace_level_move",
+      "from": [
+        31,
+        "MOVE_ATTRACT"
+      ],
+      "to": [
+        31,
+        "MOVE_AIR_SLASH"
+      ]
+    },
+    {
+      "species": "masquerain",
+      "source_sha256": "5ba4b8a726934557c327e8910ce79cbe9ac755d82323facd15e474e1131e0aad",
+      "operation": "replace_level_move",
+      "from": [
+        26,
+        "MOVE_SCARY_FACE"
+      ],
+      "to": [
+        26,
+        "MOVE_AIR_CUTTER"
+      ]
+    },
+    {
+      "species": "masquerain",
+      "source_sha256": "5ba4b8a726934557c327e8910ce79cbe9ac755d82323facd15e474e1131e0aad",
+      "operation": "replace_level_move",
+      "from": [
+        61,
+        "MOVE_BUG_BUZZ"
+      ],
+      "to": [
+        54,
+        "MOVE_BUG_BUZZ"
+      ]
+    },
+    {
+      "species": "sableye",
+      "source_sha256": "dec0cb475a93554b1c3c4e6847259cf6165472b37311a228f840992ac2cf9d14",
+      "operation": "replace_level_move",
+      "from": [
+        53,
+        "MOVE_SHADOW_BALL"
+      ],
+      "to": [
+        53,
+        "MOVE_RECOVER"
+      ]
+    },
+    {
+      "species": "mawile",
+      "source_sha256": "269810dd9d758993c4a74c993331936df47da4d6b813934406673a5866327235",
+      "operation": "replace_level_move",
+      "from": [
+        21,
+        "MOVE_VICE_GRIP"
+      ],
+      "to": [
+        21,
+        "MOVE_IRON_HEAD"
+      ]
+    },
+    {
+      "species": "mawile",
+      "source_sha256": "269810dd9d758993c4a74c993331936df47da4d6b813934406673a5866327235",
+      "operation": "replace_level_move",
+      "from": [
+        56,
+        "MOVE_IRON_HEAD"
+      ],
+      "to": [
+        56,
+        "MOVE_IRON_DEFENSE"
+      ]
+    },
+    {
+      "species": "grumpig",
+      "source_sha256": "ff035b583cacb9db8a2c38a9c9dd3b00960b8363a2595b0135cba962448b8e8b",
+      "operation": "replace_level_move",
+      "from": [
+        47,
+        "MOVE_PSYCHIC"
+      ],
+      "to": [
+        26,
+        "MOVE_PSYCHIC"
+      ]
+    },
+    {
+      "species": "grumpig",
+      "source_sha256": "ff035b583cacb9db8a2c38a9c9dd3b00960b8363a2595b0135cba962448b8e8b",
+      "operation": "replace_level_move",
+      "from": [
+        55,
+        "MOVE_POWER_GEM"
+      ],
+      "to": [
+        37,
+        "MOVE_POWER_GEM"
+      ]
+    },
+    {
+      "species": "grumpig",
+      "source_sha256": "ff035b583cacb9db8a2c38a9c9dd3b00960b8363a2595b0135cba962448b8e8b",
+      "operation": "replace_level_move",
+      "from": [
+        37,
+        "MOVE_PAYBACK"
+      ],
+      "to": [
+        47,
+        "MOVE_CALM_MIND"
+      ]
+    },
+    {
+      "species": "cacturne",
+      "source_sha256": "33480e665d654974fb751ccdf72713b389d20f4306a52f3286532f53a5a3e454",
+      "operation": "replace_level_move",
+      "from": [
+        53,
+        "MOVE_NEEDLE_ARM"
+      ],
+      "to": [
+        29,
+        "MOVE_NEEDLE_ARM"
+      ]
+    },
+    {
+      "species": "cacturne",
+      "source_sha256": "33480e665d654974fb751ccdf72713b389d20f4306a52f3286532f53a5a3e454",
+      "operation": "replace_level_move",
+      "from": [
+        29,
+        "MOVE_FAINT_ATTACK"
+      ],
+      "to": [
+        53,
+        "MOVE_DREAD_WAVE"
+      ]
+    },
+    {
+      "species": "lunatone",
+      "source_sha256": "b7deaae6a9e504b15b7a82501f43dcc5c68fff38b40d62c272e8c8e5880d85f2",
+      "operation": "replace_level_move",
+      "from": [
+        9,
+        "MOVE_ROCK_THROW"
+      ],
+      "to": [
+        9,
+        "MOVE_ANCIENT_POWER"
+      ]
+    },
+    {
+      "species": "lunatone",
+      "source_sha256": "b7deaae6a9e504b15b7a82501f43dcc5c68fff38b40d62c272e8c8e5880d85f2",
+      "operation": "replace_level_move",
+      "from": [
+        31,
+        "MOVE_EMBARGO"
+      ],
+      "to": [
+        31,
+        "MOVE_POWER_GEM"
+      ]
+    },
+    {
+      "species": "solrock",
+      "source_sha256": "e64b7bdc4e17a2e0809d7d43ac76a3ec2ba041cb8ae866baa42b2137bb3c37e2",
+      "operation": "replace_level_move",
+      "from": [
+        23,
+        "MOVE_PSYWAVE"
+      ],
+      "to": [
+        23,
+        "MOVE_MIND_STRIKE"
+      ]
+    },
+    {
+      "species": "solrock",
+      "source_sha256": "e64b7bdc4e17a2e0809d7d43ac76a3ec2ba041cb8ae866baa42b2137bb3c37e2",
+      "operation": "replace_level_move",
+      "from": [
+        42,
+        "MOVE_HEAL_BLOCK"
+      ],
+      "to": [
+        42,
+        "MOVE_ZEN_HEADBUTT"
+      ]
+    },
+    {
+      "species": "whiscash",
+      "source_sha256": "d3604d0573799886322708d83cf58cc61451f005fd4094054c031fcb806b2db2",
+      "operation": "replace_level_move",
+      "from": [
+        51,
+        "MOVE_FUTURE_SIGHT"
+      ],
+      "to": [
+        51,
+        "MOVE_RIPTIDE_RUSH"
+      ]
+    },
+    {
+      "species": "absol",
+      "source_sha256": "7a9001d6df9aa227929e6f46e6cb80585f2c169d90dd5748d4b8ee91db252364",
+      "operation": "replace_level_move",
+      "from": [
+        41,
+        "MOVE_FUTURE_SIGHT"
+      ],
+      "to": [
+        41,
+        "MOVE_NIGHT_SLASH"
+      ]
+    },
+    {
+      "species": "absol",
+      "source_sha256": "7a9001d6df9aa227929e6f46e6cb80585f2c169d90dd5748d4b8ee91db252364",
+      "operation": "replace_level_move",
+      "from": [
+        52,
+        "MOVE_NIGHT_SLASH"
+      ],
+      "to": [
+        52,
+        "MOVE_PSYCHO_CUT"
+      ]
+    },
+    {
+      "species": "absol",
+      "source_sha256": "7a9001d6df9aa227929e6f46e6cb80585f2c169d90dd5748d4b8ee91db252364",
+      "operation": "replace_level_move",
+      "from": [
+        60,
+        "MOVE_PSYCHO_CUT"
+      ],
+      "to": [
+        60,
+        "MOVE_FUTURE_SIGHT"
+      ]
+    },
+    {
+      "species": "relicanth",
+      "source_sha256": "b8bfa47cdae45378d3857d4f4586b389d3f97607e782c73078d76d4629b5a1c0",
+      "operation": "replace_level_move",
+      "from": [
+        36,
+        "MOVE_MUD_SPORT"
+      ],
+      "to": [
+        36,
+        "MOVE_ROCK_SLIDE"
+      ]
+    },
+    {
+      "species": "relicanth",
+      "source_sha256": "b8bfa47cdae45378d3857d4f4586b389d3f97607e782c73078d76d4629b5a1c0",
+      "operation": "replace_level_move",
+      "from": [
+        78,
+        "MOVE_HEAD_SMASH"
+      ],
+      "to": [
+        71,
+        "MOVE_HEAD_SMASH"
+      ]
+    }
+  ]
+}

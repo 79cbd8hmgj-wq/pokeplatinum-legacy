@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source_historical_commit": "dceb548782be5c3ed30afba39a8b5727fdd6716d",
+  "ledger_counts": {
+    "platinum_c3h_l1_guarded_ledger_v1.json": 67,
+    "platinum_c3h_l2_gen1_guarded_ledger_v1.json": 27,
+    "platinum_c3h_l3_gen2_guarded_ledger_v1.json": 40,
+    "platinum_c3h_l4_gen3_guarded_ledger_v1.json": 53,
+    "platinum_c3h_l5_sinnoh_guarded_ledger_v1.json": 38
+  },
+  "total_operations": 225,
+  "recovery_note": "Decoded verbatim from the five gzip+base64 ledger payloads embedded in the historical C3H species application workflow."
+}
