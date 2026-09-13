@@ -53,13 +53,14 @@ Includes selected retypes, stat redistribution/repair, ability changes, species 
 
 ### B. Existing move rework (C1)
 
-**Design: LOCKED**
+**Design: LOCKED / CANONICALIZED**
 **Implementation: NOT YET APPLIED**
-**Recovery: 82/82 edit membership recovered; five Batch 9F final values still unresolved**
 
-C1 remains the one major completed design package that must be fully canonicalized before implementation.
+The complete **82-edit** machine-readable authority now exists at:
 
-Do not implement from proposal spreadsheets or Emerald move specs.
+`docs/overhaul/implementation/c1_move_changes_manifest.json`
+
+Before application, Claude must generate/validate live-source before-value guards against current `main`.
 
 ### C. TM/HM system (C2)
 
@@ -90,7 +91,7 @@ Mainline implementation:
 
 - 22 custom moves;
 - IDs 468–489;
-- target/current `MAX_MOVES = 490`;
+- `MAX_MOVES = 490`;
 - mod-aware CI for US Rev 0 / Rev 1;
 - build run `33981291318`: success.
 
@@ -121,21 +122,18 @@ Historical ledgers remain audit/provenance material and must not be reapplied ov
 
 **Status: ACTIVE NEXT PHASE**
 
-This replaces the obsolete plan to implement C2.5E/C3H from scratch.
-
 Order:
 
-1. Finish C1 canonical recovery.
-2. Generate and validate the complete 82-edit C1 manifest against current main.
-3. Apply C1 with guards.
-4. Build both supported US revisions.
-5. Audit/implement remaining C2 mechanics:
+1. Validate `c1_move_changes_manifest.json` against current main and generate before-value/source guards.
+2. Apply all 82 C1 edits.
+3. Build both supported US revisions.
+4. Audit/implement remaining C2 mechanics:
    - reusable TMs;
    - HM battle values/Defog behavior;
    - TM economy/source changes where not yet landed.
-6. Perform focused runtime tests for custom moves and high-risk mechanics.
-7. Semantic-audit current C3H state against canonical design.
-8. Update status evidence before moving into world-scale work.
+5. Perform focused runtime tests for custom moves and high-risk mechanics.
+6. Semantic-audit current C3H state against canonical design.
+7. Update status evidence before moving into world-scale work.
 
 ## Phase 3 — Emerald-to-Platinum system port
 
@@ -284,12 +282,11 @@ Outputs:
 
 ## Immediate execution order
 
-1. Finish canonical repo documentation/recovery.
-2. Resolve the final five C1 Batch 9F values and produce the exact 82-edit manifest.
-3. Implement/build C1.
-4. Audit/implement remaining C2 mechanics.
-5. Run targeted L4 runtime QA on created moves + C3 high-risk cases.
-6. Perform Emerald-to-Platinum port audit and implement evolution system.
-7. Build the 493 availability plan and encounter tables.
-8. Trainers/economy/events/postgame.
-9. Full QA and release.
+1. Finish/merge canonical repo documentation.
+2. Implement/build C1 from the canonical 82-edit manifest.
+3. Audit/implement remaining C2 mechanics.
+4. Run targeted L4 runtime QA on created moves + C3 high-risk cases.
+5. Perform Emerald-to-Platinum port audit and implement evolution system.
+6. Build the 493 availability plan and encounter tables.
+7. Trainers/economy/events/postgame.
+8. Full QA and release.
