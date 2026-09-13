@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "status": "LOCKED_DESIGN_IMPLEMENTING",
+  "allocation": {
+    "first_custom_move_id": 468,
+    "last_custom_move_id": 489,
+    "custom_move_count": 22,
+    "max_moves_target": 490
+  },
+  "implementation_invariants": {
+    "sound_registry": ["MOVE_RESONANT_SLASH"],
+    "punch_registry": ["MOVE_STAR_JAB"],
+    "magnet_volley": {
+      "hits": 3,
+      "power_per_hit": 25,
+      "equal_power_each_hit": true,
+      "triple_kick_escalation": false
+    },
+    "species_ledgers_wait_for_created_move_build_gate": true
+  },
+  "moves": [
+    {"id":468,"const":"MOVE_STATIC_STRIKE","name":"Static Strike","type":"Electric","category":"Physical","power":85,"accuracy":100,"pp":15,"effect":"10% paralysis","contact":true,"distribution":["Electabuzz","Electivire","Luxray"]},
+    {"id":469,"const":"MOVE_FROST_RUSH","name":"Frost Rush","type":"Ice","category":"Physical","power":80,"accuracy":100,"pp":15,"effect":"none","contact":true,"distribution":["Glalie","Delibird"]},
+    {"id":470,"const":"MOVE_AURA_BURST","name":"Aura Burst","type":"Fighting","category":"Special","power":70,"accuracy":100,"pp":15,"effect":"10% Sp. Def -1","contact":false,"distribution":["Toxicroak"]},
+    {"id":471,"const":"MOVE_DRAGON_SWIPE","name":"Dragon Swipe","type":"Dragon","category":"Physical","power":60,"accuracy":100,"pp":20,"effect":"none","contact":true,"distribution":[],"distribution_status":"historical_final_recipient_unresolved_do_not_guess"},
+    {"id":472,"const":"MOVE_METAL_RAY","name":"Metal Ray","type":"Steel","category":"Special","power":50,"accuracy":100,"pp":25,"effect":"none","contact":false,"distribution":["Raichu"]},
+    {"id":473,"const":"MOVE_RIPTIDE_RUSH","name":"Riptide Rush","type":"Water","category":"Physical","power":65,"accuracy":100,"pp":20,"effect":"none","contact":true,"distribution":["Feraligatr","Kingler","Seaking","Qwilfish","Whiscash","Crawdaunt","Huntail"]},
+    {"id":474,"const":"MOVE_MIND_STRIKE","name":"Mind Strike","type":"Psychic","category":"Physical","power":55,"accuracy":100,"pp":20,"effect":"10% confusion","contact":true,"distribution":["Medicham","Girafarig","Stantler","Solrock"]},
+    {"id":475,"const":"MOVE_DREAD_WAVE","name":"Dread Wave","type":"Dark","category":"Special","power":60,"accuracy":100,"pp":20,"effect":"10% Sp. Def -1","contact":false,"distribution":["Shiftry","Cacturne"]},
+    {"id":476,"const":"MOVE_SPIRIT_WISP","name":"Spirit Wisp","type":"Ghost","category":"Special","power":50,"accuracy":100,"pp":25,"effect":"none","contact":false,"distribution":["Rotom","Rotom Heat","Rotom Wash","Rotom Frost","Rotom Fan","Rotom Mow"]},
+    {"id":477,"const":"MOVE_RESONANT_SLASH","name":"Resonant Slash","type":"Bug","category":"Physical","power":60,"accuracy":100,"pp":20,"effect":"high critical-hit ratio; sound-based","contact":true,"distribution":["Kricketune"]},
+    {"id":478,"const":"MOVE_SOLAR_PETAL","name":"Solar Petal","type":"Grass","category":"Physical","power":100,"accuracy":100,"pp":10,"effect":"charges normally; attacks immediately in harsh sunlight","contact":true,"distribution":["Cherrim"]},
+    {"id":479,"const":"MOVE_VINE_SNARE","name":"Vine Snare","type":"Grass","category":"Physical","power":65,"accuracy":100,"pp":15,"effect":"traps target 2-5 turns","contact":true,"distribution":["Carnivine"]},
+    {"id":480,"const":"MOVE_LUMINOUS_CURRENT","name":"Luminous Current","type":"Water","category":"Special","power":60,"accuracy":100,"pp":15,"effect":"guaranteed Speed -1","contact":false,"distribution":["Finneon","Lumineon"]},
+    {"id":481,"const":"MOVE_SOUL_SIPHON","name":"Soul Siphon","type":"Ghost","category":"Special","power":60,"accuracy":100,"pp":10,"effect":"restores 50% of damage dealt","contact":false,"distribution":["Spiritomb"]},
+    {"id":482,"const":"MOVE_POLLEN_PULSE","name":"Pollen Pulse","type":"Grass","category":"Special","power":55,"accuracy":100,"pp":15,"effect":"guaranteed Sp. Atk -1","contact":false,"distribution":["Wormadam Plant"]},
+    {"id":483,"const":"MOVE_EARTHEN_BASH","name":"Earthen Bash","type":"Ground","category":"Physical","power":70,"accuracy":100,"pp":15,"effect":"30% Defense -1","contact":true,"distribution":["Wormadam Sandy"]},
+    {"id":484,"const":"MOVE_SCRAP_GUARD","name":"Scrap Guard","type":"Steel","category":"Status","power":0,"accuracy":null,"pp":10,"effect":"Defense +1 and Sp. Def +1","contact":false,"distribution":["Wormadam Trash"]},
+    {"id":485,"const":"MOVE_MAGNET_VOLLEY","name":"Magnet Volley","type":"Steel","category":"Special","power":25,"accuracy":100,"pp":10,"effect":"exactly 3 equal-power hits","contact":false,"distribution":["Probopass"]},
+    {"id":486,"const":"MOVE_SOUL_GRIP","name":"Soul Grip","type":"Ghost","category":"Physical","power":70,"accuracy":100,"pp":15,"effect":"traps target 2-5 turns","contact":true,"distribution":["Dusknoir"]},
+    {"id":487,"const":"MOVE_STALK_SLASH","name":"Stalk Slash","type":"Fighting","category":"Physical","power":60,"accuracy":100,"pp":15,"effect":"high critical-hit ratio","contact":true,"distribution":["Farfetch'd"]},
+    {"id":488,"const":"MOVE_CURSED_STITCH","name":"Cursed Stitch","type":"Ghost","category":"Physical","power":75,"accuracy":100,"pp":15,"effect":"20% confusion","contact":true,"distribution":["Banette"],"distribution_note":"Lv38 after Shuppet evolves at Lv37; Shadow Ball Lv31 remains"},
+    {"id":489,"const":"MOVE_STAR_JAB","name":"Star Jab","type":"Bug","category":"Physical","power":65,"accuracy":100,"pp":15,"effect":"20% flinch; punching","contact":true,"distribution":["Ledian"]}
+  ]
+}
