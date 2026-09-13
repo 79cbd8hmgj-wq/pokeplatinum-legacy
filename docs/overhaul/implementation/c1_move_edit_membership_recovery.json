@@ -1,105 +1,47 @@
 {
-  "status": "membership_recovered_values_partially_pending",
+  "status": "membership_and_batch_values_recovered",
   "expected_total_edits": 82,
   "recovered_total_membership": 82,
   "implementation_authority": false,
   "notes": [
-    "This file proves/reconstructs membership of the historical 82-edit C1 ledger, not final implementation values for every row.",
-    "All batches except 9F have recovered locked/final values documented in the C1 recovery Markdown files or later canonical dependencies.",
-    "Batch 9F contains six edited moves. Sand Tomb is independently confirmed final at 50 BP / 95 Acc / 15 PP; the final superseding values for Bind, Wrap, Fire Spin, Whirlpool, and Clamp still require exact final-audit recovery.",
+    "This file proves/reconstructs membership of the historical 82-edit C1 ledger.",
+    "Batch 9F final approved values have now been recovered from the Platinum C1 conversation; earlier Emerald Sand Tomb 50/95 evidence was unrelated and is superseded for this project.",
+    "The next canonical step is the complete 82-entry machine-readable implementation manifest with exact changed fields and live-source guard validation.",
     "Do not implement C1 from this membership file alone."
   ],
   "batches": [
+    {"batch":"1","title":"Bug Offense","moves":["Fury Cutter","Leech Life","Pin Missile","Twineedle","Silver Wind"]},
+    {"batch":"2","title":"Physical Poison Offense","moves":["Poison Sting","Poison Tail","Gunk Shot"]},
+    {"batch":"3","title":"Rock Offense","moves":["Rock Throw","Rock Tomb","Rock Blast","AncientPower","Power Gem"]},
+    {"batch":"4","title":"Early Grass Offense","moves":["Absorb","Vine Whip","Bullet Seed","Mega Drain","Giga Drain"]},
+    {"batch":"5","title":"Fighting Offense","moves":["Arm Thrust","Drain Punch","Vital Throw","Submission"]},
+    {"batch":"6","title":"Physical Ghost & Dark Offense","moves":["Lick","Astonish","Shadow Punch","Knock Off","Thief"]},
+    {"batch":"7","title":"Ice Offense & Access","moves":[]},
+    {"batch":"8A","title":"Special Category Balance","moves":["Mud-Slap","Mud Bomb","Ominous Wind","Mirror Shot"]},
+    {"batch":"8B","title":"Physical Category Balance","moves":[]},
+    {"batch":"9A","title":"Normal Offense Cleanup","moves":["Tackle","DoubleSlap","Barrage","Fury Swipes","Comet Punch","Slam","Take Down"]},
+    {"batch":"9B","title":"Low/Mid-Power Offense Cleanup","moves":["Fury Attack","Bubble","Smog","Air Cutter","Twister","Bone Club","Steel Wing"]},
+    {"batch":"9C","title":"Two-Turn / Charge Attacks","moves":["Razor Wind","Skull Bash","Bounce"]},
+    {"batch":"9D","title":"Status & Control Reliability","moves":["String Shot","Screech","Metal Sound","Kinesis","Supersonic","Sing","GrassWhistle","Hypnosis","Will-O-Wisp","Toxic","PoisonPowder","Glare"]},
+    {"batch":"9E","title":"Recovery & Sustain","moves":["Synthesis","Morning Sun","Moonlight"]},
     {
-      "batch": "1",
-      "title": "Bug Offense",
-      "moves": ["Fury Cutter", "Leech Life", "Pin Missile", "Twineedle", "Silver Wind"]
+      "batch":"9F",
+      "title":"Trapping & Residual Damage",
+      "values_status":"final_approved_recovered",
+      "moves":["Bind","Wrap","Fire Spin","Whirlpool","Sand Tomb","Clamp"],
+      "final_values":{
+        "Bind":{"power":30,"accuracy":90,"pp":20},
+        "Wrap":{"power":30,"accuracy":90,"pp":20},
+        "Fire Spin":{"power":35,"accuracy":90,"pp":15},
+        "Whirlpool":{"power":35,"accuracy":90,"pp":15},
+        "Sand Tomb":{"power":35,"accuracy":90,"pp":15},
+        "Clamp":{"power":35,"accuracy":90,"pp":10}
+      },
+      "shared_rule":"Trapping duration and residual-damage behavior remain unchanged from Platinum; no effect rewrite or new mechanic.",
+      "keep":{"Magma Storm":{"power":120,"accuracy":70,"pp":5}}
     },
-    {
-      "batch": "2",
-      "title": "Physical Poison Offense",
-      "moves": ["Poison Sting", "Poison Tail", "Gunk Shot"]
-    },
-    {
-      "batch": "3",
-      "title": "Rock Offense",
-      "moves": ["Rock Throw", "Rock Tomb", "Rock Blast", "AncientPower", "Power Gem"]
-    },
-    {
-      "batch": "4",
-      "title": "Early Grass Offense",
-      "moves": ["Absorb", "Vine Whip", "Bullet Seed", "Mega Drain", "Giga Drain"]
-    },
-    {
-      "batch": "5",
-      "title": "Fighting Offense",
-      "moves": ["Arm Thrust", "Drain Punch", "Vital Throw", "Submission"]
-    },
-    {
-      "batch": "6",
-      "title": "Physical Ghost & Dark Offense",
-      "moves": ["Lick", "Astonish", "Shadow Punch", "Knock Off", "Thief"]
-    },
-    {
-      "batch": "7",
-      "title": "Ice Offense & Access",
-      "moves": []
-    },
-    {
-      "batch": "8A",
-      "title": "Special Category Balance",
-      "moves": ["Mud-Slap", "Mud Bomb", "Ominous Wind", "Mirror Shot"]
-    },
-    {
-      "batch": "8B",
-      "title": "Physical Category Balance",
-      "moves": []
-    },
-    {
-      "batch": "9A",
-      "title": "Normal Offense Cleanup",
-      "moves": ["Tackle", "DoubleSlap", "Barrage", "Fury Swipes", "Comet Punch", "Slam", "Take Down"]
-    },
-    {
-      "batch": "9B",
-      "title": "Low/Mid-Power Offense Cleanup",
-      "moves": ["Fury Attack", "Bubble", "Smog", "Air Cutter", "Twister", "Bone Club", "Steel Wing"]
-    },
-    {
-      "batch": "9C",
-      "title": "Two-Turn / Charge Attacks",
-      "moves": ["Razor Wind", "Skull Bash", "Bounce"]
-    },
-    {
-      "batch": "9D",
-      "title": "Status & Control Reliability",
-      "moves": ["String Shot", "Screech", "Metal Sound", "Kinesis", "Supersonic", "Sing", "GrassWhistle", "Hypnosis", "Will-O-Wisp", "Toxic", "PoisonPowder", "Glare"]
-    },
-    {
-      "batch": "9E",
-      "title": "Recovery & Sustain",
-      "moves": ["Synthesis", "Morning Sun", "Moonlight"]
-    },
-    {
-      "batch": "9F",
-      "title": "Trapping & Residual Damage",
-      "values_status": "needs_final_supersession_recovery",
-      "moves": ["Bind", "Wrap", "Fire Spin", "Whirlpool", "Sand Tomb", "Clamp"]
-    },
-    {
-      "batch": "9G",
-      "title": "Setup Moves",
-      "moves": []
-    },
-    {
-      "batch": "9H",
-      "title": "Screens, Weather & Field Control",
-      "moves": ["Rapid Spin"]
-    },
-    {
-      "batch": "final_catch_up",
-      "title": "Final Audit Catch-Up",
-      "moves": ["Constrict", "Icicle Spear", "Bone Rush", "Triple Kick", "Rolling Kick", "Mega Punch", "Egg Bomb", "Iron Tail", "Dragon Rush", "Psywave", "Poison Gas", "Future Sight"]
-    }
+    {"batch":"9G","title":"Setup Moves","moves":[]},
+    {"batch":"9H","title":"Screens, Weather & Field Control","moves":["Rapid Spin"]},
+    {"batch":"final_catch_up","title":"Final Audit Catch-Up","moves":["Constrict","Icicle Spear","Bone Rush","Triple Kick","Rolling Kick","Mega Punch","Egg Bomb","Iron Tail","Dragon Rush","Psywave","Poison Gas","Future Sight"]}
   ]
 }
