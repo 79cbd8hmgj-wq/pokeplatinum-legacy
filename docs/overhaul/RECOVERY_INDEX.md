@@ -9,6 +9,7 @@ Track which historical Platinum-overhaul decisions have been migrated into repos
 - `CANONICALIZED` — authoritative repo document/artifact exists.
 - `IMPLEMENTED` — current main contains the source implementation.
 - `RECOVERED SOURCE` — exact historical implementation source is preserved for provenance/audit.
+- `LOCKED / MANIFEST RECOVERY` — design is already complete; the remaining task is reconstructing the canonical machine-readable artifact/source mapping.
 - `PARTIAL` — governing rules captured; later design/implementation still required.
 - `PLANNED` — work was not fully designed yet; no recovery is expected.
 
@@ -41,18 +42,6 @@ Recovered result:
 - no new C1 mechanics;
 - one effect reassignment: Razor Wind charge-high-crit → immediate high-crit;
 - Batch 9F trapping mechanics/duration remain unchanged.
-
-Final Batch 9F values:
-
-- Bind 30/90/20
-- Wrap 30/90/20
-- Fire Spin 35/90/15
-- Whirlpool 35/90/15
-- Sand Tomb 35/90/15
-- Clamp 35/90/10
-- Magma Storm KEEP 120/70/5
-
-The previously surfaced Sand Tomb 50/95 value is from a separate Emerald move-rework spec and is not Platinum C1 authority.
 
 Remaining work is implementation, not recovery: validate current source, generate before-value guards, apply exactly 82 edits, build Rev 0/Rev 1, and archive evidence.
 
@@ -138,15 +127,33 @@ Known superseded historical artifact:
 
 ## Evolution overhaul
 
-**Status: PARTIAL / next major design-to-implementation target after foundation stabilization.**
+**Status: LOCKED / MANIFEST RECOVERY.**
 
-Still required:
+Evolution was completed as part of **Pass A: Identity & Evolution** across #001–#493. The locked Pass A master contained:
 
-- authoritative complete evolution manifest;
-- exact replacement methods for all trade/trade-item evolutions;
-- friendship/location threshold/access review;
-- item-availability dependencies;
-- one-save completion validation.
+- a 493-species master table;
+- global evolution rules;
+- **50 consolidated type/evolution decisions**.
+
+Canonical recovered authority:
+
+`evolution/EVOLUTION_SPEC.md`
+
+Final global rule:
+
+> **Evolution stones are the only evolution items. No trade or held non-stone item is required for evolution.**
+
+Recovered exact decisions include the major former trade/item evolutions, stat-based branches, Gligar/Sneasel night evolutions, and retained identity-positive mechanics.
+
+What remains is **not a new design pass**. Required work:
+
+1. reconstruct/check in the complete 50-decision `implementation/evolution_manifest.json`;
+2. map each locked method to Platinum's evolution source/tables;
+3. validate against C3 evolution-timing assumptions;
+4. implement with before-state guards;
+5. verify every evolution is possible in one save.
+
+Earlier direct-item and hold-item-plus-level proposals are superseded.
 
 ## World / #001–#493 availability
 
@@ -255,8 +262,9 @@ Future required artifacts include:
 2. Build Rev 0 / Rev 1 and record evidence.
 3. Audit/implement remaining C2 reusable-TM/HM/economy behavior.
 4. Perform focused L4 runtime QA on created moves and high-risk C3 mechanics.
-5. Build the authoritative evolution manifest and run the Emerald-to-Platinum port audit.
-6. Generate a human-readable #001–#493 species authority from machine-readable/current source rather than manually duplicating it.
-7. Proceed into availability, trainers, economy, events, postgame, and release QA.
+5. Reconstruct and implement the **already-locked** evolution manifest; do not redesign it.
+6. Perform the remaining Emerald-to-Platinum port audit for EXP/economy/capture/breeding.
+7. Generate a human-readable #001–#493 species authority from machine-readable/current source rather than manually duplicating it.
+8. Proceed into availability, trainers, economy, events, postgame, and release QA.
 
-At this point, old chat history is no longer required to implement the completed C1/C2.5/C3 Pokémon/move phases correctly. Remaining chats are historical evidence, not operational authority.
+At this point, old chat history is no longer required to implement the completed C1/C2.5/C3 Pokémon/move phases correctly. Evolution is also a completed design phase, but its original full 50-decision machine artifact still needs reconstruction into the repo before implementation.
