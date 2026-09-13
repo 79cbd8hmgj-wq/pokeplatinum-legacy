@@ -1,0 +1,21 @@
+{
+  "status": "exact_historical_source_recovered",
+  "historical_commit": "dceb548782be5c3ed30afba39a8b5727fdd6716d",
+  "historical_workflow_path": ".github/workflows/c3h-apply-species.yml",
+  "historical_workflow_blob_sha": "c45362c9913899aae07e6a84fa5bc62e9ee7edb0",
+  "ledger_operation_counts": [67, 27, 40, 53, 38],
+  "total_operations": 225,
+  "canonical_filenames": [
+    "platinum_c3h_l1_guarded_ledger_v1.json",
+    "platinum_c3h_l2_gen1_guarded_ledger_v1.json",
+    "platinum_c3h_l3_gen2_guarded_ledger_v1.json",
+    "platinum_c3h_l4_gen3_guarded_ledger_v1.json",
+    "platinum_c3h_l5_sinnoh_guarded_ledger_v1.json"
+  ],
+  "notes": [
+    "The five exact ledgers are embedded as base64+gzip JSON blobs in the archived workflow.",
+    "The deterministic recovery utility must verify counts [67,27,40,53,38] and total 225 before writing.",
+    "Do not use the superseded inferred L3 reconstruction found elsewhere in historical branch commits.",
+    "L4 was independently recovered byte-for-byte from historical blob 5f941ea13f70f7e3d1e45b8d2b4c43f3b32b307a."
+  ]
+}
