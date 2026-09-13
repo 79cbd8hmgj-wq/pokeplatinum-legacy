@@ -31,7 +31,7 @@ Useful later, but outside Core 1.0.
 | Emerald subsystem | Platinum class | Platinum direction |
 |---|---|---|
 | Single-save complete Pokédex | ADAPT | Extend 386 philosophy to #001–#493 and Sinnoh's encounter systems |
-| No mandatory trade evolutions | DIRECT PORT / ADAPT | Same principle; extend to Gen IV held-item trade evolutions |
+| No mandatory trade evolutions | LOCKED / ADAPT | Platinum Pass A already finalized the no-trade/no-non-stone-item evolution rule; remaining work is manifest recovery + source implementation |
 | Evolved-form encounter restraint | DIRECT PORT | Keep base-stage-first ecology rule |
 | EXP rebalance | ADAPT | Use Emerald values as test baseline, tune against Platinum level curve |
 | Mart/economy rebalance | ADAPT | Carry anti-grind philosophy; tune around Platinum prices/rewards |
@@ -50,39 +50,58 @@ Useful later, but outside Core 1.0.
 
 ## 1. Evolution system
 
-### Target
+### Status
 
-No Pokémon required for completion should need trading, a second system, or an external game.
+**Design is already LOCKED. Do not redesign it.**
 
-### Platinum adaptation
+Pass A covered Identity & Evolution across #001–#493 and was consolidated into a locked master containing 50 type/evolution decisions plus global evolution rules.
 
-Level-based trade evolutions may remain level-based where that is the cleanest solution.
+The repository recovery authority is:
 
-Trade-with-item evolutions should generally become direct item evolutions because Platinum already contains the relevant items.
+`evolution/EVOLUTION_SPEC.md`
 
-Design examples already present in the Platinum plan include:
+What remains is to reconstruct the complete machine-readable evolution manifest from that locked design/current surviving evidence and implement it in Platinum source.
 
-- Kadabra → Alakazam: level
-- Machoke → Machamp: level
-- Graveler → Golem: level
-- Haunter → Gengar: level
-- Onix → Steelix: Metal Coat
-- Scyther → Scizor: Metal Coat
-- Seadra → Kingdra: Dragon Scale
-- Rhydon → Rhyperior: Protector
-- Electabuzz → Electivire: Electrizer
-- Magmar → Magmortar: Magmarizer
-- Dusclops → Dusknoir: Reaper Cloth
-- Porygon → Porygon2: Up-Grade
-- Porygon2 → Porygon-Z: Dubious Disc
-- Poliwhirl/Slowpoke branches: King's Rock
-- Clamperl branches: Deep Sea Tooth / Deep Sea Scale
+### Final global rules
 
-Location and friendship evolutions should generally remain because they fit Sinnoh, with tedious thresholds reviewed separately.
+- No trade evolutions.
+- No held-item evolutions.
+- Evolution stones are the only evolution items.
+- Protector, Electirizer, Magmarizer, Reaper Cloth, Up-Grade, Dubious Disc, Razor Fang, Razor Claw, Metal Coat, King's Rock, Dragon Scale, Deep Sea Tooth, and Deep Sea Scale are not evolution requirements.
+- Natural conditions replace removed gates: level, stats, friendship, time, location, known move, gender, party condition, etc.
+- Distinctive existing mechanics are retained when they add identity rather than friction.
+
+Recovered locked examples include:
+
+- Kadabra → Alakazam: Lv36
+- Machoke → Machamp: Lv36
+- Graveler → Golem: Lv36
+- Haunter → Gengar: Lv36
+- Onix → Steelix: Lv35
+- Scyther → Scizor: Lv38
+- Seadra → Kingdra: Lv42
+- Electabuzz → Electivire: Lv42
+- Magmar → Magmortar: Lv42
+- Rhydon → Rhyperior: Lv52
+- Porygon → Porygon2: Lv30
+- Porygon2 → Porygon-Z: Lv45
+- Dusclops → Dusknoir: Lv45
+- Gligar → Gliscor: Lv38 at night
+- Sneasel → Weavile: Lv38 at night
+- Poliwhirl → Politoed: Lv35 with SpA > Atk
+- Slowpoke → Slowking: Lv37 with SpD > Def
+- Clamperl → Huntail: Lv35 with Atk > SpA
+- Clamperl → Gorebyss: Lv35 with SpA ≥ Atk
+
+Location/friendship/stone evolutions generally remain where they are thematic and non-frictional.
+
+### Superseded concepts
+
+Earlier proposals that used direct evolution items or hold-item-plus-level are obsolete. They must not be reintroduced during implementation.
 
 ### Implementation task
 
-Claude should compare the finalized Emerald evolution implementation with Platinum's evolution method tables/logic and produce a source-backed Platinum evolution manifest rather than blindly copying C code.
+Claude should compare the locked evolution spec with Platinum's evolution tables/logic and produce `docs/overhaul/implementation/evolution_manifest.json` with before-state guards. This is **recovery/implementation mapping**, not new design.
 
 ## 2. EXP and progression economy
 
