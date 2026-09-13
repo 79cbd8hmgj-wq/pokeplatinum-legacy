@@ -11,7 +11,7 @@ Core targets:
 - No required trading, second DS, GBA cartridge, version exclusivity, WFC distribution, or multiplayer gate.
 - Evolved forms are primarily earned through evolution rather than saturating wild encounter tables.
 - Legendary and Mythical Pokémon use proper encounters, restored events, quests, or gifts.
-- Trade evolutions are replaced with logical level/item/friendship/location methods.
+- Trade evolutions are replaced with the already-locked natural evolution system.
 - Pokémon identities are strengthened through typing, stats, abilities, moves, evolution timing, and selective compatibility changes.
 - Progression is faster and less grind-heavy without flattening the campaign.
 - Trainer difficulty is improved through coherent teams and better progression, not by turning the game into a restrictive difficulty hack.
@@ -150,9 +150,8 @@ Classify each subsystem as:
 - `PLATINUM-SPECIFIC`
 - `DEFER`
 
-Priority:
+The evolution system is **not part of the remaining design audit**; its Platinum design was already locked in Pass A. The remaining port-audit targets are primarily:
 
-- evolution/trade-evolution removal;
 - EXP/progression economy;
 - mart/item economy;
 - Poké Ball rebalance;
@@ -163,16 +162,29 @@ Detailed policy: `EMERALD_PORT_PLAN.md`.
 
 ## Phase 4 — Evolution system + one-save evolution accessibility
 
-**Status: PARTIAL DESIGN / PLANNED IMPLEMENTATION**
+**Design status: LOCKED**
+**Implementation status: NOT YET COMPLETE**
+**Recovery status: complete historical Pass A master known to contain 50 consolidated type/evolution decisions; full machine manifest still needs repo reconstruction**
 
-Before encounter placement, lock and implement a complete evolution manifest:
+Authority:
 
-- all trade evolutions replaced;
-- Gen IV held-item trade evolutions adapted;
-- friendship/location methods reviewed for tedium/access;
-- required items deliberately obtainable;
-- every evolution possible in one save;
-- no evolution timing conflicts with finalized learnsets.
+`docs/overhaul/evolution/EVOLUTION_SPEC.md`
+
+Final global rule:
+
+> **Evolution stones are the only evolution items. No Pokémon requires trading or a held non-stone item to evolve.**
+
+Pass A already defined the natural replacement methods across the 493-species master. C3 also synchronized learnsets around several altered evolution levels.
+
+This phase therefore means:
+
+1. reconstruct/check in the complete locked evolution manifest;
+2. map the locked methods to Platinum source;
+3. implement with guards;
+4. verify every evolution can be achieved in one save;
+5. verify evolution timing remains compatible with locked C3 learnsets.
+
+It does **not** require a new evolution-design pass.
 
 ## Phase 5 — World and #001–#493 availability
 
@@ -186,7 +198,7 @@ Goals:
 - Honey Tree improvements;
 - both fossil paths available;
 - Spiritomb obtainable through single-player Underground progression;
-- deliberate evolution-item distribution;
+- deliberate evolution-item/stone distribution where still relevant;
 - rare encounters meaningful without excessive 1% frustration.
 
 ## Phase 6 — Trainers, items, and economy
@@ -205,7 +217,7 @@ Economy targets:
 
 - less grinding without making money meaningless;
 - practical healing/catching/team experimentation;
-- reliable evolution-item access;
+- reliable stone/other progression-item access;
 - sensible repeatable money/BP sources.
 
 Emerald numerical settings are starting evidence, not automatic Platinum locks.
@@ -286,7 +298,7 @@ Outputs:
 2. Implement/build C1 from the canonical 82-edit manifest.
 3. Audit/implement remaining C2 mechanics.
 4. Run targeted L4 runtime QA on created moves + C3 high-risk cases.
-5. Perform Emerald-to-Platinum port audit and implement evolution system.
+5. Reconstruct and implement the already-locked evolution manifest while auditing the remaining Emerald-port systems.
 6. Build the 493 availability plan and encounter tables.
 7. Trainers/economy/events/postgame.
 8. Full QA and release.
