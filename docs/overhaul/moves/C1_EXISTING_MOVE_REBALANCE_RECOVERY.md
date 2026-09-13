@@ -1,228 +1,204 @@
-# Pass C1 — Existing Move Rebalance Recovery Ledger
+# Pass C1 — Existing Move Rebalance
 
-> **Status: RECOVERY IN PROGRESS — NOT YET COMPLETE IMPLEMENTATION AUTHORITY**
+> **Status: RECOVERED / LOCKED DESIGN AUTHORITY**
 
-Pass C1 design was completed and locked. The final audit produced a source-of-truth Markdown with a complete **82-move edit ledger** plus KEEP rulings and rationale. That final file has not yet been fully migrated into this repository.
+Pass C1 design was completed and locked on August 20, 2026. The final audit contains **82 edited existing moves**, no new C1 moves, no new C1 mechanics, and one existing-effect reassignment: Razor Wind.
 
-This document records only values that have been recovered from locked/final checkpoints or from later design documents that explicitly depend on those final C1 values. It exists to prevent repeated reconstruction and, equally importantly, to prevent Claude or another implementation agent from filling gaps by inference.
+The canonical machine-readable authority is now:
 
-## Authority rule
+`../implementation/c1_move_changes_manifest.json`
 
-A row marked `CONFIRMED FINAL` may be used as recovered design evidence, but **do not implement the complete C1 pass until the canonical 82-move machine-readable manifest is complete and validated against live Platinum source**.
+That manifest contains exactly **82 entries** and encodes only the fields C1 changes. All unlisted move fields/effects/flags remain Platinum behavior unless the manifest explicitly says otherwise.
 
-A row/batch marked `NEEDS FINAL-AUDIT CHECK` is historical evidence only.
+## Implementation rule
 
-If an earlier locked batch conflicts with a later final-audit value, the later final-audit value wins and the earlier value must be marked superseded.
+Before applying C1, Claude must validate every manifest entry against current `main` and generate before-value/source guards. C1 is recovered, but it is **not yet implemented** on current main.
 
----
+Do not use older proposal spreadsheets or Emerald move-rework files as Platinum C1 authority.
 
-## Confirmed final — Batch 1 Bug offense
+## Core batch rulings
 
-| Move | Final C1 values | Effect / notes | Status |
-|---|---|---|---|
-| Fury Cutter | 20 BP / 100 Acc / 20 PP | Consecutive-use doubling preserved | CONFIRMED FINAL |
-| Leech Life | 40 / 100 / 20 | Restores 50% of damage dealt | CONFIRMED FINAL |
-| Pin Missile | 20 BP per hit / 95 Acc / 20 PP | 2–5 hits | CONFIRMED FINAL |
-| Twineedle | 30 BP per hit ×2 / 100 Acc / 20 PP | Existing poison behavior preserved | CONFIRMED FINAL |
-| Silver Wind | 60 / 100 / 10 | Existing 10% omniboost preserved | CONFIRMED FINAL |
+### Batch 1 — Bug Offense
 
-### Explicit KEEP rulings
+- Fury Cutter — **20 BP / 100 Acc / 20 PP**; consecutive doubling preserved.
+- Leech Life — **40 / 100 / 20**; 50% drain preserved.
+- Pin Missile — **20 BP per hit / 95 Acc / 20 PP**; 2–5 hits.
+- Twineedle — **30 BP per hit ×2 / 100 / 20**; poison behavior preserved.
+- Silver Wind — **60 / 100 / 10**; omniboost behavior preserved.
 
-- Bug Bite — 60 / 100 / 20; Berry interaction unchanged.
-- U-turn — 70 / 100 / 20; switch-after-damage behavior unchanged.
-- Signal Beam — 75 / 100 / 15; confusion chance unchanged.
-- X-Scissor — 80 / 100 / 15.
-- Bug Buzz — 90 / 100 / 10; Sp. Def-drop chance unchanged.
-- Megahorn — 120 / 85 / 10.
+KEEP: Bug Bite, U-turn, Signal Beam, X-Scissor, Bug Buzz, Megahorn.
 
----
+### Batch 2 — Physical Poison Offense
 
-## Confirmed final — Batch 9A Normal offense cleanup
+- Poison Sting — **30 / 100 / 35**.
+- Poison Tail — **60 / 100 / 25**; high crit + poison preserved.
+- Gunk Shot — **120 / 80 / 5**; poison behavior preserved.
 
-| Move | Final C1 values | Status |
-|---|---|---|
-| Tackle | 40 BP / 100 Acc | CONFIRMED FINAL |
-| DoubleSlap | 20 BP per hit / 90 Acc | CONFIRMED FINAL |
-| Barrage | 20 BP per hit / 90 Acc | CONFIRMED FINAL |
-| Fury Swipes | 20 BP per hit / 90 Acc | CONFIRMED FINAL |
-| Comet Punch | 20 BP per hit / 90 Acc | CONFIRMED FINAL |
-| Slam | 85 BP / 95 Acc | CONFIRMED FINAL |
-| Take Down | 100 BP / 95 Acc | CONFIRMED FINAL |
+KEEP: Poison Fang, Cross Poison, Poison Jab.
 
-Explicit KEEP: Pound, Scratch, Quick Attack, Headbutt, Double-Edge.
+### Batch 3 — Rock Offense
 
----
+- Rock Throw — **50 / 100 / 15**.
+- Rock Tomb — **60 / 95 / 10**; guaranteed Speed -1 preserved.
+- Rock Blast — **25 ×2–5 / 90 / 10**.
+- AncientPower — **60 / 100 / 10**; omniboost preserved.
+- Power Gem — **80 / 100 / 20**.
 
-## Confirmed final — Batch 9B low/mid-power offense cleanup
+KEEP: Rollout, Rock Slide, Stone Edge.
 
-| Move | Final C1 values | Effect / notes | Status |
-|---|---|---|---|
-| Fury Attack | 20 BP per hit / 90 Acc | 2–5 hits | CONFIRMED FINAL |
-| Bubble | 30 BP / 100 Acc | Existing 10% Speed-drop chance preserved | CONFIRMED FINAL |
-| Smog | 30 BP / 90 Acc | Existing 40% poison chance preserved | CONFIRMED FINAL |
-| Air Cutter | 60 BP / 100 Acc | High-critical-ratio effect preserved | CONFIRMED FINAL |
-| Twister | 50 BP / 100 Acc | Existing 20% flinch chance preserved | CONFIRMED FINAL |
-| Bone Club | 70 BP / 95 Acc | Existing 10% flinch chance preserved | CONFIRMED FINAL |
-| Steel Wing | 75 BP / 95 Acc | Existing 10% Defense-raise chance preserved | CONFIRMED FINAL |
+### Batch 4 — Early Grass Offense
 
-Explicit KEEP: Metal Claw, Bonemerang, Spike Cannon.
+- Absorb — **30 / 100 / 25**; drain preserved.
+- Vine Whip — **45 / 100 / 25**.
+- Bullet Seed — **20 ×2–5 / 100 / 20**.
+- Mega Drain — **50 / 100 / 15**; drain preserved.
+- Giga Drain — **75 / 100 / 10**; drain preserved.
 
----
+KEEP: Razor Leaf, Magical Leaf, Seed Bomb, Energy Ball.
 
-## Confirmed final — Batch 9C two-turn / charge attacks
+### Batch 5 — Fighting Offense
 
-| Move | Final C1 values | Effect / notes | Status |
-|---|---|---|---|
-| Razor Wind | 80 BP / 100 Acc / 10 PP | Charge turn removed; remains high crit | CONFIRMED FINAL |
-| Skull Bash | 120 BP / 100 Acc / 15 PP | Two-turn structure and first-turn Defense raise retained | CONFIRMED FINAL |
-| Bounce | 85 BP / 95 Acc / 10 PP | Two-turn; existing 30% paralysis retained | CONFIRMED FINAL |
+- Arm Thrust — **20 ×2–5 / 100 / 20**.
+- Drain Punch — **75 / 100 / 10**; drain preserved.
+- Vital Throw — **80 BP**, never-miss and -1 priority preserved.
+- Submission — **90 / 95**, recoil preserved.
 
-Explicit KEEP recovered: Sky Attack 140 / 90 / 5 with two-turn/high-crit/flinch identity; Dig 80 / 100 / 10; Dive 80 / 100 / 10.
+KEEP: Karate Chop, Double Kick, Force Palm, Wake-Up Slap, Brick Break, Revenge, Sky Uppercut, Cross Chop.
 
----
+### Batch 6 — Physical Ghost & Dark Offense
 
-## Confirmed final — Batch 9G setup moves
+- Lick — **30 BP**.
+- Astonish — **40 BP**.
+- Shadow Punch — **70 BP**.
+- Knock Off — **40 BP**.
+- Thief — **60 BP**.
 
-**No C1 property/effect edits.**
+KEEP: Shadow Sneak, Shadow Claw, Pursuit, Bite, Faint Attack, Payback, Assurance, Night Slash, Crunch, Sucker Punch.
 
-Explicit KEEP:
+### Batch 7 — Ice Offense & Access
 
-- Meditate
-- Howl
-- Sharpen
-- Growth
-- Swords Dance
-- Nasty Plot
-- Tail Glow
-- Bulk Up
-- Calm Mind
-- Dragon Dance
-- Agility
-- Rock Polish
-- Harden
-- Defense Curl
-- Iron Defense
-- Amnesia
-- Focus Energy
-- Charge
-- Stockpile
+No edits in this batch. The later final catch-up changes Icicle Spear.
 
----
+### Batch 8A — Special Category Balance
 
-## Confirmed final — Batch 9H screens, weather & field control
+- Mud-Slap — **30 BP**.
+- Mud Bomb — **70 / 95**.
+- Ominous Wind — **10 PP**.
+- Mirror Shot — **70 / 95**.
 
-| Move | Final C1 values | Effect / notes | Status |
-|---|---|---|---|
-| Rapid Spin | 40 BP | Existing hazard/binding removal behavior retained | CONFIRMED FINAL |
+Batch 8B made no move-data edits.
 
-Other reviewed screen/weather/field-control moves were kept unchanged. Defog behavior was deliberately deferred to C2 and is governed by `../tm_hm/TM_HM_SPEC.md`.
+### Batch 9A — Normal Offense Cleanup
 
----
+- Tackle — **40 / 100**.
+- DoubleSlap — **20 per hit / 90**.
+- Barrage — **20 per hit / 90**.
+- Fury Swipes — **20 per hit / 90**.
+- Comet Punch — **20 per hit / 90**.
+- Slam — **85 / 95**.
+- Take Down — **100 / 95**.
 
-## Confirmed final — final catch-up audit entries
+KEEP: Pound, Scratch, Quick Attack, Headbutt, Double-Edge.
 
-The final catch-up pass locked the following values:
+### Batch 9B — Low/Mid-Power Offense Cleanup
 
-| Move | Final C1 values | Status |
-|---|---|---|
-| Constrict | 30 BP | CONFIRMED FINAL |
-| Icicle Spear | 20 BP per hit / 20 PP | CONFIRMED FINAL |
-| Bone Rush | 90 Acc | CONFIRMED FINAL |
-| Triple Kick | 15 base BP | CONFIRMED FINAL |
-| Rolling Kick | 95 Acc | CONFIRMED FINAL |
-| Mega Punch | 90 BP / 100 Acc | CONFIRMED FINAL |
-| Egg Bomb | 90 Acc | CONFIRMED FINAL |
-| Iron Tail | 85 Acc | CONFIRMED FINAL |
-| Dragon Rush | 100 BP / 85 Acc | CONFIRMED FINAL |
-| Psywave | 100 Acc | CONFIRMED FINAL |
-| Poison Gas | 90 Acc | CONFIRMED FINAL |
-| Future Sight | 100 BP / 100 Acc | CONFIRMED FINAL |
+- Fury Attack — **20 per hit / 90**.
+- Bubble — **30 BP**.
+- Smog — **30 / 90**.
+- Air Cutter — **60 / 100**; high crit preserved.
+- Twister — **50 BP**.
+- Bone Club — **70 / 95**.
+- Steel Wing — **75 / 95**.
 
-Explicit KEEP from the same catch-up record:
+KEEP: Metal Claw, Bonemerang, Spike Cannon.
 
-- Mega Kick
-- Present
-- ViceGrip
-- Acid
-- Sweet Kiss
-- Rage
-- SonicBoom
-- Dragon Rage
-- Bide
-- Doom Desire
+### Batch 9C — Two-Turn / Charge Attacks
 
----
+- Razor Wind — **80 / 100 / 10**, charge turn removed; high crit retained by changing effect to `BATTLE_EFFECT_HIGH_CRITICAL`. Its description must also be updated.
+- Skull Bash — **120 / 100 / 15**; two-turn structure and first-turn Defense raise retained.
+- Bounce — **85 / 95 / 10**; two-turn/paralysis behavior retained.
 
-## Confirmed final — later cross-checks from C2/C2.5/C3
+KEEP: Sky Attack, Dig, Dive.
 
-The following C1 values are explicitly relied upon by later locked design and therefore are final C1 dependencies:
+### Batch 9D — Status & Control Reliability
 
-| Move | Final C1 value(s) | Later dependency evidence |
-|---|---|---|
-| Power Gem | 80 BP / 100 Acc / 20 PP | C2 TM78 design / special Rock ladder |
-| Toxic | 90 Acc | C2 TM roster |
-| Bullet Seed | 20 BP per hit / 20 PP | C2 TM roster |
-| Giga Drain | 75 BP | C2 TM roster |
-| Rock Tomb | 60 BP / 95 Acc | C2 TM roster / Rock ladder |
-| Thief | 60 BP | C2 TM roster |
-| Drain Punch | 75 BP / 10 PP | C2 Gym-TM preservation |
-| Will-O-Wisp | 85 Acc | C2 TM roster |
-| Mirror Shot | 70 BP / 95 Acc | C2.5 special-Steel gap audit |
-| Ominous Wind | 10 PP | C2.5 special-Ghost gap audit |
-| Mud-Slap | 30 BP | C2.5 final Ground ladder |
-| Mud Shot | 55 BP | C2.5 final Ground ladder |
-| Mud Bomb | 70 BP | C2.5 final Ground ladder |
-| Earth Power | 90 BP | C2.5 final Ground ladder |
+Final accuracies:
 
-Additional final ladders used downstream:
+- String Shot 100
+- Screech 90
+- Metal Sound 90
+- Kinesis 100
+- Supersonic 70
+- Sing 65
+- GrassWhistle 65
+- Hypnosis 70
+- Will-O-Wisp 85
+- Toxic 90
+- PoisonPowder 90
+- Glare 90
 
-- Rock physical: Rock Throw 50 → Rock Tomb 60 → Rock Slide 75 → Stone Edge 100.
-- Rock special: AncientPower 60 → Power Gem 80.
+No effect rewrites or new mechanics.
 
----
+KEEP: Sleep Powder, Stun Spore, Confuse Ray.
 
-## Historical Batch 9F conflict — DO NOT IMPLEMENT YET
+### Batch 9E — Recovery & Sustain
 
-An earlier locked snapshot of the trapping/residual batch records:
+- Synthesis — **10 PP**.
+- Morning Sun — **10 PP**.
+- Moonlight — **10 PP**.
 
-- Bind — 30 BP / 90 Acc / 20 PP
-- Wrap — 30 / 90 / 20
-- Fire Spin — 35 / 90 / 15
-- Whirlpool — 35 / 90 / 15
-- Sand Tomb — 35 / 90 / 15
-- Clamp — 35 / 90 / 10
-- Magma Storm — KEEP 120 / 70 / 5
-- trapping duration/effects unchanged
+Recovery formulas remain unchanged.
 
-However, later recovered project evidence reports **Sand Tomb final = 50 BP / 95 Acc / 15 PP** with its trapping/damage effect retained.
+### Batch 9F — Trapping & Residual Damage
 
-Therefore Batch 9F is marked:
+Final approved Platinum values:
 
-> **NEEDS FINAL-AUDIT CHECK — probable later supersession exists.**
+- Bind — **30 / 90 / 20**.
+- Wrap — **30 / 90 / 20**.
+- Fire Spin — **35 / 90 / 15**.
+- Whirlpool — **35 / 90 / 15**.
+- Sand Tomb — **35 / 90 / 15**.
+- Clamp — **35 / 90 / 10**.
+- Magma Storm — **KEEP 120 / 70 / 5**.
 
-Do not put any Batch 9F value into the machine-readable implementation manifest until the final source-of-truth or an unambiguous later audit is recovered.
+**Trapping duration and residual-damage mechanics remain unchanged.** No effect rewrite or new mechanic.
 
----
+Important supersession note: the previously surfaced **Sand Tomb 50/95** value came from an unrelated Emerald buff-first spec and is **not** Platinum C1 authority.
 
-## Still unrecovered / incomplete
+### Batch 9G — Setup Moves
 
-The final 82-edit ledger is **not yet fully represented here**. In particular, the following batch ranges still require exact final-audit recovery before C1 can become implementation authority:
+No edits.
 
-- Batch 9D
-- Batch 9E
-- Batch 9F final superseding values
-- earlier C1 type/category batches not already represented above
-- any final audit corrections not captured by later C2/C2.5 dependencies
+### Batch 9H — Screens, Weather & Field Control
 
-## Completion gate
+- Rapid Spin — **40 BP**; existing removal behavior retained.
 
-C1 recovery is complete only when all of the following are true:
+Defog behavior was deliberately deferred to C2.
 
-1. exactly **82 edited existing moves** are represented in a machine-readable manifest;
-2. every row has final power/accuracy/PP/effect/flag changes, not just shorthand;
-3. all known supersessions are resolved;
-4. important KEEP rulings are archived in the human-readable source-of-truth;
-5. the manifest is validated against the current Platinum source before application;
-6. `CLAUDE.md` no longer needs to block C1 implementation on recovery.
+### Final catch-up audit
 
-Until then, this document is a recovery ledger, not a license to infer the missing entries.
+- Constrict — **30 BP**.
+- Icicle Spear — **20 BP per hit / 20 PP**.
+- Bone Rush — **90 Acc**.
+- Triple Kick — **15 base BP**.
+- Rolling Kick — **95 Acc**.
+- Mega Punch — **90 BP / 100 Acc**.
+- Egg Bomb — **90 Acc**.
+- Iron Tail — **85 Acc**.
+- Dragon Rush — **100 BP / 85 Acc**.
+- Psywave — **100 Acc**.
+- Poison Gas — **90 Acc**.
+- Future Sight — **100 BP / 100 Acc**.
+
+KEEP: Mega Kick, Present, ViceGrip, Acid, Sweet Kiss, Rage, SonicBoom, Dragon Rage, Bide, Doom Desire.
+
+## Recovery completeness
+
+- Edited move membership: **82/82 recovered**.
+- Final batch values: **recovered**.
+- Known effect reassignment: **Razor Wind only**.
+- New mechanics: **0**.
+- Canonical machine manifest: **present**.
+- Live-source before-value guards: **still to be generated/validated by Claude before application**.
+
+C1 is no longer blocked on design recovery. The next step is guarded implementation against current main.
