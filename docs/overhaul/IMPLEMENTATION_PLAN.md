@@ -14,9 +14,7 @@ Two major implementation batches already landed:
 
 ### C2.5E created moves
 
-Commit:
-
-`071b8c7976801e64af5296f30b7437d7da2d8632`
+Commit `071b8c7976801e64af5296f30b7437d7da2d8632`
 
 - implements all 22 created moves and move-table plumbing;
 - adds mod-aware CI builds for US revisions 0 and 1;
@@ -24,16 +22,14 @@ Commit:
 
 ### C3H species + TM compatibility
 
-Commit:
+Commit `8a74452654e1552b78bfb329afcb351a2caec5cf`
 
-`8a74452654e1552b78bfb329afcb351a2caec5cf`
-
-- applies the TM21/TM78 compatibility rebuild;
+- applies TM21/TM78 compatibility rebuild;
 - applies 225 guarded species operations;
 - applies final Torkoal and Seviper learnset corrections;
 - GitHub Actions run `33995072848`: success.
 
-**Do not reapply the historical C3H ledgers over current main.** They are provenance/audit material.
+**Do not reapply historical C3H ledgers over current main.** They are provenance/audit material.
 
 ## Primary tools/workflow
 
@@ -81,48 +77,50 @@ Do not begin with disassembly when the decomp/source already exposes the behavio
 
 ## C1 — next source implementation target
 
-C1 design is complete and locked, but current main still contains vanilla values for C1 moves such as Fury Cutter.
+C1 design is complete, locked, and now fully canonicalized. Current main still contains vanilla values for C1 moves such as Fury Cutter.
 
-### Recovery gate
-
-Do not implement C1 until the repository contains a complete machine-readable **82-edit** manifest.
-
-Current recovery state:
-
-- 82/82 edit membership recovered;
-- most final values recovered;
-- final superseding values still unresolved for:
-  - Bind
-  - Wrap
-  - Fire Spin
-  - Whirlpool
-  - Clamp
-- Sand Tomb is confirmed at 50 BP / 95 Acc / 15 PP.
-
-Authority/recovery files:
+Canonical authority:
 
 - `moves/C1_EXISTING_MOVE_REBALANCE_RECOVERY.md`
-- `moves/C1_RECOVERED_BATCHES_SUPPLEMENT.md`
-- `implementation/c1_move_edit_membership_recovery.json`
+- `implementation/c1_move_changes_manifest.json`
+- recovery/provenance: `moves/C1_RECOVERED_BATCHES_SUPPLEMENT.md`
 
-### C1 implementation gate
+The machine manifest contains exactly **82 edits**.
 
-Once recovery is complete:
+### Final Batch 9F values
 
-1. generate one canonical 82-edit manifest;
-2. compare each intended edit with current `res/moves/*/data.json`;
-3. fail closed if the current value is not the expected vanilla/current baseline;
-4. apply only the fields defined by the locked C1 design;
-5. validate exact edit count = 82;
-6. semantic-diff the move table;
-7. build Rev 0 and Rev 1;
-8. perform focused runtime tests for effect-sensitive edits where appropriate.
+- Bind — 30 / 90 / 20
+- Wrap — 30 / 90 / 20
+- Fire Spin — 35 / 90 / 15
+- Whirlpool — 35 / 90 / 15
+- Sand Tomb — 35 / 90 / 15
+- Clamp — 35 / 90 / 10
+- Magma Storm — KEEP 120 / 70 / 5
+
+Trapping duration/residual behavior remains unchanged.
+
+The unrelated Emerald Sand Tomb 50/95 value is explicitly not Platinum C1 authority.
+
+### C1 application procedure
+
+1. Read `implementation/c1_move_changes_manifest.json`.
+2. Resolve each move to its current `res/moves/*/data.json` source file.
+3. Read current values and generate before-value guards from current `main`.
+4. Fail closed if any guarded source value differs unexpectedly.
+5. Apply only fields listed under each entry's `target`.
+6. Preserve all unlisted fields/effects/flags.
+7. For Razor Wind only:
+   - change `BATTLE_EFFECT_CHARGE_TURN_HIGH_CRIT` → `BATTLE_EFFECT_HIGH_CRITICAL`;
+   - update its description so it no longer says it is a two-turn attack.
+8. Assert exactly 82 move records were intentionally edited.
+9. Run move/source validation and semantic diff.
+10. Build Rev 0 and Rev 1.
+11. Run focused runtime tests for effect-sensitive changes if practical.
+12. Update `STATUS.md` with branch/commit/build evidence.
 
 ## C2.5E — created moves: landed, now QA
 
 The move layer is already implemented.
-
-Design/runtime invariants that still require focused QA:
 
 ### Resonant Slash
 
@@ -142,11 +140,11 @@ Design/runtime invariants that still require focused QA:
 - target pattern `25 + 25 + 25` before normal modifiers;
 - no Triple Kick escalating-power logic.
 
-### Verification status
+Verification status:
 
-- L0/L1: source exists and builds through generated resources;
-- L2: passed Rev 0 / Rev 1 CI build;
-- L4: focused runtime behavior still pending unless separate evidence is later checked in.
+- L0/L1: source exists and generated resources build;
+- L2: Rev 0 / Rev 1 CI build passed;
+- L4: focused runtime behavior still pending unless later evidence is checked in.
 
 ## C3H — species/compatibility: landed, now audit/QA
 
@@ -158,22 +156,22 @@ Historical provenance:
 - `tools/overhaul/recover_c3h_ledgers.py`
 - counts `67 / 27 / 40 / 53 / 38`.
 
-Use those only to audit current source.
+Use these only to audit current source.
 
-### Final corrections that must remain present
+Final corrections that must remain present:
 
 - Banette: Shadow Ball 31; Cursed Stitch 38; Shadow Claw 42.
 - Torkoal: Yawn 52; Heat Wave 55.
 - Seviper: Sludge Bomb 55.
 
-### C3 audit procedure
+C3 audit procedure:
 
-1. compare current main against the canonical design/manifests;
+1. compare current main against canonical design/manifests;
 2. verify created-move references resolve;
 3. verify TM21/TM78 recipient masks;
 4. verify explicit compatibility additions;
 5. verify final follow-up corrections;
-6. report semantic discrepancies rather than reapplying the old ledger wholesale;
+6. report semantic discrepancies rather than reapplying old ledgers wholesale;
 7. perform runtime/campaign checks only after source audit is clean.
 
 ## TM/HM compatibility
@@ -193,9 +191,7 @@ Use `tm_hm/TM_HM_SPEC.md` and `implementation/tm_compat_manifest.json` for audit
 
 ## Remaining C2 mechanics
 
-Do not confuse the landed compatibility work with the whole C2 system.
-
-Still implement/audit separately:
+Do not confuse landed compatibility work with the whole C2 system.
 
 ### Reusable TMs
 
@@ -261,34 +257,22 @@ Each mechanical subsystem should be independently revertible.
 ## Verification levels
 
 ### L0 — syntax/data
-
-- JSON/source parses;
-- generated resources compile.
+- JSON/source parses; generated resources compile.
 
 ### L1 — structural
-
-- expected counts/IDs;
-- compatibility masks;
-- no duplicate learnset slots unless intentional;
-- no invalid species/move/item references.
+- expected counts/IDs; compatibility masks; no invalid references.
 
 ### L2 — build
-
 - supported Platinum builds complete.
 
 ### L3 — semantic
-
-- diff/current source matches design spec;
-- no unrelated source mutation.
+- current source/diff matches design spec; no unrelated mutation.
 
 ### L4 — runtime
-
-- representative emulator tests;
-- edge cases for changed mechanics.
+- representative emulator tests; edge cases for changed mechanics.
 
 ### L5 — campaign/system QA
-
-- progression, availability, economy, event state, and completion checks.
+- progression, availability, economy, event state, completion checks.
 
 Never label a change runtime-verified merely because CI builds it.
 
