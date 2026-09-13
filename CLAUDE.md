@@ -17,90 +17,157 @@ This repository is the implementation source of truth. Do not reconstruct approv
 - **LOCKED** design is implementation authority. Do not redesign it unilaterally.
 - **SUPERSEDED** material must not be implemented.
 - **UNRESOLVED** means stop and report the ambiguity; do not guess.
-- Machine-readable canonical manifests/ledgers override older prose when they explicitly encode a later locked correction.
+- Current `main` source wins over historical application ledgers when determining what is already implemented.
+- Machine-readable canonical manifests override older prose when they explicitly encode a later locked correction.
 - Historical proposal files marked `Needs approval`, `Proposed`, or similar are not final authority.
-- Chat history is recovery evidence only when the repo explicitly says canonicalization is still incomplete.
+- Chat history is recovery evidence only where the repo explicitly says canonicalization is incomplete.
 
 ## Current checkpoint
 
-Planning/design through C3 is closed. Implementation is in **C2.5E / C3H**.
+Planning/design through C3 is closed.
 
-Implementation order:
+**Do not implement C2.5E/C3H from scratch. It already landed on `main`.**
 
-1. Implement the 22 created moves (IDs 468–489; target `MAX_MOVES = 490`).
-2. Run the created-move build/resource gate. Do not proceed if it fails.
-3. Apply the exact guarded C3 species ledgers.
-4. Apply the locked TM/HM compatibility patch.
-5. Build and perform semantic/runtime verification.
-6. Only then continue to the next master-plan phase.
+### Landed created-move implementation
+
+Commit:
+
+`071b8c7976801e64af5296f30b7437d7da2d8632`
+
+This implements all 22 custom moves and move-table plumbing, plus a mod-aware Rev 0/Rev 1 CI build matrix.
+
+GitHub Actions run `33981291318` completed successfully.
+
+### Landed C3H implementation
+
+Commit:
+
+`8a74452654e1552b78bfb329afcb351a2caec5cf`
+
+This applies:
+
+- C3H TM compatibility rebuild;
+- 225 guarded Pokémon operations;
+- final Torkoal correction;
+- final Seviper correction.
+
+GitHub Actions run `33995072848` completed successfully.
+
+Therefore your starting assumption is:
+
+> C2.5E/C3H are **implemented and L2 build-verified**, but still need focused runtime/semantic QA. Do not reapply historical ledgers over current `main`.
+
+## Immediate implementation priorities
+
+1. Audit current `main` against the canonical specs; do not redo landed C2.5E/C3H work.
+2. Wait for the final canonical C1 manifest before implementing C1 existing-move edits.
+3. Once C1 recovery is complete, implement the exact 82-edit manifest against current `main` with before-value guards.
+4. Build both supported US revisions.
+5. Run focused runtime tests for custom/high-risk mechanics.
+6. Continue to evolution-system implementation and Emerald-to-Platinum port audit according to `MASTER_PLAN.md`.
 
 ## Critical created-move facts
 
-- Created move authority: `docs/overhaul/moves/CREATED_MOVES.md`
-- Machine-readable authority: `docs/overhaul/implementation/created_moves_manifest.json`
-- Resonant Slash must be registered as a sound move.
-- Star Jab must be registered as a punching move.
-- Magnet Volley must hit **exactly three times at equal 25 BP per hit** (25+25+25), with no Triple Kick-style power escalation.
-- Dragon Swipe is finalized as a move, but its historical final C3 recipient remains unresolved. **Do not invent a recipient.**
+Design authority:
+
+- `docs/overhaul/moves/CREATED_MOVES.md`
+- `docs/overhaul/implementation/created_moves_manifest.json`
+
+Implementation facts:
+
+- IDs 468–489
+- `MAX_MOVES = 490`
+- Resonant Slash is registered as a sound move.
+- Star Jab is registered as a punching move.
+- Magnet Volley must hit **exactly three times at equal 25 BP per hit** (25+25+25), with no Triple Kick-style escalation.
+
+Focused runtime verification is still required for those interactions even though the build passes.
+
+Dragon Swipe is implemented as a finalized move, but its historical final C3 recipient remains unresolved. **Do not invent a recipient.**
 
 ## Critical C3 species facts
 
-The exact historical species implementation consisted of five ledgers with operation counts:
+The historical species implementation consisted of five guarded ledgers totaling:
 
-`[67, 27, 40, 53, 38] = 225 total operations`
+`[67, 27, 40, 53, 38] = 225 operations`
 
-Historical source of truth:
+Historical provenance:
 
 - commit: `dceb548782be5c3ed30afba39a8b5727fdd6716d`
 - workflow blob: `c45362c9913899aae07e6a84fa5bc62e9ee7edb0`
 - archived copy: `docs/overhaul/implementation/archive/c3h-apply-species-original.yml`
-- deterministic verifier/extractor: `tools/overhaul/recover_c3h_ledgers.py`
+- verifier/extractor: `tools/overhaul/recover_c3h_ledgers.py`
+
+These are **provenance and audit material**, not instructions to reapply them to current main.
 
 Never substitute the known superseded inferred L3 reconstruction from old branch history.
 
-### Banette correction
+### Final corrections
 
-The final-audit correction is authoritative:
+Current main/final audit authority includes:
 
-- Shadow Ball Lv31 remains.
-- Cursed Stitch is inserted at Lv38.
-- Shadow Claw is Lv42.
+- Banette: Shadow Ball Lv31 remains; Cursed Stitch Lv38; Shadow Claw Lv42.
+- Torkoal: Yawn Lv52; Heat Wave Lv55.
+- Seviper: Sludge Bomb Lv55.
 
-Any older ledger or prose that replaces Shadow Ball Lv31 with Cursed Stitch is superseded.
+Any older ledger/prose conflicting with these is superseded.
 
 ## TM/HM authority
 
-See `docs/overhaul/tm_hm/TM_HM_SPEC.md` and `docs/overhaul/implementation/tm_compat_manifest.json`.
+See:
 
-Key invariants:
+- `docs/overhaul/tm_hm/TM_HM_SPEC.md`
+- `docs/overhaul/implementation/tm_compat_manifest.json`
 
-- TMs are reusable.
-- TM21 = Air Slash; rebuild its compatibility from the locked 49-recipient list.
-- TM78 = Power Gem; rebuild its compatibility from the locked 27-recipient list.
-- Old Frustration/Captivate masks must not leak into the replacement slots.
-- Apply the explicit compatibility additions, including the Raichu TM91 Flash Cannon reconciliation.
+The C3H compatibility changes are already applied on main. Audit them; do not blindly reapply them.
+
+Key invariants remain:
+
+- TM21 = Air Slash using the locked 49-recipient mask.
+- TM78 = Power Gem using the locked 27-recipient mask.
+- Old Frustration/Captivate masks must not leak into replacement slots.
+- Explicit additions include the Raichu TM91 Flash Cannon reconciliation.
+
+Reusable-TM behavior, HM battle changes, TM economy/source policy, and other C2 implementation details still need separate implementation/audit unless current source proves they already landed.
 
 ## C1 recovery status
 
-C1 design is complete and locked. The final audit records **82 existing move edits**. Canonical repo recovery of that complete 82-move ledger is still being finalized.
+C1 design is complete and locked. C1 is **not yet implemented** on current main; for example, Fury Cutter remains vanilla in source.
 
-Until the canonical C1 manifest is present:
+Recovery status:
 
-- do not use old proposal spreadsheets as implementation authority;
-- do not infer missing move values;
-- report any C1-dependent implementation need as blocked on canonical recovery.
+- all **82/82 edited move names** are enumerated in `docs/overhaul/implementation/c1_move_edit_membership_recovery.json`;
+- confirmed values/rulings are in:
+  - `docs/overhaul/moves/C1_EXISTING_MOVE_REBALANCE_RECOVERY.md`
+  - `docs/overhaul/moves/C1_RECOVERED_BATCHES_SUPPLEMENT.md`
+- final superseding values remain unresolved for five Batch 9F moves:
+  - Bind
+  - Wrap
+  - Fire Spin
+  - Whirlpool
+  - Clamp
+- Sand Tomb is independently confirmed at **50 BP / 95 Acc / 15 PP**.
+
+Until the final 82-edit implementation manifest is checked in:
+
+- do not implement C1 from an old proposal spreadsheet;
+- do not infer the five unresolved trapping values;
+- do not substitute Emerald move-rework values for Platinum C1;
+- report C1 implementation as blocked on canonical recovery if asked to apply it prematurely.
 
 ## Required implementation behavior
 
 For every implementation batch:
 
 - pin/report the source commit you started from;
+- inspect current source first so already-landed work is not repeated;
 - preserve before-value/source guards where supplied;
 - fail closed on unexpected source state;
-- make the smallest source-level change that implements the locked design;
+- make the smallest source-level change that implements locked design;
 - prefer Platinum source/resource edits over binary patches;
 - use disassembly/runtime tooling only for genuine engine ambiguity;
-- do not silently broaden scope.
+- do not silently broaden scope;
+- update `docs/overhaul/STATUS.md` when project state materially changes.
 
 Before calling a batch complete, report:
 
@@ -109,7 +176,8 @@ Before calling a batch complete, report:
 3. exact validation/build commands run;
 4. results;
 5. runtime checks performed, if applicable;
-6. any discrepancy from the canonical spec;
-7. any blocker or unresolved design question.
+6. any discrepancy from canonical spec;
+7. any blocker/unresolved design question;
+8. whether status/docs were updated.
 
-If an approved spec and the live source disagree, **do not resolve the design yourself**. Document the discrepancy and stop that affected change until it is reconciled.
+If an approved spec and live source disagree, **do not resolve the design yourself**. Document the discrepancy and stop the affected change until it is reconciled.
