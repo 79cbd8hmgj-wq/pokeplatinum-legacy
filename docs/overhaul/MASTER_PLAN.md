@@ -19,294 +19,277 @@ Core targets:
 
 ## Status vocabulary
 
-- `PLANNED` — scope is defined but design is not locked.
+- `PLANNED` — scope defined; design not locked.
 - `LOCKED` — design authority is final unless explicitly amended.
-- `IMPLEMENTING` — source work is active.
+- `IMPLEMENTING` — source work active.
 - `IMPLEMENTED` — source changes exist.
-- `VERIFIED` — build/runtime/semantic verification passed.
+- `VERIFIED L2` — supported builds pass.
+- `VERIFIED L4` — targeted runtime behavior verified.
 - `DEFERRED` — intentionally outside Core 1.0.
 
 ## Phase 0 — Repository foundation
 
-**Status: PARTIAL / ongoing**
+**Status: IMPLEMENTING**
 
 Goals:
 
-- Keep the overhaul in Git, not in chat history.
+- Keep project authority in Git rather than chat history.
 - Maintain canonical docs under `docs/overhaul/`.
-- Use guarded edits, semantic diffs, and build gates.
-- Preserve clean checkpoints and narrowly scoped commits.
-- Verify both supported US Platinum revisions before release.
+- Give Claude/other implementation agents a single read order and explicit supersession rules.
+- Preserve provenance for recovered historical work.
+- Use guarded edits, semantic diffs, build gates, and narrow commits.
 
-Required outputs:
-
-- master plan
-- status file
-- master design spec
-- implementation plan
-- Emerald port plan
-- subsystem specs/manifests
+Current vehicle: `overhaul/canonical-docs` / draft PR #8.
 
 ## Phase 1 — Pokémon and move foundation
 
 ### A. Species identity
 
-**Design status: LOCKED**
+**Design: LOCKED**
+**Implementation: IMPLEMENTED through C3H**
+**Verification: L2 build**
 
-Includes:
-
-- selected retypes
-- stat redistribution/repair
-- ability changes
-- species roles
-- evolution identity rules
+Includes selected retypes, stat redistribution/repair, ability changes, species roles, and related learnset identity work.
 
 ### B. Existing move rework (C1)
 
-**Design status: LOCKED**
+**Design: LOCKED**
+**Implementation: NOT YET APPLIED**
+**Recovery: 82/82 edit membership recovered; five Batch 9F final values still unresolved**
 
-Goals already completed:
+C1 remains the one major completed design package that must be fully canonicalized before implementation.
 
-- revive weak/obsolete moves without broad modern-power inflation
-- preserve Generation IV character
-- repair physical/special progression gaps
-- keep useful niche identities rather than turning every attack into an 80-BP clone
+Do not implement from proposal spreadsheets or Emerald move specs.
 
 ### C. TM/HM system (C2)
 
-**Design status: LOCKED**
+**Design: LOCKED**
+**Implementation: PARTIAL**
 
-Key rulings:
+Locked design includes:
 
-- TMs are reusable.
-- 90 of 92 TM move assignments remain vanilla.
-- TM21 becomes Air Slash.
-- TM78 becomes Power Gem.
-- First acquisition still gates access.
-- Game Corner/Frontier TM economies are reduced where grind was excessive.
-- HM field use remains coupled to moves for Core 1.0.
-- HMs are made respectable battle moves.
+- reusable TMs;
+- TM21 Air Slash;
+- TM78 Power Gem;
+- acquisition/source policy;
+- TM economy;
+- HM battle rework;
+- compatibility framework.
+
+The C3H compatibility portion is already implemented and L2 build-verified. Reusable-TM behavior, HM battle changes, TM economy/source changes, and related C2 mechanics require separate implementation/audit.
 
 ### D. Created move ecosystem (C2.5)
 
-**Design status: LOCKED**
-**Implementation status: IMPLEMENTING**
+**Design: LOCKED**
+**Implementation: IMPLEMENTED**
+**Verification: L2 build**
 
-- 22 custom moves total.
-- 9 generic progression moves.
-- 13 species/family identity moves.
-- IDs 468–489 reserved.
-- `MAX_MOVES` target: 490.
-- Created-move plumbing must build before species ledgers referencing the new constants are applied.
+Mainline implementation:
+
+`071b8c7976801e64af5296f30b7437d7da2d8632`
+
+- 22 custom moves;
+- IDs 468–489;
+- target/current `MAX_MOVES = 490`;
+- mod-aware CI for US Rev 0 / Rev 1;
+- build run `33981291318`: success.
+
+Focused runtime tests remain necessary before L4 verification.
 
 ### E. Species learnsets and compatibility (C3)
 
-**Design status: LOCKED**
-**Implementation status: IMPLEMENTING**
+**Design: LOCKED**
+**Implementation: IMPLEMENTED**
+**Verification: L2 build**
 
-Completed design categories:
+Mainline implementation:
 
-- level-up learnsets
-- evolution timing audit
-- natural-STAB/dead-slot audit
-- TM/HM compatibility consolidation
-- tutor consolidation
-- egg-move consolidation
+`8a74452654e1552b78bfb329afcb351a2caec5cf`
 
-Known final correction:
+This applies:
 
-- Banette keeps Shadow Ball at Lv31, evolves at Lv37, gains Cursed Stitch at Lv38, and Shadow Claw at Lv42.
+- C3H compatibility rebuild;
+- 225 guarded species operations;
+- final Torkoal correction;
+- final Seviper correction.
 
-## Phase 2 — Core implementation gate
+Build run `33995072848`: success.
 
-**Status: IMPLEMENTING**
+Historical ledgers remain audit/provenance material and must not be reapplied over current main.
 
-This phase turns the locked Phase 1 design into verified source.
+## Phase 2 — Foundation verification + remaining C1/C2 implementation
 
-Order is mandatory:
+**Status: ACTIVE NEXT PHASE**
 
-1. Implement all 22 custom moves and resource plumbing.
-2. Build and validate the move layer.
-3. Apply guarded species type/stat/ability/learnset ledgers.
-4. Apply TM/HM compatibility patch.
-5. Build again.
-6. Run semantic diff and invariant checks.
-7. Runtime-test representative/high-risk mechanics.
-8. Mark completed batches `VERIFIED` only after evidence exists.
+This replaces the obsolete plan to implement C2.5E/C3H from scratch.
 
-Do not apply learnset operations referencing new `MOVE_*` constants before the custom-move build gate passes.
+Order:
+
+1. Finish C1 canonical recovery.
+2. Generate and validate the complete 82-edit C1 manifest against current main.
+3. Apply C1 with guards.
+4. Build both supported US revisions.
+5. Audit/implement remaining C2 mechanics:
+   - reusable TMs;
+   - HM battle values/Defog behavior;
+   - TM economy/source changes where not yet landed.
+6. Perform focused runtime tests for custom moves and high-risk mechanics.
+7. Semantic-audit current C3H state against canonical design.
+8. Update status evidence before moving into world-scale work.
 
 ## Phase 3 — Emerald-to-Platinum system port
 
-**Status: PLANNED**
+**Status: PLANNED / ready after foundation stabilization**
 
 Default rule:
 
-> Reuse the finalized Emerald design/behavior whenever it still serves the Platinum goals; translate the implementation into Platinum's architecture instead of redesigning from scratch.
+> Reuse finalized Emerald design/behavior whenever it still serves Platinum goals; translate implementation into Platinum architecture instead of redesigning from scratch.
 
-Classify every Emerald subsystem as:
+Classify each subsystem as:
 
-- `DIRECT PORT` — behavior/design can transfer essentially unchanged.
-- `ADAPT` — keep the design but translate for Sinnoh/Gen IV systems.
-- `PLATINUM-SPECIFIC` — use native Platinum infrastructure instead.
-- `DEFER` — not needed for Core 1.0.
+- `DIRECT PORT`
+- `ADAPT`
+- `PLATINUM-SPECIFIC`
+- `DEFER`
 
-Priority systems:
+Priority:
 
-- trade-evolution removal and evolution accessibility
-- EXP/progression economy
-- mart/item economy
-- Poké Ball rebalance
-- breeding improvements
-- full-dex availability philosophy
-- grind reduction/QoL
+- evolution/trade-evolution removal;
+- EXP/progression economy;
+- mart/item economy;
+- Poké Ball rebalance;
+- breeding improvements;
+- grind reduction/QoL.
 
-Detailed policy lives in `EMERALD_PORT_PLAN.md`.
+Detailed policy: `EMERALD_PORT_PLAN.md`.
 
-## Phase 4 — World and 493 availability
+## Phase 4 — Evolution system + one-save evolution accessibility
+
+**Status: PARTIAL DESIGN / PLANNED IMPLEMENTATION**
+
+Before encounter placement, lock and implement a complete evolution manifest:
+
+- all trade evolutions replaced;
+- Gen IV held-item trade evolutions adapted;
+- friendship/location methods reviewed for tedium/access;
+- required items deliberately obtainable;
+- every evolution possible in one save;
+- no evolution timing conflicts with finalized learnsets.
+
+## Phase 5 — World and #001–#493 availability
 
 **Status: PLANNED**
 
 Goals:
 
-- early National Dex access while preserving the 210-species regional story identity
-- all non-legendary base families before the Elite Four
-- normal alternatives for Diamond/Pearl exclusives
-- normal alternatives for GBA dual-slot species
-- normal alternatives for mandatory swarm/Radar/Trophy Garden/Great Marsh rotations
-- Honey Tree improvements
-- both fossil paths available
-- Spiritomb obtainable through single-player Underground progression
-- evolution items deliberately distributed
-- rare encounters meaningful without excessive 1% frustration
+- early National Dex access while preserving the 210-species regional story identity;
+- all non-legendary base families before the Elite Four;
+- normal alternatives for version exclusives, dual-slot species, and hard daily/rotation gates;
+- Honey Tree improvements;
+- both fossil paths available;
+- Spiritomb obtainable through single-player Underground progression;
+- deliberate evolution-item distribution;
+- rare encounters meaningful without excessive 1% frustration.
 
-Encounter philosophy:
-
-- Early game: Sinnoh remains dominant; older families supplement weak type variety.
-- Midgame: National Dex breadth expands through distinct ecological systems.
-- Late story: rare/pseudo-legendary families become available.
-- Postgame: legendary quests, optimization, rematches, Frontier, collection cleanup.
-
-## Phase 5 — Trainers, items, and economy
+## Phase 6 — Trainers, items, and economy
 
 **Status: PLANNED**
 
 Trainer targets:
 
-- coherent important-trainer teams
-- fuller Gym teams where appropriate
-- improved Rival development
-- stronger Galactic identities
-- Elite Four/Cynthia as the main-story benchmark
-- National Dex rematches
-- ordinary trainers showcasing newly available species/mechanics
+- coherent important-trainer teams;
+- improved Rival/Galactic progression;
+- stronger Gym/Elite Four/Cynthia progression;
+- rematches;
+- ordinary trainers showcasing new availability and mechanics.
 
 Economy targets:
 
-- less grinding without making money meaningless
-- practical healing/catching/team experimentation
-- reliable evolution-item access
-- cheaper vitamins and practical move services
-- controlled repeatable money sources
-- improved BP economy
+- less grinding without making money meaningless;
+- practical healing/catching/team experimentation;
+- reliable evolution-item access;
+- sensible repeatable money/BP sources.
 
-Emerald numerical settings are starting points for testing, not automatic Platinum locks.
+Emerald numerical settings are starting evidence, not automatic Platinum locks.
 
-## Phase 6 — Mechanical and breeding systems
+## Phase 7 — Mechanical and breeding systems
 
 **Status: PLANNED / partly designed**
 
 Includes:
 
-- evolution logic changes
-- capture/Poké Ball behavior
-- EXP changes
-- reusable-TM runtime behavior if not already completed
-- Defog battle-effect correction
-- AI improvements where justified
-- breeding improvements
+- EXP changes;
+- capture/Poké Ball behavior;
+- breeding improvements;
+- AI improvements where justified;
+- any remaining QoL engine work.
 
-Breeding rule for Platinum:
+Baseline campaign functionality must not depend on breeding.
 
-- baseline campaign functionality comes from level-up moves, not breeding
-- vanilla Platinum egg pools remain the default unless a specific locked change exists
-- broader Emerald breeding innovations are port candidates, but must be reviewed against Platinum's richer native breeding system
+Field-move decoupling remains `DEFERRED` for Core 1.0 unless later proven unusually low-risk.
 
-Field-move decoupling remains `DEFERRED` for Core 1.0 unless implementation cost proves unexpectedly low and safe.
-
-## Phase 7 — Legendary, Mythical, and event restoration
+## Phase 8 — Legendary, Mythical, and event restoration
 
 **Status: PLANNED**
 
 Prefer Platinum-native infrastructure:
 
-- Darkrai — Member Card/Newmoon Island sequence
-- Shaymin — Oak's Letter/Seabreak Path
-- Arceus — Azure Flute/Hall of Origin
-- Rotom forms — Secret Key room
-- Regirock/Regice/Registeel — no event-Regigigas dependency
-- Regigigas — after obtaining the three Regis
-- Manaphy — Sinnoh-side quest or restored gift
-- Phione — breeding
-- Dialga/Palkia — existing postgame encounters
-- legendary birds — existing roaming framework, improved if needed
-- other version/migration-exclusive legendaries — dedicated quests/encounters
+- Darkrai — Member Card/Newmoon Island;
+- Shaymin — Oak's Letter/Seabreak Path;
+- Arceus — Azure Flute/Hall of Origin;
+- Rotom forms — Secret Key room;
+- Regis/Regigigas — remove event-Regigigas dependency;
+- Manaphy/Phione — one-save accessible path;
+- Dialga/Palkia — preserve native postgame encounter structure;
+- other migration/version-exclusive legendaries — dedicated Platinum-native encounters/quests.
 
-## Phase 8 — Postgame and Battle Frontier
+## Phase 9 — Postgame and Battle Frontier
 
 **Status: PLANNED**
 
-Includes:
+Includes Frontier economy, rematches, postgame encounter cleanup, optimization resources, and completion rewards.
 
-- Frontier economy
-- rematches
-- postgame encounter cleanup
-- optimization resources
-- completion rewards
-- optional late-game collection methods
-
-## Phase 9 — Full QA
+## Phase 10 — Full QA
 
 **Status: PLANNED**
 
 Release-blocking checks:
 
-- every species #001–#493 obtainable
-- every evolution achievable in one save
-- no external hardware/service requirement
-- no progression softlocks
-- every TM/key item obtainable
-- trainer legality checks
-- learnset and move-ID validation
-- encounter-rate audit
-- economy/progression playtest
-- event-state validation
-- save compatibility testing where supported
-- Rev 0 and Rev 1 builds
-- custom-move runtime tests
-- TM/HM compatibility checks
-- complete semantic diff against intended design
+- #001–#493 obtainable;
+- every evolution achievable;
+- no external hardware/service requirement;
+- no progression softlocks;
+- TM/key-item completeness;
+- trainer legality/progression;
+- move/learnset validation;
+- custom-move runtime behavior;
+- encounter-rate audit;
+- economy/progression playtest;
+- event-state validation;
+- Rev 0 + Rev 1 builds;
+- semantic diff against intended design.
 
-## Phase 10 — Release
+## Phase 11 — Release
 
 **Status: PLANNED**
 
 Outputs:
 
-- versioned source tag
-- release notes/changelog
-- patch generation
-- player-facing documentation
-- known-issues list
-- reproducible build/verification instructions
+- versioned source tag;
+- release notes/changelog;
+- patch generation;
+- player-facing documentation;
+- known-issues list;
+- reproducible build/verification instructions.
 
 ## Immediate execution order
 
-1. Finish canonical repo documentation.
-2. Finish and verify created-move plumbing.
-3. Apply/verify C3 species + compatibility implementation.
-4. Run the Emerald-to-Platinum port audit.
-5. Implement evolution/economy/capture/breeding ports in dependency order.
-6. Build the 493 availability plan and encounter tables.
-7. Continue through trainers/economy/events/postgame.
-8. Full QA and release.
+1. Finish canonical repo documentation/recovery.
+2. Resolve the final five C1 Batch 9F values and produce the exact 82-edit manifest.
+3. Implement/build C1.
+4. Audit/implement remaining C2 mechanics.
+5. Run targeted L4 runtime QA on created moves + C3 high-risk cases.
+6. Perform Emerald-to-Platinum port audit and implement evolution system.
+7. Build the 493 availability plan and encounter tables.
+8. Trainers/economy/events/postgame.
+9. Full QA and release.
