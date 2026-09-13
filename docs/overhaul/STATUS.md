@@ -1,6 +1,6 @@
 # Pokémon Platinum Overhaul — Current Status
 
-Last verified against repository history: 2026-09-13.
+Last verified against repository/project history: 2026-09-13.
 
 ## Executive status
 
@@ -8,6 +8,7 @@ Last verified against repository history: 2026-09-13.
 - **C2.5E created moves:** IMPLEMENTED + L2 BUILD VERIFIED on `main`.
 - **C3H species + TM compatibility:** IMPLEMENTED + L2 BUILD VERIFIED on `main`.
 - **C1 existing-move rebalance:** LOCKED, fully recovered into an 82-edit canonical manifest, **not yet implemented** on `main`.
+- **Evolution design:** **LOCKED in Pass A** across #001–#493; complete historical master had 50 consolidated type/evolution decisions. The repo still needs the complete machine-readable evolution manifest reconstructed from that locked authority.
 - **Known design blockers:** 0.
 - **Next source task:** guarded C1 implementation against current `main`, then remaining C2 mechanics and focused runtime QA.
 
@@ -62,7 +63,7 @@ They are provenance sources, not current implementation targets.
 | TM acquisition/economy | LOCKED | not yet fully audited/implemented | pending |
 | Tutor consolidation | LOCKED | baseline retained | audit pending |
 | Egg-move consolidation | LOCKED | baseline retained | audit pending |
-| Evolution-method overhaul | PARTIAL | not yet complete | pending |
+| Evolution-method overhaul | **LOCKED / RECOVERY NEEDED FOR FULL MANIFEST** | not yet implemented as a complete system | pending |
 | World/#001–#493 availability | PLANNED | not started | pending |
 | Trainer overhaul | PLANNED | not started | pending |
 | Economy/EXP port | PLANNED PORT | not started | pending |
@@ -114,6 +115,34 @@ Next implementation procedure:
 7. build Rev 0 and Rev 1;
 8. record evidence in this file.
 
+## Evolution authority
+
+Evolution was part of **Pass A: Identity & Evolution**, not an undesigned future phase.
+
+Canonical recovery entry:
+
+`evolution/EVOLUTION_SPEC.md`
+
+Final global rule:
+
+> **Evolution stones are the only evolution items. No trade or held non-stone item is required for evolution.**
+
+Recovered locked examples include:
+
+- Kadabra/Machoke/Graveler/Haunter → Lv36 final evolutions;
+- Onix → Steelix Lv35;
+- Scyther → Scizor Lv38;
+- Seadra → Kingdra Lv42;
+- Electabuzz/Magmar → Lv42 final evolutions;
+- Rhydon → Rhyperior Lv52;
+- Porygon → Porygon2 Lv30 → Porygon-Z Lv45;
+- Dusclops → Dusknoir Lv45;
+- Gligar/Sneasel → Lv38 at night;
+- Poliwhirl/Slowpoke/Clamperl branch logic uses stat comparisons;
+- genuine stones, location evolutions, Beauty, Wurmple/Shedinja, and other identity-positive mechanics are retained.
+
+The historical locked Pass A master contained **50 consolidated type/evolution decisions**. The remaining task is to recover/check in the full machine-readable evolution manifest and map it to source—not to redesign the system.
+
 ## C3 provenance
 
 Exact historical species payload:
@@ -159,8 +188,9 @@ Do not invent one. This is not a build blocker.
 2. Build Rev 0 + Rev 1 and archive validation evidence.
 3. Audit/implement remaining C2 reusable-TM/HM/economy behavior.
 4. Run focused L4 runtime QA for C2.5/C3 high-risk mechanics.
-5. Complete the evolution-system manifest and Emerald-to-Platinum port audit.
-6. Continue into #001–#493 availability, trainers, economy, events, and postgame.
+5. Reconstruct the complete locked Pass A evolution manifest and implement it; **no new evolution-design pass is required**.
+6. Perform the remaining Emerald-to-Platinum port audit for EXP/economy/capture/breeding.
+7. Continue into #001–#493 availability, trainers, economy, events, and postgame.
 
 ## Rule for future sessions
 
