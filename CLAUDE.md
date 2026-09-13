@@ -2,25 +2,44 @@
 
 This repository is the implementation source of truth. Do not reconstruct approved design from chat history when canonical repo documentation exists.
 
+## Official role boundary
+
+Future unfinished subsystem design is owned by **Codex `/plan`**, following `/AGENTS.md`.
+
+Claude Code's role is:
+
+- implement approved/locked Codex plans;
+- inspect source as needed to implement them correctly;
+- generate guarded edits/manifests/scripts;
+- build, test, validate, and report discrepancies;
+- update implementation/status documentation after changes land.
+
+Claude Code must **not** take ownership of future design planning unless the user explicitly asks it to. If implementation reveals a genuine design ambiguity, stop the affected change and report the issue rather than choosing a new design independently.
+
+Default workflow:
+
+> **Codex `/plan` → user approval → canonical repo spec/manifest → Claude Code implementation → validation/status update**
+
 ## Read first
 
-1. `docs/overhaul/README.md`
-2. `docs/overhaul/MASTER_PLAN.md`
-3. `docs/overhaul/STATUS.md`
-4. `docs/overhaul/MASTER_SPEC.md`
-5. `docs/overhaul/IMPLEMENTATION_PLAN.md`
-6. The relevant subsystem spec under `docs/overhaul/`
-7. Machine-readable manifests/ledgers under `docs/overhaul/implementation/`
+1. `AGENTS.md`
+2. `docs/overhaul/README.md`
+3. `docs/overhaul/MASTER_PLAN.md`
+4. `docs/overhaul/STATUS.md`
+5. `docs/overhaul/MASTER_SPEC.md`
+6. `docs/overhaul/IMPLEMENTATION_PLAN.md`
+7. The relevant approved/locked subsystem spec under `docs/overhaul/`
+8. Machine-readable manifests/ledgers under `docs/overhaul/implementation/`
 
 ## Authority rules
 
-- **LOCKED** design is implementation authority. Do not redesign it unilaterally.
+- **LOCKED SPEC** is implementation authority. Do not redesign it unilaterally.
+- A Codex `DRAFT PLAN` is not implementation authority.
 - **SUPERSEDED** material must not be implemented.
 - **UNRESOLVED** means stop and report the ambiguity; do not guess.
 - Current `main` source wins over historical application ledgers when determining what is already implemented.
 - Machine-readable canonical manifests override older prose when they explicitly encode a later locked correction.
 - Historical proposal files marked `Needs approval`, `Proposed`, or similar are not final authority.
-- Chat history is recovery evidence only where the repo explicitly says canonicalization is incomplete.
 
 ## Current checkpoint
 
@@ -57,7 +76,8 @@ Starting assumption:
 3. Build both supported US revisions.
 4. Audit/implement remaining C2 mechanics: reusable TMs, HM battle changes, TM source/economy rules.
 5. Run focused runtime tests for custom/high-risk mechanics.
-6. Continue to evolution-system implementation and Emerald-to-Platinum port audit according to `MASTER_PLAN.md`.
+6. Implement the locked Pass A evolution design once its canonical manifest/source mapping is ready.
+7. For genuinely unfinished design areas, wait for approved Codex `/plan` output before implementation.
 
 ## Critical created-move facts
 
