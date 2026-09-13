@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "status": "LOCKED_DESIGN_IMPLEMENTING",
+  "implementation_rules": [
+    "Clear TM21 from all Pokemon/form by_tm lists before applying Air Slash recipients.",
+    "Clear TM78 from all Pokemon/form by_tm lists before applying Power Gem recipients.",
+    "No former Frustration or Captivate compatibility survives by slot inheritance.",
+    "Shaymin Sky receives TM21; Shaymin Land does not.",
+    "Rotom Fan does not gain TM21 globally; appliance move handling remains form-change based.",
+    "Raichu TM91 is an implementation reconciliation because live source lacked the compatibility assumed by design."
+  ],
+  "tm21": {
+    "move": "MOVE_AIR_SLASH",
+    "recipient_count": 49,
+    "recipients": [
+      "charizard","butterfree","pidgey","pidgeotto","pidgeot","zubat","golbat","farfetchd","scyther","articuno","moltres","dragonite","mew",
+      "crobat","hoothoot","noctowl","natu","xatu","yanma","murkrow","delibird","mantine","skarmory","lugia","ho_oh",
+      "taillow","swellow","wingull","pelipper","masquerain","beautifly","ninjask","tropius","swablu","altaria","salamence","rayquaza",
+      "mothim","vespiquen","drifloon","drifblim","honchkrow","chatot","mantyke","togetic","togekiss","yanmega","shaymin/forms/sky","arceus"
+    ]
+  },
+  "tm78": {
+    "move": "MOVE_POWER_GEM",
+    "recipient_count": 27,
+    "recipients": [
+      "persian","staryu","starmie","mareep","flaaffy","ampharos","slowking","misdreavus","mismagius","corsola","nosepass","probopass","sableye","spoink","grumpig","vespiquen","omanyte","omastar","slugma","magcargo","lunatone","lileep","cradily","dialga","palkia","mew","arceus"
+    ]
+  },
+  "explicit_additions": {
+    "farfetchd": ["TM31","HM06"],
+    "electabuzz": ["TM08","TM60"],
+    "electivire": ["TM08","TM60"],
+    "vigoroth": ["TM60"],
+    "slaking": ["TM60"],
+    "shinx": ["TM66"],
+    "luxio": ["TM66"],
+    "luxray": ["TM66"],
+    "raichu": ["TM91"]
+  },
+  "expected_total_explicit_flags": 12
+}

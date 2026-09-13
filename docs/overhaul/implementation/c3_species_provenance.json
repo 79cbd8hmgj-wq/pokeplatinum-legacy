@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "status": "locked_design_historical_implementation_found",
+  "repository": "79cbd8hmgj-wq/pokeplatinum-legacy",
+  "historical_branch": "overhaul/c3h-species-compat",
+  "pinned_source_baseline": "0fee7dc526f3220dc6a3b58986415446423f83de",
+  "application": {
+    "commit": "e93080d07141426042504363e385c121fbe88d89",
+    "message": "Apply C3H 225 species operations",
+    "operation_count": 225
+  },
+  "post_application_corrections": [
+    {
+      "commit": "e21bf6d81e08c10bf335dcad3097f3597f8b9d15",
+      "message": "Apply final C3 Torkoal learnset correction"
+    },
+    {
+      "commit": "887c0d8a17104cebfab2d66b284b1ee7feae7f20",
+      "message": "Apply final C3 Seviper learnset correction"
+    }
+  ],
+  "authoritative_species_snapshot": "887c0d8a17104cebfab2d66b284b1ee7feae7f20",
+  "owned_fields": [
+    "base_stats",
+    "types",
+    "abilities",
+    "learnset.by_level"
+  ],
+  "excluded_fields": {
+    "learnset.by_tm": "governed by tm_compat_manifest.json"
+  },
+  "supported_semantic_operations": [
+    "set_base_stat",
+    "set_types",
+    "set_abilities",
+    "insert_level_move",
+    "replace_level_move",
+    "remove_level_move"
+  ],
+  "recovery_rule": "Regenerate the consolidated guarded ledger by semantic diff from the pinned baseline to the authoritative species snapshot, replay it from the baseline, and require exact equality for C3-owned fields. Do not redesign C3.",
+  "known_removed_ledger_evidence": [
+    {
+      "path": "overhaul_ledgers/platinum_c3h_l4_gen3_guarded_ledger_v1.json",
+      "historical_note": "recoverable from Git history; a later reconstruction workflow produced 53 Gen III operations but later recovery hypotheses must be reconciled against the authoritative source snapshot"
+    }
+  ],
+  "validation_anchors": {
+    "banette": {
+      "level_31": "MOVE_SHADOW_BALL",
+      "level_38": "MOVE_CURSED_STITCH",
+      "level_42": "MOVE_SHADOW_CLAW"
+    },
+    "glalie": {
+      "type_1": "TYPE_ICE",
+      "type_2": "TYPE_STEEL",
+      "level_43": "MOVE_IRON_HEAD"
+    }
+  }
+}
