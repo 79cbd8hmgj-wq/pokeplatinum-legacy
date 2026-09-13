@@ -2,17 +2,15 @@
 
 ## Purpose
 
-Track which historical design/implementation decisions have been migrated into repository authority and which still require recovery.
+Track which historical Platinum-overhaul decisions have been migrated into repository authority and which still require recovery. This file exists specifically so implementation never again depends on remembering an old chat.
 
-This file exists specifically to prevent another situation where critical project state lives only in old chats.
+## Status legend
 
-## Recovery status legend
-
-- `CANONICALIZED` — authoritative repo document now exists.
-- `PARTIAL` — major rules captured, detailed per-record authority still needs migration.
-- `ARTIFACT EXISTS` — implementation artifact was previously generated/recovered but still needs permanent repo placement or verification.
-- `NEEDS RECOVERY` — historical work exists in checkpoints but is not yet canonicalized.
-- `PLANNED` — work was not fully designed yet; no recovery expected.
+- `CANONICALIZED` — authoritative repo document/artifact exists.
+- `RECOVERED SOURCE` — exact historical implementation source is preserved in-repo and reproducibly extractable.
+- `PARTIAL` — governing rules are captured, but detailed record authority is still being migrated.
+- `NEEDS RECOVERY` — completed historical work exists but is not yet safely canonicalized.
+- `PLANNED` — work was not fully designed yet; no recovery is expected.
 
 ## Top-level project
 
@@ -21,292 +19,292 @@ This file exists specifically to prevent another situation where critical projec
 | Project identity | CANONICALIZED | `MASTER_PLAN.md`, `MASTER_SPEC.md` |
 | Phase order / roadmap | CANONICALIZED | `MASTER_PLAN.md` |
 | Current checkpoint | CANONICALIZED | `STATUS.md` |
-| Implementation workflow | CANONICALIZED | `IMPLEMENTATION_PLAN.md` |
+| Implementation workflow | CANONICALIZED | `IMPLEMENTATION_PLAN.md`, `/CLAUDE.md` |
 | Emerald reuse strategy | CANONICALIZED | `EMERALD_PORT_PLAN.md` |
 
 ## C1 — existing move rebalance
 
-Status: `PARTIAL`
+Status: `NEEDS RECOVERY` **for the full implementation ledger only. Design itself is complete and locked.**
 
-Captured:
+Historical final-audit evidence confirms:
 
-- governing philosophy
-- representative/high-impact final values
-- relationship to C2/C3
+- C1 was completed and locked;
+- the final source-of-truth Markdown contained all approved batches, KEEP rulings, rationales, C1 consistency rules, C2/C3 deferrals, and a complete **82-move edit ledger**;
+- old proposal spreadsheets marked `Needs approval` are not implementation authority.
 
-Still required:
+Already canonicalized elsewhere or independently reconfirmed include representative/high-impact final values such as:
 
-- canonical full move-by-move C1 ledger
-- every final power/accuracy/PP/effect change
-- explicit unchanged rulings where they mattered to later design
-- source path/implementation status per move
+- Fury Cutter — 20 BP / 100 Acc / 20 PP;
+- Leech Life — 40 BP / 100 Acc / 20 PP, normal drain effect;
+- Pin Missile — 20 BP per hit / 95 Acc / 20 PP;
+- Twineedle — 30 BP ×2 / 100 Acc / 20 PP, existing poison behavior;
+- Silver Wind — 60 BP / 100 Acc / 10 PP, existing omniboost behavior;
+- Power Gem — 80 BP / 100 Acc / 20 PP;
+- Toxic — 90 Acc;
+- Bullet Seed — 20 BP per hit / 20 PP;
+- Giga Drain — 75 BP;
+- Iron Tail — 85 Acc;
+- Rock Tomb — 60 BP / 95 Acc;
+- Thief — 60 BP;
+- Steel Wing — 75 BP / 95 Acc;
+- Drain Punch — 75 BP / 10 PP;
+- Will-O-Wisp — 85 Acc;
+- Mirror Shot — 70 BP / 95 Acc;
+- Twister — 50 BP;
+- Dragon Rush — 100 BP / 85 Acc;
+- Icicle Spear — 20 BP per hit;
+- Ominous Wind — 10 PP.
 
-Historical sources include the C1 move-rebalance batch files/checkpoints, including the Bug offense workbook and later move-rework checkpoints.
+Still required before C1 implementation is considered repo-self-contained:
+
+1. recover the complete final 82-move ledger;
+2. write `moves/C1_EXISTING_MOVE_REBALANCE.md`;
+3. write a machine-readable `implementation/c1_move_changes_manifest.json`;
+4. preserve explicit final KEEP rulings where later balance decisions depend on them;
+5. validate the manifest against the live Platinum source before applying edits.
+
+**Do not fill unrecovered entries by inference.**
 
 ## C2 — TM/HM
 
 Status: `CANONICALIZED` for design.
 
-Repo authority:
+Authority:
 
 - `tm_hm/TM_HM_SPEC.md`
+- `implementation/tm_compat_manifest.json`
 
-Still useful to archive permanently:
+Still useful to archive after live-source validation:
 
-- generated compatibility manifest JSON
-- guarded compatibility apply script
-- validation output/checkpoint metadata
+- final guarded compatibility apply script;
+- validation/build evidence tied to the implementation commit.
 
 ## C2.5 — created moves
 
-Status: `CANONICALIZED` for design; implementation artifacts still need permanent source placement/verification.
+Status: `CANONICALIZED` for design.
 
-Repo authority:
+Authority:
 
 - `moves/CREATED_MOVES.md`
+- `implementation/created_moves_manifest.json`
 
-Historical/recovered implementation artifacts:
+Still required on the implementation side:
 
-- `platinum_created_moves_plumbing_manifest_v3.json`
-- created-move source patch specification
-- guarded created-move apply script
+- reconcile the final plumbing/source-patch artifacts against the active implementation branch;
+- run the created-move build/resource gate;
+- archive only the validated final artifact versions as current authority.
 
-Required next step:
-
-- put the final artifact versions in a stable repo path after validating them against the live implementation branch
-- do not archive obsolete v1/v2 artifacts as current authority without marking them superseded
+Do not promote obsolete v1/v2 artifacts without marking them superseded.
 
 ## Pass A/B — species types/stats/abilities/roles
 
-Status: `PARTIAL`
+Status: `RECOVERED SOURCE` for implemented guarded changes; `PARTIAL` for a polished human-readable #001–#493 catalog.
 
-Captured:
+The exact C3H species implementation payload contains the guarded stat/type/ability changes needed by the implementation batches. A future generated species catalog should expose these in human-readable form rather than creating a second manually maintained authority.
 
-- major retype authority in `MASTER_SPEC.md`
-- design principles
-- numerous species details exist in guarded-ledger/checkpoint history
+Still desirable:
 
-Still required:
+- generated #001–#493 table with types, stats, abilities, role, evolution method, implementation status, and rationale/reference.
 
-- canonical #001–#493 species design table containing:
-  - types
-  - base stats
-  - abilities
-  - role
-  - evolution method
-  - implementation status
-  - justification/reference
+## C3 — level-up learnsets and species implementation
 
-This should ultimately replace any need to search old Pass A/B chats.
+Status: `RECOVERED SOURCE`.
 
-## C3 — level-up learnsets
+### Exact historical source
 
-Status: `PARTIAL`
+The original application workflow is archived byte-for-byte at:
 
-Captured:
+- `implementation/archive/c3h-apply-species-original.yml`
 
-- design hierarchy
-- final audit rules
-- Banette correction
-- created-move distribution
-- compatibility/tutor/egg policies
-- several high-risk examples
+Historical provenance:
 
-Still required:
+- commit: `dceb548782be5c3ed30afba39a8b5727fdd6716d`
+- workflow blob SHA: `c45362c9913899aae07e6a84fa5bc62e9ee7edb0`
+- exact ledger counts: **67 / 27 / 40 / 53 / 38 = 225 operations**
 
-- canonical species-by-species C3 learnset ledger/table
-- every insert/replace/remove operation from the final guarded implementation plan
-- clear `SUPERSEDED` handling for provisional pre-C2.5 learnset proposals
+Deterministic verifier/extractor:
 
-Historical checkpoint indicates at least 225 guarded Pokémon operations across C3H-L1 through L5.
+- `/tools/overhaul/recover_c3h_ledgers.py`
 
-Preferred canonical form:
+Provenance manifest:
 
-- machine-readable final ledger in repo
-- generated human-readable species summary derived from that ledger
+- `implementation/ledgers/C3H_LEDGER_PROVENANCE.json`
 
-Do not manually maintain two divergent authorities if the human-readable table can be generated from the machine-readable ledger.
+One ledger is already materialized byte-for-byte as an additional cross-check:
+
+- `implementation/ledgers/platinum_c3h_l4_gen3_guarded_ledger_v1.json`
+
+The extractor is the canonical way to materialize/reconcile all five exact ledgers from the archived historical payload.
+
+### Critical supersession rule
+
+Do **not** use the historical `platinum_c3h_l3_gen2_guarded_ledger_v1_rebuilt.json` inferred reconstruction found in old branch history. It was explicitly removed as superseded. Use the five embedded historical blobs above.
+
+### Final-audit correction
+
+Banette authority remains:
+
+- Shadow Ball Lv31 remains;
+- Cursed Stitch Lv38;
+- Shadow Claw Lv42.
+
+Any older proposal replacing Shadow Ball Lv31 with Cursed Stitch is superseded.
 
 ## C3 — TM/HM compatibility
 
 Status: `CANONICALIZED` for design.
 
-Still required:
+Authority:
 
-- final manifest/script checked into repo beside the implementation
-- validation evidence attached to the implementation commit/PR
+- `tm_hm/TM_HM_SPEC.md`
+- `implementation/tm_compat_manifest.json`
+
+Implementation still requires final guarded script + validation evidence against the live branch.
 
 ## C3 — tutors
 
 Status: `CANONICALIZED` at policy level.
 
-Final rule:
-
-- tutors specialize; they do not repair baseline functionality
-- no created move becomes a general tutor in Core 1.0
-
-No large custom tutor rewrite needs recovery unless a later implementation branch proves otherwise.
+- tutors specialize; they do not repair baseline functionality;
+- no created move becomes a general tutor in Core 1.0.
 
 ## C3 — egg moves
 
 Status: `CANONICALIZED` at policy level.
 
-Final rule:
+- vanilla Platinum egg pools remain the baseline;
+- ordinary STAB cannot depend on breeding;
+- no blanket created-move egg expansion.
 
-- vanilla Platinum egg pools remain baseline
-- no breeding dependency for ordinary STAB
-- no blanket created-move egg expansion
-
-Detailed exceptions should be recovered only if final guarded implementation contains them.
+Detailed exceptions should be added only if final implementation evidence establishes them.
 
 ## Evolution overhaul
 
-Status: `PARTIAL / next planning target`
+Status: `PARTIAL / next major design-to-implementation target`.
 
 Captured:
 
-- no required trade evolutions
-- proposed item/level replacements in `EMERALD_PORT_PLAN.md`
+- no required trade evolutions;
+- Emerald-successor philosophy;
+- several proposed replacements and item-access principles.
 
 Still required:
 
-- authoritative complete evolution manifest for all affected species
-- exact levels/items/locations/friendship thresholds
-- source implementation mapping
-- item availability dependencies
+- authoritative complete evolution manifest for every affected species;
+- exact levels/items/locations/friendship thresholds;
+- source implementation mapping;
+- item-availability dependencies;
+- validation that every evolution can be completed in one save.
 
 ## World / #001–#493 availability
 
-Status: `PLANNED`
-
-Captured:
-
-- philosophy and phase targets
+Status: `PLANNED`.
 
 Still required:
 
-- complete encounter matrix
-- all gifts/fossils/static encounters
-- swarm/Radar/Honey/Marsh/Trophy Garden policy per species
-- pre-E4 completion audit
-- National Dex timing
+- complete encounter matrix;
+- gifts/fossils/static encounters;
+- swarm/Radar/Honey/Marsh/Trophy Garden handling;
+- pre-E4 nonlegendary-family audit;
+- National Dex timing;
+- one-save 493 completion audit.
 
 ## Trainers
 
-Status: `PLANNED`
-
-Captured:
-
-- difficulty philosophy only
+Status: `PLANNED`.
 
 Still required:
 
-- ordinary trainer curve
-- Gym teams
-- Rival teams
-- Galactic teams
-- Elite Four/Cynthia
-- rematches
-- held items/AI level rules
+- ordinary trainer curve;
+- Gym/Rival/Galactic teams;
+- Elite Four/Cynthia;
+- rematches;
+- held-item/AI rules.
 
 ## Economy / EXP
 
-Status: `PLANNED PORT`
-
-Captured:
-
-- Emerald numerical baseline and port methodology
+Status: `PLANNED PORT` from Emerald.
 
 Still required:
 
-- Platinum audit
-- playtest-based final multipliers/prices
-- source implementation spec
+- compare the final Emerald implementation against Platinum equivalents;
+- classify each change DIRECT / ADAPT / PLATINUM-SPECIFIC;
+- validate final Platinum multipliers/prices through playtesting.
 
 ## Poké Balls
 
-Status: `PLANNED PORT`
-
-Captured:
-
-- Emerald role/value references and Platinum adaptation rule
+Status: `PLANNED PORT` from Emerald.
 
 Still required:
 
-- audit native Platinum ball behavior
-- choose exact final Platinum multipliers
-- exact shop/field availability
-- implementation tests
+- audit native Platinum ball behavior;
+- translate Emerald balance goals to Platinum's larger ball ecosystem;
+- lock exact multipliers and availability;
+- test capture behavior.
 
 ## Breeding
 
-Status: `PLANNED PORT`
-
-Captured:
-
-- Emerald inheritance candidates
-- Platinum C3 egg-move policy
+Status: `PLANNED PORT` from Emerald.
 
 Still required:
 
-- Gen IV inheritance audit
-- exact Core 1.0 breeding scope
-- hatch-cycle targets
-- Day Care/economy integration
+- Gen IV inheritance audit;
+- exact Core 1.0 scope;
+- egg-group/egg-move decisions;
+- hatch-cycle targets;
+- Day Care/economy integration.
 
 ## Legendary/Mythical events
 
-Status: `PLANNED`
-
-Captured:
-
-- intended native Platinum event paths
+Status: `PLANNED`.
 
 Still required:
 
-- event-state/source audit
-- trigger/item requirements
-- permanent in-game unlock path
-- softlock/repeatability tests
+- native Platinum event-state/source audit;
+- Darkrai/Shaymin/Arceus and other event unlock paths;
+- event-item requirements;
+- permanent one-save acquisition flow;
+- softlock/repeatability tests.
 
 ## Battle Frontier / postgame
 
-Status: `PARTIAL`
+Status: `PARTIAL`.
 
 Captured:
 
-- TM BP price reduction
-- anti-grind philosophy
+- TM BP price reduction;
+- anti-grind philosophy.
 
 Still required:
 
-- general BP earning/reward audit
-- held-item prices
-- rematches/postgame availability
-- completion rewards
+- general BP earnings/reward audit;
+- held-item prices;
+- rematches/postgame availability;
+- completion rewards.
 
 ## QA / release
 
-Status: `PLANNED`
+Status: `PLANNED`.
 
-Required future artifacts:
+Future required artifacts include:
 
-- automated structural validation
-- 493 availability checker
-- evolution completion checker
-- trainer legality checker
-- move/learnset validator
-- event-state checklist
-- Rev 0/Rev 1 build matrix
-- runtime regression suite for custom mechanics
-- release changelog
+- structural validators;
+- 493 availability checker;
+- evolution-completion checker;
+- trainer legality/progression checker;
+- move/learnset validator;
+- event-state checklist;
+- Rev 0/Rev 1 build matrix;
+- runtime regression suite for custom mechanics;
+- release changelog/patch packaging.
 
-## Immediate recovery priorities
+## Immediate recovery/implementation priorities
 
-1. Recover/check in the final machine-readable **species guarded ledgers**.
-2. Recover/check in final **TM/HM compatibility manifest + guarded script**.
-3. Recover/check in the final **created-move plumbing manifest/spec/apply script** after live-repo validation.
-4. Build the complete **C1 move-change ledger**.
-5. Generate a human-readable #001–#493 species authority from the guarded species ledgers.
+1. **Finish C1 canonical recovery**: complete locked 82-move ledger + machine-readable manifest.
+2. Materialize/verify all five exact C3 ledgers using `/tools/overhaul/recover_c3h_ledgers.py` when working in a local Claude checkout.
+3. Reconcile/check in the final guarded TM/HM compatibility apply script after live-source validation.
+4. Reconcile/check in the final created-move plumbing/source-patch/apply artifacts after the build gate.
+5. Generate a human-readable #001–#493 species authority from machine-readable source rather than manually duplicating it.
+6. Build the authoritative evolution manifest.
 
-Once those five are complete, the old chats should no longer be required to implement Phase 1 correctly.
+Once C1 recovery and the live-source implementation artifacts are complete, old chat history should no longer be required to implement the completed Pokémon/move phases correctly.
