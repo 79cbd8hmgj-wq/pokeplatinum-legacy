@@ -1,15 +1,18 @@
 # Codex Planning Instructions — Pokémon Platinum Overhaul
 
-## Role split
+## Official role split
 
-Use **Codex `/plan` as the primary design-planning agent** for future overhaul phases.
+For all future unfinished overhaul phases:
 
-- **Codex `/plan`**: investigate the repository, recover relevant existing authority, compare Emerald/Platinum systems when applicable, and draft new design plans.
-- **User**: approves/rejects major design decisions and determines when a plan becomes locked authority.
-- **Claude Code**: implements only approved/locked plans and canonical manifests; it must not redesign them during implementation.
-- **ChatGPT project coordination**: reviews/reconciles planning output against existing locked authority, maintains canonical status/spec organization, and catches contradictions or accidental redesigns.
+- **Codex `/plan` owns design planning.** It investigates the repo, studies relevant source and prior Emerald work, proposes the subsystem design, resolves sequencing/dependency questions, and produces an implementation-ready plan.
+- **User approves or rejects the plan.** User approval is required before a design becomes locked authority.
+- **Claude Code owns implementation.** Claude implements approved/locked Codex plans, performs source investigation needed for implementation, validates/builds/tests the result, and reports implementation blockers. Claude does not redesign approved systems.
 
-Do not use Claude Code as the default design-planning agent when `/plan` can do the planning first.
+This is the default project workflow:
+
+> **Codex `/plan` → user approval → canonical plan/spec → Claude Code implementation → validation/status update**
+
+Do not hand future design ownership to Claude Code. Do not begin implementation of a genuinely unfinished subsystem until Codex has planned it and the user has approved the direction.
 
 ## Mandatory read order before planning
 
@@ -42,7 +45,7 @@ If repo documents disagree, identify the contradiction instead of silently choos
 
 ## Planning target
 
-Use `/plan` primarily for genuinely unfinished design areas, including:
+Use `/plan` for genuinely unfinished design areas, especially:
 
 - #001–#493 world/encounter availability architecture
 - trainer overhaul
@@ -53,11 +56,11 @@ Use `/plan` primarily for genuinely unfinished design areas, including:
 - Battle Frontier/postgame
 - final integration/QA design
 
-Evolution is not a blank design phase: its rules were locked in Pass A. Planning there should focus on **manifest recovery, source mapping, item-access dependencies, implementation sequencing, and verification**, not redesigning evolution methods from scratch.
+Evolution is not a blank design phase: its rules were locked in Pass A. Codex planning there should focus on manifest recovery, source mapping, item-access dependencies, implementation sequencing, and verification—not redesigning evolution methods from scratch.
 
 ## Emerald reuse rule
 
-For systems already solved in Emerald, `/plan` must begin with the Emerald implementation/design rather than inventing a fresh Platinum system.
+For systems already solved in Emerald, `/plan` must begin with the Emerald design and implementation rather than inventing a fresh Platinum system.
 
 Classify each feature as:
 
@@ -66,7 +69,7 @@ Classify each feature as:
 - `PLATINUM-SPECIFIC`
 - `DEFER`
 
-Then explain exactly what behavior carries over and what Platinum-specific changes are necessary.
+Then specify exactly what behavior carries over and what Platinum-specific changes are necessary.
 
 ## Required plan structure
 
@@ -93,19 +96,19 @@ Prefer concrete tables and machine-readable deliverables where the subsystem is 
 Use these states:
 
 - `DRAFT PLAN` — Codex proposal, not authority
-- `APPROVED PLAN` — user approved direction, ready to canonicalize
-- `LOCKED SPEC` — repo canonical authority, safe for Claude implementation
+- `APPROVED PLAN` — user approved direction
+- `LOCKED SPEC` — canonical repo authority; Claude may implement
 - `IMPLEMENTING`
 - `IMPLEMENTED`
 - `VERIFIED`
 
-A `/plan` result is **not automatically locked** merely because it is thorough.
+A `/plan` result is not automatically locked merely because it is thorough.
 
 ## Handoff rule
 
-Before Claude begins implementing a newly designed subsystem, the approved plan must be converted into a canonical repo spec/manifest with explicit acceptance criteria.
+Before Claude begins implementing a newly designed subsystem, the approved Codex plan must exist in the repository as a canonical spec/manifest with explicit acceptance criteria.
 
-Claude should be able to implement from the repository alone without needing the planning chat.
+Claude should be able to implement from the repository alone without needing the planning conversation.
 
 ## Anti-regression rules
 
