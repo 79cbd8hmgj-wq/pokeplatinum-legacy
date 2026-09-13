@@ -30,39 +30,32 @@ Planning/design through C3 is closed.
 
 ### Landed created-move implementation
 
-Commit:
+Commit `071b8c7976801e64af5296f30b7437d7da2d8632`
 
-`071b8c7976801e64af5296f30b7437d7da2d8632`
-
-This implements all 22 custom moves and move-table plumbing, plus a mod-aware Rev 0/Rev 1 CI build matrix.
-
-GitHub Actions run `33981291318` completed successfully.
+- all 22 custom moves and move-table plumbing;
+- mod-aware Rev 0 / Rev 1 CI build matrix;
+- GitHub Actions run `33981291318`: success.
 
 ### Landed C3H implementation
 
-Commit:
-
-`8a74452654e1552b78bfb329afcb351a2caec5cf`
-
-This applies:
+Commit `8a74452654e1552b78bfb329afcb351a2caec5cf`
 
 - C3H TM compatibility rebuild;
 - 225 guarded Pokémon operations;
 - final Torkoal correction;
-- final Seviper correction.
+- final Seviper correction;
+- GitHub Actions run `33995072848`: success.
 
-GitHub Actions run `33995072848` completed successfully.
-
-Therefore your starting assumption is:
+Starting assumption:
 
 > C2.5E/C3H are **implemented and L2 build-verified**, but still need focused runtime/semantic QA. Do not reapply historical ledgers over current `main`.
 
 ## Immediate implementation priorities
 
-1. Audit current `main` against the canonical specs; do not redo landed C2.5E/C3H work.
-2. Wait for the final canonical C1 manifest before implementing C1 existing-move edits.
-3. Once C1 recovery is complete, implement the exact 82-edit manifest against current `main` with before-value guards.
-4. Build both supported US revisions.
+1. Audit current `main` against canonical specs; do not redo landed C2.5E/C3H work.
+2. Implement C1 from `docs/overhaul/implementation/c1_move_changes_manifest.json` using live-source before-value guards.
+3. Build both supported US revisions.
+4. Audit/implement remaining C2 mechanics: reusable TMs, HM battle changes, TM source/economy rules.
 5. Run focused runtime tests for custom/high-risk mechanics.
 6. Continue to evolution-system implementation and Emerald-to-Platinum port audit according to `MASTER_PLAN.md`.
 
@@ -81,7 +74,7 @@ Implementation facts:
 - Star Jab is registered as a punching move.
 - Magnet Volley must hit **exactly three times at equal 25 BP per hit** (25+25+25), with no Triple Kick-style escalation.
 
-Focused runtime verification is still required for those interactions even though the build passes.
+Focused runtime verification is still required even though the build passes.
 
 Dragon Swipe is implemented as a finalized move, but its historical final C3 recipient remains unresolved. **Do not invent a recipient.**
 
@@ -98,7 +91,7 @@ Historical provenance:
 - archived copy: `docs/overhaul/implementation/archive/c3h-apply-species-original.yml`
 - verifier/extractor: `tools/overhaul/recover_c3h_ledgers.py`
 
-These are **provenance and audit material**, not instructions to reapply them to current main.
+These are provenance/audit material, not instructions to reapply them to current main.
 
 Never substitute the known superseded inferred L3 reconstruction from old branch history.
 
@@ -121,7 +114,7 @@ See:
 
 The C3H compatibility changes are already applied on main. Audit them; do not blindly reapply them.
 
-Key invariants remain:
+Key invariants:
 
 - TM21 = Air Slash using the locked 49-recipient mask.
 - TM78 = Power Gem using the locked 27-recipient mask.
@@ -130,30 +123,44 @@ Key invariants remain:
 
 Reusable-TM behavior, HM battle changes, TM economy/source policy, and other C2 implementation details still need separate implementation/audit unless current source proves they already landed.
 
-## C1 recovery status
+## C1 authority
 
-C1 design is complete and locked. C1 is **not yet implemented** on current main; for example, Fury Cutter remains vanilla in source.
+C1 design is complete and locked. C1 is **not yet implemented** on current main; Fury Cutter is still vanilla in source.
 
-Recovery status:
+Canonical authority:
 
-- all **82/82 edited move names** are enumerated in `docs/overhaul/implementation/c1_move_edit_membership_recovery.json`;
-- confirmed values/rulings are in:
-  - `docs/overhaul/moves/C1_EXISTING_MOVE_REBALANCE_RECOVERY.md`
-  - `docs/overhaul/moves/C1_RECOVERED_BATCHES_SUPPLEMENT.md`
-- final superseding values remain unresolved for five Batch 9F moves:
-  - Bind
-  - Wrap
-  - Fire Spin
-  - Whirlpool
-  - Clamp
-- Sand Tomb is independently confirmed at **50 BP / 95 Acc / 15 PP**.
+- human-readable: `docs/overhaul/moves/C1_EXISTING_MOVE_REBALANCE_RECOVERY.md`
+- machine-readable: `docs/overhaul/implementation/c1_move_changes_manifest.json`
+- historical recovery evidence: `docs/overhaul/moves/C1_RECOVERED_BATCHES_SUPPLEMENT.md`
 
-Until the final 82-edit implementation manifest is checked in:
+The manifest contains exactly **82 edits**.
 
-- do not implement C1 from an old proposal spreadsheet;
-- do not infer the five unresolved trapping values;
-- do not substitute Emerald move-rework values for Platinum C1;
-- report C1 implementation as blocked on canonical recovery if asked to apply it prematurely.
+### Batch 9F final Platinum values
+
+- Bind — 30 / 90 / 20
+- Wrap — 30 / 90 / 20
+- Fire Spin — 35 / 90 / 15
+- Whirlpool — 35 / 90 / 15
+- Sand Tomb — 35 / 90 / 15
+- Clamp — 35 / 90 / 10
+- Magma Storm — KEEP 120 / 70 / 5
+
+Trapping duration/residual behavior remains unchanged.
+
+The previously surfaced Sand Tomb **50/95** value belongs to a separate Emerald move-rework spec and is explicitly **not Platinum C1 authority**.
+
+### C1 implementation rules
+
+- inspect each current move file first;
+- generate before-value/source guards from current `main`;
+- apply only fields listed under each manifest entry's `target`;
+- preserve all other fields/effects/flags unless the manifest says otherwise;
+- Razor Wind is the only effect reassignment: `BATTLE_EFFECT_CHARGE_TURN_HIGH_CRIT` → `BATTLE_EFFECT_HIGH_CRITICAL`;
+- update Razor Wind's description so it no longer claims to be a two-turn move;
+- assert exact applied edit count = 82;
+- run semantic diff and Rev 0 / Rev 1 builds.
+
+Do not substitute values from older proposal spreadsheets or Emerald move specs.
 
 ## Required implementation behavior
 
