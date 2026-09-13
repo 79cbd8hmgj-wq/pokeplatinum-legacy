@@ -1,187 +1,197 @@
 # Pokémon Platinum Overhaul — Current Status
 
-Last reconstructed checkpoint: 2026-09-13.
+Last verified against repository history: 2026-09-13.
 
 ## Executive status
 
-**Design:** Phase 1 Pokémon/move design through C3 is closed.
+**Design:** Pokémon/move design through C3 is closed.
 
-**Implementation:** C2.5E/C3H is active.
+**C2.5E created moves:** **IMPLEMENTED + L2 BUILD VERIFIED** on `main`.
+
+**C3H species + TM compatibility:** **IMPLEMENTED + L2 BUILD VERIFIED** on `main`.
+
+**C1 existing-move rebalance:** design complete/locked; **not yet implemented** on `main`; canonical recovery is almost complete.
 
 **Known design blockers:** 0.
 
-**Current implementation dependency:** the 22 created moves must be fully plumbed and build-validated before species ledgers that reference their `MOVE_*` constants are applied.
+**Remaining completed-design recovery blocker:** final superseding values for five Batch 9F trapping moves before C1 can be converted into a complete implementation manifest.
 
-## Canonical branch/workflow
+## Mainline implementation evidence
 
-This documentation is being reconstructed on:
+### Created moves
+
+Commit:
+
+`071b8c7976801e64af5296f30b7437d7da2d8632` — **Implement Platinum overhaul custom moves and mod-aware CI**
+
+This commit implements:
+
+- all 22 created moves;
+- IDs 468–489;
+- move-table plumbing / `MAX_MOVES` expansion;
+- custom move resources/text/scripts/animations;
+- Resonant Slash sound registration;
+- Star Jab punching registration;
+- Magnet Volley exact-three-hit effect support;
+- mod-aware CI matrix for both supported US revisions.
+
+GitHub Actions build run `33981291318` completed successfully. The workflow matrix builds US revisions 0 and 1.
+
+**Status:** source implemented; L2 build verified. Focused runtime behavior is still a separate L4 verification task.
+
+### Species + TM compatibility
+
+Commit:
+
+`8a74452654e1552b78bfb329afcb351a2caec5cf` — **Apply C3H species and TM compatibility overhaul**
+
+This commit applies:
+
+- the C3H TM21/TM78 compatibility rebuild;
+- explicit compatibility additions;
+- the 225 guarded C3 species operations;
+- final Torkoal learnset correction;
+- final Seviper learnset correction.
+
+GitHub Actions build run `33995072848` completed successfully under the same Rev 0/Rev 1 build matrix.
+
+**Status:** source implemented; L2 build verified. Runtime/campaign verification remains future QA.
+
+### Current mainline baseline
+
+The documentation branch was created from `main` after the C2.5E/C3H implementation landed. Claude must therefore **audit/continue from the existing implementation**, not reapply the historical ledgers over `main`.
+
+Historical ledgers remain useful for provenance and semantic verification only.
+
+## Canonical documentation branch
 
 `overhaul/canonical-docs`
 
-Existing implementation/history branches discovered in the repository include:
+Draft PR: **#8**
+
+Existing historical branches include:
 
 - `overhaul/c3h-species-compat`
 - `overhaul/c3h-ledger-archive`
 
-Those branches are implementation/history sources, but this documentation package is intended to become the long-term design/status authority after review and merge.
+They are recovery/provenance sources, not the current implementation target.
 
 ## Design completion matrix
 
-| Area | Status | Notes |
-|---|---|---|
-| Core project identity | LOCKED | Single-save #001–#493 target; Emerald-successor philosophy |
-| Types/stats/abilities/roles | LOCKED | Targeted enrichment; no blanket BST inflation |
-| Existing move rework (C1) | LOCKED | Weak-move revival and Gen IV role repair complete |
-| HM battle rework | LOCKED | 5 changed, 3 retained |
-| TM roster | LOCKED | TM21 Air Slash; TM78 Power Gem; 90 unchanged |
-| TM acquisition policy | LOCKED | Preserve first-acquisition progression |
-| TM economy | LOCKED | Department Store mostly preserved; Game Corner/Frontier grind reduced |
-| TM/HM compatibility framework | LOCKED | Vanilla baseline; selective additions only |
-| TM21 Air Slash compatibility | LOCKED | 49 recipients |
-| TM78 Power Gem compatibility | LOCKED | 27 recipients |
-| Retype-family compatibility additions | LOCKED | 11 original additions plus Raichu TM91 source reconciliation at implementation |
-| Created move set | LOCKED | 22 moves: 9 generic + 13 identity |
-| Created move feasibility | LOCKED | All 22 retained |
-| Level-up learnsets | LOCKED | C3 closed |
-| Evolution timing audit | LOCKED | One Banette correction; no remaining known conflict |
-| Natural-STAB/dead-slot audit | LOCKED | No further correction required after Banette |
-| Tutor consolidation | LOCKED | No created move becomes a general tutor in Core 1.0 |
-| Egg-move consolidation | LOCKED | Vanilla baseline; breeding not required for basic functionality |
-| World/encounter overhaul | PLANNED | Next major design/implementation phase after core implementation |
-| Trainer overhaul | PLANNED | Not yet canonicalized in detail |
-| Economy/EXP port | PLANNED | Emerald port candidate |
-| Capture/Poké Ball port | PLANNED | Emerald port candidate; Platinum has more native specialist balls |
-| Breeding system port | PLANNED | Emerald ideas require Platinum-specific audit |
-| Event restoration | PLANNED | Prefer Platinum-native event infrastructure |
-| Frontier/postgame | PLANNED | Later phase |
-| Full QA/release | PLANNED | Release-blocking phase |
+| Area | Design | Implementation | Verification |
+|---|---|---|---|
+| Core project identity | LOCKED | n/a | n/a |
+| Types/stats/abilities/roles | LOCKED | IMPLEMENTED through C3H | L2 build |
+| Existing move rework (C1) | LOCKED | NOT YET IMPLEMENTED | pending |
+| HM battle rework | LOCKED | not fully audited as implemented | pending |
+| TM roster | LOCKED | compatibility side implemented; broader reusable-TM/economy behavior still separate | partial |
+| TM acquisition/economy | LOCKED | not yet fully implemented/audited | pending |
+| TM21 Air Slash compatibility | LOCKED | IMPLEMENTED | L2 build |
+| TM78 Power Gem compatibility | LOCKED | IMPLEMENTED | L2 build |
+| Retype compatibility additions | LOCKED | IMPLEMENTED | L2 build |
+| Created move set | LOCKED | IMPLEMENTED | L2 build |
+| Level-up learnsets | LOCKED | IMPLEMENTED through C3H | L2 build |
+| Evolution timing audit | LOCKED | reflected in C3 implementation | L2 build; campaign QA pending |
+| Tutor consolidation | LOCKED | design baseline retained | audit pending |
+| Egg-move consolidation | LOCKED | vanilla baseline retained unless explicitly changed | audit pending |
+| Evolution-method overhaul | PARTIAL | not yet canonicalized/implemented as a complete system | pending |
+| World/encounter overhaul | PLANNED | not started | pending |
+| Trainer overhaul | PLANNED | not started | pending |
+| Economy/EXP port | PLANNED PORT | not started | pending |
+| Capture/Poké Ball port | PLANNED PORT | not started | pending |
+| Breeding-system port | PLANNED PORT | not started | pending |
+| Event restoration | PLANNED | not started | pending |
+| Frontier/postgame | PLANNED | partial TM-BP design only | pending |
+| Full QA/release | PLANNED | not started | pending |
 
-## Created-move implementation checkpoint
+## C1 recovery status
 
-### Allocation
+The historical C1 final audit contains **82 edited existing moves**.
 
-- 22 custom moves total.
-- IDs `468–489`.
-- Generic moves: `468–476`.
-- Identity moves: `477–489`.
-- Target `MAX_MOVES`: `490`.
+Repository recovery now has:
 
-### Technical resolution
+- exact membership of all **82/82** edits in `implementation/c1_move_edit_membership_recovery.json`;
+- recovered final values for all batches except part of Batch 9F;
+- human-readable recovery authority in:
+  - `moves/C1_EXISTING_MOVE_REBALANCE_RECOVERY.md`
+  - `moves/C1_RECOVERED_BATCHES_SUPPLEMENT.md`
 
-The latest recovered source-plumbing checkpoint establishes:
+Batch 9F membership is exactly:
 
-- authoritative move enum input: `generated/moves.txt`
-- Resonant Slash must be added to `sSoundMoves`
-- Star Jab must be added to `sPunchingMoves`
-- Magnet Volley uses the existing multi-hit machinery with `SetMultiHit 3, SYSCTL_MULTI_HIT_MOVE`
-- Magnet Volley must deal equal power on all three hits: `25 + 25 + 25`
-- Triple Kick-style per-hit power escalation must not be used
-- retail animation/move-script padding `490–500` is preserved
-- move-data handling must support the expanded custom move records
+- Bind
+- Wrap
+- Fire Spin
+- Whirlpool
+- Sand Tomb
+- Clamp
 
-The previously generated apply script passed syntax/invariant inspection. A local dry run failed because it was pointed at an empty/non-Platinum directory, not because the source guards were disproven.
+Sand Tomb is independently confirmed at **50 BP / 95 Acc / 15 PP**.
 
-### Build gate
+The final superseding values for **Bind, Wrap, Fire Spin, Whirlpool, and Clamp** still require exact final-audit recovery before generating the authoritative 82-edit implementation manifest.
 
-Before species ledgers are applied:
+Do not infer those values from older proposal material.
 
-1. validate all 22 generated move directories/resources against the real repository
-2. apply move enum/data/text/script/animation/contest plumbing
-3. apply sound/punch registry changes
-4. verify Magnet Volley behavior
-5. audit `MAX_MOVES`-sized consumers
-6. build
-7. only then allow species learnsets to reference the new constants
+## C3 provenance
 
-## Species implementation checkpoint
+The exact historical species implementation payload is preserved at:
 
-Recovered implementation planning reached at least:
+`docs/overhaul/implementation/archive/c3h-apply-species-original.yml`
 
-- **225 guarded Pokémon operations** across C3H-L1 through C3H-L5
-- operations include:
-  - `set_base_stat`
-  - `set_types`
-  - `set_abilities`
-  - `insert_level_move`
-  - `replace_level_move`
-  - `remove_level_move`
+Historical provenance:
 
-The ROM Mod Toolkit workflow uses expected-original-value guards and file SHA-256 checks.
+- commit `dceb548782be5c3ed30afba39a8b5727fdd6716d`
+- workflow blob `c45362c9913899aae07e6a84fa5bc62e9ee7edb0`
+- exact operation counts `67 / 27 / 40 / 53 / 38 = 225`
 
-### Known authoritative final correction
+`tools/overhaul/recover_c3h_ledgers.py` verifies/extracts the historical ledger set.
 
-Banette:
+Important: these ledgers are now provenance. **Do not reapply them to current `main`.** Current source already contains the implementation plus final follow-up corrections.
 
-- leave Shadow Ball at Lv31
-- evolve from Shuppet at Lv37
-- insert Cursed Stitch at Lv38
-- replace Embargo Lv42 with Shadow Claw Lv42
+### Authoritative final corrections visible on current main
 
-Any older C3D11 instruction replacing Shadow Ball Lv31 with Cursed Stitch is **SUPERSEDED**.
+- Banette: Shadow Ball 31 retained; Cursed Stitch 38; Shadow Claw 42.
+- Torkoal: Yawn 52; Heat Wave 55.
+- Seviper: Sludge Bomb 55.
 
-## TM/HM compatibility implementation checkpoint
+## Created-move invariants still needing focused runtime QA
 
-Recovered compatibility implementation contains:
+Source/build success does not prove every battle interaction.
 
-- TM21 Air Slash: 49 locked recipients
-- TM78 Power Gem: 27 locked recipients
-- 12 explicit additions in the implementation set
-  - 11 design-locked retype-family additions
-  - Raichu TM91 Flash Cannon source reconciliation
+High-priority L4 checks:
 
-A recovered compatibility checkpoint reported:
+- Resonant Slash is blocked/recognized by sound-move logic as intended;
+- Star Jab receives punching/Iron Fist handling;
+- Magnet Volley produces exactly three equal-power hits (`25 + 25 + 25` before normal modifiers);
+- custom move text/animation behavior is correct in battle;
+- representative custom effects behave as specified.
 
-- pinned source commit: `0fee7dc526f3220dc6a3b58986415446423f83de`
-- syntax/invariant validation: PASS
+## Historical unresolved design item
 
-Important: the Pokémon guarded ledger schema did not support arbitrary TM add/remove operations at that checkpoint, so compatibility work was separated into a guarded general source patch.
+`Dragon Swipe` is implemented as one of the 22 moves, but recovered final C3 documentation does not prove a final recipient.
 
-## Final C3 policy reminders
+- do not invent a recipient;
+- absence of a recipient is not a build blocker;
+- resolve only from authoritative recovered design evidence or a new explicit design decision.
 
-### Machines
+## Immediate next actions
 
-- Created moves do not consume TM slots.
-- TM21/TM78 replacement masks must be rebuilt; old Frustration/Captivate compatibility must not leak through.
-- No broad compatibility expansion merely because a Pokémon gained a new type.
+### Repository preparation
 
-### Tutors
+1. Finish C1 recovery by resolving the five remaining Batch 9F values.
+2. Generate the complete machine-readable 82-edit C1 implementation manifest.
+3. Validate that manifest against current `main` before Claude applies C1.
+4. Preserve mainline C2.5E/C3H commits/build evidence in the canonical docs.
+5. Merge the canonical documentation PR only after authority/status files agree.
 
-- Tutors are specialization, not baseline functionality.
-- No created identity move becomes a general tutor in Core 1.0.
-- No generic created move becomes a tutor until balance testing supports broader distribution.
+### Claude implementation after handoff
 
-### Egg moves
-
-- Vanilla Platinum egg pools remain the baseline.
-- Breeding must not be required for ordinary STAB or campaign functionality.
-- Identity moves tied to evolved anatomy/state should not be pushed into base-form egg pools.
-
-## Historical unresolved item
-
-`Dragon Swipe` remains a finalized move definition, but the recovered final C3 checkpoints did not prove an authoritative final recipient. The final audit deliberately did **not** invent one.
-
-Status:
-
-- move remains valid and implemented as part of the 22-move set
-- no new recipient should be invented during implementation
-- distribution remains a documentation/recovery item, not a build blocker
-
-## Next actions
-
-### Implementation
-
-1. Finish created-move resource validation and build gate.
-2. Apply guarded species ledgers.
-3. Apply compatibility patch.
-4. Build + semantic-diff + runtime validation.
-
-### Planning
-
-1. Complete Emerald-to-Platinum port matrix.
-2. Canonicalize evolution system decisions.
-3. Build the #001–#493 availability/encounter plan.
-4. Canonicalize trainers/economy/events/postgame.
+1. **Do not redo C2.5E/C3H.** Audit current main and use the landed commits as baseline.
+2. Implement C1 from the final canonical manifest once recovery is complete.
+3. Run source/build validation for C1.
+4. Perform focused L4 runtime tests for custom moves and other high-risk mechanics.
+5. Begin the Emerald-to-Platinum port audit and evolution-system work.
+6. Continue into #001–#493 availability, trainers, economy, events, and postgame according to `MASTER_PLAN.md`.
 
 ## Rule for future sessions
 
-Do not reconstruct project status from memory when this file answers the question. Update this file in the same commit/PR that materially changes project state.
+Do not reconstruct status from memory when this file answers the question. Update this file in the same branch/PR that materially changes project state.
