@@ -4,193 +4,163 @@ Last verified against repository history: 2026-09-13.
 
 ## Executive status
 
-**Design:** Pokémon/move design through C3 is closed.
-
-**C2.5E created moves:** **IMPLEMENTED + L2 BUILD VERIFIED** on `main`.
-
-**C3H species + TM compatibility:** **IMPLEMENTED + L2 BUILD VERIFIED** on `main`.
-
-**C1 existing-move rebalance:** design complete/locked; **not yet implemented** on `main`; canonical recovery is almost complete.
-
-**Known design blockers:** 0.
-
-**Remaining completed-design recovery blocker:** final superseding values for five Batch 9F trapping moves before C1 can be converted into a complete implementation manifest.
+- **Design:** Pokémon/move design through C3 is closed.
+- **C2.5E created moves:** IMPLEMENTED + L2 BUILD VERIFIED on `main`.
+- **C3H species + TM compatibility:** IMPLEMENTED + L2 BUILD VERIFIED on `main`.
+- **C1 existing-move rebalance:** LOCKED, fully recovered into an 82-edit canonical manifest, **not yet implemented** on `main`.
+- **Known design blockers:** 0.
+- **Next source task:** guarded C1 implementation against current `main`, then remaining C2 mechanics and focused runtime QA.
 
 ## Mainline implementation evidence
 
 ### Created moves
 
-Commit:
+Commit `071b8c7976801e64af5296f30b7437d7da2d8632` — **Implement Platinum overhaul custom moves and mod-aware CI**
 
-`071b8c7976801e64af5296f30b7437d7da2d8632` — **Implement Platinum overhaul custom moves and mod-aware CI**
+Implements all 22 created moves, IDs 468–489, move-table plumbing / `MAX_MOVES = 490`, text/scripts/animations, Resonant Slash sound registration, Star Jab punching registration, Magnet Volley exact-three-hit support, and a Rev 0/Rev 1 CI matrix.
 
-This commit implements:
+GitHub Actions run `33981291318`: **SUCCESS**.
 
-- all 22 created moves;
-- IDs 468–489;
-- move-table plumbing / `MAX_MOVES` expansion;
-- custom move resources/text/scripts/animations;
-- Resonant Slash sound registration;
-- Star Jab punching registration;
-- Magnet Volley exact-three-hit effect support;
-- mod-aware CI matrix for both supported US revisions.
-
-GitHub Actions build run `33981291318` completed successfully. The workflow matrix builds US revisions 0 and 1.
-
-**Status:** source implemented; L2 build verified. Focused runtime behavior is still a separate L4 verification task.
+Status: source implemented; L2 build verified; focused L4 runtime behavior still pending.
 
 ### Species + TM compatibility
 
-Commit:
+Commit `8a74452654e1552b78bfb329afcb351a2caec5cf` — **Apply C3H species and TM compatibility overhaul**
 
-`8a74452654e1552b78bfb329afcb351a2caec5cf` — **Apply C3H species and TM compatibility overhaul**
+Applies the TM21/TM78 compatibility rebuild, explicit compatibility additions, 225 guarded C3 species operations, and final Torkoal/Seviper corrections.
 
-This commit applies:
+GitHub Actions run `33995072848`: **SUCCESS**.
 
-- the C3H TM21/TM78 compatibility rebuild;
-- explicit compatibility additions;
-- the 225 guarded C3 species operations;
-- final Torkoal learnset correction;
-- final Seviper learnset correction.
+Status: source implemented; L2 build verified; runtime/campaign QA still pending.
 
-GitHub Actions build run `33995072848` completed successfully under the same Rev 0/Rev 1 build matrix.
+## Canonical documentation
 
-**Status:** source implemented; L2 build verified. Runtime/campaign verification remains future QA.
-
-### Current mainline baseline
-
-The documentation branch was created from `main` after the C2.5E/C3H implementation landed. Claude must therefore **audit/continue from the existing implementation**, not reapply the historical ledgers over `main`.
-
-Historical ledgers remain useful for provenance and semantic verification only.
-
-## Canonical documentation branch
-
-`overhaul/canonical-docs`
+Branch: `overhaul/canonical-docs`
 
 Draft PR: **#8**
 
-Existing historical branches include:
+Historical recovery branches:
 
 - `overhaul/c3h-species-compat`
 - `overhaul/c3h-ledger-archive`
 
-They are recovery/provenance sources, not the current implementation target.
+They are provenance sources, not current implementation targets.
 
-## Design completion matrix
+## Completion matrix
 
 | Area | Design | Implementation | Verification |
 |---|---|---|---|
 | Core project identity | LOCKED | n/a | n/a |
 | Types/stats/abilities/roles | LOCKED | IMPLEMENTED through C3H | L2 build |
-| Existing move rework (C1) | LOCKED | NOT YET IMPLEMENTED | pending |
-| HM battle rework | LOCKED | not fully audited as implemented | pending |
-| TM roster | LOCKED | compatibility side implemented; broader reusable-TM/economy behavior still separate | partial |
-| TM acquisition/economy | LOCKED | not yet fully implemented/audited | pending |
-| TM21 Air Slash compatibility | LOCKED | IMPLEMENTED | L2 build |
-| TM78 Power Gem compatibility | LOCKED | IMPLEMENTED | L2 build |
+| Existing move rework (C1) | LOCKED / CANONICALIZED | NOT YET IMPLEMENTED | pending |
+| Created moves (C2.5E) | LOCKED | IMPLEMENTED | L2 build |
+| C3 learnsets/species edits | LOCKED | IMPLEMENTED | L2 build |
+| TM21/TM78 compatibility | LOCKED | IMPLEMENTED | L2 build |
 | Retype compatibility additions | LOCKED | IMPLEMENTED | L2 build |
-| Created move set | LOCKED | IMPLEMENTED | L2 build |
-| Level-up learnsets | LOCKED | IMPLEMENTED through C3H | L2 build |
-| Evolution timing audit | LOCKED | reflected in C3 implementation | L2 build; campaign QA pending |
-| Tutor consolidation | LOCKED | design baseline retained | audit pending |
-| Egg-move consolidation | LOCKED | vanilla baseline retained unless explicitly changed | audit pending |
-| Evolution-method overhaul | PARTIAL | not yet canonicalized/implemented as a complete system | pending |
-| World/encounter overhaul | PLANNED | not started | pending |
+| Reusable TMs | LOCKED | not yet fully audited/implemented | pending |
+| HM battle rework | LOCKED | not yet fully audited/implemented | pending |
+| TM acquisition/economy | LOCKED | not yet fully audited/implemented | pending |
+| Tutor consolidation | LOCKED | baseline retained | audit pending |
+| Egg-move consolidation | LOCKED | baseline retained | audit pending |
+| Evolution-method overhaul | PARTIAL | not yet complete | pending |
+| World/#001–#493 availability | PLANNED | not started | pending |
 | Trainer overhaul | PLANNED | not started | pending |
 | Economy/EXP port | PLANNED PORT | not started | pending |
 | Capture/Poké Ball port | PLANNED PORT | not started | pending |
 | Breeding-system port | PLANNED PORT | not started | pending |
 | Event restoration | PLANNED | not started | pending |
-| Frontier/postgame | PLANNED | partial TM-BP design only | pending |
+| Frontier/postgame | PLANNED | partial design only | pending |
 | Full QA/release | PLANNED | not started | pending |
 
-## C1 recovery status
+## C1 authority
 
-The historical C1 final audit contains **82 edited existing moves**.
+C1 final audit contains exactly **82 edited existing moves**.
 
-Repository recovery now has:
+Canonical authority:
 
-- exact membership of all **82/82** edits in `implementation/c1_move_edit_membership_recovery.json`;
-- recovered final values for all batches except part of Batch 9F;
-- human-readable recovery authority in:
-  - `moves/C1_EXISTING_MOVE_REBALANCE_RECOVERY.md`
-  - `moves/C1_RECOVERED_BATCHES_SUPPLEMENT.md`
+- human-readable: `moves/C1_EXISTING_MOVE_REBALANCE_RECOVERY.md`
+- machine-readable: `implementation/c1_move_changes_manifest.json`
+- membership/provenance: `implementation/c1_move_edit_membership_recovery.json`
+- recovery evidence: `moves/C1_RECOVERED_BATCHES_SUPPLEMENT.md`
 
-Batch 9F membership is exactly:
+The machine manifest contains exactly **82 entries** and changes only listed fields.
 
-- Bind
-- Wrap
-- Fire Spin
-- Whirlpool
-- Sand Tomb
-- Clamp
+### Final Batch 9F values
 
-Sand Tomb is independently confirmed at **50 BP / 95 Acc / 15 PP**.
+- Bind — 30 / 90 / 20
+- Wrap — 30 / 90 / 20
+- Fire Spin — 35 / 90 / 15
+- Whirlpool — 35 / 90 / 15
+- Sand Tomb — 35 / 90 / 15
+- Clamp — 35 / 90 / 10
+- Magma Storm — KEEP 120 / 70 / 5
 
-The final superseding values for **Bind, Wrap, Fire Spin, Whirlpool, and Clamp** still require exact final-audit recovery before generating the authoritative 82-edit implementation manifest.
+Trapping duration/residual behavior is unchanged.
 
-Do not infer those values from older proposal material.
+The previously surfaced Sand Tomb 50/95 value came from an unrelated Emerald move-rework spec and is **not Platinum C1 authority**.
+
+### C1 implementation state
+
+C1 has not yet been applied to current main; for example, Fury Cutter remains vanilla in source.
+
+Next implementation procedure:
+
+1. inspect current move files;
+2. generate before-value/source guards;
+3. apply `implementation/c1_move_changes_manifest.json`;
+4. assert exact edit count = 82;
+5. update Razor Wind's description alongside its effect reassignment;
+6. semantic-diff the move table;
+7. build Rev 0 and Rev 1;
+8. record evidence in this file.
 
 ## C3 provenance
 
-The exact historical species implementation payload is preserved at:
+Exact historical species payload:
 
-`docs/overhaul/implementation/archive/c3h-apply-species-original.yml`
+`implementation/archive/c3h-apply-species-original.yml`
 
-Historical provenance:
+- historical commit: `dceb548782be5c3ed30afba39a8b5727fdd6716d`
+- workflow blob: `c45362c9913899aae07e6a84fa5bc62e9ee7edb0`
+- ledger counts: `67 / 27 / 40 / 53 / 38 = 225`
 
-- commit `dceb548782be5c3ed30afba39a8b5727fdd6716d`
-- workflow blob `c45362c9913899aae07e6a84fa5bc62e9ee7edb0`
-- exact operation counts `67 / 27 / 40 / 53 / 38 = 225`
+Verifier/extractor:
 
-`tools/overhaul/recover_c3h_ledgers.py` verifies/extracts the historical ledger set.
+`tools/overhaul/recover_c3h_ledgers.py`
 
-Important: these ledgers are now provenance. **Do not reapply them to current `main`.** Current source already contains the implementation plus final follow-up corrections.
+These ledgers are provenance only. Do **not** reapply them over current main.
 
-### Authoritative final corrections visible on current main
+Final corrections visible on main:
 
-- Banette: Shadow Ball 31 retained; Cursed Stitch 38; Shadow Claw 42.
+- Banette: Shadow Ball 31; Cursed Stitch 38; Shadow Claw 42.
 - Torkoal: Yawn 52; Heat Wave 55.
 - Seviper: Sludge Bomb 55.
 
-## Created-move invariants still needing focused runtime QA
-
-Source/build success does not prove every battle interaction.
+## Focused runtime QA still required
 
 High-priority L4 checks:
 
-- Resonant Slash is blocked/recognized by sound-move logic as intended;
-- Star Jab receives punching/Iron Fist handling;
-- Magnet Volley produces exactly three equal-power hits (`25 + 25 + 25` before normal modifiers);
-- custom move text/animation behavior is correct in battle;
-- representative custom effects behave as specified.
+- Resonant Slash sound/Soundproof interaction;
+- Star Jab punching/Iron Fist interaction;
+- Magnet Volley exactly 3 equal-power hits (`25 + 25 + 25` before normal modifiers);
+- representative custom move effects/text/animations;
+- Defog behavior once C2 HM work is implemented/audited;
+- representative C3 evolution-timing and compatibility cases.
 
 ## Historical unresolved design item
 
-`Dragon Swipe` is implemented as one of the 22 moves, but recovered final C3 documentation does not prove a final recipient.
+`Dragon Swipe` is implemented as a finalized move, but recovered C3 documentation does not prove a final recipient.
 
-- do not invent a recipient;
-- absence of a recipient is not a build blocker;
-- resolve only from authoritative recovered design evidence or a new explicit design decision.
+Do not invent one. This is not a build blocker.
 
 ## Immediate next actions
 
-### Repository preparation
-
-1. Finish C1 recovery by resolving the five remaining Batch 9F values.
-2. Generate the complete machine-readable 82-edit C1 implementation manifest.
-3. Validate that manifest against current `main` before Claude applies C1.
-4. Preserve mainline C2.5E/C3H commits/build evidence in the canonical docs.
-5. Merge the canonical documentation PR only after authority/status files agree.
-
-### Claude implementation after handoff
-
-1. **Do not redo C2.5E/C3H.** Audit current main and use the landed commits as baseline.
-2. Implement C1 from the final canonical manifest once recovery is complete.
-3. Run source/build validation for C1.
-4. Perform focused L4 runtime tests for custom moves and other high-risk mechanics.
-5. Begin the Emerald-to-Platinum port audit and evolution-system work.
-6. Continue into #001–#493 availability, trainers, economy, events, and postgame according to `MASTER_PLAN.md`.
+1. Apply C1 from the canonical manifest with live-source guards.
+2. Build Rev 0 + Rev 1 and archive validation evidence.
+3. Audit/implement remaining C2 reusable-TM/HM/economy behavior.
+4. Run focused L4 runtime QA for C2.5/C3 high-risk mechanics.
+5. Complete the evolution-system manifest and Emerald-to-Platinum port audit.
+6. Continue into #001–#493 availability, trainers, economy, events, and postgame.
 
 ## Rule for future sessions
 
