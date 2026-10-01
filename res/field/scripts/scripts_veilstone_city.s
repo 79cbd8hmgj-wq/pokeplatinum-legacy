@@ -988,7 +988,45 @@ VeilstoneCity_Lady:
     End
 
 VeilstoneCity_BattleGirl2:
-    NPCMessage VeilstoneCity_Text_IBoughtANewParasol
+    PlaySE SEQ_SE_CONFIRM
+    LockAll
+    FacePlayer
+    GoToIfSet FLAG_RECEIVED_VEILSTONE_CITY_CASTFORM, VeilstoneCity_BattleGirl2_Parasol
+    Message VeilstoneCity_Text_OfferCastform
+    ShowYesNoMenu VAR_RESULT
+    GoToIfEq VAR_RESULT, MENU_NO, VeilstoneCity_BattleGirl2_Declined
+    GetPartyCount VAR_RESULT
+    GoToIfEq VAR_RESULT, MAX_PARTY_SIZE, VeilstoneCity_BattleGirl2_PartyFull
+    BufferPlayerName 0
+    PlayFanfare SEQ_FANFA4
+    Message VeilstoneCity_Text_PlayerReceivedCastform
+    WaitFanfare
+    GivePokemon SPECIES_CASTFORM, 22, ITEM_NONE, VAR_RESULT
+    GoToIfEq VAR_RESULT, FALSE, VeilstoneCity_BattleGirl2_PartyFull
+    SetFlag FLAG_RECEIVED_VEILSTONE_CITY_CASTFORM
+    Message VeilstoneCity_Text_CastformThanks
+    GoTo VeilstoneCity_BattleGirl2_End
+    End
+
+VeilstoneCity_BattleGirl2_Declined:
+    Message VeilstoneCity_Text_CastformDeclined
+    GoTo VeilstoneCity_BattleGirl2_End
+    End
+
+VeilstoneCity_BattleGirl2_PartyFull:
+    Message VeilstoneCity_Text_CastformPartyFull
+    GoTo VeilstoneCity_BattleGirl2_End
+    End
+
+VeilstoneCity_BattleGirl2_Parasol:
+    Message VeilstoneCity_Text_IBoughtANewParasol
+    GoTo VeilstoneCity_BattleGirl2_End
+    End
+
+VeilstoneCity_BattleGirl2_End:
+    WaitButton
+    CloseMessage
+    ReleaseAll
     End
 
 VeilstoneCity_CoordEvent_GruntBlockWarehouse:

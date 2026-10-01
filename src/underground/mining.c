@@ -73,8 +73,9 @@
 #include "res/graphics/trap_effects/trap_effects.naix"
 #include "res/text/bank/underground_common.h"
 
-#define MAX_BURIED_OBJECTS 8
-#define MAX_BURIED_ITEMS   4
+#define MAX_BURIED_OBJECTS    8
+#define SPIRITOMB_COUNTER_MAX 999
+#define MAX_BURIED_ITEMS      4
 
 #define INITIAL_WALL_INTEGRITY 196
 
@@ -620,21 +621,21 @@ static MiningObject sMiningObjects[] = {
     { .itemID = MINING_TREASURE_WATER_STONE, .oddTIDWeight = 1, .evenTIDWeight = 4, .oddTIDNatDexWeight = 5, .evenTIDNatDexWeight = 30, .width = 3 * 2, .height = 3 * 2, .shape = sWaterStoneShape, .spriteNARCIndex = water_stone_NCGR, .paletteNARCIndex = water_stone_NCLR },
     { .itemID = MINING_TREASURE_LEAF_STONE, .oddTIDWeight = 1, .evenTIDWeight = 2, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 15, .width = 3 * 2, .height = 4 * 2, .shape = sLeafStoneShape, .spriteNARCIndex = leaf_stone_NCGR, .paletteNARCIndex = leaf_stone_NCLR },
     { .itemID = MINING_TREASURE_LEAF_STONE, .oddTIDWeight = 1, .evenTIDWeight = 2, .oddTIDNatDexWeight = 2, .evenTIDNatDexWeight = 15, .width = 4 * 2, .height = 3 * 2, .shape = sLeafStoneShape90deg, .spriteNARCIndex = leaf_stone_90deg_NCGR, .paletteNARCIndex = leaf_stone_NCLR },
-    { .itemID = MINING_TREASURE_HELIX_FOSSIL, .oddTIDWeight = 0, .evenTIDWeight = 0, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 1, .width = 4 * 2, .height = 4 * 2, .shape = sHelixFossilShape, .spriteNARCIndex = helix_fossil_NCGR, .paletteNARCIndex = fossil_NCLR },
-    { .itemID = MINING_TREASURE_HELIX_FOSSIL, .oddTIDWeight = 0, .evenTIDWeight = 0, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 1, .width = 4 * 2, .height = 4 * 2, .shape = sHelixFossilShape90deg, .spriteNARCIndex = helix_fossil_90deg_NCGR, .paletteNARCIndex = fossil_NCLR },
-    { .itemID = MINING_TREASURE_HELIX_FOSSIL, .oddTIDWeight = 0, .evenTIDWeight = 0, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 1, .width = 4 * 2, .height = 4 * 2, .shape = sHelixFossilShape, .spriteNARCIndex = helix_fossil_180deg_NCGR, .paletteNARCIndex = fossil_NCLR },
-    { .itemID = MINING_TREASURE_HELIX_FOSSIL, .oddTIDWeight = 0, .evenTIDWeight = 0, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 1, .width = 4 * 2, .height = 4 * 2, .shape = sHelixFossilShape90deg, .spriteNARCIndex = helix_fossil_270deg_NCGR, .paletteNARCIndex = fossil_NCLR },
-    { .itemID = MINING_TREASURE_DOME_FOSSIL, .oddTIDWeight = 0, .evenTIDWeight = 0, .oddTIDNatDexWeight = 1, .evenTIDNatDexWeight = 13, .width = 5 * 2, .height = 4 * 2, .shape = sDomeFossilShape, .spriteNARCIndex = dome_fossil_NCGR, .paletteNARCIndex = fossil_NCLR },
-    { .itemID = MINING_TREASURE_CLAW_FOSSIL, .oddTIDWeight = 0, .evenTIDWeight = 0, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 1, .width = 4 * 2, .height = 5 * 2, .shape = sClawFossilShape, .spriteNARCIndex = claw_fossil_NCGR, .paletteNARCIndex = fossil_NCLR },
-    { .itemID = MINING_TREASURE_CLAW_FOSSIL, .oddTIDWeight = 0, .evenTIDWeight = 0, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 1, .width = 5 * 2, .height = 4 * 2, .shape = sClawFossilShape90deg, .spriteNARCIndex = claw_fossil_90deg_NCGR, .paletteNARCIndex = fossil_NCLR },
-    { .itemID = MINING_TREASURE_CLAW_FOSSIL, .oddTIDWeight = 0, .evenTIDWeight = 0, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 1, .width = 4 * 2, .height = 5 * 2, .shape = sClawFossilShape180deg, .spriteNARCIndex = claw_fossil_180deg_NCGR, .paletteNARCIndex = fossil_NCLR },
-    { .itemID = MINING_TREASURE_CLAW_FOSSIL, .oddTIDWeight = 0, .evenTIDWeight = 0, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 1, .width = 5 * 2, .height = 4 * 2, .shape = sClawFossilShape270deg, .spriteNARCIndex = claw_fossil_270deg_NCGR, .paletteNARCIndex = fossil_NCLR },
-    { .itemID = MINING_TREASURE_ROOT_FOSSIL, .oddTIDWeight = 0, .evenTIDWeight = 0, .oddTIDNatDexWeight = 1, .evenTIDNatDexWeight = 3, .width = 5 * 2, .height = 5 * 2, .shape = sRootFossilShape, .spriteNARCIndex = root_fossil_NCGR, .paletteNARCIndex = fossil_NCLR },
-    { .itemID = MINING_TREASURE_ROOT_FOSSIL, .oddTIDWeight = 0, .evenTIDWeight = 0, .oddTIDNatDexWeight = 1, .evenTIDNatDexWeight = 3, .width = 5 * 2, .height = 5 * 2, .shape = sRootFossilShape90deg, .spriteNARCIndex = root_fossil_90deg_NCGR, .paletteNARCIndex = fossil_NCLR },
-    { .itemID = MINING_TREASURE_ROOT_FOSSIL, .oddTIDWeight = 0, .evenTIDWeight = 0, .oddTIDNatDexWeight = 1, .evenTIDNatDexWeight = 3, .width = 5 * 2, .height = 5 * 2, .shape = sRootFossilShape180deg, .spriteNARCIndex = root_fossil_180deg_NCGR, .paletteNARCIndex = fossil_NCLR },
-    { .itemID = MINING_TREASURE_ROOT_FOSSIL, .oddTIDWeight = 0, .evenTIDWeight = 0, .oddTIDNatDexWeight = 1, .evenTIDNatDexWeight = 3, .width = 5 * 2, .height = 5 * 2, .shape = sRootFossilShape270deg, .spriteNARCIndex = root_fossil_270deg_NCGR, .paletteNARCIndex = fossil_NCLR },
-    { .itemID = MINING_TREASURE_OLD_AMBER, .oddTIDWeight = 0, .evenTIDWeight = 0, .oddTIDNatDexWeight = 2, .evenTIDNatDexWeight = 2, .width = 4 * 2, .height = 4 * 2, .shape = sOldAmberShape, .spriteNARCIndex = old_amber_NCGR, .paletteNARCIndex = old_amber_NCLR },
-    { .itemID = MINING_TREASURE_OLD_AMBER, .oddTIDWeight = 0, .evenTIDWeight = 0, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 3, .width = 4 * 2, .height = 4 * 2, .shape = sOldAmberShape90deg, .spriteNARCIndex = old_amber_90deg_NCGR, .paletteNARCIndex = old_amber_NCLR },
+    { .itemID = MINING_TREASURE_HELIX_FOSSIL, .oddTIDWeight = 3, .evenTIDWeight = 3, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 3, .width = 4 * 2, .height = 4 * 2, .shape = sHelixFossilShape, .spriteNARCIndex = helix_fossil_NCGR, .paletteNARCIndex = fossil_NCLR },
+    { .itemID = MINING_TREASURE_HELIX_FOSSIL, .oddTIDWeight = 3, .evenTIDWeight = 3, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 3, .width = 4 * 2, .height = 4 * 2, .shape = sHelixFossilShape90deg, .spriteNARCIndex = helix_fossil_90deg_NCGR, .paletteNARCIndex = fossil_NCLR },
+    { .itemID = MINING_TREASURE_HELIX_FOSSIL, .oddTIDWeight = 3, .evenTIDWeight = 3, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 3, .width = 4 * 2, .height = 4 * 2, .shape = sHelixFossilShape, .spriteNARCIndex = helix_fossil_180deg_NCGR, .paletteNARCIndex = fossil_NCLR },
+    { .itemID = MINING_TREASURE_HELIX_FOSSIL, .oddTIDWeight = 3, .evenTIDWeight = 3, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 3, .width = 4 * 2, .height = 4 * 2, .shape = sHelixFossilShape90deg, .spriteNARCIndex = helix_fossil_270deg_NCGR, .paletteNARCIndex = fossil_NCLR },
+    { .itemID = MINING_TREASURE_DOME_FOSSIL, .oddTIDWeight = 12, .evenTIDWeight = 12, .oddTIDNatDexWeight = 12, .evenTIDNatDexWeight = 12, .width = 5 * 2, .height = 4 * 2, .shape = sDomeFossilShape, .spriteNARCIndex = dome_fossil_NCGR, .paletteNARCIndex = fossil_NCLR },
+    { .itemID = MINING_TREASURE_CLAW_FOSSIL, .oddTIDWeight = 3, .evenTIDWeight = 3, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 3, .width = 4 * 2, .height = 5 * 2, .shape = sClawFossilShape, .spriteNARCIndex = claw_fossil_NCGR, .paletteNARCIndex = fossil_NCLR },
+    { .itemID = MINING_TREASURE_CLAW_FOSSIL, .oddTIDWeight = 3, .evenTIDWeight = 3, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 3, .width = 5 * 2, .height = 4 * 2, .shape = sClawFossilShape90deg, .spriteNARCIndex = claw_fossil_90deg_NCGR, .paletteNARCIndex = fossil_NCLR },
+    { .itemID = MINING_TREASURE_CLAW_FOSSIL, .oddTIDWeight = 3, .evenTIDWeight = 3, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 3, .width = 4 * 2, .height = 5 * 2, .shape = sClawFossilShape180deg, .spriteNARCIndex = claw_fossil_180deg_NCGR, .paletteNARCIndex = fossil_NCLR },
+    { .itemID = MINING_TREASURE_CLAW_FOSSIL, .oddTIDWeight = 3, .evenTIDWeight = 3, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 3, .width = 5 * 2, .height = 4 * 2, .shape = sClawFossilShape270deg, .spriteNARCIndex = claw_fossil_270deg_NCGR, .paletteNARCIndex = fossil_NCLR },
+    { .itemID = MINING_TREASURE_ROOT_FOSSIL, .oddTIDWeight = 3, .evenTIDWeight = 3, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 3, .width = 5 * 2, .height = 5 * 2, .shape = sRootFossilShape, .spriteNARCIndex = root_fossil_NCGR, .paletteNARCIndex = fossil_NCLR },
+    { .itemID = MINING_TREASURE_ROOT_FOSSIL, .oddTIDWeight = 3, .evenTIDWeight = 3, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 3, .width = 5 * 2, .height = 5 * 2, .shape = sRootFossilShape90deg, .spriteNARCIndex = root_fossil_90deg_NCGR, .paletteNARCIndex = fossil_NCLR },
+    { .itemID = MINING_TREASURE_ROOT_FOSSIL, .oddTIDWeight = 3, .evenTIDWeight = 3, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 3, .width = 5 * 2, .height = 5 * 2, .shape = sRootFossilShape180deg, .spriteNARCIndex = root_fossil_180deg_NCGR, .paletteNARCIndex = fossil_NCLR },
+    { .itemID = MINING_TREASURE_ROOT_FOSSIL, .oddTIDWeight = 3, .evenTIDWeight = 3, .oddTIDNatDexWeight = 3, .evenTIDNatDexWeight = 3, .width = 5 * 2, .height = 5 * 2, .shape = sRootFossilShape270deg, .spriteNARCIndex = root_fossil_270deg_NCGR, .paletteNARCIndex = fossil_NCLR },
+    { .itemID = MINING_TREASURE_OLD_AMBER, .oddTIDWeight = 6, .evenTIDWeight = 6, .oddTIDNatDexWeight = 6, .evenTIDNatDexWeight = 6, .width = 4 * 2, .height = 4 * 2, .shape = sOldAmberShape, .spriteNARCIndex = old_amber_NCGR, .paletteNARCIndex = old_amber_NCLR },
+    { .itemID = MINING_TREASURE_OLD_AMBER, .oddTIDWeight = 6, .evenTIDWeight = 6, .oddTIDNatDexWeight = 6, .evenTIDNatDexWeight = 6, .width = 4 * 2, .height = 4 * 2, .shape = sOldAmberShape90deg, .spriteNARCIndex = old_amber_90deg_NCGR, .paletteNARCIndex = old_amber_NCLR },
     { .itemID = MINING_TREASURE_RARE_BONE, .oddTIDWeight = 1, .evenTIDWeight = 1, .oddTIDNatDexWeight = 5, .evenTIDNatDexWeight = 5, .width = 3 * 2, .height = 6 * 2, .shape = sRareBoneShape, .spriteNARCIndex = rare_bone_NCGR, .paletteNARCIndex = rare_bone_NCLR },
     { .itemID = MINING_TREASURE_RARE_BONE, .oddTIDWeight = 1, .evenTIDWeight = 1, .oddTIDNatDexWeight = 5, .evenTIDNatDexWeight = 5, .width = 6 * 2, .height = 3 * 2, .shape = sRareBoneShape90deg, .spriteNARCIndex = rare_bone_90deg_NCGR, .paletteNARCIndex = rare_bone_NCLR },
     { .itemID = MINING_TREASURE_REVIVE, .oddTIDWeight = 8, .evenTIDWeight = 8, .oddTIDNatDexWeight = 10, .evenTIDNatDexWeight = 10, .width = 3 * 2, .height = 3 * 2, .shape = sStarPieceReviveShape, .spriteNARCIndex = revive_NCGR, .paletteNARCIndex = revive_NCLR },
@@ -644,8 +645,8 @@ static MiningObject sMiningObjects[] = {
     { .itemID = MINING_TREASURE_YELLOW_SHARD, .oddTIDWeight = 13, .evenTIDWeight = 13, .oddTIDNatDexWeight = 17, .evenTIDNatDexWeight = 17, .width = 4 * 2, .height = 3 * 2, .shape = sYellowShardShape, .spriteNARCIndex = yellow_shard_NCGR, .paletteNARCIndex = zap_plate_NCLR },
     { .itemID = MINING_TREASURE_GREEN_SHARD, .oddTIDWeight = 13, .evenTIDWeight = 13, .oddTIDNatDexWeight = 17, .evenTIDNatDexWeight = 17, .width = 4 * 2, .height = 3 * 2, .shape = sGreenShardShape, .spriteNARCIndex = green_shard_NCGR, .paletteNARCIndex = meadow_plate_NCLR },
     { .itemID = MINING_TREASURE_HEART_SCALE, .oddTIDWeight = 33, .evenTIDWeight = 33, .oddTIDNatDexWeight = 30, .evenTIDNatDexWeight = 30, .width = 2 * 2, .height = 2 * 2, .shape = sHeartScaleShape, .spriteNARCIndex = heart_scale_NCGR, .paletteNARCIndex = heart_scale_NCLR },
-    { .itemID = MINING_TREASURE_ARMOR_FOSSIL, .oddTIDWeight = 0, .evenTIDWeight = 25, .oddTIDNatDexWeight = 0, .evenTIDNatDexWeight = 12, .width = 5 * 2, .height = 4 * 2, .shape = sArmorFossilShape, .spriteNARCIndex = armor_fossil_NCGR, .paletteNARCIndex = fossil_NCLR },
-    { .itemID = MINING_TREASURE_SKULL_FOSSIL, .oddTIDWeight = 25, .evenTIDWeight = 0, .oddTIDNatDexWeight = 12, .evenTIDNatDexWeight = 0, .width = 4 * 2, .height = 4 * 2, .shape = sSkullFossilShape, .spriteNARCIndex = skull_fossil_NCGR, .paletteNARCIndex = fossil_NCLR },
+    { .itemID = MINING_TREASURE_ARMOR_FOSSIL, .oddTIDWeight = 12, .evenTIDWeight = 12, .oddTIDNatDexWeight = 12, .evenTIDNatDexWeight = 12, .width = 5 * 2, .height = 4 * 2, .shape = sArmorFossilShape, .spriteNARCIndex = armor_fossil_NCGR, .paletteNARCIndex = fossil_NCLR },
+    { .itemID = MINING_TREASURE_SKULL_FOSSIL, .oddTIDWeight = 12, .evenTIDWeight = 12, .oddTIDNatDexWeight = 12, .evenTIDNatDexWeight = 12, .width = 4 * 2, .height = 4 * 2, .shape = sSkullFossilShape, .spriteNARCIndex = skull_fossil_NCGR, .paletteNARCIndex = fossil_NCLR },
     { .itemID = MINING_TREASURE_LIGHT_CLAY, .oddTIDWeight = 1, .evenTIDWeight = 1, .oddTIDNatDexWeight = 5, .evenTIDNatDexWeight = 2, .width = 4 * 2, .height = 4 * 2, .shape = sLightClayShape, .spriteNARCIndex = light_clay_NCGR, .paletteNARCIndex = light_clay_NCLR },
     { .itemID = MINING_TREASURE_IRON_BALL, .oddTIDWeight = 1, .evenTIDWeight = 1, .oddTIDNatDexWeight = 2, .evenTIDNatDexWeight = 5, .width = 3 * 2, .height = 3 * 2, .shape = NULL, .spriteNARCIndex = iron_ball_NCGR, .paletteNARCIndex = iron_ball_NCLR },
     { .itemID = MINING_TREASURE_ICY_ROCK, .oddTIDWeight = 2, .evenTIDWeight = 1, .oddTIDNatDexWeight = 11, .evenTIDNatDexWeight = 5, .width = 4 * 2, .height = 4 * 2, .shape = sIcyRockShape, .spriteNARCIndex = icy_rock_NCGR, .paletteNARCIndex = icy_rock_NCLR },
@@ -1828,6 +1829,8 @@ static BOOL Mining_TryPlaceObject(int index, int x, int y)
     return TRUE;
 }
 
+// Fossil weights are identical for odd/even Trainer IDs and with or without the National Dex, so every fossil
+// family stays obtainable from the Underground in any save (availability: special acquisition, fossils).
 static int Mining_GetWeightOfItem(MiningObject *item)
 {
     SaveData *saveData = FieldSystem_GetSaveData(sMiningEnv->fieldSystem);
@@ -2623,6 +2626,16 @@ static BOOL Mining_PrintNextDugUpItem(MiningGameContext *ctx)
     return FALSE;
 }
 
+static void Mining_AddSpiritombProgress(void)
+{
+    VarsFlags *varsFlags = SaveData_GetVarsFlags(sMiningEnv->fieldSystem->saveData);
+    u16 counter = SystemVars_GetSpiritombCounter(varsFlags);
+
+    if (counter < SPIRITOMB_COUNTER_MAX) {
+        SystemVars_SetSpiritombCounter(varsFlags, counter + 1);
+    }
+}
+
 static BOOL Mining_ProcessNextDugUpItem(MiningGameContext *ctx)
 {
     UndergroundRecord *undergroundRecord = SaveData_GetUndergroundRecord(sMiningEnv->fieldSystem->saveData);
@@ -2633,6 +2646,10 @@ static BOOL Mining_ProcessNextDugUpItem(MiningGameContext *ctx)
             sMiningEnv->buriedObjects[i].isDugUp = FALSE;
 
             int itemID = sMiningEnv->buriedObjects[i].itemID;
+
+            // Single-player Spiritomb ritual: every unearthed object counts toward the Hallowed Tower counter
+            // (replaces the original "talk to other players" requirement).
+            Mining_AddSpiritombProgress();
 
             if (Spheres_IsMiningItemSphere(itemID)) {
                 UndergroundRecord_AddNumSpheresDug(undergroundRecord, 1);
