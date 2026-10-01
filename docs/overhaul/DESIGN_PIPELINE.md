@@ -21,7 +21,7 @@ Chat-only approval is not sufficient implementation authority.
 ## Remaining design order
 
 ### D1 — Trainer Overhaul
-Status: `NEEDS DETAILED DESIGN`
+Status: `LOCKED SPEC`
 
 Existing authority:
 - stronger, coherent teams without becoming a hardcore-only hack;
@@ -170,4 +170,8 @@ Must validate:
 
 ## Current next design
 
-**D1 — Trainer Overhaul** is the next design phase because it has the largest amount of genuine unresolved game-design detail.
+**D2 — EXP, Money, Shops, and Item Economy** is the next design phase.
+
+Trainer authority:
+- `docs/overhaul/trainers/TRAINER_OVERHAUL_SPEC.md`
+- `docs/overhaul/trainers/TRAINER_IMPLEMENTATION_PLAN.md`
