@@ -195,3 +195,14 @@ Do not invent one. This is not a build blocker.
 ## Rule for future sessions
 
 Do not reconstruct status from memory when this file answers the question. Update this file in the same branch/PR that materially changes project state.
+
+
+## EXP / economy
+
+Status: **LOCKED SPEC — awaiting implementation**
+
+Canonical authority:
+- `docs/overhaul/economy/EXP_ECONOMY_SPEC.md`
+- `docs/overhaul/economy/EXP_ECONOMY_IMPLEMENTATION_PLAN.md`
+
+Key locks: Platinum-native EXP pool, conserved 60/40 team-wide distribution, Exp. Share as priority weighting without creating extra base EXP, participant-only EVs, targeted payout cleanup, lower healing/vitamin costs, free Move Reminder, half-cost shard tutors, reliable evolution-stone access, and postgame-only unlimited Rare Candy stock.
