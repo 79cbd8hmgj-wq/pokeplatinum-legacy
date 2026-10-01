@@ -239,3 +239,14 @@ Canonical authority:
 - `docs/overhaul/events/LEGENDARY_MYTHICAL_IMPLEMENTATION_PLAN.md`
 
 Key locks: native Platinum event restoration for Darkrai/Shaymin/Arceus/Rotom, Regi external-gate removal, Regigigas after internal Regis, retry-safe legendary encounters, Manaphy Egg in-save quest, and internal Sinnoh-side acquisition chains for migration/external legends.
+
+
+## Battle Frontier / postgame
+
+Status: **LOCKED SPEC — awaiting implementation**
+
+Canonical authority:
+- `docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md`
+- `docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_IMPLEMENTATION_PLAN.md`
+
+Key locks: preserve native Frontier silver/gold streak milestones, double final BP awards, retain locked reduced TM BP prices while leaving ordinary non-TM BP prices intact, audit rather than rebuild Frontier sets, make Battleground rematches reshuffleable without calendar waiting, make Rival rematches daily rather than weekend-only, and add one-time Silver/Gold Print BP/item milestone rewards.
