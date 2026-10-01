@@ -134,7 +134,7 @@ Still needed:
 - completion validation.
 
 ### D6 — Battle Frontier, Rematches, and Postgame Rewards
-Status: `NEEDS DETAILED DESIGN`
+Status: `LOCKED SPEC`
 
 Existing authority:
 - better BP rewards;
@@ -171,7 +171,7 @@ Must validate:
 
 ## Current next design
 
-**D6 — Battle Frontier, Rematches, and Postgame Rewards** is the next design phase.
+**D7 — Final Integration / QA** is the next design phase.
 
 Legendary/Mythical authority:
 - `docs/overhaul/events/LEGENDARY_MYTHICAL_SPEC.md`
@@ -192,3 +192,8 @@ Trainer authority:
 D4 authority:
 - `docs/overhaul/breeding/BREEDING_2_SPEC.md`
 - `docs/overhaul/breeding/BREEDING_2_IMPLEMENTATION_PLAN.md`
+
+
+D6 authority:
+- `docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md`
+- `docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_IMPLEMENTATION_PLAN.md`
