@@ -152,7 +152,7 @@ Still needed:
 - optional convenience systems.
 
 ### D7 — Final Integration / QA
-Status: `NEEDS FINAL SPEC AFTER SYSTEMS LOCK`
+Status: `LOCKED SPEC`
 
 Must validate:
 - all 493 eventual availability;
@@ -171,7 +171,7 @@ Must validate:
 
 ## Current next design
 
-**D7 — Final Integration / QA** is the next design phase.
+**All currently identified remaining design phases D1–D7 are now LOCKED. The project is ready to proceed through implementation sequencing from canonical repo authority.**
 
 Legendary/Mythical authority:
 - `docs/overhaul/events/LEGENDARY_MYTHICAL_SPEC.md`
@@ -197,3 +197,8 @@ D4 authority:
 D6 authority:
 - `docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md`
 - `docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_IMPLEMENTATION_PLAN.md`
+
+
+D7 authority:
+- `docs/overhaul/qa/FINAL_INTEGRATION_QA_SPEC.md`
+- `docs/overhaul/qa/FINAL_INTEGRATION_QA_IMPLEMENTATION_PLAN.md`
