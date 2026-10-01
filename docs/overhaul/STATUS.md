@@ -261,3 +261,14 @@ Canonical authority:
 - `docs/overhaul/qa/FINAL_INTEGRATION_QA_IMPLEMENTATION_PLAN.md`
 
 Release gates are now defined for clean Rev 0/Rev 1 builds, subsystem validators, #001–#493 completion proof, evolution legality, progression simulation, runtime boss/event/frontier tests, full fresh-save campaign completion, save compatibility, release blockers, and legal patch packaging. The project may only be marked CORE 1.0 VERIFIED / RELEASE CANDIDATE when the evidence is recorded in-repo.
+
+
+## Legendary / Mythical availability
+
+Status: **LOCKED SPEC — awaiting implementation**
+
+Canonical authority:
+- `docs/overhaul/events/LEGENDARY_MYTHICAL_SPEC.md`
+- `docs/overhaul/events/LEGENDARY_MYTHICAL_IMPLEMENTATION_PLAN.md`
+
+Key locks: Sinnoh/Platinum-native legends retain native story/event treatment; Darkrai/Shaymin/Arceus/Rotom distribution gates are replaced by permanent in-game access; Manaphy becomes an in-save Canalave egg gift with Phione through breeding; Regis use Platinum's native ruins without event-Regigigas dependency; older Gen I–III legends become renewable 1–2% postgame habitat encounters; older Mythicals use lightweight retry-safe statics; Arceus is the #493 capstone after catching #001–#492.
