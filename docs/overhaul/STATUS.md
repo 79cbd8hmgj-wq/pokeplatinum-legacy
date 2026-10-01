@@ -228,3 +228,14 @@ Canonical authority:
 - `docs/overhaul/breeding/BREEDING_IMPLEMENTATION_PLAN.md`
 
 Key locks: 100% Everstone nature inheritance, four unique inherited IV stats, either-parent egg-move inheritance, no-incense babies, 128-step egg checks, half hatch cycles, vanilla ability-slot logic preserved, one-save egg-move legality validation, and no broad created-move leakage into egg pools.
+
+
+## Legendary / Mythical events
+
+Status: **LOCKED SPEC — awaiting implementation**
+
+Canonical authority:
+- `docs/overhaul/events/LEGENDARY_MYTHICAL_SPEC.md`
+- `docs/overhaul/events/LEGENDARY_MYTHICAL_IMPLEMENTATION_PLAN.md`
+
+Key locks: native Platinum event restoration for Darkrai/Shaymin/Arceus/Rotom, Regi external-gate removal, Regigigas after internal Regis, retry-safe legendary encounters, Manaphy Egg in-save quest, and internal Sinnoh-side acquisition chains for migration/external legends.
