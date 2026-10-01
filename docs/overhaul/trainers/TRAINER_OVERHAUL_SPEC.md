@@ -20,6 +20,8 @@ Core rules:
 
 Keep Platinum's broad level curve. Do not apply a global +5/+10 rule.
 
+**Scaling authority:** all trainer-level tuning must begin from Platinum's actual vanilla level curve and expected campaign progression, then be re-evaluated against the overhaul's final team-wide EXP-sharing behavior. Do not import Emerald trainer levels or assume vanilla single-recipient EXP pacing. The target is that a normally exploring player using a rotating team remains competitive without deliberate grinding.
+
 Main-story ace targets:
 
 | Battle | Ace level |
@@ -39,7 +41,9 @@ Main-story ace targets:
 | Lucian | 59 |
 | Cynthia | 62 |
 
-Ordinary trainers normally remain close to vanilla area's level band. Adjust only obvious dips/spikes after the encounter/EXP curve is implemented.
+Ordinary trainers normally remain close to the vanilla Platinum area's level band. Adjust only obvious dips/spikes after the encounter/EXP curve is implemented.
+
+Final trainer levels are therefore **provisional until the EXP-sharing/economy phase is locked and simulated**. Team composition, party-size rules, and relative boss ordering are locked; exact levels may receive small evidence-based adjustments if team-wide EXP materially changes the player's expected level at that point.
 
 ### Strength-budget rule
 
