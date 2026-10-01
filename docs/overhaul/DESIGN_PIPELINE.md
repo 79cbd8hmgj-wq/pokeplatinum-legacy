@@ -47,6 +47,8 @@ Still needed:
 Status: `NEEDS EXACT VALUES`
 
 Existing authority:
+- Platinum's own level/EXP progression is the baseline; Emerald is precedent for philosophy/mechanics, not a source of Platinum trainer level values;
+- final scaling must explicitly model team-wide EXP sharing and a normally rotating party rather than single-recipient vanilla EXP assumptions;
 - reduce grind without trivializing progression;
 - earlier/additional Exp. Share access;
 - improved trainer payouts;
