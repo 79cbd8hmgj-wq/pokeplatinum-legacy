@@ -217,3 +217,14 @@ Canonical authority:
 - `docs/overhaul/pokeballs/POKE_BALL_IMPLEMENTATION_PLAN.md`
 
 Design locks include Quick 5x first-turn, Timer 4x by turn 10, Repeat 3.5x, Dusk 3x, Net 3.5x Water/Bug, Dive 4x water terrain, Heal 1.5x with healing preserved, and Nest Ball converted to a level-ratio specialist rather than introducing a new ball slot.
+
+
+## Breeding 2.0
+
+Status: **LOCKED SPEC — awaiting implementation**
+
+Canonical authority:
+- `docs/overhaul/breeding/BREEDING_SPEC.md`
+- `docs/overhaul/breeding/BREEDING_IMPLEMENTATION_PLAN.md`
+
+Key locks: 100% Everstone nature inheritance, four unique inherited IV stats, either-parent egg-move inheritance, no-incense babies, 128-step egg checks, half hatch cycles, vanilla ability-slot logic preserved, one-save egg-move legality validation, and no broad created-move leakage into egg pools.
