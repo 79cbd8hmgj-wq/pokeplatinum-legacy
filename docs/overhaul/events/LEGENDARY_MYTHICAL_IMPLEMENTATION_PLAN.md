@@ -3,9 +3,9 @@
 Status: **LOCKED IMPLEMENTATION PLAN**
 
 Authority:
-- `docs/overhaul/events/LEGENDARY_MYTHICAL_SPEC.md`
+- `docs/overhaul/events/LEGENDARY_MYTHICAL_EVENT_SPEC.md`
 
-Claude Code implements; it must not redesign event placements or prerequisites.
+Claude Code implements; it must not redesign event locations, prerequisites, levels, retry rules, or event-item ownership.
 
 ## 1. Native-event audit
 
@@ -127,8 +127,8 @@ If a preferred broad location has several valid existing maps, Claude may choose
 ## 7. L5 — Manaphy Egg
 
 Implement retry-safe gift:
-- postgame Canalave sailor chain;
-- requires Cresselia/sailor-child resolution and Iron Island completion;
+- Canalave sailor chain after the Lunar Wing/sailor-child resolution;
+- do not add an Iron Island requirement;
 - give Manaphy Egg only when party has room;
 - if full/refused, remain claimable;
 - set received flag only after successful grant.
