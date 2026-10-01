@@ -44,7 +44,7 @@ Still needed:
 - implementation batching.
 
 ### D2 — EXP, Money, Shops, and Item Economy
-Status: `NEEDS EXACT VALUES`
+Status: `LOCKED SPEC`
 
 Existing authority:
 - Platinum's own level/EXP progression is the baseline; Emerald is precedent for philosophy/mechanics, not a source of Platinum trainer level values;
@@ -172,7 +172,11 @@ Must validate:
 
 ## Current next design
 
-**D2 — EXP, Money, Shops, and Item Economy** is the next design phase.
+**D3 — Poké Ball Rebalance** is the next design phase.
+
+Economy authority:
+- `docs/overhaul/economy/EXP_ECONOMY_SPEC.md`
+- `docs/overhaul/economy/EXP_ECONOMY_IMPLEMENTATION_PLAN.md`
 
 Trainer authority:
 - `docs/overhaul/trainers/TRAINER_OVERHAUL_SPEC.md`
