@@ -3,51 +3,51 @@
     "land_encounters": [
         {
             "level": 3,
+            "species": "SPECIES_WURMPLE"
+        },
+        {
+            "level": 3,
+            "species": "SPECIES_HOOTHOOT"
+        },
+        {
+            "level": 4,
             "species": "SPECIES_SHINX"
         },
         {
             "level": 3,
-            "species": "SPECIES_BIDOOF"
+            "species": "SPECIES_SPINARAK"
         },
         {
             "level": 4,
-            "species": "SPECIES_STARLY"
-        },
-        {
-            "level": 3,
             "species": "SPECIES_KRICKETOT"
         },
         {
+            "level": 3,
+            "species": "SPECIES_ZIGZAGOON"
+        },
+        {
             "level": 4,
+            "species": "SPECIES_POOCHYENA"
+        },
+        {
+            "level": 4,
+            "species": "SPECIES_SPINARAK"
+        },
+        {
+            "level": 2,
+            "species": "SPECIES_WURMPLE"
+        },
+        {
+            "level": 2,
             "species": "SPECIES_SHINX"
         },
         {
-            "level": 3,
-            "species": "SPECIES_BIDOOF"
-        },
-        {
-            "level": 4,
-            "species": "SPECIES_STARLY"
-        },
-        {
-            "level": 4,
-            "species": "SPECIES_BIDOOF"
-        },
-        {
             "level": 2,
             "species": "SPECIES_STARLY"
         },
         {
             "level": 2,
-            "species": "SPECIES_BIDOOF"
-        },
-        {
-            "level": 2,
-            "species": "SPECIES_STARLY"
-        },
-        {
-            "level": 2,
-            "species": "SPECIES_BIDOOF"
+            "species": "SPECIES_KRICKETOT"
         }
     ],
     "swarms": [
@@ -55,12 +55,12 @@
         "SPECIES_ZIGZAGOON"
     ],
     "day": [
-        "SPECIES_STARLY",
-        "SPECIES_BIDOOF"
+        "SPECIES_SHINX",
+        "SPECIES_SPINARAK"
     ],
     "night": [
-        "SPECIES_KRICKETOT",
-        "SPECIES_BIDOOF"
+        "SPECIES_SHINX",
+        "SPECIES_SPINARAK"
     ],
     "radar": [
         "SPECIES_SENTRET",

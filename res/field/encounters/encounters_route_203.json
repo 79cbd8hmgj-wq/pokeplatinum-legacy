@@ -3,23 +3,23 @@
     "land_encounters": [
         {
             "level": 4,
-            "species": "SPECIES_STARLY"
-        },
-        {
-            "level": 4,
-            "species": "SPECIES_SHINX"
-        },
-        {
-            "level": 5,
-            "species": "SPECIES_STARLY"
-        },
-        {
-            "level": 4,
-            "species": "SPECIES_KRICKETOT"
-        },
-        {
-            "level": 5,
             "species": "SPECIES_BIDOOF"
+        },
+        {
+            "level": 4,
+            "species": "SPECIES_WEEDLE"
+        },
+        {
+            "level": 5,
+            "species": "SPECIES_SPEAROW"
+        },
+        {
+            "level": 4,
+            "species": "SPECIES_MEDITITE"
+        },
+        {
+            "level": 5,
+            "species": "SPECIES_MANKEY"
         },
         {
             "level": 4,
@@ -27,14 +27,10 @@
         },
         {
             "level": 5,
-            "species": "SPECIES_ABRA"
-        },
-        {
-            "level": 5,
             "species": "SPECIES_SHINX"
         },
         {
-            "level": 6,
+            "level": 5,
             "species": "SPECIES_STARLY"
         },
         {
@@ -42,12 +38,16 @@
             "species": "SPECIES_BIDOOF"
         },
         {
-            "level": 7,
-            "species": "SPECIES_STARLY"
+            "level": 6,
+            "species": "SPECIES_SPEAROW"
         },
         {
             "level": 7,
-            "species": "SPECIES_BIDOOF"
+            "species": "SPECIES_MANKEY"
+        },
+        {
+            "level": 7,
+            "species": "SPECIES_ABRA"
         }
     ],
     "swarms": [
@@ -55,12 +55,12 @@
         "SPECIES_CUBONE"
     ],
     "day": [
-        "SPECIES_STARLY",
-        "SPECIES_BIDOOF"
+        "SPECIES_SPEAROW",
+        "SPECIES_MEDITITE"
     ],
     "night": [
-        "SPECIES_KRICKETOT",
-        "SPECIES_ZUBAT"
+        "SPECIES_SPEAROW",
+        "SPECIES_MEDITITE"
     ],
     "radar": [
         "SPECIES_BIDOOF",
