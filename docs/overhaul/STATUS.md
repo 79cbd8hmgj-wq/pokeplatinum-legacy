@@ -1,6 +1,6 @@
 # Pokémon Platinum Overhaul — Current Status
 
-Last verified against repository/project history: 2026-09-13.
+Last verified against repository/project history: 2026-10-01.
 
 ## Executive status
 
@@ -9,7 +9,8 @@ Last verified against repository/project history: 2026-09-13.
 - **C3H species + TM compatibility:** IMPLEMENTED + L2 BUILD VERIFIED on `main`.
 - **C1 existing-move rebalance:** LOCKED, fully recovered into an 82-edit canonical manifest, **not yet implemented** on `main`.
 - **Evolution design:** **LOCKED in Pass A** across #001–#493; complete historical master had 50 consolidated type/evolution decisions. The repo still needs the complete machine-readable evolution manifest reconstructed from that locked authority.
-- **Known design blockers:** 0.
+- **World/#001–#493 availability (ordinary wild encounters):** IMPLEMENTED on branch `claude/platinum-availability-impl-c651fe` (not merged); L2 build verified Rev 0 + Rev 1; no runtime QA. 28 families remain `USER_DECISION_REQUIRED`. See `implementation/AVAILABILITY_IMPLEMENTATION_REPORT.md`.
+- **Known design blockers:** 0 for C1–C3; availability has the 28 reserved decision families listed in the report.
 - **Next source task:** guarded C1 implementation against current `main`, then remaining C2 mechanics and focused runtime QA.
 
 ## Mainline implementation evidence
@@ -64,7 +65,8 @@ They are provenance sources, not current implementation targets.
 | Tutor consolidation | LOCKED | baseline retained | audit pending |
 | Egg-move consolidation | LOCKED | baseline retained | audit pending |
 | Evolution-method overhaul | **LOCKED / RECOVERY NEEDED FOR FULL MANIFEST** | not yet implemented as a complete system | pending |
-| World/#001–#493 availability | PLANNED | not started | pending |
+| World/#001–#493 availability — ordinary wild distribution, dual-slot/Radar/swarm/Honey/Garden/Marsh policy | APPROVED BASIS (`AVAILABILITY_ARCHITECTURE.md`) | IMPLEMENTED (branch, unmerged) | L2 build (Rev 0 + Rev 1) + manifest/validator proof; runtime pending |
+| World/#001–#493 availability — Section 5 decisions (starters, fossils, Spiritomb, Rotom, Tyrogue, Happiny/Chansey, Eevee, Porygon, Riolu, Castform, Feebas, pseudo catch-up, Dex UI timing) | USER APPROVAL REQUIRED | NOT STARTED (reserved) | n/a |
 | Trainer overhaul | PLANNED | not started | pending |
 | Economy/EXP port | PLANNED PORT | not started | pending |
 | Capture/Poké Ball port | PLANNED PORT | not started | pending |
@@ -190,8 +192,21 @@ Do not invent one. This is not a build blocker.
 4. Run focused L4 runtime QA for C2.5/C3 high-risk mechanics.
 5. Reconstruct the complete locked Pass A evolution manifest and implement it; **no new evolution-design pass is required**.
 6. Perform the remaining Emerald-to-Platinum port audit for EXP/economy/capture/breeding.
-7. Continue into #001–#493 availability, trainers, economy, events, and postgame.
+7. Review the availability manifests, decide the Section 5 items, then run L4 availability QA; continue into trainers, economy, events, and postgame.
 
 ## Rule for future sessions
 
 Do not reconstruct status from memory when this file answers the question. Update this file in the same branch/PR that materially changes project state.
+
+## Availability implementation (2026-10-01)
+
+Base commit `cb420c0d`. Branch `claude/platinum-availability-impl-c651fe`.
+
+- Manifests: `implementation/availability_families.json` (247 families; 184 wild-placed, 28 `USER_DECISION_REQUIRED`, 35 reserved
+  Legendary/Mythical), `encounter_zones.json`, `wild_encounters.json` (94 maps / 1532 entries), `special_systems.json`.
+- Tooling: `tools/overhaul/availability/` (builders, `validate_availability.py`, guarded `apply_wild_encounters.py`,
+  `semantic_diff.py`, `verify_built_encounters.py`, mutation tests). Source audit: `implementation/AVAILABILITY_SOURCE_AUDIT.md`.
+- Applied in groups: E0/E1, M1/M2, L1/L2/P0 land; water; special systems (148 files in `res/field/encounters/`).
+- Evidence and discrepancies (Super Rod is postgame, dual-slot neutralised, Great Marsh Safari rule, …):
+  `implementation/AVAILABILITY_IMPLEMENTATION_REPORT.md`.
+- Exact placements are `PROVISIONAL PLACEMENT`; they need design review before being called LOCKED.
