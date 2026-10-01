@@ -18,7 +18,9 @@ Claude Code must **not** take ownership of future design planning unless the use
 
 Default workflow:
 
-> **Codex `/plan` → user approval → canonical repo spec/manifest → Claude Code implementation → validation/status update**
+> **Codex `/plan` → user approval → approved design + full implementation plan committed to repo → Claude Code implementation → validation/status update**
+
+Do not implement a newly designed subsystem from chat-only approval. The repo must contain both the locked design and its implementation plan first.
 
 ## Read first
 
