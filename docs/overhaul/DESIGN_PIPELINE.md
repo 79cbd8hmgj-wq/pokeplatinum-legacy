@@ -189,3 +189,8 @@ D6 authority:
 D7 authority:
 - `docs/overhaul/qa/FINAL_INTEGRATION_QA_SPEC.md`
 - `docs/overhaul/qa/FINAL_INTEGRATION_QA_IMPLEMENTATION_PLAN.md`
+
+
+D5 authority:
+- `docs/overhaul/events/LEGENDARY_MYTHICAL_EVENT_SPEC.md`
+- `docs/overhaul/events/LEGENDARY_MYTHICAL_IMPLEMENTATION_PLAN.md`
