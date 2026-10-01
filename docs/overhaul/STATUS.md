@@ -9,6 +9,7 @@ Last verified against repository/project history: 2026-09-13.
 - **C3H species + TM compatibility:** IMPLEMENTED + L2 BUILD VERIFIED on `main`.
 - **C1 existing-move rebalance:** LOCKED, fully recovered into an 82-edit canonical manifest, **not yet implemented** on `main`.
 - **Evolution design:** **LOCKED in Pass A** across #001–#493; complete historical master had 50 consolidated type/evolution decisions. The repo still needs the complete machine-readable evolution manifest reconstructed from that locked authority.
+- **World/#001–#493 ordinary availability:** IMPLEMENTED on `main` via PR #10; manifests/validators landed; Rev 0 + Rev 1 CI build verified; runtime availability QA pending. Reserved special acquisitions remain outside this implementation.
 - **Known design blockers:** 0.
 - **Next source task:** guarded C1 implementation against current `main`, then remaining C2 mechanics and focused runtime QA.
 
@@ -64,7 +65,8 @@ They are provenance sources, not current implementation targets.
 | Tutor consolidation | LOCKED | baseline retained | audit pending |
 | Egg-move consolidation | LOCKED | baseline retained | audit pending |
 | Evolution-method overhaul | **LOCKED / RECOVERY NEEDED FOR FULL MANIFEST** | not yet implemented as a complete system | pending |
-| World/#001–#493 availability | PLANNED | not started | pending |
+| World/#001–#493 availability — ordinary wild distribution | APPROVED ARCHITECTURE | IMPLEMENTED on `main` via PR #10 | L2 dual-revision CI build + manifest/validator evidence; runtime pending |
+| World/#001–#493 availability — reserved special acquisitions | LOCKED/RESERVED BY OWNING SPECS WHERE APPLICABLE | not implemented by PR #10 | pending |
 | Trainer overhaul | PLANNED | not started | pending |
 | Economy/EXP port | PLANNED PORT | not started | pending |
 | Capture/Poké Ball port | PLANNED PORT | not started | pending |
@@ -190,7 +192,7 @@ Do not invent one. This is not a build blocker.
 4. Run focused L4 runtime QA for C2.5/C3 high-risk mechanics.
 5. Reconstruct the complete locked Pass A evolution manifest and implement it; **no new evolution-design pass is required**.
 6. Perform the remaining Emerald-to-Platinum port audit for EXP/economy/capture/breeding.
-7. Continue into #001–#493 availability, trainers, economy, events, and postgame.
+7. Continue implementing the remaining locked subsystems from canonical repo authority; ordinary availability is now merged.
 
 ## Rule for future sessions
 
@@ -272,3 +274,34 @@ Canonical authority:
 - `docs/overhaul/events/LEGENDARY_MYTHICAL_IMPLEMENTATION_PLAN.md`
 
 Key locks: Sinnoh/Platinum-native legends retain native story/event treatment; Darkrai/Shaymin/Arceus/Rotom distribution gates are replaced by permanent in-game access; Manaphy becomes an in-save Canalave egg gift with Phione through breeding; Regis use Platinum's native ruins without event-Regigigas dependency; older Gen I–III legends become renewable 1–2% postgame habitat encounters; older Mythicals use lightweight retry-safe statics; Arceus is the #493 capstone after catching #001–#492.
+
+
+## Availability implementation — merged PR #10
+
+Merged as `f89dfc792efe5955acac89e07c866e9f98f6aa4a`.
+
+Canonical implementation evidence:
+- `docs/overhaul/implementation/AVAILABILITY_SOURCE_AUDIT.md`
+- `docs/overhaul/implementation/AVAILABILITY_IMPLEMENTATION_REPORT.md`
+- `docs/overhaul/implementation/availability_families.json`
+- `docs/overhaul/implementation/encounter_zones.json`
+- `docs/overhaul/implementation/wild_encounters.json`
+- `docs/overhaul/implementation/special_systems.json`
+- `tools/overhaul/availability/`
+
+Implemented scope:
+- E0–P0 ordinary land/cave distribution;
+- required Surf / Old Rod / Good Rod distribution;
+- dual-slot neutralization;
+- Great Marsh before/after-Dex array unification;
+- fixed fallback paths for Radar / swarm / Honey / Trophy Garden / Great Marsh species;
+- guarded application and semantic-diff tooling;
+- availability validators and mutation tests.
+
+PR #10 deliberately does **not** implement its reserved special-acquisition families or Legendary/Mythical content.
+
+Validation:
+- branch-local availability validators: 0 failures / 0 warnings for the implemented ordinary-wild scope;
+- mutation validator tests: 12/12 expected bad states rejected;
+- GitHub Actions run `36907831401`: **SUCCESS** for US Rev 0 and US Rev 1;
+- runtime/L4 encounter QA remains pending.
