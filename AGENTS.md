@@ -1,20 +1,21 @@
-# Codex Planning Instructions — Pokémon Platinum Overhaul
+# Planning Instructions — Pokémon Platinum Overhaul
 
 ## Official role split
 
 For all future unfinished overhaul phases:
 
-- **Codex `/plan` owns design planning.** It investigates the repo, studies relevant source and prior Emerald work, proposes the subsystem design, resolves sequencing/dependency questions, and produces an implementation-ready plan.
-- **User approves or rejects the plan.** User approval is required before a design becomes locked authority.
-- **Claude Code owns implementation.** Claude implements approved/locked Codex plans, performs source investigation needed for implementation, validates/builds/tests the result, and reports implementation blockers. Claude does not redesign approved systems.
+- **ChatGPT project planning owns interactive design with the user.** Design decisions are worked out in the project chat so the user can actively revise them.
+- **User approval locks the design.** Approved decisions must then be written into canonical repo specs and a full Claude-ready implementation plan.
+- **Codex `/plan` is optional support**, useful for targeted repo/source audits or a planning cross-check when specifically requested; it is not the default design owner.
+- **Claude Code owns implementation.** Claude implements approved/locked repo plans, performs source investigation needed for implementation, validates/builds/tests the result, and reports implementation blockers. Claude does not redesign approved systems.
 
 This is the default project workflow:
 
-> **Codex `/plan` → user approval → canonical plan/spec → Claude Code implementation → validation/status update**
+> **interactive ChatGPT design → user approval → approved design + full implementation plan committed to repo → Claude Code implementation → validation/status update**
 
-Do not hand future design ownership to Claude Code. Do not begin implementation of a genuinely unfinished subsystem until Codex has planned it and the user has approved the direction.
+Do not hand future design ownership to Claude Code. Do not begin implementation of a genuinely unfinished subsystem until the user has approved the design and the locked repo spec + implementation plan exist.
 
-## Mandatory read order before planning
+## Mandatory read order before design/source audit
 
 Before proposing a design plan, inspect:
 
@@ -45,7 +46,7 @@ If repo documents disagree, identify the contradiction instead of silently choos
 
 ## Planning target
 
-Use `/plan` for genuinely unfinished design areas, especially:
+Interactive project design should cover genuinely unfinished areas, especially:
 
 - #001–#493 world/encounter availability architecture
 - trainer overhaul
@@ -60,7 +61,7 @@ Evolution is not a blank design phase: its rules were locked in Pass A. Codex pl
 
 ## Emerald reuse rule
 
-For systems already solved in Emerald, `/plan` must begin with the Emerald design and implementation rather than inventing a fresh Platinum system.
+For systems already solved in Emerald, design must begin with the Emerald design and implementation rather than inventing a fresh Platinum system.
 
 Classify each feature as:
 
@@ -102,18 +103,18 @@ Use these states:
 - `IMPLEMENTED`
 - `VERIFIED`
 
-A `/plan` result is not automatically locked merely because it is thorough.
+A chat design or optional `/plan` result is not automatically locked merely because it is thorough.
 
 ## Handoff rule
 
-Before Claude begins implementing a newly designed subsystem, the approved Codex plan must exist in the repository as canonical authority.
+Before Claude begins implementing a newly designed subsystem, the approved design and implementation plan must exist in the repository as canonical authority.
 
 **User approval is not considered fully captured until the repository contains both:**
 
 1. the approved design/spec, including all locked decisions and superseded alternatives; and
 2. a complete Claude-ready implementation plan covering source targets, data/manifests, sequencing, guards, validation, build/runtime tests, dependencies, and acceptance criteria.
 
-When a design is approved, Codex should update/create these repo artifacts immediately rather than leaving the approval only in chat. If the subsystem is data-heavy, include machine-readable manifests or schemas where practical.
+When a design is approved, update/create these repo artifacts immediately rather than leaving the approval only in chat. If the subsystem is data-heavy, include machine-readable manifests or schemas where practical.
 
 Claude should be able to implement from the repository alone without needing the planning conversation.
 
