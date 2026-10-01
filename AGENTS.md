@@ -106,7 +106,14 @@ A `/plan` result is not automatically locked merely because it is thorough.
 
 ## Handoff rule
 
-Before Claude begins implementing a newly designed subsystem, the approved Codex plan must exist in the repository as a canonical spec/manifest with explicit acceptance criteria.
+Before Claude begins implementing a newly designed subsystem, the approved Codex plan must exist in the repository as canonical authority.
+
+**User approval is not considered fully captured until the repository contains both:**
+
+1. the approved design/spec, including all locked decisions and superseded alternatives; and
+2. a complete Claude-ready implementation plan covering source targets, data/manifests, sequencing, guards, validation, build/runtime tests, dependencies, and acceptance criteria.
+
+When a design is approved, Codex should update/create these repo artifacts immediately rather than leaving the approval only in chat. If the subsystem is data-heavy, include machine-readable manifests or schemas where practical.
 
 Claude should be able to implement from the repository alone without needing the planning conversation.
 
