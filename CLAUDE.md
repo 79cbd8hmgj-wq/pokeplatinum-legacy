@@ -4,11 +4,11 @@ This repository is the implementation source of truth. Do not reconstruct approv
 
 ## Official role boundary
 
-Future unfinished subsystem design is owned by **Codex `/plan`**, following `/AGENTS.md`.
+Future unfinished subsystem design is worked out interactively with the user in the ChatGPT project, following `/AGENTS.md`. Codex `/plan` may assist with targeted audits when explicitly requested, but it is not the default design owner.
 
 Claude Code's role is:
 
-- implement approved/locked Codex plans;
+- implement approved/locked repository plans;
 - inspect source as needed to implement them correctly;
 - generate guarded edits/manifests/scripts;
 - build, test, validate, and report discrepancies;
@@ -18,7 +18,7 @@ Claude Code must **not** take ownership of future design planning unless the use
 
 Default workflow:
 
-> **Codex `/plan` → user approval → approved design + full implementation plan committed to repo → Claude Code implementation → validation/status update**
+> **interactive ChatGPT design → user approval → approved design + full implementation plan committed to repo → Claude Code implementation → validation/status update**
 
 Do not implement a newly designed subsystem from chat-only approval. The repo must contain both the locked design and its implementation plan first.
 
@@ -36,7 +36,7 @@ Do not implement a newly designed subsystem from chat-only approval. The repo mu
 ## Authority rules
 
 - **LOCKED SPEC** is implementation authority. Do not redesign it unilaterally.
-- A Codex `DRAFT PLAN` is not implementation authority.
+- A chat draft or optional Codex `DRAFT PLAN` is not implementation authority.
 - **SUPERSEDED** material must not be implemented.
 - **UNRESOLVED** means stop and report the ambiguity; do not guess.
 - Current `main` source wins over historical application ledgers when determining what is already implemented.
@@ -79,7 +79,7 @@ Starting assumption:
 4. Audit/implement remaining C2 mechanics: reusable TMs, HM battle changes, TM source/economy rules.
 5. Run focused runtime tests for custom/high-risk mechanics.
 6. Implement the locked Pass A evolution design once its canonical manifest/source mapping is ready.
-7. For genuinely unfinished design areas, wait for approved Codex `/plan` output before implementation.
+7. For genuinely unfinished design areas, wait for the user-approved locked repo spec + implementation plan before implementation.
 
 ## Critical created-move facts
 
