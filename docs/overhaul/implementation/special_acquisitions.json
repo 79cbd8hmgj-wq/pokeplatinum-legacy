@@ -1,0 +1,589 @@
+{
+  "schema": "availability_special_acquisitions/1",
+  "resolves": "the 28 USER_DECISION_REQUIRED families deferred by the ordinary availability implementation (PR #10)",
+  "base_commit": "f89dfc79",
+  "shared": {
+    "fossil_revival": {
+      "file": "res/field/scripts/scripts_mining_museum.s",
+      "revival_label": "MiningMuseum_PokemonRevival",
+      "explorer_kit_file": "res/field/scripts/scripts_eterna_city_underground_man_house.s"
+    }
+  },
+  "acquisitions": {
+    "turtwig": {
+      "decision_key": "STARTER_DISTRIBUTION",
+      "kind": "GIFT",
+      "region": "SINNOH",
+      "band": "M1",
+      "vanilla_method": "Route 201 starter choice (one of three, the other two never obtainable)",
+      "overhaul_method": "Sandgem Lab research assistant gifts TURTWIG once 2 badges are held (one gift per visit, party-full retry)",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": false,
+      "gift": {
+        "file": "res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s",
+        "entry_label": "SandgemTownLab_ScientistF",
+        "species": "SPECIES_TURTWIG",
+        "flag": "FLAG_RECEIVED_STARTER_SINNOH_TURTWIG",
+        "min_badges": 2,
+        "give": {
+          "mode": "table",
+          "offer_label": "SandgemTownLab_StarterGift_Offer_Turtwig",
+          "give_label": "SandgemTownLab_StarterGift_Offer",
+          "var": "VAR_0x8001"
+        }
+      }
+    },
+    "chimchar": {
+      "decision_key": "STARTER_DISTRIBUTION",
+      "kind": "GIFT",
+      "region": "SINNOH",
+      "band": "M1",
+      "vanilla_method": "Route 201 starter choice",
+      "overhaul_method": "Sandgem Lab research assistant gifts CHIMCHAR once 2 badges are held (one gift per visit, party-full retry)",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": false,
+      "gift": {
+        "file": "res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s",
+        "entry_label": "SandgemTownLab_ScientistF",
+        "species": "SPECIES_CHIMCHAR",
+        "flag": "FLAG_RECEIVED_STARTER_SINNOH_CHIMCHAR",
+        "min_badges": 2,
+        "give": {
+          "mode": "table",
+          "offer_label": "SandgemTownLab_StarterGift_Offer_Chimchar",
+          "give_label": "SandgemTownLab_StarterGift_Offer",
+          "var": "VAR_0x8001"
+        }
+      }
+    },
+    "piplup": {
+      "decision_key": "STARTER_DISTRIBUTION",
+      "kind": "GIFT",
+      "region": "SINNOH",
+      "band": "M1",
+      "vanilla_method": "Route 201 starter choice",
+      "overhaul_method": "Sandgem Lab research assistant gifts PIPLUP once 2 badges are held (one gift per visit, party-full retry)",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": false,
+      "gift": {
+        "file": "res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s",
+        "entry_label": "SandgemTownLab_ScientistF",
+        "species": "SPECIES_PIPLUP",
+        "flag": "FLAG_RECEIVED_STARTER_SINNOH_PIPLUP",
+        "min_badges": 2,
+        "give": {
+          "mode": "table",
+          "offer_label": "SandgemTownLab_StarterGift_Offer_Piplup",
+          "give_label": "SandgemTownLab_StarterGift_Offer",
+          "var": "VAR_0x8001"
+        }
+      }
+    },
+    "bulbasaur": {
+      "decision_key": "STARTER_DISTRIBUTION",
+      "kind": "GIFT",
+      "region": "KANTO",
+      "band": "M1",
+      "vanilla_method": "not obtainable (Slot-2/trade only)",
+      "overhaul_method": "Sandgem Lab research assistant gifts BULBASAUR once 3 badges are held (one gift per visit, party-full retry)",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": false,
+      "gift": {
+        "file": "res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s",
+        "entry_label": "SandgemTownLab_ScientistF",
+        "species": "SPECIES_BULBASAUR",
+        "flag": "FLAG_RECEIVED_STARTER_KANTO_BULBASAUR",
+        "min_badges": 3,
+        "give": {
+          "mode": "table",
+          "offer_label": "SandgemTownLab_StarterGift_Offer_Bulbasaur",
+          "give_label": "SandgemTownLab_StarterGift_Offer",
+          "var": "VAR_0x8001"
+        }
+      }
+    },
+    "charmander": {
+      "decision_key": "STARTER_DISTRIBUTION",
+      "kind": "GIFT",
+      "region": "KANTO",
+      "band": "M1",
+      "vanilla_method": "not obtainable (Slot-2/trade only)",
+      "overhaul_method": "Sandgem Lab research assistant gifts CHARMANDER once 3 badges are held (one gift per visit, party-full retry)",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": false,
+      "gift": {
+        "file": "res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s",
+        "entry_label": "SandgemTownLab_ScientistF",
+        "species": "SPECIES_CHARMANDER",
+        "flag": "FLAG_RECEIVED_STARTER_KANTO_CHARMANDER",
+        "min_badges": 3,
+        "give": {
+          "mode": "table",
+          "offer_label": "SandgemTownLab_StarterGift_Offer_Charmander",
+          "give_label": "SandgemTownLab_StarterGift_Offer",
+          "var": "VAR_0x8001"
+        }
+      }
+    },
+    "squirtle": {
+      "decision_key": "STARTER_DISTRIBUTION",
+      "kind": "GIFT",
+      "region": "KANTO",
+      "band": "M1",
+      "vanilla_method": "not obtainable (Slot-2/trade only)",
+      "overhaul_method": "Sandgem Lab research assistant gifts SQUIRTLE once 3 badges are held (one gift per visit, party-full retry)",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": false,
+      "gift": {
+        "file": "res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s",
+        "entry_label": "SandgemTownLab_ScientistF",
+        "species": "SPECIES_SQUIRTLE",
+        "flag": "FLAG_RECEIVED_STARTER_KANTO_SQUIRTLE",
+        "min_badges": 3,
+        "give": {
+          "mode": "table",
+          "offer_label": "SandgemTownLab_StarterGift_Offer_Squirtle",
+          "give_label": "SandgemTownLab_StarterGift_Offer",
+          "var": "VAR_0x8001"
+        }
+      }
+    },
+    "chikorita": {
+      "decision_key": "STARTER_DISTRIBUTION",
+      "kind": "GIFT",
+      "region": "JOHTO",
+      "band": "M1",
+      "vanilla_method": "not obtainable (Slot-2/trade only)",
+      "overhaul_method": "Sandgem Lab research assistant gifts CHIKORITA once 4 badges are held (one gift per visit, party-full retry)",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": false,
+      "gift": {
+        "file": "res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s",
+        "entry_label": "SandgemTownLab_ScientistF",
+        "species": "SPECIES_CHIKORITA",
+        "flag": "FLAG_RECEIVED_STARTER_JOHTO_CHIKORITA",
+        "min_badges": 4,
+        "give": {
+          "mode": "table",
+          "offer_label": "SandgemTownLab_StarterGift_Offer_Chikorita",
+          "give_label": "SandgemTownLab_StarterGift_Offer",
+          "var": "VAR_0x8001"
+        }
+      }
+    },
+    "cyndaquil": {
+      "decision_key": "STARTER_DISTRIBUTION",
+      "kind": "GIFT",
+      "region": "JOHTO",
+      "band": "M1",
+      "vanilla_method": "not obtainable (Slot-2/trade only)",
+      "overhaul_method": "Sandgem Lab research assistant gifts CYNDAQUIL once 4 badges are held (one gift per visit, party-full retry)",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": false,
+      "gift": {
+        "file": "res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s",
+        "entry_label": "SandgemTownLab_ScientistF",
+        "species": "SPECIES_CYNDAQUIL",
+        "flag": "FLAG_RECEIVED_STARTER_JOHTO_CYNDAQUIL",
+        "min_badges": 4,
+        "give": {
+          "mode": "table",
+          "offer_label": "SandgemTownLab_StarterGift_Offer_Cyndaquil",
+          "give_label": "SandgemTownLab_StarterGift_Offer",
+          "var": "VAR_0x8001"
+        }
+      }
+    },
+    "totodile": {
+      "decision_key": "STARTER_DISTRIBUTION",
+      "kind": "GIFT",
+      "region": "JOHTO",
+      "band": "M1",
+      "vanilla_method": "not obtainable (Slot-2/trade only)",
+      "overhaul_method": "Sandgem Lab research assistant gifts TOTODILE once 4 badges are held (one gift per visit, party-full retry)",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": false,
+      "gift": {
+        "file": "res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s",
+        "entry_label": "SandgemTownLab_ScientistF",
+        "species": "SPECIES_TOTODILE",
+        "flag": "FLAG_RECEIVED_STARTER_JOHTO_TOTODILE",
+        "min_badges": 4,
+        "give": {
+          "mode": "table",
+          "offer_label": "SandgemTownLab_StarterGift_Offer_Totodile",
+          "give_label": "SandgemTownLab_StarterGift_Offer",
+          "var": "VAR_0x8001"
+        }
+      }
+    },
+    "treecko": {
+      "decision_key": "STARTER_DISTRIBUTION",
+      "kind": "GIFT",
+      "region": "HOENN",
+      "band": "M2",
+      "vanilla_method": "not obtainable (Slot-2/trade only)",
+      "overhaul_method": "Sandgem Lab research assistant gifts TREECKO once 5 badges are held (one gift per visit, party-full retry)",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": false,
+      "gift": {
+        "file": "res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s",
+        "entry_label": "SandgemTownLab_ScientistF",
+        "species": "SPECIES_TREECKO",
+        "flag": "FLAG_RECEIVED_STARTER_HOENN_TREECKO",
+        "min_badges": 5,
+        "give": {
+          "mode": "table",
+          "offer_label": "SandgemTownLab_StarterGift_Offer_Treecko",
+          "give_label": "SandgemTownLab_StarterGift_Offer",
+          "var": "VAR_0x8001"
+        }
+      }
+    },
+    "torchic": {
+      "decision_key": "STARTER_DISTRIBUTION",
+      "kind": "GIFT",
+      "region": "HOENN",
+      "band": "M2",
+      "vanilla_method": "not obtainable (Slot-2/trade only)",
+      "overhaul_method": "Sandgem Lab research assistant gifts TORCHIC once 5 badges are held (one gift per visit, party-full retry)",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": false,
+      "gift": {
+        "file": "res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s",
+        "entry_label": "SandgemTownLab_ScientistF",
+        "species": "SPECIES_TORCHIC",
+        "flag": "FLAG_RECEIVED_STARTER_HOENN_TORCHIC",
+        "min_badges": 5,
+        "give": {
+          "mode": "table",
+          "offer_label": "SandgemTownLab_StarterGift_Offer_Torchic",
+          "give_label": "SandgemTownLab_StarterGift_Offer",
+          "var": "VAR_0x8001"
+        }
+      }
+    },
+    "mudkip": {
+      "decision_key": "STARTER_DISTRIBUTION",
+      "kind": "GIFT",
+      "region": "HOENN",
+      "band": "M2",
+      "vanilla_method": "not obtainable (Slot-2/trade only)",
+      "overhaul_method": "Sandgem Lab research assistant gifts MUDKIP once 5 badges are held (one gift per visit, party-full retry)",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": false,
+      "gift": {
+        "file": "res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s",
+        "entry_label": "SandgemTownLab_ScientistF",
+        "species": "SPECIES_MUDKIP",
+        "flag": "FLAG_RECEIVED_STARTER_HOENN_MUDKIP",
+        "min_badges": 5,
+        "give": {
+          "mode": "table",
+          "offer_label": "SandgemTownLab_StarterGift_Offer_Mudkip",
+          "give_label": "SandgemTownLab_StarterGift_Offer",
+          "var": "VAR_0x8001"
+        }
+      }
+    },
+    "omanyte": {
+      "decision_key": "FOSSIL_ACQUISITION",
+      "kind": "FOSSIL",
+      "band": "M1",
+      "vanilla_method": "Underground mining; weight 0 before the National Dex",
+      "overhaul_method": "Underground mining (Explorer Kit from Eterna) with one TID/Dex-independent weight per fossil; revived at the Oreburgh Mining Museum",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": true,
+      "fossil": {
+        "mining_item": "HELIX_FOSSIL",
+        "revival_item": "ITEM_HELIX_FOSSIL",
+        "species": "SPECIES_OMANYTE"
+      }
+    },
+    "kabuto": {
+      "decision_key": "FOSSIL_ACQUISITION",
+      "kind": "FOSSIL",
+      "band": "M1",
+      "vanilla_method": "Underground mining; weight 0 before the National Dex",
+      "overhaul_method": "Underground mining (Explorer Kit from Eterna) with one TID/Dex-independent weight per fossil; revived at the Oreburgh Mining Museum",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": true,
+      "fossil": {
+        "mining_item": "DOME_FOSSIL",
+        "revival_item": "ITEM_DOME_FOSSIL",
+        "species": "SPECIES_KABUTO"
+      }
+    },
+    "lileep": {
+      "decision_key": "FOSSIL_ACQUISITION",
+      "kind": "FOSSIL",
+      "band": "M1",
+      "vanilla_method": "Underground mining; weight 0 before the National Dex",
+      "overhaul_method": "Underground mining (Explorer Kit from Eterna) with one TID/Dex-independent weight per fossil; revived at the Oreburgh Mining Museum",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": true,
+      "fossil": {
+        "mining_item": "ROOT_FOSSIL",
+        "revival_item": "ITEM_ROOT_FOSSIL",
+        "species": "SPECIES_LILEEP"
+      }
+    },
+    "anorith": {
+      "decision_key": "FOSSIL_ACQUISITION",
+      "kind": "FOSSIL",
+      "band": "M1",
+      "vanilla_method": "Underground mining; weight 0 before the National Dex",
+      "overhaul_method": "Underground mining (Explorer Kit from Eterna) with one TID/Dex-independent weight per fossil; revived at the Oreburgh Mining Museum",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": true,
+      "fossil": {
+        "mining_item": "CLAW_FOSSIL",
+        "revival_item": "ITEM_CLAW_FOSSIL",
+        "species": "SPECIES_ANORITH"
+      }
+    },
+    "aerodactyl": {
+      "decision_key": "FOSSIL_ACQUISITION",
+      "kind": "FOSSIL",
+      "band": "M1",
+      "vanilla_method": "Underground mining; weight 0 before the National Dex",
+      "overhaul_method": "Underground mining (Explorer Kit from Eterna) with one TID/Dex-independent weight per fossil; revived at the Oreburgh Mining Museum",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": true,
+      "fossil": {
+        "mining_item": "OLD_AMBER",
+        "revival_item": "ITEM_OLD_AMBER",
+        "species": "SPECIES_AERODACTYL"
+      }
+    },
+    "shieldon": {
+      "decision_key": "FOSSIL_ACQUISITION",
+      "kind": "FOSSIL",
+      "band": "M1",
+      "vanilla_method": "Underground mining; weight 0 for odd Trainer IDs",
+      "overhaul_method": "Underground mining (Explorer Kit from Eterna) with one TID/Dex-independent weight per fossil; revived at the Oreburgh Mining Museum",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": true,
+      "fossil": {
+        "mining_item": "ARMOR_FOSSIL",
+        "revival_item": "ITEM_ARMOR_FOSSIL",
+        "species": "SPECIES_SHIELDON"
+      }
+    },
+    "cranidos": {
+      "decision_key": "FOSSIL_ACQUISITION",
+      "kind": "FOSSIL",
+      "band": "M1",
+      "vanilla_method": "Underground mining; weight 0 for even Trainer IDs",
+      "overhaul_method": "Underground mining (Explorer Kit from Eterna) with one TID/Dex-independent weight per fossil; revived at the Oreburgh Mining Museum",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": true,
+      "fossil": {
+        "mining_item": "SKULL_FOSSIL",
+        "revival_item": "ITEM_SKULL_FOSSIL",
+        "species": "SPECIES_CRANIDOS"
+      }
+    },
+    "spiritomb": {
+      "decision_key": "SPIRITOMB_QUEST",
+      "kind": "SPIRITOMB_RITUAL",
+      "band": "M1",
+      "vanilla_method": "Odd Keystone + Hallowed Tower after talking to 32 other players in the Underground; an uncaught Spiritomb ends the ritual",
+      "overhaul_method": "Odd Keystone (Twinleaf hidden item) + Hallowed Tower; the counter rises by one per object unearthed in Underground mining; an uncaught Spiritomb leaves the ritual intact",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": true,
+      "ritual": {
+        "file": "res/field/scripts/scripts_route_209.s"
+      }
+    },
+    "rotom": {
+      "decision_key": "ROTOM_UNLOCK_PRESENTATION",
+      "kind": "STATIC_ENCOUNTER",
+      "band": "E1",
+      "vanilla_method": "Old Chateau TV static (night, once per day); form room needs a Mystery Gift Secret Key",
+      "overhaul_method": "Old Chateau TV static at night with no daily cap; catching it grants the Secret Key and unlocks the existing appliance room",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": false,
+      "static": {
+        "file": "res/field/scripts/scripts_old_chateau_back_middle_west_room.s",
+        "entry_label": "OldChateauBackMiddleWestRoom_TV",
+        "species": "SPECIES_ROTOM",
+        "caught_flag": "FLAG_CAUGHT_OLD_CHATEAU_ROTOM",
+        "forbidden_gate_tokens": ["FLAG_DAILY_BATTLED_OLD_CHATEAU_ROTOM"],
+        "secret_key": {
+          "var": "VAR_DISTRIBUTION_EVENT_ROTOM",
+          "magic": "0x1103"
+        }
+      }
+    },
+    "tyrogue": {
+      "decision_key": "TYROGUE_GIFT_VS_HABITAT",
+      "kind": "GIFT",
+      "band": "M1",
+      "vanilla_method": "breeding Hitmonlee/Hitmonchan/Hitmontop only (Radar slot on Route 211 West)",
+      "overhaul_method": "Celestic Town Black Belt gifts Tyrogue after the Poketch watch gift",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": false,
+      "gift": {
+        "file": "res/field/scripts/scripts_celestic_town_southwest_house.s",
+        "entry_label": "CelesticTownPokecenter1F_BlackBelt",
+        "species": "SPECIES_TYROGUE",
+        "flag": "FLAG_RECEIVED_CELESTIC_TOWN_SOUTHWEST_HOUSE_TYROGUE",
+        "min_badges": 0,
+        "give": {
+          "mode": "direct",
+          "label": "CelesticTownSoutheastHouse_OfferTyrogue"
+        }
+      }
+    },
+    "happiny": {
+      "decision_key": "HAPPINY_CHANSEY_GIFT_VS_HABITAT",
+      "kind": "GIFT",
+      "band": "M1",
+      "vanilla_method": "Chansey 1%/4% on Routes 209/210 (kept as bonus), Trophy Garden daily; Happiny by breeding",
+      "overhaul_method": "Celestic Town Black Belt gifts Happiny after the Tyrogue gift (the Happiny in his room)",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": false,
+      "gift": {
+        "file": "res/field/scripts/scripts_celestic_town_southwest_house.s",
+        "entry_label": "CelesticTownPokecenter1F_BlackBelt",
+        "species": "SPECIES_HAPPINY",
+        "flag": "FLAG_RECEIVED_CELESTIC_TOWN_SOUTHWEST_HOUSE_HAPPINY",
+        "min_badges": 0,
+        "give": {
+          "mode": "direct",
+          "label": "CelesticTownSoutheastHouse_OfferHappiny"
+        }
+      }
+    },
+    "castform": {
+      "decision_key": "CASTFORM_GIFT_VS_HABITAT",
+      "kind": "GIFT",
+      "band": "M1",
+      "vanilla_method": "Trophy Garden daily rotation only",
+      "overhaul_method": "Veilstone City parasol woman (weather-report watcher) gifts Castform",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": false,
+      "gift": {
+        "file": "res/field/scripts/scripts_veilstone_city.s",
+        "entry_label": "VeilstoneCity_BattleGirl2",
+        "species": "SPECIES_CASTFORM",
+        "flag": "FLAG_RECEIVED_VEILSTONE_CITY_CASTFORM",
+        "min_badges": 0,
+        "give": {
+          "mode": "direct",
+          "label": "VeilstoneCity_BattleGirl2"
+        }
+      }
+    },
+    "eevee": {
+      "decision_key": "EEVEE_GIFT_VS_WILD_BALANCE",
+      "kind": "GIFT",
+      "band": "M1",
+      "vanilla_method": "Hearthome City northwest house gift (Lv20, party-full retry) + Trophy Garden daily",
+      "overhaul_method": "unchanged: existing Hearthome gift verified retry-safe and pre-E4 (Hearthome is the 3rd gym town)",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": false,
+      "gift": {
+        "file": "res/field/scripts/scripts_hearthome_city_northwest_house.s",
+        "entry_label": "HearthomeCityNorthwestHouse_Bebe",
+        "species": "SPECIES_EEVEE",
+        "flag": "FLAG_RECEIVED_HEARTHOME_CITY_NORTHWEST_HOUSE_EEVEE",
+        "min_badges": 0,
+        "give": {
+          "mode": "direct",
+          "label": "HearthomeCityNorthwestHouse_AcceptEevee"
+        }
+      }
+    },
+    "porygon": {
+      "decision_key": "PORYGON_ACQUISITION_PRESENTATION",
+      "kind": "GIFT",
+      "band": "M1",
+      "vanilla_method": "Veilstone City northeast house gift (Lv25, party-full retry)",
+      "overhaul_method": "unchanged: existing Veilstone gift verified retry-safe and pre-E4",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": false,
+      "gift": {
+        "file": "res/field/scripts/scripts_veilstone_city_northeast_house.s",
+        "entry_label": "VeilstoneCityNortheastHouse_PokefanM",
+        "species": "SPECIES_PORYGON",
+        "flag": "FLAG_RECEIVED_VEILSTONE_CITY_NORTHEAST_HOUSE_PORYGON",
+        "min_badges": 0,
+        "give": {
+          "mode": "direct",
+          "label": "VeilstoneCityNortheastHouse_AcceptPorygon"
+        }
+      }
+    },
+    "riolu": {
+      "decision_key": "RIOLU_REPEATABILITY",
+      "kind": "GIFT",
+      "band": "M2",
+      "vanilla_method": "Riley's Riolu egg on Iron Island B2F; a full party sets FLAG_COULD_NOT_RECEIVE_RIOLU_EGG and Riley re-offers",
+      "overhaul_method": "unchanged: existing recovery flag verified (set on failure, checked at entry, cleared on success)",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": false,
+      "gift": {
+        "file": "res/field/scripts/scripts_iron_island_b2f_left_room.s",
+        "entry_label": "IronIslandB2FLeftRoom_Riley",
+        "species": "SPECIES_RIOLU",
+        "give_command": "GiveEgg",
+        "flag": "FLAG_RECEIVED_RIOLU_EGG_FROM_RILEY",
+        "flag_label": "IronIslandB2FLeftRoom_SetFlagReceivedEgg",
+        "recovery_flag": "FLAG_COULD_NOT_RECEIVE_RIOLU_EGG",
+        "min_badges": 0,
+        "give": {
+          "mode": "direct",
+          "label": "IronIslandB2FLeftRoom_AcceptedEgg"
+        }
+      }
+    },
+    "feebas": {
+      "decision_key": "FEEBAS_IMPLEMENTATION",
+      "kind": "FISHING_FIXED_TILES",
+      "band": "P0",
+      "vanilla_method": "Mt. Coronet B1F: four Feebas tiles re-rolled from the mixed-record RNG, 50% hit chance on them",
+      "overhaul_method": "four fixed tiles (one per quarter of the lake), same 50% chance; any rod",
+      "retry_safe": true,
+      "external_dependencies": [],
+      "engine_change": true,
+      "fishing": {
+        "fixed_tiles_xz": [
+          [23, 21],
+          [12, 29],
+          [21, 39],
+          [12, 48]
+        ],
+        "map": "mt_coronet_b1f"
+      }
+    }
+  }
+}

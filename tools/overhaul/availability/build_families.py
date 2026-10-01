@@ -17,7 +17,7 @@ from base_source import all_base_maps, base_encounter
 from common import (BASE_COMMIT, IMPL_DIR, LEGENDARY_DEX, SPECIES, dex, evolution_edges)
 from manifest_io import dumps_compact
 
-# Section 5 (USER APPROVAL REQUIRED) items -> decision keys. Claude must not choose these.
+# Section 5 items deferred by the ordinary-availability pass -> resolved by special_acquisitions.json.
 DECISIONS = {
     "STARTER_DISTRIBUTION": ["Bulbasaur", "Charmander", "Squirtle", "Chikorita", "Cyndaquil", "Totodile",
                               "Treecko", "Torchic", "Mudkip", "Turtwig", "Chimchar", "Piplup"],
@@ -36,9 +36,6 @@ LABEL_TO_DECISION = {lbl: key for key, lbls in DECISIONS.items() for lbl in lbls
 # Pseudo-legendary catch-up habitats are a separate USER_DECISION (secondary habitat only).
 PSEUDO = ["Dratini", "Larvitar", "Bagon", "Gible", "Beldum"]
 
-# Dependencies present in current source for decision families (left in place until the user decides).
-KNOWN_CURRENT_DEPENDENCIES = {"feebas": ["RANDOM_TILE (elusive rod tile, current source)"],
-                              "spiritomb": ["MULTIPLAYER (Underground interaction counter, current source)"]}
 BONUS_KEYWORDS = [("Radar", "RADAR"), ("swarm", "SWARM"), ("Honey", "HONEY"), ("Marsh", "GREAT_MARSH"),
                   ("Garden", "TROPHY_GARDEN"), ("daily", "GREAT_MARSH")]
 
@@ -176,20 +173,23 @@ def main() -> int:
         fam = {
             "family_id": fid, "label": r["label"], "components": mem, "dex": dexes,
             "classification": "NONLEGENDARY",
-            "availability_status": "USER_DECISION_REQUIRED" if decision else "PLACE_WILD",
+            "availability_status": "SPECIAL_ACQUISITION" if decision else "PLACE_WILD",
             "earliest_progression_band": r["earliest"],
             "origin_section": r["origin_section"],
             "area_system_text": r["area"],
-            "acquisition_class": "SPECIAL_DECISION_REQUIRED" if decision else "WILD_FIXED",
+            "acquisition_class": "SPECIAL_SCRIPTED" if decision else "WILD_FIXED",
             "entry_stage": stages, "entry_stage_text": r["entry_stage_text"],
             "rarity_tier": r["tier"], "pre_e4": r["pre_e4"] == "Y",
-            "renewable_retry_safe": None if decision else True,
+            "renewable_retry_safe": True,
             "special_system_bonus": bonus,
-            "external_dependency_flags": (["PENDING_USER_DECISION"] + KNOWN_CURRENT_DEPENDENCIES.get(fid, [])) if decision else [],
+            "external_dependency_flags": [],
             "legacy_dependency_flags_in_base_source": legacy_dependency,
             "placement_confidence": r["confidence"],
-            "user_decision_required": bool(decision),
-            "user_decision_key": decision,
+            "user_decision_required": False,
+            "user_decision_key": None,
+            "special_acquisition": bool(decision),
+            "special_acquisition_key": decision,
+            "resolved_by": "special_acquisitions.json" if decision else "wild_encounters.json",
             "note": r["note"],
         }
         if r["label"] in PSEUDO:
@@ -209,12 +209,13 @@ def main() -> int:
         "authority": "docs/overhaul/AVAILABILITY_ARCHITECTURE.md (Pass 3 matrix); components from live evolution data",
         "note": ("Family components are connected components of res/pokemon/*/data.json evolution edges "
                  "(method-independent, so Pass A evolution-method changes cannot change membership)."),
-        "decisions_unresolved": {k: v for k, v in DECISIONS.items()},
+        "special_acquisition_groups": {k: v for k, v in DECISIONS.items()},
         "counts": {
             "families_total": len(families),
             "nonlegendary": sum(f["classification"] == "NONLEGENDARY" for f in families),
             "reserved_later_phase": sum(f["classification"] != "NONLEGENDARY" for f in families),
             "place_wild": sum(f.get("availability_status") == "PLACE_WILD" for f in families),
+            "special_acquisition": sum(f.get("special_acquisition", False) for f in families),
             "user_decision_required": sum(f.get("user_decision_required", False) for f in families),
         },
         "families": families,

@@ -6,7 +6,7 @@ Policy (AVAILABILITY_ARCHITECTURE.md s.3, user-approved at policy level):
   * Radar / swarm / Honey / Trophy Garden dailies / Great Marsh dailies -> kept as bonus systems; every species they
     can produce points at a deterministic fixed fallback in wild_encounters.json
   * Great Marsh before/after National Dex arrays -> unified (after set); the Dex no longer changes the Marsh table
-Nothing here chooses a USER_DECISION_REQUIRED design: decision families are recorded as such, never invented.
+Special-acquisition families (gifts/statics/fossils/...) are recorded as SPECIAL_ACQUISITION fallbacks.
 """
 from __future__ import annotations
 
@@ -33,7 +33,7 @@ def main() -> int:
         return {"species": sp, **fb.resolve(sp)}
 
     out = {"schema": "availability_special_systems/1", "base_commit": BASE_COMMIT,
-           "status": "policy-level conversions only; no USER_DECISION_REQUIRED item is decided here"}
+           "status": "policy-level conversions only; special-acquisition families resolve to SPECIAL_ACQUISITION"}
 
     dual = {}
     for name in all_base_maps():

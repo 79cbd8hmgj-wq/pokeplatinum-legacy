@@ -15,7 +15,10 @@ validate_availability.py     --state manifest   (pre-apply proof)   |  --state l
 apply_wild_encounters.py     --bands E0,E1 --groups land,water,special [--dry-run]   (before-value guards, fail closed, idempotent)
 semantic_diff.py             live JSON vs manifest target (+ scope audit)
 verify_built_encounters.py   --build <meson build dir>   (decodes the compiled encounter binaries)
-test_validators.py           mutation tests proving the validators fail when they should
+build_special_acquisitions.py  -> special_acquisitions.json (28 special families)
+special_verify.py            static analyzers (scripts/C source) for gifts, statics, fossils, Spiritomb, Feebas
+special_scope_audit.py       only the allowed files may differ from the availability baseline
+test_validators.py           mutation tests proving the validators fail when they should (12 ordinary + 25 special + vanilla control)
 ```
 
 Regenerate everything: `for s in build_families build_wild_manifest build_special_manifest build_zones; do python3 tools/overhaul/availability/$s.py; done`

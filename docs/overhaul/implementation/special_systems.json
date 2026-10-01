@@ -1,7 +1,7 @@
 {
   "schema": "availability_special_systems/1",
   "base_commit": "cb420c0d",
-  "status": "policy-level conversions only; no USER_DECISION_REQUIRED item is decided here",
+  "status": "policy-level conversions only; special-acquisition families resolve to SPECIAL_ACQUISITION",
   "dual_slot": {
     "policy": "NEUTRALIZED: every cartridge array mirrors land slots 8/9; no Slot-2 effect remains",
     "maps": {
@@ -5975,10 +5975,10 @@
         "before": ["SPECIES_TYROGUE", "SPECIES_TYROGUE", "SPECIES_TYROGUE", "SPECIES_TYROGUE"],
         "after": ["SPECIES_TYROGUE", "SPECIES_TYROGUE", "SPECIES_TYROGUE", "SPECIES_TYROGUE"],
         "entries": [
-          {"species": "SPECIES_TYROGUE", "family_id": "tyrogue", "fallback": "USER_DECISION_REQUIRED", "decision": "TYROGUE_GIFT_VS_HABITAT"},
-          {"species": "SPECIES_TYROGUE", "family_id": "tyrogue", "fallback": "USER_DECISION_REQUIRED", "decision": "TYROGUE_GIFT_VS_HABITAT"},
-          {"species": "SPECIES_TYROGUE", "family_id": "tyrogue", "fallback": "USER_DECISION_REQUIRED", "decision": "TYROGUE_GIFT_VS_HABITAT"},
-          {"species": "SPECIES_TYROGUE", "family_id": "tyrogue", "fallback": "USER_DECISION_REQUIRED", "decision": "TYROGUE_GIFT_VS_HABITAT"}
+          {"species": "SPECIES_TYROGUE", "family_id": "tyrogue", "fallback": "SPECIAL_ACQUISITION", "acquisition": "TYROGUE_GIFT_VS_HABITAT"},
+          {"species": "SPECIES_TYROGUE", "family_id": "tyrogue", "fallback": "SPECIAL_ACQUISITION", "acquisition": "TYROGUE_GIFT_VS_HABITAT"},
+          {"species": "SPECIES_TYROGUE", "family_id": "tyrogue", "fallback": "SPECIAL_ACQUISITION", "acquisition": "TYROGUE_GIFT_VS_HABITAT"},
+          {"species": "SPECIES_TYROGUE", "family_id": "tyrogue", "fallback": "SPECIAL_ACQUISITION", "acquisition": "TYROGUE_GIFT_VS_HABITAT"}
         ]
       },
       "route_212_north": {
@@ -7378,9 +7378,9 @@
       "before": ["SPECIES_EEVEE", "SPECIES_BONSLY", "SPECIES_HAPPINY", "SPECIES_MEOWTH", "SPECIES_CLEFFA", "SPECIES_CLEFAIRY", "SPECIES_IGGLYBUFF", "SPECIES_PLUSLE", "SPECIES_JIGGLYPUFF", "SPECIES_DITTO", "SPECIES_CASTFORM", "SPECIES_MINUN", "SPECIES_MIME_JR", "SPECIES_MARILL", "SPECIES_CHANSEY", "SPECIES_AZURILL"],
       "after": ["SPECIES_EEVEE", "SPECIES_BONSLY", "SPECIES_HAPPINY", "SPECIES_MEOWTH", "SPECIES_CLEFFA", "SPECIES_CLEFAIRY", "SPECIES_IGGLYBUFF", "SPECIES_PLUSLE", "SPECIES_JIGGLYPUFF", "SPECIES_DITTO", "SPECIES_CASTFORM", "SPECIES_MINUN", "SPECIES_MIME_JR", "SPECIES_MARILL", "SPECIES_CHANSEY", "SPECIES_AZURILL"],
       "entries": [
-        {"species": "SPECIES_EEVEE", "family_id": "eevee", "fallback": "USER_DECISION_REQUIRED", "decision": "EEVEE_GIFT_VS_WILD_BALANCE"},
+        {"species": "SPECIES_EEVEE", "family_id": "eevee", "fallback": "SPECIAL_ACQUISITION", "acquisition": "EEVEE_GIFT_VS_WILD_BALANCE"},
         {"species": "SPECIES_BONSLY", "family_id": "bonsly", "fallback": {"map": "route_209", "method": "land", "species": "SPECIES_BONSLY", "min_rate_pct": 15, "band": "M1"}},
-        {"species": "SPECIES_HAPPINY", "family_id": "happiny", "fallback": "USER_DECISION_REQUIRED", "decision": "HAPPINY_CHANSEY_GIFT_VS_HABITAT"},
+        {"species": "SPECIES_HAPPINY", "family_id": "happiny", "fallback": "SPECIAL_ACQUISITION", "acquisition": "HAPPINY_CHANSEY_GIFT_VS_HABITAT"},
         {"species": "SPECIES_MEOWTH", "family_id": "meowth", "fallback": {"map": "lake_verity", "method": "land", "species": "SPECIES_MEOWTH", "min_rate_pct": 10, "band": "E0"}},
         {"species": "SPECIES_CLEFFA", "family_id": "cleffa", "fallback": {"map": "mt_coronet_1f_north_room_1", "method": "land", "species": "SPECIES_CLEFAIRY", "min_rate_pct": 15, "band": "E1"}},
         {"species": "SPECIES_CLEFAIRY", "family_id": "cleffa", "fallback": {"map": "mt_coronet_1f_north_room_1", "method": "land", "species": "SPECIES_CLEFAIRY", "min_rate_pct": 15, "band": "E1"}},
@@ -7388,11 +7388,11 @@
         {"species": "SPECIES_PLUSLE", "family_id": "plusle", "fallback": {"map": "trophy_garden", "method": "land", "species": "SPECIES_PLUSLE", "min_rate_pct": 10, "band": "M1"}},
         {"species": "SPECIES_JIGGLYPUFF", "family_id": "igglybuff", "fallback": {"map": "route_208", "method": "land", "species": "SPECIES_JIGGLYPUFF", "min_rate_pct": 20, "band": "M1"}},
         {"species": "SPECIES_DITTO", "family_id": "ditto", "fallback": {"map": "trophy_garden", "method": "land", "species": "SPECIES_DITTO", "min_rate_pct": 10, "band": "M1"}},
-        {"species": "SPECIES_CASTFORM", "family_id": "castform", "fallback": "USER_DECISION_REQUIRED", "decision": "CASTFORM_GIFT_VS_HABITAT"},
+        {"species": "SPECIES_CASTFORM", "family_id": "castform", "fallback": "SPECIAL_ACQUISITION", "acquisition": "CASTFORM_GIFT_VS_HABITAT"},
         {"species": "SPECIES_MINUN", "family_id": "minun", "fallback": {"map": "trophy_garden", "method": "land", "species": "SPECIES_MINUN", "min_rate_pct": 10, "band": "M1"}},
         {"species": "SPECIES_MIME_JR", "family_id": "mime_jr", "fallback": {"map": "route_209", "method": "land", "species": "SPECIES_MIME_JR", "min_rate_pct": 20, "band": "M1"}},
         {"species": "SPECIES_MARILL", "family_id": "azurill", "fallback": {"map": "route_205_south", "method": "land", "species": "SPECIES_AZURILL", "min_rate_pct": 10, "band": "E1"}},
-        {"species": "SPECIES_CHANSEY", "family_id": "happiny", "fallback": "USER_DECISION_REQUIRED", "decision": "HAPPINY_CHANSEY_GIFT_VS_HABITAT"},
+        {"species": "SPECIES_CHANSEY", "family_id": "happiny", "fallback": "SPECIAL_ACQUISITION", "acquisition": "HAPPINY_CHANSEY_GIFT_VS_HABITAT"},
         {"species": "SPECIES_AZURILL", "family_id": "azurill", "fallback": {"map": "route_205_south", "method": "land", "species": "SPECIES_AZURILL", "min_rate_pct": 10, "band": "E1"}}
       ]
     }
