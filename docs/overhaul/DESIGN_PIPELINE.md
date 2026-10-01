@@ -6,15 +6,14 @@ This file tracks design work that still needs exact subsystem-level specificatio
 
 For every remaining subsystem:
 
-1. Codex `/plan` reads canonical repo authority and relevant Platinum/Emerald source.
-2. Codex produces a `DRAFT PLAN` containing only genuinely unresolved decisions.
-3. User approves/rejects the decisions.
-4. Approval is immediately captured in the repository as:
+1. ChatGPT and the user design the subsystem interactively from canonical repo authority and relevant Platinum/Emerald source.
+2. Draft decisions are revised in chat until the user approves them.
+3. Approval is immediately captured in the repository as:
    - a canonical locked design/spec; and
    - a complete Claude-ready implementation plan.
-5. Data-heavy systems also receive machine-readable manifests/schemas when practical.
-6. Only then may Claude implement.
-7. Claude validates/builds/tests and updates `docs/overhaul/STATUS.md`.
+4. Data-heavy systems also receive machine-readable manifests/schemas when practical.
+5. Only then may Claude implement.
+6. Claude validates/builds/tests and updates `docs/overhaul/STATUS.md`.
 
 Chat-only approval is not sufficient implementation authority.
 
@@ -89,7 +88,7 @@ Still needed:
 - capture-regression tests.
 
 ### D4 — Breeding 2.0
-Status: `NEEDS GEN-IV FINALIZATION`
+Status: `LOCKED SPEC`
 
 Existing authority:
 - breeding should be meaningful rather than postgame paperwork;
@@ -172,7 +171,7 @@ Must validate:
 
 ## Current next design
 
-**D4 — Breeding 2.0** is the next design phase.
+**D5 — Legendary/Mythical Events** is the next design phase.
 
 D3 authority:
 - `docs/overhaul/pokeballs/POKE_BALL_REBALANCE_SPEC.md`
@@ -185,3 +184,7 @@ Economy authority:
 Trainer authority:
 - `docs/overhaul/trainers/TRAINER_OVERHAUL_SPEC.md`
 - `docs/overhaul/trainers/TRAINER_IMPLEMENTATION_PLAN.md`
+
+D4 authority:
+- `docs/overhaul/breeding/BREEDING_2_SPEC.md`
+- `docs/overhaul/breeding/BREEDING_2_IMPLEMENTATION_PLAN.md`
