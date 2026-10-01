@@ -4,292 +4,293 @@ Status: **LOCKED IMPLEMENTATION PLAN**
 
 Authority:
 - `docs/overhaul/breeding/BREEDING_SPEC.md`
-- locked C3 learnset/egg-move principles
-- locked evolution/species rules
+- locked evolution/species/learnset authority
 
-Claude Code implements; it must not redesign breeding behavior.
+Claude Code implements; it must not redesign breeding rules.
 
-## 1. Source targets
+## 1. Confirmed source targets
 
-Primary engine:
+Primary breeding engine:
 - `src/overlay005/daycare.c`
 - `include/constants/daycare.h`
-- `src/daycare_save.c`
-- relevant Day Care scripts/text
 
-Data:
-- species egg-group fields under `res/pokemon/*/data.json`;
-- generated egg-group constants;
-- species egg-move resources generated from `res/pokemon/species_egg_moves.h` / source templates;
-- species hatch-cycle values in Pokémon data.
+Relevant behavior already exposed there:
+- Everstone nature inheritance;
+- IV inheritance;
+- egg-move construction;
+- Ditto handling;
+- incense-baby conversion;
+- compatibility;
+- egg generation;
+- hatch-cycle decrement;
+- Flame Body/Magma Armor.
 
-Known functions requiring audit/edits:
-- `Daycare_GetParentToInheritNature`
-- `Daycare_SetInheritedNature`
-- `Egg_InheritIVs`
-- `Egg_BuildMoveset`
-- `Daycare_AlterEggSpeciesWithIncenseItem`
-- `Daycare_Update`
-- egg hatch-cycle decrement path
-- compatibility helpers
+Additional sources:
+- `res/pokemon/*/data.json` for hatch cycles / egg groups;
+- generated egg-move data and source templates;
+- Day Care field scripts/text;
+- item data for Everstone/Power items;
+- mart stock for breeding supplies.
 
-## 2. B0 — Baseline manifest
+## 2. Breeding manifests
 
 Create:
+- `docs/overhaul/implementation/breeding/breeding_rules.json`
+- `docs/overhaul/implementation/breeding/egg_group_changes.json`
+- `docs/overhaul/implementation/breeding/egg_move_changes.json`
+- `docs/overhaul/implementation/breeding/hatch_cycle_changes.json`
+- `docs/overhaul/implementation/breeding/breeder_shop_changes.json`
 
-`docs/overhaul/implementation/breeding/breeding_rules.json`
+Every non-empty change entry must include:
+- before value;
+- target value;
+- source path;
+- rationale;
+- locked authority reference.
 
-Encode:
-- Everstone rate = 100%;
-- inherited IV count = 4;
-- IV stats unique = true;
-- either-parent egg moves = true;
-- no-incense babies = true;
-- egg check cadence = 128;
-- hatch-cycle transform = ceil(vanilla/2);
-- Flame Body/Magma Armor multiplier preserved;
-- ability inheritance = vanilla;
-- Masuda behavior = vanilla.
+The egg-group and egg-move manifests may legitimately be empty if the audit proves no Core 1.0 changes are required.
 
-Create before-value/source guards.
+## 3. B0 — Guard current behavior
 
-## 3. B1 — Nature inheritance
+Before edits, add or script deterministic tests for:
+- single-Everstone 50% behavior;
+- current female/Ditto restriction;
+- 3-IV inheritance;
+- current father-only egg moves;
+- incense babies;
+- 255-step generation cycle;
+- hatch-cycle decrement;
+- Flame Body/Magma Armor;
+- Masuda personality rerolls.
 
-Refactor current Everstone selection so:
-- one holder always passes nature;
-- two holders use a 50/50 parent choice when appropriate;
-- same-nature holders remain deterministic;
-- Ditto works consistently.
+Capture source hashes/guards.
 
-Do not change random nature behavior when no Everstone is held.
+## 4. B1 — Everstone rewrite
 
-Test gendered pair, Ditto pair, two Everstones, and no Everstone.
+Update nature-parent selection:
 
-## 4. B2 — IV inheritance
+- gather parents holding Everstone;
+- none → random nature as vanilla;
+- one → inherit that parent's nature 100%;
+- two → randomly choose one of the two parents, then inherit 100%.
+
+Remove gender/female/Ditto restriction.
+
+Keep personality generation compatible with:
+- target nature;
+- gender;
+- shiny handling;
+- later ability-slot selection.
+
+## 5. B2 — Four-IV inheritance
 
 Change `NUM_INHERITED_IVS` from 3 to 4.
 
-Audit and correct the unique-stat selection routine.
+Fix/verify distinct-stat selection so the selected stat index, not merely the loop index, is removed from the candidate list.
 
-Important:
-the current function must be checked carefully because the removal helper is index-sensitive. Validator/unit tests must prove four distinct stat indices are selected every time.
+Add Power-item forced-stat handling before random selection:
+- identify relevant held Power items;
+- choose one guarantee if one/both parents qualify;
+- reserve that stat index;
+- copy it from the correct holder;
+- select remaining inherited stats distinctly;
+- randomize parent source for unforced inherited stats.
 
-For each selected stat:
-- randomly select parent 0/1;
-- copy that parent's IV;
-- leave the other two random.
+Do not implement Destiny Knot inheritance.
 
-No stat may be inherited twice.
+## 6. B3 — Ability-slot inheritance
 
-## 5. B3 — No-incense babies
+Implement 80/20 inheritance from the non-Ditto species parent for species with two distinct normal abilities.
 
-Remove the incense gate for the nine baby families.
+Do not create a new hidden-ability field/system.
 
-Preferred implementation:
-- make the egg-species resolution directly retain the baby species;
-- do not require held incense checks.
+Preserve legal personality-derived semantics:
+- if ability slot is personality-linked in live source, generate/adjust personality under the already-selected nature/gender/shiny constraints rather than writing a contradictory ability value;
+- if the engine stores a stable ability slot independently, use the smallest safe source change.
 
-Do not delete incense items or their battle effects.
+Add deterministic tests for:
+- female + male;
+- male + Ditto;
+- female + Ditto;
+- genderless + Ditto;
+- one-ability species;
+- two-ability species.
 
-Regression-test all nine families.
+## 7. B4 — Either-parent egg moves
 
-## 6. B4 — Either-parent egg moves
+Refactor egg-move collection so listed egg moves may come from either parent.
 
-Refactor `Egg_BuildMoveset` so listed egg moves can come from either parent.
+Rules:
+- gather eligible listed egg moves from both;
+- deduplicate;
+- preserve deterministic order;
+- preserve four-move cap/replace semantics.
 
-Requirements:
-- avoid duplicate moves;
-- retain four-move capacity behavior;
-- preserve shared level-up inheritance;
-- preserve existing TM/HM inheritance unless a direct code conflict requires a documented minimal adaptation;
-- Ditto must not accidentally inject unrelated moves.
+Do not broaden the species egg-move list during this engine step.
 
-Do not add created identity moves.
+Preserve:
+- father TM/HM inheritance;
+- both-parent shared level-up inheritance;
+- Volt Tackle special behavior.
 
-## 7. B5 — Egg generation cadence
+## 8. B5 — No-incense babies
 
-Change the ordinary egg-generation compatibility check cadence from 255 to 128 parent steps.
+Remove incense gating from:
+- Wynaut
+- Azurill
+- Mime Jr.
+- Bonsly
+- Munchlax
+- Mantyke
+- Budew
+- Happiny
+- Chingling
 
-Preserve compatibility probabilities 20/50/70.
+Prefer simplifying/bypassing `Daycare_AlterEggSpeciesWithIncenseItem` while retaining the correct family base species.
 
-Audit special-date logic:
-- ordinary cadence must never become slower than 128 because of a calendar date;
-- preserve harmless flavor only if behavior remains consistent.
+Regression-test each family.
 
-## 8. B6 — Hatch-cycle transform
+## 9. B6 — Egg production interval
 
-Create a generated manifest:
+Change the normal Day Care generation interval from 255 to 128 steps.
 
-`docs/overhaul/implementation/breeding/hatch_cycles.json`
+Preserve compatibility percentages 20/50/70.
 
-For every breedable species:
-- record vanilla hatch cycles;
-- target = max(1, ceil(vanilla / 2)).
+Audit special-date handling:
+- either scale special dates proportionally to the new interval;
+- or remove the special-date micro-bonus if that is cleaner.
 
-Apply target values to species data.
+Do not let the date behavior produce a slower interval than ordinary overhaul breeding.
 
-Do not change hatch-cycle values for special pseudo-species such as Egg/Bad Egg unless source semantics explicitly require it.
+Document the chosen equivalent in the manifest; this is implementation normalization, not a new design choice.
 
-Preserve Flame Body/Magma Armor decrement of 2.
+## 10. B7 — Hatch cycles
 
-## 9. B7 — Egg-move legality audit
+Generate the hatch-cycle manifest from current breedable species:
+
+`target = max(5, ceil(vanilla / 2))`
+
+Do not modify Undiscovered-only species unless they participate in a legitimate egg result.
+
+Apply data edits with before-value guards.
+
+Preserve Flame Body/Magma Armor cycle subtraction.
+
+## 11. B8 — Egg-group and egg-move audit
+
+Run a one-save inheritance audit against:
+- all species #001–#493;
+- final encounter availability;
+- final egg groups;
+- existing egg moves;
+- either-parent inheritance;
+- no-incense babies.
+
+For every egg move, prove at least one legal same-save parent chain or mark it unreachable.
+
+Only propose a data change if:
+- the chain is impossible; or
+- a previously locked breeding refinement explicitly requires it.
+
+Do not invent broad new egg-group/egg-move content.
+
+If a genuine design decision is needed, stop only that affected entry and report it.
+
+## 12. B9 — Breeder supply access
+
+Add renewable midgame purchase access for:
+- Everstone at ₽200;
+- Power Weight/Bracer/Belt/Lens/Band/Anklet at ₽3,000 each.
+
+Prefer Veilstone Department Store or a Solaceon-area existing vendor.
+
+Do not make these Frontier-only.
+
+Validate Ditto availability separately against the availability manifest; do not add a gift unless already approved.
+
+## 13. Validator
 
 Create:
+`tools/overhaul/validate_breeding.py`
 
-`tools/overhaul/validate_egg_moves.py`
+Fail on:
+- Everstone not 100%;
+- gender restriction still present;
+- inherited IV count != 4;
+- duplicate inherited IV stat indices;
+- incorrect Power-item mapping/source;
+- ability-slot probability/config mismatch;
+- father-only egg-move restriction remaining;
+- incense-required baby family;
+- wrong generation interval;
+- wrong hatch-cycle target;
+- broken Flame Body/Magma Armor behavior;
+- broken Manaphy→Phione/Nidoran/Volbeat-Illumise special cases;
+- unreachable egg moves in the final one-save graph;
+- unapproved egg-group/egg-move expansion.
 
-For every species egg move:
-- identify at least one legal parent in the final #001–#493 same-save roster;
-- validate overlapping egg group;
-- validate parent can know the move through locked level-up/TM/tutor/egg inheritance rules;
-- validate sex/compatibility constraints;
-- permit legal chain breeding;
-- reject paths requiring external games/trading/transfers.
+Generate:
+`docs/overhaul/implementation/breeding/BREEDING_VALIDATION_REPORT.md`
 
-Output:
-
-`docs/overhaul/implementation/breeding/EGG_MOVE_LEGALITY_REPORT.md`
-
-Do not automatically add moves merely because a path is missing.
-
-For dead vanilla entries:
-- produce a compact proposed-fix table;
-- use the smallest fix consistent with the locked spec;
-- if it requires a subjective new egg-group or egg-move design decision, flag it rather than silently inventing one.
-
-## 10. B8 — Egg-group cleanup manifest
-
-Create:
-
-`docs/overhaul/implementation/breeding/egg_group_changes.json`
-
-Default: no change.
-
-Only include a species when:
-- one-save inheritance validation proves a practical blocker; and
-- a second group is anatomically/ecologically defensible.
-
-Every entry must include:
-- species/family;
-- vanilla groups;
-- target groups;
-- inheritance problem fixed;
-- rationale.
-
-Do not bulk-map groups from typings.
-
-If no changes are required, commit an empty manifest and state that vanilla egg groups were sufficient.
-
-## 11. B9 — Final egg-move sweep
-
-Use locked C3 authority.
-
-Preserve vanilla pools by default.
-
-For each actual change create:
-`docs/overhaul/implementation/breeding/egg_move_changes.json`
-
-Fields:
-- species;
-- move;
-- add/remove;
-- source parent path;
-- rationale category;
-- one-save legality.
-
-Reject:
-- created identity moves;
-- basic STAB repair;
-- gratuitous elite-Pokémon coverage.
-
-## 12. Ability safety
-
-Do not implement ability inheritance.
-
-Add regression tests proving breeding still produces valid ability slots under current Platinum personality logic.
-
-Nature inheritance changes must not corrupt:
-- gender;
-- ability slot;
-- shiny checks;
-- form/personality-sensitive cases.
-
-## 13. Masuda/shiny regression
-
-Test:
-- same-language parents;
-- different-language parents;
-- Everstone + different-language parents;
-- two Everstones + different languages.
-
-Preserve the existing number/behavior of shiny personality attempts.
-
-No shiny-rate buff.
-
-## 14. Runtime test matrix
+## 14. Runtime tests
 
 At minimum:
-- one normal compatible pair;
-- high/medium/low compatibility;
-- Ditto + male;
-- Ditto + female;
-- Ditto + genderless;
-- two Everstones;
-- four-IV inheritance across repeated eggs;
-- either-parent egg move;
-- shared level-up move;
-- father TM/HM move;
-- each of nine no-incense babies;
-- Pichu + Light Ball Volt Tackle;
-- Nidoran outcome;
-- Volbeat/Illumise outcome;
-- Manaphy → Phione;
-- Flame Body/Magma Armor hatch acceleration;
-- ordinary hatch timing;
-- Masuda pair.
+- one parent Everstone;
+- both parent Everstones;
+- four-IV inheritance over deterministic seeded runs;
+- each Power item;
+- both parents holding different Power items;
+- ability-slot inheritance sample distribution;
+- mother-only listed egg move;
+- father-only listed egg move;
+- duplicate move from both parents;
+- all nine no-incense babies;
+- Ditto + male/female/genderless cases;
+- 128-step egg-generation check;
+- standard hatch cycle;
+- Flame Body/Magma Armor accelerated hatch;
+- Masuda-language shiny-path regression;
+- Manaphy→Phione;
+- Nidoran;
+- Volbeat/Illumise.
 
-## 15. Build sequence
+## 15. Build order
 
 Recommended commits:
-1. breeding manifests + validators;
-2. nature + IV inheritance;
-3. no-incense babies + egg moves;
-4. egg generation/hatch speed;
-5. egg legality audit + minimal data cleanup;
-6. final runtime tests + status update.
+1. manifests + baseline validator;
+2. Everstone + IV inheritance;
+3. Power-item + ability inheritance;
+4. either-parent egg moves;
+5. no-incense babies;
+6. generation/hatch speed;
+7. breeding supply shop;
+8. one-save legality audit;
+9. final validation/status.
 
-Build US Rev 0 and Rev 1 after every engine-affecting batch and final integration.
+Build US Rev 0 and Rev 1 after each engine-affecting batch and at final integration.
 
-## 16. Status updates
+## 16. Status
 
 Update:
 - `docs/overhaul/STATUS.md`
 - `docs/overhaul/DESIGN_PIPELINE.md`
 
-Lifecycle:
+Use:
 - LOCKED SPEC
 - IMPLEMENTING
 - IMPLEMENTED
 - VERIFIED
 
-VERIFIED requires:
-- dual-revision builds;
-- exact inheritance tests;
-- hatch/generation timing tests;
-- one-save egg-move legality report;
-- no-incense baby tests;
-- Masuda/special-case regression tests.
+Do not claim VERIFIED until dual-revision builds and runtime inheritance/hatch tests pass.
 
-## 17. Acceptance criteria
+## 17. Acceptance
 
 D4 is complete when:
-- Everstone nature inheritance is deterministic at 100%;
-- exactly four distinct IV stats inherit;
-- either parent can pass listed egg moves;
-- all incense babies breed directly;
-- egg generation checks at 128 steps;
-- hatch cycles are halved;
-- Flame Body/Magma Armor remain useful;
-- all retained egg moves have legal one-save inheritance paths;
-- no unintended ability/shiny/form regressions occur;
-- both supported US revisions build and runtime tests pass.
+- all locked breeding mechanics are implemented exactly;
+- breeding is materially faster and more predictable;
+- no-incense babies work;
+- inheritance is one-save legal;
+- no broad unapproved egg-group/move redesign slipped in;
+- breeder supplies are reasonably available;
+- both supported revisions build;
+- runtime tests pass.
