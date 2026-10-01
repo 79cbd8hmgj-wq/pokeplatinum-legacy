@@ -79,6 +79,100 @@ These must be considered before finalizing any visual subsystem. They are not as
 #### Rule
 For each visual subsystem, compare all relevant donor/reference games before choosing a direction. Prefer the strongest result that can be implemented efficiently on Platinum's DS base rather than favoring a game merely because it is newer.
 
+
+## Cross-game visual subsystem matrix
+
+This matrix is the default source-selection order for Pass G. It is a working implementation guide, not a requirement to copy a donor wholesale.
+
+| Subsystem | Primary source | Secondary source(s) | Intended use |
+|---|---|---|---|
+| Field lighting | Platinum | HGSS, Stadium 1/2 reference | Modify Platinum's native area-light system; use other games for color/lighting direction |
+| Field weather | Platinum | HGSS, PMD Sky | Prefer native Platinum weather; study HGSS/PMD behavior for richer layering and timing |
+| Environmental particles/overlays | Platinum + PMD Sky | HGSS, Ruby | Rebuild effects through Platinum field-effect/particle systems; PMD is the main presentation reference |
+| Field camera | Platinum | Diamond, HGSS, Stadium reference | Preserve Platinum compatibility; borrow camera behaviors only where visually meaningful |
+| Map props/3D environment | HGSS | Platinum, Diamond | HGSS is the first donor for compatible late-Gen-IV models/textures; convert selectively |
+| Environment textures | HGSS | Diamond, Ruby | Prefer DS-native compatible art; Ruby is useful for color/pattern inspiration rather than direct 3D texture replacement |
+| Animated environmental props | Platinum/HGSS | Diamond, PMD Sky | Use native map-prop animation where possible; PMD contributes animation concepts |
+| Player/NPC field sprites | HGSS | Platinum, Diamond | Compare dimensions/palette/resource assumptions and use the strongest compatible rendition |
+| Pokemon icons | HGSS | Platinum, Diamond | High-priority direct/convertible asset class |
+| Pokemon battle sprites | Platinum/HGSS | Diamond, Ruby/Yellow reference | Favor Gen-IV-compatible assets; older games only where they provide superior pose/readability ideas |
+| Trainer sprites | HGSS/Platinum | Diamond, Ruby | Direct/convertible DS assets first; Ruby as 2D reference |
+| UI frames/panels | Platinum | HGSS, PMD Sky, Ruby/Yellow | Rebuild within Platinum UI resource formats using strongest Pokemon-style visual language |
+| UI animation/transitions | Platinum | PMD Sky, HGSS, Yellow | PMD is the strongest presentation reference; implement through Platinum-native systems |
+| Battle backgrounds | Platinum | Stadium 1/2, HGSS, Diamond | Stadium games define staging/composition ideas; final assets must be rebuilt for DS constraints |
+| Battle camera/staging | Platinum | Stadium 1/2, Diamond | Stadium is the primary visual reference; implementation remains Platinum-native |
+| Battle move effects | Platinum | PMD Sky, Stadium 1/2, Ruby/Yellow | Use Platinum's script/particle system; mine other games for effect design, timing and impact |
+| Pokemon battle animation | Platinum | Stadium 1/2, Diamond | Stadium supplies animation/camera language, not direct N64 animation transplantation |
+| Palette/color identity | Platinum/HGSS | Ruby, Yellow, PMD | Use older games selectively when their color separation/readability is stronger |
+| Special-area presentation | Platinum | PMD Sky, Stadium 1/2, HGSS | Distortion World, Galactic areas and legendary scenes can combine native 3D with layered effects |
+| Technical DS ceiling/control | Platinum | HGSS, Diamond | These three determine what is realistically portable without unnecessary engine replacement |
+
+### Donor classification rules
+
+Every candidate resource or technique must be labeled as one of:
+
+1. **Direct** — usable with little or no structural conversion.
+2. **Convertible** — useful asset/data, but requires format/palette/dimension/remapping work.
+3. **Technique** — implementation concept worth reproducing in Platinum code.
+4. **Reference** — visual/art-direction reference only.
+5. **Reject** — cost, incompatibility, or visual mismatch exceeds the payoff.
+
+### Current repo-specific findings
+
+#### Diamond
+Confirmed useful material includes:
+- camera source
+- RTC/weather field code
+- palette code
+- graphics loaders
+- NNS G2D/G3D routines
+- extensive field-model animation resources in NSBTA/NSBCA/NSBTP formats
+
+**Classification:** high-value technical control/reference; some assets may be directly compatible or cheaply convertible.
+
+#### Ruby
+Confirmed useful material includes:
+- editable tilesets and metatiles
+- explicit palette files
+- animated tiles
+- battle animation scripts
+- field-effect scripts
+- Pokemon/trainer graphics
+- map/layout resources
+
+**Classification:** strong 2D art/effect donor and reference source; weak direct DS-engine donor.
+
+#### Yellow
+Confirmed useful material includes:
+- battle animation data
+- battle transitions
+- screen effects
+- sprite animation systems
+- battle HUD graphics
+- tilesets
+- emotes
+- Pikachu-specific animation resources
+
+**Classification:** selective style/readability/effect reference.
+
+#### Stadium 1 / Stadium 2
+Confirmed Stadium material includes graphics/animation tooling and battle/presentation resources; Stadium 2 remains primarily an N64 presentation reference.
+
+Best targets:
+- battle framing
+- camera motion
+- Pokemon animation timing
+- move-impact staging
+- arena composition
+- lighting/material direction
+
+**Classification:** high-value presentation/animation reference; low direct portability to DS.
+
+## Implementation-selection rule
+
+Before modifying a visual subsystem, inspect the primary source named above and only inspect secondary sources when they can plausibly improve that subsystem. This prevents donor research from becoming open-ended while still using the full available resource pool.
+
+
 ## Confirmed Platinum visual systems
 
 The current decomp exposes substantially more than simple asset replacement.
