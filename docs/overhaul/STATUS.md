@@ -9,7 +9,6 @@ Last verified against repository/project history: 2026-09-13.
 - **C3H species + TM compatibility:** IMPLEMENTED + L2 BUILD VERIFIED on `main`.
 - **C1 existing-move rebalance:** LOCKED, fully recovered into an 82-edit canonical manifest, **not yet implemented** on `main`.
 - **Evolution design:** **LOCKED in Pass A** across #001–#493; complete historical master had 50 consolidated type/evolution decisions. The repo still needs the complete machine-readable evolution manifest reconstructed from that locked authority.
-- **World/#001–#493 ordinary availability:** IMPLEMENTED on PR #10 branch `claude/platinum-availability-impl-c651fe`; Rev 0 + Rev 1 build verified by the implementation branch; runtime QA pending. Special acquisition families remain reserved rather than guessed.
 - **Known design blockers:** 0.
 - **Next source task:** guarded C1 implementation against current `main`, then remaining C2 mechanics and focused runtime QA.
 
@@ -65,8 +64,7 @@ They are provenance sources, not current implementation targets.
 | Tutor consolidation | LOCKED | baseline retained | audit pending |
 | Egg-move consolidation | LOCKED | baseline retained | audit pending |
 | Evolution-method overhaul | **LOCKED / RECOVERY NEEDED FOR FULL MANIFEST** | not yet implemented as a complete system | pending |
-| World/#001–#493 availability — ordinary wild distribution | APPROVED ARCHITECTURE | IMPLEMENTED on PR #10 branch, unmerged | L2 dual-revision build + manifest/validator evidence; runtime pending |
-| World/#001–#493 availability — reserved special acquisitions | LOCKED/RESERVED BY OWNING SPECS WHERE APPLICABLE | not implemented in PR #10 | pending |
+| World/#001–#493 availability | PLANNED | not started | pending |
 | Trainer overhaul | PLANNED | not started | pending |
 | Economy/EXP port | PLANNED PORT | not started | pending |
 | Capture/Poké Ball port | PLANNED PORT | not started | pending |
@@ -192,7 +190,7 @@ Do not invent one. This is not a build blocker.
 4. Run focused L4 runtime QA for C2.5/C3 high-risk mechanics.
 5. Reconstruct the complete locked Pass A evolution manifest and implement it; **no new evolution-design pass is required**.
 6. Perform the remaining Emerald-to-Platinum port audit for EXP/economy/capture/breeding.
-7. Review/merge PR #10 ordinary availability implementation, then implement the remaining locked subsystems from their canonical specs.
+7. Continue into #001–#493 availability, trainers, economy, events, and postgame.
 
 ## Rule for future sessions
 
@@ -274,31 +272,3 @@ Canonical authority:
 - `docs/overhaul/events/LEGENDARY_MYTHICAL_IMPLEMENTATION_PLAN.md`
 
 Key locks: Sinnoh/Platinum-native legends retain native story/event treatment; Darkrai/Shaymin/Arceus/Rotom distribution gates are replaced by permanent in-game access; Manaphy becomes an in-save Canalave egg gift with Phione through breeding; Regis use Platinum's native ruins without event-Regigigas dependency; older Gen I–III legends become renewable 1–2% postgame habitat encounters; older Mythicals use lightweight retry-safe statics; Arceus is the #493 capstone after catching #001–#492.
-
-
-## Availability implementation — PR #10
-
-Branch: `claude/platinum-availability-impl-c651fe`
-
-Base/implementation history predates the later design-document commits on `main`; current `main` documentation remains canonical.
-
-PR #10 adds:
-
-- `implementation/availability_families.json` — 247 family records;
-- `implementation/encounter_zones.json`;
-- `implementation/wild_encounters.json` — 94 maps / 1532 manifest entries;
-- `implementation/special_systems.json`;
-- availability source audit and implementation report;
-- guarded apply / semantic-diff / validation tooling;
-- ordinary encounter edits across E0–P0 land/cave and water tables;
-- dual-slot neutralization and special-system fallback handling.
-
-Implementation-branch report states:
-
-- 184 families are wild-placed;
-- 28 families are deliberately reserved as `USER_DECISION_REQUIRED` in that branch's manifest rather than guessed;
-- 35 Legendary/Mythical families are reserved to their owning event phase;
-- Rev 0 and Rev 1 builds passed on the branch;
-- runtime availability QA remains pending.
-
-Exact placements remain subject to canonical architecture validation and later locked special-acquisition/event specs. PR #10 must not overwrite newer design authority from `main`.
