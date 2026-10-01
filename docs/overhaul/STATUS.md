@@ -206,3 +206,14 @@ Canonical authority:
 - `docs/overhaul/economy/EXP_ECONOMY_IMPLEMENTATION_PLAN.md`
 
 Key locks: Platinum-native EXP pool, conserved 60/40 team-wide distribution, Exp. Share as priority weighting without creating extra base EXP, participant-only EVs, targeted payout cleanup, lower healing/vitamin costs, free Move Reminder, half-cost shard tutors, reliable evolution-stone access, and postgame-only unlimited Rare Candy stock.
+
+
+## Poké Ball rebalance
+
+Status: **LOCKED SPEC — awaiting implementation**
+
+Canonical authority:
+- `docs/overhaul/pokeballs/POKE_BALL_REBALANCE_SPEC.md`
+- `docs/overhaul/pokeballs/POKE_BALL_IMPLEMENTATION_PLAN.md`
+
+Design locks include Quick 5x first-turn, Timer 4x by turn 10, Repeat 3.5x, Dusk 3x, Net 3.5x Water/Bug, Dive 4x water terrain, Heal 1.5x with healing preserved, and Nest Ball converted to a level-ratio specialist rather than introducing a new ball slot.
