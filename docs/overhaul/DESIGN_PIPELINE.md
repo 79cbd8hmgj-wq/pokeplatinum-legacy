@@ -69,7 +69,7 @@ Still needed:
 - machine-readable economy manifests.
 
 ### D3 — Poké Ball Rebalance
-Status: `NEEDS PLATINUM FINAL TABLE`
+Status: `LOCKED SPEC`
 
 Existing authority:
 - Quick Ball strong turn-one identity;
@@ -172,7 +172,11 @@ Must validate:
 
 ## Current next design
 
-**D3 — Poké Ball Rebalance** is the next design phase.
+**D4 — Breeding 2.0** is the next design phase.
+
+D3 authority:
+- `docs/overhaul/pokeballs/POKE_BALL_REBALANCE_SPEC.md`
+- `docs/overhaul/pokeballs/POKE_BALL_IMPLEMENTATION_PLAN.md`
 
 Economy authority:
 - `docs/overhaul/economy/EXP_ECONOMY_SPEC.md`
