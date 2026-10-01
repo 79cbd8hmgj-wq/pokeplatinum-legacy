@@ -224,8 +224,8 @@ Design locks include Quick 5x first-turn, Timer 4x by turn 10, Repeat 3.5x, Dusk
 Status: **LOCKED SPEC — awaiting implementation**
 
 Canonical authority:
-- `docs/overhaul/breeding/BREEDING_SPEC.md`
-- `docs/overhaul/breeding/BREEDING_IMPLEMENTATION_PLAN.md`
+- `docs/overhaul/breeding/BREEDING_2_SPEC.md`
+- `docs/overhaul/breeding/BREEDING_2_IMPLEMENTATION_PLAN.md`
 
 Key locks: 100% Everstone nature inheritance, four unique inherited IV stats, Power-item forced IV inheritance, 80/20 normal ability-slot inheritance, either-parent egg-move inheritance, no-incense babies, 128-step egg checks, half hatch cycles with a five-cycle minimum, one-save egg-move legality validation, renewable midgame breeding supplies, and no broad created-move leakage into egg pools.
 
@@ -235,7 +235,7 @@ Key locks: 100% Everstone nature inheritance, four unique inherited IV stats, Po
 Status: **LOCKED SPEC — awaiting implementation**
 
 Canonical authority:
-- `docs/overhaul/events/LEGENDARY_MYTHICAL_SPEC.md`
+- `docs/overhaul/events/LEGENDARY_MYTHICAL_EVENT_SPEC.md`
 - `docs/overhaul/events/LEGENDARY_MYTHICAL_IMPLEMENTATION_PLAN.md`
 
 Key locks: native Platinum event restoration for Darkrai/Shaymin/Arceus/Rotom, Regi external-gate removal, Regigigas after internal Regis, retry-safe legendary encounters, Manaphy Egg in-save quest, and internal Sinnoh-side acquisition chains for migration/external legends.
