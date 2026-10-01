@@ -110,7 +110,7 @@ Still needed:
 - legality validator and one-save inheritance audit.
 
 ### D5 — Legendary/Mythical Events
-Status: `ARCHITECTURE EXISTS; NEEDS EXACT EVENT SPECS`
+Status: `LOCKED SPEC`
 
 Existing authority:
 - Darkrai via Member Card/Newmoon Island;
@@ -171,7 +171,11 @@ Must validate:
 
 ## Current next design
 
-**D5 — Legendary/Mythical Events** is the next design phase.
+**D6 — Battle Frontier, Rematches, and Postgame Rewards** is the next design phase.
+
+Legendary/Mythical authority:
+- `docs/overhaul/events/LEGENDARY_MYTHICAL_SPEC.md`
+- `docs/overhaul/events/LEGENDARY_MYTHICAL_IMPLEMENTATION_PLAN.md`
 
 D3 authority:
 - `docs/overhaul/pokeballs/POKE_BALL_REBALANCE_SPEC.md`
