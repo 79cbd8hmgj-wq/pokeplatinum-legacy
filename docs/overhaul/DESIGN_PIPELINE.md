@@ -90,24 +90,11 @@ Still needed:
 ### D4 — Breeding 2.0
 Status: `LOCKED SPEC`
 
-Existing authority:
-- breeding should be meaningful rather than postgame paperwork;
-- no-incense baby breeding rule is part of locked evolution/species work;
-- reduced hatch friction;
-- egg-group cleanup/expansion;
-- broader useful inheritance;
-- improved parent access;
-- earlier Day Care usefulness;
-- egg moves refine rather than repair;
-- experimental cross-type/variant offspring are deferred.
+Canonical authority:
+- `docs/overhaul/breeding/BREEDING_SPEC.md`
+- `docs/overhaul/breeding/BREEDING_IMPLEMENTATION_PLAN.md`
 
-Still needed:
-- exact hatch-cycle policy;
-- exact IV/nature/ability inheritance rules to port/adapt from Emerald;
-- egg-group changes;
-- final egg-move framework;
-- Day Care access/reward changes;
-- legality validator and one-save inheritance audit.
+Resolved design includes nature/IV/ability inheritance, Power-item targeting, no-incense babies, egg-move inheritance policy, hatch/egg-generation speed, breeding-supply access, and one-save legality validation.
 
 ### D5 — Legendary/Mythical Events
 Status: `LOCKED SPEC`
