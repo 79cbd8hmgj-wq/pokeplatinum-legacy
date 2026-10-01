@@ -3,26 +3,38 @@
     "land_encounters": [
         {
             "level": 6,
-            "species": "SPECIES_ZUBAT"
+            "species": "SPECIES_PSYDUCK"
         },
         {
             "level": 8,
-            "species": "SPECIES_PSYDUCK"
+            "species": "SPECIES_ZUBAT"
         },
         {
             "level": 7,
-            "species": "SPECIES_ZUBAT"
+            "species": "SPECIES_ONIX"
         },
         {
             "level": 9,
-            "species": "SPECIES_PSYDUCK"
+            "species": "SPECIES_ZUBAT"
         },
         {
             "level": 6,
-            "species": "SPECIES_GEODUDE"
+            "species": "SPECIES_WHISMUR"
         },
         {
             "level": 8,
+            "species": "SPECIES_GEODUDE"
+        },
+        {
+            "level": 10,
+            "species": "SPECIES_DUNSPARCE"
+        },
+        {
+            "level": 8,
+            "species": "SPECIES_ONIX"
+        },
+        {
+            "level": 9,
             "species": "SPECIES_ZUBAT"
         },
         {
@@ -30,24 +42,12 @@
             "species": "SPECIES_PSYDUCK"
         },
         {
-            "level": 8,
+            "level": 9,
             "species": "SPECIES_GEODUDE"
         },
         {
-            "level": 9,
-            "species": "SPECIES_ZUBAT"
-        },
-        {
             "level": 10,
-            "species": "SPECIES_GOLBAT"
-        },
-        {
-            "level": 9,
-            "species": "SPECIES_ZUBAT"
-        },
-        {
-            "level": 10,
-            "species": "SPECIES_GOLBAT"
+            "species": "SPECIES_ONIX"
         }
     ],
     "swarms": [
@@ -55,12 +55,12 @@
         "SPECIES_PSYDUCK"
     ],
     "day": [
-        "SPECIES_ZUBAT",
-        "SPECIES_PSYDUCK"
+        "SPECIES_ONIX",
+        "SPECIES_ZUBAT"
     ],
     "night": [
-        "SPECIES_ZUBAT",
-        "SPECIES_PSYDUCK"
+        "SPECIES_ONIX",
+        "SPECIES_ZUBAT"
     ],
     "radar": [
         "SPECIES_GEODUDE",
@@ -76,23 +76,23 @@
     "unown_table": 0,
     "ruby": [
         "SPECIES_ZUBAT",
-        "SPECIES_GOLBAT"
+        "SPECIES_PSYDUCK"
     ],
     "sapphire": [
         "SPECIES_ZUBAT",
-        "SPECIES_GOLBAT"
+        "SPECIES_PSYDUCK"
     ],
     "emerald": [
         "SPECIES_ZUBAT",
-        "SPECIES_GOLBAT"
+        "SPECIES_PSYDUCK"
     ],
     "firered": [
         "SPECIES_ZUBAT",
-        "SPECIES_GOLBAT"
+        "SPECIES_PSYDUCK"
     ],
     "leafgreen": [
         "SPECIES_ZUBAT",
-        "SPECIES_GOLBAT"
+        "SPECIES_PSYDUCK"
     ],
     "surf_rate": 10,
     "surf_encounters": [

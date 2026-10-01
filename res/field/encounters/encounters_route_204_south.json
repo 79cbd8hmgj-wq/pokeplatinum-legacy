@@ -3,27 +3,31 @@
     "land_encounters": [
         {
             "level": 4,
-            "species": "SPECIES_STARLY"
+            "species": "SPECIES_BUDEW"
         },
         {
             "level": 4,
-            "species": "SPECIES_BIDOOF"
+            "species": "SPECIES_CATERPIE"
         },
         {
             "level": 4,
-            "species": "SPECIES_WURMPLE"
+            "species": "SPECIES_HOPPIP"
         },
         {
             "level": 3,
-            "species": "SPECIES_KRICKETOT"
+            "species": "SPECIES_TAILLOW"
         },
         {
             "level": 4,
-            "species": "SPECIES_BUDEW"
+            "species": "SPECIES_NIDORAN_F"
         },
         {
             "level": 4,
-            "species": "SPECIES_SHINX"
+            "species": "SPECIES_NIDORAN_M"
+        },
+        {
+            "level": 5,
+            "species": "SPECIES_PACHIRISU"
         },
         {
             "level": 5,
@@ -31,23 +35,19 @@
         },
         {
             "level": 5,
-            "species": "SPECIES_SHINX"
+            "species": "SPECIES_BUDEW"
         },
         {
             "level": 5,
-            "species": "SPECIES_STARLY"
-        },
-        {
-            "level": 5,
-            "species": "SPECIES_BIDOOF"
+            "species": "SPECIES_HOPPIP"
         },
         {
             "level": 6,
-            "species": "SPECIES_STARLY"
+            "species": "SPECIES_NIDORAN_F"
         },
         {
             "level": 6,
-            "species": "SPECIES_BIDOOF"
+            "species": "SPECIES_NIDORAN_M"
         }
     ],
     "swarms": [
@@ -55,12 +55,12 @@
         "SPECIES_BIDOOF"
     ],
     "day": [
-        "SPECIES_WURMPLE",
-        "SPECIES_BUDEW"
+        "SPECIES_HOPPIP",
+        "SPECIES_TAILLOW"
     ],
     "night": [
-        "SPECIES_KRICKETOT",
-        "SPECIES_ZUBAT"
+        "SPECIES_HOPPIP",
+        "SPECIES_TAILLOW"
     ],
     "radar": [
         "SPECIES_BUDEW",
@@ -75,24 +75,24 @@
     "rate_form4": 0,
     "unown_table": 0,
     "ruby": [
-        "SPECIES_SEEDOT",
-        "SPECIES_SEEDOT"
+        "SPECIES_BUDEW",
+        "SPECIES_HOPPIP"
     ],
     "sapphire": [
-        "SPECIES_LOTAD",
-        "SPECIES_LOTAD"
+        "SPECIES_BUDEW",
+        "SPECIES_HOPPIP"
     ],
     "emerald": [
-        "SPECIES_PINECO",
-        "SPECIES_PINECO"
+        "SPECIES_BUDEW",
+        "SPECIES_HOPPIP"
     ],
     "firered": [
-        "SPECIES_CATERPIE",
-        "SPECIES_CATERPIE"
+        "SPECIES_BUDEW",
+        "SPECIES_HOPPIP"
     ],
     "leafgreen": [
-        "SPECIES_WEEDLE",
-        "SPECIES_WEEDLE"
+        "SPECIES_BUDEW",
+        "SPECIES_HOPPIP"
     ],
     "surf_rate": 10,
     "surf_encounters": [

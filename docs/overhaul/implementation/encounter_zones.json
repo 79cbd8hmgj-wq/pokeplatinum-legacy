@@ -1,0 +1,3713 @@
+{
+  "schema": "availability_encounter_zones/1",
+  "base_commit": "cb420c0d",
+  "zones": {
+    "START": "Twinleaf-Jubilife meadow, lake edge, farm fringe",
+    "ORE": "Oreburgh mine/gate/foothills",
+    "FOREST": "Floaroma, Eterna woodland, Old Chateau",
+    "CYCLE": "routes 206-208 scrub, Wayward Cave",
+    "HEARTH": "Hearthome-Solaceon pasture/ruins",
+    "MARSH": "routes 212-213, Great Marsh, Valor shore",
+    "CORONET": "lower/upper Mt. Coronet",
+    "IRON": "Fuego, Canalave, Iron Island",
+    "COAST": "freshwater/estuary/sea separated by method",
+    "SNOW": "routes 216-217, Acuity",
+    "DRY": "route 214 and dry pockets",
+    "EAST": "Valor-Sunyshore-route 222/223",
+    "DEEP": "deep caves and Victory Road",
+    "POST": "routes 224-230 and islands, postgame"
+  },
+  "bands": {
+    "E0": "start of game through the Oreburgh Gym (badge 1)",
+    "E1": "after Oreburgh Gym through the Eterna Gym (badge 2)",
+    "M1": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+    "M2": "after Pastoria Gym through the Canalave Gym (badge 6)",
+    "L1": "after Canalave Gym through the Snowpoint Gym (badge 7)",
+    "L2": "after Snowpoint Gym through the Sunyshore Gym (badge 8)",
+    "P0": "after badge 8 through the Pokemon League (Victory Road)",
+    "P1": "after the Hall of Fame (Super Rod = Fight Area fisherman)"
+  },
+  "density_targets": {
+    "ordinary_land_families": "6-8",
+    "connector": "4-5",
+    "signature_max": 9,
+    "water_per_method": "3-4"
+  },
+  "adjacency": [
+    {"a": "route_201", "b": "route_202", "continuous": false},
+    {"a": "route_202", "b": "route_203", "continuous": false},
+    {"a": "route_203", "b": "oreburgh_gate_1f", "continuous": false},
+    {"a": "oreburgh_gate_1f", "b": "oreburgh_gate_b1f", "continuous": true},
+    {"a": "oreburgh_mine_b1f", "b": "oreburgh_mine_b2f", "continuous": true},
+    {"a": "route_204_south", "b": "ravaged_path", "continuous": false},
+    {"a": "route_204_south", "b": "route_204_north", "continuous": true},
+    {"a": "route_204_north", "b": "route_205_south", "continuous": false},
+    {"a": "route_205_south", "b": "route_205_north", "continuous": true},
+    {"a": "route_205_south", "b": "valley_windworks_outside", "continuous": false},
+    {"a": "route_205_south", "b": "eterna_forest", "continuous": false},
+    {"a": "route_205_north", "b": "eterna_forest", "continuous": false},
+    {"a": "route_206", "b": "route_207", "continuous": false},
+    {"a": "route_206", "b": "wayward_cave_1f", "continuous": false},
+    {"a": "wayward_cave_1f", "b": "wayward_cave_b1f", "continuous": true},
+    {"a": "route_208", "b": "route_209", "continuous": false},
+    {"a": "route_209", "b": "route_210_south", "continuous": false},
+    {"a": "route_210_south", "b": "route_210_north", "continuous": true},
+    {"a": "route_210_south", "b": "route_215", "continuous": false},
+    {"a": "route_211_west", "b": "route_211_east", "continuous": true},
+    {"a": "route_212_north", "b": "route_212_south", "continuous": true},
+    {"a": "route_212_south", "b": "route_213", "continuous": false},
+    {"a": "route_213", "b": "valor_lakefront", "continuous": false},
+    {"a": "route_218", "b": "route_221", "continuous": false},
+    {"a": "route_216", "b": "route_217", "continuous": true},
+    {"a": "route_217", "b": "acuity_lakefront", "continuous": true},
+    {"a": "acuity_lakefront", "b": "lake_acuity", "continuous": true},
+    {"a": "route_222", "b": "lake_valor", "continuous": false},
+    {"a": "great_marsh_1", "b": "great_marsh_3", "continuous": true},
+    {"a": "great_marsh_3", "b": "great_marsh_5", "continuous": true},
+    {"a": "mt_coronet_2f", "b": "mt_coronet_3f", "continuous": true},
+    {"a": "mt_coronet_3f", "b": "mt_coronet_4f_rooms_1_and_2", "continuous": true},
+    {"a": "mt_coronet_5f", "b": "mt_coronet_6f", "continuous": true},
+    {"a": "iron_island_1f", "b": "iron_island_b1f_left_room", "continuous": true},
+    {"a": "iron_island_b1f_left_room", "b": "iron_island_b2f_left_room", "continuous": true},
+    {"a": "iron_island_b2f_left_room", "b": "iron_island_b3f", "continuous": true},
+    {"a": "victory_road_1f", "b": "victory_road_1f_room_1", "continuous": true},
+    {"a": "victory_road_1f", "b": "victory_road_2f", "continuous": true},
+    {"a": "old_chateau", "b": "old_chateau_back_west_room", "continuous": true}
+  ],
+  "level_policy": "slots keep the base-commit level of the same slot (route level curve preserved)",
+  "maps": {
+    "acuity_lakefront": {
+      "zone": "SNOW",
+      "band": "L1",
+      "story_gate": "after Canalave Gym through the Snowpoint Gym (badge 7)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [32, 35]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 7
+      },
+      "note": null
+    },
+    "canalave_city": {
+      "zone": "COAST",
+      "band": "M2",
+      "story_gate": "after Pastoria Gym through the Canalave Gym (badge 6)",
+      "kind": "water",
+      "authored_by_this_work": true,
+      "encounter_methods": ["surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [20, 55]
+      },
+      "family_cap_budget": {
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "surf": 2,
+        "old_rod": 3,
+        "good_rod": 4,
+        "super_rod": 3
+      },
+      "note": null
+    },
+    "celestic_town": {
+      "zone": "CORONET",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "water",
+      "authored_by_this_work": true,
+      "encounter_methods": ["surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 35],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "surf": 2,
+        "old_rod": 3,
+        "good_rod": 2,
+        "super_rod": 3
+      },
+      "note": null
+    },
+    "eterna_city": {
+      "zone": "FOREST",
+      "band": "E1",
+      "story_gate": "after Oreburgh Gym through the Eterna Gym (badge 2)",
+      "kind": "water",
+      "authored_by_this_work": true,
+      "encounter_methods": ["surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "surf": 2,
+        "old_rod": 3,
+        "good_rod": 3,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "eterna_forest": {
+      "zone": "FOREST",
+      "band": "E1",
+      "story_gate": "after Oreburgh Gym through the Eterna Gym (badge 2)",
+      "kind": "signature",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [10, 14]
+      },
+      "family_cap_budget": {
+        "land": 9,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8
+      },
+      "note": null
+    },
+    "fuego_ironworks_outside": {
+      "zone": "IRON",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "signature",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [28, 31],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [20, 55]
+      },
+      "family_cap_budget": {
+        "land": 9,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8,
+        "surf": 2,
+        "old_rod": 1,
+        "good_rod": 2,
+        "super_rod": 3
+      },
+      "note": null
+    },
+    "great_marsh_1": {
+      "zone": "MARSH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "signature",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [28, 31],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [20, 55]
+      },
+      "family_cap_budget": {
+        "land": 9,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 7,
+        "surf": 1,
+        "old_rod": 3,
+        "good_rod": 3,
+        "super_rod": 3
+      },
+      "note": "great_marsh_a"
+    },
+    "great_marsh_2": {
+      "zone": "MARSH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "signature",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [28, 31],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [20, 55]
+      },
+      "family_cap_budget": {
+        "land": 9,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 7,
+        "surf": 1,
+        "old_rod": 3,
+        "good_rod": 3,
+        "super_rod": 3
+      },
+      "note": "great_marsh_a"
+    },
+    "great_marsh_3": {
+      "zone": "MARSH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "signature",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [27, 30],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [20, 55]
+      },
+      "family_cap_budget": {
+        "land": 9,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8,
+        "surf": 1,
+        "old_rod": 3,
+        "good_rod": 3,
+        "super_rod": 3
+      },
+      "note": "great_marsh_b"
+    },
+    "great_marsh_4": {
+      "zone": "MARSH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "signature",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [27, 30],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [20, 55]
+      },
+      "family_cap_budget": {
+        "land": 9,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8,
+        "surf": 1,
+        "old_rod": 3,
+        "good_rod": 3,
+        "super_rod": 3
+      },
+      "note": "great_marsh_b"
+    },
+    "great_marsh_5": {
+      "zone": "MARSH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "signature",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [26, 29],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [20, 55]
+      },
+      "family_cap_budget": {
+        "land": 9,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8,
+        "surf": 1,
+        "old_rod": 3,
+        "good_rod": 3,
+        "super_rod": 3
+      },
+      "note": "great_marsh_c"
+    },
+    "great_marsh_6": {
+      "zone": "MARSH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "signature",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [26, 29],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [20, 55]
+      },
+      "family_cap_budget": {
+        "land": 9,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8,
+        "surf": 1,
+        "old_rod": 3,
+        "good_rod": 3,
+        "super_rod": 3
+      },
+      "note": "great_marsh_c"
+    },
+    "great_marsh_lookout": {
+      "zone": "MARSH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": [],
+      "intended_level_band": {},
+      "family_cap_budget": null,
+      "families_in_final_tables": {},
+      "note": "binocular / daily arrays (special_systems.json)"
+    },
+    "honey_tree": {
+      "zone": "FOREST",
+      "band": "E1",
+      "story_gate": "after Oreburgh Gym through the Eterna Gym (badge 2)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": [],
+      "intended_level_band": {},
+      "family_cap_budget": null,
+      "families_in_final_tables": {},
+      "note": "Honey Tree tables (special_systems.json)"
+    },
+    "iron_island": {
+      "zone": "IRON",
+      "band": "M2",
+      "story_gate": "after Pastoria Gym through the Canalave Gym (badge 6)",
+      "kind": "water",
+      "authored_by_this_work": true,
+      "encounter_methods": ["surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [20, 55]
+      },
+      "family_cap_budget": {
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "surf": 3,
+        "old_rod": 1,
+        "good_rod": 4,
+        "super_rod": 3
+      },
+      "note": null
+    },
+    "iron_island_1f": {
+      "zone": "IRON",
+      "band": "M2",
+      "story_gate": "after Pastoria Gym through the Canalave Gym (badge 6)",
+      "kind": "connector",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [30, 33]
+      },
+      "family_cap_budget": {
+        "land": 5,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "iron_island_caves"
+    },
+    "iron_island_b1f_left_room": {
+      "zone": "IRON",
+      "band": "M2",
+      "story_gate": "after Pastoria Gym through the Canalave Gym (badge 6)",
+      "kind": "connector",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [30, 33]
+      },
+      "family_cap_budget": {
+        "land": 5,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "iron_island_caves"
+    },
+    "iron_island_b1f_right_room": {
+      "zone": "IRON",
+      "band": "M2",
+      "story_gate": "after Pastoria Gym through the Canalave Gym (badge 6)",
+      "kind": "connector",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [30, 33]
+      },
+      "family_cap_budget": {
+        "land": 5,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "iron_island_caves"
+    },
+    "iron_island_b2f_left_room": {
+      "zone": "IRON",
+      "band": "M2",
+      "story_gate": "after Pastoria Gym through the Canalave Gym (badge 6)",
+      "kind": "connector",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [31, 35]
+      },
+      "family_cap_budget": {
+        "land": 5,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "iron_island_caves"
+    },
+    "iron_island_b2f_right_room": {
+      "zone": "IRON",
+      "band": "M2",
+      "story_gate": "after Pastoria Gym through the Canalave Gym (badge 6)",
+      "kind": "connector",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [31, 35]
+      },
+      "family_cap_budget": {
+        "land": 5,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "iron_island_caves"
+    },
+    "iron_island_b3f": {
+      "zone": "IRON",
+      "band": "M2",
+      "story_gate": "after Pastoria Gym through the Canalave Gym (badge 6)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [31, 35]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6
+      },
+      "note": "iron_island_caves"
+    },
+    "lake_acuity": {
+      "zone": "SNOW",
+      "band": "L1",
+      "story_gate": "after Canalave Gym through the Snowpoint Gym (badge 7)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [38, 41],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 35],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6,
+        "surf": 2,
+        "old_rod": 1,
+        "good_rod": 3,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "lake_valor": {
+      "zone": "EAST",
+      "band": "L2",
+      "story_gate": "after Snowpoint Gym through the Sunyshore Gym (badge 8)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [38, 41],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 35],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6,
+        "surf": 1,
+        "old_rod": 1,
+        "good_rod": 2,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "lake_verity": {
+      "zone": "START",
+      "band": "E0",
+      "story_gate": "start of game through the Oreburgh Gym (badge 1)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [2, 4],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 35],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 7,
+        "surf": 1,
+        "old_rod": 1,
+        "good_rod": 2,
+        "super_rod": 2
+      },
+      "note": "lake_verity"
+    },
+    "lake_verity_low_water": {
+      "zone": "START",
+      "band": "E0",
+      "story_gate": "start of game through the Oreburgh Gym (badge 1)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [2, 4],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 35],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 7,
+        "surf": 1,
+        "old_rod": 1,
+        "good_rod": 2,
+        "super_rod": 2
+      },
+      "note": "lake_verity"
+    },
+    "maniac_tunnel": {
+      "zone": "DRY",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "connector",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [23, 26]
+      },
+      "family_cap_budget": {
+        "land": 5,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "maniac_caves"
+    },
+    "mt_coronet_1f_north_room_1": {
+      "zone": "CORONET",
+      "band": "E1",
+      "story_gate": "after Oreburgh Gym through the Eterna Gym (badge 2)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [13, 16]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6
+      },
+      "note": null
+    },
+    "mt_coronet_1f_north_room_2": {
+      "zone": "CORONET",
+      "band": "L1",
+      "story_gate": "after Canalave Gym through the Snowpoint Gym (badge 7)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [32, 35]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8
+      },
+      "note": "coronet_lower_deep"
+    },
+    "mt_coronet_1f_south": {
+      "zone": "CORONET",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [17, 20],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [20, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8,
+        "surf": 1,
+        "old_rod": 1,
+        "good_rod": 2,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "mt_coronet_1f_tunnel_room": {
+      "zone": "CORONET",
+      "band": "L1",
+      "story_gate": "after Canalave Gym through the Snowpoint Gym (badge 7)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [36, 39]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8
+      },
+      "note": "coronet_lower_deep"
+    },
+    "mt_coronet_2f": {
+      "zone": "CORONET",
+      "band": "L1",
+      "story_gate": "after Canalave Gym through the Snowpoint Gym (badge 7)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [36, 39]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8
+      },
+      "note": "coronet_upper"
+    },
+    "mt_coronet_3f": {
+      "zone": "CORONET",
+      "band": "L1",
+      "story_gate": "after Canalave Gym through the Snowpoint Gym (badge 7)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [36, 39]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8
+      },
+      "note": "coronet_upper"
+    },
+    "mt_coronet_4f_room_3": {
+      "zone": "CORONET",
+      "band": "L1",
+      "story_gate": "after Canalave Gym through the Snowpoint Gym (badge 7)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [36, 39]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8
+      },
+      "note": "coronet_upper"
+    },
+    "mt_coronet_4f_rooms_1_and_2": {
+      "zone": "CORONET",
+      "band": "L1",
+      "story_gate": "after Canalave Gym through the Snowpoint Gym (badge 7)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [36, 39],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [15, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8,
+        "surf": 1,
+        "old_rod": 1,
+        "good_rod": 3,
+        "super_rod": 3
+      },
+      "note": "coronet_upper"
+    },
+    "mt_coronet_5f": {
+      "zone": "DEEP",
+      "band": "L1",
+      "story_gate": "after Canalave Gym through the Snowpoint Gym (badge 7)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [36, 40]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8
+      },
+      "note": "coronet_deep"
+    },
+    "mt_coronet_6f": {
+      "zone": "DEEP",
+      "band": "L1",
+      "story_gate": "after Canalave Gym through the Snowpoint Gym (badge 7)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [36, 41]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8
+      },
+      "note": "coronet_deep"
+    },
+    "mt_coronet_b1f": {
+      "zone": "CORONET",
+      "band": "P0",
+      "story_gate": "after badge 8 through the Pokemon League (Victory Road)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [32, 35],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8,
+        "surf": 1,
+        "old_rod": 1,
+        "good_rod": 2,
+        "super_rod": 2
+      },
+      "note": "coronet_lower_deep"
+    },
+    "mt_coronet_outside_north": {
+      "zone": "CORONET",
+      "band": "L1",
+      "story_gate": "after Canalave Gym through the Snowpoint Gym (badge 7)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [36, 40]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8
+      },
+      "note": "coronet_outside"
+    },
+    "mt_coronet_outside_south": {
+      "zone": "CORONET",
+      "band": "L1",
+      "story_gate": "after Canalave Gym through the Snowpoint Gym (badge 7)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [36, 40]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8
+      },
+      "note": "coronet_outside"
+    },
+    "old_chateau": {
+      "zone": "FOREST",
+      "band": "E1",
+      "story_gate": "after Oreburgh Gym through the Eterna Gym (badge 2)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [14, 17]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6
+      },
+      "note": "old_chateau_front"
+    },
+    "old_chateau_back_east_room": {
+      "zone": "FOREST",
+      "band": "E1",
+      "story_gate": "after Oreburgh Gym through the Eterna Gym (badge 2)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [14, 17]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6
+      },
+      "note": "old_chateau_back"
+    },
+    "old_chateau_back_middle_east_room": {
+      "zone": "FOREST",
+      "band": "E1",
+      "story_gate": "after Oreburgh Gym through the Eterna Gym (badge 2)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [14, 17]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6
+      },
+      "note": "old_chateau_back"
+    },
+    "old_chateau_back_middle_room": {
+      "zone": "FOREST",
+      "band": "E1",
+      "story_gate": "after Oreburgh Gym through the Eterna Gym (badge 2)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [14, 17]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6
+      },
+      "note": "old_chateau_back"
+    },
+    "old_chateau_back_middle_west_room": {
+      "zone": "FOREST",
+      "band": "E1",
+      "story_gate": "after Oreburgh Gym through the Eterna Gym (badge 2)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [14, 17]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6
+      },
+      "note": "old_chateau_back"
+    },
+    "old_chateau_back_west_room": {
+      "zone": "FOREST",
+      "band": "E1",
+      "story_gate": "after Oreburgh Gym through the Eterna Gym (badge 2)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [14, 17]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6
+      },
+      "note": "old_chateau_back"
+    },
+    "old_chateau_corridor": {
+      "zone": "FOREST",
+      "band": "E1",
+      "story_gate": "after Oreburgh Gym through the Eterna Gym (badge 2)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [14, 17]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6
+      },
+      "note": "old_chateau_front"
+    },
+    "old_chateau_dining_area": {
+      "zone": "FOREST",
+      "band": "E1",
+      "story_gate": "after Oreburgh Gym through the Eterna Gym (badge 2)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [14, 17]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6
+      },
+      "note": "old_chateau_front"
+    },
+    "old_chateau_side_rooms": {
+      "zone": "FOREST",
+      "band": "E1",
+      "story_gate": "after Oreburgh Gym through the Eterna Gym (badge 2)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [14, 17]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6
+      },
+      "note": "old_chateau_front"
+    },
+    "oreburgh_gate_1f": {
+      "zone": "ORE",
+      "band": "E0",
+      "story_gate": "start of game through the Oreburgh Gym (badge 1)",
+      "kind": "connector",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [5, 8]
+      },
+      "family_cap_budget": {
+        "land": 5,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 4
+      },
+      "note": null
+    },
+    "oreburgh_gate_b1f": {
+      "zone": "ORE",
+      "band": "E0",
+      "story_gate": "start of game through the Oreburgh Gym (badge 1)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [6, 10],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6,
+        "surf": 2,
+        "old_rod": 1,
+        "good_rod": 2,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "oreburgh_mine_b1f": {
+      "zone": "ORE",
+      "band": "E0",
+      "story_gate": "start of game through the Oreburgh Gym (badge 1)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [4, 8]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6
+      },
+      "note": null
+    },
+    "oreburgh_mine_b2f": {
+      "zone": "ORE",
+      "band": "E0",
+      "story_gate": "start of game through the Oreburgh Gym (badge 1)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [5, 9]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 7
+      },
+      "note": null
+    },
+    "pastoria_city": {
+      "zone": "COAST",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "water",
+      "authored_by_this_work": true,
+      "encounter_methods": ["surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "surf": 3,
+        "old_rod": 3,
+        "good_rod": 3,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "pokemon_league": {
+      "zone": "POST",
+      "band": "P0",
+      "story_gate": "after badge 8 through the Pokemon League (Victory Road)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "surf": [30, 50],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [20, 55]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "surf": 2,
+        "old_rod": 1,
+        "good_rod": 2,
+        "super_rod": 3
+      },
+      "note": "League-front water; evolved ecology retained"
+    },
+    "ravaged_path": {
+      "zone": "ORE",
+      "band": "E0",
+      "story_gate": "start of game through the Oreburgh Gym (badge 1)",
+      "kind": "connector",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [3, 6],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 5,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 5,
+        "surf": 2,
+        "old_rod": 1,
+        "good_rod": 2,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "resort_area": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "surf": [35, 55],
+        "old_rod": [3, 15],
+        "good_rod": [10, 35],
+        "super_rod": [1, 100]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "surf": 1,
+        "old_rod": 1,
+        "good_rod": 1,
+        "super_rod": 1
+      },
+      "note": "postgame island resort"
+    },
+    "route_201": {
+      "zone": "START",
+      "band": "E0",
+      "story_gate": "start of game through the Oreburgh Gym (badge 1)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [2, 3]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8
+      },
+      "note": null
+    },
+    "route_202": {
+      "zone": "START",
+      "band": "E0",
+      "story_gate": "start of game through the Oreburgh Gym (badge 1)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [2, 4]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8
+      },
+      "note": null
+    },
+    "route_203": {
+      "zone": "START",
+      "band": "E0",
+      "story_gate": "start of game through the Oreburgh Gym (badge 1)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [4, 7],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8,
+        "surf": 1,
+        "old_rod": 1,
+        "good_rod": 2,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "route_204_north": {
+      "zone": "FOREST",
+      "band": "E1",
+      "story_gate": "after Oreburgh Gym through the Eterna Gym (badge 2)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [8, 11],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8,
+        "surf": 1,
+        "old_rod": 3,
+        "good_rod": 3,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "route_204_south": {
+      "zone": "START",
+      "band": "E0",
+      "story_gate": "start of game through the Oreburgh Gym (badge 1)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [3, 6],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 7,
+        "surf": 1,
+        "old_rod": 1,
+        "good_rod": 2,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "route_205_north": {
+      "zone": "FOREST",
+      "band": "E1",
+      "story_gate": "after Oreburgh Gym through the Eterna Gym (badge 2)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [12, 15],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8,
+        "surf": 2,
+        "old_rod": 3,
+        "good_rod": 3,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "route_205_south": {
+      "zone": "FOREST",
+      "band": "E1",
+      "story_gate": "after Oreburgh Gym through the Eterna Gym (badge 2)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [9, 12],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [20, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8,
+        "surf": 2,
+        "old_rod": 3,
+        "good_rod": 2,
+        "super_rod": 3
+      },
+      "note": null
+    },
+    "route_206": {
+      "zone": "CYCLE",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [16, 19]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8
+      },
+      "note": null
+    },
+    "route_207": {
+      "zone": "CYCLE",
+      "band": "E1",
+      "story_gate": "after Oreburgh Gym through the Eterna Gym (badge 2)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [5, 8]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8
+      },
+      "note": null
+    },
+    "route_208": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [17, 20],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8,
+        "surf": 2,
+        "old_rod": 3,
+        "good_rod": 3,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "route_209": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [17, 20],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 7,
+        "surf": 2,
+        "old_rod": 3,
+        "good_rod": 3,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "route_209_lost_tower_1f": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [17, 20]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 3
+      },
+      "note": "ghost tower; Gastly/Zubat/Duskull families already placed elsewhere"
+    },
+    "route_209_lost_tower_2f": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [17, 20]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 3
+      },
+      "note": "ghost tower"
+    },
+    "route_209_lost_tower_3f": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [18, 21]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 3
+      },
+      "note": "ghost tower"
+    },
+    "route_209_lost_tower_4f": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [18, 21]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 3
+      },
+      "note": "ghost tower"
+    },
+    "route_209_lost_tower_5f": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [19, 22]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 3
+      },
+      "note": "ghost tower"
+    },
+    "route_210_north": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [27, 30],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 35],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 7,
+        "surf": 2,
+        "old_rod": 3,
+        "good_rod": 3,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "route_210_south": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [18, 21]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8
+      },
+      "note": null
+    },
+    "route_211_east": {
+      "zone": "CORONET",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [27, 30]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8
+      },
+      "note": "route_211"
+    },
+    "route_211_west": {
+      "zone": "CORONET",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [13, 16]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6
+      },
+      "note": "route_211"
+    },
+    "route_212_north": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [21, 24],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 7,
+        "surf": 2,
+        "old_rod": 3,
+        "good_rod": 3,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "route_212_south": {
+      "zone": "MARSH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [23, 26],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 7,
+        "surf": 2,
+        "old_rod": 3,
+        "good_rod": 2,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "route_213": {
+      "zone": "MARSH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [23, 26],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6,
+        "surf": 3,
+        "old_rod": 3,
+        "good_rod": 2,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "route_214": {
+      "zone": "DRY",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [21, 24],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 7,
+        "surf": 2,
+        "old_rod": 3,
+        "good_rod": 3,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "route_215": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [19, 22]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6
+      },
+      "note": null
+    },
+    "route_216": {
+      "zone": "SNOW",
+      "band": "L1",
+      "story_gate": "after Canalave Gym through the Snowpoint Gym (badge 7)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [32, 35]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 7
+      },
+      "note": null
+    },
+    "route_217": {
+      "zone": "SNOW",
+      "band": "L1",
+      "story_gate": "after Canalave Gym through the Snowpoint Gym (badge 7)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [32, 35]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 7
+      },
+      "note": null
+    },
+    "route_218": {
+      "zone": "COAST",
+      "band": "M2",
+      "story_gate": "after Pastoria Gym through the Canalave Gym (badge 6)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [28, 31],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 7,
+        "surf": 2,
+        "old_rod": 1,
+        "good_rod": 3,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "route_219": {
+      "zone": "COAST",
+      "band": "M2",
+      "story_gate": "after Pastoria Gym through the Canalave Gym (badge 6)",
+      "kind": "water",
+      "authored_by_this_work": true,
+      "encounter_methods": ["surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 35],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "surf": 4,
+        "old_rod": 1,
+        "good_rod": 4,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "route_220": {
+      "zone": "COAST",
+      "band": "M2",
+      "story_gate": "after Pastoria Gym through the Canalave Gym (badge 6)",
+      "kind": "water",
+      "authored_by_this_work": true,
+      "encounter_methods": ["surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 35],
+        "super_rod": [20, 55]
+      },
+      "family_cap_budget": {
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "surf": 3,
+        "old_rod": 1,
+        "good_rod": 4,
+        "super_rod": 3
+      },
+      "note": null
+    },
+    "route_221": {
+      "zone": "COAST",
+      "band": "M2",
+      "story_gate": "after Pastoria Gym through the Canalave Gym (badge 6)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [28, 31],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 35],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 7,
+        "surf": 3,
+        "old_rod": 1,
+        "good_rod": 4,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "route_222": {
+      "zone": "EAST",
+      "band": "L2",
+      "story_gate": "after Snowpoint Gym through the Sunyshore Gym (badge 8)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [38, 41],
+        "surf": [30, 50],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 7,
+        "surf": 2,
+        "old_rod": 1,
+        "good_rod": 2,
+        "super_rod": 2
+      },
+      "note": null
+    },
+    "route_223": {
+      "zone": "EAST",
+      "band": "L2",
+      "story_gate": "after Snowpoint Gym through the Sunyshore Gym (badge 8)",
+      "kind": "water",
+      "authored_by_this_work": true,
+      "encounter_methods": ["surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "surf": [30, 50],
+        "old_rod": [3, 15],
+        "good_rod": [10, 35],
+        "super_rod": [20, 55]
+      },
+      "family_cap_budget": {
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "surf": 2,
+        "old_rod": 1,
+        "good_rod": 3,
+        "super_rod": 3
+      },
+      "note": null
+    },
+    "route_224": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [49, 52],
+        "surf": [35, 55],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [20, 55]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 7,
+        "surf": 3,
+        "old_rod": 1,
+        "good_rod": 2,
+        "super_rod": 3
+      },
+      "note": "postgame evolved ecology"
+    },
+    "route_225": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [47, 50],
+        "surf": [35, 55],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5,
+        "surf": 1,
+        "old_rod": 1,
+        "good_rod": 2,
+        "super_rod": 2
+      },
+      "note": "postgame evolved ecology"
+    },
+    "route_226": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [47, 50],
+        "surf": [35, 55],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [20, 55]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 6,
+        "surf": 2,
+        "old_rod": 1,
+        "good_rod": 2,
+        "super_rod": 3
+      },
+      "note": "postgame evolved ecology"
+    },
+    "route_227": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [51, 54],
+        "surf": [35, 55],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 7,
+        "surf": 1,
+        "old_rod": 1,
+        "good_rod": 2,
+        "super_rod": 2
+      },
+      "note": "postgame evolved ecology"
+    },
+    "route_228": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [49, 52],
+        "surf": [35, 55],
+        "old_rod": [3, 15],
+        "good_rod": [10, 35],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 4,
+        "surf": 1,
+        "old_rod": 1,
+        "good_rod": 2,
+        "super_rod": 2
+      },
+      "note": "postgame evolved ecology"
+    },
+    "route_229": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [47, 50],
+        "surf": [35, 55],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 7,
+        "surf": 1,
+        "old_rod": 1,
+        "good_rod": 2,
+        "super_rod": 2
+      },
+      "note": "postgame evolved ecology"
+    },
+    "route_230": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [47, 50],
+        "surf": [35, 55],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [20, 55]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5,
+        "surf": 3,
+        "old_rod": 1,
+        "good_rod": 2,
+        "super_rod": 3
+      },
+      "note": "postgame evolved ecology"
+    },
+    "ruin_maniac_cave_long": {
+      "zone": "DRY",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "connector",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [22, 25]
+      },
+      "family_cap_budget": {
+        "land": 5,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "maniac_caves"
+    },
+    "ruin_maniac_cave_short": {
+      "zone": "DRY",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "connector",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [21, 24]
+      },
+      "family_cap_budget": {
+        "land": 5,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "maniac_caves"
+    },
+    "sendoff_spring": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [37, 40],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 6,
+        "surf": 1,
+        "old_rod": 1,
+        "good_rod": 2,
+        "super_rod": 2
+      },
+      "note": "postgame"
+    },
+    "snowpoint_temple_1f": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [47, 50]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 3
+      },
+      "note": "postgame temple"
+    },
+    "snowpoint_temple_b1f": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [47, 50]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 3
+      },
+      "note": "postgame temple"
+    },
+    "snowpoint_temple_b2f": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [47, 50]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 3
+      },
+      "note": "postgame temple"
+    },
+    "snowpoint_temple_b3f": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [47, 50]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 3
+      },
+      "note": "postgame temple"
+    },
+    "snowpoint_temple_b4f": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [47, 51]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 3
+      },
+      "note": "postgame temple"
+    },
+    "snowpoint_temple_b5f": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [47, 51]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 3
+      },
+      "note": "postgame temple"
+    },
+    "solaceon_ruins_maniac_tunnel_room": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [20, 30]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 1
+      },
+      "note": "Unknown-only ruin rooms; Unown family already satisfied"
+    },
+    "solaceon_ruins_room_1_northwest_dead_end": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [20, 30]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 1
+      },
+      "note": "Unknown-only ruin rooms; Unown family already satisfied"
+    },
+    "solaceon_ruins_room_1_southeast_dead_end": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [20, 30]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 1
+      },
+      "note": "Unknown-only ruin rooms; Unown family already satisfied"
+    },
+    "solaceon_ruins_room_2": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [20, 30]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 1
+      },
+      "note": "Unknown-only ruin rooms; Unown family already satisfied"
+    },
+    "solaceon_ruins_room_2_northeast_dead_end": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [20, 30]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 1
+      },
+      "note": "Unknown-only ruin rooms; Unown family already satisfied"
+    },
+    "solaceon_ruins_room_2_southeast_dead_end": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [20, 30]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 1
+      },
+      "note": "Unknown-only ruin rooms; Unown family already satisfied"
+    },
+    "solaceon_ruins_room_3": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [20, 30]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 1
+      },
+      "note": "Unknown-only ruin rooms; Unown family already satisfied"
+    },
+    "solaceon_ruins_room_3_northwest_dead_end": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [20, 30]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 1
+      },
+      "note": "Unknown-only ruin rooms; Unown family already satisfied"
+    },
+    "solaceon_ruins_room_3_southwest_dead_end": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [20, 30]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 1
+      },
+      "note": "Unknown-only ruin rooms; Unown family already satisfied"
+    },
+    "solaceon_ruins_room_4": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [20, 30]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 1
+      },
+      "note": "Unknown-only ruin rooms; Unown family already satisfied"
+    },
+    "solaceon_ruins_room_4_southeast_dead_end": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [20, 30]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 1
+      },
+      "note": "Unknown-only ruin rooms; Unown family already satisfied"
+    },
+    "solaceon_ruins_room_5": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [20, 30]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 1
+      },
+      "note": "Unknown-only ruin rooms; Unown family already satisfied"
+    },
+    "solaceon_ruins_room_5_southeast_deadend": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [20, 30]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 1
+      },
+      "note": "Unknown-only ruin rooms; Unown family already satisfied"
+    },
+    "solaceon_ruins_room_5_southwest_dead_end": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [20, 30]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 1
+      },
+      "note": "Unknown-only ruin rooms; Unown family already satisfied"
+    },
+    "solaceon_ruins_room_6": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [20, 30]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 1
+      },
+      "note": "Unknown-only ruin rooms; Unown family already satisfied"
+    },
+    "solaceon_ruins_room_6_northwest_dead_end": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [20, 30]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 1
+      },
+      "note": "Unknown-only ruin rooms; Unown family already satisfied"
+    },
+    "solaceon_ruins_room_6_southeast_dead_end": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [20, 30]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 1
+      },
+      "note": "Unknown-only ruin rooms; Unown family already satisfied"
+    },
+    "solaceon_ruins_room_7": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [20, 30]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 1
+      },
+      "note": "Unknown-only ruin rooms; Unown family already satisfied"
+    },
+    "stark_mountain_outside": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [51, 54]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 7
+      },
+      "note": "postgame"
+    },
+    "stark_mountain_room_1": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [51, 54]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "postgame"
+    },
+    "stark_mountain_room_2": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [52, 55]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "postgame"
+    },
+    "sunyshore_city": {
+      "zone": "EAST",
+      "band": "L2",
+      "story_gate": "after Snowpoint Gym through the Sunyshore Gym (badge 8)",
+      "kind": "water",
+      "authored_by_this_work": true,
+      "encounter_methods": ["surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "surf": [30, 50],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [20, 55]
+      },
+      "family_cap_budget": {
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "surf": 2,
+        "old_rod": 1,
+        "good_rod": 3,
+        "super_rod": 3
+      },
+      "note": null
+    },
+    "trophy_garden": {
+      "zone": "HEARTH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "signature",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [21, 24]
+      },
+      "family_cap_budget": {
+        "land": 9,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6
+      },
+      "note": null
+    },
+    "turnback_cave_entrance": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [15, 18]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave (postgame)"
+    },
+    "turnback_cave_giratina_room": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [35, 38]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave (postgame)"
+    },
+    "turnback_cave_pillar_1_room_1": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [15, 18]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave (postgame)"
+    },
+    "turnback_cave_pillar_1_room_2": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [15, 18]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave (postgame)"
+    },
+    "turnback_cave_pillar_1_room_3": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [15, 18]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave (postgame)"
+    },
+    "turnback_cave_pillar_1_room_4": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [15, 18]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave (postgame)"
+    },
+    "turnback_cave_pillar_1_room_5": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [15, 18]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave (postgame)"
+    },
+    "turnback_cave_pillar_1_room_6": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [15, 18]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave (postgame)"
+    },
+    "turnback_cave_pillar_2_room_1": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [25, 28]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave (postgame)"
+    },
+    "turnback_cave_pillar_2_room_2": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [25, 28]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave (postgame)"
+    },
+    "turnback_cave_pillar_2_room_3": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [25, 28]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave (postgame)"
+    },
+    "turnback_cave_pillar_2_room_4": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [25, 28]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave (postgame)"
+    },
+    "turnback_cave_pillar_2_room_5": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [25, 28]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave (postgame)"
+    },
+    "turnback_cave_pillar_2_room_6": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [25, 28]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave (postgame)"
+    },
+    "turnback_cave_pillar_3_room_1": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [35, 38]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave (postgame)"
+    },
+    "turnback_cave_pillar_3_room_2": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [35, 38]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave (postgame)"
+    },
+    "turnback_cave_pillar_3_room_3": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [35, 38]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave (postgame)"
+    },
+    "turnback_cave_pillar_3_room_4": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [35, 38]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave (postgame)"
+    },
+    "turnback_cave_pillar_3_room_5": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [35, 38]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave (postgame)"
+    },
+    "turnback_cave_pillar_3_room_6": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [35, 38]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave (postgame)"
+    },
+    "turnback_cave_pillar_room": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [35, 38]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave (postgame)"
+    },
+    "twinleaf_town": {
+      "zone": "START",
+      "band": "E0",
+      "story_gate": "start of game through the Oreburgh Gym (badge 1)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 35],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "surf": 1,
+        "old_rod": 1,
+        "good_rod": 2,
+        "super_rod": 2
+      },
+      "note": "Old Rod magikarp-only early water; unchanged"
+    },
+    "unknown_533": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_534": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_535": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_536": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_537": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_538": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_539": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_540": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_541": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_542": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_543": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_544": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_545": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_546": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_547": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_548": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_549": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_550": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_551": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_552": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_553": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_554": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_555": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_556": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "unknown_557": {
+      "zone": "POST",
+      "band": "P1",
+      "story_gate": "after the Hall of Fame (Super Rod = Fight Area fisherman)",
+      "kind": "unmodified",
+      "authored_by_this_work": false,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [45, 48]
+      },
+      "family_cap_budget": null,
+      "families_in_final_tables": {
+        "land": 5
+      },
+      "note": "Turnback Cave pillar room (postgame)"
+    },
+    "valley_windworks_outside": {
+      "zone": "FOREST",
+      "band": "E1",
+      "story_gate": "after Oreburgh Gym through the Eterna Gym (badge 2)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [9, 12],
+        "surf": [20, 40],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [20, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 8,
+        "surf": 2,
+        "old_rod": 3,
+        "good_rod": 2,
+        "super_rod": 3
+      },
+      "note": null
+    },
+    "valor_lakefront": {
+      "zone": "MARSH",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [25, 28]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 7
+      },
+      "note": null
+    },
+    "victory_road_1f": {
+      "zone": "DEEP",
+      "band": "P0",
+      "story_gate": "after badge 8 through the Pokemon League (Victory Road)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [40, 43]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6
+      },
+      "note": "victory_road"
+    },
+    "victory_road_1f_room_1": {
+      "zone": "DEEP",
+      "band": "P0",
+      "story_gate": "after badge 8 through the Pokemon League (Victory Road)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [47, 50]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6
+      },
+      "note": "victory_road"
+    },
+    "victory_road_1f_room_2": {
+      "zone": "DEEP",
+      "band": "P0",
+      "story_gate": "after badge 8 through the Pokemon League (Victory Road)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [47, 50],
+        "surf": [35, 55],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6,
+        "surf": 3,
+        "old_rod": 1,
+        "good_rod": 1,
+        "super_rod": 1
+      },
+      "note": "victory_road"
+    },
+    "victory_road_1f_room_3": {
+      "zone": "DEEP",
+      "band": "P0",
+      "story_gate": "after badge 8 through the Pokemon League (Victory Road)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [47, 50]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6
+      },
+      "note": "victory_road"
+    },
+    "victory_road_2f": {
+      "zone": "DEEP",
+      "band": "P0",
+      "story_gate": "after badge 8 through the Pokemon League (Victory Road)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [41, 44]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 6
+      },
+      "note": "victory_road"
+    },
+    "victory_road_b1f": {
+      "zone": "DEEP",
+      "band": "P0",
+      "story_gate": "after badge 8 through the Pokemon League (Victory Road)",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land", "surf", "old_rod", "good_rod", "super_rod"],
+      "intended_level_band": {
+        "land": [41, 44],
+        "surf": [30, 50],
+        "old_rod": [3, 15],
+        "good_rod": [10, 25],
+        "super_rod": [30, 55]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 7,
+        "surf": 2,
+        "old_rod": 1,
+        "good_rod": 1,
+        "super_rod": 1
+      },
+      "note": "victory_road"
+    },
+    "wayward_cave_1f": {
+      "zone": "CYCLE",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [17, 20]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 7
+      },
+      "note": "wayward_cave"
+    },
+    "wayward_cave_b1f": {
+      "zone": "CYCLE",
+      "band": "M1",
+      "story_gate": "after Eterna Gym through the Pastoria Gym (badge 5); Surf = HM03 (Celestic Town Cave), Good Rod = Route 209",
+      "kind": "ordinary",
+      "authored_by_this_work": true,
+      "encounter_methods": ["land"],
+      "intended_level_band": {
+        "land": [17, 20]
+      },
+      "family_cap_budget": {
+        "land": 8,
+        "water_per_method": 4
+      },
+      "families_in_final_tables": {
+        "land": 7
+      },
+      "note": "wayward_cave"
+    }
+  }
+}

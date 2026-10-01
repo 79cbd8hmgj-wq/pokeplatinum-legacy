@@ -3,27 +3,27 @@
     "land_encounters": [
         {
             "level": 10,
-            "species": "SPECIES_SHELLOS"
-        },
-        {
-            "level": 11,
-            "species": "SPECIES_SHELLOS"
-        },
-        {
-            "level": 10,
             "species": "SPECIES_BUIZEL"
         },
         {
-            "level": 9,
-            "species": "SPECIES_SHELLOS"
+            "level": 11,
+            "species": "SPECIES_WINGULL"
         },
         {
             "level": 10,
-            "species": "SPECIES_BIDOOF"
+            "species": "SPECIES_SHELLOS"
+        },
+        {
+            "level": 9,
+            "species": "SPECIES_WOOPER"
+        },
+        {
+            "level": 10,
+            "species": "SPECIES_AZURILL"
         },
         {
             "level": 11,
-            "species": "SPECIES_SHELLOS"
+            "species": "SPECIES_LOTAD"
         },
         {
             "level": 9,
@@ -31,7 +31,7 @@
         },
         {
             "level": 11,
-            "species": "SPECIES_PACHIRISU"
+            "species": "SPECIES_SURSKIT"
         },
         {
             "level": 11,
@@ -43,11 +43,11 @@
         },
         {
             "level": 11,
-            "species": "SPECIES_BUIZEL"
+            "species": "SPECIES_WINGULL"
         },
         {
             "level": 12,
-            "species": "SPECIES_SHELLOS"
+            "species": "SPECIES_LOTAD"
         }
     ],
     "swarms": [
@@ -55,12 +55,12 @@
         "SPECIES_SHELLOS"
     ],
     "day": [
-        "SPECIES_BUIZEL",
-        "SPECIES_SHELLOS"
+        "SPECIES_SHELLOS",
+        "SPECIES_WOOPER"
     ],
     "night": [
-        "SPECIES_BUIZEL",
-        "SPECIES_SHELLOS"
+        "SPECIES_SHELLOS",
+        "SPECIES_WOOPER"
     ],
     "radar": [
         "SPECIES_HOPPIP",
@@ -132,12 +132,12 @@
         {
             "level_max": 7,
             "level_min": 3,
-            "species": "SPECIES_MAGIKARP"
+            "species": "SPECIES_POLIWAG"
         },
         {
             "level_max": 10,
             "level_min": 5,
-            "species": "SPECIES_MAGIKARP"
+            "species": "SPECIES_GOLDEEN"
         },
         {
             "level_max": 10,

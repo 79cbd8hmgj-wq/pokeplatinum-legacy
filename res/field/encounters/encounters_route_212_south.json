@@ -3,11 +3,11 @@
     "land_encounters": [
         {
             "level": 23,
-            "species": "SPECIES_SHELLOS"
+            "species": "SPECIES_CROAGUNK"
         },
         {
             "level": 24,
-            "species": "SPECIES_QUAGSIRE"
+            "species": "SPECIES_SHELLOS"
         },
         {
             "level": 25,
@@ -15,23 +15,31 @@
         },
         {
             "level": 24,
-            "species": "SPECIES_SHELLOS"
+            "species": "SPECIES_GRIMER"
         },
         {
             "level": 26,
-            "species": "SPECIES_QUAGSIRE"
+            "species": "SPECIES_GULPIN"
+        },
+        {
+            "level": 25,
+            "species": "SPECIES_SKORUPI"
+        },
+        {
+            "level": 24,
+            "species": "SPECIES_WOOPER"
         },
         {
             "level": 25,
             "species": "SPECIES_SHELLOS"
         },
         {
-            "level": 24,
+            "level": 23,
             "species": "SPECIES_CROAGUNK"
         },
         {
-            "level": 25,
-            "species": "SPECIES_CROAGUNK"
+            "level": 26,
+            "species": "SPECIES_SHELLOS"
         },
         {
             "level": 23,
@@ -39,15 +47,7 @@
         },
         {
             "level": 26,
-            "species": "SPECIES_SHELLOS"
-        },
-        {
-            "level": 23,
-            "species": "SPECIES_BUIZEL"
-        },
-        {
-            "level": 26,
-            "species": "SPECIES_SHELLOS"
+            "species": "SPECIES_WOOPER"
         }
     ],
     "swarms": [
@@ -56,11 +56,11 @@
     ],
     "day": [
         "SPECIES_BUIZEL",
-        "SPECIES_SHELLOS"
+        "SPECIES_GRIMER"
     ],
     "night": [
         "SPECIES_BUIZEL",
-        "SPECIES_SHELLOS"
+        "SPECIES_GRIMER"
     ],
     "radar": [
         "SPECIES_GRIMER",
@@ -75,23 +75,23 @@
     "rate_form4": 0,
     "unown_table": 0,
     "ruby": [
-        "SPECIES_BUIZEL",
+        "SPECIES_CROAGUNK",
         "SPECIES_SHELLOS"
     ],
     "sapphire": [
-        "SPECIES_LOMBRE",
-        "SPECIES_LOTAD"
+        "SPECIES_CROAGUNK",
+        "SPECIES_SHELLOS"
     ],
     "emerald": [
-        "SPECIES_BUIZEL",
+        "SPECIES_CROAGUNK",
         "SPECIES_SHELLOS"
     ],
     "firered": [
-        "SPECIES_EKANS",
-        "SPECIES_EKANS"
+        "SPECIES_CROAGUNK",
+        "SPECIES_SHELLOS"
     ],
     "leafgreen": [
-        "SPECIES_BUIZEL",
+        "SPECIES_CROAGUNK",
         "SPECIES_SHELLOS"
     ],
     "surf_rate": 10,
@@ -132,12 +132,12 @@
         {
             "level_max": 7,
             "level_min": 3,
-            "species": "SPECIES_MAGIKARP"
+            "species": "SPECIES_BARBOACH"
         },
         {
             "level_max": 10,
             "level_min": 5,
-            "species": "SPECIES_MAGIKARP"
+            "species": "SPECIES_KRABBY"
         },
         {
             "level_max": 10,

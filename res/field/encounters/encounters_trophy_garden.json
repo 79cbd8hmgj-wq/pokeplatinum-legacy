@@ -3,27 +3,27 @@
     "land_encounters": [
         {
             "level": 21,
+            "species": "SPECIES_MEOWTH"
+        },
+        {
+            "level": 22,
+            "species": "SPECIES_AZURILL"
+        },
+        {
+            "level": 22,
             "species": "SPECIES_PICHU"
-        },
-        {
-            "level": 22,
-            "species": "SPECIES_ROSELIA"
-        },
-        {
-            "level": 22,
-            "species": "SPECIES_STARAVIA"
         },
         {
             "level": 23,
-            "species": "SPECIES_KRICKETUNE"
+            "species": "SPECIES_MINUN"
         },
         {
             "level": 23,
-            "species": "SPECIES_ROSELIA"
+            "species": "SPECIES_DITTO"
         },
         {
             "level": 24,
-            "species": "SPECIES_STARAVIA"
+            "species": "SPECIES_PLUSLE"
         },
         {
             "level": 22,
@@ -35,19 +35,19 @@
         },
         {
             "level": 24,
-            "species": "SPECIES_PIKACHU"
+            "species": "SPECIES_MEOWTH"
         },
         {
             "level": 22,
-            "species": "SPECIES_PICHU"
+            "species": "SPECIES_AZURILL"
         },
         {
             "level": 24,
-            "species": "SPECIES_PIKACHU"
+            "species": "SPECIES_PICHU"
         },
         {
             "level": 22,
-            "species": "SPECIES_PICHU"
+            "species": "SPECIES_PIKACHU"
         }
     ],
     "swarms": [
@@ -55,12 +55,12 @@
         "SPECIES_ROSELIA"
     ],
     "day": [
-        "SPECIES_STARAVIA",
-        "SPECIES_STARAVIA"
+        "SPECIES_PICHU",
+        "SPECIES_MINUN"
     ],
     "night": [
-        "SPECIES_KRICKETUNE",
-        "SPECIES_KRICKETUNE"
+        "SPECIES_PICHU",
+        "SPECIES_MINUN"
     ],
     "radar": [
         "SPECIES_ROSELIA",
@@ -75,24 +75,24 @@
     "rate_form4": 0,
     "unown_table": 0,
     "ruby": [
-        "SPECIES_PIKACHU",
-        "SPECIES_PICHU"
+        "SPECIES_MEOWTH",
+        "SPECIES_AZURILL"
     ],
     "sapphire": [
-        "SPECIES_PIKACHU",
-        "SPECIES_PICHU"
+        "SPECIES_MEOWTH",
+        "SPECIES_AZURILL"
     ],
     "emerald": [
-        "SPECIES_PIKACHU",
-        "SPECIES_PICHU"
+        "SPECIES_MEOWTH",
+        "SPECIES_AZURILL"
     ],
     "firered": [
-        "SPECIES_PIKACHU",
-        "SPECIES_PICHU"
+        "SPECIES_MEOWTH",
+        "SPECIES_AZURILL"
     ],
     "leafgreen": [
-        "SPECIES_PIKACHU",
-        "SPECIES_PICHU"
+        "SPECIES_MEOWTH",
+        "SPECIES_AZURILL"
     ],
     "surf_rate": 0,
     "surf_encounters": [

@@ -3,27 +3,35 @@
     "land_encounters": [
         {
             "level": 9,
-            "species": "SPECIES_STARLY"
+            "species": "SPECIES_BUDEW"
         },
         {
             "level": 9,
-            "species": "SPECIES_BIDOOF"
+            "species": "SPECIES_COMBEE"
         },
         {
             "level": 9,
-            "species": "SPECIES_WURMPLE"
+            "species": "SPECIES_SUNKERN"
         },
         {
             "level": 8,
-            "species": "SPECIES_KRICKETOT"
+            "species": "SPECIES_SURSKIT"
         },
         {
             "level": 9,
-            "species": "SPECIES_BUDEW"
+            "species": "SPECIES_CHERUBI"
         },
         {
             "level": 9,
-            "species": "SPECIES_SHINX"
+            "species": "SPECIES_SKITTY"
+        },
+        {
+            "level": 10,
+            "species": "SPECIES_RALTS"
+        },
+        {
+            "level": 10,
+            "species": "SPECIES_GLAMEOW"
         },
         {
             "level": 10,
@@ -31,23 +39,15 @@
         },
         {
             "level": 10,
-            "species": "SPECIES_SHINX"
-        },
-        {
-            "level": 10,
-            "species": "SPECIES_STARLY"
-        },
-        {
-            "level": 10,
-            "species": "SPECIES_BIDOOF"
+            "species": "SPECIES_COMBEE"
         },
         {
             "level": 11,
-            "species": "SPECIES_STARLY"
+            "species": "SPECIES_SUNKERN"
         },
         {
             "level": 11,
-            "species": "SPECIES_BIDOOF"
+            "species": "SPECIES_SKITTY"
         }
     ],
     "swarms": [
@@ -55,12 +55,12 @@
         "SPECIES_BIDOOF"
     ],
     "day": [
-        "SPECIES_WURMPLE",
-        "SPECIES_BUDEW"
+        "SPECIES_SUNKERN",
+        "SPECIES_SURSKIT"
     ],
     "night": [
-        "SPECIES_KRICKETOT",
-        "SPECIES_ZUBAT"
+        "SPECIES_SUNKERN",
+        "SPECIES_SURSKIT"
     ],
     "radar": [
         "SPECIES_SUNKERN",
@@ -75,24 +75,24 @@
     "rate_form4": 0,
     "unown_table": 0,
     "ruby": [
-        "SPECIES_SEEDOT",
-        "SPECIES_SEEDOT"
+        "SPECIES_BUDEW",
+        "SPECIES_COMBEE"
     ],
     "sapphire": [
-        "SPECIES_LOTAD",
-        "SPECIES_LOTAD"
+        "SPECIES_BUDEW",
+        "SPECIES_COMBEE"
     ],
     "emerald": [
-        "SPECIES_PINECO",
-        "SPECIES_PINECO"
+        "SPECIES_BUDEW",
+        "SPECIES_COMBEE"
     ],
     "firered": [
-        "SPECIES_CATERPIE",
-        "SPECIES_CATERPIE"
+        "SPECIES_BUDEW",
+        "SPECIES_COMBEE"
     ],
     "leafgreen": [
-        "SPECIES_WEEDLE",
-        "SPECIES_WEEDLE"
+        "SPECIES_BUDEW",
+        "SPECIES_COMBEE"
     ],
     "surf_rate": 10,
     "surf_encounters": [
@@ -132,12 +132,12 @@
         {
             "level_max": 7,
             "level_min": 3,
-            "species": "SPECIES_MAGIKARP"
+            "species": "SPECIES_POLIWAG"
         },
         {
             "level_max": 10,
             "level_min": 5,
-            "species": "SPECIES_MAGIKARP"
+            "species": "SPECIES_GOLDEEN"
         },
         {
             "level_max": 10,
@@ -155,12 +155,12 @@
         {
             "level_max": 20,
             "level_min": 15,
-            "species": "SPECIES_MAGIKARP"
+            "species": "SPECIES_GOLDEEN"
         },
         {
             "level_max": 20,
             "level_min": 15,
-            "species": "SPECIES_GOLDEEN"
+            "species": "SPECIES_POLIWAG"
         },
         {
             "level_max": 25,

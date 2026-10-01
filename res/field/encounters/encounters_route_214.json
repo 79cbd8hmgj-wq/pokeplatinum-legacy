@@ -3,37 +3,37 @@
     "land_encounters": [
         {
             "level": 23,
-            "species": "SPECIES_GRAVELER"
-        },
-        {
-            "level": 21,
-            "species": "SPECIES_GEODUDE"
-        },
-        {
-            "level": 22,
-            "species": "SPECIES_GRAVELER"
-        },
-        {
-            "level": 22,
-            "species": "SPECIES_RHYHORN"
-        },
-        {
-            "level": 23,
             "species": "SPECIES_HOUNDOUR"
-        },
-        {
-            "level": 23,
-            "species": "SPECIES_RHYHORN"
-        },
-        {
-            "level": 24,
-            "species": "SPECIES_GRAVELER"
         },
         {
             "level": 21,
             "species": "SPECIES_RHYHORN"
         },
         {
+            "level": 22,
+            "species": "SPECIES_SPINDA"
+        },
+        {
+            "level": 22,
+            "species": "SPECIES_NUMEL"
+        },
+        {
+            "level": 23,
+            "species": "SPECIES_CACNEA"
+        },
+        {
+            "level": 23,
+            "species": "SPECIES_ELECTRIKE"
+        },
+        {
+            "level": 24,
+            "species": "SPECIES_BALTOY"
+        },
+        {
+            "level": 21,
+            "species": "SPECIES_NUMEL"
+        },
+        {
             "level": 24,
             "species": "SPECIES_HOUNDOUR"
         },
@@ -43,11 +43,11 @@
         },
         {
             "level": 24,
-            "species": "SPECIES_HOUNDOUR"
+            "species": "SPECIES_SPINDA"
         },
         {
             "level": 24,
-            "species": "SPECIES_RHYHORN"
+            "species": "SPECIES_CACNEA"
         }
     ],
     "swarms": [
@@ -55,12 +55,12 @@
         "SPECIES_SPOINK"
     ],
     "day": [
-        "SPECIES_GRAVELER",
-        "SPECIES_RHYHORN"
+        "SPECIES_SPINDA",
+        "SPECIES_NUMEL"
     ],
     "night": [
-        "SPECIES_HOUNDOUR",
-        "SPECIES_ZUBAT"
+        "SPECIES_SPINDA",
+        "SPECIES_NUMEL"
     ],
     "radar": [
         "SPECIES_POOCHYENA",
@@ -91,8 +91,8 @@
         "SPECIES_RHYHORN"
     ],
     "leafgreen": [
-        "SPECIES_VULPIX",
-        "SPECIES_VULPIX"
+        "SPECIES_HOUNDOUR",
+        "SPECIES_RHYHORN"
     ],
     "surf_rate": 10,
     "surf_encounters": [
@@ -109,7 +109,7 @@
         {
             "level_max": 40,
             "level_min": 20,
-            "species": "SPECIES_GOLDUCK"
+            "species": "SPECIES_SLOWPOKE"
         },
         {
             "level_max": 40,
@@ -132,12 +132,12 @@
         {
             "level_max": 7,
             "level_min": 3,
-            "species": "SPECIES_MAGIKARP"
+            "species": "SPECIES_POLIWAG"
         },
         {
             "level_max": 10,
             "level_min": 5,
-            "species": "SPECIES_MAGIKARP"
+            "species": "SPECIES_BARBOACH"
         },
         {
             "level_max": 10,
@@ -155,12 +155,12 @@
         {
             "level_max": 20,
             "level_min": 15,
-            "species": "SPECIES_MAGIKARP"
+            "species": "SPECIES_GOLDEEN"
         },
         {
             "level_max": 20,
             "level_min": 15,
-            "species": "SPECIES_GOLDEEN"
+            "species": "SPECIES_BARBOACH"
         },
         {
             "level_max": 25,

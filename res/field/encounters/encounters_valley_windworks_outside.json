@@ -3,42 +3,34 @@
     "land_encounters": [
         {
             "level": 9,
-            "species": "SPECIES_SHELLOS"
+            "species": "SPECIES_BUIZEL"
         },
         {
             "level": 10,
+            "species": "SPECIES_WINGULL"
+        },
+        {
+            "level": 9,
             "species": "SPECIES_SHINX"
         },
         {
-            "level": 9,
-            "species": "SPECIES_BUIZEL"
-        },
-        {
             "level": 10,
-            "species": "SPECIES_SHELLOS"
-        },
-        {
-            "level": 10,
-            "species": "SPECIES_BUIZEL"
-        },
-        {
-            "level": 11,
-            "species": "SPECIES_SHELLOS"
-        },
-        {
-            "level": 9,
             "species": "SPECIES_PACHIRISU"
         },
         {
-            "level": 11,
-            "species": "SPECIES_PACHIRISU"
+            "level": 10,
+            "species": "SPECIES_SEEDOT"
         },
         {
             "level": 11,
-            "species": "SPECIES_BUIZEL"
+            "species": "SPECIES_STUNKY"
         },
         {
-            "level": 12,
+            "level": 9,
+            "species": "SPECIES_DRIFLOON"
+        },
+        {
+            "level": 11,
             "species": "SPECIES_SHELLOS"
         },
         {
@@ -47,7 +39,15 @@
         },
         {
             "level": 12,
-            "species": "SPECIES_SHELLOS"
+            "species": "SPECIES_WINGULL"
+        },
+        {
+            "level": 11,
+            "species": "SPECIES_SHINX"
+        },
+        {
+            "level": 12,
+            "species": "SPECIES_SEEDOT"
         }
     ],
     "swarms": [
@@ -55,12 +55,12 @@
         "SPECIES_ELECTRIKE"
     ],
     "day": [
-        "SPECIES_BUIZEL",
-        "SPECIES_SHELLOS"
+        "SPECIES_SHINX",
+        "SPECIES_PACHIRISU"
     ],
     "night": [
-        "SPECIES_BUIZEL",
-        "SPECIES_SHELLOS"
+        "SPECIES_SHINX",
+        "SPECIES_PACHIRISU"
     ],
     "radar": [
         "SPECIES_MAREEP",
@@ -76,23 +76,23 @@
     "unown_table": 0,
     "ruby": [
         "SPECIES_BUIZEL",
-        "SPECIES_SHELLOS"
+        "SPECIES_WINGULL"
     ],
     "sapphire": [
         "SPECIES_BUIZEL",
-        "SPECIES_SHELLOS"
+        "SPECIES_WINGULL"
     ],
     "emerald": [
         "SPECIES_BUIZEL",
-        "SPECIES_SHELLOS"
+        "SPECIES_WINGULL"
     ],
     "firered": [
         "SPECIES_BUIZEL",
-        "SPECIES_SHELLOS"
+        "SPECIES_WINGULL"
     ],
     "leafgreen": [
         "SPECIES_BUIZEL",
-        "SPECIES_SHELLOS"
+        "SPECIES_WINGULL"
     ],
     "surf_rate": 10,
     "surf_encounters": [
@@ -132,12 +132,12 @@
         {
             "level_max": 7,
             "level_min": 3,
-            "species": "SPECIES_MAGIKARP"
+            "species": "SPECIES_GOLDEEN"
         },
         {
             "level_max": 10,
             "level_min": 5,
-            "species": "SPECIES_MAGIKARP"
+            "species": "SPECIES_POLIWAG"
         },
         {
             "level_max": 10,
