@@ -56,6 +56,29 @@ Use for:
 - effect design
 - background art reference
 
+
+### Additional Pokemon decomps in donor pool
+
+The user also has decomps/forks for:
+- Pokemon Stadium
+- Pokemon Stadium 2
+- Pokemon Diamond
+- Pokemon Yellow
+- Pokemon FireRed
+- Pokemon Crystal
+- Pokemon Ruby
+
+These must be considered before finalizing any visual subsystem. They are not assumed to be equally portable.
+
+#### Technical priority by platform/generation
+- **Diamond**: extremely high-value control/reference source because it shares the Gen IV DS engine lineage with Platinum. Use to identify alternate or unused field assets, rendering behavior, UI resources, battle presentation, effects, and content that Platinum changed or removed.
+- **FireRed / Ruby**: strong 2D donor/reference sources for sprites, tiles, palettes, UI motifs, battle effects, and readability. Use primarily for art direction and convertible 2D assets rather than DS engine code.
+- **Crystal / Yellow**: historical/reference sources for iconic Pokemon visual language, palette identity, tiles, UI motifs, and simplified effects. Use selectively where clarity or style is stronger than later assets.
+- **Pokemon Stadium / Stadium 2**: high-value visual reference sources for 3D Pokemon presentation, battle staging, camera language, animation timing, effects, stadium/battle environments, lighting direction, and model-material ideas. N64 code/assets are not assumed to be directly portable to DS; treat them primarily as reference/technique donors unless a specific asset conversion proves practical.
+
+#### Rule
+For each visual subsystem, compare all relevant donor/reference games before choosing a direction. Prefer the strongest result that can be implemented efficiently on Platinum's DS base rather than favoring a game merely because it is newer.
+
 ## Confirmed Platinum visual systems
 
 The current decomp exposes substantially more than simple asset replacement.
