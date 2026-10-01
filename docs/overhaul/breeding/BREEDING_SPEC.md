@@ -4,80 +4,147 @@ Status: **LOCKED SPEC**
 
 ## 1. Design target
 
-Breeding should be a practical midgame team-building system, not postgame paperwork.
+Breeding should be a practical team-building system during the campaign and postgame, not repetitive postgame paperwork.
 
 Core principles:
-- breeding refines Pokémon; it does not repair basic campaign functionality;
-- level-up learnsets remain the primary source of ordinary STAB and role-defining moves;
-- egg moves provide optional inherited techniques, early access, utility, and specialization;
-- no external game/trade requirement may be needed to create a legal inheritance chain;
-- the locked no-incense baby rule applies to all affected baby species;
-- cross-type offspring/variant breeding remains deferred beyond Core 1.0.
+- breeding refines a Pokémon's role; it does not repair a broken species;
+- level-up/TM/tutor access remains the primary way a species becomes functional;
+- no flat BST rewards for bred Pokémon;
+- no cross-type offspring, variant offspring, or other experimental breeding forms in Core 1.0;
+- preserve Gen IV identity where it remains useful;
+- reduce repetition in nature, IV, ability, egg production, and hatching;
+- all inheritance chains must be possible in one save.
 
 ## 2. Platinum source baseline
 
-Breeding is centrally implemented in:
-- `src/overlay005/daycare.c`;
-- `include/constants/daycare.h`;
-- species egg-group and egg-move resources;
-- daycare field scripts.
-
 Current Platinum behavior includes:
-- 50% Everstone nature inheritance from the selected eligible parent;
-- 3 inherited IV stats;
-- father-only egg-move inheritance;
+- 50% Everstone nature inheritance from the eligible female/Ditto parent;
+- three inherited IVs;
+- egg moves from the father;
 - father TM/HM inheritance;
-- shared level-up move inheritance when both parents know the move;
-- incense-gated baby species;
-- compatibility checks every 255 parent steps;
-- hatch-cycle decrement every 255 field steps, with Flame Body/Magma Armor doubling decrement.
+- shared level-up moves known by both parents;
+- incense-gated babies;
+- egg creation checks based on compatibility;
+- species hatch-cycle values;
+- Flame Body/Magma Armor doubling hatch-cycle reduction;
+- standard Ditto compatibility;
+- Masuda-language shiny rerolls;
+- eggs hatch at Lv1.
+
+Those are the baseline mechanics this spec modifies.
 
 ## 3. Nature inheritance
 
-Everstone nature inheritance becomes **100%**.
+Everstone becomes **100% nature inheritance**.
 
 Rules:
-- if exactly one eligible parent holds Everstone, inherit that parent's nature;
-- if both eligible parents hold Everstone and have different natures, choose either parent 50/50;
-- if both have the same nature, inherit it;
-- Ditto follows the same rule and does not receive a special penalty;
-- without Everstone, nature remains random.
+- if exactly one parent holds Everstone, inherit that parent's nature;
+- if both parents hold Everstone, randomly choose one parent and inherit that nature;
+- Ditto is treated exactly like any other parent for this purpose;
+- gender does not restrict Everstone inheritance.
 
-Do not add Destiny Knot or later-generation mechanics.
+This supersedes Platinum's 50% female/Ditto-only rule.
+
+Masuda-method shiny handling must remain compatible with the inherited nature.
 
 ## 4. IV inheritance
 
-Increase inherited IV count:
-
-**3 → 4 distinct stats**
+Increase inherited IV count from **3 to 4**.
 
 Rules:
-- choose four unique stats;
-- each chosen stat independently selects one of the two parents 50/50;
-- no inherited stat may be selected twice;
-- remaining two IVs stay randomly generated;
-- Ditto is treated as an ordinary parent for IV inheritance;
-- do not guarantee perfect IVs.
+- inherit four distinct stat indices;
+- never select the same stat twice;
+- for each selected stat, choose one of the two parents at random unless a Power item forces the source;
+- the remaining two stats are generated normally.
 
-This improves predictability without making breeding trivial.
+### Power-item inheritance
 
-## 5. Ability inheritance
+Power items gain their later-generation breeding utility:
 
-Do **not** add new ability-slot inheritance logic in Core 1.0.
+- Power Weight → HP
+- Power Bracer → Attack
+- Power Belt → Defense
+- Power Lens → Sp. Atk
+- Power Band → Sp. Def
+- Power Anklet → Speed
 
-Platinum ability selection remains governed by its existing personality/species behavior.
+If exactly one parent holds a relevant Power item:
+- that stat is guaranteed among the four inherited stats;
+- it is inherited from that holder.
 
-Reason:
-- the source audit confirms nature and IV inheritance are cleanly separable;
-- forcing ability-slot inheritance would require personality-generation constraints and risks interacting with gender, nature, form, and shiny logic;
-- the project does not need hidden-ability or modern breeding behavior.
+If both parents hold Power items:
+- randomly choose one holder's forced stat/source;
+- only one Power-item guarantee applies;
+- choose the other three inherited stats distinctly from the remaining five.
 
-This may be revisited only after runtime evidence shows a meaningful breeding usability problem.
+Destiny Knot does **not** gain later-generation five-IV inheritance in Core 1.0.
 
-## 6. Baby Pokémon — no incense requirement
+## 5. Ability-slot inheritance
 
-Remove incense as a requirement for producing:
+No Hidden Abilities exist in this project.
 
+For species with two distinct normal ability slots:
+
+- the non-Ditto species parent passes its current ability slot with **80% probability**;
+- the other normal ability slot occurs 20% of the time;
+- in a standard male/female pairing, the female is the species parent;
+- with Ditto, the non-Ditto parent is the species parent;
+- species with only one effective ability remain unchanged.
+
+Implementation must preserve valid Gen IV personality/gender/nature behavior. Do not create impossible personality/ability combinations merely to force the slot.
+
+## 6. Egg-move inheritance
+
+Egg moves may be inherited from **either parent**, not only the father.
+
+Rules:
+- if either parent knows a move listed in the offspring species' egg-move list, the offspring may inherit it;
+- duplicate inherited moves collapse to one;
+- preserve the four-move cap and deterministic move replacement behavior;
+- shared level-up move inheritance remains available;
+- father TM/HM inheritance remains unchanged for Gen IV identity, although reusable TMs make it less important.
+
+This broadens legal one-save breeding chains without turning egg moves into mandatory role repair.
+
+## 7. Egg-move content policy
+
+Keep Platinum's existing egg-move lists as the baseline.
+
+Do **not** perform a broad "give every species more egg moves" expansion.
+
+Additions are permitted only when all are true:
+1. they refine a locked species role;
+2. the move is not required for basic STAB/functionality;
+3. the move is thematically appropriate;
+4. a legal one-save inheritance chain exists under the final egg groups;
+5. the addition does not obsolete a level-up/TM/tutor identity decision.
+
+The C3 rule remains authoritative:
+
+> Egg moves refine; they do not repair.
+
+The bespoke Emerald conditional hatch-reward concepts are **DEFERRED** from Platinum Core 1.0. Platinum already has a larger move pool and stronger species-level redesign, while conditional hatch packages would create an additional mechanic beyond the native breeding hooks.
+
+## 8. Egg groups
+
+Retain vanilla Platinum egg groups as the default.
+
+Do **not** broadly rewrite egg groups based merely on type changes.
+
+Only change an egg group when one of these is demonstrated:
+- the current group contradicts the species' locked biological identity;
+- a locked egg-move refinement would otherwise have no legal one-save chain;
+- a cross-generation family has an internal breeding inconsistency.
+
+All egg-group changes require a machine-readable manifest and validator.
+
+Core 1.0 should prefer **minimal egg-group edits** over wholesale expansion.
+
+## 9. No-incense baby breeding
+
+The already-locked no-incense rule is mandatory.
+
+The following babies hatch directly from their family without requiring incense:
 - Wynaut
 - Azurill
 - Mime Jr.
@@ -88,214 +155,119 @@ Remove incense as a requirement for producing:
 - Happiny
 - Chingling
 
-Breeding their family always produces the baby-stage species when that family normally has one.
+Incense items may remain for their independent battle effects or collection identity. They no longer determine whether the baby species hatches.
 
-Incense items remain obtainable for their independent held-item effects.
+## 10. Egg production speed
 
-## 7. Egg-move inheritance
+Keep Platinum's compatibility score identities:
+- incompatible = 0
+- low = 20
+- medium = 50
+- high = 70
 
-### 7.1 Either parent may pass egg moves
+Change the Day Care egg-generation check interval from roughly **255 steps to 128 steps**.
 
-If either biological parent knows a move listed in the offspring species' egg-move pool, the offspring may inherit it.
+Do not increase the compatibility percentages themselves.
 
-This replaces the father-only restriction.
+This approximately doubles egg-generation opportunities while preserving the difference between poor and strong pairings.
 
-Ditto itself does not contribute species egg moves unless the non-Ditto species' normal rules make that move available through the other parent.
+## 11. Hatch-speed policy
 
-### 7.2 Shared level-up moves
-
-Keep the current rule that a move in the offspring's level-up pool is inherited when both parents know it.
-
-### 7.3 TM/HM inheritance
-
-Retain Platinum's existing TM/HM inheritance behavior for compatibility, but do not expand it.
-
-Because TMs are reusable in the overhaul, TM inheritance is no longer a major progression requirement.
-
-### 7.4 Created moves
-
-Created identity moves must not be broadly added to egg pools.
-
-Do not add:
-- Resonant Slash
-- Solar Petal
-- Vine Snare
-- Luminous Current
-- Soul Siphon
-- Pollen Pulse
-- Earthen Bash
-- Scrap Guard
-- Magnet Volley
-- Soul Grip
-- Stalk Slash
-- Cursed Stitch
-- Star Jab
-
-Generic created moves are also not automatically egg moves.
-
-## 8. Egg-move pool policy
-
-Preserve vanilla Platinum egg pools by default.
-
-Only add or remove entries when one of these conditions applies:
-- a locked redesign creates an obvious inherited specialization;
-- a family has an unnecessary one-save inheritance dead end;
-- a move remains thematically valuable as early inherited access even after becoming a natural move;
-- an evolved-anatomy/signature move would be inappropriate and should remain excluded.
-
-Do not perform blanket movepool inflation.
-
-A duplicate between level-up and egg move is allowed when breeding provides meaningful earlier access.
-
-## 9. One-save inheritance rule
-
-Every egg move retained or added in the overhaul must have at least one legal inheritance path using species obtainable in the same Platinum save.
-
-Validator must prove:
-- compatible egg groups;
-- appropriate parent sex/role or Ditto path;
-- source Pokémon can legally know the move;
-- no external generation/game transfer is required.
-
-If a vanilla egg move has no valid one-save path after the overhaul's final availability/learnset rules, either:
-1. add a legal in-save parent path; or
-2. remove the dead entry.
-
-## 10. Egg groups
-
-Core 1.0 uses a **conservative egg-group cleanup**, not a wholesale redesign.
-
-Rules:
-- preserve vanilla groups unless a clear inheritance/accessibility problem exists;
-- add a second egg group only when anatomy/ecology and inheritance utility both strongly support it;
-- do not change Undiscovered/Legendary breeding restrictions except already-established baby/family rules;
-- Ditto remains Ditto;
-- genderless non-Ditto species still require Ditto where vanilla structure requires it.
-
-The implementation manifest must list every egg-group change explicitly with rationale.
-
-No automatic type-to-egg-group mapping.
-
-## 11. Egg generation speed
-
-Keep existing compatibility percentages:
-- low: 20%;
-- medium: 50%;
-- high: 70%.
-
-Increase check frequency:
-
-**255 parent steps → 128 parent steps**
-
-This roughly doubles egg-production opportunities without removing compatibility differences.
-
-Special-date behavior may remain, but it must not make ordinary days worse than the new 128-step baseline.
-
-## 12. Hatching speed
-
-Reduce every species' hatch-cycle requirement to:
+Reduce every breedable species' hatch-cycle requirement to:
 
 **ceil(vanilla_hatch_cycles / 2)**
 
-Minimum: **1 cycle**.
+with a minimum of **5 cycles**.
 
-Keep Flame Body / Magma Armor as meaningful acceleration:
-- normal party: subtract 1 cycle per hatch tick;
-- Flame Body/Magma Armor present: subtract 2 cycles.
+Flame Body and Magma Armor retain their current effect of subtracting two hatch cycles per cycle event.
 
 Result:
-- ordinary hatching is roughly twice as fast as vanilla;
-- dedicated hatch teams remain roughly twice as fast again.
+- ordinary eggs hatch in roughly half the vanilla walking requirement;
+- a Flame Body/Magma Armor helper remains meaningfully faster;
+- extremely fast species do not collapse to near-zero hatch time.
 
-Do not remove walking/hatching gameplay entirely.
+Do not alter legendary/Undiscovered species merely because they have hatch-cycle data.
 
-## 13. Day Care availability
+## 12. Day Care access and breeder supplies
 
-Keep the Solaceon Day Care location.
-
-Do not relocate the facility or create a second full Day Care in Core 1.0.
+Keep the Day Care in Solaceon rather than creating a redundant earlier facility.
 
 Its usefulness improves through:
-- expanded pre-E4 species availability;
-- no-incense babies;
-- faster egg generation;
+- faster egg production;
 - faster hatching;
-- better inheritance;
-- broader legal one-save egg-move chains.
+- stronger inheritance;
+- no-incense babies;
+- deterministic Ditto availability from the world/availability phase.
 
-This is sufficient to make breeding useful during the main story once Solaceon is reached.
+By the Veilstone/Solaceon midgame window, provide renewable access to:
+- Everstone;
+- all six Power items.
 
-## 14. Day Care leveling
+Locked shop values:
+- Everstone: keep current ₽200;
+- Power items: keep current ₽3,000 each.
 
-Keep passive Day Care level gain and withdrawal-cost behavior unless implementation audit uncovers a concrete conflict.
+Prefer an existing Veilstone/Solaceon vendor rather than a new shop system.
 
-Breeding changes should not become a hidden EXP/economy rewrite.
+Destiny Knot remains a normal battle/utility item and is not required.
 
-## 15. Shiny/Masuda behavior
+## 13. Ditto
 
-Preserve Platinum's existing different-language parent shiny logic.
+Ditto must have a deterministic normal acquisition path by the time breeding becomes a meaningful midgame option.
 
-Do not increase shiny odds as part of Breeding 2.0.
+The availability phase should ensure this no later than the Hearthome/Solaceon portion of M1.
 
-Nature/IV changes must not accidentally bypass or multiply the existing Masuda personality attempts.
+Ditto must not remain dependent on Trophy Garden rotation or other daily RNG.
 
-## 16. Form/species special cases
+Breeding implementation does not create a separate Ditto gift unless the availability spec later explicitly chooses one.
 
-Preserve existing special logic unless explicitly changed:
-- Manaphy → Phione breeding;
-- Nidoran male/female outcome handling;
-- Volbeat/Illumise outcome handling;
-- Rotom/form handling;
-- Ditto restrictions;
-- Undiscovered group restrictions.
+## 14. Form/species special cases
 
-No new legendary breeding beyond existing Phione behavior.
+Preserve and test:
+- Manaphy → Phione;
+- Nidoran male/female offspring behavior;
+- Volbeat/Illumise paired offspring behavior;
+- Burmy/Wormadam/Mothim form behavior;
+- Shellos/Gastrodon form inheritance where current source supports it;
+- Rotom breeding restrictions/forms;
+- Ditto incompatibility with Ditto;
+- Undiscovered egg group restrictions;
+- genderless + Ditto rules.
 
-## 17. Egg-move design scope
+Do not broaden legendary breeding.
 
-The C3 rule remains authoritative:
+## 15. Ball inheritance
 
-> Egg moves refine; they do not repair.
+Retain Platinum's default Poké Ball result for bred offspring.
 
-Therefore D4 does not reopen locked C3 level-up/TM/tutor decisions.
+Do not import later-generation Poké Ball inheritance in Core 1.0.
 
-The final egg-move sweep should prioritize:
-- utility;
-- alternative coverage;
-- setup;
-- support;
-- early access to a later natural move;
-- thematic inherited techniques.
+This keeps D3 capture-ball identity separate from breeding.
 
-It should not give strong Pokémon gratuitous extra coverage.
+## 16. Shiny breeding
 
-## 18. Validation requirements
+Preserve Platinum's different-language/Masuda behavior.
 
-Breeding implementation must validate:
-- 100% Everstone nature inheritance;
-- four unique inherited IV stats;
-- no duplicate IV-stat selection;
-- either-parent egg-move inheritance;
-- no-incense baby output;
-- one-save legality of every egg move;
-- egg generation at the new cadence;
-- hatch-cycle halving;
-- Flame Body/Magma Armor acceleration;
-- Masuda logic preserved;
-- Manaphy/Phione preserved;
-- all changed egg groups explicitly manifested;
-- no created identity move leaks into egg pools.
+Nature, ability-slot, and IV improvements must not remove or weaken the existing shiny reroll behavior.
 
-## 19. Deferred
+No additional shiny-rate increase is introduced in D4.
 
-Not Core 1.0:
-- cross-type offspring;
-- regional/variant breeding;
-- hidden abilities;
-- Destiny Knot mechanics;
-- Power-item IV targeting;
-- Poké Ball inheritance;
-- guaranteed ability-slot inheritance;
-- nursery UI redesign.
+## 17. Validation requirements
 
-This spec is approved authority for Breeding 2.0.
+Breeding implementation must prove:
+- Everstone 100% inheritance works for either parent and Ditto;
+- both Everstones choose one parent's nature;
+- exactly four distinct IV stats are inherited;
+- Power-item forced inheritance works and never creates duplicate inherited stat indices;
+- ability-slot inheritance follows 80/20 where applicable;
+- either parent can pass listed egg moves;
+- vanilla TM/HM/shared-level inheritance remains valid;
+- no incense is needed for all nine baby families;
+- egg-generation interval is 128 steps;
+- hatch-cycle tables are halved with minimum 5;
+- Flame Body/Magma Armor still accelerate hatching;
+- Masuda shiny logic remains intact;
+- every legal egg-move chain is achievable in one save;
+- no invalid egg-group or species/form result is introduced.
+
+This spec is the canonical D4 breeding authority.
