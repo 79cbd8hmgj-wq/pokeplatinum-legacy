@@ -250,3 +250,14 @@ Canonical authority:
 - `docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_IMPLEMENTATION_PLAN.md`
 
 Key locks: preserve native Frontier silver/gold streak milestones, double final BP awards, retain locked reduced TM BP prices while leaving ordinary non-TM BP prices intact, audit rather than rebuild Frontier sets, make Battleground rematches reshuffleable without calendar waiting, make Rival rematches daily rather than weekend-only, and add one-time Silver/Gold Print BP/item milestone rewards.
+
+
+## Final integration / QA
+
+Status: **LOCKED SPEC — executes after subsystem implementation**
+
+Canonical authority:
+- `docs/overhaul/qa/FINAL_INTEGRATION_QA_SPEC.md`
+- `docs/overhaul/qa/FINAL_INTEGRATION_QA_IMPLEMENTATION_PLAN.md`
+
+Release gates are now defined for clean Rev 0/Rev 1 builds, subsystem validators, #001–#493 completion proof, evolution legality, progression simulation, runtime boss/event/frontier tests, full fresh-save campaign completion, save compatibility, release blockers, and legal patch packaging. The project may only be marked CORE 1.0 VERIFIED / RELEASE CANDIDATE when the evidence is recorded in-repo.
