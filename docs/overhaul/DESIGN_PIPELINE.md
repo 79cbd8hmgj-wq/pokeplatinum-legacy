@@ -161,7 +161,7 @@ Must validate:
 **All currently identified remaining design phases D1–D7 are now LOCKED. The project is ready to proceed through implementation sequencing from canonical repo authority.**
 
 Legendary/Mythical authority:
-- `docs/overhaul/events/LEGENDARY_MYTHICAL_SPEC.md`
+- `docs/overhaul/events/LEGENDARY_MYTHICAL_EVENT_SPEC.md`
 - `docs/overhaul/events/LEGENDARY_MYTHICAL_IMPLEMENTATION_PLAN.md`
 
 D3 authority:
