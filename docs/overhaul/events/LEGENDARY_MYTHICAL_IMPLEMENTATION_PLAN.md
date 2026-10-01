@@ -3,7 +3,7 @@
 Status: **LOCKED IMPLEMENTATION PLAN**
 
 Authority:
-- `docs/overhaul/events/LEGENDARY_MYTHICAL_EVENT_SPEC.md`
+- `docs/overhaul/events/LEGENDARY_MYTHICAL_SPEC.md`
 - `docs/overhaul/AVAILABILITY_ARCHITECTURE.md`
 - locked D3 Poké Ball and D4 Breeding specs
 
@@ -117,13 +117,15 @@ Reuse Azure Flute/Hall of Origin.
 
 Implement:
 - Hall of Fame required;
-- caught Dialga;
-- caught Palkia;
-- caught Giratina;
-- Rowan/Cynthia grants Azure Flute;
+- caught-Pokédex check for every species #001–#492;
+- forms are not required;
+- Arceus itself is excluded;
+- Professor Rowan/Oak grants the Azure Flute only after that check passes;
 - remove `DISTRIBUTION_EVENT_ARCEUS`;
 - level 80;
 - retry-safe until captured.
+
+This makes Arceus the final #493 completion encounter.
 
 ## 8. Manaphy / Phione
 
@@ -166,40 +168,32 @@ Each:
 
 Regigigas:
 - Snowpoint Temple;
-- require caught Regirock + Regice + Registeel;
-- level 70;
+- require caught/owned Regirock + Regice + Registeel using the native Titan-party check;
+- preserve Platinum's distinctive level 1 encounter;
 - retry-safe until captured.
 
-## 11. Legendary birds
+## 11. Legacy rare-habitat Legendary encounters
 
-Preserve Platinum's native roaming framework for:
-- Articuno;
-- Zapdos;
-- Moltres.
+Older Gen I–III legends are renewable postgame apex encounters rather than new quest chains. Do not preserve old roaming treatment merely because vanilla Platinum used it.
 
-Implement:
-- all three obtainable in one save;
-- remove unnecessary external/National-Dex acquisition dependency;
-- deterministic reset if defeated uncaught;
-- do not convert to ordinary grass encounters.
-
-## 12. Legacy rare-habitat Legendary encounters
-
-Add post-Hall-of-Fame renewable encounters exactly as follows:
+Implement the locked habitat matrix:
 
 | Species | Habitat | Method | Rate | Level |
 |---|---|---|---:|---:|
-| Mewtwo | deepest Turnback Cave rooms | cave | 1% | 68–72 |
-| Raikou | Route 222 / Sunyshore electric coast | grass | 2% | 55–60 |
-| Entei | Route 227 / Stark approach | grass | 2% | 55–60 |
-| Suicune | Route 230 outer water | Surf | 2% | 55–60 |
-| Lugia | Route 230 deep sea | Surf | 1% | 65–70 |
-| Ho-Oh | Route 225 highland | grass | 1% | 65–70 |
-| Latias | Route 229 | grass | 2% | 55–60 |
-| Latios | Route 229 | grass | 2% | 55–60 |
-| Groudon | Route 228 desert | grass | 1% | 65–70 |
-| Kyogre | Route 223 deep water | Surf | 1% | 65–70 |
-| Rayquaza | Route 224 terminus/highland | grass | 1% | 68–72 |
+| Articuno | Snowpoint Temple deep floors / Acuity cavern ecology | cave | 2% | 55–60 |
+| Zapdos | Fuego Ironworks / Valley Windworks high-energy zone | land | 2% | 55–60 |
+| Moltres | Stark Mountain exterior/deep volcanic zone | land/cave | 2% | 55–60 |
+| Mewtwo | deepest Turnback Cave rooms | cave | 1% | 70 |
+| Raikou | Route 222 / Sunyshore electric coast | land | 2% | 55–60 |
+| Entei | Stark Mountain exterior volcanic zone | land | 2% | 55–60 |
+| Suicune | Lake Acuity / northern clear-water zone | Surf | 2% | 55–60 |
+| Lugia | deep postgame sea/cavern habitat near Routes 226–230 | Surf/cave | 1% | 65–70 |
+| Ho-Oh | upper Mt. Coronet / Spear Pillar-adjacent postgame habitat | land/cave | 1% | 65–70 |
+| Latias | Routes 224–230 postgame coast | land/Surf as source permits | 2% | 55–60 |
+| Latios | Routes 224–230 postgame coast | land/Surf as source permits | 2% | 55–60 |
+| Groudon | Stark Mountain deepest terrestrial zone | cave | 1% | 70 |
+| Kyogre | deep postgame ocean, Routes 226–230 | Surf | 1% | 70 |
+| Rayquaza | upper Mt. Coronet / Spear Pillar postgame encounter zone | cave/land | 1% | 70 |
 
 Rules:
 - Hall of Fame flag required;
@@ -256,7 +250,7 @@ At minimum test:
 - Phione breeding;
 - Rotom forms;
 - all three Regis + Regigigas;
-- all three bird roamers;
+- all three legendary birds as renewable habitat encounters;
 - representative 2% and 1% legacy wilds;
 - Mew, Celebi, Jirachi, Deoxys;
 - Deoxys form change.
