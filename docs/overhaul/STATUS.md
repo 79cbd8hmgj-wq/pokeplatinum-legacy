@@ -227,7 +227,7 @@ Canonical authority:
 - `docs/overhaul/breeding/BREEDING_SPEC.md`
 - `docs/overhaul/breeding/BREEDING_IMPLEMENTATION_PLAN.md`
 
-Key locks: 100% Everstone nature inheritance, four unique inherited IV stats, either-parent egg-move inheritance, no-incense babies, 128-step egg checks, half hatch cycles, vanilla ability-slot logic preserved, one-save egg-move legality validation, and no broad created-move leakage into egg pools.
+Key locks: 100% Everstone nature inheritance, four unique inherited IV stats, Power-item forced IV inheritance, 80/20 normal ability-slot inheritance, either-parent egg-move inheritance, no-incense babies, 128-step egg checks, half hatch cycles with a five-cycle minimum, one-save egg-move legality validation, renewable midgame breeding supplies, and no broad created-move leakage into egg pools.
 
 
 ## Legendary / Mythical events
