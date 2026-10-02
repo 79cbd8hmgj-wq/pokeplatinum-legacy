@@ -8,13 +8,18 @@
 
 VictoryRoad_OnTransition:
     SetFlag FLAG_FIRST_ARRIVAL_VICTORY_ROAD
+    // Retail/postgame saves may already have the Collector's hide flag set even if
+    // TM78 was never taken on Route 204. Clear it until the locked gift is received.
+    GoToIfUnset FLAG_RECEIVED_ROUTE_204_NORTH_TM78, VictoryRoad_KeepCollectorForTM78
     GoToIfUnset FLAG_GAME_COMPLETED, VictoryRoad_DontHideCollector
     GetNationalDexEnabled VAR_MAP_LOCAL_0x00
     GoToIfEq VAR_MAP_LOCAL_0x00, FALSE, VictoryRoad_DontHideCollector
-    // Keep the Collector available until the locked TM78 gift has actually been received.
-    GoToIfUnset FLAG_RECEIVED_ROUTE_204_NORTH_TM78, VictoryRoad_DontHideCollector
     SetFlag FLAG_HIDE_VICTORY_ROAD_1F_COLLECTOR
 VictoryRoad_DontHideCollector:
+    End
+
+VictoryRoad_KeepCollectorForTM78:
+    ClearFlag FLAG_HIDE_VICTORY_ROAD_1F_COLLECTOR
     End
 
 VictoryRoad_Collector:
