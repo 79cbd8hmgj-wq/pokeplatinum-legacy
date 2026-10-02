@@ -15,6 +15,7 @@ L_0:
     Delay 8
     PlayMovingSoundEffectAtkDef SEQ_SE_DP_351, BATTLE_SOUND_PAN_RIGHT, BATTLE_SOUND_PAN_LEFT, 4, 2
     Func_Shake 5, 0, 1, 4, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
+    Func_ShakeBg 2, 3, 0, 3, 0, SHAKE_BG_TARGET_BASE
     Func_FadeBattlerSprite BATTLE_ANIM_DEFENDER, 0, 1, BATTLE_COLOR_WHITE, 14, 0
     WaitForAnimTasks
     Func_FadeBg FADE_BG_TYPE_BASE, 1, 12, 0, BATTLE_COLOR_BLACK
