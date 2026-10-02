@@ -194,6 +194,36 @@ def check_acquisition(live: dict, man: dict, P: list[str]):
             P.append(f"TM placement changed in {rel}: {base.get(rel)} -> {cur.get(rel)}")
 
 
+def check_tm78_recovery(live_src: dict, man: dict, P: list[str]):
+    """Ensure the deliberate Victory Road TM78 override is retry-safe and never becomes missable postgame."""
+    src = live_src["victory_road"]
+
+    trans_start = src.find("VictoryRoad_OnTransition:")
+    collector_start = src.find("VictoryRoad_Collector:")
+    if trans_start < 0 or collector_start < 0:
+        P.append("TM78 Victory Road script anchors missing")
+        return
+
+    transition = src[trans_start:collector_start]
+    keep_visible = transition.find("GoToIfUnset FLAG_RECEIVED_ROUTE_204_NORTH_TM78, VictoryRoad_DontHideCollector")
+    hide_collector = transition.find("SetFlag FLAG_HIDE_VICTORY_ROAD_1F_COLLECTOR")
+    if keep_visible < 0 or hide_collector < 0 or keep_visible > hide_collector:
+        P.append("TM78: postgame transition can hide the Collector before TM78 is received")
+
+    collector = src[collector_start:]
+    receipt_check = collector.find("GoToIfSet FLAG_RECEIVED_ROUTE_204_NORTH_TM78, VictoryRoad1F_TM78AlreadyReceived")
+    game_complete_check = collector.find("GoToIfSet FLAG_GAME_COMPLETED, VictoryRoad1F_YoullMeetManyPokemon")
+    if receipt_check < 0 or game_complete_check < 0 or receipt_check > game_complete_check:
+        P.append("TM78: game-completed branch can bypass the unreceived gift")
+
+    item = collector.find("SetVar VAR_0x8004, ITEM_TM78")
+    fit = collector.find("GoToIfCannotFitItem", item)
+    give = collector.find("Common_GiveItemQuantity", fit)
+    receipt_set = collector.find("SetFlag FLAG_RECEIVED_ROUTE_204_NORTH_TM78", give)
+    if min(item, fit, give, receipt_set) < 0 or not (item < fit < give < receipt_set):
+        P.append("TM78: gift/Bag-full/receipt-flag ordering is not retry-safe")
+
+
 def check_created(live: dict, ctx: dict, P: list[str]):
     toks = live["src"]["moves_txt"].split()
     if "MAX_MOVES" not in toks or toks.index("MAX_MOVES") != ctx["manifest"]["created_moves_pin"]["max_moves"]:
@@ -220,6 +250,7 @@ def validate(live: dict, ctx: dict) -> list[str]:
     check_duplicate_guards(live, man, P)
     check_roster(live, ctx, man, P)
     check_acquisition(live, man, P)
+    check_tm78_recovery(live["src"], man, P)
     check_created(live, ctx, P)
     return P
 
