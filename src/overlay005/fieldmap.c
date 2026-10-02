@@ -123,6 +123,8 @@ static void fieldmap(void *param0);
 static void ov5_021D13B4(FieldSystem *fieldSystem);
 static enum FieldExtensionOverlay FieldMap_GetExtOverlayForActiveDynMapFeatures(FieldSystem *fieldSystem);
 static BOOL FieldMap_InDistortionWorld(FieldSystem *fieldSystem);
+static BOOL FieldMap_IsDeepForest(const FieldSystem *fieldSystem);
+static void FieldMap_ApplyDeepForestFog(FieldSystem *fieldSystem);
 static MapObjectsToPreload *FetchMapObjectsToPreload(enum HeapID heapID, int memberID);
 static const int *MapObjectsToPreload_GetIDs(const MapObjectsToPreload *mapObjectsToPreload);
 static int MapObjectsToPreload_GetCount(const MapObjectsToPreload *mapObjectsToPreload);
@@ -221,6 +223,10 @@ static BOOL FieldMap_Init(ApplicationManager *appMan, int *state)
         if (fieldSystem->unk_04->unk_0C != NULL) {
             u16 weather = FieldOverworldState_GetWeather(SaveData_GetFieldOverworldState(fieldSystem->saveData));
             ov5_021D5F24(fieldSystem->unk_04->unk_0C, weather);
+        }
+
+        if (FieldMap_IsDeepForest(fieldSystem) == TRUE) {
+            FieldMap_ApplyDeepForestFog(fieldSystem);
         }
 
 
@@ -831,9 +837,7 @@ static void ov5_021D1878(FieldSystem *fieldSystem)
             v1 = sUndergroundFieldEffectRenderers;
         } else if (FieldMap_InDistortionWorld(fieldSystem) == TRUE) {
             v1 = sDistWorldFieldEffectRenderers;
-        } else if (fieldSystem->location->mapHeaderID == MAP_HEADER_ETERNA_FOREST
-            || fieldSystem->location->mapHeaderID == MAP_HEADER_FULLMOON_ISLAND_FOREST
-            || fieldSystem->location->mapHeaderID == MAP_HEADER_NEWMOON_ISLAND_FOREST) {
+        } else if (FieldMap_IsDeepForest(fieldSystem) == TRUE) {
             v1 = sForestFieldEffectRenderers;
         } else {
             v1 = sDefaultFieldEffectRenderers;
@@ -948,4 +952,37 @@ static BOOL FieldMap_InDistortionWorld(FieldSystem *fieldSystem)
     }
 
     return FALSE;
+}
+
+static BOOL FieldMap_IsDeepForest(const FieldSystem *fieldSystem)
+{
+    enum MapHeaderID mapHeaderID = fieldSystem->location->mapHeaderID;
+
+    return mapHeaderID == MAP_HEADER_ETERNA_FOREST
+        || mapHeaderID == MAP_HEADER_FULLMOON_ISLAND_FOREST
+        || mapHeaderID == MAP_HEADER_NEWMOON_ISLAND_FOREST;
+}
+
+static void FieldMap_ApplyDeepForestFog(FieldSystem *fieldSystem)
+{
+    static const char sDeepForestFogDensity[G3X_FOG_DENSITY_TABLE_SIZE] = {
+        0, 0, 0, 0, 1, 1, 2, 2,
+        3, 4, 5, 6, 8, 10, 12, 14,
+        16, 18, 20, 22, 24, 26, 28, 30,
+        32, 34, 36, 38, 40, 42, 44, 46
+    };
+
+    FogManager_ApplyParameters(
+        fieldSystem->fogMan,
+        FOG_PARAMETER_ENABLED | FOG_PARAMETER_MODE | FOG_PARAMETER_SLOPE | FOG_PARAMETER_OFFSET,
+        TRUE,
+        GX_FOGBLEND_COLOR_ALPHA,
+        GX_FOGSLOPE_0x0400,
+        0x5000);
+    FogManager_ApplyColor(
+        fieldSystem->fogMan,
+        FOG_PARAMETER_COLOR | FOG_PARAMETER_ALPHA,
+        GX_RGB(10, 14, 11),
+        8);
+    FogManager_ApplyDensityTable(fieldSystem->fogMan, sDeepForestFogDensity);
 }
