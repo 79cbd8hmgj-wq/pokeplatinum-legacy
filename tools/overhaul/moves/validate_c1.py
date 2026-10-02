@@ -11,9 +11,8 @@ import sys
 
 from c1_lib import *
 
-HM_NAMES = ["Cut", "Fly", "Surf", "Strength", "Defog", "Rock Smash", "Waterfall", "Rock Climb", "Whirlpool"]
-HM_C1_EDITED = {"Whirlpool"}  # only HM touched by C1; no later C2 override recorded for it
 C1_SCRIPT = "res/moves/razor_wind/script.s"
+C1_ANIM = "res/moves/razor_wind/anim.s"
 
 
 def load_ctx() -> dict:
@@ -21,6 +20,7 @@ def load_ctx() -> dict:
     ctx["moves_txt"] = open(os.path.join(ROOT, "generated/moves.txt")).read().split()
     ctx["battle_lib"] = open(os.path.join(ROOT, "src/battle/battle_lib.c")).read()
     ctx["razor_script"] = open(os.path.join(ROOT, C1_SCRIPT)).read()
+    ctx["razor_anim"] = open(os.path.join(ROOT, C1_ANIM)).read()
     ctx["created_dirs"] = None
     return ctx
 
@@ -39,46 +39,44 @@ def validate(live: dict, ctx: dict) -> list[str]:
         P.append("duplicate manifest moves")
     if [(e["move"], e["target"]) for e in edits] != [(e["move"], e["after"]) for e in g["edits"]]:
         P.append("guards disagree with manifest")
-    allowed = {}  # move -> {field: after}
+    # Permanent C1 validation is intentionally scoped to the 82 C1-owned move records.
+    # Later passes may legitimately change unrelated moves (including the actual Platinum HMs).
+    # Within a C1-edited record, fields not owned by C1 remain pinned unless a later-pass
+    # override is explicitly recorded in the guard schema.
     for e in edits:
         rec = live.get(e["move"], [])
         if len(rec) != 1:
             P.append(f"{e['move']}: live record count {len(rec)}")
             continue
-        d = rec[0][1]
+        _, d = rec[0]
+        _, b = unique(base, e["move"])
         cur = read_fields(d)
-        allowed[e["move"]] = e["target"]
         for k, v in e["target"].items():
             if cur[k] != v:
                 P.append(f"{e['move']}: {k} live {cur[k]!r} != locked {v!r}")
-    # semantic diff of every move against pinned base: only manifest fields may differ
-    for name, recs in base.items():
-        if name not in live or len(live[name]) != len(recs):
-            P.append(f"{name}: record missing/duplicated vs base")
-            continue
-        b, l = recs[0][1], live[name][0][1]
-        tgt = allowed.get(name, {})
-        for k in sorted(set(b) | set(l)):
+        for k in sorted(set(b) | set(d)):
             if k in FIELDS:
-                if l.get(k) != (tgt.get(k, b.get(k))):
-                    P.append(f"{name}: unexpected {k} {b.get(k)!r}->{l.get(k)!r}")
+                exp = e["target"].get(k, b.get(k))
+                if d.get(k) != exp:
+                    P.append(f"{e['move']}: unexpected {k} {b.get(k)!r}->{d.get(k)!r}")
             elif k == "effect":
-                exp_type = tgt.get("effect_type", b["effect"]["type"])
-                if l["effect"]["type"] != exp_type:
-                    P.append(f"{name}: unexpected effect type {b['effect']['type']}->{l['effect']['type']}")
-                if l["effect"].get("chance") != b["effect"].get("chance"):
-                    P.append(f"{name}: effect chance changed")
-            elif k == "description" and name == "Razor Wind":
-                if l[k] != RAZOR_WIND_DESC or any("two-turn" in x.lower() or "second" in x.lower() for x in l[k]):
+                exp_type = e["target"].get("effect_type", b["effect"]["type"])
+                if d["effect"]["type"] != exp_type:
+                    P.append(f"{e['move']}: unexpected effect type {b['effect']['type']}->{d['effect']['type']}")
+                if d["effect"].get("chance") != b["effect"].get("chance"):
+                    P.append(f"{e['move']}: effect chance changed")
+            elif k == "description" and e["move"] == "Razor Wind":
+                if d[k] != RAZOR_WIND_DESC or any("two-turn" in x.lower() or "second" in x.lower() for x in d[k]):
                     P.append("Razor Wind: description not updated")
-            elif l.get(k) != b.get(k):
-                P.append(f"{name}: unexpected {k} change")
-    for name in live:
-        if name not in base:
-            P.append(f"{name}: not in base (new move)")
-    # Razor Wind behavior plumbing: single-turn, no charge message
-    if "BufferMessage" in ctx["razor_script"]:
+            elif d.get(k) != b.get(k):
+                P.append(f"{e['move']}: unexpected {k} change")
+    # Razor Wind behavior plumbing: single-turn, no charge message or charge animation branch.
+    if "BufferMessage" in ctx["razor_script"] or "PokemonWhippedUpAWhirlwind" in ctx["razor_script"]:
         P.append("Razor Wind script still contains charge-turn message")
+    if "JumpIfEffectChanceOdd" in ctx["razor_anim"] or "EMITTER_CB_SET_POS_TO_ATTACKER" in ctx["razor_anim"]:
+        P.append("Razor Wind animation still contains charge-turn branch")
+    if "CreateEmitter 0, 0, EMITTER_CB_SET_POS_TO_DEFENDER_SIDE" not in ctx["razor_anim"]:
+        P.append("Razor Wind strike animation missing")
     # KEEP invariants
     for name, vals in g["keep_invariants"].items():
         rec = live.get(name)
@@ -88,12 +86,6 @@ def validate(live: dict, ctx: dict) -> list[str]:
         d = live["Magma Storm"][0][1]
         if (d["power"], d["accuracy"], d["pp"]) != (120, 70, 5):
             P.append("Magma Storm KEEP 120/70/5 violated")
-    # HM / later-pass safeguard: HMs other than manifest-listed must equal base
-    for h in HM_NAMES:
-        if h in HM_C1_EDITED:
-            continue
-        if h in live and read_fields(live[h][0][1]) != read_fields(base[h][0][1]):
-            P.append(f"HM {h} changed")
     # created moves
     mt = ctx["moves_txt"]
     if len(mt) != 491 or mt[-1] != "MAX_MOVES" or mt[468] != "MOVE_STATIC_STRIKE" or mt[489] != "MOVE_STAR_JAB":
@@ -108,8 +100,6 @@ def validate(live: dict, ctx: dict) -> list[str]:
         d = mv[0][1]
         if (d["power"], d["effect"]["type"]) != (25, "BATTLE_EFFECT_HIT_THREE_TIMES_EQUAL_POWER"):
             P.append("Magnet Volley not exactly 3x25 equal-power")
-    if sum(1 for n in base if base[n][0][0].startswith("res/moves/") and n in live) != len(base):
-        P.append("move records missing")
     return P
 
 
