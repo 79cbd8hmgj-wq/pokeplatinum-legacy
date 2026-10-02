@@ -2,8 +2,9 @@
 """Guarded application of the locked C1 82-edit manifest.
 
   apply_c1.py --write-guards   (re)generate c1_move_guards.json from the pinned base commit
-  apply_c1.py --apply          apply edits to res/moves/*/data.json, classifying each edit
+  apply_c1.py --apply          apply edits plus Razor Wind script/animation resources
 Per edit: MATCHES_BEFORE -> apply; ALREADY_AFTER -> record; anything else -> fail closed.
+Razor Wind's description/script/animation are guarded independently so partial application is repaired safely.
 Only textual in-place edits are made, so unrelated formatting is untouched.
 """
 from __future__ import annotations
@@ -65,10 +66,122 @@ def write_guards() -> None:
 
 
 def sub_field(text: str, key: str, old, new) -> str:
-    pat = re.compile(rf'^(    "{key}": ){old}(,?)$', re.M)
+    pat = re.compile(rf'^(    "{key}": ){old}(,?)def apply() -> None:
+    g = load_json(GUARDS)
+    counts = {"newly_applied": 0, "already_implemented": 0, "later_pass_reconciled": 0, "unresolved": 0}
+    report = []
+    live = live_moves()
+    for e in g["edits"]:
+        rel, d = unique(live, e["move"])
+        assert rel == e["path"], (rel, e["path"])
+        cur = read_fields(d)
+        cur_t = {k: cur[k] for k in e["after"]}
+        if cur_t == e["before"]:
+            path = os.path.join(ROOT, rel)
+            text = open(path).read()
+            for k, new in e["after"].items():
+                old = e["before"][k]
+                if k == "effect_type":
+                    old_s, new_s = f'"{old}"', f'"{new}"'
+                    pat = re.compile(rf'^(        "type": ){re.escape(old_s)}(,?)$', re.M)
+                    if len(pat.findall(text)) != 1:
+                        raise SystemExit(f"FAIL: effect locate {e['move']}")
+                    text = pat.sub(rf"\g<1>{new_s}\g<2>", text, count=1)
+                else:
+                    text = sub_field(text, k, old, new)
+            with open(path, "w") as f:
+                f.write(text)
+            counts["newly_applied"] += 1
+            report.append((e["move"], "NEWLY_APPLIED"))
+        elif cur_t == e["after"]:
+            counts["already_implemented"] += 1
+            report.append((e["move"], "ALREADY_AFTER"))
+        else:
+            counts["unresolved"] += 1
+            report.append((e["move"], f"UNRESOLVED live={cur_t} before={e['before']} after={e['after']}"))
+    razor = reconcile_razor_wind_extras()
+    for part, state in razor.items():
+        print("Razor Wind", part, state)
+    for r in report:
+        print(*r)
+    print(counts, "total", sum(counts.values()))
+    if counts["unresolved"] or sum(counts.values()) != 82:
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--write-guards", action="store_true")
+    ap.add_argument("--apply", action="store_true")
+    a = ap.parse_args()
+    if a.write_guards:
+        write_guards()
+    if a.apply:
+        apply()
+, re.M)
     if len(pat.findall(text)) != 1:
         raise SystemExit(f"FAIL: could not uniquely locate {key}={old}")
     return pat.sub(rf"\g<1>{new}\g<2>", text, count=1)
+
+
+def _razor_resource_after(rel: str) -> tuple[str, str]:
+    """Return exact pinned-base and canonical C1 text for a Razor Wind resource."""
+    before = git("show", f"{BASE_COMMIT}:{rel}")
+    if rel.endswith("script.s"):
+        needle = (
+            "    // {0} whipped up a whirlwind!\n"
+            "    BufferMessage BattleStrings_Text_PokemonWhippedUpAWhirlwind_Ally, TAG_NICKNAME, BTLSCR_ATTACKER\n"
+        )
+        if before.count(needle) != 1:
+            raise SystemExit("FAIL: Razor Wind script base anchor missing")
+        return before, before.replace(needle, "", 1)
+    if rel.endswith("anim.s"):
+        marker = "\nL_2:\n"
+        if before.count(marker) != 1:
+            raise SystemExit("FAIL: Razor Wind animation strike branch missing")
+        header = before.split("\nL_0:\n", 1)[0]
+        strike = before.split(marker, 1)[1]
+        return before, header + "\nL_0:\n" + strike
+    raise SystemExit(f"FAIL: unsupported Razor Wind resource {rel}")
+
+
+def _apply_guarded_resource(rel: str) -> str:
+    before, after = _razor_resource_after(rel)
+    path = os.path.join(ROOT, rel)
+    current = open(path).read()
+    if current == before:
+        with open(path, "w") as f:
+            f.write(after)
+        return "NEWLY_APPLIED"
+    if current == after:
+        return "ALREADY_AFTER"
+    raise SystemExit(f"FAIL: {rel} is neither pinned-base nor canonical C1 state")
+
+
+def reconcile_razor_wind_extras() -> dict[str, str]:
+    """Apply/verify Razor Wind description, battle script and animation independently."""
+    status: dict[str, str] = {}
+    rel = "res/moves/razor_wind/data.json"
+    path = os.path.join(ROOT, rel)
+    text = open(path).read()
+    live = json.loads(text)
+    base = json.loads(git("show", f"{BASE_COMMIT}:{rel}"))
+    if live["description"] == base["description"]:
+        old_desc = ",\n".join("        " + json.dumps(x) for x in base["description"])
+        new_desc = ",\n".join("        " + json.dumps(x) for x in RAZOR_WIND_DESC)
+        if old_desc not in text:
+            raise SystemExit("FAIL: Razor Wind description base-state anchor missing")
+        with open(path, "w") as f:
+            f.write(text.replace(old_desc, new_desc, 1))
+        status["description"] = "NEWLY_APPLIED"
+    elif live["description"] == RAZOR_WIND_DESC:
+        status["description"] = "ALREADY_AFTER"
+    else:
+        raise SystemExit("FAIL: Razor Wind description is neither pinned-base nor canonical C1 state")
+
+    status["script"] = _apply_guarded_resource("res/moves/razor_wind/script.s")
+    status["animation"] = _apply_guarded_resource("res/moves/razor_wind/anim.s")
+    return status
 
 
 def apply() -> None:
