@@ -803,7 +803,7 @@ texel-index maps, and resource naming. Changes are isolated lighting and palette
 grades, with dedicated area/texture slots created where shared retail resources would
 otherwise cause collateral changes.
 
-Remaining G4 gate: runtime visual inspection in Delta of the representative areas.
+Remaining G4 gate: objective runtime path validation through melonDS + the NDS Disassembly Toolkit, followed by a short rendered-frame sanity review for subjective palette/lighting tuning.
 
 HGSS is the first donor/reference source.
 
