@@ -1,0 +1,29 @@
+name: visual-asset-export
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/visual-asset-export.yml'
+      - 'res/prebuilt/data/mmodel/fldeff.narc'
+      - 'res/field/maps/texture_sets/map_texture_set_053.nsbtx'
+      - 'res/field/props/models/prop_model_147.nsbmd'
+      - 'res/field/props/models/mansion_door.nsbmd'
+  workflow_dispatch: {}
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/upload-artifact@v7
+        with:
+          name: platinum-visual-assets
+          path: |
+            res/prebuilt/data/mmodel/fldeff.narc
+            res/field/maps/texture_sets/map_texture_set_053.nsbtx
+            res/field/props/models/prop_model_147.nsbmd
+            res/field/props/models/mansion_door.nsbmd
+          retention-days: 1
