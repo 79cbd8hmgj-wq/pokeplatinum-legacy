@@ -1075,3 +1075,44 @@ The generated-asset workflow exposed a CI race when multiple UI commits landed c
 4. pushes the rebased result
 
 This keeps generated PNG/palette commits reproducible without losing concurrent documentation/source updates.
+
+
+### G3 Pokemon-icon donor audit checkpoint
+
+HGSS Pokemon icons are confirmed to be structurally compatible with Platinum at the source/resource level.
+
+Confirmed:
+
+- Platinum stores party/box icons as editable `res/pokemon/**/icon.png` resources and repacks them into `pl_poke_icon.narc`.
+- HGSS stores the equivalent archive as editable `files/poketool/icongra/poke_icon/poke_icon_*.png` resources and rebuilds `poke_icon.narc`.
+- Both use 32x64 indexed PNG icon sheets.
+- The shared 256-color icon palette is byte-for-byte equivalent at the JASC palette level:
+  - three populated 16-color banks
+  - remaining entries unused/zeroed
+- The standard 32x32 two-frame icon cell contract is equivalent:
+  - two cells
+  - one 32x32 OAM each
+  - tile offsets 0 and 16
+  - 4bpp/16-color sprite mode
+- Runtime selection in both games uses the same basic model:
+  - species -> icon archive member
+  - form-specific member remapping
+  - per-species/form selection of one of the shared palette banks
+
+Archive-layout warning:
+
+- Platinum currently exposes 539 icon PNG resources.
+- HGSS exposes 544 icon PNG resources.
+- HGSS includes additional late-Gen-IV battle/form icon members, including dedicated Castform battle forms and Cherrim battle presentation.
+- Therefore **do not replace Platinum's entire icon archive with the HGSS archive**.
+
+Implementation rule:
+
+1. Keep Platinum's `pl_poke_icon.narc` build pipeline and named species/form ordering.
+2. Import HGSS icon art per mapped species/form PNG.
+3. Preserve Platinum's existing archive member IDs and `pokemon_icon.c` lookup behavior.
+4. Treat HGSS-only members as optional later backports only when Platinum gains matching runtime form handling.
+
+Classification: **Direct asset donor with explicit member remapping**, not whole-archive donor.
+
+This makes Pokemon icons one of the safest G3 donor classes: artwork can be compared/replaced species-by-species without changing VRAM dimensions, shared palette architecture, cell geometry, or the Platinum icon loader.
