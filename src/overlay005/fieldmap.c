@@ -1044,7 +1044,13 @@ static BOOL FieldTask_G4RuntimeQAWarp(FieldTask *task)
         break;
     case 1:
         gG4RuntimeQAControl.loadedMapHeader = fieldSystem->location->mapHeaderID;
-        gG4RuntimeQAControl.status = G4_RUNTIME_QA_LOADED;
+
+        if (fieldSystem->location->mapHeaderID == warp->mapHeaderID) {
+            gG4RuntimeQAControl.status = G4_RUNTIME_QA_LOADED;
+        } else {
+            gG4RuntimeQAControl.status = G4_RUNTIME_QA_REJECTED;
+        }
+
         gG4RuntimeQAControl.request = G4_RUNTIME_QA_NONE;
         Heap_Free(warp);
         return TRUE;
