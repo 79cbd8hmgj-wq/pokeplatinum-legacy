@@ -205,10 +205,14 @@ def check_tm78_recovery(live_src: dict, man: dict, P: list[str]):
         return
 
     transition = src[trans_start:collector_start]
-    keep_visible = transition.find("GoToIfUnset FLAG_RECEIVED_ROUTE_204_NORTH_TM78, VictoryRoad_DontHideCollector")
+    receipt_guard = transition.find("GoToIfUnset FLAG_RECEIVED_ROUTE_204_NORTH_TM78, VictoryRoad_KeepCollectorForTM78")
     hide_collector = transition.find("SetFlag FLAG_HIDE_VICTORY_ROAD_1F_COLLECTOR")
-    if keep_visible < 0 or hide_collector < 0 or keep_visible > hide_collector:
+    keep_label = transition.find("VictoryRoad_KeepCollectorForTM78:")
+    clear_hide = transition.find("ClearFlag FLAG_HIDE_VICTORY_ROAD_1F_COLLECTOR", keep_label)
+    if receipt_guard < 0 or hide_collector < 0 or receipt_guard > hide_collector:
         P.append("TM78: postgame transition can hide the Collector before TM78 is received")
+    if keep_label < 0 or clear_hide < 0:
+        P.append("TM78: stale Collector hide flag is not cleared for unreceived retail/postgame saves")
 
     collector = src[collector_start:]
     receipt_check = collector.find("GoToIfSet FLAG_RECEIVED_ROUTE_204_NORTH_TM78, VictoryRoad1F_TM78AlreadyReceived")
