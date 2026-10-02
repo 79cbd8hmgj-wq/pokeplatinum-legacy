@@ -644,6 +644,7 @@ static BOOL ScrCmd_GetHour(ScriptContext *ctx);
 static BOOL ScrCmd_ShakeObject(ScriptContext *ctx);
 static BOOL ScrCmd_FlickerObject(ScriptContext *ctx);
 static BOOL ScrCmd_CheckHasAllLegendaryTitansInParty(ScriptContext *ctx);
+static BOOL ScrCmd_CheckPokedexCaughtAllButArceus(ScriptContext *ctx);
 static BOOL ScrCmd_TryGetRandomMassageGirlAccessory(ScriptContext *ctx);
 static BOOL ScrCmd_GetGBACartridgeVersion(ScriptContext *ctx);
 static BOOL ScrCmd_SetHiddenLocation(ScriptContext *ctx);
@@ -5876,6 +5877,24 @@ static BOOL ScrCmd_CheckHasAllLegendaryTitansInParty(ScriptContext *ctx)
     u16 *destVar = ScriptContext_GetVarPointer(ctx);
 
     *destVar = HasAllLegendaryTitansInParty(ctx->fieldSystem->saveData);
+    return FALSE;
+}
+
+static BOOL ScrCmd_CheckPokedexCaughtAllButArceus(ScriptContext *ctx)
+{
+    const Pokedex *dex = SaveData_GetPokedex(ctx->fieldSystem->saveData);
+    u16 *destVar = ScriptContext_GetVarPointer(ctx);
+    u16 species;
+
+    *destVar = TRUE;
+
+    for (species = 1; species < SPECIES_ARCEUS; species++) {
+        if (Pokedex_HasCaughtSpecies(dex, species) == FALSE) {
+            *destVar = FALSE;
+            break;
+        }
+    }
+
     return FALSE;
 }
 

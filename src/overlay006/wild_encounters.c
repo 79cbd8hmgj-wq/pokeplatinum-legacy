@@ -85,6 +85,43 @@ typedef struct UnownFormsGroup {
     const u8 *forms;
 } UnownFormsGroup;
 
+// D5 renewable Gen I-III legendary habitats (manifest: docs/overhaul/implementation/events/legacy_legendary_encounters.json).
+// After the Hall of Fame, every wild encounter on a listed map/method first rolls `percent` in 100 for the legendary; a miss
+// falls through to the unmodified map table. Not flag-gated, so the encounter is renewable until the end of the game.
+typedef struct LegendaryHabitat {
+    u16 mapHeaderID;
+    u8 encounterType; // ENCOUNTER_TYPE_GRASS (land and cave) or ENCOUNTER_TYPE_SURF
+    u8 percent;
+    u16 species;
+    u8 minLevel;
+    u8 maxLevel;
+} LegendaryHabitat;
+
+static const LegendaryHabitat sLegendaryHabitats[] = {
+    { MAP_HEADER_SNOWPOINT_TEMPLE_B4F, ENCOUNTER_TYPE_GRASS, 2, SPECIES_ARTICUNO, 55, 60 },
+    { MAP_HEADER_VALLEY_WINDWORKS_OUTSIDE, ENCOUNTER_TYPE_GRASS, 2, SPECIES_ZAPDOS, 55, 60 },
+    { MAP_HEADER_STARK_MOUNTAIN_ROOM_1, ENCOUNTER_TYPE_GRASS, 2, SPECIES_MOLTRES, 55, 60 },
+    { MAP_HEADER_STARK_MOUNTAIN_OUTSIDE, ENCOUNTER_TYPE_GRASS, 2, SPECIES_ENTEI, 55, 60 },
+    { MAP_HEADER_STARK_MOUNTAIN_ROOM_2, ENCOUNTER_TYPE_GRASS, 1, SPECIES_GROUDON, 70, 70 },
+    { MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_1, ENCOUNTER_TYPE_GRASS, 1, SPECIES_MEWTWO, 70, 70 },
+    { MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_2, ENCOUNTER_TYPE_GRASS, 1, SPECIES_MEWTWO, 70, 70 },
+    { MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_3, ENCOUNTER_TYPE_GRASS, 1, SPECIES_MEWTWO, 70, 70 },
+    { MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_4, ENCOUNTER_TYPE_GRASS, 1, SPECIES_MEWTWO, 70, 70 },
+    { MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_5, ENCOUNTER_TYPE_GRASS, 1, SPECIES_MEWTWO, 70, 70 },
+    { MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_6, ENCOUNTER_TYPE_GRASS, 1, SPECIES_MEWTWO, 70, 70 },
+    { MAP_HEADER_ROUTE_222, ENCOUNTER_TYPE_GRASS, 2, SPECIES_RAIKOU, 55, 60 },
+    { MAP_HEADER_LAKE_ACUITY, ENCOUNTER_TYPE_SURF, 2, SPECIES_SUICUNE, 55, 60 },
+    { MAP_HEADER_ROUTE_226, ENCOUNTER_TYPE_SURF, 1, SPECIES_LUGIA, 65, 70 },
+    { MAP_HEADER_ROUTE_230, ENCOUNTER_TYPE_SURF, 1, SPECIES_KYOGRE, 70, 70 },
+    { MAP_HEADER_MT_CORONET_5F, ENCOUNTER_TYPE_GRASS, 1, SPECIES_HO_OH, 65, 70 },
+    { MAP_HEADER_MT_CORONET_6F, ENCOUNTER_TYPE_GRASS, 1, SPECIES_RAYQUAZA, 70, 70 },
+    { MAP_HEADER_ROUTE_224, ENCOUNTER_TYPE_GRASS, 2, SPECIES_LATIAS, 55, 60 },
+    { MAP_HEADER_ROUTE_225, ENCOUNTER_TYPE_GRASS, 2, SPECIES_LATIOS, 55, 60 },
+};
+
+static void CreateWildMon(u16 species, u8 level, const int partyDest, const WildEncounters_FieldParams *encounterFieldParams, Pokemon *firstPartyMon, FieldBattleDTO *battleParams);
+static BOOL TryRollLegendaryHabitat(FieldSystem *fieldSystem, const u8 encounterType, u16 *species, u8 *level);
+static BOOL TryGenerateLegendaryHabitatEncounter(Pokemon *firstPartyMon, FieldBattleDTO *battleParams, const WildEncounters_FieldParams *encounterFieldParams, const u16 species, const u8 level);
 static BOOL ShouldGetRandomEncounter(FieldSystem *fieldSystem, const u32 encounterRate, const u8 tileBehavior);
 static u8 GetTileEncounterRateAndType(FieldSystem *fieldSystem, u8 tileBehavior, u8 *encounterType);
 static BOOL GracePeriodStepsUsed(FieldSystem *fieldSystem, u32 param1);
@@ -322,7 +359,12 @@ BOOL WildEncounters_TryWildEncounter(FieldSystem *fieldSystem)
 
     FieldBattleDTO_Init(battleParams, fieldSystem);
 
-    if (encounterType == ENCOUNTER_TYPE_GRASS) {
+    u16 habitatSpecies;
+    u8 habitatLevel;
+
+    if (!withPartner && !radarData.isRadarEncounter && TryRollLegendaryHabitat(fieldSystem, encounterType, &habitatSpecies, &habitatLevel)) {
+        encounterSuccess = TryGenerateLegendaryHabitatEncounter(firstPartyMon, battleParams, &encounterFieldParams, habitatSpecies, habitatLevel);
+    } else if (encounterType == ENCOUNTER_TYPE_GRASS) {
         for (int i = 0; i < MAX_GRASS_ENCOUNTERS; i++) {
             encounterTable[i].species = encounterData->grassEncounters.encounters[i].species;
             encounterTable[i].maxLevel = encounterData->grassEncounters.encounters[i].level;
@@ -745,6 +787,45 @@ static BOOL TryGenerateSurfEncounter(FieldSystem *fieldSystem, Pokemon *param1, 
 static BOOL TryGenerateFishingEncounter(FieldSystem *fieldSystem, Pokemon *param1, FieldBattleDTO *param2, EncounterSlot *param3, const WildEncounters_FieldParams *param4, const int fishingRodType)
 {
     return TryGenerateWildMon(param1, fishingRodType, param4, param3, ENCOUNTER_TYPE_FISHING, 1, param2);
+}
+
+static BOOL TryRollLegendaryHabitat(FieldSystem *fieldSystem, const u8 encounterType, u16 *species, u8 *level)
+{
+    if (SystemFlag_CheckGameCompleted(SaveData_GetVarsFlags(fieldSystem->saveData)) == FALSE) {
+        return FALSE;
+    }
+
+    for (int i = 0; i < NELEMS(sLegendaryHabitats); i++) {
+        const LegendaryHabitat *habitat = &sLegendaryHabitats[i];
+
+        if (habitat->mapHeaderID != fieldSystem->location->mapHeaderID || habitat->encounterType != encounterType) {
+            continue;
+        }
+
+        if (LCRNG_RandMod(100) >= habitat->percent) {
+            return FALSE;
+        }
+
+        *species = habitat->species;
+        *level = habitat->minLevel + LCRNG_RandMod(habitat->maxLevel - habitat->minLevel + 1);
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+static BOOL TryGenerateLegendaryHabitatEncounter(Pokemon *firstPartyMon, FieldBattleDTO *battleParams, const WildEncounters_FieldParams *encounterFieldParams, const u16 species, const u8 level)
+{
+    if (FirstMonAbilityPreventsEncounter(encounterFieldParams, firstPartyMon, level)) {
+        return FALSE;
+    }
+
+    if (RepelPreventsEncounter(level, encounterFieldParams) == TRUE) {
+        return FALSE;
+    }
+
+    CreateWildMon(species, level, 1, encounterFieldParams, firstPartyMon, battleParams);
+    return TRUE;
 }
 
 static BOOL ShouldGetRandomEncounter(FieldSystem *fieldSystem, const u32 encounterRate, const u8 tileBehavior)

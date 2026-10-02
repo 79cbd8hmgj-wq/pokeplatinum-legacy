@@ -3711,6 +3711,12 @@
     .short \destVar
     .endm
 
+    // TRUE if every species #001-#492 is registered as caught (forms not counted, Arceus excluded)
+    .macro CheckPokedexCaughtAllButArceus destVar
+    .short SCRCMD_CHECKPOKEDEXCAUGHTALLBUTARCEUS
+    .short \destVar
+    .endm
+
     .macro TryGetRandomMassageGirlAccessory destAccessoryID
     .short SCRCMD_TRYGETRANDOMMASSAGEGIRLACCESSORY
     .short \destAccessoryID
