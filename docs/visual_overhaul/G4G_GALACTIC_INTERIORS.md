@@ -1,20 +1,42 @@
 # G4G — Team Galactic Interiors
 
-Status: reviewed / no-op.
+Status: source-applied; runtime inspection pending.
 
-The final representative G4 interior review covered:
+G4G completes the representative environment reconstruction pass with a restrained
+cooler industrial grade for Team Galactic interiors. Geometry, collision, scripts,
+warps, texture dimensions, texture indices, transparency, and resource names are unchanged.
 
-- Eterna Galactic Building / Galactic HQ: `map_texture_set_057`
-- Galactic control/laboratory rooms: `map_texture_set_067`
-- Veilstone Galactic warehouse: `map_texture_set_030`
+## Main Galactic buildings
 
-The HQ and laboratory banks already have a coherent blue-gray, gold, black, and
-high-tech material language with strong readable contrast. The warehouse bank is
-a broader neutral interior family rather than a safe Galactic-only target.
+- Textures validated: **64**
+- Palettes changed: **19**
+- Rendered textures affected: **27**
+- Eterna Galactic Building and the main Galactic HQ remain on their dedicated texture set 057.
 
-No automatic recolor is applied. A broad palette rewrite would create more risk
-than visible benefit and could affect non-Galactic rooms sharing the warehouse
-materials.
+## Control room / laboratory
 
-G4G therefore closes as a deliberate no-op: native room geometry, collision,
-warps, scripts, props, and textures remain unchanged.
+- Textures validated: **8**
+- Palettes changed: **5**
+- Rendered textures affected: **5**
+- The laboratory/control-room family remains on dedicated texture set 067.
+
+## Veilstone Galactic Warehouse
+
+- Textures validated: **44**
+- Palettes changed: **32**
+- Rendered textures affected: **33**
+- The warehouse is isolated from shared generic interior area_data_031 into area_data_077.
+- Its texture bank is cloned from shared set 030 into dedicated map_texture_set_076 before grading.
+
+## G4 completion checkpoint
+
+Source-side G4 representative environment reconstruction is complete:
+- G4A Eterna Forest
+- G4B Snowpoint / Route 217
+- G4C Distortion World
+- G4D Spear Pillar
+- G4E lakes
+- G4F Turnback Cave
+- G4G Team Galactic interiors
+
+Remaining gate: runtime visual inspection in Delta of the representative areas.

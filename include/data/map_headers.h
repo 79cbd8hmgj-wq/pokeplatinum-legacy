@@ -3188,7 +3188,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = FALSE,
     },
     [MAP_HEADER_VEILSTONE_CITY_GALACTIC_WAREHOUSE] = {
-        .areaDataArchiveID = area_data_031,
+        .areaDataArchiveID = area_data_077,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_177,
         .scriptsArchiveID = scripts_veilstone_city_galactic_warehouse,
