@@ -25,7 +25,6 @@ OldChateauBackMiddleWestRoom_TV:
     CheckDidNotCapture VAR_RESULT
     GoToIfEq VAR_RESULT, TRUE, OldChateauBackMiddleWestRoom_RotomDisappearedIntoTV
     SetFlag FLAG_CAUGHT_OLD_CHATEAU_ROTOM
-    SetVar VAR_DISTRIBUTION_EVENT_ROTOM, 0x1103
     Message OldChateauBackMiddleWestRoom_Text_SomethingFellOutOfTV
     SetVar VAR_0x8004, ITEM_SECRET_KEY
     SetVar VAR_0x8005, 1

@@ -14,6 +14,7 @@
     ScriptEntry EternaForest_MossRock
     ScriptEntry EternaForest_OnTransition
     ScriptEntry EternaForest_OnFrame_CherylOldChateauCutscene
+    ScriptEntry EternaForest_Mew
     ScriptEntryEnd
 
 EternaForest_OnTransition:
@@ -430,3 +431,35 @@ EternaForest_OnFrame_CherylOldChateauCutscene:
 EternaForest_Movement_CherylWalkOnSpotNorth:
     WalkOnSpotNormalNorth
     EndMovement
+
+EternaForest_Mew:
+    GoToIfUnset FLAG_GAME_COMPLETED, EternaForest_MewEnd
+    GoToIfSet FLAG_CAUGHT_MEW, EternaForest_MewEnd
+    PlaySE SEQ_SE_CONFIRM
+    LockAll
+    PlayCry SPECIES_MEW
+    Message EternaForest_Text_MewAppears
+    CloseMessage
+    StartLegendaryBattle SPECIES_MEW, 50
+    CheckWonBattle VAR_RESULT
+    GoToIfEq VAR_RESULT, FALSE, EternaForest_MewBlackOut
+    CheckDidNotCapture VAR_RESULT
+    GoToIfEq VAR_RESULT, TRUE, EternaForest_MewGotAway
+    SetFlag FLAG_CAUGHT_MEW
+    ReleaseAll
+    End
+
+EternaForest_MewGotAway:
+    Message EternaForest_Text_MewGotAway
+    WaitButton
+    CloseMessage
+    ReleaseAll
+    End
+
+EternaForest_MewBlackOut:
+    BlackOutFromBattle
+    ReleaseAll
+    End
+
+EternaForest_MewEnd:
+    End

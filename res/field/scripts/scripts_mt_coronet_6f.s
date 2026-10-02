@@ -1,8 +1,10 @@
 #include "macros/scrcmd.inc"
+#include "res/text/bank/mt_coronet_2f.h"
 
 
     ScriptEntry MtCoronet6F_OnTransition
     ScriptEntry MtCoronet6F_OnLoad
+    ScriptEntry MtCoronet6F_Jirachi
     ScriptEntryEnd
 
 MtCoronet6F_OnTransition:
@@ -66,3 +68,35 @@ MtCoronet6F_RemoveSpearPillarWarps:
     Return
 
     .balign 4, 0
+
+MtCoronet6F_Jirachi:
+    GoToIfUnset FLAG_GAME_COMPLETED, MtCoronet6F_JirachiEnd
+    GoToIfSet FLAG_CAUGHT_JIRACHI, MtCoronet6F_JirachiEnd
+    PlaySE SEQ_SE_CONFIRM
+    LockAll
+    PlayCry SPECIES_JIRACHI
+    Message MtCoronet6F_Text_JirachiAppears
+    CloseMessage
+    StartLegendaryBattle SPECIES_JIRACHI, 50
+    CheckWonBattle VAR_RESULT
+    GoToIfEq VAR_RESULT, FALSE, MtCoronet6F_JirachiBlackOut
+    CheckDidNotCapture VAR_RESULT
+    GoToIfEq VAR_RESULT, TRUE, MtCoronet6F_JirachiGotAway
+    SetFlag FLAG_CAUGHT_JIRACHI
+    ReleaseAll
+    End
+
+MtCoronet6F_JirachiGotAway:
+    Message MtCoronet6F_Text_JirachiGotAway
+    WaitButton
+    CloseMessage
+    ReleaseAll
+    End
+
+MtCoronet6F_JirachiBlackOut:
+    BlackOutFromBattle
+    ReleaseAll
+    End
+
+MtCoronet6F_JirachiEnd:
+    End

@@ -1374,6 +1374,34 @@ VeilstoneCity_DeoxysMeteoriteNormal:
     End
 
 VeilstoneCity_MeteoriteFromTheStars:
+    GoToIfUnset FLAG_GAME_COMPLETED, VeilstoneCity_MeteoriteNoDeoxys
+    GoToIfSet FLAG_CAUGHT_DEOXYS, VeilstoneCity_MeteoriteNoDeoxys
+    Message VeilstoneCity_Text_MeteoriteCrackles
+    CloseMessage
+    PlayCry SPECIES_DEOXYS
+    WaitCry
+    StartLegendaryBattle SPECIES_DEOXYS, 60
+    CheckWonBattle VAR_RESULT
+    GoToIfEq VAR_RESULT, FALSE, VeilstoneCity_DeoxysBlackOut
+    CheckDidNotCapture VAR_RESULT
+    GoToIfEq VAR_RESULT, TRUE, VeilstoneCity_DeoxysGotAway
+    SetFlag FLAG_CAUGHT_DEOXYS
+    ReleaseAll
+    End
+
+VeilstoneCity_DeoxysGotAway:
+    Message VeilstoneCity_Text_DeoxysGotAway
+    WaitButton
+    CloseMessage
+    ReleaseAll
+    End
+
+VeilstoneCity_DeoxysBlackOut:
+    BlackOutFromBattle
+    ReleaseAll
+    End
+
+VeilstoneCity_MeteoriteNoDeoxys:
     Message VeilstoneCity_Text_MeteoriteFromTheStars
     WaitButton
     CloseMessage

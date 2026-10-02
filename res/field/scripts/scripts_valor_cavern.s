@@ -55,6 +55,7 @@ ValorCavern_Azelf:
     End
 
 ValorCavern_AzelfDisappeared:
+    ClearFlag FLAG_HIDE_VALOR_CAVERN_AZELF
     Message ValorCavern_Text_AzelfDisappeared
     WaitButton
     CloseMessage
@@ -62,6 +63,7 @@ ValorCavern_AzelfDisappeared:
     End
 
 ValorCavern_LostBattleAzelf:
+    ClearFlag FLAG_HIDE_VALOR_CAVERN_AZELF
     BlackOutFromBattle
     ReleaseAll
     End

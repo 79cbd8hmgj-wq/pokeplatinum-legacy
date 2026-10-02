@@ -5,7 +5,18 @@
 
     ScriptEntry SnowpointTempleB5F_OnLoad
     ScriptEntry SnowpointTempleB5F_Regigigas
+    ScriptEntry SnowpointTempleB5F_OnTransition
     ScriptEntryEnd
+
+SnowpointTempleB5F_OnTransition:
+    GoToIfSet FLAG_CAUGHT_REGIGIGAS, SnowpointTempleB5F_HideRegigigas
+    GoToIfUnset FLAG_GAME_COMPLETED, SnowpointTempleB5F_HideRegigigas
+    ClearFlag FLAG_HIDE_SNOWPOINT_TEMPLE_B5F_REGIGIGAS
+    End
+
+SnowpointTempleB5F_HideRegigigas:
+    SetFlag FLAG_HIDE_SNOWPOINT_TEMPLE_B5F_REGIGIGAS
+    End
 
 SnowpointTempleB5F_OnLoad:
     GoToIfSet FLAG_MAP_LOCAL_REMOVE_OBJECT, SnowpointTempleB5F_RemoveRegigigas
@@ -59,6 +70,7 @@ SnowpointTempleB5F_EncounterRegigigas:
     End
 
 SnowpointTempleB5F_RegigigasDisappeared:
+    ClearFlag FLAG_HIDE_SNOWPOINT_TEMPLE_B5F_REGIGIGAS
     Message SnowpointTempleB5F_Text_RegigigasDisappeared
     WaitButton
     CloseMessage
@@ -66,6 +78,7 @@ SnowpointTempleB5F_RegigigasDisappeared:
     End
 
 SnowpointTempleB5F_BlackOut:
+    ClearFlag FLAG_HIDE_SNOWPOINT_TEMPLE_B5F_REGIGIGAS
     BlackOutFromBattle
     ReleaseAll
     End

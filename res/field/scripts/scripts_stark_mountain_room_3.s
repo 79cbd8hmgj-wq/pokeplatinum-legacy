@@ -97,6 +97,7 @@ StarkMountainRoom3_CaughtHeatran:
     End
 
 StarkMountainRoom3_HeatranDisappeared:
+    SetVar VAR_STARK_MOUNTAIN_ROOM_3_STATE, 1
     Message StarkMountainRoom3_Text_HeatranDisappeared
     WaitButton
     CloseMessage

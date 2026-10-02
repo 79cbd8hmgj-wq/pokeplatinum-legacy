@@ -1,5 +1,4 @@
 #include "macros/scrcmd.inc"
-#include "generated/distribution_events.h"
 #include "res/text/bank/spear_pillar_dialga.h"
 
 
@@ -17,8 +16,6 @@ SpearPillarDialga_TryEnableHallOfOrigin:
     GetNationalDexEnabled VAR_MAP_LOCAL_0x00
     GoToIfEq VAR_MAP_LOCAL_0x00, FALSE, SpearPillarDialga_TryEnableHallOfOriginEnd
     CheckItem ITEM_AZURE_FLUTE, 1, VAR_MAP_LOCAL_0x00
-    GoToIfEq VAR_MAP_LOCAL_0x00, FALSE, SpearPillarDialga_TryEnableHallOfOriginEnd
-    CheckDistributionEvent DISTRIBUTION_EVENT_ARCEUS, VAR_MAP_LOCAL_0x00
     GoToIfEq VAR_MAP_LOCAL_0x00, FALSE, SpearPillarDialga_TryEnableHallOfOriginEnd
     GoToIfSet FLAG_CAUGHT_ARCEUS, SpearPillarDialga_TryEnableHallOfOriginEnd
     SetVar VAR_HALL_OF_ORIGIN_STATE, 1
@@ -43,7 +40,6 @@ SpearPillarDialga_Rift:
     StartLegendaryBattle SPECIES_DIALGA, 70
     CheckWonBattle VAR_RESULT
     GoToIfEq VAR_RESULT, FALSE, SpearPillarDialga_BlackOut
-    SetVar VAR_SPEAR_PILLAR_DIALGA_STATE, 1
     CheckDidNotCapture VAR_RESULT
     CallIfEq VAR_RESULT, FALSE, SpearPillarDialga_SetFlagCaughtDialga
     ReleaseAll
@@ -55,6 +51,7 @@ SpearPillarDialga_BlackOut:
     End
 
 SpearPillarDialga_SetFlagCaughtDialga:
+    SetVar VAR_SPEAR_PILLAR_DIALGA_STATE, 1
     SetFlag FLAG_CAUGHT_DIALGA
     Return
 

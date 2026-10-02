@@ -41,6 +41,7 @@ AcuityCavern_Uxie:
     End
 
 AcuityCavern_UxieDisappeared:
+    ClearFlag FLAG_HIDE_ACUITY_CAVERN_UXIE
     Message AcuityCavern_Text_UxieDisappeared
     WaitButton
     CloseMessage
@@ -48,6 +49,7 @@ AcuityCavern_UxieDisappeared:
     End
 
 AcuityCavern_LostBattle:
+    ClearFlag FLAG_HIDE_ACUITY_CAVERN_UXIE
     BlackOutFromBattle
     ReleaseAll
     End

@@ -14,7 +14,7 @@
     ScriptEntryEnd
 
 IcebergRuins_OnTransition:
-    GoToIfLt VAR_ICEBERG_RUINS_STATE, RUINS_STATE_DID_NOT_CATCH_REGI, IcebergRuins_ResetState
+    GoToIfNe VAR_ICEBERG_RUINS_STATE, RUINS_STATE_CAUGHT_REGI, IcebergRuins_ResetState
     End
 
 IcebergRuins_ResetState:
@@ -28,8 +28,6 @@ IcebergRuins_Statue:
     GoToIfEq VAR_ICEBERG_RUINS_STATE, RUINS_STATE_CAUGHT_REGI, IcebergRuins_CaughtRegiceStatueStoppedEmanatingPower
     GoToIfEq VAR_ICEBERG_RUINS_STATE, RUINS_STATE_DID_NOT_CATCH_REGI, IcebergRuins_DidNotCatchRegiceStatueStoppedEmanatingPower
     GoToIfUnset FLAG_GAME_COMPLETED, IcebergRuins_BecomeStrongerYouMust
-    CheckPartyHasFatefulEncounterRegigigas VAR_RESULT
-    GoToIfEq VAR_RESULT, 0, IcebergRuins_ItsAStatueOfAPokemon
     GoToIfEq VAR_ICEBERG_RUINS_STATE, RUINS_STATE_ACTIVATED_STATUE, IcebergRuins_EncounterRegice
     GoToIfLt VAR_ICEBERG_RUINS_STATE, RUINS_STATE_ACTIVATED_ALL_DOTS, IcebergRuins_ItsAStatueOfAPokemon
     WaitSE SEQ_SE_CONFIRM
@@ -59,7 +57,7 @@ IcebergRuins_CaughtRegiceStatueStoppedEmanatingPower:
     End
 
 IcebergRuins_DidNotCatchRegiceStatueStoppedEmanatingPower:
-    SetVar VAR_ICEBERG_RUINS_STATE, RUINS_STATE_DID_NOT_CATCH_REGI
+    SetVar VAR_ICEBERG_RUINS_STATE, 0
     Message IcebergRuins_Text_StatueStoppedEmanatingPower
     GoTo IcebergRuins_StatueEnd
     End

@@ -10,6 +10,7 @@
     ScriptEntry FloaromaMeadow_PokefanM
     ScriptEntry FloaromaMeadow_Dummy6
     ScriptEntry FloaromaMeadow_ItemWorksKey
+    ScriptEntry FloaromaMeadow_Celebi
     ScriptEntryEnd
 
 FloaromaMeadow_OnTransition:
@@ -243,4 +244,36 @@ FloaromaMeadow_ItemWorksKey:
     SetFlag FLAG_OBTAINED_FLOAROMA_MEADOW_WORKS_KEY
     RemoveObject LOCALID_ITEM_WORKS_KEY
     ReleaseAll
+    End
+
+FloaromaMeadow_Celebi:
+    GoToIfUnset FLAG_GAME_COMPLETED, FloaromaMeadow_CelebiEnd
+    GoToIfSet FLAG_CAUGHT_CELEBI, FloaromaMeadow_CelebiEnd
+    PlaySE SEQ_SE_CONFIRM
+    LockAll
+    PlayCry SPECIES_CELEBI
+    Message FloaromaMeadow_Text_CelebiAppears
+    CloseMessage
+    StartLegendaryBattle SPECIES_CELEBI, 50
+    CheckWonBattle VAR_RESULT
+    GoToIfEq VAR_RESULT, FALSE, FloaromaMeadow_CelebiBlackOut
+    CheckDidNotCapture VAR_RESULT
+    GoToIfEq VAR_RESULT, TRUE, FloaromaMeadow_CelebiGotAway
+    SetFlag FLAG_CAUGHT_CELEBI
+    ReleaseAll
+    End
+
+FloaromaMeadow_CelebiGotAway:
+    Message FloaromaMeadow_Text_CelebiGotAway
+    WaitButton
+    CloseMessage
+    ReleaseAll
+    End
+
+FloaromaMeadow_CelebiBlackOut:
+    BlackOutFromBattle
+    ReleaseAll
+    End
+
+FloaromaMeadow_CelebiEnd:
     End

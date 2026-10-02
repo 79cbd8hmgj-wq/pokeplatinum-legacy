@@ -13,7 +13,7 @@ EternaCitySouthHouse_ProfOak:
     GoToIfSet FLAG_CAUGHT_ROAMING_LEGENDARY_BIRDS, EternaCitySouthHouse_PokedexRatingsCheckOak2
     Call EternaCitySouthHouse_CheckCaughtAllRoamingLegendaryBirds
     GoToIfEq VAR_RESULT, TRUE, EternaCitySouthHouse_CaughtAllRoamingLegendaryBirds
-    GoToIfSet FLAG_ACTIVATED_ROAMING_LEGENDARY_BIRDS, EternaCitySouthHouse_TryReactivateRoamingLegendaryBirds
+    GoToIfSet FLAG_ACTIVATED_ROAMING_LEGENDARY_BIRDS, EternaCitySouthHouse_PokedexRatingsCheckOak
     GoToIfSet FLAG_RECEIVED_ETERNA_CITY_SOUTH_HOUSE_UPGRADE, EternaCitySouthHouse_PokedexRatingsCheckOak
     BufferPlayerName 0
     Message EternaCitySouthHouse_Text_HowIsYourPokedex
@@ -41,9 +41,6 @@ EternaCitySouthHouse_BagIsFull:
     End
 
 EternaCitySouthHouse_ActivateRoamingLegendaryBirds:
-    ActivateRoamingPokemon ROAMING_SLOT_MOLTRES
-    ActivateRoamingPokemon ROAMING_SLOT_ZAPDOS
-    ActivateRoamingPokemon ROAMING_SLOT_ARTICUNO
     SetFlag FLAG_ACTIVATED_ROAMING_LEGENDARY_BIRDS
     Message EternaCitySouthHouse_Text_SightingsOfLegendaryBirds
     GoTo EternaCitySouthHouse_ProfOakEnd
@@ -58,18 +55,12 @@ EternaCitySouthHouse_TryReactivateRoamingLegendaryBirds:
     End
 
 EternaCitySouthHouse_ReactivateRoamingMoltres:
-    SetVar VAR_ROAMING_MOLTRES_STATE, ROAMER_STATE_ROAMING
-    ActivateRoamingPokemon ROAMING_SLOT_MOLTRES
     Return
 
 EternaCitySouthHouse_ReactivateRoamingZapdos:
-    SetVar VAR_ROAMING_ZAPDOS_STATE, ROAMER_STATE_ROAMING
-    ActivateRoamingPokemon ROAMING_SLOT_ZAPDOS
     Return
 
 EternaCitySouthHouse_ReactivateRoamingArticuno:
-    SetVar VAR_ROAMING_ARTICUNO_STATE, ROAMER_STATE_ROAMING
-    ActivateRoamingPokemon ROAMING_SLOT_ARTICUNO
     Return
 
 EternaCitySouthHouse_CaughtAllRoamingLegendaryBirds:

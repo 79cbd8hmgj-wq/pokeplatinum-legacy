@@ -52,18 +52,45 @@ VeilstoneStoreB1F_ProfRowan:
     LockAll
     GoToIfSet FLAG_TALKED_TO_VEILSTONE_STORE_B1F_PROF_ROWAN, VeilstoneStoreB1F_ProfRowanAfterSpokenTo
     SetFlag FLAG_TALKED_TO_VEILSTONE_STORE_B1F_PROF_ROWAN
-    SetFlag FLAG_HIDE_VEILSTONE_STORE_B1F_PROF_ROWAN
     Message VeilstoneStoreB1F_Text_RageCandyBarsAreTooPopular
     FacePlayer
     BufferPlayerName 0
     Message VeilstoneStoreB1F_Text_DoesLifeContinueToThrillYou
-    GoTo VeilstoneStoreB1F_ProfRowanClose
+    GoTo VeilstoneStoreB1F_ProfRowanTryAzureFlute
     End
 
 VeilstoneStoreB1F_ProfRowanAfterSpokenTo:
     FacePlayer
     BufferPlayerName 0
     Message VeilstoneStoreB1F_Text_DoesLifeContinueToThrillYou
+    GoTo VeilstoneStoreB1F_ProfRowanTryAzureFlute
+    End
+
+VeilstoneStoreB1F_ProfRowanTryAzureFlute:
+    GoToIfUnset FLAG_GAME_COMPLETED, VeilstoneStoreB1F_ProfRowanClose
+    GoToIfSet FLAG_CAUGHT_ARCEUS, VeilstoneStoreB1F_ProfRowanClose
+    CheckItem ITEM_AZURE_FLUTE, 1, VAR_RESULT
+    GoToIfEq VAR_RESULT, TRUE, VeilstoneStoreB1F_ProfRowanClose
+    CheckPokedexCaughtAllButArceus VAR_RESULT
+    GoToIfEq VAR_RESULT, FALSE, VeilstoneStoreB1F_ProfRowanDexIncomplete
+    Message VeilstoneStoreB1F_Text_DexCompleteTakeAzureFlute
+    CloseMessage
+    SetVar VAR_0x8004, ITEM_AZURE_FLUTE
+    SetVar VAR_0x8005, 1
+    GoToIfCannotFitItem VAR_0x8004, VAR_0x8005, VAR_RESULT, VeilstoneStoreB1F_ProfRowanBagIsFull
+    Common_GiveItemQuantity
+    BufferPlayerName 0
+    Message VeilstoneStoreB1F_Text_AzureFluteLeadsToSpearPillar
+    GoTo VeilstoneStoreB1F_ProfRowanClose
+    End
+
+VeilstoneStoreB1F_ProfRowanDexIncomplete:
+    Message VeilstoneStoreB1F_Text_CatchEveryPokemonButOne
+    GoTo VeilstoneStoreB1F_ProfRowanClose
+    End
+
+VeilstoneStoreB1F_ProfRowanBagIsFull:
+    Common_MessageBagIsFull
     GoTo VeilstoneStoreB1F_ProfRowanClose
     End
 
