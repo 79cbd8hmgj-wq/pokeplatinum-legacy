@@ -174,8 +174,13 @@ CASES = {
     "TM78 Victory Road source removed": fp("res/field/scripts/scripts_victory_road_1f.s", "ITEM_TM78", 0),
     "TM78 Collector can hide before receipt": sub(
         "victory_road",
-        "    GoToIfUnset FLAG_RECEIVED_ROUTE_204_NORTH_TM78, VictoryRoad_DontHideCollector\n",
+        "    GoToIfUnset FLAG_RECEIVED_ROUTE_204_NORTH_TM78, VictoryRoad_KeepCollectorForTM78\n",
         "",
+    ),
+    "TM78 stale hide flag not cleared": sub(
+        "victory_road",
+        "    ClearFlag FLAG_HIDE_VICTORY_ROAD_1F_COLLECTOR\n",
+        "    Nop\n",
     ),
     "TM78 game-completed branch bypasses gift": sub(
         "victory_road",
