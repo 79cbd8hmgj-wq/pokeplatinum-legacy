@@ -828,7 +828,9 @@ does not block later visual passes.
 HGSS is the first donor/reference source.
 
 ### G5 — Battle presentation
-Status: **active**.
+Status: **source-side complete**.
+
+Canonical closure record: `docs/visual_overhaul/G5_BATTLE_PRESENTATION_COMPLETE.md`.
 
 The existing resource-contract-safe battle HUD palette checkpoint is the G5 foundation;
 do not restart the battle UI from retail.
@@ -1149,7 +1151,16 @@ Invariants:
 - no new battle renderer or allocation path was added
 - `weather_fog.s` remains unchanged because it is a separate fog presentation path rather than one of the four standard field-weather states
 
-### G6 — Showcase areas
+### G6 — Showcase Integration & Final Visual Polish
+Status: **active**.
+
+G6 is not a second environment-reconstruction pass. G4 already established the source-side
+lighting/palette/material treatments for the representative environments, while G2/G3/G5 established
+the shared atmosphere, character/Pokemon, UI, and battle-presentation layers.
+
+G6 is the holistic integration pass: inspect the highest-value showcase locations as complete scenes,
+identify mismatches between those finished systems, and make only targeted final-polish corrections.
+
 Primary quality benchmarks:
 - Eterna Forest
 - Snowpoint / Route 217
