@@ -11,13 +11,15 @@
     "double_battle": false,
     "party": [
         {
-            "species": "SPECIES_MAGNEMITE",
+            "species": "SPECIES_MAGNETON",
             "form": 0,
             "level": 30,
             "item": null,
             "moves": [
                 "MOVE_SPARK",
-                "MOVE_MAGNET_BOMB"
+                "MOVE_MAGNET_BOMB",
+                "MOVE_THUNDER_WAVE",
+                "MOVE_LOCK_ON"
             ],
             "iv_scale": 0,
             "ball_seal": 0

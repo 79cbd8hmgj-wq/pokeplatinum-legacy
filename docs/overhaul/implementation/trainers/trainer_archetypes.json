@@ -1,0 +1,215 @@
+{
+ "schema": "trainer_archetypes/1",
+ "authority": "TRAINER_OVERHAUL_SPEC.md section 10-11",
+ "classes": {
+  "beginner": [
+   "YOUNGSTER",
+   "LASS",
+   "SCHOOL_KID_MALE",
+   "SCHOOL_KID_FEMALE",
+   "POKE_KID",
+   "TWINS"
+  ],
+  "habitat_specialist": [
+   "HIKER",
+   "FISHERMAN",
+   "BIRD_KEEPER",
+   "BUG_CATCHER",
+   "SAILOR",
+   "SWIMMER_MALE",
+   "SWIMMER_FEMALE",
+   "CAMPER",
+   "PICNICKER",
+   "RUIN_MANIAC",
+   "TUBER_MALE",
+   "TUBER_FEMALE",
+   "SKIER_MALE",
+   "SKIER_FEMALE",
+   "RANGER_MALE",
+   "RANGER_FEMALE",
+   "NINJA_BOY",
+   "PARASOL_LADY",
+   "AROMA_LADY",
+   "COWGIRL",
+   "RANCHER",
+   "WORKER",
+   "POLICEMAN",
+   "JOGGER",
+   "CYCLIST_MALE",
+   "CYCLIST_FEMALE",
+   "BLACK_BELT",
+   "BATTLE_GIRL"
+  ],
+  "skilled_route_trainer": [
+   "ACE_TRAINER_MALE",
+   "ACE_TRAINER_FEMALE",
+   "ACE_TRAINER_SNOW_MALE",
+   "ACE_TRAINER_SNOW_FEMALE",
+   "VETERAN",
+   "DRAGON_TAMER",
+   "PSYCHIC_MALE",
+   "PSYCHIC_FEMALE",
+   "PI",
+   "ROUGHNECK"
+  ],
+  "breeder": [
+   "BREEDER_MALE",
+   "BREEDER_FEMALE",
+   "POKEFAN_MALE",
+   "POKEFAN_FEMALE",
+   "COLLECTOR"
+  ],
+  "galactic_grunt": [
+   "GALACTIC_GRUNT_MALE",
+   "GALACTIC_GRUNT_FEMALE"
+  ],
+  "flavor": [
+   "BEAUTY",
+   "ARTIST",
+   "CLOWN",
+   "IDOL",
+   "GENTLEMAN",
+   "MAID",
+   "LADY",
+   "SOCIALITE",
+   "RICH_BOY",
+   "GUITARIST",
+   "INTERVIEWERS",
+   "CAMERAMAN",
+   "REPORTER",
+   "SCIENTIST",
+   "WAITRESS"
+  ],
+  "double_battle": [
+   "DOUBLE_TEAM",
+   "YOUNG_COUPLE",
+   "SIS_AND_BRO",
+   "BELLE_AND_PA"
+  ]
+ },
+ "party_size_guidance": {
+  "beginner": [
+   1,
+   3
+  ],
+  "habitat_specialist": [
+   1,
+   4
+  ],
+  "skilled_route_trainer": [
+   1,
+   5
+  ],
+  "breeder": [
+   1,
+   5
+  ],
+  "galactic_grunt": [
+   1,
+   4
+  ],
+  "flavor": [
+   1,
+   4
+  ],
+  "double_battle": [
+   2,
+   4
+  ],
+  "note": "advisory (validator warns; party sizes are not changed by the ordinary pass)"
+ },
+ "held_items": {
+  "beginner": "none",
+  "habitat_specialist": "rare",
+  "skilled_route_trainer": "occasional berry",
+  "default": "unchanged"
+ },
+ "ai": {
+  "skilled_route_trainer": "expert where already supported; unchanged by this pass",
+  "default": "unchanged"
+ },
+ "transformation_rules": {
+  "R1_evolution_sync": "evolve to the unique plain level-evolution target when level >= threshold; devolve to the pre-evolution when level < the pre-evolution's threshold (thresholds read from live res/pokemon evolutions)",
+  "R2_availability": "species whose family earliest band is later than the trainer's band is replaced",
+  "R3_duplicate": "within-team repeated species are replaced (double battles exempt)",
+  "R4_usage_cap": {
+   "species_cap": 8,
+   "family_cap": 20,
+   "max_swaps_per_trainer": 2,
+   "scope": "active map-placed ordinary trainers"
+  },
+  "R5_moves": "explicit-move teams only: illegal or obviously weak (<=40 power, non-STAB, level>=28) moves are replaced by natural STAB attacks, <=2 slots per Pokémon",
+  "replacement_selection": {
+   "types": "share a type with the replaced species (Galactic grunts: Poison/Dark/Flying/Normal)",
+   "bst_window": [
+    0.8,
+    1.2
+   ],
+   "stage": "no evolution-stage contradiction at that level",
+   "excluded": "legendary/reserved families, SPECIAL_ACQUISITION families, Unown/Ditto/Smeargle/Shedinja/Wobbuffet/Wynaut",
+   "ranking": "type affinity, then least-used (species + family), then BST proximity, then stable hash"
+  }
+ },
+ "band_overrides": {
+  "galactic_grunt_lake_verity": "M1"
+ },
+ "level_fallback_bands": [
+  [
+   14,
+   "E0"
+  ],
+  [
+   24,
+   "E1"
+  ],
+  [
+   34,
+   "M1"
+  ],
+  [
+   40,
+   "M2"
+  ],
+  [
+   46,
+   "L1"
+  ],
+  [
+   52,
+   "L2"
+  ],
+  [
+   60,
+   "P0"
+  ],
+  [
+   999,
+   "P1"
+  ]
+ ],
+ "excluded_from_ordinary_pass": {
+  "prefixes": [
+   "dawn_",
+   "lucas_",
+   "cheryl_",
+   "buck_",
+   "marley_",
+   "mira_",
+   "riley_",
+   "dummy_",
+   "none",
+   "leader_",
+   "elite_four",
+   "champion",
+   "commander_",
+   "galactic_boss",
+   "rival_"
+  ],
+  "substrings": [
+   "_unused",
+   "dummy"
+  ],
+  "reason": "partner/story specials, boss records and unused/dummy records are not ordinary trainers"
+ },
+ "class_identity": "preserved by the type-sharing rule; no competitive sets, no perfect coverage, held items and iv_scale unchanged"
+}

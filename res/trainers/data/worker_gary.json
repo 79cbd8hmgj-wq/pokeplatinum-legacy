@@ -8,13 +8,15 @@
     "double_battle": false,
     "party": [
         {
-            "species": "SPECIES_MAGNEMITE",
+            "species": "SPECIES_ELECTABUZZ",
             "form": 0,
             "level": 37,
             "item": null,
             "moves": [
-                "MOVE_SPARK",
-                "MOVE_MAGNET_BOMB"
+                "MOVE_SHOCK_WAVE",
+                "MOVE_LIGHT_SCREEN",
+                "MOVE_THUNDER_PUNCH",
+                "MOVE_DISCHARGE"
             ],
             "iv_scale": 10,
             "ball_seal": 0

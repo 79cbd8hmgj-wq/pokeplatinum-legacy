@@ -10,29 +10,29 @@
     "double_battle": false,
     "party": [
         {
-            "species": "SPECIES_STARAVIA",
+            "species": "SPECIES_STARAPTOR",
             "form": 0,
             "level": 34,
             "item": null,
             "moves": [
-                "MOVE_WING_ATTACK",
+                "MOVE_AERIAL_ACE",
                 "MOVE_QUICK_ATTACK",
-                "MOVE_ENDEAVOR",
+                "MOVE_TAKE_DOWN",
                 "MOVE_DOUBLE_TEAM"
             ],
             "iv_scale": 80,
             "ball_seal": 0
         },
         {
-            "species": "SPECIES_BUIZEL",
+            "species": "SPECIES_FLOATZEL",
             "form": 0,
             "level": 32,
             "item": null,
             "moves": [
                 "MOVE_AQUA_JET",
+                "MOVE_WATER_PULSE",
                 "MOVE_QUICK_ATTACK",
-                "MOVE_PURSUIT",
-                "MOVE_GROWL"
+                "MOVE_PURSUIT"
             ],
             "iv_scale": 80,
             "ball_seal": 0
@@ -43,16 +43,16 @@
             "level": 32,
             "item": null,
             "moves": [
-                "MOVE_EMBER",
+                "MOVE_FLAME_WHEEL",
                 "MOVE_STOMP",
-                "MOVE_TAIL_WHIP",
-                "MOVE_GROWL"
+                "MOVE_TAKE_DOWN",
+                "MOVE_TAIL_WHIP"
             ],
             "iv_scale": 80,
             "ball_seal": 0
         },
         {
-            "species": "SPECIES_GROTLE",
+            "species": "SPECIES_TORTERRA",
             "form": 0,
             "level": 36,
             "item": null,
@@ -60,7 +60,7 @@
                 "MOVE_RAZOR_LEAF",
                 "MOVE_BITE",
                 "MOVE_MEGA_DRAIN",
-                "MOVE_WITHDRAW"
+                "MOVE_LEECH_SEED"
             ],
             "iv_scale": 80,
             "ball_seal": 10

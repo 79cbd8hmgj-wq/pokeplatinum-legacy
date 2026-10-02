@@ -29,7 +29,7 @@
             "level": 29,
             "item": "ITEM_NONE",
             "moves": [
-                "MOVE_KARATE_CHOP",
+                "MOVE_BRICK_BREAK",
                 "MOVE_ROCK_TOMB",
                 "MOVE_STRENGTH",
                 "MOVE_FOCUS_ENERGY"
@@ -38,10 +38,24 @@
             "ball_seal": 0
         },
         {
+            "species": "SPECIES_HITMONCHAN",
+            "form": 0,
+            "level": 30,
+            "item": "ITEM_NONE",
+            "moves": [
+                "MOVE_MACH_PUNCH",
+                "MOVE_BULLET_PUNCH",
+                "MOVE_DRAIN_PUNCH",
+                "MOVE_ICE_PUNCH"
+            ],
+            "iv_scale": 200,
+            "ball_seal": 0
+        },
+        {
             "species": "SPECIES_LUCARIO",
             "form": 0,
             "level": 32,
-            "item": "ITEM_NONE",
+            "item": "ITEM_SITRUS_BERRY",
             "moves": [
                 "MOVE_DRAIN_PUNCH",
                 "MOVE_FORCE_PALM",

@@ -8,7 +8,7 @@
     "double_battle": false,
     "party": [
         {
-            "species": "SPECIES_MAGNEMITE",
+            "species": "SPECIES_MAGNETON",
             "form": 0,
             "level": 35,
             "item": null,
@@ -21,14 +21,15 @@
             "ball_seal": 0
         },
         {
-            "species": "SPECIES_MAGNEMITE",
+            "species": "SPECIES_MINUN",
             "form": 0,
             "level": 35,
             "item": null,
             "moves": [
-                "MOVE_THUNDER_WAVE",
-                "MOVE_MAGNET_BOMB",
-                "MOVE_SPARK"
+                "MOVE_SPARK",
+                "MOVE_SWIFT",
+                "MOVE_FAKE_TEARS",
+                "MOVE_CHARGE"
             ],
             "iv_scale": 10,
             "ball_seal": 0

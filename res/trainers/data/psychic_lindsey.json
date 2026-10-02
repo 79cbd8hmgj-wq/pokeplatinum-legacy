@@ -9,12 +9,15 @@
     "double_battle": false,
     "party": [
         {
-            "species": "SPECIES_ABRA",
+            "species": "SPECIES_KADABRA",
             "form": 0,
             "level": 17,
             "item": null,
             "moves": [
-                "MOVE_HIDDEN_POWER"
+                "MOVE_HIDDEN_POWER",
+                "MOVE_TELEPORT",
+                "MOVE_KINESIS",
+                "MOVE_CONFUSION"
             ],
             "iv_scale": 20,
             "ball_seal": 0

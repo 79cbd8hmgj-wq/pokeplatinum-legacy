@@ -9,15 +9,14 @@
     "double_battle": false,
     "party": [
         {
-            "species": "SPECIES_SHUPPET",
+            "species": "SPECIES_BANETTE",
             "form": 0,
             "level": 53,
             "item": null,
             "moves": [
                 "MOVE_SHADOW_BALL",
                 "MOVE_WILL_O_WISP",
-                "MOVE_SUCKER_PUNCH",
-                "MOVE_CONFUSE_RAY"
+                "MOVE_SUCKER_PUNCH"
             ],
             "iv_scale": 0,
             "ball_seal": 0
@@ -29,7 +28,7 @@
             "item": null,
             "moves": [
                 "MOVE_PSYCHIC",
-                "MOVE_FUTURE_SIGHT",
+                "MOVE_PSYBEAM",
                 "MOVE_RECOVER",
                 "MOVE_FOCUS_BLAST"
             ],

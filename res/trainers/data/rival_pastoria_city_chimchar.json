@@ -10,14 +10,14 @@
     "double_battle": false,
     "party": [
         {
-            "species": "SPECIES_STARAVIA",
+            "species": "SPECIES_STARAPTOR",
             "form": 0,
             "level": 34,
             "item": null,
             "moves": [
-                "MOVE_WING_ATTACK",
+                "MOVE_AERIAL_ACE",
                 "MOVE_QUICK_ATTACK",
-                "MOVE_ENDEAVOR",
+                "MOVE_TAKE_DOWN",
                 "MOVE_DOUBLE_TEAM"
             ],
             "iv_scale": 80,
@@ -30,9 +30,9 @@
             "item": null,
             "moves": [
                 "MOVE_MEGA_DRAIN",
-                "MOVE_POISON_STING",
+                "MOVE_MAGICAL_LEAF",
                 "MOVE_LEECH_SEED",
-                "MOVE_MAGICAL_LEAF"
+                "MOVE_TOXIC_SPIKES"
             ],
             "iv_scale": 80,
             "ball_seal": 0
@@ -43,23 +43,23 @@
             "level": 32,
             "item": null,
             "moves": [
-                "MOVE_EMBER",
+                "MOVE_FLAME_WHEEL",
                 "MOVE_STOMP",
-                "MOVE_TAIL_WHIP",
-                "MOVE_GROWL"
+                "MOVE_TAKE_DOWN",
+                "MOVE_TAIL_WHIP"
             ],
             "iv_scale": 80,
             "ball_seal": 0
         },
         {
-            "species": "SPECIES_PRINPLUP",
+            "species": "SPECIES_EMPOLEON",
             "form": 0,
             "level": 36,
             "item": null,
             "moves": [
-                "MOVE_BUBBLE_BEAM",
-                "MOVE_PECK",
+                "MOVE_WATER_PULSE",
                 "MOVE_METAL_CLAW",
+                "MOVE_AERIAL_ACE",
                 "MOVE_GROWL"
             ],
             "iv_scale": 80,

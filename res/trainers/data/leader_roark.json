@@ -19,7 +19,8 @@
             "item": null,
             "moves": [
                 "MOVE_STEALTH_ROCK",
-                "MOVE_ROCK_THROW"
+                "MOVE_ROCK_THROW",
+                "MOVE_TACKLE"
             ],
             "iv_scale": 50,
             "ball_seal": 0
@@ -27,12 +28,13 @@
         {
             "species": "SPECIES_ONIX",
             "form": 0,
-            "level": 12,
+            "level": 13,
             "item": null,
             "moves": [
                 "MOVE_STEALTH_ROCK",
                 "MOVE_ROCK_THROW",
-                "MOVE_SCREECH"
+                "MOVE_SCREECH",
+                "MOVE_BIND"
             ],
             "iv_scale": 50,
             "ball_seal": 0
@@ -45,6 +47,7 @@
             "moves": [
                 "MOVE_HEADBUTT",
                 "MOVE_PURSUIT",
+                "MOVE_FOCUS_ENERGY",
                 "MOVE_LEER"
             ],
             "iv_scale": 50,

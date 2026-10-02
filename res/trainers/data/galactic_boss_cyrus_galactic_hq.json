@@ -13,12 +13,12 @@
     "double_battle": false,
     "party": [
         {
-            "species": "SPECIES_SNEASEL",
+            "species": "SPECIES_WEAVILE",
             "form": 0,
             "level": 44,
             "item": "ITEM_NONE",
             "moves": [
-                "MOVE_SLASH",
+                "MOVE_NIGHT_SLASH",
                 "MOVE_ICE_PUNCH",
                 "MOVE_QUICK_ATTACK",
                 "MOVE_SCREECH"
@@ -32,10 +32,24 @@
             "level": 44,
             "item": "ITEM_NONE",
             "moves": [
-                "MOVE_POISON_FANG",
-                "MOVE_AIR_CUTTER",
+                "MOVE_CROSS_POISON",
+                "MOVE_AIR_SLASH",
                 "MOVE_BITE",
-                "MOVE_SUPERSONIC"
+                "MOVE_CONFUSE_RAY"
+            ],
+            "iv_scale": 250,
+            "ball_seal": 0
+        },
+        {
+            "species": "SPECIES_HOUNDOOM",
+            "form": 0,
+            "level": 45,
+            "item": "ITEM_NONE",
+            "moves": [
+                "MOVE_FLAMETHROWER",
+                "MOVE_DARK_PULSE",
+                "MOVE_WILL_O_WISP",
+                "MOVE_SLUDGE_BOMB"
             ],
             "iv_scale": 250,
             "ball_seal": 0
@@ -46,10 +60,10 @@
             "level": 46,
             "item": "ITEM_SITRUS_BERRY",
             "moves": [
-                "MOVE_DRILL_PECK",
-                "MOVE_NIGHT_SHADE",
-                "MOVE_ASTONISH",
-                "MOVE_FAINT_ATTACK"
+                "MOVE_NIGHT_SLASH",
+                "MOVE_SUCKER_PUNCH",
+                "MOVE_AIR_SLASH",
+                "MOVE_HEAT_WAVE"
             ],
             "iv_scale": 250,
             "ball_seal": 0
