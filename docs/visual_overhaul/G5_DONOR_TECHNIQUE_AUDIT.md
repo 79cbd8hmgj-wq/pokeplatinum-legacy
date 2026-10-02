@@ -90,3 +90,17 @@ contains a large effect/background sequence and a clearly defined impact beat:
 
 These are script-only additions using Platinum's existing `Func_ShakeBg` primitive. No donor assets,
 particle resources, sounds, backgrounds, or animation data were imported.
+
+
+## Donor-control comparison: common special attacks
+
+Emerald was used only as a presentation reference for several common special attacks.
+
+Findings:
+- Psychic — Platinum already uses a dedicated moving background plus attacker/defender treatment; no change.
+- Ice Beam — Platinum already uses a cool base-background grade plus defender shake; no change.
+- Flamethrower — Platinum already combines a dark-red arena grade with sustained attacker/defender shake; no change.
+- Thunderbolt — Platinum already combines a darkened arena, repeated electrical beats, defender flash, and defender shake; no change.
+- Shadow Ball — Platinum had the projectile, defender shake, and defender purple fade, but lacked the broader scene treatment seen in Emerald's dedicated ghost background. Added only a restrained native dark-purple base-background grade and restore.
+
+This comparison is intentionally conservative: donor research is allowed to justify leaving Platinum unchanged when its native presentation already expresses the same idea well.
