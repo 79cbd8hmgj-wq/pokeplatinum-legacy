@@ -155,18 +155,20 @@ def _wait_for_runtime_control_ready(
     last_magic = None
 
     while time.monotonic() < deadline:
-        raw = session.read_memory(address, 24)
+        raw = session.read_memory(address, 28)
         last_magic = int.from_bytes(raw[20:24], "little")
-        if last_magic == G4_RUNTIME_QA_MAGIC:
+        field_ready = int.from_bytes(raw[24:28], "little")
+        if last_magic == G4_RUNTIME_QA_MAGIC and field_ready:
             return {
                 "address": f"0x{address:08x}",
                 "magic": f"0x{last_magic:08x}",
+                "field_ready": field_ready,
             }
 
         session.run_host_action(lambda: time.sleep(0.25))
 
     raise RuntimeError(
-        "runtime QA control never reached initialized state; "
+        "runtime QA control never reached a live field state; "
         f"last_magic=0x{(last_magic or 0):08x}"
     )
 
@@ -209,13 +211,14 @@ def _read_debug_warp_control(
     symbols: dict[str, int],
 ) -> dict[str, object]:
     address = _need(symbols, "gG4RuntimeQAControl")
-    raw = session.read_memory(address, 24)
+    raw = session.read_memory(address, 28)
     request = int.from_bytes(raw[0:4], "little")
     status = int.from_bytes(raw[4:8], "little")
     loaded_map_header = int.from_bytes(raw[8:12], "little")
     event_flags = int.from_bytes(raw[12:16], "little")
     light_archive_id = int.from_bytes(raw[16:20], "little")
     magic = int.from_bytes(raw[20:24], "little")
+    field_ready = int.from_bytes(raw[24:28], "little")
     return {
         "address": f"0x{address:08x}",
         "request": request,
@@ -224,6 +227,7 @@ def _read_debug_warp_control(
         "event_flags": event_flags,
         "light_archive_id": light_archive_id,
         "magic": f"0x{magic:08x}",
+        "field_ready": field_ready,
     }
 
 
@@ -419,7 +423,7 @@ def parser() -> argparse.ArgumentParser:
     p.add_argument(
         "--telemetry-timeout",
         type=float,
-        default=20.0,
+        default=30.0,
         help="maximum wall time to wait for an autowarp scenario to satisfy runtime telemetry",
     )
     p.add_argument(
