@@ -3,6 +3,7 @@
 #include <nitro.h>
 #include <string.h>
 
+#include "constants/field/area_light.h"
 #include "constants/field/dynamic_map_features.h"
 #include "constants/field/field_effect_renderer.h"
 #include "constants/field/map.h"
@@ -123,7 +124,7 @@ static void ov5_021D13B4(FieldSystem *fieldSystem);
 static enum FieldExtensionOverlay FieldMap_GetExtOverlayForActiveDynMapFeatures(FieldSystem *fieldSystem);
 static BOOL FieldMap_InDistortionWorld(FieldSystem *fieldSystem);
 static BOOL FieldMap_IsDeepForest(const FieldSystem *fieldSystem);
-static void FieldMap_ApplyDeepForestFog(FieldSystem *fieldSystem);
+static void FieldMap_ApplyEnvironmentFog(FieldSystem *fieldSystem);
 static MapObjectsToPreload *FetchMapObjectsToPreload(enum HeapID heapID, int memberID);
 static const int *MapObjectsToPreload_GetIDs(const MapObjectsToPreload *mapObjectsToPreload);
 static int MapObjectsToPreload_GetCount(const MapObjectsToPreload *mapObjectsToPreload);
@@ -224,9 +225,7 @@ static BOOL FieldMap_Init(ApplicationManager *appMan, int *state)
             ov5_021D5F24(fieldSystem->unk_04->unk_0C, weather);
         }
 
-        if (FieldMap_IsDeepForest(fieldSystem) == TRUE) {
-            FieldMap_ApplyDeepForestFog(fieldSystem);
-        }
+        FieldMap_ApplyEnvironmentFog(fieldSystem);
 
 
         FieldBGM_PlayEffectiveForMapHeader(fieldSystem, fieldSystem->location->mapHeaderID);
@@ -962,26 +961,97 @@ static BOOL FieldMap_IsDeepForest(const FieldSystem *fieldSystem)
         || mapHeaderID == MAP_HEADER_NEWMOON_ISLAND_FOREST;
 }
 
-static void FieldMap_ApplyDeepForestFog(FieldSystem *fieldSystem)
+static void FieldMap_ApplyEnvironmentFog(FieldSystem *fieldSystem)
 {
-    static const char sDeepForestFogDensity[G3X_FOG_DENSITY_TABLE_SIZE] = {
+    static const char sForestFogDensity[G3X_FOG_DENSITY_TABLE_SIZE] = {
         0, 0, 0, 0, 1, 1, 2, 2,
         3, 4, 5, 6, 8, 10, 12, 14,
         16, 18, 20, 22, 24, 26, 28, 30,
         32, 34, 36, 38, 40, 42, 44, 46
     };
+    static const char sSnowFogDensity[G3X_FOG_DENSITY_TABLE_SIZE] = {
+        0, 0, 0, 0, 0, 1, 1, 2,
+        2, 3, 4, 5, 6, 8, 10, 12,
+        14, 16, 18, 20, 22, 24, 26, 28,
+        30, 32, 34, 36, 38, 40, 42, 44
+    };
+    static const char sCoronetFogDensity[G3X_FOG_DENSITY_TABLE_SIZE] = {
+        0, 0, 1, 1, 2, 3, 4, 5,
+        6, 8, 10, 12, 14, 16, 18, 20,
+        22, 24, 26, 28, 30, 32, 34, 36,
+        38, 40, 42, 44, 46, 48, 50, 52
+    };
+    static const char sSpearPillarFogDensity[G3X_FOG_DENSITY_TABLE_SIZE] = {
+        0, 0, 0, 0, 0, 0, 1, 1,
+        2, 2, 3, 4, 5, 6, 8, 10,
+        12, 14, 16, 18, 20, 22, 24, 26,
+        28, 30, 32, 34, 36, 38, 40, 42
+    };
+    static const char sDistortionFogDensity[G3X_FOG_DENSITY_TABLE_SIZE] = {
+        0, 0, 0, 1, 1, 2, 3, 4,
+        5, 7, 9, 11, 13, 15, 17, 19,
+        21, 23, 25, 27, 29, 31, 33, 35,
+        37, 39, 41, 43, 45, 47, 49, 51
+    };
+
+    GXRgb color;
+    int alpha;
+    GXFogSlope slope;
+    int offset;
+    const char *densityTable;
+    u8 areaLightID = AreaDataManager_GetAreaLightArchiveID(fieldSystem->areaDataManager);
+
+    switch (areaLightID) {
+    case AREA_LIGHT_SET_DEEP_FOREST:
+        color = GX_RGB(10, 14, 11);
+        alpha = 8;
+        slope = GX_FOGSLOPE_0x0400;
+        offset = 0x5000;
+        densityTable = sForestFogDensity;
+        break;
+    case AREA_LIGHT_SET_SNOW:
+        color = GX_RGB(21, 24, 28);
+        alpha = 7;
+        slope = GX_FOGSLOPE_0x0400;
+        offset = 0x5800;
+        densityTable = sSnowFogDensity;
+        break;
+    case AREA_LIGHT_SET_MT_CORONET:
+        color = GX_RGB(8, 10, 14);
+        alpha = 10;
+        slope = GX_FOGSLOPE_0x0400;
+        offset = 0x4800;
+        densityTable = sCoronetFogDensity;
+        break;
+    case AREA_LIGHT_SET_SPEAR_PILLAR:
+        color = GX_RGB(16, 18, 22);
+        alpha = 5;
+        slope = GX_FOGSLOPE_0x0400;
+        offset = 0x6000;
+        densityTable = sSpearPillarFogDensity;
+        break;
+    case AREA_LIGHT_SET_DISTORTION_WORLD:
+        color = GX_RGB(14, 8, 22);
+        alpha = 10;
+        slope = GX_FOGSLOPE_0x0400;
+        offset = 0x5000;
+        densityTable = sDistortionFogDensity;
+        break;
+    default:
+        return;
+    }
 
     FogManager_ApplyParameters(
         fieldSystem->fogMan,
         FOG_PARAMETER_ENABLED | FOG_PARAMETER_MODE | FOG_PARAMETER_SLOPE | FOG_PARAMETER_OFFSET,
         TRUE,
         GX_FOGBLEND_COLOR_ALPHA,
-        GX_FOGSLOPE_0x0400,
-        0x5000);
+        slope,
+        offset);
     FogManager_ApplyColor(
         fieldSystem->fogMan,
         FOG_PARAMETER_COLOR | FOG_PARAMETER_ALPHA,
-        GX_RGB(10, 14, 11),
-        8);
-    FogManager_ApplyDensityTable(fieldSystem->fogMan, sDeepForestFogDensity);
+        color,
+        alpha);
+    FogManager_ApplyDensityTable(fieldSystem->fogMan, densityTable);
 }
