@@ -92,6 +92,22 @@ These are script-only additions using Platinum's existing `Func_ShakeBg` primiti
 particle resources, sounds, backgrounds, or animation data were imported.
 
 
+## Legendary-signature staging batch
+
+The same native staging rule was applied to three signature attacks whose Platinum scripts already
+have strong bespoke scene treatment but lacked a distinct base-arena reaction on the decisive hit:
+
+- Spacial Rend — adds a restrained base-arena jolt under the defender impact while preserving its switched background and existing effect-background shake.
+- Roar of Time — adds the strongest base-arena response in this batch at the white-flash impact, without changing its charge/fade sequence.
+- Seed Flare — keeps its existing white scene flash and effect-background motion, with a separate restrained base-arena reaction on the defender hit.
+
+No-change controls:
+- Shadow Force — already has grayscale staging, attacker disappearance/reappearance, timed sound, and defender impact treatment.
+- Dark Void — already uses a dedicated moving background, projection change, layered particles, and battler motion.
+- Judgment — already uses a full white scene grade plus repeated defender-impact shakes; additional arena motion was not justified.
+
+No particles, sounds, backgrounds, timing, battler visibility logic, or donor assets were replaced.
+
 ## Donor-control comparison: common special attacks
 
 Emerald was used only as a presentation reference for several common special attacks.
