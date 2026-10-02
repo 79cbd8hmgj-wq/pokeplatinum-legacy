@@ -972,3 +972,16 @@ Visual direction:
 - clearer blue UI accent ramp consistent with the global window/start-menu/party-menu direction
 
 Both summary and bag generators are wired into `generate-visual-ui.yml` so these text-palette changes remain reproducible alongside the PNG-based UI generators.
+
+
+### G2C shop-menu chrome checkpoint
+
+Implemented the next secondary UI pass:
+
+- added `tools/visual_overhaul/generate_shop_ui.py`
+- `default.pal` and `frontier.pal` now share the same refreshed neutral/chrome ramp
+- the distinct default-shop and Battle Frontier accent colors at palette entries 9-15 are preserved
+- `sprites.pal` changes only the existing three-color blue cursor/arrow ramp
+- tilemaps, tiles, cursor/arrow sprite geometry, cells, and animations remain unchanged
+
+This keeps normal shops and Frontier shops visually related while preserving their separate accent identities.
