@@ -279,8 +279,8 @@ def parser() -> argparse.ArgumentParser:
     p.add_argument(
         "--symbols",
         type=Path,
-        default=Path("build/overlay.map"),
-        help="debug symbol/map text used to resolve runtime addresses",
+        default=Path("build/runtime_symbols.map"),
+        help="nm-style debug symbol map used to resolve runtime addresses",
     )
     p.add_argument(
         "--address",
