@@ -985,6 +985,25 @@ The pilot does not replace particles, sounds, move timing, or existing battler a
 It uses the existing `Func_ShakeBg` implementation and explicitly targets
 `SHAKE_BG_TARGET_BASE`, keeping the effect-background behavior independent.
 
+### G5 donor-informed elemental-force checkpoint
+
+Cross-repo research is now explicitly technique-first. The implementation basis is documented in
+`docs/visual_overhaul/G5_DONOR_TECHNIQUE_AUDIT.md`.
+
+Research takeaways applied here:
+- Emerald: keep battler motion, arena/platform reaction, palette treatment, particles, and sound as separate presentation layers
+- Yellow: use impact-specific shake/flash beats rather than one uniform global damage effect
+- Stadium 1/2: borrow anticipation/recovery and arena-reaction language, not renderer/camera assets
+- PMD Sky: borrow layered timing and clear primary-impact-recovery structure, not effect resources
+
+Implemented pilot:
+- Fire Blast — short base-arena jolt on the main defender impact
+- Hydro Pump — stronger directional base-arena reaction under the pressure hit
+- Blizzard — two restrained arena pulses aligned with its existing two defender-shake beats
+- Thunder — intentionally unchanged as a control because Platinum already combines a base-background shake with an effect-background flash
+
+No donor graphics, particles, backgrounds, or animation assets were imported.
+
 ### G5 weather-presentation checkpoint
 
 Weather presentation is now aligned across both move initiation and the shared end-of-turn
