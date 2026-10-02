@@ -1,6 +1,6 @@
 # G6 — Primary Showcase Integration Audit
 
-Status: **active / objective source contracts wired**
+Status: **source-side complete / objective integration gate green**
 
 G6 is the final holistic visual pass. It does not rebuild the G4 environments from scratch.
 Instead it verifies that the environment, atmosphere, camera, lighting, texture, renderer, UI, and
