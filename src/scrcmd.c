@@ -6641,6 +6641,7 @@ static BOOL ScrCmd_PokeMartFrontier(ScriptContext *ctx)
         ITEM_TM45,
         ITEM_TM40,
         ITEM_TM31,
+        ITEM_TM89,
         ITEM_TM08,
         ITEM_TM04,
         ITEM_TM81,

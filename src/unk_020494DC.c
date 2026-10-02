@@ -504,21 +504,22 @@ BOOL ScrCmd_GetExchangeServiceCornerItemAndCost(ScriptContext *ctx)
         { ITEM_RAZOR_CLAW, 48 },
         { ITEM_RAZOR_FANG, 48 },
         { ITEM_RARE_CANDY, 48 },
-        [FRONTIER_MART_TMS_START_ID] = { ITEM_TM06, 32 }, // update FRONTIER_MART_TMS_START_ID when adding entries above this line
-        { ITEM_TM73, 32 },
-        { ITEM_TM61, 32 },
-        { ITEM_TM45, 32 },
-        { ITEM_TM40, 40 },
-        { ITEM_TM31, 40 },
-        { ITEM_TM08, 48 },
-        { ITEM_TM04, 48 },
-        { ITEM_TM81, 64 },
-        { ITEM_TM30, 64 },
-        { ITEM_TM53, 64 },
-        { ITEM_TM36, 80 },
-        { ITEM_TM59, 80 },
-        { ITEM_TM71, 80 },
-        { ITEM_TM26, 80 }
+        [FRONTIER_MART_TMS_START_ID] = { ITEM_TM06, 16 }, // update FRONTIER_MART_TMS_START_ID when adding entries above this line
+        { ITEM_TM73, 16 },
+        { ITEM_TM61, 16 },
+        { ITEM_TM45, 16 },
+        { ITEM_TM40, 20 },
+        { ITEM_TM31, 20 },
+        { ITEM_TM89, 20 },
+        { ITEM_TM08, 24 },
+        { ITEM_TM04, 24 },
+        { ITEM_TM81, 32 },
+        { ITEM_TM30, 32 },
+        { ITEM_TM53, 32 },
+        { ITEM_TM36, 40 },
+        { ITEM_TM59, 40 },
+        { ITEM_TM71, 40 },
+        { ITEM_TM26, 40 }
     };
 
     if (martID == 1) {

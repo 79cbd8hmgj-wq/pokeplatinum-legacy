@@ -30,6 +30,22 @@ VeilstoneCityPrizeExchange_TryBuyPrize:
     CallIfGe VAR_0x8000, ITEM_TM01, VeilstoneCityPrizeExchange_IsYourChoiceThisTM
     ShowYesNoMenu VAR_RESULT
     GoToIfEq VAR_RESULT, MENU_NO, VeilstoneCityPrizeExchange_TryBuyPrize
+    GoToIfGe VAR_0x8000, ITEM_TM01, VeilstoneCityPrizeExchange_CheckAlreadyHaveTM
+    GoTo VeilstoneCityPrizeExchange_CheckCoins
+    End
+
+VeilstoneCityPrizeExchange_CheckAlreadyHaveTM:
+    CheckItem VAR_0x8000, 1, VAR_RESULT
+    GoToIfEq VAR_RESULT, TRUE, VeilstoneCityPrizeExchange_AlreadyHaveTM
+    GoTo VeilstoneCityPrizeExchange_CheckCoins
+    End
+
+VeilstoneCityPrizeExchange_AlreadyHaveTM:
+    Message VeilstoneCityPrizeExchange_Text_AlreadyHaveTM
+    GoTo VeilstoneCityPrizeExchange_TryBuyPrize
+    End
+
+VeilstoneCityPrizeExchange_CheckCoins:
     HasCoins VAR_RESULT, VAR_0x8001
     GoToIfEq VAR_RESULT, FALSE, VeilstoneCityPrizeExchange_NotEnoughCoins
     GoToIfCannotFitItem VAR_0x8000, 1, VAR_RESULT, VeilstoneCityPrizeExchange_NoRoomAvailable

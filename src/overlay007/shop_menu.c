@@ -109,6 +109,8 @@ static u8 Shop_ShowPurchaseMessage(ShopMenu *shopMenu);
 static void Shop_SetItemNameToIndex(ShopMenu *shopMenu, u16 itemId, u16 idx);
 static u32 Shop_GetItemPrice(ShopMenu *shopMenu, u16 itemId);
 static u16 Shop_GetItemBPPrice(ShopMenu *shopMenu, u16 itemId);
+static BOOL Shop_IsTM(u16 itemId);
+static BOOL Shop_AlreadyOwnsTM(ShopMenu *shopMenu);
 static u32 Shop_GetCurrentMoney(ShopMenu *shopMenu);
 static void Shop_TakeMoney(ShopMenu *shopMenu, u32 amount);
 
@@ -902,6 +904,16 @@ static u8 Shop_SelectBuyMenu(ShopMenu *shopMenu)
 
         currMoney = Shop_GetCurrentMoney(shopMenu);
 
+        // C2: TMs are reusable, so refuse a duplicate purchase before any money/BP is spent
+        if (Shop_AlreadyOwnsTM(shopMenu)) {
+            string = MessageLoader_GetNewString(shopMenu->msgLoader, pl_msg_00000543_00039);
+            StringTemplate_Format(shopMenu->strTemplate, shopMenu->string, string);
+            String_Free(string);
+
+            shopMenu->fieldMsgPrinterId = FieldMessage_Print(&shopMenu->windows[SHOP_WINDOW_MESSAGE], shopMenu->string, shopMenu->options, TRUE);
+            return SHOP_STATE_FINISH_PURCHASE;
+        }
+
         if (currMoney < shopMenu->itemPrice) {
             if (shopMenu->martType == MART_TYPE_FRONTIER) {
                 string = MessageLoader_GetNewString(shopMenu->msgLoader, pl_msg_00000543_00037);
@@ -925,6 +937,10 @@ static u8 Shop_SelectBuyMenu(ShopMenu *shopMenu)
 
         if (shopMenu->itemAmountMax > 99) {
             shopMenu->itemAmountMax = 99;
+        }
+
+        if (Shop_IsTM(shopMenu->itemId)) {
+            shopMenu->itemAmountMax = 1;
         }
 
         Shop_SetItemNameToIndex(shopMenu, shopMenu->itemId, 0);
@@ -1335,6 +1351,20 @@ static u32 Shop_GetItemPrice(ShopMenu *shopMenu, u16 itemId)
     return sub_020981D0(itemId);
 }
 
+static BOOL Shop_IsTM(u16 itemId)
+{
+    return itemId >= ITEM_TM01 && itemId < ITEM_HM01;
+}
+
+static BOOL Shop_AlreadyOwnsTM(ShopMenu *shopMenu)
+{
+    if (shopMenu->martType != MART_TYPE_NORMAL && shopMenu->martType != MART_TYPE_FRONTIER) {
+        return FALSE;
+    }
+
+    return Shop_IsTM(shopMenu->itemId) && Bag_GetItemQuantity(shopMenu->destInventory, shopMenu->itemId, HEAP_ID_FIELD2) > 0;
+}
+
 static u16 Shop_GetItemBPPrice(ShopMenu *shopMenu, u16 itemId)
 {
     static const u16 itemToBpPrice[][2] = {
@@ -1364,21 +1394,22 @@ static u16 Shop_GetItemBPPrice(ShopMenu *shopMenu, u16 itemId)
         { ITEM_RAZOR_CLAW, 48 },
         { ITEM_RAZOR_FANG, 48 },
         { ITEM_RARE_CANDY, 48 },
-        { ITEM_TM06, 32 },
-        { ITEM_TM73, 32 },
-        { ITEM_TM61, 32 },
-        { ITEM_TM45, 32 },
-        { ITEM_TM40, 40 },
-        { ITEM_TM31, 40 },
-        { ITEM_TM08, 48 },
-        { ITEM_TM04, 48 },
-        { ITEM_TM81, 64 },
-        { ITEM_TM30, 64 },
-        { ITEM_TM53, 64 },
-        { ITEM_TM36, 80 },
-        { ITEM_TM59, 80 },
-        { ITEM_TM71, 80 },
-        { ITEM_TM26, 80 }
+        { ITEM_TM06, 16 },
+        { ITEM_TM73, 16 },
+        { ITEM_TM61, 16 },
+        { ITEM_TM45, 16 },
+        { ITEM_TM40, 20 },
+        { ITEM_TM31, 20 },
+        { ITEM_TM89, 20 },
+        { ITEM_TM08, 24 },
+        { ITEM_TM04, 24 },
+        { ITEM_TM81, 32 },
+        { ITEM_TM30, 32 },
+        { ITEM_TM53, 32 },
+        { ITEM_TM36, 40 },
+        { ITEM_TM59, 40 },
+        { ITEM_TM71, 40 },
+        { ITEM_TM26, 40 }
     };
 
     for (u32 i = 0; i < (NELEMS(itemToBpPrice)); i++) {

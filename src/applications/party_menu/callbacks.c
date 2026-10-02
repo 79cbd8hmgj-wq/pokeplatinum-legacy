@@ -1114,7 +1114,9 @@ static void TeachMove(PartyMenuApplication *application, Pokemon *mon, u32 moveS
     Pokemon_SetValue(mon, MON_DATA_MOVE1_PP + moveSlot, &tempVar);
 
     if (application->partyMenu->usedItemID != ITEM_NONE) {
-        if (Item_IsHMMove(application->partyMenu->learnedMove) == FALSE) {
+        // C2: TMs are reusable, so only non-machine items are ever consumed here
+        u16 usedItem = application->partyMenu->usedItemID;
+        if (usedItem < ITEM_TM01 || usedItem > ITEM_HM08) {
             Bag_TryRemoveItem(application->partyMenu->bag, application->partyMenu->usedItemID, 1, HEAP_ID_PARTY_MENU);
         }
 

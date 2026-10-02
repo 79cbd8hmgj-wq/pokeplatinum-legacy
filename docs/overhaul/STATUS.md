@@ -11,7 +11,8 @@ Last verified against repository/project history: 2026-09-13.
 - **Evolution design:** **LOCKED in Pass A** across #001–#493; complete historical master had 50 consolidated type/evolution decisions. The repo still needs the complete machine-readable evolution manifest reconstructed from that locked authority.
 - **World/#001–#493 ordinary availability:** IMPLEMENTED on `main` via PR #10; manifests/validators landed; Rev 0 + Rev 1 CI build verified; runtime availability QA pending. The 28 reserved special-acquisition families are resolved by the follow-up special-acquisition pass (see `implementation/SPECIAL_ACQUISITION.md`).
 - **Known design blockers:** 0.
-- **Next source task:** remaining locked C2 mechanics (HM battle rework, reusable TMs, TM acquisition/economy), then focused runtime QA.
+- **C2 TM/HM mechanics (HM battle rework, reusable TMs, TM acquisition/economy):** IMPLEMENTED (source + validator verified; Rev 0/Rev 1 build via CI on the C2 PR); see `implementation/C2_MECHANICS_IMPLEMENTATION_AUDIT.md`. Focused runtime QA pending.
+- **Next source task:** focused runtime QA of C1/C2/created moves, then the locked Pass A evolution manifest.
 
 ## Mainline implementation evidence
 
@@ -59,9 +60,9 @@ They are provenance sources, not current implementation targets.
 | C3 learnsets/species edits | LOCKED | IMPLEMENTED | L2 build |
 | TM21/TM78 compatibility | LOCKED | IMPLEMENTED | L2 build |
 | Retype compatibility additions | LOCKED | IMPLEMENTED | L2 build |
-| Reusable TMs | LOCKED | not yet fully audited/implemented | pending |
-| HM battle rework | LOCKED | not yet fully audited/implemented | pending |
-| TM acquisition/economy | LOCKED | not yet fully audited/implemented | pending |
+| Reusable TMs | LOCKED | IMPLEMENTED | source + validator verified; CI build; runtime QA pending |
+| HM battle rework | LOCKED | IMPLEMENTED | source + validator verified; CI build; runtime QA pending |
+| TM acquisition/economy | LOCKED | IMPLEMENTED (TM21/TM78 item assignment, Game Corner + Frontier prices, duplicate-vendor guard) | source + validator verified; CI build; runtime QA pending |
 | Tutor consolidation | LOCKED | baseline retained | audit pending |
 | Egg-move consolidation | LOCKED | baseline retained | audit pending |
 | Evolution-method overhaul | **LOCKED / RECOVERY NEEDED FOR FULL MANIFEST** | not yet implemented as a complete system | pending |
