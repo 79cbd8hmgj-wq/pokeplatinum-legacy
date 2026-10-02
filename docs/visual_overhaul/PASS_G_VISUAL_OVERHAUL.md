@@ -743,3 +743,33 @@ Before Eterna-specific asset work, G2A should establish the upgraded lighting vo
 - Use Mystery Dungeon effects as inspiration/reference unless a clean conversion path exists.
 - Do not spend work preserving original DS LCD artifacts or Platinum nostalgia.
 - Do not add Delta-only visual dependencies.
+
+
+### G2C global window foundation checkpoint
+
+Implemented first UI resource upgrade:
+
+- Added reproducible generator: `tools/visual_overhaul/generate_ui_foundation.py`.
+- Added CI helper: `.github/workflows/generate-visual-ui.yml` for binary PNG generation.
+- Rebuilt:
+  - `res/graphics/windows/standard_system.png`
+  - `res/graphics/windows/standard_field.png`
+- Both assets retain:
+  - original 24x24 dimensions
+  - 3x3 8-pixel tile semantics
+  - shared 4bpp palette architecture
+  - palette index 0 behavior
+  - original VRAM footprint
+- The new system frame uses a cleaner high-contrast navy/slate hierarchy.
+- The new field frame uses a teal/aqua Pokemon-style hierarchy with the same shared palette.
+- No window-layout code, dimensions, cell data, or archive ordering changed.
+
+Implementation is intentionally conservative at the resource-contract level while making the rendered chrome visibly cleaner.
+
+Next G2C candidates:
+1. scroll cursor / wait dial
+2. optional message-box frame refresh
+3. party menu chrome
+4. summary-screen chrome
+5. bag chrome
+
