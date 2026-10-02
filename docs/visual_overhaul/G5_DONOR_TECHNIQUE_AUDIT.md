@@ -128,6 +128,22 @@ No-change controls:
 
 This keeps base-arena movement proportional to move weight instead of turning it into a universal damage effect.
 
+## Generic special-attack control audit
+
+A final control sweep checked several common special attacks after the scene-grade and impact pilots.
+No edits were justified:
+
+- Dark Pulse — already uses background grayscale, dedicated attacker-side effects, defender shake, and a dark-purple defender grade.
+- Earth Power — already combines a dark-red arena grade with three large particle/impact waves and repeated background/defender shake.
+- Power Gem — already uses a full base-scene fade, a long jewel buildup, and sustained defender shake; extra grading would mostly duplicate its native presentation.
+- Sludge Bomb — the parabolic projectile, layered impact emitters, purple defender grade, and localized hit language are appropriate for a normal high-power Poison attack.
+- Bug Buzz — its multi-emitter sound field and defender shake already read clearly without heavyweight arena movement.
+- Surf — already owns a dedicated scrolling background plus multi-target particles, color treatment, and broad battler shake.
+- Water Pulse — already uses a moving switched background, staged pulse field, projectile travel, defender shake, and cyan impact grade.
+- Signal Beam — all normal, friendly-fire, and contest branches already combine sustained sprite shake with repeated red/green color pulses.
+
+These no-change rulings are intentional. G5 should not turn every damaging move into a scene-wide effect.
+
 ## Donor-control comparison: common special attacks
 
 Emerald was used only as a presentation reference for several common special attacks.
