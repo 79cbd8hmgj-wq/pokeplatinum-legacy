@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "pass": "G3A",
+  "purpose": "HGSS Pokemon icon runtime pilot",
+  "donor": {
+    "repository": "pret/pokeheartgold",
+    "commit": "9d8b7591f09b65804da2fb2dfd56f320633e0d36",
+    "path_template": "files/poketool/icongra/poke_icon/poke_icon_{index:08d}.png"
+  },
+  "target": {
+    "repository": "79cbd8hmgj-wq/pokeplatinum-legacy",
+    "path_template": "res/pokemon/{species}/icon.png"
+  },
+  "index_rule": "base species donor index = National Dex species ID + 7",
+  "palette_policy": "guarded; no raw donor PNG replacement until palette remap or atomic palette/mapping port",
+  "pilot": [
+    {
+      "species": "turtwig",
+      "national_dex": 387,
+      "donor_index": 394,
+      "palette_bank": 1
+    },
+    {
+      "species": "chimchar",
+      "national_dex": 390,
+      "donor_index": 397,
+      "palette_bank": null
+    },
+    {
+      "species": "piplup",
+      "national_dex": 393,
+      "donor_index": 400,
+      "palette_bank": null
+    },
+    {
+      "species": "starly",
+      "national_dex": 396,
+      "donor_index": 403,
+      "palette_bank": null
+    },
+    {
+      "species": "pikachu",
+      "national_dex": 25,
+      "donor_index": 32,
+      "palette_bank": 2
+    },
+    {
+      "species": "lucario",
+      "national_dex": 448,
+      "donor_index": 455,
+      "palette_bank": 2
+    }
+  ],
+  "acceptance": [
+    "correct party-menu colors",
+    "correct Pokemon-summary colors",
+    "correct PC/box colors",
+    "both icon animation frames intact",
+    "no palette bleed",
+    "eggs/forms unchanged",
+    "both supported ROM builds pass",
+    "visual asset export passes",
+    "Delta runtime inspection approved"
+  ]
+}
