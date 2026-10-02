@@ -47,9 +47,16 @@ make configure ROM_REVISION=1
 make debug ROM_REVISION=1
 ```
 
-`make debug` produces the project debug metadata including
-`build/overlay.map`, which `runtime_g4_probe.py` uses to resolve source
-symbols to runtime addresses. If a symbol is absent or ambiguous, pass an
+`make debug` produces `debug.nef` plus the overlay/source mapping. Export
+the actual runtime symbol addresses from the NEF before running a probe:
+
+```bash
+arm-none-eabi-nm -n build/debug.nef > build/runtime_symbols.map
+```
+
+`runtime_g4_probe.py` consumes that nm-style symbol map. `overlay.map` is
+only the source-file-to-overlay index used by the debugger and does not contain
+function addresses. If a symbol is absent or ambiguous, pass an
 explicit override:
 
 ```bash
@@ -63,13 +70,16 @@ the matching scenario. Keep the emulator running; the harness owns one GDB
 session and chains temporary breakpoints in execution order.
 
 ```bash
-python tools/visual_overhaul/runtime_g4_probe.py eterna
-python tools/visual_overhaul/runtime_g4_probe.py snow
+python tools/visual_overhaul/runtime_g4_probe.py eterna --request-warp
+python tools/visual_overhaul/runtime_g4_probe.py snow --request-warp
+python tools/visual_overhaul/runtime_g4_probe.py spear --request-warp
+python tools/visual_overhaul/runtime_g4_probe.py lakes --request-warp
+python tools/visual_overhaul/runtime_g4_probe.py turnback --request-warp
+python tools/visual_overhaul/runtime_g4_probe.py galactic --request-warp
+
+# Distortion World currently remains checkpoint-driven because its field
+# lifecycle is specialized; attach from a prepared Distortion World state.
 python tools/visual_overhaul/runtime_g4_probe.py distortion
-python tools/visual_overhaul/runtime_g4_probe.py spear
-python tools/visual_overhaul/runtime_g4_probe.py lakes
-python tools/visual_overhaul/runtime_g4_probe.py turnback
-python tools/visual_overhaul/runtime_g4_probe.py galactic
 ```
 
 Expected area-light IDs:
