@@ -1,5 +1,6 @@
 #include "overlay005/area_data.h"
 
+#include "constants/field/area_light.h"
 #include <nitro.h>
 #include <string.h>
 
@@ -205,10 +206,11 @@ const MapPropMaterialShape *AreaDataManager_GetMapPropMaterialShape(const AreaDa
 BOOL AreaDataManager_IsOutdoorsLighting(const AreaDataManager *areaDataManager)
 {
     switch (areaDataManager->areaData.areaLightArchiveID) {
-    case 0: // retail outdoors
-    case 3: // retail outdoors variant
-    case 4: // deep forest
-    case 5: // snow
+    case AREA_LIGHT_SET_RETAIL_0:
+    case AREA_LIGHT_SET_RETAIL_3:
+    case AREA_LIGHT_SET_DEEP_FOREST:
+    case AREA_LIGHT_SET_SNOW:
+    case AREA_LIGHT_SET_SPEAR_PILLAR:
         return TRUE;
     default:
         return FALSE;
