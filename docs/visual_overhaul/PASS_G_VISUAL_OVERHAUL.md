@@ -1159,3 +1159,49 @@ Donor source:
 - audited donor commit: `9d8b7591f09b65804da2fb2dfd56f320633e0d36`
 
 If the pilot build/runtime presentation is clean, the same mapping can be expanded across the normal National Dex without engine changes.
+
+
+### G3 HGSS battle-sprite donor audit checkpoint
+
+The first full Pokemon battle-sprite donor audit is complete and is recorded in
+`docs/visual_overhaul/HGSS_BATTLE_SPRITE_AUDIT.md`.
+
+The audit compares the four base sprite source slots used by Platinum for every
+species (female back, male back, female front, male front) against the pinned
+HGSS donor.
+
+Results:
+
+- **494 species audited**
+- **1,812 overlapping sprite files audited**
+- **495 files contain actual rendered-art differences**
+- those art differences span **253 species**
+- **433 files are fully identical**
+- **884 files differ only in palette/color treatment while retaining the same indexed art**
+- **0 structural incompatibilities** among overlapping files
+- **164 missing target paths** are the expected Platinum omissions for impossible/unused gender slots (genderless or single-gender species), not format failures
+
+Representative inspection confirms that the real differences are meaningful
+later-game redraws rather than archive noise: examples such as Pikachu,
+Charizard, Gyarados, and Snorlax use visibly different HGSS frames, while some
+Sinnoh-era species such as Torterra retain effectively the same underlying art.
+
+This makes HGSS battle sprites a real G3 donor class, unlike Pokemon icons.
+
+However, wholesale replacement is intentionally not being applied yet. Platinum
+stores its battle-animation timing/frame-shift data separately in per-species
+`sprite_data.json`, while HGSS's corresponding animation data is still carried
+in prebuilt animation archives rather than an immediately source-compatible
+per-species format. Platinum also compiles normal/shiny palettes from separate
+`normal.pal` / `shiny.pal` sources.
+
+The safe backport strategy is therefore:
+
+1. preserve Platinum's normal/shiny palette sources
+2. transplant only HGSS indexed sprite art that is an actual art difference
+3. preserve Platinum's existing gender/file contract
+4. stage the donor set through animation/bounding-box compatibility checks
+5. runtime-check the changed animation frames before treating the full 253-species set as locked
+
+This prevents a visually newer static frame from silently regressing a
+species-specific Platinum animation.
