@@ -20,13 +20,14 @@ VANILLA_METHODS = [
     "EVO_LEVEL_WITH_HELD_ITEM_NIGHT", "EVO_LEVEL_KNOW_MOVE", "EVO_LEVEL_SPECIES_IN_PARTY", "EVO_LEVEL_MALE",
     "EVO_LEVEL_FEMALE", "EVO_LEVEL_MAGNETIC_FIELD", "EVO_LEVEL_MOSS_ROCK", "EVO_LEVEL_ICE_ROCK",
 ]
-# Methods appended by this pass (IDs 27..31).
+# Methods appended by this pass (IDs 27..32).
 NEW_METHODS = [
     "EVO_LEVEL_SPATK_GT_ATK",   # 27  Lv >= param and SpA >  Atk
     "EVO_LEVEL_SPATK_GE_ATK",   # 28  Lv >= param and SpA >= Atk
     "EVO_LEVEL_ATK_GT_SPATK",   # 29  Lv >= param and Atk >  SpA
     "EVO_LEVEL_SPDEF_GT_DEF",   # 30  Lv >= param and SpD >  Def
     "EVO_LEVEL_NIGHT",          # 31  Lv >= param and night (no item)
+    "EVO_LEVEL_DAY",            # 32  Lv >= param and daytime (no item)
 ]
 ALL_METHODS = VANILLA_METHODS + NEW_METHODS
 
@@ -50,13 +51,8 @@ EVOLUTION_STONES = [
     "ITEM_SUN_STONE", "ITEM_SHINY_STONE", "ITEM_DUSK_STONE", "ITEM_DAWN_STONE",
 ]
 
-# The single evolution whose final method was never recovered (see EVOLUTION_RECOVERY_AUDIT.md).
-UNRESOLVED = {
-    "happiny": {
-        "key": "HAPPINY_CHANSEY_HELD_OVAL_STONE",
-        "edge": ["EVO_LEVEL_WITH_HELD_ITEM_DAY", "ITEM_OVAL_STONE", "SPECIES_CHANSEY"],
-    }
-}
+# All intended changed evolution methods are recovered.
+UNRESOLVED = {}
 
 
 def E(method: str, *rest) -> list:
@@ -81,6 +77,7 @@ LOCKED_FINAL = {
     "dusclops":   [E("EVO_LEVEL", 45, "SPECIES_DUSKNOIR")],
     "gligar":     [E("EVO_LEVEL_NIGHT", 38, "SPECIES_GLISCOR")],
     "sneasel":    [E("EVO_LEVEL_NIGHT", 38, "SPECIES_WEAVILE")],
+    "happiny":     [E("EVO_LEVEL_DAY", 20, "SPECIES_CHANSEY")],
     "pupitar":    [E("EVO_LEVEL", 50, "SPECIES_TYRANITAR")],
     "poliwhirl":  [E("EVO_USE_ITEM", "ITEM_WATER_STONE", "SPECIES_POLIWRATH"),
                    E("EVO_LEVEL_SPATK_GT_ATK", 35, "SPECIES_POLITOED")],
@@ -108,6 +105,7 @@ CHANGE_AUTHORITY = {
     "dusclops": ("ITEM_TRADE_REPLACEMENT", "EVOLUTION_SPEC.md (Dusknoir Lv45)"),
     "gligar": ("NIGHT_LEVEL", "EVOLUTION_SPEC.md (Gliscor Lv38 at night, no Razor Fang)"),
     "sneasel": ("NIGHT_LEVEL", "EVOLUTION_SPEC.md (Weavile Lv38 at night, no Razor Claw)"),
+    "happiny": ("DAY_LEVEL", "Recovered locked Pass A project history: Happiny -> Chansey Lv20 during daytime, no Oval Stone"),
     "pupitar": ("LEVEL_RETUNE", "EVOLUTION_SPEC.md (Tyranitar Lv50; vanilla Lv55)"),
     "poliwhirl": ("STAT_BRANCH", "EVOLUTION_SPEC.md / EMERALD_PORT_PLAN.md (Politoed Lv35 SpA > Atk); Poliwrath Water Stone unchanged"),
     "slowpoke": ("STAT_BRANCH", "EVOLUTION_SPEC.md / EMERALD_PORT_PLAN.md (Slowking Lv37 SpD > Def); Slowbro Lv37 unchanged, now the fallback"),
