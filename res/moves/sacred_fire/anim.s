@@ -20,6 +20,7 @@ L_0:
     Delay 10
     Func_FadeBattlerSprite BATTLE_ANIM_DEFENDER, 0, 1, BATTLE_COLOR_RED, 10, 0
     Func_Shake 1, 0, 1, 2, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
+    Func_ShakeBg 2, 3, 0, 2, 0, SHAKE_BG_TARGET_BASE
     WaitForAllEmitters
     UnloadParticleSystem 0
     StopSoundEffect SEQ_SE_DP_W053
