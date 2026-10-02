@@ -1015,6 +1015,19 @@ Results:
 
 This checkpoint establishes an explicit rule for the remainder of G5: **research can validate no-change decisions**. A donor comparison does not automatically justify editing a move.
 
+### G5 signature scene-grade checkpoint
+
+Cross-game research also supports treating scene atmosphere as a separate layer from particles and
+battler motion. Four Platinum moves already had strong black arena fades, so their resource/timing
+contracts were preserved and only the existing fade color was specialized:
+
+- Aura Sphere — dark blue
+- Energy Ball — teal green
+- Flash Cannon — dark gray
+- Dragon Pulse — dark purple
+
+No particles, emitters, sounds, timing, cells, backgrounds, or donor assets were replaced.
+
 ### G5 weather-presentation checkpoint
 
 Weather presentation is now aligned across both move initiation and the shared end-of-turn
