@@ -62,6 +62,7 @@ G4RuntimeQAControl gG4RuntimeQAControl = {
     0,
     0,
     G4_RUNTIME_QA_MAGIC,
+    FALSE,
 };
 #endif
 
