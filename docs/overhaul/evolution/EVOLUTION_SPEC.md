@@ -2,10 +2,10 @@
 
 > **Design status: LOCKED**
 > **Design status (canonical): LOCKED / CANONICALIZED**
-> **Implementation status: IMPLEMENTED** — 20 changed edges + 5 appended engine methods; manifest `implementation/evolution_manifest.json`.
+> **Implementation status: IMPLEMENTED** — 21 changed edges + 6 appended engine methods; manifest `implementation/evolution_manifest.json`.
 > **Verification: source + validator + mutation tests + dual-revision (Rev 0 / Rev 1) build verified.**
 > **Runtime: DEFERRED TO FINAL OVERHAUL PLAYTEST.**
-> **Open item:** Happiny → Chansey (vanilla held Oval Stone) has no recovered final method — UNRESOLVED_AUTHORITY, left vanilla.
+> **Open items:** none (Happiny → Chansey recovered: Lv20, daytime, no item).
 > **Provenance:** the original locked #001–#493 Pass A master workbook is not in the repo; the manifest was reconstructed from this spec, the Emerald port plan, C3 timing and git history (`implementation/EVOLUTION_RECOVERY_AUDIT.md`).
 
 ## Important status distinction
@@ -138,17 +138,17 @@ The final global rule is:
 
 ## Implementation (landed)
 
-- Manifest: `docs/overhaul/implementation/evolution_manifest.json` (229 evolution-bearing species, 246 edges; 20 LOCKED_CHANGED, 24 LOCKED_KEEP, 201 VANILLA_KEEP, 1 UNRESOLVED_AUTHORITY).
-- Engine methods appended (vanilla IDs 0–26 unchanged): 27 `EVO_LEVEL_SPATK_GT_ATK`, 28 `EVO_LEVEL_SPATK_GE_ATK`, 29 `EVO_LEVEL_ATK_GT_SPATK`, 30 `EVO_LEVEL_SPDEF_GT_DEF`, 31 `EVO_LEVEL_NIGHT`.
+- Manifest: `docs/overhaul/implementation/evolution_manifest.json` (229 evolution-bearing species, 246 edges; 21 LOCKED_CHANGED, 24 LOCKED_KEEP, 201 VANILLA_KEEP, 0 UNRESOLVED_AUTHORITY).
+- Engine methods appended (vanilla IDs 0–26 unchanged; IDs 27–32): 27 `EVO_LEVEL_SPATK_GT_ATK`, 28 `EVO_LEVEL_SPATK_GE_ATK`, 29 `EVO_LEVEL_ATK_GT_SPATK`, 30 `EVO_LEVEL_SPDEF_GT_DEF`, 31 `EVO_LEVEL_NIGHT`, 32 `EVO_LEVEL_DAY`.
 - Branch rules: Clamperl Huntail = Atk > SpA, Gorebyss = SpA ≥ Atk; Poliwhirl→Politoed = SpA > Atk (Poliwrath stays Water Stone); Slowking = SpD > Def listed before the unchanged Lv37 Slowbro, so SpD ≤ Def → Slowbro (the engine takes the first eligible entry).
 - Gligar/Sneasel evolve at Lv38 at night with no held item (`EVO_LEVEL_NIGHT`).
 - Tooling: `tools/overhaul/evolution/` (`build_manifest.py`, `apply_evolutions.py`, `validate_evolutions.py`, `test_validate_evolutions.py`, `scope_audit_evolutions.py`, `timing_crosscheck.py`).
 - Audits: `implementation/EVOLUTION_RECOVERY_AUDIT.md`, `implementation/EVOLUTION_IMPLEMENTATION_AUDIT.md`.
 
-### Open: Happiny → Chansey
+### Happiny → Chansey (resolved)
 
-Vanilla uses a daytime level-up while holding an Oval Stone. This is a held-item evolution, which the global rule removes, but no replacement method was ever recovered. It is intentionally unedited and tracked as the single UNRESOLVED_AUTHORITY edge; supply the intended method to close it.
+Recovered locked Pass A history: Happiny evolves into Chansey at **Lv20 during the daytime, with no held Oval Stone** (`EVO_LEVEL_DAY`, `IsNight() == FALSE && param <= level`).
 
-### Known side effect
+### Kadabra and Everstone
 
-Kadabra is still exempted from the Everstone evolution block in `Pokemon_GetEvolutionTargetSpecies` (a vanilla trade-evolution special case), so an Everstone no longer stops it now that it evolves by level. Not changed here.
+The vanilla Kadabra exemption from the Everstone evolution block was removed, since Kadabra now evolves by level like any other species (Everstone blocks it).

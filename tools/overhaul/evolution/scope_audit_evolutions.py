@@ -28,8 +28,10 @@ for f in sorted(files):
 for f, d in leak:
     print("NON-EVOLUTION FIELD CHANGED:", f, d)
 
-# src/pokemon.c may only gain lines inside Pokemon_GetEvolutionTargetSpecies (additions only; no deletions).
+# src/pokemon.c may only gain lines, except the deliberate removal of the Kadabra Everstone exemption
+# (Kadabra is no longer a trade evolution; the exemption lines are rewritten without the Kadabra clause).
 patch = git("diff", "-U0", BASE_COMMIT, "--", "src/pokemon.c", "tools/dataproc/src/speciesproc.c")
-removed = [l for l in patch.splitlines() if l.startswith("-") and not l.startswith("---")]
+ALLOWED_REMOVED = {"-    if (monSpecies != SPECIES_KADABRA", "-        && itemHoldEffect == HOLD_EFFECT_NO_EVOLVE"}
+removed = [l for l in patch.splitlines() if l.startswith("-") and not l.startswith("---") and l.rstrip() not in ALLOWED_REMOVED]
 print(f"engine source deletions: {len(removed)}")
 sys.exit(1 if bad or leak or removed else 0)

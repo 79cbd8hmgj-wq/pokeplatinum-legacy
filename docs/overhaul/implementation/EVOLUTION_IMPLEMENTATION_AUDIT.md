@@ -9,8 +9,8 @@
 | Total evolution edges | 246 |
 | Vanilla-kept edges (VANILLA_KEEP) | 201 |
 | Locked, already matching vanilla (LOCKED_KEEP) | 24 |
-| **Changed edges (LOCKED_CHANGED)** | **20** across 19 species tables (Slowpoke's table is also re-ordered for precedence; its Slowbro edge is unchanged) |
-| Unresolved authority | 1 — Happiny → Chansey (held Oval Stone), left vanilla; see `EVOLUTION_RECOVERY_AUDIT.md` |
+| **Changed edges (LOCKED_CHANGED)** | **21** across 20 species tables (Slowpoke's table is also re-ordered for precedence; its Slowbro edge is unchanged) |
+| Unresolved authority | 0 (Happiny → Chansey recovered as Lv20 daytime) |
 
 ## Changed evolutions
 
@@ -22,20 +22,21 @@
 | 4 | SPECIES_ELECTABUZZ | SPECIES_ELECTIVIRE: `EVO_LEVEL 42` | `EVO_TRADE_WITH_HELD_ITEM ITEM_ELECTIRIZER` | ITEM_TRADE_REPLACEMENT |
 | 5 | SPECIES_GLIGAR | SPECIES_GLISCOR: `EVO_LEVEL_NIGHT 38` | `EVO_LEVEL_WITH_HELD_ITEM_NIGHT ITEM_RAZOR_FANG` | NIGHT_LEVEL |
 | 6 | SPECIES_GRAVELER | SPECIES_GOLEM: `EVO_LEVEL 36` | `EVO_TRADE` | TRADE_REPLACEMENT_KANTO |
-| 7 | SPECIES_HAUNTER | SPECIES_GENGAR: `EVO_LEVEL 36` | `EVO_TRADE` | TRADE_REPLACEMENT_KANTO |
-| 8 | SPECIES_KADABRA | SPECIES_ALAKAZAM: `EVO_LEVEL 36` | `EVO_TRADE` | TRADE_REPLACEMENT_KANTO |
-| 9 | SPECIES_MACHOKE | SPECIES_MACHAMP: `EVO_LEVEL 36` | `EVO_TRADE` | TRADE_REPLACEMENT_KANTO |
-| 10 | SPECIES_MAGMAR | SPECIES_MAGMORTAR: `EVO_LEVEL 42` | `EVO_TRADE_WITH_HELD_ITEM ITEM_MAGMARIZER` | ITEM_TRADE_REPLACEMENT |
-| 11 | SPECIES_ONIX | SPECIES_STEELIX: `EVO_LEVEL 35` | `EVO_TRADE_WITH_HELD_ITEM ITEM_METAL_COAT` | ITEM_TRADE_REPLACEMENT |
-| 12 | SPECIES_POLIWHIRL | SPECIES_POLITOED: `EVO_LEVEL_SPATK_GT_ATK 35` | `EVO_TRADE_WITH_HELD_ITEM ITEM_KINGS_ROCK` | STAT_BRANCH |
-| 13 | SPECIES_PORYGON | SPECIES_PORYGON2: `EVO_LEVEL 30` | `EVO_TRADE_WITH_HELD_ITEM ITEM_UPGRADE` | ITEM_TRADE_REPLACEMENT |
-| 14 | SPECIES_PORYGON2 | SPECIES_PORYGON_Z: `EVO_LEVEL 45` | `EVO_TRADE_WITH_HELD_ITEM ITEM_DUBIOUS_DISC` | ITEM_TRADE_REPLACEMENT |
-| 15 | SPECIES_PUPITAR | SPECIES_TYRANITAR: `EVO_LEVEL 50` | `EVO_LEVEL 55` | LEVEL_RETUNE |
-| 16 | SPECIES_RHYDON | SPECIES_RHYPERIOR: `EVO_LEVEL 52` | `EVO_TRADE_WITH_HELD_ITEM ITEM_PROTECTOR` | ITEM_TRADE_REPLACEMENT |
-| 17 | SPECIES_SCYTHER | SPECIES_SCIZOR: `EVO_LEVEL 38` | `EVO_TRADE_WITH_HELD_ITEM ITEM_METAL_COAT` | ITEM_TRADE_REPLACEMENT |
-| 18 | SPECIES_SEADRA | SPECIES_KINGDRA: `EVO_LEVEL 42` | `EVO_TRADE_WITH_HELD_ITEM ITEM_DRAGON_SCALE` | ITEM_TRADE_REPLACEMENT |
-| 19 | SPECIES_SLOWPOKE | SPECIES_SLOWKING: `EVO_LEVEL_SPDEF_GT_DEF 37` | `EVO_TRADE_WITH_HELD_ITEM ITEM_KINGS_ROCK` | STAT_BRANCH |
-| 20 | SPECIES_SNEASEL | SPECIES_WEAVILE: `EVO_LEVEL_NIGHT 38` | `EVO_LEVEL_WITH_HELD_ITEM_NIGHT ITEM_RAZOR_CLAW` | NIGHT_LEVEL |
+| 7 | SPECIES_HAPPINY | SPECIES_CHANSEY: `EVO_LEVEL_DAY 20` | `EVO_LEVEL_WITH_HELD_ITEM_DAY ITEM_OVAL_STONE` | DAY_LEVEL |
+| 8 | SPECIES_HAUNTER | SPECIES_GENGAR: `EVO_LEVEL 36` | `EVO_TRADE` | TRADE_REPLACEMENT_KANTO |
+| 9 | SPECIES_KADABRA | SPECIES_ALAKAZAM: `EVO_LEVEL 36` | `EVO_TRADE` | TRADE_REPLACEMENT_KANTO |
+| 10 | SPECIES_MACHOKE | SPECIES_MACHAMP: `EVO_LEVEL 36` | `EVO_TRADE` | TRADE_REPLACEMENT_KANTO |
+| 11 | SPECIES_MAGMAR | SPECIES_MAGMORTAR: `EVO_LEVEL 42` | `EVO_TRADE_WITH_HELD_ITEM ITEM_MAGMARIZER` | ITEM_TRADE_REPLACEMENT |
+| 12 | SPECIES_ONIX | SPECIES_STEELIX: `EVO_LEVEL 35` | `EVO_TRADE_WITH_HELD_ITEM ITEM_METAL_COAT` | ITEM_TRADE_REPLACEMENT |
+| 13 | SPECIES_POLIWHIRL | SPECIES_POLITOED: `EVO_LEVEL_SPATK_GT_ATK 35` | `EVO_TRADE_WITH_HELD_ITEM ITEM_KINGS_ROCK` | STAT_BRANCH |
+| 14 | SPECIES_PORYGON | SPECIES_PORYGON2: `EVO_LEVEL 30` | `EVO_TRADE_WITH_HELD_ITEM ITEM_UPGRADE` | ITEM_TRADE_REPLACEMENT |
+| 15 | SPECIES_PORYGON2 | SPECIES_PORYGON_Z: `EVO_LEVEL 45` | `EVO_TRADE_WITH_HELD_ITEM ITEM_DUBIOUS_DISC` | ITEM_TRADE_REPLACEMENT |
+| 16 | SPECIES_PUPITAR | SPECIES_TYRANITAR: `EVO_LEVEL 50` | `EVO_LEVEL 55` | LEVEL_RETUNE |
+| 17 | SPECIES_RHYDON | SPECIES_RHYPERIOR: `EVO_LEVEL 52` | `EVO_TRADE_WITH_HELD_ITEM ITEM_PROTECTOR` | ITEM_TRADE_REPLACEMENT |
+| 18 | SPECIES_SCYTHER | SPECIES_SCIZOR: `EVO_LEVEL 38` | `EVO_TRADE_WITH_HELD_ITEM ITEM_METAL_COAT` | ITEM_TRADE_REPLACEMENT |
+| 19 | SPECIES_SEADRA | SPECIES_KINGDRA: `EVO_LEVEL 42` | `EVO_TRADE_WITH_HELD_ITEM ITEM_DRAGON_SCALE` | ITEM_TRADE_REPLACEMENT |
+| 20 | SPECIES_SLOWPOKE | SPECIES_SLOWKING: `EVO_LEVEL_SPDEF_GT_DEF 37` | `EVO_TRADE_WITH_HELD_ITEM ITEM_KINGS_ROCK` | STAT_BRANCH |
+| 21 | SPECIES_SNEASEL | SPECIES_WEAVILE: `EVO_LEVEL_NIGHT 38` | `EVO_LEVEL_WITH_HELD_ITEM_NIGHT ITEM_RAZOR_CLAW` | NIGHT_LEVEL |
 
 Poliwrath (Water Stone) and Slowbro (Lv37) are unchanged edges inside changed tables.  Edge order in `slowpoke`: Slowking (SpD > Def) first, then Slowbro.
 
@@ -48,8 +49,9 @@ Poliwrath (Water Stone) and Slowbro (Lv37) are unchanged edges inside changed ta
 | 29 | `EVO_LEVEL_ATK_GT_SPATK` | Atk **>** SpA |
 | 30 | `EVO_LEVEL_SPDEF_GT_DEF` | SpD **>** Def |
 | 31 | `EVO_LEVEL_NIGHT` | `IsNight()`; no held item |
+| 32 | `EVO_LEVEL_DAY` | `!IsNight()`; no held item |
 
-Five new methods in total.  Files: `generated/evolution_methods.txt` (appended lines only), `src/pokemon.c` (new `case`s inside `Pokemon_GetEvolutionTargetSpecies`, additions only),
+Six new methods in total.  Files: `generated/evolution_methods.txt` (appended lines only), `src/pokemon.c` (new `case`s inside `Pokemon_GetEvolutionTargetSpecies`; the only deletion is the Kadabra Everstone exemption),
 `tools/dataproc/src/speciesproc.c` (param handler cases), `docs/datafiles/pokemon.md` (parameter doc).  The validator proves IDs 0–26 are byte-for-byte the vanilla order.
 
 The engine returns the **first** eligible entry of a species' list, so branch precedence is by array order.
@@ -59,21 +61,21 @@ The engine returns the **first** eligible entry of a species' list, so branch pr
 | Check | Result |
 |---|---|
 | No-trade audit (whole #001–#493 table) | PASS — no `EVO_TRADE` / `EVO_TRADE_WITH_HELD_ITEM` remains |
-| No-held-item audit | PASS with one recorded exception: Happiny → Chansey `EVO_LEVEL_WITH_HELD_ITEM_DAY` (UNRESOLVED_AUTHORITY, see above). `EVO_LEVEL_WITH_HELD_ITEM_NIGHT` is gone. |
+| No-held-item audit | PASS — no `EVO_LEVEL_WITH_HELD_ITEM_*` or `EVO_TRADE*` evolution remains; no exceptions |
 | No-non-stone-item audit | PASS — every `EVO_USE_ITEM*` consumes one of the 9 whitelisted Gen IV stones (Fire, Water, Thunder, Leaf, Moon, Sun, Shiny, Dusk, Dawn) |
-| Branch exhaustiveness | PASS — Clamperl exactly-one over all 4-stat orderings/ties at Lv34–36; Slowpoke first-match gives Slowking iff SpD > Def else Slowbro; Poliwhirl Politoed iff SpA > Atk (Poliwrath only by stone); Tyrogue exactly-one (>, =, <); Gligar/Sneasel night × level |
+| Branch exhaustiveness | PASS — Clamperl exactly-one over all 4-stat orderings/ties at Lv34–36; Slowpoke first-match gives Slowking iff SpD > Def else Slowbro; Poliwhirl Politoed iff SpA > Atk (Poliwrath only by stone); Tyrogue exactly-one (>, =, <); Gligar/Sneasel night × level; Happiny day × level |
 | Comparison semantics | Static test parses `src/pokemon.c` for each new case (operator and operands) and unit-tests ties |
 | C3 timing cross-check | `timing_crosscheck.py`: 10 C3-cited levels all agree with the manifest; 0 conflicts; no learnset edited. Per-evolution table printed by the script |
-| Scope audit | `scope_audit_evolutions.py`: 0 out-of-scope files; species data files differ only in `evolutions`; 0 deletions in engine source |
-| One-save achievability (static) | No final evolution needs trade, a second DS, WFC, another game or a nonexistent item. Level/friendship/time/location/gender/move/party/Beauty conditions are in-game. Stone evolutions need stones; Moon/Sun Stone currently have only Underground sources in vanilla — stone access is owned by the later item/economy phase ("reliable evolution-stone access"), not changed here. Happiny→Chansey needs a held Oval Stone (obtainable) pending the unresolved decision. |
-| Kadabra / Everstone note | `Pokemon_GetEvolutionTargetSpecies` still exempts Kadabra from the Everstone block (vanilla, because Kadabra was a trade evolution). Kadabra now level-evolves, so an Everstone does not stop it. Left untouched (out of scope); flagged for the user. |
+| Scope audit | `scope_audit_evolutions.py`: 0 out-of-scope files; species data files differ only in `evolutions`; engine source deletions limited to the Kadabra Everstone exemption |
+| One-save achievability (static) | No final evolution needs trade, a second DS, WFC, another game or a nonexistent item. Level/friendship/time/location/gender/move/party/Beauty conditions are in-game. Stone evolutions need stones; Moon/Sun Stone currently have only Underground sources in vanilla — stone access is owned by the later item/economy phase ("reliable evolution-stone access"), not changed here. Happiny→Chansey now needs only Lv20 in daytime. |
+| Kadabra / Everstone | The vanilla Kadabra exemption from the Everstone evolution block was removed (Kadabra now level-evolves); validator-checked |
 
 ## Regression suite (all on this branch)
 
 | Validator | Result |
 |---|---|
-| `validate_evolutions.py` | PASS (0 failures; 1 recorded UNRESOLVED note) |
-| `test_validate_evolutions.py` | 18 tests OK (mutation cases listed in the PR) |
+| `validate_evolutions.py` | PASS, including `--strict` (0 failures, 0 unresolved) |
+| `test_validate_evolutions.py` | 21 tests OK (mutation cases listed in the PR) |
 | `scope_audit_evolutions.py` | clean |
 | `tools/overhaul/moves/validate_c1.py` | OK (0 problems, 82 edits) |
 | `tools/overhaul/moves/test_validate_c1.py` | 24/24 rejecting, 4/4 forward-compatible |
@@ -91,8 +93,8 @@ No existing validator needed changes.
 
 | Revision | Result |
 |---|---|
-| US Platinum Rev 0 | PENDING_CI |
-| US Platinum Rev 1 | PENDING_CI |
+| US Platinum Rev 0 | PENDING_CI for final head (previous head 2d20f14e: success, run 37045544349) |
+| US Platinum Rev 1 | PENDING_CI for final head (previous head 2d20f14e: success, run 37045544349) |
 
 (A ROM build needs the Metroskrew toolchain and is verified by the `build` GitHub Actions workflow; it could not be run in this session's container.)
 

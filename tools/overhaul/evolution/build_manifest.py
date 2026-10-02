@@ -23,6 +23,7 @@ NEW_METHOD_SEMANTICS = {
     "EVO_LEVEL_ATK_GT_SPATK": "level >= param AND Atk > SpA (strict)",
     "EVO_LEVEL_SPDEF_GT_DEF": "level >= param AND SpD > Def (strict)",
     "EVO_LEVEL_NIGHT": "level >= param AND IsNight() (no held item required)",
+    "EVO_LEVEL_DAY": "level >= param AND NOT IsNight() (no held item required)",
 }
 
 

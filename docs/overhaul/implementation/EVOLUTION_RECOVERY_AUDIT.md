@@ -14,28 +14,29 @@
 ## The "50 decisions" count
 
 The original Pass A master held **50 consolidated TYPE/EVOLUTION decisions**.  The 17 locked retypes (and other typing decisions) were implemented in earlier phases.
-The evolution subset that actually changes a Platinum evolution edge is **20 edges across 19 species tables**.  No evolution edges were manufactured to reach 50.
+The evolution subset that actually changes a Platinum evolution edge is **21 edges across 20 species tables**.  No evolution edges were manufactured to reach 50.
 
 ## Classification totals (current source, #001–#493)
 
 | Class | Edges |
 |---|---|
-| LOCKED_CHANGED | 20 |
+| LOCKED_CHANGED | 21 |
 | LOCKED_KEEP | 24 |
 | VANILLA_KEEP | 201 |
 | SUPERSEDED_EARLY_PROPOSAL | concept-level only (listed below; no source edge carries it) |
-| UNRESOLVED_AUTHORITY | 1 (Happiny → Chansey, see below) |
+| UNRESOLVED_AUTHORITY | 0 |
 | **Total** | 246 edges over 229 evolution-bearing species |
 
 ## Locked rulings and how each was resolved
 
-All 26 rows of the `EVOLUTION_SPEC.md` table plus Tyrogue / Feebas / Nosepass were mapped to source:
+All 26 rows (+ Happiny) of the `EVOLUTION_SPEC.md` table plus Tyrogue / Feebas / Nosepass were mapped to source:
 
-- **Changed (LOCKED_CHANGED, 20 edges)** — the table in `EVOLUTION_IMPLEMENTATION_AUDIT.md`.
+- **Changed (LOCKED_CHANGED, 21 edges)** — the table in `EVOLUTION_IMPLEMENTATION_AUDIT.md`.
 - **Already matching vanilla (LOCKED_KEEP)** — Snorunt→Glalie Lv42, female Snorunt→Froslass (Dawn Stone), Kirlia→Gardevoir Lv30, male Kirlia→Gallade (Dawn Stone),
   Nosepass→Probopass (existing Mt. Coronet magnetic-field method), Roselia→Roserade (Shiny Stone), Feebas→Milotic (Beauty 170), Tyrogue three-way split,
   Wurmple split, Nincada/Shedinja, Magneton→Magnezone, Eevee branches, Poliwhirl→Poliwrath (Water Stone), Slowpoke→Slowbro (Lv37).
 - **Gligar / Sneasel** "Lv38 at night": vanilla Platinum has no level-plus-night method that does not require a held item, so one method (`EVO_LEVEL_NIGHT`) was appended.
+- **Happiny → Chansey**: Lv20 during the daytime with no held item (`EVO_LEVEL_DAY`, appended). Recovered locked Pass A project history, supplied after the first pass of this audit reported the edge as unresolved.
 
 ### Authority inferences that are *not* new design
 
@@ -54,18 +55,9 @@ All 26 rows of the `EVOLUTION_SPEC.md` table plus Tyrogue / Feebas / Nosepass we
 - level + held Razor Fang / Razor Claw / Metal Coat / King's Rock / Dragon Scale / Protector / Electirizer / Magmarizer / Reaper Cloth / Up-Grade / Dubious Disc
 - earliest provisional trade-evolution level suggestions where later Pass A / C3 values differ
 
-## UNRESOLVED_AUTHORITY — exactly one edge
+## UNRESOLVED_AUTHORITY — none
 
-**Happiny → Chansey** currently uses `EVO_LEVEL_WITH_HELD_ITEM_DAY` with `ITEM_OVAL_STONE` (level up in the daytime while holding an Oval Stone).
-
-- The global rule forbids held-item evolutions and says only genuine evolution stones may be evolution items.  The Oval Stone is a held item, not an evolution stone use.
-- No recovered Pass A ruling, C3 note, Emerald-plan entry, or git-history fragment gives its replacement method or level.  (Chansey → Blissey is friendship and is untouched.)
-- Per the no-invention rule the edge was **left as vanilla and not edited**, and is the only exception to the no-held-item validator rule (hard-coded by key `HAPPINY_CHANSEY_HELD_OVAL_STONE`).
-  `validate_evolutions.py --strict` fails while it remains.
-- Static one-save status: still achievable (Oval Stone is a Lost Tower 2F field item and the common held item of wild Happiny/Chansey/Blissey; Happiny is gifted by the Celestic Black Belt).
-- **Decision needed from the user**: the replacement method (e.g. a level and/or time-of-day condition).  Once given, it is one edge edit in `evo_lib.LOCKED_FINAL` plus rerunning the builder/applier.
-
-Everything else in the intended-to-change set has zero unresolved authority.
+The earlier single exception (Happiny → Chansey, vanilla held Oval Stone) was resolved by the recovered Pass A ruling above; no no-held-item exception remains in the validator.
 
 ## Current-source inventory (all 246 edges)
 
@@ -154,7 +146,7 @@ Everything else in the intended-to-change set has zero unresolved authority.
 | SPECIES_GROVYLE | SPECIES_SCEPTILE | EVO_LEVEL 36 | EVO_LEVEL 36 | VANILLA_KEEP |
 | SPECIES_GROWLITHE | SPECIES_ARCANINE | EVO_USE_ITEM ITEM_FIRE_STONE | EVO_USE_ITEM ITEM_FIRE_STONE | VANILLA_KEEP |
 | SPECIES_GULPIN | SPECIES_SWALOT | EVO_LEVEL 26 | EVO_LEVEL 26 | VANILLA_KEEP |
-| SPECIES_HAPPINY | SPECIES_CHANSEY | EVO_LEVEL_WITH_HELD_ITEM_DAY ITEM_OVAL_STONE | EVO_LEVEL_WITH_HELD_ITEM_DAY ITEM_OVAL_STONE | UNRESOLVED_AUTHORITY |
+| SPECIES_HAPPINY | SPECIES_CHANSEY | EVO_LEVEL_WITH_HELD_ITEM_DAY ITEM_OVAL_STONE | EVO_LEVEL_DAY 20 | LOCKED_CHANGED |
 | SPECIES_HAUNTER | SPECIES_GENGAR | EVO_TRADE | EVO_LEVEL 36 | LOCKED_CHANGED |
 | SPECIES_HIPPOPOTAS | SPECIES_HIPPOWDON | EVO_LEVEL 34 | EVO_LEVEL 34 | VANILLA_KEEP |
 | SPECIES_HOOTHOOT | SPECIES_NOCTOWL | EVO_LEVEL 20 | EVO_LEVEL 20 | VANILLA_KEEP |

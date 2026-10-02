@@ -29,6 +29,11 @@
     "id": 31,
     "name": "EVO_LEVEL_NIGHT",
     "semantics": "level >= param AND IsNight() (no held item required)"
+   },
+   {
+    "id": 32,
+    "name": "EVO_LEVEL_DAY",
+    "semantics": "level >= param AND NOT IsNight() (no held item required)"
    }
   ],
   "first_match_wins": true
@@ -51,30 +56,19 @@
   "level + held Razor Fang / Razor Claw / Metal Coat / King's Rock / Dragon Scale / Protector / Electirizer / Magmarizer / Reaper Cloth / Up-Grade / Dubious Disc",
   "earliest provisional trade-evolution level suggestions where later Pass A / C3 values differ"
  ],
- "unresolved_authority": [
-  {
-   "species": "SPECIES_HAPPINY",
-   "key": "HAPPINY_CHANSEY_HELD_OVAL_STONE",
-   "edge": [
-    "EVO_LEVEL_WITH_HELD_ITEM_DAY",
-    "ITEM_OVAL_STONE",
-    "SPECIES_CHANSEY"
-   ],
-   "note": "Held Oval Stone (day) evolution is not a genuine stone use and no replacement was ever recovered; left vanilla and reported. Statically achievable in one save (Lost Tower 2F field item; common held item of wild Happiny/Chansey/Blissey)."
-  }
- ],
+ "unresolved_authority": [],
  "summary": {
   "evolution_bearing_species": 229,
   "total_edges": 246,
   "edge_class_counts": {
-   "LOCKED_CHANGED": 20,
+   "LOCKED_CHANGED": 21,
    "LOCKED_KEEP": 24,
    "VANILLA_KEEP": 201,
-   "UNRESOLVED_AUTHORITY": 1,
+   "UNRESOLVED_AUTHORITY": 0,
    "SUPERSEDED_EARLY_PROPOSAL": 0
   },
-  "species_with_changed_tables": 19,
-  "changed_edges": 20
+  "species_with_changed_tables": 20,
+  "changed_edges": 21
  },
  "species": [
   {
@@ -1882,17 +1876,17 @@
    ],
    "after": [
     [
-     "EVO_LEVEL_WITH_HELD_ITEM_DAY",
-     "ITEM_OVAL_STONE",
+     "EVO_LEVEL_DAY",
+     20,
      "SPECIES_CHANSEY"
     ]
    ],
-   "changed": false,
+   "changed": true,
    "edge_classes": [
-    "UNRESOLVED_AUTHORITY"
+    "LOCKED_CHANGED"
    ],
-   "authority_key": "HAPPINY_CHANSEY_HELD_OVAL_STONE",
-   "provenance": "UNRESOLVED: global no-held-item rule applies but no final method was recovered; left as vanilla"
+   "authority_key": "DAY_LEVEL",
+   "provenance": "Recovered locked Pass A project history: Happiny -> Chansey Lv20 during daytime, no Oval Stone"
   },
   {
    "species": "SPECIES_HAUNTER",
@@ -6376,11 +6370,11 @@
    "species": "SPECIES_HAPPINY",
    "index": 0,
    "edge": [
-    "EVO_LEVEL_WITH_HELD_ITEM_DAY",
-    "ITEM_OVAL_STONE",
+    "EVO_LEVEL_DAY",
+    20,
     "SPECIES_CHANSEY"
    ],
-   "class": "UNRESOLVED_AUTHORITY"
+   "class": "LOCKED_CHANGED"
   },
   {
    "species": "SPECIES_HAUNTER",

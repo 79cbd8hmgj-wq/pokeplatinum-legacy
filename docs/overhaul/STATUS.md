@@ -8,11 +8,11 @@ Last verified against repository/project history: 2026-09-13.
 - **C2.5E created moves:** IMPLEMENTED + L2 BUILD VERIFIED on `main`.
 - **C3H species + TM compatibility:** IMPLEMENTED + L2 BUILD VERIFIED on `main`.
 - **C1 existing-move rebalance:** LOCKED and **IMPLEMENTED (source + validator verified; Rev 0/Rev 1 build verification via CI; battle runtime QA pending)** — 82/82 edits applied on branch `claude/c1-move-rebalance-implementation-4l7umd`, see `implementation/C1_IMPLEMENTATION_AUDIT.md`.
-- **Evolution (Pass A):** design **LOCKED / CANONICALIZED**; implementation **IMPLEMENTED (20 changed edges + 5 appended engine methods; source + validator + mutation tests verified; Rev 0/Rev 1 build via CI)**; runtime **DEFERRED TO FINAL OVERHAUL PLAYTEST**. One edge remains an **UNRESOLVED_AUTHORITY** exception: Happiny → Chansey (held Oval Stone) — see `implementation/EVOLUTION_RECOVERY_AUDIT.md`. Manifest: `implementation/evolution_manifest.json`; audit: `implementation/EVOLUTION_IMPLEMENTATION_AUDIT.md`.
+- **Evolution (Pass A):** design **LOCKED / CANONICALIZED**; implementation **IMPLEMENTED (21 changed edges + 6 appended engine methods; source + validator + mutation tests verified; Rev 0/Rev 1 build via CI)**; runtime **DEFERRED TO FINAL OVERHAUL PLAYTEST**. 0 unresolved evolution edges. Manifest: `implementation/evolution_manifest.json`; audits: `implementation/EVOLUTION_RECOVERY_AUDIT.md`, `implementation/EVOLUTION_IMPLEMENTATION_AUDIT.md`.
 - **World/#001–#493 ordinary availability:** IMPLEMENTED on `main` via PR #10; manifests/validators landed; Rev 0 + Rev 1 CI build verified; runtime availability QA pending. The 28 reserved special-acquisition families are resolved by the follow-up special-acquisition pass (see `implementation/SPECIAL_ACQUISITION.md`).
 - **Known design blockers:** 0.
 - **C2 TM/HM mechanics (HM battle rework, reusable TMs, TM acquisition/economy):** IMPLEMENTED (source + validator verified; Rev 0/Rev 1 build via CI on the C2 PR); see `implementation/C2_MECHANICS_IMPLEMENTATION_AUDIT.md`. Focused runtime QA pending.
-- **Next source task:** resolve the Happiny → Chansey method (one edge), then the Emerald-to-Platinum EXP/economy port. Runtime QA of C1/C2/created moves/evolution is deferred to the final overhaul playtest.
+- **Next source task:** the Emerald-to-Platinum EXP/economy port. Runtime QA of C1/C2/created moves/evolution is deferred to the final overhaul playtest.
 
 ## Mainline implementation evidence
 
@@ -65,7 +65,7 @@ They are provenance sources, not current implementation targets.
 | TM acquisition/economy | LOCKED | IMPLEMENTED (TM21/TM78 item assignment, Game Corner + Frontier prices, duplicate-vendor guard) | source + validator verified; CI build; runtime QA pending |
 | Tutor consolidation | LOCKED | baseline retained | audit pending |
 | Egg-move consolidation | LOCKED | baseline retained | audit pending |
-| Evolution-method overhaul | LOCKED / CANONICALIZED | IMPLEMENTED (20 edges; methods 27–31 appended; Happiny→Chansey held-item edge pending a decision) | source + validator + mutation tests + dual-revision CI build; runtime DEFERRED TO FINAL OVERHAUL PLAYTEST |
+| Evolution-method overhaul | LOCKED / CANONICALIZED | IMPLEMENTED (21 edges; methods 27–32 appended) | source + validator + mutation tests + dual-revision CI build; runtime DEFERRED TO FINAL OVERHAUL PLAYTEST |
 | World/#001–#493 availability — ordinary wild distribution | APPROVED ARCHITECTURE | IMPLEMENTED on `main` via PR #10 | L2 dual-revision CI build + manifest/validator evidence; runtime pending |
 | World/#001–#493 availability — special acquisitions (starters, fossils, Spiritomb, Rotom, Tyrogue, Happiny, Eevee, Porygon, Riolu, Castform, Feebas) | LOCKED/RESERVED BY OWNING SPECS WHERE APPLICABLE | IMPLEMENTED on main via PR #11 | source + L2 build + validator (S1–S5 + 25 mutation cases); runtime pending |
 | Trainer overhaul | PLANNED | not started | pending |
@@ -144,7 +144,7 @@ Recovered locked examples include:
 - Poliwhirl/Slowpoke/Clamperl branch logic uses stat comparisons;
 - genuine stones, location evolutions, Beauty, Wurmple/Shedinja, and other identity-positive mechanics are retained.
 
-The historical locked Pass A master contained **50 consolidated type/evolution decisions** (the typing decisions were implemented in earlier phases). The evolution subset was recovered and implemented: **20 changed edges** over 19 species tables, plus five appended engine methods (IDs 27–31). The original workbook still has to be treated as reconstructed provenance: it is not in the repo, and the recovery relies on the canonical spec, the Emerald plan and C3 timing. Only **Happiny → Chansey** (vanilla held Oval Stone) has no recovered final method and is left vanilla pending a user decision. See `implementation/EVOLUTION_RECOVERY_AUDIT.md` and `implementation/EVOLUTION_IMPLEMENTATION_AUDIT.md`.
+The historical locked Pass A master contained **50 consolidated type/evolution decisions** (the typing decisions were implemented in earlier phases). The evolution subset was recovered and implemented: **21 changed edges** over 20 species tables, plus six appended engine methods (IDs 27–32). The original workbook still has to be treated as reconstructed provenance: it is not in the repo, and the recovery relies on the canonical spec, the Emerald plan and C3 timing. Happiny → Chansey was recovered as Lv20 daytime (no Oval Stone); nothing is unresolved. See `implementation/EVOLUTION_RECOVERY_AUDIT.md` and `implementation/EVOLUTION_IMPLEMENTATION_AUDIT.md`.
 
 ## C3 provenance
 
@@ -189,7 +189,7 @@ Do not invent one. This is not a build blocker.
 
 1. Merge the verified C2 mechanics implementation once its final Rev 0 / Rev 1 CI run is green.
 2. Run focused L4 runtime QA for C1/C2/C2.5/C3 high-risk mechanics where emulator automation is available; keep runtime status pending where it is not.
-3. Decide the Happiny → Chansey replacement method (the only unresolved evolution edge); the rest of the Pass A evolution manifest is implemented.
+3. (done) Pass A evolution manifest implemented; no unresolved evolution edges.
 4. Perform the remaining Emerald-to-Platinum port audit for EXP/economy/capture/breeding.
 5. Continue implementing the remaining locked subsystems from canonical repo authority; ordinary and special nonlegendary availability are source/build complete.
 

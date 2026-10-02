@@ -55,6 +55,8 @@ def eligible(edge: list, level: int, atk: int, df: int, spa: int, spd: int, nigh
         return p <= level
     if m == "EVO_LEVEL_NIGHT":
         return night and p <= level
+    if m == "EVO_LEVEL_DAY":
+        return (not night) and p <= level
     if m in STAT_SEMANTICS:
         a, op, b = STAT_SEMANTICS[m]
         v = {"MON_DATA_ATK": atk, "MON_DATA_DEF": df, "MON_DATA_SP_ATK": spa, "MON_DATA_SP_DEF": spd}
@@ -121,6 +123,14 @@ def check_branches(tables: dict, f: list) -> None:
                 if hits != exp:
                     f.append(f"tyrogue lvl{lvl} atk{atk} def{df}: eligible {hits}, expected {exp}")
                     return
+    if need("happiny"):
+        for lvl in (19, 20, 21):
+            for night in (False, True):
+                got = first_match(tables["happiny"], level=lvl, atk=1, df=1, spa=1, spd=1, night=night)
+                exp = "SPECIES_CHANSEY" if (not night and lvl >= 20) else None
+                if got != exp:
+                    f.append(f"happiny lvl{lvl} night={night}: got {got}, expected {exp}")
+                    return
     for sp, target in (("gligar", "SPECIES_GLISCOR"), ("sneasel", "SPECIES_WEAVILE")):
         if not need(sp):
             continue
@@ -153,6 +163,11 @@ def check_engine_source(pokemon_c: str, methods: list[str], speciesproc_c: str, 
     blk = re.search(r"case EVO_LEVEL_NIGHT:(.*?)break;", pokemon_c, re.S)
     if not blk or "IsNight() == TRUE" not in blk.group(1) or "param <= monLevel" not in blk.group(1) or "HELD" in blk.group(1).upper():
         f.append("src/pokemon.c EVO_LEVEL_NIGHT must be `IsNight() == TRUE && param <= monLevel` with no held-item test")
+    blk = re.search(r"case EVO_LEVEL_DAY:(.*?)break;", pokemon_c, re.S)
+    if not blk or "IsNight() == FALSE" not in blk.group(1) or "param <= monLevel" not in blk.group(1) or "HELD" in blk.group(1).upper():
+        f.append("src/pokemon.c EVO_LEVEL_DAY must be `IsNight() == FALSE && param <= monLevel` with no held-item test")
+    if "SPECIES_KADABRA" in pokemon_c.split("Pokemon_GetEvolutionTargetSpecies(", 1)[-1].split("switch (evoClass)", 1)[0]:
+        f.append("Kadabra Everstone exemption is back (Kadabra no longer evolves by trade)")
     for m in NEW_METHODS:
         if f"case {m}:" not in speciesproc_c:
             f.append(f"tools/dataproc/src/speciesproc.c has no param handler for {m}")

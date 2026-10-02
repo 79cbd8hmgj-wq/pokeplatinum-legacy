@@ -127,7 +127,7 @@ Known superseded historical artifact:
 
 ## Evolution overhaul
 
-**Status: LOCKED / CANONICALIZED / IMPLEMENTED (one unresolved edge).**
+**Status: LOCKED / CANONICALIZED / IMPLEMENTED.**
 
 Evolution was completed as part of **Pass A: Identity & Evolution** across #001–#493. The locked Pass A master contained:
 
@@ -145,7 +145,7 @@ Final global rule:
 
 Recovered exact decisions include the major former trade/item evolutions, stat-based branches, Gligar/Sneasel night evolutions, and retained identity-positive mechanics.
 
-**Status update: IMPLEMENTED** (20 changed edges, 5 appended engine methods; manifest `implementation/evolution_manifest.json`; audits `implementation/EVOLUTION_RECOVERY_AUDIT.md` / `EVOLUTION_IMPLEMENTATION_AUDIT.md`). The only open item is Happiny → Chansey (vanilla held Oval Stone), which has no recovered final method and is left vanilla. Runtime: deferred to the final overhaul playtest.
+**Status update: IMPLEMENTED** (21 changed edges, 6 appended engine methods; manifest `implementation/evolution_manifest.json`; audits `implementation/EVOLUTION_RECOVERY_AUDIT.md` / `EVOLUTION_IMPLEMENTATION_AUDIT.md`). No unresolved edges (Happiny → Chansey = Lv20 daytime). Runtime: deferred to the final overhaul playtest.
 
 Earlier direct-item and hold-item-plus-level proposals are superseded.
 

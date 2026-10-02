@@ -65,6 +65,16 @@ class Mutations(unittest.TestCase):
                     n += 1
         self.assertGreaterEqual(n, 20)
 
+    def test_happiny(self):
+        self.rejects("happiny", [["EVO_LEVEL_WITH_HELD_ITEM_DAY", "ITEM_OVAL_STONE", "SPECIES_CHANSEY"]])  # held item restored
+        self.rejects("happiny", [["EVO_LEVEL", 20, "SPECIES_CHANSEY"]])  # daytime restriction lost
+        self.rejects("happiny", [["EVO_LEVEL_NIGHT", 20, "SPECIES_CHANSEY"]])  # wrong time of day
+        self.rejects("happiny", [["EVO_LEVEL_DAY", 21, "SPECIES_CHANSEY"]])  # wrong level
+        e = V.eligible
+        self.assertTrue(e(["EVO_LEVEL_DAY", 20, "X"], 20, 1, 1, 1, 1, night=False))
+        self.assertFalse(e(["EVO_LEVEL_DAY", 20, "X"], 20, 1, 1, 1, 1, night=True))
+        self.assertFalse(e(["EVO_LEVEL_DAY", 20, "X"], 19, 1, 1, 1, 1, night=False))
+
     def test_night_restriction_lost(self):
         self.rejects("gligar", [["EVO_LEVEL", 38, "SPECIES_GLISCOR"]])
         self.rejects("sneasel", [["EVO_LEVEL", 38, "SPECIES_WEAVILE"]])
@@ -144,7 +154,15 @@ class EngineSource(unittest.TestCase):
     def test_new_ids(self):
         self.assertEqual({m: read_methods_file().index(m) for m in NEW_METHODS},
                          {"EVO_LEVEL_SPATK_GT_ATK": 27, "EVO_LEVEL_SPATK_GE_ATK": 28, "EVO_LEVEL_ATK_GT_SPATK": 29,
-                          "EVO_LEVEL_SPDEF_GT_DEF": 30, "EVO_LEVEL_NIGHT": 31})
+                          "EVO_LEVEL_SPDEF_GT_DEF": 30, "EVO_LEVEL_NIGHT": 31, "EVO_LEVEL_DAY": 32})
+
+    def test_kadabra_everstone_exemption_must_stay_removed(self):
+        bad = PC.replace("    if (itemHoldEffect == HOLD_EFFECT_NO_EVOLVE", "    if (monSpecies != SPECIES_KADABRA && itemHoldEffect == HOLD_EFFECT_NO_EVOLVE", 1)
+        self.assertNotEqual(bad, PC)
+        self.assertTrue(self.fails(bad))
+
+    def test_day_semantics_mutation_caught(self):
+        self.assertTrue(self.fails(PC.replace("IsNight() == FALSE && speciesEvolutions[i].param <= monLevel", "IsNight() == TRUE && speciesEvolutions[i].param <= monLevel", 1)))
 
     def test_dataproc_handler_required(self):
         self.assertTrue(self.fails(sp=SP.replace("case EVO_LEVEL_NIGHT:", "case EVO_NONE_X:")))
