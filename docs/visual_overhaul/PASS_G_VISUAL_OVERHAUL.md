@@ -1070,6 +1070,18 @@ No particle resources, sounds, timing, battler motion, backgrounds, or donor ass
 
 
 
+
+### G5 remaining-signature control checkpoint
+
+The remaining obvious signature candidates were audited and intentionally left unchanged:
+Magma Storm, Crush Grip, Luster Purge, Mist Ball, Lunar Dance, Attack Order, Defend Order,
+Heal Order, and Aeroblast.
+
+Their native Platinum scripts already carry distinct identities through dedicated backgrounds,
+multi-emitter sequences, all-battler/scene grades, battler compression/fades, sustained background
+motion, or coherent family-specific presentation. Adding the same base-arena jolt to all of them
+would reduce rather than improve visual differentiation.
+
 ### G5 legacy heavy-contact staging checkpoint
 
 The selective physical-impact pass now also covers:
