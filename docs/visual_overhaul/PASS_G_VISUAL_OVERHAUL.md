@@ -485,6 +485,29 @@ Current status:
 - next effect target is drifting leaves through the dedicated forest renderer path
 
 
+
+### Eterna asset-path audit
+
+Confirmed Eterna/deep-forest resource mapping:
+- `area_data_054`
+- `mapTextureSet = map_texture_set_053`
+- `mapPropSet = prop_model_set_050`
+- `prop_model_set_050` contains:
+  - `prop_model_147_nsbmd`
+  - `mansion_door_nsbmd`
+
+Implication:
+- most of the forest's visual identity comes from map geometry + `map_texture_set_053.nsbtx`, not a large standalone prop collection.
+- the map/prop texture and model resources are Nitro binaries (`NSBTX` / `NSBMD`).
+- `fldeff.narc` is also binary/prebuilt.
+- the current GitHub connector exposes these paths and metadata but cannot materialize the binary contents in this environment.
+
+Working rule:
+- do not guess at anonymous binary resource IDs.
+- continue source-exposed visual work (lighting, fog, renderer routing, camera, UI/code paths) immediately.
+- inspect/convert Nitro assets when a binary-capable repository checkout or artifact handoff is available.
+
+
 #### G2C — Global UI presentation
 Improve:
 - frames
