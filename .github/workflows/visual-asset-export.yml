@@ -18,6 +18,19 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v6
+      - name: Collect icon comparison set
+        run: |
+          mkdir -p visual-export/platinum-icons visual-export/hgss-icons
+          cp res/pokemon/bulbasaur/icon.png visual-export/platinum-icons/bulbasaur.png
+          cp res/pokemon/pikachu/icon.png visual-export/platinum-icons/pikachu.png
+          cp res/pokemon/gengar/icon.png visual-export/platinum-icons/gengar.png
+          cp res/pokemon/lucario/icon.png visual-export/platinum-icons/lucario.png
+          git clone --depth 1 https://github.com/79cbd8hmgj-wq/pokeheartgold.git /tmp/pokeheartgold
+          cp /tmp/pokeheartgold/files/poketool/icongra/poke_icon/poke_icon_00000007.png visual-export/hgss-icons/bulbasaur.png
+          cp /tmp/pokeheartgold/files/poketool/icongra/poke_icon/poke_icon_00000031.png visual-export/hgss-icons/pikachu.png
+          cp /tmp/pokeheartgold/files/poketool/icongra/poke_icon/poke_icon_00000100.png visual-export/hgss-icons/gengar.png
+          cp /tmp/pokeheartgold/files/poketool/icongra/poke_icon/poke_icon_00000454.png visual-export/hgss-icons/lucario.png
+
       - name: Build field-effect reference report
         run: |
           grep -R -n -E 'FieldEffectManager_Load(Model|Animation)|ov5_021DF9E0|ov5_021DFA14|ov5_021DFA3C' src/overlay005 include/overlay005 > fldeff_refs.txt || true
@@ -27,6 +40,7 @@ jobs:
           name: platinum-visual-assets
           path: |
             fldeff_refs.txt
+            visual-export/
             res/prebuilt/data/mmodel/fldeff.narc
             res/field/maps/texture_sets/map_texture_set_053.nsbtx
             res/field/props/models/prop_model_147.nsbmd
