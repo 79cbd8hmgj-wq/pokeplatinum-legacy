@@ -57,6 +57,7 @@ REQUIRED_SYMBOLS = {
     "FogManager_ApplyParameters",
     "ForestAmbienceRenderer_New",
     "ForestAmbienceRenderer_Task",
+    "FieldMap_Main",
     "gG4RuntimeQAControl",
 }
 
@@ -229,6 +230,9 @@ def run(args: argparse.Namespace) -> int:
         port=args.port,
         timeout=args.timeout,
     ) as session:
+        if args.wait_for_field:
+            results.append(_hit(session, symbols, "FieldMap_Main"))
+
         if args.request_warp:
             warp_control = _request_debug_warp(session, symbols, scenario)
 
@@ -305,6 +309,11 @@ def parser() -> argparse.ArgumentParser:
     p.add_argument("--host", default="127.0.0.1")
     p.add_argument("--port", type=int, default=3333)
     p.add_argument("--timeout", type=float, default=30.0)
+    p.add_argument(
+        "--wait-for-field",
+        action="store_true",
+        help="wait for FieldMap_Main before issuing any debug warp request",
+    )
     p.add_argument(
         "--request-warp",
         action="store_true",
