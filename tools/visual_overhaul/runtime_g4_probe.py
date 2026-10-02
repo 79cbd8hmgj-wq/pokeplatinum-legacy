@@ -103,6 +103,20 @@ def _resolve_symbols(symbol_file: Path, overrides: dict[str, int]) -> dict[str, 
     return resolved
 
 
+def _scenario_symbol_names(scenario: Scenario) -> tuple[str, ...]:
+    names = [
+        *scenario.before_light_symbols,
+        "AreaLightManager_New",
+        *(
+            ("FieldMap_ApplySpecialAreaFog", "FogManager_ApplyParameters")
+            if scenario.require_special_fog
+            else ()
+        ),
+        *scenario.after_light_symbols,
+    ]
+    return tuple(dict.fromkeys(names))
+
+
 def _need(symbols: dict[str, int], name: str) -> int:
     if name not in symbols:
         raise RuntimeError(
@@ -130,6 +144,28 @@ def run(args: argparse.Namespace) -> int:
     overrides = _load_overrides(args.address)
     symbols = _resolve_symbols(args.symbols, overrides)
     results: list[dict[str, object]] = []
+
+    if args.validate_symbols_only:
+        needed = _scenario_symbol_names(scenario)
+        missing = [name for name in needed if name not in symbols]
+        if missing:
+            raise RuntimeError(
+                f"{args.scenario}: unresolved runtime symbols: " + ", ".join(missing)
+            )
+        report = {
+            "scenario": args.scenario,
+            "symbols": {
+                name: f"0x{symbols[name]:08x}"
+                for name in needed
+            },
+            "status": "PASS",
+        }
+        rendered = json.dumps(report, indent=2, sort_keys=True) + "\n"
+        if args.output:
+            args.output.parent.mkdir(parents=True, exist_ok=True)
+            args.output.write_text(rendered, encoding="utf-8")
+        print(rendered, end="")
+        return 0
 
     with MelonDSSession.connect(
         cpu=RuntimeCpu.ARM9,
@@ -194,6 +230,11 @@ def parser() -> argparse.ArgumentParser:
     p.add_argument("--host", default="127.0.0.1")
     p.add_argument("--port", type=int, default=3333)
     p.add_argument("--timeout", type=float, default=30.0)
+    p.add_argument(
+        "--validate-symbols-only",
+        action="store_true",
+        help="resolve all symbols required by the selected scenario without connecting to an emulator",
+    )
     p.add_argument("--output", type=Path)
     return p
 
