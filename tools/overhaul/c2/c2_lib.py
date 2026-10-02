@@ -22,6 +22,7 @@ SRC = {
     "scrcmd": "src/scrcmd.c",
     "defog": "res/battle/scripts/subscripts/subscript_defog.s",
     "prize_script": "res/field/scripts/scripts_veilstone_city_prize_exchange.s",
+    "victory_road": "res/field/scripts/scripts_victory_road_1f.s",
     "moves_txt": "generated/moves.txt",
 }
 # Vendor script: its ITEM_TM01 threshold comparisons are vendor logic, not TM placement.
