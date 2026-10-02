@@ -354,6 +354,24 @@ Additional mapping note:
 - `lighting_set_004` should therefore be treated as a shared deep-forest lighting family unless those maps are split into separate area-data entries later.
 
 
+
+### G2B implementation checkpoint — native weather enhancement
+
+Implemented in `src/overlay005/ov5_021D5EB8.c`:
+
+- Deep-forest weather ID 23 retains its existing scrolling BG2 mist/parallax and density behavior, but its fog is now a muted green-gray (`GX_RGB(20, 24, 22)`) instead of flat white.
+- Light snow fog now uses a cool blue-white (`GX_RGB(22, 26, 31)`).
+- Heavy snow fog now uses a colder blue-white (`GX_RGB(20, 24, 31)`).
+- Blizzard fog now uses `GX_RGB(20, 24, 31)`.
+- Hail fog now uses `GX_RGB(22, 26, 31)`.
+- Existing particle counts, movement logic, fog offsets, and transition timing remain unchanged pending runtime validation.
+
+Validation:
+- Only 10 intended weather-source lines differ from `main` for this checkpoint.
+- Forest weather 23 is exclusive to the three deep-forest maps already sharing `area_data_054`.
+- Brand-new leaf particles remain deferred because `weather_sys.narc` and `fldeff.narc` are currently prebuilt binary archives; adding new textures cleanly requires reconstructing one of those resource pipelines or deliberately patching the archive.
+
+
 #### G2C — Global UI presentation
 Improve:
 - frames
