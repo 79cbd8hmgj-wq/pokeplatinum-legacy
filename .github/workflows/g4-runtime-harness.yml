@@ -15,6 +15,10 @@ on:
       - 'res/field/lighting/**'
   workflow_dispatch: {}
 
+concurrency:
+  group: g4-runtime-harness-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 env:
   LM_LICENSE_FILE: "${{ github.workspace }}/tools/cw/license.dat"
   BUILD: /var/tmp/pokeplatinum
