@@ -789,6 +789,22 @@ Validation status:
 - interiors
 - selective model upgrades
 
+Source-side G4 implementation is complete across the representative environment set:
+- G4A: Eterna Forest
+- G4B: Snowpoint / Route 217
+- G4C: Distortion World
+- G4D: Spear Pillar
+- G4E: Sinnoh lakes
+- G4F: Turnback Cave
+- G4G: Team Galactic interiors
+
+The pass preserves map geometry, collision, scripts, progression, texture dimensions,
+texel-index maps, and resource naming. Changes are isolated lighting and palette/material
+grades, with dedicated area/texture slots created where shared retail resources would
+otherwise cause collateral changes.
+
+Remaining G4 gate: runtime visual inspection in Delta of the representative areas.
+
 HGSS is the first donor/reference source.
 
 ### G5 — Battle presentation
