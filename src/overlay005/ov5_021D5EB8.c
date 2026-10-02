@@ -2099,7 +2099,7 @@ static void ov5_021D7658(SysTask *param0, void *param1)
     switch (v0->unk_BA2) {
     case 0:
         ov5_021D7210(&v2->unk_00, v0, 1, 8, 4, 0, -1, 1, 1, ov5_021D78A4);
-        ov5_021D7308(&v2->unk_4C, &v2->unk_1C, v0->unk_00->fieldSystem->fogMan, 3, 0x6F6F + 0x300, GX_RGB(22, 26, 31), 1, v0->unk_BA4);
+        ov5_021D7308(&v2->unk_4C, &v2->unk_1C, v0->unk_00->fieldSystem->fogMan, 3, 0x6F6F + 0x300, GX_RGB(26, 26, 26), 1, v0->unk_BA4);
 
         v2->unk_B4[0] = 0;
 
@@ -2124,7 +2124,7 @@ static void ov5_021D7658(SysTask *param0, void *param1)
 
         if (v0->unk_BA4 != 0) {
             v2->unk_1C.unk_00 = v0->unk_00->fieldSystem->fogMan;
-            ov5_021D7384(v2->unk_1C.unk_00, 3, 0x6F6F + 0x300, GX_RGB(22, 26, 31));
+            ov5_021D7384(v2->unk_1C.unk_00, 3, 0x6F6F + 0x300, GX_RGB(26, 26, 26));
 
             ov5_021D74D4(&v2->unk_1C);
         }
@@ -2720,7 +2720,7 @@ static void ov5_021D823C(SysTask *param0, void *param1)
     switch (v0->unk_BA2) {
     case 0:
         ov5_021D7210(&v2->unk_00, v0, 1, 30, 6, 3, -5, 2, 1, ov5_021D8098);
-        ov5_021D7308(&v2->unk_4C, &v2->unk_1C, v0->unk_00->fieldSystem->fogMan, 3, 0x6F6F, GX_RGB(20, 24, 31), 2, v0->unk_BA4);
+        ov5_021D7308(&v2->unk_4C, &v2->unk_1C, v0->unk_00->fieldSystem->fogMan, 3, 0x6F6F, GX_RGB(24, 24, 24), 2, v0->unk_BA4);
 
         v2->unk_B4[0] = 8;
         v2->unk_B4[1] = 0;
@@ -2749,7 +2749,7 @@ static void ov5_021D823C(SysTask *param0, void *param1)
 
         if (v0->unk_BA4 != 0) {
             v2->unk_1C.unk_00 = v0->unk_00->fieldSystem->fogMan;
-            ov5_021D7384(v2->unk_1C.unk_00, 3, 0x6F6F, GX_RGB(20, 24, 31));
+            ov5_021D7384(v2->unk_1C.unk_00, 3, 0x6F6F, GX_RGB(24, 24, 24));
 
             ov5_021D74D4(&v2->unk_1C);
         }
@@ -2836,7 +2836,7 @@ static void ov5_021D84D4(SysTask *param0, void *param1)
 
     switch (v0->unk_BA2) {
     case 0:
-        ov5_021D7308(&v2->unk_30, &v2->unk_00, v0->unk_00->fieldSystem->fogMan, 3, 0x6F6F + 0x200, GX_RGB(22, 26, 31), 2, v0->unk_BA4);
+        ov5_021D7308(&v2->unk_30, &v2->unk_00, v0->unk_00->fieldSystem->fogMan, 3, 0x6F6F + 0x200, GX_RGB(26, 26, 26), 2, v0->unk_BA4);
         v2->unk_98[0] = 16;
 
         v0->unk_BA2 = 1;
@@ -2855,7 +2855,7 @@ static void ov5_021D84D4(SysTask *param0, void *param1)
     case 2:
         if (v0->unk_BA4 != 0) {
             v2->unk_00.unk_00 = v0->unk_00->fieldSystem->fogMan;
-            ov5_021D7384(v2->unk_00.unk_00, 3, 0x6F6F + 0x200, GX_RGB(22, 26, 31));
+            ov5_021D7384(v2->unk_00.unk_00, 3, 0x6F6F + 0x200, GX_RGB(26, 26, 26));
             ov5_021D74D4(&v2->unk_00);
         }
 
@@ -2912,7 +2912,7 @@ static void ov5_021D8638(SysTask *param0, void *param1)
 
     switch (v0->unk_BA2) {
     case 0:
-        ov5_021D7308(&v2->unk_30, &v2->unk_00, v0->unk_00->fieldSystem->fogMan, 3, 0x6F6F + -0x9E0, GX_RGB(22, 26, 31), 2, v0->unk_BA4);
+        ov5_021D7308(&v2->unk_30, &v2->unk_00, v0->unk_00->fieldSystem->fogMan, 3, 0x6F6F + -0x9E0, GX_RGB(26, 26, 26), 2, v0->unk_BA4);
         v2->unk_98[0] = 16;
         v0->unk_BA2 = 1;
         break;
@@ -2930,7 +2930,7 @@ static void ov5_021D8638(SysTask *param0, void *param1)
     case 2:
         if (v0->unk_BA4 != 0) {
             v2->unk_00.unk_00 = v0->unk_00->fieldSystem->fogMan;
-            ov5_021D7384(v2->unk_00.unk_00, 3, 0x6F6F + -0x9E0, GX_RGB(22, 26, 31));
+            ov5_021D7384(v2->unk_00.unk_00, 3, 0x6F6F + -0x9E0, GX_RGB(26, 26, 26));
             ov5_021D74D4(&v2->unk_00);
         }
 
@@ -3869,7 +3869,7 @@ static void ov5_021D97E8(SysTask *param0, void *param1)
 static void ov5_021D9984(UnkStruct_ov5_021DB4B8 *param0, UnkStruct_ov5_021D9984 *param1)
 {
     ov5_021D7210(&param1->unk_00, param0, 1, 15, 10, 0, -3, 2, 1, ov5_021DA0A8);
-    ov5_021D7308(&param1->unk_4C, &param1->unk_1C, param0->unk_00->fieldSystem->fogMan, 3, 0x6F6F, GX_RGB(22, 26, 31), 1, param0->unk_BA4);
+    ov5_021D7308(&param1->unk_4C, &param1->unk_1C, param0->unk_00->fieldSystem->fogMan, 3, 0x6F6F, GX_RGB(26, 26, 26), 1, param0->unk_BA4);
 
     param1->unk_B4[0] = 0;
     param1->unk_B4[1] = 0;
@@ -3904,7 +3904,7 @@ static void ov5_021D9A58(UnkStruct_ov5_021DB4B8 *param0, UnkStruct_ov5_021D9984 
 
     if (param0->unk_BA4 != 0) {
         param1->unk_1C.unk_00 = param0->unk_00->fieldSystem->fogMan;
-        ov5_021D7384(param1->unk_1C.unk_00, 3, 0x6F6F, GX_RGB(22, 26, 31));
+        ov5_021D7384(param1->unk_1C.unk_00, 3, 0x6F6F, GX_RGB(26, 26, 26));
         ov5_021D74D4(&param1->unk_1C);
     }
 
