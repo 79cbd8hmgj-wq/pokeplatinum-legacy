@@ -44,6 +44,7 @@ typedef struct G4RuntimeQAControl {
     volatile u32 eventFlags;
     volatile u32 lightArchiveID;
     volatile u32 magic;
+    volatile u32 fieldReady;
 } G4RuntimeQAControl;
 
 extern G4RuntimeQAControl gG4RuntimeQAControl;
