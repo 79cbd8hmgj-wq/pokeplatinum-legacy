@@ -153,16 +153,48 @@ Priority:
 
 ## G3C — Pokemon battle sprites
 
-Platinum's battle sprites already carry game-specific animation metadata. Any donor art change must preserve:
-- gender differences
-- front/back orientation
-- frame count/layout
-- y offsets
-- shadow offsets/sizes
-- cry/start delays
-- form routing
+### Canonical strategy: optimize Platinum in place
 
-HGSS battle sprites should therefore be treated as a selective donor/reference class rather than a bulk blind import.
+Platinum's own battle-sprite sources are now the canonical G3C art base. The
+HGSS donor audit remains useful research, but direct HGSS battle-sprite
+transplants are no longer the implementation path: they introduce unnecessary
+frame-geometry, palette-index, and animation-compatibility work.
+
+Preserve Platinum's native contract:
+- `male_front.png`, `female_front.png`
+- `male_back.png`, `female_back.png`
+- `normal.pal`, `shiny.pal`
+- `sprite_data.json`
+- species/form routing and archive ordering
+
+Approved low-risk optimization includes pixel cleanup, outline cleanup, local
+contrast/shading refinement, small anatomy corrections, shiny-palette cleanup,
+and modest pose/frame refinements that retain the existing footprint and index
+contract.
+
+Material silhouette shifts, palette-index reassignment, or changes to
+`sprite_data.json`, y offsets, shadows, timing, or form routing require explicit
+runtime validation.
+
+HGSS is now **reference material only** for G3C. Later official art can guide an
+artistic fix, but the fix should be adapted into Platinum's native source rather
+than transplanted blindly.
+
+`tools/visual_overhaul/audit_platinum_native_battle_sprites.py` now inventories
+the native sources and flags edge contact, isolated pixels, rare index use,
+large frame-to-frame center motion, and unexpected format/dimensions. These are
+review signals, not automatic errors.
+
+Batch flow:
+1. audit native Platinum sprites
+2. choose a small priority batch
+3. optimize Platinum sources only
+4. preserve dimensions/index/animation contracts
+5. build and export
+6. inspect normal + shiny art and both frames in Delta
+7. expand after the batch is visually locked
+
+The staged HGSS battle-sprite pilot is reverted with this strategy change.
 
 ## Validation
 
