@@ -1067,6 +1067,17 @@ Deliberate no-change controls:
 
 No particle resources, sounds, timing, battler motion, backgrounds, or donor assets were replaced.
 
+
+### G5 generic-special control checkpoint
+
+A final common-special sweep produced **no additional edits**. Dark Pulse, Earth Power, Power Gem,
+Sludge Bomb, Bug Buzz, Surf, Water Pulse, and Signal Beam already have sufficient native staging
+through their existing combinations of scene fades/backgrounds, emitters, battler motion, color
+treatment, and impact timing.
+
+This is an explicit restraint checkpoint: G5 does not add arena-wide movement or scene grading merely
+because a move is strong. Those layers are reserved for attacks whose native presentation has a clear gap.
+
 ### G5 weather-presentation checkpoint
 
 Weather presentation is now aligned across both move initiation and the shared end-of-turn
