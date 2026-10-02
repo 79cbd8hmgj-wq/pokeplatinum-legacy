@@ -53,13 +53,11 @@ CASES = {
     "multi-hit (Pin Missile effect)": seteffect("Pin Missile", "BATTLE_EFFECT_HIT"),
     "trapping (Fire Spin effect)": seteffect("Fire Spin", "BATTLE_EFFECT_HIT"),
     "trapping value (Sand Tomb Emerald 50/95)": lambda l, c: l["Sand Tomb"][0][1].update(power=50, accuracy=95),
-    "HM later-pass value (Rock Smash)": setf("Rock Smash", "power", 60),
-    "HM later-pass value (Cut)": setf("Cut", "accuracy", 100),
     "KEEP invariant (Magma Storm)": setf("Magma Storm", "power", 100),
     "KEEP invariant (Rock Slide)": setf("Rock Slide", "accuracy", 80),
-    "unrelated move changed (Thunderbolt)": setf("Thunderbolt", "power", 100),
     "Razor Wind description stale": lambda l, c: l["Razor Wind"][0][1].__setitem__("description", ["A two-turn attack.\n"]),
     "Razor Wind script keeps charge message": lambda l, c: c.__setitem__("razor_script", "BufferMessage x"),
+    "Razor Wind animation restores charge branch": lambda l, c: c.__setitem__("razor_anim", "JumpIfEffectChanceOdd L_1, L_2\nEMITTER_CB_SET_POS_TO_ATTACKER\n"),
     "custom move: Magnet Volley power": setf("Magnet Volley", "power", 30),
     "custom move: Magnet Volley effect": seteffect("Magnet Volley", "BATTLE_EFFECT_HIT_THREE_TIMES"),
     "custom move: Resonant Slash unregistered": lambda l, c: c.__setitem__("battle_lib", c["battle_lib"].replace("MOVE_RESONANT_SLASH", "")),
@@ -71,6 +69,14 @@ CASES = {
     "manifest count != 82": lambda l, c: c["manifest"]["edits"].pop(),
 }
 
+# These are intentionally accepted: they model later-pass or unrelated changes that C1 does not own.
+ALLOWED_CASES = {
+    "later C2 Cut values": lambda l, c: l["Cut"][0][1].update(power=70, accuracy=100),
+    "later C2 Rock Smash value": setf("Rock Smash", "power", 60),
+    "later C2 Rock Climb accuracy": setf("Rock Climb", "accuracy", 95),
+    "unrelated Thunderbolt change": setf("Thunderbolt", "power", 100),
+}
+
 
 def main() -> int:
     clean = validate(copy.deepcopy(LIVE), copy.deepcopy(CTX))
@@ -78,13 +84,27 @@ def main() -> int:
     if clean:
         print("FAIL: clean tree rejected:", clean[:3])
         bad += 1
+    rejected_ok = 0
     for name, fn in CASES.items():
         probs = mutated(fn)
         status = "rejected" if probs else "NOT REJECTED"
-        if not probs:
+        if probs:
+            rejected_ok += 1
+        else:
             bad += 1
         print(f"{status:13} {name}")
-    print(f"mutation tests: {len(CASES) - bad + (1 if clean else 0)}/{len(CASES)} ok" if not bad else f"{bad} FAILURES")
+
+    allowed_ok = 0
+    for name, fn in ALLOWED_CASES.items():
+        probs = mutated(fn)
+        status = "accepted" if not probs else "WRONGLY REJECTED"
+        if not probs:
+            allowed_ok += 1
+        else:
+            bad += 1
+        print(f"{status:16} {name}")
+
+    print(f"rejecting mutations: {rejected_ok}/{len(CASES)}; forward-compatible cases: {allowed_ok}/{len(ALLOWED_CASES)}")
     return 1 if bad else 0
 
 
