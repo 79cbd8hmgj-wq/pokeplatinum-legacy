@@ -12,7 +12,8 @@ Last verified against repository/project history: 2026-10-02.
 - **World/#001–#493 ordinary availability:** IMPLEMENTED on `main` via PR #10; manifests/validators landed; Rev 0 + Rev 1 CI build verified; runtime availability QA pending. The 28 reserved special-acquisition families are resolved by the follow-up special-acquisition pass (see `implementation/SPECIAL_ACQUISITION.md`).
 - **Known design blockers:** 0.
 - **C2 TM/HM mechanics (HM battle rework, reusable TMs, TM acquisition/economy):** IMPLEMENTED (source + validator verified; Rev 0/Rev 1 build via CI on the C2 PR); see `implementation/C2_MECHANICS_IMPLEMENTATION_AUDIT.md`. Focused runtime QA pending.
-- **Next source task:** the Emerald-to-Platinum EXP/economy port. Runtime QA of C1/C2/created moves/evolution is deferred to the final overhaul playtest.
+- **EXP/economy port:** IMPLEMENTED (conserved 60/40 team EXP, participant-only EVs, prize/price cleanup, free Move Reminder, half-cost tutors, Veilstone evolution-stone vendor, postgame Rare Candy; source + validator + mutation tests; Rev 0/Rev 1 build via CI); runtime **DEFERRED TO FINAL OVERHAUL PLAYTEST**. Audit: `implementation/economy/ECONOMY_IMPLEMENTATION_AUDIT.md`.
+- **Next source task:** Poké Ball rebalance. Runtime QA of C1/C2/created moves/evolution is deferred to the final overhaul playtest.
 
 ## Mainline implementation evidence
 
@@ -69,7 +70,7 @@ They are provenance sources, not current implementation targets.
 | World/#001–#493 availability — ordinary wild distribution | APPROVED ARCHITECTURE | IMPLEMENTED on `main` via PR #10 | L2 dual-revision CI build + manifest/validator evidence; runtime pending |
 | World/#001–#493 availability — special acquisitions (starters, fossils, Spiritomb, Rotom, Tyrogue, Happiny, Eevee, Porygon, Riolu, Castform, Feebas) | LOCKED/RESERVED BY OWNING SPECS WHERE APPLICABLE | IMPLEMENTED on main via PR #11 | source + L2 build + validator (S1–S5 + 25 mutation cases); runtime pending |
 | Trainer overhaul | PLANNED | not started | pending |
-| Economy/EXP port | PLANNED PORT | not started | pending |
+| Economy/EXP port | LOCKED | IMPLEMENTED | source + validator + mutation tests + dual-revision CI build; runtime DEFERRED TO FINAL OVERHAUL PLAYTEST |
 | Capture/Poké Ball port | PLANNED PORT | not started | pending |
 | Breeding-system port | PLANNED PORT | not started | pending |
 | Event restoration | PLANNED | not started | pending |
@@ -187,10 +188,9 @@ Do not invent one. This is not a build blocker.
 
 ## Immediate next actions
 
-1. Merge the evolution implementation only after the corrected final head passes Rev 0 / Rev 1 CI.
-2. Implement the locked Emerald-to-Platinum EXP/economy port.
-3. Continue the remaining locked subsystems from canonical repo authority; ordinary and special nonlegendary availability are source/build complete.
-4. Defer focused runtime QA until the overhaul is otherwise complete, per user direction.
+1. Next source task: Poké Ball rebalance (`pokeballs/POKE_BALL_IMPLEMENTATION_PLAN.md`).
+2. Continue the remaining locked subsystems from canonical repo authority; ordinary and special nonlegendary availability are source/build complete.
+3. Defer focused runtime QA until the overhaul is otherwise complete, per user direction.
 
 ## Rule for future sessions
 
@@ -199,7 +199,7 @@ Do not reconstruct status from memory when this file answers the question. Updat
 
 ## EXP / economy
 
-Status: **LOCKED SPEC — awaiting implementation**
+Status: **IMPLEMENTED** (see `implementation/economy/ECONOMY_IMPLEMENTATION_AUDIT.md`; runtime DEFERRED TO FINAL OVERHAUL PLAYTEST)
 
 Canonical authority:
 - `docs/overhaul/economy/EXP_ECONOMY_SPEC.md`

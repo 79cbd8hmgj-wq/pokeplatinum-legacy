@@ -143,6 +143,15 @@ const u16 VeilstoneDeptStoreStock_2F_MID[] = {
     ITEM_ZINC,
     ITEM_CARBOS,
     ITEM_HP_UP,
+    ITEM_FIRE_STONE,
+    ITEM_WATER_STONE,
+    ITEM_THUNDERSTONE,
+    ITEM_LEAF_STONE,
+    ITEM_MOON_STONE,
+    ITEM_SUN_STONE,
+    ITEM_SHINY_STONE,
+    ITEM_DUSK_STONE,
+    ITEM_DAWN_STONE,
     SHOP_ITEM_END
 };
 
@@ -218,6 +227,11 @@ const u16 VeilstoneDeptStoreStock_B1F_DOWN_LEFT[] = {
     SHOP_ITEM_END
 };
 
+const u16 FightAreaPostgameStock[] = {
+    ITEM_RARE_CANDY,
+    SHOP_ITEM_END
+};
+
 const u16 *PokeMartSpecialties[] = {
     [MART_SPECIALTIES_ID_JUBILIFE] = JubilifeMartSpecialties,
     [MART_SPECIALTIES_ID_OREBURGH] = OreburghMartSpecialties,
@@ -238,7 +252,8 @@ const u16 *PokeMartSpecialties[] = {
     [MART_SPECIALTIES_ID_CANALAVE] = CanalaveMartSpecialties,
     [MART_SPECIALTIES_ID_SUNYSHORE] = SunyshoreMartSpecialties,
     [MART_SPECIALTIES_ID_POKEMON_LEAGUE] = PokemonLeagueMartSpecialties,
-    [MART_SPECIALTIES_ID_VEILSTONE_B1F] = VeilstoneDeptStoreStock_B1F_DOWN_LEFT
+    [MART_SPECIALTIES_ID_VEILSTONE_B1F] = VeilstoneDeptStoreStock_B1F_DOWN_LEFT,
+    [MART_SPECIALTIES_ID_FIGHT_AREA_POSTGAME] = FightAreaPostgameStock
 };
 
 const u16 VeilstoneDeptStoreStock_4F_UP[] = {

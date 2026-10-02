@@ -2167,18 +2167,27 @@ static BOOL BtlCmd_CalcCrit(BattleSystem *battleSys, BattleContext *battleCtx)
 }
 
 /**
- * @brief Calculate the amount of experience to be given to each participating
- * battler.
+ * @brief Calculate the amount of experience to be given to each party member.
+ *
+ * The raw pool is unchanged from vanilla: base EXP reward * level / 7. It is
+ * split 60/40 into a battle pool and a team pool:
+ * - the battle pool is divided equally among the battle group, which is the
+ * unique union of actual participants and eligible Exp. Share holders;
+ * - the team pool is divided equally among every eligible party member.
+ *
+ * Eligible means a valid, non-Egg, non-fainted party member below Lv. 100.
+ * Integer remainders go to the lowest party slots first, so the pre-modifier
+ * allocation always sums to the raw pool.
  *
  * Inputs:
  * 1. The jump distance if no experience is to be given. i.e., the defeated
  * battler is an ally, or the battle type explicitly forbids experience gain.
  *
  * Side effects:
- * - battleCtx->gainedExp will be updated with the amount of experience to be
- * given to each participating battler.
- * - battleCtx->sharedExp will be updated with the amount of experience to be
- * given to each participating battler which was holding an Exp Share.
+ * - battleCtx->expAlloc will be updated with the pre-modifier experience for
+ * each party slot.
+ * - battleCtx->expRecipientMask will be updated with the party slots which
+ * receive experience.
  *
  * @param battleSys
  * @param battleCtx
@@ -2195,49 +2204,78 @@ static BOOL BtlCmd_CalcExpGain(BattleSystem *battleSys, BattleContext *battleCtx
 
     if ((battlerData->battlerType & BATTLER_TYPE_SOLO_ENEMY) && (battleType & BATTLE_TYPE_NO_EXPERIENCE) == FALSE) {
         int i;
-        int totalMonsGainingExp = 0;
-        int totalMonsWithExpShare = 0;
+        int partyCount = Party_GetCurrentCount(BattleSystem_GetParty(battleSys, BATTLER_US));
+        u32 eligibleMask = 0;
+        u32 battleGroupMask = 0;
+        int eligibleCount = 0;
+        int battleGroupCount = 0;
 
-        for (i = 0; i < Party_GetCurrentCount(BattleSystem_GetParty(battleSys, BATTLER_US)); i++) {
+        for (i = 0; i < partyCount && i < MAX_PARTY_SIZE; i++) {
             Pokemon *mon = BattleSystem_GetPartyPokemon(battleSys, BATTLER_US, i);
 
-            if (Pokemon_GetValue(mon, MON_DATA_SPECIES, NULL) && Pokemon_GetValue(mon, MON_DATA_HP, NULL)) {
-                if (battleCtx->sideGetExpMask[(battleCtx->faintedMon >> 1) & 1] & FlagIndex(i)) {
-                    totalMonsGainingExp++;
-                }
+            battleCtx->expAlloc[i] = 0;
 
+            if (Pokemon_GetValue(mon, MON_DATA_SPECIES, NULL)
+                && Pokemon_GetValue(mon, MON_DATA_IS_EGG, NULL) == FALSE
+                && Pokemon_GetValue(mon, MON_DATA_HP, NULL)
+                && Pokemon_GetValue(mon, MON_DATA_LEVEL, NULL) < MAX_POKEMON_LEVEL) {
                 u16 item = Pokemon_GetValue(mon, MON_DATA_HELD_ITEM, NULL);
-                if (BattleSystem_GetItemData(battleCtx, item, ITEM_PARAM_HOLD_EFFECT) == HOLD_EFFECT_EXP_SHARE) {
-                    totalMonsWithExpShare++;
+
+                eligibleMask |= FlagIndex(i);
+                eligibleCount++;
+
+                if ((battleCtx->sideGetExpMask[(battleCtx->faintedMon >> 1) & 1] & FlagIndex(i))
+                    || BattleSystem_GetItemData(battleCtx, item, ITEM_PARAM_HOLD_EFFECT) == HOLD_EFFECT_EXP_SHARE) {
+                    battleGroupMask |= FlagIndex(i);
+                    battleGroupCount++;
                 }
             }
         }
 
-        u16 exp = SpeciesData_GetSpeciesValue(battleCtx->battleMons[battleCtx->faintedMon].species, SPECIES_DATA_BASE_EXP_REWARD);
+        u32 exp = SpeciesData_GetSpeciesValue(battleCtx->battleMons[battleCtx->faintedMon].species, SPECIES_DATA_BASE_EXP_REWARD);
         exp = (exp * battleCtx->battleMons[battleCtx->faintedMon].level) / 7;
 
-        if (totalMonsWithExpShare) {
-            battleCtx->gainedExp = (exp / 2) / totalMonsGainingExp;
+        u32 battlePool = exp * EXP_BATTLE_POOL_PERCENT / 100;
+        u32 teamPool = exp - battlePool;
 
-            if (battleCtx->gainedExp == 0) {
-                battleCtx->gainedExp = 1;
-            }
-
-            battleCtx->sharedExp = (exp / 2) / totalMonsWithExpShare;
-
-            if (battleCtx->sharedExp == 0) {
-                battleCtx->sharedExp = 1;
-            }
-        } else {
-            battleCtx->gainedExp = exp / totalMonsGainingExp;
-
-            if (battleCtx->gainedExp == 0) {
-                battleCtx->gainedExp = 1;
-            }
-
-            battleCtx->sharedExp = 0;
+        // If no eligible battle-group member exists, redistribute its share
+        // across the eligible team rather than discarding 60% of the raw pool.
+        if (battleGroupCount == 0 && eligibleCount != 0) {
+            teamPool += battlePool;
+            battlePool = 0;
         }
+
+        u32 battleRemainder = battleGroupCount ? battlePool % battleGroupCount : 0;
+        u32 teamRemainder = eligibleCount ? teamPool % eligibleCount : 0;
+
+        for (i = 0; i < partyCount && i < MAX_PARTY_SIZE; i++) {
+            if (battleGroupMask & FlagIndex(i)) {
+                battleCtx->expAlloc[i] += battlePool / battleGroupCount;
+
+                if (battleRemainder) {
+                    battleCtx->expAlloc[i]++;
+                    battleRemainder--;
+                }
+            }
+
+            if (eligibleMask & FlagIndex(i)) {
+                battleCtx->expAlloc[i] += teamPool / eligibleCount;
+
+                if (teamRemainder) {
+                    battleCtx->expAlloc[i]++;
+                    teamRemainder--;
+                }
+            }
+
+            // Legacy minimum of 1 EXP for battle-group members
+            if ((battleGroupMask & FlagIndex(i)) && battleCtx->expAlloc[i] == 0) {
+                battleCtx->expAlloc[i] = 1;
+            }
+        }
+
+        battleCtx->expRecipientMask = eligibleMask;
     } else {
+        battleCtx->expRecipientMask = 0;
         BattleScript_Iter(battleCtx, jump);
     }
 
@@ -9706,7 +9744,7 @@ static void BattleScript_GetExpTask(SysTask *task, void *inData)
         item = Pokemon_GetValue(mon, MON_DATA_HELD_ITEM, NULL);
         itemEffect = Item_LoadParam(item, ITEM_PARAM_HOLD_EFFECT, HEAP_ID_BATTLE);
 
-        if (itemEffect == HOLD_EFFECT_EXP_SHARE || (data->battleCtx->sideGetExpMask[battler] & FlagIndex(slot))) {
+        if (data->battleCtx->expRecipientMask & FlagIndex(slot)) {
             break;
         }
     }
@@ -9738,13 +9776,7 @@ static void BattleScript_GetExpTask(SysTask *task, void *inData)
         msg.id = BattleStrings_Text_PokemonGainedExpPoints; // "{0} gained {1} Exp. Points!"
 
         if (Pokemon_GetValue(mon, MON_DATA_HP, NULL) && Pokemon_GetValue(mon, MON_DATA_LEVEL, NULL) != MAX_POKEMON_LEVEL) {
-            if (data->battleCtx->sideGetExpMask[battler] & FlagIndex(slot)) {
-                totalExp = data->battleCtx->gainedExp;
-            }
-
-            if (itemEffect == HOLD_EFFECT_EXP_SHARE) {
-                totalExp += data->battleCtx->sharedExp;
-            }
+            totalExp = data->battleCtx->expAlloc[slot];
 
             if (itemEffect == HOLD_EFFECT_EXP_UP) {
                 totalExp = totalExp * 150 / 100;
@@ -9773,10 +9805,14 @@ static void BattleScript_GetExpTask(SysTask *task, void *inData)
             }
 
             Pokemon_SetValue(mon, MON_DATA_EXPERIENCE, &newExp);
-            BattleScript_CalcEffortValues(BattleSystem_GetParty(data->battleSys, expBattler),
-                slot,
-                data->battleCtx->battleMons[data->battleCtx->faintedMon].species,
-                data->battleCtx->battleMons[data->battleCtx->faintedMon].formNum);
+
+            // Only actual participants earn EVs; team-share and Exp. Share-only recipients do not
+            if (data->battleCtx->sideGetExpMask[battler] & FlagIndex(slot)) {
+                BattleScript_CalcEffortValues(BattleSystem_GetParty(data->battleSys, expBattler),
+                    slot,
+                    data->battleCtx->battleMons[data->battleCtx->faintedMon].species,
+                    data->battleCtx->battleMons[data->battleCtx->faintedMon].formNum);
+            }
         }
 
         if (totalExp) {
@@ -10189,11 +10225,16 @@ static void BattleScript_GetExpTask(SysTask *task, void *inData)
 
     case SEQ_GET_EXP_CHECK_DONE:
         data->battleCtx->sideGetExpMask[battler] &= (FlagIndex(slot) ^ 0xFFFFFFFF); // this mon is done
+        data->battleCtx->expRecipientMask &= (FlagIndex(slot) ^ 0xFFFFFFFF);
         data->tmpData[GET_EXP_PARTY_SLOT] = slot + 1;
         data->seqNum = SEQ_GET_EXP_START; // go back to the top and get the next mon
         break;
 
     case SEQ_GET_EXP_DONE:
+        // Party members excluded from EXP processing do not pass through
+        // SEQ_GET_EXP_CHECK_DONE, so clear the current foe's participation state here too.
+        data->battleCtx->sideGetExpMask[battler] = 0;
+        data->battleCtx->expRecipientMask = 0;
         data->battleCtx->taskData = NULL;
         Heap_Free(inData);
         SysTask_Done(task);

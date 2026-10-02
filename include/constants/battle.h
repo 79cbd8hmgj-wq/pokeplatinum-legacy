@@ -164,4 +164,7 @@
 #define COMPARE_SPEED_SLOWER 1
 #define COMPARE_SPEED_TIE    2
 
+// Share of the raw EXP pool split among the battle group (participants + Exp. Share holders); the remainder is split team-wide
+#define EXP_BATTLE_POOL_PERCENT 60
+
 #endif // POKEPLATINUM_CONSTANTS_BATTLE_H
