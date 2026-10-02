@@ -1,0 +1,96 @@
+{
+  "schema": "breeding_egg_move_changes/1",
+  "start_sha": "e2d73d33a702bc151ae283a1245ebf64575476ed",
+  "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#7",
+  "note": "No egg-move edits applied (lists are unchanged). The audit below is the one-save legality result over the final #001-#493 data; entries under unreachable_pending_design are NOT changed and need a user decision.",
+  "entries": [],
+  "audit_summary": {
+    "egg_move_entries": 1711,
+    "live_unreachable": 5,
+    "orphaned_lost_moves": 9
+  },
+  "orphaned_adult_lists": [
+    {
+      "species": "SPECIES_CHANSEY",
+      "baby": "SPECIES_HAPPINY",
+      "reason": "adult can no longer hatch once incense is not required (spec #9); its list is dead data",
+      "moves_lost_everywhere": []
+    },
+    {
+      "species": "SPECIES_CHIMECHO",
+      "baby": "SPECIES_CHINGLING",
+      "reason": "adult can no longer hatch once incense is not required (spec #9); its list is dead data",
+      "moves_lost_everywhere": []
+    },
+    {
+      "species": "SPECIES_MANTINE",
+      "baby": "SPECIES_MANTYKE",
+      "reason": "adult can no longer hatch once incense is not required (spec #9); its list is dead data",
+      "moves_lost_everywhere": []
+    },
+    {
+      "species": "SPECIES_MARILL",
+      "baby": "SPECIES_AZURILL",
+      "reason": "adult can no longer hatch once incense is not required (spec #9); its list is dead data",
+      "moves_lost_everywhere": [
+        "MOVE_LIGHT_SCREEN",
+        "MOVE_PRESENT",
+        "MOVE_AMNESIA",
+        "MOVE_FUTURE_SIGHT",
+        "MOVE_BELLY_DRUM",
+        "MOVE_PERISH_SONG",
+        "MOVE_SUPERSONIC",
+        "MOVE_AQUA_JET"
+      ]
+    },
+    {
+      "species": "SPECIES_MR_MIME",
+      "baby": "SPECIES_MIME_JR",
+      "reason": "adult can no longer hatch once incense is not required (spec #9); its list is dead data",
+      "moves_lost_everywhere": []
+    },
+    {
+      "species": "SPECIES_ROSELIA",
+      "baby": "SPECIES_BUDEW",
+      "reason": "adult can no longer hatch once incense is not required (spec #9); its list is dead data",
+      "moves_lost_everywhere": []
+    },
+    {
+      "species": "SPECIES_SNORLAX",
+      "baby": "SPECIES_MUNCHLAX",
+      "reason": "adult can no longer hatch once incense is not required (spec #9); its list is dead data",
+      "moves_lost_everywhere": [
+        "MOVE_FISSURE"
+      ]
+    },
+    {
+      "species": "SPECIES_SUDOWOODO",
+      "baby": "SPECIES_BONSLY",
+      "reason": "adult can no longer hatch once incense is not required (spec #9); its list is dead data",
+      "moves_lost_everywhere": []
+    }
+  ],
+  "unreachable_pending_design": [
+    {
+      "egg_species": "SPECIES_CLEFFA",
+      "move": "MOVE_BELLY_DRUM"
+    },
+    {
+      "egg_species": "SPECIES_GEODUDE",
+      "move": "MOVE_MEGA_PUNCH"
+    },
+    {
+      "egg_species": "SPECIES_IGGLYBUFF",
+      "move": "MOVE_PERISH_SONG"
+    },
+    {
+      "egg_species": "SPECIES_MANKEY",
+      "move": "MOVE_MEDITATE"
+    },
+    {
+      "egg_species": "SPECIES_SHELLDER",
+      "move": "MOVE_TAKE_DOWN"
+    }
+  ],
+  "unresolved_cause": "In vanilla the adult-keyed lists (Marill, Snorlax, ...) were the hatch results when no incense was held. With incense no longer required (locked), those lists are dead data. Moves present only there (see moves_lost_everywhere) are now unobtainable, and the knower chains that depended on them (Cleffa Belly Drum, Igglybuff Perish Song via Marill-line; Geodude Mega Punch, Mankey Meditate, Shellder Take Down have no remaining legal knower) are broken. Options for the owner: move the lost adult-only moves onto the Azurill/Munchlax lists, or drop them. No data changed."
+}

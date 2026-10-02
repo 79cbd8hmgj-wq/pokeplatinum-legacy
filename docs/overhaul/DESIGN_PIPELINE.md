@@ -68,7 +68,7 @@ Still needed:
 - machine-readable economy manifests.
 
 ### D3 — Poké Ball Rebalance
-Status: `LOCKED SPEC`
+Status: `IMPLEMENTED` (PR #17 merged; runtime QA pending)
 
 Existing authority:
 - Quick Ball strong turn-one identity;
@@ -88,7 +88,7 @@ Still needed:
 - capture-regression tests.
 
 ### D4 — Breeding 2.0
-Status: `LOCKED SPEC`
+Status: `IMPLEMENTED` (source/validator/harness verified; CI build; runtime QA pending, not VERIFIED)
 
 Canonical authority:
 - `docs/overhaul/breeding/BREEDING_SPEC.md`
@@ -177,8 +177,8 @@ Trainer authority:
 - `docs/overhaul/trainers/TRAINER_IMPLEMENTATION_PLAN.md`
 
 D4 authority:
-- `docs/overhaul/breeding/BREEDING_2_SPEC.md`
-- `docs/overhaul/breeding/BREEDING_2_IMPLEMENTATION_PLAN.md`
+- `docs/overhaul/breeding/BREEDING_SPEC.md`
+- `docs/overhaul/breeding/BREEDING_IMPLEMENTATION_PLAN.md`
 
 
 D6 authority:
