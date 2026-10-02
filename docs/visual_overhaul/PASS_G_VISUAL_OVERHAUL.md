@@ -1294,3 +1294,30 @@ Current G3 battle-sprite funnel:
 
 The active implementation gate remains the five-species direct-index-safe runtime
 pilot before either safe pool is expanded.
+
+
+### G4 environment reconstruction completion checkpoint
+
+G4 is now **source-pass complete / runtime QA pending**.
+
+Completed representative environment families:
+- Eterna Forest
+- Snowpoint / Routes 216–217 / Acuity
+- Distortion World
+- Spear Pillar
+- Sinnoh lake family
+- Turnback Cave
+- Team Galactic interior review
+
+Implemented work is limited to guarded texture palette changes, dedicated
+lighting, and safe resource isolation. Map collision, gameplay geometry,
+scripts, encounters, warps, and progression are unchanged.
+
+Selective NSBMD/map-geometry upgrades are deferred: the current source tree has
+a reproducible NSBTX texture pipeline but not a proven editable/round-trip model
+authoring pipeline. G4 should not cross that boundary through blind binary edits.
+
+Canonical completion record:
+`docs/visual_overhaul/G4_ENVIRONMENT_RECONSTRUCTION_COMPLETE.md`.
+
+The next visual implementation phase is **G5 — Battle Presentation**.
