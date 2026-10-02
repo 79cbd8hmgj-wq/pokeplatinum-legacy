@@ -3,7 +3,7 @@
 - Canonical manifest: `c1_move_changes_manifest.json` (82 edits, unchanged authority).
 - Guard file (before-values from pinned base, KEEP invariants): `c1_move_guards.json`.
 - Base: `main` @ `9034963728913416f2968b56f7dab8ac61b19c07` (includes PR #10, #11, #12).
-- Tooling: `tools/overhaul/moves/` — `apply_c1.py` (guarded, idempotent), `validate_c1.py`, `test_validate_c1.py` (26 mutation cases), `scope_audit_c1.py`.
+- Tooling: `tools/overhaul/moves/` — `apply_c1.py` (guarded, idempotent, including Razor Wind script/animation), `validate_c1.py`, `test_validate_c1.py` (24 rejecting mutations + 4 forward-compatibility cases), `scope_audit_c1.py`.
 
 ## Accounting
 
@@ -24,8 +24,8 @@ No C1-edited move is overridden by a locked C2 value. Whirlpool is not a Platinu
 
 ## Validation (source level)
 
-- `validate_c1.py`: OK, 0 problems; full-table semantic diff vs the pinned base shows only manifest fields changed.
-- `test_validate_c1.py`: 26/26 mutations rejected (power, accuracy, PP, chance, high-crit, multi-hit, trapping, Emerald Sand Tomb value, HM, KEEP, unrelated move, Razor Wind description/script, Magnet Volley, Resonant Slash/Star Jab registries, id renumber, MAX_MOVES, deleted custom record, manifest/guard mismatch, count).
+- `validate_c1.py`: OK, 0 problems. The permanent validator checks the 82 C1-owned records, KEEP invariants, Razor Wind resources, and created-move regressions without freezing unrelated moves against the old base; the one-time scope audit remains responsible for proving this PR did not touch unrelated move state.
+- `test_validate_c1.py`: 24/24 C1 regressions rejected plus 4/4 forward-compatible cases accepted. Coverage includes power, accuracy, PP, effect chance/type, high-crit, multi-hit, trapping, KEEP invariants, Razor Wind description/script/animation, Magnet Volley, Resonant Slash/Star Jab registries, move IDs/MAX_MOVES, custom-record loss, manifest/guard disagreement, and proof that later C2 HM or unrelated move changes do not invalidate C1.
 - `scope_audit_c1.py`: only `res/moves/*/data.json`, Razor Wind script/anim, `docs/overhaul/`, `tools/overhaul/moves/` differ from base.
 - Availability validators (PR #10/#11): `validate_availability.py --state live` 0 failures; `test_validators.py` 12/12 + 25/25.
 - Builds: Rev 0 / Rev 1 are verified by the `build` GitHub Actions workflow on the PR (no toolchain in the authoring container).
