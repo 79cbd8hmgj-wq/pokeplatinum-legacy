@@ -11,7 +11,7 @@ Last verified against repository/project history: 2026-09-13.
 - **Evolution design:** **LOCKED in Pass A** across #001–#493; complete historical master had 50 consolidated type/evolution decisions. The repo still needs the complete machine-readable evolution manifest reconstructed from that locked authority.
 - **World/#001–#493 ordinary availability:** IMPLEMENTED on `main` via PR #10; manifests/validators landed; Rev 0 + Rev 1 CI build verified; runtime availability QA pending. The 28 reserved special-acquisition families are resolved by the follow-up special-acquisition pass (see `implementation/SPECIAL_ACQUISITION.md`).
 - **Known design blockers:** 0.
-- **Next source task:** guarded C1 implementation against current `main`, then remaining C2 mechanics and focused runtime QA.
+- **Next source task:** remaining locked C2 mechanics (HM battle rework, reusable TMs, TM acquisition/economy), then focused runtime QA.
 
 ## Mainline implementation evidence
 
@@ -186,13 +186,12 @@ Do not invent one. This is not a build blocker.
 
 ## Immediate next actions
 
-1. Apply C1 from the canonical manifest with live-source guards.
-2. Build Rev 0 + Rev 1 and archive validation evidence.
-3. Audit/implement remaining C2 reusable-TM/HM/economy behavior.
-4. Run focused L4 runtime QA for C2.5/C3 high-risk mechanics.
-5. Reconstruct the complete locked Pass A evolution manifest and implement it; **no new evolution-design pass is required**.
-6. Perform the remaining Emerald-to-Platinum port audit for EXP/economy/capture/breeding.
-7. Continue implementing the remaining locked subsystems from canonical repo authority; ordinary availability is now merged.
+1. Merge the verified C1 implementation after CI remains green.
+2. Audit/implement remaining C2 reusable-TM/HM/economy behavior from locked authority.
+3. Run focused L4 runtime QA for C1/C2/C2.5/C3 high-risk mechanics.
+4. Reconstruct the complete locked Pass A evolution manifest and implement it; **no new evolution-design pass is required**.
+5. Perform the remaining Emerald-to-Platinum port audit for EXP/economy/capture/breeding.
+6. Continue implementing the remaining locked subsystems from canonical repo authority; ordinary and special nonlegendary availability are source/build complete.
 
 ## Rule for future sessions
 
