@@ -33,7 +33,7 @@
    {
     "id": 32,
     "name": "EVO_LEVEL_DAY",
-    "semantics": "level >= param AND NOT IsNight() (no held item required)"
+    "semantics": "level >= param AND IsNight() == FALSE (daytime; no held item required)"
    }
   ],
   "first_match_wins": true
