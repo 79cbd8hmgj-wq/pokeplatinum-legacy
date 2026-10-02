@@ -1,6 +1,6 @@
 # G4 Runtime QA — melonDS + NDS Disassembly Toolkit
 
-Status: runtime harness added; source/build-only G4 validation is no longer treated as sufficient.
+Status: objective G4 source/build/static validation complete. The headless live-emulator autowarp harness is retained as experimental, non-blocking QA; rendered emulator review remains the final subjective visual check.
 
 ## Why this exists
 
@@ -140,6 +140,14 @@ It verifies that:
 - `lighting_sets.order` is contiguous and index-stable
 - `AREA_LIGHT_SET_COUNT` matches the real archive member count
 - every `area_data_*.json` lighting reference is inside that range
+
+## CI policy
+
+The Rev 0 / Rev 1 debug-symbol gate and static area-light contract are blocking correctness checks.
+
+The DeSmuME autowarp job is intentionally **non-blocking**. It is useful development instrumentation, but clean-boot field automation has proved less deterministic than the game code it is intended to validate. A failure in that experimental job must not hold later visual passes while the normal builds, symbol resolution, and static contracts are green.
+
+The harness remains in-tree so it can be hardened independently and used to catch additional runtime issues when it succeeds.
 
 ## Remaining visual-only check
 
