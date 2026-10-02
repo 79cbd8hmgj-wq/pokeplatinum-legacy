@@ -1,0 +1,53 @@
+name: stage-hgss-battle-sprite-pilot
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  stage:
+    runs-on: ubuntu-latest
+    env:
+      HGSS_COMMIT: 9d8b7591f09b65804da2fb2dfd56f320633e0d36
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: visual-overhaul-g2a
+
+      - name: Fetch pinned HGSS donor assets
+        run: |
+          DONOR="$RUNNER_TEMP/pokeheartgold"
+          mkdir -p "$DONOR"
+          git -C "$DONOR" init
+          git -C "$DONOR" remote add origin https://github.com/pret/pokeheartgold.git
+          git -C "$DONOR" fetch --depth 1 origin "$HGSS_COMMIT"
+          git -C "$DONOR" checkout --detach FETCH_HEAD
+
+      - name: Stage representative safe pilot
+        run: |
+          python tools/visual_overhaul/import_hgss_battle_sprite_pilot.py \
+            --donor-root "$RUNNER_TEMP/pokeheartgold/files/poketool/pokegra/pokegra" \
+            --compatibility-manifest docs/visual_overhaul/HGSS_BATTLE_SPRITE_PALETTE_COMPATIBILITY.json
+
+      - name: Verify contract files were not modified
+        run: |
+          if git status --porcelain | grep -E '(/normal\.pal|/shiny\.pal|/sprite_data\.json|/data\.json)$'; then
+            echo "Refusing to commit: pilot modified a protected Platinum contract file."
+            exit 1
+          fi
+
+      - name: Commit pilot assets
+        run: |
+          if [ -z "$(git status --porcelain -- res/pokemon)" ]; then
+            echo "Pilot assets are already staged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add res/pokemon
+          git commit -m "visual: stage safe HGSS battle sprite pilot"
+          git fetch origin visual-overhaul-g2a
+          git rebase origin/visual-overhaul-g2a
+          git push origin HEAD:visual-overhaul-g2a
