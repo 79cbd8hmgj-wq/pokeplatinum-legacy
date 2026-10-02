@@ -30,22 +30,22 @@
 #include "sys_task.h"
 #include "sys_task_manager.h"
 
-#define DEEP_FOREST_MIST_ALPHA        8
-#define DEEP_FOREST_MIST_FADE_FRAMES  8
-#define DEEP_FOREST_FOG_SLOPE         3
-#define DEEP_FOREST_FOG_OFFSET        (0x6F6F - 1900)
-#define DEEP_FOREST_FOG_COLOR         GX_RGB(20, 24, 22)
-#define DEEP_FOREST_SCROLL_SCALE      FX32_CONST(0.75)
+#define DEEP_FOREST_MIST_ALPHA       8
+#define DEEP_FOREST_MIST_FADE_FRAMES 8
+#define DEEP_FOREST_FOG_SLOPE        3
+#define DEEP_FOREST_FOG_OFFSET       (0x6F6F - 1900)
+#define DEEP_FOREST_FOG_COLOR        GX_RGB(20, 24, 22)
+#define DEEP_FOREST_SCROLL_SCALE     FX32_CONST(0.75)
 
-#define LIGHT_SNOW_FOG_SLOPE          3
-#define LIGHT_SNOW_FOG_OFFSET         (0x6F6F + 0x200)
-#define LIGHT_SNOW_FOG_COLOR          GX_RGB(21, 26, 31)
-#define HEAVY_SNOW_FOG_SLOPE          3
-#define HEAVY_SNOW_FOG_OFFSET         (0x6F6F - 0x300)
-#define HEAVY_SNOW_FOG_COLOR          GX_RGB(19, 24, 31)
-#define BLIZZARD_FOG_SLOPE            3
-#define BLIZZARD_FOG_OFFSET           (0x6F6F - 0x500)
-#define BLIZZARD_FOG_COLOR            GX_RGB(18, 23, 31)
+#define LIGHT_SNOW_FOG_SLOPE  3
+#define LIGHT_SNOW_FOG_OFFSET (0x6F6F + 0x200)
+#define LIGHT_SNOW_FOG_COLOR  GX_RGB(21, 26, 31)
+#define HEAVY_SNOW_FOG_SLOPE  3
+#define HEAVY_SNOW_FOG_OFFSET (0x6F6F - 0x300)
+#define HEAVY_SNOW_FOG_COLOR  GX_RGB(19, 24, 31)
+#define BLIZZARD_FOG_SLOPE    3
+#define BLIZZARD_FOG_OFFSET   (0x6F6F - 0x500)
+#define BLIZZARD_FOG_COLOR    GX_RGB(18, 23, 31)
 
 typedef struct UnkStruct_ov5_021D5EF8_t {
     UnkStruct_ov5_021D6594 *unk_00;
