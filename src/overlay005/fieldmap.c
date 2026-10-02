@@ -123,7 +123,7 @@ static void ov5_021D13B4(FieldSystem *fieldSystem);
 static enum FieldExtensionOverlay FieldMap_GetExtOverlayForActiveDynMapFeatures(FieldSystem *fieldSystem);
 static BOOL FieldMap_InDistortionWorld(FieldSystem *fieldSystem);
 static BOOL FieldMap_IsDeepForest(const FieldSystem *fieldSystem);
-static void FieldMap_ApplyEnvironmentFog(FieldSystem *fieldSystem);
+static void FieldMap_ApplySpecialAreaFog(FieldSystem *fieldSystem);
 static MapObjectsToPreload *FetchMapObjectsToPreload(enum HeapID heapID, int memberID);
 static const int *MapObjectsToPreload_GetIDs(const MapObjectsToPreload *mapObjectsToPreload);
 static int MapObjectsToPreload_GetCount(const MapObjectsToPreload *mapObjectsToPreload);
@@ -224,7 +224,7 @@ static BOOL FieldMap_Init(ApplicationManager *appMan, int *state)
             ov5_021D5F24(fieldSystem->unk_04->unk_0C, weather);
         }
 
-        FieldMap_ApplyEnvironmentFog(fieldSystem);
+        FieldMap_ApplySpecialAreaFog(fieldSystem);
 
         FieldBGM_PlayEffectiveForMapHeader(fieldSystem, fieldSystem->location->mapHeaderID);
         FieldSystem_RunInitScript(fieldSystem, INIT_SCRIPT_ON_RESUME);
@@ -960,76 +960,8 @@ static BOOL FieldMap_IsDeepForest(const FieldSystem *fieldSystem)
     }
 }
 
-static void FieldMap_ApplyEnvironmentFog(FieldSystem *fieldSystem)
+static void FieldMap_ApplySpecialAreaFog(FieldSystem *fieldSystem)
 {
-    static const char sForestFogDensity[G3X_FOG_DENSITY_TABLE_SIZE] = {
-        0,
-        0,
-        0,
-        0,
-        1,
-        1,
-        2,
-        2,
-        3,
-        4,
-        5,
-        6,
-        8,
-        10,
-        12,
-        14,
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-    };
-    static const char sSnowFogDensity[G3X_FOG_DENSITY_TABLE_SIZE] = {
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        1,
-        2,
-        2,
-        3,
-        4,
-        5,
-        6,
-        8,
-        10,
-        12,
-        14,
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-    };
     static const char sCoronetFogDensity[G3X_FOG_DENSITY_TABLE_SIZE] = {
         0,
         0,
@@ -1141,20 +1073,6 @@ static void FieldMap_ApplyEnvironmentFog(FieldSystem *fieldSystem)
     u8 areaLightID = AreaDataManager_GetAreaLightArchiveID(fieldSystem->areaDataManager);
 
     switch (areaLightID) {
-    case AREA_LIGHT_SET_DEEP_FOREST:
-        color = GX_RGB(10, 14, 11);
-        alpha = 8;
-        slope = GX_FOGSLOPE_0x0400;
-        offset = 0x5000;
-        densityTable = sForestFogDensity;
-        break;
-    case AREA_LIGHT_SET_SNOW:
-        color = GX_RGB(21, 24, 28);
-        alpha = 7;
-        slope = GX_FOGSLOPE_0x0400;
-        offset = 0x5800;
-        densityTable = sSnowFogDensity;
-        break;
     case AREA_LIGHT_SET_MT_CORONET:
         color = GX_RGB(8, 10, 14);
         alpha = 10;
