@@ -934,3 +934,41 @@ Visual direction:
 
 This provides a visible party-menu modernization without changing layout or sprite geometry.
 
+
+
+### G2C Pokemon summary chrome checkpoint
+
+Implemented a resource-contract-safe summary-screen refresh:
+
+- added `tools/visual_overhaul/generate_summary_ui.py`
+- updated only shared chrome colors in `tiles_main.pal`
+- preserved page-specific accent colors and all tile/tilemap geometry
+- updated only the repeated neutral outline/white entries in `sprites.pal`
+- left `status_icons.pal`, ball palettes, ribbon palettes, sprite cells, animations, and NSCR layouts untouched
+- explicitly preserves the page-specific palette entry used as black in bank 7 and pale yellow in bank 8
+
+The first generator pass exposed why per-bank auditing matters: palette entry 6 is shared chrome in most summary banks but is page-specific in banks 7 and 8. The generator now treats those two banks as exceptions and repairs their original values deterministically.
+
+Visual direction:
+- deep navy outlines
+- cool steel-blue edge colors
+- pale blue-white panel highlights
+- existing page identity/accent colors retained
+
+
+### G2C bag chrome checkpoint
+
+Implemented a conservative bag-interface refresh:
+
+- added `tools/visual_overhaul/generate_bag_ui.py`
+- `bag_ui_main.pal` changes only the first shared chrome gradient
+- `ui_elements.pal` changes only the existing three-color blue accent ramp
+- bag tilemaps, sprite geometry, pocket-specific colors, item icons, player bag sprites, Poké Ball graphics, and animation data remain unchanged
+
+Visual direction:
+- cool white highlight
+- steel-blue midtones
+- deep blue rail/outline
+- clearer blue UI accent ramp consistent with the global window/start-menu/party-menu direction
+
+Both summary and bag generators are wired into `generate-visual-ui.yml` so these text-palette changes remain reproducible alongside the PNG-based UI generators.
