@@ -21,7 +21,6 @@
 #include "overlay005/field_effect_manager.h"
 #include "overlay005/field_effect_renderer.h"
 #include "overlay005/fog_manager.h"
-#include "overlay005/forest_ambient_effects.h"
 #include "overlay005/hblank_system.h"
 #include "overlay005/honey_tree.h"
 #include "overlay005/land_data.h"
