@@ -15,7 +15,7 @@
 | Reconciled with a later locked pass | 0 |
 | Unresolved | 0 |
 
-No C1-edited move is overridden by a locked C2 value. Whirlpool (also an HM) has no recorded C2 override, so the C1 value 35/90/15 applies. The locked C2 HM battle changes (Cut, Fly, Defog, Rock Smash, Rock Climb, …) are not yet implemented on `main`; C1 leaves them untouched and the validator enforces that.
+No C1-edited move is overridden by a locked C2 value. Whirlpool is not a Platinum HM; its C1 value 35/90/15 applies independently. The locked C2 HM battle changes (Cut, Fly, Defog, Rock Smash, Rock Climb, …) are separate later-pass authority and must be allowed by the permanent C1 validator.
 
 ## Razor Wind (only effect reassignment)
 
