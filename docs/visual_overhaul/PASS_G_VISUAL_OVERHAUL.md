@@ -938,6 +938,22 @@ All seven remain palette-only changes:
 
 The reproducible generator now owns these palettes alongside the common outdoor terrain set.
 
+### G5 Battle Frontier arena palette checkpoint
+
+Completed the first dedicated Battle Frontier arena pass while preserving each facility's
+existing 256-entry palette layout and 4bpp sprite/cell contract.
+
+Updated facilities:
+- Battle Arcade — sharper magenta/pink presentation
+- Battle Castle — cleaner emerald/green hierarchy
+- Battle Factory — colder steel/cyan hierarchy
+- Battle Hall — brighter white/cyan presentation
+- Battle Tower — stronger gold/bronze hierarchy
+
+The terrain generator now supports both 16-entry authored palettes and padded 256-entry
+facility palettes, so these changes are reproducible without altering sprite geometry,
+NCGR indices, cells, animations, or archive ordering.
+
 ### G5 impact-presentation pilot
 
 Implemented a first reusable-impact pass using Platinum's existing battle-animation shake
