@@ -1,0 +1,46 @@
+name: apply-g4-showcase-passes
+on:
+  push:
+    branches: [ visual-overhaul-g2a ]
+    paths:
+      - 'tools/visual_overhaul/apply_g4_showcase_passes.py'
+      - 'tools/visual_overhaul/recolor_g4_showcase.c'
+      - '.github/workflows/apply-g4-showcase-passes.yml'
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: visual-overhaul-g2a
+      - name: Apply structural and lighting pass
+        run: python tools/visual_overhaul/apply_g4_showcase_passes.py
+      - name: Build palette tool
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc libpng-dev
+          SRC="tools/nitrobtx/src/common.c tools/nitrobtx/src/ns/chunks/tex.c tools/nitrobtx/src/ns/container.c tools/nitrobtx/src/ns/resource_dict.c tools/nitrobtx/src/ns/resource_name.c tools/nitrobtx/src/ns/resource_tree.c tools/nitrobtx/src/palette.c tools/nitrobtx/src/texture.c"
+          gcc -std=gnu17 -O2 -Itools/nitrobtx/include $SRC tools/visual_overhaul/recolor_g4_showcase.c -lpng -lm -o /tmp/g4-recolor
+      - name: Grade Spear Pillar and lake palettes
+        run: |
+          cp res/field/maps/texture_sets/map_texture_set_059.nsbtx /tmp/spear_before.nsbtx
+          cp res/field/maps/texture_sets/map_texture_set_061.nsbtx /tmp/lakes_before.nsbtx
+          /tmp/g4-recolor spear /tmp/spear_before.nsbtx res/field/maps/texture_sets/map_texture_set_059.nsbtx
+          /tmp/g4-recolor lakes /tmp/lakes_before.nsbtx res/field/maps/texture_sets/map_texture_set_061.nsbtx
+      - name: Guard binary scope
+        run: |
+          test "$(cmp -s res/field/maps/texture_sets/map_texture_set_055.nsbtx res/field/maps/texture_sets/map_texture_set_075.nsbtx; echo $?)" -eq 0
+          test "$(git status --porcelain -- res/field/maps/texture_sets | wc -l)" -eq 3
+      - name: Commit G4 showcase passes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add include/data/map_headers.h res/field/area_data res/field/lighting res/field/maps/texture_sets docs/visual_overhaul/G4D_G4F_SHOWCASE_ENVIRONMENTS.md
+          git commit -m "visual: implement Spear Pillar lakes and Turnback passes"
+          git fetch origin visual-overhaul-g2a
+          git rebase origin/visual-overhaul-g2a
+          git push origin HEAD:visual-overhaul-g2a
