@@ -25,6 +25,8 @@ on:
       - 'src/overlay005/ov5_021D5EB8.c'
       - 'res/field/area_data/**'
       - 'res/field/lighting/**'
+      - 'res/field/maps/texture_sets/**'
+      - 'docs/visual_overhaul/G4G_GALACTIC_GRADE_REPORT.json'
   workflow_dispatch: {}
 
 concurrency:
@@ -52,6 +54,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
+      - name: Validate G6 showcase integration contracts
+        run: python tools/visual_overhaul/validate_g6_showcase_integration.py
 
       - name: Install build dependencies
         run: |
@@ -93,9 +98,6 @@ jobs:
 
       - name: Validate static area-light contract
         run: python tools/visual_overhaul/validate_area_light_contract.py
-
-      - name: Validate G6 showcase integration contracts
-        run: python tools/visual_overhaul/validate_g6_showcase_integration.py
 
       - name: Resolve every G4 runtime probe symbol
         shell: bash
