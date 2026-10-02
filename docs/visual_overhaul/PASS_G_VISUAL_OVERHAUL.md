@@ -865,6 +865,31 @@ This is the opening G5 background/staging sequence. Remaining natural and specia
 will follow under the same palette-only contract while ordinary ROM build/resource
 validation stays green.
 
+### G5 natural-terrain palette completion checkpoint
+
+The common natural battle-terrain palette pass is now synchronized with
+`tools/visual_overhaul/generate_battle_terrain.py`.
+
+Completed source-backed families now include:
+- grass
+- path
+- path with puddles
+- mud
+- rocky
+- sand
+- snow
+- ice
+- water
+- cave
+
+Day/evening/night variants retain their original sprite geometry, NCGR pixel
+indices, cells, animation data, palette counts, and archive ordering. The pass
+changes only JASC palette source data and is therefore reproducible from the
+generator.
+
+The next background work should focus on the remaining facility/special arenas
+rather than reopening the already-completed natural terrain set.
+
 ### G5 special-arena palette checkpoint
 
 Extended the battle-background palette pass into high-visibility special arenas while preserving
