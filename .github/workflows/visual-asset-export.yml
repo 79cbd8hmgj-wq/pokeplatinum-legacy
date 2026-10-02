@@ -6,7 +6,7 @@ on:
     paths:
       - '.github/workflows/visual-asset-export.yml'
       - 'res/prebuilt/data/mmodel/fldeff.narc'
-      - 'res/field/maps/texture_sets/map_texture_set_053.nsbtx'
+      - 'res/field/maps/texture_sets/map_texture_set_074.nsbtx'
       - 'res/field/props/models/prop_model_147.nsbmd'
       - 'res/field/props/models/mansion_door.nsbmd'
       - 'res/graphics/windows/**'
@@ -78,24 +78,10 @@ jobs:
           rm -rf docs/visual_overhaul/review/g4a_eterna_dump
           mkdir -p docs/visual_overhaul/review/g4a_eterna_dump/map
           mkdir -p docs/visual_overhaul/review/g4a_eterna_dump/props
-          ./g4-tools-build/nitrobtx dump res/field/maps/texture_sets/map_texture_set_053.nsbtx docs/visual_overhaul/review/g4a_eterna_dump/map
+          ./g4-tools-build/nitrobtx dump res/field/maps/texture_sets/map_texture_set_074.nsbtx docs/visual_overhaul/review/g4a_eterna_dump/map
           ./g4-tools-build/nitrobtx dump res/field/props/texture_sets/prop_texture_set_050.nsbtx docs/visual_overhaul/review/g4a_eterna_dump/props
           python tools/visual_overhaul/make_g4a_eterna_texture_sheet.py
 
-      - name: Persist G4A Eterna review sheets
-        if: github.event_name == 'pull_request'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/visual_overhaul/review/g4a_eterna_map_textures.png docs/visual_overhaul/review/g4a_eterna_prop_textures.png
-          if git diff --cached --quiet; then
-            echo "Eterna review sheets unchanged."
-          else
-            git commit -m "docs: add G4A Eterna texture review sheets"
-            git fetch origin ${{ github.head_ref }}
-            git rebase origin/${{ github.head_ref }}
-            git push origin HEAD:${{ github.head_ref }}
-          fi
 
       - name: Build field-effect reference report
         run: |
@@ -108,7 +94,7 @@ jobs:
             fldeff_refs.txt
             visual-export/
             res/prebuilt/data/mmodel/fldeff.narc
-            res/field/maps/texture_sets/map_texture_set_053.nsbtx
+            res/field/maps/texture_sets/map_texture_set_074.nsbtx
             res/field/props/models/prop_model_147.nsbmd
             res/field/props/models/mansion_door.nsbmd
             res/graphics/windows
