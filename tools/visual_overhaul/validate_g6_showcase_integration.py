@@ -35,6 +35,53 @@ def validate_color(color: dict, label: str) -> None:
             raise SystemExit(f"{label}: invalid {channel}={value!r}")
 
 
+def validate_lighting(path: str, label: str, min_keyframes: int = 8) -> list[dict]:
+    lighting = json.loads((ROOT / path).read_text())
+    if len(lighting) < min_keyframes:
+        raise SystemExit(
+            f"{label}: expected at least {min_keyframes} keyframes, got {len(lighting)}"
+        )
+
+    end_times = [entry.get("endTime") for entry in lighting]
+    if any(not isinstance(value, int) for value in end_times):
+        raise SystemExit(f"{label}: every endTime must be an integer")
+    if end_times != sorted(end_times):
+        raise SystemExit(f"{label}: endTime values are not sorted")
+    if len(end_times) != len(set(end_times)):
+        raise SystemExit(f"{label}: duplicate endTime values")
+
+    for i, entry in enumerate(lighting):
+        lights = entry.get("lights")
+        if not isinstance(lights, list) or len(lights) != 4:
+            raise SystemExit(f"{label} keyframe {i}: expected exactly four lights")
+
+        for j, light in enumerate(lights):
+            if not isinstance(light.get("enabled"), bool):
+                raise SystemExit(
+                    f"{label} keyframe {i} light {j}: enabled must be boolean"
+                )
+            validate_color(light.get("color", {}), f"{label} keyframe {i} light {j}")
+
+            direction = light.get("direction", {})
+            for axis in ("x", "y", "z"):
+                value = direction.get(axis)
+                if not isinstance(value, (int, float)) or not math.isfinite(value):
+                    raise SystemExit(
+                        f"{label} keyframe {i} light {j}: invalid direction {axis}={value!r}"
+                    )
+
+        for field in ("diffuseColor", "ambientColor", "specularColor", "emissionColor"):
+            validate_color(entry.get(field, {}), f"{label} keyframe {i} {field}")
+
+    return lighting
+
+
+def require_nonempty_file(path: str, label: str) -> None:
+    target = ROOT / path
+    if not target.is_file() or target.stat().st_size == 0:
+        raise SystemExit(f"{label}: missing or empty {path}")
+
+
 def validate_eterna() -> dict:
     header_text = read_text("include/data/map_headers.h")
     header = block_between(
@@ -67,45 +114,14 @@ def validate_eterna() -> dict:
                 f"Eterna area data: {key} expected {expected!r}, got {actual!r}"
             )
 
-    texture_path = ROOT / "res/field/maps/texture_sets/map_texture_set_074.nsbtx"
-    if not texture_path.is_file() or texture_path.stat().st_size == 0:
-        raise SystemExit("Eterna texture bank map_texture_set_074.nsbtx is missing or empty")
-
-    lighting_path = ROOT / "res/field/lighting/lighting_set_010.json"
-    lighting = json.loads(lighting_path.read_text())
-    if len(lighting) < 8:
-        raise SystemExit(f"Eterna lighting: expected a full day cycle, got {len(lighting)} keyframes")
-
-    end_times = [entry.get("endTime") for entry in lighting]
-    if any(not isinstance(value, int) for value in end_times):
-        raise SystemExit("Eterna lighting: every endTime must be an integer")
-    if end_times != sorted(end_times):
-        raise SystemExit("Eterna lighting: endTime values are not sorted")
-    if len(end_times) != len(set(end_times)):
-        raise SystemExit("Eterna lighting: duplicate endTime values")
-
-    for i, entry in enumerate(lighting):
-        lights = entry.get("lights")
-        if not isinstance(lights, list) or len(lights) != 4:
-            raise SystemExit(f"Eterna lighting keyframe {i}: expected exactly four lights")
-
-        for j, light in enumerate(lights):
-            if not isinstance(light.get("enabled"), bool):
-                raise SystemExit(
-                    f"Eterna lighting keyframe {i} light {j}: enabled must be boolean"
-                )
-            validate_color(light.get("color", {}), f"Eterna lighting keyframe {i} light {j}")
-
-            direction = light.get("direction", {})
-            for axis in ("x", "y", "z"):
-                value = direction.get(axis)
-                if not isinstance(value, (int, float)) or not math.isfinite(value):
-                    raise SystemExit(
-                        f"Eterna lighting keyframe {i} light {j}: invalid direction {axis}={value!r}"
-                    )
-
-        for field in ("diffuseColor", "ambientColor", "specularColor", "emissionColor"):
-            validate_color(entry.get(field, {}), f"Eterna lighting keyframe {i} {field}")
+    require_nonempty_file(
+        "res/field/maps/texture_sets/map_texture_set_074.nsbtx",
+        "Eterna texture bank",
+    )
+    lighting = validate_lighting(
+        "res/field/lighting/lighting_set_010.json",
+        "Eterna lighting",
+    )
 
     camera_constants = read_text("include/constants/camera_types.h")
     require(camera_constants, "CAMERA_TYPE_ETERNA_FOREST", "Camera type enum")
@@ -200,8 +216,165 @@ def validate_eterna() -> dict:
     }
 
 
+
+def validate_snow_region() -> dict:
+    header_text = read_text("include/data/map_headers.h")
+
+    snowpoint = block_between(
+        header_text,
+        "[MAP_HEADER_SNOWPOINT_CITY] = {",
+        "[MAP_HEADER_SNOWPOINT_CITY_MART] = {",
+        "Snowpoint City map header",
+    )
+    for needle in (
+        ".areaDataArchiveID = area_data_014",
+        ".weather = OVERWORLD_WEATHER_SNOWPOINT_CITY",
+        ".battleBG = BACKGROUND_SNOW",
+    ):
+        require(snowpoint, needle, "Snowpoint City map header")
+
+    route217 = block_between(
+        header_text,
+        "[MAP_HEADER_ROUTE_217] = {",
+        "[MAP_HEADER_ROUTE_217_WEST_HOUSE] = {",
+        "Route 217 map header",
+    )
+    for needle in (
+        ".areaDataArchiveID = area_data_014",
+        ".weather = OVERWORLD_WEATHER_BLIZZARD",
+        ".battleBG = BACKGROUND_SNOW",
+    ):
+        require(route217, needle, "Route 217 map header")
+
+    area = json.loads((ROOT / "res/field/area_data/area_data_014.json").read_text())
+    expected_area = {
+        "mapPropSet": "prop_model_set_010",
+        "mapTextureSet": "map_texture_set_014",
+        "lightingSet": "lighting_set_011",
+    }
+    for key, expected in expected_area.items():
+        actual = area.get(key)
+        if actual != expected:
+            raise SystemExit(
+                f"Snow-region area data: {key} expected {expected!r}, got {actual!r}"
+            )
+
+    require_nonempty_file(
+        "res/field/maps/texture_sets/map_texture_set_014.nsbtx",
+        "Snow-region texture bank",
+    )
+    lighting = validate_lighting(
+        "res/field/lighting/lighting_set_011.json",
+        "Snow-region lighting",
+    )
+
+    weather_constants = read_text("include/constants/overworld_weather.h")
+    for needle in (
+        "#define OVERWORLD_WEATHER_SNOWING      5",
+        "#define OVERWORLD_WEATHER_HEAVY_SNOW   6",
+        "#define OVERWORLD_WEATHER_BLIZZARD     7",
+        "#define OVERWORLD_WEATHER_SNOWPOINT_CITY   (OVERWORLD_WEATHER_YEARLY_START + 4)",
+    ):
+        require(weather_constants, needle, "Snow weather constants")
+
+    weather_source = read_text("src/overlay005/ov5_021D5EB8.c")
+    for needle in (
+        "#define LIGHT_SNOW_FOG_COLOR  GX_RGB(21, 26, 31)",
+        "#define HEAVY_SNOW_FOG_COLOR  GX_RGB(19, 24, 31)",
+        "#define BLIZZARD_FOG_COLOR    GX_RGB(18, 23, 31)",
+    ):
+        require(weather_source, needle, "Snow atmosphere treatment")
+
+    return {
+        "area_data": "area_data_014",
+        "texture_set": "map_texture_set_014",
+        "lighting_set": "lighting_set_011",
+        "snowpoint_weather": "OVERWORLD_WEATHER_SNOWPOINT_CITY",
+        "route_217_weather": "OVERWORLD_WEATHER_BLIZZARD",
+        "lighting_keyframes": len(lighting),
+    }
+
+
+def validate_distortion_world() -> dict:
+    header_text = read_text("include/data/map_headers.h")
+    distortion = block_between(
+        header_text,
+        "[MAP_HEADER_DISTORTION_WORLD_1F] = {",
+        "[MAP_HEADER_DISTORTION_WORLD_B1F] = {",
+        "Distortion World map header",
+    )
+    for needle in (
+        ".areaDataArchiveID = area_data_074",
+        ".battleBG = BACKGROUND_DISTORTION_WORLD",
+        ".weather = OVERWORLD_WEATHER_CLEAR",
+    ):
+        require(distortion, needle, "Distortion World map header")
+
+    area = json.loads((ROOT / "res/field/area_data/area_data_074.json").read_text())
+    expected_area = {
+        "mapPropSet": "prop_model_set_070",
+        "mapTextureSet": "map_texture_set_073",
+        "lightingSet": "lighting_set_009",
+    }
+    for key, expected in expected_area.items():
+        actual = area.get(key)
+        if actual != expected:
+            raise SystemExit(
+                f"Distortion World area data: {key} expected {expected!r}, got {actual!r}"
+            )
+
+    require_nonempty_file(
+        "res/field/maps/texture_sets/map_texture_set_073.nsbtx",
+        "Distortion World texture bank",
+    )
+    lighting = validate_lighting(
+        "res/field/lighting/lighting_set_009.json",
+        "Distortion World lighting",
+    )
+
+    reference = {key: value for key, value in lighting[0].items() if key != "endTime"}
+    for i, entry in enumerate(lighting[1:], start=1):
+        current = {key: value for key, value in entry.items() if key != "endTime"}
+        if current != reference:
+            raise SystemExit(
+                f"Distortion World lighting keyframe {i}: expected time-invariant lighting"
+            )
+
+    area_light_constants = read_text("include/constants/field/area_light.h")
+    require(
+        area_light_constants,
+        "AREA_LIGHT_SET_DISTORTION_WORLD",
+        "Distortion World area-light enum",
+    )
+
+    fieldmap = read_text("src/overlay005/fieldmap.c")
+    for needle in (
+        "if (FieldMap_InDistortionWorld(fieldSystem) == TRUE) {",
+        "v1 = sDistWorldFieldEffectRenderers;",
+        "case AREA_LIGHT_SET_DISTORTION_WORLD:",
+        "color = GX_RGB(14, 8, 22);",
+        "offset = 0x5000;",
+        "densityTable = sDistortionFogDensity;",
+    ):
+        require(fieldmap, needle, "Distortion World integration")
+
+    return {
+        "area_data": "area_data_074",
+        "texture_set": "map_texture_set_073",
+        "lighting_set": "lighting_set_009",
+        "battle_background": "BACKGROUND_DISTORTION_WORLD",
+        "special_fog": True,
+        "distortion_renderer_path": True,
+        "lighting_keyframes": len(lighting),
+    }
+
+
 def main() -> None:
-    report = {"eterna": validate_eterna()}
+    report = {
+        "eterna": validate_eterna(),
+        "snow_region": validate_snow_region(),
+        "distortion_world": validate_distortion_world(),
+    }
     print(json.dumps(report, indent=2, sort_keys=True))
 
 
