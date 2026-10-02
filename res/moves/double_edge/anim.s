@@ -23,6 +23,7 @@ L_0:
     Func_MoveBattler BATTLE_ANIM_BATTLER_SPRITE_DEFENDER, -18, 4, 2
     Func_MoveBattler BATTLE_ANIM_BATTLER_SPRITE_ATTACKER, -14, 8, 2
     Func_ShakeBg 0, 5, 1, 3, 0
+    Func_ShakeBg 2, 4, 0, 3, 0, SHAKE_BG_TARGET_BASE
     Delay 2
     Func_MoveBattler BATTLE_ANIM_BATTLER_SPRITE_DEFENDER, 18, -4, 4
     WaitForAnimTasks
