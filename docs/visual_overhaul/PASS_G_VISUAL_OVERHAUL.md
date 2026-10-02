@@ -508,6 +508,68 @@ Working rule:
 - inspect/convert Nitro assets when a binary-capable repository checkout or artifact handoff is available.
 
 
+
+### G2C / G5 editable UI surface audit
+
+Platinum exposes a large amount of interface art directly as PNG + animation/cell JSON rather than opaque archives.
+
+Confirmed directly editable groups include:
+
+#### Global windows
+`res/graphics/windows/`
+- message_box_00 through message_box_19
+- standard field/system window graphics
+- scroll cursor
+- wait dial
+- Pokemon preview graphics
+
+#### Party menu
+`res/graphics/party_menu/`
+- menu tiles
+- panels
+- cursor
+- buttons
+- icons
+- member-ball graphics
+- touch controls
+- subscreen resources
+
+#### Pokemon summary
+`res/graphics/pokemon_summary_screen/`
+- primary/subscreen tiles
+- tabs
+- cursors
+- status icons
+- markings
+- battle/contest page layouts
+- ribbons and condition graphics
+
+#### Start/options
+`res/graphics/start_menu/`
+`res/graphics/options_menu/`
+- menu icons
+- cursors
+- tiles
+- palettes
+
+#### Battle UI
+`res/graphics/battle/healthbox/`
+`res/graphics/battle/interface/`
+- player/enemy healthboxes
+- doubles healthbox
+- healthbox parts
+- arrows
+- battle cursor
+- stock graphics
+- level-up UI
+
+Implementation implication:
+- Platinum remains the editable UI base.
+- HGSS/PMD should be treated as donor/reference sources for visual language, motion, and selected convertible assets.
+- Whole-archive swaps are unnecessary and higher risk.
+- G2C/G5 can redesign the UI by replacing source PNG/JSON resources while preserving Platinum's existing layout and runtime code where practical.
+
+
 #### G2C — Global UI presentation
 Improve:
 - frames
