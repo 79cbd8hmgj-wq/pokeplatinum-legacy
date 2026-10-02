@@ -99,41 +99,9 @@ enum FieldExtensionOverlay {
 };
 
 #ifdef GDB_DEBUGGING
-enum G4RuntimeQATarget {
-    G4_RUNTIME_QA_NONE = 0,
-    G4_RUNTIME_QA_ETERNA_FOREST,
-    G4_RUNTIME_QA_SNOWPOINT,
-    G4_RUNTIME_QA_SPEAR_PILLAR,
-    G4_RUNTIME_QA_LAKE_VERITY,
-    G4_RUNTIME_QA_TURNBACK_CAVE,
-    G4_RUNTIME_QA_GALACTIC_HQ,
-    G4_RUNTIME_QA_MT_CORONET,
-};
-
-enum G4RuntimeQAStatus {
-    G4_RUNTIME_QA_IDLE = 0,
-    G4_RUNTIME_QA_WARPING,
-    G4_RUNTIME_QA_LOADED,
-    G4_RUNTIME_QA_REJECTED,
-};
-
-typedef struct G4RuntimeQAControl {
-    volatile u32 request;
-    volatile u32 status;
-    volatile u32 loadedMapHeader;
-} G4RuntimeQAControl;
-
 typedef struct G4RuntimeQAWarpData {
     enum MapHeaderID mapHeaderID;
 } G4RuntimeQAWarpData;
-
-// Debug-build-only control surface used by the NDS Toolkit runtime harness.
-// Release builds do not contain this object or any of the associated warp code.
-G4RuntimeQAControl gG4RuntimeQAControl = {
-    G4_RUNTIME_QA_NONE,
-    G4_RUNTIME_QA_IDLE,
-    0,
-};
 #endif
 
 static void BgConfig_Init(BgConfig *bgl);
@@ -942,7 +910,15 @@ static void ov5_021D1968(FieldSystem *fieldSystem)
         FieldCamera_Create(PlayerAvatar_GetPos(fieldSystem->playerAvatar), fieldSystem, v0, 1);
     }
 
-    fieldSystem->areaLightMan = AreaLightManager_New(fieldSystem->areaModelAttrs, AreaDataManager_GetAreaLightArchiveID(fieldSystem->areaDataManager));
+    u8 areaLightArchiveID = AreaDataManager_GetAreaLightArchiveID(fieldSystem->areaDataManager);
+    fieldSystem->areaLightMan = AreaLightManager_New(fieldSystem->areaModelAttrs, areaLightArchiveID);
+
+#ifdef GDB_DEBUGGING
+    if (gG4RuntimeQAControl.status == G4_RUNTIME_QA_WARPING) {
+        gG4RuntimeQAControl.lightArchiveID = areaLightArchiveID;
+        gG4RuntimeQAControl.eventFlags |= G4_RUNTIME_QA_EVENT_AREA_LIGHT;
+    }
+#endif
 
     if (FieldMap_InDistortionWorld(fieldSystem) == TRUE) {
         fieldSystem->unk_04->unk_0C = NULL;
@@ -1104,6 +1080,8 @@ static void FieldMap_TryStartG4RuntimeQA(FieldSystem *fieldSystem)
 
     gG4RuntimeQAControl.status = G4_RUNTIME_QA_WARPING;
     gG4RuntimeQAControl.loadedMapHeader = 0;
+    gG4RuntimeQAControl.eventFlags = 0;
+    gG4RuntimeQAControl.lightArchiveID = 0xffffffff;
     FieldSystem_CreateTask(fieldSystem, FieldTask_G4RuntimeQAWarp, warp);
 }
 #endif
@@ -1232,6 +1210,12 @@ static void FieldMap_ApplySpecialAreaFog(FieldSystem *fieldSystem)
     const char *densityTable;
     u8 areaLightID = AreaDataManager_GetAreaLightArchiveID(fieldSystem->areaDataManager);
 
+#ifdef GDB_DEBUGGING
+    if (gG4RuntimeQAControl.status == G4_RUNTIME_QA_WARPING) {
+        gG4RuntimeQAControl.eventFlags &= ~(G4_RUNTIME_QA_EVENT_SPECIAL_FOG | G4_RUNTIME_QA_EVENT_FOG_APPLY);
+    }
+#endif
+
     switch (areaLightID) {
     case AREA_LIGHT_SET_MT_CORONET:
         color = GX_RGB(8, 10, 14);
@@ -1259,6 +1243,12 @@ static void FieldMap_ApplySpecialAreaFog(FieldSystem *fieldSystem)
         return;
     }
 
+#ifdef GDB_DEBUGGING
+    if (gG4RuntimeQAControl.status == G4_RUNTIME_QA_WARPING) {
+        gG4RuntimeQAControl.eventFlags |= G4_RUNTIME_QA_EVENT_SPECIAL_FOG;
+    }
+#endif
+
     FogManager_ApplyParameters(
         fieldSystem->fogMan,
         FOG_PARAMETER_ENABLED | FOG_PARAMETER_MODE | FOG_PARAMETER_SLOPE | FOG_PARAMETER_OFFSET,
@@ -1272,4 +1262,10 @@ static void FieldMap_ApplySpecialAreaFog(FieldSystem *fieldSystem)
         color,
         alpha);
     FogManager_ApplyDensityTable(fieldSystem->fogMan, densityTable);
+
+#ifdef GDB_DEBUGGING
+    if (gG4RuntimeQAControl.status == G4_RUNTIME_QA_WARPING) {
+        gG4RuntimeQAControl.eventFlags |= G4_RUNTIME_QA_EVENT_FOG_APPLY;
+    }
+#endif
 }
