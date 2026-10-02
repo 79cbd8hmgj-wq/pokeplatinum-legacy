@@ -1,16 +1,16 @@
 name: format-visual-overhaul
 
 on:
-  push:
+  pull_request:
     branches:
-      - visual-overhaul-g2a
+      - main
 
 permissions:
   contents: write
 
 jobs:
   format:
-    if: github.event.head_commit.message != 'style: clang-format visual overhaul'
+    if: github.head_ref == 'visual-overhaul-g2a' && github.event.pull_request.head.sha == github.sha
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -22,7 +22,13 @@ jobs:
 
       - name: Format visual overhaul sources
         run: |
-          clang-format -i             include/constants/field/area_light.h             include/overlay005/field_effect_renderer.h             src/overlay005/area_data.c             src/overlay005/area_light.c             src/overlay005/field_effect_renderer.c             src/overlay005/fieldmap.c
+          clang-format -i \
+            include/constants/field/area_light.h \
+            include/overlay005/field_effect_renderer.h \
+            src/overlay005/area_data.c \
+            src/overlay005/area_light.c \
+            src/overlay005/field_effect_renderer.c \
+            src/overlay005/fieldmap.c
 
       - name: Commit formatting
         run: |
@@ -31,6 +37,12 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add             include/constants/field/area_light.h             include/overlay005/field_effect_renderer.h             src/overlay005/area_data.c             src/overlay005/area_light.c             src/overlay005/field_effect_renderer.c             src/overlay005/fieldmap.c
+          git add \
+            include/constants/field/area_light.h \
+            include/overlay005/field_effect_renderer.h \
+            src/overlay005/area_data.c \
+            src/overlay005/area_light.c \
+            src/overlay005/field_effect_renderer.c \
+            src/overlay005/fieldmap.c
           git commit -m "style: clang-format visual overhaul"
           git push origin HEAD:visual-overhaul-g2a
