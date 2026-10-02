@@ -2,7 +2,7 @@
 
 - Base: `main` @ `e13b728fbe4f05ad137f143be11dd7eb71bf5d46` (includes PR #10, #11, #12, #13).
 - Authority: `tm_hm/TM_HM_SPEC.md` (LOCKED). Machine manifest: `implementation/c2_mechanics_manifest.json`.
-- Tooling: `tools/overhaul/c2/` — `build_manifest.py` (before-values read from the pinned base commit), `validate_c2.py`, `test_validate_c2.py` (72 rejecting mutations + 3 forward-compatibility cases), `scope_audit_c2.py`.
+- Tooling: `tools/overhaul/c2/` — `build_manifest.py` (before-values read from the pinned base commit), `validate_c2.py`, `test_validate_c2.py` (75 rejecting mutations + 3 forward-compatibility cases), `scope_audit_c2.py`.
 - Method: source-level edits only; no binary patches or ROM offsets; no redesign.
 
 ## Source map and changes
@@ -21,7 +21,7 @@
 | Frontier prices | `src/overlay007/shop_menu.c` (`itemToBpPrice`), `src/scrcmd.c` (live shop list), `src/unk_020494DC.c` (unused exchange-corner table, kept in sync) | 16 TM prices set; TM89 added (see discrepancy 2); non-TM items untouched |
 | Department Store | item data prices | KEEP — all TM/HM item prices pinned |
 | Vendor duplicate guard | `shop_menu.c` (`Shop_IsTM`, `Shop_AlreadyOwnsTM`, new text `pl_msg_00000543_00039`); `scripts_veilstone_city_prize_exchange.s` (`CheckItem`, new text `…_AlreadyHaveTM`) | Checked before money/Coins/BP are touched; TM quantity capped at 1 in marts. Applies to Normal + Frontier marts (so the Veilstone Department Store too) and the Game Corner prize counter |
-| TM acquisition | `scripts_route_204_north.s`, `scripts_victory_road_1f.s` | All baseline TM/HM acquisition is pinned except the locked TM78 override: removed the early Route 204 gift and moved TM78 Power Gem to a deterministic Victory Road 1F Collector gift. The existing Route 204 receipt flag is reused for save compatibility. |
+| TM acquisition | `scripts_route_204_north.s`, `scripts_victory_road_1f.s` | All baseline TM/HM acquisition is pinned except the locked TM78 override: removed the early Route 204 gift and moved TM78 Power Gem to a deterministic Victory Road 1F Collector gift. The existing Route 204 receipt flag is reused for save compatibility. The Collector cannot be hidden until TM78 is received, the gift check runs before postgame dialogue, and a full Bag leaves the receipt flag unset so the gift is retry-safe. |
 
 ## Discrepancies between brief/spec and live source (documented, not redesigned)
 
@@ -41,7 +41,7 @@ Species stats/types/abilities, learnsets, TM compatibility masks, encounters, av
 
 ## Validation (source level)
 
-- `validate_c2.py`: OK, 0 problems. `test_validate_c2.py`: 72/72 mutations rejected, 3/3 forward-compatible changes accepted.
+- `validate_c2.py`: OK, 0 problems. `test_validate_c2.py`: 75/75 mutations rejected, 3/3 forward-compatible changes accepted.
 - `scope_audit_c2.py`: 0 files outside C2 scope.
 - Regression: C1 validator OK (82 edits) + 24/24 mutations & 4/4 forward-compat; availability validator `--state live` 0 failures, 12/12 + 25/25 mutations; C3 compat: TM21 49 / TM78 27 recipient sets match `tm_compat_manifest.json` exactly and all 12 explicit additions present; created moves IDs 468–489 / `MAX_MOVES` 490 verified by the C2 validator.
 - Visual: `validate_area_light_contract.py` and `validate_g6_showcase_integration.py` pass. The G4 palette validators need workflow-generated texture dumps and Pillow and fail identically without them (no visual file is touched by this branch).
