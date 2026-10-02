@@ -1126,3 +1126,36 @@ Tooling:
 - can emit a JSON manifest of identical/different/missing resources through `--write-manifest`
 
 This gives the implementation pass a deterministic way to identify the HGSS icons that actually differ instead of replacing hundreds of pixel-identical assets blindly.
+
+
+### G3 HGSS Pokemon-icon pilot checkpoint
+
+The first G3 Pokemon-graphics batch now uses HeartGold/SoulSilver as the direct donor source for party/box icons.
+
+Compatibility audit:
+
+- Platinum `res/pokemon/.shared/pl_poke_icon.pal` is byte-for-byte color-equivalent to HGSS `poke_icon_00000000.pal` after newline normalization.
+- Both games expose normal Pokemon icons as indexed 4bpp PNGs at 32x64 with 16-color per-image palettes.
+- HGSS normal-species icon numbering follows `National Dex + 7`, matching the archive contract used by `GetMonIconNaixEx`.
+- Because Platinum already builds its icon archive from named per-species PNG sources, HGSS donor art can replace those source PNGs without changing the Platinum icon archive builder, palette table, cells, animations, or runtime loader.
+
+Pilot batch replaced with HGSS art:
+
+- Pikachu
+- Eevee
+- Turtwig
+- Chimchar
+- Piplup
+- Staraptor
+- Luxray
+- Garchomp
+- Riolu
+- Lucario
+
+The replacements preserve Platinum's existing per-species paths and build wiring. This batch is intentionally limited to normal species first; eggs and alternate-form icon indices remain untouched until their donor-index mapping is audited separately.
+
+Donor source:
+- repository: `pret/pokeheartgold`
+- audited donor commit: `9d8b7591f09b65804da2fb2dfd56f320633e0d36`
+
+If the pilot build/runtime presentation is clean, the same mapping can be expanded across the normal National Dex without engine changes.
