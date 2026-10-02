@@ -4,7 +4,6 @@ on:
     branches: [ visual-overhaul-g2a ]
     paths:
       - '.github/workflows/dump-g4c-distortion-textures.yml'
-      - 'res/field/maps/texture_sets/map_texture_set_073.nsbtx'
   workflow_dispatch: {}
 permissions:
   contents: write
@@ -23,23 +22,25 @@ jobs:
           mkdir -p g4-tools-build
           gcc -std=gnu17 -O2 -Itools/nitrobtx/include             tools/nitrobtx/src/common.c             tools/nitrobtx/src/help.c             tools/nitrobtx/src/main.c             tools/nitrobtx/src/ns/chunks/tex.c             tools/nitrobtx/src/ns/container.c             tools/nitrobtx/src/ns/resource_dict.c             tools/nitrobtx/src/ns/resource_name.c             tools/nitrobtx/src/ns/resource_tree.c             tools/nitrobtx/src/options.c             tools/nitrobtx/src/palette.c             tools/nitrobtx/src/texture.c             -lpng -lm -o g4-tools-build/nitrobtx
           python -m pip install Pillow
-      - name: Dump Distortion World texture bank
+      - name: Dump Distortion World environment banks
         run: |
-          rm -rf /tmp/g4c_distortion
-          mkdir -p /tmp/g4c_distortion
-          ./g4-tools-build/nitrobtx dump res/field/maps/texture_sets/map_texture_set_073.nsbtx /tmp/g4c_distortion
-          python tools/visual_overhaul/make_texture_sheet.py /tmp/g4c_distortion docs/visual_overhaul/review/g4c_distortion_textures.png
+          rm -rf /tmp/g4c_map /tmp/g4c_props
+          mkdir -p /tmp/g4c_map /tmp/g4c_props
+          ./g4-tools-build/nitrobtx dump res/field/maps/texture_sets/map_texture_set_073.nsbtx /tmp/g4c_map
+          ./g4-tools-build/nitrobtx dump res/field/props/texture_sets/prop_texture_set_070.nsbtx /tmp/g4c_props
+          python tools/visual_overhaul/make_texture_sheet.py /tmp/g4c_map docs/visual_overhaul/review/g4c_distortion_map_textures.png
+          python tools/visual_overhaul/make_texture_sheet.py /tmp/g4c_props docs/visual_overhaul/review/g4c_distortion_prop_textures.png
           {
-            for p in /tmp/g4c_distortion/*.pal; do
-              echo "## $(basename "$p")"
-              cat "$p"
-            done
+            echo '# Map palettes'
+            for p in /tmp/g4c_map/*.pal; do echo "## $(basename "$p")"; cat "$p"; done
+            echo '# Prop palettes'
+            for p in /tmp/g4c_props/*.pal; do echo "## $(basename "$p")"; cat "$p"; done
           } > docs/visual_overhaul/review/g4c_distortion_palettes.txt
-      - name: Commit Distortion review
+      - name: Commit review
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/visual_overhaul/review/g4c_distortion_textures.png docs/visual_overhaul/review/g4c_distortion_palettes.txt
+          git add docs/visual_overhaul/review/g4c_distortion_map_textures.png docs/visual_overhaul/review/g4c_distortion_prop_textures.png docs/visual_overhaul/review/g4c_distortion_palettes.txt
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "docs: add G4C Distortion World texture review"
           git fetch origin visual-overhaul-g2a
