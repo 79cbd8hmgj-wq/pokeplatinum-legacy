@@ -865,6 +865,28 @@ This is the opening G5 background/staging sequence. Remaining natural and specia
 will follow under the same palette-only contract while ordinary ROM build/resource
 validation stays green.
 
+### G5 special-arena palette checkpoint
+
+Extended the battle-background palette pass into high-visibility special arenas while preserving
+the same resource contract.
+
+Updated families:
+- generic indoor arena — cleaner steel/blue neutral hierarchy
+- Giratina arena — deeper violet/magenta shadow identity distinct from the broader Distortion World palette
+- Elite Four Aaron — brighter mint/teal hierarchy
+- Elite Four Bertha — warmer earth/bronze hierarchy
+- Elite Four Flint — stronger ember/crimson hierarchy
+- Elite Four Lucian — clearer indigo/violet hierarchy
+- Champion Cynthia — restrained pearl/lavender/charcoal presentation
+
+All seven remain palette-only changes:
+- terrain PNG geometry unchanged
+- NCGR pixel indices unchanged
+- cell/animation data unchanged
+- archive ordering unchanged
+
+The reproducible generator now owns these palettes alongside the common outdoor terrain set.
+
 ### G5 impact-presentation pilot
 
 Implemented a first reusable-impact pass using Platinum's existing battle-animation shake
