@@ -108,6 +108,26 @@ No-change controls:
 
 No particles, sounds, backgrounds, timing, battler visibility logic, or donor assets were replaced.
 
+## Heavy physical-collision staging batch
+
+The same base-arena impact layer was extended to a narrow group of high-power physical attacks whose
+native scripts already communicate a large collision but leave most of the motion on the defender or
+effect background:
+
+- Flare Blitz — short base-arena jolt at the defender collision after the attacker rush.
+- Wood Hammer — adds a separate base-arena impact beneath its existing effect-background shake.
+- Head Smash — receives the strongest base-arena jolt in this batch while preserving its switched background.
+- Superpower — adds a heavy arena reaction beneath the existing defender shake and attacker movement.
+- Hammer Arm — adds a restrained base-arena response beneath its existing effect-background movement and defender squash.
+
+No-change controls:
+- Waterfall — its moving dedicated background, attacker motion, defender fade, and shake already create sufficient scene motion.
+- Aqua Tail — retained as a cleaner mid-power physical Water strike rather than escalating every contact move.
+- Outrage — already uses a moving switched background, repeated full-scene red pulses, and sustained defender shake.
+- Dragon Claw, Iron Head, and Poison Jab — deliberately remain localized mid-power impacts rather than inheriting heavyweight arena motion.
+
+This keeps base-arena movement proportional to move weight instead of turning it into a universal damage effect.
+
 ## Donor-control comparison: common special attacks
 
 Emerald was used only as a presentation reference for several common special attacks.
