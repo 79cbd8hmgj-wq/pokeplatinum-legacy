@@ -35,12 +35,15 @@ enum G4RuntimeQAEvent {
     G4_RUNTIME_QA_EVENT_FOG_APPLY = 1 << 4,
 };
 
+#define G4_RUNTIME_QA_MAGIC 0x47345141
+
 typedef struct G4RuntimeQAControl {
     volatile u32 request;
     volatile u32 status;
     volatile u32 loadedMapHeader;
     volatile u32 eventFlags;
     volatile u32 lightArchiveID;
+    volatile u32 magic;
 } G4RuntimeQAControl;
 
 extern G4RuntimeQAControl gG4RuntimeQAControl;
