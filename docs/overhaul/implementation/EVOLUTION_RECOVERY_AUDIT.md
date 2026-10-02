@@ -36,7 +36,7 @@ All 26 rows (+ Happiny) of the `EVOLUTION_SPEC.md` table plus Tyrogue / Feebas /
   Nosepass→Probopass (existing Mt. Coronet magnetic-field method), Roselia→Roserade (Shiny Stone), Feebas→Milotic (Beauty 170), Tyrogue three-way split,
   Wurmple split, Nincada/Shedinja, Magneton→Magnezone, Eevee branches and Slowpoke→Slowbro (Lv37).
 - **Gligar / Sneasel** "Lv38 at night": vanilla Platinum has no level-plus-night method that does not require a held item, so one method (`EVO_LEVEL_NIGHT`) was appended.
-- **Happiny → Chansey**: Lv20 during the daytime with no held item (`EVO_LEVEL_DAY`, appended). Recovered locked Pass A project history, supplied after the first pass of this audit reported the edge as unresolved.
+- **Happiny → Chansey**: Lv20 during the daytime with no held item (`EVO_LEVEL_DAY`, appended). No primary surviving Pass A artifact proving the exact replacement was recovered. The user explicitly approved the final ruling on 2026-10-02.
 
 ### Authority inferences that are *not* new design
 
@@ -56,7 +56,7 @@ All 26 rows (+ Happiny) of the `EVOLUTION_SPEC.md` table plus Tyrogue / Feebas /
 
 ## UNRESOLVED_AUTHORITY — none
 
-The earlier single exception (Happiny → Chansey, vanilla held Oval Stone) was resolved by the recovered Pass A ruling above; no no-held-item exception remains in the validator.
+The earlier single exception (Happiny → Chansey, vanilla held Oval Stone) was resolved by explicit user approval of Lv20 daytime with no Oval Stone on 2026-10-02; no no-held-item exception remains in the validator.
 
 ## Current-source inventory (all 246 edges)
 
