@@ -10,6 +10,7 @@ L_0:
     CreateEmitter 0, 1, EMITTER_CB_SET_POS_TO_DEFENDER
     Func_Shake 2, 0, 1, 6, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
     Func_ShakeBg 0, 5, 1, 5, 0
+    Func_ShakeBg 2, 3, 0, 3, 0, SHAKE_BG_TARGET_BASE
     WaitForAllEmitters
     UnloadParticleSystem 0
     End

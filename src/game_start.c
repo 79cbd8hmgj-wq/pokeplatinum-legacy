@@ -36,6 +36,9 @@ static int GameStartNewSave_Exit(ApplicationManager *appMan, int *state);
 static int GameStartLoadSave_Init(ApplicationManager *appMan, int *state);
 static int GameStartLoadSave_Main(ApplicationManager *appMan, int *state);
 static int GameStartLoadSave_Exit(ApplicationManager *appMan, int *state);
+#ifdef GDB_DEBUGGING
+static int GameStartRuntimeQANewSave_Main(ApplicationManager *appMan, int *state);
+#endif
 
 static void InitializeNewSave(enum HeapID heapID, SaveData *saveData, BOOL setTrainerID);
 static void TryLoadingSave(int unused, SaveData *saveData);
@@ -63,6 +66,15 @@ const ApplicationManagerTemplate gGameStartLoadSaveAppTemplate = {
     .exit = GameStartLoadSave_Exit,
     .overlayID = FS_OVERLAY_ID_NONE,
 };
+
+#ifdef GDB_DEBUGGING
+const ApplicationManagerTemplate gGameStartRuntimeQANewSaveAppTemplate = {
+    .init = GameStartNewSave_Init,
+    .main = GameStartRuntimeQANewSave_Main,
+    .exit = GameStartNewSave_Exit,
+    .overlayID = FS_OVERLAY_ID_NONE,
+};
+#endif
 
 static BOOL GameStartRowanIntro_Init(ApplicationManager *appMan, int *state)
 {
@@ -99,6 +111,21 @@ static int GameStartNewSave_Main(ApplicationManager *appMan, int *state)
     PlayTime_Start(SaveData_GetPlayTime(saveData));
     return TRUE;
 }
+
+#ifdef GDB_DEBUGGING
+static int GameStartRuntimeQANewSave_Main(ApplicationManager *appMan, int *state)
+{
+    SaveData *saveData = ((ApplicationArgs *)ApplicationManager_Args(appMan))->saveData;
+
+    // Debug/runtime-QA builds must be able to boot from a clean emulator
+    // profile without depending on a preexisting commercial-game save.
+    StartNewSave(HEAP_ID_GAME_START, saveData);
+    InitializeNewSave(HEAP_ID_GAME_START, saveData, TRUE);
+    PlayTime_Start(SaveData_GetPlayTime(saveData));
+
+    return TRUE;
+}
+#endif
 
 static int GameStartNewSave_Exit(ApplicationManager *appMan, int *state)
 {

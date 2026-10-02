@@ -1,0 +1,48 @@
+name: format-visual-overhaul
+
+on: [pull_request]
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install clang-format
+        run: python -m pip install clang-format==19.1.1
+
+      - name: Format files
+        run: |
+          clang-format -i include/constants/camera_types.h
+          clang-format -i include/constants/field/area_light.h
+          clang-format -i include/constants/overworld_weather.h
+          clang-format -i include/data/map_headers.h
+          clang-format -i include/overlay005/field_effect_renderer.h
+          clang-format -i include/overlay005/ov5_021F2D20.h
+          clang-format -i src/overlay005/area_data.c
+          clang-format -i src/overlay005/area_light.c
+          clang-format -i src/overlay005/field_camera.c
+          clang-format -i src/overlay005/field_effect_renderer.c
+          clang-format -i src/overlay005/fieldmap.c
+          clang-format -i src/overlay005/ov5_021D5EB8.c
+          clang-format -i src/overlay005/ov5_021F2D20.c
+          git diff --binary --             include/constants/camera_types.h             include/constants/field/area_light.h             include/constants/overworld_weather.h             include/data/map_headers.h             include/overlay005/field_effect_renderer.h             include/overlay005/ov5_021F2D20.h             src/overlay005/area_data.c             src/overlay005/area_light.c             src/overlay005/field_camera.c             src/overlay005/field_effect_renderer.c             src/overlay005/fieldmap.c             src/overlay005/ov5_021D5EB8.c             src/overlay005/ov5_021F2D20.c > clang-format.patch
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: formatted-visual-overhaul
+          path: |
+            clang-format.patch
+            include/constants/camera_types.h
+            include/constants/field/area_light.h
+            include/constants/overworld_weather.h
+            include/data/map_headers.h
+            include/overlay005/field_effect_renderer.h
+            include/overlay005/ov5_021F2D20.h
+            src/overlay005/area_data.c
+            src/overlay005/area_light.c
+            src/overlay005/field_camera.c
+            src/overlay005/field_effect_renderer.c
+            src/overlay005/fieldmap.c
+            src/overlay005/ov5_021D5EB8.c
+            src/overlay005/ov5_021F2D20.c

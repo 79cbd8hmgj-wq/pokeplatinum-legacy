@@ -33,6 +33,7 @@ L_2:
     Delay 15
     PlaySoundEffectR SEQ_SE_DP_186
     Func_Shake 4, 0, 1, 6, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
+    Func_ShakeBg 3, 1, 0, 3, 0, SHAKE_BG_TARGET_BASE
     Func_FadeBattlerSprite BATTLE_ANIM_DEFENDER, 0, 1, BATTLE_COLOR_RED, 14, 0
     CreateEmitter 0, 8, EMITTER_CB_GENERIC
     SetExtraParams 0, 2, 2, 0, 0, 0
@@ -71,6 +72,7 @@ L_1:
     Delay 15
     PlaySoundEffectR SEQ_SE_DP_186
     Func_Shake 4, 0, 1, 6, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
+    Func_ShakeBg 3, 1, 0, 3, 0, SHAKE_BG_TARGET_BASE
     Func_FadeBattlerSprite BATTLE_ANIM_DEFENDER, 0, 1, BATTLE_COLOR_RED, 14, 0
     CreateEmitter 0, 8, EMITTER_CB_GENERIC
     SetExtraParams 0, 2, 2, 0, 0, 0
@@ -109,6 +111,7 @@ L_3:
     Delay 15
     PlaySoundEffectR SEQ_SE_DP_186
     Func_Shake 4, 0, 1, 6, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
+    Func_ShakeBg 3, 1, 0, 3, 0, SHAKE_BG_TARGET_BASE
     Func_FadeBattlerSprite BATTLE_ANIM_DEFENDER, 0, 1, BATTLE_COLOR_RED, 14, 0
     CreateEmitter 0, 8, EMITTER_CB_GENERIC
     SetExtraParams 0, 2, 2, 0, 0, 0

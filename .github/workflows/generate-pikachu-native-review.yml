@@ -1,0 +1,35 @@
+name: generate-pikachu-native-review
+on:
+  push:
+    branches: [ visual-overhaul-g2a ]
+    paths:
+      - 'tools/visual_overhaul/generate_pikachu_native_review.py'
+      - '.github/workflows/generate-pikachu-native-review.yml'
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  review:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    env:
+      HGSS_COMMIT: 9d8b7591f09b65804da2fb2dfd56f320633e0d36
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: visual-overhaul-g2a
+      - run: python -m pip install Pillow
+      - run: |
+          D="$RUNNER_TEMP/pokeheartgold"
+          git clone --filter=blob:none --no-checkout https://github.com/pret/pokeheartgold.git "$D"
+          git -C "$D" checkout "$HGSS_COMMIT" -- files/poketool/pokegra/pokegra/0025
+          python tools/visual_overhaul/generate_pikachu_native_review.py "$D/files/poketool/pokegra/pokegra"
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/visual_overhaul/review/pikachu_*_compare.png
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "docs: add Pikachu native sprite review sheets"
+          git fetch origin visual-overhaul-g2a
+          git rebase origin/visual-overhaul-g2a
+          git push origin HEAD:visual-overhaul-g2a

@@ -15,6 +15,7 @@ L_0:
     PlayLoopedSoundEffectR SEQ_SE_DP_003, 4, 5
     PlayLoopedSoundEffectR SEQ_SE_DP_030, 5, 5
     Func_Shake 2, 0, 1, 10, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
+    Func_ShakeBg 2, 0, 0, 2, 0, SHAKE_BG_TARGET_BASE
     WaitForAllEmitters
     UnloadParticleSystem 0
     SetVar BATTLE_ANIM_VAR_BG_MOVE_STEP_X, -64

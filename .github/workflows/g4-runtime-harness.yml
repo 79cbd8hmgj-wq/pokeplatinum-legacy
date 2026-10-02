@@ -1,0 +1,219 @@
+name: g4-runtime-harness
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/g4-runtime-harness.yml'
+      - 'tools/visual_overhaul/runtime_g4_probe.py'
+      - 'tools/visual_overhaul/validate_area_light_contract.py'
+      - 'tools/visual_overhaul/validate_g6_showcase_integration.py'
+      - 'include/constants/field/area_light.h'
+      - 'include/constants/field/field_effect_renderer.h'
+      - 'include/constants/camera_types.h'
+      - 'include/constants/overworld_weather.h'
+      - 'include/data/map_headers.h'
+      - 'include/field_system.h'
+      - 'include/game_start.h'
+      - 'src/main.c'
+      - 'src/game_start.c'
+      - 'src/field_system.c'
+      - 'src/overlay005/area_light.c'
+      - 'src/overlay005/field_camera.c'
+      - 'src/overlay005/field_effect_renderer.c'
+      - 'src/overlay005/fieldmap.c'
+      - 'src/overlay005/ov5_021D5EB8.c'
+      - 'res/field/area_data/**'
+      - 'res/field/lighting/**'
+      - 'res/field/maps/texture_sets/**'
+      - 'docs/visual_overhaul/G4G_GALACTIC_GRADE_REPORT.json'
+  workflow_dispatch: {}
+
+concurrency:
+  group: g4-runtime-harness-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+env:
+  LM_LICENSE_FILE: "${{ github.workspace }}/tools/cw/license.dat"
+  BUILD: /var/tmp/pokeplatinum
+
+jobs:
+  debug-symbol-gate:
+    name: debug runtime symbols (US rev ${{ matrix.revision }})
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        revision: [0, 1]
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate G6 showcase integration contracts
+        run: python tools/visual_overhaul/validate_g6_showcase_integration.py
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y --no-install-recommends \
+            bison flex g++ gcc-arm-none-eabi git make ninja-build pkg-config python3 wget xz-utils
+
+      - name: Install Metroskrew
+        shell: bash
+        run: |
+          set -euxo pipefail
+          for attempt in 1 2 3; do
+            if sudo make skrew; then
+              exit 0
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              exit 1
+            fi
+            sleep $((attempt * 5))
+          done
+
+      - name: Install pinned NDS Disassembly Toolkit
+        run: |
+          python -m pip install \
+            "git+https://github.com/79cbd8hmgj-wq/NDS-Disassembly-Toolkit.git@4b08df5a3a070fffafa10d4064f58e89d0c525d1"
+
+      - name: Build debug ROM and symbols
+        run: |
+          make configure ROM_REVISION=${{ matrix.revision }}
+          make debug ROM_REVISION=${{ matrix.revision }}
+
+      - name: Export debug runtime symbols
+        shell: bash
+        run: |
+          set -euxo pipefail
+          arm-none-eabi-nm -n "$BUILD/debug.nef" > "$BUILD/runtime_symbols.map"
+          test -s "$BUILD/runtime_symbols.map"
+          grep -E 'AreaLightManager_New|gG4RuntimeQAControl' "$BUILD/runtime_symbols.map"
+
+      - name: Validate static area-light contract
+        run: python tools/visual_overhaul/validate_area_light_contract.py
+
+      - name: Resolve every G4 runtime probe symbol
+        shell: bash
+        run: |
+          set -euxo pipefail
+          mkdir -p runtime-symbol-reports
+          for scenario in \
+            eterna snow distortion spear lakes turnback galactic coronet-control
+          do
+            python tools/visual_overhaul/runtime_g4_probe.py "$scenario" \
+              --symbols "$BUILD/runtime_symbols.map" \
+              --validate-symbols-only \
+              --output "runtime-symbol-reports/$scenario.json"
+          done
+
+      - name: Upload runtime QA package
+        uses: actions/upload-artifact@v7
+        with:
+          name: g4-runtime-qa-rev${{ matrix.revision }}
+          path: |
+            ${{ env.BUILD }}/pokeplatinum.us.nds
+            ${{ env.BUILD }}/debug.nef
+            ${{ env.BUILD }}/overlay.map
+            ${{ env.BUILD }}/runtime_symbols.map
+            runtime-symbol-reports/
+            tools/visual_overhaul/runtime_g4_probe.py
+            docs/visual_overhaul/G4_RUNTIME_QA.md
+          retention-days: 7
+
+
+  live-runtime-rev1:
+    name: experimental live G4 runtime probes (US rev 1)
+    needs: debug-symbol-gate
+    continue-on-error: true
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install pinned NDS Disassembly Toolkit
+        run: |
+          python -m pip install             "git+https://github.com/79cbd8hmgj-wq/NDS-Disassembly-Toolkit.git@4b08df5a3a070fffafa10d4064f58e89d0c525d1"
+
+      - name: Download rev 1 runtime QA package
+        uses: actions/download-artifact@v7
+        with:
+          name: g4-runtime-qa-rev1
+          path: /tmp/g4-runtime
+
+      - name: Install DeSmuME build dependencies
+        shell: bash
+        run: |
+          set -euxo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends git meson ninja-build xvfb iproute2 libglib2.0-dev libsdl2-dev libpcap-dev zlib1g-dev libx11-dev libgl1-mesa-dev
+
+      - name: Build pinned DeSmuME CLI with GDB stub
+        shell: bash
+        run: |
+          set -euxo pipefail
+          git clone --filter=blob:none https://github.com/TASEmulators/desmume.git /tmp/desmume
+          git -C /tmp/desmume checkout release_0_9_13
+          meson setup /tmp/desmume/desmume/src/frontend/posix/build             /tmp/desmume/desmume/src/frontend/posix             --buildtype=release             -Dfrontend-gtk=false             -Dfrontend-cli=true             -Dgdb-stub=true
+          ninja -C /tmp/desmume/desmume/src/frontend/posix/build
+
+      - name: Run experimental deterministic G4 live probes
+        shell: bash
+        run: |
+          set -euxo pipefail
+          ROM="$(find /tmp/g4-runtime -name pokeplatinum.us.nds -print -quit)"
+          SYMBOLS="$(find /tmp/g4-runtime -name runtime_symbols.map -print -quit)"
+          test -n "$ROM"
+          test -n "$SYMBOLS"
+
+          EMU=/tmp/desmume/desmume/src/frontend/posix/build/cli/desmume-cli
+          PORT=39491
+          mkdir -p runtime-live-reports
+
+          GDBSTUB_DEBUG=1 xvfb-run -a             "$EMU" --arm9gdb "$PORT" --disable-sound --nojoy "$ROM"             >/tmp/desmume-g4.out 2>/tmp/desmume-g4.err &
+          PID=$!
+
+          cleanup() {
+            kill "$PID" 2>/dev/null || true
+            wait "$PID" 2>/dev/null || true
+          }
+          trap cleanup EXIT
+
+          READY=0
+          for _ in $(seq 1 100); do
+            if ss -ltn | grep -q ":$PORT "; then
+              READY=1
+              break
+            fi
+            kill -0 "$PID"
+            sleep 0.1
+          done
+          test "$READY" -eq 1
+
+          for scenario in eterna snow spear lakes turnback galactic coronet-control
+          do
+            timeout 45s python tools/visual_overhaul/runtime_g4_probe.py "$scenario"               --emulator desmume               --host 127.0.0.1               --port "$PORT"               --symbols "$SYMBOLS"               --wait-for-field               --request-warp               --output "runtime-live-reports/$scenario.json"
+          done
+
+      - name: Upload live runtime reports
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: g4-live-runtime-reports-rev1
+          path: |
+            runtime-live-reports/
+            /tmp/desmume-g4.out
+            /tmp/desmume-g4.err
+          retention-days: 7

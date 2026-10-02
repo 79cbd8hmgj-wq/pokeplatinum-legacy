@@ -262,19 +262,23 @@ static void BerryPatchEffectCounter_CheckDisable(BerryPatchEffectCounter *counte
 OverworldAnimManager *BerryPatchGraphics_NewSparkleEffect(MapObject *mapObject)
 {
     VecFx32 position;
-    FieldEffectManager *fieldEffMan;
-    BerryPatchSparkleEffectContext effectContext;
-    OverworldAnimManager *effectTask;
+    FieldEffectManager *fieldEffMan = MapObject_GetFieldEffectManager(mapObject);
 
-    fieldEffMan = MapObject_GetFieldEffectManager(mapObject);
     ov5_021ECDA0(mapObject, &position);
     position.z += (FX32_ONE * 8); // Offset sparkle effect 8 units above ground
 
+    return BerryPatchGraphics_NewSparkleEffectAt(fieldEffMan, &position, 255);
+}
+
+OverworldAnimManager *BerryPatchGraphics_NewSparkleEffectAt(FieldEffectManager *fieldEffMan, const VecFx32 *position, int priority)
+{
+    BerryPatchSparkleEffectContext effectContext;
+
     effectContext.fieldEffMan = fieldEffMan;
     effectContext.effectCounter = FieldEffectManager_GetRendererContext(fieldEffMan, FIELD_EFFECT_RENDERER_BERRY_PATCH_EFFECT_COUNTER);
-    effectTask = FieldEffectManager_InitAnimManager(fieldEffMan, &sBerryPatchSparkleEffectDefinition, &position, 0, &effectContext, 255);
+    effectContext.mapObject = NULL;
 
-    return effectTask;
+    return FieldEffectManager_InitAnimManager(fieldEffMan, &sBerryPatchSparkleEffectDefinition, position, 0, &effectContext, priority);
 }
 
 static BOOL BerryPatchSparkleEffect_Init(OverworldAnimManager *effect, void *context)

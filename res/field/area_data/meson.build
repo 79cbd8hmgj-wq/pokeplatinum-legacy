@@ -86,6 +86,9 @@ area_data_srcs = files(
     'area_data_072.json',
     'area_data_073.json',
     'area_data_074.json',
+    'area_data_075.json',
+    'area_data_076.json',
+    'area_data_077.json',
 )
 
 area_data_narc = custom_target('area_data.narc',

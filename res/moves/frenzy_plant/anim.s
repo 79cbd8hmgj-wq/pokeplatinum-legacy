@@ -18,6 +18,7 @@ L_0:
     PlayLoopedSoundEffectR SEQ_SE_DP_W025B, 3, 6
     CreateEmitter 0, 0, EMITTER_CB_SET_POS_TO_DEFENDER
     Func_Shake 2, 0, 1, 10, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
+    Func_ShakeBg 2, 4, 0, 3, 0, SHAKE_BG_TARGET_BASE
     WaitForAnimTasks
     FreeSpriteManager 0
     WaitForAllEmitters

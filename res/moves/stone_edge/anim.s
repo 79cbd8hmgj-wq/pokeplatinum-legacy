@@ -9,6 +9,7 @@ L_0:
     PlayLoopedSoundEffectR SEQ_SE_DP_W088, 2, 4
     Delay 25
     Func_Shake 2, 0, 1, 6, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
+    Func_ShakeBg 2, 1, 0, 2, 0, SHAKE_BG_TARGET_BASE
     PlaySoundEffectR SEQ_SE_DP_W082
     PlayLoopedSoundEffectR SEQ_SE_DP_W088, 6, 3
     WaitForAllEmitters

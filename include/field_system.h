@@ -8,6 +8,48 @@
 #include "overlay_manager.h"
 #include "savedata.h"
 
+#ifdef GDB_DEBUGGING
+enum G4RuntimeQATarget {
+    G4_RUNTIME_QA_NONE = 0,
+    G4_RUNTIME_QA_ETERNA_FOREST,
+    G4_RUNTIME_QA_SNOWPOINT,
+    G4_RUNTIME_QA_SPEAR_PILLAR,
+    G4_RUNTIME_QA_LAKE_VERITY,
+    G4_RUNTIME_QA_TURNBACK_CAVE,
+    G4_RUNTIME_QA_GALACTIC_HQ,
+    G4_RUNTIME_QA_MT_CORONET,
+};
+
+enum G4RuntimeQAStatus {
+    G4_RUNTIME_QA_IDLE = 0,
+    G4_RUNTIME_QA_WARPING,
+    G4_RUNTIME_QA_LOADED,
+    G4_RUNTIME_QA_REJECTED,
+};
+
+enum G4RuntimeQAEvent {
+    G4_RUNTIME_QA_EVENT_AREA_LIGHT = 1 << 0,
+    G4_RUNTIME_QA_EVENT_FOREST_RENDERER = 1 << 1,
+    G4_RUNTIME_QA_EVENT_FOREST_TASK = 1 << 2,
+    G4_RUNTIME_QA_EVENT_SPECIAL_FOG = 1 << 3,
+    G4_RUNTIME_QA_EVENT_FOG_APPLY = 1 << 4,
+};
+
+#define G4_RUNTIME_QA_MAGIC 0x47345141
+
+typedef struct G4RuntimeQAControl {
+    volatile u32 request;
+    volatile u32 status;
+    volatile u32 loadedMapHeader;
+    volatile u32 eventFlags;
+    volatile u32 lightArchiveID;
+    volatile u32 magic;
+    volatile u32 fieldReady;
+} G4RuntimeQAControl;
+
+extern G4RuntimeQAControl gG4RuntimeQAControl;
+#endif
+
 void FieldSystem_StartFieldMapInner(FieldSystem *fieldSystem);
 void FieldSystem_FlagNotRunningFieldMap(FieldSystem *fieldSystem);
 BOOL FieldSystem_HasParentProcess(FieldSystem *fieldSystem);

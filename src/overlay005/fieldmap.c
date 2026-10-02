@@ -3,11 +3,13 @@
 #include <nitro.h>
 #include <string.h>
 
+#include "constants/field/area_light.h"
 #include "constants/field/dynamic_map_features.h"
 #include "constants/field/field_effect_renderer.h"
 #include "constants/field/map.h"
 #include "constants/field/map_load.h"
 #include "constants/heap.h"
+#include "generated/map_headers.h"
 
 #include "field/field_system.h"
 #include "field/field_system_sub2_decl.h"
@@ -96,6 +98,12 @@ enum FieldExtensionOverlay {
     FIELD_EXTENSION_OVERLAY_DISTORTION_WORLD,
 };
 
+#ifdef GDB_DEBUGGING
+typedef struct G4RuntimeQAWarpData {
+    enum MapHeaderID mapHeaderID;
+} G4RuntimeQAWarpData;
+#endif
+
 static void BgConfig_Init(BgConfig *bgl);
 static void ov5_021D1524(BgConfig *bgl);
 static void ov5_021D154C(void);
@@ -120,6 +128,13 @@ static void fieldmap(void *param0);
 static void ov5_021D13B4(FieldSystem *fieldSystem);
 static enum FieldExtensionOverlay FieldMap_GetExtOverlayForActiveDynMapFeatures(FieldSystem *fieldSystem);
 static BOOL FieldMap_InDistortionWorld(FieldSystem *fieldSystem);
+static BOOL FieldMap_IsDeepForest(const FieldSystem *fieldSystem);
+static void FieldMap_ApplySpecialAreaFog(FieldSystem *fieldSystem);
+#ifdef GDB_DEBUGGING
+static BOOL FieldTask_G4RuntimeQAWarp(FieldTask *task);
+static BOOL FieldMap_GetG4RuntimeQAMapHeader(u32 request, enum MapHeaderID *mapHeaderID);
+static void FieldMap_TryStartG4RuntimeQA(FieldSystem *fieldSystem);
+#endif
 static MapObjectsToPreload *FetchMapObjectsToPreload(enum HeapID heapID, int memberID);
 static const int *MapObjectsToPreload_GetIDs(const MapObjectsToPreload *mapObjectsToPreload);
 static int MapObjectsToPreload_GetCount(const MapObjectsToPreload *mapObjectsToPreload);
@@ -220,6 +235,23 @@ static BOOL FieldMap_Init(ApplicationManager *appMan, int *state)
             ov5_021D5F24(fieldSystem->unk_04->unk_0C, weather);
         }
 
+        FieldMap_ApplySpecialAreaFog(fieldSystem);
+
+#ifdef GDB_DEBUGGING
+        if (gG4RuntimeQAControl.status == G4_RUNTIME_QA_WARPING) {
+            enum MapHeaderID expectedMapHeader;
+
+            gG4RuntimeQAControl.loadedMapHeader = fieldSystem->location->mapHeaderID;
+
+            if (FieldMap_GetG4RuntimeQAMapHeader(gG4RuntimeQAControl.request, &expectedMapHeader)
+                && expectedMapHeader == fieldSystem->location->mapHeaderID) {
+                gG4RuntimeQAControl.status = G4_RUNTIME_QA_LOADED;
+            } else {
+                gG4RuntimeQAControl.status = G4_RUNTIME_QA_REJECTED;
+            }
+        }
+#endif
+
         FieldBGM_PlayEffectiveForMapHeader(fieldSystem, fieldSystem->location->mapHeaderID);
         FieldSystem_RunInitScript(fieldSystem, INIT_SCRIPT_ON_RESUME);
 
@@ -245,6 +277,11 @@ static BOOL FieldMap_Init(ApplicationManager *appMan, int *state)
 static BOOL FieldMap_Main(ApplicationManager *appMan, int *param1)
 {
     FieldSystem *fieldSystem = ApplicationManager_Args(appMan);
+
+#ifdef GDB_DEBUGGING
+    gG4RuntimeQAControl.fieldReady = TRUE;
+    FieldMap_TryStartG4RuntimeQA(fieldSystem);
+#endif
 
     if (FieldSystem_UpdateLocationToPlayerPosition(fieldSystem)) {
         BerryPatches_UpdateGrowthStates(fieldSystem);
@@ -823,12 +860,12 @@ static void ov5_021D1878(FieldSystem *fieldSystem)
 
         if (fieldSystem->mapLoadType == MAP_LOAD_TYPE_UNDERGROUND) {
             v1 = sUndergroundFieldEffectRenderers;
+        } else if (FieldMap_InDistortionWorld(fieldSystem) == TRUE) {
+            v1 = sDistWorldFieldEffectRenderers;
+        } else if (FieldMap_IsDeepForest(fieldSystem) == TRUE) {
+            v1 = sForestFieldEffectRenderers;
         } else {
-            if (FieldMap_InDistortionWorld(fieldSystem) == TRUE) {
-                v1 = sDistWorldFieldEffectRenderers;
-            } else {
-                v1 = sDefaultFieldEffectRenderers;
-            }
+            v1 = sDefaultFieldEffectRenderers;
         }
 
         FieldEffectManager_InitRenderers(fieldSystem->fieldEffMan, v1);
@@ -874,7 +911,15 @@ static void ov5_021D1968(FieldSystem *fieldSystem)
         FieldCamera_Create(PlayerAvatar_GetPos(fieldSystem->playerAvatar), fieldSystem, v0, 1);
     }
 
-    fieldSystem->areaLightMan = AreaLightManager_New(fieldSystem->areaModelAttrs, AreaDataManager_GetAreaLightArchiveID(fieldSystem->areaDataManager));
+    u8 areaLightArchiveID = AreaDataManager_GetAreaLightArchiveID(fieldSystem->areaDataManager);
+    fieldSystem->areaLightMan = AreaLightManager_New(fieldSystem->areaModelAttrs, areaLightArchiveID);
+
+#ifdef GDB_DEBUGGING
+    if (gG4RuntimeQAControl.status == G4_RUNTIME_QA_WARPING) {
+        gG4RuntimeQAControl.lightArchiveID = areaLightArchiveID;
+        gG4RuntimeQAControl.eventFlags |= G4_RUNTIME_QA_EVENT_AREA_LIGHT;
+    }
+#endif
 
     if (FieldMap_InDistortionWorld(fieldSystem) == TRUE) {
         fieldSystem->unk_04->unk_0C = NULL;
@@ -940,4 +985,288 @@ static BOOL FieldMap_InDistortionWorld(FieldSystem *fieldSystem)
     }
 
     return FALSE;
+}
+
+#ifdef GDB_DEBUGGING
+static BOOL FieldMap_GetG4RuntimeQAMapHeader(u32 request, enum MapHeaderID *mapHeaderID)
+{
+    switch (request) {
+    case G4_RUNTIME_QA_ETERNA_FOREST:
+        *mapHeaderID = MAP_HEADER_ETERNA_FOREST;
+        return TRUE;
+    case G4_RUNTIME_QA_SNOWPOINT:
+        *mapHeaderID = MAP_HEADER_SNOWPOINT_CITY;
+        return TRUE;
+    case G4_RUNTIME_QA_SPEAR_PILLAR:
+        *mapHeaderID = MAP_HEADER_SPEAR_PILLAR;
+        return TRUE;
+    case G4_RUNTIME_QA_LAKE_VERITY:
+        *mapHeaderID = MAP_HEADER_LAKE_VERITY;
+        return TRUE;
+    case G4_RUNTIME_QA_TURNBACK_CAVE:
+        *mapHeaderID = MAP_HEADER_TURNBACK_CAVE_ENTRANCE;
+        return TRUE;
+    case G4_RUNTIME_QA_GALACTIC_HQ:
+        *mapHeaderID = MAP_HEADER_TEAM_GALACTIC_ETERNA_BUILDING_1F;
+        return TRUE;
+    case G4_RUNTIME_QA_MT_CORONET:
+        *mapHeaderID = MAP_HEADER_MT_CORONET_1F_SOUTH;
+        return TRUE;
+    default:
+        return FALSE;
+    }
+}
+
+static BOOL FieldTask_G4RuntimeQAWarp(FieldTask *task)
+{
+    FieldSystem *fieldSystem = FieldTask_GetFieldSystem(task);
+    G4RuntimeQAWarpData *warp = FieldTask_GetEnv(task);
+    int *state = FieldTask_GetState(task);
+
+    switch (*state) {
+    case 0:
+        FieldTask_StartMapChangeFull(
+            task,
+            warp->mapHeaderID,
+            0,
+            0,
+            0,
+            PlayerAvatar_GetFacingDir(fieldSystem->playerAvatar));
+        (*state)++;
+        break;
+    case 1:
+        gG4RuntimeQAControl.loadedMapHeader = fieldSystem->location->mapHeaderID;
+
+        if (fieldSystem->location->mapHeaderID != warp->mapHeaderID) {
+            gG4RuntimeQAControl.status = G4_RUNTIME_QA_REJECTED;
+        } else if (gG4RuntimeQAControl.status == G4_RUNTIME_QA_WARPING) {
+            // The map task completed before the field renderer reached its
+            // LOAD state. Keep the status conservative until that state
+            // validates the active map and visual managers.
+            break;
+        }
+
+        gG4RuntimeQAControl.request = G4_RUNTIME_QA_NONE;
+        Heap_Free(warp);
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+static void FieldMap_TryStartG4RuntimeQA(FieldSystem *fieldSystem)
+{
+    enum MapHeaderID mapHeaderID;
+
+    if (gG4RuntimeQAControl.request == G4_RUNTIME_QA_NONE) {
+        return;
+    }
+
+    if (gG4RuntimeQAControl.status != G4_RUNTIME_QA_IDLE) {
+        return;
+    }
+
+    if (FieldSystem_IsRunningTask(fieldSystem) || FieldSystem_IsRunningApplication(fieldSystem)) {
+        return;
+    }
+
+    if (!FieldMap_GetG4RuntimeQAMapHeader(gG4RuntimeQAControl.request, &mapHeaderID)) {
+        gG4RuntimeQAControl.status = G4_RUNTIME_QA_REJECTED;
+        gG4RuntimeQAControl.request = G4_RUNTIME_QA_NONE;
+        return;
+    }
+
+    G4RuntimeQAWarpData *warp = Heap_AllocAtEnd(HEAP_ID_FIELD2, sizeof(G4RuntimeQAWarpData));
+    warp->mapHeaderID = mapHeaderID;
+
+    gG4RuntimeQAControl.status = G4_RUNTIME_QA_WARPING;
+    gG4RuntimeQAControl.loadedMapHeader = 0;
+    gG4RuntimeQAControl.eventFlags = 0;
+    gG4RuntimeQAControl.lightArchiveID = 0xffffffff;
+    FieldSystem_CreateTask(fieldSystem, FieldTask_G4RuntimeQAWarp, warp);
+}
+#endif
+
+static BOOL FieldMap_IsDeepForest(const FieldSystem *fieldSystem)
+{
+    switch (fieldSystem->location->mapHeaderID) {
+    case MAP_HEADER_ETERNA_FOREST:
+    case MAP_HEADER_FULLMOON_ISLAND_FOREST:
+    case MAP_HEADER_NEWMOON_ISLAND_FOREST:
+        return TRUE;
+    default:
+        return FALSE;
+    }
+}
+
+static void FieldMap_ApplySpecialAreaFog(FieldSystem *fieldSystem)
+{
+    static const char sCoronetFogDensity[G3X_FOG_DENSITY_TABLE_SIZE] = {
+        0,
+        0,
+        1,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48,
+        50,
+        52,
+    };
+    static const char sSpearPillarFogDensity[G3X_FOG_DENSITY_TABLE_SIZE] = {
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+    };
+    static const char sDistortionFogDensity[G3X_FOG_DENSITY_TABLE_SIZE] = {
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+    };
+
+    GXRgb color;
+    int alpha;
+    GXFogSlope slope;
+    int offset;
+    const char *densityTable;
+    u8 areaLightID = AreaDataManager_GetAreaLightArchiveID(fieldSystem->areaDataManager);
+
+#ifdef GDB_DEBUGGING
+    if (gG4RuntimeQAControl.status == G4_RUNTIME_QA_WARPING) {
+        gG4RuntimeQAControl.eventFlags &= ~(G4_RUNTIME_QA_EVENT_SPECIAL_FOG | G4_RUNTIME_QA_EVENT_FOG_APPLY);
+    }
+#endif
+
+    switch (areaLightID) {
+    case AREA_LIGHT_SET_MT_CORONET:
+        color = GX_RGB(8, 10, 14);
+        alpha = 10;
+        slope = GX_FOGSLOPE_0x0400;
+        offset = 0x4800;
+        densityTable = sCoronetFogDensity;
+        break;
+    case AREA_LIGHT_SET_SPEAR_PILLAR:
+    case AREA_LIGHT_SET_SPEAR_PILLAR_GRADE:
+        color = GX_RGB(16, 18, 22);
+        alpha = 5;
+        slope = GX_FOGSLOPE_0x0400;
+        offset = 0x6000;
+        densityTable = sSpearPillarFogDensity;
+        break;
+    case AREA_LIGHT_SET_DISTORTION_WORLD:
+        color = GX_RGB(14, 8, 22);
+        alpha = 10;
+        slope = GX_FOGSLOPE_0x0400;
+        offset = 0x5000;
+        densityTable = sDistortionFogDensity;
+        break;
+    default:
+        return;
+    }
+
+#ifdef GDB_DEBUGGING
+    if (gG4RuntimeQAControl.status == G4_RUNTIME_QA_WARPING) {
+        gG4RuntimeQAControl.eventFlags |= G4_RUNTIME_QA_EVENT_SPECIAL_FOG;
+    }
+#endif
+
+    FogManager_ApplyParameters(
+        fieldSystem->fogMan,
+        FOG_PARAMETER_ENABLED | FOG_PARAMETER_MODE | FOG_PARAMETER_SLOPE | FOG_PARAMETER_OFFSET,
+        TRUE,
+        GX_FOGBLEND_COLOR_ALPHA,
+        slope,
+        offset);
+    FogManager_ApplyColor(
+        fieldSystem->fogMan,
+        FOG_PARAMETER_COLOR | FOG_PARAMETER_ALPHA,
+        color,
+        alpha);
+    FogManager_ApplyDensityTable(fieldSystem->fogMan, densityTable);
+
+#ifdef GDB_DEBUGGING
+    if (gG4RuntimeQAControl.status == G4_RUNTIME_QA_WARPING) {
+        gG4RuntimeQAControl.eventFlags |= G4_RUNTIME_QA_EVENT_FOG_APPLY;
+    }
+#endif
 }

@@ -1,0 +1,57 @@
+name: dump-g4a-eterna-textures
+on:
+  push:
+    branches: [ visual-overhaul-g2a ]
+    paths:
+      - 'tools/visual_overhaul/make_g4a_eterna_texture_sheet.py'
+      - '.github/workflows/dump-g4a-eterna-textures.yml'
+      - 'res/field/maps/texture_sets/map_texture_set_074.nsbtx'
+      - 'res/field/props/texture_sets/prop_texture_set_050.nsbtx'
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  dump:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: visual-overhaul-g2a
+      - name: Build NitroBTX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc libpng-dev
+          mkdir -p g4-tools-build
+          gcc -std=gnu17 -O2 -Itools/nitrobtx/include             tools/nitrobtx/src/common.c             tools/nitrobtx/src/help.c             tools/nitrobtx/src/main.c             tools/nitrobtx/src/ns/chunks/tex.c             tools/nitrobtx/src/ns/container.c             tools/nitrobtx/src/ns/resource_dict.c             tools/nitrobtx/src/ns/resource_name.c             tools/nitrobtx/src/ns/resource_tree.c             tools/nitrobtx/src/options.c             tools/nitrobtx/src/palette.c             tools/nitrobtx/src/texture.c             -lpng -lm -o g4-tools-build/nitrobtx
+          python -m pip install Pillow
+      - name: Dump Eterna texture banks
+        run: |
+          rm -rf docs/visual_overhaul/review/g4a_eterna_dump
+          mkdir -p docs/visual_overhaul/review/g4a_eterna_dump/map
+          mkdir -p docs/visual_overhaul/review/g4a_eterna_dump/props
+          ./g4-tools-build/nitrobtx dump res/field/maps/texture_sets/map_texture_set_074.nsbtx docs/visual_overhaul/review/g4a_eterna_dump/map
+          ./g4-tools-build/nitrobtx dump res/field/props/texture_sets/prop_texture_set_050.nsbtx docs/visual_overhaul/review/g4a_eterna_dump/props
+          python tools/visual_overhaul/make_g4a_eterna_texture_sheet.py
+          {
+            echo '# Map palettes'
+            for p in docs/visual_overhaul/review/g4a_eterna_dump/map/*.pal; do
+              echo "## $(basename \"$p\")"
+              cat "$p"
+            done
+            echo '# Prop palettes'
+            for p in docs/visual_overhaul/review/g4a_eterna_dump/props/*.pal; do
+              echo "## $(basename \"$p\")"
+              cat "$p"
+            done
+          } > docs/visual_overhaul/review/g4a_eterna_palettes.txt
+      - name: Commit review sheets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/visual_overhaul/review/g4a_eterna_map_textures.png docs/visual_overhaul/review/g4a_eterna_prop_textures.png docs/visual_overhaul/review/g4a_eterna_palettes.txt
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "docs: add G4A Eterna texture review sheets"
+          git fetch origin visual-overhaul-g2a
+          git rebase origin/visual-overhaul-g2a
+          git push origin HEAD:visual-overhaul-g2a

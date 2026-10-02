@@ -1,0 +1,37 @@
+name: export-g4a-eterna-textures
+on:
+  push:
+    branches: [ visual-overhaul-g2a ]
+    paths:
+      - '.github/workflows/export-g4a-eterna-textures.yml'
+      - 'res/field/maps/texture_sets/map_texture_set_053.nsbtx'
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  export:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: visual-overhaul-g2a
+      - name: Install apicula
+        run: cargo install --git https://github.com/scurest/apicula.git --locked
+      - name: Export Eterna Forest texture set
+        run: |
+          rm -rf docs/visual_overhaul/review/eterna_texture_set_053
+          apicula convert res/field/maps/texture_sets/map_texture_set_053.nsbtx \
+            --more-textures \
+            -o docs/visual_overhaul/review/eterna_texture_set_053
+          find docs/visual_overhaul/review/eterna_texture_set_053 -type f -maxdepth 2 -print | sort
+      - name: Commit review export
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/visual_overhaul/review/eterna_texture_set_053
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "docs: export Eterna Forest texture review"
+          git fetch origin visual-overhaul-g2a
+          git rebase origin/visual-overhaul-g2a
+          git push origin HEAD:visual-overhaul-g2a

@@ -14,6 +14,7 @@ L_0:
     Delay 5
     PlaySoundEffectR SEQ_SE_DP_W088
     Func_ShakeBg 0, 5, 0, 5, 0
+    Func_ShakeBg 3, 1, 0, 3, 0, SHAKE_BG_TARGET_BASE
     Func_Shake 1, 0, 1, 2, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
     WaitForAnimTasks
     StopSoundEffect SEQ_SE_DP_W088

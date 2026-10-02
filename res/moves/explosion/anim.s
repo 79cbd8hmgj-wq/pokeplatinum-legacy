@@ -21,6 +21,7 @@ L_0:
     Delay 15
     Func_FadeBg FADE_BG_TYPE_BASE, 0, 15, 0, BATTLE_COLOR_WHITE
     Func_ShakeBg 8, 8, 0, 8, 0
+    Func_ShakeBg 4, 4, 0, 4, 0, SHAKE_BG_TARGET_BASE
     WaitForAnimTasks
     WaitForAllEmitters
     UnloadParticleSystem 0

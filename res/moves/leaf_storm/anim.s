@@ -19,6 +19,7 @@ L_0:
     Delay 35
     PlayLoopedSoundEffectC SEQ_SE_DP_HURU, 3, 8
     Func_Shake 2, 0, 1, 6, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
+    Func_ShakeBg 2, 1, 0, 2, 0, SHAKE_BG_TARGET_BASE
     CreateEmitter 0, 1, EMITTER_CB_SET_POS_TO_DEFENDER
     WaitForAllEmitters
     UnloadParticleSystem 0

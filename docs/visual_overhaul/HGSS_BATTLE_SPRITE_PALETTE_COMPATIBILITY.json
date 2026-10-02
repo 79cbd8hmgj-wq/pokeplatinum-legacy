@@ -1,0 +1,7157 @@
+{
+  "schema_version": 1,
+  "donor_commit": "9d8b7591f09b65804da2fb2dfd56f320633e0d36",
+  "policy": {
+    "platinum_normal_palette_preserved": true,
+    "platinum_shiny_palette_preserved": true,
+    "direct_index_safe": "HGSS used pixel indices already resolve to the same RGB colors in Platinum's normal palette.",
+    "exact_normal_remap": "Normal colors can be remapped exactly into Platinum's palette, but shiny-index semantics are not proven; do not bulk import automatically.",
+    "palette_mismatch": "At least one donor color is absent from Platinum's normal palette; requires manual art/palette conversion or rejection."
+  },
+  "summary": {
+    "geometry_close_species_input": 69,
+    "views_checked": 130,
+    "direct-index-safe": 53,
+    "palette-mismatch": 77,
+    "direct_index_safe_species": 28,
+    "exact_normal_remap_species": 0,
+    "palette_mismatch_species": 41
+  },
+  "direct_index_safe_species": [
+    "SPECIES_ABRA",
+    "SPECIES_CLEFABLE",
+    "SPECIES_CLEFAIRY",
+    "SPECIES_DIGLETT",
+    "SPECIES_DITTO",
+    "SPECIES_DUGTRIO",
+    "SPECIES_ELECTRODE",
+    "SPECIES_GLOOM",
+    "SPECIES_GROWLITHE",
+    "SPECIES_HORSEA",
+    "SPECIES_HYPNO",
+    "SPECIES_JIGGLYPUFF",
+    "SPECIES_LAPRAS",
+    "SPECIES_LARVITAR",
+    "SPECIES_MAGMAR",
+    "SPECIES_METAPOD",
+    "SPECIES_NIDORINO",
+    "SPECIES_OMANYTE",
+    "SPECIES_OMASTAR",
+    "SPECIES_PERSIAN",
+    "SPECIES_PSYDUCK",
+    "SPECIES_PUPITAR",
+    "SPECIES_SANDSLASH",
+    "SPECIES_TENTACOOL",
+    "SPECIES_TYRANITAR",
+    "SPECIES_VENUSAUR",
+    "SPECIES_VOLTORB",
+    "SPECIES_WEEPINBELL"
+  ],
+  "exact_normal_remap_species": [],
+  "palette_mismatch_species": [
+    "SPECIES_BELLOSSOM",
+    "SPECIES_CLEFFA",
+    "SPECIES_CORSOLA",
+    "SPECIES_DROWZEE",
+    "SPECIES_ENTEI",
+    "SPECIES_EXEGGCUTE",
+    "SPECIES_FERALIGATR",
+    "SPECIES_FLAAFFY",
+    "SPECIES_FORRETRESS",
+    "SPECIES_GRANBULL",
+    "SPECIES_GRIMER",
+    "SPECIES_IGGLYBUFF",
+    "SPECIES_JYNX",
+    "SPECIES_KANGASKHAN",
+    "SPECIES_LANTURN",
+    "SPECIES_MACHOKE",
+    "SPECIES_MAGBY",
+    "SPECIES_MAGNEMITE",
+    "SPECIES_MAGNETON",
+    "SPECIES_MEW",
+    "SPECIES_NATU",
+    "SPECIES_NIDORINA",
+    "SPECIES_NOCTOWL",
+    "SPECIES_PHANPY",
+    "SPECIES_PINECO",
+    "SPECIES_POLITOED",
+    "SPECIES_PORYGON2",
+    "SPECIES_QUAGSIRE",
+    "SPECIES_SHELLDER",
+    "SPECIES_SKIPLOOM",
+    "SPECIES_SLOWKING",
+    "SPECIES_SNORLAX",
+    "SPECIES_SPINARAK",
+    "SPECIES_SQUIRTLE",
+    "SPECIES_SUNFLORA",
+    "SPECIES_TEDDIURSA",
+    "SPECIES_TOGEPI",
+    "SPECIES_TOGETIC",
+    "SPECIES_UMBREON",
+    "SPECIES_URSARING",
+    "SPECIES_WOOPER"
+  ],
+  "entries": [
+    {
+      "species_id": 3,
+      "species": "SPECIES_VENUSAUR",
+      "view": "female_front.png",
+      "donor_path": "0003/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 3,
+      "species": "SPECIES_VENUSAUR",
+      "view": "male_front.png",
+      "donor_path": "0003/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 7,
+      "species": "SPECIES_SQUIRTLE",
+      "view": "female_front.png",
+      "donor_path": "0007/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 2,
+          "rgb": [
+            205,
+            197,
+            197
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            123,
+            49,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 7,
+      "species": "SPECIES_SQUIRTLE",
+      "view": "male_front.png",
+      "donor_path": "0007/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 2,
+          "rgb": [
+            205,
+            197,
+            197
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            123,
+            49,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 11,
+      "species": "SPECIES_METAPOD",
+      "view": "female_front.png",
+      "donor_path": "0011/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 11,
+      "species": "SPECIES_METAPOD",
+      "view": "male_front.png",
+      "donor_path": "0011/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 28,
+      "species": "SPECIES_SANDSLASH",
+      "view": "female_front.png",
+      "donor_path": "0028/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "9": 9,
+        "10": 10,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 28,
+      "species": "SPECIES_SANDSLASH",
+      "view": "male_front.png",
+      "donor_path": "0028/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "9": 9,
+        "10": 10,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 30,
+      "species": "SPECIES_NIDORINA",
+      "view": "female_back.png",
+      "donor_path": "0030/female/back.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 4,
+          "rgb": [
+            90,
+            131,
+            32
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            65,
+            106,
+            16
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            32,
+            74,
+            0
+          ]
+        },
+        {
+          "donor_index": 11,
+          "rgb": [
+            238,
+            222,
+            230
+          ]
+        },
+        {
+          "donor_index": 12,
+          "rgb": [
+            205,
+            148,
+            197
+          ]
+        },
+        {
+          "donor_index": 13,
+          "rgb": [
+            180,
+            106,
+            164
+          ]
+        },
+        {
+          "donor_index": 14,
+          "rgb": [
+            98,
+            82,
+            90
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 30,
+      "species": "SPECIES_NIDORINA",
+      "view": "female_front.png",
+      "donor_path": "0030/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "4": 4,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 33,
+      "species": "SPECIES_NIDORINO",
+      "view": "male_front.png",
+      "donor_path": "0033/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        3,
+        4,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "3": 3,
+        "4": 4,
+        "6": 6,
+        "7": 7,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 35,
+      "species": "SPECIES_CLEFAIRY",
+      "view": "female_front.png",
+      "donor_path": "0035/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 35,
+      "species": "SPECIES_CLEFAIRY",
+      "view": "male_front.png",
+      "donor_path": "0035/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 36,
+      "species": "SPECIES_CLEFABLE",
+      "view": "female_front.png",
+      "donor_path": "0036/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 36,
+      "species": "SPECIES_CLEFABLE",
+      "view": "male_front.png",
+      "donor_path": "0036/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 39,
+      "species": "SPECIES_JIGGLYPUFF",
+      "view": "female_front.png",
+      "donor_path": "0039/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 39,
+      "species": "SPECIES_JIGGLYPUFF",
+      "view": "male_front.png",
+      "donor_path": "0039/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 44,
+      "species": "SPECIES_GLOOM",
+      "view": "female_front.png",
+      "donor_path": "0044/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 44,
+      "species": "SPECIES_GLOOM",
+      "view": "male_front.png",
+      "donor_path": "0044/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 50,
+      "species": "SPECIES_DIGLETT",
+      "view": "female_front.png",
+      "donor_path": "0050/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 50,
+      "species": "SPECIES_DIGLETT",
+      "view": "male_front.png",
+      "donor_path": "0050/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 51,
+      "species": "SPECIES_DUGTRIO",
+      "view": "female_front.png",
+      "donor_path": "0051/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 51,
+      "species": "SPECIES_DUGTRIO",
+      "view": "male_front.png",
+      "donor_path": "0051/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 53,
+      "species": "SPECIES_PERSIAN",
+      "view": "female_front.png",
+      "donor_path": "0053/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 53,
+      "species": "SPECIES_PERSIAN",
+      "view": "male_front.png",
+      "donor_path": "0053/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 54,
+      "species": "SPECIES_PSYDUCK",
+      "view": "female_front.png",
+      "donor_path": "0054/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "5": 5,
+        "7": 7,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 54,
+      "species": "SPECIES_PSYDUCK",
+      "view": "male_front.png",
+      "donor_path": "0054/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "5": 5,
+        "7": 7,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 58,
+      "species": "SPECIES_GROWLITHE",
+      "view": "female_front.png",
+      "donor_path": "0058/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 58,
+      "species": "SPECIES_GROWLITHE",
+      "view": "male_front.png",
+      "donor_path": "0058/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 63,
+      "species": "SPECIES_ABRA",
+      "view": "female_front.png",
+      "donor_path": "0063/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 63,
+      "species": "SPECIES_ABRA",
+      "view": "male_front.png",
+      "donor_path": "0063/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 67,
+      "species": "SPECIES_MACHOKE",
+      "view": "female_front.png",
+      "donor_path": "0067/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 3,
+          "rgb": [
+            106,
+            49,
+            131
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 67,
+      "species": "SPECIES_MACHOKE",
+      "view": "male_front.png",
+      "donor_path": "0067/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 3,
+          "rgb": [
+            106,
+            49,
+            131
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 70,
+      "species": "SPECIES_WEEPINBELL",
+      "view": "female_front.png",
+      "donor_path": "0070/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 70,
+      "species": "SPECIES_WEEPINBELL",
+      "view": "male_front.png",
+      "donor_path": "0070/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 72,
+      "species": "SPECIES_TENTACOOL",
+      "view": "female_front.png",
+      "donor_path": "0072/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 72,
+      "species": "SPECIES_TENTACOOL",
+      "view": "male_front.png",
+      "donor_path": "0072/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 81,
+      "species": "SPECIES_MAGNEMITE",
+      "view": "male_front.png",
+      "donor_path": "0081/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 11,
+          "rgb": [
+            222,
+            255,
+            230
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 82,
+      "species": "SPECIES_MAGNETON",
+      "view": "male_front.png",
+      "donor_path": "0082/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 13,
+          "rgb": [
+            131,
+            156,
+            156
+          ]
+        },
+        {
+          "donor_index": 14,
+          "rgb": [
+            74,
+            98,
+            74
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 88,
+      "species": "SPECIES_GRIMER",
+      "view": "female_front.png",
+      "donor_path": "0088/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 7,
+          "rgb": [
+            222,
+            172,
+            222
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            180,
+            139,
+            180
+          ]
+        },
+        {
+          "donor_index": 9,
+          "rgb": [
+            156,
+            106,
+            156
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            123,
+            74,
+            131
+          ]
+        },
+        {
+          "donor_index": 11,
+          "rgb": [
+            98,
+            57,
+            123
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 88,
+      "species": "SPECIES_GRIMER",
+      "view": "male_front.png",
+      "donor_path": "0088/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 7,
+          "rgb": [
+            222,
+            172,
+            222
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            180,
+            139,
+            180
+          ]
+        },
+        {
+          "donor_index": 9,
+          "rgb": [
+            156,
+            106,
+            156
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            123,
+            74,
+            131
+          ]
+        },
+        {
+          "donor_index": 11,
+          "rgb": [
+            98,
+            57,
+            123
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 90,
+      "species": "SPECIES_SHELLDER",
+      "view": "female_front.png",
+      "donor_path": "0090/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 6,
+          "rgb": [
+            238,
+            172,
+            180
+          ]
+        },
+        {
+          "donor_index": 7,
+          "rgb": [
+            197,
+            98,
+            106
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            123,
+            16,
+            49
+          ]
+        },
+        {
+          "donor_index": 13,
+          "rgb": [
+            131,
+            131,
+            148
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 90,
+      "species": "SPECIES_SHELLDER",
+      "view": "male_front.png",
+      "donor_path": "0090/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 6,
+          "rgb": [
+            238,
+            172,
+            180
+          ]
+        },
+        {
+          "donor_index": 7,
+          "rgb": [
+            197,
+            98,
+            106
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            123,
+            16,
+            49
+          ]
+        },
+        {
+          "donor_index": 13,
+          "rgb": [
+            131,
+            131,
+            148
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 96,
+      "species": "SPECIES_DROWZEE",
+      "view": "female_front.png",
+      "donor_path": "0096/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 3,
+          "rgb": [
+            106,
+            82,
+            65
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            139,
+            115,
+            90
+          ]
+        },
+        {
+          "donor_index": 9,
+          "rgb": [
+            213,
+            172,
+            74
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            246,
+            238,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 96,
+      "species": "SPECIES_DROWZEE",
+      "view": "male_front.png",
+      "donor_path": "0096/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 3,
+          "rgb": [
+            106,
+            82,
+            65
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            139,
+            115,
+            90
+          ]
+        },
+        {
+          "donor_index": 9,
+          "rgb": [
+            213,
+            172,
+            74
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            246,
+            238,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 97,
+      "species": "SPECIES_HYPNO",
+      "view": "female_front.png",
+      "donor_path": "0097/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 97,
+      "species": "SPECIES_HYPNO",
+      "view": "male_front.png",
+      "donor_path": "0097/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 100,
+      "species": "SPECIES_VOLTORB",
+      "view": "male_front.png",
+      "donor_path": "0100/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 101,
+      "species": "SPECIES_ELECTRODE",
+      "view": "male_front.png",
+      "donor_path": "0101/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 102,
+      "species": "SPECIES_EXEGGCUTE",
+      "view": "female_front.png",
+      "donor_path": "0102/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        11,
+        12,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "5": 5
+      },
+      "missing_colors": [
+        {
+          "donor_index": 3,
+          "rgb": [
+            255,
+            238,
+            139
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            205,
+            139,
+            8
+          ]
+        },
+        {
+          "donor_index": 11,
+          "rgb": [
+            255,
+            238,
+            238
+          ]
+        },
+        {
+          "donor_index": 12,
+          "rgb": [
+            255,
+            213,
+            222
+          ]
+        },
+        {
+          "donor_index": 14,
+          "rgb": [
+            197,
+            115,
+            148
+          ]
+        },
+        {
+          "donor_index": 15,
+          "rgb": [
+            139,
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 102,
+      "species": "SPECIES_EXEGGCUTE",
+      "view": "male_front.png",
+      "donor_path": "0102/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        11,
+        12,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "5": 5
+      },
+      "missing_colors": [
+        {
+          "donor_index": 3,
+          "rgb": [
+            255,
+            238,
+            139
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            205,
+            139,
+            8
+          ]
+        },
+        {
+          "donor_index": 11,
+          "rgb": [
+            255,
+            238,
+            238
+          ]
+        },
+        {
+          "donor_index": 12,
+          "rgb": [
+            255,
+            213,
+            222
+          ]
+        },
+        {
+          "donor_index": 14,
+          "rgb": [
+            197,
+            115,
+            148
+          ]
+        },
+        {
+          "donor_index": 15,
+          "rgb": [
+            139,
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 115,
+      "species": "SPECIES_KANGASKHAN",
+      "view": "female_front.png",
+      "donor_path": "0115/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 12,
+          "rgb": [
+            222,
+            172,
+            131
+          ]
+        },
+        {
+          "donor_index": 13,
+          "rgb": [
+            189,
+            148,
+            115
+          ]
+        },
+        {
+          "donor_index": 14,
+          "rgb": [
+            148,
+            115,
+            106
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 116,
+      "species": "SPECIES_HORSEA",
+      "view": "female_front.png",
+      "donor_path": "0116/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 116,
+      "species": "SPECIES_HORSEA",
+      "view": "male_front.png",
+      "donor_path": "0116/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 124,
+      "species": "SPECIES_JYNX",
+      "view": "female_front.png",
+      "donor_path": "0124/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14
+      },
+      "missing_colors": [
+        {
+          "donor_index": 7,
+          "rgb": [
+            189,
+            189,
+            205
+          ]
+        },
+        {
+          "donor_index": 15,
+          "rgb": [
+            139,
+            98,
+            74
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 126,
+      "species": "SPECIES_MAGMAR",
+      "view": "female_front.png",
+      "donor_path": "0126/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 126,
+      "species": "SPECIES_MAGMAR",
+      "view": "male_front.png",
+      "donor_path": "0126/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 131,
+      "species": "SPECIES_LAPRAS",
+      "view": "female_front.png",
+      "donor_path": "0131/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 131,
+      "species": "SPECIES_LAPRAS",
+      "view": "male_front.png",
+      "donor_path": "0131/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 132,
+      "species": "SPECIES_DITTO",
+      "view": "male_front.png",
+      "donor_path": "0132/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 138,
+      "species": "SPECIES_OMANYTE",
+      "view": "female_front.png",
+      "donor_path": "0138/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "mapping": {
+        "1": 1,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 138,
+      "species": "SPECIES_OMANYTE",
+      "view": "male_front.png",
+      "donor_path": "0138/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "mapping": {
+        "1": 1,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 139,
+      "species": "SPECIES_OMASTAR",
+      "view": "female_front.png",
+      "donor_path": "0139/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 139,
+      "species": "SPECIES_OMASTAR",
+      "view": "male_front.png",
+      "donor_path": "0139/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 143,
+      "species": "SPECIES_SNORLAX",
+      "view": "female_front.png",
+      "donor_path": "0143/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "5": 5,
+        "7": 6,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14
+      },
+      "missing_colors": [
+        {
+          "donor_index": 2,
+          "rgb": [
+            82,
+            156,
+            172
+          ]
+        },
+        {
+          "donor_index": 3,
+          "rgb": [
+            65,
+            115,
+            131
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            41,
+            82,
+            106
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            255,
+            246,
+            213
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            230,
+            205,
+            172
+          ]
+        },
+        {
+          "donor_index": 15,
+          "rgb": [
+            164,
+            106,
+            106
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 143,
+      "species": "SPECIES_SNORLAX",
+      "view": "male_front.png",
+      "donor_path": "0143/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "5": 5,
+        "7": 6,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14
+      },
+      "missing_colors": [
+        {
+          "donor_index": 2,
+          "rgb": [
+            82,
+            156,
+            172
+          ]
+        },
+        {
+          "donor_index": 3,
+          "rgb": [
+            65,
+            115,
+            131
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            41,
+            82,
+            106
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            255,
+            246,
+            213
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            230,
+            205,
+            172
+          ]
+        },
+        {
+          "donor_index": 15,
+          "rgb": [
+            164,
+            106,
+            106
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 151,
+      "species": "SPECIES_MEW",
+      "view": "male_front.png",
+      "donor_path": "0151/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "7": 7,
+        "9": 9,
+        "10": 10,
+        "11": 11
+      },
+      "missing_colors": [
+        {
+          "donor_index": 6,
+          "rgb": [
+            106,
+            49,
+            90
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 160,
+      "species": "SPECIES_FERALIGATR",
+      "view": "female_back.png",
+      "donor_path": "0160/female/back.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "14": 14
+      },
+      "missing_colors": [
+        {
+          "donor_index": 4,
+          "rgb": [
+            74,
+            222,
+            197
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            24,
+            172,
+            164
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            0,
+            115,
+            98
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            74,
+            123,
+            255
+          ]
+        },
+        {
+          "donor_index": 9,
+          "rgb": [
+            32,
+            82,
+            205
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            0,
+            24,
+            156
+          ]
+        },
+        {
+          "donor_index": 11,
+          "rgb": [
+            238,
+            238,
+            106
+          ]
+        },
+        {
+          "donor_index": 12,
+          "rgb": [
+            205,
+            197,
+            41
+          ]
+        },
+        {
+          "donor_index": 13,
+          "rgb": [
+            148,
+            131,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 160,
+      "species": "SPECIES_FERALIGATR",
+      "view": "male_back.png",
+      "donor_path": "0160/male/back.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "14": 14
+      },
+      "missing_colors": [
+        {
+          "donor_index": 4,
+          "rgb": [
+            74,
+            222,
+            197
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            24,
+            172,
+            164
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            0,
+            115,
+            98
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            74,
+            123,
+            255
+          ]
+        },
+        {
+          "donor_index": 9,
+          "rgb": [
+            32,
+            82,
+            205
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            0,
+            24,
+            156
+          ]
+        },
+        {
+          "donor_index": 11,
+          "rgb": [
+            238,
+            238,
+            106
+          ]
+        },
+        {
+          "donor_index": 12,
+          "rgb": [
+            205,
+            197,
+            41
+          ]
+        },
+        {
+          "donor_index": 13,
+          "rgb": [
+            148,
+            131,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 160,
+      "species": "SPECIES_FERALIGATR",
+      "view": "female_front.png",
+      "donor_path": "0160/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "7": 7,
+        "12": 12,
+        "13": 13,
+        "14": 14
+      },
+      "missing_colors": [
+        {
+          "donor_index": 3,
+          "rgb": [
+            139,
+            238,
+            255
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            65,
+            213,
+            238
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            41,
+            156,
+            189
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            8,
+            106,
+            148
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            255,
+            98,
+            65
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            172,
+            41,
+            41
+          ]
+        },
+        {
+          "donor_index": 11,
+          "rgb": [
+            255,
+            222,
+            123
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 160,
+      "species": "SPECIES_FERALIGATR",
+      "view": "male_front.png",
+      "donor_path": "0160/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "7": 7,
+        "12": 12,
+        "13": 13,
+        "14": 14
+      },
+      "missing_colors": [
+        {
+          "donor_index": 3,
+          "rgb": [
+            139,
+            238,
+            255
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            65,
+            213,
+            238
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            41,
+            156,
+            189
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            8,
+            106,
+            148
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            255,
+            98,
+            65
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            172,
+            41,
+            41
+          ]
+        },
+        {
+          "donor_index": 11,
+          "rgb": [
+            255,
+            222,
+            123
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 164,
+      "species": "SPECIES_NOCTOWL",
+      "view": "female_front.png",
+      "donor_path": "0164/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 3,
+          "rgb": [
+            222,
+            205,
+            90
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            213,
+            148,
+            98
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            172,
+            123,
+            74
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            148,
+            90,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 164,
+      "species": "SPECIES_NOCTOWL",
+      "view": "male_front.png",
+      "donor_path": "0164/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 3,
+          "rgb": [
+            222,
+            205,
+            90
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            213,
+            148,
+            98
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            172,
+            123,
+            74
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            148,
+            90,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 167,
+      "species": "SPECIES_SPINARAK",
+      "view": "female_front.png",
+      "donor_path": "0167/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 6,
+          "rgb": [
+            74,
+            98,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 167,
+      "species": "SPECIES_SPINARAK",
+      "view": "male_front.png",
+      "donor_path": "0167/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 6,
+          "rgb": [
+            74,
+            98,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 171,
+      "species": "SPECIES_LANTURN",
+      "view": "female_front.png",
+      "donor_path": "0171/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "2": 2,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 1,
+          "rgb": [
+            49,
+            57,
+            106
+          ]
+        },
+        {
+          "donor_index": 3,
+          "rgb": [
+            98,
+            156,
+            230
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            115,
+            197,
+            246
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            180,
+            230,
+            255
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            180,
+            139,
+            32
+          ]
+        },
+        {
+          "donor_index": 11,
+          "rgb": [
+            230,
+            189,
+            49
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 171,
+      "species": "SPECIES_LANTURN",
+      "view": "male_front.png",
+      "donor_path": "0171/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "2": 2,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 1,
+          "rgb": [
+            49,
+            57,
+            106
+          ]
+        },
+        {
+          "donor_index": 3,
+          "rgb": [
+            98,
+            156,
+            230
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            115,
+            197,
+            246
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            180,
+            230,
+            255
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            180,
+            139,
+            32
+          ]
+        },
+        {
+          "donor_index": 11,
+          "rgb": [
+            230,
+            189,
+            49
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 173,
+      "species": "SPECIES_CLEFFA",
+      "view": "female_front.png",
+      "donor_path": "0173/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        13,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "6": 6,
+        "7": 7,
+        "10": 10,
+        "13": 13,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 2,
+          "rgb": [
+            255,
+            213,
+            205
+          ]
+        },
+        {
+          "donor_index": 3,
+          "rgb": [
+            255,
+            164,
+            164
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            205,
+            131,
+            131
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            172,
+            82,
+            82
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            156,
+            98,
+            8
+          ]
+        },
+        {
+          "donor_index": 9,
+          "rgb": [
+            115,
+            74,
+            49
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 173,
+      "species": "SPECIES_CLEFFA",
+      "view": "male_front.png",
+      "donor_path": "0173/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        13,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "6": 6,
+        "7": 7,
+        "10": 10,
+        "13": 13,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 2,
+          "rgb": [
+            255,
+            213,
+            205
+          ]
+        },
+        {
+          "donor_index": 3,
+          "rgb": [
+            255,
+            164,
+            164
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            205,
+            131,
+            131
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            172,
+            82,
+            82
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            156,
+            98,
+            8
+          ]
+        },
+        {
+          "donor_index": 9,
+          "rgb": [
+            115,
+            74,
+            49
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 174,
+      "species": "SPECIES_IGGLYBUFF",
+      "view": "female_front.png",
+      "donor_path": "0174/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        9,
+        11,
+        12,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "9": 9,
+        "11": 11,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 12,
+          "rgb": [
+            139,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 174,
+      "species": "SPECIES_IGGLYBUFF",
+      "view": "male_front.png",
+      "donor_path": "0174/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        9,
+        11,
+        12,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "9": 9,
+        "11": 11,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 12,
+          "rgb": [
+            139,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 175,
+      "species": "SPECIES_TOGEPI",
+      "view": "female_front.png",
+      "donor_path": "0175/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "6": 6,
+        "7": 7,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12
+      },
+      "missing_colors": [
+        {
+          "donor_index": 5,
+          "rgb": [
+            106,
+            115,
+            131
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            205,
+            180,
+            115
+          ]
+        },
+        {
+          "donor_index": 13,
+          "rgb": [
+            238,
+            106,
+            106
+          ]
+        },
+        {
+          "donor_index": 14,
+          "rgb": [
+            197,
+            74,
+            65
+          ]
+        },
+        {
+          "donor_index": 15,
+          "rgb": [
+            172,
+            74,
+            74
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 175,
+      "species": "SPECIES_TOGEPI",
+      "view": "male_front.png",
+      "donor_path": "0175/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "6": 6,
+        "7": 7,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12
+      },
+      "missing_colors": [
+        {
+          "donor_index": 5,
+          "rgb": [
+            106,
+            115,
+            131
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            205,
+            180,
+            115
+          ]
+        },
+        {
+          "donor_index": 13,
+          "rgb": [
+            238,
+            106,
+            106
+          ]
+        },
+        {
+          "donor_index": 14,
+          "rgb": [
+            197,
+            74,
+            65
+          ]
+        },
+        {
+          "donor_index": 15,
+          "rgb": [
+            172,
+            74,
+            74
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 176,
+      "species": "SPECIES_TOGETIC",
+      "view": "female_front.png",
+      "donor_path": "0176/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "mapping": {
+        "1": 1,
+        "4": 4,
+        "5": 5,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11
+      },
+      "missing_colors": [
+        {
+          "donor_index": 2,
+          "rgb": [
+            115,
+            115,
+            123
+          ]
+        },
+        {
+          "donor_index": 3,
+          "rgb": [
+            189,
+            213,
+            205
+          ]
+        },
+        {
+          "donor_index": 12,
+          "rgb": [
+            148,
+            172,
+            164
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 176,
+      "species": "SPECIES_TOGETIC",
+      "view": "male_front.png",
+      "donor_path": "0176/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "mapping": {
+        "1": 1,
+        "4": 4,
+        "5": 5,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11
+      },
+      "missing_colors": [
+        {
+          "donor_index": 2,
+          "rgb": [
+            115,
+            115,
+            123
+          ]
+        },
+        {
+          "donor_index": 3,
+          "rgb": [
+            189,
+            213,
+            205
+          ]
+        },
+        {
+          "donor_index": 12,
+          "rgb": [
+            148,
+            172,
+            164
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 177,
+      "species": "SPECIES_NATU",
+      "view": "female_front.png",
+      "donor_path": "0177/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 9,
+          "rgb": [
+            246,
+            90,
+            90
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            213,
+            41,
+            90
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 177,
+      "species": "SPECIES_NATU",
+      "view": "male_front.png",
+      "donor_path": "0177/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 9,
+          "rgb": [
+            246,
+            90,
+            90
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            213,
+            41,
+            90
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 180,
+      "species": "SPECIES_FLAAFFY",
+      "view": "female_front.png",
+      "donor_path": "0180/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "4": 4,
+        "5": 5,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 2,
+          "rgb": [
+            205,
+            222,
+            246
+          ]
+        },
+        {
+          "donor_index": 3,
+          "rgb": [
+            180,
+            180,
+            213
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            255,
+            205,
+            213
+          ]
+        },
+        {
+          "donor_index": 7,
+          "rgb": [
+            255,
+            180,
+            205
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            255,
+            139,
+            156
+          ]
+        },
+        {
+          "donor_index": 9,
+          "rgb": [
+            213,
+            98,
+            123
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            139,
+            32,
+            49
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 180,
+      "species": "SPECIES_FLAAFFY",
+      "view": "male_front.png",
+      "donor_path": "0180/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "4": 4,
+        "5": 5,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 2,
+          "rgb": [
+            205,
+            222,
+            246
+          ]
+        },
+        {
+          "donor_index": 3,
+          "rgb": [
+            180,
+            180,
+            213
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            255,
+            205,
+            213
+          ]
+        },
+        {
+          "donor_index": 7,
+          "rgb": [
+            255,
+            180,
+            205
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            255,
+            139,
+            156
+          ]
+        },
+        {
+          "donor_index": 9,
+          "rgb": [
+            213,
+            98,
+            123
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            139,
+            32,
+            49
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 182,
+      "species": "SPECIES_BELLOSSOM",
+      "view": "female_front.png",
+      "donor_path": "0182/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "8": 8,
+        "9": 9,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 3,
+          "rgb": [
+            123,
+            180,
+            49
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            82,
+            123,
+            32
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            255,
+            197,
+            24
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            213,
+            148,
+            16
+          ]
+        },
+        {
+          "donor_index": 7,
+          "rgb": [
+            148,
+            115,
+            16
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            8,
+            98,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 182,
+      "species": "SPECIES_BELLOSSOM",
+      "view": "male_front.png",
+      "donor_path": "0182/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "8": 8,
+        "9": 9,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 3,
+          "rgb": [
+            123,
+            180,
+            49
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            82,
+            123,
+            32
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            255,
+            197,
+            24
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            213,
+            148,
+            16
+          ]
+        },
+        {
+          "donor_index": 7,
+          "rgb": [
+            148,
+            115,
+            16
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            8,
+            98,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 186,
+      "species": "SPECIES_POLITOED",
+      "view": "female_front.png",
+      "donor_path": "0186/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 14,
+          "rgb": [
+            82,
+            123,
+            115
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 186,
+      "species": "SPECIES_POLITOED",
+      "view": "male_front.png",
+      "donor_path": "0186/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 14,
+          "rgb": [
+            82,
+            123,
+            115
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 188,
+      "species": "SPECIES_SKIPLOOM",
+      "view": "female_front.png",
+      "donor_path": "0188/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "8": 8,
+        "10": 10,
+        "12": 12,
+        "13": 13,
+        "14": 14
+      },
+      "missing_colors": [
+        {
+          "donor_index": 6,
+          "rgb": [
+            156,
+            82,
+            0
+          ]
+        },
+        {
+          "donor_index": 9,
+          "rgb": [
+            255,
+            205,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 188,
+      "species": "SPECIES_SKIPLOOM",
+      "view": "male_front.png",
+      "donor_path": "0188/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "8": 8,
+        "10": 10,
+        "12": 12,
+        "13": 13,
+        "14": 14
+      },
+      "missing_colors": [
+        {
+          "donor_index": 6,
+          "rgb": [
+            156,
+            82,
+            0
+          ]
+        },
+        {
+          "donor_index": 9,
+          "rgb": [
+            255,
+            205,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 192,
+      "species": "SPECIES_SUNFLORA",
+      "view": "female_front.png",
+      "donor_path": "0192/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "12": 12,
+        "13": 13
+      },
+      "missing_colors": [
+        {
+          "donor_index": 2,
+          "rgb": [
+            156,
+            32,
+            0
+          ]
+        },
+        {
+          "donor_index": 14,
+          "rgb": [
+            172,
+            222,
+            90
+          ]
+        },
+        {
+          "donor_index": 15,
+          "rgb": [
+            90,
+            131,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 192,
+      "species": "SPECIES_SUNFLORA",
+      "view": "male_front.png",
+      "donor_path": "0192/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "12": 12,
+        "13": 13
+      },
+      "missing_colors": [
+        {
+          "donor_index": 2,
+          "rgb": [
+            156,
+            32,
+            0
+          ]
+        },
+        {
+          "donor_index": 14,
+          "rgb": [
+            172,
+            222,
+            90
+          ]
+        },
+        {
+          "donor_index": 15,
+          "rgb": [
+            90,
+            131,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 194,
+      "species": "SPECIES_WOOPER",
+      "view": "female_front.png",
+      "donor_path": "0194/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 7,
+          "rgb": [
+            156,
+            213,
+            246
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 194,
+      "species": "SPECIES_WOOPER",
+      "view": "male_front.png",
+      "donor_path": "0194/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 7,
+          "rgb": [
+            156,
+            213,
+            246
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 195,
+      "species": "SPECIES_QUAGSIRE",
+      "view": "female_front.png",
+      "donor_path": "0195/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "mapping": {
+        "1": 1,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "10": 10,
+        "11": 11,
+        "13": 13,
+        "14": 14
+      },
+      "missing_colors": [
+        {
+          "donor_index": 2,
+          "rgb": [
+            65,
+            82,
+            131
+          ]
+        },
+        {
+          "donor_index": 7,
+          "rgb": [
+            98,
+            156,
+            189
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            131,
+            213,
+            246
+          ]
+        },
+        {
+          "donor_index": 9,
+          "rgb": [
+            172,
+            230,
+            255
+          ]
+        },
+        {
+          "donor_index": 12,
+          "rgb": [
+            98,
+            123,
+            164
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 195,
+      "species": "SPECIES_QUAGSIRE",
+      "view": "male_front.png",
+      "donor_path": "0195/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "mapping": {
+        "1": 1,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "10": 10,
+        "11": 11,
+        "13": 13,
+        "14": 14
+      },
+      "missing_colors": [
+        {
+          "donor_index": 2,
+          "rgb": [
+            65,
+            82,
+            131
+          ]
+        },
+        {
+          "donor_index": 7,
+          "rgb": [
+            98,
+            156,
+            189
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            131,
+            213,
+            246
+          ]
+        },
+        {
+          "donor_index": 9,
+          "rgb": [
+            172,
+            230,
+            255
+          ]
+        },
+        {
+          "donor_index": 12,
+          "rgb": [
+            98,
+            123,
+            164
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 197,
+      "species": "SPECIES_UMBREON",
+      "view": "female_front.png",
+      "donor_path": "0197/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "12": 12,
+        "13": 13
+      },
+      "missing_colors": [
+        {
+          "donor_index": 3,
+          "rgb": [
+            65,
+            65,
+            82
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            41,
+            49,
+            74
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 197,
+      "species": "SPECIES_UMBREON",
+      "view": "male_front.png",
+      "donor_path": "0197/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "12": 12,
+        "13": 13
+      },
+      "missing_colors": [
+        {
+          "donor_index": 3,
+          "rgb": [
+            65,
+            65,
+            82
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            41,
+            49,
+            74
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 199,
+      "species": "SPECIES_SLOWKING",
+      "view": "female_front.png",
+      "donor_path": "0199/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 5,
+          "rgb": [
+            238,
+            115,
+            106
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            205,
+            82,
+            82
+          ]
+        },
+        {
+          "donor_index": 7,
+          "rgb": [
+            255,
+            156,
+            148
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 199,
+      "species": "SPECIES_SLOWKING",
+      "view": "male_front.png",
+      "donor_path": "0199/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 5,
+          "rgb": [
+            238,
+            115,
+            106
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            205,
+            82,
+            82
+          ]
+        },
+        {
+          "donor_index": 7,
+          "rgb": [
+            255,
+            156,
+            148
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 204,
+      "species": "SPECIES_PINECO",
+      "view": "female_front.png",
+      "donor_path": "0204/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "8": 8,
+        "11": 11,
+        "12": 12,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 6,
+          "rgb": [
+            32,
+            74,
+            98
+          ]
+        },
+        {
+          "donor_index": 7,
+          "rgb": [
+            57,
+            131,
+            164
+          ]
+        },
+        {
+          "donor_index": 9,
+          "rgb": [
+            115,
+            189,
+            164
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            156,
+            230,
+            197
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 204,
+      "species": "SPECIES_PINECO",
+      "view": "male_front.png",
+      "donor_path": "0204/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "8": 8,
+        "11": 11,
+        "12": 12,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 6,
+          "rgb": [
+            32,
+            74,
+            98
+          ]
+        },
+        {
+          "donor_index": 7,
+          "rgb": [
+            57,
+            131,
+            164
+          ]
+        },
+        {
+          "donor_index": 9,
+          "rgb": [
+            115,
+            189,
+            164
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            156,
+            230,
+            197
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 205,
+      "species": "SPECIES_FORRETRESS",
+      "view": "female_front.png",
+      "donor_path": "0205/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        11,
+        12,
+        13,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 5,
+          "rgb": [
+            156,
+            131,
+            180
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            197,
+            172,
+            213
+          ]
+        },
+        {
+          "donor_index": 7,
+          "rgb": [
+            230,
+            213,
+            222
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 205,
+      "species": "SPECIES_FORRETRESS",
+      "view": "male_front.png",
+      "donor_path": "0205/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        11,
+        12,
+        13,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 5,
+          "rgb": [
+            156,
+            131,
+            180
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            197,
+            172,
+            213
+          ]
+        },
+        {
+          "donor_index": 7,
+          "rgb": [
+            230,
+            213,
+            222
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 210,
+      "species": "SPECIES_GRANBULL",
+      "view": "female_front.png",
+      "donor_path": "0210/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 1,
+          "rgb": [
+            255,
+            123,
+            148
+          ]
+        },
+        {
+          "donor_index": 2,
+          "rgb": [
+            115,
+            57,
+            90
+          ]
+        },
+        {
+          "donor_index": 3,
+          "rgb": [
+            156,
+            90,
+            131
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            205,
+            123,
+            156
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            205,
+            139,
+            189
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            246,
+            164,
+            205
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            164,
+            57,
+            82
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 210,
+      "species": "SPECIES_GRANBULL",
+      "view": "male_front.png",
+      "donor_path": "0210/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 1,
+          "rgb": [
+            255,
+            123,
+            148
+          ]
+        },
+        {
+          "donor_index": 2,
+          "rgb": [
+            115,
+            57,
+            90
+          ]
+        },
+        {
+          "donor_index": 3,
+          "rgb": [
+            156,
+            90,
+            131
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            205,
+            123,
+            156
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            205,
+            139,
+            189
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            246,
+            164,
+            205
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            164,
+            57,
+            82
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 216,
+      "species": "SPECIES_TEDDIURSA",
+      "view": "female_front.png",
+      "donor_path": "0216/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "6": 6,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 3,
+          "rgb": [
+            255,
+            131,
+            57
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            222,
+            115,
+            49
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            180,
+            98,
+            32
+          ]
+        },
+        {
+          "donor_index": 7,
+          "rgb": [
+            255,
+            230,
+            164
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            238,
+            172,
+            82
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 216,
+      "species": "SPECIES_TEDDIURSA",
+      "view": "male_front.png",
+      "donor_path": "0216/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "6": 6,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 3,
+          "rgb": [
+            255,
+            131,
+            57
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            222,
+            115,
+            49
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            180,
+            98,
+            32
+          ]
+        },
+        {
+          "donor_index": 7,
+          "rgb": [
+            255,
+            230,
+            164
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            238,
+            172,
+            82
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 217,
+      "species": "SPECIES_URSARING",
+      "view": "female_front.png",
+      "donor_path": "0217/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 2,
+          "rgb": [
+            222,
+            164,
+            115
+          ]
+        },
+        {
+          "donor_index": 3,
+          "rgb": [
+            189,
+            115,
+            65
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            148,
+            82,
+            32
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            98,
+            65,
+            41
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            65,
+            41,
+            24
+          ]
+        },
+        {
+          "donor_index": 7,
+          "rgb": [
+            255,
+            238,
+            131
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            246,
+            197,
+            98
+          ]
+        },
+        {
+          "donor_index": 9,
+          "rgb": [
+            197,
+            156,
+            74
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            131,
+            24,
+            49
+          ]
+        },
+        {
+          "donor_index": 11,
+          "rgb": [
+            222,
+            57,
+            90
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 217,
+      "species": "SPECIES_URSARING",
+      "view": "male_front.png",
+      "donor_path": "0217/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 2,
+          "rgb": [
+            222,
+            164,
+            115
+          ]
+        },
+        {
+          "donor_index": 3,
+          "rgb": [
+            189,
+            115,
+            65
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            148,
+            82,
+            32
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            98,
+            65,
+            41
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            65,
+            41,
+            24
+          ]
+        },
+        {
+          "donor_index": 7,
+          "rgb": [
+            255,
+            238,
+            131
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            246,
+            197,
+            98
+          ]
+        },
+        {
+          "donor_index": 9,
+          "rgb": [
+            197,
+            156,
+            74
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            131,
+            24,
+            49
+          ]
+        },
+        {
+          "donor_index": 11,
+          "rgb": [
+            222,
+            57,
+            90
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 222,
+      "species": "SPECIES_CORSOLA",
+      "view": "female_front.png",
+      "donor_path": "0222/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "12": 12
+      },
+      "missing_colors": [
+        {
+          "donor_index": 4,
+          "rgb": [
+            246,
+            123,
+            189
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 222,
+      "species": "SPECIES_CORSOLA",
+      "view": "male_front.png",
+      "donor_path": "0222/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "12": 12
+      },
+      "missing_colors": [
+        {
+          "donor_index": 4,
+          "rgb": [
+            246,
+            123,
+            189
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 231,
+      "species": "SPECIES_PHANPY",
+      "view": "female_front.png",
+      "donor_path": "0231/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "4": 4,
+        "7": 7,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 2,
+          "rgb": [
+            156,
+            205,
+            238
+          ]
+        },
+        {
+          "donor_index": 3,
+          "rgb": [
+            131,
+            180,
+            222
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            82,
+            131,
+            180
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            74,
+            74,
+            131
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 231,
+      "species": "SPECIES_PHANPY",
+      "view": "male_front.png",
+      "donor_path": "0231/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "4": 4,
+        "7": 7,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 2,
+          "rgb": [
+            156,
+            205,
+            238
+          ]
+        },
+        {
+          "donor_index": 3,
+          "rgb": [
+            131,
+            180,
+            222
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            82,
+            131,
+            180
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            74,
+            74,
+            131
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 233,
+      "species": "SPECIES_PORYGON2",
+      "view": "male_back.png",
+      "donor_path": "0233/male/back.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        13,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 8,
+        "13": 13,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 3,
+          "rgb": [
+            98,
+            148,
+            255
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            57,
+            90,
+            238
+          ]
+        },
+        {
+          "donor_index": 5,
+          "rgb": [
+            8,
+            32,
+            180
+          ]
+        },
+        {
+          "donor_index": 8,
+          "rgb": [
+            255,
+            213,
+            246
+          ]
+        },
+        {
+          "donor_index": 9,
+          "rgb": [
+            213,
+            164,
+            205
+          ]
+        },
+        {
+          "donor_index": 10,
+          "rgb": [
+            164,
+            106,
+            131
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 233,
+      "species": "SPECIES_PORYGON2",
+      "view": "male_front.png",
+      "donor_path": "0233/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "8": 8,
+        "9": 9,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 10,
+          "rgb": [
+            41,
+            98,
+            131
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 240,
+      "species": "SPECIES_MAGBY",
+      "view": "female_front.png",
+      "donor_path": "0240/female/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 10,
+          "rgb": [
+            156,
+            115,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 240,
+      "species": "SPECIES_MAGBY",
+      "view": "male_front.png",
+      "donor_path": "0240/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 10,
+          "rgb": [
+            156,
+            115,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 244,
+      "species": "SPECIES_ENTEI",
+      "view": "male_front.png",
+      "donor_path": "0244/male/front.png",
+      "status": "palette-mismatch",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "5": 5,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "12": 12,
+        "13": 13,
+        "15": 15
+      },
+      "missing_colors": [
+        {
+          "donor_index": 2,
+          "rgb": [
+            172,
+            115,
+            82
+          ]
+        },
+        {
+          "donor_index": 3,
+          "rgb": [
+            131,
+            82,
+            41
+          ]
+        },
+        {
+          "donor_index": 4,
+          "rgb": [
+            106,
+            65,
+            57
+          ]
+        },
+        {
+          "donor_index": 6,
+          "rgb": [
+            238,
+            65,
+            65
+          ]
+        },
+        {
+          "donor_index": 7,
+          "rgb": [
+            222,
+            0,
+            0
+          ]
+        },
+        {
+          "donor_index": 11,
+          "rgb": [
+            197,
+            139,
+            0
+          ]
+        },
+        {
+          "donor_index": 14,
+          "rgb": [
+            82,
+            82,
+            90
+          ]
+        }
+      ]
+    },
+    {
+      "species_id": 246,
+      "species": "SPECIES_LARVITAR",
+      "view": "female_front.png",
+      "donor_path": "0246/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 246,
+      "species": "SPECIES_LARVITAR",
+      "view": "male_front.png",
+      "donor_path": "0246/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 247,
+      "species": "SPECIES_PUPITAR",
+      "view": "female_front.png",
+      "donor_path": "0247/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        9,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "7": 7,
+        "9": 9,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 247,
+      "species": "SPECIES_PUPITAR",
+      "view": "male_front.png",
+      "donor_path": "0247/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        9,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "7": 7,
+        "9": 9,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 248,
+      "species": "SPECIES_TYRANITAR",
+      "view": "female_front.png",
+      "donor_path": "0248/female/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    },
+    {
+      "species_id": 248,
+      "species": "SPECIES_TYRANITAR",
+      "view": "male_front.png",
+      "donor_path": "0248/male/front.png",
+      "status": "direct-index-safe",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "mapping": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15
+      },
+      "missing_colors": []
+    }
+  ]
+}

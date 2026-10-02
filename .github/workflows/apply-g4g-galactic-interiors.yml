@@ -1,0 +1,67 @@
+name: apply-g4g-galactic-interiors
+on:
+  push:
+    branches: [ visual-overhaul-g2a ]
+    paths:
+      - 'tools/visual_overhaul/prepare_g4g_galactic.py'
+      - 'tools/visual_overhaul/recolor_g4g_galactic.c'
+      - 'tools/visual_overhaul/validate_g4g_galactic.py'
+      - '.github/workflows/apply-g4g-galactic-interiors.yml'
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: visual-overhaul-g2a
+      - name: Build G4 tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc libpng-dev
+          mkdir -p g4-tools-build
+          COMMON_SRC="tools/nitrobtx/src/common.c tools/nitrobtx/src/ns/chunks/tex.c tools/nitrobtx/src/ns/container.c tools/nitrobtx/src/ns/resource_dict.c tools/nitrobtx/src/ns/resource_name.c tools/nitrobtx/src/ns/resource_tree.c tools/nitrobtx/src/palette.c tools/nitrobtx/src/texture.c"
+          gcc -std=gnu17 -O2 -Itools/nitrobtx/include $COMMON_SRC tools/visual_overhaul/recolor_g4g_galactic.c -lpng -lm -o g4-tools-build/recolor-g4g
+          gcc -std=gnu17 -O2 -Itools/nitrobtx/include $COMMON_SRC tools/nitrobtx/src/help.c tools/nitrobtx/src/options.c tools/nitrobtx/src/main.c -lpng -lm -o g4-tools-build/nitrobtx
+          python -m pip install Pillow
+      - name: Prepare isolated warehouse
+        run: python tools/visual_overhaul/prepare_g4g_galactic.py
+      - name: Preserve before banks
+        run: |
+          cp res/field/maps/texture_sets/map_texture_set_057.nsbtx /tmp/g4g_main_before.nsbtx
+          cp res/field/maps/texture_sets/map_texture_set_067.nsbtx /tmp/g4g_lab_before.nsbtx
+          cp res/field/maps/texture_sets/map_texture_set_030.nsbtx /tmp/g4g_warehouse_before.nsbtx
+      - name: Apply Galactic grades
+        run: |
+          ./g4-tools-build/recolor-g4g main /tmp/g4g_main_before.nsbtx /tmp/g4g_main_after.nsbtx
+          ./g4-tools-build/recolor-g4g lab /tmp/g4g_lab_before.nsbtx /tmp/g4g_lab_after.nsbtx
+          ./g4-tools-build/recolor-g4g warehouse res/field/maps/texture_sets/map_texture_set_076.nsbtx /tmp/g4g_warehouse_after.nsbtx
+          mv /tmp/g4g_main_after.nsbtx res/field/maps/texture_sets/map_texture_set_057.nsbtx
+          mv /tmp/g4g_lab_after.nsbtx res/field/maps/texture_sets/map_texture_set_067.nsbtx
+          mv /tmp/g4g_warehouse_after.nsbtx res/field/maps/texture_sets/map_texture_set_076.nsbtx
+      - name: Validate contracts
+        run: |
+          rm -rf /tmp/g4g_validate
+          for name in main lab warehouse; do mkdir -p "/tmp/g4g_validate/$name/before" "/tmp/g4g_validate/$name/after"; done
+          ./g4-tools-build/nitrobtx dump /tmp/g4g_main_before.nsbtx /tmp/g4g_validate/main/before
+          ./g4-tools-build/nitrobtx dump res/field/maps/texture_sets/map_texture_set_057.nsbtx /tmp/g4g_validate/main/after
+          ./g4-tools-build/nitrobtx dump /tmp/g4g_lab_before.nsbtx /tmp/g4g_validate/lab/before
+          ./g4-tools-build/nitrobtx dump res/field/maps/texture_sets/map_texture_set_067.nsbtx /tmp/g4g_validate/lab/after
+          ./g4-tools-build/nitrobtx dump /tmp/g4g_warehouse_before.nsbtx /tmp/g4g_validate/warehouse/before
+          ./g4-tools-build/nitrobtx dump res/field/maps/texture_sets/map_texture_set_076.nsbtx /tmp/g4g_validate/warehouse/after
+          python tools/visual_overhaul/validate_g4g_galactic.py
+          python tools/visual_overhaul/make_texture_sheet.py /tmp/g4g_validate/main/after docs/visual_overhaul/review/g4g_galactic_main_after.png
+          python tools/visual_overhaul/make_texture_sheet.py /tmp/g4g_validate/lab/after docs/visual_overhaul/review/g4g_galactic_lab_after.png
+          python tools/visual_overhaul/make_texture_sheet.py /tmp/g4g_validate/warehouse/after docs/visual_overhaul/review/g4g_galactic_warehouse_after.png
+      - name: Commit G4G
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add             include/data/map_headers.h             res/field/area_data/area_data_077.json             res/field/area_data/area_data.order             res/field/area_data/meson.build             res/field/maps/texture_sets/map_texture_set_057.nsbtx             res/field/maps/texture_sets/map_texture_set_067.nsbtx             res/field/maps/texture_sets/map_texture_set_076.nsbtx             res/field/maps/texture_sets/map_texture_sets.order             res/field/maps/texture_sets/meson.build             docs/visual_overhaul/G4G_GALACTIC_INTERIORS.md             docs/visual_overhaul/G4G_GALACTIC_GRADE_REPORT.json             docs/visual_overhaul/review/g4g_galactic_*_after.png
+          git commit -m "visual: grade Team Galactic interiors"
+          git fetch origin visual-overhaul-g2a
+          git rebase origin/visual-overhaul-g2a
+          git push origin HEAD:visual-overhaul-g2a

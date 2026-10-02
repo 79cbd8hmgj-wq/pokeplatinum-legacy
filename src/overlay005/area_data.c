@@ -3,6 +3,7 @@
 #include <nitro.h>
 #include <string.h>
 
+#include "constants/field/area_light.h"
 #include "constants/graphics.h"
 #include "constants/heap.h"
 
@@ -204,9 +205,14 @@ const MapPropMaterialShape *AreaDataManager_GetMapPropMaterialShape(const AreaDa
 
 BOOL AreaDataManager_IsOutdoorsLighting(const AreaDataManager *areaDataManager)
 {
-    if ((areaDataManager->areaData.areaLightArchiveID == 0) || (areaDataManager->areaData.areaLightArchiveID == 3)) {
+    switch (areaDataManager->areaData.areaLightArchiveID) {
+    case AREA_LIGHT_SET_RETAIL_0:
+    case AREA_LIGHT_SET_RETAIL_3:
+    case AREA_LIGHT_SET_DEEP_FOREST:
+    case AREA_LIGHT_SET_SNOW:
+    case AREA_LIGHT_SET_SPEAR_PILLAR:
         return TRUE;
-    } else {
+    default:
         return FALSE;
     }
 }

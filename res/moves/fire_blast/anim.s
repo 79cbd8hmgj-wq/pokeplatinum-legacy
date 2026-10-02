@@ -24,6 +24,7 @@ L_0:
     PlaySoundEffectR SEQ_SE_DP_W120
     Func_FadeBattlerSprite BATTLE_ANIM_DEFENDER, 0, 2, BATTLE_COLOR_RED, 10, 0
     Func_Shake 2, 0, 1, 8, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
+    Func_ShakeBg 2, 1, 0, 2, 0, SHAKE_BG_TARGET_BASE
     WaitForAnimTasks
     WaitForAllEmitters
     UnloadParticleSystem 0

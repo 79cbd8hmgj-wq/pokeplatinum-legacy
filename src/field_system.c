@@ -54,6 +54,18 @@ static void HandleFieldInput(FieldSystem *fieldSystem);
 
 static FieldSystem *sFieldSystem;
 
+#ifdef GDB_DEBUGGING
+G4RuntimeQAControl gG4RuntimeQAControl = {
+    G4_RUNTIME_QA_NONE,
+    G4_RUNTIME_QA_IDLE,
+    0,
+    0,
+    0,
+    G4_RUNTIME_QA_MAGIC,
+    FALSE,
+};
+#endif
+
 static BOOL InitFieldSystemContinue(ApplicationManager *appMan, int *state)
 {
     ApplicationArgs *argv = ApplicationManager_Args(appMan);

@@ -1,0 +1,36 @@
+name: audit-platinum-native-battle-sprites
+on:
+  push:
+    branches: [ visual-overhaul-g2a ]
+    paths:
+      - 'tools/visual_overhaul/audit_platinum_native_battle_sprites.py'
+      - '.github/workflows/audit-platinum-native-battle-sprites.yml'
+      - 'res/pokemon/**/male_front.png'
+      - 'res/pokemon/**/female_front.png'
+      - 'res/pokemon/**/male_back.png'
+      - 'res/pokemon/**/female_back.png'
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  audit:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: visual-overhaul-g2a
+      - run: python -m pip install Pillow
+      - run: |
+          python tools/visual_overhaul/audit_platinum_native_battle_sprites.py \
+            --report docs/visual_overhaul/PLATINUM_NATIVE_BATTLE_SPRITE_AUDIT.md \
+            --manifest docs/visual_overhaul/PLATINUM_NATIVE_BATTLE_SPRITE_AUDIT.json
+      - run: |
+          if [ -z "$(git status --porcelain -- docs/visual_overhaul/PLATINUM_NATIVE_BATTLE_SPRITE_AUDIT.md docs/visual_overhaul/PLATINUM_NATIVE_BATTLE_SPRITE_AUDIT.json)" ]; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/visual_overhaul/PLATINUM_NATIVE_BATTLE_SPRITE_AUDIT.md docs/visual_overhaul/PLATINUM_NATIVE_BATTLE_SPRITE_AUDIT.json
+          git commit -m "docs: record Platinum native battle sprite audit"
+          git fetch origin visual-overhaul-g2a
+          git rebase origin/visual-overhaul-g2a
+          git push origin HEAD:visual-overhaul-g2a

@@ -20,6 +20,7 @@ L_0:
     Func_MegahornDefender
     Delay 5
     Func_ShakeBg 5, 0, 1, 6, 0
+    Func_ShakeBg 2, 4, 0, 3, 0, SHAKE_BG_TARGET_BASE
     WaitForAllEmitters
     UnloadParticleSystem 0
     WaitForAnimTasks

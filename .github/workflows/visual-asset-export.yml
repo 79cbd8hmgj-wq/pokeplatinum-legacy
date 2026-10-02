@@ -1,0 +1,117 @@
+name: visual-asset-export
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/visual-asset-export.yml'
+      - 'res/prebuilt/data/mmodel/fldeff.narc'
+      - 'include/constants/field/area_light.h'
+      - 'src/overlay005/area_light.c'
+      - 'src/overlay005/fieldmap.c'
+      - 'res/field/lighting/**'
+      - 'res/field/area_data/**'
+      - 'tools/visual_overhaul/validate_area_light_contract.py'
+      - 'res/field/maps/texture_sets/map_texture_set_074.nsbtx'
+      - 'res/field/props/models/prop_model_147.nsbmd'
+      - 'res/field/props/models/mansion_door.nsbmd'
+      - 'res/graphics/windows/**'
+      - 'res/graphics/party_menu/**'
+      - 'res/graphics/pokemon_summary_screen/**'
+      - 'res/graphics/bag/**'
+      - 'res/graphics/shop_menu/**'
+      - 'res/graphics/battle/interface/**'
+      - 'res/graphics/battle/healthbox/**'
+      - 'res/graphics/options_menu/**'
+      - 'res/graphics/start_menu/**'
+      - 'res/pokemon/**'
+  workflow_dispatch: {}
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+      - name: Validate area-light runtime contract
+        run: python tools/visual_overhaul/validate_area_light_contract.py
+      - name: Collect icon comparison set
+        run: |
+          mkdir -p visual-export/platinum-icons visual-export/hgss-icons visual-export/platinum-main-battle-sprites visual-export/overhaul-battle-sprites visual-export/hgss-battle-sprites visual-export/hgss-party-menu visual-export/hgss-area-windows visual-export/hgss-zukan
+          cp res/pokemon/bulbasaur/icon.png visual-export/platinum-icons/bulbasaur.png
+          cp res/pokemon/pikachu/icon.png visual-export/platinum-icons/pikachu.png
+          cp res/pokemon/gengar/icon.png visual-export/platinum-icons/gengar.png
+          cp res/pokemon/lucario/icon.png visual-export/platinum-icons/lucario.png
+          git clone --depth 1 https://github.com/79cbd8hmgj-wq/pokeheartgold.git /tmp/pokeheartgold
+          # HGSS icon source has seven shared entries before National Dex #001,
+          # so species N maps to poke_icon_(N + 7).
+          cp /tmp/pokeheartgold/files/poketool/icongra/poke_icon/poke_icon_00000008.png visual-export/hgss-icons/bulbasaur.png
+          cp /tmp/pokeheartgold/files/poketool/icongra/poke_icon/poke_icon_00000032.png visual-export/hgss-icons/pikachu.png
+          cp /tmp/pokeheartgold/files/poketool/icongra/poke_icon/poke_icon_00000101.png visual-export/hgss-icons/gengar.png
+          cp /tmp/pokeheartgold/files/poketool/icongra/poke_icon/poke_icon_00000455.png visual-export/hgss-icons/lucario.png
+
+          # Preserve a three-way battle-sprite comparison: retail Platinum
+          # baseline, current overhaul source, and the HGSS donor.
+          git fetch origin main --depth=1
+          git show origin/main:res/pokemon/bulbasaur/male_front.png > visual-export/platinum-main-battle-sprites/bulbasaur_front.png
+          git show origin/main:res/pokemon/mewtwo/male_front.png > visual-export/platinum-main-battle-sprites/mewtwo_front.png
+          cp res/pokemon/bulbasaur/male_front.png visual-export/overhaul-battle-sprites/bulbasaur_front.png
+          cp res/pokemon/mewtwo/male_front.png visual-export/overhaul-battle-sprites/mewtwo_front.png
+          cp /tmp/pokeheartgold/files/poketool/pokegra/pokegra/0001/male/front.png visual-export/hgss-battle-sprites/bulbasaur_front.png
+          cp /tmp/pokeheartgold/files/poketool/pokegra/pokegra/0150/male/front.png visual-export/hgss-battle-sprites/mewtwo_front.png
+          cp /tmp/pokeheartgold/files/graphic/plist_gra/* visual-export/hgss-party-menu/
+          cp /tmp/pokeheartgold/files/data/gs_areawindow/*.png visual-export/hgss-area-windows/
+          find /tmp/pokeheartgold/files/graphic/zukan_gra -maxdepth 1 -name '*.png' -print0 | xargs -0 -I{} cp {} visual-export/hgss-zukan/
+
+      - name: Dump G4A Eterna Forest texture banks
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc libpng-dev
+          mkdir -p g4-tools-build
+          gcc -std=gnu17 -O2 -Itools/nitrobtx/include \
+            tools/nitrobtx/src/common.c \
+            tools/nitrobtx/src/help.c \
+            tools/nitrobtx/src/main.c \
+            tools/nitrobtx/src/ns/chunks/tex.c \
+            tools/nitrobtx/src/ns/container.c \
+            tools/nitrobtx/src/ns/resource_dict.c \
+            tools/nitrobtx/src/ns/resource_name.c \
+            tools/nitrobtx/src/ns/resource_tree.c \
+            tools/nitrobtx/src/options.c \
+            tools/nitrobtx/src/palette.c \
+            tools/nitrobtx/src/texture.c \
+            -lpng -lm -o g4-tools-build/nitrobtx
+          python -m pip install Pillow
+          rm -rf docs/visual_overhaul/review/g4a_eterna_dump
+          mkdir -p docs/visual_overhaul/review/g4a_eterna_dump/map
+          mkdir -p docs/visual_overhaul/review/g4a_eterna_dump/props
+          ./g4-tools-build/nitrobtx dump res/field/maps/texture_sets/map_texture_set_074.nsbtx docs/visual_overhaul/review/g4a_eterna_dump/map
+          ./g4-tools-build/nitrobtx dump res/field/props/texture_sets/prop_texture_set_050.nsbtx docs/visual_overhaul/review/g4a_eterna_dump/props
+          python tools/visual_overhaul/make_g4a_eterna_texture_sheet.py
+
+
+      - name: Build field-effect reference report
+        run: |
+          grep -R -n -E 'FieldEffectManager_Load(Model|Animation)|ov5_021DF9E0|ov5_021DFA14|ov5_021DFA3C' src/overlay005 include/overlay005 > fldeff_refs.txt || true
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: platinum-visual-assets
+          path: |
+            fldeff_refs.txt
+            visual-export/
+            res/prebuilt/data/mmodel/fldeff.narc
+            res/field/maps/texture_sets/map_texture_set_074.nsbtx
+            res/field/props/models/prop_model_147.nsbmd
+            res/field/props/models/mansion_door.nsbmd
+            res/graphics/windows
+            res/graphics/party_menu
+            res/graphics/pokemon_summary_screen
+            res/graphics/bag
+            res/graphics/start_menu
+            res/graphics/options_menu
+            res/graphics/battle/healthbox
+            res/graphics/battle/interface
+            res/graphics/shop_menu
+          retention-days: 1

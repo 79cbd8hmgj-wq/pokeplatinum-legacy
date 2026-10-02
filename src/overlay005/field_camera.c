@@ -149,6 +149,14 @@ static const CameraSettings sCameraTypes[] = {
         .nearPlaneDist = CAMERA_DEFAULT_NEAR_CLIP,
         .farPlaneDist = CAMERA_DEFAULT_FAR_CLIP,
     },
+    [CAMERA_TYPE_ETERNA_FOREST] = {
+        .distance = FX32_CONST(545.0),
+        .cameraAngle = { -F32_DEG_TO_IDX(58.0), 0, 0 },
+        .projection = CAMERA_PROJECTION_PERSPECTIVE,
+        .verticalFov = F32_DEG_TO_IDX(10.9),
+        .nearPlaneDist = CAMERA_DEFAULT_NEAR_CLIP,
+        .farPlaneDist = CAMERA_DEFAULT_FAR_CLIP,
+    },
     [CAMERA_TYPE_UNUSED_16] = {
         .distance = FX32_CONST(330.921875),
         .cameraAngle = { -F32_DEG_TO_IDX(59.051513671875), 0, 0 },
