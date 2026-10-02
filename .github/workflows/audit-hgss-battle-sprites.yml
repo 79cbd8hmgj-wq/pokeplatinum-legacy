@@ -38,18 +38,19 @@ jobs:
         run: |
           python tools/visual_overhaul/audit_hgss_battle_sprites.py \
             --donor-root "$RUNNER_TEMP/pokeheartgold/files/poketool/pokegra/pokegra" \
-            --report docs/visual_overhaul/HGSS_BATTLE_SPRITE_AUDIT.md
+            --report docs/visual_overhaul/HGSS_BATTLE_SPRITE_AUDIT.md \
+            --manifest docs/visual_overhaul/HGSS_BATTLE_SPRITE_COMPATIBILITY.json
 
-      - name: Commit audit report
+      - name: Commit audit outputs
         run: |
-          if [ -z "$(git status --porcelain -- docs/visual_overhaul/HGSS_BATTLE_SPRITE_AUDIT.md)" ]; then
-            echo "Battle sprite audit report already up to date."
+          if [ -z "$(git status --porcelain -- docs/visual_overhaul/HGSS_BATTLE_SPRITE_AUDIT.md docs/visual_overhaul/HGSS_BATTLE_SPRITE_COMPATIBILITY.json)" ]; then
+            echo "Battle sprite audit outputs already up to date."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/visual_overhaul/HGSS_BATTLE_SPRITE_AUDIT.md
-          git commit -m "docs: record HGSS battle sprite audit"
+          git add docs/visual_overhaul/HGSS_BATTLE_SPRITE_AUDIT.md docs/visual_overhaul/HGSS_BATTLE_SPRITE_COMPATIBILITY.json
+          git commit -m "docs: record HGSS battle sprite geometry audit"
           git fetch origin visual-overhaul-g2a
           git rebase origin/visual-overhaul-g2a
           git push origin HEAD:visual-overhaul-g2a
