@@ -468,6 +468,23 @@ Named constants now replace the relevant magic fog values in both initialization
 Commit implementing this pass: `209b2dc0a0d403e5e159f63cd6f3e1520c8f8c37`.
 
 
+
+### G2B forest mist implementation checkpoint
+
+Implemented:
+- Added a shared `FieldMap_IsDeepForest()` helper for Eterna Forest, Fullmoon Island Forest, and Newmoon Island Forest.
+- The same helper now controls both dedicated forest renderer selection and forest atmosphere activation.
+- Added `FieldMap_ApplyDeepForestFog()` using Platinum's native `FogManager`.
+- Forest fog is applied **after** stock weather initialization so the custom atmosphere is not immediately overwritten.
+- Uses a conservative 32-step density table, color+alpha fog blend, and a muted green-gray fog color.
+- No changes were made to `weather_sys.narc`.
+
+Current status:
+- source wiring is complete
+- runtime/build validation is still required
+- next effect target is drifting leaves through the dedicated forest renderer path
+
+
 #### G2C — Global UI presentation
 Improve:
 - frames
