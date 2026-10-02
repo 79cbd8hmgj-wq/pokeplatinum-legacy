@@ -1,0 +1,401 @@
+{
+  "version": 1,
+  "domain": "pokemon",
+  "changes": [
+    {
+      "species": "purugly",
+      "source_sha256": "6938498734f24a7cba7430dc90fc3b7f3e94dd3b4f96f726a0deba65ca1e970f",
+      "operation": "set_base_stat",
+      "stat": "hp",
+      "from": 71,
+      "to": 80
+    },
+    {
+      "species": "purugly",
+      "source_sha256": "6938498734f24a7cba7430dc90fc3b7f3e94dd3b4f96f726a0deba65ca1e970f",
+      "operation": "set_base_stat",
+      "stat": "attack",
+      "from": 82,
+      "to": 95
+    },
+    {
+      "species": "purugly",
+      "source_sha256": "6938498734f24a7cba7430dc90fc3b7f3e94dd3b4f96f726a0deba65ca1e970f",
+      "operation": "set_base_stat",
+      "stat": "defense",
+      "from": 64,
+      "to": 70
+    },
+    {
+      "species": "purugly",
+      "source_sha256": "6938498734f24a7cba7430dc90fc3b7f3e94dd3b4f96f726a0deba65ca1e970f",
+      "operation": "set_base_stat",
+      "stat": "speed",
+      "from": 112,
+      "to": 115
+    },
+    {
+      "species": "purugly",
+      "source_sha256": "6938498734f24a7cba7430dc90fc3b7f3e94dd3b4f96f726a0deba65ca1e970f",
+      "operation": "set_base_stat",
+      "stat": "special_attack",
+      "from": 64,
+      "to": 55
+    },
+    {
+      "species": "purugly",
+      "source_sha256": "6938498734f24a7cba7430dc90fc3b7f3e94dd3b4f96f726a0deba65ca1e970f",
+      "operation": "set_base_stat",
+      "stat": "special_defense",
+      "from": 59,
+      "to": 65
+    },
+    {
+      "species": "purugly",
+      "source_sha256": "6938498734f24a7cba7430dc90fc3b7f3e94dd3b4f96f726a0deba65ca1e970f",
+      "operation": "replace_level_move",
+      "from": [
+        32,
+        "MOVE_CAPTIVATE"
+      ],
+      "to": [
+        32,
+        "MOVE_BODY_SLAM"
+      ]
+    },
+    {
+      "species": "purugly",
+      "source_sha256": "6938498734f24a7cba7430dc90fc3b7f3e94dd3b4f96f726a0deba65ca1e970f",
+      "operation": "replace_level_move",
+      "from": [
+        45,
+        "MOVE_BODY_SLAM"
+      ],
+      "to": [
+        45,
+        "MOVE_SUCKER_PUNCH"
+      ]
+    },
+    {
+      "species": "bastiodon",
+      "source_sha256": "80fc802494f07f36d41ad86bf049f7e17227605a199caf9b0b06aa45cc6f53ed",
+      "operation": "replace_level_move",
+      "from": [
+        36,
+        "MOVE_ENDURE"
+      ],
+      "to": [
+        36,
+        "MOVE_METAL_BURST"
+      ]
+    },
+    {
+      "species": "bastiodon",
+      "source_sha256": "80fc802494f07f36d41ad86bf049f7e17227605a199caf9b0b06aa45cc6f53ed",
+      "operation": "replace_level_move",
+      "from": [
+        43,
+        "MOVE_METAL_BURST"
+      ],
+      "to": [
+        43,
+        "MOVE_ROAR"
+      ]
+    },
+    {
+      "species": "rampardos",
+      "source_sha256": "287b744abf52335bac3ec1e2e5c6fe1bb55c537372e18900e66d94a78cbfcad3",
+      "operation": "insert_level_move",
+      "entry": [
+        31,
+        "MOVE_ROCK_SLIDE"
+      ]
+    },
+    {
+      "species": "carnivine",
+      "source_sha256": "849e5dad0903415b0a2b00d1c465c5c745c58e6b387f4dc778594d5f73ea18ef",
+      "operation": "set_base_stat",
+      "stat": "hp",
+      "from": 74,
+      "to": 84
+    },
+    {
+      "species": "carnivine",
+      "source_sha256": "849e5dad0903415b0a2b00d1c465c5c745c58e6b387f4dc778594d5f73ea18ef",
+      "operation": "set_base_stat",
+      "stat": "attack",
+      "from": 100,
+      "to": 110
+    },
+    {
+      "species": "carnivine",
+      "source_sha256": "849e5dad0903415b0a2b00d1c465c5c745c58e6b387f4dc778594d5f73ea18ef",
+      "operation": "set_base_stat",
+      "stat": "defense",
+      "from": 72,
+      "to": 82
+    },
+    {
+      "species": "carnivine",
+      "source_sha256": "849e5dad0903415b0a2b00d1c465c5c745c58e6b387f4dc778594d5f73ea18ef",
+      "operation": "set_base_stat",
+      "stat": "speed",
+      "from": 46,
+      "to": 42
+    },
+    {
+      "species": "carnivine",
+      "source_sha256": "849e5dad0903415b0a2b00d1c465c5c745c58e6b387f4dc778594d5f73ea18ef",
+      "operation": "set_base_stat",
+      "stat": "special_defense",
+      "from": 72,
+      "to": 82
+    },
+    {
+      "species": "carnivine",
+      "source_sha256": "849e5dad0903415b0a2b00d1c465c5c745c58e6b387f4dc778594d5f73ea18ef",
+      "operation": "replace_level_move",
+      "from": [
+        27,
+        "MOVE_FAINT_ATTACK"
+      ],
+      "to": [
+        27,
+        "MOVE_VINE_SNARE"
+      ]
+    },
+    {
+      "species": "carnivine",
+      "source_sha256": "849e5dad0903415b0a2b00d1c465c5c745c58e6b387f4dc778594d5f73ea18ef",
+      "operation": "replace_level_move",
+      "from": [
+        41,
+        "MOVE_WRING_OUT"
+      ],
+      "to": [
+        41,
+        "MOVE_SEED_BOMB"
+      ]
+    },
+    {
+      "species": "finneon",
+      "source_sha256": "cf91699a224ee4914593aa64a079b949c087f6c63a6d2b19c93620c72a92d563",
+      "operation": "replace_level_move",
+      "from": [
+        26,
+        "MOVE_CAPTIVATE"
+      ],
+      "to": [
+        26,
+        "MOVE_LUMINOUS_CURRENT"
+      ]
+    },
+    {
+      "species": "lumineon",
+      "source_sha256": "9a871a8d6b408879af77a4584bc1f3540c3fa1a06603965912ddcfbad6f182e3",
+      "operation": "replace_level_move",
+      "from": [
+        26,
+        "MOVE_CAPTIVATE"
+      ],
+      "to": [
+        26,
+        "MOVE_LUMINOUS_CURRENT"
+      ]
+    },
+    {
+      "species": "chatot",
+      "source_sha256": "b2f687ff5da3a05b8270830d3f665b59d771dbb48978f9b24b9af11597cf2181",
+      "operation": "replace_level_move",
+      "from": [
+        17,
+        "MOVE_FURY_ATTACK"
+      ],
+      "to": [
+        17,
+        "MOVE_AIR_CUTTER"
+      ]
+    },
+    {
+      "species": "spiritomb",
+      "source_sha256": "4df632c36ddaa5089fccbd8037254519df11539663db350603b0f8e6366506c9",
+      "operation": "replace_level_move",
+      "from": [
+        25,
+        "MOVE_OMINOUS_WIND"
+      ],
+      "to": [
+        25,
+        "MOVE_SOUL_SIPHON"
+      ]
+    },
+    {
+      "species": "rotom",
+      "source_sha256": "7f354b90efd01778cb34ba8fce25aacf2036761658fb244c2346c9662facd3b7",
+      "operation": "replace_level_move",
+      "from": [
+        8,
+        "MOVE_UPROAR"
+      ],
+      "to": [
+        8,
+        "MOVE_SPIRIT_WISP"
+      ]
+    },
+    {
+      "species": "lickilicky",
+      "source_sha256": "49d8df7203b9d29e171646a099df764da35bf1a8c2a2bb4d396e4ef56bf85cee",
+      "operation": "replace_level_move",
+      "from": [
+        29,
+        "MOVE_SLAM"
+      ],
+      "to": [
+        29,
+        "MOVE_BODY_SLAM"
+      ]
+    },
+    {
+      "species": "lickilicky",
+      "source_sha256": "49d8df7203b9d29e171646a099df764da35bf1a8c2a2bb4d396e4ef56bf85cee",
+      "operation": "replace_level_move",
+      "from": [
+        37,
+        "MOVE_ME_FIRST"
+      ],
+      "to": [
+        37,
+        "MOVE_POWER_WHIP"
+      ]
+    },
+    {
+      "species": "lickilicky",
+      "source_sha256": "49d8df7203b9d29e171646a099df764da35bf1a8c2a2bb4d396e4ef56bf85cee",
+      "operation": "replace_level_move",
+      "from": [
+        49,
+        "MOVE_POWER_WHIP"
+      ],
+      "to": [
+        49,
+        "MOVE_GYRO_BALL"
+      ]
+    },
+    {
+      "species": "lickilicky",
+      "source_sha256": "49d8df7203b9d29e171646a099df764da35bf1a8c2a2bb4d396e4ef56bf85cee",
+      "operation": "replace_level_move",
+      "from": [
+        57,
+        "MOVE_GYRO_BALL"
+      ],
+      "to": [
+        57,
+        "MOVE_ME_FIRST"
+      ]
+    },
+    {
+      "species": "probopass",
+      "source_sha256": "d82e84409ebbef08aafa1b9926c3ef9deb995ec1d9e0e3d29086f6d76dc198ab",
+      "operation": "set_base_stat",
+      "stat": "hp",
+      "from": 60,
+      "to": 70
+    },
+    {
+      "species": "probopass",
+      "source_sha256": "d82e84409ebbef08aafa1b9926c3ef9deb995ec1d9e0e3d29086f6d76dc198ab",
+      "operation": "set_base_stat",
+      "stat": "defense",
+      "from": 145,
+      "to": 140
+    },
+    {
+      "species": "probopass",
+      "source_sha256": "d82e84409ebbef08aafa1b9926c3ef9deb995ec1d9e0e3d29086f6d76dc198ab",
+      "operation": "set_base_stat",
+      "stat": "special_defense",
+      "from": 150,
+      "to": 145
+    },
+    {
+      "species": "probopass",
+      "source_sha256": "d82e84409ebbef08aafa1b9926c3ef9deb995ec1d9e0e3d29086f6d76dc198ab",
+      "operation": "replace_level_move",
+      "from": [
+        37,
+        "MOVE_SANDSTORM"
+      ],
+      "to": [
+        37,
+        "MOVE_MAGNET_VOLLEY"
+      ]
+    },
+    {
+      "species": "dusknoir",
+      "source_sha256": "c5ebfb6d91c6c246f8beec77620f301c2d5e67ce1c53b6c96072052bb8878a43",
+      "operation": "set_base_stat",
+      "stat": "hp",
+      "from": 45,
+      "to": 55
+    },
+    {
+      "species": "dusknoir",
+      "source_sha256": "c5ebfb6d91c6c246f8beec77620f301c2d5e67ce1c53b6c96072052bb8878a43",
+      "operation": "set_base_stat",
+      "stat": "defense",
+      "from": 135,
+      "to": 130
+    },
+    {
+      "species": "dusknoir",
+      "source_sha256": "c5ebfb6d91c6c246f8beec77620f301c2d5e67ce1c53b6c96072052bb8878a43",
+      "operation": "set_base_stat",
+      "stat": "special_defense",
+      "from": 135,
+      "to": 130
+    },
+    {
+      "species": "dusknoir",
+      "source_sha256": "c5ebfb6d91c6c246f8beec77620f301c2d5e67ce1c53b6c96072052bb8878a43",
+      "operation": "replace_level_move",
+      "from": [
+        43,
+        "MOVE_MEAN_LOOK"
+      ],
+      "to": [
+        43,
+        "MOVE_SOUL_GRIP"
+      ]
+    },
+    {
+      "species": "lopunny",
+      "source_sha256": "7f0c3354d35439bfef12f50f62c0ff8e2bae7e7454a4bdef1e7a99a80b330a7d",
+      "operation": "set_base_stat",
+      "stat": "attack",
+      "from": 76,
+      "to": 90
+    },
+    {
+      "species": "lopunny",
+      "source_sha256": "7f0c3354d35439bfef12f50f62c0ff8e2bae7e7454a4bdef1e7a99a80b330a7d",
+      "operation": "set_base_stat",
+      "stat": "speed",
+      "from": 105,
+      "to": 111
+    },
+    {
+      "species": "lopunny",
+      "source_sha256": "7f0c3354d35439bfef12f50f62c0ff8e2bae7e7454a4bdef1e7a99a80b330a7d",
+      "operation": "set_abilities",
+      "from": [
+        "ABILITY_CUTE_CHARM",
+        "ABILITY_KLUTZ"
+      ],
+      "to": [
+        "ABILITY_CUTE_CHARM",
+        "ABILITY_SCRAPPY"
+      ]
+    }
+  ]
+}

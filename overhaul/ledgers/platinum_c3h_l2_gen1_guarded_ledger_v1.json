@@ -1,0 +1,329 @@
+{
+  "version": 1,
+  "domain": "pokemon",
+  "changes": [
+    {
+      "species": "beedrill",
+      "source_sha256": "93429b8eb60bd893afd7b26b395444077d200a977e1b00a926720e24b81a6bd4",
+      "operation": "replace_level_move",
+      "from": [
+        34,
+        "MOVE_ASSURANCE"
+      ],
+      "to": [
+        34,
+        "MOVE_CROSS_POISON"
+      ]
+    },
+    {
+      "species": "pidgeot",
+      "source_sha256": "abf6278bbb9650c29dbacaae42a03b47988eae8c2d99cc902cf7231c857716ae",
+      "operation": "replace_level_move",
+      "from": [
+        22,
+        "MOVE_TWISTER"
+      ],
+      "to": [
+        22,
+        "MOVE_WING_ATTACK"
+      ]
+    },
+    {
+      "species": "pidgeot",
+      "source_sha256": "abf6278bbb9650c29dbacaae42a03b47988eae8c2d99cc902cf7231c857716ae",
+      "operation": "replace_level_move",
+      "from": [
+        38,
+        "MOVE_WING_ATTACK"
+      ],
+      "to": [
+        38,
+        "MOVE_DRILL_PECK"
+      ]
+    },
+    {
+      "species": "pidgeot",
+      "source_sha256": "abf6278bbb9650c29dbacaae42a03b47988eae8c2d99cc902cf7231c857716ae",
+      "operation": "replace_level_move",
+      "from": [
+        56,
+        "MOVE_MIRROR_MOVE"
+      ],
+      "to": [
+        56,
+        "MOVE_BRAVE_BIRD"
+      ]
+    },
+    {
+      "species": "arbok",
+      "source_sha256": "e555cfa62ca4f6a07552f11dd511a89c237e0d013037c4fa803e87005d5d48ab",
+      "operation": "replace_level_move",
+      "from": [
+        20,
+        "MOVE_ACID"
+      ],
+      "to": [
+        20,
+        "MOVE_POISON_FANG"
+      ]
+    },
+    {
+      "species": "parasect",
+      "source_sha256": "8eafa4020b674d5516fe45bc72f064f6ef6cdd126c405cc50844f6ffcae64a29",
+      "operation": "replace_level_move",
+      "from": [
+        22,
+        "MOVE_SLASH"
+      ],
+      "to": [
+        22,
+        "MOVE_BUG_BITE"
+      ]
+    },
+    {
+      "species": "parasect",
+      "source_sha256": "8eafa4020b674d5516fe45bc72f064f6ef6cdd126c405cc50844f6ffcae64a29",
+      "operation": "replace_level_move",
+      "from": [
+        30,
+        "MOVE_GROWTH"
+      ],
+      "to": [
+        30,
+        "MOVE_SEED_BOMB"
+      ]
+    },
+    {
+      "species": "dewgong",
+      "source_sha256": "7aa80f1be68a94f4478865fd432371c87ffb2d556b742db703feb2a7cc719b65",
+      "operation": "replace_level_move",
+      "from": [
+        34,
+        "MOVE_SHEER_COLD"
+      ],
+      "to": [
+        55,
+        "MOVE_SHEER_COLD"
+      ]
+    },
+    {
+      "species": "dewgong",
+      "source_sha256": "7aa80f1be68a94f4478865fd432371c87ffb2d556b742db703feb2a7cc719b65",
+      "operation": "replace_level_move",
+      "from": [
+        37,
+        "MOVE_TAKE_DOWN"
+      ],
+      "to": [
+        37,
+        "MOVE_RAIN_DANCE"
+      ]
+    },
+    {
+      "species": "hypno",
+      "source_sha256": "2b534ba1ae8b08a3efe640df9afe00a2c5fc02fe2639aeffcf077edea6b06801",
+      "operation": "remove_level_move",
+      "entry": [
+        1,
+        "MOVE_NIGHTMARE"
+      ]
+    },
+    {
+      "species": "hypno",
+      "source_sha256": "2b534ba1ae8b08a3efe640df9afe00a2c5fc02fe2639aeffcf077edea6b06801",
+      "operation": "remove_level_move",
+      "entry": [
+        1,
+        "MOVE_SWITCHEROO"
+      ]
+    },
+    {
+      "species": "hypno",
+      "source_sha256": "2b534ba1ae8b08a3efe640df9afe00a2c5fc02fe2639aeffcf077edea6b06801",
+      "operation": "replace_level_move",
+      "from": [
+        38,
+        "MOVE_HEADBUTT"
+      ],
+      "to": [
+        38,
+        "MOVE_NIGHTMARE"
+      ]
+    },
+    {
+      "species": "hypno",
+      "source_sha256": "2b534ba1ae8b08a3efe640df9afe00a2c5fc02fe2639aeffcf077edea6b06801",
+      "operation": "replace_level_move",
+      "from": [
+        45,
+        "MOVE_SWAGGER"
+      ],
+      "to": [
+        45,
+        "MOVE_SWITCHEROO"
+      ]
+    },
+    {
+      "species": "kingler",
+      "source_sha256": "a5dcae3df891c49a92204c7a5b5fbf160867dedb94ed555fbc5d4591ebdc0bf1",
+      "operation": "replace_level_move",
+      "from": [
+        32,
+        "MOVE_PROTECT"
+      ],
+      "to": [
+        29,
+        "MOVE_RIPTIDE_RUSH"
+      ]
+    },
+    {
+      "species": "kingler",
+      "source_sha256": "a5dcae3df891c49a92204c7a5b5fbf160867dedb94ed555fbc5d4591ebdc0bf1",
+      "operation": "replace_level_move",
+      "from": [
+        56,
+        "MOVE_CRABHAMMER"
+      ],
+      "to": [
+        41,
+        "MOVE_CRABHAMMER"
+      ]
+    },
+    {
+      "species": "marowak",
+      "source_sha256": "2530cfdbe7e9cb25f90ce6da53c949b0ad15501741c62994730e940d0d3df2dd",
+      "operation": "replace_level_move",
+      "from": [
+        37,
+        "MOVE_FLING"
+      ],
+      "to": [
+        37,
+        "MOVE_KNOCK_OFF"
+      ]
+    },
+    {
+      "species": "hitmonchan",
+      "source_sha256": "e9d31e0ae5ff86969a8abe7b356f11e2a1a04506551810c201b3088686a6a2d0",
+      "operation": "remove_level_move",
+      "entry": [
+        16,
+        "MOVE_MACH_PUNCH"
+      ]
+    },
+    {
+      "species": "hitmonchan",
+      "source_sha256": "e9d31e0ae5ff86969a8abe7b356f11e2a1a04506551810c201b3088686a6a2d0",
+      "operation": "remove_level_move",
+      "entry": [
+        16,
+        "MOVE_BULLET_PUNCH"
+      ]
+    },
+    {
+      "species": "hitmonchan",
+      "source_sha256": "e9d31e0ae5ff86969a8abe7b356f11e2a1a04506551810c201b3088686a6a2d0",
+      "operation": "replace_level_move",
+      "from": [
+        21,
+        "MOVE_FEINT"
+      ],
+      "to": [
+        21,
+        "MOVE_MACH_PUNCH"
+      ]
+    },
+    {
+      "species": "hitmonchan",
+      "source_sha256": "e9d31e0ae5ff86969a8abe7b356f11e2a1a04506551810c201b3088686a6a2d0",
+      "operation": "replace_level_move",
+      "from": [
+        26,
+        "MOVE_VACUUM_WAVE"
+      ],
+      "to": [
+        26,
+        "MOVE_BULLET_PUNCH"
+      ]
+    },
+    {
+      "species": "seaking",
+      "source_sha256": "0e2ed150ac1d81050bc4a007238e0e0a5dc955618a9fc3a370f2cba30befb5fb",
+      "operation": "insert_level_move",
+      "entry": [
+        34,
+        "MOVE_RIPTIDE_RUSH"
+      ]
+    },
+    {
+      "species": "seaking",
+      "source_sha256": "0e2ed150ac1d81050bc4a007238e0e0a5dc955618a9fc3a370f2cba30befb5fb",
+      "operation": "replace_level_move",
+      "from": [
+        63,
+        "MOVE_MEGAHORN"
+      ],
+      "to": [
+        51,
+        "MOVE_MEGAHORN"
+      ]
+    },
+    {
+      "species": "omastar",
+      "source_sha256": "f24e772b9f21174566da42ca066b62f191d4717e64d210d9c1f6c88e3d8c6b57",
+      "operation": "insert_level_move",
+      "entry": [
+        41,
+        "MOVE_POWER_GEM"
+      ]
+    },
+    {
+      "species": "omastar",
+      "source_sha256": "f24e772b9f21174566da42ca066b62f191d4717e64d210d9c1f6c88e3d8c6b57",
+      "operation": "replace_level_move",
+      "from": [
+        56,
+        "MOVE_ROCK_BLAST"
+      ],
+      "to": [
+        56,
+        "MOVE_HYDRO_PUMP"
+      ]
+    },
+    {
+      "species": "omastar",
+      "source_sha256": "f24e772b9f21174566da42ca066b62f191d4717e64d210d9c1f6c88e3d8c6b57",
+      "operation": "remove_level_move",
+      "entry": [
+        67,
+        "MOVE_HYDRO_PUMP"
+      ]
+    },
+    {
+      "species": "kabutops",
+      "source_sha256": "d831a03926bbf1896e17d02de9e36b27dd47ca971fc9b471af6930803f82dd4d",
+      "operation": "replace_level_move",
+      "from": [
+        40,
+        "MOVE_SLASH"
+      ],
+      "to": [
+        41,
+        "MOVE_SLASH"
+      ]
+    },
+    {
+      "species": "kabutops",
+      "source_sha256": "d831a03926bbf1896e17d02de9e36b27dd47ca971fc9b471af6930803f82dd4d",
+      "operation": "replace_level_move",
+      "from": [
+        45,
+        "MOVE_METAL_SOUND"
+      ],
+      "to": [
+        45,
+        "MOVE_ROCK_SLIDE"
+      ]
+    }
+  ]
+}

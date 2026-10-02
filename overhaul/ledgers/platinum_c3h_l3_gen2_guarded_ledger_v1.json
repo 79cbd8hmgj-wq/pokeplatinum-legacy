@@ -1,0 +1,428 @@
+{
+  "version": 1,
+  "domain": "pokemon",
+  "changes": [
+    {
+      "species": "furret",
+      "source_sha256": "e713d3a7105125fa80223dfbc567dac992f89f2984ead105b7089e388cdc3379",
+      "operation": "replace_level_move",
+      "from": [
+        56,
+        "MOVE_HYPER_VOICE"
+      ],
+      "to": [
+        56,
+        "MOVE_DOUBLE_EDGE"
+      ]
+    },
+    {
+      "species": "noctowl",
+      "source_sha256": "c4c7ae9f9068885a76aabef5c4ef189632f63af4d76e95fdfa84eeff4b982470",
+      "operation": "replace_level_move",
+      "from": [
+        27,
+        "MOVE_TAKE_DOWN"
+      ],
+      "to": [
+        27,
+        "MOVE_PSYBEAM"
+      ]
+    },
+    {
+      "species": "ledian",
+      "source_sha256": "2d94d595f3ac571927479a87e8a47d7d3c75910adc1f43d715676fabdf3016a6",
+      "operation": "insert_level_move",
+      "entry": [
+        20,
+        "MOVE_STAR_JAB"
+      ]
+    },
+    {
+      "species": "ariados",
+      "source_sha256": "0d460eeb747fa9d66d6cd54b7039e358722f729d784c0951d95dafc29a0c0c05",
+      "operation": "replace_level_move",
+      "from": [
+        23,
+        "MOVE_FURY_SWIPES"
+      ],
+      "to": [
+        23,
+        "MOVE_BUG_BITE"
+      ]
+    },
+    {
+      "species": "ariados",
+      "source_sha256": "0d460eeb747fa9d66d6cd54b7039e358722f729d784c0951d95dafc29a0c0c05",
+      "operation": "replace_level_move",
+      "from": [
+        37,
+        "MOVE_AGILITY"
+      ],
+      "to": [
+        37,
+        "MOVE_TOXIC_SPIKES"
+      ]
+    },
+    {
+      "species": "xatu",
+      "source_sha256": "4fbe20535fe3d7440bb95627dc7eefd2b33fa98d0a5cba4c5ea5340ff9b51e76",
+      "operation": "replace_level_move",
+      "from": [
+        42,
+        "MOVE_FUTURE_SIGHT"
+      ],
+      "to": [
+        42,
+        "MOVE_AIR_SLASH"
+      ]
+    },
+    {
+      "species": "xatu",
+      "source_sha256": "4fbe20535fe3d7440bb95627dc7eefd2b33fa98d0a5cba4c5ea5340ff9b51e76",
+      "operation": "replace_level_move",
+      "from": [
+        47,
+        "MOVE_OMINOUS_WIND"
+      ],
+      "to": [
+        47,
+        "MOVE_PSYCHIC"
+      ]
+    },
+    {
+      "species": "xatu",
+      "source_sha256": "4fbe20535fe3d7440bb95627dc7eefd2b33fa98d0a5cba4c5ea5340ff9b51e76",
+      "operation": "replace_level_move",
+      "from": [
+        59,
+        "MOVE_PSYCHIC"
+      ],
+      "to": [
+        59,
+        "MOVE_FUTURE_SIGHT"
+      ]
+    },
+    {
+      "species": "sunflora",
+      "source_sha256": "dbbe2294059e9e42fd5848d59e5519f2375deb820829859e5e5e56c0ca8bb429",
+      "operation": "replace_level_move",
+      "from": [
+        29,
+        "MOVE_RAZOR_LEAF"
+      ],
+      "to": [
+        29,
+        "MOVE_GIGA_DRAIN"
+      ]
+    },
+    {
+      "species": "girafarig",
+      "source_sha256": "1ed47ccd133ebd6401121526fbd2ef56d9b9525a5e2933dd97d7126ce34aad5d",
+      "operation": "replace_level_move",
+      "from": [
+        28,
+        "MOVE_ASSURANCE"
+      ],
+      "to": [
+        28,
+        "MOVE_MIND_STRIKE"
+      ]
+    },
+    {
+      "species": "dunsparce",
+      "source_sha256": "98ab57b85eae4c7f1b7048f1871ac7431897553de6dd342dfc7ec17cbf1accfd",
+      "operation": "replace_level_move",
+      "from": [
+        25,
+        "MOVE_PURSUIT"
+      ],
+      "to": [
+        25,
+        "MOVE_HEADBUTT"
+      ]
+    },
+    {
+      "species": "qwilfish",
+      "source_sha256": "df049667b50f8fd71bfb57bc101304cc0d3847d913a5d6bdd01d7e039205f8e2",
+      "operation": "replace_level_move",
+      "from": [
+        33,
+        "MOVE_BRINE"
+      ],
+      "to": [
+        33,
+        "MOVE_RIPTIDE_RUSH"
+      ]
+    },
+    {
+      "species": "qwilfish",
+      "source_sha256": "df049667b50f8fd71bfb57bc101304cc0d3847d913a5d6bdd01d7e039205f8e2",
+      "operation": "replace_level_move",
+      "from": [
+        37,
+        "MOVE_PIN_MISSILE"
+      ],
+      "to": [
+        37,
+        "MOVE_POISON_JAB"
+      ]
+    },
+    {
+      "species": "qwilfish",
+      "source_sha256": "df049667b50f8fd71bfb57bc101304cc0d3847d913a5d6bdd01d7e039205f8e2",
+      "operation": "replace_level_move",
+      "from": [
+        49,
+        "MOVE_POISON_JAB"
+      ],
+      "to": [
+        49,
+        "MOVE_PIN_MISSILE"
+      ]
+    },
+    {
+      "species": "magcargo",
+      "source_sha256": "3d8e8e1f3493bd6494c861d9e980abaf3ed4a2a612682d750652d31633183665",
+      "operation": "replace_level_move",
+      "from": [
+        45,
+        "MOVE_ROCK_SLIDE"
+      ],
+      "to": [
+        45,
+        "MOVE_POWER_GEM"
+      ]
+    },
+    {
+      "species": "octillery",
+      "source_sha256": "2a29884c6e3fc2c81b14757682863414ad0331451271bd3afb22e9789d5640fc",
+      "operation": "replace_level_move",
+      "from": [
+        25,
+        "MOVE_OCTAZOOKA"
+      ],
+      "to": [
+        26,
+        "MOVE_OCTAZOOKA"
+      ]
+    },
+    {
+      "species": "delibird",
+      "source_sha256": "265d4c3d07625f5932054ec0c6b37d11f6a21fe545813d37df4d85b0f1a01e03",
+      "operation": "insert_level_move",
+      "entry": [
+        1,
+        "MOVE_POWDER_SNOW"
+      ]
+    },
+    {
+      "species": "delibird",
+      "source_sha256": "265d4c3d07625f5932054ec0c6b37d11f6a21fe545813d37df4d85b0f1a01e03",
+      "operation": "insert_level_move",
+      "entry": [
+        7,
+        "MOVE_QUICK_ATTACK"
+      ]
+    },
+    {
+      "species": "delibird",
+      "source_sha256": "265d4c3d07625f5932054ec0c6b37d11f6a21fe545813d37df4d85b0f1a01e03",
+      "operation": "insert_level_move",
+      "entry": [
+        12,
+        "MOVE_ICY_WIND"
+      ]
+    },
+    {
+      "species": "delibird",
+      "source_sha256": "265d4c3d07625f5932054ec0c6b37d11f6a21fe545813d37df4d85b0f1a01e03",
+      "operation": "insert_level_move",
+      "entry": [
+        17,
+        "MOVE_ICE_SHARD"
+      ]
+    },
+    {
+      "species": "delibird",
+      "source_sha256": "265d4c3d07625f5932054ec0c6b37d11f6a21fe545813d37df4d85b0f1a01e03",
+      "operation": "insert_level_move",
+      "entry": [
+        22,
+        "MOVE_AERIAL_ACE"
+      ]
+    },
+    {
+      "species": "delibird",
+      "source_sha256": "265d4c3d07625f5932054ec0c6b37d11f6a21fe545813d37df4d85b0f1a01e03",
+      "operation": "insert_level_move",
+      "entry": [
+        27,
+        "MOVE_AURORA_BEAM"
+      ]
+    },
+    {
+      "species": "delibird",
+      "source_sha256": "265d4c3d07625f5932054ec0c6b37d11f6a21fe545813d37df4d85b0f1a01e03",
+      "operation": "insert_level_move",
+      "entry": [
+        32,
+        "MOVE_FROST_RUSH"
+      ]
+    },
+    {
+      "species": "delibird",
+      "source_sha256": "265d4c3d07625f5932054ec0c6b37d11f6a21fe545813d37df4d85b0f1a01e03",
+      "operation": "insert_level_move",
+      "entry": [
+        37,
+        "MOVE_AGILITY"
+      ]
+    },
+    {
+      "species": "delibird",
+      "source_sha256": "265d4c3d07625f5932054ec0c6b37d11f6a21fe545813d37df4d85b0f1a01e03",
+      "operation": "insert_level_move",
+      "entry": [
+        42,
+        "MOVE_AIR_SLASH"
+      ]
+    },
+    {
+      "species": "delibird",
+      "source_sha256": "265d4c3d07625f5932054ec0c6b37d11f6a21fe545813d37df4d85b0f1a01e03",
+      "operation": "insert_level_move",
+      "entry": [
+        47,
+        "MOVE_ICE_PUNCH"
+      ]
+    },
+    {
+      "species": "delibird",
+      "source_sha256": "265d4c3d07625f5932054ec0c6b37d11f6a21fe545813d37df4d85b0f1a01e03",
+      "operation": "insert_level_move",
+      "entry": [
+        52,
+        "MOVE_DRILL_PECK"
+      ]
+    },
+    {
+      "species": "stantler",
+      "source_sha256": "b92de79870835fb843357bd5fd1423c84c821a262632abb6a27c84ffaa05cc32",
+      "operation": "replace_level_move",
+      "from": [
+        21,
+        "MOVE_TAKE_DOWN"
+      ],
+      "to": [
+        21,
+        "MOVE_MIND_STRIKE"
+      ]
+    },
+    {
+      "species": "furret",
+      "source_sha256": "e713d3a7105125fa80223dfbc567dac992f89f2984ead105b7089e388cdc3379",
+      "operation": "set_abilities",
+      "from": [
+        "ABILITY_RUN_AWAY",
+        "ABILITY_KEEN_EYE"
+      ],
+      "to": [
+        "ABILITY_FRISK",
+        "ABILITY_KEEN_EYE"
+      ]
+    },
+    {
+      "species": "ledian",
+      "source_sha256": "2d94d595f3ac571927479a87e8a47d7d3c75910adc1f43d715676fabdf3016a6",
+      "operation": "set_base_stat",
+      "stat": "attack",
+      "from": 35,
+      "to": 85
+    },
+    {
+      "species": "ledian",
+      "source_sha256": "2d94d595f3ac571927479a87e8a47d7d3c75910adc1f43d715676fabdf3016a6",
+      "operation": "set_base_stat",
+      "stat": "defense",
+      "from": 50,
+      "to": 60
+    },
+    {
+      "species": "ledian",
+      "source_sha256": "2d94d595f3ac571927479a87e8a47d7d3c75910adc1f43d715676fabdf3016a6",
+      "operation": "set_base_stat",
+      "stat": "speed",
+      "from": 85,
+      "to": 95
+    },
+    {
+      "species": "ledian",
+      "source_sha256": "2d94d595f3ac571927479a87e8a47d7d3c75910adc1f43d715676fabdf3016a6",
+      "operation": "set_base_stat",
+      "stat": "special_attack",
+      "from": 55,
+      "to": 45
+    },
+    {
+      "species": "ledian",
+      "source_sha256": "2d94d595f3ac571927479a87e8a47d7d3c75910adc1f43d715676fabdf3016a6",
+      "operation": "set_abilities",
+      "from": [
+        "ABILITY_SWARM",
+        "ABILITY_EARLY_BIRD"
+      ],
+      "to": [
+        "ABILITY_IRON_FIST",
+        "ABILITY_EARLY_BIRD"
+      ]
+    },
+    {
+      "species": "delibird",
+      "source_sha256": "265d4c3d07625f5932054ec0c6b37d11f6a21fe545813d37df4d85b0f1a01e03",
+      "operation": "set_base_stat",
+      "stat": "hp",
+      "from": 45,
+      "to": 60
+    },
+    {
+      "species": "delibird",
+      "source_sha256": "265d4c3d07625f5932054ec0c6b37d11f6a21fe545813d37df4d85b0f1a01e03",
+      "operation": "set_base_stat",
+      "stat": "attack",
+      "from": 55,
+      "to": 80
+    },
+    {
+      "species": "delibird",
+      "source_sha256": "265d4c3d07625f5932054ec0c6b37d11f6a21fe545813d37df4d85b0f1a01e03",
+      "operation": "set_base_stat",
+      "stat": "defense",
+      "from": 45,
+      "to": 55
+    },
+    {
+      "species": "delibird",
+      "source_sha256": "265d4c3d07625f5932054ec0c6b37d11f6a21fe545813d37df4d85b0f1a01e03",
+      "operation": "set_base_stat",
+      "stat": "speed",
+      "from": 75,
+      "to": 110
+    },
+    {
+      "species": "delibird",
+      "source_sha256": "265d4c3d07625f5932054ec0c6b37d11f6a21fe545813d37df4d85b0f1a01e03",
+      "operation": "set_base_stat",
+      "stat": "special_attack",
+      "from": 65,
+      "to": 80
+    },
+    {
+      "species": "delibird",
+      "source_sha256": "265d4c3d07625f5932054ec0c6b37d11f6a21fe545813d37df4d85b0f1a01e03",
+      "operation": "set_base_stat",
+      "stat": "special_defense",
+      "from": 45,
+      "to": 55
+    }
+  ]
+}
