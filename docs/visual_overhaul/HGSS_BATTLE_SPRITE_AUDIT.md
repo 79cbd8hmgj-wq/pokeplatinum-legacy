@@ -17,6 +17,99 @@ Palette index 0 is treated as transparent for rendered comparisons.
 - Missing paths: **164**
 - Structural incompatibilities: **0**
 
+## Frame-geometry triage
+
+Art-diff files are additionally compared frame-by-frame as two 80x80 cells.
+This is a conservative staging filter, not proof of runtime animation safety.
+Platinum's existing sprite_data.json timing and shifts remain authoritative until
+a candidate is validated in-game.
+
+- geometry-close art-diff files: **138**
+- geometry-review art-diff files: **357**
+- species whose every art-diff view is geometry-close: **69**
+
+Static staging thresholds:
+- bottom-edge shift <= 3px
+- bbox center shift <= 4px per axis
+- bbox width/height delta <= 10px
+- frame-to-frame motion delta <= 5px per axis
+- donor opaque pixels must retain at least one pixel of margin from every 80x80 edge
+
+A geometry-close result means only that the donor frames are spatially close enough
+to prioritize for a runtime pilot. It does not authorize a bulk import.
+
+## Geometry-close species staging candidates
+
+- SPECIES_ABRA
+- SPECIES_BELLOSSOM
+- SPECIES_CLEFABLE
+- SPECIES_CLEFAIRY
+- SPECIES_CLEFFA
+- SPECIES_CORSOLA
+- SPECIES_DIGLETT
+- SPECIES_DITTO
+- SPECIES_DROWZEE
+- SPECIES_DUGTRIO
+- SPECIES_ELECTRODE
+- SPECIES_ENTEI
+- SPECIES_EXEGGCUTE
+- SPECIES_FERALIGATR
+- SPECIES_FLAAFFY
+- SPECIES_FORRETRESS
+- SPECIES_GLOOM
+- SPECIES_GRANBULL
+- SPECIES_GRIMER
+- SPECIES_GROWLITHE
+- SPECIES_HORSEA
+- SPECIES_HYPNO
+- SPECIES_IGGLYBUFF
+- SPECIES_JIGGLYPUFF
+- SPECIES_JYNX
+- SPECIES_KANGASKHAN
+- SPECIES_LANTURN
+- SPECIES_LAPRAS
+- SPECIES_LARVITAR
+- SPECIES_MACHOKE
+- SPECIES_MAGBY
+- SPECIES_MAGMAR
+- SPECIES_MAGNEMITE
+- SPECIES_MAGNETON
+- SPECIES_METAPOD
+- SPECIES_MEW
+- SPECIES_NATU
+- SPECIES_NIDORINA
+- SPECIES_NIDORINO
+- SPECIES_NOCTOWL
+- SPECIES_OMANYTE
+- SPECIES_OMASTAR
+- SPECIES_PERSIAN
+- SPECIES_PHANPY
+- SPECIES_PINECO
+- SPECIES_POLITOED
+- SPECIES_PORYGON2
+- SPECIES_PSYDUCK
+- SPECIES_PUPITAR
+- SPECIES_QUAGSIRE
+- SPECIES_SANDSLASH
+- SPECIES_SHELLDER
+- SPECIES_SKIPLOOM
+- SPECIES_SLOWKING
+- SPECIES_SNORLAX
+- SPECIES_SPINARAK
+- SPECIES_SQUIRTLE
+- SPECIES_SUNFLORA
+- SPECIES_TEDDIURSA
+- SPECIES_TENTACOOL
+- SPECIES_TOGEPI
+- SPECIES_TOGETIC
+- SPECIES_TYRANITAR
+- SPECIES_UMBREON
+- SPECIES_URSARING
+- SPECIES_VENUSAUR
+- SPECIES_VOLTORB
+- SPECIES_WEEPINBELL
+- SPECIES_WOOPER
+
 ## Interpretation
 
 - identical: same indexed pixels and palette.
@@ -24,6 +117,8 @@ Palette index 0 is treated as transparent for rendered comparisons.
 - palette-only: indexed pixels match but rendered colors differ.
 - index-remap-only: index values differ but rendered art is visually identical.
 - art-diff: HGSS contains genuinely different rendered sprite art.
+- geometry-close: static frame footprint is close enough for staged runtime testing.
+- geometry-review: one or more static frame metrics exceed conservative staging thresholds.
 
 ## Species with actual HGSS art differences
 
