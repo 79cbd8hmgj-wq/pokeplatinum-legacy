@@ -127,8 +127,6 @@ const u32 sForestFieldEffectRenderers[FIELD_EFFECT_RENDERER_COUNT + 1] = {
     FIELD_EFFECT_RENDERER_INVALID
 };
 
-
-
 const u32 sUndergroundFieldEffectRenderers[FIELD_EFFECT_RENDERER_COUNT + 1] = {
     FIELD_EFFECT_RENDERER_1D,
     FIELD_EFFECT_RENDERER_02,
