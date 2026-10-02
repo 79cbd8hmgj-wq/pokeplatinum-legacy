@@ -23,6 +23,7 @@ Runtime/emulator QA: **DEFERRED TO FINAL OVERHAUL PLAYTEST**.
   same-language 1.5x / foreign 1.7x traded) are untouched and still applied per recipient after allocation.
 * EVs: `BattleScript_CalcEffortValues` now runs only for actual participants. Team-share-only and bench Exp. Share
   holders earn none; Pokerus/Macho Brace/Power items are handled inside the unchanged EV routine.
+* Participation state is cleared when the EXP task finishes, including party members that were excluded from EXP processing because they were fainted or Lv100.
 * Growth tables untouched. No Emerald multipliers.
 
 ## Economy

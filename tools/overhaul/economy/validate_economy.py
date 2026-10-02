@@ -91,6 +91,8 @@ def check_exp(live: dict, P: list[str]):
         P.append("EXP: unexpected extra EXP multiplier (no Emerald multipliers allowed)")
     if "expRecipientMask &= " not in task:
         P.append("EXP: recipient bit never cleared after processing (re-iteration risk)")
+    if "sideGetExpMask[battler] = 0;" not in task:
+        P.append("EXP: final participant-state cleanup missing")
 
 
 def check_prices(live: dict, base: dict, P: list[str]):
