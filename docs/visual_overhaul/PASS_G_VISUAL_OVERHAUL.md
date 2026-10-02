@@ -899,34 +899,12 @@ indices, cells, animation data, palette counts, and archive ordering. The pass
 changes only JASC palette source data and is therefore reproducible from the
 generator.
 
-The next background work should focus on the remaining facility/special arenas
-rather than reopening the already-completed natural terrain set.
-
-### G5 natural-terrain completion checkpoint
-
-The palette-only background pass now covers the common natural battle terrain families used
-throughout ordinary field battles:
-
-- grass
-- path
-- path with puddles
-- water
-- snow
-- ice
-- mud
-- rocky
-- sand
-- cave
-
-Day/evening/night variants are preserved where the retail resource family provides them.
-The pass strengthens environmental identity while keeping every terrain sprite, tile index,
-cell, animation, and archive position unchanged.
-
-Reproducibility is consolidated on a single generator:
-- `tools/visual_overhaul/generate_battle_terrain.py`
-
+Reproducibility is consolidated on `tools/visual_overhaul/generate_battle_terrain.py`.
 The older duplicate `generate_battle_terrain_palettes.py` was removed so there is no stale
 second source capable of regenerating conflicting palette values.
+
+The next background work should focus on the remaining facility/special arenas rather than
+reopening the already-completed natural terrain set.
 
 ### G5 special-arena palette checkpoint
 
@@ -1007,25 +985,28 @@ The pilot does not replace particles, sounds, move timing, or existing battler a
 It uses the existing `Func_ShakeBg` implementation and explicitly targets
 `SHAKE_BG_TARGET_BASE`, keeping the effect-background behavior independent.
 
-### G5 weather-initiation presentation checkpoint
+### G5 weather-presentation checkpoint
 
-The four weather-setting moves now use the existing battle-background fade system to establish
-a clearer atmosphere without changing battle mechanics or particle resources.
+Weather presentation is now aligned across both move initiation and the shared end-of-turn
+weather animation paths.
 
-Updated:
+Weather-setting moves:
 - Rain Dance — black base fade replaced by a deep-blue storm grade
 - Sunny Day — existing warm yellow grade strengthened from 10 to 12
 - Sandstorm — added a restrained dark-yellow base grade, then restores the arena after the particle sequence
 - Hail — black base fade replaced by a cool light-blue grade
 
-Invariants:
-- weather mechanics and duration are unchanged
-- existing particle resources, emitters, sounds, and ordering are preserved
-- no new battle renderer or allocation path was added
-- all presentation changes remain inside source-backed move animation scripts
+Shared weather animations:
+- `weather_rain.s` uses the same deep-blue storm grade
+- `weather_sun.s` uses the same 12-strength warm grade and removes the prior 10/12 fade mismatch
+- `weather_sandstorm.s` now carries the same restrained dark-yellow arena grade
+- `weather_hail.s` uses the same cool light-blue grade
 
-This is the first G5 weather-presentation pilot. Persistent turn-by-turn weather effects remain
-a separate follow-up and should only be changed after their shared runtime path is identified.
+Invariants:
+- weather mechanics, damage, duration, and turn sequencing are unchanged
+- existing particle resources, emitters, sounds, and battle-script ordering are preserved
+- no new battle renderer or allocation path was added
+- `weather_fog.s` remains unchanged because it is a separate fog presentation path rather than one of the four standard field-weather states
 
 ### G6 — Showcase areas
 Primary quality benchmarks:
