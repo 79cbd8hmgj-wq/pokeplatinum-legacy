@@ -38,6 +38,12 @@ Audit-only G3C pass. Platinum palettes remain canonical and unchanged.
 - SPECIES_TORTERRA: [[1, 5]]
 - SPECIES_GIRATINA: [[2, 15]]
 
+## Crowded color-ramp candidates
+
+- SPECIES_LAIRON: 3 near-color pairs
+- SPECIES_DUSCLOPS: 3 near-color pairs
+- SPECIES_GLALIE: 3 near-color pairs
+
 ## Low luminance-span candidates
 
 - None
