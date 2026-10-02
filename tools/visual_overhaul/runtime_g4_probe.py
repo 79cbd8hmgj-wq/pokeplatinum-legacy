@@ -15,7 +15,11 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
 
-from nds_disassembly_toolkit.analysis.runtime import MelonDSSession, RuntimeCpu
+from nds_disassembly_toolkit.analysis.runtime import (
+    DeSmuMESession,
+    MelonDSSession,
+    RuntimeCpu,
+)
 
 
 @dataclass(frozen=True)
@@ -217,7 +221,9 @@ def run(args: argparse.Namespace) -> int:
         print(rendered, end="")
         return 0
 
-    with MelonDSSession.connect(
+    session_type = MelonDSSession if args.emulator == "melonds" else DeSmuMESession
+
+    with session_type.connect(
         cpu=RuntimeCpu.ARM9,
         host=args.host,
         port=args.port,
@@ -259,6 +265,7 @@ def run(args: argparse.Namespace) -> int:
     report = {
         "scenario": args.scenario,
         "expected_light_id": scenario.expected_light_id,
+        "emulator": args.emulator,
         "host": args.host,
         "port": args.port,
         "checks": results,
@@ -288,6 +295,12 @@ def parser() -> argparse.ArgumentParser:
         default=[],
         metavar="SYMBOL=ADDRESS",
         help="override one unresolved/ambiguous symbol address",
+    )
+    p.add_argument(
+        "--emulator",
+        choices=("melonds", "desmume"),
+        default="melonds",
+        help="GDB-stub emulator dialect to use for the live probe",
     )
     p.add_argument("--host", default="127.0.0.1")
     p.add_argument("--port", type=int, default=3333)
