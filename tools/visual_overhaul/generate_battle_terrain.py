@@ -231,17 +231,64 @@ PALETTES = {
 }
 
 
-def write_jasc(path: Path, colors: list[tuple[int, int, int]]) -> None:
+FACILITY_PALETTES = {
+    "battle_arcade/all.pal": [
+        (255, 255, 255), (0, 0, 0), (0, 0, 0), (0, 0, 0),
+        (0, 0, 0), (0, 0, 0), (255, 151, 218), (255, 207, 252),
+        (255, 226, 255), (245, 176, 231), (225, 126, 200), (194, 105, 176),
+        (157, 82, 151), (122, 64, 119), (91, 46, 91), (55, 34, 59),
+    ],
+    "battle_castle/all.pal": [
+        (255, 255, 255), (0, 0, 0), (0, 0, 0), (0, 0, 0),
+        (0, 0, 0), (0, 0, 0), (111, 204, 166), (126, 228, 177),
+        (139, 239, 190), (117, 207, 169), (97, 178, 149), (82, 149, 132),
+        (72, 119, 113), (66, 91, 95), (61, 67, 78), (48, 38, 53),
+    ],
+    "battle_factory/all.pal": [
+        (248, 255, 255), (0, 0, 0), (0, 0, 0), (0, 0, 0),
+        (0, 0, 0), (0, 0, 0), (78, 169, 185), (88, 193, 210),
+        (99, 207, 220), (84, 176, 194), (78, 149, 170), (70, 124, 149),
+        (63, 103, 127), (58, 81, 104), (55, 60, 80), (44, 35, 55),
+    ],
+    "battle_hall/all.pal": [
+        (255, 255, 255), (0, 0, 0), (0, 0, 0), (0, 0, 0),
+        (0, 0, 0), (0, 0, 0), (221, 255, 248), (239, 255, 255),
+        (255, 255, 255), (225, 249, 252), (195, 236, 237), (166, 218, 222),
+        (136, 194, 202), (108, 153, 166), (79, 103, 120), (48, 38, 55),
+    ],
+    "battle_tower/all.pal": [
+        (255, 255, 255), (0, 0, 0), (0, 0, 0), (0, 0, 0),
+        (0, 0, 0), (0, 0, 0), (229, 216, 125), (244, 232, 133),
+        (252, 242, 146), (226, 211, 121), (200, 182, 103), (173, 150, 89),
+        (145, 121, 78), (111, 91, 72), (82, 63, 64), (49, 37, 50),
+    ],
+}
+
+
+def write_jasc(
+    path: Path,
+    colors: list[tuple[int, int, int]],
+    palette_size: int = 16,
+) -> None:
     if len(colors) != 16:
-        raise ValueError(f"{path}: expected exactly 16 colors")
-    body = ["JASC-PAL", "0100", "16"]
-    body.extend(f"{r} {g} {b}" for r, g, b in colors)
+        raise ValueError(f"{path}: expected exactly 16 authored colors")
+    if palette_size not in (16, 256):
+        raise ValueError(f"{path}: unsupported palette size {palette_size}")
+
+    output = list(colors)
+    if palette_size == 256:
+        output.extend([(0, 0, 0)] * (256 - len(output)))
+
+    body = ["JASC-PAL", "0100", str(palette_size)]
+    body.extend(f"{r} {g} {b}" for r, g, b in output)
     path.write_text("\n".join(body) + "\n", encoding="ascii")
 
 
 def main() -> None:
     for relative, colors in PALETTES.items():
         write_jasc(TERRAIN / relative, colors)
+    for relative, colors in FACILITY_PALETTES.items():
+        write_jasc(TERRAIN / relative, colors, palette_size=256)
 
 
 if __name__ == "__main__":
