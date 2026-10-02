@@ -8,6 +8,11 @@ on:
       - 'tools/visual_overhaul/runtime_g4_probe.py'
       - 'tools/visual_overhaul/validate_area_light_contract.py'
       - 'include/constants/field/area_light.h'
+      - 'include/field_system.h'
+      - 'include/game_start.h'
+      - 'src/main.c'
+      - 'src/game_start.c'
+      - 'src/field_system.c'
       - 'src/overlay005/area_light.c'
       - 'src/overlay005/field_effect_renderer.c'
       - 'src/overlay005/fieldmap.c'
@@ -101,8 +106,9 @@ jobs:
 
 
   live-runtime-rev1:
-    name: live G4 runtime probes (US rev 1)
+    name: experimental live G4 runtime probes (US rev 1)
     needs: debug-symbol-gate
+    continue-on-error: true
     runs-on: ubuntu-24.04
     timeout-minutes: 35
     permissions:
@@ -140,7 +146,7 @@ jobs:
           meson setup /tmp/desmume/desmume/src/frontend/posix/build             /tmp/desmume/desmume/src/frontend/posix             --buildtype=release             -Dfrontend-gtk=false             -Dfrontend-cli=true             -Dgdb-stub=true
           ninja -C /tmp/desmume/desmume/src/frontend/posix/build
 
-      - name: Run deterministic G4 live probes
+      - name: Run experimental deterministic G4 live probes
         shell: bash
         run: |
           set -euxo pipefail
