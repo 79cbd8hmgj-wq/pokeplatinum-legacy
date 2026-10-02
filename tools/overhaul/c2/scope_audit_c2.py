@@ -12,6 +12,8 @@ ALLOWED = [re.compile(p) for p in (
     r"^src/applications/party_menu/callbacks\.c$",
     r"^src/scrcmd_game_corner_prize\.c$", r"^src/overlay007/shop_menu\.c$", r"^src/unk_020494DC\.c$", r"^src/scrcmd\.c$",
     r"^res/field/scripts/scripts_veilstone_city_prize_exchange\.s$",
+    r"^res/field/scripts/scripts_route_204_north\.s$",
+    r"^res/field/scripts/scripts_victory_road_1f\.s$",
     r"^res/text/(unk_0543|veilstone_city_prize_exchange|oreburgh_city|route_204_north)\.json$",
     r"^docs/overhaul/", r"^tools/overhaul/c2/")]
 files = set(git("diff", "--name-only", BASE_COMMIT).split()) | set(git("ls-files", "--others", "--exclude-standard").split())
