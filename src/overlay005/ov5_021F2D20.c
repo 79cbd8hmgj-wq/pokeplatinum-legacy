@@ -518,7 +518,6 @@ static const OverworldAnimManagerFuncs Unk_ov5_02200514 = {
     ov5_021F326C
 };
 
-
 void FieldEffect_StartForestLeaves(FieldSystem *fieldSystem)
 {
     const VecFx32 *playerPos = PlayerAvatar_GetPos(fieldSystem->playerAvatar);
