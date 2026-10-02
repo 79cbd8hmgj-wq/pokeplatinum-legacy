@@ -25,7 +25,7 @@ jobs:
   export:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
     steps:
       - uses: actions/checkout@v6
       - name: Collect icon comparison set
@@ -55,6 +55,33 @@ jobs:
           cp /tmp/pokeheartgold/files/graphic/plist_gra/* visual-export/hgss-party-menu/
           cp /tmp/pokeheartgold/files/data/gs_areawindow/*.png visual-export/hgss-area-windows/
           find /tmp/pokeheartgold/files/graphic/zukan_gra -maxdepth 1 -name '*.png' -print0 | xargs -0 -I{} cp {} visual-export/hgss-zukan/
+
+      - name: Dump G4A Eterna Forest texture banks
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y meson ninja-build libpng-dev
+          meson setup g4-tools-build
+          meson compile -C g4-tools-build nitrobtx
+          python -m pip install Pillow
+          rm -rf docs/visual_overhaul/review/g4a_eterna_dump
+          mkdir -p docs/visual_overhaul/review/g4a_eterna_dump/map
+          mkdir -p docs/visual_overhaul/review/g4a_eterna_dump/props
+          ./g4-tools-build/tools/nitrobtx/nitrobtx dump res/field/maps/texture_sets/map_texture_set_053.nsbtx docs/visual_overhaul/review/g4a_eterna_dump/map
+          ./g4-tools-build/tools/nitrobtx/nitrobtx dump res/field/props/texture_sets/prop_texture_set_050.nsbtx docs/visual_overhaul/review/g4a_eterna_dump/props
+          python tools/visual_overhaul/make_g4a_eterna_texture_sheet.py
+
+      - name: Persist G4A Eterna review sheets
+        if: github.event_name == 'pull_request'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/visual_overhaul/review/g4a_eterna_map_textures.png docs/visual_overhaul/review/g4a_eterna_prop_textures.png
+          if git diff --cached --quiet; then
+            echo "Eterna review sheets unchanged."
+          else
+            git commit -m "docs: add G4A Eterna texture review sheets"
+            git push origin HEAD:${{ github.head_ref }}
+          fi
 
       - name: Build field-effect reference report
         run: |
