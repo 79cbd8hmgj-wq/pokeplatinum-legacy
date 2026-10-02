@@ -391,6 +391,23 @@ Implemented:
 This is intentionally a conservative first visual pass. Runtime validation in Delta should determine whether the fog offset/color can be pushed further before additional canopy motion or leaf elements are added.
 
 
+
+### G2B implementation checkpoint — deep-forest mist
+
+Implemented:
+- Added `FieldMap_ApplyDeepForestAtmosphere()` in `src/overlay005/fieldmap.c`.
+- Applies only to:
+  - Eterna Forest
+  - Fullmoon Island Forest
+  - Newmoon Island Forest
+- Runs after Platinum's normal weather initialization and after normal map-zone weather transitions.
+- Preserves `OVERWORLD_WEATHER_23`; the patch only overrides fog color/alpha and the 32-entry fog density table.
+- Current forest fog target is a muted green-gray with conservative alpha and progressive depth density.
+- No opaque `weather_sys.narc` edits were made.
+
+Runtime/build validation remains required before the fog values are locked.
+
+
 #### G2C — Global UI presentation
 Improve:
 - frames
