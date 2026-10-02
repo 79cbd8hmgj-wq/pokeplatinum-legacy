@@ -17,7 +17,7 @@ import sys
 
 from c1_lib import *
 
-KEEP_RE = re.compile(r"^KEEP: (.*)\\.$", re.M)
+KEEP_RE = re.compile(r"^KEEP: (.*)\.$", re.M)
 
 
 def keep_names() -> list[str]:
@@ -79,7 +79,7 @@ def sub_field(text: str, key: str, old, new) -> str:
     pat = re.compile(rf'^(    "{key}": ){old}(,?)$', re.M)
     if len(pat.findall(text)) != 1:
         raise SystemExit(f"FAIL: could not uniquely locate {key}={old}")
-    return pat.sub(rf"\\g<1>{new}\\g<2>", text, count=1)
+    return pat.sub(rf"\g<1>{new}\g<2>", text, count=1)
 
 
 def _razor_resource_after(rel: str) -> tuple[str, str]:
@@ -173,7 +173,7 @@ def apply() -> None:
                     pat = re.compile(rf'^(        "type": ){re.escape(old_s)}(,?)$', re.M)
                     if len(pat.findall(text)) != 1:
                         raise SystemExit(f"FAIL: effect locate {e['move']}")
-                    text = pat.sub(rf"\\g<1>{new_s}\\g<2>", text, count=1)
+                    text = pat.sub(rf"\g<1>{new_s}\g<2>", text, count=1)
                 else:
                     text = sub_field(text, k, old, new)
             with open(path, "w") as fh:
