@@ -1,0 +1,1100 @@
+{
+  "schema_version": 1,
+  "policy": "Audit only; no palette is modified automatically.",
+  "summary": {
+    "flagged_species": 32,
+    "duplicate_used_color_species": 25,
+    "crowded_ramp_species": 3,
+    "low_luminance_span_species": 0,
+    "shiny_identical_species": 4
+  },
+  "results": [
+    {
+      "species": "SPECIES_BLASTOISE",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          12,
+          13
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 255.0,
+      "shiny_same_used_indices": 5,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_SLOWPOKE",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 239.0,
+      "shiny_same_used_indices": 6,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_GASTLY",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          6,
+          11
+        ],
+        [
+          7,
+          12
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 239.0,
+      "shiny_same_used_indices": 5,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_KOFFING",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          3,
+          8
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 239.0,
+      "shiny_same_used_indices": 7,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_CHANSEY",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          8,
+          13
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 239.0,
+      "shiny_same_used_indices": 5,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_GOLDEEN",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 239.0,
+      "shiny_same_used_indices": 7,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_FERALIGATR",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          9,
+          15
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 239.0,
+      "shiny_same_used_indices": 4,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_TOGETIC",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 255.0,
+      "shiny_same_used_indices": 4,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_QUAGSIRE",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          1,
+          15
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 151.58,
+      "shiny_same_used_indices": 4,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_CORSOLA",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          2,
+          12
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 255.0,
+      "shiny_same_used_indices": 4,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_TYROGUE",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          7,
+          11
+        ],
+        [
+          9,
+          12
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 239.0,
+      "shiny_same_used_indices": 6,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_CELEBI",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          1,
+          8
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 239.0,
+      "shiny_same_used_indices": 5,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_MIGHTYENA",
+      "used_indices": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          2,
+          13
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 239.0,
+      "shiny_same_used_indices": 3,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_LINOONE",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          1,
+          7
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          5,
+          12
+        ]
+      ],
+      "near_pairs": [
+        {
+          "indices": [
+            4,
+            10
+          ],
+          "distance": 14.46
+        }
+      ],
+      "luminance_span": 247.91,
+      "shiny_same_used_indices": 2,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_BEAUTIFLY",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          2,
+          10
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 237.77,
+      "shiny_same_used_indices": 3,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_MASQUERAIN",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          7,
+          13
+        ],
+        [
+          8,
+          14
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 238.35,
+      "shiny_same_used_indices": 2,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_SHEDINJA",
+      "used_indices": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          5,
+          13
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 239.0,
+      "shiny_same_used_indices": 2,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_LAIRON",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15
+      ],
+      "duplicate_pairs": [],
+      "near_pairs": [
+        {
+          "indices": [
+            2,
+            6
+          ],
+          "distance": 17.0
+        },
+        {
+          "indices": [
+            3,
+            7
+          ],
+          "distance": 17.0
+        },
+        {
+          "indices": [
+            4,
+            8
+          ],
+          "distance": 17.0
+        }
+      ],
+      "luminance_span": 239.0,
+      "shiny_same_used_indices": 4,
+      "flags": [
+        "crowded-color-ramp"
+      ]
+    },
+    {
+      "species": "SPECIES_SPINDA",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          1,
+          12
+        ],
+        [
+          2,
+          13
+        ],
+        [
+          3,
+          14
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 220.16,
+      "shiny_same_used_indices": 11,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_ZANGOOSE",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          2,
+          14
+        ],
+        [
+          3,
+          15
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 239.0,
+      "shiny_same_used_indices": 4,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_MILOTIC",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          8,
+          15
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 227.8,
+      "shiny_same_used_indices": 4,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_CASTFORM",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          7,
+          15
+        ]
+      ],
+      "near_pairs": [
+        {
+          "indices": [
+            5,
+            13
+          ],
+          "distance": 17.89
+        }
+      ],
+      "luminance_span": 231.0,
+      "shiny_same_used_indices": 4,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_DUSCLOPS",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15
+      ],
+      "duplicate_pairs": [],
+      "near_pairs": [
+        {
+          "indices": [
+            1,
+            12
+          ],
+          "distance": 13.86
+        },
+        {
+          "indices": [
+            2,
+            11
+          ],
+          "distance": 13.86
+        },
+        {
+          "indices": [
+            4,
+            9
+          ],
+          "distance": 8.0
+        }
+      ],
+      "luminance_span": 239.0,
+      "shiny_same_used_indices": 2,
+      "flags": [
+        "crowded-color-ramp"
+      ]
+    },
+    {
+      "species": "SPECIES_GLALIE",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [],
+      "near_pairs": [
+        {
+          "indices": [
+            3,
+            11
+          ],
+          "distance": 9.0
+        },
+        {
+          "indices": [
+            4,
+            12
+          ],
+          "distance": 17.0
+        },
+        {
+          "indices": [
+            5,
+            13
+          ],
+          "distance": 17.0
+        }
+      ],
+      "luminance_span": 239.0,
+      "shiny_same_used_indices": 4,
+      "flags": [
+        "crowded-color-ramp"
+      ]
+    },
+    {
+      "species": "SPECIES_RELICANTH",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          7,
+          13
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 230.18,
+      "shiny_same_used_indices": 9,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_REGIROCK",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          9,
+          13
+        ]
+      ],
+      "near_pairs": [
+        {
+          "indices": [
+            10,
+            14
+          ],
+          "distance": 16.0
+        }
+      ],
+      "luminance_span": 207.12,
+      "shiny_same_used_indices": 8,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_TORTERRA",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          1,
+          5
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 214.0,
+      "shiny_same_used_indices": 2,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    },
+    {
+      "species": "SPECIES_BURMY",
+      "used_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [],
+      "near_pairs": [],
+      "luminance_span": 195.89,
+      "shiny_same_used_indices": 13,
+      "flags": [
+        "shiny-identical-on-used-indices"
+      ]
+    },
+    {
+      "species": "SPECIES_WORMADAM",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15
+      ],
+      "duplicate_pairs": [],
+      "near_pairs": [],
+      "luminance_span": 239.0,
+      "shiny_same_used_indices": 14,
+      "flags": [
+        "shiny-identical-on-used-indices"
+      ]
+    },
+    {
+      "species": "SPECIES_SHELLOS",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15
+      ],
+      "duplicate_pairs": [],
+      "near_pairs": [],
+      "luminance_span": 239.0,
+      "shiny_same_used_indices": 14,
+      "flags": [
+        "shiny-identical-on-used-indices"
+      ]
+    },
+    {
+      "species": "SPECIES_GASTRODON",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [],
+      "near_pairs": [],
+      "luminance_span": 239.0,
+      "shiny_same_used_indices": 14,
+      "flags": [
+        "shiny-identical-on-used-indices"
+      ]
+    },
+    {
+      "species": "SPECIES_GIRATINA",
+      "used_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duplicate_pairs": [
+        [
+          2,
+          15
+        ]
+      ],
+      "near_pairs": [],
+      "luminance_span": 235.97,
+      "shiny_same_used_indices": 2,
+      "flags": [
+        "duplicate-used-colors"
+      ]
+    }
+  ]
+}
