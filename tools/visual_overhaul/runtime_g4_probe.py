@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import time
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
@@ -60,6 +61,12 @@ REQUIRED_SYMBOLS = {
     "FieldMap_Main",
     "gG4RuntimeQAControl",
 }
+
+G4_RUNTIME_QA_EVENT_AREA_LIGHT = 1 << 0
+G4_RUNTIME_QA_EVENT_FOREST_RENDERER = 1 << 1
+G4_RUNTIME_QA_EVENT_FOREST_TASK = 1 << 2
+G4_RUNTIME_QA_EVENT_SPECIAL_FOG = 1 << 3
+G4_RUNTIME_QA_EVENT_FOG_APPLY = 1 << 4
 
 
 def _parse_int(value: str) -> int:
@@ -151,6 +158,8 @@ def _request_debug_warp(
         scenario.warp_request.to_bytes(4, "little")
         + (0).to_bytes(4, "little")
         + (0).to_bytes(4, "little")
+        + (0).to_bytes(4, "little")
+        + (0xFFFFFFFF).to_bytes(4, "little")
     )
     session.write_memory(address, payload)
     observed = session.read_memory(address, len(payload))
@@ -162,6 +171,8 @@ def _request_debug_warp(
         "request": scenario.warp_request,
         "status": 0,
         "loaded_map_header": 0,
+        "event_flags": 0,
+        "light_archive_id": 0xFFFFFFFF,
     }
 
 
@@ -170,16 +181,62 @@ def _read_debug_warp_control(
     symbols: dict[str, int],
 ) -> dict[str, object]:
     address = _need(symbols, "gG4RuntimeQAControl")
-    raw = session.read_memory(address, 12)
+    raw = session.read_memory(address, 20)
     request = int.from_bytes(raw[0:4], "little")
     status = int.from_bytes(raw[4:8], "little")
     loaded_map_header = int.from_bytes(raw[8:12], "little")
+    event_flags = int.from_bytes(raw[12:16], "little")
+    light_archive_id = int.from_bytes(raw[16:20], "little")
     return {
         "address": f"0x{address:08x}",
         "request": request,
         "status": status,
         "loaded_map_header": loaded_map_header,
+        "event_flags": event_flags,
+        "light_archive_id": light_archive_id,
     }
+
+
+def _required_event_flags(scenario: Scenario) -> int:
+    flags = G4_RUNTIME_QA_EVENT_AREA_LIGHT
+    if scenario.before_light_symbols:
+        flags |= G4_RUNTIME_QA_EVENT_FOREST_RENDERER | G4_RUNTIME_QA_EVENT_FOREST_TASK
+    if scenario.require_special_fog:
+        flags |= G4_RUNTIME_QA_EVENT_SPECIAL_FOG | G4_RUNTIME_QA_EVENT_FOG_APPLY
+    return flags
+
+
+def _wait_for_debug_warp(
+    session: MelonDSSession,
+    symbols: dict[str, int],
+    scenario: Scenario,
+    *,
+    timeout: float,
+) -> dict[str, object]:
+    deadline = time.monotonic() + timeout
+    required_flags = _required_event_flags(scenario)
+    last = _read_debug_warp_control(session, symbols)
+
+    while time.monotonic() < deadline:
+        if (
+            last["status"] == 2
+            and last["light_archive_id"] == scenario.expected_light_id
+            and (last["event_flags"] & required_flags) == required_flags
+        ):
+            return last
+
+        if last["status"] == 3:
+            raise RuntimeError(
+                f"{scenario}: debug warp entered REJECTED status; control={last}"
+            )
+
+        session.run_host_action(lambda: time.sleep(0.25))
+        last = _read_debug_warp_control(session, symbols)
+
+    raise RuntimeError(
+        f"runtime QA telemetry timed out; expected light={scenario.expected_light_id}, "
+        f"required_flags=0x{required_flags:08x}, control={last}"
+    )
 
 
 def _hit(session: MelonDSSession, symbols: dict[str, int], name: str) -> dict[str, object]:
@@ -232,41 +289,48 @@ def run(args: argparse.Namespace) -> int:
         port=args.port,
         timeout=args.timeout,
     ) as session:
-        if args.wait_for_field:
-            results.append(_hit(session, symbols, "FieldMap_Main"))
-
         if args.request_warp:
             warp_control = _request_debug_warp(session, symbols, scenario)
-
-        for symbol in scenario.before_light_symbols:
-            results.append(_hit(session, symbols, symbol))
-
-        light_hit = _hit(session, symbols, "AreaLightManager_New")
-        archive_id = int(str(light_hit["r1"]), 16) & 0xFF
-        light_hit["archive_id"] = archive_id
-        light_hit["expected_archive_id"] = scenario.expected_light_id
-        light_hit["pass"] = archive_id == scenario.expected_light_id
-        results.append(light_hit)
-        if archive_id != scenario.expected_light_id:
-            raise RuntimeError(
-                f"{args.scenario}: AreaLightManager_New received lighting ID "
-                f"{archive_id}, expected {scenario.expected_light_id}"
+            warp_control = _wait_for_debug_warp(
+                session,
+                symbols,
+                scenario,
+                timeout=args.telemetry_timeout,
             )
+            results.append(
+                {
+                    "check": "runtime_telemetry",
+                    "expected_archive_id": scenario.expected_light_id,
+                    "required_event_flags": f"0x{_required_event_flags(scenario):08x}",
+                    **warp_control,
+                    "pass": True,
+                }
+            )
+        else:
+            if args.wait_for_field:
+                results.append(_hit(session, symbols, "FieldMap_Main"))
 
-        if scenario.require_special_fog:
-            results.append(_hit(session, symbols, "FieldMap_ApplySpecialAreaFog"))
-            results.append(_hit(session, symbols, "FogManager_ApplyParameters"))
+            for symbol in scenario.before_light_symbols:
+                results.append(_hit(session, symbols, symbol))
 
-        for symbol in scenario.after_light_symbols:
-            results.append(_hit(session, symbols, symbol))
-
-        if args.request_warp:
-            warp_control = _read_debug_warp_control(session, symbols)
-            if warp_control["status"] != 2:
+            light_hit = _hit(session, symbols, "AreaLightManager_New")
+            archive_id = int(str(light_hit["r1"]), 16) & 0xFF
+            light_hit["archive_id"] = archive_id
+            light_hit["expected_archive_id"] = scenario.expected_light_id
+            light_hit["pass"] = archive_id == scenario.expected_light_id
+            results.append(light_hit)
+            if archive_id != scenario.expected_light_id:
                 raise RuntimeError(
-                    f"{args.scenario}: debug warp did not reach LOADED status; "
-                    f"control={warp_control}"
+                    f"{args.scenario}: AreaLightManager_New received lighting ID "
+                    f"{archive_id}, expected {scenario.expected_light_id}"
                 )
+
+            if scenario.require_special_fog:
+                results.append(_hit(session, symbols, "FieldMap_ApplySpecialAreaFog"))
+                results.append(_hit(session, symbols, "FogManager_ApplyParameters"))
+
+            for symbol in scenario.after_light_symbols:
+                results.append(_hit(session, symbols, symbol))
 
     report = {
         "scenario": args.scenario,
@@ -311,6 +375,12 @@ def parser() -> argparse.ArgumentParser:
     p.add_argument("--host", default="127.0.0.1")
     p.add_argument("--port", type=int, default=3333)
     p.add_argument("--timeout", type=float, default=30.0)
+    p.add_argument(
+        "--telemetry-timeout",
+        type=float,
+        default=20.0,
+        help="maximum wall time to wait for an autowarp scenario to satisfy runtime telemetry",
+    )
     p.add_argument(
         "--wait-for-field",
         action="store_true",
