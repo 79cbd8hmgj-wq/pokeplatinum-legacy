@@ -13,6 +13,7 @@ L_0:
     Func_FadeBg FADE_BG_TYPE_BASE, 0, 13, 0, BATTLE_COLOR_WHITE
     Func_ShakeBg 4, 4, 0, 10, 0
     Func_Shake 2, 0, 1, 6, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
+    Func_ShakeBg 2, 2, 0, 3, 0, SHAKE_BG_TARGET_BASE
     WaitForAnimTasks
     WaitForAllEmitters
     UnloadParticleSystem 0
