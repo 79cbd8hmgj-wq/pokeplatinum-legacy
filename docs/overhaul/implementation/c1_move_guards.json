@@ -1,0 +1,1429 @@
+{
+  "base_commit": "9034963728913416f2968b56f7dab8ac61b19c07",
+  "edit_count": 82,
+  "edits": [
+    {
+      "move": "Fury Cutter",
+      "path": "res/moves/fury_cutter/data.json",
+      "batch": "1",
+      "before": {
+        "power": 10,
+        "accuracy": 95
+      },
+      "after": {
+        "power": 20,
+        "accuracy": 100
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Leech Life",
+      "path": "res/moves/leech_life/data.json",
+      "batch": "1",
+      "before": {
+        "power": 20,
+        "pp": 15
+      },
+      "after": {
+        "power": 40,
+        "pp": 20
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Pin Missile",
+      "path": "res/moves/pin_missile/data.json",
+      "batch": "1",
+      "before": {
+        "power": 14,
+        "accuracy": 85
+      },
+      "after": {
+        "power": 20,
+        "accuracy": 95
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Twineedle",
+      "path": "res/moves/twineedle/data.json",
+      "batch": "1",
+      "before": {
+        "power": 25
+      },
+      "after": {
+        "power": 30
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Silver Wind",
+      "path": "res/moves/silver_wind/data.json",
+      "batch": "1",
+      "before": {
+        "pp": 5
+      },
+      "after": {
+        "pp": 10
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Poison Sting",
+      "path": "res/moves/poison_sting/data.json",
+      "batch": "2",
+      "before": {
+        "power": 15
+      },
+      "after": {
+        "power": 30
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Poison Tail",
+      "path": "res/moves/poison_tail/data.json",
+      "batch": "2",
+      "before": {
+        "power": 50
+      },
+      "after": {
+        "power": 60
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Gunk Shot",
+      "path": "res/moves/gunk_shot/data.json",
+      "batch": "2",
+      "before": {
+        "accuracy": 70
+      },
+      "after": {
+        "accuracy": 80
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Rock Throw",
+      "path": "res/moves/rock_throw/data.json",
+      "batch": "3",
+      "before": {
+        "accuracy": 90
+      },
+      "after": {
+        "accuracy": 100
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Rock Tomb",
+      "path": "res/moves/rock_tomb/data.json",
+      "batch": "3",
+      "before": {
+        "power": 50,
+        "accuracy": 80
+      },
+      "after": {
+        "power": 60,
+        "accuracy": 95
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Rock Blast",
+      "path": "res/moves/rock_blast/data.json",
+      "batch": "3",
+      "before": {
+        "accuracy": 80
+      },
+      "after": {
+        "accuracy": 90
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "AncientPower",
+      "path": "res/moves/ancient_power/data.json",
+      "batch": "3",
+      "before": {
+        "pp": 5
+      },
+      "after": {
+        "pp": 10
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Power Gem",
+      "path": "res/moves/power_gem/data.json",
+      "batch": "3",
+      "before": {
+        "power": 70
+      },
+      "after": {
+        "power": 80
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Absorb",
+      "path": "res/moves/absorb/data.json",
+      "batch": "4",
+      "before": {
+        "power": 20
+      },
+      "after": {
+        "power": 30
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Vine Whip",
+      "path": "res/moves/vine_whip/data.json",
+      "batch": "4",
+      "before": {
+        "power": 35,
+        "pp": 15
+      },
+      "after": {
+        "power": 45,
+        "pp": 25
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Bullet Seed",
+      "path": "res/moves/bullet_seed/data.json",
+      "batch": "4",
+      "before": {
+        "power": 10,
+        "pp": 30
+      },
+      "after": {
+        "power": 20,
+        "pp": 20
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Mega Drain",
+      "path": "res/moves/mega_drain/data.json",
+      "batch": "4",
+      "before": {
+        "power": 40
+      },
+      "after": {
+        "power": 50
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Giga Drain",
+      "path": "res/moves/giga_drain/data.json",
+      "batch": "4",
+      "before": {
+        "power": 60
+      },
+      "after": {
+        "power": 75
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Arm Thrust",
+      "path": "res/moves/arm_thrust/data.json",
+      "batch": "5",
+      "before": {
+        "power": 15
+      },
+      "after": {
+        "power": 20
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Drain Punch",
+      "path": "res/moves/drain_punch/data.json",
+      "batch": "5",
+      "before": {
+        "power": 60,
+        "pp": 5
+      },
+      "after": {
+        "power": 75,
+        "pp": 10
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Vital Throw",
+      "path": "res/moves/vital_throw/data.json",
+      "batch": "5",
+      "before": {
+        "power": 70
+      },
+      "after": {
+        "power": 80
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Submission",
+      "path": "res/moves/submission/data.json",
+      "batch": "5",
+      "before": {
+        "power": 80,
+        "accuracy": 80
+      },
+      "after": {
+        "power": 90,
+        "accuracy": 95
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Lick",
+      "path": "res/moves/lick/data.json",
+      "batch": "6",
+      "before": {
+        "power": 20
+      },
+      "after": {
+        "power": 30
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Astonish",
+      "path": "res/moves/astonish/data.json",
+      "batch": "6",
+      "before": {
+        "power": 30
+      },
+      "after": {
+        "power": 40
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Shadow Punch",
+      "path": "res/moves/shadow_punch/data.json",
+      "batch": "6",
+      "before": {
+        "power": 60
+      },
+      "after": {
+        "power": 70
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Knock Off",
+      "path": "res/moves/knock_off/data.json",
+      "batch": "6",
+      "before": {
+        "power": 20
+      },
+      "after": {
+        "power": 40
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Thief",
+      "path": "res/moves/thief/data.json",
+      "batch": "6",
+      "before": {
+        "power": 40
+      },
+      "after": {
+        "power": 60
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Mud-Slap",
+      "path": "res/moves/mud_slap/data.json",
+      "batch": "8A",
+      "before": {
+        "power": 20
+      },
+      "after": {
+        "power": 30
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Mud Bomb",
+      "path": "res/moves/mud_bomb/data.json",
+      "batch": "8A",
+      "before": {
+        "power": 65,
+        "accuracy": 85
+      },
+      "after": {
+        "power": 70,
+        "accuracy": 95
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Ominous Wind",
+      "path": "res/moves/ominous_wind/data.json",
+      "batch": "8A",
+      "before": {
+        "pp": 5
+      },
+      "after": {
+        "pp": 10
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Mirror Shot",
+      "path": "res/moves/mirror_shot/data.json",
+      "batch": "8A",
+      "before": {
+        "power": 65,
+        "accuracy": 85
+      },
+      "after": {
+        "power": 70,
+        "accuracy": 95
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Tackle",
+      "path": "res/moves/tackle/data.json",
+      "batch": "9A",
+      "before": {
+        "power": 35,
+        "accuracy": 95
+      },
+      "after": {
+        "power": 40,
+        "accuracy": 100
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "DoubleSlap",
+      "path": "res/moves/double_slap/data.json",
+      "batch": "9A",
+      "before": {
+        "power": 15,
+        "accuracy": 85
+      },
+      "after": {
+        "power": 20,
+        "accuracy": 90
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Barrage",
+      "path": "res/moves/barrage/data.json",
+      "batch": "9A",
+      "before": {
+        "power": 15,
+        "accuracy": 85
+      },
+      "after": {
+        "power": 20,
+        "accuracy": 90
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Fury Swipes",
+      "path": "res/moves/fury_swipes/data.json",
+      "batch": "9A",
+      "before": {
+        "power": 18,
+        "accuracy": 80
+      },
+      "after": {
+        "power": 20,
+        "accuracy": 90
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Comet Punch",
+      "path": "res/moves/comet_punch/data.json",
+      "batch": "9A",
+      "before": {
+        "power": 18,
+        "accuracy": 85
+      },
+      "after": {
+        "power": 20,
+        "accuracy": 90
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Slam",
+      "path": "res/moves/slam/data.json",
+      "batch": "9A",
+      "before": {
+        "power": 80,
+        "accuracy": 75
+      },
+      "after": {
+        "power": 85,
+        "accuracy": 95
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Take Down",
+      "path": "res/moves/take_down/data.json",
+      "batch": "9A",
+      "before": {
+        "power": 90,
+        "accuracy": 85
+      },
+      "after": {
+        "power": 100,
+        "accuracy": 95
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Fury Attack",
+      "path": "res/moves/fury_attack/data.json",
+      "batch": "9B",
+      "before": {
+        "power": 15,
+        "accuracy": 85
+      },
+      "after": {
+        "power": 20,
+        "accuracy": 90
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Bubble",
+      "path": "res/moves/bubble/data.json",
+      "batch": "9B",
+      "before": {
+        "power": 20
+      },
+      "after": {
+        "power": 30
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Smog",
+      "path": "res/moves/smog/data.json",
+      "batch": "9B",
+      "before": {
+        "power": 20,
+        "accuracy": 70
+      },
+      "after": {
+        "power": 30,
+        "accuracy": 90
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Air Cutter",
+      "path": "res/moves/air_cutter/data.json",
+      "batch": "9B",
+      "before": {
+        "power": 55,
+        "accuracy": 95
+      },
+      "after": {
+        "power": 60,
+        "accuracy": 100
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Twister",
+      "path": "res/moves/twister/data.json",
+      "batch": "9B",
+      "before": {
+        "power": 40
+      },
+      "after": {
+        "power": 50
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Bone Club",
+      "path": "res/moves/bone_club/data.json",
+      "batch": "9B",
+      "before": {
+        "power": 65,
+        "accuracy": 85
+      },
+      "after": {
+        "power": 70,
+        "accuracy": 95
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Steel Wing",
+      "path": "res/moves/steel_wing/data.json",
+      "batch": "9B",
+      "before": {
+        "power": 70,
+        "accuracy": 90
+      },
+      "after": {
+        "power": 75,
+        "accuracy": 95
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Razor Wind",
+      "path": "res/moves/razor_wind/data.json",
+      "batch": "9C",
+      "before": {
+        "effect_type": "BATTLE_EFFECT_CHARGE_TURN_HIGH_CRIT"
+      },
+      "after": {
+        "effect_type": "BATTLE_EFFECT_HIGH_CRITICAL"
+      },
+      "kind": "effect_reassignment+script"
+    },
+    {
+      "move": "Skull Bash",
+      "path": "res/moves/skull_bash/data.json",
+      "batch": "9C",
+      "before": {
+        "power": 100
+      },
+      "after": {
+        "power": 120
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Bounce",
+      "path": "res/moves/bounce/data.json",
+      "batch": "9C",
+      "before": {
+        "accuracy": 85,
+        "pp": 5
+      },
+      "after": {
+        "accuracy": 95,
+        "pp": 10
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "String Shot",
+      "path": "res/moves/string_shot/data.json",
+      "batch": "9D",
+      "before": {
+        "accuracy": 95
+      },
+      "after": {
+        "accuracy": 100
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Screech",
+      "path": "res/moves/screech/data.json",
+      "batch": "9D",
+      "before": {
+        "accuracy": 85
+      },
+      "after": {
+        "accuracy": 90
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Metal Sound",
+      "path": "res/moves/metal_sound/data.json",
+      "batch": "9D",
+      "before": {
+        "accuracy": 85
+      },
+      "after": {
+        "accuracy": 90
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Kinesis",
+      "path": "res/moves/kinesis/data.json",
+      "batch": "9D",
+      "before": {
+        "accuracy": 80
+      },
+      "after": {
+        "accuracy": 100
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Supersonic",
+      "path": "res/moves/supersonic/data.json",
+      "batch": "9D",
+      "before": {
+        "accuracy": 55
+      },
+      "after": {
+        "accuracy": 70
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Sing",
+      "path": "res/moves/sing/data.json",
+      "batch": "9D",
+      "before": {
+        "accuracy": 55
+      },
+      "after": {
+        "accuracy": 65
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "GrassWhistle",
+      "path": "res/moves/grass_whistle/data.json",
+      "batch": "9D",
+      "before": {
+        "accuracy": 55
+      },
+      "after": {
+        "accuracy": 65
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Hypnosis",
+      "path": "res/moves/hypnosis/data.json",
+      "batch": "9D",
+      "before": {
+        "accuracy": 60
+      },
+      "after": {
+        "accuracy": 70
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Will-O-Wisp",
+      "path": "res/moves/will_o_wisp/data.json",
+      "batch": "9D",
+      "before": {
+        "accuracy": 75
+      },
+      "after": {
+        "accuracy": 85
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Toxic",
+      "path": "res/moves/toxic/data.json",
+      "batch": "9D",
+      "before": {
+        "accuracy": 85
+      },
+      "after": {
+        "accuracy": 90
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "PoisonPowder",
+      "path": "res/moves/poison_powder/data.json",
+      "batch": "9D",
+      "before": {
+        "accuracy": 75
+      },
+      "after": {
+        "accuracy": 90
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Glare",
+      "path": "res/moves/glare/data.json",
+      "batch": "9D",
+      "before": {
+        "accuracy": 75
+      },
+      "after": {
+        "accuracy": 90
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Synthesis",
+      "path": "res/moves/synthesis/data.json",
+      "batch": "9E",
+      "before": {
+        "pp": 5
+      },
+      "after": {
+        "pp": 10
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Morning Sun",
+      "path": "res/moves/morning_sun/data.json",
+      "batch": "9E",
+      "before": {
+        "pp": 5
+      },
+      "after": {
+        "pp": 10
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Moonlight",
+      "path": "res/moves/moonlight/data.json",
+      "batch": "9E",
+      "before": {
+        "pp": 5
+      },
+      "after": {
+        "pp": 10
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Bind",
+      "path": "res/moves/bind/data.json",
+      "batch": "9F",
+      "before": {
+        "power": 15,
+        "accuracy": 75,
+        "pp": 20
+      },
+      "after": {
+        "power": 30,
+        "accuracy": 90,
+        "pp": 20
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Wrap",
+      "path": "res/moves/wrap/data.json",
+      "batch": "9F",
+      "before": {
+        "power": 15,
+        "accuracy": 85,
+        "pp": 20
+      },
+      "after": {
+        "power": 30,
+        "accuracy": 90,
+        "pp": 20
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Fire Spin",
+      "path": "res/moves/fire_spin/data.json",
+      "batch": "9F",
+      "before": {
+        "power": 15,
+        "accuracy": 70,
+        "pp": 15
+      },
+      "after": {
+        "power": 35,
+        "accuracy": 90,
+        "pp": 15
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Whirlpool",
+      "path": "res/moves/whirlpool/data.json",
+      "batch": "9F",
+      "before": {
+        "power": 15,
+        "accuracy": 70,
+        "pp": 15
+      },
+      "after": {
+        "power": 35,
+        "accuracy": 90,
+        "pp": 15
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Sand Tomb",
+      "path": "res/moves/sand_tomb/data.json",
+      "batch": "9F",
+      "before": {
+        "power": 15,
+        "accuracy": 70,
+        "pp": 15
+      },
+      "after": {
+        "power": 35,
+        "accuracy": 90,
+        "pp": 15
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Clamp",
+      "path": "res/moves/clamp/data.json",
+      "batch": "9F",
+      "before": {
+        "power": 35,
+        "accuracy": 75,
+        "pp": 10
+      },
+      "after": {
+        "power": 35,
+        "accuracy": 90,
+        "pp": 10
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Rapid Spin",
+      "path": "res/moves/rapid_spin/data.json",
+      "batch": "9H",
+      "before": {
+        "power": 20
+      },
+      "after": {
+        "power": 40
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Constrict",
+      "path": "res/moves/constrict/data.json",
+      "batch": "final_catch_up",
+      "before": {
+        "power": 10
+      },
+      "after": {
+        "power": 30
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Icicle Spear",
+      "path": "res/moves/icicle_spear/data.json",
+      "batch": "final_catch_up",
+      "before": {
+        "power": 10,
+        "pp": 30
+      },
+      "after": {
+        "power": 20,
+        "pp": 20
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Bone Rush",
+      "path": "res/moves/bone_rush/data.json",
+      "batch": "final_catch_up",
+      "before": {
+        "accuracy": 80
+      },
+      "after": {
+        "accuracy": 90
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Triple Kick",
+      "path": "res/moves/triple_kick/data.json",
+      "batch": "final_catch_up",
+      "before": {
+        "power": 10
+      },
+      "after": {
+        "power": 15
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Rolling Kick",
+      "path": "res/moves/rolling_kick/data.json",
+      "batch": "final_catch_up",
+      "before": {
+        "accuracy": 85
+      },
+      "after": {
+        "accuracy": 95
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Mega Punch",
+      "path": "res/moves/mega_punch/data.json",
+      "batch": "final_catch_up",
+      "before": {
+        "power": 80,
+        "accuracy": 85
+      },
+      "after": {
+        "power": 90,
+        "accuracy": 100
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Egg Bomb",
+      "path": "res/moves/egg_bomb/data.json",
+      "batch": "final_catch_up",
+      "before": {
+        "accuracy": 75
+      },
+      "after": {
+        "accuracy": 90
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Iron Tail",
+      "path": "res/moves/iron_tail/data.json",
+      "batch": "final_catch_up",
+      "before": {
+        "accuracy": 75
+      },
+      "after": {
+        "accuracy": 85
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Dragon Rush",
+      "path": "res/moves/dragon_rush/data.json",
+      "batch": "final_catch_up",
+      "before": {
+        "accuracy": 75
+      },
+      "after": {
+        "accuracy": 85
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Psywave",
+      "path": "res/moves/psywave/data.json",
+      "batch": "final_catch_up",
+      "before": {
+        "accuracy": 80
+      },
+      "after": {
+        "accuracy": 100
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Poison Gas",
+      "path": "res/moves/poison_gas/data.json",
+      "batch": "final_catch_up",
+      "before": {
+        "accuracy": 55
+      },
+      "after": {
+        "accuracy": 90
+      },
+      "kind": "data_only"
+    },
+    {
+      "move": "Future Sight",
+      "path": "res/moves/future_sight/data.json",
+      "batch": "final_catch_up",
+      "before": {
+        "power": 80,
+        "accuracy": 90
+      },
+      "after": {
+        "power": 100,
+        "accuracy": 100
+      },
+      "kind": "data_only"
+    }
+  ],
+  "keep_invariants": {
+    "Bug Bite": {
+      "power": 60,
+      "accuracy": 100,
+      "pp": 20,
+      "effect_type": "BATTLE_EFFECT_EAT_BERRY"
+    },
+    "U-turn": {
+      "power": 70,
+      "accuracy": 100,
+      "pp": 20,
+      "effect_type": "BATTLE_EFFECT_SWITCH_HIT"
+    },
+    "Signal Beam": {
+      "power": 75,
+      "accuracy": 100,
+      "pp": 15,
+      "effect_type": "BATTLE_EFFECT_CONFUSE_HIT"
+    },
+    "X-Scissor": {
+      "power": 80,
+      "accuracy": 100,
+      "pp": 15,
+      "effect_type": "BATTLE_EFFECT_HIT"
+    },
+    "Bug Buzz": {
+      "power": 90,
+      "accuracy": 100,
+      "pp": 10,
+      "effect_type": "BATTLE_EFFECT_LOWER_SP_DEF_HIT"
+    },
+    "Megahorn": {
+      "power": 120,
+      "accuracy": 85,
+      "pp": 10,
+      "effect_type": "BATTLE_EFFECT_HIT"
+    },
+    "Poison Fang": {
+      "power": 50,
+      "accuracy": 100,
+      "pp": 15,
+      "effect_type": "BATTLE_EFFECT_BADLY_POISON_HIT"
+    },
+    "Cross Poison": {
+      "power": 70,
+      "accuracy": 100,
+      "pp": 20,
+      "effect_type": "BATTLE_EFFECT_HIGH_CRITICAL_POISON_HIT"
+    },
+    "Poison Jab": {
+      "power": 80,
+      "accuracy": 100,
+      "pp": 20,
+      "effect_type": "BATTLE_EFFECT_POISON_HIT"
+    },
+    "Rollout": {
+      "power": 30,
+      "accuracy": 90,
+      "pp": 20,
+      "effect_type": "BATTLE_EFFECT_DOUBLE_POWER_EACH_TURN_LOCK_INTO"
+    },
+    "Rock Slide": {
+      "power": 75,
+      "accuracy": 90,
+      "pp": 10,
+      "effect_type": "BATTLE_EFFECT_FLINCH_HIT"
+    },
+    "Stone Edge": {
+      "power": 100,
+      "accuracy": 80,
+      "pp": 5,
+      "effect_type": "BATTLE_EFFECT_HIGH_CRITICAL"
+    },
+    "Razor Leaf": {
+      "power": 55,
+      "accuracy": 95,
+      "pp": 25,
+      "effect_type": "BATTLE_EFFECT_HIGH_CRITICAL"
+    },
+    "Magical Leaf": {
+      "power": 60,
+      "accuracy": 0,
+      "pp": 20,
+      "effect_type": "BATTLE_EFFECT_BYPASS_ACCURACY"
+    },
+    "Seed Bomb": {
+      "power": 80,
+      "accuracy": 100,
+      "pp": 15,
+      "effect_type": "BATTLE_EFFECT_HIT"
+    },
+    "Energy Ball": {
+      "power": 80,
+      "accuracy": 100,
+      "pp": 10,
+      "effect_type": "BATTLE_EFFECT_LOWER_SP_DEF_HIT"
+    },
+    "Karate Chop": {
+      "power": 50,
+      "accuracy": 100,
+      "pp": 25,
+      "effect_type": "BATTLE_EFFECT_HIGH_CRITICAL"
+    },
+    "Double Kick": {
+      "power": 30,
+      "accuracy": 100,
+      "pp": 30,
+      "effect_type": "BATTLE_EFFECT_HIT_TWICE"
+    },
+    "Force Palm": {
+      "power": 60,
+      "accuracy": 100,
+      "pp": 10,
+      "effect_type": "BATTLE_EFFECT_PARALYZE_HIT"
+    },
+    "Wake-Up Slap": {
+      "power": 60,
+      "accuracy": 100,
+      "pp": 10,
+      "effect_type": "BATTLE_EFFECT_DOUBLE_POWER_HEAL_SLEEP"
+    },
+    "Brick Break": {
+      "power": 75,
+      "accuracy": 100,
+      "pp": 15,
+      "effect_type": "BATTLE_EFFECT_REMOVE_SCREENS"
+    },
+    "Revenge": {
+      "power": 60,
+      "accuracy": 100,
+      "pp": 10,
+      "effect_type": "BATTLE_EFFECT_DOUBLE_POWER_IF_HIT"
+    },
+    "Sky Uppercut": {
+      "power": 85,
+      "accuracy": 90,
+      "pp": 15,
+      "effect_type": "BATTLE_EFFECT_HIT_FLY"
+    },
+    "Cross Chop": {
+      "power": 100,
+      "accuracy": 80,
+      "pp": 5,
+      "effect_type": "BATTLE_EFFECT_HIGH_CRITICAL"
+    },
+    "Shadow Sneak": {
+      "power": 40,
+      "accuracy": 100,
+      "pp": 30,
+      "effect_type": "BATTLE_EFFECT_PRIORITY_1"
+    },
+    "Shadow Claw": {
+      "power": 70,
+      "accuracy": 100,
+      "pp": 15,
+      "effect_type": "BATTLE_EFFECT_HIGH_CRITICAL"
+    },
+    "Pursuit": {
+      "power": 40,
+      "accuracy": 100,
+      "pp": 20,
+      "effect_type": "BATTLE_EFFECT_HIT_BEFORE_SWITCH"
+    },
+    "Bite": {
+      "power": 60,
+      "accuracy": 100,
+      "pp": 25,
+      "effect_type": "BATTLE_EFFECT_FLINCH_HIT"
+    },
+    "Faint Attack": {
+      "power": 60,
+      "accuracy": 0,
+      "pp": 20,
+      "effect_type": "BATTLE_EFFECT_BYPASS_ACCURACY"
+    },
+    "Payback": {
+      "power": 50,
+      "accuracy": 100,
+      "pp": 10,
+      "effect_type": "BATTLE_EFFECT_DOUBLE_POWER_IF_MOVING_SECOND"
+    },
+    "Assurance": {
+      "power": 50,
+      "accuracy": 100,
+      "pp": 10,
+      "effect_type": "BATTLE_EFFECT_DOUBLE_POWER_IF_TARGET_HIT"
+    },
+    "Night Slash": {
+      "power": 70,
+      "accuracy": 100,
+      "pp": 15,
+      "effect_type": "BATTLE_EFFECT_HIGH_CRITICAL"
+    },
+    "Crunch": {
+      "power": 80,
+      "accuracy": 100,
+      "pp": 15,
+      "effect_type": "BATTLE_EFFECT_LOWER_DEFENSE_HIT"
+    },
+    "Sucker Punch": {
+      "power": 80,
+      "accuracy": 100,
+      "pp": 5,
+      "effect_type": "BATTLE_EFFECT_HIT_FIRST_IF_TARGET_ATTACKING"
+    },
+    "Pound": {
+      "power": 40,
+      "accuracy": 100,
+      "pp": 35,
+      "effect_type": "BATTLE_EFFECT_HIT"
+    },
+    "Scratch": {
+      "power": 40,
+      "accuracy": 100,
+      "pp": 35,
+      "effect_type": "BATTLE_EFFECT_HIT"
+    },
+    "Quick Attack": {
+      "power": 40,
+      "accuracy": 100,
+      "pp": 30,
+      "effect_type": "BATTLE_EFFECT_PRIORITY_1"
+    },
+    "Headbutt": {
+      "power": 70,
+      "accuracy": 100,
+      "pp": 15,
+      "effect_type": "BATTLE_EFFECT_FLINCH_HIT"
+    },
+    "Double-Edge": {
+      "power": 120,
+      "accuracy": 100,
+      "pp": 15,
+      "effect_type": "BATTLE_EFFECT_RECOIL_THIRD"
+    },
+    "Metal Claw": {
+      "power": 50,
+      "accuracy": 95,
+      "pp": 35,
+      "effect_type": "BATTLE_EFFECT_RAISE_ATTACK_HIT"
+    },
+    "Bonemerang": {
+      "power": 50,
+      "accuracy": 90,
+      "pp": 10,
+      "effect_type": "BATTLE_EFFECT_HIT_TWICE"
+    },
+    "Spike Cannon": {
+      "power": 20,
+      "accuracy": 100,
+      "pp": 15,
+      "effect_type": "BATTLE_EFFECT_MULTI_HIT"
+    },
+    "Sky Attack": {
+      "power": 140,
+      "accuracy": 90,
+      "pp": 5,
+      "effect_type": "BATTLE_EFFECT_CHARGE_TURN_HIGH_CRIT_FLINCH"
+    },
+    "Dig": {
+      "power": 80,
+      "accuracy": 100,
+      "pp": 10,
+      "effect_type": "BATTLE_EFFECT_DIG"
+    },
+    "Dive": {
+      "power": 80,
+      "accuracy": 100,
+      "pp": 10,
+      "effect_type": "BATTLE_EFFECT_DIVE"
+    },
+    "Sleep Powder": {
+      "power": 0,
+      "accuracy": 75,
+      "pp": 15,
+      "effect_type": "BATTLE_EFFECT_STATUS_SLEEP"
+    },
+    "Stun Spore": {
+      "power": 0,
+      "accuracy": 75,
+      "pp": 30,
+      "effect_type": "BATTLE_EFFECT_STATUS_PARALYZE"
+    },
+    "Confuse Ray": {
+      "power": 0,
+      "accuracy": 100,
+      "pp": 10,
+      "effect_type": "BATTLE_EFFECT_STATUS_CONFUSE"
+    },
+    "Mega Kick": {
+      "power": 120,
+      "accuracy": 75,
+      "pp": 5,
+      "effect_type": "BATTLE_EFFECT_HIT"
+    },
+    "Present": {
+      "power": 1,
+      "accuracy": 90,
+      "pp": 15,
+      "effect_type": "BATTLE_EFFECT_RANDOM_POWER_MAYBE_HEAL"
+    },
+    "ViceGrip": {
+      "power": 55,
+      "accuracy": 100,
+      "pp": 30,
+      "effect_type": "BATTLE_EFFECT_HIT"
+    },
+    "Acid": {
+      "power": 40,
+      "accuracy": 100,
+      "pp": 30,
+      "effect_type": "BATTLE_EFFECT_LOWER_SP_DEF_HIT"
+    },
+    "Sweet Kiss": {
+      "power": 0,
+      "accuracy": 75,
+      "pp": 10,
+      "effect_type": "BATTLE_EFFECT_STATUS_CONFUSE"
+    },
+    "Rage": {
+      "power": 20,
+      "accuracy": 100,
+      "pp": 20,
+      "effect_type": "BATTLE_EFFECT_RAISE_ATK_WHEN_HIT"
+    },
+    "SonicBoom": {
+      "power": 1,
+      "accuracy": 90,
+      "pp": 20,
+      "effect_type": "BATTLE_EFFECT_20_DAMAGE_FLAT"
+    },
+    "Dragon Rage": {
+      "power": 1,
+      "accuracy": 100,
+      "pp": 10,
+      "effect_type": "BATTLE_EFFECT_40_DAMAGE_FLAT"
+    },
+    "Bide": {
+      "power": 1,
+      "accuracy": 0,
+      "pp": 10,
+      "effect_type": "BATTLE_EFFECT_BIDE"
+    },
+    "Doom Desire": {
+      "power": 120,
+      "accuracy": 85,
+      "pp": 5,
+      "effect_type": "BATTLE_EFFECT_HIT_IN_3_TURNS"
+    },
+    "Magma Storm": {
+      "power": 120,
+      "accuracy": 70,
+      "pp": 5,
+      "effect_type": "BATTLE_EFFECT_BIND_HIT"
+    }
+  },
+  "keep_unresolved_names": [],
+  "later_pass_overrides": [],
+  "created_moves": {
+    "first_id": 468,
+    "last_id": 489,
+    "max_moves": 490
+  }
+}

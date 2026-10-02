@@ -7,7 +7,7 @@ Last verified against repository/project history: 2026-09-13.
 - **Design:** Pokémon/move design through C3 is closed.
 - **C2.5E created moves:** IMPLEMENTED + L2 BUILD VERIFIED on `main`.
 - **C3H species + TM compatibility:** IMPLEMENTED + L2 BUILD VERIFIED on `main`.
-- **C1 existing-move rebalance:** LOCKED, fully recovered into an 82-edit canonical manifest, **not yet implemented** on `main`.
+- **C1 existing-move rebalance:** LOCKED and **IMPLEMENTED (source + validator verified; Rev 0/Rev 1 build verification via CI; battle runtime QA pending)** — 82/82 edits applied on branch `claude/c1-move-rebalance-implementation-4l7umd`, see `implementation/C1_IMPLEMENTATION_AUDIT.md`.
 - **Evolution design:** **LOCKED in Pass A** across #001–#493; complete historical master had 50 consolidated type/evolution decisions. The repo still needs the complete machine-readable evolution manifest reconstructed from that locked authority.
 - **World/#001–#493 ordinary availability:** IMPLEMENTED on `main` via PR #10; manifests/validators landed; Rev 0 + Rev 1 CI build verified; runtime availability QA pending. The 28 reserved special-acquisition families are resolved by the follow-up special-acquisition pass (see `implementation/SPECIAL_ACQUISITION.md`).
 - **Known design blockers:** 0.
@@ -54,7 +54,7 @@ They are provenance sources, not current implementation targets.
 |---|---|---|---|
 | Core project identity | LOCKED | n/a | n/a |
 | Types/stats/abilities/roles | LOCKED | IMPLEMENTED through C3H | L2 build |
-| Existing move rework (C1) | LOCKED / CANONICALIZED | NOT YET IMPLEMENTED | pending |
+| Existing move rework (C1) | LOCKED / CANONICALIZED | IMPLEMENTED (source/validator verified; CI build; runtime QA pending) | validators pass; see C1_IMPLEMENTATION_AUDIT.md |
 | Created moves (C2.5E) | LOCKED | IMPLEMENTED | L2 build |
 | C3 learnsets/species edits | LOCKED | IMPLEMENTED | L2 build |
 | TM21/TM78 compatibility | LOCKED | IMPLEMENTED | L2 build |
@@ -104,7 +104,7 @@ The previously surfaced Sand Tomb 50/95 value came from an unrelated Emerald mov
 
 ### C1 implementation state
 
-C1 has not yet been applied to current main; for example, Fury Cutter remains vanilla in source.
+C1 is applied on the implementation branch (base `9034963728913416f2968b56f7dab8ac61b19c07`): 82/82 edits, guards in `implementation/c1_move_guards.json`, tooling in `tools/overhaul/moves/`. Battle runtime QA is still pending.
 
 Next implementation procedure:
 
