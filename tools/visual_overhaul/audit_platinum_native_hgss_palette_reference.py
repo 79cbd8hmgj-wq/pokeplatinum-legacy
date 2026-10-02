@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Find HGSS palette refinements that can be applied to Platinum-native art without changing pixels."""
+"""Find later-official palette references usable with unchanged Platinum-native indexed art."""
 from __future__ import annotations
 import argparse, json, math
 from pathlib import Path
