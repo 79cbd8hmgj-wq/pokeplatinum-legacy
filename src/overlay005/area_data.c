@@ -204,9 +204,13 @@ const MapPropMaterialShape *AreaDataManager_GetMapPropMaterialShape(const AreaDa
 
 BOOL AreaDataManager_IsOutdoorsLighting(const AreaDataManager *areaDataManager)
 {
-    if ((areaDataManager->areaData.areaLightArchiveID == 0) || (areaDataManager->areaData.areaLightArchiveID == 3)) {
+    switch (areaDataManager->areaData.areaLightArchiveID) {
+    case 0: // retail outdoors
+    case 3: // retail outdoors variant
+    case 4: // deep forest
+    case 5: // snow
         return TRUE;
-    } else {
+    default:
         return FALSE;
     }
 }
