@@ -128,3 +128,24 @@ Implemented on `visual-overhaul-g2a`:
 - no archive ordering or species-resource layout changes
 
 This is intentionally small. Build/export validation must pass before a larger donor manifest is applied.
+
+
+## G3 validation artifact checkpoint
+
+The visual-asset export workflow now carries a reproducible donor comparison for this pass.
+
+Corrections:
+- HGSS's icon archive contains seven shared entries before National Dex #001.
+- The correct mapping is therefore **species N -> `poke_icon_(N + 7)`**.
+- The older comparison workflow was one slot early for Bulbasaur, Pikachu, Gengar, and Lucario; those paths are now corrected.
+
+The workflow also exports a three-way front-sprite comparison for the pilot species:
+- retail Platinum `main`
+- current overhaul branch
+- HGSS donor source
+
+for:
+- Bulbasaur
+- Mewtwo
+
+This makes the G3 pilot reviewable from CI artifacts without relying on local donor checkouts.
