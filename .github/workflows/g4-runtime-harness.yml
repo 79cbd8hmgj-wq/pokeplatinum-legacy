@@ -98,3 +98,100 @@ jobs:
             tools/visual_overhaul/runtime_g4_probe.py
             docs/visual_overhaul/G4_RUNTIME_QA.md
           retention-days: 7
+
+
+  live-runtime-rev1:
+    name: live G4 runtime probes (US rev 1)
+    needs: debug-symbol-gate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install pinned NDS Disassembly Toolkit
+        run: |
+          python -m pip install             "git+https://github.com/79cbd8hmgj-wq/NDS-Disassembly-Toolkit.git@4b08df5a3a070fffafa10d4064f58e89d0c525d1"
+
+      - name: Download rev 1 runtime QA package
+        uses: actions/download-artifact@v7
+        with:
+          name: g4-runtime-qa-rev1
+          path: /tmp/g4-runtime
+
+      - name: Install DeSmuME build dependencies
+        shell: bash
+        run: |
+          set -euxo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends             git meson ninja-build xvfb             libglib2.0-dev libsdl2-dev libpcap-dev zlib1g-dev             libx11-dev libgl1-mesa-dev
+
+      - name: Build pinned DeSmuME CLI with GDB stub
+        shell: bash
+        run: |
+          set -euxo pipefail
+          git clone --filter=blob:none https://github.com/TASEmulators/desmume.git /tmp/desmume
+          git -C /tmp/desmume checkout release_0_9_13
+          meson setup /tmp/desmume/desmume/src/frontend/posix/build             /tmp/desmume/desmume/src/frontend/posix             --buildtype=release             -Dfrontend-gtk=false             -Dfrontend-cli=true             -Dgdb-stub=true
+          ninja -C /tmp/desmume/desmume/src/frontend/posix/build
+
+      - name: Run deterministic G4 live probes
+        shell: bash
+        run: |
+          set -euxo pipefail
+          ROM="$(find /tmp/g4-runtime -name pokeplatinum.us.nds -print -quit)"
+          SYMBOLS="$(find /tmp/g4-runtime -name runtime_symbols.map -print -quit)"
+          test -n "$ROM"
+          test -n "$SYMBOLS"
+
+          EMU=/tmp/desmume/desmume/src/frontend/posix/build/cli/desmume-cli
+          PORT=39491
+          mkdir -p runtime-live-reports
+
+          GDBSTUB_DEBUG=1 xvfb-run -a             "$EMU" --arm9gdb "$PORT" --disable-sound --nojoy "$ROM"             >/tmp/desmume-g4.out 2>/tmp/desmume-g4.err &
+          PID=$!
+
+          cleanup() {
+            kill "$PID" 2>/dev/null || true
+            wait "$PID" 2>/dev/null || true
+          }
+          trap cleanup EXIT
+
+          for _ in $(seq 1 100); do
+            if python - <<PY
+import socket
+s=socket.socket()
+s.settimeout(0.1)
+try:
+    s.connect(("127.0.0.1", $PORT))
+except OSError:
+    raise SystemExit(1)
+finally:
+    s.close()
+PY
+            then
+              break
+            fi
+            sleep 0.1
+          done
+
+          for scenario in eterna snow spear lakes turnback galactic coronet-control
+          do
+            timeout 45s python tools/visual_overhaul/runtime_g4_probe.py "$scenario"               --emulator desmume               --host 127.0.0.1               --port "$PORT"               --symbols "$SYMBOLS"               --wait-for-field               --request-warp               --output "runtime-live-reports/$scenario.json"
+          done
+
+      - name: Upload live runtime reports
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: g4-live-runtime-reports-rev1
+          path: |
+            runtime-live-reports/
+            /tmp/desmume-g4.out
+            /tmp/desmume-g4.err
+          retention-days: 7
