@@ -618,6 +618,26 @@ Validation status:
 - source is under US revision 0/1 CI and clang-format validation before being treated as locked
 
 
+
+### G2B reconciled atmosphere architecture
+
+Validated implementation state:
+
+- Retail weather ID `23` is the forest/canopy handler backed by `ov5_021DB144`; it is now named `OVERWORLD_WEATHER_CANOPY`.
+- Eterna Forest, Fullmoon Island Forest, and Newmoon Island Forest use that canopy weather path.
+- Canopy weather owns its native BG2 mist/fog behavior. The visual pass tunes that native handler rather than layering a second forest fog controller over it.
+- Snow weather variants likewise retain ownership of their native fog. Their fog colors/offsets are tuned in the existing weather handlers.
+- `FieldMap_ApplySpecialAreaFog()` is reserved for lighting families that do not already own an equivalent weather-fog path:
+  - Mt. Coronet
+  - Spear Pillar
+  - Distortion World
+- The dedicated `sForestFieldEffectRenderers` path remains available for forest-only ambience.
+- `FIELD_EFFECT_RENDERER_FOREST_AMBIENCE` uses the existing berry sparkle system as a sparse ambient mote/glint effect. Its position-only helper was audited and does not require a live `MapObject`.
+- A prototype that repurposed `e_kusaeff1/2/3` as drifting leaves was removed after binary asset inspection confirmed those resources are retail one-shot ground-level grass effects.
+- `fldeff.narc` has now been successfully exported and inventoried locally: 201 members (15 NSBTX, 145 NSBMD, 10 NSBTP, 13 NSBCA, 1 NSBMA, 5 NSBTA, 12 other/metadata members).
+- Proper drifting leaves remain a later asset-authoring task; they should not reuse the grass-burst textures.
+
+
 #### G2C — Global UI presentation
 Improve:
 - frames
