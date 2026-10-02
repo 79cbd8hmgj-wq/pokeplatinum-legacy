@@ -408,6 +408,46 @@ Implemented:
 Runtime/build validation remains required before the fog values are locked.
 
 
+
+### G2B native forest-effect verification
+
+The deep-forest effect path has now been compared directly against retail Platinum.
+
+Retail weather ID 23 already implements:
+- a scrolling BG2 atmosphere layer
+- hardware fog through `FogManager`
+- fade-in/fade-out handling
+- scroll coupling to player/camera movement
+
+The overhaul therefore **enhances** that native path instead of replacing it.
+
+Current branch changes:
+- weather ID 23 is named `OVERWORLD_WEATHER_CANOPY`
+- mist opacity: 7 -> 8
+- fog offset: retail `0x6F6F - 1600` -> `0x6F6F - 1900`
+- fog color: white `GX_RGB(31,31,31)` -> cool forest `GX_RGB(20,24,22)`
+- existing 0.75 scroll response retained
+- Eterna Forest receives a dedicated camera profile:
+  - distance 545
+  - pitch 58 degrees
+  - vertical FOV 10.9 degrees
+- Fullmoon/Newmoon forest keep the retail zoomed-in camera while sharing the canopy weather/lighting treatment
+- Eterna, Fullmoon, and Newmoon route through the dedicated `sForestFieldEffectRenderers` list
+
+Outdoor-lighting invariant:
+- retail lighting sets 0 and 3 used global area model lighting
+- new forest set 4 and snow set 5 preserve that behavior
+- Galactic 6, Coronet 7, Spear Pillar 8, and Distortion World 9 preserve the non-global-lighting behavior of the retail sets they replace
+- this is intentional; do not classify lighting families from map type alone
+
+Leaf reuse finding:
+- Platinum already contains editable leaf/petal resources under `res/graphics/trap_effects/`
+- the Underground leaf effect uses standard Nitro 2D NCGR/NCLR/NCER/NANR resources
+- its runtime is tightly coupled to Underground trap state, microphone input, and its own sprite environment
+- reuse the artwork/resource formats, not the Underground runtime wholesale
+- implement ambient forest leaves as a dedicated guarded field effect after the mist path is build/runtime validated
+
+
 #### G2C — Global UI presentation
 Improve:
 - frames
