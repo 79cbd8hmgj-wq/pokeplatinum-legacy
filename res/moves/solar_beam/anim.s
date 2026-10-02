@@ -35,6 +35,7 @@ L_2:
     Delay 5
     Func_FadeBattlerSprite BATTLE_ANIM_DEFENDER, 0, 2, BATTLE_COLOR_LIGHT_YELLOW1, 14, 0
     Func_Shake 4, 0, 1, 12, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
+    Func_ShakeBg 2, 0, 0, 2, 0, SHAKE_BG_TARGET_BASE
     WaitForAllEmitters
     UnloadParticleSystem 0
     Func_FadeBg FADE_BG_TYPE_BASE, 1, 12, 0, BATTLE_COLOR_BLACK
