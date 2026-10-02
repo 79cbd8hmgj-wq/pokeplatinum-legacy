@@ -308,6 +308,22 @@ Targets:
 
 Mystery Dungeon effects are references/donors, not a wholesale engine transplant.
 
+
+### G2B deep-forest atmosphere checkpoint
+
+Current findings:
+- `OVERWORLD_WEATHER_23` is used by Eterna Forest, Fullmoon Island Forest, and Newmoon Island Forest.
+- Those maps also share `area_data_054`, now assigned to the new deep-forest lighting family `lighting_set_004`.
+- Platinum's exposed field-effect manager already supports billboarded 3D effects, texture VRAM upload, fog participation, global model lighting, animation managers, and per-map renderer sets.
+- `weather_sys.narc` is still prebuilt/opaque, so Pass G will not blindly patch that archive.
+
+Implementation rule:
+- Deep-forest atmosphere is a shared forest treatment, not an Eterna-only weather hack.
+- Prefer exposed fog and field-effect APIs over modifying opaque weather internals.
+- First forest atmosphere target: subtle mist + drifting leaf billboards at conservative density.
+- Preserve the existing `OVERWORLD_WEATHER_23` behavior until its internals are fully identified.
+
+
 #### G2C — Global UI presentation
 Improve:
 - frames
