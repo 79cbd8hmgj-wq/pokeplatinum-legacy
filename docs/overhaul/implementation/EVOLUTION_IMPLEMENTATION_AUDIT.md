@@ -93,10 +93,10 @@ No existing validator needed changes.
 
 | Revision | Result |
 |---|---|
-| US Platinum Rev 0 | PENDING_CI for final head (previous head 2d20f14e: success, run 37045544349) |
-| US Platinum Rev 1 | PENDING_CI for final head (previous head 2d20f14e: success, run 37045544349) |
+| US Platinum Rev 0 | SUCCESS — `build (US rev 0)`, head `acec33eb`, Actions run 37046549462 |
+| US Platinum Rev 1 | SUCCESS — `build (US rev 1)`, head `acec33eb`, Actions run 37046549462 |
 
-(A ROM build needs the Metroskrew toolchain and is verified by the `build` GitHub Actions workflow; it could not be run in this session's container.)
+(A ROM build needs the Metroskrew toolchain and is verified by the `build` GitHub Actions workflow; it could not be run in this session's container. Every intermediate head of this PR also built green on both revisions.)
 
 ## Runtime status
 
