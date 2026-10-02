@@ -168,6 +168,18 @@ Best targets:
 
 **Classification:** high-value presentation/animation reference; low direct portability to DS.
 
+## Donor-use constraint
+
+Use external repositories primarily to research visual direction and implementation ideas.
+
+Prefer:
+- Platinum-native code paths and source-backed assets
+- donor-informed palette, timing, staging, camera, particle, and UI decisions
+- only trivially compatible donor assets with a proven resource contract
+
+Reject or defer donor assets that require nontrivial format conversion, palette remapping,
+animation/cell reconstruction, archive surgery, or speculative binary patching.
+
 ## Implementation-selection rule
 
 Before modifying a visual subsystem, inspect the primary source named above and only inspect secondary sources when they can plausibly improve that subsystem. This prevents donor research from becoming open-ended while still using the full available resource pool.
