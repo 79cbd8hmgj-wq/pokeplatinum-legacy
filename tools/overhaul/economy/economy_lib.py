@@ -32,6 +32,11 @@ LOCKED_PRICES = {
 }
 # Status medicines: derived mechanically = ceil(0.75 * vanilla / 50) * 50 (lowest clean 50-increment >= 75%).
 STATUS_MEDICINES = ("antidote", "burn_heal", "ice_heal", "awakening", "parlyz_heal", "full_heal")
+# Poké Ball price/shop data is owned by the capture phase (pokeballs/POKE_BALL_*.md), not frozen by D2.
+CAPTURE_BALLS = ("poke_ball", "great_ball", "ultra_ball", "premier_ball", "heal_ball", "net_ball", "nest_ball", "dusk_ball",
+                 "quick_ball", "timer_ball", "repeat_ball", "dive_ball", "luxury_ball", "safari_ball", "master_ball", "cherish_ball",
+                 "park_ball", "sport_ball", "fast_ball", "level_ball", "lure_ball", "heavy_ball", "love_ball", "friend_ball", "moon_ball", "dream_ball")
+CAPTURE_BALL_ITEMS = tuple("ITEM_" + b.upper() for b in CAPTURE_BALLS)
 RARE_CANDY_PRICES = (5000, 4800)  # preferred 5000; 4800 only with documented side-effect reason
 PRIZE_CHANGES = {"TRAINER_CLASS_TUBER_MALE": (1, 3), "TRAINER_CLASS_TUBER_FEMALE": (1, 3),
                  "TRAINER_CLASS_POKE_KID": (2, 4), "TRAINER_CLASS_NINJA_BOY": (2, 4)}
@@ -78,7 +83,7 @@ def parse_prize_table(src: str) -> dict[str, int]:
 
 
 def parse_stock_arrays(src: str) -> dict[str, list[str]]:
-    return {m.group(1): re.findall(r"\bITEM_\w+", m.group(2)) for m in re.finditer(r"const u16 (\w+)\[\] = \{(.*?)\};", src, re.S)}
+    return {m.group(1): [i for i in re.findall(r"\bITEM_\w+", m.group(2)) if i not in CAPTURE_BALL_ITEMS] for m in re.finditer(r"const u16 (\w+)\[\] = \{(.*?)\};", src, re.S)}
 
 
 def parse_vendor_map(src: str) -> dict[str, str]:

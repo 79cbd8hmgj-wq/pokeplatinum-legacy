@@ -13,8 +13,8 @@ typedef struct {
 
 const PokeMartCommonItem PokeMartCommonItems[] = {
     { ITEM_POKE_BALL, 0x1 },
-    { ITEM_GREAT_BALL, 0x3 },
-    { ITEM_ULTRA_BALL, 0x4 },
+    { ITEM_GREAT_BALL, 0x2 },
+    { ITEM_ULTRA_BALL, 0x3 },
     { ITEM_POTION, 0x1 },
     { ITEM_SUPER_POTION, 0x2 },
     { ITEM_HYPER_POTION, 0x4 },
@@ -90,6 +90,7 @@ const u16 PastoriaMartSpecialties[] = {
     ITEM_NEST_BALL,
     ITEM_DUSK_BALL,
     ITEM_QUICK_BALL,
+    ITEM_DIVE_BALL,
     SHOP_ITEM_END
 };
 
@@ -214,6 +215,7 @@ const u16 PokemonLeagueMartSpecialties[] = {
     ITEM_QUICK_BALL,
     ITEM_TIMER_BALL,
     ITEM_REPEAT_BALL,
+    ITEM_DIVE_BALL,
     ITEM_LUXURY_BALL,
     SHOP_ITEM_END
 };

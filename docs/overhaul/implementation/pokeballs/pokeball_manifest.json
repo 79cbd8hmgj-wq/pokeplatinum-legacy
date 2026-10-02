@@ -1,0 +1,100 @@
+{
+  "base_commit": "fb9003d9d7894fc5b1c9c36ecaf9bdecb8176afd",
+  "units": "1/10",
+  "balls": {
+    "net": {
+      "item": "ITEM_NET_BALL",
+      "vanilla": "30 Water/Bug",
+      "target": "35 Water/Bug",
+      "source": "battle_script.c BattleScript_CalcCatchShakes",
+      "source_contains": [
+        "ballMod = 35;"
+      ]
+    },
+    "dive": {
+      "item": "ITEM_DIVE_BALL",
+      "vanilla": "35 water terrain",
+      "target": "40 water terrain",
+      "source": "battle_script.c BattleScript_CalcCatchShakes",
+      "source_contains": [
+        "TERRAIN_WATER",
+        "ballMod = 40;"
+      ]
+    },
+    "nest": {
+      "item": "ITEM_NEST_BALL",
+      "vanilla": "40-targetLevel (<40)",
+      "target": "user>=target 20; >=2x 35; >=4x 50; else 10",
+      "source": "battle_script.c BattleScript_CalcCatchShakes",
+      "source_contains": [
+        "battleCtx->attacker",
+        "targetLevel * 4",
+        "ballMod = 50;",
+        "targetLevel * 2",
+        "ballMod = 35;",
+        "ballMod = 20;"
+      ]
+    },
+    "repeat": {
+      "item": "ITEM_REPEAT_BALL",
+      "vanilla": "30 caught",
+      "target": "35 caught",
+      "source": "battle_script.c BattleScript_CalcCatchShakes",
+      "source_contains": [
+        "ballMod = 35;"
+      ]
+    },
+    "timer": {
+      "item": "ITEM_TIMER_BALL",
+      "vanilla": "10+turns cap 40",
+      "target": "10+3*turns cap 40",
+      "source": "battle_script.c BattleScript_CalcCatchShakes",
+      "source_contains": [
+        "ballMod = 10 + 3 * battleCtx->totalTurns;",
+        "ballMod > 40"
+      ]
+    },
+    "dusk": {
+      "item": "ITEM_DUSK_BALL",
+      "vanilla": "35 night/cave",
+      "target": "30 night/cave",
+      "source": "battle_script.c BattleScript_CalcCatchShakes",
+      "source_contains": [
+        "ballMod = 30;"
+      ]
+    },
+    "quick": {
+      "item": "ITEM_QUICK_BALL",
+      "vanilla": "40 turn 1",
+      "target": "50 turn 1",
+      "source": "battle_script.c BattleScript_CalcCatchShakes",
+      "source_contains": [
+        "totalTurns < 1",
+        "ballMod = 50;"
+      ]
+    },
+    "heal": {
+      "item": "ITEM_HEAL_BALL",
+      "vanilla": "10",
+      "target": "15",
+      "source": "battle_script.c BattleScript_CalcCatchShakes",
+      "source_contains": [
+        "ballMod = 15;"
+      ]
+    }
+  },
+  "prices": {
+    "poke_ball": 200,
+    "great_ball": 600,
+    "ultra_ball": 1200,
+    "heal_ball": 300,
+    "net_ball": 1000,
+    "nest_ball": 1000,
+    "dusk_ball": 1000,
+    "quick_ball": 1000,
+    "timer_ball": 1000,
+    "repeat_ball": 1000,
+    "dive_ball": 1000,
+    "luxury_ball": 1000
+  }
+}

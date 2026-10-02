@@ -218,7 +218,7 @@ def check_pr_scope(live: dict, base: dict, P: list[str]):
     lp, bp = live["prices"], base["prices"]
     if set(lp) != set(bp):
         P.append("items: item price file set changed")
-    allowed = set(LOCKED_PRICES) | set(STATUS_MEDICINES) | {"rare_candy"}
+    allowed = set(LOCKED_PRICES) | set(STATUS_MEDICINES) | {"rare_candy"} | set(CAPTURE_BALLS)  # balls: capture-phase owned
     for k in sorted(lp):
         if k not in allowed and lp[k] != bp.get(k):
             P.append(f"PR scope: unapproved item price edit: {k} {bp.get(k)} -> {lp[k]}")
