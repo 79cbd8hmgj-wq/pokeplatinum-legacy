@@ -729,9 +729,6 @@
       "res/field/scripts/scripts_pastoria_city_gym.s": {
         "ITEM_TM55": 1
       },
-      "res/field/scripts/scripts_route_204_north.s": {
-        "ITEM_TM78": 1
-      },
       "res/field/scripts/scripts_route_210_south.s": {
         "ITEM_TM51": 1
       },
@@ -834,12 +831,21 @@
         "ITEM_TM87": 1,
         "ITEM_TM89": 1,
         "ITEM_TM90": 1
+      },
+      "res/field/scripts/scripts_victory_road_1f.s": {
+        "ITEM_TM78": 1
       }
+    },
+    "tm78_override": {
+      "retail_source": "res/field/scripts/scripts_route_204_north.s",
+      "locked_source": "res/field/scripts/scripts_victory_road_1f.s",
+      "method": "Victory Road 1F Collector gift",
+      "save_compat_flag": "FLAG_RECEIVED_ROUTE_204_NORTH_TM78"
     }
   },
   "text_corrections": {
     "res/text/oreburgh_city.json": "OreburghCity_Text_TMsSingleUseHMsOverAndOver no longer claims TMs are single use",
-    "res/text/route_204_north.json": "Route204North_Text_CaptivateOppositeGender describes the TM78 Power Gem and reusable TMs"
+    "res/text/route_204_north.json": "Route204North Ace Trainer now teaches reusable-TM behavior without awarding TM78"
   },
   "created_moves_pin": {
     "max_moves": 490,
@@ -862,6 +868,6 @@
     "visual assets/maps/lighting/UI",
     "tutor consolidation",
     "field-move decoupling",
-    "world TM pickup relocation"
+    "world TM pickup relocation except the locked TM78 Route 204 -> Victory Road override"
   ]
 }
