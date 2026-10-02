@@ -3540,8 +3540,7 @@ u16 Pokemon_GetEvolutionTargetSpecies(Party *party, Pokemon *mon, u8 evoClass, u
     u16 monPersonalityUpper = (monPersonality & 0xFFFF0000) >> 16;
     u8 itemHoldEffect = Item_LoadParam(monHeldItem, ITEM_PARAM_HOLD_EFFECT, HEAP_ID_SYSTEM);
 
-    if (monSpecies != SPECIES_KADABRA
-        && itemHoldEffect == HOLD_EFFECT_NO_EVOLVE
+    if (itemHoldEffect == HOLD_EFFECT_NO_EVOLVE
         && evoClass != EVO_CLASS_BY_ITEM) {
         return SPECIES_NONE;
     }
@@ -3620,6 +3619,13 @@ u16 Pokemon_GetEvolutionTargetSpecies(Party *party, Pokemon *mon, u8 evoClass, u
                 if (IsNight() == TRUE && speciesEvolutions[i].param <= monLevel) {
                     targetSpecies = speciesEvolutions[i].targetSpecies;
                     *evoTypeResult = EVO_LEVEL_NIGHT;
+                }
+                break;
+
+            case EVO_LEVEL_DAY:
+                if (IsNight() == FALSE && speciesEvolutions[i].param <= monLevel) {
+                    targetSpecies = speciesEvolutions[i].targetSpecies;
+                    *evoTypeResult = EVO_LEVEL_DAY;
                 }
                 break;
 
