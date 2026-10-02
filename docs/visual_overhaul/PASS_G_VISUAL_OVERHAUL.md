@@ -1038,3 +1038,40 @@ The battle command cursor now has a reproducible geometry refresh in `generate_b
 - no command layout, sprite position, cell, animation, palette allocation, or VRAM contract changed
 
 The cursor is now included in the generated-asset workflow alongside the healthbox palette refresh.
+
+
+### G2C implementation-foundation closure checkpoint
+
+The first global UI foundation is now implemented across the high-visibility source-backed surfaces targeted by G2C:
+
+- global system/field windows
+- scroll cursor and wait dial
+- start-menu selection cursor
+- party-menu palette, selection frames, and button chrome
+- Pokemon summary shared chrome, tab arrow, and move-selection cursor
+- bag chrome and UI accent ramp
+- shop/default + Frontier chrome
+- normal battle healthbox chrome
+- battle command cursor
+
+All of these changes preserve the existing Platinum resource contracts unless explicitly documented otherwise. No G2C change in this foundation batch requires a UI-engine rewrite.
+
+Remaining UI work is now classified as deeper page-specific art/layout polish rather than a missing global foundation. That work can proceed after runtime inspection instead of blocking the next visual pass.
+
+Runtime status:
+- source/export/format/lint validation is being used as the build gate
+- final visual tuning still requires Delta inspection because compile success cannot validate readability, spacing, or perceived contrast on-screen
+
+
+### Visual UI generator concurrency fix
+
+The generated-asset workflow exposed a CI race when multiple UI commits landed close together: a generator run could successfully build and commit an asset, then fail its push because the remote branch had advanced.
+
+`generate-visual-ui.yml` now:
+
+1. commits the generated assets locally
+2. fetches the current `visual-overhaul-g2a` head
+3. rebases the small generated-asset commit onto that head
+4. pushes the rebased result
+
+This keeps generated PNG/palette commits reproducible without losing concurrent documentation/source updates.
