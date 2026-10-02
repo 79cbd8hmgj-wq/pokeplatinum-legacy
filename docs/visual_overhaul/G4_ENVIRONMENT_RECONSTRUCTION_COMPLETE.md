@@ -74,7 +74,9 @@ breakage.
 ## Exit condition
 
 G4 is considered source-complete for the current safe toolchain. Remaining work
-is runtime visual inspection in Delta/device plus any future model work if a proven
-NSBMD/map-geometry authoring pipeline becomes available.
+is objective runtime path validation through melonDS + the NDS Disassembly Toolkit,
+followed by a short rendered-frame sanity review for subjective visual tuning. Future
+model work remains deferred unless a proven NSBMD/map-geometry authoring pipeline
+becomes available.
 
 Next visual phase: **G5 — Battle Presentation**.
