@@ -170,7 +170,8 @@ CASES = {
     # acquisition
     "TM relocated (Galactic HQ TM21 moved)": fp("res/field/events/events_galactic_hq_3f.json", "ITEM_TM21", 0),
     "TM relocated (new TM pickup added)": fp("res/field/scripts/scripts_route_204_north.s", "ITEM_TM21", 1),
-    "TM78 Route 204 NPC removed": fp("res/field/scripts/scripts_route_204_north.s", "ITEM_TM78", 0),
+    "TM78 restored too early on Route 204": fp("res/field/scripts/scripts_route_204_north.s", "ITEM_TM78", 1),
+    "TM78 Victory Road source removed": fp("res/field/scripts/scripts_victory_road_1f.s", "ITEM_TM78", 0),
     # created moves
     "custom move ID damaged": lambda l, c: l["src"].__setitem__("moves_txt", l["src"]["moves_txt"].replace("MOVE_STAR_JAB", "MOVE_STAR_JABX")),
     "MAX_MOVES regression": lambda l, c: l["src"].__setitem__("moves_txt", l["src"]["moves_txt"].replace("MOVE_STAR_JAB\nMAX_MOVES", "MOVE_STAR_JAB\nMOVE_X\nMAX_MOVES")),
