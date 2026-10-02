@@ -1047,6 +1047,26 @@ Three equally important no-change rulings were retained:
 The batch changes only base-arena motion at explicit impact frames. Existing particles, sounds,
 backgrounds, timing, battler logic, and donor assets remain untouched.
 
+
+### G5 heavy physical-collision checkpoint
+
+A second physical-impact audit keeps heavyweight attacks visually distinct from ordinary contact moves.
+
+Updated:
+- Flare Blitz — short base-arena jolt on collision
+- Wood Hammer — separate base-arena reaction beneath its existing effect-background shake
+- Head Smash — strongest base-arena collision in the batch
+- Superpower — heavy base-arena reaction under the defender impact
+- Hammer Arm — restrained base-arena reaction beneath the existing effect/background motion
+
+Deliberate no-change controls:
+- Waterfall retains its moving dedicated background and existing defender treatment
+- Aqua Tail remains a cleaner localized mid-power strike
+- Outrage already supplies sustained scene motion through its switched background and repeated red pulses
+- Dragon Claw, Iron Head, and Poison Jab remain localized impacts
+
+No particle resources, sounds, timing, battler motion, backgrounds, or donor assets were replaced.
+
 ### G5 weather-presentation checkpoint
 
 Weather presentation is now aligned across both move initiation and the shared end-of-turn
