@@ -37,7 +37,6 @@
 #include "overlay005/ov5_021EE75C.h"
 #include "overlay005/ov5_021EF4BC.h"
 #include "overlay005/ov5_021F10E8.h"
-#include "overlay005/ov5_021F2D20.h"
 #include "overlay005/secret_base_props.h"
 #include "overlay005/signpost.h"
 #include "overlay005/struct_ov5_021ED0A4.h"
@@ -219,10 +218,6 @@ static BOOL FieldMap_Init(ApplicationManager *appMan, int *state)
         FieldSystem_InitLandManager(fieldSystem);
         ov5_021D1878(fieldSystem);
         ov5_021D1968(fieldSystem);
-
-        if (FieldMap_IsDeepForest(fieldSystem) == TRUE) {
-            FieldEffect_StartForestLeaves(fieldSystem);
-        }
 
         if (fieldSystem->unk_04->unk_0C != NULL) {
             u16 weather = FieldOverworldState_GetWeather(SaveData_GetFieldOverworldState(fieldSystem->saveData));
