@@ -42,7 +42,7 @@ jobs:
 
       - name: Commit audit report
         run: |
-          if git diff --quiet -- docs/visual_overhaul/HGSS_BATTLE_SPRITE_AUDIT.md; then
+          if [ -z "$(git status --porcelain -- docs/visual_overhaul/HGSS_BATTLE_SPRITE_AUDIT.md)" ]; then
             echo "Battle sprite audit report already up to date."
             exit 0
           fi
