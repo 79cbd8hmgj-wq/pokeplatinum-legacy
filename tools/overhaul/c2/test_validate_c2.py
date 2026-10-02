@@ -172,6 +172,22 @@ CASES = {
     "TM relocated (new TM pickup added)": fp("res/field/scripts/scripts_route_204_north.s", "ITEM_TM21", 1),
     "TM78 restored too early on Route 204": fp("res/field/scripts/scripts_route_204_north.s", "ITEM_TM78", 1),
     "TM78 Victory Road source removed": fp("res/field/scripts/scripts_victory_road_1f.s", "ITEM_TM78", 0),
+    "TM78 Collector can hide before receipt": sub(
+        "victory_road",
+        "    GoToIfUnset FLAG_RECEIVED_ROUTE_204_NORTH_TM78, VictoryRoad_DontHideCollector\n",
+        "",
+    ),
+    "TM78 game-completed branch bypasses gift": sub(
+        "victory_road",
+        "    GoToIfSet FLAG_RECEIVED_ROUTE_204_NORTH_TM78, VictoryRoad1F_TM78AlreadyReceived\n",
+        "    GoToIfSet FLAG_GAME_COMPLETED, VictoryRoad1F_YoullMeetManyPokemon\n"
+        "    GoToIfSet FLAG_RECEIVED_ROUTE_204_NORTH_TM78, VictoryRoad1F_TM78AlreadyReceived\n",
+    ),
+    "TM78 receipt flag set before successful give": sub(
+        "victory_road",
+        "    Common_GiveItemQuantity\n    SetFlag FLAG_RECEIVED_ROUTE_204_NORTH_TM78\n",
+        "    SetFlag FLAG_RECEIVED_ROUTE_204_NORTH_TM78\n    Common_GiveItemQuantity\n",
+    ),
     # created moves
     "custom move ID damaged": lambda l, c: l["src"].__setitem__("moves_txt", l["src"]["moves_txt"].replace("MOVE_STAR_JAB", "MOVE_STAR_JABX")),
     "MAX_MOVES regression": lambda l, c: l["src"].__setitem__("moves_txt", l["src"]["moves_txt"].replace("MOVE_STAR_JAB\nMAX_MOVES", "MOVE_STAR_JAB\nMOVE_X\nMAX_MOVES")),
