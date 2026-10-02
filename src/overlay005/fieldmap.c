@@ -279,6 +279,7 @@ static BOOL FieldMap_Main(ApplicationManager *appMan, int *param1)
     FieldSystem *fieldSystem = ApplicationManager_Args(appMan);
 
 #ifdef GDB_DEBUGGING
+    gG4RuntimeQAControl.fieldReady = TRUE;
     FieldMap_TryStartG4RuntimeQA(fieldSystem);
 #endif
 
