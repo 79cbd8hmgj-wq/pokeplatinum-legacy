@@ -17,6 +17,7 @@ typedef struct FieldEffectRendererFuncs {
 extern const u32 sDistWorldFieldEffectRenderers[FIELD_EFFECT_RENDERER_COUNT + 1];
 extern const u32 sForestFieldEffectRenderers[FIELD_EFFECT_RENDERER_COUNT + 1];
 extern const u32 sDefaultFieldEffectRenderers[FIELD_EFFECT_RENDERER_COUNT + 1];
+extern const u32 sDeepForestFieldEffectRenderers[FIELD_EFFECT_RENDERER_COUNT + 1];
 extern const u32 sUndergroundFieldEffectRenderers[FIELD_EFFECT_RENDERER_COUNT + 1];
 extern const FieldEffectRendererFuncs sFieldEffectRendererHandlers[FIELD_EFFECT_RENDERER_COUNT + 1];
 
