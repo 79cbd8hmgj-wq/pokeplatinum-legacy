@@ -803,11 +803,31 @@ texel-index maps, and resource naming. Changes are isolated lighting and palette
 grades, with dedicated area/texture slots created where shared retail resources would
 otherwise cause collateral changes.
 
-Remaining G4 gate: objective runtime path validation through melonDS + the NDS Disassembly Toolkit, followed by a short rendered-frame sanity review for subjective palette/lighting tuning.
+Objective G4 validation is closed:
+- normal US Rev 0 / Rev 1 builds pass
+- debug Rev 0 / Rev 1 builds and runtime-symbol export pass
+- the area-light archive contract passes
+- all G4 runtime probe symbols resolve
+
+The headless DeSmuME autowarp harness remains in-tree as experimental, non-blocking QA.
+Rendered-frame sanity review is still useful for subjective palette/lighting tuning, but it
+does not block later visual passes.
 
 HGSS is the first donor/reference source.
 
 ### G5 — Battle presentation
+Status: **active**.
+
+The existing resource-contract-safe battle HUD palette checkpoint is the G5 foundation;
+do not restart the battle UI from retail.
+
+Implementation order:
+1. battle backgrounds and arena color/staging
+2. impact/effect presentation
+3. camera motion and screen-shake treatment
+4. weather presentation
+5. selective move-animation upgrades after the reusable presentation systems are stable
+
 - HUD
 - backgrounds
 - particle effects
