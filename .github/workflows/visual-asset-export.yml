@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v6
       - name: Collect icon comparison set
         run: |
-          mkdir -p visual-export/platinum-icons visual-export/hgss-icons visual-export/hgss-area-windows visual-export/hgss-zukan
+          mkdir -p visual-export/platinum-icons visual-export/hgss-icons visual-export/hgss-party-menu visual-export/hgss-area-windows visual-export/hgss-zukan
           cp res/pokemon/bulbasaur/icon.png visual-export/platinum-icons/bulbasaur.png
           cp res/pokemon/pikachu/icon.png visual-export/platinum-icons/pikachu.png
           cp res/pokemon/gengar/icon.png visual-export/platinum-icons/gengar.png
@@ -34,6 +34,7 @@ jobs:
           cp /tmp/pokeheartgold/files/poketool/icongra/poke_icon/poke_icon_00000031.png visual-export/hgss-icons/pikachu.png
           cp /tmp/pokeheartgold/files/poketool/icongra/poke_icon/poke_icon_00000100.png visual-export/hgss-icons/gengar.png
           cp /tmp/pokeheartgold/files/poketool/icongra/poke_icon/poke_icon_00000454.png visual-export/hgss-icons/lucario.png
+          cp /tmp/pokeheartgold/files/graphic/plist_gra/* visual-export/hgss-party-menu/
           cp /tmp/pokeheartgold/files/data/gs_areawindow/*.png visual-export/hgss-area-windows/
           find /tmp/pokeheartgold/files/graphic/zukan_gra -maxdepth 1 -name '*.png' -print0 | xargs -0 -I{} cp {} visual-export/hgss-zukan/
 
