@@ -840,7 +840,10 @@
       "retail_source": "res/field/scripts/scripts_route_204_north.s",
       "locked_source": "res/field/scripts/scripts_victory_road_1f.s",
       "method": "Victory Road 1F Collector gift",
-      "save_compat_flag": "FLAG_RECEIVED_ROUTE_204_NORTH_TM78"
+      "save_compat_flag": "FLAG_RECEIVED_ROUTE_204_NORTH_TM78",
+      "retry_safe_on_full_bag": true,
+      "postgame_recoverable": true,
+      "collector_visibility_guard": "do not hide Collector until receipt flag is set"
     }
   },
   "text_corrections": {
