@@ -43,6 +43,11 @@ FightAreaMart_BagIsFull:
     End
 
 FightAreaMart_Clown:
+    GoToIfUnset FLAG_GAME_COMPLETED, FightAreaMart_ClownNoStock
+    PokeMartSpecialtiesWithGreeting MART_SPECIALTIES_ID_FIGHT_AREA_POSTGAME
+    End
+
+FightAreaMart_ClownNoStock:
     NPCMessage FightAreaMart_Text_TheyDontSellThat
     End
 

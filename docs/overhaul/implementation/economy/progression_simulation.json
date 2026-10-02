@@ -1,0 +1,834 @@
+{
+  "aces_live": [
+    14,
+    22,
+    26,
+    32,
+    37,
+    41,
+    44,
+    50,
+    53,
+    55,
+    57,
+    59,
+    62
+  ],
+  "aces_spec": [
+    14,
+    22,
+    27,
+    32,
+    37,
+    41,
+    44,
+    50,
+    53,
+    55,
+    57,
+    59,
+    62
+  ],
+  "ordinary_ko_counts": [
+    57,
+    119,
+    148,
+    77,
+    108,
+    43,
+    57,
+    53,
+    6,
+    49,
+    63,
+    43,
+    9
+  ],
+  "unresolved_species": [],
+  "profiles": {
+    "direct": {
+      "team_wide": [
+        {
+          "boss": "Roark",
+          "ace": 14,
+          "avg": 11,
+          "median": 11,
+          "max": 13,
+          "min": 9,
+          "members": 3
+        },
+        {
+          "boss": "Gardenia",
+          "ace": 22,
+          "avg": 15.8,
+          "median": 16.0,
+          "max": 17,
+          "min": 14,
+          "members": 4
+        },
+        {
+          "boss": "Fantina",
+          "ace": 27,
+          "avg": 18.6,
+          "median": 18,
+          "max": 21,
+          "min": 17,
+          "members": 5
+        },
+        {
+          "boss": "Maylene",
+          "ace": 32,
+          "avg": 21.2,
+          "median": 21,
+          "max": 23,
+          "min": 19,
+          "members": 5
+        },
+        {
+          "boss": "Wake",
+          "ace": 37,
+          "avg": 23.8,
+          "median": 25,
+          "max": 27,
+          "min": 20,
+          "members": 5
+        },
+        {
+          "boss": "Byron",
+          "ace": 41,
+          "avg": 25.6,
+          "median": 26,
+          "max": 30,
+          "min": 22,
+          "members": 5
+        },
+        {
+          "boss": "Candice",
+          "ace": 44,
+          "avg": 27.2,
+          "median": 28,
+          "max": 32,
+          "min": 23,
+          "members": 5
+        },
+        {
+          "boss": "Volkner",
+          "ace": 50,
+          "avg": 29.2,
+          "median": 30,
+          "max": 35,
+          "min": 24,
+          "members": 5
+        },
+        {
+          "boss": "Aaron",
+          "ace": 53,
+          "avg": 30,
+          "median": 31,
+          "max": 36,
+          "min": 25,
+          "members": 5
+        },
+        {
+          "boss": "Bertha",
+          "ace": 55,
+          "avg": 31.4,
+          "median": 33,
+          "max": 38,
+          "min": 26,
+          "members": 5
+        },
+        {
+          "boss": "Flint",
+          "ace": 57,
+          "avg": 33.2,
+          "median": 35,
+          "max": 40,
+          "min": 27,
+          "members": 5
+        },
+        {
+          "boss": "Lucian",
+          "ace": 59,
+          "avg": 34.6,
+          "median": 36,
+          "max": 42,
+          "min": 28,
+          "members": 5
+        },
+        {
+          "boss": "Cynthia",
+          "ace": 62,
+          "avg": 35.2,
+          "median": 37,
+          "max": 43,
+          "min": 28,
+          "members": 5
+        }
+      ],
+      "vanilla": [
+        {
+          "boss": "Roark",
+          "ace": 14,
+          "avg": 9.7,
+          "median": 11,
+          "max": 13,
+          "min": 5,
+          "members": 3
+        },
+        {
+          "boss": "Gardenia",
+          "ace": 22,
+          "avg": 12.2,
+          "median": 11.5,
+          "max": 21,
+          "min": 5,
+          "members": 4
+        },
+        {
+          "boss": "Fantina",
+          "ace": 27,
+          "avg": 14,
+          "median": 9,
+          "max": 26,
+          "min": 5,
+          "members": 5
+        },
+        {
+          "boss": "Maylene",
+          "ace": 32,
+          "avg": 15.2,
+          "median": 9,
+          "max": 29,
+          "min": 5,
+          "members": 5
+        },
+        {
+          "boss": "Wake",
+          "ace": 37,
+          "avg": 17,
+          "median": 9,
+          "max": 33,
+          "min": 5,
+          "members": 5
+        },
+        {
+          "boss": "Byron",
+          "ace": 41,
+          "avg": 17.8,
+          "median": 9,
+          "max": 35,
+          "min": 5,
+          "members": 5
+        },
+        {
+          "boss": "Candice",
+          "ace": 44,
+          "avg": 18.6,
+          "median": 9,
+          "max": 37,
+          "min": 5,
+          "members": 5
+        },
+        {
+          "boss": "Volkner",
+          "ace": 50,
+          "avg": 19.8,
+          "median": 9,
+          "max": 40,
+          "min": 5,
+          "members": 5
+        },
+        {
+          "boss": "Aaron",
+          "ace": 53,
+          "avg": 20.4,
+          "median": 9,
+          "max": 41,
+          "min": 5,
+          "members": 5
+        },
+        {
+          "boss": "Bertha",
+          "ace": 55,
+          "avg": 21.2,
+          "median": 9,
+          "max": 43,
+          "min": 5,
+          "members": 5
+        },
+        {
+          "boss": "Flint",
+          "ace": 57,
+          "avg": 22.2,
+          "median": 9,
+          "max": 46,
+          "min": 5,
+          "members": 5
+        },
+        {
+          "boss": "Lucian",
+          "ace": 59,
+          "avg": 23,
+          "median": 9,
+          "max": 48,
+          "min": 5,
+          "members": 5
+        },
+        {
+          "boss": "Cynthia",
+          "ace": 62,
+          "avg": 23.4,
+          "median": 9,
+          "max": 49,
+          "min": 5,
+          "members": 5
+        }
+      ],
+      "flags": [
+        "Gardenia: direct avg 15.8 is 6.2 below ace 22 (> 4)",
+        "Fantina: direct avg 18.6 is 8.4 below ace 27 (> 4)",
+        "Maylene: direct avg 21.2 is 10.8 below ace 32 (> 4)",
+        "Wake: direct avg 23.8 is 13.2 below ace 37 (> 4)",
+        "Byron: direct avg 25.6 is 15.4 below ace 41 (> 4)",
+        "Candice: direct avg 27.2 is 16.8 below ace 44 (> 4)",
+        "Volkner: direct avg 29.2 is 20.8 below ace 50 (> 4)",
+        "Aaron: direct avg 30 is 23.0 below ace 53 (> 4)",
+        "Bertha: direct avg 31.4 is 23.6 below ace 55 (> 4)",
+        "Flint: direct avg 33.2 is 23.8 below ace 57 (> 4)",
+        "Lucian: direct avg 34.6 is 24.4 below ace 59 (> 4)",
+        "Cynthia: direct avg 35.2 is 26.8 below ace 62 (> 4)"
+      ],
+      "vanilla_flags": [
+        "Roark: direct avg 9.7 is 4.3 below ace 14 (> 4)",
+        "Gardenia: direct avg 12.2 is 9.8 below ace 22 (> 4)",
+        "Fantina: direct avg 14 is 13.0 below ace 27 (> 4)",
+        "Maylene: direct avg 15.2 is 16.8 below ace 32 (> 4)",
+        "Wake: direct avg 17 is 20.0 below ace 37 (> 4)",
+        "Byron: direct avg 17.8 is 23.2 below ace 41 (> 4)",
+        "Candice: direct avg 18.6 is 25.4 below ace 44 (> 4)",
+        "Volkner: direct avg 19.8 is 30.2 below ace 50 (> 4)",
+        "Aaron: direct avg 20.4 is 32.6 below ace 53 (> 4)",
+        "Bertha: direct avg 21.2 is 33.8 below ace 55 (> 4)",
+        "Flint: direct avg 22.2 is 34.8 below ace 57 (> 4)",
+        "Lucian: direct avg 23 is 36.0 below ace 59 (> 4)",
+        "Cynthia: direct avg 23.4 is 38.6 below ace 62 (> 4)"
+      ]
+    },
+    "normal": {
+      "team_wide": [
+        {
+          "boss": "Roark",
+          "ace": 14,
+          "avg": 14.7,
+          "median": 15,
+          "max": 16,
+          "min": 13,
+          "members": 3
+        },
+        {
+          "boss": "Gardenia",
+          "ace": 22,
+          "avg": 22.8,
+          "median": 23.0,
+          "max": 24,
+          "min": 21,
+          "members": 4
+        },
+        {
+          "boss": "Fantina",
+          "ace": 27,
+          "avg": 28.4,
+          "median": 30,
+          "max": 31,
+          "min": 22,
+          "members": 5
+        },
+        {
+          "boss": "Maylene",
+          "ace": 32,
+          "avg": 30.5,
+          "median": 32.5,
+          "max": 34,
+          "min": 24,
+          "members": 6
+        },
+        {
+          "boss": "Wake",
+          "ace": 37,
+          "avg": 34.3,
+          "median": 37.0,
+          "max": 39,
+          "min": 26,
+          "members": 6
+        },
+        {
+          "boss": "Byron",
+          "ace": 41,
+          "avg": 36.3,
+          "median": 39.0,
+          "max": 42,
+          "min": 28,
+          "members": 6
+        },
+        {
+          "boss": "Candice",
+          "ace": 44,
+          "avg": 38.3,
+          "median": 42.0,
+          "max": 44,
+          "min": 29,
+          "members": 6
+        },
+        {
+          "boss": "Volkner",
+          "ace": 50,
+          "avg": 40.7,
+          "median": 44.5,
+          "max": 48,
+          "min": 31,
+          "members": 6
+        },
+        {
+          "boss": "Aaron",
+          "ace": 53,
+          "avg": 41.2,
+          "median": 45.5,
+          "max": 48,
+          "min": 31,
+          "members": 6
+        },
+        {
+          "boss": "Bertha",
+          "ace": 55,
+          "avg": 43.2,
+          "median": 47.5,
+          "max": 51,
+          "min": 32,
+          "members": 6
+        },
+        {
+          "boss": "Flint",
+          "ace": 57,
+          "avg": 45.5,
+          "median": 50.0,
+          "max": 54,
+          "min": 34,
+          "members": 6
+        },
+        {
+          "boss": "Lucian",
+          "ace": 59,
+          "avg": 47,
+          "median": 51.5,
+          "max": 56,
+          "min": 35,
+          "members": 6
+        },
+        {
+          "boss": "Cynthia",
+          "ace": 62,
+          "avg": 47.7,
+          "median": 52.5,
+          "max": 57,
+          "min": 35,
+          "members": 6
+        }
+      ],
+      "vanilla": [
+        {
+          "boss": "Roark",
+          "ace": 14,
+          "avg": 14.7,
+          "median": 15,
+          "max": 16,
+          "min": 13,
+          "members": 3
+        },
+        {
+          "boss": "Gardenia",
+          "ace": 22,
+          "avg": 23,
+          "median": 23.0,
+          "max": 25,
+          "min": 21,
+          "members": 4
+        },
+        {
+          "boss": "Fantina",
+          "ace": 27,
+          "avg": 28.4,
+          "median": 31,
+          "max": 31,
+          "min": 20,
+          "members": 5
+        },
+        {
+          "boss": "Maylene",
+          "ace": 32,
+          "avg": 30.3,
+          "median": 33.5,
+          "max": 35,
+          "min": 20,
+          "members": 6
+        },
+        {
+          "boss": "Wake",
+          "ace": 37,
+          "avg": 33.7,
+          "median": 38.0,
+          "max": 41,
+          "min": 20,
+          "members": 6
+        },
+        {
+          "boss": "Byron",
+          "ace": 41,
+          "avg": 35.5,
+          "median": 41.0,
+          "max": 44,
+          "min": 20,
+          "members": 6
+        },
+        {
+          "boss": "Candice",
+          "ace": 44,
+          "avg": 37,
+          "median": 43.0,
+          "max": 46,
+          "min": 20,
+          "members": 6
+        },
+        {
+          "boss": "Volkner",
+          "ace": 50,
+          "avg": 39,
+          "median": 46.0,
+          "max": 50,
+          "min": 20,
+          "members": 6
+        },
+        {
+          "boss": "Aaron",
+          "ace": 53,
+          "avg": 39.5,
+          "median": 47.0,
+          "max": 50,
+          "min": 20,
+          "members": 6
+        },
+        {
+          "boss": "Bertha",
+          "ace": 55,
+          "avg": 41.2,
+          "median": 49.5,
+          "max": 53,
+          "min": 20,
+          "members": 6
+        },
+        {
+          "boss": "Flint",
+          "ace": 57,
+          "avg": 43,
+          "median": 52.0,
+          "max": 56,
+          "min": 20,
+          "members": 6
+        },
+        {
+          "boss": "Lucian",
+          "ace": 59,
+          "avg": 44.3,
+          "median": 54.0,
+          "max": 58,
+          "min": 20,
+          "members": 6
+        },
+        {
+          "boss": "Cynthia",
+          "ace": 62,
+          "avg": 44.8,
+          "median": 55.0,
+          "max": 59,
+          "min": 20,
+          "members": 6
+        }
+      ],
+      "flags": [
+        "Byron: normal avg 36.3 is 4.7 below ace 41 (> 3)",
+        "Candice: normal avg 38.3 is 5.7 below ace 44 (> 3)",
+        "Volkner: normal avg 40.7 is 9.3 below ace 50 (> 3)",
+        "Aaron: normal avg 41.2 is 11.8 below ace 53 (> 3)",
+        "Bertha: normal avg 43.2 is 11.8 below ace 55 (> 3)",
+        "Flint: normal avg 45.5 is 11.5 below ace 57 (> 3)",
+        "Lucian: normal avg 47 is 12.0 below ace 59 (> 3)",
+        "Cynthia: normal avg 47.7 is 14.3 below ace 62 (> 3)"
+      ],
+      "vanilla_flags": [
+        "Wake: normal avg 33.7 is 3.3 below ace 37 (> 3)",
+        "Byron: normal avg 35.5 is 5.5 below ace 41 (> 3)",
+        "Candice: normal avg 37 is 7.0 below ace 44 (> 3)",
+        "Volkner: normal avg 39 is 11.0 below ace 50 (> 3)",
+        "Aaron: normal avg 39.5 is 13.5 below ace 53 (> 3)",
+        "Bertha: normal avg 41.2 is 13.8 below ace 55 (> 3)",
+        "Flint: normal avg 43 is 14.0 below ace 57 (> 3)",
+        "Lucian: normal avg 44.3 is 14.7 below ace 59 (> 3)",
+        "Cynthia: normal avg 44.8 is 17.2 below ace 62 (> 3)"
+      ]
+    },
+    "completionist": {
+      "team_wide": [
+        {
+          "boss": "Roark",
+          "ace": 14,
+          "avg": 16.3,
+          "median": 17,
+          "max": 17,
+          "min": 15,
+          "members": 3
+        },
+        {
+          "boss": "Gardenia",
+          "ace": 22,
+          "avg": 26.2,
+          "median": 26.5,
+          "max": 27,
+          "min": 25,
+          "members": 4
+        },
+        {
+          "boss": "Fantina",
+          "ace": 27,
+          "avg": 33,
+          "median": 34,
+          "max": 34,
+          "min": 31,
+          "members": 5
+        },
+        {
+          "boss": "Maylene",
+          "ace": 32,
+          "avg": 35.8,
+          "median": 36.5,
+          "max": 38,
+          "min": 31,
+          "members": 6
+        },
+        {
+          "boss": "Wake",
+          "ace": 37,
+          "avg": 40.3,
+          "median": 41.5,
+          "max": 44,
+          "min": 33,
+          "members": 6
+        },
+        {
+          "boss": "Byron",
+          "ace": 41,
+          "avg": 42.2,
+          "median": 43.5,
+          "max": 46,
+          "min": 34,
+          "members": 6
+        },
+        {
+          "boss": "Candice",
+          "ace": 44,
+          "avg": 44.8,
+          "median": 46.5,
+          "max": 49,
+          "min": 35,
+          "members": 6
+        },
+        {
+          "boss": "Volkner",
+          "ace": 50,
+          "avg": 47.3,
+          "median": 49.0,
+          "max": 52,
+          "min": 36,
+          "members": 6
+        },
+        {
+          "boss": "Aaron",
+          "ace": 53,
+          "avg": 48,
+          "median": 49.5,
+          "max": 53,
+          "min": 37,
+          "members": 6
+        },
+        {
+          "boss": "Bertha",
+          "ace": 55,
+          "avg": 50,
+          "median": 52.0,
+          "max": 55,
+          "min": 38,
+          "members": 6
+        },
+        {
+          "boss": "Flint",
+          "ace": 57,
+          "avg": 52.3,
+          "median": 54.0,
+          "max": 58,
+          "min": 39,
+          "members": 6
+        },
+        {
+          "boss": "Lucian",
+          "ace": 59,
+          "avg": 54.3,
+          "median": 56.0,
+          "max": 61,
+          "min": 40,
+          "members": 6
+        },
+        {
+          "boss": "Cynthia",
+          "ace": 62,
+          "avg": 55,
+          "median": 57.0,
+          "max": 61,
+          "min": 41,
+          "members": 6
+        }
+      ],
+      "vanilla": [
+        {
+          "boss": "Roark",
+          "ace": 14,
+          "avg": 16.3,
+          "median": 17,
+          "max": 17,
+          "min": 15,
+          "members": 3
+        },
+        {
+          "boss": "Gardenia",
+          "ace": 22,
+          "avg": 26.2,
+          "median": 26.5,
+          "max": 27,
+          "min": 25,
+          "members": 4
+        },
+        {
+          "boss": "Fantina",
+          "ace": 27,
+          "avg": 33,
+          "median": 34,
+          "max": 34,
+          "min": 31,
+          "members": 5
+        },
+        {
+          "boss": "Maylene",
+          "ace": 32,
+          "avg": 36,
+          "median": 37.0,
+          "max": 39,
+          "min": 30,
+          "members": 6
+        },
+        {
+          "boss": "Wake",
+          "ace": 37,
+          "avg": 40,
+          "median": 41.5,
+          "max": 44,
+          "min": 30,
+          "members": 6
+        },
+        {
+          "boss": "Byron",
+          "ace": 41,
+          "avg": 42.3,
+          "median": 44.5,
+          "max": 47,
+          "min": 30,
+          "members": 6
+        },
+        {
+          "boss": "Candice",
+          "ace": 44,
+          "avg": 44.5,
+          "median": 46.5,
+          "max": 50,
+          "min": 30,
+          "members": 6
+        },
+        {
+          "boss": "Volkner",
+          "ace": 50,
+          "avg": 46.8,
+          "median": 49.5,
+          "max": 53,
+          "min": 30,
+          "members": 6
+        },
+        {
+          "boss": "Aaron",
+          "ace": 53,
+          "avg": 47.5,
+          "median": 50.0,
+          "max": 54,
+          "min": 30,
+          "members": 6
+        },
+        {
+          "boss": "Bertha",
+          "ace": 55,
+          "avg": 49.2,
+          "median": 52.0,
+          "max": 56,
+          "min": 30,
+          "members": 6
+        },
+        {
+          "boss": "Flint",
+          "ace": 57,
+          "avg": 51.8,
+          "median": 55.0,
+          "max": 60,
+          "min": 30,
+          "members": 6
+        },
+        {
+          "boss": "Lucian",
+          "ace": 59,
+          "avg": 53.5,
+          "median": 57.0,
+          "max": 62,
+          "min": 30,
+          "members": 6
+        },
+        {
+          "boss": "Cynthia",
+          "ace": 62,
+          "avg": 54.2,
+          "median": 58.0,
+          "max": 63,
+          "min": 30,
+          "members": 6
+        }
+      ],
+      "flags": [
+        "Roark: completionist avg 16.3 is 2.3 above ace 14 (> 2)",
+        "Gardenia: completionist avg 26.2 is 4.2 above ace 22 (> 2)",
+        "Fantina: completionist avg 33 is 6.0 above ace 27 (> 2)",
+        "Maylene: completionist avg 35.8 is 3.8 above ace 32 (> 2)",
+        "Wake: completionist avg 40.3 is 3.3 above ace 37 (> 2)"
+      ],
+      "vanilla_flags": [
+        "Roark: completionist avg 16.3 is 2.3 above ace 14 (> 2)",
+        "Gardenia: completionist avg 26.2 is 4.2 above ace 22 (> 2)",
+        "Fantina: completionist avg 33 is 6.0 above ace 27 (> 2)",
+        "Maylene: completionist avg 36 is 4.0 above ace 32 (> 2)",
+        "Wake: completionist avg 40 is 3.0 above ace 37 (> 2)"
+      ]
+    }
+  }
+}

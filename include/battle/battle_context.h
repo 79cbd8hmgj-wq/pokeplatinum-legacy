@@ -171,8 +171,8 @@ struct BattleContext {
     int sideEffectMon;
     int lastBattlerId;
 
-    int gainedExp;
-    int sharedExp;
+    int expAlloc[MAX_PARTY_SIZE]; // per-party-slot EXP before individual modifiers
+    u32 expRecipientMask; // party slots receiving EXP from the current KO
     u32 sideGetExpMask[2];
 
     enum NarcID scriptNarc;

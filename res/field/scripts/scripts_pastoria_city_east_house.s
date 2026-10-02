@@ -10,28 +10,19 @@ PastoriaCityEastHouse_MoveManiac:
     PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
-    BufferItemNameWithArticle 4, ITEM_HEART_SCALE
-    GoToIfUnset FLAG_TALKED_TO_PASTORIA_CITY_EAST_HOUSE_MOVE_MANIAC, PastoriaCityEastHouse_CheckHeartScale
-    CheckItem ITEM_HEART_SCALE, 1, VAR_RESULT
-    GoToIfEq VAR_RESULT, FALSE, PastoriaCityEastHouse_ComeBackWithHeartScale
-    GoTo PastoriaCityEastHouse_TryTeachMove
-
-PastoriaCityEastHouse_CheckHeartScale:
+    GoToIfSet FLAG_TALKED_TO_PASTORIA_CITY_EAST_HOUSE_MOVE_MANIAC, PastoriaCityEastHouse_TryTeachMove
     SetFlag FLAG_TALKED_TO_PASTORIA_CITY_EAST_HOUSE_MOVE_MANIAC
-    Message PastoriaCityEastHouse_Text_TeachMoveForHeartScale
-    CheckItem ITEM_HEART_SCALE, 1, VAR_RESULT
-    GoToIfEq VAR_RESULT, FALSE, PastoriaCityEastHouse_ComeBackWithHeartScale
+    Message PastoriaCityEastHouse_Text_TeachMoveForFree
     GoTo PastoriaCityEastHouse_TryTeachMove
 
-PastoriaCityEastHouse_ComeBackWithHeartScale:
-    Message PastoriaCityEastHouse_Text_ComeBackWithHeartScale
+PastoriaCityEastHouse_ComeBackAnytime:
+    Message PastoriaCityEastHouse_Text_ComeBackAnytime
     WaitButton
     CloseMessage
     ReleaseAll
     End
 
 PastoriaCityEastHouse_TryTeachMove:
-    Message PastoriaCityEastHouse_Text_ThatsAHeartScale
     Message PastoriaCityEastHouse_Text_TutorWhichPokemon
     CloseMessage
     FadeScreenOut
@@ -41,7 +32,7 @@ PastoriaCityEastHouse_TryTeachMove:
     ReturnToField
     FadeScreenIn
     WaitFadeScreen
-    GoToIfEq VAR_0x8005, PARTY_SLOT_NONE, PastoriaCityEastHouse_ComeBackWithHeartScale
+    GoToIfEq VAR_0x8005, PARTY_SLOT_NONE, PastoriaCityEastHouse_ComeBackAnytime
     GetPartyMonSpecies VAR_0x8005, VAR_RESULT
     GoToIfEq VAR_RESULT, 0, PastoriaCityEastHouse_EggsCantLearnMoves
     CheckHasLearnableReminderMoves VAR_RESULT, VAR_0x8005
@@ -55,12 +46,7 @@ PastoriaCityEastHouse_TryTeachMove:
     ReturnToField
     FadeScreenIn
     WaitFadeScreen
-    GoToIfEq VAR_RESULT, 0xFF, PastoriaCityEastHouse_ComeBackWithHeartScale
-    RemoveItem ITEM_HEART_SCALE, 1, VAR_RESULT
-    BufferPlayerName 3
-    Message PastoriaCityEastHouse_Text_HandedOverHeartScale
-    WaitButton
-    CloseMessage
+    GoToIfEq VAR_RESULT, 0xFF, PastoriaCityEastHouse_ComeBackAnytime
     ReleaseAll
     End
 

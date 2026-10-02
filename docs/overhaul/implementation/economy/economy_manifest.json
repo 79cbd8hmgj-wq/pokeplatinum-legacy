@@ -1,0 +1,1032 @@
+{
+  "schema": "economy_manifest/1",
+  "base_commit": "447833b79fa5c0456d60bcbd8ec03ec109d92c23",
+  "spec": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md",
+  "edits": [
+    {
+      "category": "item_price",
+      "key": "potion",
+      "path": "res/items/data/potion.json",
+      "field": "price",
+      "before": 300,
+      "after": 200,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s5 Healing",
+      "gate": "unchanged (existing vendors)"
+    },
+    {
+      "category": "item_price",
+      "key": "super_potion",
+      "path": "res/items/data/super_potion.json",
+      "field": "price",
+      "before": 700,
+      "after": 500,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s5 Healing",
+      "gate": "unchanged (existing vendors)"
+    },
+    {
+      "category": "item_price",
+      "key": "hyper_potion",
+      "path": "res/items/data/hyper_potion.json",
+      "field": "price",
+      "before": 1200,
+      "after": 900,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s5 Healing",
+      "gate": "unchanged (existing vendors)"
+    },
+    {
+      "category": "item_price",
+      "key": "max_potion",
+      "path": "res/items/data/max_potion.json",
+      "field": "price",
+      "before": 2500,
+      "after": 2000,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s5 Healing",
+      "gate": "unchanged (existing vendors)"
+    },
+    {
+      "category": "item_price",
+      "key": "full_restore",
+      "path": "res/items/data/full_restore.json",
+      "field": "price",
+      "before": 3000,
+      "after": 2500,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s5 Healing",
+      "gate": "unchanged (existing vendors)"
+    },
+    {
+      "category": "item_price",
+      "key": "revive",
+      "path": "res/items/data/revive.json",
+      "field": "price",
+      "before": 1500,
+      "after": 1200,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s5 Healing",
+      "gate": "unchanged (existing vendors)"
+    },
+    {
+      "category": "item_price",
+      "key": "hp_up",
+      "path": "res/items/data/hp_up.json",
+      "field": "price",
+      "before": 9800,
+      "after": 4900,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s6 Vitamins",
+      "gate": "unchanged (existing vendors)"
+    },
+    {
+      "category": "item_price",
+      "key": "protein",
+      "path": "res/items/data/protein.json",
+      "field": "price",
+      "before": 9800,
+      "after": 4900,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s6 Vitamins",
+      "gate": "unchanged (existing vendors)"
+    },
+    {
+      "category": "item_price",
+      "key": "iron",
+      "path": "res/items/data/iron.json",
+      "field": "price",
+      "before": 9800,
+      "after": 4900,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s6 Vitamins",
+      "gate": "unchanged (existing vendors)"
+    },
+    {
+      "category": "item_price",
+      "key": "calcium",
+      "path": "res/items/data/calcium.json",
+      "field": "price",
+      "before": 9800,
+      "after": 4900,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s6 Vitamins",
+      "gate": "unchanged (existing vendors)"
+    },
+    {
+      "category": "item_price",
+      "key": "zinc",
+      "path": "res/items/data/zinc.json",
+      "field": "price",
+      "before": 9800,
+      "after": 4900,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s6 Vitamins",
+      "gate": "unchanged (existing vendors)"
+    },
+    {
+      "category": "item_price",
+      "key": "carbos",
+      "path": "res/items/data/carbos.json",
+      "field": "price",
+      "before": 9800,
+      "after": 4900,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s6 Vitamins",
+      "gate": "unchanged (existing vendors)"
+    },
+    {
+      "category": "item_price",
+      "key": "antidote",
+      "path": "res/items/data/antidote.json",
+      "field": "price",
+      "before": 100,
+      "after": 100,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s5 status medicine (mechanical: lowest clean 50-increment >= 75% of vanilla)",
+      "gate": "unchanged (existing vendors)"
+    },
+    {
+      "category": "item_price",
+      "key": "burn_heal",
+      "path": "res/items/data/burn_heal.json",
+      "field": "price",
+      "before": 250,
+      "after": 200,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s5 status medicine (mechanical: lowest clean 50-increment >= 75% of vanilla)",
+      "gate": "unchanged (existing vendors)"
+    },
+    {
+      "category": "item_price",
+      "key": "ice_heal",
+      "path": "res/items/data/ice_heal.json",
+      "field": "price",
+      "before": 250,
+      "after": 200,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s5 status medicine (mechanical: lowest clean 50-increment >= 75% of vanilla)",
+      "gate": "unchanged (existing vendors)"
+    },
+    {
+      "category": "item_price",
+      "key": "awakening",
+      "path": "res/items/data/awakening.json",
+      "field": "price",
+      "before": 250,
+      "after": 200,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s5 status medicine (mechanical: lowest clean 50-increment >= 75% of vanilla)",
+      "gate": "unchanged (existing vendors)"
+    },
+    {
+      "category": "item_price",
+      "key": "parlyz_heal",
+      "path": "res/items/data/parlyz_heal.json",
+      "field": "price",
+      "before": 200,
+      "after": 150,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s5 status medicine (mechanical: lowest clean 50-increment >= 75% of vanilla)",
+      "gate": "unchanged (existing vendors)"
+    },
+    {
+      "category": "item_price",
+      "key": "full_heal",
+      "path": "res/items/data/full_heal.json",
+      "field": "price",
+      "before": 600,
+      "after": 450,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s5 status medicine (mechanical: lowest clean 50-increment >= 75% of vanilla)",
+      "gate": "unchanged (existing vendors)"
+    },
+    {
+      "category": "item_price",
+      "key": "rare_candy",
+      "path": "res/items/data/rare_candy.json",
+      "field": "price",
+      "before": 4800,
+      "after": 5000,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s10 (preferred 5000)",
+      "gate": "postgame only (FLAG_GAME_COMPLETED)"
+    },
+    {
+      "category": "trainer_prize_multiplier",
+      "key": "TRAINER_CLASS_TUBER_MALE",
+      "path": "include/data/trainer_class_prize_mul.h",
+      "before": 1,
+      "after": 3,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s4"
+    },
+    {
+      "category": "trainer_prize_multiplier",
+      "key": "TRAINER_CLASS_TUBER_FEMALE",
+      "path": "include/data/trainer_class_prize_mul.h",
+      "before": 1,
+      "after": 3,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s4"
+    },
+    {
+      "category": "trainer_prize_multiplier",
+      "key": "TRAINER_CLASS_POKE_KID",
+      "path": "include/data/trainer_class_prize_mul.h",
+      "before": 2,
+      "after": 4,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s4"
+    },
+    {
+      "category": "trainer_prize_multiplier",
+      "key": "TRAINER_CLASS_NINJA_BOY",
+      "path": "include/data/trainer_class_prize_mul.h",
+      "before": 2,
+      "after": 4,
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s4"
+    }
+  ],
+  "tutors": [
+    {
+      "index": 0,
+      "move": "MOVE_DIVE",
+      "location": "TUTOR_LOCATION_ROUTE_212",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 2,
+        "blueCost": 4,
+        "yellowCost": 2,
+        "greenCost": 0
+      },
+      "after": {
+        "redCost": 1,
+        "blueCost": 2,
+        "yellowCost": 1,
+        "greenCost": 0
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 1,
+      "move": "MOVE_MUD_SLAP",
+      "location": "TUTOR_LOCATION_SURVIVAL_AREA",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 4,
+        "blueCost": 4,
+        "yellowCost": 0,
+        "greenCost": 0
+      },
+      "after": {
+        "redCost": 2,
+        "blueCost": 2,
+        "yellowCost": 0,
+        "greenCost": 0
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 2,
+      "move": "MOVE_FURY_CUTTER",
+      "location": "TUTOR_LOCATION_ROUTE_212",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 0,
+        "blueCost": 8,
+        "yellowCost": 0,
+        "greenCost": 0
+      },
+      "after": {
+        "redCost": 0,
+        "blueCost": 4,
+        "yellowCost": 0,
+        "greenCost": 0
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 3,
+      "move": "MOVE_ICY_WIND",
+      "location": "TUTOR_LOCATION_ROUTE_212",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 0,
+        "blueCost": 6,
+        "yellowCost": 0,
+        "greenCost": 2
+      },
+      "after": {
+        "redCost": 0,
+        "blueCost": 3,
+        "yellowCost": 0,
+        "greenCost": 1
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 4,
+      "move": "MOVE_ROLLOUT",
+      "location": "TUTOR_LOCATION_SURVIVAL_AREA",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 4,
+        "blueCost": 2,
+        "yellowCost": 0,
+        "greenCost": 2
+      },
+      "after": {
+        "redCost": 2,
+        "blueCost": 1,
+        "yellowCost": 0,
+        "greenCost": 1
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 5,
+      "move": "MOVE_THUNDER_PUNCH",
+      "location": "TUTOR_LOCATION_ROUTE_212",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 2,
+        "blueCost": 6,
+        "yellowCost": 0,
+        "greenCost": 0
+      },
+      "after": {
+        "redCost": 1,
+        "blueCost": 3,
+        "yellowCost": 0,
+        "greenCost": 0
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 6,
+      "move": "MOVE_FIRE_PUNCH",
+      "location": "TUTOR_LOCATION_ROUTE_212",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 2,
+        "blueCost": 6,
+        "yellowCost": 0,
+        "greenCost": 0
+      },
+      "after": {
+        "redCost": 1,
+        "blueCost": 3,
+        "yellowCost": 0,
+        "greenCost": 0
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 7,
+      "move": "MOVE_SUPERPOWER",
+      "location": "TUTOR_LOCATION_SURVIVAL_AREA",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 8,
+        "blueCost": 0,
+        "yellowCost": 0,
+        "greenCost": 0
+      },
+      "after": {
+        "redCost": 4,
+        "blueCost": 0,
+        "yellowCost": 0,
+        "greenCost": 0
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 8,
+      "move": "MOVE_ICE_PUNCH",
+      "location": "TUTOR_LOCATION_ROUTE_212",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 2,
+        "blueCost": 6,
+        "yellowCost": 0,
+        "greenCost": 0
+      },
+      "after": {
+        "redCost": 1,
+        "blueCost": 3,
+        "yellowCost": 0,
+        "greenCost": 0
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 9,
+      "move": "MOVE_IRON_HEAD",
+      "location": "TUTOR_LOCATION_SURVIVAL_AREA",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 6,
+        "blueCost": 0,
+        "yellowCost": 2,
+        "greenCost": 0
+      },
+      "after": {
+        "redCost": 3,
+        "blueCost": 0,
+        "yellowCost": 1,
+        "greenCost": 0
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 10,
+      "move": "MOVE_AQUA_TAIL",
+      "location": "TUTOR_LOCATION_SURVIVAL_AREA",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 6,
+        "blueCost": 0,
+        "yellowCost": 0,
+        "greenCost": 2
+      },
+      "after": {
+        "redCost": 3,
+        "blueCost": 0,
+        "yellowCost": 0,
+        "greenCost": 1
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 11,
+      "move": "MOVE_OMINOUS_WIND",
+      "location": "TUTOR_LOCATION_ROUTE_212",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 0,
+        "blueCost": 6,
+        "yellowCost": 0,
+        "greenCost": 2
+      },
+      "after": {
+        "redCost": 0,
+        "blueCost": 3,
+        "yellowCost": 0,
+        "greenCost": 1
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 12,
+      "move": "MOVE_GASTRO_ACID",
+      "location": "TUTOR_LOCATION_SURVIVAL_AREA",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 4,
+        "blueCost": 0,
+        "yellowCost": 2,
+        "greenCost": 2
+      },
+      "after": {
+        "redCost": 2,
+        "blueCost": 0,
+        "yellowCost": 1,
+        "greenCost": 1
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 13,
+      "move": "MOVE_SNORE",
+      "location": "TUTOR_LOCATION_SNOWPOINT_CITY",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 2,
+        "blueCost": 0,
+        "yellowCost": 4,
+        "greenCost": 2
+      },
+      "after": {
+        "redCost": 1,
+        "blueCost": 0,
+        "yellowCost": 2,
+        "greenCost": 1
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 14,
+      "move": "MOVE_SPITE",
+      "location": "TUTOR_LOCATION_SNOWPOINT_CITY",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 0,
+        "blueCost": 0,
+        "yellowCost": 8,
+        "greenCost": 0
+      },
+      "after": {
+        "redCost": 0,
+        "blueCost": 0,
+        "yellowCost": 4,
+        "greenCost": 0
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 15,
+      "move": "MOVE_AIR_CUTTER",
+      "location": "TUTOR_LOCATION_ROUTE_212",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 2,
+        "blueCost": 4,
+        "yellowCost": 0,
+        "greenCost": 2
+      },
+      "after": {
+        "redCost": 1,
+        "blueCost": 2,
+        "yellowCost": 0,
+        "greenCost": 1
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 16,
+      "move": "MOVE_HELPING_HAND",
+      "location": "TUTOR_LOCATION_SNOWPOINT_CITY",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 2,
+        "blueCost": 0,
+        "yellowCost": 4,
+        "greenCost": 2
+      },
+      "after": {
+        "redCost": 1,
+        "blueCost": 0,
+        "yellowCost": 2,
+        "greenCost": 1
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 17,
+      "move": "MOVE_ENDEAVOR",
+      "location": "TUTOR_LOCATION_SURVIVAL_AREA",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 4,
+        "blueCost": 0,
+        "yellowCost": 4,
+        "greenCost": 0
+      },
+      "after": {
+        "redCost": 2,
+        "blueCost": 0,
+        "yellowCost": 2,
+        "greenCost": 0
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 18,
+      "move": "MOVE_OUTRAGE",
+      "location": "TUTOR_LOCATION_SURVIVAL_AREA",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 6,
+        "blueCost": 0,
+        "yellowCost": 2,
+        "greenCost": 0
+      },
+      "after": {
+        "redCost": 3,
+        "blueCost": 0,
+        "yellowCost": 1,
+        "greenCost": 0
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 19,
+      "move": "MOVE_ANCIENT_POWER",
+      "location": "TUTOR_LOCATION_SURVIVAL_AREA",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 6,
+        "blueCost": 0,
+        "yellowCost": 0,
+        "greenCost": 2
+      },
+      "after": {
+        "redCost": 3,
+        "blueCost": 0,
+        "yellowCost": 0,
+        "greenCost": 1
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 20,
+      "move": "MOVE_SYNTHESIS",
+      "location": "TUTOR_LOCATION_SNOWPOINT_CITY",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 0,
+        "blueCost": 0,
+        "yellowCost": 2,
+        "greenCost": 6
+      },
+      "after": {
+        "redCost": 0,
+        "blueCost": 0,
+        "yellowCost": 1,
+        "greenCost": 3
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 21,
+      "move": "MOVE_SIGNAL_BEAM",
+      "location": "TUTOR_LOCATION_SURVIVAL_AREA",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 2,
+        "blueCost": 2,
+        "yellowCost": 2,
+        "greenCost": 2
+      },
+      "after": {
+        "redCost": 1,
+        "blueCost": 1,
+        "yellowCost": 1,
+        "greenCost": 1
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 22,
+      "move": "MOVE_ZEN_HEADBUTT",
+      "location": "TUTOR_LOCATION_ROUTE_212",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 0,
+        "blueCost": 4,
+        "yellowCost": 4,
+        "greenCost": 0
+      },
+      "after": {
+        "redCost": 0,
+        "blueCost": 2,
+        "yellowCost": 2,
+        "greenCost": 0
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 23,
+      "move": "MOVE_VACUUM_WAVE",
+      "location": "TUTOR_LOCATION_ROUTE_212",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 2,
+        "blueCost": 4,
+        "yellowCost": 0,
+        "greenCost": 2
+      },
+      "after": {
+        "redCost": 1,
+        "blueCost": 2,
+        "yellowCost": 0,
+        "greenCost": 1
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 24,
+      "move": "MOVE_EARTH_POWER",
+      "location": "TUTOR_LOCATION_SURVIVAL_AREA",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 6,
+        "blueCost": 0,
+        "yellowCost": 0,
+        "greenCost": 2
+      },
+      "after": {
+        "redCost": 3,
+        "blueCost": 0,
+        "yellowCost": 0,
+        "greenCost": 1
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 25,
+      "move": "MOVE_GUNK_SHOT",
+      "location": "TUTOR_LOCATION_SURVIVAL_AREA",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 4,
+        "blueCost": 2,
+        "yellowCost": 0,
+        "greenCost": 2
+      },
+      "after": {
+        "redCost": 2,
+        "blueCost": 1,
+        "yellowCost": 0,
+        "greenCost": 1
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 26,
+      "move": "MOVE_TWISTER",
+      "location": "TUTOR_LOCATION_SURVIVAL_AREA",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 6,
+        "blueCost": 0,
+        "yellowCost": 0,
+        "greenCost": 2
+      },
+      "after": {
+        "redCost": 3,
+        "blueCost": 0,
+        "yellowCost": 0,
+        "greenCost": 1
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 27,
+      "move": "MOVE_SEED_BOMB",
+      "location": "TUTOR_LOCATION_SURVIVAL_AREA",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 4,
+        "blueCost": 0,
+        "yellowCost": 0,
+        "greenCost": 4
+      },
+      "after": {
+        "redCost": 2,
+        "blueCost": 0,
+        "yellowCost": 0,
+        "greenCost": 2
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 28,
+      "move": "MOVE_IRON_DEFENSE",
+      "location": "TUTOR_LOCATION_SURVIVAL_AREA",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 4,
+        "blueCost": 2,
+        "yellowCost": 2,
+        "greenCost": 0
+      },
+      "after": {
+        "redCost": 2,
+        "blueCost": 1,
+        "yellowCost": 1,
+        "greenCost": 0
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 29,
+      "move": "MOVE_MAGNET_RISE",
+      "location": "TUTOR_LOCATION_SNOWPOINT_CITY",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 0,
+        "blueCost": 2,
+        "yellowCost": 4,
+        "greenCost": 2
+      },
+      "after": {
+        "redCost": 0,
+        "blueCost": 1,
+        "yellowCost": 2,
+        "greenCost": 1
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 30,
+      "move": "MOVE_LAST_RESORT",
+      "location": "TUTOR_LOCATION_SNOWPOINT_CITY",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 0,
+        "blueCost": 0,
+        "yellowCost": 0,
+        "greenCost": 8
+      },
+      "after": {
+        "redCost": 0,
+        "blueCost": 0,
+        "yellowCost": 0,
+        "greenCost": 4
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 31,
+      "move": "MOVE_BOUNCE",
+      "location": "TUTOR_LOCATION_SURVIVAL_AREA",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 4,
+        "blueCost": 0,
+        "yellowCost": 2,
+        "greenCost": 2
+      },
+      "after": {
+        "redCost": 2,
+        "blueCost": 0,
+        "yellowCost": 1,
+        "greenCost": 1
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 32,
+      "move": "MOVE_TRICK",
+      "location": "TUTOR_LOCATION_ROUTE_212",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 0,
+        "blueCost": 4,
+        "yellowCost": 4,
+        "greenCost": 0
+      },
+      "after": {
+        "redCost": 0,
+        "blueCost": 2,
+        "yellowCost": 2,
+        "greenCost": 0
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 33,
+      "move": "MOVE_HEAT_WAVE",
+      "location": "TUTOR_LOCATION_SURVIVAL_AREA",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 4,
+        "blueCost": 2,
+        "yellowCost": 0,
+        "greenCost": 2
+      },
+      "after": {
+        "redCost": 2,
+        "blueCost": 1,
+        "yellowCost": 0,
+        "greenCost": 1
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 34,
+      "move": "MOVE_KNOCK_OFF",
+      "location": "TUTOR_LOCATION_ROUTE_212",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 4,
+        "blueCost": 4,
+        "yellowCost": 0,
+        "greenCost": 0
+      },
+      "after": {
+        "redCost": 2,
+        "blueCost": 2,
+        "yellowCost": 0,
+        "greenCost": 0
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 35,
+      "move": "MOVE_SUCKER_PUNCH",
+      "location": "TUTOR_LOCATION_ROUTE_212",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 0,
+        "blueCost": 6,
+        "yellowCost": 2,
+        "greenCost": 0
+      },
+      "after": {
+        "redCost": 0,
+        "blueCost": 3,
+        "yellowCost": 1,
+        "greenCost": 0
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 36,
+      "move": "MOVE_SWIFT",
+      "location": "TUTOR_LOCATION_SNOWPOINT_CITY",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 0,
+        "blueCost": 2,
+        "yellowCost": 2,
+        "greenCost": 4
+      },
+      "after": {
+        "redCost": 0,
+        "blueCost": 1,
+        "yellowCost": 1,
+        "greenCost": 2
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    },
+    {
+      "index": 37,
+      "move": "MOVE_UPROAR",
+      "location": "TUTOR_LOCATION_SNOWPOINT_CITY",
+      "path": "res/pokemon/move_tutors.json",
+      "before": {
+        "redCost": 0,
+        "blueCost": 0,
+        "yellowCost": 6,
+        "greenCost": 2
+      },
+      "after": {
+        "redCost": 0,
+        "blueCost": 0,
+        "yellowCost": 3,
+        "greenCost": 1
+      },
+      "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s8"
+    }
+  ],
+  "exp": {
+    "path": "src/battle/battle_script.c",
+    "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s2",
+    "raw_pool": "floor(base_exp_reward * defeated_level / 7)",
+    "battle_pool_percent": 60,
+    "team_pool": "raw - battle_pool",
+    "remainder_policy": "lowest party slots first, battle pool and team pool independently; pre-modifier sum == raw (legacy min-1 only for battle-group members whose total would be 0)",
+    "evs": "actual participants only",
+    "modifiers_unchanged": [
+      "Lucky Egg 1.5x",
+      "trainer 1.5x",
+      "traded 1.5x",
+      "foreign traded 1.7x"
+    ],
+    "gate": "global"
+  },
+  "move_reminder": {
+    "path": "res/field/scripts/scripts_pastoria_city_east_house.s",
+    "text": "res/text/pastoria_city_east_house.json",
+    "before": "ITEM_HEART_SCALE x1 per lesson",
+    "after": "free",
+    "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s7",
+    "gate": "Pastoria (unchanged)"
+  },
+  "evolution_stone_shop": {
+    "vendor_id": "MART_SPECIALTIES_ID_VEILSTONE_2F_MID",
+    "vendor_script": "res/field/scripts/scripts_veilstone_store_2f.s",
+    "stock_path": "include/data/mart_items.h",
+    "stock_array": "VeilstoneDeptStoreStock_2F_MID",
+    "before": [
+      "ITEM_PROTEIN",
+      "ITEM_IRON",
+      "ITEM_CALCIUM",
+      "ITEM_ZINC",
+      "ITEM_CARBOS",
+      "ITEM_HP_UP"
+    ],
+    "added": [
+      "ITEM_DAWN_STONE",
+      "ITEM_DUSK_STONE",
+      "ITEM_FIRE_STONE",
+      "ITEM_LEAF_STONE",
+      "ITEM_MOON_STONE",
+      "ITEM_SHINY_STONE",
+      "ITEM_SUN_STONE",
+      "ITEM_THUNDERSTONE",
+      "ITEM_WATER_STONE"
+    ],
+    "base_prices": {
+      "ITEM_DAWN_STONE": 2100,
+      "ITEM_DUSK_STONE": 2100,
+      "ITEM_FIRE_STONE": 2100,
+      "ITEM_LEAF_STONE": 2100,
+      "ITEM_MOON_STONE": 2100,
+      "ITEM_SHINY_STONE": 2100,
+      "ITEM_SUN_STONE": 2100,
+      "ITEM_THUNDERSTONE": 2100,
+      "ITEM_WATER_STONE": 2100
+    },
+    "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s9",
+    "gate": "Veilstone Department Store (reachable at/after 4th-badge window, before E4); not postgame-gated"
+  },
+  "rare_candy_postgame": {
+    "vendor_id": "MART_SPECIALTIES_ID_FIGHT_AREA_POSTGAME",
+    "stock_array": "FightAreaPostgameStock",
+    "stock_path": "include/data/mart_items.h",
+    "script": "res/field/scripts/scripts_fight_area_mart.s",
+    "price": 5000,
+    "price_note": "5000 chosen: item JSON price only drives purchase and 50% sell value (2400 -> 2500); no other code reads it",
+    "authority": "docs/overhaul/economy/EXP_ECONOMY_SPEC.md#s10",
+    "gate": "FLAG_GAME_COMPLETED (Fight Area clown vendor)"
+  },
+  "frozen_c2_economy_files": [
+    "src/scrcmd_game_corner_prize.c",
+    "src/overlay007/shop_menu.c",
+    "src/unk_020494DC.c",
+    "src/scrcmd.c",
+    "res/field/scripts/scripts_veilstone_city_prize_exchange.s"
+  ]
+}
