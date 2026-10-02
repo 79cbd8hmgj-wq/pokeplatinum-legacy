@@ -6,7 +6,6 @@
 #include "constants/field/field_effect_renderer.h"
 
 #include "field/field_system.h"
-
 #include "overlay005/berry_patch_effects.h"
 #include "overlay005/dist_world_surf_mount_renderer.h"
 #include "overlay005/ov5_021F10E8.h"
