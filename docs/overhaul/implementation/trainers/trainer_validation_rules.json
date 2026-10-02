@@ -1,0 +1,309 @@
+{
+ "schema": "trainer_validation_rules/1",
+ "party_size": {
+  "gym_leader": {
+   "leader_roark": 3,
+   "leader_gardenia": 3,
+   "leader_fantina": 3,
+   "leader_maylene": 4,
+   "leader_wake": 4,
+   "leader_byron": 4,
+   "leader_candice": 4,
+   "leader_volkner": 5
+  },
+  "elite_four": 5,
+  "champion": 6,
+  "gym_rematch": 5,
+  "elite_four_rematch": 5,
+  "champion_rematch": 6,
+  "galactic_commander": {
+   "commander_mars_valley_windworks": 2,
+   "commander_jupiter_team_galactic_eterna_building": 2,
+   "default": 3
+  },
+  "galactic_boss": {
+   "galactic_boss_cyrus_galactic_hq": 4,
+   "galactic_boss_cyrus_distortion_world": 5
+  },
+  "rival": {
+   "rival_route_203": 2,
+   "rival_route_209": 4,
+   "rival_pastoria_city": 4,
+   "rival_canalave_city": 5,
+   "rival_pokemon_league": 6,
+   "rival_fight_area": 6,
+   "rival_survival_area_1": 6,
+   "rival_survival_area_2": 6,
+   "rival_survival_area_unused": 6
+  },
+  "ordinary_max": 6
+ },
+ "level_bands": {
+  "rival_route_203": [
+   7,
+   9
+  ],
+  "rival_route_209": [
+   23,
+   27
+  ],
+  "rival_pastoria_city": [
+   32,
+   36
+  ],
+  "rival_canalave_city": [
+   35,
+   38
+  ],
+  "rival_pokemon_league": [
+   47,
+   51
+  ],
+  "gym_rematch_and_elite_rematch": [
+   60,
+   78
+  ],
+  "champion_rematch": [
+   70,
+   80
+  ],
+  "note": "main-story gym/E4/Cynthia levels are the exact locked values (checked against locked_teams); rematch bands are provisional until the postgame EXP/economy phase (spec s.12: roughly 62-70)"
+ },
+ "ace_levels": {
+  "leader_roark": 14,
+  "leader_gardenia": 22,
+  "leader_fantina": 27,
+  "leader_maylene": 32,
+  "leader_wake": 37,
+  "leader_byron": 41,
+  "leader_candice": 44,
+  "leader_volkner": 50,
+  "rival_pokemon_league": 51,
+  "elite_four_aaron": 53,
+  "elite_four_bertha": 55,
+  "elite_four_flint": 57,
+  "elite_four_lucian": 59,
+  "champion_cynthia": 62
+ },
+ "boss_curve_sequence": [
+  "leader_roark",
+  "leader_gardenia",
+  "leader_fantina",
+  "leader_maylene",
+  "leader_wake",
+  "leader_byron",
+  "leader_candice",
+  "leader_volkner",
+  "rival_pokemon_league_turtwig",
+  "elite_four_aaron",
+  "elite_four_bertha",
+  "elite_four_flint",
+  "elite_four_lucian",
+  "champion_cynthia"
+ ],
+ "gym_theme_type": {
+  "leader_roark": "TYPE_ROCK",
+  "leader_gardenia": "TYPE_GRASS",
+  "leader_fantina": "TYPE_GHOST",
+  "leader_maylene": "TYPE_FIGHTING",
+  "leader_wake": "TYPE_WATER",
+  "leader_byron": "TYPE_STEEL",
+  "leader_candice": "TYPE_ICE",
+  "leader_volkner": "TYPE_ELECTRIC",
+  "elite_four_aaron": "TYPE_BUG",
+  "elite_four_bertha": "TYPE_GROUND",
+  "elite_four_flint": "TYPE_FIRE",
+  "elite_four_lucian": "TYPE_PSYCHIC"
+ },
+ "max_off_type_members": 1,
+ "ai": {
+  "required_flags": [
+   "AI_FLAG_BASIC",
+   "AI_FLAG_EVAL_ATTACK",
+   "AI_FLAG_EXPERT"
+  ],
+  "required_categories": [
+   "gym_leader",
+   "gym_rematch",
+   "elite_four",
+   "elite_four_rematch",
+   "champion",
+   "champion_rematch",
+   "galactic_commander",
+   "galactic_boss",
+   "rival"
+  ],
+  "exempt_ids": [
+   "rival_route_201_*",
+   "rival_route_203_*"
+  ],
+  "exempt_reason": "tutorial-tier intro rival fights keep their existing AI (spec: existing flags are the baseline)"
+ },
+ "duplicates": {
+  "important_categories": [
+   "gym_leader",
+   "gym_rematch",
+   "elite_four",
+   "elite_four_rematch",
+   "champion",
+   "champion_rematch",
+   "galactic_commander",
+   "galactic_boss",
+   "rival"
+  ],
+  "allowed": []
+ },
+ "held_items": {
+  "gym1_none": "leader_roark",
+  "main_story_forbidden": [
+   "ITEM_CHOICE_BAND",
+   "ITEM_CHOICE_SPECS",
+   "ITEM_CHOICE_SCARF",
+   "ITEM_LIFE_ORB",
+   "ITEM_FOCUS_SASH",
+   "ITEM_LEFTOVERS"
+  ],
+  "main_story_categories": [
+   "gym_leader",
+   "elite_four",
+   "champion",
+   "galactic_commander",
+   "galactic_boss",
+   "rival"
+  ],
+  "ace_may_hold": "berry; at most one extra modest item from Gym 6 on (none used)",
+  "max_items_per_main_story_team": 3,
+  "rival_item_gate": "starter Sitrus from Canalave onward; Snorlax Chesto at the League and postgame"
+ },
+ "bag_items": {
+  "gym_max_heals": 2,
+  "elite_four_exact": [
+   "ITEM_FULL_RESTORE",
+   "ITEM_FULL_RESTORE"
+  ],
+  "champion_exact": [
+   "ITEM_FULL_RESTORE",
+   "ITEM_FULL_RESTORE",
+   "ITEM_FULL_RESTORE",
+   "ITEM_FULL_RESTORE"
+  ]
+ },
+ "moves": {
+  "superseded": [],
+  "unresolved": [
+   "MOVE_DRAGON_SWIPE"
+  ],
+  "unresolved_reason": "final recipient unresolved in CREATED_MOVES.md; no trainer may use it",
+  "created_move_recipients": {
+   "MOVE_STATIC_STRIKE": [
+    "SPECIES_ELECTABUZZ",
+    "SPECIES_ELECTIVIRE",
+    "SPECIES_LUXRAY"
+   ],
+   "MOVE_FROST_RUSH": [
+    "SPECIES_DELIBIRD",
+    "SPECIES_GLALIE"
+   ],
+   "MOVE_AURA_BURST": [
+    "SPECIES_TOXICROAK"
+   ],
+   "MOVE_DRAGON_SWIPE": [],
+   "MOVE_METAL_RAY": [
+    "SPECIES_RAICHU"
+   ],
+   "MOVE_RIPTIDE_RUSH": [
+    "SPECIES_CRAWDAUNT",
+    "SPECIES_FERALIGATR",
+    "SPECIES_HUNTAIL",
+    "SPECIES_KINGLER",
+    "SPECIES_QWILFISH",
+    "SPECIES_SEAKING",
+    "SPECIES_WHISCASH"
+   ],
+   "MOVE_MIND_STRIKE": [
+    "SPECIES_GIRAFARIG",
+    "SPECIES_MEDICHAM",
+    "SPECIES_SOLROCK",
+    "SPECIES_STANTLER"
+   ],
+   "MOVE_DREAD_WAVE": [
+    "SPECIES_CACTURNE",
+    "SPECIES_SHIFTRY"
+   ],
+   "MOVE_SPIRIT_WISP": [
+    "SPECIES_ROTOM"
+   ],
+   "MOVE_RESONANT_SLASH": [
+    "SPECIES_KRICKETUNE"
+   ],
+   "MOVE_SOLAR_PETAL": [
+    "SPECIES_CHERRIM"
+   ],
+   "MOVE_VINE_SNARE": [
+    "SPECIES_CARNIVINE"
+   ],
+   "MOVE_LUMINOUS_CURRENT": [
+    "SPECIES_FINNEON",
+    "SPECIES_LUMINEON"
+   ],
+   "MOVE_SOUL_SIPHON": [
+    "SPECIES_SPIRITOMB"
+   ],
+   "MOVE_POLLEN_PULSE": [],
+   "MOVE_EARTHEN_BASH": [],
+   "MOVE_SCRAP_GUARD": [],
+   "MOVE_MAGNET_VOLLEY": [
+    "SPECIES_PROBOPASS"
+   ],
+   "MOVE_SOUL_GRIP": [
+    "SPECIES_DUSKNOIR"
+   ],
+   "MOVE_STALK_SLASH": [
+    "SPECIES_FARFETCHD"
+   ],
+   "MOVE_CURSED_STITCH": [
+    "SPECIES_BANETTE"
+   ],
+   "MOVE_STAR_JAB": [
+    "SPECIES_LEDIAN"
+   ]
+  },
+  "explicit_spec_moves_may_be_outside_learnset": true,
+  "note": "locked-spec explicit moves and manifest created-move recipients may exceed current learnsets (reported as notes); every other manifest move must be legal"
+ },
+ "evolution": {
+  "ordinary": "ERROR on under-evolved (level >= level-evolution threshold) or over-evolved (level < pre-evolution threshold)",
+  "bosses": "WARNING (locked/boss teams may showcase evolved forms early; explicit spec teams are authoritative)"
+ },
+ "availability": {
+  "band_order": [
+   "E0",
+   "E1",
+   "M1",
+   "M2",
+   "L1",
+   "L2",
+   "P0",
+   "P1"
+  ],
+  "ordinary": "ERROR when a species' family earliest band is later than the trainer's band",
+  "important": "bosses may showcase at most one band early; reported, not blocking"
+ },
+ "iv_scale": {
+  "max_meaningful": 255,
+  "warn_values_above": 255,
+  "normalization": "not performed"
+ },
+ "power_curve": {
+  "bst_jump_flag_ratio": 1.18,
+  "strength_jump_flag_ratio": 1.45,
+  "explained": {
+   "leader_gardenia": "locked spec s.6: redesigned Cherrim + 515-BST Roserade make Gym 2 substantially stronger by design"
+  },
+  "note": "heuristic audit only; flags are for human review"
+ },
+ "frontier": {
+  "directory": "res/trainers/frontier",
+  "must_be_unmodified": true
+ }
+}
