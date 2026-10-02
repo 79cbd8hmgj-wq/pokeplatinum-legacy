@@ -1004,6 +1004,17 @@ Implemented pilot:
 
 No donor graphics, particles, backgrounds, or animation assets were imported.
 
+### G5 donor-control special-attack checkpoint
+
+The next donor comparison was deliberately conservative. Emerald's battle scripts were used to
+check presentation structure, not to source assets.
+
+Results:
+- Psychic, Ice Beam, Flamethrower, and Thunderbolt already express the same core donor ideas well enough in Platinum and remain unchanged.
+- Shadow Ball keeps all native Platinum particles, timing, sound, and defender effects, with only an added restrained dark-purple base-arena grade to supply the missing scene-level ghost atmosphere.
+
+This checkpoint establishes an explicit rule for the remainder of G5: **research can validate no-change decisions**. A donor comparison does not automatically justify editing a move.
+
 ### G5 weather-presentation checkpoint
 
 Weather presentation is now aligned across both move initiation and the shared end-of-turn
