@@ -3,8 +3,8 @@
 #include <nitro.h>
 #include <string.h>
 
-#include "constants/graphics.h"
 #include "constants/field/area_light.h"
+#include "constants/graphics.h"
 #include "constants/heap.h"
 #include "constants/narc.h"
 
