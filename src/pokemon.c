@@ -3540,8 +3540,7 @@ u16 Pokemon_GetEvolutionTargetSpecies(Party *party, Pokemon *mon, u8 evoClass, u
     u16 monPersonalityUpper = (monPersonality & 0xFFFF0000) >> 16;
     u8 itemHoldEffect = Item_LoadParam(monHeldItem, ITEM_PARAM_HOLD_EFFECT, HEAP_ID_SYSTEM);
 
-    if (monSpecies != SPECIES_KADABRA
-        && itemHoldEffect == HOLD_EFFECT_NO_EVOLVE
+    if (itemHoldEffect == HOLD_EFFECT_NO_EVOLVE
         && evoClass != EVO_CLASS_BY_ITEM) {
         return SPECIES_NONE;
     }
@@ -3612,6 +3611,56 @@ u16 Pokemon_GetEvolutionTargetSpecies(Party *party, Pokemon *mon, u8 evoClass, u
                     if (Pokemon_GetValue(mon, MON_DATA_ATK, NULL) < Pokemon_GetValue(mon, MON_DATA_DEF, NULL)) {
                         targetSpecies = speciesEvolutions[i].targetSpecies;
                         *evoTypeResult = EVO_LEVEL_ATK_LT_DEF;
+                    }
+                }
+                break;
+
+            case EVO_LEVEL_NIGHT:
+                if (IsNight() == TRUE && speciesEvolutions[i].param <= monLevel) {
+                    targetSpecies = speciesEvolutions[i].targetSpecies;
+                    *evoTypeResult = EVO_LEVEL_NIGHT;
+                }
+                break;
+
+            case EVO_LEVEL_DAY:
+                if (IsNight() == FALSE && speciesEvolutions[i].param <= monLevel) {
+                    targetSpecies = speciesEvolutions[i].targetSpecies;
+                    *evoTypeResult = EVO_LEVEL_DAY;
+                }
+                break;
+
+            case EVO_LEVEL_SPATK_GT_ATK:
+                if (speciesEvolutions[i].param <= monLevel) {
+                    if (Pokemon_GetValue(mon, MON_DATA_SP_ATK, NULL) > Pokemon_GetValue(mon, MON_DATA_ATK, NULL)) {
+                        targetSpecies = speciesEvolutions[i].targetSpecies;
+                        *evoTypeResult = EVO_LEVEL_SPATK_GT_ATK;
+                    }
+                }
+                break;
+
+            case EVO_LEVEL_SPATK_GE_ATK:
+                if (speciesEvolutions[i].param <= monLevel) {
+                    if (Pokemon_GetValue(mon, MON_DATA_SP_ATK, NULL) >= Pokemon_GetValue(mon, MON_DATA_ATK, NULL)) {
+                        targetSpecies = speciesEvolutions[i].targetSpecies;
+                        *evoTypeResult = EVO_LEVEL_SPATK_GE_ATK;
+                    }
+                }
+                break;
+
+            case EVO_LEVEL_ATK_GT_SPATK:
+                if (speciesEvolutions[i].param <= monLevel) {
+                    if (Pokemon_GetValue(mon, MON_DATA_ATK, NULL) > Pokemon_GetValue(mon, MON_DATA_SP_ATK, NULL)) {
+                        targetSpecies = speciesEvolutions[i].targetSpecies;
+                        *evoTypeResult = EVO_LEVEL_ATK_GT_SPATK;
+                    }
+                }
+                break;
+
+            case EVO_LEVEL_SPDEF_GT_DEF:
+                if (speciesEvolutions[i].param <= monLevel) {
+                    if (Pokemon_GetValue(mon, MON_DATA_SP_DEF, NULL) > Pokemon_GetValue(mon, MON_DATA_DEF, NULL)) {
+                        targetSpecies = speciesEvolutions[i].targetSpecies;
+                        *evoTypeResult = EVO_LEVEL_SPDEF_GT_DEF;
                     }
                 }
                 break;

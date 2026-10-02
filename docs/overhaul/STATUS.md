@@ -1,6 +1,6 @@
 # Pokémon Platinum Overhaul — Current Status
 
-Last verified against repository/project history: 2026-09-13.
+Last verified against repository/project history: 2026-10-02.
 
 ## Executive status
 
@@ -8,11 +8,11 @@ Last verified against repository/project history: 2026-09-13.
 - **C2.5E created moves:** IMPLEMENTED + L2 BUILD VERIFIED on `main`.
 - **C3H species + TM compatibility:** IMPLEMENTED + L2 BUILD VERIFIED on `main`.
 - **C1 existing-move rebalance:** LOCKED and **IMPLEMENTED (source + validator verified; Rev 0/Rev 1 build verification via CI; battle runtime QA pending)** — 82/82 edits applied on branch `claude/c1-move-rebalance-implementation-4l7umd`, see `implementation/C1_IMPLEMENTATION_AUDIT.md`.
-- **Evolution design:** **LOCKED in Pass A** across #001–#493; complete historical master had 50 consolidated type/evolution decisions. The repo still needs the complete machine-readable evolution manifest reconstructed from that locked authority.
+- **Evolution (Pass A):** design **LOCKED / CANONICALIZED**; implementation **IMPLEMENTED (22 changed edges + 6 appended engine methods; source + validator + mutation tests verified; Rev 0/Rev 1 build via CI)**; runtime **DEFERRED TO FINAL OVERHAUL PLAYTEST**. Happiny → Chansey is explicitly approved as **Lv20 during daytime, no Oval Stone**. Manifest: `implementation/evolution_manifest.json`; audit: `implementation/EVOLUTION_IMPLEMENTATION_AUDIT.md`.
 - **World/#001–#493 ordinary availability:** IMPLEMENTED on `main` via PR #10; manifests/validators landed; Rev 0 + Rev 1 CI build verified; runtime availability QA pending. The 28 reserved special-acquisition families are resolved by the follow-up special-acquisition pass (see `implementation/SPECIAL_ACQUISITION.md`).
 - **Known design blockers:** 0.
 - **C2 TM/HM mechanics (HM battle rework, reusable TMs, TM acquisition/economy):** IMPLEMENTED (source + validator verified; Rev 0/Rev 1 build via CI on the C2 PR); see `implementation/C2_MECHANICS_IMPLEMENTATION_AUDIT.md`. Focused runtime QA pending.
-- **Next source task:** focused runtime QA of C1/C2/created moves, then the locked Pass A evolution manifest.
+- **Next source task:** the Emerald-to-Platinum EXP/economy port. Runtime QA of C1/C2/created moves/evolution is deferred to the final overhaul playtest.
 
 ## Mainline implementation evidence
 
@@ -65,7 +65,7 @@ They are provenance sources, not current implementation targets.
 | TM acquisition/economy | LOCKED | IMPLEMENTED (TM21/TM78 item assignment, Game Corner + Frontier prices, duplicate-vendor guard) | source + validator verified; CI build; runtime QA pending |
 | Tutor consolidation | LOCKED | baseline retained | audit pending |
 | Egg-move consolidation | LOCKED | baseline retained | audit pending |
-| Evolution-method overhaul | **LOCKED / RECOVERY NEEDED FOR FULL MANIFEST** | not yet implemented as a complete system | pending |
+| Evolution-method overhaul | LOCKED / CANONICALIZED | IMPLEMENTED (22 changed edges; methods 27–32 appended; zero unresolved authority) | source + validator + mutation tests + dual-revision CI build; runtime DEFERRED TO FINAL OVERHAUL PLAYTEST |
 | World/#001–#493 availability — ordinary wild distribution | APPROVED ARCHITECTURE | IMPLEMENTED on `main` via PR #10 | L2 dual-revision CI build + manifest/validator evidence; runtime pending |
 | World/#001–#493 availability — special acquisitions (starters, fossils, Spiritomb, Rotom, Tyrogue, Happiny, Eevee, Porygon, Riolu, Castform, Feebas) | LOCKED/RESERVED BY OWNING SPECS WHERE APPLICABLE | IMPLEMENTED on main via PR #11 | source + L2 build + validator (S1–S5 + 25 mutation cases); runtime pending |
 | Trainer overhaul | PLANNED | not started | pending |
@@ -144,7 +144,7 @@ Recovered locked examples include:
 - Poliwhirl/Slowpoke/Clamperl branch logic uses stat comparisons;
 - genuine stones, location evolutions, Beauty, Wurmple/Shedinja, and other identity-positive mechanics are retained.
 
-The historical locked Pass A master contained **50 consolidated type/evolution decisions**. The remaining task is to recover/check in the full machine-readable evolution manifest and map it to source—not to redesign the system.
+The historical locked Pass A master contained **50 consolidated type/evolution decisions** (the typing decisions were implemented in earlier phases). The evolution subset was recovered and implemented: **22 changed edges** over 20 species tables, plus six appended engine methods (IDs 27–32). The original workbook remains reconstructed provenance rather than a checked-in artifact; recovery uses the canonical spec, surviving project history, the Emerald plan and C3 timing. Happiny → Chansey lacked surviving primary-source proof for the exact replacement, so the user explicitly approved **Lv20 during daytime, no Oval Stone** on 2026-10-02. See `implementation/EVOLUTION_RECOVERY_AUDIT.md` and `implementation/EVOLUTION_IMPLEMENTATION_AUDIT.md`.
 
 ## C3 provenance
 
@@ -168,7 +168,7 @@ Final corrections visible on main:
 - Torkoal: Yawn 52; Heat Wave 55.
 - Seviper: Sludge Bomb 55.
 
-## Focused runtime QA still required
+## Runtime QA deferred to final overhaul playtest
 
 High-priority L4 checks:
 
@@ -187,11 +187,10 @@ Do not invent one. This is not a build blocker.
 
 ## Immediate next actions
 
-1. Merge the verified C2 mechanics implementation once its final Rev 0 / Rev 1 CI run is green.
-2. Run focused L4 runtime QA for C1/C2/C2.5/C3 high-risk mechanics where emulator automation is available; keep runtime status pending where it is not.
-3. Reconstruct the complete locked Pass A evolution manifest and implement it; **no new evolution-design pass is required**.
-4. Perform the remaining Emerald-to-Platinum port audit for EXP/economy/capture/breeding.
-5. Continue implementing the remaining locked subsystems from canonical repo authority; ordinary and special nonlegendary availability are source/build complete.
+1. Merge the evolution implementation only after the corrected final head passes Rev 0 / Rev 1 CI.
+2. Implement the locked Emerald-to-Platinum EXP/economy port.
+3. Continue the remaining locked subsystems from canonical repo authority; ordinary and special nonlegendary availability are source/build complete.
+4. Defer focused runtime QA until the overhaul is otherwise complete, per user direction.
 
 ## Rule for future sessions
 

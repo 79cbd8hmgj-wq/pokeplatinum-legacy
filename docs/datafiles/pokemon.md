@@ -83,7 +83,8 @@ Each element is a tuple describing one evolution path:
 
 The parameter type depends on the method:
 
-- For `EVO_LEVEL`, `EVO_LEVEL_ATK_GT_DEF`, etc., it is the level at which the
+- For `EVO_LEVEL`, `EVO_LEVEL_ATK_GT_DEF`, `EVO_LEVEL_NIGHT`, the stat-comparison
+  level methods, etc., it is the level at which the
   evolution should trigger.
 - For `EVO_USE_ITEM`, `EVO_TRADE_WITH_HELD_ITEM`, etc., it is the `enum Item`
   required to be held or used to trigger the evolution.
