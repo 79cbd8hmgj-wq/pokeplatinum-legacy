@@ -15,16 +15,17 @@ def add_order(path: Path, entry: str) -> None:
         path.write_text("\n".join(lines)+"\n")
 
 def add_meson_entry(path: Path, anchor: str, entries: list[str]) -> None:
-    s=path.read_text()
-    missing=[e for e in entries if f"'{e}'" not in s]
+    lines=path.read_text().splitlines()
+    missing=[e for e in entries if not any(f"'{e}'" in line for line in lines)]
     if not missing:
         return
-    needle=f"    '{anchor}',\n)"
-    if needle not in s:
+    anchor_line=f"    '{anchor}',"
+    try:
+        idx=lines.index(anchor_line)
+    except ValueError:
         raise SystemExit(f"{path}: anchor {anchor!r} not found")
-    insert="".join(f"    '{e}',\n" for e in missing)
-    s=s.replace(needle,f"    '{anchor}',\n"+insert+")",1)
-    path.write_text(s)
+    lines[idx+1:idx+1]=[f"    '{e}'," for e in missing]
+    path.write_text("\n".join(lines)+"\n")
 
 warehouse_area=ROOT/"res/field/area_data/area_data_077.json"
 warehouse_tex=ROOT/"res/field/maps/texture_sets/map_texture_set_076.nsbtx"
