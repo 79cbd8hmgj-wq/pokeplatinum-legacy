@@ -8,6 +8,7 @@
 #include "constants/field/map.h"
 #include "constants/field/map_load.h"
 #include "constants/heap.h"
+#include "constants/overworld_weather.h"
 
 #include "generated/map_headers.h"
 
