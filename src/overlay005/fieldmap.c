@@ -269,6 +269,21 @@ static BOOL FieldMap_Init(ApplicationManager *appMan, int *state)
 
         FieldMap_ApplySpecialAreaFog(fieldSystem);
 
+#ifdef GDB_DEBUGGING
+        if (gG4RuntimeQAControl.status == G4_RUNTIME_QA_WARPING) {
+            enum MapHeaderID expectedMapHeader;
+
+            gG4RuntimeQAControl.loadedMapHeader = fieldSystem->location->mapHeaderID;
+
+            if (FieldMap_GetG4RuntimeQAMapHeader(gG4RuntimeQAControl.request, &expectedMapHeader)
+                && expectedMapHeader == fieldSystem->location->mapHeaderID) {
+                gG4RuntimeQAControl.status = G4_RUNTIME_QA_LOADED;
+            } else {
+                gG4RuntimeQAControl.status = G4_RUNTIME_QA_REJECTED;
+            }
+        }
+#endif
+
         FieldBGM_PlayEffectiveForMapHeader(fieldSystem, fieldSystem->location->mapHeaderID);
         FieldSystem_RunInitScript(fieldSystem, INIT_SCRIPT_ON_RESUME);
 
@@ -1045,10 +1060,13 @@ static BOOL FieldTask_G4RuntimeQAWarp(FieldTask *task)
     case 1:
         gG4RuntimeQAControl.loadedMapHeader = fieldSystem->location->mapHeaderID;
 
-        if (fieldSystem->location->mapHeaderID == warp->mapHeaderID) {
-            gG4RuntimeQAControl.status = G4_RUNTIME_QA_LOADED;
-        } else {
+        if (fieldSystem->location->mapHeaderID != warp->mapHeaderID) {
             gG4RuntimeQAControl.status = G4_RUNTIME_QA_REJECTED;
+        } else if (gG4RuntimeQAControl.status == G4_RUNTIME_QA_WARPING) {
+            // The map task completed before the field renderer reached its
+            // LOAD state. Keep the status conservative until that state
+            // validates the active map and visual managers.
+            break;
         }
 
         gG4RuntimeQAControl.request = G4_RUNTIME_QA_NONE;
@@ -1067,7 +1085,7 @@ static void FieldMap_TryStartG4RuntimeQA(FieldSystem *fieldSystem)
         return;
     }
 
-    if (gG4RuntimeQAControl.status == G4_RUNTIME_QA_WARPING) {
+    if (gG4RuntimeQAControl.status != G4_RUNTIME_QA_IDLE) {
         return;
     }
 
