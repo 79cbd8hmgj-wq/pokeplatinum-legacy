@@ -129,8 +129,8 @@ Preserve vanilla first-acquisition progression by default:
 - field pickups stay where practical
 - Gym TM rewards remain their original moves/locations
 - story/NPC rewards remain progression milestones
-- TM21 Air Slash inherits TM21 sources
-- TM78 Power Gem inherits the TM78 Victory Road source
+- TM21 Air Slash keeps the live TM21 sources (Galactic HQ 3F + Veilstone Game Corner)
+- **TM78 Power Gem is the explicit exception:** its retail Route 204 North gift is replaced by a deterministic Victory Road 1F gift to preserve the locked late-game Power Gem timing
 - postgame Frontier exclusivity can remain where it does not break campaign functionality
 
 ### Economy

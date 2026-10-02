@@ -3,13 +3,13 @@
   "plural": "TM78s",
   "article": "a",
   "description": [
-    "If it is the opposite gender of the\n",
-    "user, the foe is charmed into sharply\n",
-    "lowering its Sp. Atk stat."
+    "The user attacks with a ray of light\n",
+    "that sparkles as if it were made of\n",
+    "gemstones."
   ],
   "icon": {
     "sprite": "tm_NCGR",
-    "palette": "tm_normal_NCLR"
+    "palette": "tm_rock_NCLR"
   },
   "gbaID": "GBA_ITEM_NONE",
   "price": 1500,
@@ -27,5 +27,5 @@
   "fieldUseFunc": "ITEM_USE_FUNC_TM_HM",
   "battleUseFunc": 0,
   "itemUseParams": null,
-  "teachesMove": "MOVE_CAPTIVATE"
+  "teachesMove": "MOVE_POWER_GEM"
 }

@@ -52,14 +52,22 @@ C1 final:
 - no badge-gated TM shop layer is added
 - no requirement that every TM be obtainable before the Elite Four
 
-### Replacement-slot inheritance
+### Replacement-slot acquisition
 
-TM21 Air Slash inherits TM21's vanilla sources, including:
+TM21 Air Slash keeps TM21's actual Platinum sources:
 
-- Team Galactic Warehouse
+- Galactic HQ 3F
 - Veilstone Game Corner
 
-TM78 Power Gem inherits TM78's vanilla Victory Road placement.
+TM78 Power Gem is the one explicit C2 acquisition override:
+
+- **Victory Road 1F**
+- deterministic Collector gift before the Elite Four
+- the early Route 204 North TM78 gift is removed
+
+The retail decomp places TM78 at the Route 204 North NPC. Earlier recovery notes incorrectly described that retail source as Victory Road, but the locked C2 design separately and explicitly chose **Victory Road timing for Power Gem** so reusable 80-BP special Rock coverage does not become an early-game unlock. Implementation therefore follows the locked design outcome rather than the mistaken historical description of retail placement.
+
+The existing Route 204 receipt flag is reused for the Victory Road gift to avoid introducing a new save flag and to remain safe for saves that may already have received TM78.
 
 ### Gym rewards
 

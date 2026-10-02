@@ -11,7 +11,8 @@ Last verified against repository/project history: 2026-09-13.
 - **Evolution design:** **LOCKED in Pass A** across #001–#493; complete historical master had 50 consolidated type/evolution decisions. The repo still needs the complete machine-readable evolution manifest reconstructed from that locked authority.
 - **World/#001–#493 ordinary availability:** IMPLEMENTED on `main` via PR #10; manifests/validators landed; Rev 0 + Rev 1 CI build verified; runtime availability QA pending. The 28 reserved special-acquisition families are resolved by the follow-up special-acquisition pass (see `implementation/SPECIAL_ACQUISITION.md`).
 - **Known design blockers:** 0.
-- **Next source task:** remaining locked C2 mechanics (HM battle rework, reusable TMs, TM acquisition/economy), then focused runtime QA.
+- **C2 TM/HM mechanics (HM battle rework, reusable TMs, TM acquisition/economy):** IMPLEMENTED (source + validator verified; Rev 0/Rev 1 build via CI on the C2 PR); see `implementation/C2_MECHANICS_IMPLEMENTATION_AUDIT.md`. Focused runtime QA pending.
+- **Next source task:** focused runtime QA of C1/C2/created moves, then the locked Pass A evolution manifest.
 
 ## Mainline implementation evidence
 
@@ -59,14 +60,14 @@ They are provenance sources, not current implementation targets.
 | C3 learnsets/species edits | LOCKED | IMPLEMENTED | L2 build |
 | TM21/TM78 compatibility | LOCKED | IMPLEMENTED | L2 build |
 | Retype compatibility additions | LOCKED | IMPLEMENTED | L2 build |
-| Reusable TMs | LOCKED | not yet fully audited/implemented | pending |
-| HM battle rework | LOCKED | not yet fully audited/implemented | pending |
-| TM acquisition/economy | LOCKED | not yet fully audited/implemented | pending |
+| Reusable TMs | LOCKED | IMPLEMENTED | source + validator verified; CI build; runtime QA pending |
+| HM battle rework | LOCKED | IMPLEMENTED | source + validator verified; CI build; runtime QA pending |
+| TM acquisition/economy | LOCKED | IMPLEMENTED (TM21/TM78 item assignment, Game Corner + Frontier prices, duplicate-vendor guard) | source + validator verified; CI build; runtime QA pending |
 | Tutor consolidation | LOCKED | baseline retained | audit pending |
 | Egg-move consolidation | LOCKED | baseline retained | audit pending |
 | Evolution-method overhaul | **LOCKED / RECOVERY NEEDED FOR FULL MANIFEST** | not yet implemented as a complete system | pending |
 | World/#001–#493 availability — ordinary wild distribution | APPROVED ARCHITECTURE | IMPLEMENTED on `main` via PR #10 | L2 dual-revision CI build + manifest/validator evidence; runtime pending |
-| World/#001–#493 availability — special acquisitions (starters, fossils, Spiritomb, Rotom, Tyrogue, Happiny, Eevee, Porygon, Riolu, Castform, Feebas) | LOCKED/RESERVED BY OWNING SPECS WHERE APPLICABLE | IMPLEMENTED (special-acquisition pass; pending merge) | source + L2 build + validator (S1–S5 + 25 mutation cases); runtime pending |
+| World/#001–#493 availability — special acquisitions (starters, fossils, Spiritomb, Rotom, Tyrogue, Happiny, Eevee, Porygon, Riolu, Castform, Feebas) | LOCKED/RESERVED BY OWNING SPECS WHERE APPLICABLE | IMPLEMENTED on main via PR #11 | source + L2 build + validator (S1–S5 + 25 mutation cases); runtime pending |
 | Trainer overhaul | PLANNED | not started | pending |
 | Economy/EXP port | PLANNED PORT | not started | pending |
 | Capture/Poké Ball port | PLANNED PORT | not started | pending |
@@ -186,12 +187,11 @@ Do not invent one. This is not a build blocker.
 
 ## Immediate next actions
 
-1. Merge the verified C1 implementation after CI remains green.
-2. Audit/implement remaining C2 reusable-TM/HM/economy behavior from locked authority.
-3. Run focused L4 runtime QA for C1/C2/C2.5/C3 high-risk mechanics.
-4. Reconstruct the complete locked Pass A evolution manifest and implement it; **no new evolution-design pass is required**.
-5. Perform the remaining Emerald-to-Platinum port audit for EXP/economy/capture/breeding.
-6. Continue implementing the remaining locked subsystems from canonical repo authority; ordinary and special nonlegendary availability are source/build complete.
+1. Merge the verified C2 mechanics implementation once its final Rev 0 / Rev 1 CI run is green.
+2. Run focused L4 runtime QA for C1/C2/C2.5/C3 high-risk mechanics where emulator automation is available; keep runtime status pending where it is not.
+3. Reconstruct the complete locked Pass A evolution manifest and implement it; **no new evolution-design pass is required**.
+4. Perform the remaining Emerald-to-Platinum port audit for EXP/economy/capture/breeding.
+5. Continue implementing the remaining locked subsystems from canonical repo authority; ordinary and special nonlegendary availability are source/build complete.
 
 ## Rule for future sessions
 

@@ -1,0 +1,877 @@
+{
+  "version": 1,
+  "domain": "c2-tm-hm-mechanics",
+  "status": "LOCKED_IMPLEMENTED",
+  "base_commit": "e13b728fbe4f05ad137f143be11dd7eb71bf5d46",
+  "authority": [
+    "docs/overhaul/tm_hm/TM_HM_SPEC.md",
+    "docs/overhaul/MASTER_SPEC.md"
+  ],
+  "counts": {
+    "tms": 92,
+    "hms": 8,
+    "changed_hms": 5,
+    "game_corner_tm_prices": 15,
+    "frontier_tm_prices": 16
+  },
+  "hm_battle": {
+    "cut": {
+      "name": "Cut",
+      "hm": "HM01",
+      "class": "CLASS_PHYSICAL",
+      "type": "TYPE_NORMAL",
+      "range": "RANGE_SINGLE_TARGET",
+      "source": "res/moves/cut/data.json",
+      "owner": "c2.hm.cut",
+      "changed": true,
+      "expected_before": {
+        "power": 50,
+        "accuracy": 95,
+        "pp": 30,
+        "effect": "BATTLE_EFFECT_HIT",
+        "chance": 0
+      },
+      "expected_after": {
+        "power": 70,
+        "accuracy": 100,
+        "pp": 30,
+        "effect": "BATTLE_EFFECT_HIGH_CRITICAL",
+        "chance": 0
+      }
+    },
+    "fly": {
+      "name": "Fly",
+      "hm": "HM02",
+      "class": "CLASS_PHYSICAL",
+      "type": "TYPE_FLYING",
+      "range": "RANGE_SINGLE_TARGET",
+      "source": "res/moves/fly/data.json",
+      "owner": "c2.hm.fly",
+      "changed": true,
+      "expected_before": {
+        "power": 90,
+        "accuracy": 95,
+        "pp": 15,
+        "effect": "BATTLE_EFFECT_FLY",
+        "chance": 0
+      },
+      "expected_after": {
+        "power": 100,
+        "accuracy": 100,
+        "pp": 15,
+        "effect": "BATTLE_EFFECT_FLY",
+        "chance": 0
+      }
+    },
+    "surf": {
+      "name": "Surf",
+      "hm": "HM03",
+      "class": "CLASS_SPECIAL",
+      "type": "TYPE_WATER",
+      "range": "RANGE_ALL_ADJACENT",
+      "source": "res/moves/surf/data.json",
+      "owner": "c2.hm.surf",
+      "changed": false,
+      "expected_before": {
+        "power": 95,
+        "accuracy": 100,
+        "pp": 15,
+        "effect": "BATTLE_EFFECT_DOUBLE_DAMAGE_DIVE",
+        "chance": 0
+      },
+      "expected_after": {
+        "power": 95,
+        "accuracy": 100,
+        "pp": 15,
+        "effect": "BATTLE_EFFECT_DOUBLE_DAMAGE_DIVE",
+        "chance": 0
+      }
+    },
+    "strength": {
+      "name": "Strength",
+      "hm": "HM04",
+      "class": "CLASS_PHYSICAL",
+      "type": "TYPE_NORMAL",
+      "range": "RANGE_SINGLE_TARGET",
+      "source": "res/moves/strength/data.json",
+      "owner": "c2.hm.strength",
+      "changed": false,
+      "expected_before": {
+        "power": 80,
+        "accuracy": 100,
+        "pp": 15,
+        "effect": "BATTLE_EFFECT_HIT",
+        "chance": 0
+      },
+      "expected_after": {
+        "power": 80,
+        "accuracy": 100,
+        "pp": 15,
+        "effect": "BATTLE_EFFECT_HIT",
+        "chance": 0
+      }
+    },
+    "defog": {
+      "name": "Defog",
+      "hm": "HM05",
+      "class": "CLASS_STATUS",
+      "type": "TYPE_FLYING",
+      "range": "RANGE_SINGLE_TARGET",
+      "source": "res/moves/defog/data.json",
+      "owner": "c2.hm.defog",
+      "changed": true,
+      "expected_before": {
+        "power": 0,
+        "accuracy": 0,
+        "pp": 15,
+        "effect": "BATTLE_EFFECT_REMOVE_HAZARDS_SCREENS_EVA_DOWN",
+        "chance": 0
+      },
+      "expected_after": {
+        "power": 0,
+        "accuracy": 0,
+        "pp": 15,
+        "effect": "BATTLE_EFFECT_REMOVE_HAZARDS_SCREENS_EVA_DOWN",
+        "chance": 0
+      }
+    },
+    "rock_smash": {
+      "name": "Rock Smash",
+      "hm": "HM06",
+      "class": "CLASS_PHYSICAL",
+      "type": "TYPE_FIGHTING",
+      "range": "RANGE_SINGLE_TARGET",
+      "source": "res/moves/rock_smash/data.json",
+      "owner": "c2.hm.rock_smash",
+      "changed": true,
+      "expected_before": {
+        "power": 40,
+        "accuracy": 100,
+        "pp": 15,
+        "effect": "BATTLE_EFFECT_LOWER_DEFENSE_HIT",
+        "chance": 50
+      },
+      "expected_after": {
+        "power": 60,
+        "accuracy": 100,
+        "pp": 15,
+        "effect": "BATTLE_EFFECT_LOWER_DEFENSE_HIT",
+        "chance": 50
+      }
+    },
+    "waterfall": {
+      "name": "Waterfall",
+      "hm": "HM07",
+      "class": "CLASS_PHYSICAL",
+      "type": "TYPE_WATER",
+      "range": "RANGE_SINGLE_TARGET",
+      "source": "res/moves/waterfall/data.json",
+      "owner": "c2.hm.waterfall",
+      "changed": false,
+      "expected_before": {
+        "power": 80,
+        "accuracy": 100,
+        "pp": 15,
+        "effect": "BATTLE_EFFECT_FLINCH_HIT",
+        "chance": 20
+      },
+      "expected_after": {
+        "power": 80,
+        "accuracy": 100,
+        "pp": 15,
+        "effect": "BATTLE_EFFECT_FLINCH_HIT",
+        "chance": 20
+      }
+    },
+    "rock_climb": {
+      "name": "Rock Climb",
+      "hm": "HM08",
+      "class": "CLASS_PHYSICAL",
+      "type": "TYPE_NORMAL",
+      "range": "RANGE_SINGLE_TARGET",
+      "source": "res/moves/rock_climb/data.json",
+      "owner": "c2.hm.rock_climb",
+      "changed": true,
+      "expected_before": {
+        "power": 90,
+        "accuracy": 85,
+        "pp": 20,
+        "effect": "BATTLE_EFFECT_CONFUSE_HIT",
+        "chance": 20
+      },
+      "expected_after": {
+        "power": 90,
+        "accuracy": 95,
+        "pp": 20,
+        "effect": "BATTLE_EFFECT_CONFUSE_HIT",
+        "chance": 20
+      }
+    }
+  },
+  "defog_semantics": {
+    "source": "res/battle/scripts/subscripts/subscript_defog.s",
+    "owner": "c2.hm.defog",
+    "both_sides_hazards": [
+      "SPIKES",
+      "TOXIC_SPIKES",
+      "STEALTH_ROCK"
+    ],
+    "target_side_only": [
+      "REFLECT",
+      "LIGHT_SCREEN",
+      "SAFEGUARD",
+      "MIST"
+    ],
+    "evasion_minus": 1
+  },
+  "reusable_tm": {
+    "source": "src/applications/party_menu/callbacks.c",
+    "owner": "c2.tm.reusable",
+    "function": "TeachMove",
+    "expected_before": "removal guarded by Item_IsHMMove(learnedMove) == FALSE",
+    "expected_after": "removal guarded by usedItem < ITEM_TM01 || usedItem > ITEM_HM08",
+    "other_bag_removals_pinned": {
+      "src/applications/party_menu/callbacks.c": 3,
+      "src/applications/party_menu/main.c": 3
+    }
+  },
+  "tm_roster": {
+    "owner": "c2.tm.roster",
+    "tm21": {
+      "source": "res/items/data/tm21.json",
+      "expected_before": "MOVE_FRUSTRATION",
+      "expected_after": "MOVE_AIR_SLASH",
+      "recipients": 49
+    },
+    "tm78": {
+      "source": "res/items/data/tm78.json",
+      "expected_before": "MOVE_CAPTIVATE",
+      "expected_after": "MOVE_POWER_GEM",
+      "recipients": 27
+    },
+    "discrepancy": "Task brief and C3H record said the TM21/TM78 assignments were already implemented; live source only had the compatibility masks. The item->move assignment is applied here."
+  },
+  "game_corner": {
+    "source": "src/scrcmd_game_corner_prize.c",
+    "owner": "c2.economy.game_corner",
+    "unchanged_prizes": [
+      [
+        "ITEM_SILK_SCARF",
+        1000
+      ],
+      [
+        "ITEM_WIDE_LENS",
+        1000
+      ],
+      [
+        "ITEM_ZOOM_LENS",
+        1000
+      ],
+      [
+        "ITEM_METRONOME",
+        1000
+      ]
+    ],
+    "tm_prices": {
+      "TM90": {
+        "expected_before": 2000,
+        "expected_after": 1000
+      },
+      "TM58": {
+        "expected_before": 2000,
+        "expected_after": 1000
+      },
+      "TM75": {
+        "expected_before": 4000,
+        "expected_after": 2000
+      },
+      "TM32": {
+        "expected_before": 4000,
+        "expected_after": 2000
+      },
+      "TM44": {
+        "expected_before": 6000,
+        "expected_after": 2500
+      },
+      "TM89": {
+        "expected_before": 6000,
+        "expected_after": 3000
+      },
+      "TM10": {
+        "expected_before": 6000,
+        "expected_after": 3000
+      },
+      "TM27": {
+        "expected_before": 8000,
+        "expected_after": 3000
+      },
+      "TM21": {
+        "expected_before": 8000,
+        "expected_after": 4000
+      },
+      "TM35": {
+        "expected_before": 10000,
+        "expected_after": 4000
+      },
+      "TM24": {
+        "expected_before": 10000,
+        "expected_after": 4000
+      },
+      "TM13": {
+        "expected_before": 10000,
+        "expected_after": 4000
+      },
+      "TM29": {
+        "expected_before": 10000,
+        "expected_after": 4000
+      },
+      "TM74": {
+        "expected_before": 15000,
+        "expected_after": 5000
+      },
+      "TM68": {
+        "expected_before": 20000,
+        "expected_after": 6000
+      }
+    },
+    "tm_order": [
+      "ITEM_TM90",
+      "ITEM_TM58",
+      "ITEM_TM75",
+      "ITEM_TM32",
+      "ITEM_TM44",
+      "ITEM_TM89",
+      "ITEM_TM10",
+      "ITEM_TM27",
+      "ITEM_TM21",
+      "ITEM_TM35",
+      "ITEM_TM24",
+      "ITEM_TM13",
+      "ITEM_TM29",
+      "ITEM_TM74",
+      "ITEM_TM68"
+    ]
+  },
+  "frontier": {
+    "sources": [
+      "src/overlay007/shop_menu.c",
+      "src/unk_020494DC.c"
+    ],
+    "owner": "c2.economy.frontier",
+    "unchanged_item_prices": [
+      [
+        "ITEM_PROTEIN",
+        1
+      ],
+      [
+        "ITEM_CALCIUM",
+        1
+      ],
+      [
+        "ITEM_IRON",
+        1
+      ],
+      [
+        "ITEM_ZINC",
+        1
+      ],
+      [
+        "ITEM_CARBOS",
+        1
+      ],
+      [
+        "ITEM_HP_UP",
+        1
+      ],
+      [
+        "ITEM_POWER_BRACER",
+        16
+      ],
+      [
+        "ITEM_POWER_BELT",
+        16
+      ],
+      [
+        "ITEM_POWER_LENS",
+        16
+      ],
+      [
+        "ITEM_POWER_BAND",
+        16
+      ],
+      [
+        "ITEM_POWER_ANKLET",
+        16
+      ],
+      [
+        "ITEM_POWER_WEIGHT",
+        16
+      ],
+      [
+        "ITEM_TOXIC_ORB",
+        16
+      ],
+      [
+        "ITEM_FLAME_ORB",
+        16
+      ],
+      [
+        "ITEM_WHITE_HERB",
+        32
+      ],
+      [
+        "ITEM_POWER_HERB",
+        32
+      ],
+      [
+        "ITEM_BRIGHTPOWDER",
+        48
+      ],
+      [
+        "ITEM_CHOICE_BAND",
+        48
+      ],
+      [
+        "ITEM_FOCUS_BAND",
+        48
+      ],
+      [
+        "ITEM_SCOPE_LENS",
+        48
+      ],
+      [
+        "ITEM_MUSCLE_BAND",
+        48
+      ],
+      [
+        "ITEM_FOCUS_SASH",
+        48
+      ],
+      [
+        "ITEM_CHOICE_SCARF",
+        48
+      ],
+      [
+        "ITEM_RAZOR_CLAW",
+        48
+      ],
+      [
+        "ITEM_RAZOR_FANG",
+        48
+      ],
+      [
+        "ITEM_RARE_CANDY",
+        48
+      ]
+    ],
+    "tm_prices": {
+      "TM06": {
+        "expected_before": 32,
+        "expected_after": 16
+      },
+      "TM73": {
+        "expected_before": 32,
+        "expected_after": 16
+      },
+      "TM61": {
+        "expected_before": 32,
+        "expected_after": 16
+      },
+      "TM45": {
+        "expected_before": 32,
+        "expected_after": 16
+      },
+      "TM40": {
+        "expected_before": 40,
+        "expected_after": 20
+      },
+      "TM31": {
+        "expected_before": 40,
+        "expected_after": 20
+      },
+      "TM89": {
+        "expected_before": null,
+        "expected_after": 20
+      },
+      "TM08": {
+        "expected_before": 48,
+        "expected_after": 24
+      },
+      "TM04": {
+        "expected_before": 48,
+        "expected_after": 24
+      },
+      "TM81": {
+        "expected_before": 64,
+        "expected_after": 32
+      },
+      "TM30": {
+        "expected_before": 64,
+        "expected_after": 32
+      },
+      "TM53": {
+        "expected_before": 64,
+        "expected_after": 32
+      },
+      "TM36": {
+        "expected_before": 80,
+        "expected_after": 40
+      },
+      "TM59": {
+        "expected_before": 80,
+        "expected_after": 40
+      },
+      "TM71": {
+        "expected_before": 80,
+        "expected_after": 40
+      },
+      "TM26": {
+        "expected_before": 80,
+        "expected_after": 40
+      }
+    },
+    "tm_list_order": [
+      "TM06",
+      "TM73",
+      "TM61",
+      "TM45",
+      "TM40",
+      "TM31",
+      "TM89",
+      "TM08",
+      "TM04",
+      "TM81",
+      "TM30",
+      "TM53",
+      "TM36",
+      "TM59",
+      "TM71",
+      "TM26"
+    ],
+    "note": "TM89 U-turn is not in the live Frontier TM shop at base; the locked table lists it at 20 BP, so it is added (list + price)."
+  },
+  "department_store": {
+    "rule": "KEEP",
+    "owner": "c2.economy.dept_store",
+    "tm_hm_item_prices": {
+      "HM01": 0,
+      "HM02": 0,
+      "HM03": 0,
+      "HM04": 0,
+      "HM05": 0,
+      "HM06": 0,
+      "HM07": 0,
+      "HM08": 0,
+      "TM01": 3000,
+      "TM02": 3000,
+      "TM03": 3000,
+      "TM04": 1500,
+      "TM05": 1000,
+      "TM06": 3000,
+      "TM07": 2000,
+      "TM08": 1500,
+      "TM09": 2000,
+      "TM10": 2000,
+      "TM11": 2000,
+      "TM12": 1500,
+      "TM13": 3000,
+      "TM14": 5500,
+      "TM15": 7500,
+      "TM16": 2000,
+      "TM17": 2000,
+      "TM18": 2000,
+      "TM19": 3000,
+      "TM20": 2000,
+      "TM21": 1000,
+      "TM22": 3000,
+      "TM23": 3000,
+      "TM24": 3000,
+      "TM25": 5500,
+      "TM26": 3000,
+      "TM27": 1000,
+      "TM28": 2000,
+      "TM29": 3000,
+      "TM30": 3000,
+      "TM31": 3000,
+      "TM32": 1000,
+      "TM33": 2000,
+      "TM34": 3000,
+      "TM35": 3000,
+      "TM36": 3000,
+      "TM37": 2000,
+      "TM38": 5500,
+      "TM39": 2000,
+      "TM40": 3000,
+      "TM41": 1500,
+      "TM42": 3000,
+      "TM43": 2000,
+      "TM44": 3000,
+      "TM45": 3000,
+      "TM46": 2000,
+      "TM47": 3000,
+      "TM48": 3000,
+      "TM49": 1500,
+      "TM50": 5500,
+      "TM51": 2000,
+      "TM52": 5500,
+      "TM53": 3000,
+      "TM54": 2000,
+      "TM55": 3000,
+      "TM56": 2000,
+      "TM57": 3000,
+      "TM58": 2000,
+      "TM59": 3000,
+      "TM60": 3000,
+      "TM61": 2000,
+      "TM62": 3000,
+      "TM63": 2000,
+      "TM64": 7500,
+      "TM65": 3000,
+      "TM66": 3000,
+      "TM67": 1000,
+      "TM68": 7500,
+      "TM69": 1500,
+      "TM70": 1000,
+      "TM71": 3000,
+      "TM72": 3000,
+      "TM73": 2000,
+      "TM74": 3000,
+      "TM75": 1500,
+      "TM76": 2000,
+      "TM77": 1500,
+      "TM78": 1500,
+      "TM79": 3000,
+      "TM80": 3000,
+      "TM81": 3000,
+      "TM82": 1000,
+      "TM83": 2000,
+      "TM84": 3000,
+      "TM85": 3000,
+      "TM86": 3000,
+      "TM87": 1500,
+      "TM88": 3000,
+      "TM89": 3000,
+      "TM90": 2000,
+      "TM91": 3000,
+      "TM92": 5500
+    },
+    "tm21_tm78_price_note": "TM21/TM78 item prices keep their vanilla slot price."
+  },
+  "duplicate_vendor_protection": {
+    "owner": "c2.economy.duplicate_guard",
+    "shop_menu": {
+      "source": "src/overlay007/shop_menu.c",
+      "check_before": "currMoney < shopMenu->itemPrice",
+      "scope": "MART_TYPE_NORMAL + MART_TYPE_FRONTIER, TM items only",
+      "message": "pl_msg_00000543_00039"
+    },
+    "game_corner": {
+      "source": "res/field/scripts/scripts_veilstone_city_prize_exchange.s",
+      "message": "VeilstoneCityPrizeExchange_Text_AlreadyHaveTM",
+      "check_before": [
+        "HasCoins",
+        "SubtractCoins"
+      ]
+    }
+  },
+  "first_acquisition_keep": {
+    "owner": "c2.tm.acquisition_keep",
+    "fingerprint_base": "e13b728fbe4f05ad137f143be11dd7eb71bf5d46",
+    "field_tm_fingerprint": {
+      "res/field/scripts/scripts_canalave_city.s": {
+        "ITEM_HM04": 1
+      },
+      "res/field/scripts/scripts_canalave_city_gym.s": {
+        "ITEM_TM91": 1
+      },
+      "res/field/scripts/scripts_canalave_city_southeast_house.s": {
+        "ITEM_TM48": 1
+      },
+      "res/field/scripts/scripts_celestic_town_cave.s": {
+        "ITEM_HM03": 1
+      },
+      "res/field/scripts/scripts_eterna_city.s": {
+        "ITEM_HM01": 1
+      },
+      "res/field/scripts/scripts_eterna_city_condominiums_2f.s": {
+        "ITEM_TM67": 1
+      },
+      "res/field/scripts/scripts_eterna_city_gym.s": {
+        "ITEM_TM86": 2
+      },
+      "res/field/scripts/scripts_eterna_city_mart.s": {
+        "ITEM_TM03": 1
+      },
+      "res/field/scripts/scripts_floaroma_town_middle_house.s": {
+        "ITEM_TM88": 1
+      },
+      "res/field/scripts/scripts_game_corner.s": {
+        "ITEM_TM64": 1
+      },
+      "res/field/scripts/scripts_grand_lake_route_213_northwest_house.s": {
+        "ITEM_TM92": 1
+      },
+      "res/field/scripts/scripts_hearthome_city_dp_gym_leader_room.s": {
+        "ITEM_TM65": 1
+      },
+      "res/field/scripts/scripts_hearthome_city_gym_leader_room.s": {
+        "ITEM_TM65": 1
+      },
+      "res/field/scripts/scripts_iron_island.s": {
+        "ITEM_HM04": 1
+      },
+      "res/field/scripts/scripts_oreburgh_city_gym.s": {
+        "ITEM_TM76": 1
+      },
+      "res/field/scripts/scripts_oreburgh_gate_1f.s": {
+        "ITEM_HM06": 2
+      },
+      "res/field/scripts/scripts_pastoria_city_gym.s": {
+        "ITEM_TM55": 1
+      },
+      "res/field/scripts/scripts_route_210_south.s": {
+        "ITEM_TM51": 1
+      },
+      "res/field/scripts/scripts_route_211_east.s": {
+        "ITEM_TM77": 1
+      },
+      "res/field/scripts/scripts_route_215.s": {
+        "ITEM_TM66": 1
+      },
+      "res/field/scripts/scripts_route_217_west_house.s": {
+        "ITEM_HM08": 1
+      },
+      "res/field/scripts/scripts_route_222.s": {
+        "ITEM_TM56": 1
+      },
+      "res/field/scripts/scripts_sandgem_town.s": {
+        "ITEM_TM27": 1
+      },
+      "res/field/scripts/scripts_snowpoint_city_gym.s": {
+        "ITEM_TM72": 1
+      },
+      "res/field/scripts/scripts_solaceon_ruins_room_2.s": {
+        "ITEM_HM05": 1
+      },
+      "res/field/scripts/scripts_sunyshore_city.s": {
+        "ITEM_HM07": 1
+      },
+      "res/field/scripts/scripts_sunyshore_city_gym_room_3.s": {
+        "ITEM_TM57": 1
+      },
+      "res/field/scripts/scripts_survival_area_south_house.s": {
+        "ITEM_TM42": 1
+      },
+      "res/field/scripts/scripts_unused_eterna_city_condominiums_4f.s": {
+        "ITEM_TM04": 1
+      },
+      "res/field/scripts/scripts_veilstone_city.s": {
+        "ITEM_TM63": 1
+      },
+      "res/field/scripts/scripts_veilstone_city_gym.s": {
+        "ITEM_TM60": 1
+      },
+      "res/field/scripts/scripts_veilstone_city_pokecenter_1f.s": {
+        "ITEM_HM03": 1
+      },
+      "res/field/scripts/scripts_visible_items.s": {
+        "ITEM_HM02": 1,
+        "ITEM_HM05": 1,
+        "ITEM_HM08": 1,
+        "ITEM_TM01": 1,
+        "ITEM_TM02": 1,
+        "ITEM_TM03": 1,
+        "ITEM_TM05": 1,
+        "ITEM_TM06": 1,
+        "ITEM_TM07": 1,
+        "ITEM_TM09": 1,
+        "ITEM_TM11": 1,
+        "ITEM_TM12": 1,
+        "ITEM_TM13": 1,
+        "ITEM_TM14": 1,
+        "ITEM_TM18": 1,
+        "ITEM_TM19": 1,
+        "ITEM_TM21": 1,
+        "ITEM_TM23": 1,
+        "ITEM_TM24": 1,
+        "ITEM_TM25": 1,
+        "ITEM_TM26": 1,
+        "ITEM_TM27": 1,
+        "ITEM_TM28": 1,
+        "ITEM_TM29": 1,
+        "ITEM_TM30": 1,
+        "ITEM_TM31": 1,
+        "ITEM_TM32": 1,
+        "ITEM_TM34": 1,
+        "ITEM_TM35": 1,
+        "ITEM_TM36": 1,
+        "ITEM_TM37": 1,
+        "ITEM_TM38": 1,
+        "ITEM_TM39": 1,
+        "ITEM_TM40": 1,
+        "ITEM_TM41": 1,
+        "ITEM_TM43": 1,
+        "ITEM_TM45": 1,
+        "ITEM_TM46": 1,
+        "ITEM_TM47": 1,
+        "ITEM_TM49": 1,
+        "ITEM_TM50": 1,
+        "ITEM_TM53": 1,
+        "ITEM_TM59": 1,
+        "ITEM_TM62": 1,
+        "ITEM_TM69": 1,
+        "ITEM_TM70": 1,
+        "ITEM_TM71": 1,
+        "ITEM_TM79": 1,
+        "ITEM_TM80": 1,
+        "ITEM_TM81": 1,
+        "ITEM_TM82": 1,
+        "ITEM_TM84": 1,
+        "ITEM_TM85": 1,
+        "ITEM_TM87": 1,
+        "ITEM_TM89": 1,
+        "ITEM_TM90": 1
+      },
+      "res/field/scripts/scripts_victory_road_1f.s": {
+        "ITEM_TM78": 1
+      }
+    },
+    "tm78_override": {
+      "retail_source": "res/field/scripts/scripts_route_204_north.s",
+      "locked_source": "res/field/scripts/scripts_victory_road_1f.s",
+      "method": "Victory Road 1F Collector gift",
+      "save_compat_flag": "FLAG_RECEIVED_ROUTE_204_NORTH_TM78",
+      "retry_safe_on_full_bag": true,
+      "postgame_recoverable": true,
+      "collector_visibility_guard": "clear stale hide flag and do not hide Collector until receipt flag is set",
+      "retail_save_recovery": true
+    }
+  },
+  "text_corrections": {
+    "res/text/oreburgh_city.json": "OreburghCity_Text_TMsSingleUseHMsOverAndOver no longer claims TMs are single use",
+    "res/text/route_204_north.json": "Route204North Ace Trainer now teaches reusable-TM behavior without awarding TM78"
+  },
+  "created_moves_pin": {
+    "max_moves": 490,
+    "first": 468,
+    "last": 489,
+    "count": 22
+  },
+  "excluded_systems": [
+    "species stats/types/abilities",
+    "species learnsets",
+    "TM compatibility masks (TM21/TM78 + C3 additions)",
+    "encounter tables",
+    "availability gifts",
+    "evolution tables",
+    "trainer teams",
+    "Poke Ball mechanics",
+    "breeding",
+    "general economy",
+    "legendary events",
+    "visual assets/maps/lighting/UI",
+    "tutor consolidation",
+    "field-move decoupling",
+    "world TM pickup relocation except the locked TM78 Route 204 -> Victory Road override"
+  ]
+}
