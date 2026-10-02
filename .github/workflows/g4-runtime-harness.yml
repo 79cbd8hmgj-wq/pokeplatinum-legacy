@@ -56,6 +56,14 @@ jobs:
           make configure ROM_REVISION=${{ matrix.revision }}
           make debug ROM_REVISION=${{ matrix.revision }}
 
+      - name: Export debug runtime symbols
+        shell: bash
+        run: |
+          set -euxo pipefail
+          arm-none-eabi-nm -n "$BUILD/debug.nef" > "$BUILD/runtime_symbols.map"
+          test -s "$BUILD/runtime_symbols.map"
+          grep -E 'AreaLightManager_New|gG4RuntimeQAControl' "$BUILD/runtime_symbols.map"
+
       - name: Validate static area-light contract
         run: python tools/visual_overhaul/validate_area_light_contract.py
 
@@ -68,7 +76,7 @@ jobs:
             eterna snow distortion spear lakes turnback galactic coronet-control
           do
             python tools/visual_overhaul/runtime_g4_probe.py "$scenario" \
-              --symbols "$BUILD/overlay.map" \
+              --symbols "$BUILD/runtime_symbols.map" \
               --validate-symbols-only \
               --output "runtime-symbol-reports/$scenario.json"
           done
@@ -81,6 +89,7 @@ jobs:
             ${{ env.BUILD }}/pokeplatinum.us.nds
             ${{ env.BUILD }}/debug.nef
             ${{ env.BUILD }}/overlay.map
+            ${{ env.BUILD }}/runtime_symbols.map
             runtime-symbol-reports/
             tools/visual_overhaul/runtime_g4_probe.py
             docs/visual_overhaul/G4_RUNTIME_QA.md
