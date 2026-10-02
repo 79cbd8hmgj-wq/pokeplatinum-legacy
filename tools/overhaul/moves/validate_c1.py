@@ -93,6 +93,12 @@ def validate(live: dict, ctx: dict) -> list[str]:
     for const in ("MOVE_RESONANT_SLASH", "MOVE_STAR_JAB"):
         if const not in ctx["battle_lib"]:
             P.append(f"{const} registry missing")
+    created = load_json("docs/overhaul/implementation/created_moves_manifest.json")["moves"]
+    if len(created) != 22:
+        P.append("created move manifest != 22 moves")
+    for cm in created:
+        if len(live.get(cm["name"], [])) != 1:
+            P.append(f"created move record missing: {cm['name']}")
     mv = live.get("Magnet Volley")
     if not mv:
         P.append("Magnet Volley missing")
