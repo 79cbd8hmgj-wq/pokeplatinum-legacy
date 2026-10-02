@@ -324,6 +324,36 @@ Implementation rule:
 - Preserve the existing `OVERWORLD_WEATHER_23` behavior until its internals are fully identified.
 
 
+
+### G2B implementation checkpoint
+
+Implemented source-side presentation work:
+
+- Added `CAMERA_TYPE_ETERNA_FOREST`.
+- Eterna Forest now uses a dedicated perspective profile rather than the generic `CAMERA_TYPE_ZOOMED_IN`.
+- Fullmoon Island Forest and Newmoon Island Forest retain the retail zoomed-in camera.
+- The new Eterna profile uses:
+  - distance: 545.0
+  - pitch: 58.0 degrees
+  - vertical FOV: 10.9 degrees
+  - standard near/far clipping
+- Purpose: expose more canopy/terrain depth and improve spatial presentation without changing map geometry.
+
+Environmental-effects audit findings:
+
+- Platinum's field-effect manager supports billboards, animated resources, fog participation, texture VRAM upload, and per-map renderer sets.
+- Most exposed renderer implementations are object-attached effects rather than free ambient emitters.
+- The primary field-effect asset archive `res/prebuilt/data/mmodel/fldeff.narc` is currently prebuilt/opaque in this decomp.
+- `weather_sys.narc` is also prebuilt.
+- Therefore, new leaf/mist texture effects should not be wired by blindly editing opaque archive members.
+- Preferred next path: recover/extract the relevant prebuilt archives into reproducible source assets or reuse a known-compatible existing effect resource after exact identification.
+
+Additional mapping note:
+
+- `area_data_054` is shared by Eterna Forest, Fullmoon Island Forest, and Newmoon Island Forest.
+- `lighting_set_004` should therefore be treated as a shared deep-forest lighting family unless those maps are split into separate area-data entries later.
+
+
 #### G2C — Global UI presentation
 Improve:
 - frames
