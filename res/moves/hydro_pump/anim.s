@@ -23,6 +23,7 @@ L_0:
     CreateEmitter 0, 0, EMITTER_CB_SET_POS_TO_DEFENDER
     Func_FadeBattlerSprite BATTLE_ANIM_DEFENDER, 0, 1, BATTLE_COLOR_TEAL_GREEN, 10, 25
     Func_Shake 2, 0, 1, 14, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
+    Func_ShakeBg 3, 1, 0, 3, 0, SHAKE_BG_TARGET_BASE
     WaitForAllEmitters
     UnloadParticleSystem 0
     ResetVars
