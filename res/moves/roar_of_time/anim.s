@@ -21,6 +21,7 @@ L_0:
     CreateEmitter 0, 1, EMITTER_CB_SET_POS_TO_DEFENDER
     CreateEmitter 0, 2, EMITTER_CB_SET_POS_TO_DEFENDER
     Func_Shake 4, 0, 1, 8, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
+    Func_ShakeBg 2, 4, 0, 3, 0, SHAKE_BG_TARGET_BASE
     WaitForAllEmitters
     UnloadParticleSystem 0
     Delay 20
