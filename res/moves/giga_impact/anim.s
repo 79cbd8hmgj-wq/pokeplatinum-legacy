@@ -27,6 +27,7 @@ L_0:
     PlaySoundEffectR SEQ_SE_DP_161
     Func_Shake 1, 0, 1, 2, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
     Func_ShakeBg 0, 5, 0, 5, 0
+    Func_ShakeBg 3, 2, 0, 3, 0, SHAKE_BG_TARGET_BASE
     WaitForAnimTasks
     WaitForAllEmitters
     UnloadParticleSystem 0
