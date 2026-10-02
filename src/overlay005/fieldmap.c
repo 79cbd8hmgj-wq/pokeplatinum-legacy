@@ -98,6 +98,44 @@ enum FieldExtensionOverlay {
     FIELD_EXTENSION_OVERLAY_DISTORTION_WORLD,
 };
 
+#ifdef GDB_DEBUGGING
+enum G4RuntimeQATarget {
+    G4_RUNTIME_QA_NONE = 0,
+    G4_RUNTIME_QA_ETERNA_FOREST,
+    G4_RUNTIME_QA_SNOWPOINT,
+    G4_RUNTIME_QA_SPEAR_PILLAR,
+    G4_RUNTIME_QA_LAKE_VERITY,
+    G4_RUNTIME_QA_TURNBACK_CAVE,
+    G4_RUNTIME_QA_GALACTIC_HQ,
+    G4_RUNTIME_QA_MT_CORONET,
+};
+
+enum G4RuntimeQAStatus {
+    G4_RUNTIME_QA_IDLE = 0,
+    G4_RUNTIME_QA_WARPING,
+    G4_RUNTIME_QA_LOADED,
+    G4_RUNTIME_QA_REJECTED,
+};
+
+typedef struct G4RuntimeQAControl {
+    volatile u32 request;
+    volatile u32 status;
+    volatile u32 loadedMapHeader;
+} G4RuntimeQAControl;
+
+typedef struct G4RuntimeQAWarpData {
+    enum MapHeaderID mapHeaderID;
+} G4RuntimeQAWarpData;
+
+// Debug-build-only control surface used by the NDS Toolkit runtime harness.
+// Release builds do not contain this object or any of the associated warp code.
+G4RuntimeQAControl gG4RuntimeQAControl = {
+    G4_RUNTIME_QA_NONE,
+    G4_RUNTIME_QA_IDLE,
+    0,
+};
+#endif
+
 static void BgConfig_Init(BgConfig *bgl);
 static void ov5_021D1524(BgConfig *bgl);
 static void ov5_021D154C(void);
@@ -124,6 +162,11 @@ static enum FieldExtensionOverlay FieldMap_GetExtOverlayForActiveDynMapFeatures(
 static BOOL FieldMap_InDistortionWorld(FieldSystem *fieldSystem);
 static BOOL FieldMap_IsDeepForest(const FieldSystem *fieldSystem);
 static void FieldMap_ApplySpecialAreaFog(FieldSystem *fieldSystem);
+#ifdef GDB_DEBUGGING
+static BOOL FieldTask_G4RuntimeQAWarp(FieldTask *task);
+static BOOL FieldMap_GetG4RuntimeQAMapHeader(u32 request, enum MapHeaderID *mapHeaderID);
+static void FieldMap_TryStartG4RuntimeQA(FieldSystem *fieldSystem);
+#endif
 static MapObjectsToPreload *FetchMapObjectsToPreload(enum HeapID heapID, int memberID);
 static const int *MapObjectsToPreload_GetIDs(const MapObjectsToPreload *mapObjectsToPreload);
 static int MapObjectsToPreload_GetCount(const MapObjectsToPreload *mapObjectsToPreload);
@@ -251,6 +294,10 @@ static BOOL FieldMap_Init(ApplicationManager *appMan, int *state)
 static BOOL FieldMap_Main(ApplicationManager *appMan, int *param1)
 {
     FieldSystem *fieldSystem = ApplicationManager_Args(appMan);
+
+#ifdef GDB_DEBUGGING
+    FieldMap_TryStartG4RuntimeQA(fieldSystem);
+#endif
 
     if (FieldSystem_UpdateLocationToPlayerPosition(fieldSystem)) {
         BerryPatches_UpdateGrowthStates(fieldSystem);
@@ -947,6 +994,95 @@ static BOOL FieldMap_InDistortionWorld(FieldSystem *fieldSystem)
 
     return FALSE;
 }
+
+#ifdef GDB_DEBUGGING
+static BOOL FieldMap_GetG4RuntimeQAMapHeader(u32 request, enum MapHeaderID *mapHeaderID)
+{
+    switch (request) {
+    case G4_RUNTIME_QA_ETERNA_FOREST:
+        *mapHeaderID = MAP_HEADER_ETERNA_FOREST;
+        return TRUE;
+    case G4_RUNTIME_QA_SNOWPOINT:
+        *mapHeaderID = MAP_HEADER_SNOWPOINT_CITY;
+        return TRUE;
+    case G4_RUNTIME_QA_SPEAR_PILLAR:
+        *mapHeaderID = MAP_HEADER_SPEAR_PILLAR;
+        return TRUE;
+    case G4_RUNTIME_QA_LAKE_VERITY:
+        *mapHeaderID = MAP_HEADER_LAKE_VERITY;
+        return TRUE;
+    case G4_RUNTIME_QA_TURNBACK_CAVE:
+        *mapHeaderID = MAP_HEADER_TURNBACK_CAVE_ENTRANCE;
+        return TRUE;
+    case G4_RUNTIME_QA_GALACTIC_HQ:
+        *mapHeaderID = MAP_HEADER_TEAM_GALACTIC_ETERNA_BUILDING_1F;
+        return TRUE;
+    case G4_RUNTIME_QA_MT_CORONET:
+        *mapHeaderID = MAP_HEADER_MT_CORONET_1F_SOUTH;
+        return TRUE;
+    default:
+        return FALSE;
+    }
+}
+
+static BOOL FieldTask_G4RuntimeQAWarp(FieldTask *task)
+{
+    FieldSystem *fieldSystem = FieldTask_GetFieldSystem(task);
+    G4RuntimeQAWarpData *warp = FieldTask_GetEnv(task);
+    int *state = FieldTask_GetState(task);
+
+    switch (*state) {
+    case 0:
+        FieldTask_StartMapChangeFull(
+            task,
+            warp->mapHeaderID,
+            0,
+            0,
+            0,
+            PlayerAvatar_GetFacingDir(fieldSystem->playerAvatar));
+        (*state)++;
+        break;
+    case 1:
+        gG4RuntimeQAControl.loadedMapHeader = fieldSystem->location->mapHeaderID;
+        gG4RuntimeQAControl.status = G4_RUNTIME_QA_LOADED;
+        gG4RuntimeQAControl.request = G4_RUNTIME_QA_NONE;
+        Heap_Free(warp);
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+static void FieldMap_TryStartG4RuntimeQA(FieldSystem *fieldSystem)
+{
+    enum MapHeaderID mapHeaderID;
+
+    if (gG4RuntimeQAControl.request == G4_RUNTIME_QA_NONE) {
+        return;
+    }
+
+    if (gG4RuntimeQAControl.status == G4_RUNTIME_QA_WARPING) {
+        return;
+    }
+
+    if (FieldSystem_IsRunningTask(fieldSystem) || FieldSystem_IsRunningApplication(fieldSystem)) {
+        return;
+    }
+
+    if (!FieldMap_GetG4RuntimeQAMapHeader(gG4RuntimeQAControl.request, &mapHeaderID)) {
+        gG4RuntimeQAControl.status = G4_RUNTIME_QA_REJECTED;
+        gG4RuntimeQAControl.request = G4_RUNTIME_QA_NONE;
+        return;
+    }
+
+    G4RuntimeQAWarpData *warp = Heap_AllocAtEnd(HEAP_ID_FIELD2, sizeof(G4RuntimeQAWarpData));
+    warp->mapHeaderID = mapHeaderID;
+
+    gG4RuntimeQAControl.status = G4_RUNTIME_QA_WARPING;
+    gG4RuntimeQAControl.loadedMapHeader = 0;
+    FieldSystem_CreateTask(fieldSystem, FieldTask_G4RuntimeQAWarp, warp);
+}
+#endif
 
 static BOOL FieldMap_IsDeepForest(const FieldSystem *fieldSystem)
 {
