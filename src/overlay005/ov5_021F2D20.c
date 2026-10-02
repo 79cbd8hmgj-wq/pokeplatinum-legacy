@@ -12,28 +12,6 @@
 #include "map_object.h"
 #include "map_object_move.h"
 #include "overworld_anim_manager.h"
-#include "player_avatar.h"
-
-#define FOREST_LEAF_COUNT       4
-#define FOREST_LEAF_RESOURCE_0  5
-#define FOREST_LEAF_RESOURCE_1  6
-#define FOREST_LEAF_RESOURCE_2  7
-#define FOREST_LEAF_RESET_RANGE (FX32_ONE * 80)
-
-typedef struct ForestLeafParticle {
-    Billboard *billboard;
-    VecFx32 pos;
-    fx32 velocityX;
-    fx32 velocityY;
-    fx32 velocityZ;
-    int lifetime;
-} ForestLeafParticle;
-
-typedef struct ForestLeafEmitter {
-    FieldSystem *fieldSystem;
-    FieldEffectManager *fieldEffMan;
-    ForestLeafParticle particles[FOREST_LEAF_COUNT];
-} ForestLeafEmitter;
 
 typedef struct UnkStruct_ov5_021F2D20_t {
     FieldEffectManager *unk_00;
@@ -96,20 +74,6 @@ void include_unk_ov5_02200500(void);
 
 static void ov5_021F2D4C(UnkStruct_ov5_021F2D20 *param0);
 static void ov5_021F2E2C(UnkStruct_ov5_021F2D20 *param0);
-
-static void ForestLeafEmitter_ResetParticle(ForestLeafEmitter *emitter, int index);
-static int ForestLeafEmitter_Init(OverworldAnimManager *manager, void *context);
-static void ForestLeafEmitter_Exit(OverworldAnimManager *manager, void *context);
-static void ForestLeafEmitter_Tick(OverworldAnimManager *manager, void *context);
-static void ForestLeafEmitter_Render(OverworldAnimManager *manager, void *context);
-
-static const OverworldAnimManagerFuncs sForestLeafEmitterFuncs = {
-    sizeof(ForestLeafEmitter),
-    ForestLeafEmitter_Init,
-    ForestLeafEmitter_Exit,
-    ForestLeafEmitter_Tick,
-    ForestLeafEmitter_Render
-};
 
 static const OverworldAnimManagerFuncs Unk_ov5_022004EC;
 const BillboardAnim Unk_ov5_02200540[];
@@ -517,127 +481,3 @@ static const OverworldAnimManagerFuncs Unk_ov5_02200514 = {
     ov5_021F3244,
     ov5_021F326C
 };
-
-void FieldEffect_StartForestLeaves(FieldSystem *fieldSystem)
-{
-    const VecFx32 *playerPos = PlayerAvatar_GetPos(fieldSystem->playerAvatar);
-    OverworldAnimManager *manager = FieldEffectManager_InitAnimManager(
-        fieldSystem->fieldEffMan,
-        &sForestLeafEmitterFuncs,
-        playerPos,
-        0,
-        fieldSystem,
-        0xFF);
-
-    GF_ASSERT(manager != NULL);
-}
-
-static void ForestLeafEmitter_ResetParticle(ForestLeafEmitter *emitter, int index)
-{
-    static const s8 sOffsetX[FOREST_LEAF_COUNT] = { -40, -14, 18, 42 };
-    static const s8 sOffsetZ[FOREST_LEAF_COUNT] = { -24, 26, -10, 12 };
-    static const s8 sHeight[FOREST_LEAF_COUNT] = { 30, 22, 34, 26 };
-    static const s8 sDriftX[FOREST_LEAF_COUNT] = { 1, -1, 1, -1 };
-    static const s8 sDriftZ[FOREST_LEAF_COUNT] = { 1, 1, -1, -1 };
-    const VecFx32 *playerPos = PlayerAvatar_GetPos(emitter->fieldSystem->playerAvatar);
-    ForestLeafParticle *particle = &emitter->particles[index];
-
-    particle->pos.x = playerPos->x + (FX32_ONE * sOffsetX[index]);
-    particle->pos.y = playerPos->y + (FX32_ONE * sHeight[index]);
-    particle->pos.z = playerPos->z + (FX32_ONE * sOffsetZ[index]);
-    particle->velocityX = (FX32_ONE / 16) * sDriftX[index];
-    particle->velocityY = -(FX32_ONE / 24);
-    particle->velocityZ = (FX32_ONE / 32) * sDriftZ[index];
-    particle->lifetime = 120 + (index * 24);
-
-    Billboard_SetPos(particle->billboard, &particle->pos);
-    Billboard_SetFrameNum(particle->billboard, 0);
-}
-
-static int ForestLeafEmitter_Init(OverworldAnimManager *manager, void *context)
-{
-    static const u8 sResourceIDs[FOREST_LEAF_COUNT] = {
-        FOREST_LEAF_RESOURCE_0,
-        FOREST_LEAF_RESOURCE_1,
-        FOREST_LEAF_RESOURCE_2,
-        FOREST_LEAF_RESOURCE_0
-    };
-    ForestLeafEmitter *emitter = context;
-    VecFx32 scale = {
-        (FX32_ONE * 3) / 4,
-        (FX32_ONE * 3) / 4,
-        (FX32_ONE * 3) / 4
-    };
-    const VecFx32 *playerPos;
-    int i;
-
-    emitter->fieldSystem = (FieldSystem *)OverworldAnimManager_GetUserData(manager);
-    emitter->fieldEffMan = emitter->fieldSystem->fieldEffMan;
-    playerPos = PlayerAvatar_GetPos(emitter->fieldSystem->playerAvatar);
-
-    for (i = 0; i < FOREST_LEAF_COUNT; i++) {
-        emitter->particles[i].billboard = ov5_021DF84C(
-            emitter->fieldEffMan,
-            sResourceIDs[i],
-            playerPos);
-        Billboard_SetScale(emitter->particles[i].billboard, &scale);
-        ForestLeafEmitter_ResetParticle(emitter, i);
-    }
-
-    return TRUE;
-}
-
-static void ForestLeafEmitter_Exit(OverworldAnimManager *manager, void *context)
-{
-    ForestLeafEmitter *emitter = context;
-
-    (void)manager;
-    int i;
-
-    for (i = 0; i < FOREST_LEAF_COUNT; i++) {
-        if (emitter->particles[i].billboard != NULL) {
-            Billboard_Delete(emitter->particles[i].billboard);
-            emitter->particles[i].billboard = NULL;
-        }
-    }
-}
-
-static void ForestLeafEmitter_Tick(OverworldAnimManager *manager, void *context)
-{
-    ForestLeafEmitter *emitter = context;
-
-    (void)manager;
-    const VecFx32 *playerPos = PlayerAvatar_GetPos(emitter->fieldSystem->playerAvatar);
-    int i;
-
-    for (i = 0; i < FOREST_LEAF_COUNT; i++) {
-        ForestLeafParticle *particle = &emitter->particles[i];
-
-        particle->pos.x += particle->velocityX;
-        particle->pos.y += particle->velocityY;
-        particle->pos.z += particle->velocityZ;
-        particle->lifetime--;
-
-        if (particle->lifetime <= 0
-            || particle->pos.x < playerPos->x - FOREST_LEAF_RESET_RANGE
-            || particle->pos.x > playerPos->x + FOREST_LEAF_RESET_RANGE
-            || particle->pos.z < playerPos->z - FOREST_LEAF_RESET_RANGE
-            || particle->pos.z > playerPos->z + FOREST_LEAF_RESET_RANGE) {
-            ForestLeafEmitter_ResetParticle(emitter, i);
-            continue;
-        }
-
-        if (Billboard_AdvanceAnim(particle->billboard, FX32_ONE) == TRUE) {
-            Billboard_SetFrameNum(particle->billboard, 0);
-        }
-
-        Billboard_SetPos(particle->billboard, &particle->pos);
-    }
-}
-
-static void ForestLeafEmitter_Render(OverworldAnimManager *manager, void *context)
-{
-    (void)manager;
-    (void)context;
-    return;
-}
