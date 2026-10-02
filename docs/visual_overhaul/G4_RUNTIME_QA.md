@@ -65,9 +65,10 @@ explicit override:
 
 ## Scenario workflow
 
-Place the player immediately before entering/reloading the target area, then run
-the matching scenario. Keep the emulator running; the harness owns one GDB
-session and chains temporary breakpoints in execution order.
+For normal autowarp scenarios, boot the debug ROM to any field state and run
+the matching scenario. The harness owns one GDB session, writes the requested
+debug warp into persistent ARM9 telemetry, resumes execution in bounded slices,
+and validates the resulting visual state from memory.
 
 ```bash
 python tools/visual_overhaul/runtime_g4_probe.py eterna --request-warp
@@ -98,21 +99,33 @@ There is also a `coronet-control` scenario for lighting ID 7.
 
 ## What is verified
 
-Every scenario proves at runtime that `AreaLightManager_New()` receives the
-expected archive ID, then confirms that the light manager reaches its steady
-update path.
+Autowarp scenarios use a debug-build-only telemetry block stored in ARM9 core
+memory rather than relying on breakpoints inside overlay 5. This avoids
+treating overlay-linked symbol addresses as permanently resident code.
 
-Eterna additionally proves:
+For each autowarp scenario the harness writes a request to
+`gG4RuntimeQAControl`, resumes the emulator in bounded slices, and requires:
 
-- `ForestAmbienceRenderer_New()` is selected during field-effect initialization
-- `ForestAmbienceRenderer_Task()` executes after map initialization
+- the requested map to finish field visual initialization
+- the expected area-light archive ID to be observed
+- the area-light initialization event bit to be set
 
-Spear Pillar, Distortion World, and the Mt. Coronet control additionally prove:
+Eterna additionally requires telemetry proving:
 
-- `FieldMap_ApplySpecialAreaFog()` executes
-- that path reaches `FogManager_ApplyParameters()` before continuing
+- the dedicated forest ambience renderer was constructed
+- its recurring task executed after initialization
 
-This is stronger than checking only that the modified source exists.
+Spear Pillar and the Mt. Coronet control additionally require telemetry proving:
+
+- the special-area fog branch executed
+- the fog manager received the complete fog application
+
+Distortion World remains checkpoint-driven for now because its field lifecycle
+is specialized. Legacy symbol-breakpoint probing remains available for that
+manual/checkpoint path, but it is no longer the primary autowarp mechanism.
+
+This is stronger than checking only that the modified source exists or that the
+ROM builds.
 
 ## Static contract gate
 
