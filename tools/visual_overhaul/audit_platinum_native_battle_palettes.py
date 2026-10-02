@@ -103,7 +103,7 @@ def main():
            "## Exact duplicate used-color candidates",""]
     lines += [f"- {r['species']}: {r['duplicate_pairs']}" for r in duplicates] or ["- None"]
     lines += ["","## Crowded color-ramp candidates",""]
-    lines += [f"- {r['species']}: {len(r['near_pairs'])} near-color pairs" for r in crowded] or ["- None"]
+    lines += [f"- {r['species']}: {r['near_pairs']}" for r in crowded] or ["- None"]
     lines += ["","## Low luminance-span candidates",""]
     lines += [f"- {r['species']}: span {r['luminance_span']}" for r in low] or ["- None"]
     lines += ["","## Shiny-identical candidates",""]
