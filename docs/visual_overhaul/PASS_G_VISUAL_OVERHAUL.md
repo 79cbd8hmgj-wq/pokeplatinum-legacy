@@ -1244,3 +1244,53 @@ Runtime checklist: `docs/visual_overhaul/HGSS_BATTLE_SPRITE_RUNTIME_PILOT.md`.
 
 Do not expand the remaining 23 direct-index-safe species until this pilot is
 visually checked in Delta.
+
+
+### G3 HGSS battle-sprite palette-order triage checkpoint
+
+The 41 geometry-close species that failed exact RGB palette matching were split
+again by palette-index ordering rather than being treated as one manual-conversion
+bucket.
+
+For each changed view, the audit compares the identity index mapping against the
+globally minimum-cost one-to-one RGB assignment into Platinum's retained normal
+palette.
+
+Results:
+
+- **41** palette-mismatch species examined
+- **77** changed views examined
+- **30 species** retain identity as the optimal palette-index ordering
+- **11 species** show evidence of index reordering and remain explicit conversion cases
+
+The 30 identity-order candidates can later be runtime-tested while still retaining
+Platinum's normal/shiny palettes; their RGB palettes differ, but the evidence says
+the color roles remain on the same indices.
+
+The 11 reorder-suspected species are:
+
+- Exeggcute
+- Feraligatr
+- Granbull
+- Igglybuff
+- Nidorina
+- Porygon2
+- Slowking
+- Snorlax
+- Sunflora
+- Teddiursa
+- Togetic
+
+These must not be imported without a deliberate pixel-index conversion.
+
+Current G3 battle-sprite funnel:
+
+1. **253** species with genuine HGSS art differences
+2. **69** pass conservative static frame geometry
+3. **28** are exact direct-index-safe
+4. **30 more** preserve likely index semantics despite RGB palette drift
+5. **11** geometry-close species show likely palette reordering
+6. the remaining geometry-review species stay deferred pending animation/frame work
+
+The active implementation gate remains the five-species direct-index-safe runtime
+pilot before either safe pool is expanded.
