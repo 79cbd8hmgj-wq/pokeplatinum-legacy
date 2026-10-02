@@ -1069,6 +1069,21 @@ No particle resources, sounds, timing, battler motion, backgrounds, or donor ass
 
 
 
+
+### G5 legacy heavy-contact staging checkpoint
+
+The selective physical-impact pass now also covers:
+
+- Volt Tackle — heavy base-arena reaction at the collision
+- Double-Edge — separate arena collision beneath the attacker/defender motion
+- Megahorn — heavy arena response beneath the existing dedicated-background impact
+- Meteor Mash — restrained arena jolt beneath the white-flash hit
+- Cross Chop — compact arena response appropriate to its lower presentation tier
+
+These changes preserve all particles, sounds, timing, battler movement, backgrounds, and gameplay
+logic. The governing rule remains proportionality: scene-wide arena motion is reserved for moves
+whose native animation already implies a major collision.
+
 ### G5 legacy ultimate/signature staging checkpoint
 
 A final high-power signature sweep extends the established base-arena reaction language without
