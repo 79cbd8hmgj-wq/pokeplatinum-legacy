@@ -844,11 +844,15 @@ changing sprite geometry or battle logic.
 Added reproducible generator:
 - `tools/visual_overhaul/generate_battle_terrain.py`
 
-First-pass terrain families:
+Current terrain families:
 - grass — refreshed day/evening/night palettes with stronger time-of-day separation
 - cave — cooler slate/indigo depth and less flat gray
 - ice — cleaner cyan/blue-white highlights with stronger cold contrast
 - Distortion World — shifted the retail muted rose family toward a more deliberate violet/magenta identity
+- path — stronger earth/vegetation separation across day/evening/night
+- path puddles — path treatment plus clearer reflected-sky/water color identity
+- snow — colder blue-white daytime values, lavender sunset separation, and deeper blue-violet nights
+- water — clearer cyan daytime depth, sunset coral-to-wine progression, and a deeper indigo night ramp
 
 Resource-contract invariants:
 - all terrain sprite PNG geometry is unchanged
@@ -857,8 +861,9 @@ Resource-contract invariants:
 - archive ordering is unchanged
 - only 16-color JASC palette source data changed
 
-This is the opening G5 background/staging batch. Later terrain families should follow only
-after this batch clears ordinary ROM build/resource validation.
+This is the opening G5 background/staging sequence. Remaining natural and special arenas
+will follow under the same palette-only contract while ordinary ROM build/resource
+validation stays green.
 
 ### G6 — Showcase areas
 Primary quality benchmarks:
