@@ -375,7 +375,6 @@ pokeplatinum_c = files(
     'overlay005/ov5_021DDAE4.c',
     'overlay005/encounter_effect.c',
     'overlay005/field_effect_manager.c',
-    'overlay005/forest_ambient_effects.c',
     'overlay005/ov5_021DFB54.c',
     'overlay005/ov5_021E1154.c',
     'overlay005/ov5_021E135C.c',
