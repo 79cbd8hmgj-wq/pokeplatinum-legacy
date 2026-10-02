@@ -9,6 +9,8 @@
 #include "constants/field/map_load.h"
 #include "constants/heap.h"
 
+#include "generated/map_headers.h"
+
 #include "field/field_system.h"
 #include "field/field_system_sub2_decl.h"
 #include "field/field_system_sub2_t.h"
@@ -826,12 +828,14 @@ static void ov5_021D1878(FieldSystem *fieldSystem)
 
         if (fieldSystem->mapLoadType == MAP_LOAD_TYPE_UNDERGROUND) {
             v1 = sUndergroundFieldEffectRenderers;
+        } else if (FieldMap_InDistortionWorld(fieldSystem) == TRUE) {
+            v1 = sDistWorldFieldEffectRenderers;
+        } else if (fieldSystem->location->mapHeaderID == MAP_HEADER_ETERNA_FOREST
+            || fieldSystem->location->mapHeaderID == MAP_HEADER_FULLMOON_ISLAND_FOREST
+            || fieldSystem->location->mapHeaderID == MAP_HEADER_NEWMOON_ISLAND_FOREST) {
+            v1 = sForestFieldEffectRenderers;
         } else {
-            if (FieldMap_InDistortionWorld(fieldSystem) == TRUE) {
-                v1 = sDistWorldFieldEffectRenderers;
-            } else {
-                v1 = sDefaultFieldEffectRenderers;
-            }
+            v1 = sDefaultFieldEffectRenderers;
         }
 
         FieldEffectManager_InitRenderers(fieldSystem->fieldEffMan, v1);
