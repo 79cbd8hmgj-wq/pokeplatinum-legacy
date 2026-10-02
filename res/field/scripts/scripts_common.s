@@ -83,6 +83,8 @@
     ScriptEntry CommonScript_SetLookerBGM @ 0x807
     ScriptEntry CommonScript_FadeToDefaultMusic @ 0x808
     ScriptEntry CommonScript_GriseousOrbCouldNotBeRemoved @ 0x809
+    ScriptEntry CommonScript_GiveFrontierPrintBP @ 0x80A
+    ScriptEntry CommonScript_ProcessFrontierPrintRewards @ 0x80B
     ScriptEntryEnd
 
 CommonScript_Dummy2010:
@@ -1682,6 +1684,80 @@ CommonScript_CheckObtainedAllGoldPrints:
 CommonScript_CheckObtainedAllGoldPrintsEnd:
     ReturnCommonScript
     End
+
+CommonScript_GiveFrontierPrintBP:
+    Call CommonScript_GiveFrontierPrintBPInline
+    ReturnCommonScript
+    End
+
+@ D6: all-print milestone rewards. Safe to call repeatedly: the BP and item halves have separate one-time flags,
+@ and each flag is set only after that half was actually granted, so a full Bag leaves the item claimable.
+CommonScript_ProcessFrontierPrintRewards:
+    Call CommonScript_TryFrontierAllSilverReward
+    Call CommonScript_TryFrontierAllGoldReward
+    ReturnCommonScript
+    End
+
+CommonScript_TryFrontierAllSilverReward:
+    GoToIfSet FLAG_RECEIVED_FRONTIER_ALL_SILVER_PP_MAX, CommonScript_FrontierRewardDone
+    GoToIfLt VAR_BATTLE_TOWER_PRINT_STATE, 2, CommonScript_FrontierRewardDone
+    GoToIfLt VAR_BATTLE_FACTORY_PRINT_STATE, 2, CommonScript_FrontierRewardDone
+    GoToIfLt VAR_BATTLE_HALL_PRINT_STATE, 2, CommonScript_FrontierRewardDone
+    GoToIfLt VAR_BATTLE_CASTLE_PRINT_STATE, 2, CommonScript_FrontierRewardDone
+    GoToIfLt VAR_BATTLE_ARCADE_PRINT_STATE, 2, CommonScript_FrontierRewardDone
+    GoToIfSet FLAG_RECEIVED_FRONTIER_ALL_SILVER_BP, CommonScript_GiveFrontierAllSilverItem
+    SetVar VAR_0x8004, 50
+    Call CommonScript_GiveFrontierPrintBPInline
+    SetFlag FLAG_RECEIVED_FRONTIER_ALL_SILVER_BP
+CommonScript_GiveFrontierAllSilverItem:
+    CanFitItem ITEM_PP_MAX, 1, VAR_RESULT
+    GoToIfEq VAR_RESULT, FALSE, CommonScript_FrontierRewardBagFull
+    SetVar VAR_0x8004, ITEM_PP_MAX
+    SetVar VAR_0x8005, 1
+    Call CommonScript_InternalAddItemQuantity
+    SetFlag FLAG_RECEIVED_FRONTIER_ALL_SILVER_PP_MAX
+    WaitButton
+    CloseMessage
+    Return
+
+CommonScript_TryFrontierAllGoldReward:
+    GoToIfSet FLAG_RECEIVED_FRONTIER_ALL_GOLD_MASTER_BALL, CommonScript_FrontierRewardDone
+    GoToIfNe VAR_BATTLE_TOWER_PRINT_STATE, 4, CommonScript_FrontierRewardDone
+    GoToIfNe VAR_BATTLE_FACTORY_PRINT_STATE, 4, CommonScript_FrontierRewardDone
+    GoToIfNe VAR_BATTLE_HALL_PRINT_STATE, 4, CommonScript_FrontierRewardDone
+    GoToIfNe VAR_BATTLE_CASTLE_PRINT_STATE, 4, CommonScript_FrontierRewardDone
+    GoToIfNe VAR_BATTLE_ARCADE_PRINT_STATE, 4, CommonScript_FrontierRewardDone
+    GoToIfSet FLAG_RECEIVED_FRONTIER_ALL_GOLD_BP, CommonScript_GiveFrontierAllGoldItem
+    SetVar VAR_0x8004, 100
+    Call CommonScript_GiveFrontierPrintBPInline
+    SetFlag FLAG_RECEIVED_FRONTIER_ALL_GOLD_BP
+CommonScript_GiveFrontierAllGoldItem:
+    CanFitItem ITEM_MASTER_BALL, 1, VAR_RESULT
+    GoToIfEq VAR_RESULT, FALSE, CommonScript_FrontierRewardBagFull
+    SetVar VAR_0x8004, ITEM_MASTER_BALL
+    SetVar VAR_0x8005, 1
+    Call CommonScript_InternalAddItemQuantity
+    SetFlag FLAG_RECEIVED_FRONTIER_ALL_GOLD_MASTER_BALL
+    WaitButton
+    CloseMessage
+    Return
+
+CommonScript_GiveFrontierPrintBPInline:
+    GiveBattlePoints VAR_0x8004
+    BufferNumber 0, VAR_0x8004
+    Message CommonStrings_Text_FrontierPrintBPReceived
+    PlayFanfare SEQ_PL_POINTGET3
+    WaitFanfare
+    Return
+
+CommonScript_FrontierRewardBagFull:
+    Message CommonStrings_Text_FrontierRewardBagFull
+    WaitButton
+    CloseMessage
+    Return
+
+CommonScript_FrontierRewardDone:
+    Return
 
 CommonScript_GriseousOrbCouldNotBeRemoved:
     Message CommonStrings_Text_GriseousOrbCouldNotBeRemoved

@@ -364,7 +364,7 @@ u16 BattleHall_GetEarnedBP(BattleHall *battleHall)
         bp = 12;
     }
 
-    return bp;
+    return bp * FRONTIER_BP_PAYOUT_MULTIPLIER;
 }
 
 static u16 BattleHall_LoadTypeRanks(SaveData *saveData, u8 challengeType, u8 type, u16 *type1Rank, u16 *type2Rank)

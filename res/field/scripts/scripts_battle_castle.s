@@ -75,6 +75,7 @@ BattleCastle_ExplainChallenge:
     End
 
 BattleCastle_EndChallenge:
+    Common_ProcessFrontierPrintRewards
     GoTo BattleCastle_HopeToSeeYouAgain
     End
 
@@ -482,6 +483,9 @@ BattleCastle_EarnedSilverPrint:
     PlayFanfare SEQ_FANFA4
     WaitFanfare
     SetVar VAR_BATTLE_CASTLE_PRINT_STATE, 2
+    SetVar VAR_0x8004, 10
+    Common_GiveFrontierPrintBP
+    Common_ProcessFrontierPrintRewards
     Return
 
 BattleCastle_EarnedGoldPrint:
@@ -491,7 +495,10 @@ BattleCastle_EarnedGoldPrint:
     PlayFanfare SEQ_FANFA4
     WaitFanfare
     SetVar VAR_BATTLE_CASTLE_PRINT_STATE, 4
+    SetVar VAR_0x8004, 30
+    Common_GiveFrontierPrintBP
     Common_CheckAllFrontierGoldPrintsObtained
+    Common_ProcessFrontierPrintRewards
     Return
 
 BattleCastle_OnFrame_ChallengeEnded:

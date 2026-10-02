@@ -3,6 +3,7 @@
 #include <nitro.h>
 #include <string.h>
 
+#include "constants/battle_frontier.h"
 #include "constants/battle_tower.h"
 #include "generated/battle_tower_modes.h"
 #include "generated/frontier_trainers.h"
@@ -783,6 +784,7 @@ u16 BattleTower_GiveBattlePointsReward(BattleTower *battleTower)
         }
     }
 
+    battlePoints *= FRONTIER_BP_PAYOUT_MULTIPLIER;
     WifiBattleTowerRecord_UpdateBattlePoints(battleTower->unk_74, battlePoints, BATTLE_POINTS_FUNC_ADD);
     return battlePoints;
 }

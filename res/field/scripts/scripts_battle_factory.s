@@ -75,6 +75,7 @@ BattleFactory_ExplainChallenge:
     End
 
 BattleFactory_EndChallenge:
+    Common_ProcessFrontierPrintRewards
     GoTo BattleFactory_HopeToSeeYouAgain
     End
 
@@ -439,6 +440,9 @@ BattleFactory_EarnedSilverPrint:
     PlayFanfare SEQ_FANFA4
     WaitFanfare
     SetVar VAR_BATTLE_FACTORY_PRINT_STATE, 2
+    SetVar VAR_0x8004, 10
+    Common_GiveFrontierPrintBP
+    Common_ProcessFrontierPrintRewards
     Return
 
 BattleFactory_EarnedGoldPrint:
@@ -448,7 +452,10 @@ BattleFactory_EarnedGoldPrint:
     PlayFanfare SEQ_FANFA4
     WaitFanfare
     SetVar VAR_BATTLE_FACTORY_PRINT_STATE, 4
+    SetVar VAR_0x8004, 30
+    Common_GiveFrontierPrintBP
     Common_CheckAllFrontierGoldPrintsObtained
+    Common_ProcessFrontierPrintRewards
     Return
 
 BattleFactory_OnFrame_ChallengeEnded:

@@ -1,0 +1,141 @@
+{
+  "schema": "frontier_rewards/1",
+  "start_sha": "98f9cbdf43f9a8ef4c04c3f80e7ee0b6d9482638",
+  "multiplier_constant": {
+    "source_path": "include/constants/battle_frontier.h",
+    "name": "FRONTIER_BP_PAYOUT_MULTIPLIER",
+    "before": "(undefined)",
+    "target": 2,
+    "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s3, s14; implementation plan F1",
+    "guard": "define value is exactly 2"
+  },
+  "payout_points": [
+    {
+      "facility_path": "tower",
+      "source_path": "src/unk_02049D08.c",
+      "function": "BattleTower_GiveBattlePointsReward",
+      "before": "WifiBattleTowerRecord_UpdateBattlePoints(battleTower->unk_74, battlePoints, BATTLE_POINTS_FUNC_ADD);",
+      "target": "battlePoints *= FRONTIER_BP_PAYOUT_MULTIPLIER;",
+      "multiplier": 2,
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s3, s14; implementation plan F1",
+      "guard": "target appears exactly once in the file; base tables identical to start SHA",
+      "covers": "ordinary round, wifi/link-multi ranks, Palmer Silver/Gold (20 BP base) - all pass through this single credit point"
+    },
+    {
+      "facility_path": "factory",
+      "source_path": "src/overlay104/ov104_022339B4.c",
+      "function": "ov104_022347F8",
+      "before": "return v0;",
+      "target": "return v0 * FRONTIER_BP_PAYOUT_MULTIPLIER;",
+      "multiplier": 2,
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s3, s14; implementation plan F1",
+      "guard": "target appears exactly once in the file; base tables identical to start SHA",
+      "covers": "ordinary round and Thorton Silver/Gold (20 BP base); script GiveBattlePoints credits the returned value"
+    },
+    {
+      "facility_path": "castle",
+      "source_path": "src/overlay104/battle_castle.c",
+      "function": "BattleCastle_GetEarnedBP",
+      "before": "return bp;",
+      "target": "return bp * FRONTIER_BP_PAYOUT_MULTIPLIER;",
+      "multiplier": 2,
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s3, s14; implementation plan F1",
+      "guard": "target appears exactly once in the file; base tables identical to start SHA",
+      "covers": "ordinary round and Darach Silver/Gold; Castle Points are a separate currency and are not touched"
+    },
+    {
+      "facility_path": "hall_round",
+      "source_path": "src/overlay104/battle_hall.c",
+      "function": "BattleHall_GetEarnedBP",
+      "before": "return bp;",
+      "target": "return bp * FRONTIER_BP_PAYOUT_MULTIPLIER;",
+      "multiplier": 2,
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s3, s14; implementation plan F1",
+      "guard": "target appears exactly once in the file; base tables identical to start SHA",
+      "covers": "ordinary Hall round and Argenta Silver/Gold"
+    },
+    {
+      "facility_path": "arcade_round",
+      "source_path": "src/overlay104/battle_arcade.c",
+      "function": "BattleArcade_GetEarnedBP",
+      "before": "return bp;",
+      "target": "return bp * FRONTIER_BP_PAYOUT_MULTIPLIER;",
+      "multiplier": 2,
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s3, s14; implementation plan F1",
+      "guard": "target appears exactly once in the file; base tables identical to start SHA",
+      "covers": "ordinary round and Dahlia Silver/Gold"
+    },
+    {
+      "facility_path": "arcade_roulette",
+      "source_path": "src/overlay104/battle_arcade_helpers.c",
+      "function": "BattleArcade_GetFreeBPFromEvent",
+      "before": "return bp;",
+      "target": "return bp * FRONTIER_BP_PAYOUT_MULTIPLIER;",
+      "multiplier": 2,
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s3, s14; implementation plan F1",
+      "guard": "target appears exactly once in the file; base tables identical to start SHA",
+      "covers": "Arcade roulette +1 BP / +3 BP events (base 1 -> 2, 3 -> 6 in round 1-3 tier; higher tiers scale likewise)"
+    },
+    {
+      "facility_path": "hall_record_keeper",
+      "source_path": "src/scrcmd_battle_hall.c",
+      "function": "ScrCmd_GetBattleHallRecordKeeperStats",
+      "before": "(no multiplier)",
+      "target": "earnedBP *= FRONTIER_BP_PAYOUT_MULTIPLIER;",
+      "multiplier": 2,
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s3, s14; implementation plan F1",
+      "guard": "target appears exactly once in the file; base tables identical to start SHA",
+      "covers": "Battle Hall record-keeper win-total milestones are Battle Hall BP awards and are doubled once at the credit point"
+    }
+  ],
+  "unchanged_unmultiplied_credit_paths": [
+    {
+      "source_path": "src/unk_020494DC.c",
+      "function": "ScrCmd_GiveBattlePoints",
+      "note": "field-script GiveBattlePoints (print milestone bonuses use this path and must stay 1x)"
+    },
+    {
+      "source_path": "src/overlay104/frscrcmd.c",
+      "function": "FrontierScrCmd_GiveBattlePoints",
+      "note": "frontier-script credit of values already doubled at their source"
+    }
+  ],
+  "unchanged_base_tables": [
+    {
+      "source_path": "src/overlay104/battle_castle.c",
+      "symbol": "sBPPerRoundSolo",
+      "label": "castle BP table"
+    },
+    {
+      "source_path": "src/overlay104/battle_hall.c",
+      "symbol": "sBPPerRoundSolo",
+      "label": "hall BP table"
+    },
+    {
+      "source_path": "src/overlay104/battle_arcade.c",
+      "symbol": "sBPPerRoundSolo",
+      "label": "arcade BP table"
+    },
+    {
+      "source_path": "src/overlay104/battle_arcade_helpers.c",
+      "symbol": "sBonus1BP",
+      "label": "arcade +1 BP table"
+    },
+    {
+      "source_path": "src/overlay104/battle_arcade_helpers.c",
+      "symbol": "sBonus3BP",
+      "label": "arcade +3 BP table"
+    }
+  ],
+  "castle_points": {
+    "altered": false,
+    "note": "no Castle Point (CP) code was touched; BattleCastle_GetEarnedBP is the only Castle edit"
+  },
+  "milestones_unchanged": {
+    "HALL_STREAK_SILVER_BATTLE": 50,
+    "HALL_STREAK_GOLD_BATTLE": 170,
+    "CASTLE_STREAK_SILVER_BATTLE": 21,
+    "CASTLE_STREAK_GOLD_BATTLE": 49
+  },
+  "milestones_note": "Tower/Factory/Castle/Arcade streak 21/49 and Hall battle 50/170 are untouched; Tower/Factory/Arcade use literal 21/49 in their own files."
+}

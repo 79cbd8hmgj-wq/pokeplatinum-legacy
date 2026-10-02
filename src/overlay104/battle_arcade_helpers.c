@@ -305,7 +305,7 @@ u16 BattleArcade_GetFreeBPFromEvent(BattleArcade *battleArcade, u8 activeEffect)
         }
     }
 
-    return bp;
+    return bp * FRONTIER_BP_PAYOUT_MULTIPLIER;
 }
 
 static u16 BattleArcade_GetAIMask(BattleArcade *battleArcade)

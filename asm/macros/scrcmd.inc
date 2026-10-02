@@ -5361,6 +5361,14 @@
     CallCommonScript 0x809
     .endm
 
+    .macro Common_GiveFrontierPrintBP
+    CallCommonScript 0x80A
+    .endm
+
+    .macro Common_ProcessFrontierPrintRewards
+    CallCommonScript 0x80B
+    .endm
+
     .text
     .globl _start
 _start:

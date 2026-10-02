@@ -181,11 +181,18 @@ def party_hash(data: dict) -> str:
     return hashlib.sha256(json.dumps(data["party"], sort_keys=True).encode()).hexdigest()[:16]
 
 
-def frontier_fingerprint() -> str:
+def frontier_fingerprint(overrides: dict | None = None) -> str:
+    """Fingerprint of res/trainers/frontier.  `overrides` maps repo-relative paths to replacement bytes (used to
+    compare against the D1 inventory while ignoring the D6-manifested Frontier set corrections)."""
+    overrides = overrides or {}
     h = hashlib.sha256()
     for path in sorted(glob.glob(p(FRONTIER_DIR, "**", "*"), recursive=True)):
         if os.path.isfile(path):
-            h.update(os.path.relpath(path, ROOT).encode())
+            rel = os.path.relpath(path, ROOT)
+            h.update(rel.encode())
+            if rel in overrides:
+                h.update(overrides[rel])
+                continue
             with open(path, "rb") as f:
                 h.update(f.read())
     return h.hexdigest()

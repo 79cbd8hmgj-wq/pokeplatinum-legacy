@@ -1,0 +1,126 @@
+{
+  "schema": "print_rewards/1",
+  "start_sha": "98f9cbdf43f9a8ef4c04c3f80e7ee0b6d9482638",
+  "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s13; plan F8",
+  "new_flags": [
+    {
+      "source_path": "generated/vars_flags.txt",
+      "before": "FLAG_UNUSED_0x02D2",
+      "target": "FLAG_RECEIVED_FRONTIER_ALL_SILVER_BP"
+    },
+    {
+      "source_path": "generated/vars_flags.txt",
+      "before": "FLAG_UNUSED_0x02D3",
+      "target": "FLAG_RECEIVED_FRONTIER_ALL_SILVER_PP_MAX"
+    },
+    {
+      "source_path": "generated/vars_flags.txt",
+      "before": "FLAG_UNUSED_0x02D4",
+      "target": "FLAG_RECEIVED_FRONTIER_ALL_GOLD_BP"
+    },
+    {
+      "source_path": "generated/vars_flags.txt",
+      "before": "FLAG_UNUSED_0x02D5",
+      "target": "FLAG_RECEIVED_FRONTIER_ALL_GOLD_MASTER_BALL"
+    }
+  ],
+  "per_facility": [
+    {
+      "facility": "tower",
+      "source_path": "res/field/scripts/scripts_battle_tower.s",
+      "state_var": "VAR_BATTLE_TOWER_PRINT_STATE",
+      "silver": {
+        "transition": "1->2",
+        "bp": 10
+      },
+      "gold": {
+        "transition": "3->4",
+        "bp": 30
+      },
+      "guard": "the print-state transition itself is the one-time guard; the claim routine only runs while the state is 1 or 3"
+    },
+    {
+      "facility": "factory",
+      "source_path": "res/field/scripts/scripts_battle_factory.s",
+      "state_var": "VAR_BATTLE_FACTORY_PRINT_STATE",
+      "silver": {
+        "transition": "1->2",
+        "bp": 10
+      },
+      "gold": {
+        "transition": "3->4",
+        "bp": 30
+      },
+      "guard": "the print-state transition itself is the one-time guard; the claim routine only runs while the state is 1 or 3"
+    },
+    {
+      "facility": "castle",
+      "source_path": "res/field/scripts/scripts_battle_castle.s",
+      "state_var": "VAR_BATTLE_CASTLE_PRINT_STATE",
+      "silver": {
+        "transition": "1->2",
+        "bp": 10
+      },
+      "gold": {
+        "transition": "3->4",
+        "bp": 30
+      },
+      "guard": "the print-state transition itself is the one-time guard; the claim routine only runs while the state is 1 or 3"
+    },
+    {
+      "facility": "hall",
+      "source_path": "res/field/scripts/scripts_battle_hall.s",
+      "state_var": "VAR_BATTLE_HALL_PRINT_STATE",
+      "silver": {
+        "transition": "1->2",
+        "bp": 10
+      },
+      "gold": {
+        "transition": "3->4",
+        "bp": 30
+      },
+      "guard": "the print-state transition itself is the one-time guard; the claim routine only runs while the state is 1 or 3"
+    },
+    {
+      "facility": "arcade",
+      "source_path": "res/field/scripts/scripts_battle_arcade.s",
+      "state_var": "VAR_BATTLE_ARCADE_PRINT_STATE",
+      "silver": {
+        "transition": "1->2",
+        "bp": 10
+      },
+      "gold": {
+        "transition": "3->4",
+        "bp": 30
+      },
+      "guard": "the print-state transition itself is the one-time guard; the claim routine only runs while the state is 1 or 3"
+    }
+  ],
+  "all_prints": {
+    "source_path": "res/field/scripts/scripts_common.s",
+    "entry": "CommonScript_ProcessFrontierPrintRewards (0x80B)",
+    "silver": {
+      "requires": "all five print states >= 2",
+      "bp": 50,
+      "item": "ITEM_PP_MAX",
+      "bp_flag": "FLAG_RECEIVED_FRONTIER_ALL_SILVER_BP",
+      "item_flag": "FLAG_RECEIVED_FRONTIER_ALL_SILVER_PP_MAX"
+    },
+    "gold": {
+      "requires": "all five print states == 4",
+      "bp": 100,
+      "item": "ITEM_MASTER_BALL",
+      "bp_flag": "FLAG_RECEIVED_FRONTIER_ALL_GOLD_BP",
+      "item_flag": "FLAG_RECEIVED_FRONTIER_ALL_GOLD_MASTER_BALL"
+    },
+    "full_bag": "CanFitItem is checked first; on failure the BP half stays granted (its own flag), the item flag stays clear, and the routine is re-run at every facility print claim, facility end-of-challenge, and Tower end-of-challenge",
+    "guard": "the item flag is set only after AddItem succeeded; each half has its own flag so neither can be granted twice"
+  },
+  "text": {
+    "source_path": "res/text/common_strings.json",
+    "added": [
+      "CommonStrings_Text_FrontierPrintBPReceived",
+      "CommonStrings_Text_FrontierRewardBagFull"
+    ]
+  }
+}

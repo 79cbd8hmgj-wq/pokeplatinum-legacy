@@ -987,6 +987,7 @@ _10AE:
     End
 
 _10BC:
+    Common_ProcessFrontierPrintRewards
     Message BattleTower_Text_SavingDontTurnOffPower
     Call BattleTower_TrySaveGame
     ScrCmd_1DF VAR_RESULT
@@ -1017,6 +1018,9 @@ _1135:
     PlayFanfare SEQ_FANFA4
     WaitFanfare
     SetVar VAR_BATTLE_TOWER_PRINT_STATE, 2
+    SetVar VAR_0x8004, 10
+    Common_GiveFrontierPrintBP
+    Common_ProcessFrontierPrintRewards
     Return
 
 _114C:
@@ -1026,7 +1030,10 @@ _114C:
     PlayFanfare SEQ_FANFA4
     WaitFanfare
     SetVar VAR_BATTLE_TOWER_PRINT_STATE, 4
+    SetVar VAR_0x8004, 30
+    Common_GiveFrontierPrintBP
     Common_CheckAllFrontierGoldPrintsObtained
+    Common_ProcessFrontierPrintRewards
     Return
 
 BattleTower_BeatenAllSevenTrainers:

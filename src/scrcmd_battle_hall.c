@@ -507,6 +507,8 @@ BOOL ScrCmd_GetBattleHallRecordKeeperStats(ScriptContext *ctx)
         }
     }
 
+    earnedBP *= FRONTIER_BP_PAYOUT_MULTIPLIER;
+
     GameRecords_AddToRecordValue(SaveData_GetGameRecords(ctx->fieldSystem->saveData), RECORD_BATTLE_POINTS_RECEIVED, earnedBP);
 
     if (earnedBP != 0) {

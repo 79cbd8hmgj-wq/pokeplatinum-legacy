@@ -6785,11 +6785,25 @@ BOOL ScrCmd_GetRandomBattlegroundTrainers(ScriptContext *ctx)
     u16 *destVar3 = ScriptContext_GetVarPointer(ctx);
     u16 *destVar4 = ScriptContext_GetVarPointer(ctx);
 
+    // D6: the destination variables still hold the previous group, so the first leader slot can cheaply avoid repeating it
+    // when the proprietor reshuffles (best effort only).
+    u16 previousTrainers[] = { *destVar1, *destVar2, *destVar3, *destVar4 };
+
     *destVar1 = BATTLEGROUND_TRAINER_NONE;
     *destVar2 = BATTLEGROUND_TRAINER_NONE;
     *destVar3 = BATTLEGROUND_TRAINER_NONE;
     *destVar4 = BATTLEGROUND_TRAINER_NONE;
-    u16 trainer1ID = LCRNG_Next() % NELEMS(sBattlegroundGymLeaders);
+    u16 trainer1ID;
+    u8 tries = 0;
+
+    do {
+        trainer1ID = LCRNG_Next() % NELEMS(sBattlegroundGymLeaders);
+        tries++;
+    } while (tries < 8
+        && (sBattlegroundGymLeaders[trainer1ID] == previousTrainers[0]
+            || sBattlegroundGymLeaders[trainer1ID] == previousTrainers[1]
+            || sBattlegroundGymLeaders[trainer1ID] == previousTrainers[2]));
+
     *destVar1 = sBattlegroundGymLeaders[trainer1ID];
 
     u16 trainer2ID = GetRandomBattlegroundGymLeaderID(trainer1ID, BATTLEGROUND_TRAINER_NONE, BATTLEGROUND_TRAINER_NONE, BATTLEGROUND_TRAINER_NONE);

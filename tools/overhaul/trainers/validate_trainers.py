@@ -129,6 +129,9 @@ def check_manifest(res: Result, man: dict, data: dict, use_git: bool) -> None:
                     res.err(f"{e['id']}: non-party field '{k}' changed (manifest only authorizes party edits)")
             if party_hash(base) != e["before"]["party_hash"]:
                 res.err(f"{e['id']}: manifest before-hash does not match base commit")
+    # D6 (Battle Frontier) corrected a manifested list of Frontier sets; those are the only allowed Frontier edits.
+    d6_path = os.path.join(ROOT, "docs/overhaul/implementation/postgame/frontier_set_changes.json")
+    d6_frontier = {c["source_path"] for c in json.load(open(d6_path))["changes"]} if os.path.exists(d6_path) else set()
     if use_git:
         changed = git_lines("diff", "--name-only", BASE_COMMIT, "--", TRAINER_DIR)
         changed += git_lines("ls-files", "--others", "--exclude-standard", "--", TRAINER_DIR)
@@ -139,8 +142,10 @@ def check_manifest(res: Result, man: dict, data: dict, use_git: bool) -> None:
         fr = git_lines("diff", "--name-only", BASE_COMMIT, "--", FRONTIER_DIR) + git_lines("ls-files", "--others", "--exclude-standard",
                                                                                             "--", FRONTIER_DIR)
         for rel in fr:
-            res.err(f"Frontier file modified: {rel}")
-    if frontier_fingerprint() != man["inventory"]["frontier"]["fingerprint_sha256"]:
+            if rel not in d6_frontier:
+                res.err(f"Frontier file modified: {rel}")
+    base_bytes = {rel: subprocess.check_output(["git", "show", f"{BASE_COMMIT}:{rel}"], cwd=ROOT) for rel in d6_frontier} if use_git else {}
+    if frontier_fingerprint(base_bytes) != man["inventory"]["frontier"]["fingerprint_sha256"]:
         res.err("Frontier fingerprint differs from the manifest inventory")
 
 

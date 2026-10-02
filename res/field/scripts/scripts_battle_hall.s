@@ -209,6 +209,7 @@ BattleHall_ExplainChallenge:
     End
 
 BattleHall_EndChallenge:
+    Common_ProcessFrontierPrintRewards
     GoTo BattleHall_HopeToSeeYouAgain
     End
 
@@ -611,6 +612,9 @@ BattleHall_EarnedSilverPrint:
     PlayFanfare SEQ_FANFA4
     WaitFanfare
     SetVar VAR_BATTLE_HALL_PRINT_STATE, 2
+    SetVar VAR_0x8004, 10
+    Common_GiveFrontierPrintBP
+    Common_ProcessFrontierPrintRewards
     Return
 
 BattleHall_EarnedGoldPrint:
@@ -620,7 +624,10 @@ BattleHall_EarnedGoldPrint:
     PlayFanfare SEQ_FANFA4
     WaitFanfare
     SetVar VAR_BATTLE_HALL_PRINT_STATE, 4
+    SetVar VAR_0x8004, 30
+    Common_GiveFrontierPrintBP
     Common_CheckAllFrontierGoldPrintsObtained
+    Common_ProcessFrontierPrintRewards
     Return
 
 BattleHall_OnFrame_ChallengeEnded:

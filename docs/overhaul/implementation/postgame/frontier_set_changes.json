@@ -1,0 +1,557 @@
+{
+  "schema": "frontier_set_changes/1",
+  "start_sha": "98f9cbdf43f9a8ef4c04c3f80e7ee0b6d9482638",
+  "brain_edits": 0,
+  "brain_note": "F4: the Silver/Gold Brain sets (Palmer, Dahlia, Darach) were audited separately; no overhaul-caused conflict was found. Thorton and Argenta use rental/type-pool formats with no fixed sets.",
+  "changes": [
+    {
+      "source_path": "res/trainers/frontier/pokemon/farfetchd_1.json",
+      "field": "moves",
+      "before": [
+        "MOVE_SLASH",
+        "MOVE_AIR_CUTTER",
+        "MOVE_KNOCK_OFF",
+        "MOVE_SWORDS_DANCE"
+      ],
+      "target": [
+        "MOVE_SLASH",
+        "MOVE_CLOSE_COMBAT",
+        "MOVE_KNOCK_OFF",
+        "MOVE_SWORDS_DANCE"
+      ],
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s5; implementation plan F3; spec s5 retyped Pokemon",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "RETYPE: Fighting/Flying Farfetch'd had no Fighting move"
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/raichu_1.json",
+      "field": "moves",
+      "before": [
+        "MOVE_THUNDER_PUNCH",
+        "MOVE_IRON_TAIL",
+        "MOVE_SLAM",
+        "MOVE_QUICK_ATTACK"
+      ],
+      "target": [
+        "MOVE_THUNDERBOLT",
+        "MOVE_FLASH_CANNON",
+        "MOVE_GRASS_KNOT",
+        "MOVE_QUICK_ATTACK"
+      ],
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s5; implementation plan F3; spec s5 redistributed stats; Electric/Steel Raichu",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "STAT: all-physical set on Atk 70 / SpA 100 Raichu; keeps Steel STAB via Flash Cannon",
+      "nature": {
+        "before": "NATURE_ADAMANT",
+        "target": "NATURE_MODEST"
+      }
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/raichu_2.json",
+      "field": "moves",
+      "before": [
+        "MOVE_THUNDER_PUNCH",
+        "MOVE_FOCUS_PUNCH",
+        "MOVE_SWEET_KISS",
+        "MOVE_THUNDER_WAVE"
+      ],
+      "target": [
+        "MOVE_THUNDER",
+        "MOVE_FOCUS_BLAST",
+        "MOVE_SWEET_KISS",
+        "MOVE_THUNDER_WAVE"
+      ],
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s5; implementation plan F3; spec s5 redistributed stats",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "STAT: all-physical set on Atk 70 / SpA 100 Raichu",
+      "nature": {
+        "before": "NATURE_JOLLY",
+        "target": "NATURE_TIMID"
+      }
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/raichu_4.json",
+      "field": "moves",
+      "before": [
+        "MOVE_VOLT_TACKLE",
+        "MOVE_RETURN",
+        "MOVE_BRICK_BREAK",
+        "MOVE_THUNDER_WAVE"
+      ],
+      "target": [
+        "MOVE_VOLT_TACKLE",
+        "MOVE_FLASH_CANNON",
+        "MOVE_BRICK_BREAK",
+        "MOVE_THUNDER_WAVE"
+      ],
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s5; implementation plan F3; spec s5 redistributed stats; Electric/Steel Raichu",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "STAT: all-physical set on Atk 70 / SpA 100 Raichu; adds Steel STAB",
+      "nature": {
+        "before": "NATURE_ADAMANT",
+        "target": "NATURE_HARDY"
+      }
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/glalie_3.json",
+      "field": "moves",
+      "before": [
+        "MOVE_ICE_BEAM",
+        "MOVE_SHADOW_BALL",
+        "MOVE_SIGNAL_BEAM",
+        "MOVE_WATER_PULSE"
+      ],
+      "target": [
+        "MOVE_FROST_RUSH",
+        "MOVE_SHADOW_BALL",
+        "MOVE_IRON_HEAD",
+        "MOVE_ICE_BEAM"
+      ],
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s5; implementation plan F3; spec s5 Ice/Steel Glalie",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "STAT: all-special set on Atk 90 / SpA 70 Glalie; adds Steel STAB",
+      "nature": {
+        "before": "NATURE_MODEST",
+        "target": "NATURE_HARDY"
+      }
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/glalie_4.json",
+      "field": "moves",
+      "before": [
+        "MOVE_BLIZZARD",
+        "MOVE_DARK_PULSE",
+        "MOVE_SHEER_COLD",
+        "MOVE_HAIL"
+      ],
+      "target": [
+        "MOVE_BLIZZARD",
+        "MOVE_IRON_HEAD",
+        "MOVE_SHEER_COLD",
+        "MOVE_HAIL"
+      ],
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s5; implementation plan F3; spec s5 Ice/Steel Glalie",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "STAT: all-special set on Atk 90 / SpA 70 Glalie; adds Steel STAB",
+      "nature": {
+        "before": "NATURE_MODEST",
+        "target": "NATURE_HARDY"
+      }
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/ledian_1.json",
+      "field": "moves",
+      "before": [
+        "MOVE_SILVER_WIND",
+        "MOVE_AIR_CUTTER",
+        "MOVE_AGILITY",
+        "MOVE_BATON_PASS"
+      ],
+      "target": [
+        "MOVE_DRAIN_PUNCH",
+        "MOVE_AERIAL_ACE",
+        "MOVE_AGILITY",
+        "MOVE_BATON_PASS"
+      ],
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s5; implementation plan F3; spec s5 changed abilities + stats",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "STAT: all-special set on Atk 85 / SpA 45 Ledian (new Iron Fist ability)",
+      "nature": {
+        "before": "NATURE_TIMID",
+        "target": "NATURE_JOLLY"
+      }
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/beedrill_1.json",
+      "field": "moves",
+      "before": [
+        "MOVE_TWINEEDLE",
+        "MOVE_TOXIC",
+        "MOVE_ASSURANCE",
+        "MOVE_AGILITY"
+      ],
+      "target": [
+        "MOVE_TWINEEDLE",
+        "MOVE_TOXIC",
+        "MOVE_POISON_JAB",
+        "MOVE_AGILITY"
+      ],
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s5; implementation plan F3; spec s5 C3 learnset identity",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "REMOVED: Assurance no longer learnable"
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/cacturne_1.json",
+      "field": "moves",
+      "before": [
+        "MOVE_BULLET_SEED",
+        "MOVE_FAINT_ATTACK",
+        "MOVE_SPIKES",
+        "MOVE_INGRAIN"
+      ],
+      "target": [
+        "MOVE_BULLET_SEED",
+        "MOVE_SUCKER_PUNCH",
+        "MOVE_SPIKES",
+        "MOVE_INGRAIN"
+      ],
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s5; implementation plan F3; spec s5 C3 learnset identity",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "REMOVED: Faint Attack no longer learnable"
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/carnivine_2.json",
+      "field": "moves",
+      "before": [
+        "MOVE_SEED_BOMB",
+        "MOVE_WRING_OUT",
+        "MOVE_CRUNCH",
+        "MOVE_INGRAIN"
+      ],
+      "target": [
+        "MOVE_SEED_BOMB",
+        "MOVE_POWER_WHIP",
+        "MOVE_CRUNCH",
+        "MOVE_INGRAIN"
+      ],
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s5; implementation plan F3; spec s5 C3 learnset identity",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "REMOVED: Wring Out no longer learnable"
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/kabutops_1.json",
+      "field": "moves",
+      "before": [
+        "MOVE_AQUA_JET",
+        "MOVE_ROCK_TOMB",
+        "MOVE_HARDEN",
+        "MOVE_METAL_SOUND"
+      ],
+      "target": [
+        "MOVE_AQUA_JET",
+        "MOVE_ROCK_TOMB",
+        "MOVE_HARDEN",
+        "MOVE_STEALTH_ROCK"
+      ],
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s5; implementation plan F3; spec s5 C3 learnset identity",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "REMOVED: Metal Sound no longer learnable"
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/lumineon_1.json",
+      "field": "moves",
+      "before": [
+        "MOVE_WATER_GUN",
+        "MOVE_U_TURN",
+        "MOVE_CAPTIVATE",
+        "MOVE_ATTRACT"
+      ],
+      "target": [
+        "MOVE_WATER_GUN",
+        "MOVE_U_TURN",
+        "MOVE_AQUA_RING",
+        "MOVE_ATTRACT"
+      ],
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s5; implementation plan F3; spec s5 C3 learnset identity",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "REMOVED: Captivate no longer learnable"
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/masquerain_1.json",
+      "field": "moves",
+      "before": [
+        "MOVE_SILVER_WIND",
+        "MOVE_AIR_CUTTER",
+        "MOVE_SWEET_SCENT",
+        "MOVE_SCARY_FACE"
+      ],
+      "target": [
+        "MOVE_SILVER_WIND",
+        "MOVE_AIR_CUTTER",
+        "MOVE_SWEET_SCENT",
+        "MOVE_STUN_SPORE"
+      ],
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s5; implementation plan F3; spec s5 C3 learnset identity",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "REMOVED: Scary Face no longer learnable"
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/relicanth_1.json",
+      "field": "moves",
+      "before": [
+        "MOVE_WATER_PULSE",
+        "MOVE_ROCK_TOMB",
+        "MOVE_MUD_SPORT",
+        "MOVE_HARDEN"
+      ],
+      "target": [
+        "MOVE_WATER_PULSE",
+        "MOVE_ROCK_TOMB",
+        "MOVE_YAWN",
+        "MOVE_HARDEN"
+      ],
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s5; implementation plan F3; spec s5 C3 learnset identity",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "REMOVED: Mud Sport no longer learnable"
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/solrock_1.json",
+      "field": "moves",
+      "before": [
+        "MOVE_PSYWAVE",
+        "MOVE_ROCK_TOMB",
+        "MOVE_COSMIC_POWER",
+        "MOVE_LIGHT_SCREEN"
+      ],
+      "target": [
+        "MOVE_PSYCHIC",
+        "MOVE_ROCK_TOMB",
+        "MOVE_COSMIC_POWER",
+        "MOVE_LIGHT_SCREEN"
+      ],
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s5; implementation plan F3; spec s5 C3 learnset identity",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "REMOVED: Psywave no longer learnable"
+    }
+  ],
+  "hall_pool_type_changes": [
+    {
+      "source_path": "src/overlay104/battle_hall_helpers.c",
+      "field": "sBattleHallPotentialOpponentTypes[24] (SPECIES_PSYDUCK)",
+      "before": [
+        "TYPE_WATER",
+        "TYPE_WATER"
+      ],
+      "target": [
+        "TYPE_WATER",
+        "TYPE_PSYCHIC"
+      ],
+      "authority": "spec s14 Hall: retyped Pokemon must be classified by overhaul types; static pool audited for retype drift",
+      "guard": "pair equals the species' vanilla type pair at apply time"
+    },
+    {
+      "source_path": "src/overlay104/battle_hall_helpers.c",
+      "field": "sBattleHallPotentialOpponentTypes[133] (SPECIES_SHINX)",
+      "before": [
+        "TYPE_ELECTRIC",
+        "TYPE_ELECTRIC"
+      ],
+      "target": [
+        "TYPE_ELECTRIC",
+        "TYPE_DARK"
+      ],
+      "authority": "spec s14 Hall: retyped Pokemon must be classified by overhaul types; static pool audited for retype drift",
+      "guard": "pair equals the species' vanilla type pair at apply time"
+    },
+    {
+      "source_path": "src/overlay104/battle_hall_helpers.c",
+      "field": "sBattleHallPotentialOpponentTypes[175] (SPECIES_FARFETCHD)",
+      "before": [
+        "TYPE_NORMAL",
+        "TYPE_FLYING"
+      ],
+      "target": [
+        "TYPE_FIGHTING",
+        "TYPE_FLYING"
+      ],
+      "authority": "spec s14 Hall: retyped Pokemon must be classified by overhaul types; static pool audited for retype drift",
+      "guard": "pair equals the species' vanilla type pair at apply time"
+    },
+    {
+      "source_path": "src/overlay104/battle_hall_helpers.c",
+      "field": "sBattleHallPotentialOpponentTypes[256] (SPECIES_LUXIO)",
+      "before": [
+        "TYPE_ELECTRIC",
+        "TYPE_ELECTRIC"
+      ],
+      "target": [
+        "TYPE_ELECTRIC",
+        "TYPE_DARK"
+      ],
+      "authority": "spec s14 Hall: retyped Pokemon must be classified by overhaul types; static pool audited for retype drift",
+      "guard": "pair equals the species' vanilla type pair at apply time"
+    },
+    {
+      "source_path": "src/overlay104/battle_hall_helpers.c",
+      "field": "sBattleHallPotentialOpponentTypes[270] (SPECIES_RAICHU)",
+      "before": [
+        "TYPE_ELECTRIC",
+        "TYPE_ELECTRIC"
+      ],
+      "target": [
+        "TYPE_ELECTRIC",
+        "TYPE_STEEL"
+      ],
+      "authority": "spec s14 Hall: retyped Pokemon must be classified by overhaul types; static pool audited for retype drift",
+      "guard": "pair equals the species' vanilla type pair at apply time"
+    },
+    {
+      "source_path": "src/overlay104/battle_hall_helpers.c",
+      "field": "sBattleHallPotentialOpponentTypes[300] (SPECIES_ELECTABUZZ)",
+      "before": [
+        "TYPE_ELECTRIC",
+        "TYPE_ELECTRIC"
+      ],
+      "target": [
+        "TYPE_ELECTRIC",
+        "TYPE_FIGHTING"
+      ],
+      "authority": "spec s14 Hall: retyped Pokemon must be classified by overhaul types; static pool audited for retype drift",
+      "guard": "pair equals the species' vanilla type pair at apply time"
+    },
+    {
+      "source_path": "src/overlay104/battle_hall_helpers.c",
+      "field": "sBattleHallPotentialOpponentTypes[324] (SPECIES_VIGOROTH)",
+      "before": [
+        "TYPE_NORMAL",
+        "TYPE_NORMAL"
+      ],
+      "target": [
+        "TYPE_NORMAL",
+        "TYPE_FIGHTING"
+      ],
+      "authority": "spec s14 Hall: retyped Pokemon must be classified by overhaul types; static pool audited for retype drift",
+      "guard": "pair equals the species' vanilla type pair at apply time"
+    },
+    {
+      "source_path": "src/overlay104/battle_hall_helpers.c",
+      "field": "sBattleHallPotentialOpponentTypes[349] (SPECIES_GLALIE)",
+      "before": [
+        "TYPE_ICE",
+        "TYPE_ICE"
+      ],
+      "target": [
+        "TYPE_ICE",
+        "TYPE_STEEL"
+      ],
+      "authority": "spec s14 Hall: retyped Pokemon must be classified by overhaul types; static pool audited for retype drift",
+      "guard": "pair equals the species' vanilla type pair at apply time"
+    },
+    {
+      "source_path": "src/overlay104/battle_hall_helpers.c",
+      "field": "sBattleHallPotentialOpponentTypes[375] (SPECIES_BLASTOISE)",
+      "before": [
+        "TYPE_WATER",
+        "TYPE_WATER"
+      ],
+      "target": [
+        "TYPE_WATER",
+        "TYPE_GROUND"
+      ],
+      "authority": "spec s14 Hall: retyped Pokemon must be classified by overhaul types; static pool audited for retype drift",
+      "guard": "pair equals the species' vanilla type pair at apply time"
+    },
+    {
+      "source_path": "src/overlay104/battle_hall_helpers.c",
+      "field": "sBattleHallPotentialOpponentTypes[377] (SPECIES_GOLDUCK)",
+      "before": [
+        "TYPE_WATER",
+        "TYPE_WATER"
+      ],
+      "target": [
+        "TYPE_WATER",
+        "TYPE_PSYCHIC"
+      ],
+      "authority": "spec s14 Hall: retyped Pokemon must be classified by overhaul types; static pool audited for retype drift",
+      "guard": "pair equals the species' vanilla type pair at apply time"
+    },
+    {
+      "source_path": "src/overlay104/battle_hall_helpers.c",
+      "field": "sBattleHallPotentialOpponentTypes[389] (SPECIES_PINSIR)",
+      "before": [
+        "TYPE_BUG",
+        "TYPE_BUG"
+      ],
+      "target": [
+        "TYPE_BUG",
+        "TYPE_FIGHTING"
+      ],
+      "authority": "spec s14 Hall: retyped Pokemon must be classified by overhaul types; static pool audited for retype drift",
+      "guard": "pair equals the species' vanilla type pair at apply time"
+    },
+    {
+      "source_path": "src/overlay104/battle_hall_helpers.c",
+      "field": "sBattleHallPotentialOpponentTypes[403] (SPECIES_FERALIGATR)",
+      "before": [
+        "TYPE_WATER",
+        "TYPE_WATER"
+      ],
+      "target": [
+        "TYPE_WATER",
+        "TYPE_GROUND"
+      ],
+      "authority": "spec s14 Hall: retyped Pokemon must be classified by overhaul types; static pool audited for retype drift",
+      "guard": "pair equals the species' vanilla type pair at apply time"
+    },
+    {
+      "source_path": "src/overlay104/battle_hall_helpers.c",
+      "field": "sBattleHallPotentialOpponentTypes[423] (SPECIES_SCEPTILE)",
+      "before": [
+        "TYPE_GRASS",
+        "TYPE_GRASS"
+      ],
+      "target": [
+        "TYPE_GRASS",
+        "TYPE_DRAGON"
+      ],
+      "authority": "spec s14 Hall: retyped Pokemon must be classified by overhaul types; static pool audited for retype drift",
+      "guard": "pair equals the species' vanilla type pair at apply time"
+    },
+    {
+      "source_path": "src/overlay104/battle_hall_helpers.c",
+      "field": "sBattleHallPotentialOpponentTypes[427] (SPECIES_SLAKING)",
+      "before": [
+        "TYPE_NORMAL",
+        "TYPE_NORMAL"
+      ],
+      "target": [
+        "TYPE_NORMAL",
+        "TYPE_FIGHTING"
+      ],
+      "authority": "spec s14 Hall: retyped Pokemon must be classified by overhaul types; static pool audited for retype drift",
+      "guard": "pair equals the species' vanilla type pair at apply time"
+    },
+    {
+      "source_path": "src/overlay104/battle_hall_helpers.c",
+      "field": "sBattleHallPotentialOpponentTypes[432] (SPECIES_MILOTIC)",
+      "before": [
+        "TYPE_WATER",
+        "TYPE_WATER"
+      ],
+      "target": [
+        "TYPE_WATER",
+        "TYPE_DRAGON"
+      ],
+      "authority": "spec s14 Hall: retyped Pokemon must be classified by overhaul types; static pool audited for retype drift",
+      "guard": "pair equals the species' vanilla type pair at apply time"
+    },
+    {
+      "source_path": "src/overlay104/battle_hall_helpers.c",
+      "field": "sBattleHallPotentialOpponentTypes[445] (SPECIES_LUXRAY)",
+      "before": [
+        "TYPE_ELECTRIC",
+        "TYPE_ELECTRIC"
+      ],
+      "target": [
+        "TYPE_ELECTRIC",
+        "TYPE_DARK"
+      ],
+      "authority": "spec s14 Hall: retyped Pokemon must be classified by overhaul types; static pool audited for retype drift",
+      "guard": "pair equals the species' vanilla type pair at apply time"
+    },
+    {
+      "source_path": "src/overlay104/battle_hall_helpers.c",
+      "field": "sBattleHallPotentialOpponentTypes[458] (SPECIES_ELECTIVIRE)",
+      "before": [
+        "TYPE_ELECTRIC",
+        "TYPE_ELECTRIC"
+      ],
+      "target": [
+        "TYPE_ELECTRIC",
+        "TYPE_FIGHTING"
+      ],
+      "authority": "spec s14 Hall: retyped Pokemon must be classified by overhaul types; static pool audited for retype drift",
+      "guard": "pair equals the species' vanilla type pair at apply time"
+    }
+  ]
+}

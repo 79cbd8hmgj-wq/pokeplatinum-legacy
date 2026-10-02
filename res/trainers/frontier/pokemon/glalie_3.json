@@ -1,10 +1,10 @@
 {
     "species": "SPECIES_GLALIE",
     "moves": [
-        "MOVE_ICE_BEAM",
+        "MOVE_FROST_RUSH",
         "MOVE_SHADOW_BALL",
-        "MOVE_SIGNAL_BEAM",
-        "MOVE_WATER_PULSE"
+        "MOVE_IRON_HEAD",
+        "MOVE_ICE_BEAM"
     ],
     "evFlags": {
         "hp": true,
@@ -14,7 +14,7 @@
         "special_attack": true,
         "special_defense": false
     },
-    "nature": "NATURE_MODEST",
+    "nature": "NATURE_HARDY",
     "item": "ITEM_SCOPE_LENS",
     "form": 0
 }

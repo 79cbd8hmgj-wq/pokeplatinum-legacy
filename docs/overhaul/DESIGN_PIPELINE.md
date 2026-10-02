@@ -90,7 +90,7 @@ Canonical authority:
 Resolved design includes nature/IV/ability inheritance, Power-item targeting, no-incense babies, egg-move inheritance policy, hatch/egg-generation speed, breeding-supply access, and one-save legality validation.
 
 ### D5 — Legendary/Mythical Events
-Status: `IMPLEMENTED` (source + validator + Rev 0/Rev 1 builds; runtime event QA pending — not `VERIFIED`)
+Status: `IMPLEMENTED` and merged (PR #20; source + validator + Rev 0/Rev 1 builds; runtime event QA pending — not `VERIFIED`)
 
 Authority: `docs/overhaul/events/LEGENDARY_MYTHICAL_SPEC.md` + `LEGENDARY_MYTHICAL_IMPLEMENTATION_PLAN.md`.
 Implementation record: `docs/overhaul/implementation/events/` (five manifests + `LEGENDARY_EVENT_VALIDATION_REPORT.md`);
@@ -105,7 +105,9 @@ retry-safe statics.
 Runtime QA remains for the final overhaul playtest (see the validation report).
 
 ### D6 — Battle Frontier, Rematches, and Postgame Rewards
-Status: `LOCKED SPEC`
+Status: `IMPLEMENTED` (source + validator + Rev 0/Rev 1 builds; runtime Frontier/rematch/Print QA pending — not `VERIFIED`)
+
+Implementation record: `docs/overhaul/implementation/postgame/` (five manifests, `FRONTIER_SET_AUDIT.md`, `POSTGAME_VALIDATION_REPORT.md`); validator `tools/overhaul/postgame/validate_postgame.py`.
 
 Existing authority:
 - better BP rewards;
