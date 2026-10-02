@@ -89,19 +89,23 @@ void NitroMain(void)
     }
 
     if (SaveData_BackupExists(sApplication.args.saveData) == FALSE) {
-#ifdef GDB_DEBUGGING
-        // Runtime-QA debug builds intentionally support a clean emulator
-        // profile so CI can reach the field without a pre-seeded save.
-        sApplication.args.error = FALSE;
-        EnqueueApplication(FS_OVERLAY_ID_NONE, &gGameStartRuntimeQANewSaveAppTemplate);
-#else
         sub_0209A74C(HEAP_ID_SYSTEM);
-#endif
     } else {
         switch (OS_GetResetParameter()) {
         case RESET_CLEAN:
             sApplication.args.error = FALSE;
+#ifdef GDB_DEBUGGING
+            if (SaveData_DataExists(sApplication.args.saveData) == FALSE) {
+                // Runtime-QA debug builds skip the opening/Rowan flow only
+                // when no save data exists. Backup-hardware failures still
+                // take the retail error path above.
+                EnqueueApplication(FS_OVERLAY_ID_NONE, &gGameStartRuntimeQANewSaveAppTemplate);
+            } else {
+                EnqueueApplication(FS_OVERLAY_ID(game_opening), &gOpeningCutsceneAppTemplate);
+            }
+#else
             EnqueueApplication(FS_OVERLAY_ID(game_opening), &gOpeningCutsceneAppTemplate);
+#endif
             break;
 
         case RESET_ERROR:
