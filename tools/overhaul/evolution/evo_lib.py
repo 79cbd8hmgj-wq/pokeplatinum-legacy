@@ -107,7 +107,7 @@ CHANGE_AUTHORITY = {
     "dusclops": ("ITEM_TRADE_REPLACEMENT", "EVOLUTION_SPEC.md (Dusknoir Lv45)"),
     "gligar": ("NIGHT_LEVEL", "EVOLUTION_SPEC.md (Gliscor Lv38 at night, no Razor Fang)"),
     "sneasel": ("NIGHT_LEVEL", "EVOLUTION_SPEC.md (Weavile Lv38 at night, no Razor Claw)"),
-    "happiny": ("DAY_LEVEL", "Recovered locked Pass A project history: Happiny -> Chansey Lv20 during daytime, no Oval Stone"),
+    "happiny": ("DAY_LEVEL", "User-approved final ruling (2026-10-02): Happiny -> Chansey Lv20 during daytime, no Oval Stone"),
     "pupitar": ("LEVEL_RETUNE", "EVOLUTION_SPEC.md (Tyranitar Lv50; vanilla Lv55)"),
     "poliwhirl": ("STAT_BRANCH", "Locked Pass A/C3 authority: Lv35 full stat split; SpA > Atk -> Politoed, Atk >= SpA -> Poliwrath"),
     "slowpoke": ("STAT_BRANCH", "EVOLUTION_SPEC.md / EMERALD_PORT_PLAN.md (Slowking Lv37 SpD > Def); Slowbro Lv37 unchanged, now the fallback"),
