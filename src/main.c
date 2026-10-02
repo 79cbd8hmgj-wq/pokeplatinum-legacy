@@ -89,7 +89,16 @@ void NitroMain(void)
     }
 
     if (SaveData_BackupExists(sApplication.args.saveData) == FALSE) {
+#ifdef GDB_DEBUGGING
+        // Headless runtime-QA emulators may not have autodetected the save
+        // device yet. The field-validation boot path only needs initialized
+        // in-memory save blocks, so do not strand debug CI in the retail
+        // backup-hardware error screen.
+        sApplication.args.error = FALSE;
+        EnqueueApplication(FS_OVERLAY_ID_NONE, &gGameStartRuntimeQANewSaveAppTemplate);
+#else
         sub_0209A74C(HEAP_ID_SYSTEM);
+#endif
     } else {
         switch (OS_GetResetParameter()) {
         case RESET_CLEAN:
