@@ -15,8 +15,8 @@
 #include "heap.h"
 #include "rtc.h"
 
-#define SCRATCH_BUFFER_SIZE   256
-#define INVALID_LIGHT_COLOR   0xFFFF
+#define SCRATCH_BUFFER_SIZE 256
+#define INVALID_LIGHT_COLOR 0xFFFF
 
 static void AreaLightManager_ApplyActiveTemplateToAreaModelAttrs(AreaLightManager *areaLightMan);
 static u32 AreaLightTemplate_New(u32 archiveID, AreaLightTemplate **templates);
