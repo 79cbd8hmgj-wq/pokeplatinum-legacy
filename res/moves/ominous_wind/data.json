@@ -4,14 +4,14 @@
         "The user creates a\n",
         "gust of repulsive\n",
         "wind. It may also\n",
-        "raise all the user’s\n",
+        "raise all the user\u2019s\n",
         "stats at once."
     ],
     "class": "CLASS_SPECIAL",
     "type": "TYPE_GHOST",
     "power": 60,
     "accuracy": 100,
-    "pp": 5,
+    "pp": 10,
     "effect": {
         "type": "BATTLE_EFFECT_RAISE_ALL_STATS_HIT",
         "chance": 10

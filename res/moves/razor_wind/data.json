@@ -1,10 +1,8 @@
 {
     "name": "Razor Wind",
     "description": [
-        "A two-turn attack.\n",
         "Blades of wind hit the\n",
-        "foe on the second\n",
-        "turn. It has a high\n",
+        "foe. It has a high\n",
         "critical-hit ratio."
     ],
     "class": "CLASS_SPECIAL",
@@ -13,7 +11,7 @@
     "accuracy": 100,
     "pp": 10,
     "effect": {
-        "type": "BATTLE_EFFECT_CHARGE_TURN_HIGH_CRIT",
+        "type": "BATTLE_EFFECT_HIGH_CRITICAL",
         "chance": 0
     },
     "range": "RANGE_ADJACENT_OPPONENTS",

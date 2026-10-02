@@ -1,0 +1,1074 @@
+{
+  "schema_version": 1,
+  "basis": "main@67af26fb3f118a1a010359540115ca39a6e7e9d7",
+  "manifest": "docs/overhaul/implementation/c1_move_changes_manifest.json",
+  "entries": [
+    {
+      "move": "Fury Cutter",
+      "path": "res/moves/fury_cutter/data.json",
+      "source_sha256": "6c1c18c7e46506ea69e6a172d9551036c4d6d965904e6fba7df832186c2b9f95",
+      "before": {
+        "power": 10,
+        "accuracy": 95
+      },
+      "target": {
+        "power": 20,
+        "accuracy": 100
+      },
+      "batch": "1"
+    },
+    {
+      "move": "Leech Life",
+      "path": "res/moves/leech_life/data.json",
+      "source_sha256": "ee0c350cdfa41a5d026c359f03c9732b495f67781cbb196b4a40232df5bc0994",
+      "before": {
+        "power": 20,
+        "pp": 15
+      },
+      "target": {
+        "power": 40,
+        "pp": 20
+      },
+      "batch": "1"
+    },
+    {
+      "move": "Pin Missile",
+      "path": "res/moves/pin_missile/data.json",
+      "source_sha256": "3e1fc63fb9da7b701b0657ac3ffda385787ae6ca4281c1669e3ab934466c0236",
+      "before": {
+        "power": 14,
+        "accuracy": 85
+      },
+      "target": {
+        "power": 20,
+        "accuracy": 95
+      },
+      "batch": "1"
+    },
+    {
+      "move": "Twineedle",
+      "path": "res/moves/twineedle/data.json",
+      "source_sha256": "91251fc810ad9e88e71844e4604594c871a986dd4ed1f1c065c8f63764c3f73c",
+      "before": {
+        "power": 25
+      },
+      "target": {
+        "power": 30
+      },
+      "batch": "1"
+    },
+    {
+      "move": "Silver Wind",
+      "path": "res/moves/silver_wind/data.json",
+      "source_sha256": "bd2244bd6dcf7ac2b1448e74e50d3cafd18ea7a2141298fb8c09dfd2e7a423bb",
+      "before": {
+        "pp": 5
+      },
+      "target": {
+        "pp": 10
+      },
+      "batch": "1"
+    },
+    {
+      "move": "Poison Sting",
+      "path": "res/moves/poison_sting/data.json",
+      "source_sha256": "ef2cca439990ea9b0b15f3ce555120e7c573fbcf7e7d91533fe6ad4c511336b3",
+      "before": {
+        "power": 15
+      },
+      "target": {
+        "power": 30
+      },
+      "batch": "2"
+    },
+    {
+      "move": "Poison Tail",
+      "path": "res/moves/poison_tail/data.json",
+      "source_sha256": "b308fb18751e3e16ed2a6cb451d6a755ba5c4407742b2192c20c7edf4fb03367",
+      "before": {
+        "power": 50
+      },
+      "target": {
+        "power": 60
+      },
+      "batch": "2"
+    },
+    {
+      "move": "Gunk Shot",
+      "path": "res/moves/gunk_shot/data.json",
+      "source_sha256": "cf491d99275cf25edb7eaeaa285c7632e0986d20c812b3741fc35ff884571ef6",
+      "before": {
+        "accuracy": 70
+      },
+      "target": {
+        "accuracy": 80
+      },
+      "batch": "2"
+    },
+    {
+      "move": "Rock Throw",
+      "path": "res/moves/rock_throw/data.json",
+      "source_sha256": "196ccdb357162ec57db166ffaf2c6720603dcf2f75d5070ea09147df335dbed1",
+      "before": {
+        "accuracy": 90
+      },
+      "target": {
+        "accuracy": 100
+      },
+      "batch": "3"
+    },
+    {
+      "move": "Rock Tomb",
+      "path": "res/moves/rock_tomb/data.json",
+      "source_sha256": "61aae4febad5bae6de75dcebe05f8d5423cdf85959cfcc7ab062ffc8f7e5aa9f",
+      "before": {
+        "power": 50,
+        "accuracy": 80
+      },
+      "target": {
+        "power": 60,
+        "accuracy": 95
+      },
+      "batch": "3"
+    },
+    {
+      "move": "Rock Blast",
+      "path": "res/moves/rock_blast/data.json",
+      "source_sha256": "c624c0ad23708951773b859926c34af8fa68f56171287591dd32adc52fc10fc6",
+      "before": {
+        "accuracy": 80
+      },
+      "target": {
+        "accuracy": 90
+      },
+      "batch": "3"
+    },
+    {
+      "move": "AncientPower",
+      "path": "res/moves/ancient_power/data.json",
+      "source_sha256": "9b8812ea37076442870e1615da65a840a33e390742c5c985a502cd9dd2e44ee6",
+      "before": {
+        "pp": 5
+      },
+      "target": {
+        "pp": 10
+      },
+      "batch": "3"
+    },
+    {
+      "move": "Power Gem",
+      "path": "res/moves/power_gem/data.json",
+      "source_sha256": "6cec2de66b7120c05c38d24237bdf9b61d1a68aeaee1ba8bb07aef4508f816a8",
+      "before": {
+        "power": 70
+      },
+      "target": {
+        "power": 80
+      },
+      "batch": "3"
+    },
+    {
+      "move": "Absorb",
+      "path": "res/moves/absorb/data.json",
+      "source_sha256": "8d5b069b345513d2608370d1d623578ddb60cdd12769df5022c09ca0a7856d7a",
+      "before": {
+        "power": 20
+      },
+      "target": {
+        "power": 30
+      },
+      "batch": "4"
+    },
+    {
+      "move": "Vine Whip",
+      "path": "res/moves/vine_whip/data.json",
+      "source_sha256": "3f28aa45787de3397eb05653e91b9eba30bc6ef4bbf04dc02253ce76ef232a82",
+      "before": {
+        "power": 35,
+        "pp": 15
+      },
+      "target": {
+        "power": 45,
+        "pp": 25
+      },
+      "batch": "4"
+    },
+    {
+      "move": "Bullet Seed",
+      "path": "res/moves/bullet_seed/data.json",
+      "source_sha256": "77fef8782d3cb96b0844191169b9227766055fc57870cd01878e413f0791c199",
+      "before": {
+        "power": 10,
+        "pp": 30
+      },
+      "target": {
+        "power": 20,
+        "pp": 20
+      },
+      "batch": "4"
+    },
+    {
+      "move": "Mega Drain",
+      "path": "res/moves/mega_drain/data.json",
+      "source_sha256": "357bd62a5dd9d5e44a32976eb9f37b68828608c2cef2152a5c9fe3c00f7d5180",
+      "before": {
+        "power": 40
+      },
+      "target": {
+        "power": 50
+      },
+      "batch": "4"
+    },
+    {
+      "move": "Giga Drain",
+      "path": "res/moves/giga_drain/data.json",
+      "source_sha256": "2eaee1b1278f193f25abd8de8118cafee72643bf86fe345f653f9182fffe4b13",
+      "before": {
+        "power": 60
+      },
+      "target": {
+        "power": 75
+      },
+      "batch": "4"
+    },
+    {
+      "move": "Arm Thrust",
+      "path": "res/moves/arm_thrust/data.json",
+      "source_sha256": "815f1dc95d35f7236809198f4f27fcd5905175ebbd6003b8da8b06c51ae9a2b0",
+      "before": {
+        "power": 15
+      },
+      "target": {
+        "power": 20
+      },
+      "batch": "5"
+    },
+    {
+      "move": "Drain Punch",
+      "path": "res/moves/drain_punch/data.json",
+      "source_sha256": "25d2a8f7b77e04e617849c5290315c2432535029fa66254417d856e52e66b006",
+      "before": {
+        "power": 60,
+        "pp": 5
+      },
+      "target": {
+        "power": 75,
+        "pp": 10
+      },
+      "batch": "5"
+    },
+    {
+      "move": "Vital Throw",
+      "path": "res/moves/vital_throw/data.json",
+      "source_sha256": "cfb467a30f65ef85c00645693164c40f3e2c6ffdb41ceebb07fddad2531f65bf",
+      "before": {
+        "power": 70
+      },
+      "target": {
+        "power": 80
+      },
+      "batch": "5"
+    },
+    {
+      "move": "Submission",
+      "path": "res/moves/submission/data.json",
+      "source_sha256": "cafff413102bf0147f469f9aa918a679d451dac46f236c75e88ca48b8a3549da",
+      "before": {
+        "power": 80,
+        "accuracy": 80
+      },
+      "target": {
+        "power": 90,
+        "accuracy": 95
+      },
+      "batch": "5"
+    },
+    {
+      "move": "Lick",
+      "path": "res/moves/lick/data.json",
+      "source_sha256": "b722c9c2cff5507956dbf00b868534c4f6cd9ab6dce2749f7d208e84c70281ff",
+      "before": {
+        "power": 20
+      },
+      "target": {
+        "power": 30
+      },
+      "batch": "6"
+    },
+    {
+      "move": "Astonish",
+      "path": "res/moves/astonish/data.json",
+      "source_sha256": "31128a4c317f0ce414faa2c6ec1219b6a677856fee65b592df52b2dbfa38f11a",
+      "before": {
+        "power": 30
+      },
+      "target": {
+        "power": 40
+      },
+      "batch": "6"
+    },
+    {
+      "move": "Shadow Punch",
+      "path": "res/moves/shadow_punch/data.json",
+      "source_sha256": "9fb102db4b5754663a6136d604802f5f966607c0458a689ae011e071fbcd2bcd",
+      "before": {
+        "power": 60
+      },
+      "target": {
+        "power": 70
+      },
+      "batch": "6"
+    },
+    {
+      "move": "Knock Off",
+      "path": "res/moves/knock_off/data.json",
+      "source_sha256": "7a9468317964c05fa8add1a29e4afd2fce7be243f6e2c54331dc51f4c2c27573",
+      "before": {
+        "power": 20
+      },
+      "target": {
+        "power": 40
+      },
+      "batch": "6"
+    },
+    {
+      "move": "Thief",
+      "path": "res/moves/thief/data.json",
+      "source_sha256": "78b2a4c5f03d82043544013bfdc6dfeaf22529e2c3fd06fbae86cee4e6514bab",
+      "before": {
+        "power": 40
+      },
+      "target": {
+        "power": 60
+      },
+      "batch": "6"
+    },
+    {
+      "move": "Mud-Slap",
+      "path": "res/moves/mud_slap/data.json",
+      "source_sha256": "11fe8927fe256a3a3eaf78443cbe4a1eb7ef1caf9d9835f8c1ddcc5a6ba3188f",
+      "before": {
+        "power": 20
+      },
+      "target": {
+        "power": 30
+      },
+      "batch": "8A"
+    },
+    {
+      "move": "Mud Bomb",
+      "path": "res/moves/mud_bomb/data.json",
+      "source_sha256": "5bb1c4a961c91d0f0b3142fc3457f15535bc11f3ef54a43d3bdf508e0322bbdc",
+      "before": {
+        "power": 65,
+        "accuracy": 85
+      },
+      "target": {
+        "power": 70,
+        "accuracy": 95
+      },
+      "batch": "8A"
+    },
+    {
+      "move": "Ominous Wind",
+      "path": "res/moves/ominous_wind/data.json",
+      "source_sha256": "3c764913306f8e678978423b900bd11b54f0751fa9c89971d36fdc8046514d07",
+      "before": {
+        "pp": 5
+      },
+      "target": {
+        "pp": 10
+      },
+      "batch": "8A"
+    },
+    {
+      "move": "Mirror Shot",
+      "path": "res/moves/mirror_shot/data.json",
+      "source_sha256": "4656e8cd6386cfc42e205ea87e73d61ded0eea6381598fda3a653405c74c0285",
+      "before": {
+        "power": 65,
+        "accuracy": 85
+      },
+      "target": {
+        "power": 70,
+        "accuracy": 95
+      },
+      "batch": "8A"
+    },
+    {
+      "move": "Tackle",
+      "path": "res/moves/tackle/data.json",
+      "source_sha256": "9913be9040d143d91754776823f4f4c2bd3f713fe42788e50de311f6bd9f7464",
+      "before": {
+        "power": 35,
+        "accuracy": 95
+      },
+      "target": {
+        "power": 40,
+        "accuracy": 100
+      },
+      "batch": "9A"
+    },
+    {
+      "move": "DoubleSlap",
+      "path": "res/moves/double_slap/data.json",
+      "source_sha256": "d49022337e28f1a670e7e542f0b1e9afd576dbf446d12cfd9b94e37667d97530",
+      "before": {
+        "power": 15,
+        "accuracy": 85
+      },
+      "target": {
+        "power": 20,
+        "accuracy": 90
+      },
+      "batch": "9A"
+    },
+    {
+      "move": "Barrage",
+      "path": "res/moves/barrage/data.json",
+      "source_sha256": "5575c5f281280491ed4e76289f866a4548b9ef65606b3250160671bbf5618db7",
+      "before": {
+        "power": 15,
+        "accuracy": 85
+      },
+      "target": {
+        "power": 20,
+        "accuracy": 90
+      },
+      "batch": "9A"
+    },
+    {
+      "move": "Fury Swipes",
+      "path": "res/moves/fury_swipes/data.json",
+      "source_sha256": "f8293f790dddd5f0b4c029e7e1bfaeff0ee31f90613f5352f8d9d83266b2d868",
+      "before": {
+        "power": 18,
+        "accuracy": 80
+      },
+      "target": {
+        "power": 20,
+        "accuracy": 90
+      },
+      "batch": "9A"
+    },
+    {
+      "move": "Comet Punch",
+      "path": "res/moves/comet_punch/data.json",
+      "source_sha256": "38e74853bf0578a388bbd09a6519a0aafdf1107f04ec9186d19541ab6c15d5f3",
+      "before": {
+        "power": 18,
+        "accuracy": 85
+      },
+      "target": {
+        "power": 20,
+        "accuracy": 90
+      },
+      "batch": "9A"
+    },
+    {
+      "move": "Slam",
+      "path": "res/moves/slam/data.json",
+      "source_sha256": "de858e016e0e17dfdb2af630bf7e676827ce2729a8b24cdde9f22fbeae7f42c7",
+      "before": {
+        "power": 80,
+        "accuracy": 75
+      },
+      "target": {
+        "power": 85,
+        "accuracy": 95
+      },
+      "batch": "9A"
+    },
+    {
+      "move": "Take Down",
+      "path": "res/moves/take_down/data.json",
+      "source_sha256": "5ff8e2150953f3061554900c508ff89368d4381da3ad248f3479b9db023cd543",
+      "before": {
+        "power": 90,
+        "accuracy": 85
+      },
+      "target": {
+        "power": 100,
+        "accuracy": 95
+      },
+      "batch": "9A"
+    },
+    {
+      "move": "Fury Attack",
+      "path": "res/moves/fury_attack/data.json",
+      "source_sha256": "94007149117c5f491aa7f93dc9af9f5b8a0c9273faed04b9d8621f7feb52563e",
+      "before": {
+        "power": 15,
+        "accuracy": 85
+      },
+      "target": {
+        "power": 20,
+        "accuracy": 90
+      },
+      "batch": "9B"
+    },
+    {
+      "move": "Bubble",
+      "path": "res/moves/bubble/data.json",
+      "source_sha256": "d1ab5d20b9e750f7f2b3744f08848da60c112f4ffa150bbded3a4145eaaba847",
+      "before": {
+        "power": 20
+      },
+      "target": {
+        "power": 30
+      },
+      "batch": "9B"
+    },
+    {
+      "move": "Smog",
+      "path": "res/moves/smog/data.json",
+      "source_sha256": "f8b24fc871e3a2f6c03a3888782e8b6b1adea733666326c017db01d137fb86e4",
+      "before": {
+        "power": 20,
+        "accuracy": 70
+      },
+      "target": {
+        "power": 30,
+        "accuracy": 90
+      },
+      "batch": "9B"
+    },
+    {
+      "move": "Air Cutter",
+      "path": "res/moves/air_cutter/data.json",
+      "source_sha256": "bef09261311a52b1c2e87008536ebec90af16f34ca5fd66ca40250a569561404",
+      "before": {
+        "power": 55,
+        "accuracy": 95
+      },
+      "target": {
+        "power": 60,
+        "accuracy": 100
+      },
+      "batch": "9B"
+    },
+    {
+      "move": "Twister",
+      "path": "res/moves/twister/data.json",
+      "source_sha256": "ed7fc0b77777997dab4ab025d3192a570bca3042a8af96492975e530ab0f9218",
+      "before": {
+        "power": 40
+      },
+      "target": {
+        "power": 50
+      },
+      "batch": "9B"
+    },
+    {
+      "move": "Bone Club",
+      "path": "res/moves/bone_club/data.json",
+      "source_sha256": "307f6e0d1db0e081c7cf7877f7b1a6d5a8f9dcc3a64331418d641c19d6c05864",
+      "before": {
+        "power": 65,
+        "accuracy": 85
+      },
+      "target": {
+        "power": 70,
+        "accuracy": 95
+      },
+      "batch": "9B"
+    },
+    {
+      "move": "Steel Wing",
+      "path": "res/moves/steel_wing/data.json",
+      "source_sha256": "3121eaa015c0c50eb75b724d073812d6d2be176fcbbe7a8c90af1e5fc6101c31",
+      "before": {
+        "power": 70,
+        "accuracy": 90
+      },
+      "target": {
+        "power": 75,
+        "accuracy": 95
+      },
+      "batch": "9B"
+    },
+    {
+      "move": "Razor Wind",
+      "path": "res/moves/razor_wind/data.json",
+      "source_sha256": "9f9e14a2418dad254d1461bb2a0f7d0c513c1bf1d98be96ce405b2e13419494d",
+      "before": {
+        "effect_type": "BATTLE_EFFECT_CHARGE_TURN_HIGH_CRIT",
+        "description": [
+          "A two-turn attack.\n",
+          "Blades of wind hit the\n",
+          "foe on the second\n",
+          "turn. It has a high\n",
+          "critical-hit ratio."
+        ]
+      },
+      "target": {
+        "effect_type": "BATTLE_EFFECT_HIGH_CRITICAL"
+      },
+      "batch": "9C"
+    },
+    {
+      "move": "Skull Bash",
+      "path": "res/moves/skull_bash/data.json",
+      "source_sha256": "ff6ac4a8ba567a4cf81209322e8fc7015bc6e473be3a87b655f7f6af7d529183",
+      "before": {
+        "power": 100
+      },
+      "target": {
+        "power": 120
+      },
+      "batch": "9C"
+    },
+    {
+      "move": "Bounce",
+      "path": "res/moves/bounce/data.json",
+      "source_sha256": "25a9aa5b16c8e46e4b03f017325f5e4fd2fdd29cb535e5d989ce0e3b77da4495",
+      "before": {
+        "accuracy": 85,
+        "pp": 5
+      },
+      "target": {
+        "accuracy": 95,
+        "pp": 10
+      },
+      "batch": "9C"
+    },
+    {
+      "move": "String Shot",
+      "path": "res/moves/string_shot/data.json",
+      "source_sha256": "bf76e72c76fe67da24b3abcad45c663d4d401508820d09473920babb88e850ee",
+      "before": {
+        "accuracy": 95
+      },
+      "target": {
+        "accuracy": 100
+      },
+      "batch": "9D"
+    },
+    {
+      "move": "Screech",
+      "path": "res/moves/screech/data.json",
+      "source_sha256": "dd47e663e44494a7eb114ca547d2b88cedc1f8943afe9518eddc96236bda9439",
+      "before": {
+        "accuracy": 85
+      },
+      "target": {
+        "accuracy": 90
+      },
+      "batch": "9D"
+    },
+    {
+      "move": "Metal Sound",
+      "path": "res/moves/metal_sound/data.json",
+      "source_sha256": "1e8311ec6c5d276a5adccf0d28d9de2e39919ad2a7cb8825001b767c574872cf",
+      "before": {
+        "accuracy": 85
+      },
+      "target": {
+        "accuracy": 90
+      },
+      "batch": "9D"
+    },
+    {
+      "move": "Kinesis",
+      "path": "res/moves/kinesis/data.json",
+      "source_sha256": "9cb466ed2fe8e5086f97b7693e7a1087fb118d4d148e5a325d19756b001cb0e1",
+      "before": {
+        "accuracy": 80
+      },
+      "target": {
+        "accuracy": 100
+      },
+      "batch": "9D"
+    },
+    {
+      "move": "Supersonic",
+      "path": "res/moves/supersonic/data.json",
+      "source_sha256": "25224bdecd072a1bde521db0d4048062426e6310b1f5791f53bd4b63362f9951",
+      "before": {
+        "accuracy": 55
+      },
+      "target": {
+        "accuracy": 70
+      },
+      "batch": "9D"
+    },
+    {
+      "move": "Sing",
+      "path": "res/moves/sing/data.json",
+      "source_sha256": "56896281d88cc149dcaa4e20e7424bb7915454b0a3b86dc3010ea884000dcb0b",
+      "before": {
+        "accuracy": 55
+      },
+      "target": {
+        "accuracy": 65
+      },
+      "batch": "9D"
+    },
+    {
+      "move": "GrassWhistle",
+      "path": "res/moves/grass_whistle/data.json",
+      "source_sha256": "aea930bf5cf8e6b0eb22a58ebcde2c59a56da8a042cadaf8da39fa78d6d93ae5",
+      "before": {
+        "accuracy": 55
+      },
+      "target": {
+        "accuracy": 65
+      },
+      "batch": "9D"
+    },
+    {
+      "move": "Hypnosis",
+      "path": "res/moves/hypnosis/data.json",
+      "source_sha256": "49800b3b6e5f205c9cd33563f4105c86a658c1b55f1f5eeaafe7d3198f91ee5b",
+      "before": {
+        "accuracy": 60
+      },
+      "target": {
+        "accuracy": 70
+      },
+      "batch": "9D"
+    },
+    {
+      "move": "Will-O-Wisp",
+      "path": "res/moves/will_o_wisp/data.json",
+      "source_sha256": "5f80bfaeae6425d11cacd7a564c74c085ed517a11b096c73b37ac48199b42b07",
+      "before": {
+        "accuracy": 75
+      },
+      "target": {
+        "accuracy": 85
+      },
+      "batch": "9D"
+    },
+    {
+      "move": "Toxic",
+      "path": "res/moves/toxic/data.json",
+      "source_sha256": "e83153c60d88e39b2cb8559f417cec903c98faa6a2ddb0ae7b63cff8dc5d2198",
+      "before": {
+        "accuracy": 85
+      },
+      "target": {
+        "accuracy": 90
+      },
+      "batch": "9D"
+    },
+    {
+      "move": "PoisonPowder",
+      "path": "res/moves/poison_powder/data.json",
+      "source_sha256": "c8b42f8e91d36de1bd8e301587ef43289eebd7c838e56b0c6860a8bc622a6b45",
+      "before": {
+        "accuracy": 75
+      },
+      "target": {
+        "accuracy": 90
+      },
+      "batch": "9D"
+    },
+    {
+      "move": "Glare",
+      "path": "res/moves/glare/data.json",
+      "source_sha256": "d8b872c37de029fbd2608902925dd593c21c9b9991e79dbd45e9a8c492507107",
+      "before": {
+        "accuracy": 75
+      },
+      "target": {
+        "accuracy": 90
+      },
+      "batch": "9D"
+    },
+    {
+      "move": "Synthesis",
+      "path": "res/moves/synthesis/data.json",
+      "source_sha256": "90efb34d16671649b113fb1e447c5b41b745f988cf822df8fd94cf93196563db",
+      "before": {
+        "pp": 5
+      },
+      "target": {
+        "pp": 10
+      },
+      "batch": "9E"
+    },
+    {
+      "move": "Morning Sun",
+      "path": "res/moves/morning_sun/data.json",
+      "source_sha256": "a75216a656afa0bcba1ee2a71423173c6c8e037dfe044453e34326cc3505dbb2",
+      "before": {
+        "pp": 5
+      },
+      "target": {
+        "pp": 10
+      },
+      "batch": "9E"
+    },
+    {
+      "move": "Moonlight",
+      "path": "res/moves/moonlight/data.json",
+      "source_sha256": "2fafa1aa46ae2fddc591cf5bc7d150f64ea22faef61cec6a75a4936dfcd36ae8",
+      "before": {
+        "pp": 5
+      },
+      "target": {
+        "pp": 10
+      },
+      "batch": "9E"
+    },
+    {
+      "move": "Bind",
+      "path": "res/moves/bind/data.json",
+      "source_sha256": "20125d82251f21115d236e2bacc9f3afaf96ba0ad3fc5d0c449718724f52cd4b",
+      "before": {
+        "power": 15,
+        "accuracy": 75,
+        "pp": 20
+      },
+      "target": {
+        "power": 30,
+        "accuracy": 90,
+        "pp": 20
+      },
+      "batch": "9F"
+    },
+    {
+      "move": "Wrap",
+      "path": "res/moves/wrap/data.json",
+      "source_sha256": "f9b89ea98ca09346e6d1fbaafdaf165af2c4af8b00fa5b8177e1732fef2189c8",
+      "before": {
+        "power": 15,
+        "accuracy": 85,
+        "pp": 20
+      },
+      "target": {
+        "power": 30,
+        "accuracy": 90,
+        "pp": 20
+      },
+      "batch": "9F"
+    },
+    {
+      "move": "Fire Spin",
+      "path": "res/moves/fire_spin/data.json",
+      "source_sha256": "4d6ae8d863ca932aedb1dab8ec535a771f3b895dadb94ff72f9f1270a63552dc",
+      "before": {
+        "power": 15,
+        "accuracy": 70,
+        "pp": 15
+      },
+      "target": {
+        "power": 35,
+        "accuracy": 90,
+        "pp": 15
+      },
+      "batch": "9F"
+    },
+    {
+      "move": "Whirlpool",
+      "path": "res/moves/whirlpool/data.json",
+      "source_sha256": "37bb84740c22ab513f0e542e35de860263298193c706e36a0a116a82235a5853",
+      "before": {
+        "power": 15,
+        "accuracy": 70,
+        "pp": 15
+      },
+      "target": {
+        "power": 35,
+        "accuracy": 90,
+        "pp": 15
+      },
+      "batch": "9F"
+    },
+    {
+      "move": "Sand Tomb",
+      "path": "res/moves/sand_tomb/data.json",
+      "source_sha256": "ef93ee5e8576dff3e5cd566bc0c713e774a116d783496ce0550765e4094bbe5b",
+      "before": {
+        "power": 15,
+        "accuracy": 70,
+        "pp": 15
+      },
+      "target": {
+        "power": 35,
+        "accuracy": 90,
+        "pp": 15
+      },
+      "batch": "9F"
+    },
+    {
+      "move": "Clamp",
+      "path": "res/moves/clamp/data.json",
+      "source_sha256": "a96f9d8158e3b5fb84448b450ceebb077764cb7fdfa2241b8b2294b25ba5c0ff",
+      "before": {
+        "power": 35,
+        "accuracy": 75,
+        "pp": 10
+      },
+      "target": {
+        "power": 35,
+        "accuracy": 90,
+        "pp": 10
+      },
+      "batch": "9F"
+    },
+    {
+      "move": "Rapid Spin",
+      "path": "res/moves/rapid_spin/data.json",
+      "source_sha256": "51af776ac2e171c27cb532b2cef842d3971c4886a2a9a864257fab21c2949ec9",
+      "before": {
+        "power": 20
+      },
+      "target": {
+        "power": 40
+      },
+      "batch": "9H"
+    },
+    {
+      "move": "Constrict",
+      "path": "res/moves/constrict/data.json",
+      "source_sha256": "59e783e0881ef124561aa10306ab05b9021895988a053c5adb74b84bff4d0348",
+      "before": {
+        "power": 10
+      },
+      "target": {
+        "power": 30
+      },
+      "batch": "final_catch_up"
+    },
+    {
+      "move": "Icicle Spear",
+      "path": "res/moves/icicle_spear/data.json",
+      "source_sha256": "7a2d65b675c5177bc95192b46a544597033d2aa1102c29b260b8ebc663f138e7",
+      "before": {
+        "power": 10,
+        "pp": 30
+      },
+      "target": {
+        "power": 20,
+        "pp": 20
+      },
+      "batch": "final_catch_up"
+    },
+    {
+      "move": "Bone Rush",
+      "path": "res/moves/bone_rush/data.json",
+      "source_sha256": "560dd9979231f19161b63fa97abceba9e41e5675f9eda543ae3edd1b74f922ed",
+      "before": {
+        "accuracy": 80
+      },
+      "target": {
+        "accuracy": 90
+      },
+      "batch": "final_catch_up"
+    },
+    {
+      "move": "Triple Kick",
+      "path": "res/moves/triple_kick/data.json",
+      "source_sha256": "e15b01373bbd47be77cd0016f12fe3e47bd4ff3a61f4601d270baedc0298c50a",
+      "before": {
+        "power": 10
+      },
+      "target": {
+        "power": 15
+      },
+      "batch": "final_catch_up"
+    },
+    {
+      "move": "Rolling Kick",
+      "path": "res/moves/rolling_kick/data.json",
+      "source_sha256": "cfe7ef1fbc2d48c4d16bb69575656a38498a6cb40233e2836bddc7d5dd188859",
+      "before": {
+        "accuracy": 85
+      },
+      "target": {
+        "accuracy": 95
+      },
+      "batch": "final_catch_up"
+    },
+    {
+      "move": "Mega Punch",
+      "path": "res/moves/mega_punch/data.json",
+      "source_sha256": "dbb918edc488ff784c0e6e6094b51100f3e7acbdb4c6deac27c68e2dc765f230",
+      "before": {
+        "power": 80,
+        "accuracy": 85
+      },
+      "target": {
+        "power": 90,
+        "accuracy": 100
+      },
+      "batch": "final_catch_up"
+    },
+    {
+      "move": "Egg Bomb",
+      "path": "res/moves/egg_bomb/data.json",
+      "source_sha256": "1cd33948570b97dd15f60227737a8111695e0515e4f4e5571ced1415991152cb",
+      "before": {
+        "accuracy": 75
+      },
+      "target": {
+        "accuracy": 90
+      },
+      "batch": "final_catch_up"
+    },
+    {
+      "move": "Iron Tail",
+      "path": "res/moves/iron_tail/data.json",
+      "source_sha256": "33dd22c74cf7d1ee0fa3108979725935ccded0e1873175c88306c5b176d164bb",
+      "before": {
+        "accuracy": 75
+      },
+      "target": {
+        "accuracy": 85
+      },
+      "batch": "final_catch_up"
+    },
+    {
+      "move": "Dragon Rush",
+      "path": "res/moves/dragon_rush/data.json",
+      "source_sha256": "05da6d9c84d77c5471c671c1389cee6f2c70f80a914d0a42f277af2d74f24c75",
+      "before": {
+        "accuracy": 75
+      },
+      "target": {
+        "accuracy": 85
+      },
+      "batch": "final_catch_up"
+    },
+    {
+      "move": "Psywave",
+      "path": "res/moves/psywave/data.json",
+      "source_sha256": "dd3d0f2519a2f5642f347b17c67f9fb3a4834659b31b3384ab395376d83ecb1e",
+      "before": {
+        "accuracy": 80
+      },
+      "target": {
+        "accuracy": 100
+      },
+      "batch": "final_catch_up"
+    },
+    {
+      "move": "Poison Gas",
+      "path": "res/moves/poison_gas/data.json",
+      "source_sha256": "583215869ebabac2a22c868503933384c80564eaa5a80b195c76dea10f796ab5",
+      "before": {
+        "accuracy": 55
+      },
+      "target": {
+        "accuracy": 90
+      },
+      "batch": "final_catch_up"
+    },
+    {
+      "move": "Future Sight",
+      "path": "res/moves/future_sight/data.json",
+      "source_sha256": "42727a3408ff9a777e878d851afc3d9df72ab6b5739e81c01b6231b8a289cef4",
+      "before": {
+        "power": 80,
+        "accuracy": 90
+      },
+      "target": {
+        "power": 100,
+        "accuracy": 100
+      },
+      "batch": "final_catch_up"
+    }
+  ]
+}

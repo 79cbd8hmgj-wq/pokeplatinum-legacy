@@ -3,14 +3,14 @@
     "description": [
         "The foe is bound with\n",
         "silk blown from the\n",
-        "user’s mouth.\n",
+        "user\u2019s mouth.\n",
         "It reduces the\n",
-        "target’s Speed stat."
+        "target\u2019s Speed stat."
     ],
     "class": "CLASS_STATUS",
     "type": "TYPE_BUG",
     "power": 0,
-    "accuracy": 95,
+    "accuracy": 100,
     "pp": 40,
     "effect": {
         "type": "BATTLE_EFFECT_SPEED_DOWN",

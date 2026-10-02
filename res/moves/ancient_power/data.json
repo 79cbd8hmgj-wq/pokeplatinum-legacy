@@ -4,14 +4,14 @@
         "The user attacks with\n",
         "a prehistoric power.\n",
         "It may also raise all\n",
-        "the user’s stats at\n",
+        "the user\u2019s stats at\n",
         "once."
     ],
     "class": "CLASS_SPECIAL",
     "type": "TYPE_ROCK",
     "power": 60,
     "accuracy": 100,
-    "pp": 5,
+    "pp": 10,
     "effect": {
         "type": "BATTLE_EFFECT_RAISE_ALL_STATS_HIT",
         "chance": 10

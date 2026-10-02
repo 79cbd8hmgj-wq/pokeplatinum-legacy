@@ -2,16 +2,16 @@
     "name": "Leech Life",
     "description": [
         "A blood-draining\n",
-        "attack. The user’s\n",
+        "attack. The user\u2019s\n",
         "HP is restored by\n",
         "half the damage taken\n",
         "by the target."
     ],
     "class": "CLASS_PHYSICAL",
     "type": "TYPE_BUG",
-    "power": 20,
+    "power": 40,
     "accuracy": 100,
-    "pp": 15,
+    "pp": 20,
     "effect": {
         "type": "BATTLE_EFFECT_RECOVER_HALF_DAMAGE_DEALT",
         "chance": 0
