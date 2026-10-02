@@ -1,0 +1,33 @@
+name: apply-c1-existing-move-rebalance
+on:
+  push:
+    branches: [ overhaul/c1-existing-moves-impl ]
+    paths:
+      - 'tools/overhaul/apply_c1_move_rebalance.py'
+      - '.github/workflows/apply-c1-move-rebalance.yml'
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: overhaul/c1-existing-moves-impl
+      - name: Apply C1
+        run: python tools/overhaul/apply_c1_move_rebalance.py
+      - name: Verify exact move-file count
+        run: |
+          COUNT=$(git status --porcelain -- res/moves | wc -l)
+          test "$COUNT" -eq 82
+      - name: Commit implementation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add res/moves docs/overhaul/implementation/c1_move_before_guards.json docs/overhaul/implementation/C1_MOVE_IMPLEMENTATION_REPORT.md
+          git commit -m "moves: apply locked C1 existing-move rebalance"
+          git fetch origin overhaul/c1-existing-moves-impl
+          git rebase origin/overhaul/c1-existing-moves-impl
+          git push origin HEAD:overhaul/c1-existing-moves-impl
