@@ -372,6 +372,25 @@ Validation:
 - Brand-new leaf particles remain deferred because `weather_sys.narc` and `fldeff.narc` are currently prebuilt binary archives; adding new textures cleanly requires reconstructing one of those resource pipelines or deliberately patching the archive.
 
 
+
+### G2B canopy-weather implementation checkpoint
+
+Confirmed from the Diamond decomp:
+- Platinum weather ID 23 corresponds to **CANOPY** weather.
+- The canopy mode is a native weather-state entry, not an unknown placeholder.
+- Platinum's canopy callback is `ov5_021DB144`.
+- It already combines a scrolling BG2 layer with hardware fog.
+- Its resource-set index is 9; Diamond's unpacked weather archive maps the associated members to raw weather resources 55-57.
+
+Implemented:
+- renamed `OVERWORLD_WEATHER_23` to `OVERWORLD_WEATHER_CANOPY`
+- updated the forest map headers to use the named canopy constant
+- kept the existing canopy state machine and resource layout
+- shifted canopy fog slightly closer and changed it from pure white toward a cooler green-gray forest haze
+
+This is intentionally a conservative first visual pass. Runtime validation in Delta should determine whether the fog offset/color can be pushed further before additional canopy motion or leaf elements are added.
+
+
 #### G2C — Global UI presentation
 Improve:
 - frames
