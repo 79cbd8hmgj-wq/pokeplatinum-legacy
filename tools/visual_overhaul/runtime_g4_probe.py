@@ -423,7 +423,7 @@ def parser() -> argparse.ArgumentParser:
     p.add_argument(
         "--telemetry-timeout",
         type=float,
-        default=30.0,
+        default=18.0,
         help="maximum wall time to wait for an autowarp scenario to satisfy runtime telemetry",
     )
     p.add_argument(
