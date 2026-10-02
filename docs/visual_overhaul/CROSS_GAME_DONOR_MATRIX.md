@@ -57,6 +57,26 @@ Choose the strongest available Pokemon source/reference for each visual subsyste
 | 2D tiles | Ruby | Yellow, Platinum | Convertible/reference | Source readable motifs/patterns, then redraw/convert for DS use |
 | Historic Pokemon visual grammar | Yellow | Ruby, Stadium | Reference | Use only when an older design communicates Pokemon identity better than later art |
 
+## Strict donor-use policy
+
+Cross-game repositories are primarily **research sources**, not asset banks.
+
+Default behavior:
+- borrow **ideas, timing, staging, composition, palette logic, animation structure, and presentation techniques**
+- reimplement those ideas through Platinum's native systems and source-backed resources
+- do **not** import an external asset merely because it looks better
+
+An external asset may be transferred only when all of the following are true:
+- the format and resource contract are already compatible or require only trivial deterministic conversion
+- dimensions, palette/index assumptions, animation/cell structure, and archive placement are known
+- the transfer does not require speculative binary editing or broad remapping
+- the result can be reproduced from source and validated by normal build/resource checks
+- the visual gain clearly justifies even that small integration cost
+
+If any of those conditions are uncertain, classify the candidate as **Technique** or **Reference**, not Direct/Convertible.
+
+This policy intentionally favors Platinum-native reconstruction over donor transplantation.
+
 ## Key findings
 
 ### Platinum is more capable than a simple asset swap project
