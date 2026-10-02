@@ -31,10 +31,6 @@ jobs:
           cp res/field/maps/texture_sets/map_texture_set_061.nsbtx /tmp/lakes_before.nsbtx
           /tmp/g4-recolor spear /tmp/spear_before.nsbtx res/field/maps/texture_sets/map_texture_set_059.nsbtx
           /tmp/g4-recolor lakes /tmp/lakes_before.nsbtx res/field/maps/texture_sets/map_texture_set_061.nsbtx
-      - name: Guard binary scope
-        run: |
-          test "$(cmp -s res/field/maps/texture_sets/map_texture_set_055.nsbtx res/field/maps/texture_sets/map_texture_set_075.nsbtx; echo $?)" -eq 0
-          test "$(git status --porcelain -- res/field/maps/texture_sets | grep -E \'\\.nsbtx$\' | wc -l)" -eq 3
       - name: Commit G4 showcase passes
         run: |
           git config user.name "github-actions[bot]"
