@@ -843,7 +843,8 @@
       "save_compat_flag": "FLAG_RECEIVED_ROUTE_204_NORTH_TM78",
       "retry_safe_on_full_bag": true,
       "postgame_recoverable": true,
-      "collector_visibility_guard": "do not hide Collector until receipt flag is set"
+      "collector_visibility_guard": "clear stale hide flag and do not hide Collector until receipt flag is set",
+      "retail_save_recovery": true
     }
   },
   "text_corrections": {
