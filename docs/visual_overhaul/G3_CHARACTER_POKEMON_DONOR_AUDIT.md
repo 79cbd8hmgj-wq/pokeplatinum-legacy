@@ -95,16 +95,36 @@ Use a very small pilot before scaling the donor pass:
    - clear pose improvement in HGSS;
    - same 160x80 source contract;
    - Platinum/HGSS normal palette differs only in palette entry 0 in the audit;
-   - HGSS front `.key` differs and must be imported with the sprite.
+   - HGSS front `.key` differs from Platinum and is being treated as a separate compatibility question.
 
 2. **Bulbasaur front sprite**
    - clear revised front poses;
    - same 160x80 source contract;
    - sampled normal palette matches Platinum;
-   - import the matching HGSS front `.key` if it differs.
+   - HGSS front `.key` also differs from Platinum.
 
-Do **not** alter back sprites or species palettes in this pilot.
+The pilot is now implemented by replacing only the two source PNGs:
 
-The pilot is intended to answer the remaining runtime question: whether Platinum's existing species animation metadata presents the revised two-frame HGSS fronts cleanly in battle.
+- `res/pokemon/mewtwo/male_front.png`
+- `res/pokemon/bulbasaur/male_front.png`
+
+Back sprites, normal/shiny palettes, `.key` files, and `sprite_data.json` remain Platinum-native for this first build gate. This deliberately isolates whether the revised indexed image data itself is compatible before coupling additional donor metadata to it.
+
+The pilot is intended to answer the remaining runtime question: whether Platinum's existing sprite packing and species animation metadata present the revised two-frame HGSS fronts cleanly in battle.
 
 If the pilot builds and looks correct in Delta, the next step is a generated donor manifest for other visually improved Gen I-III fronts rather than manually replacing the entire National Dex.
+
+
+## Pilot implementation checkpoint
+
+Implemented on `visual-overhaul-g2a`:
+
+- Mewtwo male/front source -> HGSS revised two-frame front art
+- Bulbasaur male/front source -> HGSS revised two-frame front art
+- both remain 160x80 indexed PNGs
+- no back-sprite replacement
+- no palette replacement
+- no sprite-data/animation replacement
+- no archive ordering or species-resource layout changes
+
+This is intentionally small. Build/export validation must pass before a larger donor manifest is applied.
