@@ -15,7 +15,10 @@ lighting_data_srcs = lighting_txt_gen.process(files(
     'lighting_set_008.json',
     'lighting_set_009.json',
     'lighting_set_010.json',
-    'lighting_set_011.json'),
+    'lighting_set_011.json',
+    'lighting_set_012.json',
+    'lighting_set_013.json',
+    'lighting_set_014.json'),
     env: jsoncnv_env,
 )
 

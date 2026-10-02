@@ -5938,7 +5938,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = TRUE,
     },
     [MAP_HEADER_TURNBACK_CAVE_ENTRANCE] = {
-        .areaDataArchiveID = area_data_056,
+        .areaDataArchiveID = area_data_076,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_061,
         .scriptsArchiveID = scripts_turnback_cave_entrance,
@@ -5960,7 +5960,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = FALSE,
     },
     [MAP_HEADER_TURNBACK_CAVE_PILLAR_ROOM] = {
-        .areaDataArchiveID = area_data_056,
+        .areaDataArchiveID = area_data_076,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_062,
         .scriptsArchiveID = scripts_turnback_cave_pillar_room,
@@ -5982,7 +5982,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = FALSE,
     },
     [MAP_HEADER_TURNBACK_CAVE_GIRATINA_ROOM] = {
-        .areaDataArchiveID = area_data_056,
+        .areaDataArchiveID = area_data_076,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_063,
         .scriptsArchiveID = scripts_turnback_cave_giratina_room,
@@ -6004,7 +6004,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = FALSE,
     },
     [MAP_HEADER_TURNBACK_CAVE_PILLAR_1_ROOM_1] = {
-        .areaDataArchiveID = area_data_056,
+        .areaDataArchiveID = area_data_076,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_064,
         .scriptsArchiveID = scripts_turnback_cave_pillar_1_room_1,
@@ -6026,7 +6026,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = FALSE,
     },
     [MAP_HEADER_TURNBACK_CAVE_PILLAR_1_ROOM_2] = {
-        .areaDataArchiveID = area_data_056,
+        .areaDataArchiveID = area_data_076,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_064,
         .scriptsArchiveID = scripts_turnback_cave_pillar_1_room_2,
@@ -6048,7 +6048,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = FALSE,
     },
     [MAP_HEADER_TURNBACK_CAVE_PILLAR_1_ROOM_3] = {
-        .areaDataArchiveID = area_data_056,
+        .areaDataArchiveID = area_data_076,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_065,
         .scriptsArchiveID = scripts_turnback_cave_pillar_1_room_3,
@@ -11438,7 +11438,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = FALSE,
     },
     [MAP_HEADER_TURNBACK_CAVE_PILLAR_1_ROOM_4] = {
-        .areaDataArchiveID = area_data_056,
+        .areaDataArchiveID = area_data_076,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_065,
         .scriptsArchiveID = scripts_turnback_cave_pillar_1_room_4,
@@ -11460,7 +11460,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = FALSE,
     },
     [MAP_HEADER_TURNBACK_CAVE_PILLAR_1_ROOM_5] = {
-        .areaDataArchiveID = area_data_056,
+        .areaDataArchiveID = area_data_076,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_066,
         .scriptsArchiveID = scripts_turnback_cave_pillar_1_room_5,
@@ -11482,7 +11482,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = FALSE,
     },
     [MAP_HEADER_TURNBACK_CAVE_PILLAR_1_ROOM_6] = {
-        .areaDataArchiveID = area_data_056,
+        .areaDataArchiveID = area_data_076,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_066,
         .scriptsArchiveID = scripts_turnback_cave_pillar_1_room_6,
@@ -11504,7 +11504,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = FALSE,
     },
     [MAP_HEADER_TURNBACK_CAVE_PILLAR_2_ROOM_1] = {
-        .areaDataArchiveID = area_data_056,
+        .areaDataArchiveID = area_data_076,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_064,
         .scriptsArchiveID = scripts_turnback_cave_pillar_2_room_1,
@@ -11526,7 +11526,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = FALSE,
     },
     [MAP_HEADER_TURNBACK_CAVE_PILLAR_2_ROOM_2] = {
-        .areaDataArchiveID = area_data_056,
+        .areaDataArchiveID = area_data_076,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_064,
         .scriptsArchiveID = scripts_turnback_cave_pillar_2_room_2,
@@ -11548,7 +11548,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = FALSE,
     },
     [MAP_HEADER_TURNBACK_CAVE_PILLAR_2_ROOM_3] = {
-        .areaDataArchiveID = area_data_056,
+        .areaDataArchiveID = area_data_076,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_065,
         .scriptsArchiveID = scripts_turnback_cave_pillar_2_room_3,
@@ -11570,7 +11570,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = FALSE,
     },
     [MAP_HEADER_TURNBACK_CAVE_PILLAR_2_ROOM_4] = {
-        .areaDataArchiveID = area_data_056,
+        .areaDataArchiveID = area_data_076,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_065,
         .scriptsArchiveID = scripts_turnback_cave_pillar_2_room_4,
@@ -11592,7 +11592,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = FALSE,
     },
     [MAP_HEADER_TURNBACK_CAVE_PILLAR_2_ROOM_5] = {
-        .areaDataArchiveID = area_data_056,
+        .areaDataArchiveID = area_data_076,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_066,
         .scriptsArchiveID = scripts_turnback_cave_pillar_2_room_5,
@@ -11614,7 +11614,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = FALSE,
     },
     [MAP_HEADER_TURNBACK_CAVE_PILLAR_2_ROOM_6] = {
-        .areaDataArchiveID = area_data_056,
+        .areaDataArchiveID = area_data_076,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_066,
         .scriptsArchiveID = scripts_turnback_cave_pillar_2_room_6,
@@ -11636,7 +11636,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = FALSE,
     },
     [MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_1] = {
-        .areaDataArchiveID = area_data_056,
+        .areaDataArchiveID = area_data_076,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_064,
         .scriptsArchiveID = scripts_turnback_cave_pillar_3_room_1,
@@ -11658,7 +11658,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = FALSE,
     },
     [MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_2] = {
-        .areaDataArchiveID = area_data_056,
+        .areaDataArchiveID = area_data_076,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_064,
         .scriptsArchiveID = scripts_turnback_cave_pillar_3_room_2,
@@ -11680,7 +11680,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = FALSE,
     },
     [MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_3] = {
-        .areaDataArchiveID = area_data_056,
+        .areaDataArchiveID = area_data_076,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_065,
         .scriptsArchiveID = scripts_turnback_cave_pillar_3_room_3,
@@ -11702,7 +11702,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = FALSE,
     },
     [MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_4] = {
-        .areaDataArchiveID = area_data_056,
+        .areaDataArchiveID = area_data_076,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_065,
         .scriptsArchiveID = scripts_turnback_cave_pillar_3_room_4,
@@ -11724,7 +11724,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = FALSE,
     },
     [MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_5] = {
-        .areaDataArchiveID = area_data_056,
+        .areaDataArchiveID = area_data_076,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_066,
         .scriptsArchiveID = scripts_turnback_cave_pillar_3_room_5,
@@ -11746,7 +11746,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = FALSE,
     },
     [MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_6] = {
-        .areaDataArchiveID = area_data_056,
+        .areaDataArchiveID = area_data_076,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_066,
         .scriptsArchiveID = scripts_turnback_cave_pillar_3_room_6,
