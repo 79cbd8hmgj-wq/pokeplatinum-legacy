@@ -1,0 +1,48 @@
+name: dump-g4b-snow-textures
+on:
+  push:
+    branches: [ visual-overhaul-g2a ]
+    paths:
+      - 'tools/visual_overhaul/make_texture_sheet.py'
+      - '.github/workflows/dump-g4b-snow-textures.yml'
+      - 'res/field/maps/texture_sets/map_texture_set_014.nsbtx'
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  dump:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: visual-overhaul-g2a
+      - name: Build NitroBTX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc libpng-dev
+          mkdir -p g4-tools-build
+          gcc -std=gnu17 -O2 -Itools/nitrobtx/include             tools/nitrobtx/src/common.c             tools/nitrobtx/src/help.c             tools/nitrobtx/src/main.c             tools/nitrobtx/src/ns/chunks/tex.c             tools/nitrobtx/src/ns/container.c             tools/nitrobtx/src/ns/resource_dict.c             tools/nitrobtx/src/ns/resource_name.c             tools/nitrobtx/src/ns/resource_tree.c             tools/nitrobtx/src/options.c             tools/nitrobtx/src/palette.c             tools/nitrobtx/src/texture.c             -lpng -lm -o g4-tools-build/nitrobtx
+          python -m pip install Pillow
+      - name: Dump snow texture bank
+        run: |
+          rm -rf /tmp/g4b_snow
+          mkdir -p /tmp/g4b_snow
+          ./g4-tools-build/nitrobtx dump res/field/maps/texture_sets/map_texture_set_014.nsbtx /tmp/g4b_snow
+          python tools/visual_overhaul/make_texture_sheet.py /tmp/g4b_snow docs/visual_overhaul/review/g4b_snow_textures.png
+          {
+            for p in /tmp/g4b_snow/*.pal; do
+              echo "## $(basename "$p")"
+              cat "$p"
+            done
+          } > docs/visual_overhaul/review/g4b_snow_palettes.txt
+      - name: Commit snow review
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/visual_overhaul/review/g4b_snow_textures.png docs/visual_overhaul/review/g4b_snow_palettes.txt
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "docs: add G4B snow texture review"
+          git fetch origin visual-overhaul-g2a
+          git rebase origin/visual-overhaul-g2a
+          git push origin HEAD:visual-overhaul-g2a
