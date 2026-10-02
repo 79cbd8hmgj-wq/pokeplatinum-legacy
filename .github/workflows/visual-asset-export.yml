@@ -79,7 +79,7 @@ jobs:
           mkdir -p docs/visual_overhaul/review/g4a_eterna_dump/map
           mkdir -p docs/visual_overhaul/review/g4a_eterna_dump/props
           ./g4-tools-build/nitrobtx dump res/field/maps/texture_sets/map_texture_set_053.nsbtx docs/visual_overhaul/review/g4a_eterna_dump/map
-          ./g4-tools-build/tools/nitrobtx/nitrobtx dump res/field/props/texture_sets/prop_texture_set_050.nsbtx docs/visual_overhaul/review/g4a_eterna_dump/props
+          ./g4-tools-build/nitrobtx dump res/field/props/texture_sets/prop_texture_set_050.nsbtx docs/visual_overhaul/review/g4a_eterna_dump/props
           python tools/visual_overhaul/make_g4a_eterna_texture_sheet.py
 
       - name: Persist G4A Eterna review sheets
