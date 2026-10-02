@@ -1,0 +1,88 @@
+name: g4-runtime-harness
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/g4-runtime-harness.yml'
+      - 'tools/visual_overhaul/runtime_g4_probe.py'
+      - 'tools/visual_overhaul/validate_area_light_contract.py'
+      - 'include/constants/field/area_light.h'
+      - 'src/overlay005/area_light.c'
+      - 'src/overlay005/field_effect_renderer.c'
+      - 'src/overlay005/fieldmap.c'
+      - 'res/field/area_data/**'
+      - 'res/field/lighting/**'
+  workflow_dispatch: {}
+
+env:
+  LM_LICENSE_FILE: "${{ github.workspace }}/tools/cw/license.dat"
+  BUILD: /var/tmp/pokeplatinum
+
+jobs:
+  debug-symbol-gate:
+    name: debug runtime symbols (US rev ${{ matrix.revision }})
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        revision: [0, 1]
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y --no-install-recommends \
+            bison flex g++ gcc-arm-none-eabi git make ninja-build pkg-config python3 wget xz-utils
+
+      - name: Install Metroskrew
+        run: sudo make skrew
+
+      - name: Install pinned NDS Disassembly Toolkit
+        run: |
+          python -m pip install \
+            "git+https://github.com/79cbd8hmgj-wq/NDS-Disassembly-Toolkit.git@4b08df5a3a070fffafa10d4064f58e89d0c525d1"
+
+      - name: Build debug ROM and symbols
+        run: |
+          make configure ROM_REVISION=${{ matrix.revision }}
+          make debug ROM_REVISION=${{ matrix.revision }}
+
+      - name: Validate static area-light contract
+        run: python tools/visual_overhaul/validate_area_light_contract.py
+
+      - name: Resolve every G4 runtime probe symbol
+        shell: bash
+        run: |
+          set -euxo pipefail
+          mkdir -p runtime-symbol-reports
+          for scenario in \
+            eterna snow distortion spear lakes turnback galactic coronet-control
+          do
+            python tools/visual_overhaul/runtime_g4_probe.py "$scenario" \
+              --symbols "$BUILD/overlay.map" \
+              --validate-symbols-only \
+              --output "runtime-symbol-reports/$scenario.json"
+          done
+
+      - name: Upload runtime QA package
+        uses: actions/upload-artifact@v7
+        with:
+          name: g4-runtime-qa-rev${{ matrix.revision }}
+          path: |
+            ${{ env.BUILD }}/pokeplatinum.us.nds
+            ${{ env.BUILD }}/debug.nef
+            ${{ env.BUILD }}/overlay.map
+            runtime-symbol-reports/
+            tools/visual_overhaul/runtime_g4_probe.py
+            docs/visual_overhaul/G4_RUNTIME_QA.md
+          retention-days: 7
