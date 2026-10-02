@@ -861,6 +861,27 @@ Validation status:
 - generated PNGs have landed on `visual-overhaul-g2a`
 - binary dimensions/palette-index usage and ROM build are being verified through the visual-asset export and normal CI workflows before this checkpoint is treated as locked.
 
+
+### G2C start-menu cursor checkpoint
+
+Implemented:
+- added `tools/visual_overhaul/generate_start_menu_ui.py`
+- regenerated `res/graphics/start_menu/cursor.png` through the shared visual-UI workflow
+- preserved the retail 96x32 cursor sprite canvas
+- preserved the existing three-OAM 32x32 cell layout and one-frame animation contract
+- preserved the colored start-menu palette bank and palette-index usage
+- replaced the thick retail rounded rectangle with a thinner cut-corner selection frame plus a small inward focus chevron
+- left the existing animated icon art/geometry unchanged because Platinum already supplies swell and wiggle selection animation states
+
+Rationale:
+- improves selection-frame clarity and reduces visual bulk without touching menu layout, sprite positions, animation sequencing, or VRAM allocation
+- avoids recoloring shared palette index 15, which is also used inside the selected menu icons
+
+Validation status:
+- generator output has landed on the branch
+- local preview confirms the intended cut-corner geometry
+- normal ROM build / PR lint / exported-binary verification is running against the generated asset before lock.
+
 ### G2C party-menu palette checkpoint
 
 Implemented a resource-contract-safe party-menu refresh through `res/graphics/party_menu/shared.pal`.
