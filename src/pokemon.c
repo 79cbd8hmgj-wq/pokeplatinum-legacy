@@ -3616,6 +3616,49 @@ u16 Pokemon_GetEvolutionTargetSpecies(Party *party, Pokemon *mon, u8 evoClass, u
                 }
                 break;
 
+            case EVO_LEVEL_NIGHT:
+                if (IsNight() == TRUE && speciesEvolutions[i].param <= monLevel) {
+                    targetSpecies = speciesEvolutions[i].targetSpecies;
+                    *evoTypeResult = EVO_LEVEL_NIGHT;
+                }
+                break;
+
+            case EVO_LEVEL_SPATK_GT_ATK:
+                if (speciesEvolutions[i].param <= monLevel) {
+                    if (Pokemon_GetValue(mon, MON_DATA_SP_ATK, NULL) > Pokemon_GetValue(mon, MON_DATA_ATK, NULL)) {
+                        targetSpecies = speciesEvolutions[i].targetSpecies;
+                        *evoTypeResult = EVO_LEVEL_SPATK_GT_ATK;
+                    }
+                }
+                break;
+
+            case EVO_LEVEL_SPATK_GE_ATK:
+                if (speciesEvolutions[i].param <= monLevel) {
+                    if (Pokemon_GetValue(mon, MON_DATA_SP_ATK, NULL) >= Pokemon_GetValue(mon, MON_DATA_ATK, NULL)) {
+                        targetSpecies = speciesEvolutions[i].targetSpecies;
+                        *evoTypeResult = EVO_LEVEL_SPATK_GE_ATK;
+                    }
+                }
+                break;
+
+            case EVO_LEVEL_ATK_GT_SPATK:
+                if (speciesEvolutions[i].param <= monLevel) {
+                    if (Pokemon_GetValue(mon, MON_DATA_ATK, NULL) > Pokemon_GetValue(mon, MON_DATA_SP_ATK, NULL)) {
+                        targetSpecies = speciesEvolutions[i].targetSpecies;
+                        *evoTypeResult = EVO_LEVEL_ATK_GT_SPATK;
+                    }
+                }
+                break;
+
+            case EVO_LEVEL_SPDEF_GT_DEF:
+                if (speciesEvolutions[i].param <= monLevel) {
+                    if (Pokemon_GetValue(mon, MON_DATA_SP_DEF, NULL) > Pokemon_GetValue(mon, MON_DATA_DEF, NULL)) {
+                        targetSpecies = speciesEvolutions[i].targetSpecies;
+                        *evoTypeResult = EVO_LEVEL_SPDEF_GT_DEF;
+                    }
+                }
+                break;
+
             case EVO_LEVEL_PID_LOW:
                 if (speciesEvolutions[i].param <= monLevel) {
                     if (monPersonalityUpper % 10 < 5) {

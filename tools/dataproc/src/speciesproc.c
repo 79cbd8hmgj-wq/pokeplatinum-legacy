@@ -584,6 +584,11 @@ static SpeciesEvolutionList proc_evolutions(datafile_t *df) {
         case EVO_LEVEL_ATK_GT_DEF:
         case EVO_LEVEL_ATK_EQ_DEF:
         case EVO_LEVEL_ATK_LT_DEF:
+        case EVO_LEVEL_SPATK_GT_ATK:
+        case EVO_LEVEL_SPATK_GE_ATK:
+        case EVO_LEVEL_ATK_GT_SPATK:
+        case EVO_LEVEL_SPDEF_GT_DEF:
+        case EVO_LEVEL_NIGHT:
         case EVO_LEVEL_PID_LOW:
         case EVO_LEVEL_PID_HIGH:
         case EVO_LEVEL_NINJASK:

@@ -102,13 +102,13 @@
     },
     "evolutions": [
         [
-            "EVO_TRADE_WITH_HELD_ITEM",
-            "ITEM_DEEPSEATOOTH",
+            "EVO_LEVEL_ATK_GT_SPATK",
+            35,
             "SPECIES_HUNTAIL"
         ],
         [
-            "EVO_TRADE_WITH_HELD_ITEM",
-            "ITEM_DEEPSEASCALE",
+            "EVO_LEVEL_SPATK_GE_ATK",
+            35,
             "SPECIES_GOREBYSS"
         ]
     ],

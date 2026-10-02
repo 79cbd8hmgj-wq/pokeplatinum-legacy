@@ -1,0 +1,7999 @@
+{
+ "schema": "evolution_manifest/1",
+ "base_commit": "3b7b843e78ae3afcbd64c475816bfd4f3e83dc79",
+ "scope": "res/pokemon/*/data.json evolutions + minimal evolution-engine methods",
+ "engine_methods": {
+  "vanilla_count": 27,
+  "new": [
+   {
+    "id": 27,
+    "name": "EVO_LEVEL_SPATK_GT_ATK",
+    "semantics": "level >= param AND SpA > Atk (strict)"
+   },
+   {
+    "id": 28,
+    "name": "EVO_LEVEL_SPATK_GE_ATK",
+    "semantics": "level >= param AND SpA >= Atk (equality included)"
+   },
+   {
+    "id": 29,
+    "name": "EVO_LEVEL_ATK_GT_SPATK",
+    "semantics": "level >= param AND Atk > SpA (strict)"
+   },
+   {
+    "id": 30,
+    "name": "EVO_LEVEL_SPDEF_GT_DEF",
+    "semantics": "level >= param AND SpD > Def (strict)"
+   },
+   {
+    "id": 31,
+    "name": "EVO_LEVEL_NIGHT",
+    "semantics": "level >= param AND IsNight() (no held item required)"
+   }
+  ],
+  "first_match_wins": true
+ },
+ "evolution_stones": [
+  "ITEM_FIRE_STONE",
+  "ITEM_WATER_STONE",
+  "ITEM_THUNDERSTONE",
+  "ITEM_LEAF_STONE",
+  "ITEM_MOON_STONE",
+  "ITEM_SUN_STONE",
+  "ITEM_SHINY_STONE",
+  "ITEM_DUSK_STONE",
+  "ITEM_DAWN_STONE"
+ ],
+ "superseded_early_proposals": [
+  "trade evolution (any)",
+  "trade-with-held-item evolution (Metal Coat, King's Rock, Dragon Scale, Protector, Electirizer, Magmarizer, Reaper Cloth, Up-Grade, Dubious Disc, Deep Sea Tooth, Deep Sea Scale)",
+  "direct use of non-stone items as evolution triggers",
+  "level + held Razor Fang / Razor Claw / Metal Coat / King's Rock / Dragon Scale / Protector / Electirizer / Magmarizer / Reaper Cloth / Up-Grade / Dubious Disc",
+  "earliest provisional trade-evolution level suggestions where later Pass A / C3 values differ"
+ ],
+ "unresolved_authority": [
+  {
+   "species": "SPECIES_HAPPINY",
+   "key": "HAPPINY_CHANSEY_HELD_OVAL_STONE",
+   "edge": [
+    "EVO_LEVEL_WITH_HELD_ITEM_DAY",
+    "ITEM_OVAL_STONE",
+    "SPECIES_CHANSEY"
+   ],
+   "note": "Held Oval Stone (day) evolution is not a genuine stone use and no replacement was ever recovered; left vanilla and reported. Statically achievable in one save (Lost Tower 2F field item; common held item of wild Happiny/Chansey/Blissey)."
+  }
+ ],
+ "summary": {
+  "evolution_bearing_species": 229,
+  "total_edges": 246,
+  "edge_class_counts": {
+   "LOCKED_CHANGED": 20,
+   "LOCKED_KEEP": 24,
+   "VANILLA_KEEP": 201,
+   "UNRESOLVED_AUTHORITY": 1,
+   "SUPERSEDED_EARLY_PROPOSAL": 0
+  },
+  "species_with_changed_tables": 19,
+  "changed_edges": 20
+ },
+ "species": [
+  {
+   "species": "SPECIES_ABRA",
+   "dir": "abra",
+   "source": "res/pokemon/abra/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_KADABRA"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_KADABRA"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_AIPOM",
+   "dir": "aipom",
+   "source": "res/pokemon/aipom/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_KNOW_MOVE",
+     "MOVE_DOUBLE_HIT",
+     "SPECIES_AMBIPOM"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_KNOW_MOVE",
+     "MOVE_DOUBLE_HIT",
+     "SPECIES_AMBIPOM"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_ANORITH",
+   "dir": "anorith",
+   "source": "res/pokemon/anorith/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     40,
+     "SPECIES_ARMALDO"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     40,
+     "SPECIES_ARMALDO"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_ARON",
+   "dir": "aron",
+   "source": "res/pokemon/aron/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     32,
+     "SPECIES_LAIRON"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     32,
+     "SPECIES_LAIRON"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_AZURILL",
+   "dir": "azurill",
+   "source": "res/pokemon/azurill/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_HAPPINESS",
+     "SPECIES_MARILL"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_HAPPINESS",
+     "SPECIES_MARILL"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_BAGON",
+   "dir": "bagon",
+   "source": "res/pokemon/bagon/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_SHELGON"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_SHELGON"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_BALTOY",
+   "dir": "baltoy",
+   "source": "res/pokemon/baltoy/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_CLAYDOL"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_CLAYDOL"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_BARBOACH",
+   "dir": "barboach",
+   "source": "res/pokemon/barboach/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_WHISCASH"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_WHISCASH"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_BAYLEEF",
+   "dir": "bayleef",
+   "source": "res/pokemon/bayleef/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     32,
+     "SPECIES_MEGANIUM"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     32,
+     "SPECIES_MEGANIUM"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_BELDUM",
+   "dir": "beldum",
+   "source": "res/pokemon/beldum/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     20,
+     "SPECIES_METANG"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     20,
+     "SPECIES_METANG"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_BELLSPROUT",
+   "dir": "bellsprout",
+   "source": "res/pokemon/bellsprout/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     21,
+     "SPECIES_WEEPINBELL"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     21,
+     "SPECIES_WEEPINBELL"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_BIDOOF",
+   "dir": "bidoof",
+   "source": "res/pokemon/bidoof/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     15,
+     "SPECIES_BIBAREL"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     15,
+     "SPECIES_BIBAREL"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_BONSLY",
+   "dir": "bonsly",
+   "source": "res/pokemon/bonsly/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_KNOW_MOVE",
+     "MOVE_MIMIC",
+     "SPECIES_SUDOWOODO"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_KNOW_MOVE",
+     "MOVE_MIMIC",
+     "SPECIES_SUDOWOODO"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_BRONZOR",
+   "dir": "bronzor",
+   "source": "res/pokemon/bronzor/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     33,
+     "SPECIES_BRONZONG"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     33,
+     "SPECIES_BRONZONG"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_BUDEW",
+   "dir": "budew",
+   "source": "res/pokemon/budew/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_HAPPINESS_DAY",
+     "SPECIES_ROSELIA"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_HAPPINESS_DAY",
+     "SPECIES_ROSELIA"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_BUIZEL",
+   "dir": "buizel",
+   "source": "res/pokemon/buizel/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     26,
+     "SPECIES_FLOATZEL"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     26,
+     "SPECIES_FLOATZEL"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_BULBASAUR",
+   "dir": "bulbasaur",
+   "source": "res/pokemon/bulbasaur/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_IVYSAUR"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_IVYSAUR"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_BUNEARY",
+   "dir": "buneary",
+   "source": "res/pokemon/buneary/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_HAPPINESS",
+     "SPECIES_LOPUNNY"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_HAPPINESS",
+     "SPECIES_LOPUNNY"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_BURMY",
+   "dir": "burmy",
+   "source": "res/pokemon/burmy/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_FEMALE",
+     20,
+     "SPECIES_WORMADAM"
+    ],
+    [
+     "EVO_LEVEL_MALE",
+     20,
+     "SPECIES_MOTHIM"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_FEMALE",
+     20,
+     "SPECIES_WORMADAM"
+    ],
+    [
+     "EVO_LEVEL_MALE",
+     20,
+     "SPECIES_MOTHIM"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP",
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_CACNEA",
+   "dir": "cacnea",
+   "source": "res/pokemon/cacnea/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     32,
+     "SPECIES_CACTURNE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     32,
+     "SPECIES_CACTURNE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_CARVANHA",
+   "dir": "carvanha",
+   "source": "res/pokemon/carvanha/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_SHARPEDO"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_SHARPEDO"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_CASCOON",
+   "dir": "cascoon",
+   "source": "res/pokemon/cascoon/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     10,
+     "SPECIES_DUSTOX"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     10,
+     "SPECIES_DUSTOX"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_CATERPIE",
+   "dir": "caterpie",
+   "source": "res/pokemon/caterpie/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     7,
+     "SPECIES_METAPOD"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     7,
+     "SPECIES_METAPOD"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_CHANSEY",
+   "dir": "chansey",
+   "source": "res/pokemon/chansey/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_HAPPINESS",
+     "SPECIES_BLISSEY"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_HAPPINESS",
+     "SPECIES_BLISSEY"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_CHARMANDER",
+   "dir": "charmander",
+   "source": "res/pokemon/charmander/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_CHARMELEON"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_CHARMELEON"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_CHARMELEON",
+   "dir": "charmeleon",
+   "source": "res/pokemon/charmeleon/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_CHARIZARD"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_CHARIZARD"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_CHERUBI",
+   "dir": "cherubi",
+   "source": "res/pokemon/cherubi/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     25,
+     "SPECIES_CHERRIM"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     25,
+     "SPECIES_CHERRIM"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_CHIKORITA",
+   "dir": "chikorita",
+   "source": "res/pokemon/chikorita/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_BAYLEEF"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_BAYLEEF"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_CHIMCHAR",
+   "dir": "chimchar",
+   "source": "res/pokemon/chimchar/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     14,
+     "SPECIES_MONFERNO"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     14,
+     "SPECIES_MONFERNO"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_CHINCHOU",
+   "dir": "chinchou",
+   "source": "res/pokemon/chinchou/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     27,
+     "SPECIES_LANTURN"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     27,
+     "SPECIES_LANTURN"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_CHINGLING",
+   "dir": "chingling",
+   "source": "res/pokemon/chingling/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_HAPPINESS_NIGHT",
+     "SPECIES_CHIMECHO"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_HAPPINESS_NIGHT",
+     "SPECIES_CHIMECHO"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_CLAMPERL",
+   "dir": "clamperl",
+   "source": "res/pokemon/clamperl/data.json",
+   "before": [
+    [
+     "EVO_TRADE_WITH_HELD_ITEM",
+     "ITEM_DEEPSEATOOTH",
+     "SPECIES_HUNTAIL"
+    ],
+    [
+     "EVO_TRADE_WITH_HELD_ITEM",
+     "ITEM_DEEPSEASCALE",
+     "SPECIES_GOREBYSS"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_ATK_GT_SPATK",
+     35,
+     "SPECIES_HUNTAIL"
+    ],
+    [
+     "EVO_LEVEL_SPATK_GE_ATK",
+     35,
+     "SPECIES_GOREBYSS"
+    ]
+   ],
+   "changed": true,
+   "edge_classes": [
+    "LOCKED_CHANGED",
+    "LOCKED_CHANGED"
+   ],
+   "authority_key": "STAT_BRANCH",
+   "provenance": "EVOLUTION_SPEC.md / EMERALD_PORT_PLAN.md (Huntail Atk > SpA; Gorebyss SpA >= Atk, both Lv35)"
+  },
+  {
+   "species": "SPECIES_CLEFAIRY",
+   "dir": "clefairy",
+   "source": "res/pokemon/clefairy/data.json",
+   "before": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_MOON_STONE",
+     "SPECIES_CLEFABLE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_MOON_STONE",
+     "SPECIES_CLEFABLE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_CLEFFA",
+   "dir": "cleffa",
+   "source": "res/pokemon/cleffa/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_HAPPINESS",
+     "SPECIES_CLEFAIRY"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_HAPPINESS",
+     "SPECIES_CLEFAIRY"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_COMBEE",
+   "dir": "combee",
+   "source": "res/pokemon/combee/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_FEMALE",
+     21,
+     "SPECIES_VESPIQUEN"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_FEMALE",
+     21,
+     "SPECIES_VESPIQUEN"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_COMBUSKEN",
+   "dir": "combusken",
+   "source": "res/pokemon/combusken/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_BLAZIKEN"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_BLAZIKEN"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_CORPHISH",
+   "dir": "corphish",
+   "source": "res/pokemon/corphish/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_CRAWDAUNT"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_CRAWDAUNT"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_CRANIDOS",
+   "dir": "cranidos",
+   "source": "res/pokemon/cranidos/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_RAMPARDOS"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_RAMPARDOS"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_CROAGUNK",
+   "dir": "croagunk",
+   "source": "res/pokemon/croagunk/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     37,
+     "SPECIES_TOXICROAK"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     37,
+     "SPECIES_TOXICROAK"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_CROCONAW",
+   "dir": "croconaw",
+   "source": "res/pokemon/croconaw/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_FERALIGATR"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_FERALIGATR"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_CUBONE",
+   "dir": "cubone",
+   "source": "res/pokemon/cubone/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     28,
+     "SPECIES_MAROWAK"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     28,
+     "SPECIES_MAROWAK"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_CYNDAQUIL",
+   "dir": "cyndaquil",
+   "source": "res/pokemon/cyndaquil/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     14,
+     "SPECIES_QUILAVA"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     14,
+     "SPECIES_QUILAVA"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_DIGLETT",
+   "dir": "diglett",
+   "source": "res/pokemon/diglett/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     26,
+     "SPECIES_DUGTRIO"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     26,
+     "SPECIES_DUGTRIO"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_DODUO",
+   "dir": "doduo",
+   "source": "res/pokemon/doduo/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     31,
+     "SPECIES_DODRIO"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     31,
+     "SPECIES_DODRIO"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_DRAGONAIR",
+   "dir": "dragonair",
+   "source": "res/pokemon/dragonair/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     55,
+     "SPECIES_DRAGONITE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     55,
+     "SPECIES_DRAGONITE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_DRATINI",
+   "dir": "dratini",
+   "source": "res/pokemon/dratini/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_DRAGONAIR"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_DRAGONAIR"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_DRIFLOON",
+   "dir": "drifloon",
+   "source": "res/pokemon/drifloon/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     28,
+     "SPECIES_DRIFBLIM"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     28,
+     "SPECIES_DRIFBLIM"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_DROWZEE",
+   "dir": "drowzee",
+   "source": "res/pokemon/drowzee/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     26,
+     "SPECIES_HYPNO"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     26,
+     "SPECIES_HYPNO"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_DUSCLOPS",
+   "dir": "dusclops",
+   "source": "res/pokemon/dusclops/data.json",
+   "before": [
+    [
+     "EVO_TRADE_WITH_HELD_ITEM",
+     "ITEM_REAPER_CLOTH",
+     "SPECIES_DUSKNOIR"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     45,
+     "SPECIES_DUSKNOIR"
+    ]
+   ],
+   "changed": true,
+   "edge_classes": [
+    "LOCKED_CHANGED"
+   ],
+   "authority_key": "ITEM_TRADE_REPLACEMENT",
+   "provenance": "EVOLUTION_SPEC.md (Dusknoir Lv45)"
+  },
+  {
+   "species": "SPECIES_DUSKULL",
+   "dir": "duskull",
+   "source": "res/pokemon/duskull/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     37,
+     "SPECIES_DUSCLOPS"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     37,
+     "SPECIES_DUSCLOPS"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_EEVEE",
+   "dir": "eevee",
+   "source": "res/pokemon/eevee/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_MOSS_ROCK",
+     "SPECIES_LEAFEON"
+    ],
+    [
+     "EVO_LEVEL_ICE_ROCK",
+     "SPECIES_GLACEON"
+    ],
+    [
+     "EVO_USE_ITEM",
+     "ITEM_THUNDERSTONE",
+     "SPECIES_JOLTEON"
+    ],
+    [
+     "EVO_USE_ITEM",
+     "ITEM_WATER_STONE",
+     "SPECIES_VAPOREON"
+    ],
+    [
+     "EVO_USE_ITEM",
+     "ITEM_FIRE_STONE",
+     "SPECIES_FLAREON"
+    ],
+    [
+     "EVO_LEVEL_HAPPINESS_DAY",
+     "SPECIES_ESPEON"
+    ],
+    [
+     "EVO_LEVEL_HAPPINESS_NIGHT",
+     "SPECIES_UMBREON"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_MOSS_ROCK",
+     "SPECIES_LEAFEON"
+    ],
+    [
+     "EVO_LEVEL_ICE_ROCK",
+     "SPECIES_GLACEON"
+    ],
+    [
+     "EVO_USE_ITEM",
+     "ITEM_THUNDERSTONE",
+     "SPECIES_JOLTEON"
+    ],
+    [
+     "EVO_USE_ITEM",
+     "ITEM_WATER_STONE",
+     "SPECIES_VAPOREON"
+    ],
+    [
+     "EVO_USE_ITEM",
+     "ITEM_FIRE_STONE",
+     "SPECIES_FLAREON"
+    ],
+    [
+     "EVO_LEVEL_HAPPINESS_DAY",
+     "SPECIES_ESPEON"
+    ],
+    [
+     "EVO_LEVEL_HAPPINESS_NIGHT",
+     "SPECIES_UMBREON"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "LOCKED_KEEP",
+    "LOCKED_KEEP",
+    "LOCKED_KEEP",
+    "LOCKED_KEEP",
+    "LOCKED_KEEP",
+    "LOCKED_KEEP",
+    "LOCKED_KEEP"
+   ],
+   "authority_key": "LOCKED_KEEP",
+   "provenance": "stone / friendship / location branches retained"
+  },
+  {
+   "species": "SPECIES_EKANS",
+   "dir": "ekans",
+   "source": "res/pokemon/ekans/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     22,
+     "SPECIES_ARBOK"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     22,
+     "SPECIES_ARBOK"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_ELECTABUZZ",
+   "dir": "electabuzz",
+   "source": "res/pokemon/electabuzz/data.json",
+   "before": [
+    [
+     "EVO_TRADE_WITH_HELD_ITEM",
+     "ITEM_ELECTIRIZER",
+     "SPECIES_ELECTIVIRE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     42,
+     "SPECIES_ELECTIVIRE"
+    ]
+   ],
+   "changed": true,
+   "edge_classes": [
+    "LOCKED_CHANGED"
+   ],
+   "authority_key": "ITEM_TRADE_REPLACEMENT",
+   "provenance": "EVOLUTION_SPEC.md; C3 sync (Electivire Lv42)"
+  },
+  {
+   "species": "SPECIES_ELECTRIKE",
+   "dir": "electrike",
+   "source": "res/pokemon/electrike/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     26,
+     "SPECIES_MANECTRIC"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     26,
+     "SPECIES_MANECTRIC"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_ELEKID",
+   "dir": "elekid",
+   "source": "res/pokemon/elekid/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_ELECTABUZZ"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_ELECTABUZZ"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_EXEGGCUTE",
+   "dir": "exeggcute",
+   "source": "res/pokemon/exeggcute/data.json",
+   "before": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_LEAF_STONE",
+     "SPECIES_EXEGGUTOR"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_LEAF_STONE",
+     "SPECIES_EXEGGUTOR"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_FEEBAS",
+   "dir": "feebas",
+   "source": "res/pokemon/feebas/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_BEAUTY",
+     170,
+     "SPECIES_MILOTIC"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_BEAUTY",
+     170,
+     "SPECIES_MILOTIC"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "LOCKED_KEEP"
+   ],
+   "authority_key": "LOCKED_KEEP",
+   "provenance": "Milotic via Beauty (retained)"
+  },
+  {
+   "species": "SPECIES_FINNEON",
+   "dir": "finneon",
+   "source": "res/pokemon/finneon/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     31,
+     "SPECIES_LUMINEON"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     31,
+     "SPECIES_LUMINEON"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_FLAAFFY",
+   "dir": "flaaffy",
+   "source": "res/pokemon/flaaffy/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_AMPHAROS"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_AMPHAROS"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_GABITE",
+   "dir": "gabite",
+   "source": "res/pokemon/gabite/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     48,
+     "SPECIES_GARCHOMP"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     48,
+     "SPECIES_GARCHOMP"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_GASTLY",
+   "dir": "gastly",
+   "source": "res/pokemon/gastly/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     25,
+     "SPECIES_HAUNTER"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     25,
+     "SPECIES_HAUNTER"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_GEODUDE",
+   "dir": "geodude",
+   "source": "res/pokemon/geodude/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     25,
+     "SPECIES_GRAVELER"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     25,
+     "SPECIES_GRAVELER"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_GIBLE",
+   "dir": "gible",
+   "source": "res/pokemon/gible/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     24,
+     "SPECIES_GABITE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     24,
+     "SPECIES_GABITE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_GLAMEOW",
+   "dir": "glameow",
+   "source": "res/pokemon/glameow/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     38,
+     "SPECIES_PURUGLY"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     38,
+     "SPECIES_PURUGLY"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_GLIGAR",
+   "dir": "gligar",
+   "source": "res/pokemon/gligar/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_WITH_HELD_ITEM_NIGHT",
+     "ITEM_RAZOR_FANG",
+     "SPECIES_GLISCOR"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_NIGHT",
+     38,
+     "SPECIES_GLISCOR"
+    ]
+   ],
+   "changed": true,
+   "edge_classes": [
+    "LOCKED_CHANGED"
+   ],
+   "authority_key": "NIGHT_LEVEL",
+   "provenance": "EVOLUTION_SPEC.md (Gliscor Lv38 at night, no Razor Fang)"
+  },
+  {
+   "species": "SPECIES_GLOOM",
+   "dir": "gloom",
+   "source": "res/pokemon/gloom/data.json",
+   "before": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_LEAF_STONE",
+     "SPECIES_VILEPLUME"
+    ],
+    [
+     "EVO_USE_ITEM",
+     "ITEM_SUN_STONE",
+     "SPECIES_BELLOSSOM"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_LEAF_STONE",
+     "SPECIES_VILEPLUME"
+    ],
+    [
+     "EVO_USE_ITEM",
+     "ITEM_SUN_STONE",
+     "SPECIES_BELLOSSOM"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP",
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_GOLBAT",
+   "dir": "golbat",
+   "source": "res/pokemon/golbat/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_HAPPINESS",
+     "SPECIES_CROBAT"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_HAPPINESS",
+     "SPECIES_CROBAT"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_GOLDEEN",
+   "dir": "goldeen",
+   "source": "res/pokemon/goldeen/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     33,
+     "SPECIES_SEAKING"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     33,
+     "SPECIES_SEAKING"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_GRAVELER",
+   "dir": "graveler",
+   "source": "res/pokemon/graveler/data.json",
+   "before": [
+    [
+     "EVO_TRADE",
+     "SPECIES_GOLEM"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_GOLEM"
+    ]
+   ],
+   "changed": true,
+   "edge_classes": [
+    "LOCKED_CHANGED"
+   ],
+   "authority_key": "TRADE_REPLACEMENT_KANTO",
+   "provenance": "EVOLUTION_SPEC.md recovered rulings; C3 sync (Golem Lv36)"
+  },
+  {
+   "species": "SPECIES_GRIMER",
+   "dir": "grimer",
+   "source": "res/pokemon/grimer/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     38,
+     "SPECIES_MUK"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     38,
+     "SPECIES_MUK"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_GROTLE",
+   "dir": "grotle",
+   "source": "res/pokemon/grotle/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     32,
+     "SPECIES_TORTERRA"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     32,
+     "SPECIES_TORTERRA"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_GROVYLE",
+   "dir": "grovyle",
+   "source": "res/pokemon/grovyle/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_SCEPTILE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_SCEPTILE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_GROWLITHE",
+   "dir": "growlithe",
+   "source": "res/pokemon/growlithe/data.json",
+   "before": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_FIRE_STONE",
+     "SPECIES_ARCANINE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_FIRE_STONE",
+     "SPECIES_ARCANINE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_GULPIN",
+   "dir": "gulpin",
+   "source": "res/pokemon/gulpin/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     26,
+     "SPECIES_SWALOT"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     26,
+     "SPECIES_SWALOT"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_HAPPINY",
+   "dir": "happiny",
+   "source": "res/pokemon/happiny/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_WITH_HELD_ITEM_DAY",
+     "ITEM_OVAL_STONE",
+     "SPECIES_CHANSEY"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_WITH_HELD_ITEM_DAY",
+     "ITEM_OVAL_STONE",
+     "SPECIES_CHANSEY"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "UNRESOLVED_AUTHORITY"
+   ],
+   "authority_key": "HAPPINY_CHANSEY_HELD_OVAL_STONE",
+   "provenance": "UNRESOLVED: global no-held-item rule applies but no final method was recovered; left as vanilla"
+  },
+  {
+   "species": "SPECIES_HAUNTER",
+   "dir": "haunter",
+   "source": "res/pokemon/haunter/data.json",
+   "before": [
+    [
+     "EVO_TRADE",
+     "SPECIES_GENGAR"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_GENGAR"
+    ]
+   ],
+   "changed": true,
+   "edge_classes": [
+    "LOCKED_CHANGED"
+   ],
+   "authority_key": "TRADE_REPLACEMENT_KANTO",
+   "provenance": "EVOLUTION_SPEC.md recovered rulings; C3 sync (Gengar Lv36)"
+  },
+  {
+   "species": "SPECIES_HIPPOPOTAS",
+   "dir": "hippopotas",
+   "source": "res/pokemon/hippopotas/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     34,
+     "SPECIES_HIPPOWDON"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     34,
+     "SPECIES_HIPPOWDON"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_HOOTHOOT",
+   "dir": "hoothoot",
+   "source": "res/pokemon/hoothoot/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     20,
+     "SPECIES_NOCTOWL"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     20,
+     "SPECIES_NOCTOWL"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_HOPPIP",
+   "dir": "hoppip",
+   "source": "res/pokemon/hoppip/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     18,
+     "SPECIES_SKIPLOOM"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     18,
+     "SPECIES_SKIPLOOM"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_HORSEA",
+   "dir": "horsea",
+   "source": "res/pokemon/horsea/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     32,
+     "SPECIES_SEADRA"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     32,
+     "SPECIES_SEADRA"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_HOUNDOUR",
+   "dir": "houndour",
+   "source": "res/pokemon/houndour/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     24,
+     "SPECIES_HOUNDOOM"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     24,
+     "SPECIES_HOUNDOOM"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_IGGLYBUFF",
+   "dir": "igglybuff",
+   "source": "res/pokemon/igglybuff/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_HAPPINESS",
+     "SPECIES_JIGGLYPUFF"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_HAPPINESS",
+     "SPECIES_JIGGLYPUFF"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_IVYSAUR",
+   "dir": "ivysaur",
+   "source": "res/pokemon/ivysaur/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     32,
+     "SPECIES_VENUSAUR"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     32,
+     "SPECIES_VENUSAUR"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_JIGGLYPUFF",
+   "dir": "jigglypuff",
+   "source": "res/pokemon/jigglypuff/data.json",
+   "before": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_MOON_STONE",
+     "SPECIES_WIGGLYTUFF"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_MOON_STONE",
+     "SPECIES_WIGGLYTUFF"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_KABUTO",
+   "dir": "kabuto",
+   "source": "res/pokemon/kabuto/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     40,
+     "SPECIES_KABUTOPS"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     40,
+     "SPECIES_KABUTOPS"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_KADABRA",
+   "dir": "kadabra",
+   "source": "res/pokemon/kadabra/data.json",
+   "before": [
+    [
+     "EVO_TRADE",
+     "SPECIES_ALAKAZAM"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_ALAKAZAM"
+    ]
+   ],
+   "changed": true,
+   "edge_classes": [
+    "LOCKED_CHANGED"
+   ],
+   "authority_key": "TRADE_REPLACEMENT_KANTO",
+   "provenance": "EVOLUTION_SPEC.md recovered rulings; C3 sync (Alakazam Lv36)"
+  },
+  {
+   "species": "SPECIES_KAKUNA",
+   "dir": "kakuna",
+   "source": "res/pokemon/kakuna/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     10,
+     "SPECIES_BEEDRILL"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     10,
+     "SPECIES_BEEDRILL"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_KIRLIA",
+   "dir": "kirlia",
+   "source": "res/pokemon/kirlia/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_GARDEVOIR"
+    ],
+    [
+     "EVO_USE_ITEM_MALE",
+     "ITEM_DAWN_STONE",
+     "SPECIES_GALLADE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_GARDEVOIR"
+    ],
+    [
+     "EVO_USE_ITEM_MALE",
+     "ITEM_DAWN_STONE",
+     "SPECIES_GALLADE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "LOCKED_KEEP",
+    "LOCKED_KEEP"
+   ],
+   "authority_key": "LOCKED_KEEP",
+   "provenance": "Gardevoir Lv30 and male Kirlia -> Gallade via Dawn Stone"
+  },
+  {
+   "species": "SPECIES_KOFFING",
+   "dir": "koffing",
+   "source": "res/pokemon/koffing/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     35,
+     "SPECIES_WEEZING"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     35,
+     "SPECIES_WEEZING"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_KRABBY",
+   "dir": "krabby",
+   "source": "res/pokemon/krabby/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     28,
+     "SPECIES_KINGLER"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     28,
+     "SPECIES_KINGLER"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_KRICKETOT",
+   "dir": "kricketot",
+   "source": "res/pokemon/kricketot/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     10,
+     "SPECIES_KRICKETUNE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     10,
+     "SPECIES_KRICKETUNE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_LAIRON",
+   "dir": "lairon",
+   "source": "res/pokemon/lairon/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     42,
+     "SPECIES_AGGRON"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     42,
+     "SPECIES_AGGRON"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_LARVITAR",
+   "dir": "larvitar",
+   "source": "res/pokemon/larvitar/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_PUPITAR"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_PUPITAR"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_LEDYBA",
+   "dir": "ledyba",
+   "source": "res/pokemon/ledyba/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     18,
+     "SPECIES_LEDIAN"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     18,
+     "SPECIES_LEDIAN"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_LICKITUNG",
+   "dir": "lickitung",
+   "source": "res/pokemon/lickitung/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_KNOW_MOVE",
+     "MOVE_ROLLOUT",
+     "SPECIES_LICKILICKY"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_KNOW_MOVE",
+     "MOVE_ROLLOUT",
+     "SPECIES_LICKILICKY"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_LILEEP",
+   "dir": "lileep",
+   "source": "res/pokemon/lileep/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     40,
+     "SPECIES_CRADILY"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     40,
+     "SPECIES_CRADILY"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_LOMBRE",
+   "dir": "lombre",
+   "source": "res/pokemon/lombre/data.json",
+   "before": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_WATER_STONE",
+     "SPECIES_LUDICOLO"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_WATER_STONE",
+     "SPECIES_LUDICOLO"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_LOTAD",
+   "dir": "lotad",
+   "source": "res/pokemon/lotad/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     14,
+     "SPECIES_LOMBRE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     14,
+     "SPECIES_LOMBRE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_LOUDRED",
+   "dir": "loudred",
+   "source": "res/pokemon/loudred/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     40,
+     "SPECIES_EXPLOUD"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     40,
+     "SPECIES_EXPLOUD"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_LUXIO",
+   "dir": "luxio",
+   "source": "res/pokemon/luxio/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_LUXRAY"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_LUXRAY"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_MACHOKE",
+   "dir": "machoke",
+   "source": "res/pokemon/machoke/data.json",
+   "before": [
+    [
+     "EVO_TRADE",
+     "SPECIES_MACHAMP"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_MACHAMP"
+    ]
+   ],
+   "changed": true,
+   "edge_classes": [
+    "LOCKED_CHANGED"
+   ],
+   "authority_key": "TRADE_REPLACEMENT_KANTO",
+   "provenance": "EVOLUTION_SPEC.md recovered rulings; C3 sync (Machamp Lv36)"
+  },
+  {
+   "species": "SPECIES_MACHOP",
+   "dir": "machop",
+   "source": "res/pokemon/machop/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     28,
+     "SPECIES_MACHOKE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     28,
+     "SPECIES_MACHOKE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_MAGBY",
+   "dir": "magby",
+   "source": "res/pokemon/magby/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_MAGMAR"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_MAGMAR"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_MAGIKARP",
+   "dir": "magikarp",
+   "source": "res/pokemon/magikarp/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     20,
+     "SPECIES_GYARADOS"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     20,
+     "SPECIES_GYARADOS"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_MAGMAR",
+   "dir": "magmar",
+   "source": "res/pokemon/magmar/data.json",
+   "before": [
+    [
+     "EVO_TRADE_WITH_HELD_ITEM",
+     "ITEM_MAGMARIZER",
+     "SPECIES_MAGMORTAR"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     42,
+     "SPECIES_MAGMORTAR"
+    ]
+   ],
+   "changed": true,
+   "edge_classes": [
+    "LOCKED_CHANGED"
+   ],
+   "authority_key": "ITEM_TRADE_REPLACEMENT",
+   "provenance": "EVOLUTION_SPEC.md (Magmortar Lv42)"
+  },
+  {
+   "species": "SPECIES_MAGNEMITE",
+   "dir": "magnemite",
+   "source": "res/pokemon/magnemite/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_MAGNETON"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_MAGNETON"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_MAGNETON",
+   "dir": "magneton",
+   "source": "res/pokemon/magneton/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_MAGNETIC_FIELD",
+     "SPECIES_MAGNEZONE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_MAGNETIC_FIELD",
+     "SPECIES_MAGNEZONE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "LOCKED_KEEP"
+   ],
+   "authority_key": "LOCKED_KEEP",
+   "provenance": "Magnezone via magnetic field retained"
+  },
+  {
+   "species": "SPECIES_MAKUHITA",
+   "dir": "makuhita",
+   "source": "res/pokemon/makuhita/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     24,
+     "SPECIES_HARIYAMA"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     24,
+     "SPECIES_HARIYAMA"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_MANKEY",
+   "dir": "mankey",
+   "source": "res/pokemon/mankey/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     28,
+     "SPECIES_PRIMEAPE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     28,
+     "SPECIES_PRIMEAPE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_MANTYKE",
+   "dir": "mantyke",
+   "source": "res/pokemon/mantyke/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_SPECIES_IN_PARTY",
+     "SPECIES_REMORAID",
+     "SPECIES_MANTINE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_SPECIES_IN_PARTY",
+     "SPECIES_REMORAID",
+     "SPECIES_MANTINE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_MAREEP",
+   "dir": "mareep",
+   "source": "res/pokemon/mareep/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     15,
+     "SPECIES_FLAAFFY"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     15,
+     "SPECIES_FLAAFFY"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_MARILL",
+   "dir": "marill",
+   "source": "res/pokemon/marill/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     18,
+     "SPECIES_AZUMARILL"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     18,
+     "SPECIES_AZUMARILL"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_MARSHTOMP",
+   "dir": "marshtomp",
+   "source": "res/pokemon/marshtomp/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_SWAMPERT"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_SWAMPERT"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_MEDITITE",
+   "dir": "meditite",
+   "source": "res/pokemon/meditite/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     37,
+     "SPECIES_MEDICHAM"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     37,
+     "SPECIES_MEDICHAM"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_MEOWTH",
+   "dir": "meowth",
+   "source": "res/pokemon/meowth/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     28,
+     "SPECIES_PERSIAN"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     28,
+     "SPECIES_PERSIAN"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_METANG",
+   "dir": "metang",
+   "source": "res/pokemon/metang/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     45,
+     "SPECIES_METAGROSS"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     45,
+     "SPECIES_METAGROSS"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_METAPOD",
+   "dir": "metapod",
+   "source": "res/pokemon/metapod/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     10,
+     "SPECIES_BUTTERFREE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     10,
+     "SPECIES_BUTTERFREE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_MIME_JR",
+   "dir": "mime_jr",
+   "source": "res/pokemon/mime_jr/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_KNOW_MOVE",
+     "MOVE_MIMIC",
+     "SPECIES_MR_MIME"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_KNOW_MOVE",
+     "MOVE_MIMIC",
+     "SPECIES_MR_MIME"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_MISDREAVUS",
+   "dir": "misdreavus",
+   "source": "res/pokemon/misdreavus/data.json",
+   "before": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_DUSK_STONE",
+     "SPECIES_MISMAGIUS"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_DUSK_STONE",
+     "SPECIES_MISMAGIUS"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_MONFERNO",
+   "dir": "monferno",
+   "source": "res/pokemon/monferno/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_INFERNAPE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_INFERNAPE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_MUDKIP",
+   "dir": "mudkip",
+   "source": "res/pokemon/mudkip/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_MARSHTOMP"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_MARSHTOMP"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_MUNCHLAX",
+   "dir": "munchlax",
+   "source": "res/pokemon/munchlax/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_HAPPINESS",
+     "SPECIES_SNORLAX"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_HAPPINESS",
+     "SPECIES_SNORLAX"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_MURKROW",
+   "dir": "murkrow",
+   "source": "res/pokemon/murkrow/data.json",
+   "before": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_DUSK_STONE",
+     "SPECIES_HONCHKROW"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_DUSK_STONE",
+     "SPECIES_HONCHKROW"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_NATU",
+   "dir": "natu",
+   "source": "res/pokemon/natu/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     25,
+     "SPECIES_XATU"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     25,
+     "SPECIES_XATU"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_NIDORAN_F",
+   "dir": "nidoran_f",
+   "source": "res/pokemon/nidoran_f/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_NIDORINA"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_NIDORINA"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_NIDORAN_M",
+   "dir": "nidoran_m",
+   "source": "res/pokemon/nidoran_m/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_NIDORINO"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_NIDORINO"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_NIDORINA",
+   "dir": "nidorina",
+   "source": "res/pokemon/nidorina/data.json",
+   "before": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_MOON_STONE",
+     "SPECIES_NIDOQUEEN"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_MOON_STONE",
+     "SPECIES_NIDOQUEEN"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_NIDORINO",
+   "dir": "nidorino",
+   "source": "res/pokemon/nidorino/data.json",
+   "before": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_MOON_STONE",
+     "SPECIES_NIDOKING"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_MOON_STONE",
+     "SPECIES_NIDOKING"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_NINCADA",
+   "dir": "nincada",
+   "source": "res/pokemon/nincada/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_NINJASK",
+     20,
+     "SPECIES_NINJASK"
+    ],
+    [
+     "EVO_LEVEL_SHEDINJA",
+     20,
+     "SPECIES_SHEDINJA"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_NINJASK",
+     20,
+     "SPECIES_NINJASK"
+    ],
+    [
+     "EVO_LEVEL_SHEDINJA",
+     20,
+     "SPECIES_SHEDINJA"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "LOCKED_KEEP",
+    "LOCKED_KEEP"
+   ],
+   "authority_key": "LOCKED_KEEP",
+   "provenance": "Ninjask/Shedinja special evolution retained"
+  },
+  {
+   "species": "SPECIES_NOSEPASS",
+   "dir": "nosepass",
+   "source": "res/pokemon/nosepass/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_MAGNETIC_FIELD",
+     "SPECIES_PROBOPASS"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_MAGNETIC_FIELD",
+     "SPECIES_PROBOPASS"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "LOCKED_KEEP"
+   ],
+   "authority_key": "LOCKED_KEEP",
+   "provenance": "Probopass via the existing Mt. Coronet magnetic-field method"
+  },
+  {
+   "species": "SPECIES_NUMEL",
+   "dir": "numel",
+   "source": "res/pokemon/numel/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     33,
+     "SPECIES_CAMERUPT"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     33,
+     "SPECIES_CAMERUPT"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_NUZLEAF",
+   "dir": "nuzleaf",
+   "source": "res/pokemon/nuzleaf/data.json",
+   "before": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_LEAF_STONE",
+     "SPECIES_SHIFTRY"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_LEAF_STONE",
+     "SPECIES_SHIFTRY"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_ODDISH",
+   "dir": "oddish",
+   "source": "res/pokemon/oddish/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     21,
+     "SPECIES_GLOOM"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     21,
+     "SPECIES_GLOOM"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_OMANYTE",
+   "dir": "omanyte",
+   "source": "res/pokemon/omanyte/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     40,
+     "SPECIES_OMASTAR"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     40,
+     "SPECIES_OMASTAR"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_ONIX",
+   "dir": "onix",
+   "source": "res/pokemon/onix/data.json",
+   "before": [
+    [
+     "EVO_TRADE_WITH_HELD_ITEM",
+     "ITEM_METAL_COAT",
+     "SPECIES_STEELIX"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     35,
+     "SPECIES_STEELIX"
+    ]
+   ],
+   "changed": true,
+   "edge_classes": [
+    "LOCKED_CHANGED"
+   ],
+   "authority_key": "ITEM_TRADE_REPLACEMENT",
+   "provenance": "EVOLUTION_SPEC.md; C3 sync (Steelix Lv35)"
+  },
+  {
+   "species": "SPECIES_PARAS",
+   "dir": "paras",
+   "source": "res/pokemon/paras/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     24,
+     "SPECIES_PARASECT"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     24,
+     "SPECIES_PARASECT"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_PHANPY",
+   "dir": "phanpy",
+   "source": "res/pokemon/phanpy/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     25,
+     "SPECIES_DONPHAN"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     25,
+     "SPECIES_DONPHAN"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_PICHU",
+   "dir": "pichu",
+   "source": "res/pokemon/pichu/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_HAPPINESS",
+     "SPECIES_PIKACHU"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_HAPPINESS",
+     "SPECIES_PIKACHU"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_PIDGEOTTO",
+   "dir": "pidgeotto",
+   "source": "res/pokemon/pidgeotto/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_PIDGEOT"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_PIDGEOT"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_PIDGEY",
+   "dir": "pidgey",
+   "source": "res/pokemon/pidgey/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     18,
+     "SPECIES_PIDGEOTTO"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     18,
+     "SPECIES_PIDGEOTTO"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_PIKACHU",
+   "dir": "pikachu",
+   "source": "res/pokemon/pikachu/data.json",
+   "before": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_THUNDERSTONE",
+     "SPECIES_RAICHU"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_THUNDERSTONE",
+     "SPECIES_RAICHU"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_PILOSWINE",
+   "dir": "piloswine",
+   "source": "res/pokemon/piloswine/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_KNOW_MOVE",
+     "MOVE_ANCIENT_POWER",
+     "SPECIES_MAMOSWINE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_KNOW_MOVE",
+     "MOVE_ANCIENT_POWER",
+     "SPECIES_MAMOSWINE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_PINECO",
+   "dir": "pineco",
+   "source": "res/pokemon/pineco/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     31,
+     "SPECIES_FORRETRESS"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     31,
+     "SPECIES_FORRETRESS"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_PIPLUP",
+   "dir": "piplup",
+   "source": "res/pokemon/piplup/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_PRINPLUP"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_PRINPLUP"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_POLIWAG",
+   "dir": "poliwag",
+   "source": "res/pokemon/poliwag/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     25,
+     "SPECIES_POLIWHIRL"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     25,
+     "SPECIES_POLIWHIRL"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_POLIWHIRL",
+   "dir": "poliwhirl",
+   "source": "res/pokemon/poliwhirl/data.json",
+   "before": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_WATER_STONE",
+     "SPECIES_POLIWRATH"
+    ],
+    [
+     "EVO_TRADE_WITH_HELD_ITEM",
+     "ITEM_KINGS_ROCK",
+     "SPECIES_POLITOED"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_WATER_STONE",
+     "SPECIES_POLIWRATH"
+    ],
+    [
+     "EVO_LEVEL_SPATK_GT_ATK",
+     35,
+     "SPECIES_POLITOED"
+    ]
+   ],
+   "changed": true,
+   "edge_classes": [
+    "LOCKED_KEEP",
+    "LOCKED_CHANGED"
+   ],
+   "authority_key": "STAT_BRANCH",
+   "provenance": "EVOLUTION_SPEC.md / EMERALD_PORT_PLAN.md (Politoed Lv35 SpA > Atk); Poliwrath Water Stone unchanged"
+  },
+  {
+   "species": "SPECIES_PONYTA",
+   "dir": "ponyta",
+   "source": "res/pokemon/ponyta/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     40,
+     "SPECIES_RAPIDASH"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     40,
+     "SPECIES_RAPIDASH"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_POOCHYENA",
+   "dir": "poochyena",
+   "source": "res/pokemon/poochyena/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     18,
+     "SPECIES_MIGHTYENA"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     18,
+     "SPECIES_MIGHTYENA"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_PORYGON",
+   "dir": "porygon",
+   "source": "res/pokemon/porygon/data.json",
+   "before": [
+    [
+     "EVO_TRADE_WITH_HELD_ITEM",
+     "ITEM_UPGRADE",
+     "SPECIES_PORYGON2"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_PORYGON2"
+    ]
+   ],
+   "changed": true,
+   "edge_classes": [
+    "LOCKED_CHANGED"
+   ],
+   "authority_key": "ITEM_TRADE_REPLACEMENT",
+   "provenance": "EVOLUTION_SPEC.md; C3 sync (Porygon2 Lv30)"
+  },
+  {
+   "species": "SPECIES_PORYGON2",
+   "dir": "porygon2",
+   "source": "res/pokemon/porygon2/data.json",
+   "before": [
+    [
+     "EVO_TRADE_WITH_HELD_ITEM",
+     "ITEM_DUBIOUS_DISC",
+     "SPECIES_PORYGON_Z"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     45,
+     "SPECIES_PORYGON_Z"
+    ]
+   ],
+   "changed": true,
+   "edge_classes": [
+    "LOCKED_CHANGED"
+   ],
+   "authority_key": "ITEM_TRADE_REPLACEMENT",
+   "provenance": "EVOLUTION_SPEC.md; C3 sync (Porygon-Z Lv45)"
+  },
+  {
+   "species": "SPECIES_PRINPLUP",
+   "dir": "prinplup",
+   "source": "res/pokemon/prinplup/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_EMPOLEON"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_EMPOLEON"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_PSYDUCK",
+   "dir": "psyduck",
+   "source": "res/pokemon/psyduck/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     33,
+     "SPECIES_GOLDUCK"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     33,
+     "SPECIES_GOLDUCK"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_PUPITAR",
+   "dir": "pupitar",
+   "source": "res/pokemon/pupitar/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     55,
+     "SPECIES_TYRANITAR"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     50,
+     "SPECIES_TYRANITAR"
+    ]
+   ],
+   "changed": true,
+   "edge_classes": [
+    "LOCKED_CHANGED"
+   ],
+   "authority_key": "LEVEL_RETUNE",
+   "provenance": "EVOLUTION_SPEC.md (Tyranitar Lv50; vanilla Lv55)"
+  },
+  {
+   "species": "SPECIES_QUILAVA",
+   "dir": "quilava",
+   "source": "res/pokemon/quilava/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_TYPHLOSION"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_TYPHLOSION"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_RALTS",
+   "dir": "ralts",
+   "source": "res/pokemon/ralts/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     20,
+     "SPECIES_KIRLIA"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     20,
+     "SPECIES_KIRLIA"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_RATTATA",
+   "dir": "rattata",
+   "source": "res/pokemon/rattata/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     20,
+     "SPECIES_RATICATE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     20,
+     "SPECIES_RATICATE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_REMORAID",
+   "dir": "remoraid",
+   "source": "res/pokemon/remoraid/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     25,
+     "SPECIES_OCTILLERY"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     25,
+     "SPECIES_OCTILLERY"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_RHYDON",
+   "dir": "rhydon",
+   "source": "res/pokemon/rhydon/data.json",
+   "before": [
+    [
+     "EVO_TRADE_WITH_HELD_ITEM",
+     "ITEM_PROTECTOR",
+     "SPECIES_RHYPERIOR"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     52,
+     "SPECIES_RHYPERIOR"
+    ]
+   ],
+   "changed": true,
+   "edge_classes": [
+    "LOCKED_CHANGED"
+   ],
+   "authority_key": "ITEM_TRADE_REPLACEMENT",
+   "provenance": "EVOLUTION_SPEC.md (Rhyperior Lv52)"
+  },
+  {
+   "species": "SPECIES_RHYHORN",
+   "dir": "rhyhorn",
+   "source": "res/pokemon/rhyhorn/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     42,
+     "SPECIES_RHYDON"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     42,
+     "SPECIES_RHYDON"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_RIOLU",
+   "dir": "riolu",
+   "source": "res/pokemon/riolu/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_HAPPINESS_DAY",
+     "SPECIES_LUCARIO"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_HAPPINESS_DAY",
+     "SPECIES_LUCARIO"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_ROSELIA",
+   "dir": "roselia",
+   "source": "res/pokemon/roselia/data.json",
+   "before": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_SHINY_STONE",
+     "SPECIES_ROSERADE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_SHINY_STONE",
+     "SPECIES_ROSERADE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "LOCKED_KEEP"
+   ],
+   "authority_key": "LOCKED_KEEP",
+   "provenance": "Roserade via Shiny Stone"
+  },
+  {
+   "species": "SPECIES_SANDSHREW",
+   "dir": "sandshrew",
+   "source": "res/pokemon/sandshrew/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     22,
+     "SPECIES_SANDSLASH"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     22,
+     "SPECIES_SANDSLASH"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SCYTHER",
+   "dir": "scyther",
+   "source": "res/pokemon/scyther/data.json",
+   "before": [
+    [
+     "EVO_TRADE_WITH_HELD_ITEM",
+     "ITEM_METAL_COAT",
+     "SPECIES_SCIZOR"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     38,
+     "SPECIES_SCIZOR"
+    ]
+   ],
+   "changed": true,
+   "edge_classes": [
+    "LOCKED_CHANGED"
+   ],
+   "authority_key": "ITEM_TRADE_REPLACEMENT",
+   "provenance": "EVOLUTION_SPEC.md; C3 sync (Scizor Lv38)"
+  },
+  {
+   "species": "SPECIES_SEADRA",
+   "dir": "seadra",
+   "source": "res/pokemon/seadra/data.json",
+   "before": [
+    [
+     "EVO_TRADE_WITH_HELD_ITEM",
+     "ITEM_DRAGON_SCALE",
+     "SPECIES_KINGDRA"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     42,
+     "SPECIES_KINGDRA"
+    ]
+   ],
+   "changed": true,
+   "edge_classes": [
+    "LOCKED_CHANGED"
+   ],
+   "authority_key": "ITEM_TRADE_REPLACEMENT",
+   "provenance": "EVOLUTION_SPEC.md; C3 sync (Kingdra Lv42)"
+  },
+  {
+   "species": "SPECIES_SEALEO",
+   "dir": "sealeo",
+   "source": "res/pokemon/sealeo/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     44,
+     "SPECIES_WALREIN"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     44,
+     "SPECIES_WALREIN"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SEEDOT",
+   "dir": "seedot",
+   "source": "res/pokemon/seedot/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     14,
+     "SPECIES_NUZLEAF"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     14,
+     "SPECIES_NUZLEAF"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SEEL",
+   "dir": "seel",
+   "source": "res/pokemon/seel/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     34,
+     "SPECIES_DEWGONG"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     34,
+     "SPECIES_DEWGONG"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SENTRET",
+   "dir": "sentret",
+   "source": "res/pokemon/sentret/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     15,
+     "SPECIES_FURRET"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     15,
+     "SPECIES_FURRET"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SHELGON",
+   "dir": "shelgon",
+   "source": "res/pokemon/shelgon/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     50,
+     "SPECIES_SALAMENCE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     50,
+     "SPECIES_SALAMENCE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SHELLDER",
+   "dir": "shellder",
+   "source": "res/pokemon/shellder/data.json",
+   "before": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_WATER_STONE",
+     "SPECIES_CLOYSTER"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_WATER_STONE",
+     "SPECIES_CLOYSTER"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SHELLOS",
+   "dir": "shellos",
+   "source": "res/pokemon/shellos/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_GASTRODON"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_GASTRODON"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SHIELDON",
+   "dir": "shieldon",
+   "source": "res/pokemon/shieldon/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_BASTIODON"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_BASTIODON"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SHINX",
+   "dir": "shinx",
+   "source": "res/pokemon/shinx/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     15,
+     "SPECIES_LUXIO"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     15,
+     "SPECIES_LUXIO"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SHROOMISH",
+   "dir": "shroomish",
+   "source": "res/pokemon/shroomish/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     23,
+     "SPECIES_BRELOOM"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     23,
+     "SPECIES_BRELOOM"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SHUPPET",
+   "dir": "shuppet",
+   "source": "res/pokemon/shuppet/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     37,
+     "SPECIES_BANETTE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     37,
+     "SPECIES_BANETTE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SILCOON",
+   "dir": "silcoon",
+   "source": "res/pokemon/silcoon/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     10,
+     "SPECIES_BEAUTIFLY"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     10,
+     "SPECIES_BEAUTIFLY"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SKIPLOOM",
+   "dir": "skiploom",
+   "source": "res/pokemon/skiploom/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     27,
+     "SPECIES_JUMPLUFF"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     27,
+     "SPECIES_JUMPLUFF"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SKITTY",
+   "dir": "skitty",
+   "source": "res/pokemon/skitty/data.json",
+   "before": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_MOON_STONE",
+     "SPECIES_DELCATTY"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_MOON_STONE",
+     "SPECIES_DELCATTY"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SKORUPI",
+   "dir": "skorupi",
+   "source": "res/pokemon/skorupi/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     40,
+     "SPECIES_DRAPION"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     40,
+     "SPECIES_DRAPION"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SLAKOTH",
+   "dir": "slakoth",
+   "source": "res/pokemon/slakoth/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     18,
+     "SPECIES_VIGOROTH"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     18,
+     "SPECIES_VIGOROTH"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SLOWPOKE",
+   "dir": "slowpoke",
+   "source": "res/pokemon/slowpoke/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     37,
+     "SPECIES_SLOWBRO"
+    ],
+    [
+     "EVO_TRADE_WITH_HELD_ITEM",
+     "ITEM_KINGS_ROCK",
+     "SPECIES_SLOWKING"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_SPDEF_GT_DEF",
+     37,
+     "SPECIES_SLOWKING"
+    ],
+    [
+     "EVO_LEVEL",
+     37,
+     "SPECIES_SLOWBRO"
+    ]
+   ],
+   "changed": true,
+   "edge_classes": [
+    "LOCKED_CHANGED",
+    "LOCKED_KEEP"
+   ],
+   "authority_key": "STAT_BRANCH",
+   "provenance": "EVOLUTION_SPEC.md / EMERALD_PORT_PLAN.md (Slowking Lv37 SpD > Def); Slowbro Lv37 unchanged, now the fallback"
+  },
+  {
+   "species": "SPECIES_SLUGMA",
+   "dir": "slugma",
+   "source": "res/pokemon/slugma/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     38,
+     "SPECIES_MAGCARGO"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     38,
+     "SPECIES_MAGCARGO"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SMOOCHUM",
+   "dir": "smoochum",
+   "source": "res/pokemon/smoochum/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_JYNX"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_JYNX"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SNEASEL",
+   "dir": "sneasel",
+   "source": "res/pokemon/sneasel/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_WITH_HELD_ITEM_NIGHT",
+     "ITEM_RAZOR_CLAW",
+     "SPECIES_WEAVILE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_NIGHT",
+     38,
+     "SPECIES_WEAVILE"
+    ]
+   ],
+   "changed": true,
+   "edge_classes": [
+    "LOCKED_CHANGED"
+   ],
+   "authority_key": "NIGHT_LEVEL",
+   "provenance": "EVOLUTION_SPEC.md (Weavile Lv38 at night, no Razor Claw)"
+  },
+  {
+   "species": "SPECIES_SNORUNT",
+   "dir": "snorunt",
+   "source": "res/pokemon/snorunt/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     42,
+     "SPECIES_GLALIE"
+    ],
+    [
+     "EVO_USE_ITEM_FEMALE",
+     "ITEM_DAWN_STONE",
+     "SPECIES_FROSLASS"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     42,
+     "SPECIES_GLALIE"
+    ],
+    [
+     "EVO_USE_ITEM_FEMALE",
+     "ITEM_DAWN_STONE",
+     "SPECIES_FROSLASS"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "LOCKED_KEEP",
+    "LOCKED_KEEP"
+   ],
+   "authority_key": "LOCKED_KEEP",
+   "provenance": "Glalie Lv42 and female Snorunt -> Froslass via Dawn Stone"
+  },
+  {
+   "species": "SPECIES_SNOVER",
+   "dir": "snover",
+   "source": "res/pokemon/snover/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     40,
+     "SPECIES_ABOMASNOW"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     40,
+     "SPECIES_ABOMASNOW"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SNUBBULL",
+   "dir": "snubbull",
+   "source": "res/pokemon/snubbull/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     23,
+     "SPECIES_GRANBULL"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     23,
+     "SPECIES_GRANBULL"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SPEAROW",
+   "dir": "spearow",
+   "source": "res/pokemon/spearow/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     20,
+     "SPECIES_FEAROW"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     20,
+     "SPECIES_FEAROW"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SPHEAL",
+   "dir": "spheal",
+   "source": "res/pokemon/spheal/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     32,
+     "SPECIES_SEALEO"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     32,
+     "SPECIES_SEALEO"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SPINARAK",
+   "dir": "spinarak",
+   "source": "res/pokemon/spinarak/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     22,
+     "SPECIES_ARIADOS"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     22,
+     "SPECIES_ARIADOS"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SPOINK",
+   "dir": "spoink",
+   "source": "res/pokemon/spoink/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     32,
+     "SPECIES_GRUMPIG"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     32,
+     "SPECIES_GRUMPIG"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SQUIRTLE",
+   "dir": "squirtle",
+   "source": "res/pokemon/squirtle/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_WARTORTLE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_WARTORTLE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_STARAVIA",
+   "dir": "staravia",
+   "source": "res/pokemon/staravia/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     34,
+     "SPECIES_STARAPTOR"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     34,
+     "SPECIES_STARAPTOR"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_STARLY",
+   "dir": "starly",
+   "source": "res/pokemon/starly/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     14,
+     "SPECIES_STARAVIA"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     14,
+     "SPECIES_STARAVIA"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_STARYU",
+   "dir": "staryu",
+   "source": "res/pokemon/staryu/data.json",
+   "before": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_WATER_STONE",
+     "SPECIES_STARMIE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_WATER_STONE",
+     "SPECIES_STARMIE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_STUNKY",
+   "dir": "stunky",
+   "source": "res/pokemon/stunky/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     34,
+     "SPECIES_SKUNTANK"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     34,
+     "SPECIES_SKUNTANK"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SUNKERN",
+   "dir": "sunkern",
+   "source": "res/pokemon/sunkern/data.json",
+   "before": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_SUN_STONE",
+     "SPECIES_SUNFLORA"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_SUN_STONE",
+     "SPECIES_SUNFLORA"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SURSKIT",
+   "dir": "surskit",
+   "source": "res/pokemon/surskit/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     22,
+     "SPECIES_MASQUERAIN"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     22,
+     "SPECIES_MASQUERAIN"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SWABLU",
+   "dir": "swablu",
+   "source": "res/pokemon/swablu/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     35,
+     "SPECIES_ALTARIA"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     35,
+     "SPECIES_ALTARIA"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_SWINUB",
+   "dir": "swinub",
+   "source": "res/pokemon/swinub/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     33,
+     "SPECIES_PILOSWINE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     33,
+     "SPECIES_PILOSWINE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_TAILLOW",
+   "dir": "taillow",
+   "source": "res/pokemon/taillow/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     22,
+     "SPECIES_SWELLOW"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     22,
+     "SPECIES_SWELLOW"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_TANGELA",
+   "dir": "tangela",
+   "source": "res/pokemon/tangela/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_KNOW_MOVE",
+     "MOVE_ANCIENT_POWER",
+     "SPECIES_TANGROWTH"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_KNOW_MOVE",
+     "MOVE_ANCIENT_POWER",
+     "SPECIES_TANGROWTH"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_TEDDIURSA",
+   "dir": "teddiursa",
+   "source": "res/pokemon/teddiursa/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_URSARING"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_URSARING"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_TENTACOOL",
+   "dir": "tentacool",
+   "source": "res/pokemon/tentacool/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_TENTACRUEL"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_TENTACRUEL"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_TOGEPI",
+   "dir": "togepi",
+   "source": "res/pokemon/togepi/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_HAPPINESS",
+     "SPECIES_TOGETIC"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_HAPPINESS",
+     "SPECIES_TOGETIC"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_TOGETIC",
+   "dir": "togetic",
+   "source": "res/pokemon/togetic/data.json",
+   "before": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_SHINY_STONE",
+     "SPECIES_TOGEKISS"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_SHINY_STONE",
+     "SPECIES_TOGEKISS"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_TORCHIC",
+   "dir": "torchic",
+   "source": "res/pokemon/torchic/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_COMBUSKEN"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_COMBUSKEN"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_TOTODILE",
+   "dir": "totodile",
+   "source": "res/pokemon/totodile/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     18,
+     "SPECIES_CROCONAW"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     18,
+     "SPECIES_CROCONAW"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_TRAPINCH",
+   "dir": "trapinch",
+   "source": "res/pokemon/trapinch/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     35,
+     "SPECIES_VIBRAVA"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     35,
+     "SPECIES_VIBRAVA"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_TREECKO",
+   "dir": "treecko",
+   "source": "res/pokemon/treecko/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_GROVYLE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     16,
+     "SPECIES_GROVYLE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_TURTWIG",
+   "dir": "turtwig",
+   "source": "res/pokemon/turtwig/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     18,
+     "SPECIES_GROTLE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     18,
+     "SPECIES_GROTLE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_TYROGUE",
+   "dir": "tyrogue",
+   "source": "res/pokemon/tyrogue/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_ATK_LT_DEF",
+     20,
+     "SPECIES_HITMONCHAN"
+    ],
+    [
+     "EVO_LEVEL_ATK_GT_DEF",
+     20,
+     "SPECIES_HITMONLEE"
+    ],
+    [
+     "EVO_LEVEL_ATK_EQ_DEF",
+     20,
+     "SPECIES_HITMONTOP"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_ATK_LT_DEF",
+     20,
+     "SPECIES_HITMONCHAN"
+    ],
+    [
+     "EVO_LEVEL_ATK_GT_DEF",
+     20,
+     "SPECIES_HITMONLEE"
+    ],
+    [
+     "EVO_LEVEL_ATK_EQ_DEF",
+     20,
+     "SPECIES_HITMONTOP"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "LOCKED_KEEP",
+    "LOCKED_KEEP",
+    "LOCKED_KEEP"
+   ],
+   "authority_key": "LOCKED_KEEP",
+   "provenance": "vanilla three-way Attack/Defense split retained"
+  },
+  {
+   "species": "SPECIES_VENONAT",
+   "dir": "venonat",
+   "source": "res/pokemon/venonat/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     31,
+     "SPECIES_VENOMOTH"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     31,
+     "SPECIES_VENOMOTH"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_VIBRAVA",
+   "dir": "vibrava",
+   "source": "res/pokemon/vibrava/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     45,
+     "SPECIES_FLYGON"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     45,
+     "SPECIES_FLYGON"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_VIGOROTH",
+   "dir": "vigoroth",
+   "source": "res/pokemon/vigoroth/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_SLAKING"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_SLAKING"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_VOLTORB",
+   "dir": "voltorb",
+   "source": "res/pokemon/voltorb/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_ELECTRODE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     30,
+     "SPECIES_ELECTRODE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_VULPIX",
+   "dir": "vulpix",
+   "source": "res/pokemon/vulpix/data.json",
+   "before": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_FIRE_STONE",
+     "SPECIES_NINETALES"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_FIRE_STONE",
+     "SPECIES_NINETALES"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_WAILMER",
+   "dir": "wailmer",
+   "source": "res/pokemon/wailmer/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     40,
+     "SPECIES_WAILORD"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     40,
+     "SPECIES_WAILORD"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_WARTORTLE",
+   "dir": "wartortle",
+   "source": "res/pokemon/wartortle/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_BLASTOISE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     36,
+     "SPECIES_BLASTOISE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_WEEDLE",
+   "dir": "weedle",
+   "source": "res/pokemon/weedle/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     7,
+     "SPECIES_KAKUNA"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     7,
+     "SPECIES_KAKUNA"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_WEEPINBELL",
+   "dir": "weepinbell",
+   "source": "res/pokemon/weepinbell/data.json",
+   "before": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_LEAF_STONE",
+     "SPECIES_VICTREEBEL"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_USE_ITEM",
+     "ITEM_LEAF_STONE",
+     "SPECIES_VICTREEBEL"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_WHISMUR",
+   "dir": "whismur",
+   "source": "res/pokemon/whismur/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     20,
+     "SPECIES_LOUDRED"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     20,
+     "SPECIES_LOUDRED"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_WINGULL",
+   "dir": "wingull",
+   "source": "res/pokemon/wingull/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     25,
+     "SPECIES_PELIPPER"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     25,
+     "SPECIES_PELIPPER"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_WOOPER",
+   "dir": "wooper",
+   "source": "res/pokemon/wooper/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     20,
+     "SPECIES_QUAGSIRE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     20,
+     "SPECIES_QUAGSIRE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_WURMPLE",
+   "dir": "wurmple",
+   "source": "res/pokemon/wurmple/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_PID_LOW",
+     7,
+     "SPECIES_SILCOON"
+    ],
+    [
+     "EVO_LEVEL_PID_HIGH",
+     7,
+     "SPECIES_CASCOON"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_PID_LOW",
+     7,
+     "SPECIES_SILCOON"
+    ],
+    [
+     "EVO_LEVEL_PID_HIGH",
+     7,
+     "SPECIES_CASCOON"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "LOCKED_KEEP",
+    "LOCKED_KEEP"
+   ],
+   "authority_key": "LOCKED_KEEP",
+   "provenance": "personality split retained"
+  },
+  {
+   "species": "SPECIES_WYNAUT",
+   "dir": "wynaut",
+   "source": "res/pokemon/wynaut/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     15,
+     "SPECIES_WOBBUFFET"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     15,
+     "SPECIES_WOBBUFFET"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_YANMA",
+   "dir": "yanma",
+   "source": "res/pokemon/yanma/data.json",
+   "before": [
+    [
+     "EVO_LEVEL_KNOW_MOVE",
+     "MOVE_ANCIENT_POWER",
+     "SPECIES_YANMEGA"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL_KNOW_MOVE",
+     "MOVE_ANCIENT_POWER",
+     "SPECIES_YANMEGA"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_ZIGZAGOON",
+   "dir": "zigzagoon",
+   "source": "res/pokemon/zigzagoon/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     20,
+     "SPECIES_LINOONE"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     20,
+     "SPECIES_LINOONE"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  },
+  {
+   "species": "SPECIES_ZUBAT",
+   "dir": "zubat",
+   "source": "res/pokemon/zubat/data.json",
+   "before": [
+    [
+     "EVO_LEVEL",
+     22,
+     "SPECIES_GOLBAT"
+    ]
+   ],
+   "after": [
+    [
+     "EVO_LEVEL",
+     22,
+     "SPECIES_GOLBAT"
+    ]
+   ],
+   "changed": false,
+   "edge_classes": [
+    "VANILLA_KEEP"
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "species": "SPECIES_ABRA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    16,
+    "SPECIES_KADABRA"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_AIPOM",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_KNOW_MOVE",
+    "MOVE_DOUBLE_HIT",
+    "SPECIES_AMBIPOM"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_ANORITH",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    40,
+    "SPECIES_ARMALDO"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_ARON",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    32,
+    "SPECIES_LAIRON"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_AZURILL",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_HAPPINESS",
+    "SPECIES_MARILL"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_BAGON",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    30,
+    "SPECIES_SHELGON"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_BALTOY",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    36,
+    "SPECIES_CLAYDOL"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_BARBOACH",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    30,
+    "SPECIES_WHISCASH"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_BAYLEEF",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    32,
+    "SPECIES_MEGANIUM"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_BELDUM",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    20,
+    "SPECIES_METANG"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_BELLSPROUT",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    21,
+    "SPECIES_WEEPINBELL"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_BIDOOF",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    15,
+    "SPECIES_BIBAREL"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_BONSLY",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_KNOW_MOVE",
+    "MOVE_MIMIC",
+    "SPECIES_SUDOWOODO"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_BRONZOR",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    33,
+    "SPECIES_BRONZONG"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_BUDEW",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_HAPPINESS_DAY",
+    "SPECIES_ROSELIA"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_BUIZEL",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    26,
+    "SPECIES_FLOATZEL"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_BULBASAUR",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    16,
+    "SPECIES_IVYSAUR"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_BUNEARY",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_HAPPINESS",
+    "SPECIES_LOPUNNY"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_BURMY",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_FEMALE",
+    20,
+    "SPECIES_WORMADAM"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_BURMY",
+   "index": 1,
+   "edge": [
+    "EVO_LEVEL_MALE",
+    20,
+    "SPECIES_MOTHIM"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_CACNEA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    32,
+    "SPECIES_CACTURNE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_CARVANHA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    30,
+    "SPECIES_SHARPEDO"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_CASCOON",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    10,
+    "SPECIES_DUSTOX"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_CATERPIE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    7,
+    "SPECIES_METAPOD"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_CHANSEY",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_HAPPINESS",
+    "SPECIES_BLISSEY"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_CHARMANDER",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    16,
+    "SPECIES_CHARMELEON"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_CHARMELEON",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    36,
+    "SPECIES_CHARIZARD"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_CHERUBI",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    25,
+    "SPECIES_CHERRIM"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_CHIKORITA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    16,
+    "SPECIES_BAYLEEF"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_CHIMCHAR",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    14,
+    "SPECIES_MONFERNO"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_CHINCHOU",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    27,
+    "SPECIES_LANTURN"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_CHINGLING",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_HAPPINESS_NIGHT",
+    "SPECIES_CHIMECHO"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_CLAMPERL",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_ATK_GT_SPATK",
+    35,
+    "SPECIES_HUNTAIL"
+   ],
+   "class": "LOCKED_CHANGED"
+  },
+  {
+   "species": "SPECIES_CLAMPERL",
+   "index": 1,
+   "edge": [
+    "EVO_LEVEL_SPATK_GE_ATK",
+    35,
+    "SPECIES_GOREBYSS"
+   ],
+   "class": "LOCKED_CHANGED"
+  },
+  {
+   "species": "SPECIES_CLEFAIRY",
+   "index": 0,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_MOON_STONE",
+    "SPECIES_CLEFABLE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_CLEFFA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_HAPPINESS",
+    "SPECIES_CLEFAIRY"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_COMBEE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_FEMALE",
+    21,
+    "SPECIES_VESPIQUEN"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_COMBUSKEN",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    36,
+    "SPECIES_BLAZIKEN"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_CORPHISH",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    30,
+    "SPECIES_CRAWDAUNT"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_CRANIDOS",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    30,
+    "SPECIES_RAMPARDOS"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_CROAGUNK",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    37,
+    "SPECIES_TOXICROAK"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_CROCONAW",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    30,
+    "SPECIES_FERALIGATR"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_CUBONE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    28,
+    "SPECIES_MAROWAK"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_CYNDAQUIL",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    14,
+    "SPECIES_QUILAVA"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_DIGLETT",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    26,
+    "SPECIES_DUGTRIO"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_DODUO",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    31,
+    "SPECIES_DODRIO"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_DRAGONAIR",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    55,
+    "SPECIES_DRAGONITE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_DRATINI",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    30,
+    "SPECIES_DRAGONAIR"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_DRIFLOON",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    28,
+    "SPECIES_DRIFBLIM"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_DROWZEE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    26,
+    "SPECIES_HYPNO"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_DUSCLOPS",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    45,
+    "SPECIES_DUSKNOIR"
+   ],
+   "class": "LOCKED_CHANGED"
+  },
+  {
+   "species": "SPECIES_DUSKULL",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    37,
+    "SPECIES_DUSCLOPS"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_EEVEE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_MOSS_ROCK",
+    "SPECIES_LEAFEON"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_EEVEE",
+   "index": 1,
+   "edge": [
+    "EVO_LEVEL_ICE_ROCK",
+    "SPECIES_GLACEON"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_EEVEE",
+   "index": 2,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_THUNDERSTONE",
+    "SPECIES_JOLTEON"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_EEVEE",
+   "index": 3,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_WATER_STONE",
+    "SPECIES_VAPOREON"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_EEVEE",
+   "index": 4,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_FIRE_STONE",
+    "SPECIES_FLAREON"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_EEVEE",
+   "index": 5,
+   "edge": [
+    "EVO_LEVEL_HAPPINESS_DAY",
+    "SPECIES_ESPEON"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_EEVEE",
+   "index": 6,
+   "edge": [
+    "EVO_LEVEL_HAPPINESS_NIGHT",
+    "SPECIES_UMBREON"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_EKANS",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    22,
+    "SPECIES_ARBOK"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_ELECTABUZZ",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    42,
+    "SPECIES_ELECTIVIRE"
+   ],
+   "class": "LOCKED_CHANGED"
+  },
+  {
+   "species": "SPECIES_ELECTRIKE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    26,
+    "SPECIES_MANECTRIC"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_ELEKID",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    30,
+    "SPECIES_ELECTABUZZ"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_EXEGGCUTE",
+   "index": 0,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_LEAF_STONE",
+    "SPECIES_EXEGGUTOR"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_FEEBAS",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_BEAUTY",
+    170,
+    "SPECIES_MILOTIC"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_FINNEON",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    31,
+    "SPECIES_LUMINEON"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_FLAAFFY",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    30,
+    "SPECIES_AMPHAROS"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_GABITE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    48,
+    "SPECIES_GARCHOMP"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_GASTLY",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    25,
+    "SPECIES_HAUNTER"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_GEODUDE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    25,
+    "SPECIES_GRAVELER"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_GIBLE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    24,
+    "SPECIES_GABITE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_GLAMEOW",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    38,
+    "SPECIES_PURUGLY"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_GLIGAR",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_NIGHT",
+    38,
+    "SPECIES_GLISCOR"
+   ],
+   "class": "LOCKED_CHANGED"
+  },
+  {
+   "species": "SPECIES_GLOOM",
+   "index": 0,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_LEAF_STONE",
+    "SPECIES_VILEPLUME"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_GLOOM",
+   "index": 1,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_SUN_STONE",
+    "SPECIES_BELLOSSOM"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_GOLBAT",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_HAPPINESS",
+    "SPECIES_CROBAT"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_GOLDEEN",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    33,
+    "SPECIES_SEAKING"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_GRAVELER",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    36,
+    "SPECIES_GOLEM"
+   ],
+   "class": "LOCKED_CHANGED"
+  },
+  {
+   "species": "SPECIES_GRIMER",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    38,
+    "SPECIES_MUK"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_GROTLE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    32,
+    "SPECIES_TORTERRA"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_GROVYLE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    36,
+    "SPECIES_SCEPTILE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_GROWLITHE",
+   "index": 0,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_FIRE_STONE",
+    "SPECIES_ARCANINE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_GULPIN",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    26,
+    "SPECIES_SWALOT"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_HAPPINY",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_WITH_HELD_ITEM_DAY",
+    "ITEM_OVAL_STONE",
+    "SPECIES_CHANSEY"
+   ],
+   "class": "UNRESOLVED_AUTHORITY"
+  },
+  {
+   "species": "SPECIES_HAUNTER",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    36,
+    "SPECIES_GENGAR"
+   ],
+   "class": "LOCKED_CHANGED"
+  },
+  {
+   "species": "SPECIES_HIPPOPOTAS",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    34,
+    "SPECIES_HIPPOWDON"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_HOOTHOOT",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    20,
+    "SPECIES_NOCTOWL"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_HOPPIP",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    18,
+    "SPECIES_SKIPLOOM"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_HORSEA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    32,
+    "SPECIES_SEADRA"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_HOUNDOUR",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    24,
+    "SPECIES_HOUNDOOM"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_IGGLYBUFF",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_HAPPINESS",
+    "SPECIES_JIGGLYPUFF"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_IVYSAUR",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    32,
+    "SPECIES_VENUSAUR"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_JIGGLYPUFF",
+   "index": 0,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_MOON_STONE",
+    "SPECIES_WIGGLYTUFF"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_KABUTO",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    40,
+    "SPECIES_KABUTOPS"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_KADABRA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    36,
+    "SPECIES_ALAKAZAM"
+   ],
+   "class": "LOCKED_CHANGED"
+  },
+  {
+   "species": "SPECIES_KAKUNA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    10,
+    "SPECIES_BEEDRILL"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_KIRLIA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    30,
+    "SPECIES_GARDEVOIR"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_KIRLIA",
+   "index": 1,
+   "edge": [
+    "EVO_USE_ITEM_MALE",
+    "ITEM_DAWN_STONE",
+    "SPECIES_GALLADE"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_KOFFING",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    35,
+    "SPECIES_WEEZING"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_KRABBY",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    28,
+    "SPECIES_KINGLER"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_KRICKETOT",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    10,
+    "SPECIES_KRICKETUNE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_LAIRON",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    42,
+    "SPECIES_AGGRON"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_LARVITAR",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    30,
+    "SPECIES_PUPITAR"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_LEDYBA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    18,
+    "SPECIES_LEDIAN"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_LICKITUNG",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_KNOW_MOVE",
+    "MOVE_ROLLOUT",
+    "SPECIES_LICKILICKY"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_LILEEP",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    40,
+    "SPECIES_CRADILY"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_LOMBRE",
+   "index": 0,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_WATER_STONE",
+    "SPECIES_LUDICOLO"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_LOTAD",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    14,
+    "SPECIES_LOMBRE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_LOUDRED",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    40,
+    "SPECIES_EXPLOUD"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_LUXIO",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    30,
+    "SPECIES_LUXRAY"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_MACHOKE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    36,
+    "SPECIES_MACHAMP"
+   ],
+   "class": "LOCKED_CHANGED"
+  },
+  {
+   "species": "SPECIES_MACHOP",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    28,
+    "SPECIES_MACHOKE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_MAGBY",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    30,
+    "SPECIES_MAGMAR"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_MAGIKARP",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    20,
+    "SPECIES_GYARADOS"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_MAGMAR",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    42,
+    "SPECIES_MAGMORTAR"
+   ],
+   "class": "LOCKED_CHANGED"
+  },
+  {
+   "species": "SPECIES_MAGNEMITE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    30,
+    "SPECIES_MAGNETON"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_MAGNETON",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_MAGNETIC_FIELD",
+    "SPECIES_MAGNEZONE"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_MAKUHITA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    24,
+    "SPECIES_HARIYAMA"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_MANKEY",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    28,
+    "SPECIES_PRIMEAPE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_MANTYKE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_SPECIES_IN_PARTY",
+    "SPECIES_REMORAID",
+    "SPECIES_MANTINE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_MAREEP",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    15,
+    "SPECIES_FLAAFFY"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_MARILL",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    18,
+    "SPECIES_AZUMARILL"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_MARSHTOMP",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    36,
+    "SPECIES_SWAMPERT"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_MEDITITE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    37,
+    "SPECIES_MEDICHAM"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_MEOWTH",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    28,
+    "SPECIES_PERSIAN"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_METANG",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    45,
+    "SPECIES_METAGROSS"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_METAPOD",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    10,
+    "SPECIES_BUTTERFREE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_MIME_JR",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_KNOW_MOVE",
+    "MOVE_MIMIC",
+    "SPECIES_MR_MIME"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_MISDREAVUS",
+   "index": 0,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_DUSK_STONE",
+    "SPECIES_MISMAGIUS"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_MONFERNO",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    36,
+    "SPECIES_INFERNAPE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_MUDKIP",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    16,
+    "SPECIES_MARSHTOMP"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_MUNCHLAX",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_HAPPINESS",
+    "SPECIES_SNORLAX"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_MURKROW",
+   "index": 0,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_DUSK_STONE",
+    "SPECIES_HONCHKROW"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_NATU",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    25,
+    "SPECIES_XATU"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_NIDORAN_F",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    16,
+    "SPECIES_NIDORINA"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_NIDORAN_M",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    16,
+    "SPECIES_NIDORINO"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_NIDORINA",
+   "index": 0,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_MOON_STONE",
+    "SPECIES_NIDOQUEEN"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_NIDORINO",
+   "index": 0,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_MOON_STONE",
+    "SPECIES_NIDOKING"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_NINCADA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_NINJASK",
+    20,
+    "SPECIES_NINJASK"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_NINCADA",
+   "index": 1,
+   "edge": [
+    "EVO_LEVEL_SHEDINJA",
+    20,
+    "SPECIES_SHEDINJA"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_NOSEPASS",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_MAGNETIC_FIELD",
+    "SPECIES_PROBOPASS"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_NUMEL",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    33,
+    "SPECIES_CAMERUPT"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_NUZLEAF",
+   "index": 0,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_LEAF_STONE",
+    "SPECIES_SHIFTRY"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_ODDISH",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    21,
+    "SPECIES_GLOOM"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_OMANYTE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    40,
+    "SPECIES_OMASTAR"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_ONIX",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    35,
+    "SPECIES_STEELIX"
+   ],
+   "class": "LOCKED_CHANGED"
+  },
+  {
+   "species": "SPECIES_PARAS",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    24,
+    "SPECIES_PARASECT"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_PHANPY",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    25,
+    "SPECIES_DONPHAN"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_PICHU",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_HAPPINESS",
+    "SPECIES_PIKACHU"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_PIDGEOTTO",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    36,
+    "SPECIES_PIDGEOT"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_PIDGEY",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    18,
+    "SPECIES_PIDGEOTTO"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_PIKACHU",
+   "index": 0,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_THUNDERSTONE",
+    "SPECIES_RAICHU"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_PILOSWINE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_KNOW_MOVE",
+    "MOVE_ANCIENT_POWER",
+    "SPECIES_MAMOSWINE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_PINECO",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    31,
+    "SPECIES_FORRETRESS"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_PIPLUP",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    16,
+    "SPECIES_PRINPLUP"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_POLIWAG",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    25,
+    "SPECIES_POLIWHIRL"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_POLIWHIRL",
+   "index": 0,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_WATER_STONE",
+    "SPECIES_POLIWRATH"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_POLIWHIRL",
+   "index": 1,
+   "edge": [
+    "EVO_LEVEL_SPATK_GT_ATK",
+    35,
+    "SPECIES_POLITOED"
+   ],
+   "class": "LOCKED_CHANGED"
+  },
+  {
+   "species": "SPECIES_PONYTA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    40,
+    "SPECIES_RAPIDASH"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_POOCHYENA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    18,
+    "SPECIES_MIGHTYENA"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_PORYGON",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    30,
+    "SPECIES_PORYGON2"
+   ],
+   "class": "LOCKED_CHANGED"
+  },
+  {
+   "species": "SPECIES_PORYGON2",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    45,
+    "SPECIES_PORYGON_Z"
+   ],
+   "class": "LOCKED_CHANGED"
+  },
+  {
+   "species": "SPECIES_PRINPLUP",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    36,
+    "SPECIES_EMPOLEON"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_PSYDUCK",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    33,
+    "SPECIES_GOLDUCK"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_PUPITAR",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    50,
+    "SPECIES_TYRANITAR"
+   ],
+   "class": "LOCKED_CHANGED"
+  },
+  {
+   "species": "SPECIES_QUILAVA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    36,
+    "SPECIES_TYPHLOSION"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_RALTS",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    20,
+    "SPECIES_KIRLIA"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_RATTATA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    20,
+    "SPECIES_RATICATE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_REMORAID",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    25,
+    "SPECIES_OCTILLERY"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_RHYDON",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    52,
+    "SPECIES_RHYPERIOR"
+   ],
+   "class": "LOCKED_CHANGED"
+  },
+  {
+   "species": "SPECIES_RHYHORN",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    42,
+    "SPECIES_RHYDON"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_RIOLU",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_HAPPINESS_DAY",
+    "SPECIES_LUCARIO"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_ROSELIA",
+   "index": 0,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_SHINY_STONE",
+    "SPECIES_ROSERADE"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_SANDSHREW",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    22,
+    "SPECIES_SANDSLASH"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SCYTHER",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    38,
+    "SPECIES_SCIZOR"
+   ],
+   "class": "LOCKED_CHANGED"
+  },
+  {
+   "species": "SPECIES_SEADRA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    42,
+    "SPECIES_KINGDRA"
+   ],
+   "class": "LOCKED_CHANGED"
+  },
+  {
+   "species": "SPECIES_SEALEO",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    44,
+    "SPECIES_WALREIN"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SEEDOT",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    14,
+    "SPECIES_NUZLEAF"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SEEL",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    34,
+    "SPECIES_DEWGONG"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SENTRET",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    15,
+    "SPECIES_FURRET"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SHELGON",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    50,
+    "SPECIES_SALAMENCE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SHELLDER",
+   "index": 0,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_WATER_STONE",
+    "SPECIES_CLOYSTER"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SHELLOS",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    30,
+    "SPECIES_GASTRODON"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SHIELDON",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    30,
+    "SPECIES_BASTIODON"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SHINX",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    15,
+    "SPECIES_LUXIO"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SHROOMISH",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    23,
+    "SPECIES_BRELOOM"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SHUPPET",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    37,
+    "SPECIES_BANETTE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SILCOON",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    10,
+    "SPECIES_BEAUTIFLY"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SKIPLOOM",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    27,
+    "SPECIES_JUMPLUFF"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SKITTY",
+   "index": 0,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_MOON_STONE",
+    "SPECIES_DELCATTY"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SKORUPI",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    40,
+    "SPECIES_DRAPION"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SLAKOTH",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    18,
+    "SPECIES_VIGOROTH"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SLOWPOKE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_SPDEF_GT_DEF",
+    37,
+    "SPECIES_SLOWKING"
+   ],
+   "class": "LOCKED_CHANGED"
+  },
+  {
+   "species": "SPECIES_SLOWPOKE",
+   "index": 1,
+   "edge": [
+    "EVO_LEVEL",
+    37,
+    "SPECIES_SLOWBRO"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_SLUGMA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    38,
+    "SPECIES_MAGCARGO"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SMOOCHUM",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    30,
+    "SPECIES_JYNX"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SNEASEL",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_NIGHT",
+    38,
+    "SPECIES_WEAVILE"
+   ],
+   "class": "LOCKED_CHANGED"
+  },
+  {
+   "species": "SPECIES_SNORUNT",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    42,
+    "SPECIES_GLALIE"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_SNORUNT",
+   "index": 1,
+   "edge": [
+    "EVO_USE_ITEM_FEMALE",
+    "ITEM_DAWN_STONE",
+    "SPECIES_FROSLASS"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_SNOVER",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    40,
+    "SPECIES_ABOMASNOW"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SNUBBULL",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    23,
+    "SPECIES_GRANBULL"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SPEAROW",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    20,
+    "SPECIES_FEAROW"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SPHEAL",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    32,
+    "SPECIES_SEALEO"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SPINARAK",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    22,
+    "SPECIES_ARIADOS"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SPOINK",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    32,
+    "SPECIES_GRUMPIG"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SQUIRTLE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    16,
+    "SPECIES_WARTORTLE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_STARAVIA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    34,
+    "SPECIES_STARAPTOR"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_STARLY",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    14,
+    "SPECIES_STARAVIA"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_STARYU",
+   "index": 0,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_WATER_STONE",
+    "SPECIES_STARMIE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_STUNKY",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    34,
+    "SPECIES_SKUNTANK"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SUNKERN",
+   "index": 0,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_SUN_STONE",
+    "SPECIES_SUNFLORA"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SURSKIT",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    22,
+    "SPECIES_MASQUERAIN"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SWABLU",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    35,
+    "SPECIES_ALTARIA"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_SWINUB",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    33,
+    "SPECIES_PILOSWINE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_TAILLOW",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    22,
+    "SPECIES_SWELLOW"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_TANGELA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_KNOW_MOVE",
+    "MOVE_ANCIENT_POWER",
+    "SPECIES_TANGROWTH"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_TEDDIURSA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    30,
+    "SPECIES_URSARING"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_TENTACOOL",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    30,
+    "SPECIES_TENTACRUEL"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_TOGEPI",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_HAPPINESS",
+    "SPECIES_TOGETIC"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_TOGETIC",
+   "index": 0,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_SHINY_STONE",
+    "SPECIES_TOGEKISS"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_TORCHIC",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    16,
+    "SPECIES_COMBUSKEN"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_TOTODILE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    18,
+    "SPECIES_CROCONAW"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_TRAPINCH",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    35,
+    "SPECIES_VIBRAVA"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_TREECKO",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    16,
+    "SPECIES_GROVYLE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_TURTWIG",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    18,
+    "SPECIES_GROTLE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_TYROGUE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_ATK_LT_DEF",
+    20,
+    "SPECIES_HITMONCHAN"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_TYROGUE",
+   "index": 1,
+   "edge": [
+    "EVO_LEVEL_ATK_GT_DEF",
+    20,
+    "SPECIES_HITMONLEE"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_TYROGUE",
+   "index": 2,
+   "edge": [
+    "EVO_LEVEL_ATK_EQ_DEF",
+    20,
+    "SPECIES_HITMONTOP"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_VENONAT",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    31,
+    "SPECIES_VENOMOTH"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_VIBRAVA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    45,
+    "SPECIES_FLYGON"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_VIGOROTH",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    36,
+    "SPECIES_SLAKING"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_VOLTORB",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    30,
+    "SPECIES_ELECTRODE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_VULPIX",
+   "index": 0,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_FIRE_STONE",
+    "SPECIES_NINETALES"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_WAILMER",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    40,
+    "SPECIES_WAILORD"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_WARTORTLE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    36,
+    "SPECIES_BLASTOISE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_WEEDLE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    7,
+    "SPECIES_KAKUNA"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_WEEPINBELL",
+   "index": 0,
+   "edge": [
+    "EVO_USE_ITEM",
+    "ITEM_LEAF_STONE",
+    "SPECIES_VICTREEBEL"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_WHISMUR",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    20,
+    "SPECIES_LOUDRED"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_WINGULL",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    25,
+    "SPECIES_PELIPPER"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_WOOPER",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    20,
+    "SPECIES_QUAGSIRE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_WURMPLE",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_PID_LOW",
+    7,
+    "SPECIES_SILCOON"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_WURMPLE",
+   "index": 1,
+   "edge": [
+    "EVO_LEVEL_PID_HIGH",
+    7,
+    "SPECIES_CASCOON"
+   ],
+   "class": "LOCKED_KEEP"
+  },
+  {
+   "species": "SPECIES_WYNAUT",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    15,
+    "SPECIES_WOBBUFFET"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_YANMA",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL_KNOW_MOVE",
+    "MOVE_ANCIENT_POWER",
+    "SPECIES_YANMEGA"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_ZIGZAGOON",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    20,
+    "SPECIES_LINOONE"
+   ],
+   "class": "VANILLA_KEEP"
+  },
+  {
+   "species": "SPECIES_ZUBAT",
+   "index": 0,
+   "edge": [
+    "EVO_LEVEL",
+    22,
+    "SPECIES_GOLBAT"
+   ],
+   "class": "VANILLA_KEEP"
+  }
+ ]
+}
