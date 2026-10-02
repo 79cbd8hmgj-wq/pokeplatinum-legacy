@@ -36,9 +36,38 @@ def apply_palette(filename: str) -> None:
     image.save(path)
 
 
+
+def make_battle_cursor() -> None:
+    """Refresh the single 16x16 corner cursor; NCER flips it for all four corners."""
+    path = ROOT / "res" / "graphics" / "battle" / "interface" / "cursor.png"
+    source = Image.open(path)
+    palette = list(source.getpalette())
+
+    image = Image.new("P", (16, 16), 0)
+    image.putpalette(palette)
+    pixels = image.load()
+
+    # The cursor palette is self-contained: 15 is the red focus color and 14
+    # the white highlight. Build a thinner L-corner so the existing bounce
+    # animation reads more cleanly around command targets.
+    for x in range(2, 12):
+        pixels[x, 2] = 15
+        pixels[x, 3] = 15
+    for y in range(2, 12):
+        pixels[2, y] = 15
+        pixels[3, y] = 15
+
+    for x in range(4, 11):
+        pixels[x, 4] = 14
+    for y in range(4, 11):
+        pixels[4, y] = 14
+
+    image.save(path)
+
 def main() -> None:
     for filename in PREVIEW_SYNC_FILES:
         apply_palette(filename)
+    make_battle_cursor()
 
 
 if __name__ == "__main__":
