@@ -40,9 +40,9 @@ Audit-only G3C pass. Platinum palettes remain canonical and unchanged.
 
 ## Crowded color-ramp candidates
 
-- SPECIES_LAIRON: 3 near-color pairs
-- SPECIES_DUSCLOPS: 3 near-color pairs
-- SPECIES_GLALIE: 3 near-color pairs
+- SPECIES_LAIRON: [{'indices': [2, 6], 'distance': 17.0}, {'indices': [3, 7], 'distance': 17.0}, {'indices': [4, 8], 'distance': 17.0}]
+- SPECIES_DUSCLOPS: [{'indices': [1, 12], 'distance': 13.86}, {'indices': [2, 11], 'distance': 13.86}, {'indices': [4, 9], 'distance': 8.0}]
+- SPECIES_GLALIE: [{'indices': [3, 11], 'distance': 9.0}, {'indices': [4, 12], 'distance': 17.0}, {'indices': [5, 13], 'distance': 17.0}]
 
 ## Low luminance-span candidates
 
