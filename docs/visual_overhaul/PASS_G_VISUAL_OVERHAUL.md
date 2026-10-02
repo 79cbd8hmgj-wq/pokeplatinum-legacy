@@ -985,3 +985,43 @@ Implemented the next secondary UI pass:
 - tilemaps, tiles, cursor/arrow sprite geometry, cells, and animations remain unchanged
 
 This keeps normal shops and Frontier shops visually related while preserving their separate accent identities.
+
+
+### G2C party-menu geometry checkpoint
+
+The party-menu pass now goes beyond palette-only cleanup while keeping the retail sprite/OAM contracts intact.
+
+Implemented through `generate_party_menu_ui.py`:
+
+- rebuilt all four `cursor.png` states on the existing 128x48 cell geometry
+- retained the two retail silhouette families:
+  - cut-corner frame
+  - rounded-leading-edge frame
+- reduced the heavy retail outline into a thinner two-stage frame
+- preserved distinct focused and alternate visual states
+- rebuilt `button.png` on the existing four-cell packing:
+  - two 56x32 large-button states
+  - two 56x16 compact-button states
+- retained the original NCER/NANR files, OAM counts, dimensions, animation IDs, and VRAM layout
+
+The generated assets therefore change presentation without requiring party-menu layout/code changes.
+
+
+### G2C summary navigation checkpoint
+
+The summary-screen generator now also owns the two low-risk navigation assets:
+
+- `tab_arrow.png`
+  - remains 8x16
+  - NCER still provides the mirrored right-facing version
+  - existing NANR bounce animation is unchanged
+  - art is now a cleaner compact chevron
+
+- `move_cursor.png`
+  - remains the retail 8x512 tile-strip source format
+  - preserves the two 64x32 half-frame states consumed by the existing mirrored NCER layout
+  - rebuilt as a thinner cut-corner frame with a navy inner edge
+  - active red and alternate light states remain distinct
+  - no cell, animation, OAM, or layout changes
+
+These assets are generated and checked through the same visual-UI pipeline as the other G2C resources.
