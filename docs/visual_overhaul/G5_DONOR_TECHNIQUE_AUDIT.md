@@ -128,6 +128,26 @@ No-change controls:
 
 This keeps base-arena movement proportional to move weight instead of turning it into a universal damage effect.
 
+## Legacy ultimate/signature staging batch
+
+A final high-power legacy/signature sweep applies the same native base-arena reaction rule to moves
+whose existing scripts already provide large bespoke effects but leave the decisive impact mostly
+localized to the defender/effect background:
+
+- Blast Burn — adds a heavy base-arena jolt to both attacker-side branches at the final defender impact.
+- Hydro Cannon — adds a heavy base-arena response beneath the sustained defender shake.
+- Frenzy Plant — adds a heavy arena reaction when the delayed vine strike lands.
+- Psycho Boost — adds a restrained-but-distinct base-arena reaction beneath the defender impact.
+- Sacred Fire — adds a restrained base-arena jolt beneath the existing switched-background hit.
+
+No-change controls:
+- Eruption — already combines a full dark-red scene grade, repeated eruption emitters, effect-background motion, multi-target defender grades, and long defender shakes.
+- Water Spout — retained around its broad multi-target water burst and sustained defender shake rather than adding more scene motion.
+- Doom Desire — its delayed hit already owns a full white scene treatment plus a long defender-impact sequence.
+- Aeroblast — already uses a dedicated switched background with a long background shake and defender impact.
+
+No particle resources, backgrounds, sounds, timing, power/effect logic, or donor assets were changed.
+
 ## Generic special-attack control audit
 
 A final control sweep checked several common special attacks after the scene-grade and impact pilots.
