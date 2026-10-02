@@ -129,7 +129,7 @@ jobs:
         run: |
           set -euxo pipefail
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends             git meson ninja-build xvfb             libglib2.0-dev libsdl2-dev libpcap-dev zlib1g-dev             libx11-dev libgl1-mesa-dev
+          sudo apt-get install -y --no-install-recommends git meson ninja-build xvfb iproute2 libglib2.0-dev libsdl2-dev libpcap-dev zlib1g-dev libx11-dev libgl1-mesa-dev
 
       - name: Build pinned DeSmuME CLI with GDB stub
         shell: bash
@@ -162,23 +162,16 @@ jobs:
           }
           trap cleanup EXIT
 
+          READY=0
           for _ in $(seq 1 100); do
-            if python - <<PY
-import socket
-s=socket.socket()
-s.settimeout(0.1)
-try:
-    s.connect(("127.0.0.1", $PORT))
-except OSError:
-    raise SystemExit(1)
-finally:
-    s.close()
-PY
-            then
+            if ss -ltn | grep -q ":$PORT "; then
+              READY=1
               break
             fi
+            kill -0 "$PID"
             sleep 0.1
           done
+          test "$READY" -eq 1
 
           for scenario in eterna snow spear lakes turnback galactic coronet-control
           do
