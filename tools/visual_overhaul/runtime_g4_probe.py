@@ -21,6 +21,7 @@ from nds_disassembly_toolkit.analysis.runtime import MelonDSSession, RuntimeCpu
 @dataclass(frozen=True)
 class Scenario:
     expected_light_id: int
+    warp_request: int | None = None
     before_light_symbols: tuple[str, ...] = ()
     after_light_symbols: tuple[str, ...] = ("AreaLightManager_UpdateActiveTemplate",)
     require_special_fog: bool = False
@@ -29,19 +30,20 @@ class Scenario:
 SCENARIOS: dict[str, Scenario] = {
     "eterna": Scenario(
         expected_light_id=10,
+        warp_request=1,
         before_light_symbols=("ForestAmbienceRenderer_New",),
         after_light_symbols=(
             "AreaLightManager_UpdateActiveTemplate",
             "ForestAmbienceRenderer_Task",
         ),
     ),
-    "snow": Scenario(expected_light_id=11),
+    "snow": Scenario(expected_light_id=11, warp_request=2),
     "distortion": Scenario(expected_light_id=9, require_special_fog=True),
-    "spear": Scenario(expected_light_id=12, require_special_fog=True),
-    "lakes": Scenario(expected_light_id=13),
-    "turnback": Scenario(expected_light_id=14),
-    "galactic": Scenario(expected_light_id=6),
-    "coronet-control": Scenario(expected_light_id=7, require_special_fog=True),
+    "spear": Scenario(expected_light_id=12, warp_request=3, require_special_fog=True),
+    "lakes": Scenario(expected_light_id=13, warp_request=4),
+    "turnback": Scenario(expected_light_id=14, warp_request=5),
+    "galactic": Scenario(expected_light_id=6, warp_request=6),
+    "coronet-control": Scenario(expected_light_id=7, warp_request=7, require_special_fog=True),
 }
 
 REQUIRED_SYMBOLS = {
@@ -51,6 +53,7 @@ REQUIRED_SYMBOLS = {
     "FogManager_ApplyParameters",
     "ForestAmbienceRenderer_New",
     "ForestAmbienceRenderer_Task",
+    "gG4RuntimeQAControl",
 }
 
 
@@ -126,6 +129,52 @@ def _need(symbols: dict[str, int], name: str) -> int:
     return symbols[name]
 
 
+def _request_debug_warp(
+    session: MelonDSSession,
+    symbols: dict[str, int],
+    scenario: Scenario,
+) -> dict[str, object]:
+    if scenario.warp_request is None:
+        raise RuntimeError(
+            "this scenario requires a prepared checkpoint; no debug autowarp is defined"
+        )
+
+    address = _need(symbols, "gG4RuntimeQAControl")
+    payload = (
+        scenario.warp_request.to_bytes(4, "little")
+        + (0).to_bytes(4, "little")
+        + (0).to_bytes(4, "little")
+    )
+    session.write_memory(address, payload)
+    observed = session.read_memory(address, len(payload))
+    if observed != payload:
+        raise RuntimeError("debug warp control verification failed after runtime write")
+
+    return {
+        "address": f"0x{address:08x}",
+        "request": scenario.warp_request,
+        "status": 0,
+        "loaded_map_header": 0,
+    }
+
+
+def _read_debug_warp_control(
+    session: MelonDSSession,
+    symbols: dict[str, int],
+) -> dict[str, object]:
+    address = _need(symbols, "gG4RuntimeQAControl")
+    raw = session.read_memory(address, 12)
+    request = int.from_bytes(raw[0:4], "little")
+    status = int.from_bytes(raw[4:8], "little")
+    loaded_map_header = int.from_bytes(raw[8:12], "little")
+    return {
+        "address": f"0x{address:08x}",
+        "request": request,
+        "status": status,
+        "loaded_map_header": loaded_map_header,
+    }
+
+
 def _hit(session: MelonDSSession, symbols: dict[str, int], name: str) -> dict[str, object]:
     address = _need(symbols, name)
     snapshot = session.run_until_breakpoint(address)
@@ -144,6 +193,7 @@ def run(args: argparse.Namespace) -> int:
     overrides = _load_overrides(args.address)
     symbols = _resolve_symbols(args.symbols, overrides)
     results: list[dict[str, object]] = []
+    warp_control: dict[str, object] | None = None
 
     if args.validate_symbols_only:
         needed = _scenario_symbol_names(scenario)
@@ -173,6 +223,9 @@ def run(args: argparse.Namespace) -> int:
         port=args.port,
         timeout=args.timeout,
     ) as session:
+        if args.request_warp:
+            warp_control = _request_debug_warp(session, symbols, scenario)
+
         for symbol in scenario.before_light_symbols:
             results.append(_hit(session, symbols, symbol))
 
@@ -195,12 +248,21 @@ def run(args: argparse.Namespace) -> int:
         for symbol in scenario.after_light_symbols:
             results.append(_hit(session, symbols, symbol))
 
+        if args.request_warp:
+            warp_control = _read_debug_warp_control(session, symbols)
+            if warp_control["status"] != 2:
+                raise RuntimeError(
+                    f"{args.scenario}: debug warp did not reach LOADED status; "
+                    f"control={warp_control}"
+                )
+
     report = {
         "scenario": args.scenario,
         "expected_light_id": scenario.expected_light_id,
         "host": args.host,
         "port": args.port,
         "checks": results,
+        "warp_control": warp_control,
         "status": "PASS",
     }
     rendered = json.dumps(report, indent=2, sort_keys=True) + "\n"
@@ -230,6 +292,11 @@ def parser() -> argparse.ArgumentParser:
     p.add_argument("--host", default="127.0.0.1")
     p.add_argument("--port", type=int, default=3333)
     p.add_argument("--timeout", type=float, default=30.0)
+    p.add_argument(
+        "--request-warp",
+        action="store_true",
+        help="use the GDB_DEBUGGING-only control block to warp to this scenario before probing",
+    )
     p.add_argument(
         "--validate-symbols-only",
         action="store_true",
