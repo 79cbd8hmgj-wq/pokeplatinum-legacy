@@ -13,6 +13,5 @@ void ov5_021F2D3C(void *param0);
 void ov5_021F2EA4(MapObject *param0, int param1);
 OverworldAnimManager *ov5_021F3154(FieldSystem *fieldSystem, int param1, int param2, int param3);
 int ov5_021F31A8(OverworldAnimManager *param0);
-void FieldEffect_StartForestLeaves(FieldSystem *fieldSystem);
 
 #endif // POKEPLATINUM_OV5_021F2D20_H
