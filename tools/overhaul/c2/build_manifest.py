@@ -56,6 +56,18 @@ def main():
     tm_prices = {}
     for p in sorted(glob_items()):
         tm_prices[os.path.basename(p)[:-5].upper()] = base_json(p)["price"]
+    # The retail/decomp baseline gives TM78 on Route 204 North, but locked C2 progression
+    # intentionally keeps reusable Power Gem late in Victory Road. Build the expected final
+    # acquisition fingerprint as "baseline + this one explicit locked override".
+    acquisition_fp = field_tm_fingerprint(lambda r: base_text(r), base_files())
+    route204 = "res/field/scripts/scripts_route_204_north.s"
+    victory = "res/field/scripts/scripts_victory_road_1f.s"
+    if route204 in acquisition_fp:
+        acquisition_fp[route204].pop("ITEM_TM78", None)
+        if not acquisition_fp[route204]:
+            acquisition_fp.pop(route204)
+    acquisition_fp.setdefault(victory, {})["ITEM_TM78"] = 1
+
     manifest = {
         "version": 1, "domain": "c2-tm-hm-mechanics", "status": "LOCKED_IMPLEMENTED",
         "base_commit": BASE_COMMIT,
@@ -89,17 +101,26 @@ def main():
             "shop_menu": {"source": SRC["shop_menu"], "check_before": "currMoney < shopMenu->itemPrice", "scope": "MART_TYPE_NORMAL + MART_TYPE_FRONTIER, TM items only", "message": "pl_msg_00000543_00039"},
             "game_corner": {"source": SRC["prize_script"], "message": "VeilstoneCityPrizeExchange_Text_AlreadyHaveTM", "check_before": ["HasCoins", "SubtractCoins"]},
         },
-        "first_acquisition_keep": {"owner": "c2.tm.acquisition_keep", "fingerprint_base": BASE_COMMIT,
-                                   "field_tm_fingerprint": field_tm_fingerprint(lambda r: base_text(r), base_files())},
+        "first_acquisition_keep": {
+            "owner": "c2.tm.acquisition_keep",
+            "fingerprint_base": BASE_COMMIT,
+            "tm78_override": {
+                "retail_source": route204,
+                "locked_source": victory,
+                "method": "Victory Road 1F Collector gift",
+                "save_compat_flag": "FLAG_RECEIVED_ROUTE_204_NORTH_TM78",
+            },
+            "field_tm_fingerprint": acquisition_fp,
+        },
         "text_corrections": {
             "res/text/oreburgh_city.json": "OreburghCity_Text_TMsSingleUseHMsOverAndOver no longer claims TMs are single use",
-            "res/text/route_204_north.json": "Route204North_Text_CaptivateOppositeGender describes the TM78 Power Gem and reusable TMs",
+            "res/text/route_204_north.json": "Route204North Ace Trainer now teaches reusable-TM behavior without awarding TM78",
         },
         "created_moves_pin": {"max_moves": 490, "first": 468, "last": 489, "count": 22},
         "excluded_systems": ["species stats/types/abilities", "species learnsets", "TM compatibility masks (TM21/TM78 + C3 additions)",
                              "encounter tables", "availability gifts", "evolution tables", "trainer teams", "Poke Ball mechanics",
                              "breeding", "general economy", "legendary events", "visual assets/maps/lighting/UI", "tutor consolidation",
-                             "field-move decoupling", "world TM pickup relocation"],
+                             "field-move decoupling", "world TM pickup relocation except the locked TM78 Route 204 -> Victory Road override"],
     }
     path = os.path.join(ROOT, MANIFEST)
     with open(path, "w", encoding="utf-8") as f:
