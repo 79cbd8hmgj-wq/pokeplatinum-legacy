@@ -1205,3 +1205,42 @@ The safe backport strategy is therefore:
 
 This prevents a visually newer static frame from silently regressing a
 species-specific Platinum animation.
+
+
+### G3 HGSS battle-sprite palette-contract checkpoint
+
+The geometry-close set has now passed a second safety gate against Platinum's
+actual sprite packing contract.
+
+The Platinum build packs battle-sprite pixel indices separately from each
+species' `normal.pal` / `shiny.pal`, so a donor PNG is not safe merely because
+its embedded palette looks correct. The donor's used indices must remain
+meaningful under Platinum's retained palettes.
+
+Results across the 69 geometry-close species:
+
+- **130** changed sprite views audited
+- **53** views are direct-index-safe
+- **28** species are fully direct-index-safe across all changed views
+- **77** views have palette mismatches
+- **41** species therefore remain on the conversion/review path
+- **0** species fell into an exact-normal-remap-only middle tier
+
+This reduces the automatic runtime-candidate pool from 69 to **28 species**.
+
+A five-species runtime pilot is now staged:
+
+- Venusaur
+- Persian
+- Hypno
+- Lapras
+- Tyranitar
+
+Only their changed HGSS front sprites are imported. Platinum palettes,
+`sprite_data.json`, back sprites, archive ordering, and engine behavior remain
+untouched.
+
+Runtime checklist: `docs/visual_overhaul/HGSS_BATTLE_SPRITE_RUNTIME_PILOT.md`.
+
+Do not expand the remaining 23 direct-index-safe species until this pilot is
+visually checked in Delta.
