@@ -836,6 +836,31 @@ Next G2C candidates:
 
 
 
+
+### G2C cursor / wait-dial checkpoint
+
+Implemented through the existing reproducible UI generator:
+
+- `res/graphics/windows/scroll_cursor.png`
+  - preserved retail resource contract: 96x8 total
+  - preserved 12 horizontal 8x8 animation frames
+  - rebuilt as a cleaner bouncing down-chevron
+  - uses only the shared window palette indices; no new palette or VRAM allocation
+
+- `res/graphics/windows/wait_dial.png`
+  - preserved retail resource contract: 16x128 total
+  - preserved 8 vertical 16x16 animation frames
+  - rebuilt as an 8-step rotating ring with active/highlight/trailing states
+  - uses only the shared window palette indices; no new palette or VRAM allocation
+
+Reproducibility:
+- `tools/visual_overhaul/generate_ui_foundation.py` now generates the standard system frame, field frame, scroll cursor, and wait dial.
+- `.github/workflows/generate-visual-ui.yml` tracks and commits all four generated assets.
+
+Validation status:
+- generated PNGs have landed on `visual-overhaul-g2a`
+- binary dimensions/palette-index usage and ROM build are being verified through the visual-asset export and normal CI workflows before this checkpoint is treated as locked.
+
 ### G2C party-menu palette checkpoint
 
 Implemented a resource-contract-safe party-menu refresh through `res/graphics/party_menu/shared.pal`.
