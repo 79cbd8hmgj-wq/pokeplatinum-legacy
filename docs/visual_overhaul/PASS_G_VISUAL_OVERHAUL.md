@@ -263,6 +263,36 @@ Active.
 4. Reassign areas where the retail four-set grouping is too coarse.
 5. Add new lighting-set entries only when existing four-set reuse cannot deliver the desired result.
 
+
+### G2A implementation checkpoint
+
+Implemented on `visual-overhaul-g2a`:
+
+- Expanded area-light archive support from 4 to 10 files.
+- Added lighting families:
+  - `lighting_set_004` — Eterna Forest / deep forest
+  - `lighting_set_005` — Snowpoint / Route 217 snow
+  - `lighting_set_006` — Galactic interiors
+  - `lighting_set_007` — Mt. Coronet interior
+  - `lighting_set_008` — Spear Pillar
+  - `lighting_set_009` — Distortion World
+- Registered all new sets in `lighting_sets.order` and `meson.build`.
+- Reassigned:
+  - `area_data_054` -> forest
+  - `area_data_014` -> snow
+  - `area_data_058` -> Galactic
+  - `area_data_069` -> Coronet
+  - `area_data_060` -> Spear Pillar
+  - `area_data_074` -> Distortion World
+
+The retail lighting sets 000-003 remain unchanged.
+
+Current validation status:
+- repository structure and references are internally consistent
+- branch is based cleanly on current `main`
+- runtime/build validation still required before these values are treated as locked
+
+
 #### G2B — Environmental effects
 Use Platinum's native field-effect/particle/weather systems first.
 
