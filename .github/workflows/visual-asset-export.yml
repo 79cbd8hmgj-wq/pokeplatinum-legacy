@@ -9,6 +9,10 @@ on:
       - 'res/field/maps/texture_sets/map_texture_set_053.nsbtx'
       - 'res/field/props/models/prop_model_147.nsbmd'
       - 'res/field/props/models/mansion_door.nsbmd'
+      - 'res/graphics/windows/**'
+      - 'res/graphics/party_menu/**'
+      - 'res/graphics/pokemon_summary_screen/**'
+      - 'res/graphics/bag/**'
   workflow_dispatch: {}
 
 jobs:
@@ -45,4 +49,8 @@ jobs:
             res/field/maps/texture_sets/map_texture_set_053.nsbtx
             res/field/props/models/prop_model_147.nsbmd
             res/field/props/models/mansion_door.nsbmd
+            res/graphics/windows
+            res/graphics/party_menu
+            res/graphics/pokemon_summary_screen
+            res/graphics/bag
           retention-days: 1
