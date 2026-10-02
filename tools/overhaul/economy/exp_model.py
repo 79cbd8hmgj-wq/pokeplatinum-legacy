@@ -42,6 +42,9 @@ def allocate(raw: int, party: list[Member]) -> dict[int, int]:
     group = [m for m in elig if m.participant or m.exp_share]  # union, each member counted once
     battle_pool = raw * BATTLE_POOL_PERCENT // 100
     team_pool = raw - battle_pool
+    if not group and elig:
+        team_pool += battle_pool
+        battle_pool = 0
     out = {m.slot: 0 for m in elig}
     if group:
         q, r = divmod(battle_pool, len(group))

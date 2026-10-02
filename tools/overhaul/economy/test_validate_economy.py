@@ -69,6 +69,8 @@ CASES = {
     "traded_altered": sub("battle_script", "totalExp = totalExp * 150 / 100;\n                }\n\n                msg.id = BattleStrings_Text_PokemonGainedABoostedExpPoints", "totalExp = totalExp * 120 / 100;\n                }\n\n                msg.id = BattleStrings_Text_PokemonGainedABoostedExpPoints"),
     "emerald_multiplier_added": sub("battle_script", "totalExp = data->battleCtx->expAlloc[slot];", "totalExp = data->battleCtx->expAlloc[slot];\n            totalExp = totalExp * 3 / 2;"),
     "raw_pool_formula_changed": sub("battle_script", "level) / 7;\n\n        u32 battlePool", "level) / 5;\n\n        u32 battlePool"),
+    "empty_battle_group_loses_battle_pool": sub("battle_script", "            teamPool += battlePool;\n            battlePool = 0;\n", "            battlePool = 0;\n"),
+    "battle_pool_constant_outside_guard": sub("battle_consts", "#define EXP_BATTLE_POOL_PERCENT 60\n\n#endif // POKEPLATINUM_CONSTANTS_BATTLE_H", "#endif // POKEPLATINUM_CONSTANTS_BATTLE_H\n\n#define EXP_BATTLE_POOL_PERCENT 60"),
     # Prices
     "potion_price_wrong": price("potion", 250),
     "full_restore_price_wrong": price("full_restore", 3000),

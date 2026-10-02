@@ -12,6 +12,8 @@ Runtime/emulator QA: **DEFERRED TO FINAL OVERHAUL PLAYTEST**.
 * Eligible = valid species, not Egg, HP > 0, level < 100. Battle group = unique union of actual participants
   (`sideGetExpMask`) and eligible Exp. Share holders (counted once however many Exp. Shares / participation).
 * Battle pool is divided among the battle group, team pool among **all** eligible members; battle members get both shares.
+  If no eligible battle-group member remains (for example all participants are fainted/Lv100 and no eligible Exp. Share holder exists),
+  the 60% battle pool is folded into the team pool so the raw pool is still conserved among eligible recipients.
 * Remainders: lowest party slots first, independently for each pool, so pre-modifier allocations sum to `raw` exactly.
   Legacy minimum of 1 EXP applies only to a battle-group member whose total would be 0 (can exceed `raw` only when
   `battle_pool < battle group size`, i.e. raw pools of a few EXP).

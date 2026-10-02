@@ -15,6 +15,8 @@ def check_exp(live: dict, P: list[str]):
     m = re.search(r"#define EXP_BATTLE_POOL_PERCENT\s+(\d+)", consts)
     if not m or int(m.group(1)) != exp_model.BATTLE_POOL_PERCENT:
         P.append(f"EXP: EXP_BATTLE_POOL_PERCENT must be {exp_model.BATTLE_POOL_PERCENT} (60/40 split)")
+    if consts.find("#define EXP_BATTLE_POOL_PERCENT") > consts.find("#endif // POKEPLATINUM_CONSTANTS_BATTLE_H"):
+        P.append("EXP: EXP_BATTLE_POOL_PERCENT must remain inside the battle.h include guard")
     a = bs.find("static BOOL BtlCmd_CalcExpGain(BattleSystem *battleSys, BattleContext *battleCtx)\n{")
     z = bs.find("enum GetExpTaskState {")
     if a < 0 or z < a:
@@ -32,6 +34,8 @@ def check_exp(live: dict, P: list[str]):
         "base reward source": "SPECIES_DATA_BASE_EXP_REWARD",
         "battle pool uses EXP_BATTLE_POOL_PERCENT": "battlePool = exp * EXP_BATTLE_POOL_PERCENT / 100",
         "team pool is the conserved remainder": "teamPool = exp - battlePool",
+        "empty battle group redistributes battle pool": "if (battleGroupCount == 0 && eligibleCount != 0)",
+        "empty battle group conservation": "teamPool += battlePool",
         "battle pool divided by battle group": "battlePool / battleGroupCount",
         "team pool divided by every eligible member": "teamPool / eligibleCount",
         "battle remainder policy": "battleRemainder",

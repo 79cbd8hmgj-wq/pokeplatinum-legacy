@@ -2237,6 +2237,14 @@ static BOOL BtlCmd_CalcExpGain(BattleSystem *battleSys, BattleContext *battleCtx
 
         u32 battlePool = exp * EXP_BATTLE_POOL_PERCENT / 100;
         u32 teamPool = exp - battlePool;
+
+        // If no eligible battle-group member exists, redistribute its share
+        // across the eligible team rather than discarding 60% of the raw pool.
+        if (battleGroupCount == 0 && eligibleCount != 0) {
+            teamPool += battlePool;
+            battlePool = 0;
+        }
+
         u32 battleRemainder = battleGroupCount ? battlePool % battleGroupCount : 0;
         u32 teamRemainder = eligibleCount ? teamPool % eligibleCount : 0;
 

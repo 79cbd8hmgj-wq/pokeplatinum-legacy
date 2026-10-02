@@ -80,6 +80,14 @@ class ExpModel(unittest.TestCase):
         p[2] = Member(2, exp_share=True, hp=0)
         self.assertEqual(allocate(100, p), {0: 100})
 
+    def test_no_eligible_battle_group_redistributes_full_pool(self):
+        p = party(3)
+        p[0] = Member(0, participant=True, hp=0)
+        a = allocate(101, p)
+        self.assertEqual(set(a), {1, 2})
+        self.assertEqual(sum(a.values()), 101)
+        self.assertEqual(a, {1: 51, 2: 50})
+
     def test_odd_pools_deterministic_remainders(self):
         a = allocate(7, party(6))
         self.assertEqual(sum(a.values()), 7)  # battle 4 -> slot0; team 3 -> slots 0..2
