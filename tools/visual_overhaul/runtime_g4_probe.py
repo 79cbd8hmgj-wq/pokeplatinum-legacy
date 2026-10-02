@@ -67,6 +67,7 @@ G4_RUNTIME_QA_EVENT_FOREST_RENDERER = 1 << 1
 G4_RUNTIME_QA_EVENT_FOREST_TASK = 1 << 2
 G4_RUNTIME_QA_EVENT_SPECIAL_FOG = 1 << 3
 G4_RUNTIME_QA_EVENT_FOG_APPLY = 1 << 4
+G4_RUNTIME_QA_MAGIC = 0x47345141
 
 
 def _parse_int(value: str) -> int:
@@ -143,6 +144,33 @@ def _need(symbols: dict[str, int], name: str) -> int:
     return symbols[name]
 
 
+def _wait_for_runtime_control_ready(
+    session: MelonDSSession,
+    symbols: dict[str, int],
+    *,
+    timeout: float,
+) -> dict[str, object]:
+    deadline = time.monotonic() + timeout
+    address = _need(symbols, "gG4RuntimeQAControl")
+    last_magic = None
+
+    while time.monotonic() < deadline:
+        raw = session.read_memory(address, 24)
+        last_magic = int.from_bytes(raw[20:24], "little")
+        if last_magic == G4_RUNTIME_QA_MAGIC:
+            return {
+                "address": f"0x{address:08x}",
+                "magic": f"0x{last_magic:08x}",
+            }
+
+        session.run_host_action(lambda: time.sleep(0.25))
+
+    raise RuntimeError(
+        "runtime QA control never reached initialized state; "
+        f"last_magic=0x{(last_magic or 0):08x}"
+    )
+
+
 def _request_debug_warp(
     session: MelonDSSession,
     symbols: dict[str, int],
@@ -181,12 +209,13 @@ def _read_debug_warp_control(
     symbols: dict[str, int],
 ) -> dict[str, object]:
     address = _need(symbols, "gG4RuntimeQAControl")
-    raw = session.read_memory(address, 20)
+    raw = session.read_memory(address, 24)
     request = int.from_bytes(raw[0:4], "little")
     status = int.from_bytes(raw[4:8], "little")
     loaded_map_header = int.from_bytes(raw[8:12], "little")
     event_flags = int.from_bytes(raw[12:16], "little")
     light_archive_id = int.from_bytes(raw[16:20], "little")
+    magic = int.from_bytes(raw[20:24], "little")
     return {
         "address": f"0x{address:08x}",
         "request": request,
@@ -194,6 +223,7 @@ def _read_debug_warp_control(
         "loaded_map_header": loaded_map_header,
         "event_flags": event_flags,
         "light_archive_id": light_archive_id,
+        "magic": f"0x{magic:08x}",
     }
 
 
@@ -290,6 +320,17 @@ def run(args: argparse.Namespace) -> int:
         timeout=args.timeout,
     ) as session:
         if args.request_warp:
+            results.append(
+                {
+                    "check": "runtime_control_ready",
+                    **_wait_for_runtime_control_ready(
+                        session,
+                        symbols,
+                        timeout=args.telemetry_timeout,
+                    ),
+                    "pass": True,
+                }
+            )
             warp_control = _request_debug_warp(session, symbols, scenario)
             warp_control = _wait_for_debug_warp(
                 session,
