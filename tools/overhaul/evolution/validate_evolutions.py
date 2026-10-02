@@ -108,12 +108,10 @@ def check_branches(tables: dict, f: list) -> None:
         for lvl in (34, 35, 36):
             for atk, df, spa, spd in STATS:
                 got = first_match(eds, level=lvl, atk=atk, df=df, spa=spa, spd=spd)
-                exp = "SPECIES_POLITOED" if lvl >= 35 and spa > atk else None
+                exp = None if lvl < 35 else ("SPECIES_POLITOED" if spa > atk else "SPECIES_POLIWRATH")
                 if got != exp:
                     f.append(f"poliwhirl lvl{lvl} atk{atk} spa{spa}: got {got}, expected {exp}")
                     return
-        if ["EVO_USE_ITEM", "ITEM_WATER_STONE", "SPECIES_POLIWRATH"] not in eds:
-            f.append("poliwhirl lost its Water Stone -> Poliwrath evolution")
     if need("tyrogue"):
         eds = tables["tyrogue"]
         for lvl in (19, 20, 21):

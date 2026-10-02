@@ -79,8 +79,10 @@ LOCKED_FINAL = {
     "sneasel":    [E("EVO_LEVEL_NIGHT", 38, "SPECIES_WEAVILE")],
     "happiny":     [E("EVO_LEVEL_DAY", 20, "SPECIES_CHANSEY")],
     "pupitar":    [E("EVO_LEVEL", 50, "SPECIES_TYRANITAR")],
-    "poliwhirl":  [E("EVO_USE_ITEM", "ITEM_WATER_STONE", "SPECIES_POLIWRATH"),
-                   E("EVO_LEVEL_SPATK_GT_ATK", 35, "SPECIES_POLITOED")],
+    # Full locked Lv35 stat split: SpA > Atk -> Politoed; Atk >= SpA -> Poliwrath.
+    # Politoed is checked first; the plain Lv35 fallback is therefore exactly the Atk >= SpA branch.
+    "poliwhirl":  [E("EVO_LEVEL_SPATK_GT_ATK", 35, "SPECIES_POLITOED"),
+                   E("EVO_LEVEL", 35, "SPECIES_POLIWRATH")],
     # Slowking first: SpD > Def -> Slowking; everything else (SpD <= Def) falls through to the unchanged Lv37 Slowbro.
     "slowpoke":   [E("EVO_LEVEL_SPDEF_GT_DEF", 37, "SPECIES_SLOWKING"),
                    E("EVO_LEVEL", 37, "SPECIES_SLOWBRO")],
@@ -107,7 +109,7 @@ CHANGE_AUTHORITY = {
     "sneasel": ("NIGHT_LEVEL", "EVOLUTION_SPEC.md (Weavile Lv38 at night, no Razor Claw)"),
     "happiny": ("DAY_LEVEL", "Recovered locked Pass A project history: Happiny -> Chansey Lv20 during daytime, no Oval Stone"),
     "pupitar": ("LEVEL_RETUNE", "EVOLUTION_SPEC.md (Tyranitar Lv50; vanilla Lv55)"),
-    "poliwhirl": ("STAT_BRANCH", "EVOLUTION_SPEC.md / EMERALD_PORT_PLAN.md (Politoed Lv35 SpA > Atk); Poliwrath Water Stone unchanged"),
+    "poliwhirl": ("STAT_BRANCH", "Locked Pass A/C3 authority: Lv35 full stat split; SpA > Atk -> Politoed, Atk >= SpA -> Poliwrath"),
     "slowpoke": ("STAT_BRANCH", "EVOLUTION_SPEC.md / EMERALD_PORT_PLAN.md (Slowking Lv37 SpD > Def); Slowbro Lv37 unchanged, now the fallback"),
     "clamperl": ("STAT_BRANCH", "EVOLUTION_SPEC.md / EMERALD_PORT_PLAN.md (Huntail Atk > SpA; Gorebyss SpA >= Atk, both Lv35)"),
 }

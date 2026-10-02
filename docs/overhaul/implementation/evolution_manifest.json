@@ -61,14 +61,14 @@
   "evolution_bearing_species": 229,
   "total_edges": 246,
   "edge_class_counts": {
-   "LOCKED_CHANGED": 21,
-   "LOCKED_KEEP": 24,
+   "LOCKED_CHANGED": 22,
+   "LOCKED_KEEP": 23,
    "VANILLA_KEEP": 201,
    "UNRESOLVED_AUTHORITY": 0,
    "SUPERSEDED_EARLY_PROPOSAL": 0
   },
   "species_with_changed_tables": 20,
-  "changed_edges": 21
+  "changed_edges": 22
  },
  "species": [
   {
@@ -3543,23 +3543,23 @@
    ],
    "after": [
     [
-     "EVO_USE_ITEM",
-     "ITEM_WATER_STONE",
-     "SPECIES_POLIWRATH"
-    ],
-    [
      "EVO_LEVEL_SPATK_GT_ATK",
      35,
      "SPECIES_POLITOED"
+    ],
+    [
+     "EVO_LEVEL",
+     35,
+     "SPECIES_POLIWRATH"
     ]
    ],
    "changed": true,
    "edge_classes": [
-    "LOCKED_KEEP",
+    "LOCKED_CHANGED",
     "LOCKED_CHANGED"
    ],
    "authority_key": "STAT_BRANCH",
-   "provenance": "EVOLUTION_SPEC.md / EMERALD_PORT_PLAN.md (Politoed Lv35 SpA > Atk); Poliwrath Water Stone unchanged"
+   "provenance": "Locked Pass A/C3 authority: Lv35 full stat split; SpA > Atk -> Politoed, Atk >= SpA -> Poliwrath"
   },
   {
    "species": "SPECIES_PONYTA",
@@ -7095,19 +7095,19 @@
    "species": "SPECIES_POLIWHIRL",
    "index": 0,
    "edge": [
-    "EVO_USE_ITEM",
-    "ITEM_WATER_STONE",
-    "SPECIES_POLIWRATH"
+    "EVO_LEVEL_SPATK_GT_ATK",
+    35,
+    "SPECIES_POLITOED"
    ],
-   "class": "LOCKED_KEEP"
+   "class": "LOCKED_CHANGED"
   },
   {
    "species": "SPECIES_POLIWHIRL",
    "index": 1,
    "edge": [
-    "EVO_LEVEL_SPATK_GT_ATK",
+    "EVO_LEVEL",
     35,
-    "SPECIES_POLITOED"
+    "SPECIES_POLIWRATH"
    ],
    "class": "LOCKED_CHANGED"
   },

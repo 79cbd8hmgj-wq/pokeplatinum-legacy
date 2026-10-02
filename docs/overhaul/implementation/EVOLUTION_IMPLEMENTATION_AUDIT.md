@@ -8,8 +8,8 @@
 | Evolution-bearing species | 229 |
 | Total evolution edges | 246 |
 | Vanilla-kept edges (VANILLA_KEEP) | 201 |
-| Locked, already matching vanilla (LOCKED_KEEP) | 24 |
-| **Changed edges (LOCKED_CHANGED)** | **21** across 20 species tables (Slowpoke's table is also re-ordered for precedence; its Slowbro edge is unchanged) |
+| Locked, already matching vanilla (LOCKED_KEEP) | 23 |
+| **Changed edges (LOCKED_CHANGED)** | **22** across 20 species tables (Slowbro remains an unchanged edge inside Slowpoke's changed table) |
 | Unresolved authority | 0 (Happiny → Chansey recovered as Lv20 daytime) |
 
 ## Changed evolutions
@@ -29,16 +29,17 @@
 | 11 | SPECIES_MAGMAR | SPECIES_MAGMORTAR: `EVO_LEVEL 42` | `EVO_TRADE_WITH_HELD_ITEM ITEM_MAGMARIZER` | ITEM_TRADE_REPLACEMENT |
 | 12 | SPECIES_ONIX | SPECIES_STEELIX: `EVO_LEVEL 35` | `EVO_TRADE_WITH_HELD_ITEM ITEM_METAL_COAT` | ITEM_TRADE_REPLACEMENT |
 | 13 | SPECIES_POLIWHIRL | SPECIES_POLITOED: `EVO_LEVEL_SPATK_GT_ATK 35` | `EVO_TRADE_WITH_HELD_ITEM ITEM_KINGS_ROCK` | STAT_BRANCH |
-| 14 | SPECIES_PORYGON | SPECIES_PORYGON2: `EVO_LEVEL 30` | `EVO_TRADE_WITH_HELD_ITEM ITEM_UPGRADE` | ITEM_TRADE_REPLACEMENT |
-| 15 | SPECIES_PORYGON2 | SPECIES_PORYGON_Z: `EVO_LEVEL 45` | `EVO_TRADE_WITH_HELD_ITEM ITEM_DUBIOUS_DISC` | ITEM_TRADE_REPLACEMENT |
-| 16 | SPECIES_PUPITAR | SPECIES_TYRANITAR: `EVO_LEVEL 50` | `EVO_LEVEL 55` | LEVEL_RETUNE |
-| 17 | SPECIES_RHYDON | SPECIES_RHYPERIOR: `EVO_LEVEL 52` | `EVO_TRADE_WITH_HELD_ITEM ITEM_PROTECTOR` | ITEM_TRADE_REPLACEMENT |
-| 18 | SPECIES_SCYTHER | SPECIES_SCIZOR: `EVO_LEVEL 38` | `EVO_TRADE_WITH_HELD_ITEM ITEM_METAL_COAT` | ITEM_TRADE_REPLACEMENT |
-| 19 | SPECIES_SEADRA | SPECIES_KINGDRA: `EVO_LEVEL 42` | `EVO_TRADE_WITH_HELD_ITEM ITEM_DRAGON_SCALE` | ITEM_TRADE_REPLACEMENT |
-| 20 | SPECIES_SLOWPOKE | SPECIES_SLOWKING: `EVO_LEVEL_SPDEF_GT_DEF 37` | `EVO_TRADE_WITH_HELD_ITEM ITEM_KINGS_ROCK` | STAT_BRANCH |
-| 21 | SPECIES_SNEASEL | SPECIES_WEAVILE: `EVO_LEVEL_NIGHT 38` | `EVO_LEVEL_WITH_HELD_ITEM_NIGHT ITEM_RAZOR_CLAW` | NIGHT_LEVEL |
+| 14 | SPECIES_POLIWHIRL | SPECIES_POLIWRATH: `EVO_LEVEL 35` fallback after Politoed check (= Atk ≥ SpA) | `EVO_USE_ITEM ITEM_WATER_STONE` | STAT_BRANCH |
+| 15 | SPECIES_PORYGON | SPECIES_PORYGON2: `EVO_LEVEL 30` | `EVO_TRADE_WITH_HELD_ITEM ITEM_UPGRADE` | ITEM_TRADE_REPLACEMENT |
+| 16 | SPECIES_PORYGON2 | SPECIES_PORYGON_Z: `EVO_LEVEL 45` | `EVO_TRADE_WITH_HELD_ITEM ITEM_DUBIOUS_DISC` | ITEM_TRADE_REPLACEMENT |
+| 17 | SPECIES_PUPITAR | SPECIES_TYRANITAR: `EVO_LEVEL 50` | `EVO_LEVEL 55` | LEVEL_RETUNE |
+| 18 | SPECIES_RHYDON | SPECIES_RHYPERIOR: `EVO_LEVEL 52` | `EVO_TRADE_WITH_HELD_ITEM ITEM_PROTECTOR` | ITEM_TRADE_REPLACEMENT |
+| 19 | SPECIES_SCYTHER | SPECIES_SCIZOR: `EVO_LEVEL 38` | `EVO_TRADE_WITH_HELD_ITEM ITEM_METAL_COAT` | ITEM_TRADE_REPLACEMENT |
+| 20 | SPECIES_SEADRA | SPECIES_KINGDRA: `EVO_LEVEL 42` | `EVO_TRADE_WITH_HELD_ITEM ITEM_DRAGON_SCALE` | ITEM_TRADE_REPLACEMENT |
+| 21 | SPECIES_SLOWPOKE | SPECIES_SLOWKING: `EVO_LEVEL_SPDEF_GT_DEF 37` | `EVO_TRADE_WITH_HELD_ITEM ITEM_KINGS_ROCK` | STAT_BRANCH |
+| 22 | SPECIES_SNEASEL | SPECIES_WEAVILE: `EVO_LEVEL_NIGHT 38` | `EVO_LEVEL_WITH_HELD_ITEM_NIGHT ITEM_RAZOR_CLAW` | NIGHT_LEVEL |
 
-Poliwrath (Water Stone) and Slowbro (Lv37) are unchanged edges inside changed tables.  Edge order in `slowpoke`: Slowking (SpD > Def) first, then Slowbro.
+Slowbro remains the unchanged Lv37 fallback inside Slowpoke's changed table: SpD > Def → Slowking; otherwise Def ≥ SpD → Slowbro. Poliwhirl is an exhaustive Lv35 split: SpA > Atk → Politoed; otherwise Atk ≥ SpA → Poliwrath.
 
 ## Engine methods added (appended; vanilla IDs 0–26 untouched)
 
@@ -63,9 +64,9 @@ The engine returns the **first** eligible entry of a species' list, so branch pr
 | No-trade audit (whole #001–#493 table) | PASS — no `EVO_TRADE` / `EVO_TRADE_WITH_HELD_ITEM` remains |
 | No-held-item audit | PASS — no `EVO_LEVEL_WITH_HELD_ITEM_*` or `EVO_TRADE*` evolution remains; no exceptions |
 | No-non-stone-item audit | PASS — every `EVO_USE_ITEM*` consumes one of the 9 whitelisted Gen IV stones (Fire, Water, Thunder, Leaf, Moon, Sun, Shiny, Dusk, Dawn) |
-| Branch exhaustiveness | PASS — Clamperl exactly-one over all 4-stat orderings/ties at Lv34–36; Slowpoke first-match gives Slowking iff SpD > Def else Slowbro; Poliwhirl Politoed iff SpA > Atk (Poliwrath only by stone); Tyrogue exactly-one (>, =, <); Gligar/Sneasel night × level; Happiny day × level |
+| Branch exhaustiveness | PASS — Clamperl exactly-one over all 4-stat orderings/ties at Lv34–36; Slowpoke first-match gives Slowking iff SpD > Def else Slowbro; Poliwhirl gives Politoed iff SpA > Atk else Poliwrath at Lv35; Tyrogue exactly-one (>, =, <); Gligar/Sneasel night × level; Happiny day × level |
 | Comparison semantics | Static test parses `src/pokemon.c` for each new case (operator and operands) and unit-tests ties |
-| C3 timing cross-check | `timing_crosscheck.py`: 10 C3-cited levels all agree with the manifest; 0 conflicts; no learnset edited. Per-evolution table printed by the script |
+| C3 timing cross-check | `timing_crosscheck.py`: 11 C3-cited levels all agree with the manifest, including Poliwrath's locked Lv35 branch into its Lv36 payoff; 0 conflicts; no learnset edited. Per-evolution table printed by the script |
 | Scope audit | `scope_audit_evolutions.py`: 0 out-of-scope files; species data files differ only in `evolutions`; engine source deletions limited to the Kadabra Everstone exemption |
 | One-save achievability (static) | No final evolution needs trade, a second DS, WFC, another game or a nonexistent item. Level/friendship/time/location/gender/move/party/Beauty conditions are in-game. Stone evolutions need stones; Moon/Sun Stone currently have only Underground sources in vanilla — stone access is owned by the later item/economy phase ("reliable evolution-stone access"), not changed here. Happiny→Chansey now needs only Lv20 in daytime. |
 | Kadabra / Everstone | The vanilla Kadabra exemption from the Everstone evolution block was removed (Kadabra now level-evolves); validator-checked |
@@ -93,10 +94,10 @@ No existing validator needed changes.
 
 | Revision | Result |
 |---|---|
-| US Platinum Rev 0 | SUCCESS — `build (US rev 0)`, head `acec33eb`, Actions run 37046549462 |
-| US Platinum Rev 1 | SUCCESS — `build (US rev 1)`, head `acec33eb`, Actions run 37046549462 |
+| US Platinum Rev 0 | Previous reviewed head `acec33eb` passed; fresh final-head CI required after the Poliwhirl correction |
+| US Platinum Rev 1 | Previous reviewed head `acec33eb` passed; fresh final-head CI required after the Poliwhirl correction |
 
-(A ROM build needs the Metroskrew toolchain and is verified by the `build` GitHub Actions workflow; it could not be run in this session's container. Every intermediate head of this PR also built green on both revisions.)
+(A ROM build needs the Metroskrew toolchain and is verified by the `build` GitHub Actions workflow; it could not be run in this session's container. Merge only after the corrected final head passes both revisions.)
 
 ## Runtime status
 

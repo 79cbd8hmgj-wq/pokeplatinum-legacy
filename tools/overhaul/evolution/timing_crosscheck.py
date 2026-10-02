@@ -8,7 +8,7 @@ from evo_lib import LOCKED_FINAL, ROOT, data_path, load_base_tables
 
 C3_CITED = {  # evolved species dir -> (evolution level locked by C3 sync notes)
     "alakazam": 36, "machamp": 36, "golem": 36, "gengar": 36, "steelix": 35, "scizor": 38, "electivire": 42,
-    "kingdra": 42, "porygon2": 30, "porygon_z": 45,
+    "kingdra": 42, "porygon2": 30, "porygon_z": 45, "poliwrath": 35,
 }
 
 

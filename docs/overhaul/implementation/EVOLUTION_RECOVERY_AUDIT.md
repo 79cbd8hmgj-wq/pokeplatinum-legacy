@@ -14,14 +14,14 @@
 ## The "50 decisions" count
 
 The original Pass A master held **50 consolidated TYPE/EVOLUTION decisions**.  The 17 locked retypes (and other typing decisions) were implemented in earlier phases.
-The evolution subset that actually changes a Platinum evolution edge is **21 edges across 20 species tables**.  No evolution edges were manufactured to reach 50.
+The evolution subset that actually changes a Platinum evolution edge is **22 edges across 20 species tables**.  No evolution edges were manufactured to reach 50.
 
 ## Classification totals (current source, #001–#493)
 
 | Class | Edges |
 |---|---|
-| LOCKED_CHANGED | 21 |
-| LOCKED_KEEP | 24 |
+| LOCKED_CHANGED | 22 |
+| LOCKED_KEEP | 23 |
 | VANILLA_KEEP | 201 |
 | SUPERSEDED_EARLY_PROPOSAL | concept-level only (listed below; no source edge carries it) |
 | UNRESOLVED_AUTHORITY | 0 |
@@ -31,17 +31,16 @@ The evolution subset that actually changes a Platinum evolution edge is **21 edg
 
 All 26 rows (+ Happiny) of the `EVOLUTION_SPEC.md` table plus Tyrogue / Feebas / Nosepass were mapped to source:
 
-- **Changed (LOCKED_CHANGED, 21 edges)** — the table in `EVOLUTION_IMPLEMENTATION_AUDIT.md`.
+- **Changed (LOCKED_CHANGED, 22 edges)** — the table in `EVOLUTION_IMPLEMENTATION_AUDIT.md`.
 - **Already matching vanilla (LOCKED_KEEP)** — Snorunt→Glalie Lv42, female Snorunt→Froslass (Dawn Stone), Kirlia→Gardevoir Lv30, male Kirlia→Gallade (Dawn Stone),
   Nosepass→Probopass (existing Mt. Coronet magnetic-field method), Roselia→Roserade (Shiny Stone), Feebas→Milotic (Beauty 170), Tyrogue three-way split,
-  Wurmple split, Nincada/Shedinja, Magneton→Magnezone, Eevee branches, Poliwhirl→Poliwrath (Water Stone), Slowpoke→Slowbro (Lv37).
+  Wurmple split, Nincada/Shedinja, Magneton→Magnezone, Eevee branches and Slowpoke→Slowbro (Lv37).
 - **Gligar / Sneasel** "Lv38 at night": vanilla Platinum has no level-plus-night method that does not require a held item, so one method (`EVO_LEVEL_NIGHT`) was appended.
 - **Happiny → Chansey**: Lv20 during the daytime with no held item (`EVO_LEVEL_DAY`, appended). Recovered locked Pass A project history, supplied after the first pass of this audit reported the edge as unresolved.
 
 ### Authority inferences that are *not* new design
 
-- **Poliwrath** stays a Water Stone evolution.  The spec lists only Politoed as changed; the stone branch is on a different evolution class (item vs level-up), so Politoed and Poliwrath cannot collide
-  and no complementary stat rule for Poliwrath is invented.  A Poliwhirl with SpA ≤ Atk simply does not level-evolve (it can still use a Water Stone).
+- **Poliwhirl's final Pass A branch is fully stat-based at Lv35.** SpA > Atk → Politoed; Atk ≥ SpA → Poliwrath. Equality therefore → Poliwrath. The earlier Water Stone fallback was a recovery error and is superseded by the locked split-family authority and C3's physical-branch timing evidence.
 - **Slowbro** keeps its vanilla Lv37 `EVO_LEVEL` edge; the engine takes the first eligible entry, so the Slowking edge (SpD > Def) is listed first and Slowbro is the fallback for SpD ≤ Def.
   Equality therefore → Slowbro.  No new ≤ method was invented.
 - **Clamperl** equality: SpA = Atk → Gorebyss (locked: Huntail Atk > SpA, Gorebyss SpA ≥ Atk).
@@ -219,8 +218,8 @@ The earlier single exception (Happiny → Chansey, vanilla held Oval Stone) was 
 | SPECIES_PINECO | SPECIES_FORRETRESS | EVO_LEVEL 31 | EVO_LEVEL 31 | VANILLA_KEEP |
 | SPECIES_PIPLUP | SPECIES_PRINPLUP | EVO_LEVEL 16 | EVO_LEVEL 16 | VANILLA_KEEP |
 | SPECIES_POLIWAG | SPECIES_POLIWHIRL | EVO_LEVEL 25 | EVO_LEVEL 25 | VANILLA_KEEP |
-| SPECIES_POLIWHIRL | SPECIES_POLIWRATH | EVO_USE_ITEM ITEM_WATER_STONE | EVO_USE_ITEM ITEM_WATER_STONE | LOCKED_KEEP |
 | SPECIES_POLIWHIRL | SPECIES_POLITOED | EVO_TRADE_WITH_HELD_ITEM ITEM_KINGS_ROCK | EVO_LEVEL_SPATK_GT_ATK 35 | LOCKED_CHANGED |
+| SPECIES_POLIWHIRL | SPECIES_POLIWRATH | EVO_USE_ITEM ITEM_WATER_STONE | EVO_LEVEL 35 (fallback after Politoed condition = Atk ≥ SpA) | LOCKED_CHANGED |
 | SPECIES_PONYTA | SPECIES_RAPIDASH | EVO_LEVEL 40 | EVO_LEVEL 40 | VANILLA_KEEP |
 | SPECIES_POOCHYENA | SPECIES_MIGHTYENA | EVO_LEVEL 18 | EVO_LEVEL 18 | VANILLA_KEEP |
 | SPECIES_PORYGON | SPECIES_PORYGON2 | EVO_TRADE_WITH_HELD_ITEM ITEM_UPGRADE | EVO_LEVEL 30 | LOCKED_CHANGED |

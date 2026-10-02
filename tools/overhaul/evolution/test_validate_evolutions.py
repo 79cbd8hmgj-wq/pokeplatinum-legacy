@@ -88,8 +88,10 @@ class Mutations(unittest.TestCase):
 
     def test_slowpoke_and_poliwhirl(self):
         self.rejects("slowpoke", [["EVO_LEVEL", 37, "SPECIES_SLOWBRO"], ["EVO_LEVEL_SPDEF_GT_DEF", 37, "SPECIES_SLOWKING"]])  # Slowking shadowed
-        self.rejects("poliwhirl", [["EVO_USE_ITEM", "ITEM_WATER_STONE", "SPECIES_POLIWRATH"], ["EVO_LEVEL_ATK_GT_SPATK", 35, "SPECIES_POLITOED"]])
-        self.rejects("poliwhirl", [["EVO_LEVEL_SPATK_GT_ATK", 35, "SPECIES_POLITOED"]])  # Poliwrath stone lost
+        self.rejects("poliwhirl", [["EVO_LEVEL_ATK_GT_SPATK", 35, "SPECIES_POLITOED"], ["EVO_LEVEL", 35, "SPECIES_POLIWRATH"]])  # comparison reversed
+        self.rejects("poliwhirl", [["EVO_LEVEL", 35, "SPECIES_POLIWRATH"], ["EVO_LEVEL_SPATK_GT_ATK", 35, "SPECIES_POLITOED"]])  # Politoed shadowed
+        self.rejects("poliwhirl", [["EVO_USE_ITEM", "ITEM_WATER_STONE", "SPECIES_POLIWRATH"], ["EVO_LEVEL_SPATK_GT_ATK", 35, "SPECIES_POLITOED"]])  # obsolete stone branch restored
+        self.rejects("poliwhirl", [["EVO_LEVEL_SPATK_GT_ATK", 35, "SPECIES_POLITOED"]])  # physical branch lost
 
     def test_retained_mechanics(self):
         self.rejects("tyrogue", LIVE["tyrogue"][:2])

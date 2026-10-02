@@ -2,7 +2,7 @@
 
 > **Design status: LOCKED**
 > **Design status (canonical): LOCKED / CANONICALIZED**
-> **Implementation status: IMPLEMENTED** — 21 changed edges + 6 appended engine methods; manifest `implementation/evolution_manifest.json`.
+> **Implementation status: IMPLEMENTED** — 22 changed edges + 6 appended engine methods; manifest `implementation/evolution_manifest.json`.
 > **Verification: source + validator + mutation tests + dual-revision (Rev 0 / Rev 1) build verified.**
 > **Runtime: DEFERRED TO FINAL OVERHAUL PLAYTEST.**
 > **Open items:** none (Happiny → Chansey recovered: Lv20, daytime, no item).
@@ -14,13 +14,7 @@ The evolution overhaul is **not undesigned future work**.
 
 Pass A explicitly covered **Identity & Evolution** across all #001–#493 and was later consolidated into a locked 493-species master containing **50 consolidated type/evolution decisions** plus global evolution rules.
 
-What remains is:
-
-1. reconstruct/check in the complete machine-readable evolution manifest from the locked Pass A authority/current downstream evidence;
-2. map those locked decisions to Platinum's source evolution methods;
-3. implement and validate them.
-
-Do not redesign the evolution system from scratch.
+The complete machine-readable manifest and source implementation now exist in this PR. Future evolution changes require an explicit design amendment; do not restart or redesign Pass A.
 
 ## Final global evolution rules
 
@@ -84,6 +78,7 @@ The following exact rulings are recovered from the locked Pass A/C3 history and 
 | Dusclops → Dusknoir | Lv. 45 |
 | Gligar → Gliscor | Lv. 38 at night |
 | Sneasel → Weavile | Lv. 38 at night |
+| Poliwhirl → Poliwrath | Lv. 35 with Atk ≥ SpA |
 | Poliwhirl → Politoed | Lv. 35 with SpA > Atk |
 | Slowpoke → Slowking | Lv. 37 with SpD > Def |
 | Clamperl → Huntail | Lv. 35 with Atk > SpA |
@@ -138,9 +133,9 @@ The final global rule is:
 
 ## Implementation (landed)
 
-- Manifest: `docs/overhaul/implementation/evolution_manifest.json` (229 evolution-bearing species, 246 edges; 21 LOCKED_CHANGED, 24 LOCKED_KEEP, 201 VANILLA_KEEP, 0 UNRESOLVED_AUTHORITY).
+- Manifest: `docs/overhaul/implementation/evolution_manifest.json` (229 evolution-bearing species, 246 edges; 22 LOCKED_CHANGED, 23 LOCKED_KEEP, 201 VANILLA_KEEP, 0 UNRESOLVED_AUTHORITY).
 - Engine methods appended (vanilla IDs 0–26 unchanged; IDs 27–32): 27 `EVO_LEVEL_SPATK_GT_ATK`, 28 `EVO_LEVEL_SPATK_GE_ATK`, 29 `EVO_LEVEL_ATK_GT_SPATK`, 30 `EVO_LEVEL_SPDEF_GT_DEF`, 31 `EVO_LEVEL_NIGHT`, 32 `EVO_LEVEL_DAY`.
-- Branch rules: Clamperl Huntail = Atk > SpA, Gorebyss = SpA ≥ Atk; Poliwhirl→Politoed = SpA > Atk (Poliwrath stays Water Stone); Slowking = SpD > Def listed before the unchanged Lv37 Slowbro, so SpD ≤ Def → Slowbro (the engine takes the first eligible entry).
+- Branch rules: Clamperl Huntail = Atk > SpA, Gorebyss = SpA ≥ Atk; Poliwhirl at Lv35 gives Politoed when SpA > Atk and Poliwrath when Atk ≥ SpA; Slowking = SpD > Def listed before the unchanged Lv37 Slowbro, so Def ≥ SpD → Slowbro (the engine takes the first eligible entry).
 - Gligar/Sneasel evolve at Lv38 at night with no held item (`EVO_LEVEL_NIGHT`).
 - Tooling: `tools/overhaul/evolution/` (`build_manifest.py`, `apply_evolutions.py`, `validate_evolutions.py`, `test_validate_evolutions.py`, `scope_audit_evolutions.py`, `timing_crosscheck.py`).
 - Audits: `implementation/EVOLUTION_RECOVERY_AUDIT.md`, `implementation/EVOLUTION_IMPLEMENTATION_AUDIT.md`.
