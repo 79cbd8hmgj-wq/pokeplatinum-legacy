@@ -104,3 +104,20 @@ Findings:
 - Shadow Ball — Platinum had the projectile, defender shake, and defender purple fade, but lacked the broader scene treatment seen in Emerald's dedicated ghost background. Added only a restrained native dark-purple base-background grade and restore.
 
 This comparison is intentionally conservative: donor research is allowed to justify leaving Platinum unchanged when its native presentation already expresses the same idea well.
+
+
+## Native scene-grade identity batch
+
+Emerald's scripts frequently treat palette/background grading as a separate presentation layer from
+particles and battler motion. Platinum already exposes that idea directly through `Func_FadeBg`,
+so the next pass keeps every native particle/timing path intact and changes only the color used by
+existing arena fades.
+
+Updated:
+- Aura Sphere — black -> dark blue
+- Energy Ball — black -> teal green
+- Flash Cannon — black -> dark gray
+- Dragon Pulse — black -> dark purple
+
+These are not donor asset conversions. They are Platinum-native color-language changes informed by
+cross-game research into how strong attacks separate scene atmosphere from their primary particle effect.
