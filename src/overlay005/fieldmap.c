@@ -9,7 +9,6 @@
 #include "constants/field/map.h"
 #include "constants/field/map_load.h"
 #include "constants/heap.h"
-
 #include "generated/map_headers.h"
 
 #include "field/field_system.h"
@@ -227,7 +226,6 @@ static BOOL FieldMap_Init(ApplicationManager *appMan, int *state)
 
         FieldMap_ApplyEnvironmentFog(fieldSystem);
 
-
         FieldBGM_PlayEffectiveForMapHeader(fieldSystem, fieldSystem->location->mapHeaderID);
         FieldSystem_RunInitScript(fieldSystem, INIT_SCRIPT_ON_RESUME);
 
@@ -437,7 +435,6 @@ static BOOL FieldMap_ChangeZone(FieldSystem *fieldSystem)
         ov5_021D5F7C(
             fieldSystem->unk_04->unk_0C, FieldOverworldState_GetWeather(fieldState));
     }
-
 
     int oldMapLabelTextID = MapHeader_GetMapLabelTextID(oldMapHeaderID);
     int newMapLabelTextID = MapHeader_GetMapLabelTextID(newMapHeaderID);
@@ -659,7 +656,6 @@ static void FieldMap_InitModelAttributes(ModelAttributes *modelAttrs)
     ModelAttributes_SetMiscAttrEnabled(modelAttrs, GX_POLYGON_ATTR_MISC_FOG, TRUE, FALSE);
     ModelAttributes_ApplyGlobal(modelAttrs, MODEL_ATTRIBUTES_LAST_BIT);
 }
-
 
 void ov5_021D15B4(void)
 {
