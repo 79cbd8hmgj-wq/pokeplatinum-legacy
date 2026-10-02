@@ -128,6 +128,22 @@ No-change controls:
 
 This keeps base-arena movement proportional to move weight instead of turning it into a universal damage effect.
 
+## Legacy heavy-contact staging batch
+
+A further physical-impact sweep extends base-arena reaction only to moves whose native scripts
+already communicate a large collision:
+
+- Volt Tackle — adds a heavy base-arena jolt at the defender collision beneath its dedicated switched background.
+- Double-Edge — adds a separate base-arena collision beneath its attacker/defender movement and effect-background shake.
+- Megahorn — adds a heavy base-arena response beneath its dedicated background and defender impact treatment.
+- Meteor Mash — adds a restrained base-arena jolt beneath the white-flash defender hit.
+- Cross Chop — adds only a compact base-arena response, keeping it below the heavyweight recoil/signature tier.
+
+The batch preserves all particle resources, sounds, timing, battler movement, switched backgrounds,
+effect-background motion, and gameplay logic.
+
+Restraint rule remains active: ordinary contact moves do not receive scene-wide motion by default.
+
 ## Legacy ultimate/signature staging batch
 
 A final high-power legacy/signature sweep applies the same native base-arena reaction rule to moves
