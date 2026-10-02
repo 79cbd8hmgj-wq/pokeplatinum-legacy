@@ -36,7 +36,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add include/data/map_headers.h res/field/area_data res/field/lighting res/field/maps/texture_sets docs/visual_overhaul/G4D_G4F_SHOWCASE_ENVIRONMENTS.md
-          git commit -m "visual: implement Spear Pillar lakes and Turnback passes"
+          git commit -m "visual: implement showcase lighting and Turnback isolation"
           git fetch origin visual-overhaul-g2a
           git rebase origin/visual-overhaul-g2a
           git push origin HEAD:visual-overhaul-g2a
