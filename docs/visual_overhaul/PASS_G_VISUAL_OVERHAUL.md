@@ -679,6 +679,67 @@ G2C implementation order:
 Reason: these are highly visible, source-backed, and can be upgraded without renderer work.
 
 
+
+### G2C UI audit checkpoint
+
+Platinum exposes most major UI surfaces in directly editable formats rather than opaque archives.
+
+Confirmed editable groups:
+- `res/graphics/windows/`
+  - message-box PNGs
+  - standard field/system windows
+  - scroll cursor
+  - wait dial
+- `res/graphics/main_menu/`
+  - menu tiles/backgrounds
+  - arrows
+  - buttons
+  - particle sprites
+  - animation/cell JSON
+- `res/graphics/party_menu/`
+  - menu tiles
+  - panels
+  - cursor
+  - icons
+  - buttons
+  - animation/cell JSON
+- `res/graphics/pokemon_summary_screen/`
+  - page layouts
+  - tabs
+  - cursors
+  - icons
+  - tiles
+  - palettes
+  - animation/cell JSON
+- `res/graphics/bag/`
+  - main UI tileset
+  - pocket selector
+  - highlights
+  - borders
+  - item-entry icons
+- `res/graphics/start_menu/`
+  - icons
+  - cursor
+  - menu palettes
+- `res/graphics/battle/healthbox/`
+  - player/enemy healthboxes
+  - doubles/safari variants
+  - arrows and component graphics
+- `res/graphics/battle/interface/`
+  - cursor
+  - stock/player/enemy interface graphics
+  - level-up graphics
+- `res/graphics/battle/type_icons/`
+  - all type/category icons as editable PNGs plus shared palette/cell data
+
+HGSS's `files/graphic/plist_gra/` contains equivalent Nitro UI resources (NANR/NCER/NCGR/NCLR/NSCR) and is the first donor/reference source for a later-Gen-IV interface treatment.
+
+Implementation implication:
+- most G2C work can be done as asset/layout replacement without rewriting the UI engine.
+- highest-payoff first batch should be message windows, party menu, summary screen, bag, start menu, and battle healthboxes.
+- preserve existing cell/animation geometry when possible for low-risk replacements; change layout code only where the redesigned composition requires it.
+
+
 ### G3 — Character and Pokemon graphics
 - player sprites
 - NPC sprites
