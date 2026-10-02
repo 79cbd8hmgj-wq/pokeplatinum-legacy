@@ -101,7 +101,6 @@ static void ov5_021D1524(BgConfig *bgl);
 static void ov5_021D154C(void);
 static void ov5_021D1570(void);
 static void FieldMap_InitModelAttributes(ModelAttributes *modelAttrs);
-static void FieldMap_ApplyDeepForestAtmosphere(FieldSystem *fieldSystem);
 static void ov5_021D15F4(FieldSystem *fieldSystem);
 static void ov5_021D173C(FieldSystem *fieldSystem);
 static void ov5_021D1414(void);
@@ -221,7 +220,6 @@ static BOOL FieldMap_Init(ApplicationManager *appMan, int *state)
             ov5_021D5F24(fieldSystem->unk_04->unk_0C, weather);
         }
 
-        FieldMap_ApplyDeepForestAtmosphere(fieldSystem);
 
         FieldBGM_PlayEffectiveForMapHeader(fieldSystem, fieldSystem->location->mapHeaderID);
         FieldSystem_RunInitScript(fieldSystem, INIT_SCRIPT_ON_RESUME);
@@ -433,7 +431,6 @@ static BOOL FieldMap_ChangeZone(FieldSystem *fieldSystem)
             fieldSystem->unk_04->unk_0C, FieldOverworldState_GetWeather(fieldState));
     }
 
-    FieldMap_ApplyDeepForestAtmosphere(fieldSystem);
 
     int oldMapLabelTextID = MapHeader_GetMapLabelTextID(oldMapHeaderID);
     int newMapLabelTextID = MapHeader_GetMapLabelTextID(newMapHeaderID);
@@ -656,31 +653,6 @@ static void FieldMap_InitModelAttributes(ModelAttributes *modelAttrs)
     ModelAttributes_ApplyGlobal(modelAttrs, MODEL_ATTRIBUTES_LAST_BIT);
 }
 
-
-static void FieldMap_ApplyDeepForestAtmosphere(FieldSystem *fieldSystem)
-{
-    static const char sDeepForestFogDensity[G3X_FOG_DENSITY_TABLE_SIZE] = {
-        0, 1, 2, 3, 4, 5, 6, 8,
-        10, 12, 14, 16, 18, 20, 22, 24,
-        27, 30, 33, 36, 40, 44, 48, 52,
-        57, 62, 68, 74, 81, 88, 96, 104
-    };
-
-    switch (fieldSystem->location->mapHeaderID) {
-    case MAP_HEADER_ETERNA_FOREST:
-    case MAP_HEADER_FULLMOON_ISLAND_FOREST:
-    case MAP_HEADER_NEWMOON_ISLAND_FOREST:
-        FogManager_ApplyColor(
-            fieldSystem->fogMan,
-            FOG_PARAMETER_COLOR | FOG_PARAMETER_ALPHA,
-            GX_RGB(8, 11, 9),
-            10);
-        FogManager_ApplyDensityTable(fieldSystem->fogMan, sDeepForestFogDensity);
-        break;
-    default:
-        break;
-    }
-}
 
 void ov5_021D15B4(void)
 {
