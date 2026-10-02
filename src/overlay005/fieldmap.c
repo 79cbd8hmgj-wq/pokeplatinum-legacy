@@ -950,11 +950,14 @@ static BOOL FieldMap_InDistortionWorld(FieldSystem *fieldSystem)
 
 static BOOL FieldMap_IsDeepForest(const FieldSystem *fieldSystem)
 {
-    enum MapHeaderID mapHeaderID = fieldSystem->location->mapHeaderID;
-
-    return mapHeaderID == MAP_HEADER_ETERNA_FOREST
-        || mapHeaderID == MAP_HEADER_FULLMOON_ISLAND_FOREST
-        || mapHeaderID == MAP_HEADER_NEWMOON_ISLAND_FOREST;
+    switch (fieldSystem->location->mapHeaderID) {
+    case MAP_HEADER_ETERNA_FOREST:
+    case MAP_HEADER_FULLMOON_ISLAND_FOREST:
+    case MAP_HEADER_NEWMOON_ISLAND_FOREST:
+        return TRUE;
+    default:
+        return FALSE;
+    }
 }
 
 static void FieldMap_ApplyEnvironmentFog(FieldSystem *fieldSystem)
@@ -963,31 +966,31 @@ static void FieldMap_ApplyEnvironmentFog(FieldSystem *fieldSystem)
         0, 0, 0, 0, 1, 1, 2, 2,
         3, 4, 5, 6, 8, 10, 12, 14,
         16, 18, 20, 22, 24, 26, 28, 30,
-        32, 34, 36, 38, 40, 42, 44, 46
+        32, 34, 36, 38, 40, 42, 44, 46,
     };
     static const char sSnowFogDensity[G3X_FOG_DENSITY_TABLE_SIZE] = {
         0, 0, 0, 0, 0, 1, 1, 2,
         2, 3, 4, 5, 6, 8, 10, 12,
         14, 16, 18, 20, 22, 24, 26, 28,
-        30, 32, 34, 36, 38, 40, 42, 44
+        30, 32, 34, 36, 38, 40, 42, 44,
     };
     static const char sCoronetFogDensity[G3X_FOG_DENSITY_TABLE_SIZE] = {
         0, 0, 1, 1, 2, 3, 4, 5,
         6, 8, 10, 12, 14, 16, 18, 20,
         22, 24, 26, 28, 30, 32, 34, 36,
-        38, 40, 42, 44, 46, 48, 50, 52
+        38, 40, 42, 44, 46, 48, 50, 52,
     };
     static const char sSpearPillarFogDensity[G3X_FOG_DENSITY_TABLE_SIZE] = {
         0, 0, 0, 0, 0, 0, 1, 1,
         2, 2, 3, 4, 5, 6, 8, 10,
         12, 14, 16, 18, 20, 22, 24, 26,
-        28, 30, 32, 34, 36, 38, 40, 42
+        28, 30, 32, 34, 36, 38, 40, 42,
     };
     static const char sDistortionFogDensity[G3X_FOG_DENSITY_TABLE_SIZE] = {
         0, 0, 0, 1, 1, 2, 3, 4,
         5, 7, 9, 11, 13, 15, 17, 19,
         21, 23, 25, 27, 29, 31, 33, 35,
-        37, 39, 41, 43, 45, 47, 49, 51
+        37, 39, 41, 43, 45, 47, 49, 51,
     };
 
     GXRgb color;
