@@ -18,6 +18,7 @@ on:
       - 'res/graphics/battle/healthbox/**'
       - 'res/graphics/options_menu/**'
       - 'res/graphics/start_menu/**'
+      - 'res/pokemon/**'
   workflow_dispatch: {}
 
 jobs:
@@ -29,16 +30,28 @@ jobs:
       - uses: actions/checkout@v6
       - name: Collect icon comparison set
         run: |
-          mkdir -p visual-export/platinum-icons visual-export/hgss-icons visual-export/hgss-party-menu visual-export/hgss-area-windows visual-export/hgss-zukan
+          mkdir -p visual-export/platinum-icons visual-export/hgss-icons visual-export/platinum-main-battle-sprites visual-export/overhaul-battle-sprites visual-export/hgss-battle-sprites visual-export/hgss-party-menu visual-export/hgss-area-windows visual-export/hgss-zukan
           cp res/pokemon/bulbasaur/icon.png visual-export/platinum-icons/bulbasaur.png
           cp res/pokemon/pikachu/icon.png visual-export/platinum-icons/pikachu.png
           cp res/pokemon/gengar/icon.png visual-export/platinum-icons/gengar.png
           cp res/pokemon/lucario/icon.png visual-export/platinum-icons/lucario.png
           git clone --depth 1 https://github.com/79cbd8hmgj-wq/pokeheartgold.git /tmp/pokeheartgold
-          cp /tmp/pokeheartgold/files/poketool/icongra/poke_icon/poke_icon_00000007.png visual-export/hgss-icons/bulbasaur.png
-          cp /tmp/pokeheartgold/files/poketool/icongra/poke_icon/poke_icon_00000031.png visual-export/hgss-icons/pikachu.png
-          cp /tmp/pokeheartgold/files/poketool/icongra/poke_icon/poke_icon_00000100.png visual-export/hgss-icons/gengar.png
-          cp /tmp/pokeheartgold/files/poketool/icongra/poke_icon/poke_icon_00000454.png visual-export/hgss-icons/lucario.png
+          # HGSS icon source has seven shared entries before National Dex #001,
+          # so species N maps to poke_icon_(N + 7).
+          cp /tmp/pokeheartgold/files/poketool/icongra/poke_icon/poke_icon_00000008.png visual-export/hgss-icons/bulbasaur.png
+          cp /tmp/pokeheartgold/files/poketool/icongra/poke_icon/poke_icon_00000032.png visual-export/hgss-icons/pikachu.png
+          cp /tmp/pokeheartgold/files/poketool/icongra/poke_icon/poke_icon_00000101.png visual-export/hgss-icons/gengar.png
+          cp /tmp/pokeheartgold/files/poketool/icongra/poke_icon/poke_icon_00000455.png visual-export/hgss-icons/lucario.png
+
+          # Preserve a three-way battle-sprite comparison: retail Platinum
+          # baseline, current overhaul source, and the HGSS donor.
+          git fetch origin main --depth=1
+          git show origin/main:res/pokemon/bulbasaur/male_front.png > visual-export/platinum-main-battle-sprites/bulbasaur_front.png
+          git show origin/main:res/pokemon/mewtwo/male_front.png > visual-export/platinum-main-battle-sprites/mewtwo_front.png
+          cp res/pokemon/bulbasaur/male_front.png visual-export/overhaul-battle-sprites/bulbasaur_front.png
+          cp res/pokemon/mewtwo/male_front.png visual-export/overhaul-battle-sprites/mewtwo_front.png
+          cp /tmp/pokeheartgold/files/poketool/pokegra/pokegra/0001/male/front.png visual-export/hgss-battle-sprites/bulbasaur_front.png
+          cp /tmp/pokeheartgold/files/poketool/pokegra/pokegra/0150/male/front.png visual-export/hgss-battle-sprites/mewtwo_front.png
           cp /tmp/pokeheartgold/files/graphic/plist_gra/* visual-export/hgss-party-menu/
           cp /tmp/pokeheartgold/files/data/gs_areawindow/*.png visual-export/hgss-area-windows/
           find /tmp/pokeheartgold/files/graphic/zukan_gra -maxdepth 1 -name '*.png' -print0 | xargs -0 -I{} cp {} visual-export/hgss-zukan/
