@@ -37,6 +37,16 @@
 #define DEEP_FOREST_FOG_COLOR         GX_RGB(20, 24, 22)
 #define DEEP_FOREST_SCROLL_SCALE      FX32_CONST(0.75)
 
+#define LIGHT_SNOW_FOG_SLOPE          3
+#define LIGHT_SNOW_FOG_OFFSET         (0x6F6F + 0x200)
+#define LIGHT_SNOW_FOG_COLOR          GX_RGB(21, 26, 31)
+#define HEAVY_SNOW_FOG_SLOPE          3
+#define HEAVY_SNOW_FOG_OFFSET         (0x6F6F - 0x300)
+#define HEAVY_SNOW_FOG_COLOR          GX_RGB(19, 24, 31)
+#define BLIZZARD_FOG_SLOPE            3
+#define BLIZZARD_FOG_OFFSET           (0x6F6F - 0x500)
+#define BLIZZARD_FOG_COLOR            GX_RGB(18, 23, 31)
+
 typedef struct UnkStruct_ov5_021D5EF8_t {
     UnkStruct_ov5_021D6594 *unk_00;
     int unk_04;
@@ -2302,7 +2312,7 @@ static void ov5_021D79F0(SysTask *param0, void *param1)
         ov5_021D7210(&v3->unk_00, v0, 1, 24, 1, 14, -5, 1, 0, ov5_021D7C40);
         v3->unk_B4[1] = 0;
 
-        ov5_021D7308(&v3->unk_4C, &v3->unk_1C, v0->unk_00->fieldSystem->fogMan, 3, 0x6F6F + 0x300, GX_RGB(22, 26, 31), 1, v0->unk_BA4);
+        ov5_021D7308(&v3->unk_4C, &v3->unk_1C, v0->unk_00->fieldSystem->fogMan, LIGHT_SNOW_FOG_SLOPE, LIGHT_SNOW_FOG_OFFSET, LIGHT_SNOW_FOG_COLOR, 1, v0->unk_BA4);
         v3->unk_B4[0] = 16;
 
         v0->unk_BA2 = 1;
@@ -2328,7 +2338,7 @@ static void ov5_021D79F0(SysTask *param0, void *param1)
 
         if (v0->unk_BA4 != 0) {
             v3->unk_1C.unk_00 = v0->unk_00->fieldSystem->fogMan;
-            ov5_021D7384(v3->unk_1C.unk_00, 3, 0x6F6F + 0x300, GX_RGB(22, 26, 31));
+            ov5_021D7384(v3->unk_1C.unk_00, LIGHT_SNOW_FOG_SLOPE, LIGHT_SNOW_FOG_OFFSET, LIGHT_SNOW_FOG_COLOR);
             ov5_021D74D4(&v3->unk_1C);
         }
 
@@ -2539,7 +2549,7 @@ static void ov5_021D7E54(SysTask *param0, void *param1)
     switch (v0->unk_BA2) {
     case 0:
         ov5_021D7210(&v2->unk_00, v0, 1, 30, 6, 3, -5, 2, 1, ov5_021D8098);
-        ov5_021D7308(&v2->unk_4C, &v2->unk_1C, v0->unk_00->fieldSystem->fogMan, 3, 0x6F6F + -0x200, GX_RGB(20, 24, 31), 2, v0->unk_BA4);
+        ov5_021D7308(&v2->unk_4C, &v2->unk_1C, v0->unk_00->fieldSystem->fogMan, HEAVY_SNOW_FOG_SLOPE, HEAVY_SNOW_FOG_OFFSET, HEAVY_SNOW_FOG_COLOR, 2, v0->unk_BA4);
 
         v2->unk_B4[0] = 8;
         v2->unk_B4[1] = 0;
@@ -2563,7 +2573,7 @@ static void ov5_021D7E54(SysTask *param0, void *param1)
 
         if (v0->unk_BA4 != 0) {
             v2->unk_1C.unk_00 = v0->unk_00->fieldSystem->fogMan;
-            ov5_021D7384(v2->unk_1C.unk_00, 3, 0x6F6F + -0x200, GX_RGB(20, 24, 31));
+            ov5_021D7384(v2->unk_1C.unk_00, HEAVY_SNOW_FOG_SLOPE, HEAVY_SNOW_FOG_OFFSET, HEAVY_SNOW_FOG_COLOR);
             ov5_021D74D4(&v2->unk_1C);
         }
 
@@ -3390,7 +3400,7 @@ static void ov5_021D8FF8(SysTask *param0, void *param1)
     switch (v0->unk_BA2) {
     case 0:
         ov5_021D7210(&v5->unk_00, v0, 1, 30, 10, 1, -4, 2, 3, ov5_021D92C4);
-        ov5_021D7308(&v5->unk_4C, &v5->unk_1C, v0->unk_00->fieldSystem->fogMan, 3, 0x6F6F + -0x400, GX_RGB(20, 24, 31), 1, v0->unk_BA4);
+        ov5_021D7308(&v5->unk_4C, &v5->unk_1C, v0->unk_00->fieldSystem->fogMan, BLIZZARD_FOG_SLOPE, BLIZZARD_FOG_OFFSET, BLIZZARD_FOG_COLOR, 1, v0->unk_BA4);
         v5->unk_B4[0] = 16;
         v5->unk_B4[1] = 0;
         v5->unk_B4[2] = 0;
@@ -3415,7 +3425,7 @@ static void ov5_021D8FF8(SysTask *param0, void *param1)
 
         if (v0->unk_BA4 != 0) {
             v5->unk_1C.unk_00 = v0->unk_00->fieldSystem->fogMan;
-            ov5_021D7384(v5->unk_1C.unk_00, 3, 0x6F6F + -0x400, GX_RGB(20, 24, 31));
+            ov5_021D7384(v5->unk_1C.unk_00, BLIZZARD_FOG_SLOPE, BLIZZARD_FOG_OFFSET, BLIZZARD_FOG_COLOR);
             ov5_021D74D4(&v5->unk_1C);
         }
 
