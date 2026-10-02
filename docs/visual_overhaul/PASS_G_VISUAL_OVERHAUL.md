@@ -1028,6 +1028,25 @@ contracts were preserved and only the existing fade color was specialized:
 
 No particles, emitters, sounds, timing, cells, backgrounds, or donor assets were replaced.
 
+
+### G5 legendary-signature staging checkpoint
+
+A signature-move audit applied the existing Platinum-native arena-reaction language only where a
+clear impact-layer gap remained:
+
+- Spacial Rend — restrained base-arena jolt beneath the main defender impact
+- Roar of Time — stronger base-arena reaction at the white-flash impact
+- Seed Flare — restrained base-arena reaction beneath the existing scene/effect shake
+
+Three equally important no-change rulings were retained:
+
+- Shadow Force already has grayscale disappearance/reappearance staging and a clear impact beat
+- Dark Void already has a dedicated moving background, projection treatment, particles, and battler motion
+- Judgment already combines a full white scene grade with repeated defender-impact shakes
+
+The batch changes only base-arena motion at explicit impact frames. Existing particles, sounds,
+backgrounds, timing, battler logic, and donor assets remain untouched.
+
 ### G5 weather-presentation checkpoint
 
 Weather presentation is now aligned across both move initiation and the shared end-of-turn
