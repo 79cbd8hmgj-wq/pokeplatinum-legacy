@@ -21,6 +21,7 @@ L_0:
     SetExtraParams 0, 2, 20, 14, 0, 0
     Delay 5
     Func_Shake 5, 0, 1, 15, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
+    Func_ShakeBg 2, 4, 0, 3, 0, SHAKE_BG_TARGET_BASE
     WaitForAllEmitters
     UnloadParticleSystem 0
     ResetVars
