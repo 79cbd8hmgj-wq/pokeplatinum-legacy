@@ -76,3 +76,17 @@ Apply the rule to:
 - Blizzard — two restrained base-arena pulses aligned with its existing two defender-shake beats
 
 Thunder is retained as a control because Platinum already gives it a base-background shake plus an effect-background flash.
+
+## Second donor-informed signature-impact batch
+
+The same technique policy was extended only to moves whose existing Platinum animation already
+contains a large effect/background sequence and a clearly defined impact beat:
+
+- Draco Meteor — only the final meteor impact now moves the base arena; earlier effect-background pulses remain unchanged
+- Leaf Storm — adds a restrained arena reaction under the defender impact
+- Overheat — adds a short arena jolt at the defender heat burst
+- Focus Blast — adds a compact arena reaction when the projectile lands
+- Solar Beam — adds a restrained horizontal arena response only on the firing branch; the charge branch is unchanged
+
+These are script-only additions using Platinum's existing `Func_ShakeBg` primitive. No donor assets,
+particle resources, sounds, backgrounds, or animation data were imported.
