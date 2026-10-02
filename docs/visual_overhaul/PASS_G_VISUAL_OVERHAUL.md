@@ -1172,6 +1172,26 @@ Additional showcase targets:
 - lakes
 - Turnback Cave
 
+### G6 showcase-integration QA checkpoint
+
+The showcase pass now has a source-level integration validator:
+`tools/visual_overhaul/validate_g6_showcase_integration.py`.
+
+It verifies the map-header -> area-data -> texture -> lighting -> weather/camera/renderer contracts for
+all named showcase targets rather than treating each earlier visual subsystem in isolation.
+
+Primary benchmark records:
+- `docs/visual_overhaul/G6_PRIMARY_SHOWCASE_INTEGRATION.md`
+
+Secondary benchmark records:
+- `docs/visual_overhaul/G6_SECONDARY_SHOWCASE_INTEGRATION.md`
+
+The runtime QA workflow runs the validator on both supported ROM revisions and now retries transient
+Metroskrew release downloads, preventing network failures from being misclassified as visual-source regressions.
+
+No new palette/camera/fog changes are authorized merely because G6 is active. Further source tuning
+requires an objective validator/runtime mismatch or a concrete rendered-frame defect.
+
 ## First implementation target
 
 Eterna Forest is the first quality benchmark because it exercises:
