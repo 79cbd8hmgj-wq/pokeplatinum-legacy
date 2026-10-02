@@ -865,6 +865,28 @@ This is the opening G5 background/staging sequence. Remaining natural and specia
 will follow under the same palette-only contract while ordinary ROM build/resource
 validation stays green.
 
+### G5 impact-presentation pilot
+
+Implemented a first reusable-impact pass using Platinum's existing battle-animation shake
+primitives rather than adding a new renderer or particle subsystem.
+
+Pilot moves:
+- Body Slam — defender shake plus a restrained base-background jolt
+- Giga Impact — retains its effect-background shake and adds a heavier base-arena jolt
+- Explosion — retains the large effect-background shake and adds synchronized arena movement
+- Stone Edge — adds a short base-background impact beneath the existing defender shake
+- Close Combat — adds a tight horizontal arena jolt to reinforce the repeated hit sequence
+- Brave Bird — adds the same base-arena impact in all three attacker-side/contest branches
+
+Implementation rule:
+- use `Func_ShakeBg(..., SHAKE_BG_TARGET_BASE)` only at explicit impact frames
+- preserve existing particles, sounds, timing, battler movement, and effect-background behavior
+- avoid global shake-strength changes until the move-script pilot is visually reviewed
+- scale shake strength by move weight instead of making every damaging move equally violent
+
+This establishes G5 screen-impact treatment through existing scriptable presentation systems
+with no new runtime allocation or resource format.
+
 ### G6 — Showcase areas
 Primary quality benchmarks:
 - Eterna Forest
