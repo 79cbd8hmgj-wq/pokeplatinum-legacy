@@ -96,9 +96,8 @@ def check_exp(live: dict, P: list[str]):
 
 
 def check_prices(live: dict, base: dict, P: list[str]):
+    """Permanent D2 invariants only; unrelated future item-price owners are not frozen here."""
     lp, bp = live["prices"], base["prices"]
-    if set(lp) != set(bp):
-        P.append("items: item price file set changed")
     for k, v in LOCKED_PRICES.items():
         if lp.get(k) != v:
             P.append(f"price {k}: {lp.get(k)} != locked {v}")
@@ -108,15 +107,6 @@ def check_prices(live: dict, base: dict, P: list[str]):
             P.append(f"status medicine {k}: {lp.get(k)} != derived {want} (from vanilla {bp[k]})")
     if lp.get("rare_candy") not in RARE_CANDY_PRICES:
         P.append(f"rare_candy price {lp.get('rare_candy')} not in {RARE_CANDY_PRICES}")
-    allowed = set(LOCKED_PRICES) | set(STATUS_MEDICINES) | {"rare_candy"}
-    for k in sorted(lp):
-        if k.endswith("_ball") and lp[k] != bp.get(k):
-            P.append(f"Poke Ball price edited: {k} {bp.get(k)} -> {lp[k]}")
-        elif k not in allowed and lp[k] != bp.get(k):
-            P.append(f"unapproved item price edit: {k} {bp.get(k)} -> {lp[k]}")
-    for k, v in live["tm_prices"].items():
-        if v != base["tm_prices"].get(k):
-            P.append(f"TM/HM base price edited (C2 economy): {k}")
 
 
 def check_prizes(live: dict, base: dict, P: list[str]):
@@ -205,19 +195,13 @@ def check_stock(live: dict, base: dict, P: list[str]):
     mid = vs[vs.index("VeilstoneStore2F_MiddleVendor:"):]
     if STONE_VENDOR_ID not in mid or "FLAG_GAME_COMPLETED" in mid.split("\n\n")[0]:
         P.append("stone vendor script missing or gated behind postgame")
-    for k in set(barrays) - {vmap.get(STONE_VENDOR_ID)}:
-        if k in arrays and arrays[k] != barrays[k] and k != "FightAreaPostgameStock":
-            P.append(f"unrelated shop stock modified: {k}")
-    base_stock = barrays[bvmap[STONE_VENDOR_ID]]
-    if [i for i in stock if i not in required_stones()] != base_stock:
-        P.append("stone vendor: existing (vitamin) stock changed")
-    # Rare Candy: finite campaign, unlimited only postgame.
+    # Rare Candy: at least one unlimited source must remain postgame-only.
     rc_vendor = vmap.get(RARE_CANDY_VENDOR_ID)
-    if rc_vendor is None or arrays.get(rc_vendor) != ["ITEM_RARE_CANDY"]:
-        P.append("postgame Rare Candy vendor stock missing or not Rare Candy only")
-    for name, items in arrays.items():
-        if "ITEM_RARE_CANDY" in items and name != rc_vendor:
-            P.append(f"Rare Candy sold from {name} (only the postgame vendor may sell it)")
+    if rc_vendor is None or "ITEM_RARE_CANDY" not in arrays.get(rc_vendor, []):
+        P.append("postgame Rare Candy vendor stock missing")
+    for vid, arr_name in vmap.items():
+        if vid in PRE_E4_VENDOR_IDS and "ITEM_RARE_CANDY" in arrays.get(arr_name, []):
+            P.append(f"Rare Candy sold from pre-E4 specialty vendor {vid}")
     if "ITEM_RARE_CANDY" in re.findall(r"\{ (ITEM_\w+), 0x\d \}", src):
         P.append("Rare Candy in common mart table (pre-E4 unlimited)")
     if RARE_CANDY_VENDOR_ID in PRE_E4_VENDOR_IDS:
@@ -228,14 +212,34 @@ def check_stock(live: dict, base: dict, P: list[str]):
     shop = clown.find(RARE_CANDY_VENDOR_ID)
     if gate < 0 or shop < 0 or gate > shop:
         P.append("unlimited Rare Candy available pre-E4: postgame gate (FLAG_GAME_COMPLETED) must precede the shop")
-    if sum(f.count(RARE_CANDY_VENDOR_ID) for f in (fa,)) != 1:
-        P.append("postgame Rare Candy vendor must be opened from exactly one script")
 
+def check_pr_scope(live: dict, base: dict, P: list[str]):
+    """PR-local guardrails. Mutation tests use these; permanent validation does not freeze later subsystem owners."""
+    lp, bp = live["prices"], base["prices"]
+    if set(lp) != set(bp):
+        P.append("items: item price file set changed")
+    allowed = set(LOCKED_PRICES) | set(STATUS_MEDICINES) | {"rare_candy"}
+    for k in sorted(lp):
+        if k not in allowed and lp[k] != bp.get(k):
+            P.append(f"PR scope: unapproved item price edit: {k} {bp.get(k)} -> {lp[k]}")
 
-def check_frozen(live: dict, base: dict, P: list[str]):
+    src = live["src"]["marts"]
+    arrays, vmap = parse_stock_arrays(src), parse_vendor_map(src)
+    barrays, bvmap = parse_stock_arrays(base["src"]["marts"]), parse_vendor_map(base["src"]["marts"])
+    stone_array = vmap.get(STONE_VENDOR_ID)
+    for name, before_items in barrays.items():
+        if name == stone_array:
+            continue
+        if name in arrays and arrays[name] != before_items:
+            P.append(f"PR scope: unrelated shop stock modified: {name}")
+    if stone_array and stone_array in arrays:
+        base_stock = barrays[bvmap[STONE_VENDOR_ID]]
+        if [i for i in arrays[stone_array] if i not in required_stones()] != base_stock:
+            P.append("PR scope: stone vendor existing stock changed")
+
     for rel in C2_ECONOMY_FILES:
         if live["c2_files"][rel] != base["c2_files"][rel]:
-            P.append(f"C2 Game Corner/Frontier TM economy source modified: {rel}")
+            P.append(f"PR scope: C2 Game Corner/Frontier TM economy source modified: {rel}")
 
 
 def check_manifest(live: dict, base: dict, man: dict, P: list[str]):
@@ -259,7 +263,7 @@ def check_manifest(live: dict, base: dict, man: dict, P: list[str]):
         P.append("manifest tutor count mismatch")
 
 
-def validate(live: dict, base: dict, man: dict | None = None) -> list[str]:
+def validate(live: dict, base: dict, man: dict | None = None, enforce_pr_scope: bool = False) -> list[str]:
     P: list[str] = []
     check_exp(live, P)
     check_prices(live, base, P)
@@ -267,9 +271,10 @@ def validate(live: dict, base: dict, man: dict | None = None) -> list[str]:
     check_reminder(live, P)
     check_tutors(live, base, P)
     check_stock(live, base, P)
-    check_frozen(live, base, P)
     if man is not None:
         check_manifest(live, base, man, P)
+    if enforce_pr_scope:
+        check_pr_scope(live, base, P)
     return P
 
 

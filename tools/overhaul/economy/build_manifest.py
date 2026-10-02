@@ -58,7 +58,7 @@ def main():
         "rare_candy_postgame": {"vendor_id": RARE_CANDY_VENDOR_ID, "stock_array": "FightAreaPostgameStock", "stock_path": SRC["marts"],
                                 "script": SRC["fight_area_script"], "price": 5000, "price_note": "5000 chosen: item JSON price only drives purchase and 50% sell value (2400 -> 2500); no other code reads it",
                                 "authority": f"{SPEC}#s10", "gate": "FLAG_GAME_COMPLETED (Fight Area clown vendor)"},
-        "frozen_c2_economy_files": list(C2_ECONOMY_FILES),
+        "pr_scope_c2_economy_files": list(C2_ECONOMY_FILES),
     }
     out = os.path.join(ROOT, MANIFEST)
     os.makedirs(os.path.dirname(out), exist_ok=True)

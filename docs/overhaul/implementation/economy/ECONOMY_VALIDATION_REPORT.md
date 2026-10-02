@@ -11,6 +11,9 @@ Base: `447833b79fa5c0456d60bcbd8ec03ec109d92c23`. Commands run from `tools/overh
 | `python3 scope_audit_economy.py` | 0 files outside economy scope |
 | `python3 simulate_progression.py --json ../../../docs/overhaul/implementation/economy/progression_simulation.json` | deterministic; flags reported in the audit, no trainer edits |
 
+Permanent `validate_economy.py` checks D2-owned invariants only. PR-local no-collateral-change rules (including Poké Ball prices,
+unrelated shop stock and byte-identical C2 economy sources) are enforced by the mutation suite/scope mode so future owning phases are not frozen.
+
 Existing validators re-run on this branch (all unchanged and passing): C1 (`validate_c1.py` 0 problems / 82 edits; mutation 24/24),
 C2 (`validate_c2.py` OK; mutation 76/76, also guards TM21/TM78 recipient masks and Game Corner/Frontier TM economy),
 evolution (`validate_evolutions.py` PASS; 22 tests), ordinary availability + special acquisition

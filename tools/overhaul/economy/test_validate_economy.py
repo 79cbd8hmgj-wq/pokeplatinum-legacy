@@ -16,7 +16,7 @@ MAN = json.loads(read(MANIFEST))
 def run(fn):
     live = copy.deepcopy(LIVE)
     fn(live)
-    return validate(live, BASE, MAN)
+    return validate(live, BASE, MAN, enforce_pr_scope=True)
 
 
 def sub(key, old, new, count=1):
@@ -117,7 +117,7 @@ CASES = {
 
 
 def main() -> int:
-    clean = validate(copy.deepcopy(LIVE), BASE, MAN)
+    clean = validate(copy.deepcopy(LIVE), BASE, MAN, enforce_pr_scope=True)
     ok = not clean
     print(f"clean tree: {'PASS' if ok else 'FAIL'} ({len(clean)} failures)")
     for p in clean:
