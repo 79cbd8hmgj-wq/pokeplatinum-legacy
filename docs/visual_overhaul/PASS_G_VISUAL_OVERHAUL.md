@@ -773,3 +773,26 @@ Next G2C candidates:
 4. summary-screen chrome
 5. bag chrome
 
+
+
+### G2C party-menu palette checkpoint
+
+Implemented a resource-contract-safe party-menu refresh through `res/graphics/party_menu/shared.pal`.
+
+Scope:
+- modernized palette banks 0 and 1 used by party-menu buttons/cursors and shared chrome
+- preserved the existing 256-color JASC palette structure
+- preserved sprite PNGs, OAM cells, animation JSON, dimensions, and VRAM usage
+- retained separate cursor-state accents:
+  - bank 0: gold accent
+  - bank 1: teal accent
+
+Visual direction:
+- deep navy outlines
+- cleaner royal/clear blue fills
+- cool slate neutrals
+- softer coral Poké Ball tones
+- restrained gold/teal state accents
+
+This provides a visible party-menu modernization without changing layout or sprite geometry.
+
