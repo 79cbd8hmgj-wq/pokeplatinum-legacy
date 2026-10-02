@@ -27,13 +27,13 @@
 
 1. **TM21/TM78 item→move assignment was NOT already implemented.** The C3H commit applied only the compatibility masks (49/27 recipients — verified intact). `tm21.json` still taught Frustration and `tm78.json` Captivate. Applied the locked assignment (Air Slash / Power Gem), plus matching item description and type-colored icon palette (flying / rock). Item prices keep the slot's vanilla price.
 2. **Live Frontier TM shop had 15 TMs; the locked table has 16.** TM89 U-turn (20 BP) was missing from the live list and price table; it was added to the shop list, the BP table and the unused exchange-corner table. U-turn remains in the Game Corner at 3000 Coins.
-3. **TM78 live acquisition is the Route 204 North NPC, not Victory Road.** The spec text says "inherits TM78's vanilla Victory Road placement"; live source gives TM78 only via the Route 204 North Ace Trainer. Per the keep-acquisition rule nothing was moved, so progression timing is exactly vanilla. The spec statement should be corrected in a later docs pass; no design was chosen here.
-4. **TM21 sources** (Galactic HQ 3F pickup and Veilstone Game Corner) are preserved and pinned.
+3. **Recovered acquisition labels were wrong, but the governing design rule was clear.** Live Platinum source gives TM78 via the Route 204 North NPC, not Victory Road, and TM21's field pickup is Galactic HQ 3F rather than the Galactic Warehouse label used in earlier notes. The canonical C2 and master specs are corrected in this PR. No TM was relocated: the actual vanilla TM-number acquisition map remains authoritative.
+4. **TM21 sources** (Galactic HQ 3F pickup and Veilstone Game Corner) and **TM78's Route 204 North NPC source** are preserved and pinned.
 
 ## Minimal text corrections (required by the reusable-TM change)
 
 - `OreburghCity_Text_TMsSingleUseHMsOverAndOver` claimed TMs are single use.
-- `Route204North_Text_CaptivateOppositeGender` described Captivate and "good for only one use"; it now describes the TM78 Power Gem and reusable TMs. The NPC's unchanged opening line (“are you the flirty type?”) is flavor text left as-is.
+- Route 204 North's TM78 dialogue described Captivate and one-use TMs; both the explanation and the Captivate-specific opening are updated to match Power Gem and reusable TMs.
 
 ## Not touched (scope audit clean)
 
