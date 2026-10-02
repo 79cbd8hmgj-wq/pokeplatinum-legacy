@@ -1081,6 +1081,7 @@ static void FieldMap_ApplySpecialAreaFog(FieldSystem *fieldSystem)
         densityTable = sCoronetFogDensity;
         break;
     case AREA_LIGHT_SET_SPEAR_PILLAR:
+    case AREA_LIGHT_SET_SPEAR_PILLAR_GRADE:
         color = GX_RGB(16, 18, 22);
         alpha = 5;
         slope = GX_FOGSLOPE_0x0400;
