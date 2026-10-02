@@ -1116,3 +1116,13 @@ Implementation rule:
 Classification: **Direct asset donor with explicit member remapping**, not whole-archive donor.
 
 This makes Pokemon icons one of the safest G3 donor classes: artwork can be compared/replaced species-by-species without changing VRAM dimensions, shared palette architecture, cell geometry, or the Platinum icon loader.
+
+Tooling:
+- added `tools/visual_overhaul/audit_hgss_icons.py`
+- accepts a local `pret/pokeheartgold` checkout through `--hgss-root`
+- verifies the shared palette and standard cell contract
+- maps Platinum base species to HGSS members using the shared `species + 7` convention
+- compares indexed pixel data and embedded palettes for all base species through Arceus
+- can emit a JSON manifest of identical/different/missing resources through `--write-manifest`
+
+This gives the implementation pass a deterministic way to identify the HGSS icons that actually differ instead of replacing hundreds of pixel-identical assets blindly.
