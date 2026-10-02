@@ -12,6 +12,7 @@ L_0:
     CreateEmitter 0, 1, EMITTER_CB_SET_POS_TO_DEFENDER
     CreateEmitter 0, 0, EMITTER_CB_SET_POS_TO_DEFENDER
     Func_Shake 1, 0, 1, 2, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
+    Func_ShakeBg 2, 2, 0, 2, 0, SHAKE_BG_TARGET_BASE
     PlaySoundEffectR SEQ_SE_DP_W013
     WaitForAllEmitters
     UnloadParticleSystem 0
