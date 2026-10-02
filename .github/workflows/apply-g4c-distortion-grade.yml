@@ -1,0 +1,48 @@
+name: apply-g4c-distortion-grade
+on:
+  push:
+    branches: [ visual-overhaul-g2a ]
+    paths:
+      - 'tools/visual_overhaul/recolor_g4c_distortion.c'
+      - 'tools/visual_overhaul/validate_g4c_distortion_recolor.py'
+      - '.github/workflows/apply-g4c-distortion-grade.yml'
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: visual-overhaul-g2a
+      - name: Build G4C tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc libpng-dev
+          mkdir -p g4-tools-build
+          COMMON_SRC="tools/nitrobtx/src/common.c tools/nitrobtx/src/ns/chunks/tex.c tools/nitrobtx/src/ns/container.c tools/nitrobtx/src/ns/resource_dict.c tools/nitrobtx/src/ns/resource_name.c tools/nitrobtx/src/ns/resource_tree.c tools/nitrobtx/src/palette.c tools/nitrobtx/src/texture.c"
+          gcc -std=gnu17 -O2 -Itools/nitrobtx/include $COMMON_SRC tools/visual_overhaul/recolor_g4c_distortion.c -lpng -lm -o g4-tools-build/recolor-g4c
+          gcc -std=gnu17 -O2 -Itools/nitrobtx/include $COMMON_SRC tools/nitrobtx/src/help.c tools/nitrobtx/src/options.c tools/nitrobtx/src/main.c -lpng -lm -o g4-tools-build/nitrobtx
+          python -m pip install Pillow
+      - name: Apply and validate Distortion grade
+        run: |
+          cp res/field/maps/texture_sets/map_texture_set_073.nsbtx /tmp/g4c_before.nsbtx
+          ./g4-tools-build/recolor-g4c /tmp/g4c_before.nsbtx /tmp/g4c_after.nsbtx
+          mv /tmp/g4c_after.nsbtx res/field/maps/texture_sets/map_texture_set_073.nsbtx
+          rm -rf docs/visual_overhaul/review/g4c_before docs/visual_overhaul/review/g4c_after
+          mkdir -p docs/visual_overhaul/review/g4c_before docs/visual_overhaul/review/g4c_after
+          ./g4-tools-build/nitrobtx dump /tmp/g4c_before.nsbtx docs/visual_overhaul/review/g4c_before
+          ./g4-tools-build/nitrobtx dump res/field/maps/texture_sets/map_texture_set_073.nsbtx docs/visual_overhaul/review/g4c_after
+          python tools/visual_overhaul/validate_g4c_distortion_recolor.py
+          python tools/visual_overhaul/make_texture_sheet.py docs/visual_overhaul/review/g4c_after docs/visual_overhaul/review/g4c_distortion_textures.png
+      - name: Commit G4C
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add res/field/maps/texture_sets/map_texture_set_073.nsbtx docs/visual_overhaul/G4C_DISTORTION_WORLD.md docs/visual_overhaul/review/g4c_distortion_textures.png
+          git commit -m "visual: grade Distortion World environment"
+          git fetch origin visual-overhaul-g2a
+          git rebase origin/visual-overhaul-g2a
+          git push origin HEAD:visual-overhaul-g2a
