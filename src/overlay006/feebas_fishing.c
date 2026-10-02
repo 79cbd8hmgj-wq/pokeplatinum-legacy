@@ -12,6 +12,11 @@
 #include "player_move.h"
 #include "record_mixed_rng.h"
 
+// Fixed Feebas tile seed. Vanilla re-rolled the four Feebas tiles from the mixed-record RNG, which made the
+// Feebas spot random and dependent on exchanging records with other players. The overhaul uses four fixed tiles,
+// one per quarter of the Mt. Coronet B1F lake (see docs/overhaul/implementation/SPECIAL_ACQUISITION.md).
+#define FEEBAS_FIXED_TILE_SEED 0x42424242
+
 // Calculates if the player is facing a Feebas tile, but exits early 50% of the time
 // to simulate Feebas having a 50% encounter rate.
 BOOL PlayerAvatar_IsFacingFeebasTile(FieldSystem *fieldSystem)
@@ -38,7 +43,7 @@ BOOL PlayerAvatar_IsFacingFeebasTile(FieldSystem *fieldSystem)
         return 0;
     }
 
-    rand = RecordMixedRNG_GetRand(SaveData_GetRecordMixedRNG(fieldSystem->saveData));
+    rand = FEEBAS_FIXED_TILE_SEED;
 
     PlayerAvatar_GetFacingTileCoords(fieldSystem->playerAvatar, &x, &z);
 

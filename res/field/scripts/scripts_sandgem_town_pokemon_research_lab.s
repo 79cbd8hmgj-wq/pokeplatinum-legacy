@@ -417,6 +417,181 @@ SandgemTownLab_ScientistF:
     PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
+    CountBadgesAcquired VAR_0x8007
+    GetPlayerStarterSpecies VAR_0x8000
+    GoTo SandgemTownLab_StarterGift_Sinnoh
+    End
+
+SandgemTownLab_StarterGift_Sinnoh:
+    GoToIfLt VAR_0x8007, 2, SandgemTownLab_StarterGift_None
+    SetVar VAR_0x8002, 15
+    GoToIfEq VAR_0x8000, SPECIES_TURTWIG, SandgemTownLab_StarterGift_Sinnoh_SkipTurtwig
+    GoToIfUnset FLAG_RECEIVED_STARTER_SINNOH_TURTWIG, SandgemTownLab_StarterGift_Offer_Turtwig
+SandgemTownLab_StarterGift_Sinnoh_SkipTurtwig:
+    GoToIfEq VAR_0x8000, SPECIES_CHIMCHAR, SandgemTownLab_StarterGift_Sinnoh_SkipChimchar
+    GoToIfUnset FLAG_RECEIVED_STARTER_SINNOH_CHIMCHAR, SandgemTownLab_StarterGift_Offer_Chimchar
+SandgemTownLab_StarterGift_Sinnoh_SkipChimchar:
+    GoToIfEq VAR_0x8000, SPECIES_PIPLUP, SandgemTownLab_StarterGift_Sinnoh_SkipPiplup
+    GoToIfUnset FLAG_RECEIVED_STARTER_SINNOH_PIPLUP, SandgemTownLab_StarterGift_Offer_Piplup
+SandgemTownLab_StarterGift_Sinnoh_SkipPiplup:
+    GoTo SandgemTownLab_StarterGift_Kanto
+    End
+
+SandgemTownLab_StarterGift_Kanto:
+    GoToIfLt VAR_0x8007, 3, SandgemTownLab_StarterGift_None
+    SetVar VAR_0x8002, 20
+    GoToIfUnset FLAG_RECEIVED_STARTER_KANTO_BULBASAUR, SandgemTownLab_StarterGift_Offer_Bulbasaur
+    GoToIfUnset FLAG_RECEIVED_STARTER_KANTO_CHARMANDER, SandgemTownLab_StarterGift_Offer_Charmander
+    GoToIfUnset FLAG_RECEIVED_STARTER_KANTO_SQUIRTLE, SandgemTownLab_StarterGift_Offer_Squirtle
+    GoTo SandgemTownLab_StarterGift_Johto
+    End
+
+SandgemTownLab_StarterGift_Johto:
+    GoToIfLt VAR_0x8007, 4, SandgemTownLab_StarterGift_None
+    SetVar VAR_0x8002, 25
+    GoToIfUnset FLAG_RECEIVED_STARTER_JOHTO_CHIKORITA, SandgemTownLab_StarterGift_Offer_Chikorita
+    GoToIfUnset FLAG_RECEIVED_STARTER_JOHTO_CYNDAQUIL, SandgemTownLab_StarterGift_Offer_Cyndaquil
+    GoToIfUnset FLAG_RECEIVED_STARTER_JOHTO_TOTODILE, SandgemTownLab_StarterGift_Offer_Totodile
+    GoTo SandgemTownLab_StarterGift_Hoenn
+    End
+
+SandgemTownLab_StarterGift_Hoenn:
+    GoToIfLt VAR_0x8007, 5, SandgemTownLab_StarterGift_None
+    SetVar VAR_0x8002, 28
+    GoToIfUnset FLAG_RECEIVED_STARTER_HOENN_TREECKO, SandgemTownLab_StarterGift_Offer_Treecko
+    GoToIfUnset FLAG_RECEIVED_STARTER_HOENN_TORCHIC, SandgemTownLab_StarterGift_Offer_Torchic
+    GoToIfUnset FLAG_RECEIVED_STARTER_HOENN_MUDKIP, SandgemTownLab_StarterGift_Offer_Mudkip
+    GoTo SandgemTownLab_StarterGift_None
+    End
+
+SandgemTownLab_StarterGift_Offer_Turtwig:
+    SetVar VAR_0x8001, SPECIES_TURTWIG
+    Call SandgemTownLab_StarterGift_Offer
+    GoToIfEq VAR_0x8003, FALSE, SandgemTownLab_StarterGift_End
+    SetFlag FLAG_RECEIVED_STARTER_SINNOH_TURTWIG
+    GoTo SandgemTownLab_StarterGift_End
+    End
+
+SandgemTownLab_StarterGift_Offer_Chimchar:
+    SetVar VAR_0x8001, SPECIES_CHIMCHAR
+    Call SandgemTownLab_StarterGift_Offer
+    GoToIfEq VAR_0x8003, FALSE, SandgemTownLab_StarterGift_End
+    SetFlag FLAG_RECEIVED_STARTER_SINNOH_CHIMCHAR
+    GoTo SandgemTownLab_StarterGift_End
+    End
+
+SandgemTownLab_StarterGift_Offer_Piplup:
+    SetVar VAR_0x8001, SPECIES_PIPLUP
+    Call SandgemTownLab_StarterGift_Offer
+    GoToIfEq VAR_0x8003, FALSE, SandgemTownLab_StarterGift_End
+    SetFlag FLAG_RECEIVED_STARTER_SINNOH_PIPLUP
+    GoTo SandgemTownLab_StarterGift_End
+    End
+
+SandgemTownLab_StarterGift_Offer_Bulbasaur:
+    SetVar VAR_0x8001, SPECIES_BULBASAUR
+    Call SandgemTownLab_StarterGift_Offer
+    GoToIfEq VAR_0x8003, FALSE, SandgemTownLab_StarterGift_End
+    SetFlag FLAG_RECEIVED_STARTER_KANTO_BULBASAUR
+    GoTo SandgemTownLab_StarterGift_End
+    End
+
+SandgemTownLab_StarterGift_Offer_Charmander:
+    SetVar VAR_0x8001, SPECIES_CHARMANDER
+    Call SandgemTownLab_StarterGift_Offer
+    GoToIfEq VAR_0x8003, FALSE, SandgemTownLab_StarterGift_End
+    SetFlag FLAG_RECEIVED_STARTER_KANTO_CHARMANDER
+    GoTo SandgemTownLab_StarterGift_End
+    End
+
+SandgemTownLab_StarterGift_Offer_Squirtle:
+    SetVar VAR_0x8001, SPECIES_SQUIRTLE
+    Call SandgemTownLab_StarterGift_Offer
+    GoToIfEq VAR_0x8003, FALSE, SandgemTownLab_StarterGift_End
+    SetFlag FLAG_RECEIVED_STARTER_KANTO_SQUIRTLE
+    GoTo SandgemTownLab_StarterGift_End
+    End
+
+SandgemTownLab_StarterGift_Offer_Chikorita:
+    SetVar VAR_0x8001, SPECIES_CHIKORITA
+    Call SandgemTownLab_StarterGift_Offer
+    GoToIfEq VAR_0x8003, FALSE, SandgemTownLab_StarterGift_End
+    SetFlag FLAG_RECEIVED_STARTER_JOHTO_CHIKORITA
+    GoTo SandgemTownLab_StarterGift_End
+    End
+
+SandgemTownLab_StarterGift_Offer_Cyndaquil:
+    SetVar VAR_0x8001, SPECIES_CYNDAQUIL
+    Call SandgemTownLab_StarterGift_Offer
+    GoToIfEq VAR_0x8003, FALSE, SandgemTownLab_StarterGift_End
+    SetFlag FLAG_RECEIVED_STARTER_JOHTO_CYNDAQUIL
+    GoTo SandgemTownLab_StarterGift_End
+    End
+
+SandgemTownLab_StarterGift_Offer_Totodile:
+    SetVar VAR_0x8001, SPECIES_TOTODILE
+    Call SandgemTownLab_StarterGift_Offer
+    GoToIfEq VAR_0x8003, FALSE, SandgemTownLab_StarterGift_End
+    SetFlag FLAG_RECEIVED_STARTER_JOHTO_TOTODILE
+    GoTo SandgemTownLab_StarterGift_End
+    End
+
+SandgemTownLab_StarterGift_Offer_Treecko:
+    SetVar VAR_0x8001, SPECIES_TREECKO
+    Call SandgemTownLab_StarterGift_Offer
+    GoToIfEq VAR_0x8003, FALSE, SandgemTownLab_StarterGift_End
+    SetFlag FLAG_RECEIVED_STARTER_HOENN_TREECKO
+    GoTo SandgemTownLab_StarterGift_End
+    End
+
+SandgemTownLab_StarterGift_Offer_Torchic:
+    SetVar VAR_0x8001, SPECIES_TORCHIC
+    Call SandgemTownLab_StarterGift_Offer
+    GoToIfEq VAR_0x8003, FALSE, SandgemTownLab_StarterGift_End
+    SetFlag FLAG_RECEIVED_STARTER_HOENN_TORCHIC
+    GoTo SandgemTownLab_StarterGift_End
+    End
+
+SandgemTownLab_StarterGift_Offer_Mudkip:
+    SetVar VAR_0x8001, SPECIES_MUDKIP
+    Call SandgemTownLab_StarterGift_Offer
+    GoToIfEq VAR_0x8003, FALSE, SandgemTownLab_StarterGift_End
+    SetFlag FLAG_RECEIVED_STARTER_HOENN_MUDKIP
+    GoTo SandgemTownLab_StarterGift_End
+    End
+
+SandgemTownLab_StarterGift_Offer:
+    SetVar VAR_0x8003, FALSE
+    BufferSpeciesNameFromVar 0, VAR_0x8001, 0, 0
+    Message SandgemTownLab_Text_OfferStarter
+    ShowYesNoMenu VAR_RESULT
+    GoToIfEq VAR_RESULT, MENU_NO, SandgemTownLab_StarterGift_Declined
+    GetPartyCount VAR_RESULT
+    GoToIfEq VAR_RESULT, MAX_PARTY_SIZE, SandgemTownLab_StarterGift_PartyFull
+    BufferPlayerName 1
+    PlayFanfare SEQ_FANFA4
+    Message SandgemTownLab_Text_ReceivedStarter
+    WaitFanfare
+    GivePokemon VAR_0x8001, VAR_0x8002, ITEM_NONE, VAR_RESULT
+    GoToIfEq VAR_RESULT, FALSE, SandgemTownLab_StarterGift_PartyFull
+    SetVar VAR_0x8003, TRUE
+    Return
+
+SandgemTownLab_StarterGift_Declined:
+    Message SandgemTownLab_Text_StarterDeclined
+    Return
+
+SandgemTownLab_StarterGift_PartyFull:
+    Message SandgemTownLab_Text_StarterPartyFull
+    Return
+
+SandgemTownLab_StarterGift_End:
+    WaitButton
+    CloseMessage
+    ReleaseAll
+    End
+
+SandgemTownLab_StarterGift_None:
     Call SandgemTownLab_SetVarIfArrivedInSunyshoreCity
     GoToIfEq VAR_0x8006, TRUE, SandgemTownLab_GaveMeShivers
     GetNationalDexEnabled VAR_RESULT

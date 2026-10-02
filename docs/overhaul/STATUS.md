@@ -9,7 +9,7 @@ Last verified against repository/project history: 2026-09-13.
 - **C3H species + TM compatibility:** IMPLEMENTED + L2 BUILD VERIFIED on `main`.
 - **C1 existing-move rebalance:** LOCKED, fully recovered into an 82-edit canonical manifest, **not yet implemented** on `main`.
 - **Evolution design:** **LOCKED in Pass A** across #001–#493; complete historical master had 50 consolidated type/evolution decisions. The repo still needs the complete machine-readable evolution manifest reconstructed from that locked authority.
-- **World/#001–#493 ordinary availability:** IMPLEMENTED on `main` via PR #10; manifests/validators landed; Rev 0 + Rev 1 CI build verified; runtime availability QA pending. Reserved special acquisitions remain outside this implementation.
+- **World/#001–#493 ordinary availability:** IMPLEMENTED on `main` via PR #10; manifests/validators landed; Rev 0 + Rev 1 CI build verified; runtime availability QA pending. The 28 reserved special-acquisition families are resolved by the follow-up special-acquisition pass (see `implementation/SPECIAL_ACQUISITION.md`).
 - **Known design blockers:** 0.
 - **Next source task:** guarded C1 implementation against current `main`, then remaining C2 mechanics and focused runtime QA.
 
@@ -66,7 +66,7 @@ They are provenance sources, not current implementation targets.
 | Egg-move consolidation | LOCKED | baseline retained | audit pending |
 | Evolution-method overhaul | **LOCKED / RECOVERY NEEDED FOR FULL MANIFEST** | not yet implemented as a complete system | pending |
 | World/#001–#493 availability — ordinary wild distribution | APPROVED ARCHITECTURE | IMPLEMENTED on `main` via PR #10 | L2 dual-revision CI build + manifest/validator evidence; runtime pending |
-| World/#001–#493 availability — reserved special acquisitions | LOCKED/RESERVED BY OWNING SPECS WHERE APPLICABLE | not implemented by PR #10 | pending |
+| World/#001–#493 availability — special acquisitions (starters, fossils, Spiritomb, Rotom, Tyrogue, Happiny, Eevee, Porygon, Riolu, Castform, Feebas) | LOCKED/RESERVED BY OWNING SPECS WHERE APPLICABLE | IMPLEMENTED (special-acquisition pass; pending merge) | source + L2 build + validator (S1–S5 + 25 mutation cases); runtime pending |
 | Trainer overhaul | PLANNED | not started | pending |
 | Economy/EXP port | PLANNED PORT | not started | pending |
 | Capture/Poké Ball port | PLANNED PORT | not started | pending |
@@ -305,3 +305,17 @@ Validation:
 - mutation validator tests: 12/12 expected bad states rejected;
 - GitHub Actions run `36907831401`: **SUCCESS** for US Rev 0 and US Rev 1;
 - runtime/L4 encounter QA remains pending.
+
+
+## Special acquisition closure (28 families)
+
+Branch `claude/platinum-availability-impl-c651fe` (follow-up to PR #10). Canonical docs/data:
+`implementation/SPECIAL_ACQUISITION.md`, `implementation/special_acquisitions.json`, `tools/overhaul/availability/special_verify.py`.
+
+- 12 starters: Sandgem Lab assistant gifts (badges 2/3/4/5 for Sinnoh-unchosen/Kanto/Johto/Hoenn), per-starter flags, party-full retry.
+- 7 fossils: Underground weights made Trainer-ID- and National-Dex-independent.
+- Spiritomb: single-player ritual (counter from Underground mining, retry if uncaught); Rotom: no daily cap, Secret Key + form unlock on capture;
+  Tyrogue/Happiny: Celestic Town Black Belt; Castform: Veilstone parasol woman; Feebas: four fixed tiles;
+  Eevee/Porygon/Riolu: existing gifts verified unchanged.
+- Nonlegendary families with a verified pre-E4 path: 212/212 (184 wild + 28 special). USER_DECISION_REQUIRED families: 0.
+- Runtime/L4 QA pending. The nonlegendary world-availability phase is source/build/validator complete.

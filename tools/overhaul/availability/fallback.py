@@ -36,9 +36,9 @@ class FallbackResolver:
             return {"family_id": None, "fallback": "UNKNOWN_SPECIES"}
         if fam["classification"] != "NONLEGENDARY":
             return {"family_id": fam["family_id"], "fallback": "RESERVED_LATER_PHASE"}
-        if fam["user_decision_required"]:
-            return {"family_id": fam["family_id"], "fallback": "USER_DECISION_REQUIRED",
-                    "decision": fam["user_decision_key"]}
+        if fam.get("special_acquisition"):
+            return {"family_id": fam["family_id"], "fallback": "SPECIAL_ACQUISITION",
+                    "acquisition": fam["special_acquisition_key"]}
         cands = sorted(self.by_family.get(fam["family_id"], []), key=lambda t: (t[0], t[1]))
         if not cands:
             return {"family_id": fam["family_id"], "fallback": "NO_FALLBACK"}

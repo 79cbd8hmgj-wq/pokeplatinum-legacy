@@ -138,8 +138,8 @@ def main() -> int:
         if f["classification"] != "NONLEGENDARY":
             report_fam[fid] = "RESERVED_LATER_PHASE"
             continue
-        if f["user_decision_required"]:
-            report_fam[fid] = f"USER_DECISION_REQUIRED:{f['user_decision_key']}"
+        if f.get("special_acquisition"):
+            report_fam[fid] = f"SPECIAL_ACQUISITION:{f['special_acquisition_key']}"
             continue
         ok_all = [p for p in by_family[fid] if pband(p) in PRE_E4_BANDS and p.min_rate >= REQUIRED_MIN_RATE]
         ok = [p for p in ok_all if not p.safari]
@@ -164,7 +164,7 @@ def main() -> int:
     if tier_warn:
         warn("V5", f"{len(tier_warn)} families whose best stable rate is below their rarity-tier floor: " + ", ".join(tier_warn))
 
-    # ---------------- V6 decision families untouched ----------------
+    # ---------------- V6 special-acquisition families are never generic wild encounters ----------------
     def occurrences(state, species_set):
         occ = set()
         for n, j in state.items():
@@ -184,10 +184,10 @@ def main() -> int:
             if "elusive_rod_encounter" in j and j["elusive_rod_encounter"]["species"] in species_set:
                 occ.add((n, "elusive_rod", 0))
         return occ
-    dec_species = {s for f in fams if f.get("user_decision_required") for s in f["components"]}
+    dec_species = {s for f in fams if f.get("special_acquisition") for s in f["components"]}
     if occurrences(base, dec_species) != occurrences(st, dec_species):
         diff = occurrences(base, dec_species) ^ occurrences(st, dec_species)
-        fail("V6", f"USER_DECISION_REQUIRED species occurrences changed: {sorted(diff)[:10]}")
+        fail("V6", f"special-acquisition species occurrences in wild tables changed: {sorted(diff)[:10]}")
 
     # ---------------- V7 external dependencies ----------------
     for n, j in st.items():
@@ -278,7 +278,7 @@ def main() -> int:
         fwd[a].add(b)
     breed_only, unreachable = [], []
     for f in fams:
-        if f["classification"] != "NONLEGENDARY" or f["user_decision_required"]:
+        if f["classification"] != "NONLEGENDARY" or f.get("special_acquisition"):
             continue
         placed = {p.species for p in by_family[f["family_id"]] if pband(p) in PRE_E4_BANDS and p.min_rate >= 5 and not p.safari}
         reach = set(placed)
@@ -305,7 +305,7 @@ def main() -> int:
     status = collections.Counter()
     for f in fams:
         r = report_fam[f["family_id"]]
-        key = "RESERVED_LATER_PHASE" if r.startswith("RESERVED") else "USER_DECISION_REQUIRED" if r.startswith("USER") else \
+        key = "RESERVED_LATER_PHASE" if r.startswith("RESERVED") else "SPECIAL_ACQUISITION" if r.startswith("SPECIAL") else \
             "NO_PATH" if r == "NO_PATH" else "WILD_PRE_E4"
         status[key] += len(f["components"])
     if sum(status.values()) != 493:
@@ -313,6 +313,18 @@ def main() -> int:
     INFO.append(f"species coverage (of 493): {dict(status)}")
     INFO.append(f"nonlegendary families with a verified deterministic pre-E4 wild path: {verified}")
     INFO.append(f"USER_DECISION_REQUIRED families: {sum(1 for f in fams if f.get('user_decision_required'))}")
+    # ---------------- S special acquisitions (scripts / source analysis) ----------------
+    import special_verify
+    sp_fails, sp_ok = special_verify.verify(special_verify.load_manifest(), fams)
+    for x in sp_fails:
+        fail(x.split(" ", 1)[0], x.split(" ", 1)[1])
+    n_special = sum(1 for f in fams if f.get("special_acquisition"))
+    if sp_ok != n_special:
+        fail("S1", f"only {sp_ok}/{n_special} special-acquisition families verified")
+    INFO.append(f"special-acquisition families verified from source: {sp_ok}/{n_special}")
+    INFO.append(f"nonlegendary families with a verified deterministic pre-E4 path (wild + special): {verified + sp_ok}")
+    if verified + sp_ok != sum(1 for f in fams if f["classification"] == "NONLEGENDARY"):
+        fail("S1", "not every nonlegendary family has a verified pre-E4 path")
 
     print(f"state={args.state}  families={len(fams)}  wild entries={len(wild['entries'])}  maps={len(wild['maps'])}")
     for line in INFO:

@@ -78,8 +78,17 @@ Route209_EncounterSpiritomb:
     StartWildBattle SPECIES_SPIRITOMB, 25
     CheckWonBattle VAR_RESULT
     GoToIfEq VAR_RESULT, FALSE, Route209_BlackOut
+    CheckDidNotCapture VAR_RESULT
+    GoToIfEq VAR_RESULT, TRUE, Route209_SpiritombGotAway
     SetVar VAR_HALLOWED_TOWER_STATE, 0
     ClearSpiritombCounter
+    End
+
+Route209_SpiritombGotAway:
+    Message Route209_Text_SpiritombGotAway
+    WaitButton
+    CloseMessage
+    ReleaseAll
     End
 
 Route209_BlackOut:

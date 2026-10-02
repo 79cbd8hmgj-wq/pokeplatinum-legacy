@@ -9,7 +9,6 @@ OldChateauBackMiddleWestRoom_TV:
     PlaySE SEQ_SE_CONFIRM
     LockAll
     GoToIfSet FLAG_CAUGHT_OLD_CHATEAU_ROTOM, OldChateauBackMiddleWestRoom_TVHasMalevolentFeel
-    GoToIfSet FLAG_DAILY_BATTLED_OLD_CHATEAU_ROTOM, OldChateauBackMiddleWestRoom_TVHasMalevolentFeel
     GetTimeOfDay VAR_RESULT
     GoToIfLt VAR_RESULT, TIMEOFDAY_NIGHT, OldChateauBackMiddleWestRoom_TVHasMalevolentFeel
     Message OldChateauBackMiddleWestRoom_Text_WantToThumpTheTV
@@ -20,13 +19,19 @@ OldChateauBackMiddleWestRoom_TV:
     CloseMessage
     PlayCry SPECIES_ROTOM
     WaitCry
-    SetFlag FLAG_DAILY_BATTLED_OLD_CHATEAU_ROTOM
     StartWildBattle SPECIES_ROTOM, 20
     CheckWonBattle VAR_RESULT
     GoToIfEq VAR_RESULT, FALSE, OldChateauBackMiddleWestRoom_BlackOut
     CheckDidNotCapture VAR_RESULT
     GoToIfEq VAR_RESULT, TRUE, OldChateauBackMiddleWestRoom_RotomDisappearedIntoTV
     SetFlag FLAG_CAUGHT_OLD_CHATEAU_ROTOM
+    SetVar VAR_DISTRIBUTION_EVENT_ROTOM, 0x1103
+    Message OldChateauBackMiddleWestRoom_Text_SomethingFellOutOfTV
+    SetVar VAR_0x8004, ITEM_SECRET_KEY
+    SetVar VAR_0x8005, 1
+    Common_GiveItemQuantity
+    WaitButton
+    CloseMessage
     ReleaseAll
     End
 
