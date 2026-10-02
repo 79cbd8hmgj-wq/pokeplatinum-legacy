@@ -54,12 +54,16 @@ C1 final:
 
 ### Replacement-slot inheritance
 
-TM21 Air Slash inherits TM21's vanilla sources, including:
+TM21 Air Slash inherits TM21's live Platinum sources, including:
 
-- Team Galactic Warehouse
+- Galactic HQ 3F
 - Veilstone Game Corner
 
-TM78 Power Gem inherits TM78's vanilla Victory Road placement.
+TM78 Power Gem inherits TM78's live Platinum source:
+
+- Route 204 North NPC
+
+**Source correction:** earlier recovery notes incorrectly identified TM21's field source as the Galactic Warehouse and TM78 as a Victory Road pickup. The decomp source shows Galactic HQ 3F for TM21 and the Route 204 North NPC for TM78. The controlling C2 rule is to preserve the actual vanilla TM-number acquisition map; no relocation is introduced solely to preserve an incorrect recovered location label.
 
 ### Gym rewards
 
