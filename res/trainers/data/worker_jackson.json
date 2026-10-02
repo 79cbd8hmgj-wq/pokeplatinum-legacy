@@ -8,7 +8,7 @@
     "double_battle": false,
     "party": [
         {
-            "species": "SPECIES_MAGNEMITE",
+            "species": "SPECIES_MAGNETON",
             "form": 0,
             "level": 34,
             "item": null,
@@ -21,27 +21,29 @@
             "ball_seal": 0
         },
         {
-            "species": "SPECIES_MAGNEMITE",
+            "species": "SPECIES_MANECTRIC",
             "form": 0,
             "level": 34,
             "item": null,
             "moves": [
-                "MOVE_MAGNET_BOMB",
+                "MOVE_QUICK_ATTACK",
                 "MOVE_SPARK",
-                "MOVE_THUNDER_WAVE"
+                "MOVE_ODOR_SLEUTH",
+                "MOVE_BITE"
             ],
             "iv_scale": 10,
             "ball_seal": 0
         },
         {
-            "species": "SPECIES_MAGNEMITE",
+            "species": "SPECIES_ELECTRODE",
             "form": 0,
             "level": 34,
             "item": null,
             "moves": [
-                "MOVE_MAGNET_BOMB",
-                "MOVE_SPARK",
-                "MOVE_THUNDER_WAVE"
+                "MOVE_SCREECH",
+                "MOVE_LIGHT_SCREEN",
+                "MOVE_CHARGE_BEAM",
+                "MOVE_SELFDESTRUCT"
             ],
             "iv_scale": 10,
             "ball_seal": 0

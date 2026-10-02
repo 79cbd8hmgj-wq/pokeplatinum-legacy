@@ -9,37 +9,43 @@
     "double_battle": false,
     "party": [
         {
+            "species": "SPECIES_CROAGUNK",
+            "form": 0,
+            "level": 25,
+            "item": null,
+            "moves": [
+                "MOVE_PURSUIT",
+                "MOVE_FAINT_ATTACK",
+                "MOVE_REVENGE",
+                "MOVE_SWAGGER"
+            ],
+            "iv_scale": 40,
+            "ball_seal": 0
+        },
+        {
             "species": "SPECIES_MACHOP",
             "form": 0,
             "level": 25,
             "item": null,
             "moves": [
-                "MOVE_KARATE_CHOP",
-                "MOVE_FORESIGHT"
+                "MOVE_FORESIGHT",
+                "MOVE_SEISMIC_TOSS",
+                "MOVE_REVENGE",
+                "MOVE_VITAL_THROW"
             ],
             "iv_scale": 40,
             "ball_seal": 0
         },
         {
-            "species": "SPECIES_MEDITITE",
+            "species": "SPECIES_MANKEY",
             "form": 0,
             "level": 25,
             "item": null,
             "moves": [
-                "MOVE_CONFUSION",
-                "MOVE_FORCE_PALM"
-            ],
-            "iv_scale": 40,
-            "ball_seal": 0
-        },
-        {
-            "species": "SPECIES_MACHOKE",
-            "form": 0,
-            "level": 25,
-            "item": null,
-            "moves": [
+                "MOVE_FURY_SWIPES",
                 "MOVE_KARATE_CHOP",
-                "MOVE_FORESIGHT"
+                "MOVE_SEISMIC_TOSS",
+                "MOVE_SCREECH"
             ],
             "iv_scale": 40,
             "ball_seal": 0

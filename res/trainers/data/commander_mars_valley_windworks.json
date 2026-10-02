@@ -17,7 +17,8 @@
             "moves": [
                 "MOVE_BITE",
                 "MOVE_LEECH_LIFE",
-                "MOVE_TOXIC"
+                "MOVE_TOXIC",
+                "MOVE_SUPERSONIC"
             ],
             "iv_scale": 100,
             "ball_seal": 0
@@ -28,9 +29,10 @@
             "level": 17,
             "item": "ITEM_ORAN_BERRY",
             "moves": [
+                "MOVE_FAKE_OUT",
                 "MOVE_FAINT_ATTACK",
                 "MOVE_SCRATCH",
-                "MOVE_FAKE_OUT"
+                "MOVE_HYPNOSIS"
             ],
             "iv_scale": 100,
             "ball_seal": 0

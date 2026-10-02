@@ -10,7 +10,7 @@
     "double_battle": false,
     "party": [
         {
-            "species": "SPECIES_BRONZOR",
+            "species": "SPECIES_BRONZONG",
             "form": 0,
             "level": 35,
             "item": null,
@@ -23,27 +23,29 @@
             "ball_seal": 0
         },
         {
-            "species": "SPECIES_BRONZOR",
+            "species": "SPECIES_MAWILE",
             "form": 0,
             "level": 36,
             "item": null,
             "moves": [
-                "MOVE_GYRO_BALL",
-                "MOVE_EXTRASENSORY",
-                "MOVE_CONFUSE_RAY"
+                "MOVE_IRON_HEAD",
+                "MOVE_FAINT_ATTACK",
+                "MOVE_BATON_PASS",
+                "MOVE_CRUNCH"
             ],
             "iv_scale": 60,
             "ball_seal": 0
         },
         {
-            "species": "SPECIES_BRONZOR",
+            "species": "SPECIES_SKARMORY",
             "form": 0,
             "level": 38,
             "item": null,
             "moves": [
-                "MOVE_GYRO_BALL",
-                "MOVE_EXTRASENSORY",
-                "MOVE_CONFUSE_RAY"
+                "MOVE_AIR_CUTTER",
+                "MOVE_SPIKES",
+                "MOVE_METAL_SOUND",
+                "MOVE_STEEL_WING"
             ],
             "iv_scale": 60,
             "ball_seal": 0

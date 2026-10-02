@@ -21,7 +21,7 @@
             "ball_seal": 0
         },
         {
-            "species": "SPECIES_CASCOON",
+            "species": "SPECIES_DUSTOX",
             "form": 0,
             "level": 13,
             "item": null,
@@ -35,15 +35,15 @@
             "ball_seal": 0
         },
         {
-            "species": "SPECIES_DUSTOX",
+            "species": "SPECIES_BUTTERFREE",
             "form": 0,
             "level": 15,
             "item": null,
             "moves": [
-                "MOVE_TACKLE",
-                "MOVE_POISON_STING",
                 "MOVE_CONFUSION",
-                "MOVE_GUST"
+                "MOVE_TACKLE",
+                "MOVE_STUN_SPORE",
+                "MOVE_SLEEP_POWDER"
             ],
             "iv_scale": 20,
             "ball_seal": 0

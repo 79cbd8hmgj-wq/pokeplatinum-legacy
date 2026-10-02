@@ -27,23 +27,9 @@
             "ball_seal": 0
         },
         {
-            "species": "SPECIES_GLISCOR",
-            "form": 0,
-            "level": 69,
-            "item": "ITEM_NONE",
-            "moves": [
-                "MOVE_EARTHQUAKE",
-                "MOVE_ICE_FANG",
-                "MOVE_FIRE_FANG",
-                "MOVE_THUNDER_FANG"
-            ],
-            "iv_scale": 250,
-            "ball_seal": 0
-        },
-        {
             "species": "SPECIES_HIPPOWDON",
             "form": 0,
-            "level": 68,
+            "level": 69,
             "item": "ITEM_NONE",
             "moves": [
                 "MOVE_EARTHQUAKE",
@@ -63,7 +49,21 @@
                 "MOVE_EARTHQUAKE",
                 "MOVE_FIRE_PUNCH",
                 "MOVE_THUNDER_PUNCH",
-                "MOVE_SANDSTORM"
+                "MOVE_STONE_EDGE"
+            ],
+            "iv_scale": 250,
+            "ball_seal": 0
+        },
+        {
+            "species": "SPECIES_GLISCOR",
+            "form": 0,
+            "level": 68,
+            "item": "ITEM_NONE",
+            "moves": [
+                "MOVE_EARTHQUAKE",
+                "MOVE_ICE_FANG",
+                "MOVE_FIRE_FANG",
+                "MOVE_THUNDER_FANG"
             ],
             "iv_scale": 250,
             "ball_seal": 0
@@ -75,9 +75,9 @@
             "item": "ITEM_SITRUS_BERRY",
             "moves": [
                 "MOVE_EARTHQUAKE",
-                "MOVE_ROCK_WRECKER",
-                "MOVE_MEGAHORN",
-                "MOVE_AVALANCHE"
+                "MOVE_STONE_EDGE",
+                "MOVE_AVALANCHE",
+                "MOVE_SUPERPOWER"
             ],
             "iv_scale": 250,
             "ball_seal": 0

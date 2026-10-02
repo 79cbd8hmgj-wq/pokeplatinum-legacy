@@ -8,7 +8,7 @@
     "double_battle": false,
     "party": [
         {
-            "species": "SPECIES_WINGULL",
+            "species": "SPECIES_PELIPPER",
             "form": 0,
             "level": 29,
             "item": null,
@@ -21,7 +21,7 @@
             "ball_seal": 0
         },
         {
-            "species": "SPECIES_SHELLOS",
+            "species": "SPECIES_GASTRODON",
             "form": 0,
             "level": 30,
             "item": null,
@@ -34,14 +34,15 @@
             "ball_seal": 0
         },
         {
-            "species": "SPECIES_GOLDUCK",
+            "species": "SPECIES_PSYDUCK",
             "form": 0,
             "level": 31,
             "item": null,
             "moves": [
-                "MOVE_FURY_SWIPES",
                 "MOVE_CONFUSION",
-                "MOVE_WATER_PULSE"
+                "MOVE_WATER_PULSE",
+                "MOVE_PSYBEAM",
+                "MOVE_SCREECH"
             ],
             "iv_scale": 10,
             "ball_seal": 0

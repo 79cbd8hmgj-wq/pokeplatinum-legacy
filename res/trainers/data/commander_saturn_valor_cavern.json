@@ -17,8 +17,8 @@
             "moves": [
                 "MOVE_AIR_CUTTER",
                 "MOVE_BITE",
-                "MOVE_TOXIC",
-                "MOVE_SUPERSONIC"
+                "MOVE_POISON_FANG",
+                "MOVE_CONFUSE_RAY"
             ],
             "iv_scale": 200,
             "ball_seal": 0
@@ -30,8 +30,8 @@
             "item": "ITEM_NONE",
             "moves": [
                 "MOVE_GYRO_BALL",
+                "MOVE_EXTRASENSORY",
                 "MOVE_SHADOW_BALL",
-                "MOVE_ROCK_TOMB",
                 "MOVE_IRON_DEFENSE"
             ],
             "iv_scale": 200,
@@ -43,9 +43,9 @@
             "level": 40,
             "item": "ITEM_SITRUS_BERRY",
             "moves": [
+                "MOVE_AURA_BURST",
                 "MOVE_POISON_JAB",
                 "MOVE_REVENGE",
-                "MOVE_MUD_BOMB",
                 "MOVE_FAINT_ATTACK"
             ],
             "iv_scale": 200,

@@ -13,15 +13,15 @@
     "double_battle": false,
     "party": [
         {
-            "species": "SPECIES_SNEASEL",
+            "species": "SPECIES_WEAVILE",
             "form": 0,
             "level": 40,
             "item": "ITEM_NONE",
             "moves": [
-                "MOVE_SLASH",
-                "MOVE_AERIAL_ACE",
-                "MOVE_FAINT_ATTACK",
-                "MOVE_ICE_SHARD"
+                "MOVE_ICE_PUNCH",
+                "MOVE_NIGHT_SLASH",
+                "MOVE_FAKE_OUT",
+                "MOVE_AERIAL_ACE"
             ],
             "iv_scale": 250,
             "ball_seal": 0
@@ -33,8 +33,8 @@
             "item": "ITEM_NONE",
             "moves": [
                 "MOVE_AVALANCHE",
-                "MOVE_STONE_EDGE",
                 "MOVE_EARTHQUAKE",
+                "MOVE_STONE_EDGE",
                 "MOVE_HAIL"
             ],
             "iv_scale": 250,
@@ -61,8 +61,8 @@
             "item": "ITEM_SITRUS_BERRY",
             "moves": [
                 "MOVE_BLIZZARD",
-                "MOVE_DOUBLE_TEAM",
                 "MOVE_SHADOW_BALL",
+                "MOVE_DOUBLE_TEAM",
                 "MOVE_PSYCHIC"
             ],
             "iv_scale": 250,

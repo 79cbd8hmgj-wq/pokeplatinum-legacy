@@ -32,10 +32,24 @@
             "level": 38,
             "item": "ITEM_NONE",
             "moves": [
-                "MOVE_FLASH_CANNON",
-                "MOVE_ICE_FANG",
                 "MOVE_EARTHQUAKE",
+                "MOVE_ROCK_SLIDE",
+                "MOVE_ICE_FANG",
                 "MOVE_SANDSTORM"
+            ],
+            "iv_scale": 200,
+            "ball_seal": 0
+        },
+        {
+            "species": "SPECIES_SCIZOR",
+            "form": 0,
+            "level": 39,
+            "item": "ITEM_NONE",
+            "moves": [
+                "MOVE_X_SCISSOR",
+                "MOVE_IRON_HEAD",
+                "MOVE_NIGHT_SLASH",
+                "MOVE_QUICK_ATTACK"
             ],
             "iv_scale": 200,
             "ball_seal": 0
@@ -47,9 +61,9 @@
             "item": "ITEM_SITRUS_BERRY",
             "moves": [
                 "MOVE_METAL_BURST",
-                "MOVE_STONE_EDGE",
+                "MOVE_ROCK_TOMB",
                 "MOVE_IRON_DEFENSE",
-                "MOVE_TAUNT"
+                "MOVE_ROAR"
             ],
             "iv_scale": 200,
             "ball_seal": 0

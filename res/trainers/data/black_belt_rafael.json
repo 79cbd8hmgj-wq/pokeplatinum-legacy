@@ -22,13 +22,15 @@
             "ball_seal": 0
         },
         {
-            "species": "SPECIES_MACHOKE",
+            "species": "SPECIES_MANKEY",
             "form": 0,
             "level": 26,
             "item": null,
             "moves": [
+                "MOVE_FURY_SWIPES",
                 "MOVE_KARATE_CHOP",
-                "MOVE_FORESIGHT"
+                "MOVE_SEISMIC_TOSS",
+                "MOVE_SCREECH"
             ],
             "iv_scale": 40,
             "ball_seal": 0

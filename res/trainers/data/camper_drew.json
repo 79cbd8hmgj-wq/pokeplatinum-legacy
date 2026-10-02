@@ -10,40 +10,43 @@
     "double_battle": false,
     "party": [
         {
-            "species": "SPECIES_GASTLY",
-            "form": 0,
-            "level": 27,
-            "item": null,
-            "moves": [
-                "MOVE_PAYBACK",
-                "MOVE_SUCKER_PUNCH",
-                "MOVE_CONFUSE_RAY"
-            ],
-            "iv_scale": 10,
-            "ball_seal": 0
-        },
-        {
-            "species": "SPECIES_GASTLY",
+            "species": "SPECIES_HAUNTER",
             "form": 0,
             "level": 27,
             "item": null,
             "moves": [
                 "MOVE_SUCKER_PUNCH",
+                "MOVE_CONFUSE_RAY",
                 "MOVE_NIGHT_SHADE",
-                "MOVE_CONFUSE_RAY"
+                "MOVE_SHADOW_PUNCH"
             ],
             "iv_scale": 10,
             "ball_seal": 0
         },
         {
-            "species": "SPECIES_GASTLY",
+            "species": "SPECIES_MISDREAVUS",
             "form": 0,
             "level": 27,
             "item": null,
             "moves": [
-                "MOVE_NIGHT_SHADE",
-                "MOVE_PAYBACK",
-                "MOVE_CONFUSE_RAY"
+                "MOVE_ASTONISH",
+                "MOVE_CONFUSE_RAY",
+                "MOVE_MEAN_LOOK",
+                "MOVE_PSYBEAM"
+            ],
+            "iv_scale": 10,
+            "ball_seal": 0
+        },
+        {
+            "species": "SPECIES_DRIFLOON",
+            "form": 0,
+            "level": 27,
+            "item": null,
+            "moves": [
+                "MOVE_GUST",
+                "MOVE_ASTONISH",
+                "MOVE_STOCKPILE",
+                "MOVE_SWALLOW"
             ],
             "iv_scale": 10,
             "ball_seal": 0

@@ -8,7 +8,7 @@
     "double_battle": false,
     "party": [
         {
-            "species": "SPECIES_BUIZEL",
+            "species": "SPECIES_FLOATZEL",
             "form": 0,
             "level": 32,
             "item": null,
@@ -22,7 +22,7 @@
             "ball_seal": 0
         },
         {
-            "species": "SPECIES_MEDICHAM",
+            "species": "SPECIES_MEDITITE",
             "form": 0,
             "level": 32,
             "item": null,
@@ -36,15 +36,14 @@
             "ball_seal": 0
         },
         {
-            "species": "SPECIES_SEAKING",
+            "species": "SPECIES_GOLDEEN",
             "form": 0,
             "level": 32,
             "item": null,
             "moves": [
                 "MOVE_WATER_PULSE",
                 "MOVE_HORN_ATTACK",
-                "MOVE_AQUA_RING",
-                "MOVE_CAPTIVATE"
+                "MOVE_AQUA_RING"
             ],
             "iv_scale": 0,
             "ball_seal": 15
