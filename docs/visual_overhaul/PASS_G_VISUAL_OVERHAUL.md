@@ -740,6 +740,37 @@ Implementation implication:
 - preserve existing cell/animation geometry when possible for low-risk replacements; change layout code only where the redesigned composition requires it.
 
 
+
+### G5 battle HUD palette checkpoint
+
+Implemented a resource-contract-safe first battle HUD refresh:
+
+- added `tools/visual_overhaul/generate_battle_ui.py`
+- normal player/enemy healthboxes retain their existing indexed pixel geometry, NCGR dimensions, cells, and OAM layout
+- changed only shared chrome palette entries used by the normal healthboxes:
+  - cool edge highlight
+  - deep navy outline
+  - steel-blue rail
+  - bright cool highlight
+  - slate panel fill
+- HP-state colors, status colors, white text/highlights, and black remain unchanged
+- synchronized embedded preview palettes for:
+  - `player_singles.png`
+  - `player_doubles.png`
+  - `enemy.png`
+  - `healthbox_parts.png`
+- `primary.NCLR` continues to be generated from `player_singles.png` exactly as before
+- Safari healthbox remains untouched because it uses its own `safari.NCLR` and requires a separate design pass
+
+Visual result:
+- replaces the retail olive/brown frame language with a cleaner navy/slate/steel presentation
+- preserves battle readability and the existing Pokemon HP/status color language
+
+Validation status:
+- generated assets have landed on `visual-overhaul-g2a`
+- local indexed-palette preview confirms only the intended chrome colors changed
+- normal ROM build, PR lint, and exported-binary verification are running against the generated assets before lock.
+
 ### G3 — Character and Pokemon graphics
 - player sprites
 - NPC sprites
