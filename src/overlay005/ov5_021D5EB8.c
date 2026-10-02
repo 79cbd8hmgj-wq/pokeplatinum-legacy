@@ -30,6 +30,13 @@
 #include "sys_task.h"
 #include "sys_task_manager.h"
 
+#define DEEP_FOREST_MIST_ALPHA        8
+#define DEEP_FOREST_MIST_FADE_FRAMES  8
+#define DEEP_FOREST_FOG_SLOPE         3
+#define DEEP_FOREST_FOG_OFFSET        (0x6F6F - 1800)
+#define DEEP_FOREST_FOG_COLOR         GX_RGB(24, 28, 25)
+#define DEEP_FOREST_SCROLL_SCALE      FX32_CONST(0.75)
+
 typedef struct UnkStruct_ov5_021D5EF8_t {
     UnkStruct_ov5_021D6594 *unk_00;
     int unk_04;
@@ -5129,7 +5136,7 @@ static void ov5_021DB144(SysTask *param0, void *param1)
 
     switch (v0->unk_BA2) {
     case 0:
-        ov5_021D64FC(&v1->unk_00, 0, 7, 8);
+        ov5_021D64FC(&v1->unk_00, 0, DEEP_FOREST_MIST_ALPHA, DEEP_FOREST_MIST_FADE_FRAMES);
         ov5_021D64E4(0, 16);
         GXLayers_EngineAToggleLayers(GX_PLANEMASK_BG2, 1);
         ov5_021D7308(&v1->unk_44, &v1->unk_14, v0->unk_00->fieldSystem->fogMan, 3, 0x6F6F + -1900, (GX_RGB(20, 24, 22)), 1, v0->unk_BA4);
@@ -5150,7 +5157,7 @@ static void ov5_021DB144(SysTask *param0, void *param1)
         }
         break;
     case 2:
-        ov5_021D64E4(7, 16 - 7);
+        ov5_021D64E4(DEEP_FOREST_MIST_ALPHA, 16 - DEEP_FOREST_MIST_ALPHA);
 
         if (v0->unk_BA4 != 0) {
             v1->unk_14.unk_00 = v0->unk_00->fieldSystem->fogMan;
@@ -5167,7 +5174,7 @@ static void ov5_021DB144(SysTask *param0, void *param1)
         break;
     case 3:
         if (v0->unk_BA6 == 5) {
-            ov5_021D64FC(&v1->unk_00, 7, 0, 8);
+            ov5_021D64FC(&v1->unk_00, DEEP_FOREST_MIST_ALPHA, 0, DEEP_FOREST_MIST_FADE_FRAMES);
 
             if (v0->unk_BA4 != 0) {
                 ov5_021D749C(&v1->unk_14, 1, 0);
@@ -5207,9 +5214,9 @@ static void ov5_021DB144(SysTask *param0, void *param1)
         ov5_021D71B4(v0, &v6, &v7);
 
         if (v7 < 0) {
-            v7 = FX_Mul(v7, FX32_CONST(0.75));
+            v7 = FX_Mul(v7, DEEP_FOREST_SCROLL_SCALE);
         } else {
-            v7 = FX_Mul(v7, FX32_CONST(0.75));
+            v7 = FX_Mul(v7, DEEP_FOREST_SCROLL_SCALE);
         }
 
         v1->unk_AC += v6;
