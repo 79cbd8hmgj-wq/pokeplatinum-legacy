@@ -128,6 +128,22 @@ No-change controls:
 
 This keeps base-arena movement proportional to move weight instead of turning it into a universal damage effect.
 
+## Remaining signature-move control audit
+
+The remaining high-identity Gen III/IV signature moves were reviewed for the same scene-layer gaps.
+This pass intentionally produced no source edits:
+
+- Magma Storm — already owns a dedicated moving background plus three particle systems and sustained revolving emitters; additional shake would compete with the vortex identity.
+- Crush Grip — its defining presentation is defender compression rather than a collision with the arena, so scene-wide motion would be semantically wrong.
+- Luster Purge — already escalates into a full white scene flash, all-battler color treatment, projectile impact, and defender shake.
+- Mist Ball — already combines a moving dedicated background, white scene grade, branch-specific emitters, defender fade, and impact shake.
+- Lunar Dance — its purpose is sacrificial/ritual staging rather than impact, and its dedicated moving background plus sprite fade already carries that identity.
+- Attack Order / Defend Order / Heal Order — the three-move family already has a coherent shared bee-emitter language; changing only one would weaken the set's visual consistency.
+- Aeroblast — already uses a dedicated switched background, a long background shake, projectile staging, and a defender impact.
+
+These no-change rulings close the remaining obvious signature candidates without escalating every bespoke
+move into the same arena-shake vocabulary.
+
 ## Legacy heavy-contact staging batch
 
 A further physical-impact sweep extends base-arena reaction only to moves whose native scripts
