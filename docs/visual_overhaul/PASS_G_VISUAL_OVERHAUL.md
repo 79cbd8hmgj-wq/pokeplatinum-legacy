@@ -570,6 +570,54 @@ Implementation implication:
 - G2C/G5 can redesign the UI by replacing source PNG/JSON resources while preserving Platinum's existing layout and runtime code where practical.
 
 
+
+### G2B foliage-resource and emitter checkpoint
+
+Binary inspection is now available through a temporary GitHub Actions asset-export artifact.
+
+`fldeff.narc` inventory:
+- 201 members total
+- 15 NSBTX texture resources
+- 145 NSBMD model resources
+- 10 NSBTP texture-pattern animations
+- 13 NSBCA skeletal animations
+- 1 NSBMA material animation
+- 5 NSBTA texture-coordinate animations
+- 12 small metadata records
+
+Relevant embedded resource names:
+- texture member 000: `kusaeff`
+- texture members 001-003: `e_kusaeff1`, `e_kusaeff2`, `e_kusaeff3`
+- model member 083: `kusaeff`
+- model member 084: `e_kusaeff1`
+- model members 089/090: `lgrass_ani1` / `ngrass_ani1`
+
+Source-reference mapping confirms `src/overlay005/ov5_021F2D20.c` / `FIELD_EFFECT_RENDERER_13` loads:
+- model 83 -> `kusaeff`
+- model 84 -> `e_kusaeff1`
+- metadata members 170-173
+- texture members 0-3
+- billboard resource slots 0, 5, 6, 7
+
+This renderer is already present in the normal and deep-forest renderer lists and exposes a standalone billboard path that does not require a map object.
+
+Implemented forest foliage prototype:
+- `FieldEffect_StartForestLeaves(FieldSystem *)`
+- four recycled billboards controlled by one animation manager
+- reuses existing renderer-13 foliage resources 5/6/7
+- no new NARC members, textures, or models
+- player-relative spawn/reset positions
+- deterministic drift
+- conservative 3/4 scale
+- particles recycle after lifetime/range limits instead of allocating continuously
+- cleanup is handled through the existing animation-manager lifecycle
+- emitter starts only in the three deep-forest maps
+
+Validation status:
+- exact visual character of the reused `e_kusaeff` assets still requires Delta runtime inspection
+- source is under US revision 0/1 CI and clang-format validation before being treated as locked
+
+
 #### G2C — Global UI presentation
 Improve:
 - frames
