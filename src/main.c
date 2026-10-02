@@ -89,7 +89,14 @@ void NitroMain(void)
     }
 
     if (SaveData_BackupExists(sApplication.args.saveData) == FALSE) {
+#ifdef GDB_DEBUGGING
+        // Runtime-QA debug builds intentionally support a clean emulator
+        // profile so CI can reach the field without a pre-seeded save.
+        sApplication.args.error = FALSE;
+        EnqueueApplication(FS_OVERLAY_ID_NONE, &gGameStartRuntimeQANewSaveAppTemplate);
+#else
         sub_0209A74C(HEAP_ID_SYSTEM);
+#endif
     } else {
         switch (OS_GetResetParameter()) {
         case RESET_CLEAN:
