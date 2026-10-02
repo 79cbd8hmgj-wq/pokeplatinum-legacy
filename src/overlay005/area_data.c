@@ -1,9 +1,9 @@
 #include "overlay005/area_data.h"
 
-#include "constants/field/area_light.h"
 #include <nitro.h>
 #include <string.h>
 
+#include "constants/field/area_light.h"
 #include "constants/graphics.h"
 #include "constants/heap.h"
 
