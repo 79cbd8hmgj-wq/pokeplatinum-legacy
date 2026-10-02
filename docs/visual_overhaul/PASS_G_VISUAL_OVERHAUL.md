@@ -909,6 +909,26 @@ Implementation rule:
 This establishes G5 screen-impact treatment through existing scriptable presentation systems
 with no new runtime allocation or resource format.
 
+### G5 weather-initiation presentation checkpoint
+
+The four weather-setting moves now use the existing battle-background fade system to establish
+a clearer atmosphere without changing battle mechanics or particle resources.
+
+Updated:
+- Rain Dance — black base fade replaced by a deep-blue storm grade
+- Sunny Day — existing warm yellow grade strengthened from 10 to 12
+- Sandstorm — added a restrained dark-yellow base grade, then restores the arena after the particle sequence
+- Hail — black base fade replaced by a cool light-blue grade
+
+Invariants:
+- weather mechanics and duration are unchanged
+- existing particle resources, emitters, sounds, and ordering are preserved
+- no new battle renderer or allocation path was added
+- all presentation changes remain inside source-backed move animation scripts
+
+This is the first G5 weather-presentation pilot. Persistent turn-by-turn weather effects remain
+a separate follow-up and should only be changed after their shared runtime path is identified.
+
 ### G6 — Showcase areas
 Primary quality benchmarks:
 - Eterna Forest
