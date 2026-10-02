@@ -237,12 +237,12 @@ def check_static(fid: str, a: dict) -> list[str]:
         f.append(f"S2 {fid}: caught flag must be set only after the capture check")
     sk = a.get("secret_key")
     if sk:
-        if f"SetVar {sk['var']}, {sk['magic']}" not in all_text or "SetVar VAR_0x8004, ITEM_SECRET_KEY" not in all_text:
+        if f"SetVar VAR_0x8004, {sk['item']}" not in all_text or "Common_GiveItemQuantity" not in all_text:
             f.append(f"S1 {fid}: capture does not grant the Secret Key / form-room unlock")
-        sysv = read("src/system_vars.c")
-        m = re.search(r"\[DISTRIBUTION_EVENT_ROTOM\] = (0x[0-9A-Fa-f]+)", sysv)
-        if not m or int(m.group(1), 16) != int(sk["magic"], 16):
-            f.append(f"S1 {fid}: unlock magic number does not match system_vars.c")
+        # D5: the form-room unlock is the Secret Key alone; no script may still gate on the distribution magic number
+        for rel in list(sk.get("form_room_files", [])) + [a["file"]]:
+            if "DISTRIBUTION_EVENT_ROTOM" in read(rel):
+                f.append(f"S1 {fid}: {rel} still gates the form room on DISTRIBUTION_EVENT_ROTOM")
     if a["band"] not in PRE_E4_BANDS:
         f.append(f"S3 {fid}: band {a['band']} is not PRE_E4")
     return f

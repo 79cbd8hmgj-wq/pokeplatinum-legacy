@@ -20,7 +20,7 @@ Chat-only approval is not sufficient implementation authority.
 ## Remaining design order
 
 ### D1 — Trainer Overhaul
-Status: `IMPLEMENTED` (source + validator + Rev 0/Rev 1 CI build; `VERIFIED` only after runtime trainer QA)
+Status: `IMPLEMENTED` and merged (PR #19; source + validator + Rev 0/Rev 1 CI build; `VERIFIED` only after runtime trainer QA)
 
 Existing authority:
 - stronger, coherent teams without becoming a hardcore-only hack;
@@ -90,28 +90,19 @@ Canonical authority:
 Resolved design includes nature/IV/ability inheritance, Power-item targeting, no-incense babies, egg-move inheritance policy, hatch/egg-generation speed, breeding-supply access, and one-save legality validation.
 
 ### D5 — Legendary/Mythical Events
-Status: `LOCKED SPEC`
+Status: `IMPLEMENTED` (source + validator + Rev 0/Rev 1 builds; runtime event QA pending — not `VERIFIED`)
 
-Existing authority:
-- Darkrai via Member Card/Newmoon Island;
-- Shaymin via Oak's Letter/Seabreak Path;
-- Arceus via Azure Flute/Hall of Origin;
-- Rotom room/form access restored in-game;
-- Regis obtainable without external event Regigigas;
-- Regigigas after Regis;
-- Manaphy receives an in-save path;
-- Phione through breeding;
-- Dialga/Palkia use Platinum postgame infrastructure;
-- birds retain/improve native roaming;
-- migration/version/event-only legends become proper in-save quests;
-- no external distribution/hardware/network required.
+Authority: `docs/overhaul/events/LEGENDARY_MYTHICAL_SPEC.md` + `LEGENDARY_MYTHICAL_IMPLEMENTATION_PLAN.md`.
+Implementation record: `docs/overhaul/implementation/events/` (five manifests + `LEGENDARY_EVENT_VALIDATION_REPORT.md`);
+validator `tools/overhaul/validate_legendary_availability.py` (51 checks, 46 mutation cases + baseline in `tools/overhaul/events/`).
 
-Still needed:
-- per-event prerequisites;
-- exact flags/scripts/items/NPCs;
-- retry/respawn behavior;
-- ordering and level scaling;
-- completion validation.
+Implemented: native Sinnoh retry safety (Uxie, Azelf, Mesprit, Cresselia, Giratina, Dialga, Palkia, Heatran, Regigigas);
+Rotom/Darkrai/Shaymin/Arceus distribution gates removed with in-game unlocks (Sailor Eldritch Member Card, Oak's Letter on Route 224,
+Rowan's Azure Flute after a #001–#492 caught check); Sailor Eldritch Manaphy Egg gift (Phione via Breeding 2.0); Regi ruins and
+Regigigas without the event Regigigas; renewable post-Hall-of-Fame habitats for the 14 Gen I–III legends; Mew/Celebi/Jirachi/Deoxys
+retry-safe statics.
+
+Runtime QA remains for the final overhaul playtest (see the validation report).
 
 ### D6 — Battle Frontier, Rematches, and Postgame Rewards
 Status: `LOCKED SPEC`

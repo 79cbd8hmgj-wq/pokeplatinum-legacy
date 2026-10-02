@@ -15,8 +15,9 @@ Last verified against repository/project history: 2026-10-02.
 - **EXP/economy port:** IMPLEMENTED (conserved 60/40 team EXP, participant-only EVs, prize/price cleanup, free Move Reminder, half-cost tutors, Veilstone evolution-stone vendor, postgame Rare Candy; source + validator + mutation tests; Rev 0/Rev 1 build via CI); runtime **DEFERRED TO FINAL OVERHAUL PLAYTEST**. Audit: `implementation/economy/ECONOMY_IMPLEMENTATION_AUDIT.md`.
 - **Poké Ball rebalance:** IMPLEMENTED and merged (PR #17; source + validator verified, build via CI; capture runtime QA pending).
 - **Breeding 2.0:** IMPLEMENTED and merged (PR #18; source + host-compiled rules harness + validator + mutation tests verified; Rev 0/Rev 1 build via CI); **runtime breeding QA PENDING — not VERIFIED**. Audit/manifests: `implementation/breeding/`. Egg-move legality audit: 0 unreachable / 0 pending after the owner ruling below.
-- **Trainer overhaul (D1):** **IMPLEMENTED** (source + validator + Rev 0/Rev 1 CI build success, PR #19 head `1497736a`) on branch `claude/platinum-trainer-overhaul-3guoip` (393 records changed: 8 Gyms, 33 Rival, 11 Galactic, Elite Four, Cynthia, 13 rematches, 332 ordinary/ordinary-rematch via archetype rules); trainer runtime QA **PENDING — not VERIFIED**. Manifests/report: `implementation/trainers/`; validator: `tools/overhaul/trainers/validate_trainers.py`.
-- **Next source task:** next locked subsystem after the trainer overhaul (events per `DESIGN_PIPELINE.md`). Runtime QA of C1/C2/created moves/evolution/capture/breeding/trainers is deferred to the final overhaul playtest.
+- **Trainer overhaul (D1):** **IMPLEMENTED and merged** (PR #19, merge commit `08092189`; source + validator + Rev 0/Rev 1 CI build success, PR head `1497736a`) (393 records changed: 8 Gyms, 33 Rival, 11 Galactic, Elite Four, Cynthia, 13 rematches, 332 ordinary/ordinary-rematch via archetype rules); trainer runtime QA **PENDING — not VERIFIED**. Manifests/report: `implementation/trainers/`; validator: `tools/overhaul/trainers/validate_trainers.py`.
+- **Legendary/Mythical events (D5):** **IMPLEMENTED** (source + validator + dual-revision builds; branch `claude/platinum-legendary-events-vfuov1`, base `08092189`); runtime event QA **PENDING — not VERIFIED**. All 35 Legendary/Mythical species #001–#493 have an in-save path: native retry-safe Sinnoh events, Rotom/Darkrai/Shaymin/Arceus without distribution gates, Manaphy Egg gift (+ Phione breeding), Regis/Regigigas without the event Regigigas, 14 renewable post-Hall-of-Fame legacy habitats (1%/2% roll in `src/overlay006/wild_encounters.c`), Mew/Celebi/Jirachi/Deoxys retry-safe statics. Manifests/report: `implementation/events/`; validator: `tools/overhaul/validate_legendary_availability.py`. The availability phase's Rotom special-acquisition verifier was updated because D5 removed `DISTRIBUTION_EVENT_ROTOM` (Secret Key alone gates the form room).
+- **Next source task:** next locked subsystem after D5 (Battle Frontier/postgame, then final integration QA per `DESIGN_PIPELINE.md`; both still need locked repo specs/plans before implementation). Runtime QA of C1/C2/created moves/evolution/capture/breeding/trainers/legendary events is deferred to the final overhaul playtest.
 
 ## Mainline implementation evidence
 
@@ -72,11 +73,11 @@ They are provenance sources, not current implementation targets.
 | Evolution-method overhaul | LOCKED / CANONICALIZED | IMPLEMENTED (22 changed edges; methods 27–32 appended; zero unresolved authority) | source + validator + mutation tests + dual-revision CI build; runtime DEFERRED TO FINAL OVERHAUL PLAYTEST |
 | World/#001–#493 availability — ordinary wild distribution | APPROVED ARCHITECTURE | IMPLEMENTED on `main` via PR #10 | L2 dual-revision CI build + manifest/validator evidence; runtime pending |
 | World/#001–#493 availability — special acquisitions (starters, fossils, Spiritomb, Rotom, Tyrogue, Happiny, Eevee, Porygon, Riolu, Castform, Feebas) | LOCKED/RESERVED BY OWNING SPECS WHERE APPLICABLE | IMPLEMENTED on main via PR #11 | source + L2 build + validator (S1–S5 + 25 mutation cases); runtime pending |
-| Trainer overhaul (D1) | LOCKED | IMPLEMENTED (source + validator + dual-revision CI build) | validator 0 errors + 19 mutation tests; cross-system validators pass; runtime trainer QA pending; see `implementation/trainers/TRAINER_VALIDATION_REPORT.md` |
+| Trainer overhaul (D1) | LOCKED | IMPLEMENTED and merged (PR #19; source + validator + dual-revision CI build) | validator 0 errors + 19 mutation tests; cross-system validators pass; runtime trainer QA pending; see `implementation/trainers/TRAINER_VALIDATION_REPORT.md` |
 | Economy/EXP port | LOCKED | IMPLEMENTED | source + validator + mutation tests + dual-revision CI build; runtime DEFERRED TO FINAL OVERHAUL PLAYTEST |
 | Capture/Poké Ball port | LOCKED | IMPLEMENTED (merged, PR #17) | validators pass; CI build; runtime QA pending; see `capture/POKE_BALL_FEASIBILITY_AUDIT.md`, `tools/overhaul/pokeballs/` |
 | Breeding 2.0 | LOCKED | IMPLEMENTED and merged (PR #18) | source + harness + validator verified; CI build; runtime QA pending; see `implementation/breeding/BREEDING_VALIDATION_REPORT.md` |
-| Event restoration | PLANNED | not started | pending |
+| Legendary/Mythical events (D5) | LOCKED | IMPLEMENTED (source + validator + dual-revision builds) | validator 51/51 + 46 mutation cases + baseline; cross-system validators pass; runtime event QA pending; see `implementation/events/LEGENDARY_EVENT_VALIDATION_REPORT.md` |
 | Frontier/postgame | PLANNED | partial design only | pending |
 | Full QA/release | PLANNED | not started | pending |
 
@@ -191,7 +192,7 @@ Do not invent one. This is not a build blocker.
 
 ## Immediate next actions
 
-1. Next source task: the next locked subsystem after Breeding 2.0 (Poké Ball and Breeding 2.0 are implemented).
+1. Next source task: the next locked subsystem after D5 (Battle Frontier/postgame, final integration QA); each needs its locked spec + implementation plan in the repo first.
 2. Continue the remaining locked subsystems from canonical repo authority; ordinary and special nonlegendary availability are source/build complete.
 3. Defer focused runtime QA until the overhaul is otherwise complete, per user direction.
 
@@ -238,7 +239,7 @@ Owner ruling applied (PR #18): the 9 egg moves orphaned by the no-incense change
 
 ## Legendary / Mythical events
 
-Status: **LOCKED SPEC — awaiting implementation**
+Status: **IMPLEMENTED — source + validator + dual-revision builds; runtime event QA PENDING (not VERIFIED)**
 
 Canonical authority:
 - `docs/overhaul/events/LEGENDARY_MYTHICAL_EVENT_SPEC.md`
@@ -271,7 +272,7 @@ Release gates are now defined for clean Rev 0/Rev 1 builds, subsystem validators
 
 ## Legendary / Mythical availability
 
-Status: **LOCKED SPEC — awaiting implementation**
+Status: **IMPLEMENTED — see "Legendary / Mythical events" above and `implementation/events/`; runtime QA PENDING (not VERIFIED)**
 
 Canonical authority:
 - `docs/overhaul/events/LEGENDARY_MYTHICAL_SPEC.md`
