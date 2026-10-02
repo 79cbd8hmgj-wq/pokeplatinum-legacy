@@ -28,8 +28,13 @@ for f in sorted(files):
 for f, d in leak:
     print("NON-EVOLUTION FIELD CHANGED:", f, d)
 
-# src/pokemon.c may only gain lines inside Pokemon_GetEvolutionTargetSpecies (additions only; no deletions).
+# Engine changes are additive except for removal of Kadabra's vanilla Everstone-bypass special case,
+# which would be incorrect once Kadabra evolves normally by level.
 patch = git("diff", "-U0", BASE_COMMIT, "--", "src/pokemon.c", "tools/dataproc/src/speciesproc.c")
 removed = [l for l in patch.splitlines() if l.startswith("-") and not l.startswith("---")]
-print(f"engine source deletions: {len(removed)}")
-sys.exit(1 if bad or leak or removed else 0)
+allowed_removed = {"-    if (monSpecies != SPECIES_KADABRA"}
+unexpected_removed = [l for l in removed if l not in allowed_removed]
+print(f"engine source deletions: {len(removed)} (unexpected: {len(unexpected_removed)})")
+for l in unexpected_removed:
+    print("UNEXPECTED ENGINE DELETION:", l)
+sys.exit(1 if bad or leak or unexpected_removed else 0)
