@@ -1,0 +1,4099 @@
+{
+  "schema": "breeding_hatch_cycle_changes/1",
+  "start_sha": "e2d73d33a702bc151ae283a1245ebf64575476ed",
+  "formula": "max(5, ceil(vanilla_hatch_cycles / 2))",
+  "scope": "breedable species (egg group not Undiscovered/Ditto) plus every legitimate egg result (babies); Undiscovered-only species that never hatch are untouched",
+  "flame_body_magma_armor": "unchanged: Party_GetEggCyclesToSubtract still subtracts 2 per cycle event",
+  "unchanged_at_floor": [
+    "SPECIES_GYARADOS",
+    "SPECIES_MAGIKARP"
+  ],
+  "entries": [
+    {
+      "species": "SPECIES_ABOMASNOW",
+      "source_path": "res/pokemon/abomasnow/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ABRA",
+      "source_path": "res/pokemon/abra/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ABSOL",
+      "source_path": "res/pokemon/absol/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_AERODACTYL",
+      "source_path": "res/pokemon/aerodactyl/data.json",
+      "field": "hatch_cycles",
+      "before": 35,
+      "target": 18,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_AGGRON",
+      "source_path": "res/pokemon/aggron/data.json",
+      "field": "hatch_cycles",
+      "before": 35,
+      "target": 18,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_AIPOM",
+      "source_path": "res/pokemon/aipom/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ALAKAZAM",
+      "source_path": "res/pokemon/alakazam/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ALTARIA",
+      "source_path": "res/pokemon/altaria/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_AMBIPOM",
+      "source_path": "res/pokemon/ambipom/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_AMPHAROS",
+      "source_path": "res/pokemon/ampharos/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ANORITH",
+      "source_path": "res/pokemon/anorith/data.json",
+      "field": "hatch_cycles",
+      "before": 30,
+      "target": 15,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ARBOK",
+      "source_path": "res/pokemon/arbok/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ARCANINE",
+      "source_path": "res/pokemon/arcanine/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ARIADOS",
+      "source_path": "res/pokemon/ariados/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ARMALDO",
+      "source_path": "res/pokemon/armaldo/data.json",
+      "field": "hatch_cycles",
+      "before": 30,
+      "target": 15,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ARON",
+      "source_path": "res/pokemon/aron/data.json",
+      "field": "hatch_cycles",
+      "before": 35,
+      "target": 18,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_AZUMARILL",
+      "source_path": "res/pokemon/azumarill/data.json",
+      "field": "hatch_cycles",
+      "before": 10,
+      "target": 5,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_AZURILL",
+      "source_path": "res/pokemon/azurill/data.json",
+      "field": "hatch_cycles",
+      "before": 10,
+      "target": 5,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BAGON",
+      "source_path": "res/pokemon/bagon/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BALTOY",
+      "source_path": "res/pokemon/baltoy/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BANETTE",
+      "source_path": "res/pokemon/banette/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BARBOACH",
+      "source_path": "res/pokemon/barboach/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BASTIODON",
+      "source_path": "res/pokemon/bastiodon/data.json",
+      "field": "hatch_cycles",
+      "before": 30,
+      "target": 15,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BAYLEEF",
+      "source_path": "res/pokemon/bayleef/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BEAUTIFLY",
+      "source_path": "res/pokemon/beautifly/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BEEDRILL",
+      "source_path": "res/pokemon/beedrill/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BELDUM",
+      "source_path": "res/pokemon/beldum/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BELLOSSOM",
+      "source_path": "res/pokemon/bellossom/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BELLSPROUT",
+      "source_path": "res/pokemon/bellsprout/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BIBAREL",
+      "source_path": "res/pokemon/bibarel/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BIDOOF",
+      "source_path": "res/pokemon/bidoof/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BLASTOISE",
+      "source_path": "res/pokemon/blastoise/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BLAZIKEN",
+      "source_path": "res/pokemon/blaziken/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BLISSEY",
+      "source_path": "res/pokemon/blissey/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BONSLY",
+      "source_path": "res/pokemon/bonsly/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BRELOOM",
+      "source_path": "res/pokemon/breloom/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BRONZONG",
+      "source_path": "res/pokemon/bronzong/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BRONZOR",
+      "source_path": "res/pokemon/bronzor/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BUDEW",
+      "source_path": "res/pokemon/budew/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BUIZEL",
+      "source_path": "res/pokemon/buizel/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BULBASAUR",
+      "source_path": "res/pokemon/bulbasaur/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BUNEARY",
+      "source_path": "res/pokemon/buneary/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BURMY",
+      "source_path": "res/pokemon/burmy/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_BUTTERFREE",
+      "source_path": "res/pokemon/butterfree/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CACNEA",
+      "source_path": "res/pokemon/cacnea/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CACTURNE",
+      "source_path": "res/pokemon/cacturne/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CAMERUPT",
+      "source_path": "res/pokemon/camerupt/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CARNIVINE",
+      "source_path": "res/pokemon/carnivine/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CARVANHA",
+      "source_path": "res/pokemon/carvanha/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CASCOON",
+      "source_path": "res/pokemon/cascoon/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CASTFORM",
+      "source_path": "res/pokemon/castform/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CATERPIE",
+      "source_path": "res/pokemon/caterpie/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CHANSEY",
+      "source_path": "res/pokemon/chansey/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CHARIZARD",
+      "source_path": "res/pokemon/charizard/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CHARMANDER",
+      "source_path": "res/pokemon/charmander/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CHARMELEON",
+      "source_path": "res/pokemon/charmeleon/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CHATOT",
+      "source_path": "res/pokemon/chatot/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CHERRIM",
+      "source_path": "res/pokemon/cherrim/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CHERUBI",
+      "source_path": "res/pokemon/cherubi/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CHIKORITA",
+      "source_path": "res/pokemon/chikorita/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CHIMCHAR",
+      "source_path": "res/pokemon/chimchar/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CHIMECHO",
+      "source_path": "res/pokemon/chimecho/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CHINCHOU",
+      "source_path": "res/pokemon/chinchou/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CHINGLING",
+      "source_path": "res/pokemon/chingling/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CLAMPERL",
+      "source_path": "res/pokemon/clamperl/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CLAYDOL",
+      "source_path": "res/pokemon/claydol/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CLEFABLE",
+      "source_path": "res/pokemon/clefable/data.json",
+      "field": "hatch_cycles",
+      "before": 10,
+      "target": 5,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CLEFAIRY",
+      "source_path": "res/pokemon/clefairy/data.json",
+      "field": "hatch_cycles",
+      "before": 10,
+      "target": 5,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CLEFFA",
+      "source_path": "res/pokemon/cleffa/data.json",
+      "field": "hatch_cycles",
+      "before": 10,
+      "target": 5,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CLOYSTER",
+      "source_path": "res/pokemon/cloyster/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_COMBEE",
+      "source_path": "res/pokemon/combee/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_COMBUSKEN",
+      "source_path": "res/pokemon/combusken/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CORPHISH",
+      "source_path": "res/pokemon/corphish/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CORSOLA",
+      "source_path": "res/pokemon/corsola/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CRADILY",
+      "source_path": "res/pokemon/cradily/data.json",
+      "field": "hatch_cycles",
+      "before": 30,
+      "target": 15,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CRANIDOS",
+      "source_path": "res/pokemon/cranidos/data.json",
+      "field": "hatch_cycles",
+      "before": 30,
+      "target": 15,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CRAWDAUNT",
+      "source_path": "res/pokemon/crawdaunt/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CROAGUNK",
+      "source_path": "res/pokemon/croagunk/data.json",
+      "field": "hatch_cycles",
+      "before": 10,
+      "target": 5,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CROBAT",
+      "source_path": "res/pokemon/crobat/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CROCONAW",
+      "source_path": "res/pokemon/croconaw/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CUBONE",
+      "source_path": "res/pokemon/cubone/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_CYNDAQUIL",
+      "source_path": "res/pokemon/cyndaquil/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_DELCATTY",
+      "source_path": "res/pokemon/delcatty/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_DELIBIRD",
+      "source_path": "res/pokemon/delibird/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_DEWGONG",
+      "source_path": "res/pokemon/dewgong/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_DIGLETT",
+      "source_path": "res/pokemon/diglett/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_DODRIO",
+      "source_path": "res/pokemon/dodrio/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_DODUO",
+      "source_path": "res/pokemon/doduo/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_DONPHAN",
+      "source_path": "res/pokemon/donphan/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_DRAGONAIR",
+      "source_path": "res/pokemon/dragonair/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_DRAGONITE",
+      "source_path": "res/pokemon/dragonite/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_DRAPION",
+      "source_path": "res/pokemon/drapion/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_DRATINI",
+      "source_path": "res/pokemon/dratini/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_DRIFBLIM",
+      "source_path": "res/pokemon/drifblim/data.json",
+      "field": "hatch_cycles",
+      "before": 30,
+      "target": 15,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_DRIFLOON",
+      "source_path": "res/pokemon/drifloon/data.json",
+      "field": "hatch_cycles",
+      "before": 30,
+      "target": 15,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_DROWZEE",
+      "source_path": "res/pokemon/drowzee/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_DUGTRIO",
+      "source_path": "res/pokemon/dugtrio/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_DUNSPARCE",
+      "source_path": "res/pokemon/dunsparce/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_DUSCLOPS",
+      "source_path": "res/pokemon/dusclops/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_DUSKNOIR",
+      "source_path": "res/pokemon/dusknoir/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_DUSKULL",
+      "source_path": "res/pokemon/duskull/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_DUSTOX",
+      "source_path": "res/pokemon/dustox/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_EEVEE",
+      "source_path": "res/pokemon/eevee/data.json",
+      "field": "hatch_cycles",
+      "before": 35,
+      "target": 18,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_EKANS",
+      "source_path": "res/pokemon/ekans/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ELECTABUZZ",
+      "source_path": "res/pokemon/electabuzz/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ELECTIVIRE",
+      "source_path": "res/pokemon/electivire/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ELECTRIKE",
+      "source_path": "res/pokemon/electrike/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ELECTRODE",
+      "source_path": "res/pokemon/electrode/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ELEKID",
+      "source_path": "res/pokemon/elekid/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_EMPOLEON",
+      "source_path": "res/pokemon/empoleon/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ESPEON",
+      "source_path": "res/pokemon/espeon/data.json",
+      "field": "hatch_cycles",
+      "before": 35,
+      "target": 18,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_EXEGGCUTE",
+      "source_path": "res/pokemon/exeggcute/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_EXEGGUTOR",
+      "source_path": "res/pokemon/exeggutor/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_EXPLOUD",
+      "source_path": "res/pokemon/exploud/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_FARFETCHD",
+      "source_path": "res/pokemon/farfetchd/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_FEAROW",
+      "source_path": "res/pokemon/fearow/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_FEEBAS",
+      "source_path": "res/pokemon/feebas/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_FERALIGATR",
+      "source_path": "res/pokemon/feraligatr/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_FINNEON",
+      "source_path": "res/pokemon/finneon/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_FLAAFFY",
+      "source_path": "res/pokemon/flaaffy/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_FLAREON",
+      "source_path": "res/pokemon/flareon/data.json",
+      "field": "hatch_cycles",
+      "before": 35,
+      "target": 18,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_FLOATZEL",
+      "source_path": "res/pokemon/floatzel/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_FLYGON",
+      "source_path": "res/pokemon/flygon/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_FORRETRESS",
+      "source_path": "res/pokemon/forretress/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_FROSLASS",
+      "source_path": "res/pokemon/froslass/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_FURRET",
+      "source_path": "res/pokemon/furret/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GABITE",
+      "source_path": "res/pokemon/gabite/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GALLADE",
+      "source_path": "res/pokemon/gallade/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GARCHOMP",
+      "source_path": "res/pokemon/garchomp/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GARDEVOIR",
+      "source_path": "res/pokemon/gardevoir/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GASTLY",
+      "source_path": "res/pokemon/gastly/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GASTRODON",
+      "source_path": "res/pokemon/gastrodon/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GENGAR",
+      "source_path": "res/pokemon/gengar/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GEODUDE",
+      "source_path": "res/pokemon/geodude/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GIBLE",
+      "source_path": "res/pokemon/gible/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GIRAFARIG",
+      "source_path": "res/pokemon/girafarig/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GLACEON",
+      "source_path": "res/pokemon/glaceon/data.json",
+      "field": "hatch_cycles",
+      "before": 35,
+      "target": 18,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GLALIE",
+      "source_path": "res/pokemon/glalie/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GLAMEOW",
+      "source_path": "res/pokemon/glameow/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GLIGAR",
+      "source_path": "res/pokemon/gligar/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GLISCOR",
+      "source_path": "res/pokemon/gliscor/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GLOOM",
+      "source_path": "res/pokemon/gloom/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GOLBAT",
+      "source_path": "res/pokemon/golbat/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GOLDEEN",
+      "source_path": "res/pokemon/goldeen/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GOLDUCK",
+      "source_path": "res/pokemon/golduck/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GOLEM",
+      "source_path": "res/pokemon/golem/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GOREBYSS",
+      "source_path": "res/pokemon/gorebyss/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GRANBULL",
+      "source_path": "res/pokemon/granbull/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GRAVELER",
+      "source_path": "res/pokemon/graveler/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GRIMER",
+      "source_path": "res/pokemon/grimer/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GROTLE",
+      "source_path": "res/pokemon/grotle/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GROVYLE",
+      "source_path": "res/pokemon/grovyle/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GROWLITHE",
+      "source_path": "res/pokemon/growlithe/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GRUMPIG",
+      "source_path": "res/pokemon/grumpig/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_GULPIN",
+      "source_path": "res/pokemon/gulpin/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_HAPPINY",
+      "source_path": "res/pokemon/happiny/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_HARIYAMA",
+      "source_path": "res/pokemon/hariyama/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_HAUNTER",
+      "source_path": "res/pokemon/haunter/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_HERACROSS",
+      "source_path": "res/pokemon/heracross/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_HIPPOPOTAS",
+      "source_path": "res/pokemon/hippopotas/data.json",
+      "field": "hatch_cycles",
+      "before": 30,
+      "target": 15,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_HIPPOWDON",
+      "source_path": "res/pokemon/hippowdon/data.json",
+      "field": "hatch_cycles",
+      "before": 30,
+      "target": 15,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_HITMONCHAN",
+      "source_path": "res/pokemon/hitmonchan/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_HITMONLEE",
+      "source_path": "res/pokemon/hitmonlee/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_HITMONTOP",
+      "source_path": "res/pokemon/hitmontop/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_HONCHKROW",
+      "source_path": "res/pokemon/honchkrow/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_HOOTHOOT",
+      "source_path": "res/pokemon/hoothoot/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_HOPPIP",
+      "source_path": "res/pokemon/hoppip/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_HORSEA",
+      "source_path": "res/pokemon/horsea/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_HOUNDOOM",
+      "source_path": "res/pokemon/houndoom/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_HOUNDOUR",
+      "source_path": "res/pokemon/houndour/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_HUNTAIL",
+      "source_path": "res/pokemon/huntail/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_HYPNO",
+      "source_path": "res/pokemon/hypno/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_IGGLYBUFF",
+      "source_path": "res/pokemon/igglybuff/data.json",
+      "field": "hatch_cycles",
+      "before": 10,
+      "target": 5,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ILLUMISE",
+      "source_path": "res/pokemon/illumise/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_INFERNAPE",
+      "source_path": "res/pokemon/infernape/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_IVYSAUR",
+      "source_path": "res/pokemon/ivysaur/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_JIGGLYPUFF",
+      "source_path": "res/pokemon/jigglypuff/data.json",
+      "field": "hatch_cycles",
+      "before": 10,
+      "target": 5,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_JOLTEON",
+      "source_path": "res/pokemon/jolteon/data.json",
+      "field": "hatch_cycles",
+      "before": 35,
+      "target": 18,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_JUMPLUFF",
+      "source_path": "res/pokemon/jumpluff/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_JYNX",
+      "source_path": "res/pokemon/jynx/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_KABUTO",
+      "source_path": "res/pokemon/kabuto/data.json",
+      "field": "hatch_cycles",
+      "before": 30,
+      "target": 15,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_KABUTOPS",
+      "source_path": "res/pokemon/kabutops/data.json",
+      "field": "hatch_cycles",
+      "before": 30,
+      "target": 15,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_KADABRA",
+      "source_path": "res/pokemon/kadabra/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_KAKUNA",
+      "source_path": "res/pokemon/kakuna/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_KANGASKHAN",
+      "source_path": "res/pokemon/kangaskhan/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_KECLEON",
+      "source_path": "res/pokemon/kecleon/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_KINGDRA",
+      "source_path": "res/pokemon/kingdra/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_KINGLER",
+      "source_path": "res/pokemon/kingler/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_KIRLIA",
+      "source_path": "res/pokemon/kirlia/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_KOFFING",
+      "source_path": "res/pokemon/koffing/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_KRABBY",
+      "source_path": "res/pokemon/krabby/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_KRICKETOT",
+      "source_path": "res/pokemon/kricketot/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_KRICKETUNE",
+      "source_path": "res/pokemon/kricketune/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LAIRON",
+      "source_path": "res/pokemon/lairon/data.json",
+      "field": "hatch_cycles",
+      "before": 35,
+      "target": 18,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LANTURN",
+      "source_path": "res/pokemon/lanturn/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LAPRAS",
+      "source_path": "res/pokemon/lapras/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LARVITAR",
+      "source_path": "res/pokemon/larvitar/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LEAFEON",
+      "source_path": "res/pokemon/leafeon/data.json",
+      "field": "hatch_cycles",
+      "before": 35,
+      "target": 18,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LEDIAN",
+      "source_path": "res/pokemon/ledian/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LEDYBA",
+      "source_path": "res/pokemon/ledyba/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LICKILICKY",
+      "source_path": "res/pokemon/lickilicky/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LICKITUNG",
+      "source_path": "res/pokemon/lickitung/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LILEEP",
+      "source_path": "res/pokemon/lileep/data.json",
+      "field": "hatch_cycles",
+      "before": 30,
+      "target": 15,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LINOONE",
+      "source_path": "res/pokemon/linoone/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LOMBRE",
+      "source_path": "res/pokemon/lombre/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LOPUNNY",
+      "source_path": "res/pokemon/lopunny/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LOTAD",
+      "source_path": "res/pokemon/lotad/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LOUDRED",
+      "source_path": "res/pokemon/loudred/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LUCARIO",
+      "source_path": "res/pokemon/lucario/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LUDICOLO",
+      "source_path": "res/pokemon/ludicolo/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LUMINEON",
+      "source_path": "res/pokemon/lumineon/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LUNATONE",
+      "source_path": "res/pokemon/lunatone/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LUVDISC",
+      "source_path": "res/pokemon/luvdisc/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LUXIO",
+      "source_path": "res/pokemon/luxio/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_LUXRAY",
+      "source_path": "res/pokemon/luxray/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MACHAMP",
+      "source_path": "res/pokemon/machamp/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MACHOKE",
+      "source_path": "res/pokemon/machoke/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MACHOP",
+      "source_path": "res/pokemon/machop/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MAGBY",
+      "source_path": "res/pokemon/magby/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MAGCARGO",
+      "source_path": "res/pokemon/magcargo/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MAGMAR",
+      "source_path": "res/pokemon/magmar/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MAGMORTAR",
+      "source_path": "res/pokemon/magmortar/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MAGNEMITE",
+      "source_path": "res/pokemon/magnemite/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MAGNETON",
+      "source_path": "res/pokemon/magneton/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MAGNEZONE",
+      "source_path": "res/pokemon/magnezone/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MAKUHITA",
+      "source_path": "res/pokemon/makuhita/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MAMOSWINE",
+      "source_path": "res/pokemon/mamoswine/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MANAPHY",
+      "source_path": "res/pokemon/manaphy/data.json",
+      "field": "hatch_cycles",
+      "before": 10,
+      "target": 5,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MANECTRIC",
+      "source_path": "res/pokemon/manectric/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MANKEY",
+      "source_path": "res/pokemon/mankey/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MANTINE",
+      "source_path": "res/pokemon/mantine/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MANTYKE",
+      "source_path": "res/pokemon/mantyke/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MAREEP",
+      "source_path": "res/pokemon/mareep/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MARILL",
+      "source_path": "res/pokemon/marill/data.json",
+      "field": "hatch_cycles",
+      "before": 10,
+      "target": 5,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MAROWAK",
+      "source_path": "res/pokemon/marowak/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MARSHTOMP",
+      "source_path": "res/pokemon/marshtomp/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MASQUERAIN",
+      "source_path": "res/pokemon/masquerain/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MAWILE",
+      "source_path": "res/pokemon/mawile/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MEDICHAM",
+      "source_path": "res/pokemon/medicham/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MEDITITE",
+      "source_path": "res/pokemon/meditite/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MEGANIUM",
+      "source_path": "res/pokemon/meganium/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MEOWTH",
+      "source_path": "res/pokemon/meowth/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_METAGROSS",
+      "source_path": "res/pokemon/metagross/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_METANG",
+      "source_path": "res/pokemon/metang/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_METAPOD",
+      "source_path": "res/pokemon/metapod/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MIGHTYENA",
+      "source_path": "res/pokemon/mightyena/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MILOTIC",
+      "source_path": "res/pokemon/milotic/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MILTANK",
+      "source_path": "res/pokemon/miltank/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MIME_JR",
+      "source_path": "res/pokemon/mime_jr/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MINUN",
+      "source_path": "res/pokemon/minun/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MISDREAVUS",
+      "source_path": "res/pokemon/misdreavus/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MISMAGIUS",
+      "source_path": "res/pokemon/mismagius/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MONFERNO",
+      "source_path": "res/pokemon/monferno/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MOTHIM",
+      "source_path": "res/pokemon/mothim/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MR_MIME",
+      "source_path": "res/pokemon/mr_mime/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MUDKIP",
+      "source_path": "res/pokemon/mudkip/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MUK",
+      "source_path": "res/pokemon/muk/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MUNCHLAX",
+      "source_path": "res/pokemon/munchlax/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_MURKROW",
+      "source_path": "res/pokemon/murkrow/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_NATU",
+      "source_path": "res/pokemon/natu/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_NIDOKING",
+      "source_path": "res/pokemon/nidoking/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_NIDORAN_F",
+      "source_path": "res/pokemon/nidoran_f/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_NIDORAN_M",
+      "source_path": "res/pokemon/nidoran_m/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_NIDORINO",
+      "source_path": "res/pokemon/nidorino/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_NINCADA",
+      "source_path": "res/pokemon/nincada/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_NINETALES",
+      "source_path": "res/pokemon/ninetales/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_NINJASK",
+      "source_path": "res/pokemon/ninjask/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_NOCTOWL",
+      "source_path": "res/pokemon/noctowl/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_NOSEPASS",
+      "source_path": "res/pokemon/nosepass/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_NUMEL",
+      "source_path": "res/pokemon/numel/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_NUZLEAF",
+      "source_path": "res/pokemon/nuzleaf/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_OCTILLERY",
+      "source_path": "res/pokemon/octillery/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ODDISH",
+      "source_path": "res/pokemon/oddish/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_OMANYTE",
+      "source_path": "res/pokemon/omanyte/data.json",
+      "field": "hatch_cycles",
+      "before": 30,
+      "target": 15,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_OMASTAR",
+      "source_path": "res/pokemon/omastar/data.json",
+      "field": "hatch_cycles",
+      "before": 30,
+      "target": 15,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ONIX",
+      "source_path": "res/pokemon/onix/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PACHIRISU",
+      "source_path": "res/pokemon/pachirisu/data.json",
+      "field": "hatch_cycles",
+      "before": 10,
+      "target": 5,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PARAS",
+      "source_path": "res/pokemon/paras/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PARASECT",
+      "source_path": "res/pokemon/parasect/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PELIPPER",
+      "source_path": "res/pokemon/pelipper/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PERSIAN",
+      "source_path": "res/pokemon/persian/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PHANPY",
+      "source_path": "res/pokemon/phanpy/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PHIONE",
+      "source_path": "res/pokemon/phione/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PICHU",
+      "source_path": "res/pokemon/pichu/data.json",
+      "field": "hatch_cycles",
+      "before": 10,
+      "target": 5,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PIDGEOT",
+      "source_path": "res/pokemon/pidgeot/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PIDGEOTTO",
+      "source_path": "res/pokemon/pidgeotto/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PIDGEY",
+      "source_path": "res/pokemon/pidgey/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PIKACHU",
+      "source_path": "res/pokemon/pikachu/data.json",
+      "field": "hatch_cycles",
+      "before": 10,
+      "target": 5,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PILOSWINE",
+      "source_path": "res/pokemon/piloswine/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PINECO",
+      "source_path": "res/pokemon/pineco/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PINSIR",
+      "source_path": "res/pokemon/pinsir/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PIPLUP",
+      "source_path": "res/pokemon/piplup/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PLUSLE",
+      "source_path": "res/pokemon/plusle/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_POLITOED",
+      "source_path": "res/pokemon/politoed/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_POLIWAG",
+      "source_path": "res/pokemon/poliwag/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_POLIWHIRL",
+      "source_path": "res/pokemon/poliwhirl/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_POLIWRATH",
+      "source_path": "res/pokemon/poliwrath/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PONYTA",
+      "source_path": "res/pokemon/ponyta/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_POOCHYENA",
+      "source_path": "res/pokemon/poochyena/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PORYGON",
+      "source_path": "res/pokemon/porygon/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PORYGON2",
+      "source_path": "res/pokemon/porygon2/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PORYGON_Z",
+      "source_path": "res/pokemon/porygon_z/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PRIMEAPE",
+      "source_path": "res/pokemon/primeape/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PRINPLUP",
+      "source_path": "res/pokemon/prinplup/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PROBOPASS",
+      "source_path": "res/pokemon/probopass/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PSYDUCK",
+      "source_path": "res/pokemon/psyduck/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PUPITAR",
+      "source_path": "res/pokemon/pupitar/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_PURUGLY",
+      "source_path": "res/pokemon/purugly/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_QUAGSIRE",
+      "source_path": "res/pokemon/quagsire/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_QUILAVA",
+      "source_path": "res/pokemon/quilava/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_QWILFISH",
+      "source_path": "res/pokemon/qwilfish/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_RAICHU",
+      "source_path": "res/pokemon/raichu/data.json",
+      "field": "hatch_cycles",
+      "before": 10,
+      "target": 5,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_RALTS",
+      "source_path": "res/pokemon/ralts/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_RAMPARDOS",
+      "source_path": "res/pokemon/rampardos/data.json",
+      "field": "hatch_cycles",
+      "before": 30,
+      "target": 15,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_RAPIDASH",
+      "source_path": "res/pokemon/rapidash/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_RATICATE",
+      "source_path": "res/pokemon/raticate/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_RATTATA",
+      "source_path": "res/pokemon/rattata/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_RELICANTH",
+      "source_path": "res/pokemon/relicanth/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_REMORAID",
+      "source_path": "res/pokemon/remoraid/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_RHYDON",
+      "source_path": "res/pokemon/rhydon/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_RHYHORN",
+      "source_path": "res/pokemon/rhyhorn/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_RHYPERIOR",
+      "source_path": "res/pokemon/rhyperior/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_RIOLU",
+      "source_path": "res/pokemon/riolu/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ROSELIA",
+      "source_path": "res/pokemon/roselia/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ROSERADE",
+      "source_path": "res/pokemon/roserade/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ROTOM",
+      "source_path": "res/pokemon/rotom/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SABLEYE",
+      "source_path": "res/pokemon/sableye/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SALAMENCE",
+      "source_path": "res/pokemon/salamence/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SANDSHREW",
+      "source_path": "res/pokemon/sandshrew/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SANDSLASH",
+      "source_path": "res/pokemon/sandslash/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SCEPTILE",
+      "source_path": "res/pokemon/sceptile/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SCIZOR",
+      "source_path": "res/pokemon/scizor/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SCYTHER",
+      "source_path": "res/pokemon/scyther/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SEADRA",
+      "source_path": "res/pokemon/seadra/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SEAKING",
+      "source_path": "res/pokemon/seaking/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SEALEO",
+      "source_path": "res/pokemon/sealeo/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SEEDOT",
+      "source_path": "res/pokemon/seedot/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SEEL",
+      "source_path": "res/pokemon/seel/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SENTRET",
+      "source_path": "res/pokemon/sentret/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SEVIPER",
+      "source_path": "res/pokemon/seviper/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SHARPEDO",
+      "source_path": "res/pokemon/sharpedo/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SHEDINJA",
+      "source_path": "res/pokemon/shedinja/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SHELGON",
+      "source_path": "res/pokemon/shelgon/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SHELLDER",
+      "source_path": "res/pokemon/shellder/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SHELLOS",
+      "source_path": "res/pokemon/shellos/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SHIELDON",
+      "source_path": "res/pokemon/shieldon/data.json",
+      "field": "hatch_cycles",
+      "before": 30,
+      "target": 15,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SHIFTRY",
+      "source_path": "res/pokemon/shiftry/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SHINX",
+      "source_path": "res/pokemon/shinx/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SHROOMISH",
+      "source_path": "res/pokemon/shroomish/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SHUCKLE",
+      "source_path": "res/pokemon/shuckle/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SHUPPET",
+      "source_path": "res/pokemon/shuppet/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SILCOON",
+      "source_path": "res/pokemon/silcoon/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SKARMORY",
+      "source_path": "res/pokemon/skarmory/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SKIPLOOM",
+      "source_path": "res/pokemon/skiploom/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SKITTY",
+      "source_path": "res/pokemon/skitty/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SKORUPI",
+      "source_path": "res/pokemon/skorupi/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SKUNTANK",
+      "source_path": "res/pokemon/skuntank/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SLAKING",
+      "source_path": "res/pokemon/slaking/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SLAKOTH",
+      "source_path": "res/pokemon/slakoth/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SLOWBRO",
+      "source_path": "res/pokemon/slowbro/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SLOWKING",
+      "source_path": "res/pokemon/slowking/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SLOWPOKE",
+      "source_path": "res/pokemon/slowpoke/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SLUGMA",
+      "source_path": "res/pokemon/slugma/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SMEARGLE",
+      "source_path": "res/pokemon/smeargle/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SMOOCHUM",
+      "source_path": "res/pokemon/smoochum/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SNEASEL",
+      "source_path": "res/pokemon/sneasel/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SNORLAX",
+      "source_path": "res/pokemon/snorlax/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SNORUNT",
+      "source_path": "res/pokemon/snorunt/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SNOVER",
+      "source_path": "res/pokemon/snover/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SNUBBULL",
+      "source_path": "res/pokemon/snubbull/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SOLROCK",
+      "source_path": "res/pokemon/solrock/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SPEAROW",
+      "source_path": "res/pokemon/spearow/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SPHEAL",
+      "source_path": "res/pokemon/spheal/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SPINARAK",
+      "source_path": "res/pokemon/spinarak/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SPINDA",
+      "source_path": "res/pokemon/spinda/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SPIRITOMB",
+      "source_path": "res/pokemon/spiritomb/data.json",
+      "field": "hatch_cycles",
+      "before": 30,
+      "target": 15,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SPOINK",
+      "source_path": "res/pokemon/spoink/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SQUIRTLE",
+      "source_path": "res/pokemon/squirtle/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_STANTLER",
+      "source_path": "res/pokemon/stantler/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_STARAPTOR",
+      "source_path": "res/pokemon/staraptor/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_STARAVIA",
+      "source_path": "res/pokemon/staravia/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_STARLY",
+      "source_path": "res/pokemon/starly/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_STARMIE",
+      "source_path": "res/pokemon/starmie/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_STARYU",
+      "source_path": "res/pokemon/staryu/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_STEELIX",
+      "source_path": "res/pokemon/steelix/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_STUNKY",
+      "source_path": "res/pokemon/stunky/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SUDOWOODO",
+      "source_path": "res/pokemon/sudowoodo/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SUNFLORA",
+      "source_path": "res/pokemon/sunflora/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SUNKERN",
+      "source_path": "res/pokemon/sunkern/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SURSKIT",
+      "source_path": "res/pokemon/surskit/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SWABLU",
+      "source_path": "res/pokemon/swablu/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SWALOT",
+      "source_path": "res/pokemon/swalot/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SWAMPERT",
+      "source_path": "res/pokemon/swampert/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SWELLOW",
+      "source_path": "res/pokemon/swellow/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_SWINUB",
+      "source_path": "res/pokemon/swinub/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TAILLOW",
+      "source_path": "res/pokemon/taillow/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TANGELA",
+      "source_path": "res/pokemon/tangela/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TANGROWTH",
+      "source_path": "res/pokemon/tangrowth/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TAUROS",
+      "source_path": "res/pokemon/tauros/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TEDDIURSA",
+      "source_path": "res/pokemon/teddiursa/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TENTACOOL",
+      "source_path": "res/pokemon/tentacool/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TENTACRUEL",
+      "source_path": "res/pokemon/tentacruel/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TOGEKISS",
+      "source_path": "res/pokemon/togekiss/data.json",
+      "field": "hatch_cycles",
+      "before": 10,
+      "target": 5,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TOGEPI",
+      "source_path": "res/pokemon/togepi/data.json",
+      "field": "hatch_cycles",
+      "before": 10,
+      "target": 5,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TOGETIC",
+      "source_path": "res/pokemon/togetic/data.json",
+      "field": "hatch_cycles",
+      "before": 10,
+      "target": 5,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TORCHIC",
+      "source_path": "res/pokemon/torchic/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TORKOAL",
+      "source_path": "res/pokemon/torkoal/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TORTERRA",
+      "source_path": "res/pokemon/torterra/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TOTODILE",
+      "source_path": "res/pokemon/totodile/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TOXICROAK",
+      "source_path": "res/pokemon/toxicroak/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TRAPINCH",
+      "source_path": "res/pokemon/trapinch/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TREECKO",
+      "source_path": "res/pokemon/treecko/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TROPIUS",
+      "source_path": "res/pokemon/tropius/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TURTWIG",
+      "source_path": "res/pokemon/turtwig/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TYPHLOSION",
+      "source_path": "res/pokemon/typhlosion/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TYRANITAR",
+      "source_path": "res/pokemon/tyranitar/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_TYROGUE",
+      "source_path": "res/pokemon/tyrogue/data.json",
+      "field": "hatch_cycles",
+      "before": 25,
+      "target": 13,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_UMBREON",
+      "source_path": "res/pokemon/umbreon/data.json",
+      "field": "hatch_cycles",
+      "before": 35,
+      "target": 18,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_URSARING",
+      "source_path": "res/pokemon/ursaring/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_VAPOREON",
+      "source_path": "res/pokemon/vaporeon/data.json",
+      "field": "hatch_cycles",
+      "before": 35,
+      "target": 18,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_VENOMOTH",
+      "source_path": "res/pokemon/venomoth/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_VENONAT",
+      "source_path": "res/pokemon/venonat/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_VENUSAUR",
+      "source_path": "res/pokemon/venusaur/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_VESPIQUEN",
+      "source_path": "res/pokemon/vespiquen/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_VIBRAVA",
+      "source_path": "res/pokemon/vibrava/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_VICTREEBEL",
+      "source_path": "res/pokemon/victreebel/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_VIGOROTH",
+      "source_path": "res/pokemon/vigoroth/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_VILEPLUME",
+      "source_path": "res/pokemon/vileplume/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_VOLBEAT",
+      "source_path": "res/pokemon/volbeat/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_VOLTORB",
+      "source_path": "res/pokemon/voltorb/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_VULPIX",
+      "source_path": "res/pokemon/vulpix/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_WAILMER",
+      "source_path": "res/pokemon/wailmer/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_WAILORD",
+      "source_path": "res/pokemon/wailord/data.json",
+      "field": "hatch_cycles",
+      "before": 40,
+      "target": 20,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_WALREIN",
+      "source_path": "res/pokemon/walrein/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_WARTORTLE",
+      "source_path": "res/pokemon/wartortle/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_WEAVILE",
+      "source_path": "res/pokemon/weavile/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_WEEDLE",
+      "source_path": "res/pokemon/weedle/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_WEEPINBELL",
+      "source_path": "res/pokemon/weepinbell/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_WEEZING",
+      "source_path": "res/pokemon/weezing/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_WHISCASH",
+      "source_path": "res/pokemon/whiscash/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_WHISMUR",
+      "source_path": "res/pokemon/whismur/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_WIGGLYTUFF",
+      "source_path": "res/pokemon/wigglytuff/data.json",
+      "field": "hatch_cycles",
+      "before": 10,
+      "target": 5,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_WINGULL",
+      "source_path": "res/pokemon/wingull/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_WOBBUFFET",
+      "source_path": "res/pokemon/wobbuffet/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_WOOPER",
+      "source_path": "res/pokemon/wooper/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_WORMADAM",
+      "source_path": "res/pokemon/wormadam/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_WURMPLE",
+      "source_path": "res/pokemon/wurmple/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_WYNAUT",
+      "source_path": "res/pokemon/wynaut/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_XATU",
+      "source_path": "res/pokemon/xatu/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_YANMA",
+      "source_path": "res/pokemon/yanma/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_YANMEGA",
+      "source_path": "res/pokemon/yanmega/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ZANGOOSE",
+      "source_path": "res/pokemon/zangoose/data.json",
+      "field": "hatch_cycles",
+      "before": 20,
+      "target": 10,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ZIGZAGOON",
+      "source_path": "res/pokemon/zigzagoon/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    },
+    {
+      "species": "SPECIES_ZUBAT",
+      "source_path": "res/pokemon/zubat/data.json",
+      "field": "hatch_cycles",
+      "before": 15,
+      "target": 8,
+      "rationale": "target = max(5, ceil(vanilla / 2))",
+      "locked_authority": "docs/overhaul/breeding/BREEDING_SPEC.md#11"
+    }
+  ]
+}

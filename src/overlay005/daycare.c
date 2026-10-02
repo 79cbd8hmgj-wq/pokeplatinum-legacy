@@ -33,12 +33,17 @@
 #include "unk_020559DC.h"
 #include "unk_02092494.h"
 
+#define BREEDING_RNG()                  LCRNG_Next()
+#define BREEDING_NATURE_OF(personality) Pokemon_GetNatureOf(personality)
+#define BREEDING_ARNG(personality)      ARNG_Next(personality)
+#include "overlay005/breeding_rules.h"
+
 #include "res/pokemon/species_egg_moves.h"
 
 typedef struct {
-    int fatherMoves[LEARNED_MOVES_MAX];
+    u16 fatherMoves[LEARNED_MOVES_MAX];
     int sharedMoves[LEARNED_MOVES_MAX];
-    int motherMoves[LEARNED_MOVES_MAX];
+    u16 motherMoves[LEARNED_MOVES_MAX];
     u16 eggSpeciesLevelUpMoves[50];
     u16 eggSpeciesEggMoves[MAX_EGG_MOVES];
 } EggMoveBuilder;
@@ -299,48 +304,26 @@ static void Daycare_CopyDaycareMonToBoxMonArray(Daycare *daycare, BoxPokemon *bo
     boxMon[1] = Daycare_GetBoxMon(daycare, 1);
 }
 
-static int Daycare_GetParentToInheritNature(Daycare *daycare)
+static u8 Daycare_GetEverstoneMask(Daycare *daycare)
 {
     int i;
-    int species[NUM_DAYCARE_MONS], slot = -1, dittoCount;
+    u8 mask = 0;
     BoxPokemon *boxMon[NUM_DAYCARE_MONS];
 
     Daycare_CopyDaycareMonToBoxMonArray(daycare, boxMon);
 
-    // search for female gender
     for (i = 0; i < NUM_DAYCARE_MONS; i++) {
-        if (BoxPokemon_GetGender(boxMon[i]) == GENDER_FEMALE) {
-            slot = i;
+        if (BoxPokemon_GetValue(boxMon[i], MON_DATA_HELD_ITEM, NULL) == ITEM_EVERSTONE) {
+            mask |= 1 << i;
         }
     }
 
-    // search for ditto
-    for (dittoCount = 0, i = 0; i < NUM_DAYCARE_MONS; i++) {
-        if ((species[i] = BoxPokemon_GetValue(boxMon[i], MON_DATA_SPECIES, NULL)) == SPECIES_DITTO) {
-            dittoCount++;
-            slot = i;
-        }
-    }
+    return mask;
+}
 
-    // coin flip on ...two Dittos
-    if (dittoCount == NUM_DAYCARE_MONS) {
-        if (LCRNG_Next() >= (0xffff / 2)) {
-            slot = 0;
-        } else {
-            slot = 1;
-        }
-    }
-
-    // Don't inherit nature if not holding Everstone
-    if (BoxPokemon_GetValue(boxMon[slot], MON_DATA_HELD_ITEM, NULL) == ITEM_EVERSTONE) {
-        if (LCRNG_Next() >= (0xffff / 2)) {
-            return -1;
-        }
-    } else {
-        return -1;
-    }
-
-    return slot;
+static int Daycare_GetParentToInheritNature(Daycare *daycare)
+{
+    return BreedingRules_PickNatureParent(Daycare_GetEverstoneMask(daycare));
 }
 
 static void Daycare_SetInheritedNature(Daycare *daycare)
@@ -373,42 +356,16 @@ static void Daycare_SetInheritedNature(Daycare *daycare)
     }
 }
 
-static void RemoveIVIndexFromList(u8 *ivs, u8 selectedIV)
-{
-    int i, j;
-    u8 temp[STAT_MAX];
-
-    ivs[selectedIV] = 0xff;
-
-    for (i = 0; i < STAT_MAX; i++) {
-        temp[i] = ivs[i];
-    }
-
-    j = 0;
-
-    for (i = 0; i < STAT_MAX; i++) {
-        if (temp[i] != 0xff) {
-            ivs[j++] = temp[i];
-        }
-    }
-}
-
 static void Egg_InheritIVs(Pokemon *egg, Daycare *daycare)
 {
-    u8 selectedIVs[NUM_INHERITED_IVS], i, availableIVs[STAT_MAX], slots[NUM_INHERITED_IVS], value;
+    u8 selectedIVs[NUM_INHERITED_IVS], slots[NUM_INHERITED_IVS], i, value;
+    u16 heldItems[NUM_DAYCARE_MONS];
 
-    for (i = 0; i < STAT_MAX; i++) {
-        availableIVs[i] = i;
+    for (i = 0; i < NUM_DAYCARE_MONS; i++) {
+        heldItems[i] = BoxPokemon_GetValue(Daycare_GetBoxMon(daycare, i), MON_DATA_HELD_ITEM, NULL);
     }
 
-    for (i = 0; i < NUM_INHERITED_IVS; i++) {
-        selectedIVs[i] = availableIVs[LCRNG_Next() % (STAT_MAX - i)];
-        RemoveIVIndexFromList(availableIVs, i);
-    }
-
-    for (i = 0; i < NUM_INHERITED_IVS; i++) {
-        slots[i] = LCRNG_Next() % NUM_DAYCARE_MONS;
-    }
+    BreedingRules_SelectInheritedIVs(heldItems, selectedIVs, slots);
 
     for (i = 0; i < NUM_INHERITED_IVS; i++) {
         BoxPokemon *daycareBoxMon = Daycare_GetBoxMon(daycare, slots[i]);
@@ -472,6 +429,7 @@ static u8 LoadSpeciesEggMoves(Pokemon *mon, u16 *eggMoves)
 static void Egg_BuildMoveset(Pokemon *egg, BoxPokemon *father, BoxPokemon *mother)
 {
     u16 i, j, v2, species, levelUpMoveCount, eggMoveCount, form;
+    u16 inheritedEggMoves[BREEDING_MAX_GATHERED_EGG_MOVES];
     EggMoveBuilder *builder = Heap_Alloc(HEAP_ID_FIELD1, sizeof(EggMoveBuilder));
 
     v2 = 0;
@@ -489,19 +447,12 @@ static void Egg_BuildMoveset(Pokemon *egg, BoxPokemon *father, BoxPokemon *mothe
 
     eggMoveCount = LoadSpeciesEggMoves(egg, builder->eggSpeciesEggMoves);
 
-    // Egg moves from the father
-    for (i = 0; i < LEARNED_MOVES_MAX; i++) {
-        if (builder->fatherMoves[i] != MOVE_NONE) {
-            for (j = 0; j < eggMoveCount; j++) {
-                if (builder->fatherMoves[i] == builder->eggSpeciesEggMoves[j]) {
-                    if (Pokemon_AddMove(egg, builder->fatherMoves[i]) == LEARNSET_ALL_SLOTS_FILLED) {
-                        Pokemon_ReplaceMove(egg, builder->fatherMoves[i]);
-                    }
-                    break;
-                }
-            }
-        } else {
-            break;
+    // Listed egg moves known by either parent (father first, no duplicates)
+    eggMoveCount = BreedingRules_GatherEggMoves(builder->fatherMoves, builder->motherMoves, builder->eggSpeciesEggMoves, eggMoveCount, inheritedEggMoves);
+
+    for (i = 0; i < eggMoveCount; i++) {
+        if (Pokemon_AddMove(egg, inheritedEggMoves[i]) == LEARNSET_ALL_SLOTS_FILLED) {
+            Pokemon_ReplaceMove(egg, inheritedEggMoves[i]);
         }
     }
 
@@ -557,46 +508,6 @@ void Daycare_ResetPersonalityAndStepCounter(Daycare *daycare)
 {
     Daycare_SetOffspringPersonality(daycare, 0);
     Daycare_SetStepCounter(daycare, 0);
-}
-
-static const u16 sIncenseBabyTable[][3] = {
-    { SPECIES_WYNAUT, ITEM_LAX_INCENSE, SPECIES_WOBBUFFET },
-    { SPECIES_AZURILL, ITEM_SEA_INCENSE, SPECIES_MARILL },
-    { SPECIES_MIME_JR, ITEM_ODD_INCENSE, SPECIES_MR_MIME },
-    { SPECIES_BONSLY, ITEM_ROCK_INCENSE, SPECIES_SUDOWOODO },
-    { SPECIES_MUNCHLAX, ITEM_FULL_INCENSE, SPECIES_SNORLAX },
-    { SPECIES_MANTYKE, ITEM_WAVE_INCENSE, SPECIES_MANTINE },
-    { SPECIES_BUDEW, ITEM_ROSE_INCENSE, SPECIES_ROSELIA },
-    { SPECIES_HAPPINY, ITEM_LUCK_INCENSE, SPECIES_CHANSEY },
-    { SPECIES_CHINGLING, ITEM_PURE_INCENSE, SPECIES_CHIMECHO }
-};
-
-static u16 Daycare_AlterEggSpeciesWithIncenseItem(u16 species, Daycare *daycare)
-{
-    u16 item1, item2, slot, i;
-    BoxPokemon *parents[2];
-
-    Daycare_CopyDaycareMonToBoxMonArray(daycare, parents);
-
-    for (i = 0; i < NELEMS(sIncenseBabyTable); i++) {
-        if (species == sIncenseBabyTable[i][0]) {
-            slot = i;
-            break;
-        }
-    }
-
-    if (i == NELEMS(sIncenseBabyTable)) {
-        return species;
-    }
-
-    item1 = BoxPokemon_GetValue(parents[0], MON_DATA_HELD_ITEM, NULL);
-    item2 = BoxPokemon_GetValue(parents[1], MON_DATA_HELD_ITEM, NULL);
-
-    if ((item1 != sIncenseBabyTable[slot][1]) && (item2 != sIncenseBabyTable[slot][1])) {
-        species = sIncenseBabyTable[slot][2];
-    }
-
-    return species;
 }
 
 static void Egg_TryGiveVoltTackle(Pokemon *mon, Daycare *daycare)
@@ -706,22 +617,58 @@ void Egg_CreateEgg(Pokemon *egg, u16 species, u8 param2, TrainerInfo *trainerInf
     UpdateMonStatusAndTrainerInfo(egg, trainerInfo, param4, metLocation, HEAP_ID_SYSTEM);
 }
 
-static void Egg_SetInitialData(Pokemon *mon, u16 species, Daycare *daycare, u32 monOTID, u8 form)
+// Ability slot (personality bit 0) of a parent, as the engine derives it.
+static int BoxMon_GetAbilitySlot(BoxPokemon *boxMon)
+{
+    u16 species = BoxPokemon_GetValue(boxMon, MON_DATA_SPECIES, NULL);
+    u8 form = BoxPokemon_GetValue(boxMon, MON_DATA_FORM, NULL);
+
+    if (SpeciesData_GetFormValue(species, form, SPECIES_DATA_ABILITY_2) != ABILITY_NONE) {
+        return BoxPokemon_GetValue(boxMon, MON_DATA_PERSONALITY, NULL) & 1;
+    }
+
+    return 0;
+}
+
+// Returns the ability slot the egg must have, or -1 when the species has a single
+// effective ability and the personality parity is irrelevant.
+static int Egg_RollAbilitySlot(u16 species, u8 form, BoxPokemon *speciesParent)
+{
+    u32 ability1 = SpeciesData_GetFormValue(species, form, SPECIES_DATA_ABILITY_1);
+    u32 ability2 = SpeciesData_GetFormValue(species, form, SPECIES_DATA_ABILITY_2);
+
+    if (ability2 == ABILITY_NONE || ability2 == ability1) {
+        return -1;
+    }
+
+    return BreedingRules_PickAbilitySlot(BoxMon_GetAbilitySlot(speciesParent));
+}
+
+static void Egg_SetInitialData(Pokemon *mon, u16 species, Daycare *daycare, u32 monOTID, u8 form, BoxPokemon *speciesParent)
 {
     u8 level;
     u16 ball;
     u32 personality;
+    int nature, abilitySlot;
     String *string;
     u8 hatchCycles = SpeciesData_GetSpeciesValue(species, SPECIES_DATA_HATCH_CYCLES);
 
     personality = Daycare_GetOffspringPersonality(daycare);
+
+    // An Everstone nature must survive the ability-slot fix and the Masuda rerolls.
+    nature = (Daycare_GetEverstoneMask(daycare) != 0) ? Pokemon_GetNatureOf(personality) : -1;
+    abilitySlot = Egg_RollAbilitySlot(species, form, speciesParent);
+
+    if (!BreedingRules_PersonalityMatches(personality, nature, abilitySlot)) {
+        personality = BreedingRules_NextPersonality(personality, nature, abilitySlot);
+    }
 
     if (Daycare_AreParentLanguagesDifferent(daycare)) {
         int i;
 
         if (Pokemon_IsPersonalityShiny(monOTID, personality) == FALSE) {
             for (i = 0; i < 4; i++) {
-                personality = ARNG_Next(personality);
+                personality = BreedingRules_NextPersonality(personality, nature, abilitySlot);
 
                 if (Pokemon_IsPersonalityShiny(monOTID, personality)) {
                     break;
@@ -755,13 +702,19 @@ void Daycare_GiveEggFromDaycare(Daycare *daycare, Party *party, TrainerInfo *tra
     Pokemon *mon = Pokemon_New(HEAP_ID_FIELD1);
 
     species = Egg_DetermineEggSpeciesAndParentSlots(daycare, parentSlots);
-    species = Daycare_AlterEggSpeciesWithIncenseItem(species, daycare);
 
     u32 monOTID = TrainerInfo_ID(trainerInfo);
     BoxPokemon *boxMon = Daycare_GetBoxMon(daycare, parentSlots[0]);
     u8 form = BoxPokemon_GetValue(boxMon, MON_DATA_FORM, NULL);
 
-    Egg_SetInitialData(mon, species, daycare, monOTID, form);
+    // The species parent is the non-Ditto parent (the mother in a normal pairing).
+    BoxPokemon *speciesParent = Daycare_GetBoxMon(daycare, parentSlots[0]);
+
+    if (BoxPokemon_GetValue(speciesParent, MON_DATA_SPECIES, NULL) == SPECIES_DITTO) {
+        speciesParent = Daycare_GetBoxMon(daycare, parentSlots[1]);
+    }
+
+    Egg_SetInitialData(mon, species, daycare, monOTID, form, speciesParent);
 
     Egg_InheritIVs(mon, daycare);
     Egg_BuildMoveset(mon, Daycare_GetBoxMon(daycare, parentSlots[1]), Daycare_GetBoxMon(daycare, parentSlots[0]));
@@ -790,7 +743,7 @@ static int Party_GetEggCyclesToSubtract(Party *party)
         if (Pokemon_GetValue(Party_GetPokemonBySlotIndex(party, i), MON_DATA_SANITY_IS_EGG, NULL) == FALSE) {
             ability = Pokemon_GetValue(Party_GetPokemonBySlotIndex(party, i), MON_DATA_ABILITY, NULL);
 
-            if ((ability == ABILITY_MAGMA_ARMOR) || (ability == ABILITY_FLAME_BODY)) {
+            if (BreedingRules_EggCyclesToSubtract(ability) == 2) {
                 return 2;
             }
         }
@@ -934,7 +887,7 @@ BOOL Daycare_Update(Daycare *daycare, Party *party, FieldSystem *fieldSystem)
     }
 
     if ((Daycare_HasEgg(daycare) == FALSE) && (monCount == NUM_DAYCARE_MONS)) {
-        if ((DaycareMon_GetSteps(Daycare_GetDaycareMon(daycare, 1)) & 0xff) == 0xff) {
+        if (BreedingRules_IsEggCheckStep(DaycareMon_GetSteps(Daycare_GetDaycareMon(daycare, 1)))) {
             compatibilityScore = Daycare_GetCompatibilityScore(daycare);
             rand = LCRNG_Next();
             rand = (rand * 100) / 0xffff;
@@ -963,11 +916,7 @@ BOOL Daycare_Update(Daycare *daycare, Party *party, FieldSystem *fieldSystem)
                 eggCycles = Pokemon_GetValue(mon, MON_DATA_FRIENDSHIP, NULL);
 
                 if (eggCycles != 0) {
-                    if (eggCycles >= toSubtract) {
-                        eggCycles -= toSubtract;
-                    } else {
-                        eggCycles--;
-                    }
+                    eggCycles = BreedingRules_SubtractEggCycles(eggCycles, toSubtract);
 
                     Pokemon_SetValue(mon, MON_DATA_FRIENDSHIP, (u8 *)&eggCycles);
                 } else {

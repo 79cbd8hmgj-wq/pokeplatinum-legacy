@@ -1,0 +1,258 @@
+{
+  "schema": "breeding_egg_move_changes/1",
+  "start_sha": "e2d73d33a702bc151ae283a1245ebf64575476ed",
+  "locked_authority": [
+    "docs/overhaul/breeding/BREEDING_SPEC.md#7",
+    "owner ruling on PR #18: preserve family egg moves orphaned by no-incense breeding; remove entries with no legal one-save donor chain"
+  ],
+  "note": "Targeted repair only; adult-keyed lists are left as dead data (those species can no longer hatch).",
+  "entries": [
+    {
+      "species": "SPECIES_AZURILL",
+      "source_path": "res/pokemon/azurill/data.json",
+      "before": [
+        "MOVE_ENCORE",
+        "MOVE_SING",
+        "MOVE_REFRESH",
+        "MOVE_SLAM",
+        "MOVE_TICKLE",
+        "MOVE_FAKE_TEARS"
+      ],
+      "target": [
+        "MOVE_ENCORE",
+        "MOVE_SING",
+        "MOVE_REFRESH",
+        "MOVE_SLAM",
+        "MOVE_TICKLE",
+        "MOVE_FAKE_TEARS",
+        "MOVE_LIGHT_SCREEN",
+        "MOVE_PRESENT",
+        "MOVE_AMNESIA",
+        "MOVE_FUTURE_SIGHT",
+        "MOVE_BELLY_DRUM",
+        "MOVE_PERISH_SONG",
+        "MOVE_SUPERSONIC",
+        "MOVE_AQUA_JET"
+      ],
+      "rationale": "preserve existing Marill-family egg moves orphaned because no-incense breeding now hatches Azurill; moves taken from the former Marill list",
+      "locked_authority": [
+        "owner ruling on PR #18: preserve family egg moves orphaned by no-incense breeding; remove entries with no legal one-save donor chain",
+        "docs/overhaul/breeding/BREEDING_SPEC.md#9"
+      ]
+    },
+    {
+      "species": "SPECIES_CLEFFA",
+      "source_path": "res/pokemon/cleffa/data.json",
+      "before": [
+        "MOVE_PRESENT",
+        "MOVE_METRONOME",
+        "MOVE_AMNESIA",
+        "MOVE_BELLY_DRUM",
+        "MOVE_SPLASH",
+        "MOVE_MIMIC",
+        "MOVE_WISH",
+        "MOVE_SUBSTITUTE",
+        "MOVE_FAKE_TEARS",
+        "MOVE_COVET"
+      ],
+      "rationale": "remove MOVE_BELLY_DRUM: no legal one-save donor chain under the final egg groups/learnsets; no unrelated data changed to create one",
+      "locked_authority": [
+        "owner ruling on PR #18: preserve family egg moves orphaned by no-incense breeding; remove entries with no legal one-save donor chain",
+        "docs/overhaul/breeding/BREEDING_SPEC.md#7"
+      ],
+      "target": [
+        "MOVE_PRESENT",
+        "MOVE_METRONOME",
+        "MOVE_AMNESIA",
+        "MOVE_SPLASH",
+        "MOVE_MIMIC",
+        "MOVE_WISH",
+        "MOVE_SUBSTITUTE",
+        "MOVE_FAKE_TEARS",
+        "MOVE_COVET"
+      ]
+    },
+    {
+      "species": "SPECIES_GEODUDE",
+      "source_path": "res/pokemon/geodude/data.json",
+      "before": [
+        "MOVE_MEGA_PUNCH",
+        "MOVE_ROCK_SLIDE",
+        "MOVE_BLOCK",
+        "MOVE_HAMMER_ARM",
+        "MOVE_FLAIL"
+      ],
+      "rationale": "remove MOVE_MEGA_PUNCH: no legal one-save donor chain under the final egg groups/learnsets; no unrelated data changed to create one",
+      "locked_authority": [
+        "owner ruling on PR #18: preserve family egg moves orphaned by no-incense breeding; remove entries with no legal one-save donor chain",
+        "docs/overhaul/breeding/BREEDING_SPEC.md#7"
+      ],
+      "target": [
+        "MOVE_ROCK_SLIDE",
+        "MOVE_BLOCK",
+        "MOVE_HAMMER_ARM",
+        "MOVE_FLAIL"
+      ]
+    },
+    {
+      "species": "SPECIES_IGGLYBUFF",
+      "source_path": "res/pokemon/igglybuff/data.json",
+      "before": [
+        "MOVE_PERISH_SONG",
+        "MOVE_PRESENT",
+        "MOVE_FAINT_ATTACK",
+        "MOVE_WISH",
+        "MOVE_FAKE_TEARS",
+        "MOVE_LAST_RESORT",
+        "MOVE_COVET",
+        "MOVE_GRAVITY"
+      ],
+      "rationale": "remove MOVE_PERISH_SONG: no legal one-save donor chain under the final egg groups/learnsets; no unrelated data changed to create one",
+      "locked_authority": [
+        "owner ruling on PR #18: preserve family egg moves orphaned by no-incense breeding; remove entries with no legal one-save donor chain",
+        "docs/overhaul/breeding/BREEDING_SPEC.md#7"
+      ],
+      "target": [
+        "MOVE_PRESENT",
+        "MOVE_FAINT_ATTACK",
+        "MOVE_WISH",
+        "MOVE_FAKE_TEARS",
+        "MOVE_LAST_RESORT",
+        "MOVE_COVET",
+        "MOVE_GRAVITY"
+      ]
+    },
+    {
+      "species": "SPECIES_MANKEY",
+      "source_path": "res/pokemon/mankey/data.json",
+      "before": [
+        "MOVE_ROCK_SLIDE",
+        "MOVE_FORESIGHT",
+        "MOVE_MEDITATE",
+        "MOVE_COUNTER",
+        "MOVE_REVERSAL",
+        "MOVE_BEAT_UP",
+        "MOVE_REVENGE",
+        "MOVE_SMELLING_SALT",
+        "MOVE_CLOSE_COMBAT"
+      ],
+      "rationale": "remove MOVE_MEDITATE: no legal one-save donor chain under the final egg groups/learnsets; no unrelated data changed to create one",
+      "locked_authority": [
+        "owner ruling on PR #18: preserve family egg moves orphaned by no-incense breeding; remove entries with no legal one-save donor chain",
+        "docs/overhaul/breeding/BREEDING_SPEC.md#7"
+      ],
+      "target": [
+        "MOVE_ROCK_SLIDE",
+        "MOVE_FORESIGHT",
+        "MOVE_COUNTER",
+        "MOVE_REVERSAL",
+        "MOVE_BEAT_UP",
+        "MOVE_REVENGE",
+        "MOVE_SMELLING_SALT",
+        "MOVE_CLOSE_COMBAT"
+      ]
+    },
+    {
+      "species": "SPECIES_MUNCHLAX",
+      "source_path": "res/pokemon/munchlax/data.json",
+      "before": [
+        "MOVE_LICK",
+        "MOVE_CHARM",
+        "MOVE_DOUBLE_EDGE",
+        "MOVE_CURSE",
+        "MOVE_SUBSTITUTE",
+        "MOVE_WHIRLWIND",
+        "MOVE_PURSUIT",
+        "MOVE_ZEN_HEADBUTT"
+      ],
+      "target": [
+        "MOVE_LICK",
+        "MOVE_CHARM",
+        "MOVE_DOUBLE_EDGE",
+        "MOVE_CURSE",
+        "MOVE_SUBSTITUTE",
+        "MOVE_WHIRLWIND",
+        "MOVE_PURSUIT",
+        "MOVE_ZEN_HEADBUTT",
+        "MOVE_FISSURE"
+      ],
+      "rationale": "preserve existing Snorlax-family egg moves orphaned because no-incense breeding now hatches Munchlax; moves taken from the former Snorlax list",
+      "locked_authority": [
+        "owner ruling on PR #18: preserve family egg moves orphaned by no-incense breeding; remove entries with no legal one-save donor chain",
+        "docs/overhaul/breeding/BREEDING_SPEC.md#9"
+      ]
+    },
+    {
+      "species": "SPECIES_SHELLDER",
+      "source_path": "res/pokemon/shellder/data.json",
+      "before": [
+        "MOVE_BUBBLE_BEAM",
+        "MOVE_TAKE_DOWN",
+        "MOVE_BARRIER",
+        "MOVE_RAPID_SPIN",
+        "MOVE_SCREECH",
+        "MOVE_ICICLE_SPEAR",
+        "MOVE_MUD_SHOT"
+      ],
+      "rationale": "remove MOVE_TAKE_DOWN: no legal one-save donor chain under the final egg groups/learnsets; no unrelated data changed to create one",
+      "locked_authority": [
+        "owner ruling on PR #18: preserve family egg moves orphaned by no-incense breeding; remove entries with no legal one-save donor chain",
+        "docs/overhaul/breeding/BREEDING_SPEC.md#7"
+      ],
+      "target": [
+        "MOVE_BUBBLE_BEAM",
+        "MOVE_BARRIER",
+        "MOVE_RAPID_SPIN",
+        "MOVE_SCREECH",
+        "MOVE_ICICLE_SPEAR",
+        "MOVE_MUD_SHOT"
+      ]
+    }
+  ],
+  "migrated_moves": [
+    {
+      "from": "SPECIES_MARILL",
+      "to": "SPECIES_AZURILL",
+      "moves": [
+        "MOVE_LIGHT_SCREEN",
+        "MOVE_PRESENT",
+        "MOVE_AMNESIA",
+        "MOVE_FUTURE_SIGHT",
+        "MOVE_BELLY_DRUM",
+        "MOVE_PERISH_SONG",
+        "MOVE_SUPERSONIC",
+        "MOVE_AQUA_JET"
+      ]
+    },
+    {
+      "from": "SPECIES_SNORLAX",
+      "to": "SPECIES_MUNCHLAX",
+      "moves": [
+        "MOVE_FISSURE"
+      ]
+    }
+  ],
+  "removed_moves": [
+    {
+      "egg_species": "SPECIES_CLEFFA",
+      "move": "MOVE_BELLY_DRUM"
+    },
+    {
+      "egg_species": "SPECIES_IGGLYBUFF",
+      "move": "MOVE_PERISH_SONG"
+    },
+    {
+      "egg_species": "SPECIES_GEODUDE",
+      "move": "MOVE_MEGA_PUNCH"
+    },
+    {
+      "egg_species": "SPECIES_MANKEY",
+      "move": "MOVE_MEDITATE"
+    },
+    {
+      "egg_species": "SPECIES_SHELLDER",
+      "move": "MOVE_TAKE_DOWN"
+    }
+  ],
+  "unreachable_pending_design": []
+}

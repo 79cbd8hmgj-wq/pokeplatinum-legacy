@@ -13,7 +13,9 @@ Last verified against repository/project history: 2026-10-02.
 - **Known design blockers:** 0.
 - **C2 TM/HM mechanics (HM battle rework, reusable TMs, TM acquisition/economy):** IMPLEMENTED (source + validator verified; Rev 0/Rev 1 build via CI on the C2 PR); see `implementation/C2_MECHANICS_IMPLEMENTATION_AUDIT.md`. Focused runtime QA pending.
 - **EXP/economy port:** IMPLEMENTED (conserved 60/40 team EXP, participant-only EVs, prize/price cleanup, free Move Reminder, half-cost tutors, Veilstone evolution-stone vendor, postgame Rare Candy; source + validator + mutation tests; Rev 0/Rev 1 build via CI); runtime **DEFERRED TO FINAL OVERHAUL PLAYTEST**. Audit: `implementation/economy/ECONOMY_IMPLEMENTATION_AUDIT.md`.
-- **Next source task:** Poké Ball rebalance. Runtime QA of C1/C2/created moves/evolution is deferred to the final overhaul playtest.
+- **Poké Ball rebalance:** IMPLEMENTED and merged (PR #17; source + validator verified, build via CI; capture runtime QA pending).
+- **Breeding 2.0:** IMPLEMENTED (source + host-compiled rules harness + validator + mutation tests verified; Rev 0/Rev 1 build via CI on the Breeding PR); **runtime breeding QA PENDING — not VERIFIED**. Audit/manifests: `implementation/breeding/`. Egg-move legality audit: 0 unreachable / 0 pending after the owner ruling below.
+- **Next source task:** next locked subsystem after Breeding 2.0 (trainer overhaul / events per `DESIGN_PIPELINE.md`). Runtime QA of C1/C2/created moves/evolution/capture/breeding is deferred to the final overhaul playtest.
 
 ## Mainline implementation evidence
 
@@ -71,8 +73,8 @@ They are provenance sources, not current implementation targets.
 | World/#001–#493 availability — special acquisitions (starters, fossils, Spiritomb, Rotom, Tyrogue, Happiny, Eevee, Porygon, Riolu, Castform, Feebas) | LOCKED/RESERVED BY OWNING SPECS WHERE APPLICABLE | IMPLEMENTED on main via PR #11 | source + L2 build + validator (S1–S5 + 25 mutation cases); runtime pending |
 | Trainer overhaul | PLANNED | not started | pending |
 | Economy/EXP port | LOCKED | IMPLEMENTED | source + validator + mutation tests + dual-revision CI build; runtime DEFERRED TO FINAL OVERHAUL PLAYTEST |
-| Capture/Poké Ball port | IMPLEMENTED (L1/validators) | `claude/platinum-pokeball-overhaul-qf25mf` | build + runtime QA pending; see `capture/POKE_BALL_FEASIBILITY_AUDIT.md`, `tools/overhaul/pokeballs/` |
-| Breeding-system port | PLANNED PORT | not started | pending |
+| Capture/Poké Ball port | LOCKED | IMPLEMENTED (merged, PR #17) | validators pass; CI build; runtime QA pending; see `capture/POKE_BALL_FEASIBILITY_AUDIT.md`, `tools/overhaul/pokeballs/` |
+| Breeding 2.0 | LOCKED | IMPLEMENTED (`claude/platinum-breeding-2`) | source + harness + validator verified; CI build; runtime QA pending; see `implementation/breeding/BREEDING_VALIDATION_REPORT.md` |
 | Event restoration | PLANNED | not started | pending |
 | Frontier/postgame | PLANNED | partial design only | pending |
 | Full QA/release | PLANNED | not started | pending |
@@ -188,7 +190,7 @@ Do not invent one. This is not a build blocker.
 
 ## Immediate next actions
 
-1. Next source task: Poké Ball rebalance (`pokeballs/POKE_BALL_IMPLEMENTATION_PLAN.md`).
+1. Next source task: the next locked subsystem after Breeding 2.0 (Poké Ball and Breeding 2.0 are implemented).
 2. Continue the remaining locked subsystems from canonical repo authority; ordinary and special nonlegendary availability are source/build complete.
 3. Defer focused runtime QA until the overhaul is otherwise complete, per user direction.
 
@@ -210,7 +212,7 @@ Key locks: Platinum-native EXP pool, conserved 60/40 team-wide distribution, Exp
 
 ## Poké Ball rebalance
 
-Status: **LOCKED SPEC — awaiting implementation**
+Status: **IMPLEMENTED — merged via PR #17 (runtime QA pending)**
 
 Canonical authority:
 - `docs/overhaul/pokeballs/POKE_BALL_REBALANCE_SPEC.md`
@@ -221,14 +223,17 @@ Design locks include Quick 5x first-turn, Timer 4x by turn 10, Repeat 3.5x, Dusk
 
 ## Breeding 2.0
 
-Status: **LOCKED SPEC — awaiting implementation**
+Status: **IMPLEMENTED — source + validator verified; Rev 0/Rev 1 build via CI; runtime breeding QA PENDING (not VERIFIED)**
 
 Canonical authority:
-- `docs/overhaul/breeding/BREEDING_2_SPEC.md`
-- `docs/overhaul/breeding/BREEDING_2_IMPLEMENTATION_PLAN.md`
+- `docs/overhaul/breeding/BREEDING_SPEC.md`
+- `docs/overhaul/breeding/BREEDING_IMPLEMENTATION_PLAN.md`
 
-Key locks: 100% Everstone nature inheritance, four unique inherited IV stats, Power-item forced IV inheritance, 80/20 normal ability-slot inheritance, either-parent egg-move inheritance, no-incense babies, 128-step egg checks, half hatch cycles with a five-cycle minimum, one-save egg-move legality validation, renewable midgame breeding supplies, and no broad created-move leakage into egg pools.
+Started from `e2d73d33a702bc151ae283a1245ebf64575476ed`. Implemented: 100% Everstone (either parent, no gender restriction), four distinct inherited IVs (also fixes vanilla's repeatable-stat bug), six Power items, 80/20 ability slot, either-parent egg moves, no-incense babies (9), 128-step egg check, halved hatch cycles (454 edits, min 5), Veilstone 2F battle-item counter stocks Everstone ₽200 + six Power items ₽3,000. Engine rules live in `include/overlay005/breeding_rules.h` (host-testable); manifests/report in `implementation/breeding/`; validator `tools/overhaul/validate_breeding.py`.
 
+Normalization: the 255/230-step constant in `Daycare_GetEggCycleLength` is the *hatch-cycle* length, not the egg-roll cadence, and is left unchanged (halving it would also quarter hatch time, contradicting spec #11). The egg roll (day-care step counter `& 0xff`) became `& 0x7f`.
+
+Owner ruling applied (PR #18): the 9 egg moves orphaned by the no-incense change were migrated (Marill→Azurill: Light Screen, Present, Amnesia, Future Sight, Belly Drum, Perish Song, Supersonic, Aqua Jet; Snorlax→Munchlax: Fissure) and 5 donorless entries were removed (Cleffa Belly Drum, Igglybuff Perish Song, Geodude Mega Punch, Mankey Meditate, Shellder Take Down). No other egg-move/egg-group/learnset changes. Unresolved breeding blockers: 0.
 
 ## Legendary / Mythical events
 
