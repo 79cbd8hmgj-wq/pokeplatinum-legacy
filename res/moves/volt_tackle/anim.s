@@ -24,6 +24,7 @@ L_0:
     CreateEmitter 0, 4, EMITTER_CB_SET_POS_TO_DEFENDER
     Delay 40
     Func_Shake 2, 0, 1, 2, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
+    Func_ShakeBg 2, 4, 0, 3, 0, SHAKE_BG_TARGET_BASE
     CreateEmitter 0, 2, EMITTER_CB_GENERIC
     SetExtraParams 0, 2, 2, 0, 0, 0
     PlayLoopedSoundEffectR SEQ_SE_DP_W085B, 3, 2
