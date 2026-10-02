@@ -20,8 +20,25 @@ VictoryRoad_Collector:
     LockAll
     FacePlayer
     GoToIfSet FLAG_GAME_COMPLETED, VictoryRoad1F_YoullMeetManyPokemon
+    GoToIfSet FLAG_RECEIVED_ROUTE_204_NORTH_TM78, VictoryRoad1F_AimForPokemonLeague
+    Message VictoryRoad1F_Text_AimForPokemonLeague
+    SetVar VAR_0x8004, ITEM_TM78
+    SetVar VAR_0x8005, 1
+    GoToIfCannotFitItem VAR_0x8004, VAR_0x8005, VAR_RESULT, VictoryRoad1F_TM78BagFull
+    Common_GiveItemQuantity
+    SetFlag FLAG_RECEIVED_ROUTE_204_NORTH_TM78
+    GoTo VictoryRoad1F_CollectorEnd
+    End
+
+VictoryRoad1F_AimForPokemonLeague:
     Message VictoryRoad1F_Text_AimForPokemonLeague
     GoTo VictoryRoad1F_CollectorEnd
+    End
+
+VictoryRoad1F_TM78BagFull:
+    Common_MessageBagIsFull
+    CloseMessage
+    ReleaseAll
     End
 
 VictoryRoad1F_YoullMeetManyPokemon:
