@@ -836,6 +836,30 @@ Implementation order:
 - screen shake/impact treatment
 - weather presentation
 
+### G5 battle-terrain palette checkpoint
+
+Implemented the first battle-background pass using source-backed terrain palettes rather than
+changing sprite geometry or battle logic.
+
+Added reproducible generator:
+- `tools/visual_overhaul/generate_battle_terrain.py`
+
+First-pass terrain families:
+- grass — refreshed day/evening/night palettes with stronger time-of-day separation
+- cave — cooler slate/indigo depth and less flat gray
+- ice — cleaner cyan/blue-white highlights with stronger cold contrast
+- Distortion World — shifted the retail muted rose family toward a more deliberate violet/magenta identity
+
+Resource-contract invariants:
+- all terrain sprite PNG geometry is unchanged
+- NCGR pixel indices are unchanged
+- cells and animations are unchanged
+- archive ordering is unchanged
+- only 16-color JASC palette source data changed
+
+This is the opening G5 background/staging batch. Later terrain families should follow only
+after this batch clears ordinary ROM build/resource validation.
+
 ### G6 — Showcase areas
 Primary quality benchmarks:
 - Eterna Forest
