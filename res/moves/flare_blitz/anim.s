@@ -16,6 +16,7 @@ L_0:
     SwitchBg 33, BATTLE_BG_SWITCH_MODE_FADE
     Delay 5
     Func_Shake 1, 0, 1, 2, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
+    Func_ShakeBg 2, 3, 0, 2, 0, SHAKE_BG_TARGET_BASE
     PlaySoundEffectR SEQ_SE_DP_186
     Delay 2
     Func_FadeBattlerSprite BATTLE_ANIM_DEFENDER, 0, 1, BATTLE_COLOR_DARK_RED2, 14, 0
