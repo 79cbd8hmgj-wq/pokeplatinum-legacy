@@ -37,3 +37,26 @@ environment assets:
 4. replace or recolor only the specific Eterna-facing textures that materially
    improve the scene
 5. leave map collision and progression geometry unchanged
+
+## Batch 2: dedicated Eterna texture namespace
+
+The first lighting commit exposed an important shared-area-data issue:
+`area_data_054` is also used by Fullmoon Island Forest, Newmoon Island Forest,
+and one unknown map header. Changing that shared record did not actually isolate
+Eterna Forest.
+
+This batch fixes the scope and prepares the real environment reconstruction:
+
+- restored shared `area_data_054` to `lighting_set_004`
+- added `area_data_075` exclusively for Eterna Forest
+- Eterna now uses `lighting_set_010` through its own area-data record
+- cloned `map_texture_set_053` to dedicated `map_texture_set_074`
+- Eterna now points to texture set 074
+- Fullmoon/Newmoon and the other area-054 user remain on texture set 053
+
+The cloned texture set is intentionally byte-identical in this checkpoint. The
+purpose is to give G4 a safe Eterna-only environment asset slot before any
+foliage/ground/water texture replacement is attempted.
+
+This means the next visible G4 edit can change Eterna's environment textures
+without silently changing the other forest maps.

@@ -4508,7 +4508,7 @@ static const MapHeader sMapHeaders[] = {
         .isFlyAllowed = TRUE,
     },
     [MAP_HEADER_ETERNA_FOREST] = {
-        .areaDataArchiveID = area_data_054,
+        .areaDataArchiveID = area_data_075,
         .preloadedMapObjectsArchiveID = 0xF,
         .mapMatrixID = map_matrix_007,
         .scriptsArchiveID = scripts_eterna_forest,
