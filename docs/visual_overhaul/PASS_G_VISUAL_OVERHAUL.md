@@ -988,6 +988,25 @@ Implementation rule:
 This establishes G5 screen-impact treatment through existing scriptable presentation systems
 with no new runtime allocation or resource format.
 
+### G5 battle staging / camera-language checkpoint
+
+The source audit found that Platinum's battle-animation script surface exposes particle-camera
+projection controls, but not a general-purpose full-scene camera dolly/zoom command. Practical
+battle "camera" language on this engine is therefore built from battler motion, switched/custom
+background scrolling, and selective base/effect-background movement.
+
+A second staging pilot now reinforces moves whose existing animation already implies large
+environmental force:
+
+- Earthquake — base arena now moves with the existing battler/effect shake
+- Hyper Beam — all normal/friendly-fire/contest branches add a restrained horizontal base-arena jolt at the beam impact
+- Dragon Rush — adds a short base-arena impact beneath the existing effect-background shake
+- Rock Slide — adds a compact two-axis arena shake beneath the existing defender shake
+
+The pilot does not replace particles, sounds, move timing, or existing battler animation.
+It uses the existing `Func_ShakeBg` implementation and explicitly targets
+`SHAKE_BG_TARGET_BASE`, keeping the effect-background behavior independent.
+
 ### G5 weather-initiation presentation checkpoint
 
 The four weather-setting moves now use the existing battle-background fade system to establish
