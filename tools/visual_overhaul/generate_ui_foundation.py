@@ -90,6 +90,75 @@ def make_window_frame(filename: str, outer: int, mid: int, light: int, fill: int
     image.save(WINDOW_DIR / filename)
 
 
+
+def make_scroll_cursor(palette: list[int]) -> None:
+    """Build the 12-frame 8x8 scroll cursor strip without changing its resource contract."""
+    frame_count = 12
+    frame_width = 8
+    frame_height = 8
+    image = Image.new("P", (frame_count * frame_width, frame_height), 0)
+    image.putpalette(palette)
+    pixels = image.load()
+
+    # A restrained bounce keeps the retail 12-frame timing while replacing the
+    # old cursor with a cleaner Pokemon-style down chevron.
+    y_offsets = [0, 0, 1, 1, 2, 2, 1, 1, 0, 0, 1, 0]
+    chevron = (
+        (1, 1, 4), (6, 1, 4),
+        (1, 2, 2), (2, 2, 4), (5, 2, 4), (6, 2, 2),
+        (2, 3, 1), (3, 3, 4), (4, 3, 4), (5, 3, 1),
+        (3, 4, 2), (4, 4, 2),
+        (3, 5, 4), (4, 5, 4),
+    )
+
+    for frame, y_offset in enumerate(y_offsets):
+        x_origin = frame * frame_width
+
+        for x, y, palette_index in chevron:
+            shifted_y = y + y_offset
+            if shifted_y < frame_height:
+                pixels[x_origin + x, shifted_y] = palette_index
+
+    image.save(WINDOW_DIR / "scroll_cursor.png")
+
+
+def make_wait_dial(palette: list[int]) -> None:
+    """Build the 8-frame 16x16 wait spinner using the shared window palette."""
+    frame_count = 8
+    frame_width = 16
+    frame_height = 16
+    image = Image.new("P", (frame_width, frame_count * frame_height), 0)
+    image.putpalette(palette)
+    pixels = image.load()
+
+    points = (
+        (7, 1),
+        (11, 3),
+        (13, 7),
+        (11, 11),
+        (7, 13),
+        (3, 11),
+        (1, 7),
+        (3, 3),
+    )
+
+    for frame in range(frame_count):
+        y_origin = frame * frame_height
+
+        for point_index, (x, y) in enumerate(points):
+            if point_index == frame:
+                palette_index = 1
+            elif point_index == (frame - 1) % frame_count:
+                palette_index = 2
+            else:
+                palette_index = 3
+
+            for dy in range(2):
+                for dx in range(2):
+                    pixels[x + dx, y_origin + y + dy] = palette_index
+
+    image.save(WINDOW_DIR / "wait_dial.png")
+
 def main() -> None:
     palette = shared_palette()
 
@@ -112,6 +181,9 @@ def main() -> None:
         fill=10,
         palette=palette,
     )
+
+    make_scroll_cursor(palette)
+    make_wait_dial(palette)
 
 
 if __name__ == "__main__":
