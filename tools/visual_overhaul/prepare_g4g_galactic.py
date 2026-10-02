@@ -19,11 +19,12 @@ def add_meson_entry(path: Path, anchor: str, entries: list[str]) -> None:
     missing=[e for e in entries if not any(f"'{e}'" in line for line in lines)]
     if not missing:
         return
-    anchor_line=f"    '{anchor}',"
-    try:
-        idx=lines.index(anchor_line)
-    except ValueError:
-        raise SystemExit(f"{path}: anchor {anchor!r} not found")
+    matches=[i for i,line in enumerate(lines) if f"'{anchor}'" in line]
+    if len(matches)!=1:
+        raise SystemExit(f"{path}: expected one anchor {anchor!r}, found {len(matches)}")
+    idx=matches[0]
+    if not lines[idx].rstrip().endswith(","):
+        lines[idx]=lines[idx].rstrip()+","
     lines[idx+1:idx+1]=[f"    '{e}'," for e in missing]
     path.write_text("\n".join(lines)+"\n")
 
