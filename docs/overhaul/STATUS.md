@@ -14,8 +14,9 @@ Last verified against repository/project history: 2026-10-02.
 - **C2 TM/HM mechanics (HM battle rework, reusable TMs, TM acquisition/economy):** IMPLEMENTED (source + validator verified; Rev 0/Rev 1 build via CI on the C2 PR); see `implementation/C2_MECHANICS_IMPLEMENTATION_AUDIT.md`. Focused runtime QA pending.
 - **EXP/economy port:** IMPLEMENTED (conserved 60/40 team EXP, participant-only EVs, prize/price cleanup, free Move Reminder, half-cost tutors, Veilstone evolution-stone vendor, postgame Rare Candy; source + validator + mutation tests; Rev 0/Rev 1 build via CI); runtime **DEFERRED TO FINAL OVERHAUL PLAYTEST**. Audit: `implementation/economy/ECONOMY_IMPLEMENTATION_AUDIT.md`.
 - **Poké Ball rebalance:** IMPLEMENTED and merged (PR #17; source + validator verified, build via CI; capture runtime QA pending).
-- **Breeding 2.0:** IMPLEMENTED (source + host-compiled rules harness + validator + mutation tests verified; Rev 0/Rev 1 build via CI on the Breeding PR); **runtime breeding QA PENDING — not VERIFIED**. Audit/manifests: `implementation/breeding/`. Egg-move legality audit: 0 unreachable / 0 pending after the owner ruling below.
-- **Next source task:** next locked subsystem after Breeding 2.0 (trainer overhaul / events per `DESIGN_PIPELINE.md`). Runtime QA of C1/C2/created moves/evolution/capture/breeding is deferred to the final overhaul playtest.
+- **Breeding 2.0:** IMPLEMENTED and merged (PR #18; source + host-compiled rules harness + validator + mutation tests verified; Rev 0/Rev 1 build via CI); **runtime breeding QA PENDING — not VERIFIED**. Audit/manifests: `implementation/breeding/`. Egg-move legality audit: 0 unreachable / 0 pending after the owner ruling below.
+- **Trainer overhaul (D1):** IMPLEMENTING → source + validator complete on branch `claude/platinum-trainer-overhaul-3guoip` (393 records changed: 8 Gyms, 33 Rival, 11 Galactic, Elite Four, Cynthia, 13 rematches, 332 ordinary/ordinary-rematch via archetype rules); Rev 0/Rev 1 build via CI on the Trainer PR is the remaining gate for IMPLEMENTED; trainer runtime QA **PENDING — not VERIFIED**. Manifests/report: `implementation/trainers/`; validator: `tools/overhaul/trainers/validate_trainers.py`.
+- **Next source task:** next locked subsystem after the trainer overhaul (events per `DESIGN_PIPELINE.md`). Runtime QA of C1/C2/created moves/evolution/capture/breeding/trainers is deferred to the final overhaul playtest.
 
 ## Mainline implementation evidence
 
@@ -71,10 +72,10 @@ They are provenance sources, not current implementation targets.
 | Evolution-method overhaul | LOCKED / CANONICALIZED | IMPLEMENTED (22 changed edges; methods 27–32 appended; zero unresolved authority) | source + validator + mutation tests + dual-revision CI build; runtime DEFERRED TO FINAL OVERHAUL PLAYTEST |
 | World/#001–#493 availability — ordinary wild distribution | APPROVED ARCHITECTURE | IMPLEMENTED on `main` via PR #10 | L2 dual-revision CI build + manifest/validator evidence; runtime pending |
 | World/#001–#493 availability — special acquisitions (starters, fossils, Spiritomb, Rotom, Tyrogue, Happiny, Eevee, Porygon, Riolu, Castform, Feebas) | LOCKED/RESERVED BY OWNING SPECS WHERE APPLICABLE | IMPLEMENTED on main via PR #11 | source + L2 build + validator (S1–S5 + 25 mutation cases); runtime pending |
-| Trainer overhaul | PLANNED | not started | pending |
+| Trainer overhaul (D1) | LOCKED | IMPLEMENTING → source + validator done; IMPLEMENTED after Rev 0/Rev 1 CI build | validator 0 errors + 19 mutation tests; cross-system validators pass; runtime trainer QA pending; see `implementation/trainers/TRAINER_VALIDATION_REPORT.md` |
 | Economy/EXP port | LOCKED | IMPLEMENTED | source + validator + mutation tests + dual-revision CI build; runtime DEFERRED TO FINAL OVERHAUL PLAYTEST |
 | Capture/Poké Ball port | LOCKED | IMPLEMENTED (merged, PR #17) | validators pass; CI build; runtime QA pending; see `capture/POKE_BALL_FEASIBILITY_AUDIT.md`, `tools/overhaul/pokeballs/` |
-| Breeding 2.0 | LOCKED | IMPLEMENTED (`claude/platinum-breeding-2`) | source + harness + validator verified; CI build; runtime QA pending; see `implementation/breeding/BREEDING_VALIDATION_REPORT.md` |
+| Breeding 2.0 | LOCKED | IMPLEMENTED and merged (PR #18) | source + harness + validator verified; CI build; runtime QA pending; see `implementation/breeding/BREEDING_VALIDATION_REPORT.md` |
 | Event restoration | PLANNED | not started | pending |
 | Frontier/postgame | PLANNED | partial design only | pending |
 | Full QA/release | PLANNED | not started | pending |

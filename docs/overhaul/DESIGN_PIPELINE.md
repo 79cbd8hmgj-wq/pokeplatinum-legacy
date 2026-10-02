@@ -20,7 +20,7 @@ Chat-only approval is not sufficient implementation authority.
 ## Remaining design order
 
 ### D1 — Trainer Overhaul
-Status: `LOCKED SPEC`
+Status: `IMPLEMENTING` (source + validator complete; becomes `IMPLEMENTED` after Rev 0/Rev 1 CI build; `VERIFIED` only after runtime trainer QA)
 
 Existing authority:
 - stronger, coherent teams without becoming a hardcore-only hack;
@@ -33,14 +33,7 @@ Existing authority:
 - rematches use stronger National Dex teams;
 - ordinary trainers should showcase expanded species/mechanics.
 
-Still needed:
-- level curve;
-- ordinary-trainer archetype rules;
-- exact Gym/Rival/Galactic/E4/Cynthia teams;
-- moves/items/AI policy;
-- rematch tables;
-- legality/progression validators;
-- implementation batching.
+Locked and implemented from `docs/overhaul/trainers/` (level curve, archetype rules, exact Gym/Rival/Galactic/E4/Cynthia teams, moves/items/AI policy, rematch tables, validators, batching). Manifests: `docs/overhaul/implementation/trainers/`. Runtime trainer QA pending.
 
 ### D2 — EXP, Money, Shops, and Item Economy
 Status: `LOCKED SPEC`
@@ -88,7 +81,7 @@ Still needed:
 - capture-regression tests.
 
 ### D4 — Breeding 2.0
-Status: `IMPLEMENTED` (source/validator/harness verified; CI build; runtime QA pending, not VERIFIED)
+Status: `IMPLEMENTED` and merged (PR #18; source/validator/harness verified; CI build; runtime QA pending, not VERIFIED)
 
 Canonical authority:
 - `docs/overhaul/breeding/BREEDING_SPEC.md`
