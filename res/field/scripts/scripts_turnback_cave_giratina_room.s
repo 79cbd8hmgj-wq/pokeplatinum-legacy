@@ -48,6 +48,7 @@ TurnbackCaveGiratinaRoom_CaughtGiratina:
     End
 
 TurnbackCaveGiratinaRoom_DefeatedGiratina:
+    ClearFlag FLAG_HIDE_TURNBACK_CAVE_GIRATINA_ROOM_GIRATINA
     Message TurnbackCaveGiratinaRoom_Text_GiratinaDisappeared
     WaitButton
     CloseMessage

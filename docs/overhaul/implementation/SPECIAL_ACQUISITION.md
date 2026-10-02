@@ -44,6 +44,9 @@ No family was converted into a generic wild encounter; Eevee/Porygon/Riolu neede
   `SetVar VAR_DISTRIBUTION_EVENT_ROTOM, 0x1103` + gives `ITEM_SECRET_KEY`, which satisfies the existing
   `CheckDistributionEvent` gates in the Eterna Galactic building and Rotom's room, so no appliance script was rewritten. This is
   compatible with `events/LEGENDARY_MYTHICAL_EVENT_SPEC.md` s.5 (the event-restoration phase may later delete the check outright).
+  **Superseded by D5:** the event-restoration phase deleted the `DISTRIBUTION_EVENT_ROTOM` checks and the magic-number write; capture still
+  gives `ITEM_SECRET_KEY`, and the Secret Key alone now gates the Eterna Galactic building wall and the appliance room
+  (see `implementation/events/event_gate_removals.json`).
 * **Feebas.** `FEEBAS_FIXED_TILE_SEED = 0x42424242` selects, per quarter of the 528-tile lake, tile index `132·i + 66`:
   (x,z) = **(23,21), (12,29), (21,39), (12,48)** in map-matrix tile coordinates (same space as `elusive_rod_encounter.tiles`).
   Mt. Coronet B1F is banded P0 (Waterfall route); Feebas is still pre-E4.

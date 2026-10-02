@@ -1,5 +1,4 @@
 #include "macros/scrcmd.inc"
-#include "generated/distribution_events.h"
 #include "generated/hidden_locations.h"
 #include "res/text/bank/route_224.h"
 #include "res/field/events/events_route_224.h"
@@ -20,13 +19,15 @@ Route224_OnTransition:
     GoToIfEq VAR_MAP_LOCAL_0x00, FALSE, Route224_DontHideProfOak
     GetNationalDexEnabled VAR_MAP_LOCAL_0x00
     GoToIfEq VAR_MAP_LOCAL_0x00, FALSE, Route224_DontHideProfOak
-    CheckItem ITEM_OAKS_LETTER, 1, VAR_MAP_LOCAL_0x00
-    GoToIfEq VAR_MAP_LOCAL_0x00, FALSE, Route224_DontHideProfOak
-    CheckDistributionEvent DISTRIBUTION_EVENT_SHAYMIN, VAR_MAP_LOCAL_0x00
-    GoToIfEq VAR_MAP_LOCAL_0x00, FALSE, Route224_DontHideProfOak
+    CallIfEq VAR_SHAYMIN_EVENT_STATE, 0, Route224_StartShayminEvent
     ClearFlag FLAG_HIDE_ROUTE_224_PROF_OAK
 Route224_DontHideProfOak:
     End
+
+Route224_StartShayminEvent:
+    SetVar VAR_SHAYMIN_EVENT_STATE, 2
+    SetVar VAR_ROUTE_224_STATE, 1
+    Return
 
 Route224_OnResume:
     GoToIfSet FLAG_WROTE_ON_ROUTE_224_TABLET, Route224_OnResumeEnd
@@ -71,6 +72,9 @@ Route224_ProfOak:
     PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
+    CheckItem ITEM_OAKS_LETTER, 1, VAR_RESULT
+    GoToIfEq VAR_RESULT, FALSE, Route224_GiveOaksLetter
+Route224_ProfOakStartScene:
     SetVar VAR_ROUTE_224_PROF_OAK_STATE, 1
     BufferPlayerName 0
     GetPlayerGender VAR_RESULT
@@ -117,6 +121,22 @@ Route224_ExpressThanks:
     SetFlag FLAG_HIDE_ROUTE_224_PROF_OAK
     SetFlag FLAG_HIDE_ROUTE_224_MARLEY
     SetVar VAR_ROUTE_224_PROF_OAK_STATE, 0
+    ReleaseAll
+    End
+
+Route224_GiveOaksLetter:
+    BufferPlayerName 0
+    Message Route224_Text_HaveALetterForYou
+    CloseMessage
+    SetVar VAR_0x8004, ITEM_OAKS_LETTER
+    SetVar VAR_0x8005, 1
+    GoToIfCannotFitItem VAR_0x8004, VAR_0x8005, VAR_RESULT, Route224_OaksLetterBagIsFull
+    Common_GiveItemQuantity
+    GoTo Route224_ProfOakStartScene
+
+Route224_OaksLetterBagIsFull:
+    Common_MessageBagIsFull
+    CloseMessage
     ReleaseAll
     End
 

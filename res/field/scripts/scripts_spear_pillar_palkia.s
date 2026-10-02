@@ -1,5 +1,4 @@
 #include "macros/scrcmd.inc"
-#include "generated/distribution_events.h"
 #include "res/text/bank/spear_pillar_palkia.h"
 
 
@@ -17,8 +16,6 @@ SpearPillarPalkia_TryEnableHallOfOrigin:
     GetNationalDexEnabled VAR_MAP_LOCAL_0x00
     GoToIfEq VAR_MAP_LOCAL_0x00, FALSE, SpearPillarPalkia_TryEnableHallOfOriginEnd
     CheckItem ITEM_AZURE_FLUTE, 1, VAR_MAP_LOCAL_0x00
-    GoToIfEq VAR_MAP_LOCAL_0x00, FALSE, SpearPillarPalkia_TryEnableHallOfOriginEnd
-    CheckDistributionEvent DISTRIBUTION_EVENT_ARCEUS, VAR_MAP_LOCAL_0x00
     GoToIfEq VAR_MAP_LOCAL_0x00, FALSE, SpearPillarPalkia_TryEnableHallOfOriginEnd
     GoToIfSet FLAG_CAUGHT_ARCEUS, SpearPillarPalkia_TryEnableHallOfOriginEnd
     SetVar VAR_HALL_OF_ORIGIN_STATE, 1
@@ -43,7 +40,6 @@ SpearPillarPalkia_Rift:
     StartLegendaryBattle SPECIES_PALKIA, 70
     CheckWonBattle VAR_RESULT
     GoToIfEq VAR_RESULT, FALSE, SpearPillarPalkia_BlackOut
-    SetVar VAR_SPEAR_PILLAR_PALKIA_STATE, 1
     CheckDidNotCapture VAR_RESULT
     CallIfEq VAR_RESULT, FALSE, SpearPillarPalkia_SetFlagCaughtPalkia
     ReleaseAll
@@ -55,6 +51,7 @@ SpearPillarPalkia_BlackOut:
     End
 
 SpearPillarPalkia_SetFlagCaughtPalkia:
+    SetVar VAR_SPEAR_PILLAR_PALKIA_STATE, 1
     SetFlag FLAG_CAUGHT_PALKIA
     Return
 

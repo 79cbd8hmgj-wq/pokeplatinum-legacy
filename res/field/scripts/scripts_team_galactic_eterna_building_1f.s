@@ -1,5 +1,4 @@
 #include "macros/scrcmd.inc"
-#include "generated/distribution_events.h"
 #include "res/text/bank/team_galactic_eterna_building_1f.h"
 #include "res/field/events/events_team_galactic_eterna_building_1f.h"
 
@@ -91,8 +90,6 @@ TeamGalacticEternaBuilding1F_Movement_LookerSpin:
 
 TeamGalacticEternaBuilding1F_WallBlockingRotomsRoom:
     CheckItem ITEM_SECRET_KEY, 1, VAR_RESULT
-    GoToIfEq VAR_RESULT, FALSE, TeamGalacticEternaBuilding1F_WallBlockingRotomsRoomEnd
-    CheckDistributionEvent DISTRIBUTION_EVENT_ROTOM, VAR_RESULT
     GoToIfEq VAR_RESULT, FALSE, TeamGalacticEternaBuilding1F_WallBlockingRotomsRoomEnd
     GoToIfUnset FLAG_TEAM_GALACTIC_LEFT_ETERNA_BUILDING, TeamGalacticEternaBuilding1F_WallBlockingRotomsRoomEnd
     PlaySE SEQ_SE_CONFIRM

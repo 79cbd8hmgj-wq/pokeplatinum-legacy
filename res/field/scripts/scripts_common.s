@@ -1,5 +1,4 @@
 #include "macros/scrcmd.inc"
-#include "generated/distribution_events.h"
 #include "generated/player_transitions.h"
 #include "generated/time_of_day.h"
 #include "generated/tutor_locations.h"
@@ -1534,8 +1533,6 @@ CommonScript_AskUseAzureFlute:
     CheckGameCompleted VAR_MAP_LOCAL_0x00
     GoToIfEq VAR_MAP_LOCAL_0x00, FALSE, CommonScript_CantUseAzureFlute
     GetNationalDexEnabled VAR_MAP_LOCAL_0x00
-    GoToIfEq VAR_MAP_LOCAL_0x00, FALSE, CommonScript_CantUseAzureFlute
-    CheckDistributionEvent DISTRIBUTION_EVENT_ARCEUS, VAR_MAP_LOCAL_0x00
     GoToIfEq VAR_MAP_LOCAL_0x00, FALSE, CommonScript_CantUseAzureFlute
     GoToIfSet FLAG_CAUGHT_ARCEUS, CommonScript_CantUseAzureFlute
     BufferPlayerName 0

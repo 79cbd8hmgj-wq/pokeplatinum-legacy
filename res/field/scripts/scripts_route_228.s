@@ -10,7 +10,7 @@
 
 Route228_OnTransition:
     CallIfNe VAR_ROCK_PEAK_RUINS_STATE, RUINS_STATE_CAUGHT_REGI, Route228_ResetRockPeakRuinsState
-    CheckPartyHasFatefulEncounterRegigigas VAR_MAP_LOCAL_0x01
+    CheckGameCompleted VAR_MAP_LOCAL_0x01
     GoToIfEq VAR_MAP_LOCAL_0x01, FALSE, Route228_RemoveWarpRockPeakRuinsWithRegirock
     GoToIfEq VAR_MAP_LOCAL_0x01, TRUE, Route228_RemoveWarpRockPeakRuinsWithoutRegirock
     End
@@ -20,7 +20,7 @@ Route228_ResetRockPeakRuinsState:
     Return
 
 Route228_OnLoad:
-    CheckPartyHasFatefulEncounterRegigigas VAR_MAP_LOCAL_0x01
+    CheckGameCompleted VAR_MAP_LOCAL_0x01
     GoToIfEq VAR_MAP_LOCAL_0x01, FALSE, Route228_RemoveWarpRockPeakRuinsWithRegirock
     GoToIfEq VAR_MAP_LOCAL_0x01, TRUE, Route228_RemoveWarpRockPeakRuinsWithoutRegirock
     End

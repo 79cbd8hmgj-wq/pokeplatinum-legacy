@@ -9,7 +9,13 @@
 
 VerityCavern_OnTransition:
     SetFlag FLAG_FIRST_ARRIVAL_VERITY_CAVERN
+    CallIfEq VAR_ROAMING_MESPRIT_STATE, ROAMER_STATE_DEFEATED, VerityCavern_ResetDefeatedMesprit
     End
+
+VerityCavern_ResetDefeatedMesprit:
+    ClearFlag FLAG_HIDE_VERITY_CAVERN_MESPRIT
+    SetVar VAR_ROAMING_MESPRIT_STATE, ROAMER_STATE_RESET
+    Return
 
 VerityCavern_Mesprit:
     PlaySE SEQ_SE_CONFIRM

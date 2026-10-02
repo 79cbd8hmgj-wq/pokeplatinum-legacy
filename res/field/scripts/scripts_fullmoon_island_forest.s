@@ -8,7 +8,13 @@
     ScriptEntryEnd
 
 FullmoonIslandForest_Dummy1:
+    CallIfEq VAR_ROAMING_CRESSELIA_STATE, ROAMER_STATE_DEFEATED, FullmoonIslandForest_ResetDefeatedCresselia
     End
+
+FullmoonIslandForest_ResetDefeatedCresselia:
+    ClearFlag FLAG_HIDE_FULLMOON_ISLAND_FOREST_CRESSELIA
+    SetVar VAR_ROAMING_CRESSELIA_STATE, ROAMER_STATE_RESET
+    Return
 
 FullmoonIslandForest_Cresselia:
     PlaySE SEQ_SE_CONFIRM

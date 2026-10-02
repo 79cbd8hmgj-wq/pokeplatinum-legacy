@@ -1,7 +1,7 @@
 #include "macros/scrcmd.inc"
-#include "generated/distribution_events.h"
 #include "res/text/bank/canalave_city.h"
 #include "res/text/bank/menu_entries.h"
+#include "res/text/bank/special_met_location_names.h"
 #include "res/field/events/events_canalave_city.h"
 
 
@@ -94,8 +94,6 @@ CanalaveCity_CheckDoDarkraiEvent:
     GetNationalDexEnabled VAR_MAP_LOCAL_0x00
     GoToIfEq VAR_MAP_LOCAL_0x00, FALSE, CanalaveCity_SetMapLocalFalse
     CheckItem ITEM_MEMBER_CARD, 1, VAR_MAP_LOCAL_0x00
-    GoToIfEq VAR_MAP_LOCAL_0x00, FALSE, CanalaveCity_SetMapLocalFalse
-    CheckDistributionEvent DISTRIBUTION_EVENT_DARKRAI, VAR_MAP_LOCAL_0x00
     GoToIfEq VAR_MAP_LOCAL_0x00, FALSE, CanalaveCity_SetMapLocalFalse
     GoToIfUnset FLAG_WOKE_UP_CANALAVE_CITY_SAILOR_ELDRITCH_HOUSE_LITTLE_BOY, CanalaveCity_SetMapLocalFalse
     SetVar VAR_MAP_LOCAL_0x00, TRUE
@@ -498,6 +496,7 @@ CanalaveCity_SailorEldritch:
     GetPlayerDir VAR_0x8004
     FacePlayer
     GoToIfEq VAR_LUNAR_WING_EVENT_STATE, 2, CanalaveCity_AskGoingToFullmoonIsland
+    Call CanalaveCity_SailorEldritchTryGifts
     Message CanalaveCity_Text_DoYouWannaSetSail
     InitGlobalTextMenu 1, 1, 0, VAR_RESULT
     AddMenuEntryImm MenuEntries_Text_CanalaveDock_IronIsland, 0
@@ -511,6 +510,47 @@ CanalaveCity_SailorEldritch:
     GoToIfEq VAR_RESULT, 3, CanalaveCity_DontTakeShip
     GoTo CanalaveCity_DontTakeShip
     End
+
+CanalaveCity_SailorEldritchTryGifts:
+    GoToIfUnset FLAG_GAME_COMPLETED, CanalaveCity_SailorEldritchTryGiftsEnd
+    GoToIfUnset FLAG_WOKE_UP_CANALAVE_CITY_SAILOR_ELDRITCH_HOUSE_LITTLE_BOY, CanalaveCity_SailorEldritchTryGiftsEnd
+    CheckItem ITEM_MEMBER_CARD, 1, VAR_RESULT
+    GoToIfEq VAR_RESULT, FALSE, CanalaveCity_SailorEldritchGiveMemberCard
+CanalaveCity_SailorEldritchTryGiveManaphyEgg:
+    GoToIfSet FLAG_RECEIVED_CANALAVE_CITY_MANAPHY_EGG, CanalaveCity_SailorEldritchTryGiftsEnd
+    GetPartyCount VAR_RESULT
+    GoToIfGe VAR_RESULT, MAX_PARTY_SIZE, CanalaveCity_SailorEldritchPartyFull
+    Message CanalaveCity_Text_FoundThisEggAtSea
+    CloseMessage
+    PlayFanfare SEQ_FANFA4
+    WaitFanfare
+    GiveEgg SPECIES_MANAPHY, SPECIAL_METLOC_NAME_DISTANT_LAND
+    SetFlag FLAG_RECEIVED_CANALAVE_CITY_MANAPHY_EGG
+    BufferPlayerName 0
+    Message CanalaveCity_Text_ReceivedManaphyEgg
+    CloseMessage
+CanalaveCity_SailorEldritchTryGiftsEnd:
+    GetPlayerDir VAR_0x8004
+    Return
+
+CanalaveCity_SailorEldritchGiveMemberCard:
+    Message CanalaveCity_Text_MemberCardThanks
+    CloseMessage
+    SetVar VAR_0x8004, ITEM_MEMBER_CARD
+    SetVar VAR_0x8005, 1
+    GoToIfCannotFitItem VAR_0x8004, VAR_0x8005, VAR_RESULT, CanalaveCity_SailorEldritchBagIsFull
+    Common_GiveItemQuantity
+    GoTo CanalaveCity_SailorEldritchTryGiveManaphyEgg
+
+CanalaveCity_SailorEldritchBagIsFull:
+    Common_MessageBagIsFull
+    CloseMessage
+    GoTo CanalaveCity_SailorEldritchTryGiftsEnd
+
+CanalaveCity_SailorEldritchPartyFull:
+    Message CanalaveCity_Text_EggWaitsForRoom
+    CloseMessage
+    GoTo CanalaveCity_SailorEldritchTryGiftsEnd
 
 CanalaveCity_AddMenuEntryNewmoonIsland:
     AddMenuEntryImm MenuEntries_Text_CanalaveDock_NewmoonIsland, 2

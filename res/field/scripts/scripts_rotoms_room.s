@@ -1,5 +1,4 @@
 #include "macros/scrcmd.inc"
-#include "generated/distribution_events.h"
 #include "constants/moves.h"
 #include "res/text/bank/rotoms_room.h"
 #include "res/field/events/events_rotoms_room.h"
@@ -31,7 +30,7 @@ RotomsRoom_OnTransition:
     SetFlag FLAG_HIDE_ROTOMS_ROOM_REFRIGERATOR
     SetFlag FLAG_HIDE_ROTOMS_ROOM_FAN
     SetFlag FLAG_HIDE_ROTOMS_ROOM_LAWN_MOWER
-    CheckDistributionEvent DISTRIBUTION_EVENT_ROTOM, VAR_MAP_LOCAL_0x00
+    CheckItem ITEM_SECRET_KEY, 1, VAR_MAP_LOCAL_0x00
     GoToIfEq VAR_MAP_LOCAL_0x00, FALSE, RotomsRoom_RemoveBgEvents
     GetRotomFormsInSave VAR_MAP_LOCAL_0x00, VAR_MAP_LOCAL_0x01, VAR_MAP_LOCAL_0x02, VAR_MAP_LOCAL_0x03, VAR_MAP_LOCAL_0x04
     CallIfEq VAR_MAP_LOCAL_0x00, FALSE, RotomsRoom_ShowMicrowave
@@ -108,8 +107,6 @@ RotomsRoom_CheckAppliance:
     CheckPartyHasSpecies VAR_RESULT, SPECIES_ROTOM
     GoToIfEq VAR_RESULT, FALSE, RotomsRoom_ItsAnAppliance
     CheckItem ITEM_SECRET_KEY, 1, VAR_RESULT
-    GoToIfEq VAR_RESULT, FALSE, RotomsRoom_ItsAnAppliance
-    CheckDistributionEvent DISTRIBUTION_EVENT_ROTOM, VAR_RESULT
     GoToIfEq VAR_RESULT, FALSE, RotomsRoom_ItsAnAppliance
     CallIfEq LOCAL_VAR_ROTOM_FORM, ROTOM_FORM_HEAT, RotomsRoom_AllowRotomEnterMicrowave
     CallIfEq LOCAL_VAR_ROTOM_FORM, ROTOM_FORM_FROST, RotomsRoom_AllowRotomEnterRefrigerator

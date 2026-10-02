@@ -1,5 +1,4 @@
 #include "macros/scrcmd.inc"
-#include "generated/distribution_events.h"
 #include "res/text/bank/flower_paradise.h"
 #include "res/field/events/events_flower_paradise.h"
 
@@ -15,8 +14,7 @@ FlowerParadise_OnTransition:
     GoToIfEq VAR_MAP_LOCAL_0x00, FALSE, FlowerParadise_HideShaymin
     CheckItem ITEM_OAKS_LETTER, 1, VAR_MAP_LOCAL_0x00
     GoToIfEq VAR_MAP_LOCAL_0x00, FALSE, FlowerParadise_HideShaymin
-    CheckDistributionEvent DISTRIBUTION_EVENT_SHAYMIN, VAR_MAP_LOCAL_0x00
-    GoToIfEq VAR_MAP_LOCAL_0x00, FALSE, FlowerParadise_HideShaymin
+    GoToIfUnset FLAG_GAME_COMPLETED, FlowerParadise_HideShaymin
     GoToIfSet FLAG_CAUGHT_SHAYMIN, FlowerParadise_HideShaymin
     ClearFlag FLAG_HIDE_FLOWER_PARADISE_SHAYMIN
     End

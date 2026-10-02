@@ -67,7 +67,9 @@ def main() -> int:
         "static": {"file": "res/field/scripts/scripts_old_chateau_back_middle_west_room.s",
                    "entry_label": "OldChateauBackMiddleWestRoom_TV", "species": "SPECIES_ROTOM",
                    "caught_flag": "FLAG_CAUGHT_OLD_CHATEAU_ROTOM", "forbidden_gate_tokens": ["FLAG_DAILY_BATTLED_OLD_CHATEAU_ROTOM"],
-                   "secret_key": {"var": "VAR_DISTRIBUTION_EVENT_ROTOM", "magic": "0x1103"}}}
+                   "secret_key": {"item": "ITEM_SECRET_KEY", "distribution_gate_removed": True,
+                                  "form_room_files": ["res/field/scripts/scripts_rotoms_room.s", "res/field/scripts/scripts_team_galactic_eterna_building_1f.s"],
+                                  "superseded_by": "D5 Legendary/Mythical events (docs/overhaul/implementation/events/event_gate_removals.json): the DISTRIBUTION_EVENT_ROTOM magic number no longer gates the appliance room; the Secret Key alone does"}}}
     acq["tyrogue"] = {
         "decision_key": "TYROGUE_GIFT_VS_HABITAT", "kind": "GIFT", "band": "M1",
         "vanilla_method": "breeding Hitmonlee/Hitmonchan/Hitmontop only (Radar slot on Route 211 West)",

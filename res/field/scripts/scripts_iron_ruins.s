@@ -14,7 +14,7 @@
     ScriptEntryEnd
 
 IronRuins_OnTransition:
-    GoToIfLt VAR_IRON_RUINS_STATE, RUINS_STATE_DID_NOT_CATCH_REGI, IronRuins_ResetState
+    GoToIfNe VAR_IRON_RUINS_STATE, RUINS_STATE_CAUGHT_REGI, IronRuins_ResetState
     End
 
 IronRuins_ResetState:
@@ -28,8 +28,6 @@ IronRuins_Statue:
     GoToIfEq VAR_IRON_RUINS_STATE, RUINS_STATE_CAUGHT_REGI, IronRuins_CaughtRegisteelStatueStoppedEmanatingPower
     GoToIfEq VAR_IRON_RUINS_STATE, RUINS_STATE_DID_NOT_CATCH_REGI, IronRuins_DidNotCatchRegisteelStatueStoppedEmanatingPower
     GoToIfUnset FLAG_GAME_COMPLETED, IronRuins_BecomeStrongerYouMust
-    CheckPartyHasFatefulEncounterRegigigas VAR_RESULT
-    GoToIfEq VAR_RESULT, 0, IronRuins_ItsAStatueOfAPokemon
     GoToIfEq VAR_IRON_RUINS_STATE, RUINS_STATE_ACTIVATED_STATUE, IronRuins_EncounterRegisteel
     GoToIfLt VAR_IRON_RUINS_STATE, RUINS_STATE_ACTIVATED_ALL_DOTS, IronRuins_ItsAStatueOfAPokemon
     WaitSE SEQ_SE_CONFIRM
@@ -59,7 +57,7 @@ IronRuins_CaughtRegisteelStatueStoppedEmanatingPower:
     End
 
 IronRuins_DidNotCatchRegisteelStatueStoppedEmanatingPower:
-    SetVar VAR_IRON_RUINS_STATE, RUINS_STATE_DID_NOT_CATCH_REGI
+    SetVar VAR_IRON_RUINS_STATE, 0
     Message IronRuins_Text_StatueStoppedEmanatingPower
     GoTo IronRuins_StatueEnd
     End

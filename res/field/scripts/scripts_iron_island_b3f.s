@@ -8,7 +8,7 @@
     ScriptEntryEnd
 
 IronIslandB3F_OnLoad:
-    CheckPartyHasFatefulEncounterRegigigas VAR_MAP_LOCAL_0x04
+    CheckGameCompleted VAR_MAP_LOCAL_0x04
     GoToIfEq VAR_MAP_LOCAL_0x04, FALSE, IronIslandB3F_RemoveWarpIronRuinsWithRegisteel
     GoToIfEq VAR_MAP_LOCAL_0x04, TRUE, IronIslandB3F_RemoveWarpIronRuinsWithoutRegisteel
     End
@@ -16,7 +16,7 @@ IronIslandB3F_OnLoad:
 IronIslandB3F_OnTransition:
     InitPersistedMapFeaturesForPlatformLift
     CallIfNe VAR_IRON_RUINS_STATE, RUINS_STATE_CAUGHT_REGI, IronIslandB3F_ResetIronRuinsState
-    CheckPartyHasFatefulEncounterRegigigas VAR_MAP_LOCAL_0x04
+    CheckGameCompleted VAR_MAP_LOCAL_0x04
     GoToIfEq VAR_MAP_LOCAL_0x04, FALSE, IronIslandB3F_RemoveWarpIronRuinsWithRegisteel
     GoToIfEq VAR_MAP_LOCAL_0x04, TRUE, IronIslandB3F_RemoveWarpIronRuinsWithoutRegisteel
     End

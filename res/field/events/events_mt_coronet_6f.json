@@ -1,5 +1,14 @@
 {
-    "bg_events": [],
+    "bg_events": [
+        {
+            "script": 3,
+            "type": 0,
+            "x": 7,
+            "z": 6,
+            "y": 0,
+            "player_facing_dir": "BG_EVENT_DIR_ALL"
+        }
+    ],
     "object_events": [
         {
             "id": "LOCALID_GALACTIC_GRUNT",

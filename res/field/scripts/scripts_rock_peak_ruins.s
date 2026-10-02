@@ -14,7 +14,7 @@
     ScriptEntryEnd
 
 RockPeakRuins_OnTransition:
-    GoToIfLt VAR_ROCK_PEAK_RUINS_STATE, RUINS_STATE_DID_NOT_CATCH_REGI, RockPeakRuins_ResetState
+    GoToIfNe VAR_ROCK_PEAK_RUINS_STATE, RUINS_STATE_CAUGHT_REGI, RockPeakRuins_ResetState
     End
 
 RockPeakRuins_ResetState:
@@ -28,8 +28,6 @@ RockPeakRuins_Statue:
     GoToIfEq VAR_ROCK_PEAK_RUINS_STATE, RUINS_STATE_CAUGHT_REGI, RockPeakRuins_CaughtRegirockStatueStoppedEmanatingPower
     GoToIfEq VAR_ROCK_PEAK_RUINS_STATE, RUINS_STATE_DID_NOT_CATCH_REGI, RockPeakRuins_DidNotCatchRegirockStatueStoppedEmanatingPower
     GoToIfUnset FLAG_GAME_COMPLETED, RockPeakRuins_SeemsToExudePower
-    CheckPartyHasFatefulEncounterRegigigas VAR_RESULT
-    GoToIfEq VAR_RESULT, 0, RockPeakRuins_FromSomewhereSomethingSpokeOut
     GoToIfEq VAR_ROCK_PEAK_RUINS_STATE, RUINS_STATE_ACTIVATED_STATUE, RockPeakRuins_EncounterRegirock
     GoToIfLt VAR_ROCK_PEAK_RUINS_STATE, RUINS_STATE_ACTIVATED_ALL_DOTS, RockPeakRuins_FromSomewhereSomethingSpokeOut
     WaitSE SEQ_SE_CONFIRM
@@ -59,7 +57,7 @@ RockPeakRuins_CaughtRegirockStatueStoppedEmanatingPower:
     End
 
 RockPeakRuins_DidNotCatchRegirockStatueStoppedEmanatingPower:
-    SetVar VAR_ROCK_PEAK_RUINS_STATE, RUINS_STATE_DID_NOT_CATCH_REGI
+    SetVar VAR_ROCK_PEAK_RUINS_STATE, 0
     Message RockPeakRuins_Text_StatueStoppedEmanatingPower
     GoTo RockPeakRuins_StatueEnd
     End
