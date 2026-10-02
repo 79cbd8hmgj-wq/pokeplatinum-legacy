@@ -40,6 +40,7 @@
 #include "overlay005/surf_mount_renderer.h"
 #include "overlay005/veilstone_gym_object_renderer.h"
 
+#include "field_system.h"
 #include "player_avatar.h"
 #include "sys_task.h"
 
@@ -60,6 +61,12 @@ static void *ForestAmbienceRenderer_New(FieldEffectManager *fieldEffMan)
     renderer->fieldEffMan = fieldEffMan;
     renderer->fieldSystem = FieldEffectManager_GetFieldSystem(fieldEffMan);
     renderer->task = SysTask_Start(ForestAmbienceRenderer_Task, renderer, 255);
+
+#ifdef GDB_DEBUGGING
+    if (gG4RuntimeQAControl.status == G4_RUNTIME_QA_WARPING) {
+        gG4RuntimeQAControl.eventFlags |= G4_RUNTIME_QA_EVENT_FOREST_RENDERER;
+    }
+#endif
 
     GF_ASSERT(renderer->task != NULL);
     return renderer;
@@ -96,6 +103,14 @@ static void ForestAmbienceRenderer_Task(SysTask *task, void *data)
     }
 
     renderer->frameCounter = 0;
+
+#ifdef GDB_DEBUGGING
+    if (gG4RuntimeQAControl.status == G4_RUNTIME_QA_LOADED
+        || gG4RuntimeQAControl.status == G4_RUNTIME_QA_WARPING) {
+        gG4RuntimeQAControl.eventFlags |= G4_RUNTIME_QA_EVENT_FOREST_TASK;
+    }
+#endif
+
     playerPos = PlayerAvatar_GetPos(FieldSystem_GetPlayerAvatar(renderer->fieldSystem));
     position = *playerPos;
 
