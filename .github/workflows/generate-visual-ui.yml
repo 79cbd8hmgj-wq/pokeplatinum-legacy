@@ -6,6 +6,7 @@ on:
     paths:
       - 'tools/visual_overhaul/generate_ui_foundation.py'
       - 'tools/visual_overhaul/generate_start_menu_ui.py'
+      - 'tools/visual_overhaul/generate_battle_ui.py'
       - '.github/workflows/generate-visual-ui.yml'
   workflow_dispatch: {}
 
@@ -28,15 +29,16 @@ jobs:
         run: |
           python tools/visual_overhaul/generate_ui_foundation.py
           python tools/visual_overhaul/generate_start_menu_ui.py
+          python tools/visual_overhaul/generate_battle_ui.py
 
       - name: Commit generated PNG assets
         run: |
-          if git diff --quiet -- res/graphics/windows/standard_system.png res/graphics/windows/standard_field.png res/graphics/windows/scroll_cursor.png res/graphics/windows/wait_dial.png res/graphics/start_menu/cursor.png; then
+          if git diff --quiet -- res/graphics/windows/standard_system.png res/graphics/windows/standard_field.png res/graphics/windows/scroll_cursor.png res/graphics/windows/wait_dial.png res/graphics/start_menu/cursor.png res/graphics/battle/healthbox/player_singles.png res/graphics/battle/healthbox/player_doubles.png res/graphics/battle/healthbox/enemy.png res/graphics/battle/healthbox/healthbox_parts.png; then
             echo "UI assets already up to date."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add res/graphics/windows/standard_system.png res/graphics/windows/standard_field.png res/graphics/windows/scroll_cursor.png res/graphics/windows/wait_dial.png res/graphics/start_menu/cursor.png
+          git add res/graphics/windows/standard_system.png res/graphics/windows/standard_field.png res/graphics/windows/scroll_cursor.png res/graphics/windows/wait_dial.png res/graphics/start_menu/cursor.png res/graphics/battle/healthbox/player_singles.png res/graphics/battle/healthbox/player_doubles.png res/graphics/battle/healthbox/enemy.png res/graphics/battle/healthbox/healthbox_parts.png
           git commit -m "visual: regenerate global UI foundation assets"
           git push origin HEAD:visual-overhaul-g2a
