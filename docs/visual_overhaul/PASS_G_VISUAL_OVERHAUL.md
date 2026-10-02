@@ -448,6 +448,26 @@ Leaf reuse finding:
 - implement ambient forest leaves as a dedicated guarded field effect after the mist path is build/runtime validated
 
 
+
+### G2B snow-atmosphere checkpoint
+
+Mapped native weather handlers:
+- weather 5 = light snow
+- weather 6 = heavy snow
+- weather 7 = blizzard
+
+The native particle system already ramps density substantially, especially for blizzard. Particle counts were intentionally left unchanged for the first pass to avoid spending DS effect budget where retail is already dense.
+
+Fog separation was strengthened instead:
+- light snow: slightly denser/cooler distance haze
+- heavy snow: stronger blue-white depth fog
+- blizzard: strongest near-field atmospheric fog of the three
+
+Named constants now replace the relevant magic fog values in both initialization and resume paths, ensuring weather transitions use consistent parameters.
+
+Commit implementing this pass: `209b2dc0a0d403e5e159f63cd6f3e1520c8f8c37`.
+
+
 #### G2C — Global UI presentation
 Improve:
 - frames
