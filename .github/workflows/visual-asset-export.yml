@@ -92,6 +92,8 @@ jobs:
             echo "Eterna review sheets unchanged."
           else
             git commit -m "docs: add G4A Eterna texture review sheets"
+            git fetch origin ${{ github.head_ref }}
+            git rebase origin/${{ github.head_ref }}
             git push origin HEAD:${{ github.head_ref }}
           fi
 
