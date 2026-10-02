@@ -33,8 +33,8 @@
 #define DEEP_FOREST_MIST_ALPHA        8
 #define DEEP_FOREST_MIST_FADE_FRAMES  8
 #define DEEP_FOREST_FOG_SLOPE         3
-#define DEEP_FOREST_FOG_OFFSET        (0x6F6F - 1800)
-#define DEEP_FOREST_FOG_COLOR         GX_RGB(24, 28, 25)
+#define DEEP_FOREST_FOG_OFFSET        (0x6F6F - 1900)
+#define DEEP_FOREST_FOG_COLOR         GX_RGB(20, 24, 22)
 #define DEEP_FOREST_SCROLL_SCALE      FX32_CONST(0.75)
 
 typedef struct UnkStruct_ov5_021D5EF8_t {
@@ -5139,7 +5139,7 @@ static void ov5_021DB144(SysTask *param0, void *param1)
         ov5_021D64FC(&v1->unk_00, 0, DEEP_FOREST_MIST_ALPHA, DEEP_FOREST_MIST_FADE_FRAMES);
         ov5_021D64E4(0, 16);
         GXLayers_EngineAToggleLayers(GX_PLANEMASK_BG2, 1);
-        ov5_021D7308(&v1->unk_44, &v1->unk_14, v0->unk_00->fieldSystem->fogMan, 3, 0x6F6F + -1900, (GX_RGB(20, 24, 22)), 1, v0->unk_BA4);
+        ov5_021D7308(&v1->unk_44, &v1->unk_14, v0->unk_00->fieldSystem->fogMan, DEEP_FOREST_FOG_SLOPE, DEEP_FOREST_FOG_OFFSET, DEEP_FOREST_FOG_COLOR, 1, v0->unk_BA4);
 
         v1->unk_AC = 0;
         v1->unk_B0 = 0;
@@ -5161,7 +5161,7 @@ static void ov5_021DB144(SysTask *param0, void *param1)
 
         if (v0->unk_BA4 != 0) {
             v1->unk_14.unk_00 = v0->unk_00->fieldSystem->fogMan;
-            ov5_021D7384(v1->unk_14.unk_00, 3, 0x6F6F + -1900, (GX_RGB(20, 24, 22)));
+            ov5_021D7384(v1->unk_14.unk_00, DEEP_FOREST_FOG_SLOPE, DEEP_FOREST_FOG_OFFSET, DEEP_FOREST_FOG_COLOR);
             ov5_021D74D4(&v1->unk_14);
         }
 
