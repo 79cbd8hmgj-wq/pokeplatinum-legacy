@@ -113,6 +113,8 @@ def _resolve_symbols(symbol_file: Path, overrides: dict[str, int]) -> dict[str, 
 
 def _scenario_symbol_names(scenario: Scenario) -> tuple[str, ...]:
     names = [
+        "FieldMap_Main",
+        "gG4RuntimeQAControl",
         *scenario.before_light_symbols,
         "AreaLightManager_New",
         *(
