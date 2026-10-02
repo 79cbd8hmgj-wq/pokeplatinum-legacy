@@ -10231,6 +10231,10 @@ static void BattleScript_GetExpTask(SysTask *task, void *inData)
         break;
 
     case SEQ_GET_EXP_DONE:
+        // Party members excluded from EXP processing do not pass through
+        // SEQ_GET_EXP_CHECK_DONE, so clear the current foe's participation state here too.
+        data->battleCtx->sideGetExpMask[battler] = 0;
+        data->battleCtx->expRecipientMask = 0;
         data->battleCtx->taskData = NULL;
         Heap_Free(inData);
         SysTask_Done(task);
