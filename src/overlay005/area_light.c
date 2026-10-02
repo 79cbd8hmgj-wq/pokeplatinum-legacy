@@ -4,6 +4,7 @@
 #include <string.h>
 
 #include "constants/graphics.h"
+#include "constants/field/area_light.h"
 #include "constants/heap.h"
 #include "constants/narc.h"
 
@@ -14,7 +15,6 @@
 #include "heap.h"
 #include "rtc.h"
 
-#define AREA_LIGHT_FILE_COUNT 10
 #define SCRATCH_BUFFER_SIZE   256
 #define INVALID_LIGHT_COLOR   0xFFFF
 
@@ -26,7 +26,7 @@ static char *AreaLightTemplate_ParseColor(char *fileIter, GXRgb *color);
 
 AreaLightManager *AreaLightManager_New(ModelAttributes *areaModelAttrs, const u8 archiveID)
 {
-    GF_ASSERT(archiveID < AREA_LIGHT_FILE_COUNT);
+    GF_ASSERT(archiveID < AREA_LIGHT_SET_COUNT);
 
     AreaLightManager *areaLightMan = Heap_Alloc(HEAP_ID_FIELD1, sizeof(AreaLightManager));
 
