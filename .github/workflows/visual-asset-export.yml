@@ -13,6 +13,11 @@ on:
       - 'res/graphics/party_menu/**'
       - 'res/graphics/pokemon_summary_screen/**'
       - 'res/graphics/bag/**'
+      - 'res/graphics/shop_menu/**'
+      - 'res/graphics/battle/interface/**'
+      - 'res/graphics/battle/healthbox/**'
+      - 'res/graphics/options_menu/**'
+      - 'res/graphics/start_menu/**'
   workflow_dispatch: {}
 
 jobs:
@@ -56,4 +61,9 @@ jobs:
             res/graphics/party_menu
             res/graphics/pokemon_summary_screen
             res/graphics/bag
+            res/graphics/start_menu
+            res/graphics/options_menu
+            res/graphics/battle/healthbox
+            res/graphics/battle/interface
+            res/graphics/shop_menu
           retention-days: 1
