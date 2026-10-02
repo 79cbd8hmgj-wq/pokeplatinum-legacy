@@ -27,13 +27,13 @@
 
 1. **TM21/TM78 item→move assignment was NOT already implemented.** The C3H commit applied only the compatibility masks (49/27 recipients — verified intact). `tm21.json` still taught Frustration and `tm78.json` Captivate. Applied the locked assignment (Air Slash / Power Gem), plus matching item description and type-colored icon palette (flying / rock). Item prices keep the slot's vanilla price.
 2. **Live Frontier TM shop had 15 TMs; the locked table has 16.** TM89 U-turn (20 BP) was missing from the live list and price table; it was added to the shop list, the BP table and the unused exchange-corner table. U-turn remains in the Game Corner at 3000 Coins.
-3. **Recovered acquisition labels were wrong, but the governing design rule was clear.** Live Platinum source gives TM78 via the Route 204 North NPC, not Victory Road, and TM21's field pickup is Galactic HQ 3F rather than the Galactic Warehouse label used in earlier notes. The canonical C2 and master specs are corrected in this PR. No TM was relocated: the actual vanilla TM-number acquisition map remains authoritative.
-4. **TM21 sources** (Galactic HQ 3F pickup and Veilstone Game Corner) and **TM78's Route 204 North NPC source** are preserved and pinned.
+3. **Retail source vs locked TM78 timing was reconciled explicitly.** The live Platinum decomp gives TM78 through the Route 204 North NPC, while the recovered C2 design explicitly locked Power Gem to Victory Road to keep reusable 80-BP special Rock coverage late. The historical note was wrong about where retail TM78 lived, but its final progression decision was unambiguous. This PR therefore removes the Route 204 TM78 gift and adds a deterministic Victory Road 1F Collector gift.
+4. **TM21 sources** (Galactic HQ 3F pickup and Veilstone Game Corner) remain unchanged. **TM78 is the sole acquisition-location override** in this pass. The old Route 204 receipt flag is reused by the Victory Road gift for save compatibility.
 
 ## Minimal text corrections (required by the reusable-TM change)
 
 - `OreburghCity_Text_TMsSingleUseHMsOverAndOver` claimed TMs are single use.
-- Route 204 North's TM78 dialogue described Captivate and one-use TMs; both the explanation and the Captivate-specific opening are updated to match Power Gem and reusable TMs.
+- Route 204 North no longer awards TM78; its former Captivate-specific NPC text is repurposed as a reusable-TM tutorial. Victory Road's existing Collector dialogue precedes the new TM78 gift, while the standard give-item text identifies the received TM.
 
 ## Not touched (scope audit clean)
 
