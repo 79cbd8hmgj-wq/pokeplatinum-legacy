@@ -20,7 +20,7 @@ Chat-only approval is not sufficient implementation authority.
 ## Remaining design order
 
 ### D1 — Trainer Overhaul
-Status: `IMPLEMENTING` (source + validator complete; becomes `IMPLEMENTED` after Rev 0/Rev 1 CI build; `VERIFIED` only after runtime trainer QA)
+Status: `IMPLEMENTED` (source + validator + Rev 0/Rev 1 CI build; `VERIFIED` only after runtime trainer QA)
 
 Existing authority:
 - stronger, coherent teams without becoming a hardcore-only hack;
