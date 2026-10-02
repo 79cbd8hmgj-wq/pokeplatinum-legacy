@@ -1025,3 +1025,16 @@ The summary-screen generator now also owns the two low-risk navigation assets:
   - no cell, animation, OAM, or layout changes
 
 These assets are generated and checked through the same visual-UI pipeline as the other G2C resources.
+
+
+### G2C/G5 battle-cursor checkpoint
+
+The battle command cursor now has a reproducible geometry refresh in `generate_battle_ui.py`.
+
+- `res/graphics/battle/interface/cursor.png` remains 16x16
+- the existing NCER still flips the one source corner into all four orientations
+- the existing NANR bounce/offset animation remains unchanged
+- the heavy retail L-corner was replaced by a thinner red focus bracket with a white inner highlight
+- no command layout, sprite position, cell, animation, palette allocation, or VRAM contract changed
+
+The cursor is now included in the generated-asset workflow alongside the healthbox palette refresh.
