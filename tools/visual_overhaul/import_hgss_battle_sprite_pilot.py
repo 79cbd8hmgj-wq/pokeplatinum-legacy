@@ -7,7 +7,7 @@ Only views that already passed BOTH G3 safety gates are eligible:
 - palette/index contract: direct-index-safe
 
 Platinum's normal/shiny palettes and sprite_data.json animation metadata are never
-modified by this importer.
+modified by this importer. The pilot is deliberately representative rather than exhaustive.
 """
 
 from __future__ import annotations
