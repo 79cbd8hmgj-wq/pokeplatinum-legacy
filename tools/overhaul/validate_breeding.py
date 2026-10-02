@@ -245,10 +245,20 @@ def data_checks(res, species):
                 other.append(f)
     egm = json.load(open(os.path.join(L.IMPL, "egg_group_changes.json")))
     emm = json.load(open(os.path.join(L.IMPL, "egg_move_changes.json")))
+    approved = {e["species"] for e in emm["entries"]}
     res.check(S, "no unapproved egg-group changes", not eg_changed and not egm["entries"], str(eg_changed))
-    res.check(S, "no unapproved egg-move changes", not em_changed and not emm["entries"], str(em_changed))
+    res.check(S, "egg-move edits are exactly the manifest entries (no expansion)", {f.split("/")[2].upper() for f in em_changed} == {x[8:] for x in approved}, str(em_changed))
+    exact = True
+    for e in emm["entries"]:
+        exact &= species[e["species"]]["learnset"]["egg_moves"] == e["target"] and json.loads(git_show(e["source_path"]))["learnset"]["egg_moves"] == e["before"]
+        exact &= all(k in e for k in ("before", "target", "source_path", "rationale", "locked_authority"))
+    res.check(S, "egg-move manifest before/target guards match start commit and current data", exact)
+    added = [(e["species"], m) for e in emm["entries"] for m in e["target"] if m not in e["before"]]
+    mig = {(x["to"], m) for x in emm["migrated_moves"] for m in x["moves"]}
+    res.check(S, "only added egg moves are the 9 ruled Marill->Azurill / Snorlax->Munchlax migrations", set(added) == mig and len(added) == 9, str(added))
+    rem = {(e["species"], m) for e in emm["entries"] for m in e["before"] if m not in e["target"]}
+    res.check(S, "only removed egg moves are the 5 ruled entries", rem == {(x["egg_species"], x["move"]) for x in emm["removed_moves"]} and len(rem) == 5, str(rem))
     res.check(S, "species data diff limited to hatch_cycles", not other, str(other))
-    res.check(S, "egg-group / egg-move manifests carry no entries (audit-only)", True, "both lists empty")
 
     for baby, adult, inc in L.NO_INCENSE_BABIES:
         res.check(S, f"no-incense family {baby[8:]}: {adult[8:]} offspring -> {baby[8:]}, baby is an egg result",
@@ -281,17 +291,12 @@ def legality_checks(res, species):
     S = "legality"
     reach, dead, live, lost = L.split_unreachable(species)
     emm = json.load(open(os.path.join(L.IMPL, "egg_move_changes.json")))
-    recorded = sorted((e["egg_species"], e["move"]) for e in emm["unreachable_pending_design"])
-    recorded_lost = {e["species"]: e["moves_lost_everywhere"] for e in emm["orphaned_adult_lists"]}
     ad = {a: b for b, a, _ in L.NO_INCENSE_BABIES}
     live_total = sum(1 for k in reach if k[0] not in set(dead))
     res.check(S, f"{live_total} egg-move entries on species that can hatch audited", live_total > 0)
-    res.check(S, "every unreachable live entry is recorded in egg_move_changes.json (nothing new)", live == recorded, f"{live} vs {recorded}")
-    res.check(S, "legal same-save chain found for all other live entries", True, f"{live_total - len(live)} reachable")
-    res.check(S, "orphaned lists are exactly former no-incense hatch results; lost moves recorded", set(dead) <= set(ad) and lost == recorded_lost)
-    res.check(S, "chains use either-parent inheritance and Ditto (audit model)", True)
-    if live or any(lost.values()):
-        res.pending(S, f"{len(live)} live egg moves and {sum(len(v) for v in lost.values())} orphaned adult-only moves have no legal chain (unchanged; owner decision)", "; ".join([f"{s[8:]}:{m[5:]}" for s, m in live] + [f"{a[8:]}:{m[5:]}" for a, ms in lost.items() for m in ms]))
+    res.check(S, "0 unreachable egg moves: legal same-save chain (either parent / Ditto) for every entry", not live, str(live))
+    res.check(S, "0 egg moves lost by orphaned adult-keyed lists", set(dead) <= set(ad) and not any(lost.values()), str(lost))
+    res.check(S, "manifest records 0 pending design entries", not emm["unreachable_pending_design"])
     return reach, dead
 
 
@@ -320,10 +325,7 @@ def write_report(res, reach, dead):
     unreachable = sorted(k for k, v in reach.items() if not v and k[0] not in set(dead))
     live_total = sum(1 for k in reach if k[0] not in set(dead))
     lost = L.orphan_report(L.load_species(), dead)
-    lines += ["", "## One-save egg-move legality", "", f"- egg-move entries on species that can hatch: {live_total}", f"- legal chain found: {live_total - len(unreachable)}", f"- unreachable live entries: {len(unreachable)}", f"- adult-keyed lists orphaned by the no-incense change: {len(dead)}", ""]
-    if unreachable:
-        lines += ["Unreachable live entries (unchanged, awaiting owner decision):", ""] + [f"- {s[8:]} — {m[5:]}" for s, m in unreachable]
-    lines += ["", "Adult-only moves lost everywhere (unchanged, awaiting owner decision):", ""] + [f"- {a[8:]} — {', '.join(m[5:] for m in ms) or 'none'}" for a, ms in lost.items()]
+    lines += ["", "## One-save egg-move legality", "", f"- egg-move entries on species that can hatch: {live_total}", f"- legal chain found: {live_total - len(unreachable)}", f"- unreachable: {len(unreachable)}", f"- pending: 0", f"- adult-keyed lists left as dead data (species can no longer hatch): {len(dead)}", "", "Owner ruling applied: 9 Marill/Snorlax egg moves migrated to Azurill/Munchlax; 5 donorless entries removed (Cleffa Belly Drum, Igglybuff Perish Song, Geodude Mega Punch, Mankey Meditate, Shellder Take Down)."]
     lines.append("")
     open(p, "w").write("\n".join(lines))
     return p

@@ -122,21 +122,63 @@ def egg_group_manifest():
     return {"schema": "breeding_egg_group_changes/1", "start_sha": L.START_SHA, "locked_authority": f"{L.SPEC}#8", "note": "Legality audit found no egg-group edit that is required without a design decision; vanilla Platinum egg groups retained.", "entries": []}
 
 
+AUTH_RULING = "owner ruling on PR #18: preserve family egg moves orphaned by no-incense breeding; remove entries with no legal one-save donor chain"
+MIGRATE = [
+    ("SPECIES_MARILL", "SPECIES_AZURILL", ["MOVE_LIGHT_SCREEN", "MOVE_PRESENT", "MOVE_AMNESIA", "MOVE_FUTURE_SIGHT", "MOVE_BELLY_DRUM", "MOVE_PERISH_SONG", "MOVE_SUPERSONIC", "MOVE_AQUA_JET"]),
+    ("SPECIES_SNORLAX", "SPECIES_MUNCHLAX", ["MOVE_FISSURE"]),
+]
+REMOVE = [
+    ("SPECIES_CLEFFA", "MOVE_BELLY_DRUM"),
+    ("SPECIES_IGGLYBUFF", "MOVE_PERISH_SONG"),
+    ("SPECIES_GEODUDE", "MOVE_MEGA_PUNCH"),
+    ("SPECIES_MANKEY", "MOVE_MEDITATE"),
+    ("SPECIES_SHELLDER", "MOVE_TAKE_DOWN"),
+]
+
+
+def egg_moves_at_start(sp):
+    return list(json.loads(git_show(f"res/pokemon/{sp[8:].lower()}/data.json"))["learnset"].get("egg_moves", []))
+
+
 def egg_move_manifest():
-    sp = L.load_species()
-    reach, dead, live, lost = L.split_unreachable(sp)
-    ad = {a: b for b, a, _ in L.NO_INCENSE_BABIES}
+    edits = {}
+    for adult, baby, moves in MIGRATE:
+        before = egg_moves_at_start(baby)
+        assert not set(moves) & set(before)
+        assert set(moves) <= set(egg_moves_at_start(adult))
+        edits[baby] = {"species": baby, "source_path": f"res/pokemon/{baby[8:].lower()}/data.json", "before": before, "target": before + moves,
+                       "rationale": f"preserve existing {adult[8:].title()}-family egg moves orphaned because no-incense breeding now hatches {baby[8:].title()}; moves taken from the former {adult[8:].title()} list",
+                       "locked_authority": [AUTH_RULING, f"{L.SPEC}#9"]}
+    for sp, mv in REMOVE:
+        e = edits.setdefault(sp, {"species": sp, "source_path": f"res/pokemon/{sp[8:].lower()}/data.json", "before": egg_moves_at_start(sp), "rationale": "", "locked_authority": [AUTH_RULING, f"{L.SPEC}#7"]})
+        e["target"] = [m for m in e["target"] if m != mv] if "target" in e else [m for m in e["before"] if m != mv]
+        e["rationale"] = f"remove {mv}: no legal one-save donor chain under the final egg groups/learnsets; no unrelated data changed to create one"
+    entries = [edits[k] for k in sorted(edits)]
     return {
         "schema": "breeding_egg_move_changes/1",
         "start_sha": L.START_SHA,
-        "locked_authority": f"{L.SPEC}#7",
-        "note": "No egg-move edits applied (lists are unchanged). The audit below is the one-save legality result over the final #001-#493 data; entries under unreachable_pending_design are NOT changed and need a user decision.",
-        "entries": [],
-        "audit_summary": {"egg_move_entries": len(reach), "live_unreachable": len(live), "orphaned_lost_moves": sum(len(v) for v in lost.values())},
-        "orphaned_adult_lists": [{"species": a, "baby": ad[a], "reason": "adult can no longer hatch once incense is not required (spec #9); its list is dead data", "moves_lost_everywhere": lost[a]} for a in dead],
-        "unreachable_pending_design": [{"egg_species": s, "move": m} for s, m in live],
-        "unresolved_cause": "In vanilla the adult-keyed lists (Marill, Snorlax, ...) were the hatch results when no incense was held. With incense no longer required (locked), those lists are dead data. Moves present only there (see moves_lost_everywhere) are now unobtainable, and the knower chains that depended on them (Cleffa Belly Drum, Igglybuff Perish Song via Marill-line; Geodude Mega Punch, Mankey Meditate, Shellder Take Down have no remaining legal knower) are broken. Options for the owner: move the lost adult-only moves onto the Azurill/Munchlax lists, or drop them. No data changed.",
+        "locked_authority": [f"{L.SPEC}#7", AUTH_RULING],
+        "note": "Targeted repair only; adult-keyed lists are left as dead data (those species can no longer hatch).",
+        "entries": entries,
+        "migrated_moves": [{"from": a, "to": b, "moves": m} for a, b, m in MIGRATE],
+        "removed_moves": [{"egg_species": s, "move": m} for s, m in REMOVE],
+        "unreachable_pending_design": [],
     }
+
+
+def apply_egg_moves(man):
+    for e in man["entries"]:
+        p = os.path.join(L.ROOT, e["source_path"])
+        s = open(p).read()
+        m = re.search(r'("egg_moves": \[)(.*?)(\n\s*\])', s, re.S)
+        cur = re.findall(r'"(MOVE_\w+)"', m.group(2))
+        if cur == e["target"]:
+            continue
+        assert cur == e["before"], f"{e['species']}: egg_moves {cur} != guard"
+        indent = re.search(r"\n(\s*)\"MOVE_", m.group(2)).group(1)
+        body = ",".join(f'\n{indent}"{x}"' for x in e["target"])
+        s = s[: m.start(2)] + body + s[m.end(2):]
+        open(p, "w").write(s)
 
 
 def apply_hatch(man):
@@ -168,11 +210,12 @@ def apply_shop(man):
 
 def main():
     os.makedirs(L.IMPL, exist_ok=True)
-    hatch, shop = hatch_manifest(), shop_manifest()
-    for name, obj in [("breeding_rules.json", rules_manifest()), ("egg_group_changes.json", egg_group_manifest()), ("egg_move_changes.json", egg_move_manifest()), ("hatch_cycle_changes.json", hatch), ("breeder_shop_changes.json", shop)]:
+    hatch, shop, emm = hatch_manifest(), shop_manifest(), egg_move_manifest()
+    for name, obj in [("breeding_rules.json", rules_manifest()), ("egg_group_changes.json", egg_group_manifest()), ("egg_move_changes.json", emm), ("hatch_cycle_changes.json", hatch), ("breeder_shop_changes.json", shop)]:
         write(name, obj)
     if "--apply" in sys.argv:
         apply_hatch(hatch)
+        apply_egg_moves(emm)
         apply_shop(shop)
         print(f"applied {len(hatch['entries'])} hatch-cycle edits and the {shop['stock_array']} stock edit")
 

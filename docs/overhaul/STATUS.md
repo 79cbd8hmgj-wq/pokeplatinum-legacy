@@ -14,7 +14,7 @@ Last verified against repository/project history: 2026-10-02.
 - **C2 TM/HM mechanics (HM battle rework, reusable TMs, TM acquisition/economy):** IMPLEMENTED (source + validator verified; Rev 0/Rev 1 build via CI on the C2 PR); see `implementation/C2_MECHANICS_IMPLEMENTATION_AUDIT.md`. Focused runtime QA pending.
 - **EXP/economy port:** IMPLEMENTED (conserved 60/40 team EXP, participant-only EVs, prize/price cleanup, free Move Reminder, half-cost tutors, Veilstone evolution-stone vendor, postgame Rare Candy; source + validator + mutation tests; Rev 0/Rev 1 build via CI); runtime **DEFERRED TO FINAL OVERHAUL PLAYTEST**. Audit: `implementation/economy/ECONOMY_IMPLEMENTATION_AUDIT.md`.
 - **Poké Ball rebalance:** IMPLEMENTED and merged (PR #17; source + validator verified, build via CI; capture runtime QA pending).
-- **Breeding 2.0:** IMPLEMENTED (source + host-compiled rules harness + validator + mutation tests verified; Rev 0/Rev 1 build via CI on the Breeding PR); **runtime breeding QA PENDING — not VERIFIED**. Audit/manifests: `implementation/breeding/`. 5 live egg moves + 9 orphaned adult-only egg moves are unreachable after the locked no-incense change and are awaiting an owner decision (see below).
+- **Breeding 2.0:** IMPLEMENTED (source + host-compiled rules harness + validator + mutation tests verified; Rev 0/Rev 1 build via CI on the Breeding PR); **runtime breeding QA PENDING — not VERIFIED**. Audit/manifests: `implementation/breeding/`. Egg-move legality audit: 0 unreachable / 0 pending after the owner ruling below.
 - **Next source task:** next locked subsystem after Breeding 2.0 (trainer overhaul / events per `DESIGN_PIPELINE.md`). Runtime QA of C1/C2/created moves/evolution/capture/breeding is deferred to the final overhaul playtest.
 
 ## Mainline implementation evidence
@@ -233,7 +233,7 @@ Started from `e2d73d33a702bc151ae283a1245ebf64575476ed`. Implemented: 100% Evers
 
 Normalization: the 255/230-step constant in `Daycare_GetEggCycleLength` is the *hatch-cycle* length, not the egg-roll cadence, and is left unchanged (halving it would also quarter hatch time, contradicting spec #11). The egg roll (day-care step counter `& 0xff`) became `& 0x7f`.
 
-Open owner decision (no data edited): the locked no-incense change orphans the adult-keyed egg lists (Marill, Snorlax, Mr. Mime, Sudowoodo, Mantine, Roselia, Chansey, Chimecho). Nine moves existed only there (Marill: Light Screen, Present, Amnesia, Future Sight, Belly Drum, Perish Song, Supersonic, Aqua Jet; Snorlax: Fissure), and five baby egg moves have no remaining legal knower (Cleffa Belly Drum, Igglybuff Perish Song, Geodude Mega Punch, Mankey Meditate, Shellder Take Down). Options: move the lost moves onto the Azurill/Munchlax lists or drop them.
+Owner ruling applied (PR #18): the 9 egg moves orphaned by the no-incense change were migrated (Marill→Azurill: Light Screen, Present, Amnesia, Future Sight, Belly Drum, Perish Song, Supersonic, Aqua Jet; Snorlax→Munchlax: Fissure) and 5 donorless entries were removed (Cleffa Belly Drum, Igglybuff Perish Song, Geodude Mega Punch, Mankey Meditate, Shellder Take Down). No other egg-move/egg-group/learnset changes. Unresolved breeding blockers: 0.
 
 ## Legendary / Mythical events
 
