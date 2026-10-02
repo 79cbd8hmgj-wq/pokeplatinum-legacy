@@ -1068,6 +1068,27 @@ Deliberate no-change controls:
 No particle resources, sounds, timing, battler motion, backgrounds, or donor assets were replaced.
 
 
+
+### G5 legacy ultimate/signature staging checkpoint
+
+A final high-power signature sweep extends the established base-arena reaction language without
+replacing any native animation resources.
+
+Updated:
+- Blast Burn — heavy base-arena jolt on the final impact in both side branches
+- Hydro Cannon — heavy base-arena response under its sustained defender shake
+- Frenzy Plant — heavy arena reaction when the delayed vine strike lands
+- Psycho Boost — distinct base-arena impact beneath the switched-background hit
+- Sacred Fire — restrained base-arena reaction beneath the existing scene treatment
+
+No-change controls:
+- Eruption already supplies a full scene grade, repeated eruptions, effect-background motion, and multi-target impact treatment
+- Water Spout retains its broad multi-target burst and long defender shake
+- Doom Desire already owns a full white delayed-impact scene
+- Aeroblast already supplies a long dedicated-background shake and defender impact
+
+No gameplay logic, particles, backgrounds, sounds, timing, or donor assets were replaced.
+
 ### G5 generic-special control checkpoint
 
 A final common-special sweep produced **no additional edits**. Dark Pulse, Earth Power, Power Gem,
