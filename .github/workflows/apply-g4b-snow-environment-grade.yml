@@ -1,0 +1,48 @@
+name: apply-g4b-snow-environment-grade
+on:
+  push:
+    branches: [ visual-overhaul-g2a ]
+    paths:
+      - 'tools/visual_overhaul/recolor_g4b_snow.c'
+      - 'tools/visual_overhaul/validate_g4b_snow_recolor.py'
+      - '.github/workflows/apply-g4b-snow-environment-grade.yml'
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: visual-overhaul-g2a
+      - name: Build G4B tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc libpng-dev
+          mkdir -p g4-tools-build
+          COMMON_SRC="tools/nitrobtx/src/common.c tools/nitrobtx/src/ns/chunks/tex.c tools/nitrobtx/src/ns/container.c tools/nitrobtx/src/ns/resource_dict.c tools/nitrobtx/src/ns/resource_name.c tools/nitrobtx/src/ns/resource_tree.c tools/nitrobtx/src/palette.c tools/nitrobtx/src/texture.c"
+          gcc -std=gnu17 -O2 -Itools/nitrobtx/include $COMMON_SRC tools/visual_overhaul/recolor_g4b_snow.c -lpng -lm -o g4-tools-build/recolor-g4b
+          gcc -std=gnu17 -O2 -Itools/nitrobtx/include $COMMON_SRC tools/nitrobtx/src/help.c tools/nitrobtx/src/options.c tools/nitrobtx/src/main.c -lpng -lm -o g4-tools-build/nitrobtx
+          python -m pip install Pillow
+      - name: Apply and validate snow grade
+        run: |
+          cp res/field/maps/texture_sets/map_texture_set_014.nsbtx /tmp/g4b_before.nsbtx
+          ./g4-tools-build/recolor-g4b /tmp/g4b_before.nsbtx /tmp/g4b_after.nsbtx
+          mv /tmp/g4b_after.nsbtx res/field/maps/texture_sets/map_texture_set_014.nsbtx
+          rm -rf docs/visual_overhaul/review/g4b_snow_before docs/visual_overhaul/review/g4b_snow_after
+          mkdir -p docs/visual_overhaul/review/g4b_snow_before docs/visual_overhaul/review/g4b_snow_after
+          ./g4-tools-build/nitrobtx dump /tmp/g4b_before.nsbtx docs/visual_overhaul/review/g4b_snow_before
+          ./g4-tools-build/nitrobtx dump res/field/maps/texture_sets/map_texture_set_014.nsbtx docs/visual_overhaul/review/g4b_snow_after
+          python tools/visual_overhaul/validate_g4b_snow_recolor.py
+          python tools/visual_overhaul/make_texture_sheet.py docs/visual_overhaul/review/g4b_snow_after docs/visual_overhaul/review/g4b_snow_textures.png
+      - name: Commit G4B
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add res/field/maps/texture_sets/map_texture_set_014.nsbtx docs/visual_overhaul/G4B_SNOW_ENVIRONMENT.md docs/visual_overhaul/review/g4b_snow_textures.png
+          git commit -m "visual: grade Snowpoint and Route 217 environment"
+          git fetch origin visual-overhaul-g2a
+          git rebase origin/visual-overhaul-g2a
+          git push origin HEAD:visual-overhaul-g2a
