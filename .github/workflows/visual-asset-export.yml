@@ -59,14 +59,26 @@ jobs:
       - name: Dump G4A Eterna Forest texture banks
         run: |
           sudo apt-get update
-          sudo apt-get install -y meson ninja-build libpng-dev
-          meson setup g4-tools-build
-          meson compile -C g4-tools-build nitrobtx
+          sudo apt-get install -y gcc libpng-dev
+          mkdir -p g4-tools-build
+          gcc -std=gnu17 -O2 -Itools/nitrobtx/include \
+            tools/nitrobtx/src/common.c \
+            tools/nitrobtx/src/help.c \
+            tools/nitrobtx/src/main.c \
+            tools/nitrobtx/src/ns/chunks/tex.c \
+            tools/nitrobtx/src/ns/container.c \
+            tools/nitrobtx/src/ns/resource_dict.c \
+            tools/nitrobtx/src/ns/resource_name.c \
+            tools/nitrobtx/src/ns/resource_tree.c \
+            tools/nitrobtx/src/options.c \
+            tools/nitrobtx/src/palette.c \
+            tools/nitrobtx/src/texture.c \
+            -lpng -lm -o g4-tools-build/nitrobtx
           python -m pip install Pillow
           rm -rf docs/visual_overhaul/review/g4a_eterna_dump
           mkdir -p docs/visual_overhaul/review/g4a_eterna_dump/map
           mkdir -p docs/visual_overhaul/review/g4a_eterna_dump/props
-          ./g4-tools-build/tools/nitrobtx/nitrobtx dump res/field/maps/texture_sets/map_texture_set_053.nsbtx docs/visual_overhaul/review/g4a_eterna_dump/map
+          ./g4-tools-build/nitrobtx dump res/field/maps/texture_sets/map_texture_set_053.nsbtx docs/visual_overhaul/review/g4a_eterna_dump/map
           ./g4-tools-build/tools/nitrobtx/nitrobtx dump res/field/props/texture_sets/prop_texture_set_050.nsbtx docs/visual_overhaul/review/g4a_eterna_dump/props
           python tools/visual_overhaul/make_g4a_eterna_texture_sheet.py
 
