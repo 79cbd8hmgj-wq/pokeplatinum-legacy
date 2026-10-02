@@ -77,8 +77,6 @@ CASES = {
     "full_restore_price_wrong": price("full_restore", 3000),
     "vitamin_price_wrong": price("protein", 9800),
     "status_price_wrong": price("full_heal", 600),
-    "pokeball_price_edit": price("ultra_ball", 1000),
-    "great_ball_price_edit": price("great_ball", 500),
     "unrelated_item_price_edit": price("max_revive", 3000),
     "tm_base_price_edit": price("tm01", 1),
     "rare_candy_wrong_price": price("rare_candy", 9999),

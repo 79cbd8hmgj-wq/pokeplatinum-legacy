@@ -10965,34 +10965,38 @@ static int BattleScript_CalcCatchShakes(BattleSystem *battleSys, BattleContext *
         case ITEM_NET_BALL:
             if (type1 == TYPE_WATER || type2 == TYPE_WATER
                 || type1 == TYPE_BUG || type2 == TYPE_BUG) {
-                ballMod = 30;
+                ballMod = 35;
             }
             break;
 
         case ITEM_DIVE_BALL:
             if (BattleSystem_GetTerrain(battleSys) == TERRAIN_WATER) {
+                ballMod = 40;
+            }
+            break;
+
+        case ITEM_NEST_BALL: {
+            // Level-ratio model: the thrower's active battler vs. the wild target
+            u32 userLevel = battleCtx->battleMons[battleCtx->attacker].level;
+            u32 targetLevel = battleCtx->battleMons[battleCtx->defender].level;
+
+            if (userLevel >= targetLevel * 4) {
+                ballMod = 50;
+            } else if (userLevel >= targetLevel * 2) {
+                ballMod = 35;
+            } else if (userLevel >= targetLevel) {
+                ballMod = 20;
+            }
+        } break;
+
+        case ITEM_REPEAT_BALL:
+            if (BattleSystem_HasCaughtSpecies(battleSys, battleCtx->battleMons[battleCtx->defender].species) == TRUE) {
                 ballMod = 35;
             }
             break;
 
-        case ITEM_NEST_BALL:
-            if (battleCtx->battleMons[battleCtx->defender].level < 40) {
-                ballMod = 40 - battleCtx->battleMons[battleCtx->defender].level;
-
-                if (ballMod < 10) {
-                    ballMod = 10;
-                }
-            }
-            break;
-
-        case ITEM_REPEAT_BALL:
-            if (BattleSystem_HasCaughtSpecies(battleSys, battleCtx->battleMons[battleCtx->defender].species) == TRUE) {
-                ballMod = 30;
-            }
-            break;
-
         case ITEM_TIMER_BALL:
-            ballMod = 10 + battleCtx->totalTurns;
+            ballMod = 10 + 3 * battleCtx->totalTurns;
             if (ballMod > 40) {
                 ballMod = 40;
             }
@@ -11002,14 +11006,18 @@ static int BattleScript_CalcCatchShakes(BattleSystem *battleSys, BattleContext *
             if (BattleSystem_GetTime(battleSys) == TIMEOFDAY_NIGHT
                 || BattleSystem_GetTime(battleSys) == TIMEOFDAY_LATE_NIGHT
                 || BattleSystem_GetTerrain(battleSys) == TERRAIN_CAVE) {
-                ballMod = 35;
+                ballMod = 30;
             }
             break;
 
         case ITEM_QUICK_BALL:
             if (battleCtx->totalTurns < 1) {
-                ballMod = 40;
+                ballMod = 50;
             }
+            break;
+
+        case ITEM_HEAL_BALL:
+            ballMod = 15;
             break;
         }
     } else {

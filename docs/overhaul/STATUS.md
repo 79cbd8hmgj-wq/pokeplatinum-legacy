@@ -71,7 +71,7 @@ They are provenance sources, not current implementation targets.
 | World/#001–#493 availability — special acquisitions (starters, fossils, Spiritomb, Rotom, Tyrogue, Happiny, Eevee, Porygon, Riolu, Castform, Feebas) | LOCKED/RESERVED BY OWNING SPECS WHERE APPLICABLE | IMPLEMENTED on main via PR #11 | source + L2 build + validator (S1–S5 + 25 mutation cases); runtime pending |
 | Trainer overhaul | PLANNED | not started | pending |
 | Economy/EXP port | LOCKED | IMPLEMENTED | source + validator + mutation tests + dual-revision CI build; runtime DEFERRED TO FINAL OVERHAUL PLAYTEST |
-| Capture/Poké Ball port | PLANNED PORT | not started | pending |
+| Capture/Poké Ball port | IMPLEMENTED (L1/validators) | `claude/platinum-pokeball-overhaul-qf25mf` | build + runtime QA pending; see `capture/POKE_BALL_FEASIBILITY_AUDIT.md`, `tools/overhaul/pokeballs/` |
 | Breeding-system port | PLANNED PORT | not started | pending |
 | Event restoration | PLANNED | not started | pending |
 | Frontier/postgame | PLANNED | partial design only | pending |
