@@ -1152,7 +1152,9 @@ Invariants:
 - `weather_fog.s` remains unchanged because it is a separate fog presentation path rather than one of the four standard field-weather states
 
 ### G6 — Showcase Integration & Final Visual Polish
-Status: **active**.
+Status: **source-side complete**.
+
+Canonical closure record: `docs/visual_overhaul/G6_SHOWCASE_INTEGRATION_COMPLETE.md`.
 
 G6 is not a second environment-reconstruction pass. G4 already established the source-side
 lighting/palette/material treatments for the representative environments, while G2/G3/G5 established
