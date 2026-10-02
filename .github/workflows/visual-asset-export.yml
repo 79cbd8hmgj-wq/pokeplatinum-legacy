@@ -6,6 +6,12 @@ on:
     paths:
       - '.github/workflows/visual-asset-export.yml'
       - 'res/prebuilt/data/mmodel/fldeff.narc'
+      - 'include/constants/field/area_light.h'
+      - 'src/overlay005/area_light.c'
+      - 'src/overlay005/fieldmap.c'
+      - 'res/field/lighting/**'
+      - 'res/field/area_data/**'
+      - 'tools/visual_overhaul/validate_area_light_contract.py'
       - 'res/field/maps/texture_sets/map_texture_set_074.nsbtx'
       - 'res/field/props/models/prop_model_147.nsbmd'
       - 'res/field/props/models/mansion_door.nsbmd'
@@ -28,6 +34,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v6
+      - name: Validate area-light runtime contract
+        run: python tools/visual_overhaul/validate_area_light_contract.py
       - name: Collect icon comparison set
         run: |
           mkdir -p visual-export/platinum-icons visual-export/hgss-icons visual-export/platinum-main-battle-sprites visual-export/overhaul-battle-sprites visual-export/hgss-battle-sprites visual-export/hgss-party-menu visual-export/hgss-area-windows visual-export/hgss-zukan
