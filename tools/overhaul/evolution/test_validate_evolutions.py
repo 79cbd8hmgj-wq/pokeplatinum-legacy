@@ -68,6 +68,8 @@ class Mutations(unittest.TestCase):
     def test_night_restriction_lost(self):
         self.rejects("gligar", [["EVO_LEVEL", 38, "SPECIES_GLISCOR"]])
         self.rejects("sneasel", [["EVO_LEVEL", 38, "SPECIES_WEAVILE"]])
+        self.rejects("happiny", [["EVO_LEVEL", 20, "SPECIES_CHANSEY"]])
+        self.rejects("happiny", [["EVO_LEVEL_WITH_HELD_ITEM_DAY", "ITEM_OVAL_STONE", "SPECIES_CHANSEY"]])
 
     def test_clamperl(self):
         self.rejects("clamperl", [["EVO_LEVEL_SPATK_GT_ATK", 35, "SPECIES_HUNTAIL"], ["EVO_LEVEL_ATK_GT_SPATK", 35, "SPECIES_GOREBYSS"]])  # reversed
@@ -127,6 +129,9 @@ class EngineSource(unittest.TestCase):
         self.assertTrue(e(["EVO_LEVEL_SPDEF_GT_DEF", 37, "X"], 37, 1, 4, 1, 5))
         self.assertFalse(e(["EVO_LEVEL_NIGHT", 38, "X"], 38, 1, 1, 1, 1, night=False))
         self.assertFalse(e(["EVO_LEVEL_NIGHT", 38, "X"], 37, 1, 1, 1, 1, night=True))
+        self.assertTrue(e(["EVO_LEVEL_DAY", 20, "X"], 20, 1, 1, 1, 1, night=False))
+        self.assertFalse(e(["EVO_LEVEL_DAY", 20, "X"], 20, 1, 1, 1, 1, night=True))
+        self.assertFalse(e(["EVO_LEVEL_DAY", 20, "X"], 19, 1, 1, 1, 1, night=False))
 
     def test_each_pokemon_c_operator_mutation_caught(self):
         for m, (a, op, b) in V.STAT_SEMANTICS.items():
@@ -148,6 +153,11 @@ class EngineSource(unittest.TestCase):
 
     def test_dataproc_handler_required(self):
         self.assertTrue(self.fails(sp=SP.replace("case EVO_LEVEL_NIGHT:", "case EVO_NONE_X:")))
+        self.assertTrue(self.fails(sp=SP.replace("case EVO_LEVEL_DAY:", "case EVO_NONE_X:")))
+
+    def test_kadabra_no_longer_bypasses_everstone(self):
+        self.assertNotIn("monSpecies != SPECIES_KADABRA", PC)
+        self.assertTrue(self.fails(pc=PC.replace("if (itemHoldEffect == HOLD_EFFECT_NO_EVOLVE", "if (monSpecies != SPECIES_KADABRA\n        && itemHoldEffect == HOLD_EFFECT_NO_EVOLVE", 1)))
 
 
 if __name__ == "__main__":
