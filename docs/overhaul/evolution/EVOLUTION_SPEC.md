@@ -5,7 +5,7 @@
 > **Implementation status: IMPLEMENTED** — 22 changed edges + 6 appended engine methods; manifest `implementation/evolution_manifest.json`.
 > **Verification: source + validator + mutation tests + dual-revision (Rev 0 / Rev 1) build verified.**
 > **Runtime: DEFERRED TO FINAL OVERHAUL PLAYTEST.**
-> **Open items:** none (Happiny → Chansey recovered: Lv20, daytime, no item).
+> **Open items:** none (Happiny → Chansey explicitly approved by the user: Lv20, daytime, no item).
 > **Provenance:** the original locked #001–#493 Pass A master workbook is not in the repo; the manifest was reconstructed from this spec, the Emerald port plan, C3 timing and git history (`implementation/EVOLUTION_RECOVERY_AUDIT.md`).
 
 ## Important status distinction
@@ -142,7 +142,7 @@ The final global rule is:
 
 ### Happiny → Chansey (resolved)
 
-Recovered locked Pass A history: Happiny evolves into Chansey at **Lv20 during the daytime, with no held Oval Stone** (`EVO_LEVEL_DAY`, `IsNight() == FALSE && param <= level`).
+User-approved final ruling (2026-10-02): Happiny evolves into Chansey at **Lv20 during the daytime, with no held Oval Stone** (`EVO_LEVEL_DAY`, `IsNight() == FALSE && param <= level`).
 
 ### Kadabra and Everstone
 
