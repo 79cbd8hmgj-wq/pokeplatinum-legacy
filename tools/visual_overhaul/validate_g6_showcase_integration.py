@@ -369,11 +369,281 @@ def validate_distortion_world() -> dict:
     }
 
 
+
+def validate_spear_pillar() -> dict:
+    header_text = read_text("include/data/map_headers.h")
+    header = block_between(
+        header_text,
+        "[MAP_HEADER_SPEAR_PILLAR] = {",
+        "[MAP_HEADER_SPEAR_PILLAR_DISTORTED] = {",
+        "Spear Pillar map header",
+    )
+    for needle in (
+        ".areaDataArchiveID = area_data_060",
+        ".weather = OVERWORLD_WEATHER_CLEAR_13",
+        ".cameraType = CAMERA_TYPE_SPEAR_PILLAR",
+        ".battleBG = BACKGROUND_MOUNTAIN",
+    ):
+        require(header, needle, "Spear Pillar map header")
+
+    area = json.loads((ROOT / "res/field/area_data/area_data_060.json").read_text())
+    expected_area = {
+        "mapPropSet": "prop_model_set_056",
+        "mapTextureSet": "map_texture_set_059",
+        "lightingSet": "lighting_set_012",
+    }
+    for key, expected in expected_area.items():
+        actual = area.get(key)
+        if actual != expected:
+            raise SystemExit(
+                f"Spear Pillar area data: {key} expected {expected!r}, got {actual!r}"
+            )
+
+    require_nonempty_file(
+        "res/field/maps/texture_sets/map_texture_set_059.nsbtx",
+        "Spear Pillar texture bank",
+    )
+    lighting = validate_lighting(
+        "res/field/lighting/lighting_set_012.json",
+        "Spear Pillar lighting",
+    )
+
+    area_light_constants = read_text("include/constants/field/area_light.h")
+    require(
+        area_light_constants,
+        "AREA_LIGHT_SET_SPEAR_PILLAR_GRADE",
+        "Spear Pillar area-light enum",
+    )
+
+    fieldmap = read_text("src/overlay005/fieldmap.c")
+    for needle in (
+        "case AREA_LIGHT_SET_SPEAR_PILLAR:",
+        "case AREA_LIGHT_SET_SPEAR_PILLAR_GRADE:",
+        "color = GX_RGB(16, 18, 22);",
+        "offset = 0x6000;",
+        "densityTable = sSpearPillarFogDensity;",
+    ):
+        require(fieldmap, needle, "Spear Pillar integration")
+
+    return {
+        "area_data": "area_data_060",
+        "texture_set": "map_texture_set_059",
+        "lighting_set": "lighting_set_012",
+        "camera": "CAMERA_TYPE_SPEAR_PILLAR",
+        "special_fog": True,
+        "lighting_keyframes": len(lighting),
+    }
+
+
+def validate_lakes() -> dict:
+    header_text = read_text("include/data/map_headers.h")
+    header = block_between(
+        header_text,
+        "[MAP_HEADER_LAKE_VERITY] = {",
+        "[MAP_HEADER_VERITY_CAVERN] = {",
+        "Lake Verity map header",
+    )
+    for needle in (
+        ".areaDataArchiveID = area_data_062",
+        ".weather = OVERWORLD_WEATHER_CLEAR",
+        ".cameraType = CAMERA_TYPE_ZOOMED_IN",
+        ".battleBG = BACKGROUND_FOREST",
+    ):
+        require(header, needle, "Lake Verity map header")
+
+    area = json.loads((ROOT / "res/field/area_data/area_data_062.json").read_text())
+    expected_area = {
+        "mapPropSet": "prop_model_set_058",
+        "mapTextureSet": "map_texture_set_061",
+        "lightingSet": "lighting_set_013",
+    }
+    for key, expected in expected_area.items():
+        actual = area.get(key)
+        if actual != expected:
+            raise SystemExit(
+                f"Sinnoh lakes area data: {key} expected {expected!r}, got {actual!r}"
+            )
+
+    require_nonempty_file(
+        "res/field/maps/texture_sets/map_texture_set_061.nsbtx",
+        "Sinnoh lakes texture bank",
+    )
+    lighting = validate_lighting(
+        "res/field/lighting/lighting_set_013.json",
+        "Sinnoh lakes lighting",
+    )
+
+    area_light_constants = read_text("include/constants/field/area_light.h")
+    require(
+        area_light_constants,
+        "AREA_LIGHT_SET_SINNOH_LAKES",
+        "Sinnoh lakes area-light enum",
+    )
+
+    return {
+        "area_data": "area_data_062",
+        "texture_set": "map_texture_set_061",
+        "lighting_set": "lighting_set_013",
+        "camera": "CAMERA_TYPE_ZOOMED_IN",
+        "lighting_keyframes": len(lighting),
+    }
+
+
+def validate_turnback_cave() -> dict:
+    header_text = read_text("include/data/map_headers.h")
+    header = block_between(
+        header_text,
+        "[MAP_HEADER_TURNBACK_CAVE_ENTRANCE] = {",
+        "[MAP_HEADER_TURNBACK_CAVE_PILLAR_ROOM] = {",
+        "Turnback Cave map header",
+    )
+    for needle in (
+        ".areaDataArchiveID = area_data_076",
+        ".weather = OVERWORLD_WEATHER_FOG",
+        ".cameraType = CAMERA_TYPE_DEFAULT",
+        ".battleBG = BACKGROUND_CAVE_3",
+    ):
+        require(header, needle, "Turnback Cave map header")
+
+    area = json.loads((ROOT / "res/field/area_data/area_data_076.json").read_text())
+    expected_area = {
+        "mapPropSet": "prop_model_set_052",
+        "mapTextureSet": "map_texture_set_075",
+        "lightingSet": "lighting_set_014",
+    }
+    for key, expected in expected_area.items():
+        actual = area.get(key)
+        if actual != expected:
+            raise SystemExit(
+                f"Turnback Cave area data: {key} expected {expected!r}, got {actual!r}"
+            )
+
+    require_nonempty_file(
+        "res/field/maps/texture_sets/map_texture_set_075.nsbtx",
+        "Turnback Cave texture bank",
+    )
+    lighting = validate_lighting(
+        "res/field/lighting/lighting_set_014.json",
+        "Turnback Cave lighting",
+    )
+
+    area_light_constants = read_text("include/constants/field/area_light.h")
+    require(
+        area_light_constants,
+        "AREA_LIGHT_SET_TURNBACK_CAVE",
+        "Turnback Cave area-light enum",
+    )
+
+    return {
+        "area_data": "area_data_076",
+        "texture_set": "map_texture_set_075",
+        "lighting_set": "lighting_set_014",
+        "weather": "OVERWORLD_WEATHER_FOG",
+        "lighting_keyframes": len(lighting),
+    }
+
+
+def validate_galactic_interiors() -> dict:
+    header_text = read_text("include/data/map_headers.h")
+
+    eterna_hq = block_between(
+        header_text,
+        "[MAP_HEADER_TEAM_GALACTIC_ETERNA_BUILDING_1F] = {",
+        "[MAP_HEADER_TEAM_GALACTIC_ETERNA_BUILDING_2F] = {",
+        "Galactic Eterna Building map header",
+    )
+    for needle in (
+        ".areaDataArchiveID = area_data_058",
+        ".cameraType = CAMERA_TYPE_INTERIOR_ORTHOGRAPHIC",
+        ".battleBG = BACKGROUND_INDOORS_2",
+    ):
+        require(eterna_hq, needle, "Galactic Eterna Building map header")
+
+    warehouse = block_between(
+        header_text,
+        "[MAP_HEADER_VEILSTONE_CITY_GALACTIC_WAREHOUSE] = {",
+        "[MAP_HEADER_VEILSTONE_CITY_PRIZE_EXCHANGE] = {",
+        "Galactic Warehouse map header",
+    )
+    for needle in (
+        ".areaDataArchiveID = area_data_077",
+        ".cameraType = CAMERA_TYPE_INTERIOR_ORTHOGRAPHIC",
+        ".battleBG = BACKGROUND_INDOORS_2",
+    ):
+        require(warehouse, needle, "Galactic Warehouse map header")
+
+    main_area = json.loads((ROOT / "res/field/area_data/area_data_058.json").read_text())
+    expected_main = {
+        "mapPropSet": "prop_model_set_054",
+        "mapTextureSet": "map_texture_set_057",
+        "lightingSet": "lighting_set_006",
+    }
+    for key, expected in expected_main.items():
+        actual = main_area.get(key)
+        if actual != expected:
+            raise SystemExit(
+                f"Galactic main area data: {key} expected {expected!r}, got {actual!r}"
+            )
+
+    warehouse_area = json.loads((ROOT / "res/field/area_data/area_data_077.json").read_text())
+    expected_warehouse = {
+        "mapPropSet": "prop_model_set_027",
+        "mapTextureSet": "map_texture_set_076",
+        "lightingSet": "lighting_set_001",
+    }
+    for key, expected in expected_warehouse.items():
+        actual = warehouse_area.get(key)
+        if actual != expected:
+            raise SystemExit(
+                f"Galactic warehouse area data: {key} expected {expected!r}, got {actual!r}"
+            )
+
+    require_nonempty_file(
+        "res/field/maps/texture_sets/map_texture_set_057.nsbtx",
+        "Galactic main texture bank",
+    )
+    require_nonempty_file(
+        "res/field/maps/texture_sets/map_texture_set_076.nsbtx",
+        "Galactic warehouse texture bank",
+    )
+
+    main_lighting = validate_lighting(
+        "res/field/lighting/lighting_set_006.json",
+        "Galactic main lighting",
+    )
+
+    grade_report = json.loads(
+        (ROOT / "docs/visual_overhaul/G4G_GALACTIC_GRADE_REPORT.json").read_text()
+    )
+    results = grade_report.get("results", {})
+    for key in ("main", "lab", "warehouse"):
+        result = results.get(key, {})
+        if not result.get("changed_palettes"):
+            raise SystemExit(f"Galactic grade report: {key} has no changed palettes")
+        if not result.get("visual_textures"):
+            raise SystemExit(f"Galactic grade report: {key} has no changed visual textures")
+
+    return {
+        "main_area_data": "area_data_058",
+        "main_texture_set": "map_texture_set_057",
+        "main_lighting_set": "lighting_set_006",
+        "warehouse_area_data": "area_data_077",
+        "warehouse_texture_set": "map_texture_set_076",
+        "warehouse_lighting_set": "lighting_set_001",
+        "main_lighting_keyframes": len(main_lighting),
+        "grade_report_sections": sorted(results),
+    }
+
+
 def main() -> None:
     report = {
         "eterna": validate_eterna(),
         "snow_region": validate_snow_region(),
         "distortion_world": validate_distortion_world(),
+        "spear_pillar": validate_spear_pillar(),
+        "lakes": validate_lakes(),
+        "turnback_cave": validate_turnback_cave(),
+        "galactic_interiors": validate_galactic_interiors(),
     }
     print(json.dumps(report, indent=2, sort_keys=True))
 
