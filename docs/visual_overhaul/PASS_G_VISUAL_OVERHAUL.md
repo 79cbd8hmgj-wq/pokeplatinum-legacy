@@ -890,6 +890,32 @@ generator.
 The next background work should focus on the remaining facility/special arenas
 rather than reopening the already-completed natural terrain set.
 
+### G5 natural-terrain completion checkpoint
+
+The palette-only background pass now covers the common natural battle terrain families used
+throughout ordinary field battles:
+
+- grass
+- path
+- path with puddles
+- water
+- snow
+- ice
+- mud
+- rocky
+- sand
+- cave
+
+Day/evening/night variants are preserved where the retail resource family provides them.
+The pass strengthens environmental identity while keeping every terrain sprite, tile index,
+cell, animation, and archive position unchanged.
+
+Reproducibility is consolidated on a single generator:
+- `tools/visual_overhaul/generate_battle_terrain.py`
+
+The older duplicate `generate_battle_terrain_palettes.py` was removed so there is no stale
+second source capable of regenerating conflicting palette values.
+
 ### G5 special-arena palette checkpoint
 
 Extended the battle-background palette pass into high-visibility special arenas while preserving
