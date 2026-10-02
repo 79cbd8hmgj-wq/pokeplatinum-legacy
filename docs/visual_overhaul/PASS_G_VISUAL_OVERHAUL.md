@@ -382,6 +382,37 @@ Improve:
 - HUD readability
 - party/status presentation
 
+
+### G2C UI source audit checkpoint
+
+Platinum exposes the following UI groups as source-backed build resources:
+
+- `res/graphics/windows/` — message boxes, scroll cursor, frame order
+- `res/graphics/start_menu/` — cursor, icons, palettes
+- `res/graphics/party_menu/` — menu panels, cursor, icons, buttons, subscreen
+- `res/graphics/pokemon_summary_screen/` — tabs, cursors, status icons, tiles, page layouts
+- `res/graphics/shop_menu/` — tiles, tilemaps, cursor, arrows
+- `res/graphics/bag/` — bag UI tiles, layouts, player sprites
+- `res/graphics/battle/healthbox/` — player/enemy healthboxes and parts
+- `res/graphics/battle/interface/` — battle cursor/interface assets
+
+Relevant donor/reference findings:
+
+- HGSS exposes directly comparable window/area-window assets, menu code, cursor code, party-menu code, message-printer code, and font/window rendering infrastructure.
+- PMD Sky exposes multiple frame variants, cursor assets, page arrows, text palettes, and UI transition graphics; treat these primarily as presentation/style references unless a clean conversion path is proven.
+
+G2C implementation order:
+
+1. Message-box/window frames and scroll cursor
+2. Start-menu cursor/icon presentation
+3. Party-menu panel/cursor cleanup
+4. Pokemon summary-screen tabs/cursors/status presentation
+5. Battle healthboxes and battle cursor
+6. Bag/shop secondary UI
+
+Reason: these are highly visible, source-backed, and can be upgraded without renderer work.
+
+
 ### G3 — Character and Pokemon graphics
 - player sprites
 - NPC sprites
