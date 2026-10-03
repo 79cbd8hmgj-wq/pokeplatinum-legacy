@@ -115,7 +115,7 @@ SurvivalArea_RivalBattle:
     BufferPlayerName 1
     Message SurvivalArea_Text_IllProveImTougher
     CloseMessage
-    GetPlayerStarterSpecies VAR_RESULT
+    GetPlayerStarterBranch VAR_RESULT
     GoToIfEq VAR_RESULT, SPECIES_TURTWIG, SurvivalArea_SetRivalTeamTurtwig
     GoToIfEq VAR_RESULT, SPECIES_CHIMCHAR, SurvivalArea_SetRivalTeamChimchar
     GoTo SurvivalArea_SetRivalTeamPiplup

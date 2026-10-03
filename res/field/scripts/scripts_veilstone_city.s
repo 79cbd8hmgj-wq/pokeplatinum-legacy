@@ -626,7 +626,7 @@ VeilstoneCity_SetPlayerCounterpartPartnerTeam:
     End
 
 VeilstoneCity_SetDawnPartnerTeam:
-    GetPlayerStarterSpecies VAR_RESULT
+    GetPlayerStarterBranch VAR_RESULT
     SetVar VAR_0x8004, TRAINER_DAWN_VEILSTONE_CITY_CHIMCHAR
     GoToIfEq VAR_RESULT, SPECIES_CHIMCHAR, VeilstoneCity_SetCounterpartPartnerTeamReturn
     SetVar VAR_0x8004, TRAINER_DAWN_VEILSTONE_CITY_PIPLUP
@@ -635,7 +635,7 @@ VeilstoneCity_SetDawnPartnerTeam:
     Return
 
 VeilstoneCity_SetLucasPartnerTeam:
-    GetPlayerStarterSpecies VAR_RESULT
+    GetPlayerStarterBranch VAR_RESULT
     SetVar VAR_0x8004, TRAINER_LUCAS_VEILSTONE_CITY_CHIMCHAR
     GoToIfEq VAR_RESULT, SPECIES_CHIMCHAR, VeilstoneCity_SetCounterpartPartnerTeamReturn
     SetVar VAR_0x8004, TRAINER_LUCAS_VEILSTONE_CITY_PIPLUP

@@ -1,0 +1,187 @@
+{
+ "total": 36,
+ "detected": 36,
+ "baseline_failures": 0,
+ "cases": [
+  {
+   "name": "Pikachu weight 1 -> 2",
+   "detected": true,
+   "failing": 4
+  },
+  {
+   "name": "Gen I weight (Bulbasaur) 3 -> 4",
+   "detected": true,
+   "failing": 4
+  },
+  {
+   "name": "Gen II weight (Chikorita) 10 -> 9",
+   "detected": true,
+   "failing": 4
+  },
+  {
+   "name": "Gen III weight (Mudkip) 10 -> 11",
+   "detected": true,
+   "failing": 4
+  },
+  {
+   "name": "Gen IV weight (Piplup) 10 -> 11 (total 101)",
+   "detected": true,
+   "failing": 4
+  },
+  {
+   "name": "total weight 100 -> 99 via Torchic",
+   "detected": true,
+   "failing": 4
+  },
+  {
+   "name": "egg position becomes a table input",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "draw takes the egg position",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "second RNG call in the draw",
+   "detected": true,
+   "failing": 2
+  },
+  {
+   "name": "draw called a second time (hatch reroll)",
+   "detected": true,
+   "failing": 2
+  },
+  {
+   "name": "Pikachu Rival mapping -> Chimchar branch",
+   "detected": true,
+   "failing": 3
+  },
+  {
+   "name": "Pikachu Rival mapping -> Turtwig branch",
+   "detected": true,
+   "failing": 3
+  },
+  {
+   "name": "Grass category mapped to Water (Treecko)",
+   "detected": true,
+   "failing": 2
+  },
+  {
+   "name": "non-Sinnoh fallthrough: Route 203 reads actual species",
+   "detected": true,
+   "failing": 2
+  },
+  {
+   "name": "non-Sinnoh fallthrough: Rival starter keyed on actual species",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "Rival branch compared against a non-Sinnoh species",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "thirteen-way Rival duplication (extra Rival label)",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "output level 5 -> 1",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "starter hatch level reset to ordinary",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "species preview: chooser sprite built from a real species",
+   "detected": true,
+   "failing": 2
+  },
+  {
+   "name": "species cry before hatch",
+   "detected": true,
+   "failing": 2
+  },
+  {
+   "name": "per-position confirmation text",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "Poke Ball models shown again",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "chooser text differs per egg",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "missing persistence after roll",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "extra species in the pool",
+   "detected": true,
+   "failing": 5
+  },
+  {
+   "name": "missing species in the pool",
+   "detected": true,
+   "failing": 5
+  },
+  {
+   "name": "first Rival battle before hatch",
+   "detected": true,
+   "failing": 3
+  },
+  {
+   "name": "hatch moved after Rowan departure",
+   "detected": true,
+   "failing": 3
+  },
+  {
+   "name": "old direct GivePokemon award restored",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "ordinary Egg_CreateEgg level changed",
+   "detected": true,
+   "failing": 2
+  },
+  {
+   "name": "ordinary hatch level changed",
+   "detected": true,
+   "failing": 2
+  },
+  {
+   "name": "breeding logic edited (hatch friendship)",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "Day Care hatch-cycle constants edited",
+   "detected": true,
+   "failing": 2
+  },
+  {
+   "name": "Rival starter ignores branch",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "manifest/source drift (manifest weight)",
+   "detected": true,
+   "failing": 3
+  }
+ ]
+}

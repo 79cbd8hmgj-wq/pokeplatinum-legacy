@@ -156,7 +156,7 @@ CanalaveCity_RivalBridgeEnter:
     BufferPlayerName 1
     Message CanalaveCity_Text_CheckIfYoureReady
     CloseMessage
-    GetPlayerStarterSpecies VAR_RESULT
+    GetPlayerStarterBranch VAR_RESULT
     GoToIfEq VAR_RESULT, SPECIES_TURTWIG, CanalaveCity_StartRivalBattleTurtwig
     GoToIfEq VAR_RESULT, SPECIES_CHIMCHAR, CanalaveCity_StartRivalBattleChimchar
     GoTo CanalaveCity_StartRivalBattlePiplup

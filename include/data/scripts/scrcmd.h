@@ -846,6 +846,9 @@ ScriptCommand(SCRCMD_BUFFERBALLSEALNAMEPLURAL,                             ScrCm
 ScriptCommand(SCRCMD_CAPITALIZEFIRSTLETTER,                                ScrCmd_CapitalizeFirstLetter)
 ScriptCommand(SCRCMD_BUFFERFLOORNUMBER,                                    ScrCmd_BufferFloorNumber)
 ScriptCommand(SCRCMD_CHECKPOKEDEXCAUGHTALLBUTARCEUS,                       ScrCmd_CheckPokedexCaughtAllButArceus)
+ScriptCommand(SCRCMD_GETPLAYERSTARTERBRANCH,                               ScrCmd_GetPlayerStarterBranch)
+ScriptCommand(SCRCMD_GIVEMYSTERYSTARTEREGG,                                ScrCmd_GiveMysteryStarterEgg)
+ScriptCommand(SCRCMD_HATCHMYSTERYSTARTEREGG,                               ScrCmd_HatchMysteryStarterEgg)
 
 // clang-format on
 

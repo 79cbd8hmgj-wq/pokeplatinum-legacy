@@ -47,7 +47,7 @@ VeilstoneStore1F_Socialite:
     LockAll
     FacePlayer
     GoToIfSet FLAG_RECEIVED_VEILSTONE_STORE_1F_ACCESSORY_STARTER_MASK, VeilstoneStore1F_Socialite_AfterMaskGiven
-    GetPlayerStarterSpecies VAR_RESULT
+    GetPlayerStarterBranch VAR_RESULT
     CallIfEq VAR_RESULT, SPECIES_TURTWIG, VeilstoneStore1F_Socialite_Turtwig
     CallIfEq VAR_RESULT, SPECIES_CHIMCHAR, VeilstoneStore1F_Socialite_Chimchar
     CallIfEq VAR_RESULT, SPECIES_PIPLUP, VeilstoneStore1F_Socialite_Piplup

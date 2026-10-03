@@ -905,7 +905,7 @@ JubilifeCity_SetPlayerCounterpartPartnerTeam:
     End
 
 JubilifeCity_SetDawnPartnerTeam:
-    GetPlayerStarterSpecies VAR_RESULT
+    GetPlayerStarterBranch VAR_RESULT
     SetVar VAR_0x8004, TRAINER_DAWN_JUBILIFE_CITY_CHIMCHAR
     GoToIfEq VAR_RESULT, SPECIES_CHIMCHAR, JubilifeCity_Return
     SetVar VAR_0x8004, TRAINER_DAWN_JUBILIFE_CITY_PIPLUP
@@ -914,7 +914,7 @@ JubilifeCity_SetDawnPartnerTeam:
     Return
 
 JubilifeCity_SetLucasPartnerTeam:
-    GetPlayerStarterSpecies VAR_RESULT
+    GetPlayerStarterBranch VAR_RESULT
     SetVar VAR_0x8004, TRAINER_LUCAS_JUBILIFE_CITY_CHIMCHAR
     GoToIfEq VAR_RESULT, SPECIES_CHIMCHAR, JubilifeCity_Return
     SetVar VAR_0x8004, TRAINER_LUCAS_JUBILIFE_CITY_PIPLUP

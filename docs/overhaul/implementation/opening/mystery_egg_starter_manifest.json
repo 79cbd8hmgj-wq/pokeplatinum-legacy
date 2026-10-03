@@ -1,0 +1,319 @@
+{
+ "authority": [
+  "docs/overhaul/opening/MYSTERY_EGG_STARTER_SPEC.md",
+  "docs/overhaul/opening/MYSTERY_EGG_STARTER_IMPLEMENTATION_PLAN.md"
+ ],
+ "ordinary_breeding_unchanged": {
+  "Egg_CreateEgg_level": 1,
+  "Egg_CreateHatchedMon_level": 1,
+  "FieldSystem_HatchEgg_hatchLevel": 0,
+  "untouched_files": [
+   "include/constants/daycare.h",
+   "src/daycare_save.c",
+   "docs/overhaul/implementation/breeding/"
+  ]
+ },
+ "output": {
+  "generation": "Pokemon_InitWith(level 5, INIT_IVS_RANDOM, random personality); no guaranteed IV/nature/gender/shiny/item",
+  "level": 5,
+  "level_constant": "MYSTERY_STARTER_LEVEL",
+  "owner": "player",
+  "pikachu_hatches_as": "SPECIES_PIKACHU"
+ },
+ "persistence": {
+  "rival_branch_store": "none; derived by SystemVars_GetPlayerStarterBranch (pure function of the actual species)",
+  "save_format_change": false,
+  "store": "VAR_PLAYER_STARTER (existing u16 var; actual species)",
+  "written": "immediately in ScrCmd_SaveChosenStarter"
+ },
+ "pool": [
+  {
+   "category": "GEN_I_RARE",
+   "rival_branch": "SPECIES_TURTWIG",
+   "roll_range": [
+    0,
+    2
+   ],
+   "species": "SPECIES_BULBASAUR",
+   "weight": 3
+  },
+  {
+   "category": "GEN_I_RARE",
+   "rival_branch": "SPECIES_CHIMCHAR",
+   "roll_range": [
+    3,
+    5
+   ],
+   "species": "SPECIES_CHARMANDER",
+   "weight": 3
+  },
+  {
+   "category": "GEN_I_RARE",
+   "rival_branch": "SPECIES_PIPLUP",
+   "roll_range": [
+    6,
+    8
+   ],
+   "species": "SPECIES_SQUIRTLE",
+   "weight": 3
+  },
+  {
+   "category": "PIKACHU_RARE",
+   "rival_branch": "SPECIES_PIPLUP",
+   "roll_range": [
+    9,
+    9
+   ],
+   "species": "SPECIES_PIKACHU",
+   "weight": 1
+  },
+  {
+   "category": "GEN_II",
+   "rival_branch": "SPECIES_TURTWIG",
+   "roll_range": [
+    10,
+    19
+   ],
+   "species": "SPECIES_CHIKORITA",
+   "weight": 10
+  },
+  {
+   "category": "GEN_II",
+   "rival_branch": "SPECIES_CHIMCHAR",
+   "roll_range": [
+    20,
+    29
+   ],
+   "species": "SPECIES_CYNDAQUIL",
+   "weight": 10
+  },
+  {
+   "category": "GEN_II",
+   "rival_branch": "SPECIES_PIPLUP",
+   "roll_range": [
+    30,
+    39
+   ],
+   "species": "SPECIES_TOTODILE",
+   "weight": 10
+  },
+  {
+   "category": "GEN_III",
+   "rival_branch": "SPECIES_TURTWIG",
+   "roll_range": [
+    40,
+    49
+   ],
+   "species": "SPECIES_TREECKO",
+   "weight": 10
+  },
+  {
+   "category": "GEN_III",
+   "rival_branch": "SPECIES_CHIMCHAR",
+   "roll_range": [
+    50,
+    59
+   ],
+   "species": "SPECIES_TORCHIC",
+   "weight": 10
+  },
+  {
+   "category": "GEN_III",
+   "rival_branch": "SPECIES_PIPLUP",
+   "roll_range": [
+    60,
+    69
+   ],
+   "species": "SPECIES_MUDKIP",
+   "weight": 10
+  },
+  {
+   "category": "GEN_IV",
+   "rival_branch": "SPECIES_TURTWIG",
+   "roll_range": [
+    70,
+    79
+   ],
+   "species": "SPECIES_TURTWIG",
+   "weight": 10
+  },
+  {
+   "category": "GEN_IV",
+   "rival_branch": "SPECIES_CHIMCHAR",
+   "roll_range": [
+    80,
+    89
+   ],
+   "species": "SPECIES_CHIMCHAR",
+   "weight": 10
+  },
+  {
+   "category": "GEN_IV",
+   "rival_branch": "SPECIES_PIPLUP",
+   "roll_range": [
+    90,
+    99
+   ],
+   "species": "SPECIES_PIPLUP",
+   "weight": 10
+  }
+ ],
+ "pool_size": 13,
+ "reveal": {
+  "mechanism": "GiveMysteryStarterEgg -> native egg hatch scene (HatchMysteryStarterEgg)",
+  "timing": "after ReturnToField, before Rowan/counterpart departure and before Barry's first battle",
+  "tv_segment": false
+ },
+ "rival_branch_count": 3,
+ "rival_branches": {
+  "SPECIES_CHIMCHAR": "Fire",
+  "SPECIES_PIPLUP": "Water",
+  "SPECIES_TURTWIG": "Grass"
+ },
+ "rng": {
+  "anti_save_scumming": false,
+  "draws": 1,
+  "function": "MysteryStarter_Draw",
+  "position_is_input": false,
+  "range": [
+   0,
+   99
+  ],
+  "reroll_on_battle_start": false,
+  "reroll_on_field_return": false,
+  "reroll_on_hatch": false,
+  "source": "LCRNG_Next() % 100",
+  "timing": "inside ScrCmd_SaveChosenStarter, after the chooser app exits with a confirmed egg"
+ },
+ "schema": "pokeplatinum-overhaul/mystery-egg-starter/v1",
+ "source_guards": {
+  "include/mystery_egg_starter.h": {
+   "before_blob": null,
+   "target": "NEW: MYSTERY_STARTER_* constants + prototypes"
+  },
+  "include/struct_defs/choose_starter_data.h": {
+   "before_blob": "4c92688379f2d8cfaa39dcd39ad4d7b78156fd69",
+   "target": "species output replaced by eggPosition (never selects a species)"
+  },
+  "res/field/scripts/scripts_canalave_city.s": {
+   "before_blob": "f5839853e918e98f2ee5ddb13bb9c46aba0a5125",
+   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+  },
+  "res/field/scripts/scripts_eterna_city_underground_man_house.s": {
+   "before_blob": "6104b321d09b7521478755c841f5326ce868b19b",
+   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+  },
+  "res/field/scripts/scripts_fight_area.s": {
+   "before_blob": "32c992890f49321e2625473dcc36d7eac1eb631c",
+   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+  },
+  "res/field/scripts/scripts_jubilife_city.s": {
+   "before_blob": "806054604b55abf470362baf549c3146391d1e8c",
+   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+  },
+  "res/field/scripts/scripts_jubilife_tv_2f.s": {
+   "before_blob": "b373a36ca4236915d8a647942933cba5b06419b1",
+   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+  },
+  "res/field/scripts/scripts_pastoria_city.s": {
+   "before_blob": "18ea4b563dac175dc3056af3097ee898731f4b02",
+   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+  },
+  "res/field/scripts/scripts_pokemon_league_north_pokecenter_1f.s": {
+   "before_blob": "37af7ead74542f1645d41b94d3ed7c323641d3bb",
+   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+  },
+  "res/field/scripts/scripts_route_201.s": {
+   "before_blob": "64a320fb05bf05e6a2e1585286069e81e51d1081",
+   "target": "Route201_Briefcase egg flow + branch query"
+  },
+  "res/field/scripts/scripts_route_203.s": {
+   "before_blob": "3447e9f71d60f1df07fb7a08ba842d49956ac1d5",
+   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+  },
+  "res/field/scripts/scripts_route_209_gate_to_hearthome_city.s": {
+   "before_blob": "dd111b2afc6eb6b908b4774e895ef1d672592965",
+   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+  },
+  "res/field/scripts/scripts_spear_pillar.s": {
+   "before_blob": "12bca1e70d288066af0b413b267e1eea24342b9f",
+   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+  },
+  "res/field/scripts/scripts_survival_area.s": {
+   "before_blob": "69120503035b9b0ea6cd5048833df5d951d146dc",
+   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+  },
+  "res/field/scripts/scripts_trainers_school.s": {
+   "before_blob": "4b3d48b4593bccea5d7ab8a7be382587d1a2919e",
+   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+  },
+  "res/field/scripts/scripts_veilstone_city.s": {
+   "before_blob": "20ead40a160a830c222fa198151810505f8bcf0a",
+   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+  },
+  "res/field/scripts/scripts_veilstone_store_1f.s": {
+   "before_blob": "492a3614b68889ba6c600d0a3406aadd19d0b9f9",
+   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+  },
+  "res/text/route_201.json": {
+   "before_blob": "9ad344735e69b5fde46fb1f390728a5efbebccc8",
+   "target": "Egg wording + hatch lead-in"
+  },
+  "res/text/unk_0360.json": {
+   "before_blob": "2572dff7fa5bc7411ff50f66e4f7b5fda9cdacc2",
+   "target": "neutral Mystery Egg chooser text"
+  },
+  "src/choose_starter/choose_starter_app.c": {
+   "before_blob": "7eab7f91426ae947925d508e1faa12fffc958cfe",
+   "target": "three identical egg sprites; species preview/cry removed"
+  },
+  "src/egg_hatch.c": {
+   "before_blob": "ffc8c2ab57f2c7bd6ed02bd88bd868301b8cbdd4",
+   "target": "hatchLevel > 1 selects Egg_CreateHatchedMonAtLevel"
+  },
+  "src/mystery_egg_starter.c": {
+   "before_blob": null,
+   "target": "NEW: weighted table, single draw, Rival-branch mapping"
+  },
+  "src/overlay005/daycare.c": {
+   "before_blob": "f687c17376d6b3020e2b6a00c9d811a5430d7f50",
+   "target": "level-parameterised internals; ordinary entry points keep level 1"
+  },
+  "src/scrcmd.c": {
+   "before_blob": "ac5180b574353f8f9e755077b893db4b4c9b29b6",
+   "target": "SaveChosenStarter draws once and persists; GetPlayerStarterBranch / GiveMysteryStarterEgg / HatchMysteryStarterEgg"
+  },
+  "src/system_vars.c": {
+   "before_blob": "e6ea14aff470b1768487e623aa27d7468c0f9a80",
+   "target": "SystemVars_GetPlayerStarterBranch; Rival/counterpart starter derived from the branch"
+  },
+  "src/unk_0203D1B8.c": {
+   "before_blob": "eba7d7bdc853517ca25c8f4ea25591ec769d8a52",
+   "target": "FieldSystem_HatchMysteryStarterEgg (no TV segment); FieldSystem_HatchEgg hatchLevel = 0"
+  }
+ },
+ "starting_sha": "6fc1eedfec637041733b5e5d9626a49c7524daa9",
+ "validation": {
+  "runtime": "NOT RUN",
+  "state": "IMPLEMENTED_PENDING_CI",
+  "validator": "tools/overhaul/validate_mystery_starter.py",
+  "verified": false
+ },
+ "visual_equivalence": {
+  "confirmation_text_identical": true,
+  "cry_before_hatch": false,
+  "pokeball_3d_models_visible": false,
+  "positions": [
+   "left",
+   "center",
+   "right"
+  ],
+  "same_visual": "SPECIES_EGG sprite",
+  "species_name_preview": false,
+  "species_preview": false,
+  "table_depends_on_position": false,
+  "type_hint": false
+ },
+ "weight_total": 100,
+ "weight_unit": "integer units out of 100 (no floating point)"
+}

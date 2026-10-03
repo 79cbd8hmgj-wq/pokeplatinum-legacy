@@ -96,6 +96,7 @@
 #include "mail.h"
 #include "math_util.h"
 #include "move_reminder_data.h"
+#include "mystery_egg_starter.h"
 #include "overlay_manager.h"
 #include "overworld_map_history.h"
 #include "party.h"
@@ -1478,6 +1479,25 @@ void FieldSystem_HatchEgg(FieldSystem *fieldSystem)
     args.options = SaveData_GetOptions(fieldSystem->saveData);
     args.trainerInfo = SaveData_GetTrainerInfo(fieldSystem->saveData);
     args.bgmID = FieldBGM_GetEffective(fieldSystem, fieldSystem->location->mapHeaderID);
+    args.hatchLevel = 0;
+
+    EggHatch_HatchEgg(fieldSystem->task, &args);
+}
+
+// Scripted Mystery Egg starter reveal: same hatch scene, no Happy Happy Egg Club TV segment.
+void FieldSystem_HatchMysteryStarterEgg(FieldSystem *fieldSystem)
+{
+    Party *party = SaveData_GetParty(fieldSystem->saveData);
+    Pokemon *eggMon = Party_GetFirstEgg(party);
+
+    GF_ASSERT(eggMon != NULL);
+
+    EggHatchArgs args;
+    args.mon = eggMon;
+    args.options = SaveData_GetOptions(fieldSystem->saveData);
+    args.trainerInfo = SaveData_GetTrainerInfo(fieldSystem->saveData);
+    args.bgmID = FieldBGM_GetEffective(fieldSystem, fieldSystem->location->mapHeaderID);
+    args.hatchLevel = MYSTERY_STARTER_LEVEL;
 
     EggHatch_HatchEgg(fieldSystem->task, &args);
 }

@@ -14,6 +14,7 @@ typedef struct {
     Options *options;
     TrainerInfo *trainerInfo;
     u16 bgmID;
+    u8 hatchLevel; // 0 or 1 = ordinary hatch; >1 = scripted Mystery Egg starter
 } EggHatchArgs;
 
 typedef struct {
