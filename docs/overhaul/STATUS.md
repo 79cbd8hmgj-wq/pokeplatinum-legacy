@@ -271,7 +271,7 @@ Release gates are now defined for clean Rev 0/Rev 1 builds, subsystem validators
 
 D7 evidence recorded so far (all static; see `qa/QA_INDEX.md`):
 
-- Master validator `python3 tools/overhaul/validate_overhaul.py`: 17 validators + 14 mutation/regression suites, all PASS (`qa/MASTER_VALIDATION_REPORT.md`).
+- Master validator `python3 tools/overhaul/validate_overhaul.py`: 18 validators + 13 mutation/regression suites, all PASS (`qa/MASTER_VALIDATION_REPORT.md`).
 - Completion graphs: 493/493 species reachable in one save, 212/212 nonlegendary families with a pre-E4 entry, 0 trade/held-item/external dependencies, 0 event cycles, Arceus the terminal #493 capstone (`qa/POKEDEX_493_COMPLETION_REPORT.md`).
 - Proven integration fix: Solar Petal contact flag (created-move manifest mismatch). Test-harness baselines for economy/trainers/postgame refreshed. No gameplay redesign.
 - Progression simulation: model-flagged calibration items, unproven, no trainer/EXP change (`qa/PROGRESSION_SIMULATION_REPORT.md`, `qa/RELEASE_BLOCKERS.md` B-1).
