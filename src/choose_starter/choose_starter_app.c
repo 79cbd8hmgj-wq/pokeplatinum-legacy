@@ -17,6 +17,7 @@
 #include "easy3d.h"
 #include "font.h"
 #include "game_options.h"
+#include "mystery_egg_diag.h"
 #include "graphics.h"
 #include "gx_layers.h"
 #include "heap.h"
@@ -381,6 +382,7 @@ BOOL ChooseStarter_Init(ApplicationManager *appMan, int *param1)
 
     Sound_SetSceneAndPlayBGM(SOUND_SCENE_SUB_60, SEQ_NONE, 0);
 
+    MYSTERY_EGG_DIAG(MEDIAG_A_CHOOSER_INIT);
     return TRUE;
 }
 
@@ -417,6 +419,7 @@ BOOL ChooseStarter_Main(ApplicationManager *appMan, int *state)
         UpdateGraphics(app, HEAP_ID_CHOOSE_STARTER_APP);
 
         if (selectionMade == TRUE) {
+            MYSTERY_EGG_DIAG_V(MEDIAG_A_CHOOSER_FINISH, "pos=%d", app->cursorPosition);
             (*state)++;
         }
         break;
@@ -431,6 +434,7 @@ BOOL ChooseStarter_Main(ApplicationManager *appMan, int *state)
             ResetVisibleHardwareWindows(DS_SCREEN_MAIN);
             ResetVisibleHardwareWindows(DS_SCREEN_SUB);
 
+            MYSTERY_EGG_DIAG(MEDIAG_A_CHOOSER_FADED);
             return TRUE;
         }
         break;
@@ -445,6 +449,7 @@ BOOL ChooseStarter_Exit(ApplicationManager *appMan, int *param1)
     ChooseStarterApp *app = ApplicationManager_Data(appMan);
     ChooseStarterData *data = ApplicationManager_Args(appMan);
 
+    MYSTERY_EGG_DIAG(MEDIAG_A_CHOOSER_EXIT_BEGIN);
     SetVBlankCallback(NULL, NULL);
 
     data->eggPosition = app->cursorPosition;
@@ -473,6 +478,7 @@ BOOL ChooseStarter_Exit(ApplicationManager *appMan, int *param1)
     ApplicationManager_FreeData(appMan);
     Heap_Destroy(HEAP_ID_CHOOSE_STARTER_APP);
 
+    MYSTERY_EGG_DIAG(MEDIAG_A_CHOOSER_EXIT_END);
     return TRUE;
 }
 

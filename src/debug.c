@@ -19,6 +19,10 @@ static void EmulatorRawPrint(const char *fmt)
 
 char formattingBuffer[LOG_MESSAGE_MAX_LENGTH];
 
+// TEMPORARY D8 blocker diagnostics (see mystery_egg_diag.h)
+volatile u32 gMysteryEggDiagStage = 0;
+volatile u32 gMysteryEggDiagActive = 0;
+
 void EmulatorVPrintf(const char *text, va_list ap)
 {
 
