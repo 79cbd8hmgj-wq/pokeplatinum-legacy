@@ -114,7 +114,47 @@
    "failing": 1
   },
   {
-   "name": "Poke Ball models shown again",
+   "name": "Poke Ball models hidden again (non-vanilla visibility)",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "custom resting-state plumbing reintroduced",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "preview movement offset changed",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "eggPosition output reintroduced",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "Route 201 calls GiveMysteryStarterEgg again",
+   "detected": true,
+   "failing": 2
+  },
+  {
+   "name": "Route 201 calls HatchMysteryStarterEgg again",
+   "detected": true,
+   "failing": 2
+  },
+  {
+   "name": "Route 201 award GivePokemon removed",
+   "detected": true,
+   "failing": 3
+  },
+  {
+   "name": "Route 201 award level changed",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "Route 201 award before FadeScreenIn",
    "detected": true,
    "failing": 1
   },
@@ -139,21 +179,6 @@
    "failing": 5
   },
   {
-   "name": "first Rival battle before hatch",
-   "detected": true,
-   "failing": 7
-  },
-  {
-   "name": "hatch moved after Rowan departure",
-   "detected": true,
-   "failing": 7
-  },
-  {
-   "name": "old direct GivePokemon award restored",
-   "detected": true,
-   "failing": 2
-  },
-  {
    "name": "ordinary Egg_CreateEgg level changed",
    "detected": true,
    "failing": 2
@@ -175,31 +200,6 @@
   },
   {
    "name": "Rival starter ignores branch",
-   "detected": true,
-   "failing": 1
-  },
-  {
-   "name": "hatch: manual fade out before message restored (stacked fade)",
-   "detected": true,
-   "failing": 2
-  },
-  {
-   "name": "hatch: extra FadeScreenOut pair added",
-   "detected": true,
-   "failing": 2
-  },
-  {
-   "name": "hatch: invoked twice",
-   "detected": true,
-   "failing": 3
-  },
-  {
-   "name": "hatch: native StartMap removed",
-   "detected": true,
-   "failing": 1
-  },
-  {
-   "name": "hatch: extra transition in starter hatch helper",
    "detected": true,
    "failing": 1
   },

@@ -1292,7 +1292,7 @@ Result vocabulary: `PASS`, `FAIL`, `NOT RUN`. Revisions: US Rev 0, US Rev 1.
 
 * **Setup / save requirement:** Fresh save at the Route 201 briefcase
 * **Steps:** Choose the left egg and confirm.
-* **Expected:** Three identical egg sprites; no species/type/name/cry before confirmation; same confirmation wording; egg hatches before Barry's battle.
+* **Expected:** Three identical egg sprites; no species/type/name/cry before confirmation; same confirmation wording; Route 201 then awards the rolled starter at Lv5 (native hatch scene deferred) before Barry's battle.
 * **Authority:** opening/MYSTERY_EGG_STARTER_SPEC.md s4; mystery_egg_starter_manifest.json
 
 | Revision | Actual result | Result | Tester / date | Evidence |
@@ -1327,7 +1327,7 @@ Result vocabulary: `PASS`, `FAIL`, `NOT RUN`. Revisions: US Rev 0, US Rev 1.
 ### OP-04 — Representative Gen II result (10% tier)
 
 * **Setup / save requirement:** Fresh save; debug-assisted or repeated save-state runs until a Chikorita/Cyndaquil/Totodile result
-* **Steps:** Hatch; open the Summary screen and party.
+* **Steps:** Receive the starter after the fade-in; open the Summary screen and party.
 * **Expected:** Level 5 member of the rolled species; Grass/Fire/Water Rival branch per mapping.
 * **Authority:** mystery_egg_starter_manifest.json pool
 
@@ -1339,7 +1339,7 @@ Result vocabulary: `PASS`, `FAIL`, `NOT RUN`. Revisions: US Rev 0, US Rev 1.
 ### OP-05 — Representative Gen III result (10% tier)
 
 * **Setup / save requirement:** As OP-04 for Treecko/Torchic/Mudkip
-* **Steps:** Hatch; open the Summary screen.
+* **Steps:** Receive the starter; open the Summary screen.
 * **Expected:** Level 5 member of the rolled species; correct Rival branch.
 * **Authority:** mystery_egg_starter_manifest.json pool
 
@@ -1351,7 +1351,7 @@ Result vocabulary: `PASS`, `FAIL`, `NOT RUN`. Revisions: US Rev 0, US Rev 1.
 ### OP-06 — Representative Gen IV result (10% tier)
 
 * **Setup / save requirement:** As OP-04 for Turtwig/Chimchar/Piplup
-* **Steps:** Hatch; open the Summary screen.
+* **Steps:** Receive the starter; open the Summary screen.
 * **Expected:** Level 5 member of the rolled species; its own Rival branch.
 * **Authority:** mystery_egg_starter_manifest.json pool
 
@@ -1363,7 +1363,7 @@ Result vocabulary: `PASS`, `FAIL`, `NOT RUN`. Revisions: US Rev 0, US Rev 1.
 ### OP-07 — Gen I rare result (3% tier)
 
 * **Setup / save requirement:** As OP-04 for Bulbasaur/Charmander/Squirtle
-* **Steps:** Hatch; open the Summary screen.
+* **Steps:** Receive the starter; open the Summary screen.
 * **Expected:** Level 5 Kanto starter; Rival branch Grass/Fire/Water respectively.
 * **Authority:** mystery_egg_starter_manifest.json pool
 
@@ -1375,8 +1375,8 @@ Result vocabulary: `PASS`, `FAIL`, `NOT RUN`. Revisions: US Rev 0, US Rev 1.
 ### OP-08 — Pikachu rare result (1% tier)
 
 * **Setup / save requirement:** As OP-04 for Pikachu
-* **Steps:** Hatch; open the Summary screen.
-* **Expected:** Hatches directly as Level 5 Pikachu (not Pichu); Rival uses the Piplup branch.
+* **Steps:** Receive the starter; open the Summary screen.
+* **Expected:** Level 5 Pikachu is received directly (not Pichu); Rival uses the Piplup branch.
 * **Authority:** mystery_egg_starter_manifest.json pool
 
 | Revision | Actual result | Result | Tester / date | Evidence |
@@ -1384,11 +1384,11 @@ Result vocabulary: `PASS`, `FAIL`, `NOT RUN`. Revisions: US Rev 0, US Rev 1.
 | US Rev 0 | — | **NOT RUN** | — | — |
 | US Rev 1 | — | **NOT RUN** | — | — |
 
-### OP-09 — No preview before hatch
+### OP-09 — No preview before the award
 
 * **Setup / save requirement:** Fresh save
-* **Steps:** Move the cursor across all eggs, confirm one, watch the confirmation and hatch lead-in.
-* **Expected:** No Pokémon sprite, species name, type hint, rarity hint or cry appears before the hatch scene reveals the species.
+* **Steps:** Move the cursor across all eggs, confirm one, watch the confirmation and the award.
+* **Expected:** No Pokémon sprite, species name, type hint, rarity hint or cry appears before the species is awarded.
 * **Authority:** mystery_egg_starter_manifest.json visual_equivalence
 
 | Revision | Actual result | Result | Tester / date | Evidence |
@@ -1396,11 +1396,11 @@ Result vocabulary: `PASS`, `FAIL`, `NOT RUN`. Revisions: US Rev 0, US Rev 1.
 | US Rev 0 | — | **NOT RUN** | — | — |
 | US Rev 1 | — | **NOT RUN** | — | — |
 
-### OP-10 — Hatch scene completes and output is Level 5
+### OP-10 — Direct starter award is Level 5 (hatch scene DEFERRED)
 
 * **Setup / save requirement:** Fresh save
-* **Steps:** Let the hatch animation finish; check party and Summary.
-* **Expected:** Native hatch scene plays once; one party member at Level 5, valid HP/stats, legal Level-5 moves, no duplicate insertion, no unhatched Egg left.
+* **Steps:** After the fade-in, the GivePokemon message appears; check party and Summary.
+* **Expected:** Vanilla GivePokemon award path runs once (no hatch scene); one party member at Level 5, valid HP/stats, legal Level-5 moves, no duplicate insertion, no unhatched Egg left.
 * **Authority:** MYSTERY_EGG_STARTER_IMPLEMENTATION_PLAN.md s10
 
 | Revision | Actual result | Result | Tester / date | Evidence |
@@ -1411,8 +1411,8 @@ Result vocabulary: `PASS`, `FAIL`, `NOT RUN`. Revisions: US Rev 0, US Rev 1.
 ### OP-11 — First Barry battle
 
 * **Setup / save requirement:** Fresh save
-* **Steps:** After the hatch, watch Rowan/counterpart leave and accept Barry's challenge.
-* **Expected:** Rowan/counterpart choreography unchanged; the battle starts normally with the hatched Pokémon; win/loss handling, healing and warp home unchanged.
+* **Steps:** After the award, watch Rowan/counterpart leave and accept Barry's challenge.
+* **Expected:** Rowan/counterpart choreography unchanged; the battle starts normally with the awarded Pokémon; win/loss handling, healing and warp home unchanged.
 * **Authority:** scripts_route_201.s
 
 | Revision | Actual result | Result | Tester / date | Evidence |
@@ -1470,9 +1470,9 @@ Result vocabulary: `PASS`, `FAIL`, `NOT RUN`. Revisions: US Rev 0, US Rev 1.
 
 ### OP-16 — Save/reload persistence and no reroll
 
-* **Setup / save requirement:** Save after the hatch; also a save made before the choice
+* **Setup / save requirement:** Save after the award; also a save made before the choice
 * **Steps:** Reload the post-hatch save and check later Rival/counterpart/lab content; reload the pre-choice save and choose again.
-* **Expected:** Post-hatch save keeps the same actual starter and branch; a save from before the choice may roll a new result (no anti-save-scumming).
+* **Expected:** Post-award save keeps the same actual starter and branch; a save from before the choice may roll a new result (no anti-save-scumming).
 * **Authority:** MYSTERY_EGG_STARTER_SPEC.md s5
 
 | Revision | Actual result | Result | Tester / date | Evidence |

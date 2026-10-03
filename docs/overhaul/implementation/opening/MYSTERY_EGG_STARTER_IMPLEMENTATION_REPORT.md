@@ -49,3 +49,16 @@ before the task launched. Eggs: scale 0.75 / Y +40. **Neither fix is runtime-ver
 
 ## Unresolved blockers
 **BLOCKER C-1 (runtime, OPEN until OP-10/OP-11 pass on both revisions) — see `qa/RELEASE_BLOCKERS.md`.** Visual caveats that only runtime can settle: egg-sprite placement/scale over the old ball positions and sprite layering against the briefcase BG (OP-01…OP-03, OP-09).
+
+## Addendum — simplification to the vanilla-safe award path
+
+After the runtime black screen following Mystery Egg confirmation (PR #26 did not fix it), the integration was reduced:
+
+* Chooser internals restored to vanilla (Poké Ball model visibility, preview movement scale/offset, sprite hide/show, exit/teardown). Only the preview sprite (`SPECIES_EGG`), the species-neutral confirmation text and the removed cry differ from vanilla.
+* `ChooseStarterData` is `options` only; the unused `eggPosition` output was removed (no consumer existed after selection).
+* `Route201_Briefcase` is the vanilla award flow: `StartChooseStarterScene`, `SaveChosenStarter`, `ReturnToField`, `FadeScreenIn`, `WaitFadeScreen`, `GetPlayerStarterSpecies VAR_0x8000`, `GivePokemon VAR_0x8000, 5, ITEM_NONE, VAR_RESULT`.
+* `GiveMysteryStarterEgg` / `HatchMysteryStarterEgg` and the hatch plumbing remain in source but are not called (native hatch presentation DEFERRED / DISABLED).
+* Preserved: weight table, single draw in `ScrCmd_SaveChosenStarter`, `VAR_PLAYER_STARTER` = actual species, branch mapping, Pikachu → Piplup branch, no save-format change, Lv. 5.
+
+Runtime behavior is NOT VERIFIED.
+
