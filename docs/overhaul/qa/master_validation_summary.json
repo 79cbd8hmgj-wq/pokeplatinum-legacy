@@ -1,0 +1,292 @@
+{
+ "child_report_side_effects_restored": [
+  "docs/overhaul/implementation/postgame/POSTGAME_VALIDATION_REPORT.md"
+ ],
+ "failed": [],
+ "overall": "PASS",
+ "results": [
+  {
+   "command": "python3 tools/overhaul/qa/audit_release_consistency.py",
+   "id": "docs",
+   "kind": "validator",
+   "phase": 1,
+   "result": "PASS",
+   "summary": "release consistency: 45 hits, 0 unclassified, 0 stale-state issue(s)",
+   "title": "Canonical-doc / release consistency"
+  },
+  {
+   "command": "python3 tools/overhaul/qa/validate_species_c3.py",
+   "id": "species_c3",
+   "kind": "validator",
+   "phase": 2,
+   "result": "PASS",
+   "summary": "species/C3 validation: 2709 pass, 0 fail",
+   "title": "Species / C3 ledgers + final corrections"
+  },
+  {
+   "command": "python3 tools/overhaul/evolution/validate_evolutions.py",
+   "id": "evolution",
+   "kind": "validator",
+   "phase": 2,
+   "result": "PASS",
+   "summary": "PASS",
+   "title": "Evolution (Pass A)"
+  },
+  {
+   "command": "python3 tools/overhaul/moves/validate_c1.py",
+   "id": "c1_moves",
+   "kind": "validator",
+   "phase": 3,
+   "result": "PASS",
+   "summary": "C1 validation: OK (0 problems, 82 edits)",
+   "title": "C1 existing-move rebalance (82 edits)"
+  },
+  {
+   "command": "python3 tools/overhaul/qa/validate_created_moves.py",
+   "id": "created_moves",
+   "kind": "validator",
+   "phase": 3,
+   "result": "PASS",
+   "summary": "created-move validation: 163 pass, 0 fail",
+   "title": "Created moves 468-489"
+  },
+  {
+   "command": "python3 tools/overhaul/qa/validate_id_integrity.py",
+   "id": "id_integrity",
+   "kind": "validator",
+   "phase": 3,
+   "result": "PASS",
+   "summary": "ID integrity: 41626 pass, 0 fail",
+   "title": "Move/species/item ID integrity"
+  },
+  {
+   "command": "python3 tools/overhaul/c2/validate_c2.py",
+   "id": "c2_tm_hm",
+   "kind": "validator",
+   "phase": 4,
+   "result": "PASS",
+   "summary": "C2 validation: OK (0 problems)",
+   "title": "C2 TM/HM + HM battle + reusable TMs"
+  },
+  {
+   "command": "python3 tools/overhaul/availability/validate_availability.py",
+   "id": "availability",
+   "kind": "validator",
+   "phase": 5,
+   "result": "PASS",
+   "summary": "RESULT: 0 failure(s), 0 warning(s)",
+   "title": "Encounters / availability / special acquisition (manifest state)"
+  },
+  {
+   "command": "python3 tools/overhaul/trainers/validate_trainers.py --no-report",
+   "id": "trainers",
+   "kind": "validator",
+   "phase": 6,
+   "result": "PASS",
+   "summary": "trainer validation: 0 errors, 16 warnings, 13 notes",
+   "title": "Trainers (D1)"
+  },
+  {
+   "command": "python3 tools/overhaul/economy/validate_economy.py",
+   "id": "economy",
+   "kind": "validator",
+   "phase": 7,
+   "result": "PASS",
+   "summary": "economy validation: 0 failure(s)",
+   "title": "Economy / EXP (D2)"
+  },
+  {
+   "command": "python3 tools/overhaul/qa/progression_report.py",
+   "id": "progression",
+   "kind": "validator",
+   "phase": 7,
+   "result": "PASS",
+   "summary": "progression: integrity OK; out-of-tolerance boss-profiles default=27/39, with story trainers=26/39 (reported, not gated)",
+   "title": "Progression simulation integrity (D2 profiles, final source)"
+  },
+  {
+   "command": "python3 tools/overhaul/pokeballs/validate_pokeballs.py",
+   "id": "pokeballs",
+   "kind": "validator",
+   "phase": 8,
+   "result": "PASS",
+   "summary": "pokeball validation: 0 failure(s)",
+   "title": "Pok\u00e9 Balls (D3)"
+  },
+  {
+   "command": "python3 tools/overhaul/validate_breeding.py",
+   "id": "breeding",
+   "kind": "validator",
+   "phase": 9,
+   "result": "PASS",
+   "summary": "breeding validator: 107 pass, 0 fail, 0 pending -> docs/overhaul/implementation/breeding/BREEDING_VALIDATION_REPORT.md",
+   "title": "Breeding 2.0 (D4)"
+  },
+  {
+   "command": "python3 tools/overhaul/validate_legendary_availability.py --no-report",
+   "id": "events",
+   "kind": "validator",
+   "phase": 10,
+   "result": "PASS",
+   "summary": "51/51 checks pass; failures: 0",
+   "title": "Legendary/Mythical events (D5)"
+  },
+  {
+   "command": "python3 tools/overhaul/postgame/validate_postgame.py",
+   "id": "postgame",
+   "kind": "validator",
+   "phase": 11,
+   "result": "PASS",
+   "summary": "119 pass, 0 fail",
+   "title": "Battle Frontier / postgame (D6)"
+  },
+  {
+   "command": "python3 tools/overhaul/qa/build_qa_graphs.py --check",
+   "id": "graphs",
+   "kind": "validator",
+   "phase": 12,
+   "result": "PASS",
+   "summary": "QA graphs: 493/493 reachable, 212 nonlegendary families, 246 evolution edges, 0 event cycles, 0 failure(s)",
+   "title": "Completion graphs (493 / evolution / events / gates), artifacts current"
+  },
+  {
+   "command": "python3 tools/overhaul/qa/validate_runtime_matrix.py",
+   "id": "runtime_matrix",
+   "kind": "validator",
+   "phase": 12,
+   "result": "PASS",
+   "summary": "runtime evidence: {'PASS': 0, 'FAIL': 0, 'NOT RUN': 206} -> RUNTIME QA PENDING (not VERIFIED)",
+   "title": "Runtime matrix integrity (no PASS without evidence)"
+  },
+  {
+   "command": "python3 tools/overhaul/qa/smoke_structural.py",
+   "id": "smoke",
+   "kind": "validator",
+   "phase": 12,
+   "result": "PASS",
+   "summary": "structural smoke (host-side, not runtime): 70 pass, 0 fail",
+   "title": "Structural smoke (host-side, not runtime)"
+  },
+  {
+   "command": "(cd tools/overhaul/moves && python3 test_validate_c1.py)",
+   "id": "c1_tests",
+   "kind": "suite",
+   "phase": 13,
+   "result": "PASS",
+   "summary": "rejecting mutations: 24/24; forward-compatible cases: 4/4",
+   "title": "c1 tests"
+  },
+  {
+   "command": "(cd tools/overhaul/c2 && python3 test_validate_c2.py)",
+   "id": "c2_tests",
+   "kind": "suite",
+   "phase": 13,
+   "result": "PASS",
+   "summary": "rejecting mutations: 76/76; forward-compatible cases: 3/3",
+   "title": "c2 tests"
+  },
+  {
+   "command": "(cd tools/overhaul/evolution && python3 test_validate_evolutions.py)",
+   "id": "evolution_tests",
+   "kind": "suite",
+   "phase": 13,
+   "result": "PASS",
+   "summary": "OK",
+   "title": "evolution tests"
+  },
+  {
+   "command": "(cd tools/overhaul/availability && python3 test_validators.py)",
+   "id": "availability_tests",
+   "kind": "suite",
+   "phase": 13,
+   "result": "PASS",
+   "summary": "26/26 special-acquisition mutation cases detected",
+   "title": "availability tests"
+  },
+  {
+   "command": "(cd tools/overhaul/trainers && python3 test_validate_trainers.py)",
+   "id": "trainer_tests",
+   "kind": "suite",
+   "phase": 13,
+   "result": "PASS",
+   "summary": "PASS unmutated tree has 0 errors",
+   "title": "trainer tests"
+  },
+  {
+   "command": "(cd tools/overhaul/economy && python3 test_validate_economy.py)",
+   "id": "economy_tests",
+   "kind": "suite",
+   "phase": 13,
+   "result": "PASS",
+   "summary": "mutations caught: 56/56 (+1 documented post-merge skip)",
+   "title": "economy tests"
+  },
+  {
+   "command": "(cd tools/overhaul/economy && python3 test_exp_model.py)",
+   "id": "exp_model_tests",
+   "kind": "suite",
+   "phase": 13,
+   "result": "PASS",
+   "summary": "OK",
+   "title": "exp model tests"
+  },
+  {
+   "command": "(cd tools/overhaul/pokeballs && python3 test_pokeballs.py)",
+   "id": "pokeball_tests",
+   "kind": "suite",
+   "phase": 13,
+   "result": "PASS",
+   "summary": "OK",
+   "title": "pokeball tests"
+  },
+  {
+   "command": "(cd tools/overhaul/breeding && python3 test_validate_breeding.py)",
+   "id": "breeding_tests",
+   "kind": "suite",
+   "phase": 13,
+   "result": "PASS",
+   "summary": "OK",
+   "title": "breeding tests"
+  },
+  {
+   "command": "(cd tools/overhaul/events && python3 test_validate_legendary.py)",
+   "id": "event_tests",
+   "kind": "suite",
+   "phase": 13,
+   "result": "PASS",
+   "summary": "OK",
+   "title": "event tests"
+  },
+  {
+   "command": "(cd tools/overhaul/postgame && python3 test_validate_postgame.py)",
+   "id": "postgame_tests",
+   "kind": "suite",
+   "phase": 13,
+   "result": "PASS",
+   "summary": "baseline failures: 0",
+   "title": "postgame tests"
+  },
+  {
+   "command": "(cd tools/overhaul/qa && python3 test_qa_graphs.py)",
+   "id": "qa_graph_tests",
+   "kind": "suite",
+   "phase": 13,
+   "result": "PASS",
+   "summary": "OK",
+   "title": "qa graph tests"
+  },
+  {
+   "command": "(cd tools/overhaul/qa && python3 test_qa_validators.py)",
+   "id": "qa_validator_tests",
+   "kind": "suite",
+   "phase": 13,
+   "result": "PASS",
+   "summary": "OK",
+   "title": "qa validator tests"
+  }
+ ],
+ "schema": "pokeplatinum-overhaul/d7-master-validation/v1",
+ "scope": "static validation only; NOT runtime verification",
+ "suites": 13,
+ "validators": 18
+}

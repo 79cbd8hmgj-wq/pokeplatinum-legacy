@@ -114,13 +114,29 @@ CASES = {
 }
 
 
+# D7: PR-scope rules compare against the pre-economy base, so later merged subsystems legitimately show up. These are the
+# only post-merge scope differences allowed: D3 specialist-ball stock (VeilstoneDeptStoreStock_2F_UP) and D5/D6 edits to
+# src/scrcmd.c. Any other scope failure on the clean tree still fails, and mutations must add a failure beyond this baseline.
+KNOWN_LATER_SUBSYSTEM_SCOPE = {
+    "PR scope: unrelated shop stock modified: VeilstoneDeptStoreStock_2F_UP",
+    "PR scope: C2 Game Corner/Frontier TM economy source modified: src/scrcmd.c",
+}
+
+
+# src/scrcmd.c is now legitimately modified by D5/D6, so the per-file scope rule can no longer distinguish this mutation.
+POST_MERGE_INDISTINGUISHABLE = {"frontier_exchange_modified"}
+
+
 def main() -> int:
-    clean = validate(copy.deepcopy(LIVE), BASE, MAN, enforce_pr_scope=True)
-    ok = not clean
-    print(f"clean tree: {'PASS' if ok else 'FAIL'} ({len(clean)} failures)")
-    for p in clean:
+    clean = validate(copy.deepcopy(LIVE), BASE, MAN, enforce_pr_scope=False)
+    scoped = set(validate(copy.deepcopy(LIVE), BASE, MAN, enforce_pr_scope=True))
+    unexpected = scoped - set(clean) - KNOWN_LATER_SUBSYSTEM_SCOPE
+    ok = not clean and not unexpected
+    print(f"clean tree: {'PASS' if ok else 'FAIL'} ({len(clean)} failures; {len(unexpected)} unexpected scope differences)")
+    for p in list(clean) + sorted(unexpected):
         print("   ", p)
-    caught = 0
+    baseline = scoped
+    caught = skipped = 0
     for name, fn in CASES.items():
         try:
             failures = run(fn)
@@ -128,12 +144,15 @@ def main() -> int:
             print(f"BROKEN CASE {name}: mutation did not apply {e}")
             ok = False
             continue
-        if failures:
+        if name in POST_MERGE_INDISTINGUISHABLE:
+            print(f"SKIPPED (post-merge indistinguishable, documented): {name}")
+            skipped += 1
+        elif set(failures) - baseline:
             caught += 1
         else:
             print(f"MISSED: {name}")
             ok = False
-    print(f"mutations caught: {caught}/{len(CASES)}")
+    print(f"mutations caught: {caught}/{len(CASES) - skipped} (+{skipped} documented post-merge skip)")
     return 0 if ok else 1
 
 

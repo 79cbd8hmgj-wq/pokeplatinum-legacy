@@ -17,8 +17,8 @@ Last verified against repository/project history: 2026-10-02.
 - **Breeding 2.0:** IMPLEMENTED and merged (PR #18; source + host-compiled rules harness + validator + mutation tests verified; Rev 0/Rev 1 build via CI); **runtime breeding QA PENDING — not VERIFIED**. Audit/manifests: `implementation/breeding/`. Egg-move legality audit: 0 unreachable / 0 pending after the owner ruling below.
 - **Trainer overhaul (D1):** **IMPLEMENTED and merged** (PR #19, merge commit `08092189`; source + validator + Rev 0/Rev 1 CI build success, PR head `1497736a`) (393 records changed: 8 Gyms, 33 Rival, 11 Galactic, Elite Four, Cynthia, 13 rematches, 332 ordinary/ordinary-rematch via archetype rules); trainer runtime QA **PENDING — not VERIFIED**. Manifests/report: `implementation/trainers/`; validator: `tools/overhaul/trainers/validate_trainers.py`.
 - **Legendary/Mythical events (D5):** **IMPLEMENTED and merged** (PR #20, merge commit `98f9cbdf`; source + validator + dual-revision builds); runtime event QA **PENDING — not VERIFIED**. All 35 Legendary/Mythical species #001–#493 have an in-save path: native retry-safe Sinnoh events, Rotom/Darkrai/Shaymin/Arceus without distribution gates, Manaphy Egg gift (+ Phione breeding), Regis/Regigigas without the event Regigigas, 14 renewable post-Hall-of-Fame legacy habitats (1%/2% roll in `src/overlay006/wild_encounters.c`), Mew/Celebi/Jirachi/Deoxys retry-safe statics. Manifests/report: `implementation/events/`; validator: `tools/overhaul/validate_legendary_availability.py`. The availability phase's Rotom special-acquisition verifier was updated because D5 removed `DISTRIBUTION_EVENT_ROTOM` (Secret Key alone gates the form room).
-- **Battle Frontier / postgame (D6):** **IMPLEMENTED** (branch `claude/platinum-frontier-postgame-7afa9h`, base `98f9cbdf`; source + validator + mutation tests; Rev 0/Rev 1 CI build recorded on the PR); runtime QA **PENDING — not VERIFIED**. Exact 2x BP at every payout point (Tower/Factory/Castle/Hall/Arcade round + roulette + Hall record keeper; Castle Points untouched), locked TM BP prices confirmed already live (no shop edit), 15 targeted Frontier set fixes + 17 Hall type-pool retype corrections (Brains audited, 0 edits), Battleground proprietor reshuffle without calendar wait, Survival Area Rival daily (weekend gate removed), Print milestone rewards (+10/+30 BP per facility; all-Silver +50 BP + PP Max; all-Gold +100 BP + Master Ball; retry-safe on full Bag), Fight Area/League/Rival rematch trainer references audited. Manifests/report: `implementation/postgame/`; validator: `tools/overhaul/postgame/validate_postgame.py`.
-- **Next source task:** final integration QA / D7 per `DESIGN_PIPELINE.md` (needs its locked spec + plan in the repo first). Runtime QA of C1/C2/created moves/evolution/capture/breeding/trainers/legendary events/Frontier is deferred to the final overhaul playtest.
+- **Battle Frontier / postgame (D6):** **IMPLEMENTED and merged** (PR #21, merge commit `19cbadaa`; source + validator + mutation tests; Rev 0/Rev 1 CI build recorded on the PR); runtime QA **PENDING — not VERIFIED**. Exact 2x BP at every payout point (Tower/Factory/Castle/Hall/Arcade round + roulette + Hall record keeper; Castle Points untouched), locked TM BP prices confirmed already live (no shop edit), 15 targeted Frontier set fixes + 17 Hall type-pool retype corrections (Brains audited, 0 edits), Battleground proprietor reshuffle without calendar wait, Survival Area Rival daily (weekend gate removed), Print milestone rewards (+10/+30 BP per facility; all-Silver +50 BP + PP Max; all-Gold +100 BP + Master Ball; retry-safe on full Bag), Fight Area/League/Rival rematch trainer references audited. Manifests/report: `implementation/postgame/`; validator: `tools/overhaul/postgame/validate_postgame.py`.
+- **Final integration QA (D7):** **IN PROGRESS** — locked spec + plan are in the repo (`qa/`); the QA framework (master validator, completion graphs, runtime matrix, reports) is added by the D7 integration PR. Project state: **CORE 1.0 SOURCE-COMPLETE — RUNTIME QA PENDING** (not VERIFIED, not a release candidate); see `qa/QA_INDEX.md`, `qa/MASTER_VALIDATION_REPORT.md`, `qa/RELEASE_BLOCKERS.md`. Runtime QA of C1/C2/created moves/evolution/capture/breeding/trainers/legendary events/Frontier is deferred to the final overhaul playtest.
 
 ## Mainline implementation evidence
 
@@ -44,9 +44,7 @@ Status: source implemented; L2 build verified; runtime/campaign QA still pending
 
 ## Canonical documentation
 
-Branch: `overhaul/canonical-docs`
-
-Draft PR: **#8**
+Historical: the canonical documentation landed on `main`; branch `overhaul/canonical-docs` / PR #8 are no longer working targets (`main` is the source of truth).
 
 Historical recovery branches:
 
@@ -80,7 +78,8 @@ They are provenance sources, not current implementation targets.
 | Breeding 2.0 | LOCKED | IMPLEMENTED and merged (PR #18) | source + harness + validator verified; CI build; runtime QA pending; see `implementation/breeding/BREEDING_VALIDATION_REPORT.md` |
 | Legendary/Mythical events (D5) | LOCKED | IMPLEMENTED and merged (PR #20) (source + validator + dual-revision builds) | validator 51/51 + 46 mutation cases + baseline; cross-system validators pass; runtime event QA pending; see `implementation/events/LEGENDARY_EVENT_VALIDATION_REPORT.md` |
 | Battle Frontier/postgame (D6) | LOCKED | IMPLEMENTED (source + validator + dual-revision build) | validator 119 checks + 12 mutation cases; cross-system validators pass; runtime Frontier/rematch/Print QA pending — not VERIFIED; see `implementation/postgame/POSTGAME_VALIDATION_REPORT.md` |
-| Full QA/release | PLANNED | not started | pending |
+| Battle Frontier/postgame merge record | n/a | merged via PR #21 (`19cbadaa`) | see row above |
+| Full QA/release (D7) | LOCKED | IN PROGRESS: QA framework + static master validation + completion graphs landed by the D7 PR; runtime campaign/493 run NOT performed | **CORE 1.0 SOURCE-COMPLETE — RUNTIME QA PENDING**; not VERIFIED / not a release candidate |
 
 ## C1 authority
 
@@ -193,9 +192,9 @@ Do not invent one. This is not a build blocker.
 
 ## Immediate next actions
 
-1. Next source task: final integration / QA (D7); it needs its locked spec + implementation plan in the repo first.
-2. Continue the remaining locked subsystems from canonical repo authority; ordinary and special nonlegendary availability are source/build complete.
-3. Defer focused runtime QA until the overhaul is otherwise complete, per user direction.
+1. D7 final integration: the static framework is in place (`qa/`); the remaining work is human/emulator runtime QA (`qa/RUNTIME_TEST_MATRIX.md`), the full campaign (`qa/FULL_CAMPAIGN_REPORT.md`), the 493 completion run (`qa/POKEDEX_493_COMPLETION_REPORT.md`) and the save-import test (`qa/SAVE_COMPATIBILITY_REPORT.md`).
+2. All locked subsystems (C1–C3, D1–D6) are implemented; no design phase is open.
+3. Runtime QA was deferred to the final overhaul playtest per user direction; that playtest is now the gating item for `VERIFIED` / release-candidate status.
 
 ## Rule for future sessions
 
@@ -243,10 +242,10 @@ Owner ruling applied (PR #18): the 9 egg moves orphaned by the no-incense change
 Status: **IMPLEMENTED — source + validator + dual-revision builds; runtime event QA PENDING (not VERIFIED)**
 
 Canonical authority:
-- `docs/overhaul/events/LEGENDARY_MYTHICAL_EVENT_SPEC.md`
+- `docs/overhaul/events/LEGENDARY_MYTHICAL_SPEC.md`
 - `docs/overhaul/events/LEGENDARY_MYTHICAL_IMPLEMENTATION_PLAN.md`
 
-Key locks: native Platinum event restoration for Darkrai/Shaymin/Arceus/Rotom, Regi external-gate removal, Regigigas after internal Regis, retry-safe legendary encounters, Manaphy Egg in-save quest, and internal Sinnoh-side acquisition chains for migration/external legends.
+Key locks: see the availability section below (the earlier "internal migration chain" wording was superseded by the rare-habitat model).
 
 
 ## Battle Frontier / postgame
@@ -262,13 +261,22 @@ Key locks: preserve native Frontier silver/gold streak milestones, double final 
 
 ## Final integration / QA
 
-Status: **LOCKED SPEC — executes after subsystem implementation**
+Status: **LOCKED SPEC — D7 IN PROGRESS: CORE 1.0 SOURCE-COMPLETE — RUNTIME QA PENDING** (static master validation + completion graphs + QA framework landed; no runtime/campaign/493/save-import evidence yet, so NOT `VERIFIED` and NOT a release candidate). Index: `qa/QA_INDEX.md`; blockers: `qa/RELEASE_BLOCKERS.md`.
 
 Canonical authority:
 - `docs/overhaul/qa/FINAL_INTEGRATION_QA_SPEC.md`
 - `docs/overhaul/qa/FINAL_INTEGRATION_QA_IMPLEMENTATION_PLAN.md`
 
 Release gates are now defined for clean Rev 0/Rev 1 builds, subsystem validators, #001–#493 completion proof, evolution legality, progression simulation, runtime boss/event/frontier tests, full fresh-save campaign completion, save compatibility, release blockers, and legal patch packaging. The project may only be marked CORE 1.0 VERIFIED / RELEASE CANDIDATE when the evidence is recorded in-repo.
+
+D7 evidence recorded so far (all static; see `qa/QA_INDEX.md`):
+
+- Master validator `python3 tools/overhaul/validate_overhaul.py`: 18 validators + 13 mutation/regression suites, all PASS (`qa/MASTER_VALIDATION_REPORT.md`).
+- Completion graphs: 493/493 species reachable in one save, 212/212 nonlegendary families with a pre-E4 entry, 0 trade/held-item/external dependencies, 0 event cycles, Arceus the terminal #493 capstone (`qa/POKEDEX_493_COMPLETION_REPORT.md`).
+- Proven integration fix: Solar Petal contact flag (created-move manifest mismatch). Test-harness baselines for economy/trainers/postgame refreshed. No gameplay redesign.
+- Progression simulation: model-flagged calibration items, unproven, no trainer/EXP change (`qa/PROGRESSION_SIMULATION_REPORT.md`, `qa/RELEASE_BLOCKERS.md` B-1).
+- Runtime matrix: 103 cases × 2 revisions, **0 PASS / 0 FAIL / 206 NOT RUN**; full campaign, 493 in-game run and save-import tests **not executed**.
+- Builds: CI only; baseline `main` Rev 0/Rev 1 success; D7 PR run in `qa/BUILD_MATRIX.md`. No patch tooling exists in the repo, so no artifacts were produced (`qa/RELEASE_ARTIFACTS.md`).
 
 
 ## Legendary / Mythical availability

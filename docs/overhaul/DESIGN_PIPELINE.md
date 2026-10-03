@@ -36,7 +36,7 @@ Existing authority:
 Locked and implemented from `docs/overhaul/trainers/` (level curve, archetype rules, exact Gym/Rival/Galactic/E4/Cynthia teams, moves/items/AI policy, rematch tables, validators, batching). Manifests: `docs/overhaul/implementation/trainers/`. Runtime trainer QA pending.
 
 ### D2 — EXP, Money, Shops, and Item Economy
-Status: `LOCKED SPEC`
+Status: `IMPLEMENTED` and merged (PR #16; source + validator + mutation tests + Rev 0/Rev 1 CI build; runtime deferred to the final playtest — not `VERIFIED`)
 
 Existing authority:
 - Platinum's own level/EXP progression is the baseline; Emerald is precedent for philosophy/mechanics, not a source of Platinum trainer level values;
@@ -105,7 +105,7 @@ retry-safe statics.
 Runtime QA remains for the final overhaul playtest (see the validation report).
 
 ### D6 — Battle Frontier, Rematches, and Postgame Rewards
-Status: `IMPLEMENTED` (source + validator + Rev 0/Rev 1 builds; runtime Frontier/rematch/Print QA pending — not `VERIFIED`)
+Status: `IMPLEMENTED` and merged (PR #21; source + validator + Rev 0/Rev 1 builds; runtime Frontier/rematch/Print QA pending — not `VERIFIED`)
 
 Implementation record: `docs/overhaul/implementation/postgame/` (five manifests, `FRONTIER_SET_AUDIT.md`, `POSTGAME_VALIDATION_REPORT.md`); validator `tools/overhaul/postgame/validate_postgame.py`.
 
@@ -125,7 +125,7 @@ Still needed:
 - optional convenience systems.
 
 ### D7 — Final Integration / QA
-Status: `LOCKED SPEC`
+Status: `IN PROGRESS` (locked spec + plan in repo; QA framework, master validator, completion graphs and runtime matrix landed by the D7 PR; **CORE 1.0 SOURCE-COMPLETE — RUNTIME QA PENDING**, not `VERIFIED`)
 
 Must validate:
 - all 493 eventual availability;
@@ -144,10 +144,10 @@ Must validate:
 
 ## Current next design
 
-**All currently identified remaining design phases D1–D7 are now LOCKED. The project is ready to proceed through implementation sequencing from canonical repo authority.**
+**All design phases D1–D7 are LOCKED; D1–D6 are IMPLEMENTED and merged; D7 (final integration QA) is IN PROGRESS. No design phase is open.** Sections below that read "Still needed" under D2/D6 are historical design checklists that the locked specs and manifests have since satisfied; they are not open work.
 
 Legendary/Mythical authority:
-- `docs/overhaul/events/LEGENDARY_MYTHICAL_EVENT_SPEC.md`
+- `docs/overhaul/events/LEGENDARY_MYTHICAL_SPEC.md`
 - `docs/overhaul/events/LEGENDARY_MYTHICAL_IMPLEMENTATION_PLAN.md`
 
 D3 authority:
@@ -178,5 +178,5 @@ D7 authority:
 
 
 D5 authority:
-- `docs/overhaul/events/LEGENDARY_MYTHICAL_EVENT_SPEC.md`
+- `docs/overhaul/events/LEGENDARY_MYTHICAL_SPEC.md`
 - `docs/overhaul/events/LEGENDARY_MYTHICAL_IMPLEMENTATION_PLAN.md`

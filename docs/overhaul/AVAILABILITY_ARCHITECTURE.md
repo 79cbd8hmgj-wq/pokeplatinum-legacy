@@ -1,8 +1,8 @@
 # Pokémon Platinum Overhaul — #001–#493 Availability Architecture
 
-> **DRAFT PLAN — requires user approval**
+> **APPROVED ARCHITECTURE — IMPLEMENTED** (PR #10 ordinary availability; PR #11 special acquisitions; PR #20 Legendary/Mythical).
 >
-> Planning only; this document does not authorize gameplay changes.
+> Historical note: this file began as a `DRAFT PLAN`. Per `STATUS.md` it is the approved implementation basis; the exact per-map placements are the machine-readable manifests `implementation/wild_encounters.json` / `special_acquisitions.json`, which win over this prose where they differ (e.g. recorded band drift in `qa/progression_gates.json`). The s.5 `USER APPROVAL REQUIRED` items were resolved by `implementation/SPECIAL_ACQUISITION.md`.
 
 ## 0. Canonical alignment and scope
 

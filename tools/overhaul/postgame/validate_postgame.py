@@ -28,6 +28,10 @@ ALLOWED = [
     r"^src/(overlay104/(battle_arcade|battle_arcade_helpers|battle_castle|battle_hall|battle_hall_helpers|ov104_022339B4)|scrcmd|scrcmd_battle_hall|unk_02049D08)\.c$",
     r"^docs/overhaul/", r"^tools/overhaul/postgame/",
     r"^tools/overhaul/trainers/(trainer_lib|validate_trainers)\.py$",  # integration fix: trainer validator froze the Frontier directory
+    # D7 final-integration PR (later than D6): QA framework + proven integration fixes. Listed explicitly so the D6 scope check
+    # keeps rejecting any OTHER later change.
+    r"^tools/overhaul/(qa/|validate_overhaul\.py$)", r"^res/moves/solar_petal/data\.json$", r"^\.github/workflows/build\.yml$",
+    r"^tools/overhaul/economy/(simulate_progression|test_validate_economy)\.py$", r"^tools/overhaul/trainers/test_validate_trainers\.py$",
 ]
 
 

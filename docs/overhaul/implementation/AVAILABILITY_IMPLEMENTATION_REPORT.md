@@ -1,5 +1,7 @@
 # Availability Implementation Report (ordinary wild availability)
 
+> **HISTORICAL SNAPSHOT (PR #10, non-authoritative for current state).** The 28 `USER_DECISION_REQUIRED` families named below were resolved by `SPECIAL_ACQUISITION.md` (PR #11; 0 remain) and the 35 reserved Legendary/Mythical families by the D5 manifests under `implementation/events/`. The `DRAFT PLAN` header noted in D4 has been replaced in `AVAILABILITY_ARCHITECTURE.md`. Current state: `STATUS.md`, `qa/QA_INDEX.md`.
+
 Branch: `claude/platinum-availability-impl-c651fe` · base commit `cb420c0d` (main) · status: **IMPLEMENTED + L2 BUILD VERIFIED (Rev 0 / Rev 1); no runtime (L4) verification**
 
 Authority used: `docs/overhaul/AVAILABILITY_ARCHITECTURE.md` as the approved implementation basis (see D4). Section 5

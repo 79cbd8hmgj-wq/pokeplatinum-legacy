@@ -1,6 +1,8 @@
 # Pokémon Platinum Overhaul — Legendary/Mythical Availability & Events
 
-Status: **LOCKED SPEC**
+Status: **NON-AUTHORITATIVE DUPLICATE — superseded by `LEGENDARY_MYTHICAL_SPEC.md`**
+
+> D7 release-consistency audit: this older file duplicates the D5 spec under a different name (two files carried `LOCKED SPEC`). The implemented manifests, validator and implementation plan cite `LEGENDARY_MYTHICAL_SPEC.md`; do not implement from this copy. Deletion is pending owner confirmation (see `qa/RELEASE_BLOCKERS.md`).
 
 ## 1. Core policy
 

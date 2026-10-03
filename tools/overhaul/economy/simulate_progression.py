@@ -29,6 +29,11 @@ BOSSES = [("Roark", "leader_roark", 14), ("Gardenia", "leader_gardenia", 22), ("
           ("Cynthia", "champion_cynthia", 62)]
 ORDINARY_EXCLUDE = ("leader_", "elite_four", "champion", "commander", "galactic_boss", "rival", "dummy", "frontier", "_rematch",
                     "lucas", "dawn", "ruin_maniac_cyrus", "_fight_area", "_spear_pillar", "_stark", "galactic")
+# D7 option (--include-story-trainers): mandatory story fights the default model leaves out of the EXP supply. They are bucketed by
+# ace level into the segment like ordinary trainers but are always fought (added to boss_kos). Default OFF keeps the committed
+# progression_simulation.json byte-identical.
+STORY_TRAINERS = ("rival", "galactic", "commander", "lucas", "dawn", "ruin_maniac_cyrus")
+STORY_EXCLUDE = ("leader_", "elite_four", "champion", "dummy", "frontier", "_fight_area", "_rematch")
 GROWTH_COLUMN = {"EXP_RATE_MEDIUM_FAST": "medium_fast", "EXP_RATE_ERRATIC": "erratic", "EXP_RATE_FLUCTUATING": "fluctuating",
                  "EXP_RATE_MEDIUM_SLOW": "medium_slow", "EXP_RATE_FAST": "fast", "EXP_RATE_SLOW": "slow"}
 
@@ -66,7 +71,7 @@ def trainer_levels(path):
     return [(p["species"], p["level"]) for p in j["party"]]
 
 
-def collect_segments(cache):
+def collect_segments(cache, include_story=False):
     bounds = [b[2] for b in BOSSES]
     seg_kos = [[] for _ in BOSSES]   # ordinary trainer KOs (base_exp, level)
     boss_kos = [[] for _ in BOSSES]
@@ -83,6 +88,17 @@ def collect_segments(cache):
                 missing.add(sp)
     for path in sorted(glob.glob(os.path.join(ROOT, "res/trainers/data/*.json"))):
         stem = os.path.basename(path)[:-5]
+        if include_story and any(x in stem for x in STORY_TRAINERS) and not any(x in stem for x in STORY_EXCLUDE):
+            mons = trainer_levels(path)
+            seg = next((i for i, b in enumerate(bounds) if mons and max(l for _, l in mons) <= b), None)
+            if seg is not None:
+                for sp, lv in mons:
+                    info = species_info(sp, cache)
+                    if info:
+                        boss_kos[seg].append((info[0], lv))
+                    else:
+                        missing.add(sp)
+            continue
         if any(x in stem for x in ORDINARY_EXCLUDE):
             continue
         mons = trainer_levels(path)
@@ -201,9 +217,10 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--json", help="write full results to this path")
     ap.add_argument("--quiet", action="store_true")
+    ap.add_argument("--include-story-trainers", action="store_true", help="D7: add mandatory rival/Galactic fights to the EXP supply")
     args = ap.parse_args(argv)
     tables, cache = load_tables(), {}
-    seg_kos, boss_kos, aces, missing = collect_segments(cache)
+    seg_kos, boss_kos, aces, missing = collect_segments(cache, args.include_story_trainers)
     wild = wild_per_segment(cache)
     spec_aces = [b[2] for b in BOSSES]
     result = {"aces_live": aces, "aces_spec": spec_aces, "ordinary_ko_counts": [len(s) for s in seg_kos],

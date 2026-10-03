@@ -1,0 +1,1013 @@
+{
+ "default": {
+  "aces_live": [
+   14,
+   22,
+   27,
+   32,
+   37,
+   41,
+   44,
+   50,
+   53,
+   55,
+   57,
+   59,
+   62
+  ],
+  "aces_spec": [
+   14,
+   22,
+   27,
+   32,
+   37,
+   41,
+   44,
+   50,
+   53,
+   55,
+   57,
+   59,
+   62
+  ],
+  "profiles": {
+   "completionist": {
+    "out_of_tolerance": [
+     "Roark",
+     "Gardenia",
+     "Fantina",
+     "Maylene",
+     "Wake",
+     "Byron",
+     "Candice"
+    ],
+    "rows": [
+     {
+      "ace": 14,
+      "avg": 16.3,
+      "boss": "Roark",
+      "delta_vs_ace": 2.3,
+      "in_tolerance": false,
+      "max": 17,
+      "median": 17,
+      "vanilla_delta_vs_ace": 2.3
+     },
+     {
+      "ace": 22,
+      "avg": 27,
+      "boss": "Gardenia",
+      "delta_vs_ace": 5,
+      "in_tolerance": false,
+      "max": 28,
+      "median": 27.0,
+      "vanilla_delta_vs_ace": 5
+     },
+     {
+      "ace": 27,
+      "avg": 34,
+      "boss": "Fantina",
+      "delta_vs_ace": 7,
+      "in_tolerance": false,
+      "max": 35,
+      "median": 35,
+      "vanilla_delta_vs_ace": 7
+     },
+     {
+      "ace": 32,
+      "avg": 37,
+      "boss": "Maylene",
+      "delta_vs_ace": 5,
+      "in_tolerance": false,
+      "max": 39,
+      "median": 38.0,
+      "vanilla_delta_vs_ace": 4.8
+     },
+     {
+      "ace": 37,
+      "avg": 41.8,
+      "boss": "Wake",
+      "delta_vs_ace": 4.8,
+      "in_tolerance": false,
+      "max": 45,
+      "median": 43.0,
+      "vanilla_delta_vs_ace": 4.5
+     },
+     {
+      "ace": 41,
+      "avg": 43.7,
+      "boss": "Byron",
+      "delta_vs_ace": 2.7,
+      "in_tolerance": false,
+      "max": 47,
+      "median": 45.0,
+      "vanilla_delta_vs_ace": 2.7
+     },
+     {
+      "ace": 44,
+      "avg": 46.3,
+      "boss": "Candice",
+      "delta_vs_ace": 2.3,
+      "in_tolerance": false,
+      "max": 51,
+      "median": 47.5,
+      "vanilla_delta_vs_ace": 2.2
+     },
+     {
+      "ace": 50,
+      "avg": 49.2,
+      "boss": "Volkner",
+      "delta_vs_ace": -0.8,
+      "in_tolerance": true,
+      "max": 54,
+      "median": 50.5,
+      "vanilla_delta_vs_ace": -1.2
+     },
+     {
+      "ace": 53,
+      "avg": 49.7,
+      "boss": "Aaron",
+      "delta_vs_ace": -3.3,
+      "in_tolerance": true,
+      "max": 55,
+      "median": 51.5,
+      "vanilla_delta_vs_ace": -4
+     },
+     {
+      "ace": 55,
+      "avg": 51.7,
+      "boss": "Bertha",
+      "delta_vs_ace": -3.3,
+      "in_tolerance": true,
+      "max": 57,
+      "median": 53.5,
+      "vanilla_delta_vs_ace": -3.7
+     },
+     {
+      "ace": 57,
+      "avg": 54.7,
+      "boss": "Flint",
+      "delta_vs_ace": -2.3,
+      "in_tolerance": true,
+      "max": 61,
+      "median": 56.5,
+      "vanilla_delta_vs_ace": -3.2
+     },
+     {
+      "ace": 59,
+      "avg": 56.5,
+      "boss": "Lucian",
+      "delta_vs_ace": -2.5,
+      "in_tolerance": true,
+      "max": 63,
+      "median": 58.5,
+      "vanilla_delta_vs_ace": -3.5
+     },
+     {
+      "ace": 62,
+      "avg": 56.8,
+      "boss": "Cynthia",
+      "delta_vs_ace": -5.2,
+      "in_tolerance": true,
+      "max": 63,
+      "median": 59.0,
+      "vanilla_delta_vs_ace": -5.8
+     }
+    ]
+   },
+   "direct": {
+    "out_of_tolerance": [
+     "Gardenia",
+     "Fantina",
+     "Maylene",
+     "Wake",
+     "Byron",
+     "Candice",
+     "Volkner",
+     "Aaron",
+     "Bertha",
+     "Flint",
+     "Lucian",
+     "Cynthia"
+    ],
+    "rows": [
+     {
+      "ace": 14,
+      "avg": 11,
+      "boss": "Roark",
+      "delta_vs_ace": -3,
+      "in_tolerance": true,
+      "max": 13,
+      "median": 11,
+      "vanilla_delta_vs_ace": -4.3
+     },
+     {
+      "ace": 22,
+      "avg": 16,
+      "boss": "Gardenia",
+      "delta_vs_ace": -6,
+      "in_tolerance": false,
+      "max": 17,
+      "median": 16.0,
+      "vanilla_delta_vs_ace": -9.5
+     },
+     {
+      "ace": 27,
+      "avg": 19.2,
+      "boss": "Fantina",
+      "delta_vs_ace": -7.8,
+      "in_tolerance": false,
+      "max": 21,
+      "median": 19,
+      "vanilla_delta_vs_ace": -13
+     },
+     {
+      "ace": 32,
+      "avg": 21.8,
+      "boss": "Maylene",
+      "delta_vs_ace": -10.2,
+      "in_tolerance": false,
+      "max": 24,
+      "median": 22,
+      "vanilla_delta_vs_ace": -16.4
+     },
+     {
+      "ace": 37,
+      "avg": 24.6,
+      "boss": "Wake",
+      "delta_vs_ace": -12.4,
+      "in_tolerance": false,
+      "max": 28,
+      "median": 25,
+      "vanilla_delta_vs_ace": -19.6
+     },
+     {
+      "ace": 41,
+      "avg": 26.4,
+      "boss": "Byron",
+      "delta_vs_ace": -14.6,
+      "in_tolerance": false,
+      "max": 31,
+      "median": 27,
+      "vanilla_delta_vs_ace": -22.8
+     },
+     {
+      "ace": 44,
+      "avg": 28,
+      "boss": "Candice",
+      "delta_vs_ace": -16,
+      "in_tolerance": false,
+      "max": 33,
+      "median": 29,
+      "vanilla_delta_vs_ace": -24.8
+     },
+     {
+      "ace": 50,
+      "avg": 30.2,
+      "boss": "Volkner",
+      "delta_vs_ace": -19.8,
+      "in_tolerance": false,
+      "max": 36,
+      "median": 31,
+      "vanilla_delta_vs_ace": -29.6
+     },
+     {
+      "ace": 53,
+      "avg": 30.8,
+      "boss": "Aaron",
+      "delta_vs_ace": -22.2,
+      "in_tolerance": false,
+      "max": 37,
+      "median": 32,
+      "vanilla_delta_vs_ace": -32.2
+     },
+     {
+      "ace": 55,
+      "avg": 32.2,
+      "boss": "Bertha",
+      "delta_vs_ace": -22.8,
+      "in_tolerance": false,
+      "max": 39,
+      "median": 34,
+      "vanilla_delta_vs_ace": -33.4
+     },
+     {
+      "ace": 57,
+      "avg": 34.2,
+      "boss": "Flint",
+      "delta_vs_ace": -22.8,
+      "in_tolerance": false,
+      "max": 41,
+      "median": 36,
+      "vanilla_delta_vs_ace": -34.4
+     },
+     {
+      "ace": 59,
+      "avg": 35.4,
+      "boss": "Lucian",
+      "delta_vs_ace": -23.6,
+      "in_tolerance": false,
+      "max": 43,
+      "median": 37,
+      "vanilla_delta_vs_ace": -35.6
+     },
+     {
+      "ace": 62,
+      "avg": 36.2,
+      "boss": "Cynthia",
+      "delta_vs_ace": -25.8,
+      "in_tolerance": false,
+      "max": 44,
+      "median": 38,
+      "vanilla_delta_vs_ace": -38.2
+     }
+    ]
+   },
+   "normal": {
+    "out_of_tolerance": [
+     "Byron",
+     "Candice",
+     "Volkner",
+     "Aaron",
+     "Bertha",
+     "Flint",
+     "Lucian",
+     "Cynthia"
+    ],
+    "rows": [
+     {
+      "ace": 14,
+      "avg": 14.7,
+      "boss": "Roark",
+      "delta_vs_ace": 0.7,
+      "in_tolerance": true,
+      "max": 16,
+      "median": 15,
+      "vanilla_delta_vs_ace": 1
+     },
+     {
+      "ace": 22,
+      "avg": 23.8,
+      "boss": "Gardenia",
+      "delta_vs_ace": 1.8,
+      "in_tolerance": true,
+      "max": 25,
+      "median": 24.0,
+      "vanilla_delta_vs_ace": 1.8
+     },
+     {
+      "ace": 27,
+      "avg": 28.8,
+      "boss": "Fantina",
+      "delta_vs_ace": 1.8,
+      "in_tolerance": true,
+      "max": 31,
+      "median": 30,
+      "vanilla_delta_vs_ace": 1.8
+     },
+     {
+      "ace": 32,
+      "avg": 31.5,
+      "boss": "Maylene",
+      "delta_vs_ace": -0.5,
+      "in_tolerance": true,
+      "max": 35,
+      "median": 34.0,
+      "vanilla_delta_vs_ace": -1
+     },
+     {
+      "ace": 37,
+      "avg": 35.7,
+      "boss": "Wake",
+      "delta_vs_ace": -1.3,
+      "in_tolerance": true,
+      "max": 40,
+      "median": 39.0,
+      "vanilla_delta_vs_ace": -2.3
+     },
+     {
+      "ace": 41,
+      "avg": 37.5,
+      "boss": "Byron",
+      "delta_vs_ace": -3.5,
+      "in_tolerance": false,
+      "max": 43,
+      "median": 41.0,
+      "vanilla_delta_vs_ace": -4.7
+     },
+     {
+      "ace": 44,
+      "avg": 39.8,
+      "boss": "Candice",
+      "delta_vs_ace": -4.2,
+      "in_tolerance": false,
+      "max": 46,
+      "median": 43.5,
+      "vanilla_delta_vs_ace": -5.8
+     },
+     {
+      "ace": 50,
+      "avg": 42.2,
+      "boss": "Volkner",
+      "delta_vs_ace": -7.8,
+      "in_tolerance": false,
+      "max": 49,
+      "median": 46.5,
+      "vanilla_delta_vs_ace": -9.8
+     },
+     {
+      "ace": 53,
+      "avg": 42.7,
+      "boss": "Aaron",
+      "delta_vs_ace": -10.3,
+      "in_tolerance": false,
+      "max": 49,
+      "median": 47.0,
+      "vanilla_delta_vs_ace": -12.5
+     },
+     {
+      "ace": 55,
+      "avg": 44.7,
+      "boss": "Bertha",
+      "delta_vs_ace": -10.3,
+      "in_tolerance": false,
+      "max": 52,
+      "median": 49.5,
+      "vanilla_delta_vs_ace": -12.7
+     },
+     {
+      "ace": 57,
+      "avg": 47.2,
+      "boss": "Flint",
+      "delta_vs_ace": -9.8,
+      "in_tolerance": false,
+      "max": 55,
+      "median": 52.0,
+      "vanilla_delta_vs_ace": -12.8
+     },
+     {
+      "ace": 59,
+      "avg": 48.5,
+      "boss": "Lucian",
+      "delta_vs_ace": -10.5,
+      "in_tolerance": false,
+      "max": 57,
+      "median": 53.5,
+      "vanilla_delta_vs_ace": -13.3
+     },
+     {
+      "ace": 62,
+      "avg": 49.2,
+      "boss": "Cynthia",
+      "delta_vs_ace": -12.8,
+      "in_tolerance": false,
+      "max": 58,
+      "median": 54.5,
+      "vanilla_delta_vs_ace": -16
+     }
+    ]
+   }
+  },
+  "unresolved": []
+ },
+ "summary": {
+  "integrity_errors": [],
+  "model_default": {
+   "completionist": [
+    "Roark",
+    "Gardenia",
+    "Fantina",
+    "Maylene",
+    "Wake",
+    "Byron",
+    "Candice"
+   ],
+   "direct": [
+    "Gardenia",
+    "Fantina",
+    "Maylene",
+    "Wake",
+    "Byron",
+    "Candice",
+    "Volkner",
+    "Aaron",
+    "Bertha",
+    "Flint",
+    "Lucian",
+    "Cynthia"
+   ],
+   "normal": [
+    "Byron",
+    "Candice",
+    "Volkner",
+    "Aaron",
+    "Bertha",
+    "Flint",
+    "Lucian",
+    "Cynthia"
+   ]
+  },
+  "model_with_story_trainers": {
+   "completionist": [
+    "Roark",
+    "Gardenia",
+    "Fantina",
+    "Maylene",
+    "Wake",
+    "Byron",
+    "Candice",
+    "Volkner"
+   ],
+   "direct": [
+    "Maylene",
+    "Wake",
+    "Byron",
+    "Candice",
+    "Volkner",
+    "Aaron",
+    "Bertha",
+    "Flint",
+    "Lucian",
+    "Cynthia"
+   ],
+   "normal": [
+    "Roark",
+    "Gardenia",
+    "Fantina",
+    "Aaron",
+    "Bertha",
+    "Flint",
+    "Lucian",
+    "Cynthia"
+   ]
+  }
+ },
+ "with_story_trainers": {
+  "aces_live": [
+   14,
+   22,
+   27,
+   32,
+   37,
+   41,
+   44,
+   50,
+   53,
+   55,
+   57,
+   59,
+   62
+  ],
+  "aces_spec": [
+   14,
+   22,
+   27,
+   32,
+   37,
+   41,
+   44,
+   50,
+   53,
+   55,
+   57,
+   59,
+   62
+  ],
+  "profiles": {
+   "completionist": {
+    "out_of_tolerance": [
+     "Roark",
+     "Gardenia",
+     "Fantina",
+     "Maylene",
+     "Wake",
+     "Byron",
+     "Candice",
+     "Volkner"
+    ],
+    "rows": [
+     {
+      "ace": 14,
+      "avg": 18.3,
+      "boss": "Roark",
+      "delta_vs_ace": 4.3,
+      "in_tolerance": false,
+      "max": 19,
+      "median": 19,
+      "vanilla_delta_vs_ace": 4.3
+     },
+     {
+      "ace": 22,
+      "avg": 28,
+      "boss": "Gardenia",
+      "delta_vs_ace": 6,
+      "in_tolerance": false,
+      "max": 29,
+      "median": 28.0,
+      "vanilla_delta_vs_ace": 6
+     },
+     {
+      "ace": 27,
+      "avg": 35.6,
+      "boss": "Fantina",
+      "delta_vs_ace": 8.6,
+      "in_tolerance": false,
+      "max": 37,
+      "median": 36,
+      "vanilla_delta_vs_ace": 8.8
+     },
+     {
+      "ace": 32,
+      "avg": 38.3,
+      "boss": "Maylene",
+      "delta_vs_ace": 6.3,
+      "in_tolerance": false,
+      "max": 41,
+      "median": 39.5,
+      "vanilla_delta_vs_ace": 6.3
+     },
+     {
+      "ace": 37,
+      "avg": 44,
+      "boss": "Wake",
+      "delta_vs_ace": 7,
+      "in_tolerance": false,
+      "max": 48,
+      "median": 45.5,
+      "vanilla_delta_vs_ace": 6.8
+     },
+     {
+      "ace": 41,
+      "avg": 47.5,
+      "boss": "Byron",
+      "delta_vs_ace": 6.5,
+      "in_tolerance": false,
+      "max": 52,
+      "median": 49.0,
+      "vanilla_delta_vs_ace": 6.5
+     },
+     {
+      "ace": 44,
+      "avg": 51,
+      "boss": "Candice",
+      "delta_vs_ace": 7,
+      "in_tolerance": false,
+      "max": 56,
+      "median": 53.0,
+      "vanilla_delta_vs_ace": 6.5
+     },
+     {
+      "ace": 50,
+      "avg": 54,
+      "boss": "Volkner",
+      "delta_vs_ace": 4,
+      "in_tolerance": false,
+      "max": 60,
+      "median": 56.0,
+      "vanilla_delta_vs_ace": 3.2
+     },
+     {
+      "ace": 53,
+      "avg": 54.8,
+      "boss": "Aaron",
+      "delta_vs_ace": 1.8,
+      "in_tolerance": true,
+      "max": 61,
+      "median": 57.0,
+      "vanilla_delta_vs_ace": 1.2
+     },
+     {
+      "ace": 55,
+      "avg": 56.7,
+      "boss": "Bertha",
+      "delta_vs_ace": 1.7,
+      "in_tolerance": true,
+      "max": 63,
+      "median": 59.0,
+      "vanilla_delta_vs_ace": 0.8
+     },
+     {
+      "ace": 57,
+      "avg": 58.8,
+      "boss": "Flint",
+      "delta_vs_ace": 1.8,
+      "in_tolerance": true,
+      "max": 65,
+      "median": 61.0,
+      "vanilla_delta_vs_ace": 1.2
+     },
+     {
+      "ace": 59,
+      "avg": 60.5,
+      "boss": "Lucian",
+      "delta_vs_ace": 1.5,
+      "in_tolerance": true,
+      "max": 67,
+      "median": 63.0,
+      "vanilla_delta_vs_ace": 0.7
+     },
+     {
+      "ace": 62,
+      "avg": 61.2,
+      "boss": "Cynthia",
+      "delta_vs_ace": -0.8,
+      "in_tolerance": true,
+      "max": 68,
+      "median": 63.5,
+      "vanilla_delta_vs_ace": -1.7
+     }
+    ]
+   },
+   "direct": {
+    "out_of_tolerance": [
+     "Maylene",
+     "Wake",
+     "Byron",
+     "Candice",
+     "Volkner",
+     "Aaron",
+     "Bertha",
+     "Flint",
+     "Lucian",
+     "Cynthia"
+    ],
+    "rows": [
+     {
+      "ace": 14,
+      "avg": 14,
+      "boss": "Roark",
+      "delta_vs_ace": 0,
+      "in_tolerance": true,
+      "max": 16,
+      "median": 14,
+      "vanilla_delta_vs_ace": -2
+     },
+     {
+      "ace": 22,
+      "avg": 18.8,
+      "boss": "Gardenia",
+      "delta_vs_ace": -3.2,
+      "in_tolerance": true,
+      "max": 20,
+      "median": 19.0,
+      "vanilla_delta_vs_ace": -7.2
+     },
+     {
+      "ace": 27,
+      "avg": 23.6,
+      "boss": "Fantina",
+      "delta_vs_ace": -3.4,
+      "in_tolerance": true,
+      "max": 26,
+      "median": 23,
+      "vanilla_delta_vs_ace": -9.4
+     },
+     {
+      "ace": 32,
+      "avg": 26,
+      "boss": "Maylene",
+      "delta_vs_ace": -6,
+      "in_tolerance": false,
+      "max": 29,
+      "median": 26,
+      "vanilla_delta_vs_ace": -13.2
+     },
+     {
+      "ace": 37,
+      "avg": 31,
+      "boss": "Wake",
+      "delta_vs_ace": -6,
+      "in_tolerance": false,
+      "max": 36,
+      "median": 32,
+      "vanilla_delta_vs_ace": -15.2
+     },
+     {
+      "ace": 41,
+      "avg": 35.6,
+      "boss": "Byron",
+      "delta_vs_ace": -5.4,
+      "in_tolerance": false,
+      "max": 43,
+      "median": 37,
+      "vanilla_delta_vs_ace": -16.4
+     },
+     {
+      "ace": 44,
+      "avg": 39.4,
+      "boss": "Candice",
+      "delta_vs_ace": -4.6,
+      "in_tolerance": false,
+      "max": 48,
+      "median": 41,
+      "vanilla_delta_vs_ace": -17.6
+     },
+     {
+      "ace": 50,
+      "avg": 41.2,
+      "boss": "Volkner",
+      "delta_vs_ace": -8.8,
+      "in_tolerance": false,
+      "max": 51,
+      "median": 43,
+      "vanilla_delta_vs_ace": -22.4
+     },
+     {
+      "ace": 53,
+      "avg": 43,
+      "boss": "Aaron",
+      "delta_vs_ace": -10,
+      "in_tolerance": false,
+      "max": 53,
+      "median": 45,
+      "vanilla_delta_vs_ace": -24.6
+     },
+     {
+      "ace": 55,
+      "avg": 43.6,
+      "boss": "Bertha",
+      "delta_vs_ace": -11.4,
+      "in_tolerance": false,
+      "max": 54,
+      "median": 46,
+      "vanilla_delta_vs_ace": -26
+     },
+     {
+      "ace": 57,
+      "avg": 44.6,
+      "boss": "Flint",
+      "delta_vs_ace": -12.4,
+      "in_tolerance": false,
+      "max": 55,
+      "median": 47,
+      "vanilla_delta_vs_ace": -27.4
+     },
+     {
+      "ace": 59,
+      "avg": 45.4,
+      "boss": "Lucian",
+      "delta_vs_ace": -13.6,
+      "in_tolerance": false,
+      "max": 56,
+      "median": 48,
+      "vanilla_delta_vs_ace": -29
+     },
+     {
+      "ace": 62,
+      "avg": 46.2,
+      "boss": "Cynthia",
+      "delta_vs_ace": -15.8,
+      "in_tolerance": false,
+      "max": 57,
+      "median": 49,
+      "vanilla_delta_vs_ace": -31.6
+     }
+    ]
+   },
+   "normal": {
+    "out_of_tolerance": [
+     "Roark",
+     "Gardenia",
+     "Fantina",
+     "Aaron",
+     "Bertha",
+     "Flint",
+     "Lucian",
+     "Cynthia"
+    ],
+    "rows": [
+     {
+      "ace": 14,
+      "avg": 16.3,
+      "boss": "Roark",
+      "delta_vs_ace": 2.3,
+      "in_tolerance": false,
+      "max": 17,
+      "median": 17,
+      "vanilla_delta_vs_ace": 2.3
+     },
+     {
+      "ace": 22,
+      "avg": 24.8,
+      "boss": "Gardenia",
+      "delta_vs_ace": 2.8,
+      "in_tolerance": false,
+      "max": 26,
+      "median": 25.0,
+      "vanilla_delta_vs_ace": 2.5
+     },
+     {
+      "ace": 27,
+      "avg": 31.2,
+      "boss": "Fantina",
+      "delta_vs_ace": 4.2,
+      "in_tolerance": false,
+      "max": 34,
+      "median": 33,
+      "vanilla_delta_vs_ace": 4.2
+     },
+     {
+      "ace": 32,
+      "avg": 33.8,
+      "boss": "Maylene",
+      "delta_vs_ace": 1.8,
+      "in_tolerance": true,
+      "max": 38,
+      "median": 36.0,
+      "vanilla_delta_vs_ace": 1.2
+     },
+     {
+      "ace": 37,
+      "avg": 38.8,
+      "boss": "Wake",
+      "delta_vs_ace": 1.8,
+      "in_tolerance": true,
+      "max": 45,
+      "median": 42.0,
+      "vanilla_delta_vs_ace": 0.7
+     },
+     {
+      "ace": 41,
+      "avg": 42.7,
+      "boss": "Byron",
+      "delta_vs_ace": 1.7,
+      "in_tolerance": true,
+      "max": 50,
+      "median": 46.5,
+      "vanilla_delta_vs_ace": 0
+     },
+     {
+      "ace": 44,
+      "avg": 46,
+      "boss": "Candice",
+      "delta_vs_ace": 2,
+      "in_tolerance": true,
+      "max": 54,
+      "median": 50.5,
+      "vanilla_delta_vs_ace": -0.5
+     },
+     {
+      "ace": 50,
+      "avg": 48,
+      "boss": "Volkner",
+      "delta_vs_ace": -2,
+      "in_tolerance": true,
+      "max": 57,
+      "median": 52.5,
+      "vanilla_delta_vs_ace": -4.5
+     },
+     {
+      "ace": 53,
+      "avg": 49.5,
+      "boss": "Aaron",
+      "delta_vs_ace": -3.5,
+      "in_tolerance": false,
+      "max": 58,
+      "median": 54.5,
+      "vanilla_delta_vs_ace": -6.3
+     },
+     {
+      "ace": 55,
+      "avg": 50.8,
+      "boss": "Bertha",
+      "delta_vs_ace": -4.2,
+      "in_tolerance": false,
+      "max": 60,
+      "median": 56.0,
+      "vanilla_delta_vs_ace": -7.2
+     },
+     {
+      "ace": 57,
+      "avg": 52.5,
+      "boss": "Flint",
+      "delta_vs_ace": -4.5,
+      "in_tolerance": false,
+      "max": 62,
+      "median": 58.0,
+      "vanilla_delta_vs_ace": -7.7
+     },
+     {
+      "ace": 59,
+      "avg": 54,
+      "boss": "Lucian",
+      "delta_vs_ace": -5,
+      "in_tolerance": false,
+      "max": 64,
+      "median": 59.5,
+      "vanilla_delta_vs_ace": -8.7
+     },
+     {
+      "ace": 62,
+      "avg": 54.8,
+      "boss": "Cynthia",
+      "delta_vs_ace": -7.2,
+      "in_tolerance": false,
+      "max": 65,
+      "median": 60.5,
+      "vanilla_delta_vs_ace": -11
+     }
+    ]
+   }
+  },
+  "unresolved": []
+ }
+}

@@ -1,0 +1,335 @@
+{
+ "hits": [
+  {
+   "class": "POLICY_DEFINITION",
+   "line": 99,
+   "path": "AGENTS.md",
+   "reason": "defines how authority labels are interpreted; not gameplay authority",
+   "text": "- `DRAFT PLAN` \u2014 Codex proposal, not authority"
+  },
+  {
+   "class": "POLICY_DEFINITION",
+   "line": 114,
+   "path": "AGENTS.md",
+   "reason": "defines how authority labels are interpreted; not gameplay authority",
+   "text": "1. the approved design/spec, including all locked decisions and superseded alternatives; and"
+  },
+  {
+   "class": "POLICY_DEFINITION",
+   "line": 39,
+   "path": "CLAUDE.md",
+   "reason": "defines how authority labels are interpreted; not gameplay authority",
+   "text": "- A chat draft or optional Codex `DRAFT PLAN` is not implementation authority."
+  },
+  {
+   "class": "POLICY_DEFINITION",
+   "line": 41,
+   "path": "CLAUDE.md",
+   "reason": "defines how authority labels are interpreted; not gameplay authority",
+   "text": "- **UNRESOLVED** means stop and report the ambiguity; do not guess."
+  },
+  {
+   "class": "POLICY_DEFINITION",
+   "line": 118,
+   "path": "CLAUDE.md",
+   "reason": "defines how authority labels are interpreted; not gameplay authority",
+   "text": "Never substitute the known superseded inferred L3 reconstruction from old branch history."
+  },
+  {
+   "class": "POLICY_DEFINITION",
+   "line": 128,
+   "path": "CLAUDE.md",
+   "reason": "defines how authority labels are interpreted; not gameplay authority",
+   "text": "Any older ledger/prose conflicting with these is superseded."
+  },
+  {
+   "class": "RESOLVED_HEADER",
+   "line": 5,
+   "path": "docs/overhaul/AVAILABILITY_ARCHITECTURE.md",
+   "reason": "historical note: formerly DRAFT PLAN, now bannered APPROVED/IMPLEMENTED",
+   "text": "> Historical note: this file began as a `DRAFT PLAN`. Per `STATUS.md` it is the approved implementation basis; the exact per-map placements "
+  },
+  {
+   "class": "PROVENANCE",
+   "line": 98,
+   "path": "docs/overhaul/EMERALD_PORT_PLAN.md",
+   "reason": "recovery/provenance or non-Platinum reference material that explicitly labels itself non-authoritative",
+   "text": "### Superseded concepts"
+  },
+  {
+   "class": "PROVENANCE",
+   "line": 115,
+   "path": "docs/overhaul/RECOVERY_INDEX.md",
+   "reason": "recovery/provenance or non-Platinum reference material that explicitly labels itself non-authoritative",
+   "text": "Known superseded historical artifact:"
+  },
+  {
+   "class": "PROVENANCE",
+   "line": 150,
+   "path": "docs/overhaul/RECOVERY_INDEX.md",
+   "reason": "recovery/provenance or non-Platinum reference material that explicitly labels itself non-authoritative",
+   "text": "Earlier direct-item and hold-item-plus-level proposals are superseded."
+  },
+  {
+   "class": "STATUS_NOTE",
+   "line": 248,
+   "path": "docs/overhaul/STATUS.md",
+   "reason": "status text recording a resolved/zero state",
+   "text": "Key locks: see the availability section below (the earlier \"internal migration chain\" wording was superseded by the rare-habitat model)."
+  },
+  {
+   "class": "ZERO_COUNT_RESOLVED",
+   "line": 334,
+   "path": "docs/overhaul/STATUS.md",
+   "reason": "records that the count is zero / resolved",
+   "text": "- Nonlegendary families with a verified pre-E4 path: 212/212 (184 wild + 28 special). USER_DECISION_REQUIRED families: 0."
+  },
+  {
+   "class": "BANNERED_NON_AUTHORITY",
+   "line": 3,
+   "path": "docs/overhaul/events/LEGENDARY_MYTHICAL_EVENT_SPEC.md",
+   "reason": "duplicate spec explicitly bannered NON-AUTHORITATIVE (D7)",
+   "text": "Status: **NON-AUTHORITATIVE DUPLICATE \u2014 superseded by `LEGENDARY_MYTHICAL_SPEC.md`**"
+  },
+  {
+   "class": "SUPERSEDED_MARKER",
+   "line": 121,
+   "path": "docs/overhaul/evolution/EVOLUTION_SPEC.md",
+   "reason": "section/key that lists superseded alternatives so they are NOT implemented (or is an empty list / checklist item)",
+   "text": "## Superseded evolution concepts"
+  },
+  {
+   "class": "ZERO_COUNT_RESOLVED",
+   "line": 136,
+   "path": "docs/overhaul/evolution/EVOLUTION_SPEC.md",
+   "reason": "records that the count is zero / resolved",
+   "text": "- Manifest: `docs/overhaul/implementation/evolution_manifest.json` (229 evolution-bearing species, 246 edges; 22 LOCKED_CHANGED, 23 LOCKED_K"
+  },
+  {
+   "class": "HISTORICAL_SNAPSHOT",
+   "line": 3,
+   "path": "docs/overhaul/implementation/AVAILABILITY_IMPLEMENTATION_REPORT.md",
+   "reason": "dated implementation/audit record; carries a historical or 'superseded/resolved' banner",
+   "text": "> **HISTORICAL SNAPSHOT (PR #10, non-authoritative for current state).** The 28 `USER_DECISION_REQUIRED` families named below were resolved "
+  },
+  {
+   "class": "HISTORICAL_SNAPSHOT",
+   "line": 8,
+   "path": "docs/overhaul/implementation/AVAILABILITY_IMPLEMENTATION_REPORT.md",
+   "reason": "dated implementation/audit record; carries a historical or 'superseded/resolved' banner",
+   "text": "(`USER APPROVAL REQUIRED`) was **not** decided; those 28 families are reserved as `USER_DECISION_REQUIRED`."
+  },
+  {
+   "class": "HISTORICAL_SNAPSHOT",
+   "line": 17,
+   "path": "docs/overhaul/implementation/AVAILABILITY_IMPLEMENTATION_REPORT.md",
+   "reason": "dated implementation/audit record; carries a historical or 'superseded/resolved' banner",
+   "text": "| Families | 247 evolution families derived from live `res/pokemon/*/data.json`: 212 nonlegendary + 35 Legendary/Mythical (`RESERVED_LATER_P"
+  },
+  {
+   "class": "HISTORICAL_SNAPSHOT",
+   "line": 18,
+   "path": "docs/overhaul/implementation/AVAILABILITY_IMPLEMENTATION_REPORT.md",
+   "reason": "dated implementation/audit record; carries a historical or 'superseded/resolved' banner",
+   "text": "| Species coverage (of 493) | 384 wild-reachable PRE_E4, 74 in `USER_DECISION_REQUIRED` families, 35 reserved (Legendary/Mythical). Babies w"
+  },
+  {
+   "class": "HISTORICAL_SNAPSHOT",
+   "line": 22,
+   "path": "docs/overhaul/implementation/AVAILABILITY_IMPLEMENTATION_REPORT.md",
+   "reason": "dated implementation/audit record; carries a historical or 'superseded/resolved' banner",
+   "text": "## 2. USER_DECISION_REQUIRED (reserved, not designed)"
+  },
+  {
+   "class": "HISTORICAL_SNAPSHOT",
+   "line": 40,
+   "path": "docs/overhaul/implementation/AVAILABILITY_IMPLEMENTATION_REPORT.md",
+   "reason": "dated implementation/audit record; carries a historical or 'superseded/resolved' banner",
+   "text": "The validator proves that no occurrence of a `USER_DECISION_REQUIRED` species was added, moved or removed in any table."
+  },
+  {
+   "class": "HISTORICAL_SNAPSHOT",
+   "line": 49,
+   "path": "docs/overhaul/implementation/AVAILABILITY_IMPLEMENTATION_REPORT.md",
+   "reason": "dated implementation/audit record; carries a historical or 'superseded/resolved' banner",
+   "text": "| D4 | `AVAILABILITY_ARCHITECTURE.md` still carries the header \"DRAFT PLAN \u2014 requires user approval\" and s.8 says exact map/slot/level/perce"
+  },
+  {
+   "class": "HISTORICAL_SNAPSHOT",
+   "line": 22,
+   "path": "docs/overhaul/implementation/AVAILABILITY_SOURCE_AUDIT.md",
+   "reason": "dated implementation/audit record; carries a historical or 'superseded/resolved' banner",
+   "text": "| Feebas | `encounters_mt_coronet_b1f.json` `elusive_rod_encounter` + tile table, `src/overlay006/feebas_fishing.c` | Random tiles seeded fr"
+  },
+  {
+   "class": "HISTORICAL_SNAPSHOT",
+   "line": 24,
+   "path": "docs/overhaul/implementation/AVAILABILITY_SOURCE_AUDIT.md",
+   "reason": "dated implementation/audit record; carries a historical or 'superseded/resolved' banner",
+   "text": "| National Dex gates | `WildEncounters_ReplaceDualSlotEncounters`, `WildEncounters_ReplaceTrophyGardenEncounters`, `ReplaceGreatMarshDailyEn"
+  },
+  {
+   "class": "ZERO_COUNT_RESOLVED",
+   "line": 27,
+   "path": "docs/overhaul/implementation/EVOLUTION_RECOVERY_AUDIT.md",
+   "reason": "records that the count is zero / resolved",
+   "text": "| UNRESOLVED_AUTHORITY | 0 |"
+  },
+  {
+   "class": "HISTORICAL_SNAPSHOT",
+   "line": 43,
+   "path": "docs/overhaul/implementation/EVOLUTION_RECOVERY_AUDIT.md",
+   "reason": "dated implementation/audit record; carries a historical or 'superseded/resolved' banner",
+   "text": "- **Poliwhirl's final Pass A branch is fully stat-based at Lv35.** SpA > Atk \u2192 Politoed; Atk \u2265 SpA \u2192 Poliwrath. Equality therefore \u2192 Poliwra"
+  },
+  {
+   "class": "ZERO_COUNT_RESOLVED",
+   "line": 57,
+   "path": "docs/overhaul/implementation/EVOLUTION_RECOVERY_AUDIT.md",
+   "reason": "records that the count is zero / resolved",
+   "text": "## UNRESOLVED_AUTHORITY \u2014 none"
+  },
+  {
+   "class": "HISTORICAL_SNAPSHOT",
+   "line": 4,
+   "path": "docs/overhaul/implementation/SPECIAL_ACQUISITION.md",
+   "reason": "dated implementation/audit record; carries a historical or 'superseded/resolved' banner",
+   "text": "`USER_DECISION_REQUIRED`. Status: **IMPLEMENTED; source + build + validator verified; runtime QA pending.**"
+  },
+  {
+   "class": "HISTORICAL_SNAPSHOT",
+   "line": 47,
+   "path": "docs/overhaul/implementation/SPECIAL_ACQUISITION.md",
+   "reason": "dated implementation/audit record; carries a historical or 'superseded/resolved' banner",
+   "text": "**Superseded by D5:** the event-restoration phase deleted the `DISTRIBUTION_EVENT_ROTOM` checks and the magic-number write; capture still"
+  },
+  {
+   "class": "RESOLVED_DECISION_KEY",
+   "line": 93,
+   "path": "docs/overhaul/implementation/availability_families.json",
+   "reason": "key/label of a decision already resolved by SPECIAL_ACQUISITION.md (0 remain)",
+   "text": "{\"family_id\": \"dratini\", \"label\": \"Dratini\", \"components\": [\"SPECIES_DRATINI\", \"SPECIES_DRAGONAIR\", \"SPECIES_DRAGONITE\"], \"dex\": [147, 148, "
+  },
+  {
+   "class": "RESOLVED_DECISION_KEY",
+   "line": 146,
+   "path": "docs/overhaul/implementation/availability_families.json",
+   "reason": "key/label of a decision already resolved by SPECIAL_ACQUISITION.md (0 remain)",
+   "text": "{\"family_id\": \"larvitar\", \"label\": \"Larvitar\", \"components\": [\"SPECIES_LARVITAR\", \"SPECIES_PUPITAR\", \"SPECIES_TYRANITAR\"], \"dex\": [246, 247,"
+  },
+  {
+   "class": "RESOLVED_DECISION_KEY",
+   "line": 211,
+   "path": "docs/overhaul/implementation/availability_families.json",
+   "reason": "key/label of a decision already resolved by SPECIAL_ACQUISITION.md (0 remain)",
+   "text": "{\"family_id\": \"bagon\", \"label\": \"Bagon\", \"components\": [\"SPECIES_BAGON\", \"SPECIES_SHELGON\", \"SPECIES_SALAMENCE\"], \"dex\": [371, 372, 373], \"c"
+  },
+  {
+   "class": "RESOLVED_DECISION_KEY",
+   "line": 212,
+   "path": "docs/overhaul/implementation/availability_families.json",
+   "reason": "key/label of a decision already resolved by SPECIAL_ACQUISITION.md (0 remain)",
+   "text": "{\"family_id\": \"beldum\", \"label\": \"Beldum\", \"components\": [\"SPECIES_BELDUM\", \"SPECIES_METANG\", \"SPECIES_METAGROSS\"], \"dex\": [374, 375, 376], "
+  },
+  {
+   "class": "RESOLVED_DECISION_KEY",
+   "line": 250,
+   "path": "docs/overhaul/implementation/availability_families.json",
+   "reason": "key/label of a decision already resolved by SPECIAL_ACQUISITION.md (0 remain)",
+   "text": "{\"family_id\": \"gible\", \"label\": \"Gible\", \"components\": [\"SPECIES_GIBLE\", \"SPECIES_GABITE\", \"SPECIES_GARCHOMP\"], \"dex\": [443, 444, 445], \"cla"
+  },
+  {
+   "class": "PROVENANCE",
+   "line": 8,
+   "path": "docs/overhaul/implementation/c1_move_edit_membership_recovery.json",
+   "reason": "recovery/provenance or non-Platinum reference material that explicitly labels itself non-authoritative",
+   "text": "\"Batch 9F final approved values have now been recovered from the Platinum C1 conversation; earlier Emerald Sand Tomb 50/95 evidence was unre"
+  },
+  {
+   "class": "SUPERSEDED_MARKER",
+   "line": 52,
+   "path": "docs/overhaul/implementation/evolution_manifest.json",
+   "reason": "section/key that lists superseded alternatives so they are NOT implemented (or is an empty list / checklist item)",
+   "text": "\"superseded_early_proposals\": ["
+  },
+  {
+   "class": "ZERO_COUNT_RESOLVED",
+   "line": 67,
+   "path": "docs/overhaul/implementation/evolution_manifest.json",
+   "reason": "records that the count is zero / resolved",
+   "text": "\"UNRESOLVED_AUTHORITY\": 0,"
+  },
+  {
+   "class": "PROVENANCE",
+   "line": 18,
+   "path": "docs/overhaul/implementation/ledgers/C3H_LEDGER_PROVENANCE.json",
+   "reason": "recovery/provenance or non-Platinum reference material that explicitly labels itself non-authoritative",
+   "text": "\"Do not use the superseded inferred L3 reconstruction found elsewhere in historical branch commits.\","
+  },
+  {
+   "class": "RESOLVED_DECISION_KEY",
+   "line": 3,
+   "path": "docs/overhaul/implementation/special_acquisitions.json",
+   "reason": "key/label of a decision already resolved by SPECIAL_ACQUISITION.md (0 remain)",
+   "text": "\"resolves\": \"the 28 USER_DECISION_REQUIRED families deferred by the ordinary availability implementation (PR #10)\","
+  },
+  {
+   "class": "RESOLVED_DECISION_KEY",
+   "line": 438,
+   "path": "docs/overhaul/implementation/special_acquisitions.json",
+   "reason": "key/label of a decision already resolved by SPECIAL_ACQUISITION.md (0 remain)",
+   "text": "\"superseded_by\": \"D5 Legendary/Mythical events (docs/overhaul/implementation/events/event_gate_removals.json): the DISTRIBUTION_EVENT_ROTOM "
+  },
+  {
+   "class": "SUPERSEDED_MARKER",
+   "line": 192,
+   "path": "docs/overhaul/implementation/trainers/trainer_validation_rules.json",
+   "reason": "section/key that lists superseded alternatives so they are NOT implemented (or is an empty list / checklist item)",
+   "text": "\"superseded\": [],"
+  },
+  {
+   "class": "PROVENANCE",
+   "line": 40,
+   "path": "docs/overhaul/species/C3_IMPLEMENTATION_AUTHORITY.md",
+   "reason": "recovery/provenance or non-Platinum reference material that explicitly labels itself non-authoritative",
+   "text": "5. Later commits named as recovery/rebuild hypotheses are **not automatically authoritative**. Several temporary L3/L4 reconstruction workfl"
+  },
+  {
+   "class": "PROVENANCE",
+   "line": 59,
+   "path": "docs/overhaul/species/C3_IMPLEMENTATION_AUTHORITY.md",
+   "reason": "recovery/provenance or non-Platinum reference material that explicitly labels itself non-authoritative",
+   "text": "A later temporary workflow reconstructed this as an exact **53-operation Gen III ledger** validated against the pinned source baseline. Beca"
+  },
+  {
+   "class": "SUPERSEDED_MARKER",
+   "line": 169,
+   "path": "docs/overhaul/trainers/TRAINER_IMPLEMENTATION_PLAN.md",
+   "reason": "section/key that lists superseded alternatives so they are NOT implemented (or is an empty list / checklist item)",
+   "text": "- unresolved/superseded move constants;"
+  },
+  {
+   "class": "SUPERSEDED_MARKER",
+   "line": 395,
+   "path": "docs/overhaul/trainers/TRAINER_OVERHAUL_SPEC.md",
+   "reason": "section/key that lists superseded alternatives so they are NOT implemented (or is an empty list / checklist item)",
+   "text": "- no superseded evolution assumptions;"
+  }
+ ],
+ "summary": {
+  "active_unclassified": 0,
+  "by_class": {
+   "BANNERED_NON_AUTHORITY": 1,
+   "HISTORICAL_SNAPSHOT": 12,
+   "POLICY_DEFINITION": 6,
+   "PROVENANCE": 7,
+   "RESOLVED_DECISION_KEY": 7,
+   "RESOLVED_HEADER": 1,
+   "STATUS_NOTE": 1,
+   "SUPERSEDED_MARKER": 5,
+   "ZERO_COUNT_RESOLVED": 5
+  },
+  "hits": 45,
+  "stale_state": []
+ }
+}
