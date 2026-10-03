@@ -143,7 +143,7 @@ Must validate:
 - focused runtime QA.
 
 ### D8 — Mystery Egg Starter
-Status: `LOCKED SPEC — awaiting implementation`
+Status: `IMPLEMENTED` (source + validators + host-compiled exhaustive RNG test; Rev 0/Rev 1 via CI on PR #24); runtime `PENDING` — not `VERIFIED`
 
 Canonical authority:
 - `docs/overhaul/opening/MYSTERY_EGG_STARTER_SPEC.md`
@@ -160,7 +160,7 @@ Locked identity:
 
 ## Current next design
 
-**D8 is the only newly opened gameplay phase and is already LOCKED. D1–D6 are implemented and merged; D7 static/framework QA is merged but runtime QA remains pending. The next source task is D8 Mystery Egg starter implementation, followed by a D7 master-validation refresh and runtime playtest.** Sections below that read "Still needed" under D2/D6 are historical design checklists that the locked specs and manifests have since satisfied; they are not open work.
+**D8 is the only newly opened gameplay phase and is already LOCKED. D1–D6 are implemented and merged; D7 static/framework QA is merged but runtime QA remains pending. D8 Mystery Egg starter is now implemented and the D7 master validation was refreshed against it; the remaining work is the runtime playtest (`qa/RUNTIME_TEST_MATRIX.md`, incl. the 17 `OP-*` cases).** Sections below that read "Still needed" under D2/D6 are historical design checklists that the locked specs and manifests have since satisfied; they are not open work.
 
 Legendary/Mythical authority:
 - `docs/overhaul/events/LEGENDARY_MYTHICAL_SPEC.md`
