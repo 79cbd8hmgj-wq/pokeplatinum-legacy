@@ -282,15 +282,8 @@ Route201_Briefcase:
     ReturnToField
     FadeScreenIn
     WaitFadeScreen
-    GiveMysteryStarterEgg
-    Message Route201_Text_TheEggIsHatching
-    WaitABPress
-    FadeScreenOut
-    WaitFadeScreen
-    CloseMessage
-    HatchMysteryStarterEgg
-    FadeScreenIn
-    WaitFadeScreen
+    GetPlayerStarterSpecies VAR_0x8000
+    GivePokemon VAR_0x8000, 5, ITEM_NONE, VAR_RESULT
     ApplyMovement LOCALID_PROF_ROWAN, Route201_Movement_ProfRowanFacePlayerSouth
     ApplyMovement LOCALID_RIVAL, Route201_Movement_RivalFaceWest
     ApplyMovement LOCALID_PLAYER, Route201_Movement_PlayerFaceProfRowanNorth

@@ -21,16 +21,16 @@ POOL = [  # (species, weight, category, rival branch, roll range)
 SOURCES = {
     "src/mystery_egg_starter.c": "NEW: weighted table, single draw, Rival-branch mapping",
     "include/mystery_egg_starter.h": "NEW: MYSTERY_STARTER_* constants + prototypes",
-    "src/choose_starter/choose_starter_app.c": "three identical egg sprites; species preview/cry removed",
-    "include/struct_defs/choose_starter_data.h": "species output replaced by eggPosition (never selects a species)",
-    "src/scrcmd.c": "SaveChosenStarter draws once and persists; GetPlayerStarterBranch / GiveMysteryStarterEgg / HatchMysteryStarterEgg",
+    "src/choose_starter/choose_starter_app.c": "three identical egg preview sprites; species preview/cry removed; otherwise vanilla lifecycle",
+    "include/struct_defs/choose_starter_data.h": "species output removed (ChooseStarterData holds options only)",
+    "src/scrcmd.c": "SaveChosenStarter draws once and persists; GetPlayerStarterBranch; GiveMysteryStarterEgg / HatchMysteryStarterEgg retained but unused",
     "src/system_vars.c": "SystemVars_GetPlayerStarterBranch; Rival/counterpart starter derived from the branch",
     "src/overlay005/daycare.c": "level-parameterised internals; ordinary entry points keep level 1",
     "src/egg_hatch.c": "hatchLevel > 1 selects Egg_CreateHatchedMonAtLevel",
     "src/unk_0203D1B8.c": "FieldSystem_HatchMysteryStarterEgg (no TV segment); FieldSystem_HatchEgg hatchLevel = 0",
-    "res/field/scripts/scripts_route_201.s": "Route201_Briefcase egg flow",
+    "res/field/scripts/scripts_route_201.s": "Route201_Briefcase vanilla award flow (GetPlayerStarterSpecies + GivePokemon Lv5)",
     "res/text/unk_0360.json": "neutral Mystery Egg chooser text",
-    "res/text/route_201.json": "Egg wording + hatch lead-in",
+    "res/text/route_201.json": "Egg wording",
 }
 RIVAL_SCRIPTS = [
     "scripts_route_201.s", "scripts_route_203.s", "scripts_route_209_gate_to_hearthome_city.s", "scripts_pastoria_city.s",
@@ -54,7 +54,7 @@ def main():
     guards = {p: {"before_blob": blob(p), "target": why} for p, why in SOURCES.items()}
     for f in RIVAL_SCRIPTS:
         p = f"res/field/scripts/{f}"
-        guards[p] = {"before_blob": blob(p), "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch" if "route_201" not in f else "Route201_Briefcase egg flow + branch query"}
+        guards[p] = {"before_blob": blob(p), "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch" if "route_201" not in f else "Route201_Briefcase vanilla award flow + branch query"}
     m = {
         "schema": "pokeplatinum-overhaul/mystery-egg-starter/v1",
         "starting_sha": START_SHA,
@@ -66,14 +66,15 @@ def main():
         "visual_equivalence": {
             "positions": ["left", "center", "right"], "same_visual": "SPECIES_EGG sprite", "species_preview": False, "species_name_preview": False,
             "type_hint": False, "cry_before_hatch": False, "confirmation_text_identical": True, "table_depends_on_position": False,
-            "pokeball_3d_models_visible": False,
+            "pokeball_3d_models_visible": True, "pokeball_models_note": "vanilla briefcase balls are identical; only the preview sprite is an egg",
         },
         "rng": {"function": "MysteryStarter_Draw", "source": "LCRNG_Next() % 100", "range": [0, 99], "draws": 1, "timing": "inside ScrCmd_SaveChosenStarter, after the chooser app exits with a confirmed egg",
                 "position_is_input": False, "reroll_on_hatch": False, "reroll_on_field_return": False, "reroll_on_battle_start": False, "anti_save_scumming": False},
         "persistence": {"store": "VAR_PLAYER_STARTER (existing u16 var; actual species)", "written": "immediately in ScrCmd_SaveChosenStarter", "save_format_change": False,
                         "rival_branch_store": "none; derived by SystemVars_GetPlayerStarterBranch (pure function of the actual species)"},
-        "reveal": {"timing": "after ReturnToField, before Rowan/counterpart departure and before Barry's first battle",
-                   "mechanism": "GiveMysteryStarterEgg -> native egg hatch scene (HatchMysteryStarterEgg)", "tv_segment": False},
+        "reveal": {"timing": "after ReturnToField/FadeScreenIn, before Rowan/counterpart departure and before Barry's first battle",
+                   "mechanism": "GivePokemon (vanilla Route 201 award path, Lv5); species read via GetPlayerStarterSpecies",
+                   "hatch_presentation": "DEFERRED_DISABLED", "hatch_code_retained_unused": ["GiveMysteryStarterEgg", "HatchMysteryStarterEgg"], "tv_segment": False},
         "output": {"level": 5, "level_constant": "MYSTERY_STARTER_LEVEL", "owner": "player", "pikachu_hatches_as": "SPECIES_PIKACHU",
                    "generation": "Pokemon_InitWith(level 5, INIT_IVS_RANDOM, random personality); no guaranteed IV/nature/gender/shiny/item"},
         "ordinary_breeding_unchanged": {"Egg_CreateEgg_level": 1, "Egg_CreateHatchedMon_level": 1, "FieldSystem_HatchEgg_hatchLevel": 0,

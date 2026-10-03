@@ -48,10 +48,6 @@
 
 #define NUM_STARTER_OPTIONS 3
 
-// All three positions show the same Mystery Egg; the species is rolled after confirmation.
-#define MYSTERY_EGG_REST_Y_OFFSET 40
-#define MYSTERY_EGG_REST_SCALE    FX32_CONST(0.75f)
-
 #define OAM_MAIN_START 0
 #define OAM_MAIN_END   128
 #define OAM_SUB_START  0
@@ -237,7 +233,6 @@ static void ChooseStarterAppMainCallback(void *data);
 static void StartFadeIn(ChooseStarterApp *app);
 static void StartFadeOut(ChooseStarterApp *app);
 static BOOL IsFadeDone(ChooseStarterApp *app);
-static void SetMysteryEggRestingState(ChooseStarterApp *app, int position);
 static BOOL IsSelectionMade(ChooseStarterApp *app, enum HeapID heapID);
 static void UpdateGraphics(ChooseStarterApp *app, enum HeapID heapID);
 static void DrawScene(ChooseStarterApp *app);
@@ -446,8 +441,6 @@ BOOL ChooseStarter_Exit(ApplicationManager *appMan, int *param1)
     ChooseStarterData *data = ApplicationManager_Args(appMan);
 
     SetVBlankCallback(NULL, NULL);
-
-    data->eggPosition = app->cursorPosition;
 
     BOOL touchPadResult = DisableTouchPad();
     GF_ASSERT(touchPadResult == AUTO_SAMPLING_OPERATION_RESULT_SUCCESS);
@@ -701,7 +694,7 @@ static void MakePokemonSprites(ChooseStarterApp *app, enum HeapID heapID)
 static void MakeMysteryEggSprite(PokemonSprite **sprite, ChooseStarterApp *app)
 {
     PokemonSpriteTemplate spriteTemplate;
-    BuildPokemonSpriteTemplate(&spriteTemplate, SPECIES_EGG, 0, FACE_FRONT, FALSE, 0, 0);
+    BuildPokemonSpriteTemplate(&spriteTemplate, SPECIES_EGG, 0, FACE_FRONT, FALSE, NULL, NULL);
 
     *sprite = PokemonSpriteManager_CreateSprite(app->spriteManager,
         &spriteTemplate,
@@ -986,10 +979,9 @@ static void UpdateGraphics(ChooseStarterApp *app, enum HeapID heapID)
         if (Advance3DGraphicsAnimationIfNotLastFrame(&app->starter3DGraphics[0])) {
             Set3DGraphicsIsVisible(&app->starter3DGraphics[0], FALSE);
             Set3DGraphicsIsVisible(&app->starter3DGraphics[1], TRUE);
-            // The three Poké Ball models stay hidden; identical 2D Mystery Eggs take their place.
-            for (int i = 0; i < NUM_STARTER_OPTIONS; i++) {
-                SetMysteryEggRestingState(app, i);
-            }
+            Set3DGraphicsIsVisible(&app->starter3DGraphics[2], TRUE);
+            Set3DGraphicsIsVisible(&app->starter3DGraphics[3], TRUE);
+            Set3DGraphicsIsVisible(&app->starter3DGraphics[4], TRUE);
             AdvanceChoiceStep(app, 1);
         }
         break;
@@ -1259,7 +1251,7 @@ static void AdvancePokeballConfirmGraphics(ChooseStarterApp *app, enum HeapID he
             AdvanceChoiceStep(app, -1);
             app->chooseStarterStep = 7;
             ShowPreviewWindow(&app->previewWindow, FALSE);
-            SetMysteryEggRestingState(app, app->cursorPosition);
+            PokemonSprite_SetAttribute(app->sprites[app->cursorPosition], MON_SPRITE_HIDE, TRUE);
             app->messagePrinterID = SetMessageWindowText(app->messageWindow, heapID, 360, 7, TEXT_COLOR(1, 2, 15), TEXT_SPEED_NO_TRANSFER);
         }
         break;
@@ -1622,10 +1614,10 @@ static BOOL HasPreviewWindowMovementFinished(StarterPreviewWindow *previewWindow
 static void StartPreviewWindowAndGraphicsMovements(ChooseStarterApp *app)
 {
     fx32 xStart = app->otherSelectionMatrix[app->cursorPosition][0] << FX32_SHIFT;
-    fx32 yStart = (app->otherSelectionMatrix[app->cursorPosition][1] + MYSTERY_EGG_REST_Y_OFFSET) << FX32_SHIFT;
+    fx32 yStart = (app->otherSelectionMatrix[app->cursorPosition][1] + 48) << FX32_SHIFT;
 
     StartPreviewWindowMovement(&app->previewWindow, xStart, 128 << FX32_SHIFT, yStart, 96 << FX32_SHIFT, FX32_CONST(0.40f), FX32_CONST(1.0f), 6);
-    StartPreviewGraphicsMovement(&app->previewGraphics, app->sprites[app->cursorPosition], xStart, 128 << FX32_SHIFT, yStart, 96 << FX32_SHIFT, MYSTERY_EGG_REST_SCALE, FX32_CONST(1.0f), 6);
+    StartPreviewGraphicsMovement(&app->previewGraphics, app->sprites[app->cursorPosition], xStart, 128 << FX32_SHIFT, yStart, 96 << FX32_SHIFT, FX32_CONST(0.40f), FX32_CONST(1.0f), 6);
 }
 
 static void StartOtherPreviewWindowAndGraphicsMovements(ChooseStarterApp *app)
@@ -1743,15 +1735,4 @@ static void SetSubplaneWindowText(Window *window, enum HeapID heapID, int bankID
 static void DeleteSubplaneWindow(ChooseStarterApp *app)
 {
     Window_ClearAndCopyToVRAM(app->subplaneWindows[app->subplaneWindowIndex]);
-}
-
-static void SetMysteryEggRestingState(ChooseStarterApp *app, int position)
-{
-    u32 scale = FX_Mul(0x100 * FX32_ONE, MYSTERY_EGG_REST_SCALE) >> FX32_SHIFT;
-
-    PokemonSprite_SetAttribute(app->sprites[position], MON_SPRITE_X_CENTER, app->otherSelectionMatrix[position][0]);
-    PokemonSprite_SetAttribute(app->sprites[position], MON_SPRITE_Y_CENTER, app->otherSelectionMatrix[position][1] + MYSTERY_EGG_REST_Y_OFFSET);
-    PokemonSprite_SetAttribute(app->sprites[position], MON_SPRITE_SCALE_X, scale);
-    PokemonSprite_SetAttribute(app->sprites[position], MON_SPRITE_SCALE_Y, scale);
-    PokemonSprite_SetAttribute(app->sprites[position], MON_SPRITE_HIDE, FALSE);
 }

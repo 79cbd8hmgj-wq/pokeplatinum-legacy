@@ -152,7 +152,10 @@ class V:
         self.rec("no cry before hatch", "Sound_PlayPokemonCry" not in cleaned)
         self.rec("no species data lookups in chooser (gender/name/type)", not re.search(r"Pokemon_GetGenderOf|GetSpeciesName|SPECIES_NAME|GetSpeciesType|SpeciesData_", cleaned))
         self.rec("chooser message index independent of cursor position", not re.search(r"360,\s*\d\s*\+\s*app->cursorPosition", cleaned))
-        self.rec("Poke Ball models stay hidden after the intro", not re.search(r"Set3DGraphicsIsVisible\(&app->starter3DGraphics\[[234]\],\s*TRUE\)", cleaned))
+        self.rec("Poke Ball model visibility transitions are vanilla (models 1-4 shown after the intro)", all(
+                 re.search(r"Set3DGraphicsIsVisible\(&app->starter3DGraphics\[%d\],\s*TRUE\)" % i, cleaned) for i in (1, 2, 3, 4)))
+        self.rec("chooser has no custom resting-state / egg-position plumbing", not re.search(r"SetMysteryEggRestingState|MYSTERY_EGG_REST|eggPosition", cleaned))
+        self.rec("preview movement uses vanilla offsets (+48, scale 0.40)", "[1] + 48) << FX32_SHIFT" in cleaned and cleaned.count("FX32_CONST(0.40f), FX32_CONST(1.0f), 6)") == 2)
         self.rec("chooser draws no random numbers", not RNG_CALL.search(cleaned))
         txt = json.loads(self.read("res/text/unk_0360.json"))["messages"]
         by = {m["id"][-5:]: "".join(m.get("en_US", [])) for m in txt}
@@ -186,45 +189,23 @@ class V:
             self.rec(f"no RNG/draw in {fn}", not RNG_CALL.search(func_body(scrcmd, fn) or "x(") and "MysteryStarter_Draw" not in (func_body(scrcmd, fn) or ""))
         give = func_body(scrcmd, "ScrCmd_GiveMysteryStarterEgg") or ""
         self.rec("egg is bound to the persisted species (reads VAR_PLAYER_STARTER)", "SystemVars_GetPlayerStarter(" in give and "Egg_CreateMysteryStarterEgg(egg, species" in give)
-        self.rec("save format unchanged (no new save fields)", "VAR_" not in self.read("include/struct_defs/choose_starter_data.h"))
+        csd = self.read("include/struct_defs/choose_starter_data.h")
+        self.rec("save format unchanged (no new save fields)", "VAR_" not in csd)
+        self.rec("ChooseStarterData is minimal (options only; no species / eggPosition output)", re.search(r"typedef struct ChooseStarterData \{\s*const Options \*options;\s*\} ChooseStarterData;", csd) is not None)
         r201 = self.read("res/field/scripts/scripts_route_201.s")
         body = r201[r201.index("Route201_Briefcase:"):r201.index("Route201_DawnLeave:")]
         cmds = [l.strip().split()[0] for l in body.splitlines() if l.strip() and not l.strip().endswith(":")]
-        need = ["StartChooseStarterScene", "SaveChosenStarter", "ReturnToField", "GiveMysteryStarterEgg", "HatchMysteryStarterEgg"]
-        pos = [cmds.index(c) if c in cmds else -1 for c in need]
-        self.rec("Route 201 order: choose -> save/draw -> return -> give egg -> hatch", -1 not in pos and pos == sorted(pos), str(pos))
-        self.rec("hatch precedes Rowan departure", "HatchMysteryStarterEgg" in cmds and cmds.index("HatchMysteryStarterEgg") < cmds.index("ApplyMovement", cmds.index("HatchMysteryStarterEgg")))
-        self.rec("hatch is in the same label chain before the first Rival battle", "StartFirstBattle" not in body and "Route201_StartRivalBattle:" in r201)
-        self.rec("old direct GivePokemon starter award removed from Route201_Briefcase", "GivePokemon" not in body)
+        need = ["StartChooseStarterScene", "SaveChosenStarter", "ReturnToField", "FadeScreenIn", "WaitFadeScreen", "GetPlayerStarterSpecies", "GivePokemon"]
+        i = cmds.index("StartChooseStarterScene") if "StartChooseStarterScene" in cmds else -1
+        self.rec("Route 201 award flow is vanilla (choose, save/draw, return, fade in, read species, GivePokemon Lv5)",
+                 i >= 0 and cmds[i:i + len(need)] == need, str(cmds[i:i + len(need)] if i >= 0 else None))
+        self.rec("starter is awarded directly at Level 5 via the native GivePokemon path", "GivePokemon VAR_0x8000, 5, ITEM_NONE, VAR_RESULT" in body and body.count("GivePokemon") == 1)
+        self.rec("award happens before Rowan departure and the first Rival battle", "GivePokemon" in cmds and cmds.index("GivePokemon") < cmds.index("ApplyMovement", cmds.index("GivePokemon")) and "StartFirstBattle" not in body)
+        self.rec("hatch presentation deferred: Route 201 calls neither GiveMysteryStarterEgg nor HatchMysteryStarterEgg", not re.search(r"\b(GiveMysteryStarterEgg|HatchMysteryStarterEgg)\b", r201))
+        self.rec("hatch presentation deferred: no hatch lead-in message in Route 201", "TheEggIsHatching" not in r201)
         self.rec("Route 201 draws no random numbers", not re.search(r"\bGetRandom", r201))
         self.rec("Rowan/counterpart/Barry flow labels preserved", all(x in r201 for x in ("Route201_DawnLeave:", "Route201_LucasLeave:", "Route201_CounterpartLeave:",
                  "Route201_AskUpForABattle:", "Route201_StartRivalBattle:", "Route201_HandleRivalBattleEnd:", "StartFirstBattle TRAINER_RIVAL_ROUTE_201_TURTWIG")))
-        self.rec("first Rival battle always follows a hatched Level-5 Pokemon (flow cannot skip the hatch)",
-                 r201.count("HatchMysteryStarterEgg") == 1 and r201.index("HatchMysteryStarterEgg") < r201.index("Route201_StartRivalBattle:") and
-                 "Route201_Briefcase" in r201 and r201.count("SaveChosenStarter") == 1)
-
-        self.check_hatch_lifecycle(r201)
-
-    def check_hatch_lifecycle(self, r201):
-        """D8 runtime-QA regression: the script must mirror vanilla CommonScript_HatchEgg (Message, WaitABPress, fade out, close, hatch, fade in) so no
-        message/fade is left stacked around the native FieldTask_HatchEgg FinishMap/StartMap lifecycle."""
-        body = r201[r201.index("Route201_Briefcase:"):r201.index("Route201_DawnLeave:")]
-        cmds = [l.strip().split()[0] for l in body.splitlines() if l.strip() and not l.strip().endswith(":")]
-        i = cmds.index("GiveMysteryStarterEgg") if "GiveMysteryStarterEgg" in cmds else -1
-        want = ["GiveMysteryStarterEgg", "Message", "WaitABPress", "FadeScreenOut", "WaitFadeScreen", "CloseMessage", "HatchMysteryStarterEgg", "FadeScreenIn", "WaitFadeScreen"]
-        self.rec("Route 201 hatch sequence mirrors vanilla CommonScript_HatchEgg", i >= 0 and cmds[i:i + len(want)] == want, str(cmds[i:i + len(want)] if i >= 0 else None))
-        self.rec("hatch task invoked exactly once", body.count("HatchMysteryStarterEgg") == 1 and r201.count("HatchMysteryStarterEgg") == 1)
-        h = cmds.index("HatchMysteryStarterEgg") if "HatchMysteryStarterEgg" in cmds else -1
-        window = cmds[i:h + 3] if i >= 0 and h >= 0 else []
-        self.rec("exactly one FadeScreenOut/FadeScreenIn pair around the hatch (no stacked fades)", window.count("FadeScreenOut") == 1 and window.count("FadeScreenIn") == 1)
-        fo = cmds.index("FadeScreenOut", i) if i >= 0 and "FadeScreenOut" in cmds[i:] else -1
-        self.rec("no message is printed while the screen is faded out for the hatch", fo >= 0 and h > fo and "Message" not in cmds[fo:h])
-        hs = strip_comments(self.read("src/unk_0203D1B8.c"))
-        fn = func_body(hs, "FieldSystem_HatchMysteryStarterEgg") or ""
-        self.rec("starter hatch calls EggHatch_HatchEgg exactly once and no extra transition", fn.count("EggHatch_HatchEgg(") == 1 and "FieldTransition_" not in fn)
-        eh = strip_comments(self.read("src/egg_hatch.c"))
-        task = func_body(eh, "FieldTask_HatchEgg") or ""
-        self.rec("native hatch task owns FinishMap then StartMap (field returns after hatch)", task.count("FieldTransition_FinishMap(") == 1 and task.count("FieldTransition_StartMap(") == 1 and task.index("FieldTransition_FinishMap(") < task.index("FieldTransition_StartMap("))
 
     # -- level / hatch / breeding ----------------------------------------------------------------------------------------------------
     def check_output_and_breeding(self):
@@ -282,7 +263,7 @@ class V:
         for p in sorted(glob.glob(os.path.join(ROOT, "res/field/scripts/*.s"))):
             rel = os.path.relpath(p, ROOT)
             t = self.read(rel)
-            if "GetPlayerStarterSpecies" in t and not rel.endswith("sandgem_town_pokemon_research_lab.s"):
+            if "GetPlayerStarterSpecies" in t and not rel.endswith(("sandgem_town_pokemon_research_lab.s", "scripts_route_201.s")):
                 legacy.append(os.path.basename(rel))
             if "GetPlayerStarterBranch" in t:
                 branch_users.append(os.path.basename(rel))
@@ -290,7 +271,9 @@ class V:
                 for m in re.finditer(r"(GoToIfEq|CallIfEq) VAR_RESULT, (SPECIES_\w+)", t):
                     if m.group(2) not in SINNOH:
                         wrong.append(f"{os.path.basename(rel)}:{m.group(2)}")
-        self.rec("no active Rival/branch script reads the actual starter species", not legacy, ",".join(legacy))
+        self.rec("no active Rival/branch script reads the actual starter species (Route 201 award and Sandgem gifts excepted)", not legacy, ",".join(legacy))
+        r201t = self.read("res/field/scripts/scripts_route_201.s")
+        self.rec("Route 201 reads the actual species only for the GivePokemon award, never for Rival branching", r201t.count("GetPlayerStarterSpecies") == 1 and "GetPlayerStarterBranch VAR_RESULT" in r201t)
         self.rec("Sandgem lab starter-gift offers keep the actual species (later gifts unchanged)", "GetPlayerStarterSpecies VAR_0x8000" in self.read("res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s"))
         self.rec("branch consumers compare only against Turtwig/Chimchar/Piplup", not wrong, ",".join(wrong))
         expect = {"scripts_route_201.s", "scripts_route_203.s", "scripts_route_209_gate_to_hearthome_city.s", "scripts_pastoria_city.s", "scripts_canalave_city.s",
@@ -323,6 +306,7 @@ class V:
                 drift.append(path)
         self.rec("every guarded source path exists", not miss, ",".join(miss))
         self.rec("before-blob guards match the starting SHA", not drift, ",".join(drift))
+        self.rec("manifest records the deferred hatch presentation", m["reveal"]["hatch_presentation"] == "DEFERRED_DISABLED" and m["reveal"]["mechanism"].startswith("GivePokemon"))
         self.rec("manifest visual equivalence flags", all(m["visual_equivalence"][k] is False for k in ("species_preview", "species_name_preview", "type_hint", "cry_before_hatch", "table_depends_on_position")))
         self.rec("manifest RNG timing: one draw, no rerolls", m["rng"]["draws"] == 1 and not any(m["rng"][k] for k in ("position_is_input", "reroll_on_hatch", "reroll_on_field_return", "reroll_on_battle_start")))
         self.rec("manifest output level == 5", m["output"]["level"] == 5)
