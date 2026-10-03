@@ -35,7 +35,7 @@ See `MYSTERY_EGG_STARTER_VALIDATION_REPORT.md`: **99 pass / 0 fail**; **36/36 mu
 `python3 tools/overhaul/validate_overhaul.py`: **PASS (33/33)** — all established validators (docs, C3, evolution, C1, created moves, ID integrity, C2, availability/special acquisition, trainers, economy/progression, Poké Balls, breeding, events, Frontier/postgame, graphs, runtime matrix, smoke) plus all mutation suites and the new D8 validator/suite. `postgame` scope guard was extended to allow D8's files only. D7 artifacts regenerated: `qa/MASTER_VALIDATION_REPORT.md`, `master_validation_summary.json`, `RUNTIME_TEST_MATRIX.md` (+17 `OP-*` cases → 120 cases × 2 revisions = 240 NOT RUN), `QA_INDEX.md`, `RELEASE_ARTIFACTS.md`, `RELEASE_BLOCKERS.md`, `STATUS.md`, `DESIGN_PIPELINE.md`. The completion graphs do not model the starter path; `build_qa_graphs.py --check` passes unchanged.
 
 ## Build results
-CI (PR #24): see `qa/BUILD_MATRIX.md` row "D8" for the head SHA and run id (filled after the dual-revision run completes).
+CI run [37089678263](https://github.com/79cbd8hmgj-wq/pokeplatinum-legacy/actions/runs/37089678263) on source commit `fae2b539`: **US Rev 0 success, US Rev 1 success, pr-lint success, format success** (also recorded in `qa/BUILD_MATRIX.md`).
 
 ## Runtime QA status
 All 17 `OP-*` cases × 2 revisions: **NOT RUN** (no emulator/hardware in the session). D8 is **IMPLEMENTED, not VERIFIED**; the project is not a release candidate.

@@ -27,3 +27,8 @@ Toolchain (from the job logs): `arm-none-eabi-gcc (15:13.2.rel1-2) 13.2.1 202310
 `make skrew`; its version was not printed (the `tools/cw` listing in the provenance step came back empty), so it is not recorded here.
 
 These are build-output checksums of unreleased test builds, recorded for provenance only; no ROM or patch is distributed.
+
+## D8 Mystery Egg starter PR #24 (source commit `fae2b539b1b4dbd46f22d4f6edd3a2ee7e3efd66`)
+
+CI run [37089678263](https://github.com/79cbd8hmgj-wq/pokeplatinum-legacy/actions/runs/37089678263): `build (US rev 0)` **success**, `build (US rev 1)` **success**; `pr-lint` success; `format` success.
+Later commits on the PR change only docs/validators/QA data (no C, script or text changes) and are rebuilt by CI on each push.
