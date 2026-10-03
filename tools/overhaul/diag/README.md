@@ -27,9 +27,14 @@ Run in melonDS / no$gba with debug output visible. Expected log sequence on a he
 
 The last line printed is the failing stage. `gMysteryEggDiagStage` holds the same id for debugger watch.
 
-## Isolation build (vanilla award path, egg give/hatch bypassed)
+## iPhone-friendly diagnostic ROMs (primary path)
 
-    git apply tools/overhaul/diag/mystery_egg_isolation.patch
+Workflow `.github/workflows/diag-mystery-egg-roms.yml` (push to this branch) applies one patch
+per variant and uploads Rev 1 ROMs as artifacts. Temporary: never merge to main.
 
-Keeps the random 13-species draw; restores `GetPlayerStarterSpecies` + `GivePokemon Lv5`.
-The D8 validator is expected to fail with this patch applied; never commit it.
+- `mystery-diag-A-vanilla-award` (`diag-A-vanilla-award.patch`): chooser + weighted draw kept;
+  egg give/hatch bypassed; vanilla `GetPlayerStarterSpecies` + `GivePokemon Lv5`.
+  Black screen => chooser exit / field restoration. Visible Route 201 => fault is downstream.
+- `mystery-diag-B-egg-no-hatch` (`diag-B-egg-no-hatch.patch`): `GiveMysteryStarterEgg` runs, shows
+  "DIAG: EGG CREATED", no hatch, then the vanilla starter is also given so the Route 201 sequence continues.
+  A works + B black => egg construction. B works => `HatchMysteryStarterEgg` / hatch app.

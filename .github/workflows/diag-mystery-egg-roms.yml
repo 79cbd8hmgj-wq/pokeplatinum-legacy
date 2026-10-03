@@ -1,0 +1,59 @@
+# TEMPORARY D8 blocker diagnostics. NEVER merge to main; delete before the fix PR.
+# Builds Rev 1 diagnostic ROMs (patches in tools/overhaul/diag/) as downloadable artifacts.
+name: diag-mystery-egg-roms
+
+on:
+  push:
+    branches: [ claude/mystery-egg-chooser-blocker-ts8ik0 ]
+    paths:
+      - '.github/workflows/diag-mystery-egg-roms.yml'
+      - 'tools/overhaul/diag/**'
+  workflow_dispatch: {}
+
+env:
+  LM_LICENSE_FILE: "${{ github.workspace }}/tools/cw/license.dat"
+  BUILD: /var/tmp/pokeplatinum
+
+jobs:
+  diag:
+    name: diag ${{ matrix.variant }} (US rev 1)
+    if: github.ref != 'refs/heads/main'
+    strategy:
+      fail-fast: false
+      matrix:
+        variant: [ A-vanilla-award, B-egg-no-hatch ]
+    permissions:
+      contents: read
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Install Software
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y --no-install-recommends bison flex g++ gcc-arm-none-eabi git make ninja-build pkg-config python3 wget xz-utils
+
+      - uses: actions/checkout@v6
+
+      - name: Apply diagnostic patch (${{ matrix.variant }})
+        run: git apply --index tools/overhaul/diag/diag-${{ matrix.variant }}.patch && git diff --cached --stat
+
+      - name: Install Metroskrew
+        run: sudo make skrew
+
+      - name: Configure Repo
+        run: make configure ROM_REVISION=1
+
+      - name: Build diagnostic ROM
+        run: make rom ROM_REVISION=1
+
+      - name: Name ROM
+        run: |
+          cp "$BUILD/pokeplatinum.us.nds" "mystery-diag-${{ matrix.variant }}.nds"
+          sha256sum "mystery-diag-${{ matrix.variant }}.nds"
+
+      - name: Upload diagnostic ROM
+        uses: actions/upload-artifact@v7
+        with:
+          name: mystery-diag-${{ matrix.variant }}
+          path: mystery-diag-${{ matrix.variant }}.nds
+          if-no-files-found: error
+          retention-days: 14
