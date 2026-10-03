@@ -1,0 +1,2557 @@
+{
+ "edges": [
+  {
+   "args": [
+    16
+   ],
+   "from": "SPECIES_ABRA",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_KADABRA"
+  },
+  {
+   "args": [
+    "MOVE_DOUBLE_HIT"
+   ],
+   "from": "SPECIES_AIPOM",
+   "index": 0,
+   "method": "EVO_LEVEL_KNOW_MOVE",
+   "move_source": [
+    "level-up"
+   ],
+   "requirement": "know:MOVE_DOUBLE_HIT",
+   "to": "SPECIES_AMBIPOM"
+  },
+  {
+   "args": [
+    40
+   ],
+   "from": "SPECIES_ANORITH",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_ARMALDO"
+  },
+  {
+   "args": [
+    32
+   ],
+   "from": "SPECIES_ARON",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_LAIRON"
+  },
+  {
+   "args": [],
+   "from": "SPECIES_AZURILL",
+   "index": 0,
+   "method": "EVO_LEVEL_HAPPINESS",
+   "requirement": "friendship",
+   "to": "SPECIES_MARILL"
+  },
+  {
+   "args": [
+    30
+   ],
+   "from": "SPECIES_BAGON",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_SHELGON"
+  },
+  {
+   "args": [
+    36
+   ],
+   "from": "SPECIES_BALTOY",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_CLAYDOL"
+  },
+  {
+   "args": [
+    30
+   ],
+   "from": "SPECIES_BARBOACH",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_WHISCASH"
+  },
+  {
+   "args": [
+    32
+   ],
+   "from": "SPECIES_BAYLEEF",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_MEGANIUM"
+  },
+  {
+   "args": [
+    20
+   ],
+   "from": "SPECIES_BELDUM",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_METANG"
+  },
+  {
+   "args": [
+    21
+   ],
+   "from": "SPECIES_BELLSPROUT",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_WEEPINBELL"
+  },
+  {
+   "args": [
+    15
+   ],
+   "from": "SPECIES_BIDOOF",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_BIBAREL"
+  },
+  {
+   "args": [
+    "MOVE_MIMIC"
+   ],
+   "from": "SPECIES_BONSLY",
+   "index": 0,
+   "method": "EVO_LEVEL_KNOW_MOVE",
+   "move_source": [
+    "level-up"
+   ],
+   "requirement": "know:MOVE_MIMIC",
+   "to": "SPECIES_SUDOWOODO"
+  },
+  {
+   "args": [
+    33
+   ],
+   "from": "SPECIES_BRONZOR",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_BRONZONG"
+  },
+  {
+   "args": [],
+   "from": "SPECIES_BUDEW",
+   "index": 0,
+   "method": "EVO_LEVEL_HAPPINESS_DAY",
+   "requirement": "friendship+day",
+   "to": "SPECIES_ROSELIA"
+  },
+  {
+   "args": [
+    26
+   ],
+   "from": "SPECIES_BUIZEL",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_FLOATZEL"
+  },
+  {
+   "args": [
+    16
+   ],
+   "from": "SPECIES_BULBASAUR",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_IVYSAUR"
+  },
+  {
+   "args": [],
+   "from": "SPECIES_BUNEARY",
+   "index": 0,
+   "method": "EVO_LEVEL_HAPPINESS",
+   "requirement": "friendship",
+   "to": "SPECIES_LOPUNNY"
+  },
+  {
+   "args": [
+    20
+   ],
+   "from": "SPECIES_BURMY",
+   "index": 0,
+   "method": "EVO_LEVEL_FEMALE",
+   "requirement": "level+female",
+   "to": "SPECIES_WORMADAM"
+  },
+  {
+   "args": [
+    20
+   ],
+   "from": "SPECIES_BURMY",
+   "index": 1,
+   "method": "EVO_LEVEL_MALE",
+   "requirement": "level+male",
+   "to": "SPECIES_MOTHIM"
+  },
+  {
+   "args": [
+    32
+   ],
+   "from": "SPECIES_CACNEA",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_CACTURNE"
+  },
+  {
+   "args": [
+    30
+   ],
+   "from": "SPECIES_CARVANHA",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_SHARPEDO"
+  },
+  {
+   "args": [
+    10
+   ],
+   "from": "SPECIES_CASCOON",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_DUSTOX"
+  },
+  {
+   "args": [
+    7
+   ],
+   "from": "SPECIES_CATERPIE",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_METAPOD"
+  },
+  {
+   "args": [],
+   "from": "SPECIES_CHANSEY",
+   "index": 0,
+   "method": "EVO_LEVEL_HAPPINESS",
+   "requirement": "friendship",
+   "to": "SPECIES_BLISSEY"
+  },
+  {
+   "args": [
+    16
+   ],
+   "from": "SPECIES_CHARMANDER",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_CHARMELEON"
+  },
+  {
+   "args": [
+    36
+   ],
+   "from": "SPECIES_CHARMELEON",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_CHARIZARD"
+  },
+  {
+   "args": [
+    25
+   ],
+   "from": "SPECIES_CHERUBI",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_CHERRIM"
+  },
+  {
+   "args": [
+    16
+   ],
+   "from": "SPECIES_CHIKORITA",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_BAYLEEF"
+  },
+  {
+   "args": [
+    14
+   ],
+   "from": "SPECIES_CHIMCHAR",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_MONFERNO"
+  },
+  {
+   "args": [
+    27
+   ],
+   "from": "SPECIES_CHINCHOU",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_LANTURN"
+  },
+  {
+   "args": [],
+   "from": "SPECIES_CHINGLING",
+   "index": 0,
+   "method": "EVO_LEVEL_HAPPINESS_NIGHT",
+   "requirement": "friendship+night",
+   "to": "SPECIES_CHIMECHO"
+  },
+  {
+   "args": [
+    35
+   ],
+   "from": "SPECIES_CLAMPERL",
+   "index": 0,
+   "method": "EVO_LEVEL_ATK_GT_SPATK",
+   "requirement": "level+stat",
+   "to": "SPECIES_HUNTAIL"
+  },
+  {
+   "args": [
+    35
+   ],
+   "from": "SPECIES_CLAMPERL",
+   "index": 1,
+   "method": "EVO_LEVEL_SPATK_GE_ATK",
+   "requirement": "level+stat",
+   "to": "SPECIES_GOREBYSS"
+  },
+  {
+   "args": [
+    "ITEM_MOON_STONE"
+   ],
+   "from": "SPECIES_CLEFAIRY",
+   "gate": "M1",
+   "index": 0,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_MOON_STONE",
+   "to": "SPECIES_CLEFABLE"
+  },
+  {
+   "args": [],
+   "from": "SPECIES_CLEFFA",
+   "index": 0,
+   "method": "EVO_LEVEL_HAPPINESS",
+   "requirement": "friendship",
+   "to": "SPECIES_CLEFAIRY"
+  },
+  {
+   "args": [
+    21
+   ],
+   "from": "SPECIES_COMBEE",
+   "index": 0,
+   "method": "EVO_LEVEL_FEMALE",
+   "requirement": "level+female",
+   "to": "SPECIES_VESPIQUEN"
+  },
+  {
+   "args": [
+    36
+   ],
+   "from": "SPECIES_COMBUSKEN",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_BLAZIKEN"
+  },
+  {
+   "args": [
+    30
+   ],
+   "from": "SPECIES_CORPHISH",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_CRAWDAUNT"
+  },
+  {
+   "args": [
+    30
+   ],
+   "from": "SPECIES_CRANIDOS",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_RAMPARDOS"
+  },
+  {
+   "args": [
+    37
+   ],
+   "from": "SPECIES_CROAGUNK",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_TOXICROAK"
+  },
+  {
+   "args": [
+    30
+   ],
+   "from": "SPECIES_CROCONAW",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_FERALIGATR"
+  },
+  {
+   "args": [
+    28
+   ],
+   "from": "SPECIES_CUBONE",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_MAROWAK"
+  },
+  {
+   "args": [
+    14
+   ],
+   "from": "SPECIES_CYNDAQUIL",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_QUILAVA"
+  },
+  {
+   "args": [
+    26
+   ],
+   "from": "SPECIES_DIGLETT",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_DUGTRIO"
+  },
+  {
+   "args": [
+    31
+   ],
+   "from": "SPECIES_DODUO",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_DODRIO"
+  },
+  {
+   "args": [
+    55
+   ],
+   "from": "SPECIES_DRAGONAIR",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_DRAGONITE"
+  },
+  {
+   "args": [
+    30
+   ],
+   "from": "SPECIES_DRATINI",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_DRAGONAIR"
+  },
+  {
+   "args": [
+    28
+   ],
+   "from": "SPECIES_DRIFLOON",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_DRIFBLIM"
+  },
+  {
+   "args": [
+    26
+   ],
+   "from": "SPECIES_DROWZEE",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_HYPNO"
+  },
+  {
+   "args": [
+    45
+   ],
+   "from": "SPECIES_DUSCLOPS",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_DUSKNOIR"
+  },
+  {
+   "args": [
+    37
+   ],
+   "from": "SPECIES_DUSKULL",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_DUSCLOPS"
+  },
+  {
+   "args": [],
+   "from": "SPECIES_EEVEE",
+   "gate": "native-location",
+   "index": 0,
+   "method": "EVO_LEVEL_MOSS_ROCK",
+   "requirement": "Moss Rock, Eterna Forest (native)",
+   "to": "SPECIES_LEAFEON"
+  },
+  {
+   "args": [],
+   "from": "SPECIES_EEVEE",
+   "gate": "native-location",
+   "index": 1,
+   "method": "EVO_LEVEL_ICE_ROCK",
+   "requirement": "Ice Rock, Route 217 (native)",
+   "to": "SPECIES_GLACEON"
+  },
+  {
+   "args": [
+    "ITEM_THUNDERSTONE"
+   ],
+   "from": "SPECIES_EEVEE",
+   "gate": "M1",
+   "index": 2,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_THUNDERSTONE",
+   "to": "SPECIES_JOLTEON"
+  },
+  {
+   "args": [
+    "ITEM_WATER_STONE"
+   ],
+   "from": "SPECIES_EEVEE",
+   "gate": "M1",
+   "index": 3,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_WATER_STONE",
+   "to": "SPECIES_VAPOREON"
+  },
+  {
+   "args": [
+    "ITEM_FIRE_STONE"
+   ],
+   "from": "SPECIES_EEVEE",
+   "gate": "M1",
+   "index": 4,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_FIRE_STONE",
+   "to": "SPECIES_FLAREON"
+  },
+  {
+   "args": [],
+   "from": "SPECIES_EEVEE",
+   "index": 5,
+   "method": "EVO_LEVEL_HAPPINESS_DAY",
+   "requirement": "friendship+day",
+   "to": "SPECIES_ESPEON"
+  },
+  {
+   "args": [],
+   "from": "SPECIES_EEVEE",
+   "index": 6,
+   "method": "EVO_LEVEL_HAPPINESS_NIGHT",
+   "requirement": "friendship+night",
+   "to": "SPECIES_UMBREON"
+  },
+  {
+   "args": [
+    22
+   ],
+   "from": "SPECIES_EKANS",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_ARBOK"
+  },
+  {
+   "args": [
+    42
+   ],
+   "from": "SPECIES_ELECTABUZZ",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_ELECTIVIRE"
+  },
+  {
+   "args": [
+    26
+   ],
+   "from": "SPECIES_ELECTRIKE",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_MANECTRIC"
+  },
+  {
+   "args": [
+    30
+   ],
+   "from": "SPECIES_ELEKID",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_ELECTABUZZ"
+  },
+  {
+   "args": [
+    "ITEM_LEAF_STONE"
+   ],
+   "from": "SPECIES_EXEGGCUTE",
+   "gate": "M1",
+   "index": 0,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_LEAF_STONE",
+   "to": "SPECIES_EXEGGUTOR"
+  },
+  {
+   "args": [
+    170
+   ],
+   "from": "SPECIES_FEEBAS",
+   "index": 0,
+   "method": "EVO_LEVEL_BEAUTY",
+   "requirement": "beauty (Pokéblock/Poffin)",
+   "to": "SPECIES_MILOTIC"
+  },
+  {
+   "args": [
+    31
+   ],
+   "from": "SPECIES_FINNEON",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_LUMINEON"
+  },
+  {
+   "args": [
+    30
+   ],
+   "from": "SPECIES_FLAAFFY",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_AMPHAROS"
+  },
+  {
+   "args": [
+    48
+   ],
+   "from": "SPECIES_GABITE",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_GARCHOMP"
+  },
+  {
+   "args": [
+    25
+   ],
+   "from": "SPECIES_GASTLY",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_HAUNTER"
+  },
+  {
+   "args": [
+    25
+   ],
+   "from": "SPECIES_GEODUDE",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_GRAVELER"
+  },
+  {
+   "args": [
+    24
+   ],
+   "from": "SPECIES_GIBLE",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_GABITE"
+  },
+  {
+   "args": [
+    38
+   ],
+   "from": "SPECIES_GLAMEOW",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_PURUGLY"
+  },
+  {
+   "args": [
+    38
+   ],
+   "from": "SPECIES_GLIGAR",
+   "index": 0,
+   "method": "EVO_LEVEL_NIGHT",
+   "requirement": "level+night",
+   "to": "SPECIES_GLISCOR"
+  },
+  {
+   "args": [
+    "ITEM_LEAF_STONE"
+   ],
+   "from": "SPECIES_GLOOM",
+   "gate": "M1",
+   "index": 0,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_LEAF_STONE",
+   "to": "SPECIES_VILEPLUME"
+  },
+  {
+   "args": [
+    "ITEM_SUN_STONE"
+   ],
+   "from": "SPECIES_GLOOM",
+   "gate": "M1",
+   "index": 1,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_SUN_STONE",
+   "to": "SPECIES_BELLOSSOM"
+  },
+  {
+   "args": [],
+   "from": "SPECIES_GOLBAT",
+   "index": 0,
+   "method": "EVO_LEVEL_HAPPINESS",
+   "requirement": "friendship",
+   "to": "SPECIES_CROBAT"
+  },
+  {
+   "args": [
+    33
+   ],
+   "from": "SPECIES_GOLDEEN",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_SEAKING"
+  },
+  {
+   "args": [
+    36
+   ],
+   "from": "SPECIES_GRAVELER",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_GOLEM"
+  },
+  {
+   "args": [
+    38
+   ],
+   "from": "SPECIES_GRIMER",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_MUK"
+  },
+  {
+   "args": [
+    32
+   ],
+   "from": "SPECIES_GROTLE",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_TORTERRA"
+  },
+  {
+   "args": [
+    36
+   ],
+   "from": "SPECIES_GROVYLE",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_SCEPTILE"
+  },
+  {
+   "args": [
+    "ITEM_FIRE_STONE"
+   ],
+   "from": "SPECIES_GROWLITHE",
+   "gate": "M1",
+   "index": 0,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_FIRE_STONE",
+   "to": "SPECIES_ARCANINE"
+  },
+  {
+   "args": [
+    26
+   ],
+   "from": "SPECIES_GULPIN",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_SWALOT"
+  },
+  {
+   "args": [
+    20
+   ],
+   "from": "SPECIES_HAPPINY",
+   "index": 0,
+   "method": "EVO_LEVEL_DAY",
+   "requirement": "level+day",
+   "to": "SPECIES_CHANSEY"
+  },
+  {
+   "args": [
+    36
+   ],
+   "from": "SPECIES_HAUNTER",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_GENGAR"
+  },
+  {
+   "args": [
+    34
+   ],
+   "from": "SPECIES_HIPPOPOTAS",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_HIPPOWDON"
+  },
+  {
+   "args": [
+    20
+   ],
+   "from": "SPECIES_HOOTHOOT",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_NOCTOWL"
+  },
+  {
+   "args": [
+    18
+   ],
+   "from": "SPECIES_HOPPIP",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_SKIPLOOM"
+  },
+  {
+   "args": [
+    32
+   ],
+   "from": "SPECIES_HORSEA",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_SEADRA"
+  },
+  {
+   "args": [
+    24
+   ],
+   "from": "SPECIES_HOUNDOUR",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_HOUNDOOM"
+  },
+  {
+   "args": [],
+   "from": "SPECIES_IGGLYBUFF",
+   "index": 0,
+   "method": "EVO_LEVEL_HAPPINESS",
+   "requirement": "friendship",
+   "to": "SPECIES_JIGGLYPUFF"
+  },
+  {
+   "args": [
+    32
+   ],
+   "from": "SPECIES_IVYSAUR",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_VENUSAUR"
+  },
+  {
+   "args": [
+    "ITEM_MOON_STONE"
+   ],
+   "from": "SPECIES_JIGGLYPUFF",
+   "gate": "M1",
+   "index": 0,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_MOON_STONE",
+   "to": "SPECIES_WIGGLYTUFF"
+  },
+  {
+   "args": [
+    40
+   ],
+   "from": "SPECIES_KABUTO",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_KABUTOPS"
+  },
+  {
+   "args": [
+    36
+   ],
+   "from": "SPECIES_KADABRA",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_ALAKAZAM"
+  },
+  {
+   "args": [
+    10
+   ],
+   "from": "SPECIES_KAKUNA",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_BEEDRILL"
+  },
+  {
+   "args": [
+    30
+   ],
+   "from": "SPECIES_KIRLIA",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_GARDEVOIR"
+  },
+  {
+   "args": [
+    "ITEM_DAWN_STONE"
+   ],
+   "from": "SPECIES_KIRLIA",
+   "gate": "M1",
+   "index": 1,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM_MALE",
+   "requirement": "item:ITEM_DAWN_STONE",
+   "to": "SPECIES_GALLADE"
+  },
+  {
+   "args": [
+    35
+   ],
+   "from": "SPECIES_KOFFING",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_WEEZING"
+  },
+  {
+   "args": [
+    28
+   ],
+   "from": "SPECIES_KRABBY",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_KINGLER"
+  },
+  {
+   "args": [
+    10
+   ],
+   "from": "SPECIES_KRICKETOT",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_KRICKETUNE"
+  },
+  {
+   "args": [
+    42
+   ],
+   "from": "SPECIES_LAIRON",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_AGGRON"
+  },
+  {
+   "args": [
+    30
+   ],
+   "from": "SPECIES_LARVITAR",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_PUPITAR"
+  },
+  {
+   "args": [
+    18
+   ],
+   "from": "SPECIES_LEDYBA",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_LEDIAN"
+  },
+  {
+   "args": [
+    "MOVE_ROLLOUT"
+   ],
+   "from": "SPECIES_LICKITUNG",
+   "index": 0,
+   "method": "EVO_LEVEL_KNOW_MOVE",
+   "move_source": [
+    "level-up",
+    "tutor"
+   ],
+   "requirement": "know:MOVE_ROLLOUT",
+   "to": "SPECIES_LICKILICKY"
+  },
+  {
+   "args": [
+    40
+   ],
+   "from": "SPECIES_LILEEP",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_CRADILY"
+  },
+  {
+   "args": [
+    "ITEM_WATER_STONE"
+   ],
+   "from": "SPECIES_LOMBRE",
+   "gate": "M1",
+   "index": 0,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_WATER_STONE",
+   "to": "SPECIES_LUDICOLO"
+  },
+  {
+   "args": [
+    14
+   ],
+   "from": "SPECIES_LOTAD",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_LOMBRE"
+  },
+  {
+   "args": [
+    40
+   ],
+   "from": "SPECIES_LOUDRED",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_EXPLOUD"
+  },
+  {
+   "args": [
+    30
+   ],
+   "from": "SPECIES_LUXIO",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_LUXRAY"
+  },
+  {
+   "args": [
+    36
+   ],
+   "from": "SPECIES_MACHOKE",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_MACHAMP"
+  },
+  {
+   "args": [
+    28
+   ],
+   "from": "SPECIES_MACHOP",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_MACHOKE"
+  },
+  {
+   "args": [
+    30
+   ],
+   "from": "SPECIES_MAGBY",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_MAGMAR"
+  },
+  {
+   "args": [
+    20
+   ],
+   "from": "SPECIES_MAGIKARP",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_GYARADOS"
+  },
+  {
+   "args": [
+    42
+   ],
+   "from": "SPECIES_MAGMAR",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_MAGMORTAR"
+  },
+  {
+   "args": [
+    30
+   ],
+   "from": "SPECIES_MAGNEMITE",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_MAGNETON"
+  },
+  {
+   "args": [],
+   "from": "SPECIES_MAGNETON",
+   "gate": "native-location",
+   "index": 0,
+   "method": "EVO_LEVEL_MAGNETIC_FIELD",
+   "requirement": "Mt. Coronet magnetic field map (native)",
+   "to": "SPECIES_MAGNEZONE"
+  },
+  {
+   "args": [
+    24
+   ],
+   "from": "SPECIES_MAKUHITA",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_HARIYAMA"
+  },
+  {
+   "args": [
+    28
+   ],
+   "from": "SPECIES_MANKEY",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_PRIMEAPE"
+  },
+  {
+   "args": [
+    "SPECIES_REMORAID"
+   ],
+   "from": "SPECIES_MANTYKE",
+   "index": 0,
+   "method": "EVO_LEVEL_SPECIES_IN_PARTY",
+   "party_species": "SPECIES_REMORAID",
+   "requirement": "party:SPECIES_REMORAID",
+   "to": "SPECIES_MANTINE"
+  },
+  {
+   "args": [
+    15
+   ],
+   "from": "SPECIES_MAREEP",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_FLAAFFY"
+  },
+  {
+   "args": [
+    18
+   ],
+   "from": "SPECIES_MARILL",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_AZUMARILL"
+  },
+  {
+   "args": [
+    36
+   ],
+   "from": "SPECIES_MARSHTOMP",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_SWAMPERT"
+  },
+  {
+   "args": [
+    37
+   ],
+   "from": "SPECIES_MEDITITE",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_MEDICHAM"
+  },
+  {
+   "args": [
+    28
+   ],
+   "from": "SPECIES_MEOWTH",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_PERSIAN"
+  },
+  {
+   "args": [
+    45
+   ],
+   "from": "SPECIES_METANG",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_METAGROSS"
+  },
+  {
+   "args": [
+    10
+   ],
+   "from": "SPECIES_METAPOD",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_BUTTERFREE"
+  },
+  {
+   "args": [
+    "MOVE_MIMIC"
+   ],
+   "from": "SPECIES_MIME_JR",
+   "index": 0,
+   "method": "EVO_LEVEL_KNOW_MOVE",
+   "move_source": [
+    "level-up",
+    "egg"
+   ],
+   "requirement": "know:MOVE_MIMIC",
+   "to": "SPECIES_MR_MIME"
+  },
+  {
+   "args": [
+    "ITEM_DUSK_STONE"
+   ],
+   "from": "SPECIES_MISDREAVUS",
+   "gate": "M1",
+   "index": 0,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_DUSK_STONE",
+   "to": "SPECIES_MISMAGIUS"
+  },
+  {
+   "args": [
+    36
+   ],
+   "from": "SPECIES_MONFERNO",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_INFERNAPE"
+  },
+  {
+   "args": [
+    16
+   ],
+   "from": "SPECIES_MUDKIP",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_MARSHTOMP"
+  },
+  {
+   "args": [],
+   "from": "SPECIES_MUNCHLAX",
+   "index": 0,
+   "method": "EVO_LEVEL_HAPPINESS",
+   "requirement": "friendship",
+   "to": "SPECIES_SNORLAX"
+  },
+  {
+   "args": [
+    "ITEM_DUSK_STONE"
+   ],
+   "from": "SPECIES_MURKROW",
+   "gate": "M1",
+   "index": 0,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_DUSK_STONE",
+   "to": "SPECIES_HONCHKROW"
+  },
+  {
+   "args": [
+    25
+   ],
+   "from": "SPECIES_NATU",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_XATU"
+  },
+  {
+   "args": [
+    16
+   ],
+   "from": "SPECIES_NIDORAN_F",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_NIDORINA"
+  },
+  {
+   "args": [
+    16
+   ],
+   "from": "SPECIES_NIDORAN_M",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_NIDORINO"
+  },
+  {
+   "args": [
+    "ITEM_MOON_STONE"
+   ],
+   "from": "SPECIES_NIDORINA",
+   "gate": "M1",
+   "index": 0,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_MOON_STONE",
+   "to": "SPECIES_NIDOQUEEN"
+  },
+  {
+   "args": [
+    "ITEM_MOON_STONE"
+   ],
+   "from": "SPECIES_NIDORINO",
+   "gate": "M1",
+   "index": 0,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_MOON_STONE",
+   "to": "SPECIES_NIDOKING"
+  },
+  {
+   "args": [
+    20
+   ],
+   "from": "SPECIES_NINCADA",
+   "index": 0,
+   "method": "EVO_LEVEL_NINJASK",
+   "requirement": "level",
+   "to": "SPECIES_NINJASK"
+  },
+  {
+   "args": [
+    20
+   ],
+   "from": "SPECIES_NINCADA",
+   "index": 1,
+   "method": "EVO_LEVEL_SHEDINJA",
+   "requirement": "level+empty slot+Poké Ball",
+   "to": "SPECIES_SHEDINJA"
+  },
+  {
+   "args": [],
+   "from": "SPECIES_NOSEPASS",
+   "gate": "native-location",
+   "index": 0,
+   "method": "EVO_LEVEL_MAGNETIC_FIELD",
+   "requirement": "Mt. Coronet magnetic field map (native)",
+   "to": "SPECIES_PROBOPASS"
+  },
+  {
+   "args": [
+    33
+   ],
+   "from": "SPECIES_NUMEL",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_CAMERUPT"
+  },
+  {
+   "args": [
+    "ITEM_LEAF_STONE"
+   ],
+   "from": "SPECIES_NUZLEAF",
+   "gate": "M1",
+   "index": 0,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_LEAF_STONE",
+   "to": "SPECIES_SHIFTRY"
+  },
+  {
+   "args": [
+    21
+   ],
+   "from": "SPECIES_ODDISH",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_GLOOM"
+  },
+  {
+   "args": [
+    40
+   ],
+   "from": "SPECIES_OMANYTE",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_OMASTAR"
+  },
+  {
+   "args": [
+    35
+   ],
+   "from": "SPECIES_ONIX",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_STEELIX"
+  },
+  {
+   "args": [
+    24
+   ],
+   "from": "SPECIES_PARAS",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_PARASECT"
+  },
+  {
+   "args": [
+    25
+   ],
+   "from": "SPECIES_PHANPY",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_DONPHAN"
+  },
+  {
+   "args": [],
+   "from": "SPECIES_PICHU",
+   "index": 0,
+   "method": "EVO_LEVEL_HAPPINESS",
+   "requirement": "friendship",
+   "to": "SPECIES_PIKACHU"
+  },
+  {
+   "args": [
+    36
+   ],
+   "from": "SPECIES_PIDGEOTTO",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_PIDGEOT"
+  },
+  {
+   "args": [
+    18
+   ],
+   "from": "SPECIES_PIDGEY",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_PIDGEOTTO"
+  },
+  {
+   "args": [
+    "ITEM_THUNDERSTONE"
+   ],
+   "from": "SPECIES_PIKACHU",
+   "gate": "M1",
+   "index": 0,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_THUNDERSTONE",
+   "to": "SPECIES_RAICHU"
+  },
+  {
+   "args": [
+    "MOVE_ANCIENT_POWER"
+   ],
+   "from": "SPECIES_PILOSWINE",
+   "index": 0,
+   "method": "EVO_LEVEL_KNOW_MOVE",
+   "move_source": [
+    "level-up",
+    "tutor"
+   ],
+   "requirement": "know:MOVE_ANCIENT_POWER",
+   "to": "SPECIES_MAMOSWINE"
+  },
+  {
+   "args": [
+    31
+   ],
+   "from": "SPECIES_PINECO",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_FORRETRESS"
+  },
+  {
+   "args": [
+    16
+   ],
+   "from": "SPECIES_PIPLUP",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_PRINPLUP"
+  },
+  {
+   "args": [
+    25
+   ],
+   "from": "SPECIES_POLIWAG",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_POLIWHIRL"
+  },
+  {
+   "args": [
+    35
+   ],
+   "from": "SPECIES_POLIWHIRL",
+   "index": 0,
+   "method": "EVO_LEVEL_SPATK_GT_ATK",
+   "requirement": "level+stat",
+   "to": "SPECIES_POLITOED"
+  },
+  {
+   "args": [
+    35
+   ],
+   "from": "SPECIES_POLIWHIRL",
+   "index": 1,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_POLIWRATH"
+  },
+  {
+   "args": [
+    40
+   ],
+   "from": "SPECIES_PONYTA",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_RAPIDASH"
+  },
+  {
+   "args": [
+    18
+   ],
+   "from": "SPECIES_POOCHYENA",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_MIGHTYENA"
+  },
+  {
+   "args": [
+    30
+   ],
+   "from": "SPECIES_PORYGON",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_PORYGON2"
+  },
+  {
+   "args": [
+    45
+   ],
+   "from": "SPECIES_PORYGON2",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_PORYGON_Z"
+  },
+  {
+   "args": [
+    36
+   ],
+   "from": "SPECIES_PRINPLUP",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_EMPOLEON"
+  },
+  {
+   "args": [
+    33
+   ],
+   "from": "SPECIES_PSYDUCK",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_GOLDUCK"
+  },
+  {
+   "args": [
+    50
+   ],
+   "from": "SPECIES_PUPITAR",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_TYRANITAR"
+  },
+  {
+   "args": [
+    36
+   ],
+   "from": "SPECIES_QUILAVA",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_TYPHLOSION"
+  },
+  {
+   "args": [
+    20
+   ],
+   "from": "SPECIES_RALTS",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_KIRLIA"
+  },
+  {
+   "args": [
+    20
+   ],
+   "from": "SPECIES_RATTATA",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_RATICATE"
+  },
+  {
+   "args": [
+    25
+   ],
+   "from": "SPECIES_REMORAID",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_OCTILLERY"
+  },
+  {
+   "args": [
+    52
+   ],
+   "from": "SPECIES_RHYDON",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_RHYPERIOR"
+  },
+  {
+   "args": [
+    42
+   ],
+   "from": "SPECIES_RHYHORN",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_RHYDON"
+  },
+  {
+   "args": [],
+   "from": "SPECIES_RIOLU",
+   "index": 0,
+   "method": "EVO_LEVEL_HAPPINESS_DAY",
+   "requirement": "friendship+day",
+   "to": "SPECIES_LUCARIO"
+  },
+  {
+   "args": [
+    "ITEM_SHINY_STONE"
+   ],
+   "from": "SPECIES_ROSELIA",
+   "gate": "M1",
+   "index": 0,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_SHINY_STONE",
+   "to": "SPECIES_ROSERADE"
+  },
+  {
+   "args": [
+    22
+   ],
+   "from": "SPECIES_SANDSHREW",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_SANDSLASH"
+  },
+  {
+   "args": [
+    38
+   ],
+   "from": "SPECIES_SCYTHER",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_SCIZOR"
+  },
+  {
+   "args": [
+    42
+   ],
+   "from": "SPECIES_SEADRA",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_KINGDRA"
+  },
+  {
+   "args": [
+    44
+   ],
+   "from": "SPECIES_SEALEO",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_WALREIN"
+  },
+  {
+   "args": [
+    14
+   ],
+   "from": "SPECIES_SEEDOT",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_NUZLEAF"
+  },
+  {
+   "args": [
+    34
+   ],
+   "from": "SPECIES_SEEL",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_DEWGONG"
+  },
+  {
+   "args": [
+    15
+   ],
+   "from": "SPECIES_SENTRET",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_FURRET"
+  },
+  {
+   "args": [
+    50
+   ],
+   "from": "SPECIES_SHELGON",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_SALAMENCE"
+  },
+  {
+   "args": [
+    "ITEM_WATER_STONE"
+   ],
+   "from": "SPECIES_SHELLDER",
+   "gate": "M1",
+   "index": 0,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_WATER_STONE",
+   "to": "SPECIES_CLOYSTER"
+  },
+  {
+   "args": [
+    30
+   ],
+   "from": "SPECIES_SHELLOS",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_GASTRODON"
+  },
+  {
+   "args": [
+    30
+   ],
+   "from": "SPECIES_SHIELDON",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_BASTIODON"
+  },
+  {
+   "args": [
+    15
+   ],
+   "from": "SPECIES_SHINX",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_LUXIO"
+  },
+  {
+   "args": [
+    23
+   ],
+   "from": "SPECIES_SHROOMISH",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_BRELOOM"
+  },
+  {
+   "args": [
+    37
+   ],
+   "from": "SPECIES_SHUPPET",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_BANETTE"
+  },
+  {
+   "args": [
+    10
+   ],
+   "from": "SPECIES_SILCOON",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_BEAUTIFLY"
+  },
+  {
+   "args": [
+    27
+   ],
+   "from": "SPECIES_SKIPLOOM",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_JUMPLUFF"
+  },
+  {
+   "args": [
+    "ITEM_MOON_STONE"
+   ],
+   "from": "SPECIES_SKITTY",
+   "gate": "M1",
+   "index": 0,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_MOON_STONE",
+   "to": "SPECIES_DELCATTY"
+  },
+  {
+   "args": [
+    40
+   ],
+   "from": "SPECIES_SKORUPI",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_DRAPION"
+  },
+  {
+   "args": [
+    18
+   ],
+   "from": "SPECIES_SLAKOTH",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_VIGOROTH"
+  },
+  {
+   "args": [
+    37
+   ],
+   "from": "SPECIES_SLOWPOKE",
+   "index": 0,
+   "method": "EVO_LEVEL_SPDEF_GT_DEF",
+   "requirement": "level+stat",
+   "to": "SPECIES_SLOWKING"
+  },
+  {
+   "args": [
+    37
+   ],
+   "from": "SPECIES_SLOWPOKE",
+   "index": 1,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_SLOWBRO"
+  },
+  {
+   "args": [
+    38
+   ],
+   "from": "SPECIES_SLUGMA",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_MAGCARGO"
+  },
+  {
+   "args": [
+    30
+   ],
+   "from": "SPECIES_SMOOCHUM",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_JYNX"
+  },
+  {
+   "args": [
+    38
+   ],
+   "from": "SPECIES_SNEASEL",
+   "index": 0,
+   "method": "EVO_LEVEL_NIGHT",
+   "requirement": "level+night",
+   "to": "SPECIES_WEAVILE"
+  },
+  {
+   "args": [
+    42
+   ],
+   "from": "SPECIES_SNORUNT",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_GLALIE"
+  },
+  {
+   "args": [
+    "ITEM_DAWN_STONE"
+   ],
+   "from": "SPECIES_SNORUNT",
+   "gate": "M1",
+   "index": 1,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM_FEMALE",
+   "requirement": "item:ITEM_DAWN_STONE",
+   "to": "SPECIES_FROSLASS"
+  },
+  {
+   "args": [
+    40
+   ],
+   "from": "SPECIES_SNOVER",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_ABOMASNOW"
+  },
+  {
+   "args": [
+    23
+   ],
+   "from": "SPECIES_SNUBBULL",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_GRANBULL"
+  },
+  {
+   "args": [
+    20
+   ],
+   "from": "SPECIES_SPEAROW",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_FEAROW"
+  },
+  {
+   "args": [
+    32
+   ],
+   "from": "SPECIES_SPHEAL",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_SEALEO"
+  },
+  {
+   "args": [
+    22
+   ],
+   "from": "SPECIES_SPINARAK",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_ARIADOS"
+  },
+  {
+   "args": [
+    32
+   ],
+   "from": "SPECIES_SPOINK",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_GRUMPIG"
+  },
+  {
+   "args": [
+    16
+   ],
+   "from": "SPECIES_SQUIRTLE",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_WARTORTLE"
+  },
+  {
+   "args": [
+    34
+   ],
+   "from": "SPECIES_STARAVIA",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_STARAPTOR"
+  },
+  {
+   "args": [
+    14
+   ],
+   "from": "SPECIES_STARLY",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_STARAVIA"
+  },
+  {
+   "args": [
+    "ITEM_WATER_STONE"
+   ],
+   "from": "SPECIES_STARYU",
+   "gate": "M1",
+   "index": 0,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_WATER_STONE",
+   "to": "SPECIES_STARMIE"
+  },
+  {
+   "args": [
+    34
+   ],
+   "from": "SPECIES_STUNKY",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_SKUNTANK"
+  },
+  {
+   "args": [
+    "ITEM_SUN_STONE"
+   ],
+   "from": "SPECIES_SUNKERN",
+   "gate": "M1",
+   "index": 0,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_SUN_STONE",
+   "to": "SPECIES_SUNFLORA"
+  },
+  {
+   "args": [
+    22
+   ],
+   "from": "SPECIES_SURSKIT",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_MASQUERAIN"
+  },
+  {
+   "args": [
+    35
+   ],
+   "from": "SPECIES_SWABLU",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_ALTARIA"
+  },
+  {
+   "args": [
+    33
+   ],
+   "from": "SPECIES_SWINUB",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_PILOSWINE"
+  },
+  {
+   "args": [
+    22
+   ],
+   "from": "SPECIES_TAILLOW",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_SWELLOW"
+  },
+  {
+   "args": [
+    "MOVE_ANCIENT_POWER"
+   ],
+   "from": "SPECIES_TANGELA",
+   "index": 0,
+   "method": "EVO_LEVEL_KNOW_MOVE",
+   "move_source": [
+    "level-up",
+    "tutor"
+   ],
+   "requirement": "know:MOVE_ANCIENT_POWER",
+   "to": "SPECIES_TANGROWTH"
+  },
+  {
+   "args": [
+    30
+   ],
+   "from": "SPECIES_TEDDIURSA",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_URSARING"
+  },
+  {
+   "args": [
+    30
+   ],
+   "from": "SPECIES_TENTACOOL",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_TENTACRUEL"
+  },
+  {
+   "args": [],
+   "from": "SPECIES_TOGEPI",
+   "index": 0,
+   "method": "EVO_LEVEL_HAPPINESS",
+   "requirement": "friendship",
+   "to": "SPECIES_TOGETIC"
+  },
+  {
+   "args": [
+    "ITEM_SHINY_STONE"
+   ],
+   "from": "SPECIES_TOGETIC",
+   "gate": "M1",
+   "index": 0,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_SHINY_STONE",
+   "to": "SPECIES_TOGEKISS"
+  },
+  {
+   "args": [
+    16
+   ],
+   "from": "SPECIES_TORCHIC",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_COMBUSKEN"
+  },
+  {
+   "args": [
+    18
+   ],
+   "from": "SPECIES_TOTODILE",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_CROCONAW"
+  },
+  {
+   "args": [
+    35
+   ],
+   "from": "SPECIES_TRAPINCH",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_VIBRAVA"
+  },
+  {
+   "args": [
+    16
+   ],
+   "from": "SPECIES_TREECKO",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_GROVYLE"
+  },
+  {
+   "args": [
+    18
+   ],
+   "from": "SPECIES_TURTWIG",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_GROTLE"
+  },
+  {
+   "args": [
+    20
+   ],
+   "from": "SPECIES_TYROGUE",
+   "index": 0,
+   "method": "EVO_LEVEL_ATK_LT_DEF",
+   "requirement": "level+stat",
+   "to": "SPECIES_HITMONCHAN"
+  },
+  {
+   "args": [
+    20
+   ],
+   "from": "SPECIES_TYROGUE",
+   "index": 1,
+   "method": "EVO_LEVEL_ATK_GT_DEF",
+   "requirement": "level+stat",
+   "to": "SPECIES_HITMONLEE"
+  },
+  {
+   "args": [
+    20
+   ],
+   "from": "SPECIES_TYROGUE",
+   "index": 2,
+   "method": "EVO_LEVEL_ATK_EQ_DEF",
+   "requirement": "level+stat",
+   "to": "SPECIES_HITMONTOP"
+  },
+  {
+   "args": [
+    31
+   ],
+   "from": "SPECIES_VENONAT",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_VENOMOTH"
+  },
+  {
+   "args": [
+    45
+   ],
+   "from": "SPECIES_VIBRAVA",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_FLYGON"
+  },
+  {
+   "args": [
+    36
+   ],
+   "from": "SPECIES_VIGOROTH",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_SLAKING"
+  },
+  {
+   "args": [
+    30
+   ],
+   "from": "SPECIES_VOLTORB",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_ELECTRODE"
+  },
+  {
+   "args": [
+    "ITEM_FIRE_STONE"
+   ],
+   "from": "SPECIES_VULPIX",
+   "gate": "M1",
+   "index": 0,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_FIRE_STONE",
+   "to": "SPECIES_NINETALES"
+  },
+  {
+   "args": [
+    40
+   ],
+   "from": "SPECIES_WAILMER",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_WAILORD"
+  },
+  {
+   "args": [
+    36
+   ],
+   "from": "SPECIES_WARTORTLE",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_BLASTOISE"
+  },
+  {
+   "args": [
+    7
+   ],
+   "from": "SPECIES_WEEDLE",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_KAKUNA"
+  },
+  {
+   "args": [
+    "ITEM_LEAF_STONE"
+   ],
+   "from": "SPECIES_WEEPINBELL",
+   "gate": "M1",
+   "index": 0,
+   "item_source": "Veilstone Dept. Store 2F (renewable, pre-E4)",
+   "method": "EVO_USE_ITEM",
+   "requirement": "item:ITEM_LEAF_STONE",
+   "to": "SPECIES_VICTREEBEL"
+  },
+  {
+   "args": [
+    20
+   ],
+   "from": "SPECIES_WHISMUR",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_LOUDRED"
+  },
+  {
+   "args": [
+    25
+   ],
+   "from": "SPECIES_WINGULL",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_PELIPPER"
+  },
+  {
+   "args": [
+    20
+   ],
+   "from": "SPECIES_WOOPER",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_QUAGSIRE"
+  },
+  {
+   "args": [
+    7
+   ],
+   "from": "SPECIES_WURMPLE",
+   "index": 0,
+   "method": "EVO_LEVEL_PID_LOW",
+   "requirement": "level+PID",
+   "to": "SPECIES_SILCOON"
+  },
+  {
+   "args": [
+    7
+   ],
+   "from": "SPECIES_WURMPLE",
+   "index": 1,
+   "method": "EVO_LEVEL_PID_HIGH",
+   "requirement": "level+PID",
+   "to": "SPECIES_CASCOON"
+  },
+  {
+   "args": [
+    15
+   ],
+   "from": "SPECIES_WYNAUT",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_WOBBUFFET"
+  },
+  {
+   "args": [
+    "MOVE_ANCIENT_POWER"
+   ],
+   "from": "SPECIES_YANMA",
+   "index": 0,
+   "method": "EVO_LEVEL_KNOW_MOVE",
+   "move_source": [
+    "level-up",
+    "tutor"
+   ],
+   "requirement": "know:MOVE_ANCIENT_POWER",
+   "to": "SPECIES_YANMEGA"
+  },
+  {
+   "args": [
+    20
+   ],
+   "from": "SPECIES_ZIGZAGOON",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_LINOONE"
+  },
+  {
+   "args": [
+    22
+   ],
+   "from": "SPECIES_ZUBAT",
+   "index": 0,
+   "method": "EVO_LEVEL",
+   "requirement": "level",
+   "to": "SPECIES_GOLBAT"
+  }
+ ],
+ "schema": "pokeplatinum-overhaul/d7-evolution-graph/v1",
+ "stones": {
+  "ITEM_DAWN_STONE": {
+   "in_live_stock": true,
+   "vendor": "Veilstone Dept. Store 2F"
+  },
+  "ITEM_DUSK_STONE": {
+   "in_live_stock": true,
+   "vendor": "Veilstone Dept. Store 2F"
+  },
+  "ITEM_FIRE_STONE": {
+   "in_live_stock": true,
+   "vendor": "Veilstone Dept. Store 2F"
+  },
+  "ITEM_LEAF_STONE": {
+   "in_live_stock": true,
+   "vendor": "Veilstone Dept. Store 2F"
+  },
+  "ITEM_MOON_STONE": {
+   "in_live_stock": true,
+   "vendor": "Veilstone Dept. Store 2F"
+  },
+  "ITEM_SHINY_STONE": {
+   "in_live_stock": true,
+   "vendor": "Veilstone Dept. Store 2F"
+  },
+  "ITEM_SUN_STONE": {
+   "in_live_stock": true,
+   "vendor": "Veilstone Dept. Store 2F"
+  },
+  "ITEM_THUNDERSTONE": {
+   "in_live_stock": true,
+   "vendor": "Veilstone Dept. Store 2F"
+  },
+  "ITEM_WATER_STONE": {
+   "in_live_stock": true,
+   "vendor": "Veilstone Dept. Store 2F"
+  }
+ },
+ "summary": {
+  "edges": 246,
+  "forbidden": 0,
+  "item_edges": 26,
+  "move_known_edges": 7,
+  "trade_or_held_item_edges": 0
+ }
+}

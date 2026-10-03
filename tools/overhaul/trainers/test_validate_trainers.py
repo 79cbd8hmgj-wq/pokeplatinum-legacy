@@ -23,7 +23,7 @@ def run(mutate) -> vt.Result:
     vt.trainer_files = lambda: sorted(data)
     res = vt.Result()
     d = vt.check_source(res, RULES)
-    vt.check_manifest(res, MAN, d, False)
+    vt.check_manifest(res, MAN, d, True)  # D7: D6 re-derives the Frontier base bytes via git; use_git=False now always trips the fingerprint check
     vt.check_bosses(res, RULES, MAN, d)
     vt.rival_structure(res, MAN, d)
     vt.check_ordinary(res, d, vt.category_of(MAN))

@@ -41,6 +41,19 @@ jobs:
       - name: Build Modded ROM
         run: make rom ROM_REVISION=${{ matrix.revision }}
 
+      - name: Record build provenance (D7)
+        continue-on-error: true
+        run: |
+          # Prints the output checksum and toolchain versions; the ROM itself is never uploaded or committed.
+          ROM="$BUILD/pokeplatinum.us.nds"
+          {
+            echo "D7_BUILD source=${{ github.sha }} revision=${{ matrix.revision }}"
+            echo "D7_BUILD rom_sha256=$(sha256sum "$ROM" | cut -d' ' -f1) bytes=$(stat -c %s "$ROM")"
+            echo "D7_BUILD arm-none-eabi-gcc=$(arm-none-eabi-gcc --version | head -1)"
+            echo "D7_BUILD ninja=$(ninja --version) python=$(python3 --version 2>&1)"
+            echo "D7_BUILD metroskrew=$(ls -d tools/cw/* 2>/dev/null | head -3 | tr '\n' ' ')"
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+
       - name: Post error archive
         if: failure()
         continue-on-error: true
