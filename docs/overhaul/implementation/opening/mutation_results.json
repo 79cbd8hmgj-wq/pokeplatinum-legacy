@@ -1,6 +1,6 @@
 {
- "total": 36,
- "detected": 36,
+ "total": 41,
+ "detected": 41,
  "baseline_failures": 0,
  "cases": [
   {
@@ -141,17 +141,17 @@
   {
    "name": "first Rival battle before hatch",
    "detected": true,
-   "failing": 3
+   "failing": 7
   },
   {
    "name": "hatch moved after Rowan departure",
    "detected": true,
-   "failing": 3
+   "failing": 7
   },
   {
    "name": "old direct GivePokemon award restored",
    "detected": true,
-   "failing": 1
+   "failing": 2
   },
   {
    "name": "ordinary Egg_CreateEgg level changed",
@@ -175,6 +175,31 @@
   },
   {
    "name": "Rival starter ignores branch",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "hatch: manual fade out before message restored (stacked fade)",
+   "detected": true,
+   "failing": 2
+  },
+  {
+   "name": "hatch: extra FadeScreenOut pair added",
+   "detected": true,
+   "failing": 2
+  },
+  {
+   "name": "hatch: invoked twice",
+   "detected": true,
+   "failing": 3
+  },
+  {
+   "name": "hatch: native StartMap removed",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "hatch: extra transition in starter hatch helper",
    "detected": true,
    "failing": 1
   },

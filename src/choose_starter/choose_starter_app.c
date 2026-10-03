@@ -49,8 +49,8 @@
 #define NUM_STARTER_OPTIONS 3
 
 // All three positions show the same Mystery Egg; the species is rolled after confirmation.
-#define MYSTERY_EGG_REST_Y_OFFSET 48
-#define MYSTERY_EGG_REST_SCALE    FX32_CONST(0.40f)
+#define MYSTERY_EGG_REST_Y_OFFSET 40
+#define MYSTERY_EGG_REST_SCALE    FX32_CONST(0.75f)
 
 #define OAM_MAIN_START 0
 #define OAM_MAIN_END   128
@@ -1622,10 +1622,10 @@ static BOOL HasPreviewWindowMovementFinished(StarterPreviewWindow *previewWindow
 static void StartPreviewWindowAndGraphicsMovements(ChooseStarterApp *app)
 {
     fx32 xStart = app->otherSelectionMatrix[app->cursorPosition][0] << FX32_SHIFT;
-    fx32 yStart = (app->otherSelectionMatrix[app->cursorPosition][1] + 48) << FX32_SHIFT;
+    fx32 yStart = (app->otherSelectionMatrix[app->cursorPosition][1] + MYSTERY_EGG_REST_Y_OFFSET) << FX32_SHIFT;
 
     StartPreviewWindowMovement(&app->previewWindow, xStart, 128 << FX32_SHIFT, yStart, 96 << FX32_SHIFT, FX32_CONST(0.40f), FX32_CONST(1.0f), 6);
-    StartPreviewGraphicsMovement(&app->previewGraphics, app->sprites[app->cursorPosition], xStart, 128 << FX32_SHIFT, yStart, 96 << FX32_SHIFT, FX32_CONST(0.40f), FX32_CONST(1.0f), 6);
+    StartPreviewGraphicsMovement(&app->previewGraphics, app->sprites[app->cursorPosition], xStart, 128 << FX32_SHIFT, yStart, 96 << FX32_SHIFT, MYSTERY_EGG_REST_SCALE, FX32_CONST(1.0f), 6);
 }
 
 static void StartOtherPreviewWindowAndGraphicsMovements(ChooseStarterApp *app)

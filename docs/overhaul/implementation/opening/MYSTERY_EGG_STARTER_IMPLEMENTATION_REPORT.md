@@ -1,6 +1,6 @@
 # Mystery Egg Starter — Implementation Report (D8)
 
-**Starting SHA:** `6fc1eedfec637041733b5e5d9626a49c7524daa9` (`main` had not advanced). **Status: IMPLEMENTED — runtime QA PENDING (not VERIFIED).**
+**Starting SHA:** `6fc1eedfec637041733b5e5d9626a49c7524daa9` (`main` had not advanced). **Status: IMPLEMENTED — runtime QA FAILED on first run (BLOCKER C-1/C-2, fixes pending re-verification); not VERIFIED.**
 
 ## Source audit findings
 `MYSTERY_EGG_STARTER_SOURCE_AUDIT.md`. No blocker. Key facts: stock hatch is hard-coded Lv1 and logs a TV segment; `VAR_PLAYER_STARTER` is an existing u16 var; 19 script
@@ -13,7 +13,7 @@ call sites and two C helpers branched on the starter; the Sandgem lab gift logic
 - **QA integration:** `tools/overhaul/validate_overhaul.py` (phase 14 + suite), `tools/overhaul/qa/runtime_cases.py` (+17 `OP-*` cases), `tools/overhaul/postgame/validate_postgame.py` (D8 scope allowlist; Fight Area script check now allows only the branch-query line swap), regenerated D7 docs.
 
 ## UI approach
-The chooser keeps its camera, cursor, navigation, bag animation and confirmation menu. The three Poké Ball 3D models stay hidden; three **identical `SPECIES_EGG` sprites** are placed at the ball positions (scale 0.40, the zoom-from point of the existing preview animation) and the existing zoom-to-center confirm animation now shows the egg. Removed: per-slot species sprites, species cry on confirm, per-slot species text. Text bank 360 is neutral ("Mystery Egg", identical for all positions). No new art.
+The chooser keeps its camera, cursor, navigation, bag animation and confirmation menu. The three Poké Ball 3D models stay hidden; three **identical `SPECIES_EGG` sprites** are placed at the ball positions (rest scale 0.75, Y offset +40 from the ball position, also the zoom-from point of the confirm animation; was 0.40/+48 before the D8 runtime fix) and the existing zoom-to-center confirm animation now shows the egg. Removed: per-slot species sprites, species cry on confirm, per-slot species text. Text bank 360 is neutral ("Mystery Egg", identical for all positions). No new art.
 
 ## Weighted RNG
 `MysteryStarter_Draw()` = `LCRNG_Next() % 100` → `MysteryStarter_SpeciesFromRoll(roll)` over one static integer table (3/3/3/1/10×9; ranges 0–2, 3–5, 6–8, 9, 10–19 … 90–99). No position input exists in any signature. Called from exactly one place, `ScrCmd_SaveChosenStarter`, after the chooser app has exited with a confirmed egg. Note: `LCRNG_Next()` yields 16 bits, so `% 100` carries the engine's inherent ≤1/655 granularity (buckets of 655/656 of 65 536); the table itself is exact.
@@ -40,5 +40,12 @@ CI run [37089678263](https://github.com/79cbd8hmgj-wq/pokeplatinum-legacy/action
 ## Runtime QA status
 All 17 `OP-*` cases × 2 revisions: **NOT RUN** (no emulator/hardware in the session). D8 is **IMPLEMENTED, not VERIFIED**; the project is not a release candidate.
 
+## D8 runtime-QA fix (BLOCKER C-1 / C-2)
+Runtime QA reported (1) tiny, pasted-looking eggs and (2) both screens black indefinitely after confirming an egg (music continuing). Findings: `FieldSystem_HatchMysteryStarterEgg` is
+identical to vanilla `FieldSystem_HatchEgg` apart from the level and the TV segment, and native `FieldTask_HatchEgg` already does `FinishMap → app → StartMap`; vanilla
+`CommonScript_HatchEgg` also uses one `FadeScreenOut`…`FadeScreenIn` pair, so that pair is required and was kept. The Route 201 script differed by printing the message *after* the fade-out
+(unacknowledgeable on a black screen). It now mirrors vanilla order. Music not stopping implies the hatch app never initialised (`EggHatch_Init` stops sequences), i.e. the stall was in the script
+before the task launched. Eggs: scale 0.75 / Y +40. **Neither fix is runtime-verified; the root cause of the black screen is not proven.** Regression: `check_hatch_lifecycle` + 5 mutations.
+
 ## Unresolved blockers
-None. Visual caveats that only runtime can settle: egg-sprite placement/scale over the old ball positions and sprite layering against the briefcase BG (OP-01…OP-03, OP-09).
+**BLOCKER C-1 (runtime, OPEN until OP-10/OP-11 pass on both revisions) — see `qa/RELEASE_BLOCKERS.md`.** Visual caveats that only runtime can settle: egg-sprite placement/scale over the old ball positions and sprite layering against the briefcase BG (OP-01…OP-03, OP-09).

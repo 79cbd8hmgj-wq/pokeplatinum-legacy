@@ -42,6 +42,9 @@ def render(led):
            "No emulator or hardware was available to the author of this matrix, so every run is **NOT RUN**. This is expected and is not a pass; "
            "static validation (`MASTER_VALIDATION_REPORT.md`) is not a substitute. A case may be marked PASS only by executing its steps on that "
            "revision and recording actual result, tester, date and evidence (screenshot/log/save-state reference).", "",
+           "**Known open runtime failure (D8, user-reported; not a PASS/FAIL ledger entry because the revision was not recorded):** after confirming a Mystery Egg both "
+           "screens went black indefinitely with music still playing, and the eggs rendered tiny in the briefcase. Fixes are in source (RELEASE_BLOCKERS C-1/C-2) but "
+           "**unverified at runtime**: OP-01, OP-02, OP-03, OP-09, OP-10 and OP-11 must be re-run on both revisions and stay NOT RUN until then.", "",
            "Result vocabulary: `PASS`, `FAIL`, `NOT RUN`. Revisions: " + ", ".join(REVISIONS) + ".", "",
            "## Index", ""]
     for g in GROUPS_REQUIRED:

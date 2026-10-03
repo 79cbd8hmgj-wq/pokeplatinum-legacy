@@ -2,7 +2,7 @@
 
 Severity: **BLOCKER** (release cannot proceed) · **MAJOR** (gameplay/progression defect requiring fix) · **MINOR** (non-blocking polish/process) · **COSMETIC**.
 
-**Release state: CORE 1.0 SOURCE-COMPLETE — RUNTIME QA PENDING.** No source/static BLOCKER or MAJOR remains open. Section B lists runtime-unverified items:
+**Release state: CORE 1.0 SOURCE-COMPLETE — RUNTIME QA PENDING; D8 runtime BLOCKER C-1 OPEN (Section C).** No source/static BLOCKER or MAJOR remains open. Section B lists runtime-unverified items:
 they are not defects, but they prevent `CORE 1.0 VERIFIED / RELEASE CANDIDATE` under spec s21.
 
 ## A. Source / static items
@@ -43,8 +43,17 @@ they are not defects, but they prevent `CORE 1.0 VERIFIED / RELEASE CANDIDATE` u
 | B-5 | — | No vanilla-save import / overhaul save reload test was run. | `SAVE_COMPATIBILITY_REPORT.md` |
 | B-6 | — | Clean-build output checksums are only recorded by the new CI provenance step on the D7 PR run; no local toolchain/base ROM was available. | `BUILD_MATRIX.md` |
 
+## C. D8 runtime-QA defects (user-reported)
+
+| ID | Severity | Status | Item |
+|---|---|---|---|
+| C-1 | **BLOCKER** | **OPEN — source fix applied, NOT runtime-verified** | After confirming a Mystery Egg, both screens stay black indefinitely (music continues; hatch reveal and progression never resume). Source change: `Route201_Briefcase` now mirrors vanilla `CommonScript_HatchEgg` — `Message` + `WaitABPress` while the field is still visible, then one `FadeScreenOut`/`WaitFadeScreen`, `CloseMessage`, one `HatchMysteryStarterEgg`, `FadeScreenIn`/`WaitFadeScreen`. Previously the message was printed *after* the fade-out (on a black screen where it cannot be seen or acknowledged). The single fade pair is kept because the vanilla script and the native task require it (`EggHatch_Main` state 0 waits on a running screen fade; the field restarts black after `FieldTransition_StartMap`). Root cause is not proven without a runtime. Closes only when OP-10/OP-11 pass on Rev 0 and Rev 1. |
+| C-2 | MAJOR | **OPEN — source fix applied, NOT runtime-verified** | Mystery Eggs render tiny and look pasted over the briefcase. Source change: `MYSTERY_EGG_REST_SCALE` 0.40 → 0.75, `MYSTERY_EGG_REST_Y_OFFSET` 48 → 40 (the confirm zoom now starts from the same scale/offset so the selected egg does not jump). Exact placement is a runtime-tuned estimate. Closes only when OP-01…OP-03 and OP-09 pass on both revisions. |
+
+Regression coverage: `tools/overhaul/validate_mystery_starter.py::check_hatch_lifecycle` (+5 mutations in `opening/test_validate_mystery_starter.py`). These are source-level guards, not runtime evidence.
+
 ## Release-readiness summary
 
-* Source/static BLOCKER open: **0**. Source/static MAJOR open: **0** (A-1 fixed).
+* Runtime BLOCKER open: **C-1** (Mystery Egg hatch black screen; fix unverified). Source/static BLOCKER open: **0**. Source/static MAJOR open: **0** (A-1 fixed).
 * Open for release candidate: B-1…B-6 plus A-6 (patch tooling), and owner confirmation items A-4/A-5.
 * Therefore: **CORE 1.0 SOURCE-COMPLETE — RUNTIME QA PENDING**; artifacts, if any, are TEST/QA builds only.

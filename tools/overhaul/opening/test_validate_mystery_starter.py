@@ -58,6 +58,11 @@ MUTATIONS = {
     "breeding logic edited (hatch friendship)": (DC, "friendship = 120;", "friendship = 70;"),
     "Day Care hatch-cycle constants edited": ("include/constants/daycare.h", None, "\n#define MUTATED_HATCH_CONSTANT 1\n"),
     "Rival starter ignores branch": (SV, "u16 playerBranch = SystemVars_GetPlayerStarterBranch(varsFlags);\n\n    if (playerBranch == SPECIES_TURTWIG) {\n        counterpartStarter", "u16 playerStarter = TryGetVarValue(varsFlags, VAR_PLAYER_STARTER);\n\n    if (playerStarter == SPECIES_TURTWIG) {\n        counterpartStarter"),
+    "hatch: manual fade out before message restored (stacked fade)": (R201, "    Message Route201_Text_TheEggIsHatching\n    WaitABPress\n    FadeScreenOut\n    WaitFadeScreen\n    CloseMessage\n", "    FadeScreenOut\n    WaitFadeScreen\n    Message Route201_Text_TheEggIsHatching\n    WaitABPress\n    CloseMessage\n"),
+    "hatch: extra FadeScreenOut pair added": (R201, "    CloseMessage\n    HatchMysteryStarterEgg\n", "    CloseMessage\n    FadeScreenOut\n    WaitFadeScreen\n    HatchMysteryStarterEgg\n"),
+    "hatch: invoked twice": (R201, "    HatchMysteryStarterEgg\n    FadeScreenIn", "    HatchMysteryStarterEgg\n    HatchMysteryStarterEgg\n    FadeScreenIn"),
+    "hatch: native StartMap removed": ("src/egg_hatch.c", "FieldTransition_StartMap(fieldTask);", "(void)fieldTask;"),
+    "hatch: extra transition in starter hatch helper": ("src/unk_0203D1B8.c", "    args.hatchLevel = MYSTERY_STARTER_LEVEL;\n", "    args.hatchLevel = MYSTERY_STARTER_LEVEL;\n    FieldTransition_FinishMap(fieldSystem->task);\n"),
     "manifest/source drift (manifest weight)": ("MANIFEST", None, None),
 }
 
