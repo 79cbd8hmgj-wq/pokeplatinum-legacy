@@ -283,9 +283,10 @@ Route201_Briefcase:
     FadeScreenIn
     WaitFadeScreen
     GiveMysteryStarterEgg
+    Message Route201_Text_TheEggIsHatching
+    WaitABPress
     FadeScreenOut
     WaitFadeScreen
-    Message Route201_Text_TheEggIsHatching
     CloseMessage
     HatchMysteryStarterEgg
     FadeScreenIn

@@ -203,6 +203,29 @@ class V:
                  r201.count("HatchMysteryStarterEgg") == 1 and r201.index("HatchMysteryStarterEgg") < r201.index("Route201_StartRivalBattle:") and
                  "Route201_Briefcase" in r201 and r201.count("SaveChosenStarter") == 1)
 
+        self.check_hatch_lifecycle(r201)
+
+    def check_hatch_lifecycle(self, r201):
+        """D8 runtime-QA regression: the script must mirror vanilla CommonScript_HatchEgg (Message, WaitABPress, fade out, close, hatch, fade in) so no
+        message/fade is left stacked around the native FieldTask_HatchEgg FinishMap/StartMap lifecycle."""
+        body = r201[r201.index("Route201_Briefcase:"):r201.index("Route201_DawnLeave:")]
+        cmds = [l.strip().split()[0] for l in body.splitlines() if l.strip() and not l.strip().endswith(":")]
+        i = cmds.index("GiveMysteryStarterEgg") if "GiveMysteryStarterEgg" in cmds else -1
+        want = ["GiveMysteryStarterEgg", "Message", "WaitABPress", "FadeScreenOut", "WaitFadeScreen", "CloseMessage", "HatchMysteryStarterEgg", "FadeScreenIn", "WaitFadeScreen"]
+        self.rec("Route 201 hatch sequence mirrors vanilla CommonScript_HatchEgg", i >= 0 and cmds[i:i + len(want)] == want, str(cmds[i:i + len(want)] if i >= 0 else None))
+        self.rec("hatch task invoked exactly once", body.count("HatchMysteryStarterEgg") == 1 and r201.count("HatchMysteryStarterEgg") == 1)
+        h = cmds.index("HatchMysteryStarterEgg") if "HatchMysteryStarterEgg" in cmds else -1
+        window = cmds[i:h + 3] if i >= 0 and h >= 0 else []
+        self.rec("exactly one FadeScreenOut/FadeScreenIn pair around the hatch (no stacked fades)", window.count("FadeScreenOut") == 1 and window.count("FadeScreenIn") == 1)
+        fo = cmds.index("FadeScreenOut", i) if i >= 0 and "FadeScreenOut" in cmds[i:] else -1
+        self.rec("no message is printed while the screen is faded out for the hatch", fo >= 0 and h > fo and "Message" not in cmds[fo:h])
+        hs = strip_comments(self.read("src/unk_0203D1B8.c"))
+        fn = func_body(hs, "FieldSystem_HatchMysteryStarterEgg") or ""
+        self.rec("starter hatch calls EggHatch_HatchEgg exactly once and no extra transition", fn.count("EggHatch_HatchEgg(") == 1 and "FieldTransition_" not in fn)
+        eh = strip_comments(self.read("src/egg_hatch.c"))
+        task = func_body(eh, "FieldTask_HatchEgg") or ""
+        self.rec("native hatch task owns FinishMap then StartMap (field returns after hatch)", task.count("FieldTransition_FinishMap(") == 1 and task.count("FieldTransition_StartMap(") == 1 and task.index("FieldTransition_FinishMap(") < task.index("FieldTransition_StartMap("))
+
     # -- level / hatch / breeding ----------------------------------------------------------------------------------------------------
     def check_output_and_breeding(self):
         hdr = self.read("include/mystery_egg_starter.h")
