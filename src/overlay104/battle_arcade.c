@@ -1343,7 +1343,7 @@ u16 BattleArcade_GetEarnedBP(BattleArcade *arcade)
         }
     }
 
-    return bp;
+    return bp * FRONTIER_BP_PAYOUT_MULTIPLIER;
 }
 
 void BattleArcade_SaveItemsAfterBattle(Party *battleParty, Party *arcadeParty, int battleSlot, int arcadeSlot)

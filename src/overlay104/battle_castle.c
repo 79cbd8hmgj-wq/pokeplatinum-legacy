@@ -2,6 +2,7 @@
 
 #include <nitro.h>
 
+#include "constants/battle_frontier.h"
 #include "constants/heap.h"
 #include "constants/moves.h"
 #include "generated/game_records.h"
@@ -731,5 +732,5 @@ u16 BattleCastle_GetEarnedBP(BattleCastle *castle)
         }
     }
 
-    return bp;
+    return bp * FRONTIER_BP_PAYOUT_MULTIPLIER;
 }

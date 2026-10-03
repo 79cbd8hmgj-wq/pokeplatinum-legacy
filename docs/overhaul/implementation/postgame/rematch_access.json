@@ -1,0 +1,67 @@
+{
+  "schema": "rematch_access/1",
+  "start_sha": "98f9cbdf43f9a8ef4c04c3f80e7ee0b6d9482638",
+  "changed_records": [
+    {
+      "source_path": "res/field/scripts/scripts_survival_area.s",
+      "symbol": "SurvivalArea_Rival",
+      "before": "GetDayOfWeek; GoToIfEq SUNDAY/SATURDAY -> SurvivalArea_RivalBattle; otherwise idle chatter",
+      "target": "GoTo SurvivalArea_RivalBattle (daily flag FLAG_DAILY_DEFEATED_SURVIVAL_AREA_RIVAL still gates repeats)",
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s9; plan F6",
+      "guard": "no DAY_OF_WEEK reference remains in the file; daily flag set on victory and checked first"
+    },
+    {
+      "source_path": "res/field/scripts/scripts_battleground.s",
+      "symbol": "Battleground_ExpertM -> Battleground_OfferNewTrainers",
+      "before": "ExpertM only talks; trainers regenerate once per calendar day (FLAG_DAILY_SET_BATTLEGROUND_TRAINERS)",
+      "target": "after the group is resolved the proprietor clears the 13 per-trainer daily defeated flags and FLAG_DAILY_SET_BATTLEGROUND_TRAINERS, then re-enters the map so OnTransition regenerates up to 4 slots",
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s7; plan F5",
+      "guard": "reshuffle requires every visible slot defeated or declined; partner prerequisite hides unchanged"
+    },
+    {
+      "source_path": "src/scrcmd.c",
+      "symbol": "ScrCmd_GetRandomBattlegroundTrainers",
+      "before": "first leader slot chosen uniformly",
+      "target": "first leader slot retried up to 8 times to avoid the previous group (cheap, best-effort duplicate avoidance)",
+      "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s7 (avoid obvious immediate duplicates where practical)",
+      "guard": "slot 2/3 selection and stat-trainer selection unchanged"
+    }
+  ],
+  "audited_no_change": {
+    "gym_leader_pool": {
+      "source_path": "src/scrcmd.c",
+      "symbol": "sBattlegroundGymLeaders",
+      "count": 8,
+      "rematch_trainer_ids": "Battleground_SetTrainer*: TRAINER_LEADER_*_REMATCH"
+    },
+    "partner_pool": [
+      "Cheryl",
+      "Riley",
+      "Marley",
+      "Buck",
+      "Mira"
+    ],
+    "league": {
+      "flag": "FLAG_ARRESTED_CHARON_STARK_MOUNTAIN",
+      "rooms": [
+        "aaron",
+        "bertha",
+        "flint",
+        "lucian",
+        "champion"
+      ],
+      "note": "E4/Cynthia rooms already choose *_REMATCH trainers on the postgame flag and are repeatable; nothing real-time gates them"
+    },
+    "fight_area": {
+      "source_path": "res/field/scripts/scripts_fight_area.s",
+      "trainers": [
+        "TRAINER_LEADER_VOLKNER_FIGHT_AREA",
+        "TRAINER_ELITE_FOUR_FLINT_FIGHT_AREA",
+        "TRAINER_RIVAL_FIGHT_AREA_PIPLUP",
+        "TRAINER_RIVAL_FIGHT_AREA_TURTWIG",
+        "TRAINER_RIVAL_FIGHT_AREA_CHIMCHAR"
+      ],
+      "note": "all five references resolve to trainer-overhaul records; script flow untouched"
+    }
+  }
+}

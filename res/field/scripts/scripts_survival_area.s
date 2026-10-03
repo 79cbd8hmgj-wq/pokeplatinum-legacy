@@ -106,36 +106,7 @@ SurvivalArea_Rival:
     PlaySE SEQ_SE_CONFIRM
     LockAll
     FacePlayer
-    GetDayOfWeek VAR_MAP_LOCAL_0x00
-    GoToIfEq VAR_MAP_LOCAL_0x00, DAY_OF_WEEK_SUNDAY, SurvivalArea_RivalBattle
-    GoToIfEq VAR_MAP_LOCAL_0x00, DAY_OF_WEEK_SATURDAY, SurvivalArea_RivalBattle
-    BufferRivalName 0
-    BufferPlayerName 1
-    SetVar VAR_0x8008, VAR_RANDOM_SURVIVAL_AREA_RIVAL_MESSAGE
-    GoToIfEq VAR_0x8008, 0, SurvivalArea_PilingUpWins
-    GoToIfEq VAR_0x8008, 1, SurvivalArea_DidYouBattleEveryone
-    GoTo SurvivalArea_BestTrainersLovePokemon
-    End
-
-SurvivalArea_PilingUpWins:
-    Message SurvivalArea_Text_PilingUpWins
-    GoTo SurvivalArea_RivalEnd
-    End
-
-SurvivalArea_DidYouBattleEveryone:
-    Message SurvivalArea_Text_DidYouBattleEveryone
-    GoTo SurvivalArea_RivalEnd
-    End
-
-SurvivalArea_BestTrainersLovePokemon:
-    Message SurvivalArea_Text_BestTrainersLovePokemon
-    GoTo SurvivalArea_RivalEnd
-    End
-
-SurvivalArea_RivalEnd:
-    WaitButton
-    CloseMessage
-    ReleaseAll
+    GoTo SurvivalArea_RivalBattle
     End
 
 SurvivalArea_RivalBattle:

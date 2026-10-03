@@ -78,6 +78,7 @@ BattleArcade_ExplainChallenge:
     End
 
 BattleArcade_EndChallenge:
+    Common_ProcessFrontierPrintRewards
     GoTo BattleArcade_HopeToSeeYouAgain
     End
 
@@ -487,6 +488,9 @@ BattleArcade_EarnedSilverPrint:
     PlayFanfare SEQ_FANFA4
     WaitFanfare
     SetVar VAR_BATTLE_ARCADE_PRINT_STATE, 2
+    SetVar VAR_0x8004, 10
+    Common_GiveFrontierPrintBP
+    Common_ProcessFrontierPrintRewards
     Return
 
 BattleArcade_EarnedGoldPrint:
@@ -496,7 +500,10 @@ BattleArcade_EarnedGoldPrint:
     PlayFanfare SEQ_FANFA4
     WaitFanfare
     SetVar VAR_BATTLE_ARCADE_PRINT_STATE, 4
+    SetVar VAR_0x8004, 30
+    Common_GiveFrontierPrintBP
     Common_CheckAllFrontierGoldPrintsObtained
+    Common_ProcessFrontierPrintRewards
     Return
 
 BattleArcade_OnFrame_ChallengeEnded:

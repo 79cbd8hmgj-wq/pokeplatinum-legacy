@@ -2,6 +2,7 @@
 
 #include <nitro.h>
 
+#include "constants/battle_frontier.h"
 #include "generated/game_records.h"
 
 #include "struct_defs/battle_frontier.h"
@@ -639,5 +640,5 @@ u16 ov104_022347F8(BattleFactory *param0)
         }
     }
 
-    return v0;
+    return v0 * FRONTIER_BP_PAYOUT_MULTIPLIER;
 }

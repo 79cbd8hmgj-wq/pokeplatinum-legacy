@@ -99,17 +99,99 @@ Battleground_ExpertM:
     FacePlayer
     GoToIfSet FLAG_BATTLED_STARK_MOUNTAIN_ROOM_3_HEATRAN, Battleground_MakeYourselfAtHome
     Message Battleground_Text_TalkAboutStarkMountain
+    GoTo Battleground_OfferNewTrainers
+    End
+
+Battleground_MakeYourselfAtHome:
+    Message Battleground_Text_MakeYourselfAtHome
+    GoTo Battleground_OfferNewTrainers
+    End
+
+@ D6: once every trainer in the current group is beaten or declined, the proprietor can call in a new group at once.
+@ The map is re-entered so OnTransition regenerates the four slots; the per-trainer daily defeated flags are cleared
+@ first so any Gym Leader or partner can appear again without waiting for the next calendar day.
+Battleground_OfferNewTrainers:
+    Message Battleground_Text_OfferNewTrainers
+    ShowYesNoMenu VAR_RESULT
+    GoToIfEq VAR_RESULT, MENU_NO, Battleground_ExpertMEnd
+    SetVar VAR_0x8003, TRUE
+    CallIfUnset FLAG_HIDE_BATTLEGROUND_TRAINER_1, Battleground_CheckSlot1Resolved
+    CallIfUnset FLAG_HIDE_BATTLEGROUND_TRAINER_2, Battleground_CheckSlot2Resolved
+    CallIfUnset FLAG_HIDE_BATTLEGROUND_TRAINER_3, Battleground_CheckSlot3Resolved
+    CallIfUnset FLAG_HIDE_BATTLEGROUND_TRAINER_4, Battleground_CheckSlot4Resolved
+    GoToIfEq VAR_0x8003, FALSE, Battleground_FinishCurrentTrainers
+    Message Battleground_Text_CallingNewTrainers
+    CloseMessage
+    Call Battleground_ClearDefeatedTrainerFlags
+    ClearFlag FLAG_DAILY_SET_BATTLEGROUND_TRAINERS
+    GetPlayerMapPos VAR_0x8004, VAR_0x8005
+    GetPlayerDir VAR_0x8006
+    FadeScreenOut
+    WaitFadeScreen
+    Warp MAP_HEADER_BATTLEGROUND, VAR_0x8004, VAR_0x8005, VAR_0x8006
+    FadeScreenIn
+    WaitFadeScreen
+    End
+
+Battleground_FinishCurrentTrainers:
+    Message Battleground_Text_FinishCurrentTrainers
+    GoTo Battleground_ExpertMEnd
+    End
+
+Battleground_ExpertMEnd:
     WaitButton
     CloseMessage
     ReleaseAll
     End
 
-Battleground_MakeYourselfAtHome:
-    Message Battleground_Text_MakeYourselfAtHome
-    WaitButton
-    CloseMessage
-    ReleaseAll
-    End
+Battleground_CheckSlot1Resolved:
+    GoToIfSet FLAG_DEFEATED_BATTLEGROUND_TRAINER_1, Battleground_SlotResolved
+    GoToIfSet LOCAL_FLAG_DECLINED_BATTLE_TRAINER_1, Battleground_SlotResolved
+    SetVar VAR_MAP_LOCAL_0x01, VAR_OBJ_GFX_ID_1
+    GoTo Battleground_CheckSlotDailyDefeated
+
+Battleground_CheckSlot2Resolved:
+    GoToIfSet FLAG_DEFEATED_BATTLEGROUND_TRAINER_2, Battleground_SlotResolved
+    GoToIfSet LOCAL_FLAG_DECLINED_BATTLE_TRAINER_2, Battleground_SlotResolved
+    SetVar VAR_MAP_LOCAL_0x01, VAR_OBJ_GFX_ID_2
+    GoTo Battleground_CheckSlotDailyDefeated
+
+Battleground_CheckSlot3Resolved:
+    GoToIfSet FLAG_DEFEATED_BATTLEGROUND_TRAINER_3, Battleground_SlotResolved
+    GoToIfSet LOCAL_FLAG_DECLINED_BATTLE_TRAINER_3, Battleground_SlotResolved
+    SetVar VAR_MAP_LOCAL_0x01, VAR_OBJ_GFX_ID_3
+    GoTo Battleground_CheckSlotDailyDefeated
+
+Battleground_CheckSlot4Resolved:
+    GoToIfSet FLAG_DEFEATED_BATTLEGROUND_TRAINER_4, Battleground_SlotResolved
+    GoToIfSet LOCAL_FLAG_DECLINED_BATTLE_TRAINER_4, Battleground_SlotResolved
+    SetVar VAR_MAP_LOCAL_0x01, VAR_OBJ_GFX_ID_4
+    GoTo Battleground_CheckSlotDailyDefeated
+
+Battleground_CheckSlotDailyDefeated:
+    Call Battleground_CheckDefeatedTrainer
+    GoToIfEq VAR_RESULT, TRUE, Battleground_SlotResolved
+    SetVar VAR_0x8003, FALSE
+    Return
+
+Battleground_SlotResolved:
+    Return
+
+Battleground_ClearDefeatedTrainerFlags:
+    ClearFlag FLAG_DAILY_DEFEATED_BATTLEGROUND_ROARK
+    ClearFlag FLAG_DAILY_DEFEATED_BATTLEGROUND_GARDENIA
+    ClearFlag FLAG_DAILY_DEFEATED_BATTLEGROUND_CRASHER_WAKE
+    ClearFlag FLAG_DAILY_DEFEATED_BATTLEGROUND_MAYLENE
+    ClearFlag FLAG_DAILY_DEFEATED_BATTLEGROUND_FANTINA
+    ClearFlag FLAG_DAILY_DEFEATED_BATTLEGROUND_CANDICE
+    ClearFlag FLAG_DAILY_DEFEATED_BATTLEGROUND_BYRON
+    ClearFlag FLAG_DAILY_DEFEATED_BATTLEGROUND_VOLKNER
+    ClearFlag FLAG_DAILY_DEFEATED_BATTLEGROUND_CHERYL
+    ClearFlag FLAG_DAILY_DEFEATED_BATTLEGROUND_RILEY
+    ClearFlag FLAG_DAILY_DEFEATED_BATTLEGROUND_MARLEY
+    ClearFlag FLAG_DAILY_DEFEATED_BATTLEGROUND_BUCK
+    ClearFlag FLAG_DAILY_DEFEATED_BATTLEGROUND_MIRA
+    Return
 
 Battleground_Buck:
     PlaySE SEQ_SE_CONFIRM

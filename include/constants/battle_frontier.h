@@ -21,6 +21,9 @@ enum BattleFrontierScene {
     FRONTIER_SCENE_ARCADE_BATTLE_ROOM,
 };
 
+/* D6: every Battle Point award from a Frontier facility is multiplied by this exactly once, at its payout point. */
+#define FRONTIER_BP_PAYOUT_MULTIPLIER 2
+
 #define FRONTIER_CHALLENGE_SINGLE    0
 #define FRONTIER_CHALLENGE_DOUBLE    1
 #define FRONTIER_CHALLENGE_MULTI     2
