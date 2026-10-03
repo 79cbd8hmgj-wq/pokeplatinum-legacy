@@ -133,6 +133,7 @@
 #include "menu.h"
 #include "message.h"
 #include "message_util.h"
+#include "mystery_egg_diag.h"
 #include "mystery_egg_starter.h"
 #include "network_icon.h"
 #include "npc_trade_task.h"
@@ -1312,6 +1313,11 @@ static BOOL ScrCmd_Message(ScriptContext *ctx)
 {
     u8 messageID = ScriptContext_ReadByte(ctx);
 
+#ifdef LOGGING_ENABLED
+    if (gMysteryEggDiagActive) {
+        MYSTERY_EGG_DIAG_V(MEDIAG_F_MESSAGE, "messageID=%d", messageID);
+    }
+#endif
     ScriptMessage_Show(ctx, ctx->loader, messageID, TRUE, NULL);
     ScriptContext_Pause(ctx, ScriptContext_WaitForFinishedPrinting);
 
@@ -2928,6 +2934,7 @@ BOOL ScriptContext_WaitForApplicationExit(ScriptContext *ctx)
 
 static BOOL ScrCmd_ReturnToField(ScriptContext *ctx)
 {
+    MYSTERY_EGG_DIAG(MEDIAG_C_RETURN_TO_FIELD);
     FieldTransition_StartMap(ctx->fieldSystem->task);
     return TRUE;
 }
@@ -3404,6 +3411,9 @@ static BOOL ScrCmd_StartChooseStarterScene(ScriptContext *ctx)
 
     chooseStarterData->options = SaveData_GetOptions(ctx->fieldSystem->saveData);
 
+#ifdef LOGGING_ENABLED
+    gMysteryEggDiagActive = TRUE;
+#endif
     FieldSystem_LaunchChooseStarterApp(ctx->fieldSystem, *fieldSysDataPtr);
     ScriptContext_Pause(ctx, ScriptContext_WaitForApplicationExit);
 
@@ -3416,11 +3426,14 @@ static BOOL ScrCmd_SaveChosenStarter(ScriptContext *ctx)
 
     ChooseStarterData *chooseStarterData = (*fieldSysDataPtr);
 
+    MYSTERY_EGG_DIAG_V(MEDIAG_B_SAVE_BEGIN, "eggPosition=%d", chooseStarterData->eggPosition);
+
     // The one and only weighted draw. The egg position is not an input.
     u16 species = MysteryStarter_Draw();
     SystemVars_SetPlayerStarter(SaveData_GetVarsFlags(ctx->fieldSystem->saveData), species);
 
     Heap_Free(*fieldSysDataPtr);
+    MYSTERY_EGG_DIAG_V(MEDIAG_B_SAVE_END, "species=%d", species);
 
     return FALSE;
 }
@@ -3555,6 +3568,11 @@ static BOOL ScrCmd_FadeScreen(ScriptContext *ctx)
     u16 type = ScriptContext_ReadHalfWord(ctx);
     u16 color = ScriptContext_ReadHalfWord(ctx);
 
+#ifdef LOGGING_ENABLED
+    if (gMysteryEggDiagActive) {
+        MYSTERY_EGG_DIAG_V(MEDIAG_D_FADE_IN_START, "type=%d frames=%d", type, frames);
+    }
+#endif
     StartScreenFade(FADE_BOTH_SCREENS, type, type, color, transition, frames, HEAP_ID_FIELD1);
     ResetVisibleHardwareWindows(DS_SCREEN_MAIN);
     ResetVisibleHardwareWindows(DS_SCREEN_SUB);
@@ -3570,6 +3588,11 @@ static BOOL ScrCmd_WaitFadeScreen(ScriptContext *ctx)
 
 static BOOL ScriptContext_ScreenWipeDone(ScriptContext *ctx)
 {
+#ifdef LOGGING_ENABLED
+    if (gMysteryEggDiagActive && IsScreenFadeDone() == TRUE) {
+        MYSTERY_EGG_DIAG(MEDIAG_D_FADE_IN_DONE);
+    }
+#endif
     return IsScreenFadeDone() == TRUE;
 }
 
@@ -3808,22 +3831,27 @@ static BOOL ScrCmd_GiveMysteryStarterEgg(ScriptContext *ctx)
     u16 species = SystemVars_GetPlayerStarter(SaveData_GetVarsFlags(fieldSystem->saveData));
     int metLocation = MapHeader_GetMapLabelTextID(fieldSystem->location->mapHeaderID);
 
+    MYSTERY_EGG_DIAG_V(MEDIAG_E_GIVE_BEGIN, "species=%d metLoc=%d partyCount=%d", species, metLocation, Party_GetCurrentCount(party));
     GF_ASSERT(species != SPECIES_NONE);
 
     Pokemon *egg = Pokemon_New(HEAP_ID_FIELD2);
     Pokemon_Init(egg);
     Egg_CreateMysteryStarterEgg(egg, species, trainerInfo, metLocation);
+    MYSTERY_EGG_DIAG(MEDIAG_E_GIVE_EGG_BUILT);
 
     BOOL added = Party_AddPokemon(party, egg);
     GF_ASSERT(added);
     Heap_Free(egg);
+    MYSTERY_EGG_DIAG_V(MEDIAG_E_GIVE_END, "added=%d", added);
 
     return FALSE;
 }
 
 static BOOL ScrCmd_HatchMysteryStarterEgg(ScriptContext *ctx)
 {
+    MYSTERY_EGG_DIAG(MEDIAG_G_HATCH_BEGIN);
     FieldSystem_HatchMysteryStarterEgg(ctx->fieldSystem);
+    MYSTERY_EGG_DIAG(MEDIAG_G_HATCH_END);
     return TRUE;
 }
 
