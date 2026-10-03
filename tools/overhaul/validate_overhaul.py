@@ -45,6 +45,7 @@ VALIDATORS = [
     (12, "graphs", "Completion graphs (493 / evolution / events / gates), artifacts current", [f"{T}/qa/build_qa_graphs.py", "--check"]),
     (12, "runtime_matrix", "Runtime matrix integrity (no PASS without evidence)", [f"{T}/qa/validate_runtime_matrix.py"]),
     (12, "smoke", "Structural smoke (host-side, not runtime)", [f"{T}/qa/smoke_structural.py"]),
+    (14, "mystery_starter", "Mystery Egg starter (D8)", [f"{T}/validate_mystery_starter.py", "--no-report"]),
 ]
 SUITES = [  # mutation / regression suites (run with their own directory as cwd)
     ("c1_tests", f"{T}/moves/test_validate_c1.py"), ("c2_tests", f"{T}/c2/test_validate_c2.py"),
@@ -55,6 +56,7 @@ SUITES = [  # mutation / regression suites (run with their own directory as cwd)
     ("pokeball_tests", f"{T}/pokeballs/test_pokeballs.py"), ("breeding_tests", f"{T}/breeding/test_validate_breeding.py"),
     ("event_tests", f"{T}/events/test_validate_legendary.py"), ("postgame_tests", f"{T}/postgame/test_validate_postgame.py"),
     ("qa_graph_tests", f"{T}/qa/test_qa_graphs.py"), ("qa_validator_tests", f"{T}/qa/test_qa_validators.py"),
+    ("mystery_starter_tests", f"{T}/opening/test_validate_mystery_starter.py"),
 ]
 KEEP = re.compile(r"pass|fail|ok\b|error|warning|result|mutation|hits|reachable|integrity|checks|PASS|FAIL", re.I)
 
@@ -114,7 +116,7 @@ Machine-readable: `docs/overhaul/qa/master_validation_summary.json`.
 
 **Scope: static validation only. A green master run is NOT runtime verification and does not make any subsystem `VERIFIED`** (see `QA_INDEX.md`).
 The master run fails if any child fails. Phase numbers follow D7 Phase 5 order (1 docs, 2 species/evolution, 3 moves, 4 TM/HM, 5 encounters,
-6 trainers, 7 economy/EXP, 8 balls, 9 breeding, 10 events, 11 Frontier/postgame, 12 graphs/smoke, 13 suites).
+6 trainers, 7 economy/EXP, 8 balls, 9 breeding, 10 events, 11 Frontier/postgame, 12 graphs/smoke, 13 suites, 14 D8 Mystery Egg starter).
 
 | Phase | Check | Command | Result | Child summary |
 |---|---|---|---|---|

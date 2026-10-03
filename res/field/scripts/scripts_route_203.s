@@ -68,7 +68,7 @@ Route203_RivalIntro:
     BufferPlayerName 1
     Message Route203_Text_IGotTougher
     CloseMessage
-    GetPlayerStarterSpecies VAR_RESULT
+    GetPlayerStarterBranch VAR_RESULT
     GoToIfEq VAR_RESULT, SPECIES_TURTWIG, Route203_StartRivalBattleTurtwig
     GoToIfEq VAR_RESULT, SPECIES_CHIMCHAR, Route203_StartRivalBattleChimchar
     GoTo Route203_StartRivalBattlePiplup

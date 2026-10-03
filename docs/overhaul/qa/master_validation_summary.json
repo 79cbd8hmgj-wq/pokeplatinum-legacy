@@ -155,7 +155,7 @@
    "kind": "validator",
    "phase": 12,
    "result": "PASS",
-   "summary": "runtime evidence: {'PASS': 0, 'FAIL': 0, 'NOT RUN': 206} -> RUNTIME QA PENDING (not VERIFIED)",
+   "summary": "runtime evidence: {'PASS': 0, 'FAIL': 0, 'NOT RUN': 240} -> RUNTIME QA PENDING (not VERIFIED)",
    "title": "Runtime matrix integrity (no PASS without evidence)"
   },
   {
@@ -166,6 +166,15 @@
    "result": "PASS",
    "summary": "structural smoke (host-side, not runtime): 70 pass, 0 fail",
    "title": "Structural smoke (host-side, not runtime)"
+  },
+  {
+   "command": "python3 tools/overhaul/validate_mystery_starter.py --no-report",
+   "id": "mystery_starter",
+   "kind": "validator",
+   "phase": 14,
+   "result": "PASS",
+   "summary": "mystery starter validation: 99 pass, 0 fail",
+   "title": "Mystery Egg starter (D8)"
   },
   {
    "command": "(cd tools/overhaul/moves && python3 test_validate_c1.py)",
@@ -283,10 +292,19 @@
    "result": "PASS",
    "summary": "OK",
    "title": "qa validator tests"
+  },
+  {
+   "command": "(cd tools/overhaul/opening && python3 test_validate_mystery_starter.py)",
+   "id": "mystery_starter_tests",
+   "kind": "suite",
+   "phase": 13,
+   "result": "PASS",
+   "summary": "baseline failures: 0",
+   "title": "mystery starter tests"
   }
  ],
  "schema": "pokeplatinum-overhaul/d7-master-validation/v1",
  "scope": "static validation only; NOT runtime verification",
- "suites": 13,
- "validators": 18
+ "suites": 14,
+ "validators": 19
 }

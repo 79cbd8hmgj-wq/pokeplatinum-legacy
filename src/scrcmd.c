@@ -25,6 +25,7 @@
 #include "generated/pokemon_contest_ranks.h"
 #include "generated/save_types.h"
 #include "generated/signpost_commands.h"
+#include "generated/species.h"
 
 #include "struct_decls/map_object.h"
 #include "struct_decls/map_object_manager.h"
@@ -49,6 +50,7 @@
 #include "cutscenes/boat_cutscene.h"
 #include "field/field_system.h"
 #include "field/field_system_sub2_t.h"
+#include "overlay005/daycare.h"
 #include "overlay005/field_menu.h"
 #include "overlay005/footprint_type.h"
 #include "overlay005/honey_tree.h"
@@ -123,6 +125,7 @@
 #include "journal.h"
 #include "location.h"
 #include "mail.h"
+#include "map_header.h"
 #include "map_header_data.h"
 #include "map_object.h"
 #include "map_object_move.h"
@@ -130,6 +133,7 @@
 #include "menu.h"
 #include "message.h"
 #include "message_util.h"
+#include "mystery_egg_starter.h"
 #include "network_icon.h"
 #include "npc_trade_task.h"
 #include "party.h"
@@ -418,6 +422,9 @@ static BOOL ScrCmd_GetPlayerState(ScriptContext *ctx);
 static BOOL ScrCmd_SetPlayerState(ScriptContext *ctx);
 static BOOL ScrCmd_ChangePlayerState(ScriptContext *ctx);
 static BOOL ScrCmd_GetPlayerStarterSpecies(ScriptContext *ctx);
+static BOOL ScrCmd_GetPlayerStarterBranch(ScriptContext *ctx);
+static BOOL ScrCmd_GiveMysteryStarterEgg(ScriptContext *ctx);
+static BOOL ScrCmd_HatchMysteryStarterEgg(ScriptContext *ctx);
 static BOOL ScrCmd_GetSwarmMapAndSpecies(ScriptContext *ctx);
 static BOOL ScrCmd_PrintTrainerDialogue(ScriptContext *ctx);
 static BOOL ScrCmd_StartBattleClient(ScriptContext *ctx);
@@ -3409,7 +3416,9 @@ static BOOL ScrCmd_SaveChosenStarter(ScriptContext *ctx)
 
     ChooseStarterData *chooseStarterData = (*fieldSysDataPtr);
 
-    SystemVars_SetPlayerStarter(SaveData_GetVarsFlags(ctx->fieldSystem->saveData), chooseStarterData->species);
+    // The one and only weighted draw. The egg position is not an input.
+    u16 species = MysteryStarter_Draw();
+    SystemVars_SetPlayerStarter(SaveData_GetVarsFlags(ctx->fieldSystem->saveData), species);
 
     Heap_Free(*fieldSysDataPtr);
 
@@ -3781,6 +3790,41 @@ static BOOL ScrCmd_GetPlayerStarterSpecies(ScriptContext *ctx)
 
     *species = SystemVars_GetPlayerStarter(SaveData_GetVarsFlags(ctx->fieldSystem->saveData));
     return FALSE;
+}
+
+static BOOL ScrCmd_GetPlayerStarterBranch(ScriptContext *ctx)
+{
+    u16 *branch = ScriptContext_GetVarPointer(ctx);
+
+    *branch = SystemVars_GetPlayerStarterBranch(SaveData_GetVarsFlags(ctx->fieldSystem->saveData));
+    return FALSE;
+}
+
+static BOOL ScrCmd_GiveMysteryStarterEgg(ScriptContext *ctx)
+{
+    FieldSystem *fieldSystem = ctx->fieldSystem;
+    TrainerInfo *trainerInfo = SaveData_GetTrainerInfo(fieldSystem->saveData);
+    Party *party = SaveData_GetParty(fieldSystem->saveData);
+    u16 species = SystemVars_GetPlayerStarter(SaveData_GetVarsFlags(fieldSystem->saveData));
+    int metLocation = MapHeader_GetMapLabelTextID(fieldSystem->location->mapHeaderID);
+
+    GF_ASSERT(species != SPECIES_NONE);
+
+    Pokemon *egg = Pokemon_New(HEAP_ID_FIELD2);
+    Pokemon_Init(egg);
+    Egg_CreateMysteryStarterEgg(egg, species, trainerInfo, metLocation);
+
+    BOOL added = Party_AddPokemon(party, egg);
+    GF_ASSERT(added);
+    Heap_Free(egg);
+
+    return FALSE;
+}
+
+static BOOL ScrCmd_HatchMysteryStarterEgg(ScriptContext *ctx)
+{
+    FieldSystem_HatchMysteryStarterEgg(ctx->fieldSystem);
+    return TRUE;
 }
 
 static BOOL ScrCmd_PrintTrainerDialogue(ScriptContext *ctx)

@@ -82,7 +82,7 @@ PastoriaCity_ParasolLady:
     LockAll
     FacePlayer
     GoToIfSet FLAG_RECEIVED_PASTORIA_CITY_ACCESSORY_STARTER_MASK, PastoriaCity_ICookedPoffins
-    GetPlayerStarterSpecies VAR_RESULT
+    GetPlayerStarterBranch VAR_RESULT
     CallIfEq VAR_RESULT, SPECIES_TURTWIG, PastoriaCity_SetAccessoryChimcharMask
     CallIfEq VAR_RESULT, SPECIES_CHIMCHAR, PastoriaCity_SetAccessoryPiplupMask
     CallIfEq VAR_RESULT, SPECIES_PIPLUP, PastoriaCity_SetAccessoryTurtwigMask
@@ -387,7 +387,7 @@ PastoriaCity_CoordEvent_RivalBattle:
     CloseMessage
     ApplyMovement LOCALID_RIVAL, PastoriaCity_Movement_RivalWalkWest
     WaitMovement
-    GetPlayerStarterSpecies VAR_RESULT
+    GetPlayerStarterBranch VAR_RESULT
     GoToIfEq VAR_RESULT, SPECIES_TURTWIG, PastoriaCity_StartRivalBattleTurtwig
     GoToIfEq VAR_RESULT, SPECIES_CHIMCHAR, PastoriaCity_StartRivalBattleChimchar
     GoTo PastoriaCity_StartRivalBattlePiplup

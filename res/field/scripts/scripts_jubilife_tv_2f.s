@@ -27,7 +27,7 @@ JubilifeTV2F_GymGuide:
     LockAll
     FacePlayer
     GoToIfSet FLAG_RECEIVED_JUBILIFE_TV_2F_ACCESSORY_STARTER_MASK, JubilifeTV2F_IHopeYouCollectAccessories
-    GetPlayerStarterSpecies VAR_RESULT
+    GetPlayerStarterBranch VAR_RESULT
     CallIfEq VAR_RESULT, SPECIES_TURTWIG, JubilifeTV2F_SetAccessoryTurtwigMask
     CallIfEq VAR_RESULT, SPECIES_CHIMCHAR, JubilifeTV2F_SetAccessoryChimcharMask
     CallIfEq VAR_RESULT, SPECIES_PIPLUP, JubilifeTV2F_SetAccessoryPiplupMask

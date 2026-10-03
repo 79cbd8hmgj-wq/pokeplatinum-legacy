@@ -3,7 +3,7 @@
 Authority: `FINAL_INTEGRATION_QA_SPEC.md`, `FINAL_INTEGRATION_QA_IMPLEMENTATION_PLAN.md`. Starting point: `main` @ `19cbadaa` (PR #21 merged).
 
 > **IMPLEMENTED ≠ VERIFIED.** "Verified" in this index means *runtime-verified in-game* (spec s21). Nothing below is `VERIFIED`: every row has
-> runtime evidence **NONE** (`RUNTIME_TEST_MATRIX.md`: 0 PASS / 0 FAIL / 206 NOT RUN). Static validation and CI builds are recorded separately and are
+> runtime evidence **NONE** (`RUNTIME_TEST_MATRIX.md`: 0 PASS / 0 FAIL / 240 NOT RUN). Static validation and CI builds are recorded separately and are
 > not runtime evidence.
 
 **Project state: CORE 1.0 SOURCE-COMPLETE — RUNTIME QA PENDING.** Not `CORE 1.0 VERIFIED`, not a release candidate.
@@ -35,6 +35,7 @@ Common columns: **Rev 0 / Rev 1** = CI build state at the merge commit and at cu
 | Trainer overhaul (D1) | `trainers/TRAINER_OVERHAUL_SPEC.md` | `implementation/trainers/*.json` | `tools/overhaul/trainers/validate_trainers.py` | PR #19 `08092189` · run `37068740706` | none (16 documented warnings accepted) | IMPLEMENTED — static + build verified; runtime pending |
 | Legendary / Mythical events (D5) | `events/LEGENDARY_MYTHICAL_SPEC.md` | `implementation/events/*.json` | `tools/overhaul/validate_legendary_availability.py` | PR #20 `98f9cbdf` · run `37077868600` | duplicate spec file bannered non-authoritative (RELEASE_BLOCKERS A-4) | IMPLEMENTED — static + build verified; runtime pending |
 | Battle Frontier / postgame (D6) | `postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md` | `implementation/postgame/*.json` | `tools/overhaul/postgame/validate_postgame.py` | PR #21 `19cbadaa` · run `37081807517` | none | IMPLEMENTED — static + build verified; runtime pending |
+| Mystery Egg starter (D8) | `opening/MYSTERY_EGG_STARTER_SPEC.md` | `implementation/opening/mystery_egg_starter_manifest.json` | `tools/overhaul/validate_mystery_starter.py` (+ `tools/overhaul/opening/test_validate_mystery_starter.py` mutation suite; host-compiled exhaustive 0–99 × 3-position test) | D8 PR #24 (CI run recorded in `BUILD_MATRIX.md`) | none | IMPLEMENTED — static + host-compiled verified; runtime pending (17 `OP-*` cases NOT RUN) |
 | D7 completion graphs | `FINAL_INTEGRATION_QA_SPEC.md` s4 | `qa/pokedex_493_graph.json`, `evolution_graph.json`, `event_dependency_graph.json`, `progression_gates.json` | `tools/overhaul/qa/build_qa_graphs.py --check` (+9 mutation tests) | D7 PR | none | STATIC PROOF ONLY (493/493 reachable in the model; no in-game 493 run) |
 | Save compatibility | spec s17 | — | — | — | runtime import untested (`SAVE_COMPATIBILITY_REPORT.md`) | NOT VERIFIED |
 | Visual overhaul (G-series) | out of D7 gameplay scope | — | — | PR #12 and CI audit workflows | not assessed by D7 | out of scope |

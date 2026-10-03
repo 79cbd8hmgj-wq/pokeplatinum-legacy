@@ -1,6 +1,6 @@
 # Pokémon Platinum Overhaul — Current Status
 
-Last verified against repository/project history: 2026-10-02.
+Last verified against repository/project history: 2026-10-03.
 
 ## Executive status
 
@@ -19,6 +19,7 @@ Last verified against repository/project history: 2026-10-02.
 - **Legendary/Mythical events (D5):** **IMPLEMENTED and merged** (PR #20, merge commit `98f9cbdf`; source + validator + dual-revision builds); runtime event QA **PENDING — not VERIFIED**. All 35 Legendary/Mythical species #001–#493 have an in-save path: native retry-safe Sinnoh events, Rotom/Darkrai/Shaymin/Arceus without distribution gates, Manaphy Egg gift (+ Phione breeding), Regis/Regigigas without the event Regigigas, 14 renewable post-Hall-of-Fame legacy habitats (1%/2% roll in `src/overlay006/wild_encounters.c`), Mew/Celebi/Jirachi/Deoxys retry-safe statics. Manifests/report: `implementation/events/`; validator: `tools/overhaul/validate_legendary_availability.py`. The availability phase's Rotom special-acquisition verifier was updated because D5 removed `DISTRIBUTION_EVENT_ROTOM` (Secret Key alone gates the form room).
 - **Battle Frontier / postgame (D6):** **IMPLEMENTED and merged** (PR #21, merge commit `19cbadaa`; source + validator + mutation tests; Rev 0/Rev 1 CI build recorded on the PR); runtime QA **PENDING — not VERIFIED**. Exact 2x BP at every payout point (Tower/Factory/Castle/Hall/Arcade round + roulette + Hall record keeper; Castle Points untouched), locked TM BP prices confirmed already live (no shop edit), 15 targeted Frontier set fixes + 17 Hall type-pool retype corrections (Brains audited, 0 edits), Battleground proprietor reshuffle without calendar wait, Survival Area Rival daily (weekend gate removed), Print milestone rewards (+10/+30 BP per facility; all-Silver +50 BP + PP Max; all-Gold +100 BP + Master Ball; retry-safe on full Bag), Fight Area/League/Rival rematch trainer references audited. Manifests/report: `implementation/postgame/`; validator: `tools/overhaul/postgame/validate_postgame.py`.
 - **Final integration QA (D7):** **STATIC/FRAMEWORK COMPLETE and merged via PR #22**; master validator, completion graphs, runtime matrix and QA reports are on `main`. Project state remains **CORE 1.0 SOURCE-COMPLETE — RUNTIME QA PENDING** (not VERIFIED, not a release candidate); see `qa/QA_INDEX.md`, `qa/MASTER_VALIDATION_REPORT.md`, `qa/RELEASE_BLOCKERS.md`.
+- **Mystery Egg starter (D8):** **IMPLEMENTED (source + validator + 36 mutation cases + host-compiled exhaustive 0–99 test; Rev 0/Rev 1 build via CI on PR #24)**; runtime **PENDING — not VERIFIED** (17 `OP-*` cases NOT RUN). Three identical Mystery Egg sprites; one weighted 13-species draw (`LCRNG_Next() % 100`, ranges 0–2/3–5/6–8 Gen I, 9 Pikachu, 10–19 … 90–99 Gen II–IV) performed once in `ScrCmd_SaveChosenStarter` and persisted to the existing `VAR_PLAYER_STARTER`; the three Rival campaigns are preserved by a pure branch helper (`GetPlayerStarterBranch`), 19 script call sites converted; native egg-hatch scene reveals a Lv5 starter before Barry's first battle; ordinary Breeding 2.0 hatch (Lv1, TV segment) unchanged. Manifest/audit/report: `implementation/opening/`; validator: `tools/overhaul/validate_mystery_starter.py`. The D7 master report was rerun after D8 (see `qa/MASTER_VALIDATION_REPORT.md`); project state is still **CORE 1.0 SOURCE-COMPLETE — RUNTIME QA PENDING**, not a release candidate.
 
 ## Mainline implementation evidence
 
@@ -276,7 +277,7 @@ D7 evidence recorded so far (all static; see `qa/QA_INDEX.md`):
 - Completion graphs: 493/493 species reachable in one save, 212/212 nonlegendary families with a pre-E4 entry, 0 trade/held-item/external dependencies, 0 event cycles, Arceus the terminal #493 capstone (`qa/POKEDEX_493_COMPLETION_REPORT.md`).
 - Proven integration fix: Solar Petal contact flag (created-move manifest mismatch). Test-harness baselines for economy/trainers/postgame refreshed. No gameplay redesign.
 - Progression simulation: model-flagged calibration items, unproven, no trainer/EXP change (`qa/PROGRESSION_SIMULATION_REPORT.md`, `qa/RELEASE_BLOCKERS.md` B-1).
-- Runtime matrix: 103 cases × 2 revisions, **0 PASS / 0 FAIL / 206 NOT RUN**; full campaign, 493 in-game run and save-import tests **not executed**.
+- Runtime matrix: 120 cases × 2 revisions (103 D7 + 17 D8 `OP-*`), **0 PASS / 0 FAIL / 240 NOT RUN**; full campaign, 493 in-game run and save-import tests **not executed**.
 - Builds: CI only; baseline `main` Rev 0/Rev 1 success; D7 PR run in `qa/BUILD_MATRIX.md`. No patch tooling exists in the repo, so no artifacts were produced (`qa/RELEASE_ARTIFACTS.md`).
 
 

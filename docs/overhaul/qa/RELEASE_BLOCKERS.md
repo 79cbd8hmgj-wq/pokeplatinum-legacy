@@ -37,7 +37,7 @@ they are not defects, but they prevent `CORE 1.0 VERIFIED / RELEASE CANDIDATE` u
 | ID | Severity if confirmed | Item | Evidence state |
 |---|---|---|---|
 | B-1 | MAJOR candidate (release blocker per spec s19 "major progression over/under-leveling") | **Progression calibration is model-flagged, unproven.** The D2 calibration model (final source) reports normal-explorer party average 3.5–12.8 below the boss ace from Byron on, completionist +2.3…+7.0 above ace at Roark–Candice (+4.3…+8.6 with story trainers) and direct 3–26 below. Diagnosis: the model omitted 92 mandatory story trainers; with them the normal deficit shrinks to −3.5…−7.2 but 26/39 profile×boss cells remain out of tolerance. The same gap exists under vanilla EXP in the model. No source defect was proven, so **no trainer level or EXP value was changed** (no blanket rescaling). | `PROGRESSION_SIMULATION_REPORT.md`; needs the human campaign (CG-01) |
-| B-2 | — | All 103 mandatory runtime cases × 2 revisions are **NOT RUN** (206 runs). | `RUNTIME_TEST_MATRIX.md` |
+| B-2 | — | All 120 mandatory runtime cases (103 D7 + 17 D8 `OP-*`) × 2 revisions are **NOT RUN** (240 runs). | `RUNTIME_TEST_MATRIX.md` |
 | B-3 | — | Full fresh-save campaign not performed. | `FULL_CAMPAIGN_REPORT.md` (template) |
 | B-4 | — | In-game 493 completion run not performed (static graph proof only). | `POKEDEX_493_COMPLETION_REPORT.md` |
 | B-5 | — | No vanilla-save import / overhaul save reload test was run. | `SAVE_COMPATIBILITY_REPORT.md` |

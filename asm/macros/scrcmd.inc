@@ -1389,6 +1389,19 @@
     .short \destVar
     .endm
 
+    .macro GetPlayerStarterBranch destVar
+    .short SCRCMD_GETPLAYERSTARTERBRANCH
+    .short \destVar
+    .endm
+
+    .macro GiveMysteryStarterEgg
+    .short SCRCMD_GIVEMYSTERYSTARTEREGG
+    .endm
+
+    .macro HatchMysteryStarterEgg
+    .short SCRCMD_HATCHMYSTERYSTARTEREGG
+    .endm
+
     .macro BufferUndergroundGoodsName templateArg, goods
     .short SCRCMD_BUFFERUNDERGROUNDGOODSNAME
     .byte \templateArg

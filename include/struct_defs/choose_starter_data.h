@@ -4,7 +4,7 @@
 #include "game_options.h"
 
 typedef struct ChooseStarterData {
-    int species;
+    int eggPosition; // output only; never selects a species
     const Options *options;
 } ChooseStarterData;
 

@@ -29,7 +29,7 @@ The base ROM is never bundled or committed.
 
 ## Known limitations (current)
 
-* Runtime QA incomplete: 0 of 206 runtime-matrix runs executed (`RUNTIME_TEST_MATRIX.md`); no full campaign, no 493 run.
+* Runtime QA incomplete: 0 of 240 runtime-matrix runs executed (`RUNTIME_TEST_MATRIX.md`); no full campaign, no 493 run.
 * Progression calibration is model-flagged but unproven (`RELEASE_BLOCKERS.md` B-1).
 * Dragon Swipe has no assigned recipient (owner decision pending).
 

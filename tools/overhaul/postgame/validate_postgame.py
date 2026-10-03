@@ -32,6 +32,12 @@ ALLOWED = [
     # keeps rejecting any OTHER later change.
     r"^tools/overhaul/(qa/|validate_overhaul\.py$)", r"^res/moves/solar_petal/data\.json$", r"^\.github/workflows/build\.yml$",
     r"^tools/overhaul/economy/(simulate_progression|test_validate_economy)\.py$", r"^tools/overhaul/trainers/test_validate_trainers\.py$",
+    # D8 Mystery Egg starter PR (later than D7): opening flow + the three-way Rival branch helper. Listed explicitly so the D6
+    # scope check keeps rejecting any OTHER later change.
+    r"^tools/overhaul/(validate_mystery_starter\.py$|opening/)",
+    r"^(include|src)/(mystery_egg_starter|egg_hatch|system_vars|unk_0203D1B8|choose_starter/choose_starter_app|overlay005/daycare|struct_defs/choose_starter_data)\.[ch]$",
+    r"^include/data/scripts/scrcmd\.h$", r"^src/meson\.build$", r"^res/text/(route_201|unk_0360)\.json$",
+    r"^res/field/scripts/scripts_[a-z0-9_]+\.s$",  # starter-branch consumers; per-file scope is asserted by validate_mystery_starter.py
 ]
 
 
@@ -207,8 +213,12 @@ class V:
         fa = self.read("res/field/scripts/scripts_fight_area.s")
         trainers = re.findall(r"TRAINER_[A-Z_]*FIGHT_AREA\w*", fa)
         self.rec("Fight Area tag battle references resolve to trainer records", len(set(trainers)) == 5 and all(t in ids for t in set(trainers)), ",".join(sorted(set(trainers))))
+        # D8: the only permitted change is the Rival-branch query (GetPlayerStarterSpecies -> GetPlayerStarterBranch).
+        fa_diff = [l for l in subprocess.check_output(["git", "diff", "-U0", L.START_SHA, "--", "res/field/scripts/scripts_fight_area.s"], cwd=L.ROOT).decode().splitlines()
+                   if l[:1] in "+-" and not l.startswith(("+++", "---"))]
+        fa_ok = all(l[1:].strip() in ("GetPlayerStarterSpecies VAR_RESULT", "GetPlayerStarterBranch VAR_RESULT") for l in fa_diff)
         self.rec("Fight Area script untouched (flow/Palmer/route unblock preserved)",
-                 "res/field/scripts/scripts_fight_area.s" not in self.changed_files() and "StartTagBattle" in fa and "AddObject LOCALID_PALMER" in fa)
+                 fa_ok and "StartTagBattle" in fa and "AddObject LOCALID_PALMER" in fa)
         for t in sorted(set(trainers)):
             self.rec(f"trainer data present: {t}", os.path.exists(L.p("res/trainers/data", t.lower()[len("trainer_"):] + ".json")))
 

@@ -263,7 +263,7 @@ EternaCityUndergroundManHouse_MissionDecorateYourSecretBase:
     End
 
 EternaCityUndergroundManHouse_SendStarterDollToUndergroundPC:
-    GetPlayerStarterSpecies VAR_RESULT
+    GetPlayerStarterBranch VAR_RESULT
     GoToIfEq VAR_RESULT, SPECIES_CHIMCHAR, EternaCityUndergroundManHouse_SendChimcharDollToUndergroundPC
     GoToIfEq VAR_RESULT, SPECIES_TURTWIG, EternaCityUndergroundManHouse_SendTurtwigDollToUndergroundPC
     GoTo EternaCityUndergroundManHouse_SendPiplupDollToUndergroundPC
