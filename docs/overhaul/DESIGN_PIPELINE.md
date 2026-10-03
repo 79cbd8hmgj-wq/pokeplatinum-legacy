@@ -125,7 +125,7 @@ Still needed:
 - optional convenience systems.
 
 ### D7 — Final Integration / QA
-Status: `IN PROGRESS` (locked spec + plan in repo; QA framework, master validator, completion graphs and runtime matrix landed by the D7 PR; **CORE 1.0 SOURCE-COMPLETE — RUNTIME QA PENDING**, not `VERIFIED`)
+Status: `STATIC/FRAMEWORK COMPLETE` and merged via PR #22; **CORE 1.0 SOURCE-COMPLETE — RUNTIME QA PENDING**, not `VERIFIED`
 
 Must validate:
 - all 493 eventual availability;
@@ -142,9 +142,25 @@ Must validate:
 - US Rev 0 / Rev 1 builds;
 - focused runtime QA.
 
+### D8 — Mystery Egg Starter
+Status: `LOCKED SPEC — awaiting implementation`
+
+Canonical authority:
+- `docs/overhaul/opening/MYSTERY_EGG_STARTER_SPEC.md`
+- `docs/overhaul/opening/MYSTERY_EGG_STARTER_IMPLEMENTATION_PLAN.md`
+
+Locked identity:
+- replace the traditional starter choice with three identical Mystery Eggs;
+- one shared 13-species weighted table for all three positions;
+- Gen I starters 3% each, Pikachu 1%, every Gen II–IV starter 10%;
+- roll only after confirmation and reveal through a hatch sequence before the first Rival battle;
+- resulting starter enters play at level 5;
+- preserve the existing three Rival campaigns through category mapping rather than creating thirteen branches;
+- rerun D7 master integration outputs after implementation.
+
 ## Current next design
 
-**All design phases D1–D7 are LOCKED; D1–D6 are IMPLEMENTED and merged; D7 (final integration QA) is IN PROGRESS. No design phase is open.** Sections below that read "Still needed" under D2/D6 are historical design checklists that the locked specs and manifests have since satisfied; they are not open work.
+**D8 is the only newly opened gameplay phase and is already LOCKED. D1–D6 are implemented and merged; D7 static/framework QA is merged but runtime QA remains pending. The next source task is D8 Mystery Egg starter implementation, followed by a D7 master-validation refresh and runtime playtest.** Sections below that read "Still needed" under D2/D6 are historical design checklists that the locked specs and manifests have since satisfied; they are not open work.
 
 Legendary/Mythical authority:
 - `docs/overhaul/events/LEGENDARY_MYTHICAL_SPEC.md`

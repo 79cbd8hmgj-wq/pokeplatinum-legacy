@@ -18,7 +18,7 @@ Last verified against repository/project history: 2026-10-02.
 - **Trainer overhaul (D1):** **IMPLEMENTED and merged** (PR #19, merge commit `08092189`; source + validator + Rev 0/Rev 1 CI build success, PR head `1497736a`) (393 records changed: 8 Gyms, 33 Rival, 11 Galactic, Elite Four, Cynthia, 13 rematches, 332 ordinary/ordinary-rematch via archetype rules); trainer runtime QA **PENDING — not VERIFIED**. Manifests/report: `implementation/trainers/`; validator: `tools/overhaul/trainers/validate_trainers.py`.
 - **Legendary/Mythical events (D5):** **IMPLEMENTED and merged** (PR #20, merge commit `98f9cbdf`; source + validator + dual-revision builds); runtime event QA **PENDING — not VERIFIED**. All 35 Legendary/Mythical species #001–#493 have an in-save path: native retry-safe Sinnoh events, Rotom/Darkrai/Shaymin/Arceus without distribution gates, Manaphy Egg gift (+ Phione breeding), Regis/Regigigas without the event Regigigas, 14 renewable post-Hall-of-Fame legacy habitats (1%/2% roll in `src/overlay006/wild_encounters.c`), Mew/Celebi/Jirachi/Deoxys retry-safe statics. Manifests/report: `implementation/events/`; validator: `tools/overhaul/validate_legendary_availability.py`. The availability phase's Rotom special-acquisition verifier was updated because D5 removed `DISTRIBUTION_EVENT_ROTOM` (Secret Key alone gates the form room).
 - **Battle Frontier / postgame (D6):** **IMPLEMENTED and merged** (PR #21, merge commit `19cbadaa`; source + validator + mutation tests; Rev 0/Rev 1 CI build recorded on the PR); runtime QA **PENDING — not VERIFIED**. Exact 2x BP at every payout point (Tower/Factory/Castle/Hall/Arcade round + roulette + Hall record keeper; Castle Points untouched), locked TM BP prices confirmed already live (no shop edit), 15 targeted Frontier set fixes + 17 Hall type-pool retype corrections (Brains audited, 0 edits), Battleground proprietor reshuffle without calendar wait, Survival Area Rival daily (weekend gate removed), Print milestone rewards (+10/+30 BP per facility; all-Silver +50 BP + PP Max; all-Gold +100 BP + Master Ball; retry-safe on full Bag), Fight Area/League/Rival rematch trainer references audited. Manifests/report: `implementation/postgame/`; validator: `tools/overhaul/postgame/validate_postgame.py`.
-- **Final integration QA (D7):** **IN PROGRESS** — locked spec + plan are in the repo (`qa/`); the QA framework (master validator, completion graphs, runtime matrix, reports) is added by the D7 integration PR. Project state: **CORE 1.0 SOURCE-COMPLETE — RUNTIME QA PENDING** (not VERIFIED, not a release candidate); see `qa/QA_INDEX.md`, `qa/MASTER_VALIDATION_REPORT.md`, `qa/RELEASE_BLOCKERS.md`. Runtime QA of C1/C2/created moves/evolution/capture/breeding/trainers/legendary events/Frontier is deferred to the final overhaul playtest.
+- **Final integration QA (D7):** **STATIC/FRAMEWORK COMPLETE and merged via PR #22**; master validator, completion graphs, runtime matrix and QA reports are on `main`. Project state remains **CORE 1.0 SOURCE-COMPLETE — RUNTIME QA PENDING** (not VERIFIED, not a release candidate); see `qa/QA_INDEX.md`, `qa/MASTER_VALIDATION_REPORT.md`, `qa/RELEASE_BLOCKERS.md`.
 
 ## Mainline implementation evidence
 
@@ -79,7 +79,8 @@ They are provenance sources, not current implementation targets.
 | Legendary/Mythical events (D5) | LOCKED | IMPLEMENTED and merged (PR #20) (source + validator + dual-revision builds) | validator 51/51 + 46 mutation cases + baseline; cross-system validators pass; runtime event QA pending; see `implementation/events/LEGENDARY_EVENT_VALIDATION_REPORT.md` |
 | Battle Frontier/postgame (D6) | LOCKED | IMPLEMENTED (source + validator + dual-revision build) | validator 119 checks + 12 mutation cases; cross-system validators pass; runtime Frontier/rematch/Print QA pending — not VERIFIED; see `implementation/postgame/POSTGAME_VALIDATION_REPORT.md` |
 | Battle Frontier/postgame merge record | n/a | merged via PR #21 (`19cbadaa`) | see row above |
-| Full QA/release (D7) | LOCKED | IN PROGRESS: QA framework + static master validation + completion graphs landed by the D7 PR; runtime campaign/493 run NOT performed | **CORE 1.0 SOURCE-COMPLETE — RUNTIME QA PENDING**; not VERIFIED / not a release candidate |
+| Full QA/release (D7) | LOCKED | STATIC/FRAMEWORK COMPLETE and merged via PR #22; runtime campaign/493 run NOT performed | **CORE 1.0 SOURCE-COMPLETE — RUNTIME QA PENDING**; not VERIFIED / not a release candidate |
+| Mystery Egg starter (D8) | LOCKED | not implemented | Design + Claude implementation plan committed on `design/mystery-egg-starter`; runtime QA pending after implementation |
 
 ## C1 authority
 
@@ -192,9 +193,9 @@ Do not invent one. This is not a build blocker.
 
 ## Immediate next actions
 
-1. D7 final integration: the static framework is in place (`qa/`); the remaining work is human/emulator runtime QA (`qa/RUNTIME_TEST_MATRIX.md`), the full campaign (`qa/FULL_CAMPAIGN_REPORT.md`), the 493 completion run (`qa/POKEDEX_493_COMPLETION_REPORT.md`) and the save-import test (`qa/SAVE_COMPATIBILITY_REPORT.md`).
-2. All locked subsystems (C1–C3, D1–D6) are implemented; no design phase is open.
-3. Runtime QA was deferred to the final overhaul playtest per user direction; that playtest is now the gating item for `VERIFIED` / release-candidate status.
+1. Implement D8 Mystery Egg starter from `opening/MYSTERY_EGG_STARTER_SPEC.md` and `opening/MYSTERY_EGG_STARTER_IMPLEMENTATION_PLAN.md`.
+2. Rerun the D7 master/static QA outputs after D8 lands, because the opening and Rival-branch assumptions will have changed.
+3. Complete human/emulator runtime QA (`qa/RUNTIME_TEST_MATRIX.md`), the full campaign (`qa/FULL_CAMPAIGN_REPORT.md`), the 493 completion run (`qa/POKEDEX_493_COMPLETION_REPORT.md`) and save-import testing (`qa/SAVE_COMPATIBILITY_REPORT.md`) before VERIFIED / release-candidate status.
 
 ## Rule for future sessions
 
@@ -333,3 +334,25 @@ Branch `claude/platinum-availability-impl-c651fe` (follow-up to PR #10). Canonic
   Eevee/Porygon/Riolu: existing gifts verified unchanged.
 - Nonlegendary families with a verified pre-E4 path: 212/212 (184 wild + 28 special). USER_DECISION_REQUIRED families: 0.
 - Runtime/L4 QA pending. The nonlegendary world-availability phase is source/build/validator complete.
+
+
+## Mystery Egg starter (D8)
+
+Status: **LOCKED SPEC — awaiting implementation**
+
+Canonical authority:
+- `docs/overhaul/opening/MYSTERY_EGG_STARTER_SPEC.md`
+- `docs/overhaul/opening/MYSTERY_EGG_STARTER_IMPLEMENTATION_PLAN.md`
+
+Locked design:
+- Route 201 presents three visually identical Mystery Eggs;
+- all three positions use the same weighted draw;
+- Bulbasaur/Charmander/Squirtle are 3% each;
+- Pikachu is 1%;
+- Chikorita/Cyndaquil/Totodile, Treecko/Torchic/Mudkip and Turtwig/Chimchar/Piplup are 10% each;
+- species is rolled exactly once after confirmation and hidden until the hatch/reveal;
+- starter enters play at level 5 before Barry's first battle;
+- existing three Rival branches are preserved by species-category mapping (Grass→Turtwig branch, Fire→Chimchar branch, Water→Piplup branch, Pikachu→Piplup branch);
+- ordinary Breeding 2.0 egg behavior and later starter availability remain unchanged.
+
+Because D8 is post-D7, the D7 static/master reports must be regenerated after implementation and release-candidate status remains blocked on runtime QA.
