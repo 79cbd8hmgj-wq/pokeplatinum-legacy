@@ -44,7 +44,6 @@ jobs:
       - name: Record build provenance (D7)
         continue-on-error: true
         run: |
-          # Prints the output checksum and toolchain versions; the ROM itself is never uploaded or committed.
           ROM="$BUILD/pokeplatinum.us.nds"
           {
             echo "D7_BUILD source=${{ github.sha }} revision=${{ matrix.revision }}"
@@ -53,6 +52,14 @@ jobs:
             echo "D7_BUILD ninja=$(ninja --version) python=$(python3 --version 2>&1)"
             echo "D7_BUILD metroskrew=$(ls -d tools/cw/* 2>/dev/null | head -3 | tr '\n' ' ')"
           } | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload built ROM
+        uses: actions/upload-artifact@v7
+        with:
+          name: pokeplatinum-us-rev${{ matrix.revision }}-${{ github.sha }}
+          path: ${{ env.BUILD }}/pokeplatinum.us.nds
+          if-no-files-found: error
+          retention-days: 30
 
       - name: Post error archive
         if: failure()
