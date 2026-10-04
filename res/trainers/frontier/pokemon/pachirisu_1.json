@@ -1,20 +1,20 @@
 {
     "species": "SPECIES_PACHIRISU",
     "moves": [
-        "MOVE_SPARK",
-        "MOVE_QUICK_ATTACK",
-        "MOVE_BITE",
+        "MOVE_DISCHARGE",
+        "MOVE_SWIFT",
+        "MOVE_GRASS_KNOT",
         "MOVE_SWEET_KISS"
     ],
     "evFlags": {
         "hp": false,
-        "attack": true,
+        "attack": false,
         "defense": false,
         "speed": true,
-        "special_attack": false,
+        "special_attack": true,
         "special_defense": false
     },
-    "nature": "NATURE_JOLLY",
+    "nature": "NATURE_TIMID",
     "item": "ITEM_MAGNET",
     "form": 0
 }
