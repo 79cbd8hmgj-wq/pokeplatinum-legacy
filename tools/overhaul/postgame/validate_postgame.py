@@ -267,8 +267,11 @@ class V:
             if re.search(r"(?i)frontier|battle.?point|\bprint\b", t):
                 bad.append(f)
         self.rec("no Frontier/BP/Print requirement in availability or special-acquisition manifests (Pokedex completion)", not bad, ",".join(bad))
-        extra = [f for f in self.changed_files() if not any(re.search(a, f) for a in ALLOWED)]
-        self.rec("diff contains no unrelated subsystem changes", not extra, ",".join(extra[:8]))
+        # This is a permanent validator, so later locked subsystems must not fail D6 merely
+        # because they changed elsewhere in the tree. Keep the scope guard on D6-owned surfaces.
+        d6_owned = re.compile(r"^(?:res/trainers/frontier/|src/overlay104/|src/overlay007/|res/field/scripts/scripts_(?:battle_|battleground|common|survival_area)|include/constants/battle_frontier\\.h|docs/overhaul/implementation/postgame/|tools/overhaul/postgame/)")
+        extra = [f for f in self.changed_files() if d6_owned.search(f) and not any(re.search(a, f) for a in ALLOWED)]
+        self.rec("no unapproved changes inside D6-owned surfaces", not extra, ",".join(extra[:8]))
 
     def run(self):
         for fn in (self.check_bp, self.check_milestones_and_castle, self.check_shop, self.check_sets, self.check_battleground,
