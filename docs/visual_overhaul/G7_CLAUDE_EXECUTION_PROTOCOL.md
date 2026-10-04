@@ -235,11 +235,18 @@ Do not include a long replay of the work log.
 
 ## Current G7 checkpoint
 
-Merged on `main` through PR #50:
+Merged on `main`:
 - G7.1A command menu — implemented
 - G7.1B move selection — implemented
 - G7.2A healthboxes — implemented
 - G7.2B message frames — implemented
 - G7.3 encounter intensity hierarchy — audited; risky runtime-sensitive additions intentionally deferred
+- G7.4 core menus — implemented and merged via PR #53:
+  - Party
+  - Pokémon Summary
+  - Bag
+  - Start Menu
+  - Shop / secondary UI
 
-**Next implementation section: G7.4 — Core Menu Modernization (G7.4A Party + Summary, then G7.4B Bag + Start + Shop).**
+**Next implementation section: G7.5 — Global Window / Typography-Adjacent Polish.**
+

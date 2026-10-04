@@ -32,66 +32,45 @@ The user has already approved the G7 direction:
 
 ## Current target
 
-PR #50 merged G7.1A, G7.1B, G7.2A and G7.2B. G7.3 was audited and intentionally deferred for runtime-sensitive additions.
+PR #50 merged G7.1A, G7.1B, G7.2A and G7.2B. G7.3 was audited and intentionally deferred for runtime-sensitive additions. PR #53 merged the complete G7.4 core-menu section.
 
-**Current implementation section: G7.4 — Core Menu Modernization.**
+**Current implementation section: G7.5 — Global Window / Typography-Adjacent Polish.**
 
-Complete **all of G7.4 in one Claude session**:
+Complete all of G7.5 in one Claude session.
 
-### G7.4A — Party + Summary
-Party:
-- stronger selected member card;
-- clearer HP/status hierarchy;
-- preserve member-ball/icon/touch semantics;
-- preserve cell/OAM geometry unless a demonstrable requirement forces a layout change.
+Goals:
+- audit the full message-box/window frame family before changing shared resources;
+- modernize standard field/system frames where needed for G7 consistency;
+- modernize scroll cursor and wait dial where needed;
+- remove remaining high-frequency beige/olive or mismatched legacy chrome;
+- keep text readability and printer behavior unchanged;
+- preserve message speed, line capacity, encoding, and font behavior;
+- do not replace the core font unless the font pipeline is first proven safe and the benefit clearly justifies it;
+- use per-context frame variants only if the current resource contract supports them cleanly and without invasive source work.
 
-Summary:
-- modernize tab hierarchy;
-- strengthen page section separation;
-- prioritize move/stat data;
-- preserve every page, including contest/ribbon content;
-- strengthen move-selection focus.
+Primary source surfaces:
+- `res/graphics/windows/`
+- `tools/visual_overhaul/generate_ui_foundation.py`
+- `tools/visual_overhaul/generate_message_frames.py`
+- existing window/message-box load paths only where ownership must be traced
 
-Use first:
-- `tools/visual_overhaul/generate_party_menu_ui.py`
-- `tools/visual_overhaul/generate_summary_ui.py`
+Implementation principle:
+- first determine which assets are global vs player-selectable decorative frames;
+- preserve decorative Frames 6–20 unless a concrete high-frequency inconsistency requires action;
+- prefer generator-backed palette/art updates over C changes;
+- do not turn G7.5 into a font-engine or text-renderer rewrite.
 
-### G7.4B — Bag + Start + Shop
-Bag:
-- cleaner pocket identity;
-- stronger item focus;
-- clearer quantity/value hierarchy;
-- preserve pocket switching and touch behavior.
-
-Start menu:
-- stronger icon/focus hierarchy;
-- more deliberate panel composition;
-- preserve menu topology and input semantics.
-
-Shop / secondary UI:
-- bring shop chrome into the same G7 language;
-- preserve default vs Frontier shop identity;
-- avoid unnecessary layout changes.
-
-Use first:
-- `tools/visual_overhaul/generate_bag_ui.py`
-- `tools/visual_overhaul/generate_start_menu_ui.py`
-- `tools/visual_overhaul/generate_shop_ui.py`
-- `tools/visual_overhaul/generate_ui_foundation.py` only where shared chrome requires it.
-
-Finish G7.4A, then continue directly into G7.4B **without running full Rev 0/Rev 1 builds between them**. Run final validation/builds only after all of G7.4 is complete.
-
-Do not continue to G7.5 in the same session.
+Do not continue to G7.6 in the same session.
 
 ## Validation
 
-At the end of the full G7.4 section:
-- relevant visual validators for Party, Summary, Bag, Start, Shop, and shared chrome;
+At the end of the full G7.5 section:
+- relevant window/frame/UI validators;
 - rerun every touched generator and confirm no diff;
-- core master validator if integration touches shared code/resource plumbing;
+- core master validator if shared integration/resource plumbing is changed;
 - US Rev 0 build;
 - US Rev 1 build;
-- concise G7.4 implementation report;
+- concise G7.5 implementation report;
 - clean git status.
 
-Then stop before G7.5.
+Then stop before G7.6.
