@@ -114,13 +114,19 @@ Test:
 Use existing common/specialty mart infrastructure.
 
 Implement:
-- Great Ball after first badge;
-- Ultra Ball by roughly fourth badge;
-- Dive Ball added Pastoria or Canalave;
-- keep thematic specialty ball vendors;
-- ensure League shop sells broad specialist set.
+- Poké Ball + Great Ball + Heal Ball in the opening common-Mart tier;
+- Quick Ball in Jubilife, before Badge 1;
+- Timer Ball in Oreburgh, around the first badge;
+- preserve Net Ball as the Water/Bug target specialist from Oreburgh/Floaroma onward;
+- introduce Nest Ball (Level Ball role) and Dive Ball (Lure/water-environment role) by Eterna;
+- introduce Dusk Ball after the earliest specialist wave, around Hearthome/Solaceon;
+- introduce Repeat Ball by Solaceon/early-midgame;
+- keep Quick/Timer and other earlier specialist tools available in later regional marts rather than removing them as the story advances;
+- Ultra Ball by roughly the third-to-fourth badge tier;
+- keep Luxury Ball as a later flavor/friendship option;
+- ensure League shop sells the broad specialist set.
 
-Avoid replacing each city's specialty identity with a universal list.
+Avoid replacing each city's specialty identity with a universal list; the goal is overlapping, progressively richer specialist access.
 
 ## 8. Prices
 
