@@ -1,8 +1,9 @@
 # G7 — Claude Code Handoff
 
 Use this file together with:
-- `docs/visual_overhaul/G7_MODERN_DS_REMASTER_DESIGN.md`
-- `docs/visual_overhaul/G7_MODERN_DS_REMASTER_IMPLEMENTATION_PLAN.md`
+- `docs/visual_overhaul/G7_CLAUDE_EXECUTION_PROTOCOL.md` — operational/session rules
+- `docs/visual_overhaul/G7_MODERN_DS_REMASTER_DESIGN.md` — design authority
+- `docs/visual_overhaul/G7_MODERN_DS_REMASTER_IMPLEMENTATION_PLAN.md` — implementation authority
 
 ## Execution mandate
 
@@ -20,31 +21,39 @@ The user has already approved the G7 direction:
 
 1. Start from current `main`.
 2. Create/use `visual/g7-modern-ds-remaster`.
-3. Read the G7 design and implementation plan completely before editing.
-4. Audit the exact resource/code ownership of the first target.
-5. Implement **G7.1A battle command menu** first.
+3. Read `G7_CLAUDE_EXECUTION_PROTOCOL.md` first and obey its bounded-session rules.
+4. Read the design document and only the implementation-plan section relevant to the current batch, expanding context only when necessary.
+5. Audit exact resource/code ownership for the current target using targeted search.
 6. Preserve all gameplay and input semantics.
 7. Prefer deterministic generator-backed assets.
-8. Validate/build before advancing.
-9. Continue through the plan without asking for routine approval.
-10. Stop only for a real blocker listed in the implementation plan.
+8. Validate and build once at the end of the current batch.
+9. Commit/document the current batch.
+10. **Stop after the current batch. Do not automatically continue into the next numbered batch.**
 
-## First target
+## Current target
 
-Trace and redesign the current Fight / Bag / Pokémon / Run command interface.
+PR #50 merged G7.1A, G7.1B, G7.2A and G7.2B. G7.3 was audited and intentionally deferred for runtime-sensitive additions.
 
-The desired result:
-- keeps the large touch-friendly surfaces visible in the current build;
-- uses stronger hierarchy and more deliberate composition;
-- Fight remains dominant;
-- secondary actions remain obvious;
-- selected/pressed state is unmistakable without color alone;
-- less empty filler;
-- cleaner depth and panel treatment;
-- native 256×192 readability;
-- correct in portrait stacked and landscape side-by-side emulator layouts.
+**Current implementation target: G7.4A — Party + Summary modernization.**
 
-Do not assume the visible panels are all sprites; trace whether they are BG tilemaps, windows, sprites, or mixed.
+Execute only G7.4A in the next session. Do not continue to G7.4B after completion.
+
+Party goals:
+- stronger selected member card;
+- clearer HP/status hierarchy;
+- preserve member-ball/icon/touch semantics;
+- preserve cell/OAM geometry unless a demonstrable requirement forces a layout change.
+
+Summary goals:
+- modernize tab hierarchy;
+- strengthen page section separation;
+- prioritize move/stat data;
+- preserve every page, including contest/ribbon content;
+- strengthen move-selection focus.
+
+Use the existing generators first:
+- `tools/visual_overhaul/generate_party_menu_ui.py`
+- `tools/visual_overhaul/generate_summary_ui.py`
 
 ## Validation
 
