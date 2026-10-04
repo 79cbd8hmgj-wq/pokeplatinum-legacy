@@ -312,6 +312,211 @@
       "authority": "docs/overhaul/postgame/BATTLE_FRONTIER_POSTGAME_SPEC.md s5; implementation plan F3; spec s5 C3 learnset identity",
       "guard": "live moves equal before-value at apply time",
       "reason": "REMOVED: Psywave no longer learnable"
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/girafarig_2.json",
+      "field": "moves",
+      "before": [
+        "MOVE_ZEN_HEADBUTT",
+        "MOVE_DOUBLE_HIT",
+        "MOVE_CRUNCH",
+        "MOVE_THUNDER_WAVE"
+      ],
+      "target": [
+        "MOVE_PSYCHIC",
+        "MOVE_SHADOW_BALL",
+        "MOVE_SIGNAL_BEAM",
+        "MOVE_THUNDER_WAVE"
+      ],
+      "authority": "post-Pass-B recovery integrity follow-up; D6 F3 stat-redistribution reconciliation",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "STAT: recovered Girafarig is now special-led (75 Atk / 100 SpA); convert the physical set into a special coverage set",
+      "nature": {
+        "before": "NATURE_ADAMANT",
+        "target": "NATURE_MODEST"
+      },
+      "evFlags": {
+        "before": {
+          "hp": false,
+          "attack": true,
+          "defense": false,
+          "speed": true,
+          "special_attack": false,
+          "special_defense": false
+        },
+        "target": {
+          "hp": false,
+          "attack": false,
+          "defense": false,
+          "speed": true,
+          "special_attack": true,
+          "special_defense": false
+        }
+      }
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/hypno_1.json",
+      "field": "moves",
+      "before": [
+        "MOVE_PSYCHO_CUT",
+        "MOVE_FLING",
+        "MOVE_HYPNOSIS",
+        "MOVE_TRICK_ROOM"
+      ],
+      "target": [
+        "MOVE_PSYCHIC",
+        "MOVE_FLING",
+        "MOVE_HYPNOSIS",
+        "MOVE_TRICK_ROOM"
+      ],
+      "authority": "post-Pass-B recovery integrity follow-up; D6 F3 stat-redistribution reconciliation",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "STAT: recovered Hypno is special-led (55 Atk / 93 SpA); retain the Iron Ball/Fling Trick Room gimmick but move primary STAB to Psychic",
+      "nature": {
+        "before": "NATURE_BRAVE",
+        "target": "NATURE_QUIET"
+      },
+      "evFlags": {
+        "before": {
+          "hp": false,
+          "attack": true,
+          "defense": false,
+          "speed": false,
+          "special_attack": false,
+          "special_defense": true
+        },
+        "target": {
+          "hp": false,
+          "attack": false,
+          "defense": false,
+          "speed": false,
+          "special_attack": true,
+          "special_defense": true
+        }
+      }
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/hypno_3.json",
+      "field": "moves",
+      "before": [
+        "MOVE_ZEN_HEADBUTT",
+        "MOVE_FIRE_PUNCH",
+        "MOVE_THUNDER_PUNCH",
+        "MOVE_ICE_PUNCH"
+      ],
+      "target": [
+        "MOVE_PSYCHIC",
+        "MOVE_FOCUS_BLAST",
+        "MOVE_NASTY_PLOT",
+        "MOVE_HYPNOSIS"
+      ],
+      "authority": "post-Pass-B recovery integrity follow-up; D6 F3 stat-redistribution reconciliation",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "STAT: recovered Hypno is special-led (55 Atk / 93 SpA); replace the all-physical punch set with a distinct special setup set",
+      "nature": {
+        "before": "NATURE_ADAMANT",
+        "target": "NATURE_MODEST"
+      },
+      "evFlags": {
+        "before": {
+          "hp": false,
+          "attack": true,
+          "defense": false,
+          "speed": false,
+          "special_attack": false,
+          "special_defense": true
+        },
+        "target": {
+          "hp": false,
+          "attack": false,
+          "defense": false,
+          "speed": false,
+          "special_attack": true,
+          "special_defense": true
+        }
+      }
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/pachirisu_1.json",
+      "field": "moves",
+      "before": [
+        "MOVE_SPARK",
+        "MOVE_QUICK_ATTACK",
+        "MOVE_BITE",
+        "MOVE_SWEET_KISS"
+      ],
+      "target": [
+        "MOVE_DISCHARGE",
+        "MOVE_SWIFT",
+        "MOVE_GRASS_KNOT",
+        "MOVE_SWEET_KISS"
+      ],
+      "authority": "post-Pass-B recovery integrity follow-up; D6 F3 stat-redistribution reconciliation",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "STAT: recovered Pachirisu is special-led (45 Atk / 60 SpA); convert the set to fast special utility",
+      "nature": {
+        "before": "NATURE_JOLLY",
+        "target": "NATURE_TIMID"
+      },
+      "evFlags": {
+        "before": {
+          "hp": false,
+          "attack": true,
+          "defense": false,
+          "speed": true,
+          "special_attack": false,
+          "special_defense": false
+        },
+        "target": {
+          "hp": false,
+          "attack": false,
+          "defense": false,
+          "speed": true,
+          "special_attack": true,
+          "special_defense": false
+        }
+      }
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/poliwrath_1.json",
+      "field": "moves",
+      "before": [
+        "MOVE_SURF",
+        "MOVE_VACUUM_WAVE",
+        "MOVE_PSYCHIC",
+        "MOVE_DOUBLE_TEAM"
+      ],
+      "target": [
+        "MOVE_WATERFALL",
+        "MOVE_BRICK_BREAK",
+        "MOVE_ICE_PUNCH",
+        "MOVE_DOUBLE_TEAM"
+      ],
+      "authority": "post-Pass-B recovery integrity follow-up; D6 F3 stat-redistribution reconciliation",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "STAT: recovered Poliwrath is strongly physical (100 Atk / 60 SpA); convert the all-special set into a physical coverage set",
+      "nature": {
+        "before": "NATURE_MODEST",
+        "target": "NATURE_ADAMANT"
+      },
+      "evFlags": {
+        "before": {
+          "hp": true,
+          "attack": false,
+          "defense": false,
+          "speed": false,
+          "special_attack": true,
+          "special_defense": false
+        },
+        "target": {
+          "hp": true,
+          "attack": true,
+          "defense": false,
+          "speed": false,
+          "special_attack": false,
+          "special_defense": false
+        }
+      }
     }
   ],
   "hall_pool_type_changes": [
