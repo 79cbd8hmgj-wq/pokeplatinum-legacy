@@ -7,7 +7,6 @@
 #include "field_overworld_state.h"
 #include "location.h"
 #include "math_util.h"
-#include "mystery_egg_starter.h"
 #include "record_mixed_rng.h"
 #include "savedata.h"
 #include "system_flags.h"
@@ -73,19 +72,24 @@ u16 SystemVars_GetPlayerStarter(VarsFlags *varsFlags)
     return TryGetVarValue(varsFlags, VAR_PLAYER_STARTER);
 }
 
-u16 SystemVars_GetPlayerStarterBranch(VarsFlags *varsFlags)
+BOOL SystemVars_SetMysteryStarterSpecies(VarsFlags *varsFlags, u16 species)
 {
-    return MysteryStarter_GetRivalBranch(TryGetVarValue(varsFlags, VAR_PLAYER_STARTER));
+    return TrySetVarToValue(varsFlags, VAR_MYSTERY_STARTER_SPECIES, species);
+}
+
+u16 SystemVars_GetMysteryStarterSpecies(VarsFlags *varsFlags)
+{
+    return TryGetVarValue(varsFlags, VAR_MYSTERY_STARTER_SPECIES);
 }
 
 u16 SystemVars_GetRivalStarter(VarsFlags *varsFlags)
 {
     u16 rivalStarter;
-    u16 playerBranch = SystemVars_GetPlayerStarterBranch(varsFlags);
+    u16 playerStarter = TryGetVarValue(varsFlags, VAR_PLAYER_STARTER);
 
-    if (playerBranch == SPECIES_TURTWIG) {
+    if (playerStarter == SPECIES_TURTWIG) {
         rivalStarter = SPECIES_CHIMCHAR;
-    } else if (playerBranch == SPECIES_CHIMCHAR) {
+    } else if (playerStarter == SPECIES_CHIMCHAR) {
         rivalStarter = SPECIES_PIPLUP;
     } else {
         rivalStarter = SPECIES_TURTWIG;
@@ -97,11 +101,11 @@ u16 SystemVars_GetRivalStarter(VarsFlags *varsFlags)
 u16 SystemVars_GetPlayerCounterpartStarter(VarsFlags *varsFlags)
 {
     u16 counterpartStarter;
-    u16 playerBranch = SystemVars_GetPlayerStarterBranch(varsFlags);
+    u16 playerStarter = TryGetVarValue(varsFlags, VAR_PLAYER_STARTER);
 
-    if (playerBranch == SPECIES_TURTWIG) {
+    if (playerStarter == SPECIES_TURTWIG) {
         counterpartStarter = SPECIES_PIPLUP;
-    } else if (playerBranch == SPECIES_CHIMCHAR) {
+    } else if (playerStarter == SPECIES_CHIMCHAR) {
         counterpartStarter = SPECIES_TURTWIG;
     } else {
         counterpartStarter = SPECIES_CHIMCHAR;

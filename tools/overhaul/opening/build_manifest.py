@@ -23,12 +23,15 @@ SOURCES = {
     "include/mystery_egg_starter.h": "NEW: MYSTERY_STARTER_* constants + prototypes",
     "src/choose_starter/choose_starter_app.c": "three identical egg preview sprites; species preview/cry removed; otherwise vanilla lifecycle",
     "include/struct_defs/choose_starter_data.h": "species output removed (ChooseStarterData holds options only)",
-    "src/scrcmd.c": "SaveChosenStarter draws once and persists; GetPlayerStarterBranch; GiveMysteryStarterEgg / HatchMysteryStarterEgg retained but unused",
-    "src/system_vars.c": "SystemVars_GetPlayerStarterBranch; Rival/counterpart starter derived from the branch",
+    "src/scrcmd.c": "SaveChosenStarter draws once; actual species -> VAR_MYSTERY_STARTER_SPECIES, branch -> VAR_PLAYER_STARTER; GetMysteryStarterSpecies; GiveMysteryStarterEgg / HatchMysteryStarterEgg retained but unused",
+    "src/system_vars.c": "SystemVars_Get/SetMysteryStarterSpecies; Rival/counterpart starter vanilla (canonical VAR_PLAYER_STARTER)",
+    "generated/vars_flags.txt": "VAR_UNUSED_0x4031 renamed VAR_MYSTERY_STARTER_SPECIES (same slot, no save change)",
+    "src/scrcmd_strings.c": "player starter name buffer uses the actual Mystery species",
+    "res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s": "starter-gift skip reads GetMysteryStarterSpecies",
     "src/overlay005/daycare.c": "level-parameterised internals; ordinary entry points keep level 1",
     "src/egg_hatch.c": "hatchLevel > 1 selects Egg_CreateHatchedMonAtLevel",
     "src/unk_0203D1B8.c": "FieldSystem_HatchMysteryStarterEgg (no TV segment); FieldSystem_HatchEgg hatchLevel = 0",
-    "res/field/scripts/scripts_route_201.s": "Route201_Briefcase vanilla award flow (GetPlayerStarterSpecies + GivePokemon Lv5)",
+    "res/field/scripts/scripts_route_201.s": "Route201_Briefcase vanilla award flow (GetMysteryStarterSpecies + GivePokemon Lv5; Rival branch query stays vanilla)",
     "res/text/unk_0360.json": "neutral Mystery Egg chooser text",
     "res/text/route_201.json": "Egg wording",
 }
@@ -54,7 +57,7 @@ def main():
     guards = {p: {"before_blob": blob(p), "target": why} for p, why in SOURCES.items()}
     for f in RIVAL_SCRIPTS:
         p = f"res/field/scripts/{f}"
-        guards[p] = {"before_blob": blob(p), "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch" if "route_201" not in f else "Route201_Briefcase vanilla award flow + branch query"}
+        guards[p] = {"before_blob": blob(p), "target": "unchanged from vanilla (canonical VAR_PLAYER_STARTER)" if "route_201" not in f else "Route201_Briefcase vanilla award flow; award reads GetMysteryStarterSpecies"}
     m = {
         "schema": "pokeplatinum-overhaul/mystery-egg-starter/v1",
         "starting_sha": START_SHA,
@@ -70,10 +73,11 @@ def main():
         },
         "rng": {"function": "MysteryStarter_Draw", "source": "LCRNG_Next() % 100", "range": [0, 99], "draws": 1, "timing": "inside ScrCmd_SaveChosenStarter, after the chooser app exits with a confirmed egg",
                 "position_is_input": False, "reroll_on_hatch": False, "reroll_on_field_return": False, "reroll_on_battle_start": False, "anti_save_scumming": False},
-        "persistence": {"store": "VAR_PLAYER_STARTER (existing u16 var; actual species)", "written": "immediately in ScrCmd_SaveChosenStarter", "save_format_change": False,
-                        "rival_branch_store": "none; derived by SystemVars_GetPlayerStarterBranch (pure function of the actual species)"},
+        "persistence": {"canonical_store": "VAR_PLAYER_STARTER (vanilla invariant: only Turtwig / Chimchar / Piplup = story/Rival branch)",
+                        "actual_species_store": "VAR_MYSTERY_STARTER_SPECIES (existing u16 var, formerly VAR_UNUSED_0x4031; actual 13-way species)",
+                        "written": "both immediately in ScrCmd_SaveChosenStarter from the single draw", "save_format_change": False},
         "reveal": {"timing": "after ReturnToField/FadeScreenIn, before Rowan/counterpart departure and before Barry's first battle",
-                   "mechanism": "GivePokemon (vanilla Route 201 award path, Lv5); species read via GetPlayerStarterSpecies",
+                   "mechanism": "GivePokemon (vanilla Route 201 award path, Lv5); species read via GetMysteryStarterSpecies",
                    "hatch_presentation": "DEFERRED_DISABLED", "hatch_code_retained_unused": ["GiveMysteryStarterEgg", "HatchMysteryStarterEgg"], "tv_segment": False},
         "output": {"level": 5, "level_constant": "MYSTERY_STARTER_LEVEL", "owner": "player", "pikachu_hatches_as": "SPECIES_PIKACHU",
                    "generation": "Pokemon_InitWith(level 5, INIT_IVS_RANDOM, random personality); no guaranteed IV/nature/gender/shiny/item"},

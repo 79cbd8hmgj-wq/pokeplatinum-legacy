@@ -1389,8 +1389,8 @@
     .short \destVar
     .endm
 
-    .macro GetPlayerStarterBranch destVar
-    .short SCRCMD_GETPLAYERSTARTERBRANCH
+    .macro GetMysteryStarterSpecies destVar
+    .short SCRCMD_GETMYSTERYSTARTERSPECIES
     .short \destVar
     .endm
 

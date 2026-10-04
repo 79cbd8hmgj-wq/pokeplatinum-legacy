@@ -146,7 +146,7 @@ TrainersSchool_SchoolKidHarrison:
 TrainersSchool_BattleSchoolKidHarrison:
     Message TrainersSchool_Text_GoMyPokemonGo
     CloseMessage
-    GetPlayerStarterBranch VAR_RESULT
+    GetPlayerStarterSpecies VAR_RESULT
     GoToIfEq VAR_RESULT, SPECIES_TURTWIG, TrainersSchool_BattleHarrisonTurtwig
     GoToIfEq VAR_RESULT, SPECIES_CHIMCHAR, TrainersSchool_BattleHarrisonChimchar
     GoTo TrainersSchool_BattleHarrisonPiplup
@@ -239,7 +239,7 @@ TrainersSchool_SchoolKidChristine:
 TrainersSchool_BattleSchoolKidChristine:
     Message TrainersSchool_Text_TryThingsILearned
     CloseMessage
-    GetPlayerStarterBranch VAR_RESULT
+    GetPlayerStarterSpecies VAR_RESULT
     GoToIfEq VAR_RESULT, SPECIES_TURTWIG, TrainersSchool_BattleChristineTurtwig
     GoToIfEq VAR_RESULT, SPECIES_CHIMCHAR, TrainersSchool_BattleChristineChimchar
     GoTo TrainersSchool_BattleChristinePiplup

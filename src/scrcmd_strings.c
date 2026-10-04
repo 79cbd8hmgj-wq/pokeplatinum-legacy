@@ -279,7 +279,13 @@ BOOL ScrCmd_BufferPlayerStarterSpeciesName(ScriptContext *ctx)
 {
     StringTemplate **stringTemplate = FieldSystem_GetScriptMemberPtr(ctx->fieldSystem, SCRIPT_MANAGER_STR_TEMPLATE);
     u8 templateArg = ScriptContext_ReadByte(ctx);
-    u16 species = SystemVars_GetPlayerStarter(SaveData_GetVarsFlags(ctx->fieldSystem->saveData));
+    VarsFlags *varsFlags = SaveData_GetVarsFlags(ctx->fieldSystem->saveData);
+    u16 species = SystemVars_GetMysteryStarterSpecies(varsFlags);
+
+    if (species == SPECIES_NONE) {
+        species = SystemVars_GetPlayerStarter(varsFlags);
+    }
+
     String *speciesName = GetSpeciesNameString(species, HEAP_ID_FIELD1);
 
     StringTemplate_SetString(*stringTemplate, templateArg, speciesName, 0, 1, GAME_LANGUAGE);

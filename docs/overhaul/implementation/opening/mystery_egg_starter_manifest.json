@@ -21,10 +21,10 @@
   "pikachu_hatches_as": "SPECIES_PIKACHU"
  },
  "persistence": {
-  "rival_branch_store": "none; derived by SystemVars_GetPlayerStarterBranch (pure function of the actual species)",
+  "actual_species_store": "VAR_MYSTERY_STARTER_SPECIES (existing u16 var, formerly VAR_UNUSED_0x4031; actual 13-way species)",
+  "canonical_store": "VAR_PLAYER_STARTER (vanilla invariant: only Turtwig / Chimchar / Piplup = story/Rival branch)",
   "save_format_change": false,
-  "store": "VAR_PLAYER_STARTER (existing u16 var; actual species)",
-  "written": "immediately in ScrCmd_SaveChosenStarter"
+  "written": "both immediately in ScrCmd_SaveChosenStarter from the single draw"
  },
  "pool": [
   {
@@ -165,7 +165,7 @@
    "HatchMysteryStarterEgg"
   ],
   "hatch_presentation": "DEFERRED_DISABLED",
-  "mechanism": "GivePokemon (vanilla Route 201 award path, Lv5); species read via GetPlayerStarterSpecies",
+  "mechanism": "GivePokemon (vanilla Route 201 award path, Lv5); species read via GetMysteryStarterSpecies",
   "timing": "after ReturnToField/FadeScreenIn, before Rowan/counterpart departure and before Barry's first battle",
   "tv_segment": false
  },
@@ -192,6 +192,10 @@
  },
  "schema": "pokeplatinum-overhaul/mystery-egg-starter/v1",
  "source_guards": {
+  "generated/vars_flags.txt": {
+   "before_blob": "bcafe261ffe484a7361069e867516bc2f6b311e1",
+   "target": "VAR_UNUSED_0x4031 renamed VAR_MYSTERY_STARTER_SPECIES (same slot, no save change)"
+  },
   "include/mystery_egg_starter.h": {
    "before_blob": null,
    "target": "NEW: MYSTERY_STARTER_* constants + prototypes"
@@ -202,63 +206,67 @@
   },
   "res/field/scripts/scripts_canalave_city.s": {
    "before_blob": "f5839853e918e98f2ee5ddb13bb9c46aba0a5125",
-   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+   "target": "unchanged from vanilla (canonical VAR_PLAYER_STARTER)"
   },
   "res/field/scripts/scripts_eterna_city_underground_man_house.s": {
    "before_blob": "6104b321d09b7521478755c841f5326ce868b19b",
-   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+   "target": "unchanged from vanilla (canonical VAR_PLAYER_STARTER)"
   },
   "res/field/scripts/scripts_fight_area.s": {
    "before_blob": "32c992890f49321e2625473dcc36d7eac1eb631c",
-   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+   "target": "unchanged from vanilla (canonical VAR_PLAYER_STARTER)"
   },
   "res/field/scripts/scripts_jubilife_city.s": {
    "before_blob": "806054604b55abf470362baf549c3146391d1e8c",
-   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+   "target": "unchanged from vanilla (canonical VAR_PLAYER_STARTER)"
   },
   "res/field/scripts/scripts_jubilife_tv_2f.s": {
    "before_blob": "b373a36ca4236915d8a647942933cba5b06419b1",
-   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+   "target": "unchanged from vanilla (canonical VAR_PLAYER_STARTER)"
   },
   "res/field/scripts/scripts_pastoria_city.s": {
    "before_blob": "18ea4b563dac175dc3056af3097ee898731f4b02",
-   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+   "target": "unchanged from vanilla (canonical VAR_PLAYER_STARTER)"
   },
   "res/field/scripts/scripts_pokemon_league_north_pokecenter_1f.s": {
    "before_blob": "37af7ead74542f1645d41b94d3ed7c323641d3bb",
-   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+   "target": "unchanged from vanilla (canonical VAR_PLAYER_STARTER)"
   },
   "res/field/scripts/scripts_route_201.s": {
    "before_blob": "64a320fb05bf05e6a2e1585286069e81e51d1081",
-   "target": "Route201_Briefcase vanilla award flow + branch query"
+   "target": "Route201_Briefcase vanilla award flow; award reads GetMysteryStarterSpecies"
   },
   "res/field/scripts/scripts_route_203.s": {
    "before_blob": "3447e9f71d60f1df07fb7a08ba842d49956ac1d5",
-   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+   "target": "unchanged from vanilla (canonical VAR_PLAYER_STARTER)"
   },
   "res/field/scripts/scripts_route_209_gate_to_hearthome_city.s": {
    "before_blob": "dd111b2afc6eb6b908b4774e895ef1d672592965",
-   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+   "target": "unchanged from vanilla (canonical VAR_PLAYER_STARTER)"
+  },
+  "res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s": {
+   "before_blob": "d720e40086461915fef73ea4dc96b2900b3311d8",
+   "target": "starter-gift skip reads GetMysteryStarterSpecies"
   },
   "res/field/scripts/scripts_spear_pillar.s": {
    "before_blob": "12bca1e70d288066af0b413b267e1eea24342b9f",
-   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+   "target": "unchanged from vanilla (canonical VAR_PLAYER_STARTER)"
   },
   "res/field/scripts/scripts_survival_area.s": {
    "before_blob": "69120503035b9b0ea6cd5048833df5d951d146dc",
-   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+   "target": "unchanged from vanilla (canonical VAR_PLAYER_STARTER)"
   },
   "res/field/scripts/scripts_trainers_school.s": {
    "before_blob": "4b3d48b4593bccea5d7ab8a7be382587d1a2919e",
-   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+   "target": "unchanged from vanilla (canonical VAR_PLAYER_STARTER)"
   },
   "res/field/scripts/scripts_veilstone_city.s": {
    "before_blob": "20ead40a160a830c222fa198151810505f8bcf0a",
-   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+   "target": "unchanged from vanilla (canonical VAR_PLAYER_STARTER)"
   },
   "res/field/scripts/scripts_veilstone_store_1f.s": {
    "before_blob": "492a3614b68889ba6c600d0a3406aadd19d0b9f9",
-   "target": "GetPlayerStarterSpecies -> GetPlayerStarterBranch"
+   "target": "unchanged from vanilla (canonical VAR_PLAYER_STARTER)"
   },
   "res/text/route_201.json": {
    "before_blob": "9ad344735e69b5fde46fb1f390728a5efbebccc8",
@@ -286,11 +294,15 @@
   },
   "src/scrcmd.c": {
    "before_blob": "ac5180b574353f8f9e755077b893db4b4c9b29b6",
-   "target": "SaveChosenStarter draws once and persists; GetPlayerStarterBranch; GiveMysteryStarterEgg / HatchMysteryStarterEgg retained but unused"
+   "target": "SaveChosenStarter draws once; actual species -> VAR_MYSTERY_STARTER_SPECIES, branch -> VAR_PLAYER_STARTER; GetMysteryStarterSpecies; GiveMysteryStarterEgg / HatchMysteryStarterEgg retained but unused"
+  },
+  "src/scrcmd_strings.c": {
+   "before_blob": "d1cc9829c4a306dba2d067d3a919b12ff5edbadb",
+   "target": "player starter name buffer uses the actual Mystery species"
   },
   "src/system_vars.c": {
    "before_blob": "e6ea14aff470b1768487e623aa27d7468c0f9a80",
-   "target": "SystemVars_GetPlayerStarterBranch; Rival/counterpart starter derived from the branch"
+   "target": "SystemVars_Get/SetMysteryStarterSpecies; Rival/counterpart starter vanilla (canonical VAR_PLAYER_STARTER)"
   },
   "src/unk_0203D1B8.c": {
    "before_blob": "eba7d7bdc853517ca25c8f4ea25591ec769d8a52",
