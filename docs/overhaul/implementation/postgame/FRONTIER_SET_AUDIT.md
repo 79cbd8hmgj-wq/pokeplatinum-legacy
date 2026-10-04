@@ -48,7 +48,7 @@ Tool: `tools/overhaul/postgame/frontier_audit.py`; fixes: `apply_frontier_set_ch
 
 Per spec s5 not every set carries both STAB types (Milotic keeps its special/tank sets; only `milotic_4` uses Dragon).
 
-## Fixes applied (20 sets)
+## Fixes applied (22 sets)
 
 | Set | Reason | Moves before | Moves after |
 |---|---|---|---|
@@ -72,6 +72,8 @@ Per spec s5 not every set carries both STAB types (Milotic keeps its special/tan
 | hypno_3 | STAT after Pass B recovery: 55 Atk / 93 SpA | ZEN_HEADBUTT, FIRE_PUNCH, THUNDER_PUNCH, ICE_PUNCH | PSYCHIC, SHADOW_BALL, SIGNAL_BEAM, THUNDER_WAVE |
 | pachirisu_1 | STAT after Pass B recovery: 45 Atk / 60 SpA | SPARK, QUICK_ATTACK, BITE, SWEET_KISS | DISCHARGE, QUICK_ATTACK, BITE, SWEET_KISS |
 | poliwrath_1 | STAT after Pass B recovery: 100 Atk / 60 SpA | SURF, VACUUM_WAVE, PSYCHIC, DOUBLE_TEAM | SURF, VACUUM_WAVE, BRICK_BREAK, DOUBLE_TEAM |
+| poliwrath_3 | STAT after Pass B recovery: 100 Atk / 60 SpA | HYDRO_PUMP, FOCUS_BLAST, BLIZZARD, MUD_BOMB | HYDRO_PUMP, DYNAMIC_PUNCH, BLIZZARD, MUD_BOMB |
+| whiscash_1 | STAT after Pass B recovery: 90 Atk / 70 SpA | SURF, EARTH_POWER, ICY_WIND, AMNESIA | AQUA_TAIL, EARTH_POWER, ICY_WIND, AMNESIA |
 
 Nature changes accompany stat-driven fixes (see manifest `nature`).
 
@@ -88,7 +90,7 @@ Nature changes accompany stat-driven fixes (see manifest `nature`).
 
 ## Ability / stat changes reviewed
 
-Ability changes on Frontier species (Farfetch'd, Furret, Ledian, Lopunny, Wigglytuff) and stat redistributions on 19 species were screened by the STAT heuristic (all-physical or all-special sets whose attacking stat flipped). The original D6 pass corrected Raichu, Glalie and Ledian. The post-Pass-B recovery audit then surfaced Girafarig, Hypno, Pachirisu and Poliwrath set drift; those five affected sets were reconciled above. Sets left as-is are treated as valid under spec s5 ("do not force every set").
+Ability changes on Frontier species (Farfetch'd, Furret, Ledian, Lopunny, Wigglytuff) and stat redistributions on 19 species were screened by the STAT heuristic (all-physical or all-special sets whose attacking stat flipped). The original D6 pass corrected Raichu, Glalie and Ledian. The post-Pass-B recovery audit then surfaced Girafarig, Hypno, Pachirisu, Poliwrath and Whiscash set drift; seven affected sets were reconciled above. Sets left as-is are treated as valid under spec s5 ("do not force every set").
 
 ## Legality note
 
