@@ -2,59 +2,75 @@
   "base_commit": "fb9003d9d7894fc5b1c9c36ecaf9bdecb8176afd",
   "common": {
     "ITEM_POKE_BALL": 1,
-    "ITEM_GREAT_BALL": 2,
+    "ITEM_GREAT_BALL": 1,
+    "ITEM_HEAL_BALL": 1,
     "ITEM_ULTRA_BALL": 3
   },
   "vendors": {
     "JubilifeMartSpecialties": [
-      "ITEM_HEAL_BALL"
+      "ITEM_QUICK_BALL"
     ],
     "OreburghMartSpecialties": [
-      "ITEM_HEAL_BALL",
-      "ITEM_NET_BALL"
+      "ITEM_NET_BALL",
+      "ITEM_TIMER_BALL"
     ],
     "FloaromaMartSpecialties": [
-      "ITEM_HEAL_BALL",
-      "ITEM_NET_BALL"
+      "ITEM_NET_BALL",
+      "ITEM_QUICK_BALL",
+      "ITEM_TIMER_BALL"
     ],
     "EternaMartSpecialties": [
-      "ITEM_HEAL_BALL",
-      "ITEM_NET_BALL",
-      "ITEM_NEST_BALL"
-    ],
-    "HearthomeMartSpecialties": [
-      "ITEM_HEAL_BALL",
-      "ITEM_NET_BALL",
-      "ITEM_NEST_BALL"
-    ],
-    "SolaceonMartSpecialties": [
       "ITEM_NET_BALL",
       "ITEM_NEST_BALL",
-      "ITEM_DUSK_BALL"
+      "ITEM_DIVE_BALL",
+      "ITEM_QUICK_BALL",
+      "ITEM_TIMER_BALL"
+    ],
+    "HearthomeMartSpecialties": [
+      "ITEM_NEST_BALL",
+      "ITEM_DUSK_BALL",
+      "ITEM_QUICK_BALL",
+      "ITEM_TIMER_BALL"
+    ],
+    "SolaceonMartSpecialties": [
+      "ITEM_NEST_BALL",
+      "ITEM_DUSK_BALL",
+      "ITEM_REPEAT_BALL",
+      "ITEM_QUICK_BALL",
+      "ITEM_TIMER_BALL"
     ],
     "PastoriaMartSpecialties": [
       "ITEM_NEST_BALL",
       "ITEM_DUSK_BALL",
       "ITEM_QUICK_BALL",
+      "ITEM_TIMER_BALL",
+      "ITEM_REPEAT_BALL",
       "ITEM_DIVE_BALL"
     ],
     "CelesticMartSpecialties": [
       "ITEM_DUSK_BALL",
       "ITEM_QUICK_BALL",
-      "ITEM_TIMER_BALL"
+      "ITEM_TIMER_BALL",
+      "ITEM_REPEAT_BALL"
     ],
     "SnowpointMartSpecialties": [
       "ITEM_DUSK_BALL",
       "ITEM_QUICK_BALL",
-      "ITEM_TIMER_BALL"
+      "ITEM_TIMER_BALL",
+      "ITEM_REPEAT_BALL"
     ],
     "CanalaveMartSpecialties": [
       "ITEM_QUICK_BALL",
       "ITEM_TIMER_BALL",
-      "ITEM_REPEAT_BALL"
+      "ITEM_REPEAT_BALL",
+      "ITEM_DIVE_BALL"
     ],
     "SunyshoreMartSpecialties": [
-      "ITEM_LUXURY_BALL"
+      "ITEM_LUXURY_BALL",
+      "ITEM_QUICK_BALL",
+      "ITEM_TIMER_BALL",
+      "ITEM_REPEAT_BALL",
+      "ITEM_DIVE_BALL"
     ],
     "PokemonLeagueMartSpecialties": [
       "ITEM_HEAL_BALL",
