@@ -14,9 +14,9 @@
   ]
  },
  "output": {
-  "generation": "Pokemon_InitWith(level 5, INIT_IVS_RANDOM, random personality); no guaranteed IV/nature/gender/shiny/item",
+  "generation": "vanilla Pokemon_GiveMonFromScript via GivePokemon; normal generated Pokémon, no custom egg/hatch constructor",
   "level": 5,
-  "level_constant": "MYSTERY_STARTER_LEVEL",
+  "level_constant": "Route 201 GivePokemon literal 5",
   "owner": "player",
   "pikachu_hatches_as": "SPECIES_PIKACHU"
  },
@@ -195,7 +195,7 @@
   },
   "include/mystery_egg_starter.h": {
    "before_blob": null,
-   "target": "NEW: MYSTERY_STARTER_* constants + prototypes"
+   "target": "validator/reference-only locked pool constants + pure mapping helpers; module is not linked into ROM"
   },
   "include/struct_defs/choose_starter_data.h": {
    "before_blob": "4c92688379f2d8cfaa39dcd39ad4d7b78156fd69",
