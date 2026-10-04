@@ -1,0 +1,19 @@
+name: post-recovery-static-validation
+
+on:
+  push:
+    branches:
+      - fix/post-recovery-static-validation
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Run master validator
+        run: python3 tools/overhaul/validate_overhaul.py --no-write
