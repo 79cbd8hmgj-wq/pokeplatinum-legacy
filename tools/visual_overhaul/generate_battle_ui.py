@@ -38,31 +38,40 @@ def apply_palette(filename: str) -> None:
 
 
 def make_battle_cursor() -> None:
-    """Refresh the single 16x16 corner cursor; NCER flips it for all four corners."""
+    """G7.1A focus bracket: bold three-pixel L-corner with a navy keyline.
+
+    The single 16x16 corner cursor is flipped by its NCER for all four corners,
+    so cell/animation/OAM data are unchanged.  The shape (not just its color)
+    marks focus: a heavy white-edged amber bracket that reads on both the dark
+    G7 command deck and the lighter bag/party sub-screens.
+    """
     path = ROOT / "res" / "graphics" / "battle" / "interface" / "cursor.png"
     source = Image.open(path)
     palette = list(source.getpalette())
+    palette[1 * 3:1 * 3 + 3] = (10, 18, 48)       # keyline
+    palette[14 * 3:14 * 3 + 3] = (255, 255, 255)  # outer highlight
+    palette[15 * 3:15 * 3 + 3] = (255, 205, 48)   # focus fill
 
     image = Image.new("P", (16, 16), 0)
     image.putpalette(palette)
     pixels = image.load()
 
-    # The cursor palette is self-contained: 15 is the red focus color and 14
-    # the white highlight. Build a thinner L-corner so the existing bounce
-    # animation reads more cleanly around command targets.
-    for x in range(2, 12):
-        pixels[x, 2] = 15
-        pixels[x, 3] = 15
-    for y in range(2, 12):
-        pixels[2, y] = 15
-        pixels[3, y] = 15
+    def in_bracket(x: int, y: int) -> bool:
+        return (2 <= x <= 11 and 2 <= y <= 4) or (2 <= x <= 4 and 2 <= y <= 11)
 
-    for x in range(4, 11):
-        pixels[x, 4] = 14
-    for y in range(4, 11):
-        pixels[4, y] = 14
+    for y in range(16):
+        for x in range(16):
+            if in_bracket(x, y):
+                pixels[x, y] = 14 if (x == 2 or y == 2) else 15
+            elif any(
+                in_bracket(x + dx, y + dy)
+                for dx in (-1, 0, 1)
+                for dy in (-1, 0, 1)
+            ):
+                pixels[x, y] = 1
 
     image.save(path)
+
 
 def main() -> None:
     for filename in PREVIEW_SYNC_FILES:
