@@ -34,8 +34,8 @@ ALLOWED = [
     r"^tools/overhaul/economy/(simulate_progression|test_validate_economy)\.py$", r"^tools/overhaul/trainers/test_validate_trainers\.py$",
     # D8 Mystery Egg starter PR (later than D7): opening flow + the three-way Rival branch helper. Listed explicitly so the D6
     # scope check keeps rejecting any OTHER later change.
-    r"^tools/overhaul/(validate_mystery_starter\.py$|opening/)",
-    r"^(include|src)/(mystery_egg_starter|egg_hatch|system_vars|unk_0203D1B8|choose_starter/choose_starter_app|overlay005/daycare|struct_defs/choose_starter_data)\.[ch]$",
+    r"^tools/overhaul/(validate_mystery_starter\.py$|opening/|availability/special_verify\.py$)",
+    r"^(include|src)/(mystery_egg_starter|egg_hatch|system_vars|scrcmd_strings|unk_0203D1B8|choose_starter/choose_starter_app|overlay005/daycare|struct_defs/choose_starter_data)\.[ch]$",
     r"^include/data/scripts/scrcmd\.h$", r"^src/meson\.build$", r"^res/text/(route_201|unk_0360)\.json$",
     r"^res/field/scripts/scripts_[a-z0-9_]+\.s$",  # starter-branch consumers; per-file scope is asserted by validate_mystery_starter.py
 ]

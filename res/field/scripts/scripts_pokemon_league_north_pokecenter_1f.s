@@ -137,7 +137,7 @@ PokemonLeagueNorthPokecenter1F_RivalIntro:
     BufferRivalName 0
     Message PokemonLeagueNorthPokecenter1F_Text_RivalIntro
     CloseMessage
-    GetPlayerStarterBranch VAR_RESULT
+    GetPlayerStarterSpecies VAR_RESULT
     GoToIfEq VAR_RESULT, SPECIES_TURTWIG, PokemonLeagueNorthPokecenter1F_StartRivalTurtwigBattle
     GoToIfEq VAR_RESULT, SPECIES_CHIMCHAR, PokemonLeagueNorthPokecenter1F_StartRivalChimcharBattle
     GoTo PokemonLeagueNorthPokecenter1F_StartRivalPiplupBattle

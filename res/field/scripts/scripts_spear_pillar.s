@@ -290,7 +290,7 @@ SpearPillar_Movement_MarsWalkOnSpotWest:
     EndMovement
 
 SpearPillar_SetRivalPartnerTeam:
-    GetPlayerStarterBranch VAR_RESULT
+    GetPlayerStarterSpecies VAR_RESULT
     SetVar VAR_0x8004, TRAINER_RIVAL_SPEAR_PILLAR_CHIMCHAR
     GoToIfEq VAR_RESULT, SPECIES_CHIMCHAR, SpearPillar_Return
     SetVar VAR_0x8004, TRAINER_RIVAL_SPEAR_PILLAR_TURTWIG

@@ -418,7 +418,7 @@ SandgemTownLab_ScientistF:
     LockAll
     FacePlayer
     CountBadgesAcquired VAR_0x8007
-    GetPlayerStarterSpecies VAR_0x8000
+    GetMysteryStarterSpecies VAR_0x8000
     GoTo SandgemTownLab_StarterGift_Sinnoh
     End
 

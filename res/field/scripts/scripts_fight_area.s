@@ -202,7 +202,7 @@ FightArea_LostBattleVolknerFlint:
     End
 
 FightArea_SetRivalPartnerTeam:
-    GetPlayerStarterBranch VAR_RESULT
+    GetPlayerStarterSpecies VAR_RESULT
     SetVar VAR_0x8004, TRAINER_RIVAL_FIGHT_AREA_CHIMCHAR
     GoToIfEq VAR_RESULT, SPECIES_CHIMCHAR, FightArea_SetRivalPartnerTeamReturn
     SetVar VAR_0x8004, TRAINER_RIVAL_FIGHT_AREA_TURTWIG

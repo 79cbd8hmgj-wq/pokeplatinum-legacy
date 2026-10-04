@@ -62,3 +62,20 @@ After the runtime black screen following Mystery Egg confirmation (PR #26 did no
 
 Runtime behavior is NOT VERIFIED.
 
+
+## Starter-state refactor (restore vanilla `VAR_PLAYER_STARTER` semantics)
+
+PR #28 still black-screened at the same point after starter confirmation, so hatch integration is ruled out as the immediate cause. The remaining
+high-impact deviation from vanilla before field restoration was that `VAR_PLAYER_STARTER` could hold species IDs the engine never expected there.
+This change removes that global invariant violation (hypothesis only — **runtime NOT VERIFIED until user retest**).
+
+* `VAR_PLAYER_STARTER` once again holds only `SPECIES_TURTWIG` / `SPECIES_CHIMCHAR` / `SPECIES_PIPLUP` (story/Rival branch; Pikachu → Piplup).
+* The actual 13-way species lives in `VAR_MYSTERY_STARTER_SPECIES`: the existing u16 slot formerly named `VAR_UNUSED_0x4031` (search of generated vars, scripts, C,
+  asm/macros, docs and tools found no consumer; it only had a name in `generated/vars_flags.txt`). Renamed in place — same slot, same var count, no save-format/size change.
+* `ScrCmd_SaveChosenStarter`: one `MysteryStarter_Draw()`; `SystemVars_SetMysteryStarterSpecies(species)` and `SystemVars_SetPlayerStarter(MysteryStarter_GetRivalBranch(species))`.
+* Removed the remap layer: `SystemVars_GetPlayerStarterBranch`, script command `GetPlayerStarterBranch` (its slot is now `GetMysteryStarterSpecies`), and all 19 converted script
+  sites (those scripts are byte-identical to vanilla again). `SystemVars_GetRivalStarter` / `GetPlayerCounterpartStarter` are vanilla.
+* Consumer classification: **A story branch** (canonical var) — all Rival/counterpart/partner scripts, `SystemVars_GetRivalStarter`, `SystemVars_GetPlayerCounterpartStarter`,
+  `field_battle_data_transfer.c`, `BufferRivalStarterSpeciesName`, `BufferPlayerCounterpartStarterSpeciesName[WithArticle]`, `start_menu.c` (`!= SPECIES_NONE`);
+  **B actual species** (new var) — Route 201 `GivePokemon` award, `BufferPlayerStarterSpeciesName` (falls back to the canonical var if unset), dormant `GiveMysteryStarterEgg`,
+  Sandgem lab starter-gift skip; **C cosmetic** — none left ambiguous.

@@ -19,6 +19,7 @@ DC = "src/overlay005/daycare.c"
 R201 = "res/field/scripts/scripts_route_201.s"
 R203 = "res/field/scripts/scripts_route_203.s"
 TXT = "res/text/unk_0360.json"
+STR = "src/scrcmd_strings.c"
 
 # name -> (path, old, new)
 MUTATIONS = {
@@ -35,9 +36,9 @@ MUTATIONS = {
     "Pikachu Rival mapping -> Chimchar branch": (SRC, "    case SPECIES_PIPLUP:\n    case SPECIES_PIKACHU:\n    default:\n        return SPECIES_PIPLUP;", "    case SPECIES_PIPLUP:\n    default:\n        return SPECIES_PIPLUP;\n    case SPECIES_PIKACHU:\n        return SPECIES_CHIMCHAR;"),
     "Pikachu Rival mapping -> Turtwig branch": (SRC, "    case SPECIES_PIPLUP:\n    case SPECIES_PIKACHU:\n    default:\n        return SPECIES_PIPLUP;", "    case SPECIES_PIPLUP:\n    default:\n        return SPECIES_PIPLUP;\n    case SPECIES_PIKACHU:\n        return SPECIES_TURTWIG;"),
     "Grass category mapped to Water (Treecko)": (SRC, "    case SPECIES_TREECKO:\n", "    case SPECIES_TREECKO:\n        return SPECIES_PIPLUP;\n"),
-    "non-Sinnoh fallthrough: Route 203 reads actual species": (R203, "GetPlayerStarterBranch VAR_RESULT", "GetPlayerStarterSpecies VAR_RESULT"),
-    "non-Sinnoh fallthrough: Rival starter keyed on actual species": (SV, "u16 playerBranch = SystemVars_GetPlayerStarterBranch(varsFlags);\n\n    if (playerBranch == SPECIES_TURTWIG) {\n        rivalStarter",
-                                                                        "u16 playerStarter = TryGetVarValue(varsFlags, VAR_PLAYER_STARTER);\n\n    if (playerStarter == SPECIES_TURTWIG) {\n        rivalStarter"),
+    "Route 203 Rival branch reads the actual Mystery species": (R203, "GetPlayerStarterSpecies VAR_RESULT", "GetMysteryStarterSpecies VAR_RESULT"),
+    "Rival starter keyed on the Mystery species": (SV, "u16 playerStarter = TryGetVarValue(varsFlags, VAR_PLAYER_STARTER);\n\n    if (playerStarter == SPECIES_TURTWIG) {\n        rivalStarter",
+                                                      "u16 playerStarter = TryGetVarValue(varsFlags, VAR_MYSTERY_STARTER_SPECIES);\n\n    if (playerStarter == SPECIES_TURTWIG) {\n        rivalStarter"),
     "Rival branch compared against a non-Sinnoh species": (R203, "GoToIfEq VAR_RESULT, SPECIES_TURTWIG, Route203_StartRivalBattleTurtwig", "GoToIfEq VAR_RESULT, SPECIES_BULBASAUR, Route203_StartRivalBattleTurtwig"),
     "thirteen-way Rival duplication (extra Rival label)": (R203, "Route203_StartRivalBattlePiplup:", "Route203_StartRivalBattleBulbasaur:\n    GoTo Route203_StartRivalBattlePiplup\n\nRoute203_StartRivalBattlePiplup:"),
     "output level 5 -> 1": (HDR, "#define MYSTERY_STARTER_LEVEL      5", "#define MYSTERY_STARTER_LEVEL      1"),
@@ -49,20 +50,32 @@ MUTATIONS = {
     "custom resting-state plumbing reintroduced": (APP, "static BOOL IsSelectionMade(ChooseStarterApp *app, enum HeapID heapID);", "static void SetMysteryEggRestingState(ChooseStarterApp *app, int position);\nstatic BOOL IsSelectionMade(ChooseStarterApp *app, enum HeapID heapID);"),
     "preview movement offset changed": (APP, "[1] + 48) << FX32_SHIFT", "[1] + 40) << FX32_SHIFT"),
     "eggPosition output reintroduced": ("include/struct_defs/choose_starter_data.h", "const Options *options;", "int eggPosition;\n    const Options *options;"),
-    "Route 201 calls GiveMysteryStarterEgg again": (R201, "    GetPlayerStarterSpecies VAR_0x8000\n    GivePokemon", "    GiveMysteryStarterEgg\n    GetPlayerStarterSpecies VAR_0x8000\n    GivePokemon"),
-    "Route 201 calls HatchMysteryStarterEgg again": (R201, "    GetPlayerStarterSpecies VAR_0x8000\n    GivePokemon", "    HatchMysteryStarterEgg\n    GetPlayerStarterSpecies VAR_0x8000\n    GivePokemon"),
+    "Route 201 calls GiveMysteryStarterEgg again": (R201, "    GetMysteryStarterSpecies VAR_0x8000\n    GivePokemon", "    GiveMysteryStarterEgg\n    GetMysteryStarterSpecies VAR_0x8000\n    GivePokemon"),
+    "Route 201 calls HatchMysteryStarterEgg again": (R201, "    GetMysteryStarterSpecies VAR_0x8000\n    GivePokemon", "    HatchMysteryStarterEgg\n    GetMysteryStarterSpecies VAR_0x8000\n    GivePokemon"),
     "Route 201 award GivePokemon removed": (R201, "    GivePokemon VAR_0x8000, 5, ITEM_NONE, VAR_RESULT\n    ApplyMovement LOCALID_PROF_ROWAN", "    ApplyMovement LOCALID_PROF_ROWAN"),
     "Route 201 award level changed": (R201, "GivePokemon VAR_0x8000, 5,", "GivePokemon VAR_0x8000, 6,"),
-    "Route 201 award before FadeScreenIn": (R201, "    FadeScreenIn\n    WaitFadeScreen\n    GetPlayerStarterSpecies VAR_0x8000\n", "    GetPlayerStarterSpecies VAR_0x8000\n    FadeScreenIn\n    WaitFadeScreen\n"),
+    "Route 201 award before FadeScreenIn": (R201, "    FadeScreenIn\n    WaitFadeScreen\n    GetMysteryStarterSpecies VAR_0x8000\n", "    GetMysteryStarterSpecies VAR_0x8000\n    FadeScreenIn\n    WaitFadeScreen\n"),
     "chooser text differs per egg": (TXT, '"A Mystery Egg!\\n"', '"A Mystery Egg?!\\n"'),
-    "missing persistence after roll": (SC, "SystemVars_SetPlayerStarter(SaveData_GetVarsFlags(ctx->fieldSystem->saveData), species);", "(void)species;"),
+    "missing persistence after roll": (SC, "SystemVars_SetMysteryStarterSpecies(varsFlags, species);", "SystemVars_SetPlayerStarter(varsFlags, 0);"),
     "extra species in the pool": (SRC, "    { SPECIES_PIPLUP, 10 },\n};", "    { SPECIES_PIPLUP, 10 },\n    { SPECIES_EEVEE, 0 },\n};"),
     "missing species in the pool": (SRC, "    { SPECIES_MUDKIP, 10 },\n", ""),
     "ordinary Egg_CreateEgg level changed": (DC, "Egg_CreateEggAtLevel(egg, species, param2, trainerInfo, param4, metLocation, 1);", "Egg_CreateEggAtLevel(egg, species, param2, trainerInfo, param4, metLocation, 5);"),
     "ordinary hatch level changed": (DC, "Egg_CreateHatchedMonAtLevel(egg, heapID, 1);", "Egg_CreateHatchedMonAtLevel(egg, heapID, 5);"),
     "breeding logic edited (hatch friendship)": (DC, "friendship = 120;", "friendship = 70;"),
     "Day Care hatch-cycle constants edited": ("include/constants/daycare.h", None, "\n#define MUTATED_HATCH_CONSTANT 1\n"),
-    "Rival starter ignores branch": (SV, "u16 playerBranch = SystemVars_GetPlayerStarterBranch(varsFlags);\n\n    if (playerBranch == SPECIES_TURTWIG) {\n        counterpartStarter", "u16 playerStarter = TryGetVarValue(varsFlags, VAR_PLAYER_STARTER);\n\n    if (playerStarter == SPECIES_TURTWIG) {\n        counterpartStarter"),
+    "Counterpart starter keyed on the Mystery species": (SV, "u16 playerStarter = TryGetVarValue(varsFlags, VAR_PLAYER_STARTER);\n\n    if (playerStarter == SPECIES_TURTWIG) {\n        counterpartStarter",
+                                                            "u16 playerStarter = TryGetVarValue(varsFlags, VAR_MYSTERY_STARTER_SPECIES);\n\n    if (playerStarter == SPECIES_TURTWIG) {\n        counterpartStarter"),
+    "VAR_PLAYER_STARTER receives the actual species": (SC, "SystemVars_SetPlayerStarter(varsFlags, branch);", "SystemVars_SetPlayerStarter(varsFlags, species);"),
+    "actual species never stored": (SC, "SystemVars_SetMysteryStarterSpecies(varsFlags, species);", "(void)species;"),
+    "branch computed with a second helper (not the single draw)": (SC, "u16 branch = MysteryStarter_GetRivalBranch(species);", "u16 branch = MysteryStarter_GetRivalBranch(MysteryStarter_Draw());"),
+    "Pikachu branch store -> Chimchar via mapping": (SRC, "    case SPECIES_PIPLUP:\n    case SPECIES_PIKACHU:\n    default:\n        return SPECIES_PIPLUP;", "    case SPECIES_PIPLUP:\n    default:\n        return SPECIES_PIPLUP;\n    case SPECIES_PIKACHU:\n        return SPECIES_CHIMCHAR;"),
+    "branch-remap layer reintroduced (SystemVars_GetPlayerStarterBranch)": (SV, "u16 SystemVars_GetRivalStarter(VarsFlags *varsFlags)\n{", "u16 SystemVars_GetPlayerStarterBranch(VarsFlags *varsFlags)\n{\n    return 0;\n}\n\nu16 SystemVars_GetRivalStarter(VarsFlags *varsFlags)\n{"),
+    "renamed var reverted to VAR_UNUSED_0x4031": ("generated/vars_flags.txt", "VAR_MYSTERY_STARTER_SPECIES\n", "VAR_UNUSED_0x4031\n"),
+    "extra var added to the table (save-size change)": ("generated/vars_flags.txt", "VAR_MYSTERY_STARTER_SPECIES\n", "VAR_MYSTERY_STARTER_SPECIES\nVAR_EXTRA_NEW\n"),
+    "player name buffer uses the canonical branch": (STR, "u16 species = SystemVars_GetMysteryStarterSpecies(varsFlags);", "u16 species = SystemVars_GetPlayerStarter(varsFlags);"),
+    "rival name buffer uses the Mystery species": (STR, "u16 species = SystemVars_GetRivalStarter(SaveData_GetVarsFlags(ctx->fieldSystem->saveData));", "u16 species = SystemVars_GetMysteryStarterSpecies(SaveData_GetVarsFlags(ctx->fieldSystem->saveData));"),
+    "Route 201 award reads VAR_PLAYER_STARTER again": (R201, "    GetMysteryStarterSpecies VAR_0x8000\n    GivePokemon", "    GetPlayerStarterSpecies VAR_0x8000\n    GivePokemon"),
+    "Sandgem lab gift skip reads the canonical branch": ("res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s", "GetMysteryStarterSpecies VAR_0x8000", "GetPlayerStarterSpecies VAR_0x8000"),
     "manifest/source drift (manifest weight)": ("MANIFEST", None, None),
 }
 

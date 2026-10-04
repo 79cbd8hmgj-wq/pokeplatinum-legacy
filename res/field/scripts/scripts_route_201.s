@@ -282,7 +282,7 @@ Route201_Briefcase:
     ReturnToField
     FadeScreenIn
     WaitFadeScreen
-    GetPlayerStarterSpecies VAR_0x8000
+    GetMysteryStarterSpecies VAR_0x8000
     GivePokemon VAR_0x8000, 5, ITEM_NONE, VAR_RESULT
     ApplyMovement LOCALID_PROF_ROWAN, Route201_Movement_ProfRowanFacePlayerSouth
     ApplyMovement LOCALID_RIVAL, Route201_Movement_RivalFaceWest
@@ -357,7 +357,7 @@ Route201_StartRivalBattle:
     Message Route201_Text_IChallengeYouToABattle
     CloseMessage
     SetMovementType LOCALID_RIVAL, MOVEMENT_TYPE_LOOK_SOUTH
-    GetPlayerStarterBranch VAR_RESULT
+    GetPlayerStarterSpecies VAR_RESULT
     GoToIfEq VAR_RESULT, SPECIES_TURTWIG, Route201_StartFirstBattleTurtwig
     GoToIfEq VAR_RESULT, SPECIES_CHIMCHAR, Route201_StartFirstBattleChimchar
     GoTo Route201_StartFirstBattlePiplup

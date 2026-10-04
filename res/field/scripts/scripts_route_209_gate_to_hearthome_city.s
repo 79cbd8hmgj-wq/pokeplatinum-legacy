@@ -26,7 +26,7 @@ Route209GateToHearthomeCity_CoordEvent_Rival:
     BufferPlayerName 1
     Message Route209GateToHearthomeCity_Text_LetsGetTheShowStarted
     CloseMessage
-    GetPlayerStarterBranch VAR_RESULT
+    GetPlayerStarterSpecies VAR_RESULT
     GoToIfEq VAR_RESULT, SPECIES_TURTWIG, Route209GateToHearthomeCity_StartRivalBattleTurtwig
     GoToIfEq VAR_RESULT, SPECIES_CHIMCHAR, Route209GateToHearthomeCity_StartRivalBattleChimchar
     GoTo Route209GateToHearthomeCity_StartRivalBattlePiplup

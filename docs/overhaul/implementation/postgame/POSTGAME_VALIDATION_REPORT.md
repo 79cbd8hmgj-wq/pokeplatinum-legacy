@@ -127,20 +127,3 @@ Static validation only (source, data, manifests). In-game runtime QA has NOT bee
 | print-bonus BP goes through the un-multiplied field credit (no 4x) | PASS |  |
 | no Frontier/BP/Print requirement in availability or special-acquisition manifests (Pokedex completion) | PASS |  |
 | diff contains no unrelated subsystem changes | PASS |  |
-
-<!-- cross-system:begin -->
-## Cross-system validators
-
-| System | Command | Result | Summary |
-|---|---|---|---|
-| D6 postgame mutation tests | `tools/overhaul/postgame/test_validate_postgame.py` | PASS | baseline failures: 0 |
-| trainer | `tools/overhaul/trainers/validate_trainers.py` | PASS | trainer validation: 0 errors, 16 warnings, 13 notes |
-| economy | `tools/overhaul/economy/validate_economy.py` | PASS | economy validation: 0 failure(s) |
-| C2 mechanics | `tools/overhaul/c2/validate_c2.py` | PASS | C2 validation: OK (0 problems) |
-| C1 existing-move rebalance | `tools/overhaul/moves/validate_c1.py` | PASS | C1 validation: OK (0 problems, 82 edits) |
-| availability | `tools/overhaul/availability/validate_availability.py` | PASS | RESULT: 0 failure(s), 0 warning(s) |
-| evolution | `tools/overhaul/evolution/validate_evolutions.py` | PASS | PASS |
-| breeding | `tools/overhaul/validate_breeding.py` | PASS | breeding validator: 107 pass, 0 fail, 0 pending -> docs/overhaul/implementation/breeding/BREEDING_VALIDATION_R |
-| Poké Ball | `tools/overhaul/pokeballs/validate_pokeballs.py` | PASS | pokeball validation: 0 failure(s) |
-| D5 Legendary/Mythical availability | `tools/overhaul/validate_legendary_availability.py` | PASS | 51/51 checks pass; failures: 0 |
-<!-- cross-system:end -->
