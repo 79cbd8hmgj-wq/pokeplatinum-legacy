@@ -211,6 +211,13 @@ BOOL AreaDataManager_IsOutdoorsLighting(const AreaDataManager *areaDataManager)
     case AREA_LIGHT_SET_DEEP_FOREST:
     case AREA_LIGHT_SET_SNOW:
     case AREA_LIGHT_SET_SPEAR_PILLAR:
+    case AREA_LIGHT_SET_ETERNA_FOREST_GRADE:
+    case AREA_LIGHT_SET_SNOW_REGION_GRADE:
+    case AREA_LIGHT_SET_SPEAR_PILLAR_GRADE:
+    case AREA_LIGHT_SET_SINNOH_LAKES:
+    case AREA_LIGHT_SET_COAST_RESORT:
+    case AREA_LIGHT_SET_COAST_HARBOR:
+    case AREA_LIGHT_SET_LAKESHORE:
         return TRUE;
     default:
         return FALSE;
