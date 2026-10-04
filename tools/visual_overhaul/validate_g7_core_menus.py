@@ -54,7 +54,10 @@ def entries(raw):
 
 
 def snapshot():
-    return {p: hashlib.sha256((G / p).read_bytes()).hexdigest() for p in PNGS + list(PALS)}
+    # .pal files are checked out with CRLF (.gitattributes) but generators write LF;
+    # hash EOL-normalized content so idempotence is judged on palette data only.
+    return {p: hashlib.sha256((G / p).read_bytes().replace(b"\r\n", b"\n")).hexdigest()
+            for p in PNGS + list(PALS)}
 
 
 def main():
