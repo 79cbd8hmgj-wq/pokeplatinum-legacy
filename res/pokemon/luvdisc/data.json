@@ -1,11 +1,11 @@
 {
     "base_stats": {
-        "hp": 43,
-        "attack": 30,
-        "defense": 55,
-        "speed": 97,
-        "special_attack": 40,
-        "special_defense": 65
+        "hp": 60,
+        "attack": 40,
+        "defense": 65,
+        "speed": 110,
+        "special_attack": 80,
+        "special_defense": 75
     },
     "types": [
         "TYPE_WATER",
@@ -35,7 +35,7 @@
     ],
     "abilities": [
         "ABILITY_SWIFT_SWIM",
-        "ABILITY_NONE"
+        "ABILITY_HYDRATION"
     ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_PINK",

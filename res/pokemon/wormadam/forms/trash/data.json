@@ -1,11 +1,11 @@
 {
     "base_stats": {
-        "hp": 60,
-        "attack": 69,
-        "defense": 95,
-        "speed": 36,
-        "special_attack": 69,
-        "special_defense": 95
+        "hp": 70,
+        "attack": 75,
+        "defense": 105,
+        "speed": 30,
+        "special_attack": 75,
+        "special_defense": 105
     },
     "types": [
         "TYPE_BUG",
@@ -35,7 +35,7 @@
     ],
     "abilities": [
         "ABILITY_ANTICIPATION",
-        "ABILITY_NONE"
+        "ABILITY_STURDY"
     ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_GRAY",

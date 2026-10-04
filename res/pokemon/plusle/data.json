@@ -2,9 +2,9 @@
     "base_stats": {
         "hp": 60,
         "attack": 50,
-        "defense": 40,
-        "speed": 95,
-        "special_attack": 85,
+        "defense": 45,
+        "speed": 105,
+        "special_attack": 105,
         "special_defense": 75
     },
     "types": [
@@ -35,7 +35,7 @@
     ],
     "abilities": [
         "ABILITY_PLUS",
-        "ABILITY_NONE"
+        "ABILITY_STATIC"
     ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_YELLOW",

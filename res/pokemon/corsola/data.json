@@ -1,11 +1,11 @@
 {
     "base_stats": {
-        "hp": 55,
+        "hp": 70,
         "attack": 55,
-        "defense": 85,
-        "speed": 35,
-        "special_attack": 65,
-        "special_defense": 85
+        "defense": 100,
+        "speed": 40,
+        "special_attack": 75,
+        "special_defense": 110
     },
     "types": [
         "TYPE_WATER",
@@ -34,7 +34,7 @@
         "EGG_GROUP_WATER_3"
     ],
     "abilities": [
-        "ABILITY_HUSTLE",
+        "ABILITY_SOLID_ROCK",
         "ABILITY_NATURAL_CURE"
     ],
     "safari_flee_rate": 0,
