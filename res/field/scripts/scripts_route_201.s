@@ -282,7 +282,107 @@ Route201_Briefcase:
     ReturnToField
     FadeScreenIn
     WaitFadeScreen
-    GetMysteryStarterSpecies VAR_0x8000
+
+    // D8 Mystery Starter hardening:
+    // Do not run custom code on the chooser/application-exit boundary.
+    // Once the field is fully restored, use Platinum's native script RNG
+    // and normal script variables to perform exactly one 0..99 draw.
+    GetRandom VAR_0x8000, 100
+    GoToIfLt VAR_0x8000, 3, Route201_MysteryStarter_Bulbasaur
+    GoToIfLt VAR_0x8000, 6, Route201_MysteryStarter_Charmander
+    GoToIfLt VAR_0x8000, 9, Route201_MysteryStarter_Squirtle
+    GoToIfLt VAR_0x8000, 10, Route201_MysteryStarter_Pikachu
+    GoToIfLt VAR_0x8000, 20, Route201_MysteryStarter_Chikorita
+    GoToIfLt VAR_0x8000, 30, Route201_MysteryStarter_Cyndaquil
+    GoToIfLt VAR_0x8000, 40, Route201_MysteryStarter_Totodile
+    GoToIfLt VAR_0x8000, 50, Route201_MysteryStarter_Treecko
+    GoToIfLt VAR_0x8000, 60, Route201_MysteryStarter_Torchic
+    GoToIfLt VAR_0x8000, 70, Route201_MysteryStarter_Mudkip
+    GoToIfLt VAR_0x8000, 80, Route201_MysteryStarter_Turtwig
+    GoToIfLt VAR_0x8000, 90, Route201_MysteryStarter_Chimchar
+    GoTo Route201_MysteryStarter_Piplup
+    End
+
+Route201_MysteryStarter_Bulbasaur:
+    SetVar VAR_MYSTERY_STARTER_SPECIES, SPECIES_BULBASAUR
+    SetVar VAR_PLAYER_STARTER, SPECIES_TURTWIG
+    GoTo Route201_MysteryStarter_Award
+    End
+
+Route201_MysteryStarter_Charmander:
+    SetVar VAR_MYSTERY_STARTER_SPECIES, SPECIES_CHARMANDER
+    SetVar VAR_PLAYER_STARTER, SPECIES_CHIMCHAR
+    GoTo Route201_MysteryStarter_Award
+    End
+
+Route201_MysteryStarter_Squirtle:
+    SetVar VAR_MYSTERY_STARTER_SPECIES, SPECIES_SQUIRTLE
+    SetVar VAR_PLAYER_STARTER, SPECIES_PIPLUP
+    GoTo Route201_MysteryStarter_Award
+    End
+
+Route201_MysteryStarter_Pikachu:
+    SetVar VAR_MYSTERY_STARTER_SPECIES, SPECIES_PIKACHU
+    SetVar VAR_PLAYER_STARTER, SPECIES_PIPLUP
+    GoTo Route201_MysteryStarter_Award
+    End
+
+Route201_MysteryStarter_Chikorita:
+    SetVar VAR_MYSTERY_STARTER_SPECIES, SPECIES_CHIKORITA
+    SetVar VAR_PLAYER_STARTER, SPECIES_TURTWIG
+    GoTo Route201_MysteryStarter_Award
+    End
+
+Route201_MysteryStarter_Cyndaquil:
+    SetVar VAR_MYSTERY_STARTER_SPECIES, SPECIES_CYNDAQUIL
+    SetVar VAR_PLAYER_STARTER, SPECIES_CHIMCHAR
+    GoTo Route201_MysteryStarter_Award
+    End
+
+Route201_MysteryStarter_Totodile:
+    SetVar VAR_MYSTERY_STARTER_SPECIES, SPECIES_TOTODILE
+    SetVar VAR_PLAYER_STARTER, SPECIES_PIPLUP
+    GoTo Route201_MysteryStarter_Award
+    End
+
+Route201_MysteryStarter_Treecko:
+    SetVar VAR_MYSTERY_STARTER_SPECIES, SPECIES_TREECKO
+    SetVar VAR_PLAYER_STARTER, SPECIES_TURTWIG
+    GoTo Route201_MysteryStarter_Award
+    End
+
+Route201_MysteryStarter_Torchic:
+    SetVar VAR_MYSTERY_STARTER_SPECIES, SPECIES_TORCHIC
+    SetVar VAR_PLAYER_STARTER, SPECIES_CHIMCHAR
+    GoTo Route201_MysteryStarter_Award
+    End
+
+Route201_MysteryStarter_Mudkip:
+    SetVar VAR_MYSTERY_STARTER_SPECIES, SPECIES_MUDKIP
+    SetVar VAR_PLAYER_STARTER, SPECIES_PIPLUP
+    GoTo Route201_MysteryStarter_Award
+    End
+
+Route201_MysteryStarter_Turtwig:
+    SetVar VAR_MYSTERY_STARTER_SPECIES, SPECIES_TURTWIG
+    SetVar VAR_PLAYER_STARTER, SPECIES_TURTWIG
+    GoTo Route201_MysteryStarter_Award
+    End
+
+Route201_MysteryStarter_Chimchar:
+    SetVar VAR_MYSTERY_STARTER_SPECIES, SPECIES_CHIMCHAR
+    SetVar VAR_PLAYER_STARTER, SPECIES_CHIMCHAR
+    GoTo Route201_MysteryStarter_Award
+    End
+
+Route201_MysteryStarter_Piplup:
+    SetVar VAR_MYSTERY_STARTER_SPECIES, SPECIES_PIPLUP
+    SetVar VAR_PLAYER_STARTER, SPECIES_PIPLUP
+    GoTo Route201_MysteryStarter_Award
+    End
+
+Route201_MysteryStarter_Award:
+    SetVarFromVar VAR_0x8000, VAR_MYSTERY_STARTER_SPECIES
     GivePokemon VAR_0x8000, 5, ITEM_NONE, VAR_RESULT
     ApplyMovement LOCALID_PROF_ROWAN, Route201_Movement_ProfRowanFacePlayerSouth
     ApplyMovement LOCALID_RIVAL, Route201_Movement_RivalFaceWest
