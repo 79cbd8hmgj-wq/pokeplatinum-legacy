@@ -282,7 +282,7 @@ static void AdvancePokeballChoiceGraphics(ChooseStarterApp *app, enum HeapID hea
 static void UpdateSelectedPokeballAnimation(ChooseStarterApp *app);
 static void UpdateCursorPosition(ChooseStarterApp *app);
 static void AdvancePokeballConfirmGraphics(ChooseStarterApp *app, enum HeapID heapID);
-static void MakeMysteryEggSprite(PokemonSprite **sprite, ChooseStarterApp *app);
+static void MakePokemonSprite(PokemonSprite **sprite, ChooseStarterApp *app, int species);
 static void Delete3DGraphic(ChooseStarter3DGraphics *starter3DGraphics, NNSFndAllocator *allocator);
 static void Draw3DGraphics(ChooseStarter3DGraphics *starter3DGraphics);
 static void Set3DGraphicsIsVisible(ChooseStarter3DGraphics *starter3DGraphics, BOOL isVisible);
@@ -688,19 +688,21 @@ static void MakePokemonSprites(ChooseStarterApp *app, enum HeapID heapID)
     PokemonSpriteManager_SetCharBaseAddrAndSize(app->spriteManager, NNS_GfdGetTexKeyAddr(texture), NNS_GfdGetTexKeySize(texture));
     PokemonSpriteManager_SetPlttBaseAddrAndSize(app->spriteManager, NNS_GfdGetPlttKeyAddr(palette), NNS_GfdGetPlttKeySize(palette));
 
-    for (int i = 0; i < NUM_STARTER_OPTIONS; i++) {
-        MakeMysteryEggSprite(&app->sprites[i], app);
-    }
+    MakePokemonSprite(&app->sprites[0], app, STARTER_OPTION_0);
+    MakePokemonSprite(&app->sprites[1], app, STARTER_OPTION_1);
+    MakePokemonSprite(&app->sprites[2], app, STARTER_OPTION_2);
 
     for (int i = 0; i < NUM_STARTER_OPTIONS; i++) {
         PokemonSprite_SetAttribute(app->sprites[i], MON_SPRITE_HIDE, TRUE);
     }
 }
 
-static void MakeMysteryEggSprite(PokemonSprite **sprite, ChooseStarterApp *app)
+static void MakePokemonSprite(PokemonSprite **sprite, ChooseStarterApp *app, int species)
 {
+    int gender = Pokemon_GetGenderOf(species, 0);
+
     PokemonSpriteTemplate spriteTemplate;
-    BuildPokemonSpriteTemplate(&spriteTemplate, SPECIES_EGG, 0, FACE_FRONT, FALSE, NULL, NULL);
+    BuildPokemonSpriteTemplate(&spriteTemplate, species, gender, FACE_FRONT, FALSE, NULL, NULL);
 
     *sprite = PokemonSpriteManager_CreateSprite(app->spriteManager,
         &spriteTemplate,
@@ -1228,11 +1230,13 @@ static void AdvancePokeballConfirmGraphics(ChooseStarterApp *app, enum HeapID he
         PokemonSprite_SetAttribute(app->sprites[app->cursorPosition], MON_SPRITE_HIDE, FALSE);
 
         if (HasAppPreviewWindowMovementFinished(app)) {
+            Sound_PlayPokemonCry(GetSelectedSpecies(app->cursorPosition), 0);
+
             app->chooseStarterStep++;
         }
         break;
     case CHOOSE_STARTER_STEP_UPDATE_CURSOR_POSITION:
-        SetMessageWindowText(app->messageWindow, heapID, 360, 1, TEXT_COLOR(1, 2, 15), TEXT_SPEED_NO_TRANSFER);
+        SetMessageWindowText(app->messageWindow, heapID, 360, 1 + app->cursorPosition, TEXT_COLOR(1, 2, 15), TEXT_SPEED_NO_TRANSFER);
         app->confirmationMenu = Menu_MakeYesNoChoice(app->bgConfig, &app->confirmationMenuWindowTemplate, 512 + (18 + 12) + 128, 1, heapID);
         app->disableCursorMovement = FALSE;
         app->chooseStarterStep++;
