@@ -168,3 +168,137 @@ Continue Pass B reconciliation generation by generation:
 5. auto-preserved/restraint population spot-check and count reconciliation
 
 Any missing locked changes should be repaired in dedicated recovery PRs rather than folded silently into the audit document.
+
+
+---
+
+## 1D. Pass B Light Enrichment — Generations II–IV — COMPLETE
+
+The surviving project history marks the Gen II, Gen III, and Gen IV Light Enrichment blocks locked.
+
+### Gen II
+Explicit locked changes:
+- Sudowoodo — Solid Rock / Rock Head
+- Forretress — Sturdy / Shell Armor
+- Mantine — HP 75
+
+**0 / 3 were present on current main.**
+
+### Gen III
+Explicit locked changes:
+- Swellow — Guts / Scrappy
+- Pelipper — Keen Eye / Rain Dish
+- Wailord — Water Veil / Pressure
+- Armaldo — Battle Armor / Swift Swim
+- Huntail — 55/114/105/84/75/52
+
+**0 / 5 were present on current main.**
+
+### Gen IV
+Explicit locked changes:
+- Vespiquen — Pressure / Swarm
+- Skuntank — White Smoke / Aftermath
+
+**0 / 2 were present on current main.**
+
+### Light Enrichment total
+
+Across Generations I–IV, **17 / 17 explicit locked Light Enrichment changes were absent from main** before recovery.
+
+A dedicated recovery PR restores all 17 and validates exact agreement with the approved values.
+
+### Classification
+
+**MISSING IMPLEMENTATION — SYSTEMATIC**
+
+This is no longer an isolated omission. The entire explicit Light Enrichment change set failed to propagate into the canonical source state.
+
+---
+
+## 1E. Pass B Role Repair — Gen II — COMPLETE
+
+The approved Gen II role-repair block contains 14 species.
+
+Current-main reconciliation found:
+- Xatu, Qwilfish, Octillery — correctly unchanged restraint cases
+- Ledian — correct
+- Delibird — correct
+- **9 / 14 species missing locked Pass B changes**
+
+Missing and recovered:
+- Furret
+- Noctowl
+- Ariados
+- Sunflora
+- Girafarig
+- Dunsparce
+- Magcargo
+- Corsola
+- Stantler
+
+After recovery, the complete Gen II role-repair block matches **14 / 14, 0 mismatches**.
+
+### Classification
+
+**MISSING IMPLEMENTATION — CONFIRMED AND PATCHED**
+
+---
+
+## 1F. Pass B Role Repair — Gen III — COMPLETE
+
+The Gen III role-repair design consists of:
+- 10-species priority block
+- 18-species remainder block
+
+### Priority block
+
+**All 10 / 10 explicit role-repair changes were absent from main:**
+- Delcatty
+- Plusle
+- Minun
+- Volbeat
+- Illumise
+- Castform
+- Kecleon
+- Tropius
+- Chimecho
+- Luvdisc
+
+### Remaining block
+
+Of the 11 species with explicit stat changes:
+- 7 were already correct
+- **4 were missing:** Spinda, Lunatone, Solrock, Whiscash
+
+The 7 explicit restraint species in the remainder correctly remained unchanged.
+
+### Result
+
+**14 Gen III role-repair records required recovery.**
+
+The recovery branch has been checked against the locked values for all 14 restored records: **14 / 14 match, 0 mismatches**.
+
+### Classification
+
+**MISSING IMPLEMENTATION — CONFIRMED AND PATCHED**
+
+---
+
+## Current Pass B integrity picture
+
+Confirmed missing approved species-core changes so far:
+- Light Enrichment: **17**
+- Gen II Role Repair: **9**
+- Gen III Role Repair: **14**
+
+**Total confirmed missing Pass B source changes recovered so far: 40.**
+
+This establishes a systemic propagation failure between approved Pass B design and the later C3/current source snapshot.
+
+---
+
+## Next active block
+
+**Gen IV Role Repair**, followed by the Gen I Role Repair reconciliation.
+
+The audit remains source-history-first: current validators and C3 provenance are evidence of implementation state, not proof that all earlier approved Pass B decisions were propagated.
