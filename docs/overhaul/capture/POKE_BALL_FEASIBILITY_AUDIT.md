@@ -25,4 +25,17 @@ The locked spec is the Platinum adaptation of the Emerald plan and is followed. 
 
 ## Availability / prices
 
-Prices already match the locked table; none changed. Shop changes: Great Ball gate 3→2 (after 1st badge), Ultra Ball gate 4→3 (3–4 badges), Dive Ball added to Pastoria and the League mart. All other specialist gates already match spec §11.
+Prices already match the locked table; none changed.
+
+The corrected availability pass now intentionally moves the capture-strategy layer much earlier:
+- Great Ball and Heal Ball are in the opening common-Mart tier.
+- Quick Ball begins in Jubilife.
+- Timer Ball begins in Oreburgh.
+- Nest Ball (Level Ball role) and Dive Ball (Lure/water-environment role) are available by Eterna.
+- Repeat Ball begins by Solaceon.
+- Dusk Ball remains later than the first specialist wave.
+- Later marts retain overlapping Quick/Timer/Repeat/Dive access rather than making early specialist tools disappear.
+- Ultra Ball remains on common gate 3 (the 3–4 badge tier).
+- League stock remains the broad specialist catch-all.
+
+No capture-formula change is introduced by this availability correction.
