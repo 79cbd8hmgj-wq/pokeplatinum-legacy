@@ -1,0 +1,62 @@
+name: d8-mystery-starter-validation
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/choose_starter/choose_starter_app.c'
+      - 'src/mystery_egg_starter.c'
+      - 'src/scrcmd.c'
+      - 'src/scrcmd_strings.c'
+      - 'src/system_vars.c'
+      - 'src/overlay005/daycare.c'
+      - 'include/mystery_egg_starter.h'
+      - 'include/struct_defs/choose_starter_data.h'
+      - 'include/constants/daycare.h'
+      - 'generated/vars_flags.txt'
+      - 'res/field/scripts/scripts_route_201.s'
+      - 'res/field/scripts/scripts_route_203.s'
+      - 'res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s'
+      - 'res/text/unk_0360.json'
+      - 'tools/overhaul/validate_mystery_starter.py'
+      - 'tools/overhaul/opening/test_validate_mystery_starter.py'
+      - 'docs/overhaul/implementation/opening/mystery_egg_starter_manifest.json'
+      - '.github/workflows/d8-mystery-starter-validation.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'src/choose_starter/choose_starter_app.c'
+      - 'src/mystery_egg_starter.c'
+      - 'src/scrcmd.c'
+      - 'src/scrcmd_strings.c'
+      - 'src/system_vars.c'
+      - 'src/overlay005/daycare.c'
+      - 'include/mystery_egg_starter.h'
+      - 'include/struct_defs/choose_starter_data.h'
+      - 'include/constants/daycare.h'
+      - 'generated/vars_flags.txt'
+      - 'res/field/scripts/scripts_route_201.s'
+      - 'res/field/scripts/scripts_route_203.s'
+      - 'res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s'
+      - 'res/text/unk_0360.json'
+      - 'tools/overhaul/validate_mystery_starter.py'
+      - 'tools/overhaul/opening/test_validate_mystery_starter.py'
+      - 'docs/overhaul/implementation/opening/mystery_egg_starter_manifest.json'
+      - '.github/workflows/d8-mystery-starter-validation.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Static and host-compiled D8 validation
+        run: python3 tools/overhaul/validate_mystery_starter.py --no-report
+
+      - name: Deterministic D8 mutation suite
+        run: python3 tools/overhaul/opening/test_validate_mystery_starter.py
