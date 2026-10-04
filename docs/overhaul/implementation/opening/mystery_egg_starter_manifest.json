@@ -9,22 +9,29 @@
   "FieldSystem_HatchEgg_hatchLevel": 0,
   "untouched_files": [
    "include/constants/daycare.h",
+   "include/egg_hatch.h",
+   "include/overlay005/daycare.h",
+   "include/struct_defs/daycare.h",
+   "include/unk_0203D1B8.h",
    "src/daycare_save.c",
+   "src/egg_hatch.c",
+   "src/overlay005/daycare.c",
+   "src/unk_0203D1B8.c",
    "docs/overhaul/implementation/breeding/"
   ]
  },
  "output": {
-  "generation": "Pokemon_InitWith(level 5, INIT_IVS_RANDOM, random personality); no guaranteed IV/nature/gender/shiny/item",
+  "generation": "vanilla Pokemon_GiveMonFromScript via GivePokemon; normal generated Pokémon, no custom egg/hatch constructor",
   "level": 5,
-  "level_constant": "MYSTERY_STARTER_LEVEL",
+  "level_constant": "Route 201 GivePokemon literal 5",
   "owner": "player",
-  "pikachu_hatches_as": "SPECIES_PIKACHU"
+  "pikachu_output_species": "SPECIES_PIKACHU"
  },
  "persistence": {
   "actual_species_store": "VAR_MYSTERY_STARTER_SPECIES (existing u16 var, formerly VAR_UNUSED_0x4031; actual 13-way species)",
   "canonical_store": "VAR_PLAYER_STARTER (vanilla invariant: only Turtwig / Chimchar / Piplup = story/Rival branch)",
   "save_format_change": false,
-  "written": "both immediately in ScrCmd_SaveChosenStarter from the single draw"
+  "written": "both by ordinary SetVar commands in Route 201 from the single native script RNG result"
  },
  "pool": [
   {
@@ -160,13 +167,10 @@
  ],
  "pool_size": 13,
  "reveal": {
-  "hatch_code_retained_unused": [
-   "GiveMysteryStarterEgg",
-   "HatchMysteryStarterEgg"
-  ],
-  "hatch_presentation": "DEFERRED_DISABLED",
-  "mechanism": "GivePokemon (vanilla Route 201 award path, Lv5); species read via GetMysteryStarterSpecies",
-  "timing": "after ReturnToField/FadeScreenIn, before Rowan/counterpart departure and before Barry's first battle",
+  "hatch_code_retained_unused": [],
+  "hatch_presentation": "REMOVED_FROM_RUNTIME; direct Lv5 award only",
+  "mechanism": "GivePokemon (vanilla Route 201 award path, Lv5); actual species copied from VAR_MYSTERY_STARTER_SPECIES with SetVarFromVar",
+  "timing": "after field return and the single native script RNG draw, before Rowan/counterpart departure and before Barry's first battle",
   "tv_segment": false
  },
  "rival_branch_count": 3,
@@ -178,7 +182,7 @@
  "rng": {
   "anti_save_scumming": false,
   "draws": 1,
-  "function": "MysteryStarter_Draw",
+  "function": "GetRandom VAR_0x8000, 100 (native field script command)",
   "position_is_input": false,
   "range": [
    0,
@@ -187,8 +191,8 @@
   "reroll_on_battle_start": false,
   "reroll_on_field_return": false,
   "reroll_on_hatch": false,
-  "source": "LCRNG_Next() % 100",
-  "timing": "inside ScrCmd_SaveChosenStarter, after the chooser app exits with a confirmed egg"
+  "source": "vanilla ScrCmd_GetRandom -> LCRNG_Next() % upperBound",
+  "timing": "after SaveChosenStarter, ReturnToField, FadeScreenIn and WaitFadeScreen; field is fully restored before the draw"
  },
  "schema": "pokeplatinum-overhaul/mystery-egg-starter/v1",
  "source_guards": {
@@ -198,11 +202,11 @@
   },
   "include/mystery_egg_starter.h": {
    "before_blob": null,
-   "target": "NEW: MYSTERY_STARTER_* constants + prototypes"
+   "target": "validator/reference-only locked pool constants + pure mapping helpers; module is not linked into ROM"
   },
   "include/struct_defs/choose_starter_data.h": {
    "before_blob": "4c92688379f2d8cfaa39dcd39ad4d7b78156fd69",
-   "target": "species output removed (ChooseStarterData holds options only)"
+   "target": "vanilla ChooseStarterData layout/output contract retained"
   },
   "res/field/scripts/scripts_canalave_city.s": {
    "before_blob": "f5839853e918e98f2ee5ddb13bb9c46aba0a5125",
@@ -234,7 +238,7 @@
   },
   "res/field/scripts/scripts_route_201.s": {
    "before_blob": "64a320fb05bf05e6a2e1585286069e81e51d1081",
-   "target": "Route201_Briefcase vanilla award flow; award reads GetMysteryStarterSpecies"
+   "target": "Egg chooser retained; native script RNG + SetVar persist actual/canonical species only after full field return"
   },
   "res/field/scripts/scripts_route_203.s": {
    "before_blob": "3447e9f71d60f1df07fb7a08ba842d49956ac1d5",
@@ -246,7 +250,7 @@
   },
   "res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s": {
    "before_blob": "d720e40086461915fef73ea4dc96b2900b3311d8",
-   "target": "starter-gift skip reads GetMysteryStarterSpecies"
+   "target": "starter-gift skip reads VAR_MYSTERY_STARTER_SPECIES directly with SetVarFromVar"
   },
   "res/field/scripts/scripts_spear_pillar.s": {
    "before_blob": "12bca1e70d288066af0b413b267e1eea24342b9f",
@@ -282,19 +286,19 @@
   },
   "src/egg_hatch.c": {
    "before_blob": "ffc8c2ab57f2c7bd6ed02bd88bd868301b8cbdd4",
-   "target": "hatchLevel > 1 selects Egg_CreateHatchedMonAtLevel"
+   "target": "unchanged from pre-D8; no Mystery starter hatch override"
   },
   "src/mystery_egg_starter.c": {
    "before_blob": null,
-   "target": "NEW: weighted table, single draw, Rival-branch mapping"
+   "target": "validator/reference-only weighted table and branch mapping; not linked into ROM"
   },
   "src/overlay005/daycare.c": {
    "before_blob": "f687c17376d6b3020e2b6a00c9d811a5430d7f50",
-   "target": "level-parameterised internals; ordinary entry points keep level 1"
+   "target": "unchanged from pre-D8; ordinary breeding untouched"
   },
   "src/scrcmd.c": {
    "before_blob": "ac5180b574353f8f9e755077b893db4b4c9b29b6",
-   "target": "SaveChosenStarter draws once; actual species -> VAR_MYSTERY_STARTER_SPECIES, branch -> VAR_PLAYER_STARTER; GetMysteryStarterSpecies; GiveMysteryStarterEgg / HatchMysteryStarterEgg retained but unused"
+   "target": "SaveChosenStarter restored to vanilla boundary; D8 RNG/persistence removed from scrcmd.c active path; custom D8 script commands removed"
   },
   "src/scrcmd_strings.c": {
    "before_blob": "d1cc9829c4a306dba2d067d3a919b12ff5edbadb",
@@ -302,17 +306,17 @@
   },
   "src/system_vars.c": {
    "before_blob": "e6ea14aff470b1768487e623aa27d7468c0f9a80",
-   "target": "SystemVars_Get/SetMysteryStarterSpecies; Rival/counterpart starter vanilla (canonical VAR_PLAYER_STARTER)"
+   "target": "SystemVars_GetMysteryStarterSpecies only; Rival/counterpart starter vanilla (canonical VAR_PLAYER_STARTER)"
   },
   "src/unk_0203D1B8.c": {
    "before_blob": "eba7d7bdc853517ca25c8f4ea25591ec769d8a52",
-   "target": "FieldSystem_HatchMysteryStarterEgg (no TV segment); FieldSystem_HatchEgg hatchLevel = 0"
+   "target": "unchanged from pre-D8; no Mystery starter hatch field-system path"
   }
  },
  "starting_sha": "6fc1eedfec637041733b5e5d9626a49c7524daa9",
  "validation": {
   "runtime": "NOT RUN",
-  "state": "IMPLEMENTED_PENDING_CI",
+  "state": "HARDENED_SCRIPT_BACKEND_PENDING_CI",
   "validator": "tools/overhaul/validate_mystery_starter.py",
   "verified": false
  },

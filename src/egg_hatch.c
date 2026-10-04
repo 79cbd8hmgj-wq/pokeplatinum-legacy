@@ -178,11 +178,7 @@ static BOOL FieldTask_HatchEgg(FieldTask *fieldTask)
 
     switch (app->state) {
     case 0:
-        if (app->args.hatchLevel > 1) {
-            Egg_CreateHatchedMonAtLevel(app->args.mon, HEAP_ID_FIELD2, app->args.hatchLevel);
-        } else {
-            Egg_CreateHatchedMon(app->args.mon, HEAP_ID_FIELD2);
-        }
+        Egg_CreateHatchedMon(app->args.mon, HEAP_ID_FIELD2);
         FieldTransition_FinishMap(fieldTask);
         app->state++;
         break;
