@@ -1,6 +1,6 @@
 {
- "total": 41,
- "detected": 41,
+ "total": 52,
+ "detected": 52,
  "baseline_failures": 0,
  "cases": [
   {
@@ -69,24 +69,24 @@
    "failing": 2
   },
   {
-   "name": "non-Sinnoh fallthrough: Route 203 reads actual species",
+   "name": "Route 203 Rival branch reads the actual Mystery species",
    "detected": true,
    "failing": 2
   },
   {
-   "name": "non-Sinnoh fallthrough: Rival starter keyed on actual species",
+   "name": "Rival starter keyed on the Mystery species",
    "detected": true,
    "failing": 1
   },
   {
    "name": "Rival branch compared against a non-Sinnoh species",
    "detected": true,
-   "failing": 1
+   "failing": 2
   },
   {
    "name": "thirteen-way Rival duplication (extra Rival label)",
    "detected": true,
-   "failing": 1
+   "failing": 2
   },
   {
    "name": "output level 5 -> 1",
@@ -136,17 +136,17 @@
   {
    "name": "Route 201 calls GiveMysteryStarterEgg again",
    "detected": true,
-   "failing": 2
+   "failing": 3
   },
   {
    "name": "Route 201 calls HatchMysteryStarterEgg again",
    "detected": true,
-   "failing": 2
+   "failing": 3
   },
   {
    "name": "Route 201 award GivePokemon removed",
    "detected": true,
-   "failing": 3
+   "failing": 4
   },
   {
    "name": "Route 201 award level changed",
@@ -156,7 +156,7 @@
   {
    "name": "Route 201 award before FadeScreenIn",
    "detected": true,
-   "failing": 1
+   "failing": 2
   },
   {
    "name": "chooser text differs per egg",
@@ -166,7 +166,7 @@
   {
    "name": "missing persistence after roll",
    "detected": true,
-   "failing": 1
+   "failing": 2
   },
   {
    "name": "extra species in the pool",
@@ -199,9 +199,64 @@
    "failing": 2
   },
   {
-   "name": "Rival starter ignores branch",
+   "name": "Counterpart starter keyed on the Mystery species",
    "detected": true,
    "failing": 1
+  },
+  {
+   "name": "VAR_PLAYER_STARTER receives the actual species",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "actual species never stored",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "branch computed with a second helper (not the single draw)",
+   "detected": true,
+   "failing": 2
+  },
+  {
+   "name": "Pikachu branch store -> Chimchar via mapping",
+   "detected": true,
+   "failing": 3
+  },
+  {
+   "name": "branch-remap layer reintroduced (SystemVars_GetPlayerStarterBranch)",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "renamed var reverted to VAR_UNUSED_0x4031",
+   "detected": true,
+   "failing": 3
+  },
+  {
+   "name": "extra var added to the table (save-size change)",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "player name buffer uses the canonical branch",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "rival name buffer uses the Mystery species",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "Route 201 award reads VAR_PLAYER_STARTER again",
+   "detected": true,
+   "failing": 4
+  },
+  {
+   "name": "Sandgem lab gift skip reads the canonical branch",
+   "detected": true,
+   "failing": 2
   },
   {
    "name": "manifest/source drift (manifest weight)",

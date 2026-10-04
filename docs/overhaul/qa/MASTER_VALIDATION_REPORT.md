@@ -29,7 +29,7 @@ The master run fails if any child fails. Phase numbers follow D7 Phase 5 order (
 | 12 | Completion graphs (493 / evolution / events / gates), artifacts current | `python3 tools/overhaul/qa/build_qa_graphs.py --check` | **PASS** | QA graphs: 493/493 reachable, 212 nonlegendary families, 246 evolution edges, 0 event cycles, 0 failure(s) |
 | 12 | Runtime matrix integrity (no PASS without evidence) | `python3 tools/overhaul/qa/validate_runtime_matrix.py` | **PASS** | runtime evidence: {'PASS': 0, 'FAIL': 0, 'NOT RUN': 240} -> RUNTIME QA PENDING (not VERIFIED) |
 | 12 | Structural smoke (host-side, not runtime) | `python3 tools/overhaul/qa/smoke_structural.py` | **PASS** | structural smoke (host-side, not runtime): 70 pass, 0 fail |
-| 14 | Mystery Egg starter (D8) | `python3 tools/overhaul/validate_mystery_starter.py --no-report` | **PASS** | mystery starter validation: 104 pass, 0 fail |
+| 14 | Mystery Egg starter (D8) | `python3 tools/overhaul/validate_mystery_starter.py --no-report` | **PASS** | mystery starter validation: 117 pass, 0 fail |
 | 13 | c1 tests | `(cd tools/overhaul/moves && python3 test_validate_c1.py)` | **PASS** | rejecting mutations: 24/24; forward-compatible cases: 4/4 |
 | 13 | c2 tests | `(cd tools/overhaul/c2 && python3 test_validate_c2.py)` | **PASS** | rejecting mutations: 76/76; forward-compatible cases: 3/3 |
 | 13 | evolution tests | `(cd tools/overhaul/evolution && python3 test_validate_evolutions.py)` | **PASS** | OK |
@@ -56,4 +56,4 @@ The master run fails if any child fails. Phase numbers follow D7 Phase 5 order (
 
 ## Child-report side effects
 
-Child validators that rewrite their own tracked report were restored after the run: `docs/overhaul/implementation/postgame/POSTGAME_VALIDATION_REPORT.md`.
+Child validators that rewrite their own tracked report were restored after the run: none.
