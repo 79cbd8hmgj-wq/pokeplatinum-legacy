@@ -422,6 +422,9 @@ static BOOL ScrCmd_GetPlayerState(ScriptContext *ctx);
 static BOOL ScrCmd_SetPlayerState(ScriptContext *ctx);
 static BOOL ScrCmd_ChangePlayerState(ScriptContext *ctx);
 static BOOL ScrCmd_GetPlayerStarterSpecies(ScriptContext *ctx);
+static BOOL ScrCmd_GetMysteryStarterSpecies(ScriptContext *ctx);
+static BOOL ScrCmd_GiveMysteryStarterEgg(ScriptContext *ctx);
+static BOOL ScrCmd_HatchMysteryStarterEgg(ScriptContext *ctx);
 static BOOL ScrCmd_GetSwarmMapAndSpecies(ScriptContext *ctx);
 static BOOL ScrCmd_PrintTrainerDialogue(ScriptContext *ctx);
 static BOOL ScrCmd_StartBattleClient(ScriptContext *ctx);
@@ -3411,15 +3414,9 @@ static BOOL ScrCmd_SaveChosenStarter(ScriptContext *ctx)
 {
     void **fieldSysDataPtr = FieldSystem_GetScriptMemberPtr(ctx->fieldSystem, SCRIPT_MANAGER_DATA_PTR);
 
-    // The one and only weighted draw. The egg position is not an input.
-    u16 species = MysteryStarter_Draw();
-    u16 branch = MysteryStarter_GetRivalBranch(species);
-    VarsFlags *varsFlags = SaveData_GetVarsFlags(ctx->fieldSystem->saveData);
+    ChooseStarterData *chooseStarterData = (*fieldSysDataPtr);
 
-    // VAR_PLAYER_STARTER keeps its vanilla invariant (Turtwig / Chimchar / Piplup only);
-    // the actual species lives in its own variable.
-    SystemVars_SetMysteryStarterSpecies(varsFlags, species);
-    SystemVars_SetPlayerStarter(varsFlags, branch);
+    SystemVars_SetPlayerStarter(SaveData_GetVarsFlags(ctx->fieldSystem->saveData), chooseStarterData->species);
 
     Heap_Free(*fieldSysDataPtr);
 
