@@ -186,56 +186,98 @@ class V:
 
     # -- RNG / persistence / reveal ordering ---------------------------------------------------------------------------------------
     def check_rng_and_flow(self):
-        src = strip_comments(self.read("src/mystery_egg_starter.c"))
         scrcmd = strip_comments(self.read("src/scrcmd.c"))
-        draw = func_body(src, "MysteryStarter_Draw") or ""
-        self.rec("exactly one RNG call in the starter module", len(RNG_CALL.findall(src)) == 1, f"{len(RNG_CALL.findall(src))}")
-        self.rec("the RNG call is inside MysteryStarter_Draw", len(RNG_CALL.findall(draw)) == 1)
-        self.rec("draw is LCRNG_Next() % MYSTERY_STARTER_ROLL_RANGE", "LCRNG_Next() % MYSTERY_STARTER_ROLL_RANGE" in draw)
-        self.rec("SpeciesFromRoll is RNG-free", not RNG_CALL.search(func_body(src, "MysteryStarter_SpeciesFromRoll") or "x("))
-        calls = 0
-        for path in glob.glob(os.path.join(ROOT, "src", "**", "*.c"), recursive=True):
-            rel = os.path.relpath(path, ROOT)
-            text = strip_comments(self.read(rel))
-            if rel != "src/mystery_egg_starter.c":
-                calls += len(re.findall(r"\bMysteryStarter_Draw\s*\(", text))
-        self.rec("MysteryStarter_Draw has exactly one caller", calls == 1, f"{calls}")
         save = func_body(scrcmd, "ScrCmd_SaveChosenStarter") or ""
-        self.rec("the caller is ScrCmd_SaveChosenStarter", "MysteryStarter_Draw()" in save)
-        self.rec("actual species persisted immediately in VAR_MYSTERY_STARTER_SPECIES", re.search(r"SystemVars_SetMysteryStarterSpecies\([^;]*,\s*species\)", save) is not None)
-        self.rec("canonical branch computed from the single draw via MysteryStarter_GetRivalBranch", re.search(r"u16 branch = MysteryStarter_GetRivalBranch\(species\);", save) is not None)
-        self.rec("VAR_PLAYER_STARTER receives only the branch (never the actual species)",
-                 re.search(r"SystemVars_SetPlayerStarter\([^;]*,\s*branch\)", save) is not None and not re.search(r"SystemVars_SetPlayerStarter\([^;]*species\)", save))
-        callers = sum(len(re.findall(r"\bSystemVars_SetPlayerStarter\s*\(", strip_comments(self.read(os.path.relpath(pp, ROOT)))))
-                      for pp in glob.glob(os.path.join(ROOT, "src", "**", "*.c"), recursive=True) if not pp.endswith("system_vars.c"))
-        self.rec("SystemVars_SetPlayerStarter has exactly one caller (SaveChosenStarter)", callers == 1, f"{callers}")
-        self.rec("draw happens once per call (no loop around it)", not re.search(r"\b(for|while)\b", save))
-        for fn in ("ScrCmd_GiveMysteryStarterEgg", "ScrCmd_HatchMysteryStarterEgg", "ScrCmd_GetMysteryStarterSpecies", "ScrCmd_StartChooseStarterScene"):
-            self.rec(f"no RNG/draw in {fn}", not RNG_CALL.search(func_body(scrcmd, fn) or "x(") and "MysteryStarter_Draw" not in (func_body(scrcmd, fn) or ""))
-        give = func_body(scrcmd, "ScrCmd_GiveMysteryStarterEgg") or ""
-        self.rec("egg is bound to the persisted species (reads VAR_MYSTERY_STARTER_SPECIES)", "SystemVars_GetMysteryStarterSpecies(" in give and "Egg_CreateMysteryStarterEgg(egg, species" in give)
-        csd = self.read("include/struct_defs/choose_starter_data.h")
-        self.rec("save format unchanged (no new save fields)", "VAR_" not in csd)
-        self.rec("ChooseStarterData layout is exactly vanilla (int species; const Options *options;)", re.search(r"typedef struct ChooseStarterData \{\s*int species;\s*const Options \*options;\s*\} ChooseStarterData;", csd) is not None)
-        self.rec("SaveChosenStarter never reads the chooser's data->species (visual position cannot affect the roll)", "->species" not in save and "chooseStarterData" not in save)
-        self.rec("SaveChosenStarter frees the chooser data exactly once via the script data pointer", save.count("Heap_Free(*fieldSysDataPtr)") == 1 and save.index("MysteryStarter_Draw()") < save.index("Heap_Free(*fieldSysDataPtr)"))
         r201 = self.read("res/field/scripts/scripts_route_201.s")
         body = r201[r201.index("Route201_Briefcase:"):r201.index("Route201_DawnLeave:")]
-        cmds = [l.strip().split()[0] for l in body.splitlines() if l.strip() and not l.strip().endswith(":")]
-        need = ["StartChooseStarterScene", "SaveChosenStarter", "ReturnToField", "FadeScreenIn", "WaitFadeScreen", "GetMysteryStarterSpecies", "GivePokemon"]
-        i = cmds.index("StartChooseStarterScene") if "StartChooseStarterScene" in cmds else -1
-        self.rec("Route 201 award flow is vanilla (choose, save/draw, return, fade in, read species, GivePokemon Lv5)",
-                 i >= 0 and cmds[i:i + len(need)] == need, str(cmds[i:i + len(need)] if i >= 0 else None))
-        self.rec("starter is awarded directly at Level 5 via the native GivePokemon path", "GivePokemon VAR_0x8000, 5, ITEM_NONE, VAR_RESULT" in body and body.count("GivePokemon") == 1)
-        self.rec("award happens before Rowan departure and the first Rival battle", "GivePokemon" in cmds and cmds.index("GivePokemon") < cmds.index("ApplyMovement", cmds.index("GivePokemon")) and "StartFirstBattle" not in body)
-        self.rec("hatch presentation deferred: Route 201 calls neither GiveMysteryStarterEgg nor HatchMysteryStarterEgg", not re.search(r"\b(GiveMysteryStarterEgg|HatchMysteryStarterEgg)\b", r201))
-        self.rec("hatch presentation deferred: no hatch lead-in message in Route 201", "TheEggIsHatching" not in r201)
-        self.rec("Route 201 award reads the actual species variable, not VAR_PLAYER_STARTER", "GetMysteryStarterSpecies VAR_0x8000\n    GivePokemon VAR_0x8000" in body and "GetPlayerStarterSpecies" not in body)
-        self.rec("Route 201 draws no random numbers", not re.search(r"\bGetRandom", r201))
-        self.rec("Rowan/counterpart/Barry flow labels preserved", all(x in r201 for x in ("Route201_DawnLeave:", "Route201_LucasLeave:", "Route201_CounterpartLeave:",
-                 "Route201_AskUpForABattle:", "Route201_StartRivalBattle:", "Route201_HandleRivalBattleEnd:", "StartFirstBattle TRAINER_RIVAL_ROUTE_201_TURTWIG")))
 
-    # -- level / hatch / breeding ----------------------------------------------------------------------------------------------------
+        # The chooser/application boundary must remain vanilla. D8 starts only
+        # after ReturnToField + FadeScreenIn + WaitFadeScreen have completed.
+        self.rec("SaveChosenStarter uses the vanilla chooser output contract",
+                 "ChooseStarterData *chooseStarterData = (*fieldSysDataPtr);" in save and
+                 "SystemVars_SetPlayerStarter(SaveData_GetVarsFlags(ctx->fieldSystem->saveData), chooseStarterData->species);" in save)
+        self.rec("SaveChosenStarter contains no Mystery RNG / branch / persistence logic",
+                 "MysteryStarter_" not in save and "SystemVars_SetMysteryStarterSpecies" not in save)
+        self.rec("SaveChosenStarter frees chooser data exactly once", save.count("Heap_Free(*fieldSysDataPtr)") == 1)
+
+        boundary = ["StartChooseStarterScene", "SaveChosenStarter", "ReturnToField", "FadeScreenIn", "WaitFadeScreen"]
+        cmds = [l.strip().split()[0] for l in body.splitlines()
+                if l.strip() and not l.strip().startswith("//") and not l.strip().endswith(":")]
+        i = cmds.index("StartChooseStarterScene") if "StartChooseStarterScene" in cmds else -1
+        self.rec("chooser -> save -> field return -> fade boundary remains vanilla",
+                 i >= 0 and cmds[i:i + len(boundary)] == boundary,
+                 str(cmds[i:i + len(boundary)] if i >= 0 else None))
+
+        self.rec("exactly one native field-script RNG draw", body.count("GetRandom VAR_0x8000, 100") == 1 and
+                 len(re.findall(r"^\s*GetRandom\b", body, flags=re.M)) == 1)
+        self.rec("RNG happens only after the field fade has completed",
+                 body.index("WaitFadeScreen") < body.index("GetRandom VAR_0x8000, 100"))
+        self.rec("active Route 201 path does not call custom MysteryStarter_Draw/GetMysteryStarterSpecies",
+                 "MysteryStarter_Draw" not in body and "GetMysteryStarterSpecies" not in body)
+
+        thresholds = [
+            (3, "BULBASAUR"), (6, "CHARMANDER"), (9, "SQUIRTLE"), (10, "PIKACHU"),
+            (20, "CHIKORITA"), (30, "CYNDAQUIL"), (40, "TOTODILE"), (50, "TREECKO"),
+            (60, "TORCHIC"), (70, "MUDKIP"), (80, "TURTWIG"), (90, "CHIMCHAR"),
+        ]
+        threshold_lines = [(int(n), sp) for n, sp in re.findall(
+            r"GoToIfLt VAR_0x8000, (\d+), Route201_MysteryStarter_(\w+)", body)]
+        self.rec("native script thresholds exactly encode the locked 0-99 distribution",
+                 threshold_lines == thresholds and "GoTo Route201_MysteryStarter_Piplup" in body,
+                 str(threshold_lines))
+
+        expected_branch = LOCKED_BRANCH
+        assignments = {}
+        for species, _weight in LOCKED:
+            label = f"Route201_MysteryStarter_{species.title()}:"
+            start = body.find(label)
+            if start < 0:
+                continue
+            next_label = body.find("\nRoute201_MysteryStarter_", start + len(label))
+            block = body[start: next_label if next_label >= 0 else len(body)]
+            actual = re.search(r"SetVar VAR_MYSTERY_STARTER_SPECIES, SPECIES_(\w+)", block)
+            branch = re.search(r"SetVar VAR_PLAYER_STARTER, SPECIES_(\w+)", block)
+            if actual and branch:
+                assignments[species] = (actual.group(1), branch.group(1))
+
+        self.rec("all 13 labels persist the rolled actual species",
+                 len(assignments) == 13 and all(assignments[s][0] == s for s, _ in LOCKED), str(assignments))
+        self.rec("all 13 labels write the locked three-way Rival branch",
+                 len(assignments) == 13 and all(assignments[s][1] == expected_branch[s] for s, _ in LOCKED), str(assignments))
+        self.rec("Pikachu maps to the Piplup Rival branch",
+                 assignments.get("PIKACHU") == ("PIKACHU", "PIPLUP"))
+
+        self.rec("starter is awarded directly from VAR_MYSTERY_STARTER_SPECIES at Level 5",
+                 body.count("GivePokemon VAR_MYSTERY_STARTER_SPECIES, 5, ITEM_NONE, VAR_RESULT") == 1)
+        self.rec("award happens before Rowan departure and the first Rival battle",
+                 body.index("GivePokemon VAR_MYSTERY_STARTER_SPECIES") < body.index("ApplyMovement LOCALID_PROF_ROWAN") and
+                 "StartFirstBattle" not in body)
+        self.rec("hatch presentation remains disabled in active Route 201 flow",
+                 not re.search(r"\b(GiveMysteryStarterEgg|HatchMysteryStarterEgg)\b", body) and "TheEggIsHatching" not in body)
+
+        # Legacy C helpers may remain compiled for deferred hatch work, but the
+        # active production flow must not call the custom RNG/branch functions.
+        callers_draw = 0
+        callers_branch = 0
+        for pp in glob.glob(os.path.join(ROOT, "src", "**", "*.c"), recursive=True):
+            rel = os.path.relpath(pp, ROOT)
+            if rel == "src/mystery_egg_starter.c":
+                continue
+            text = strip_comments(self.read(rel))
+            callers_draw += len(re.findall(r"\bMysteryStarter_Draw\s*\(", text))
+            callers_branch += len(re.findall(r"\bMysteryStarter_GetRivalBranch\s*\(", text))
+        self.rec("custom MysteryStarter_Draw has no active C callers", callers_draw == 0, str(callers_draw))
+        self.rec("custom MysteryStarter_GetRivalBranch has no active C callers", callers_branch == 0, str(callers_branch))
+
+        csd = self.read("include/struct_defs/choose_starter_data.h")
+        self.rec("save format unchanged (no new save fields)", "VAR_" not in csd)
+        self.rec("ChooseStarterData layout is exactly vanilla (int species; const Options *options;)",
+                 re.search(r"typedef struct ChooseStarterData \{\s*int species;\s*const Options \*options;\s*\} ChooseStarterData;", csd) is not None)
+        self.rec("Rowan/counterpart/Barry flow labels preserved", all(x in r201 for x in (
+                 "Route201_DawnLeave:", "Route201_LucasLeave:", "Route201_CounterpartLeave:",
+                 "Route201_AskUpForABattle:", "Route201_StartRivalBattle:", "Route201_HandleRivalBattleEnd:",
+                 "StartFirstBattle TRAINER_RIVAL_ROUTE_201_TURTWIG")))
+
     def check_output_and_breeding(self):
         hdr = self.read("include/mystery_egg_starter.h")
         self.rec("output level constant == 5", re.search(r"#define MYSTERY_STARTER_LEVEL\s+5\b", hdr) is not None)
@@ -273,77 +315,104 @@ class V:
 
     # -- Rival branch -------------------------------------------------------------------------------------------------------------------------
     def check_rival(self):
-        src = self.read("src/mystery_egg_starter.c")
-        got, has_default = parse_branch(src)
-        bad = [f"{s}->{got.get(s)}" for s, b in LOCKED_BRANCH.items() if got.get(s) != b]
-        self.rec("category -> Rival mapping matches the lock", not bad and len(got) == 13, ",".join(bad))
-        self.rec("Pikachu -> Piplup branch", got.get("PIKACHU") == "PIPLUP")
-        self.rec("branch result is always one of the three Sinnoh representatives", set("SPECIES_" + v for v in got.values()) <= SINNOH)
-        self.rec("unknown/NONE species falls back to the Piplup branch", has_default and "default:" in src)
         sv = strip_comments(self.read("src/system_vars.c"))
         for fn in ("SystemVars_GetRivalStarter", "SystemVars_GetPlayerCounterpartStarter"):
             b = func_body(sv, fn) or ""
-            self.rec(f"{fn} is vanilla (keyed directly on canonical VAR_PLAYER_STARTER)", "playerStarter = TryGetVarValue(varsFlags, VAR_PLAYER_STARTER)" in b and "Branch" not in b and "Mystery" not in b)
-        self.rec("SystemVars_GetPlayerStarter returns canonical VAR_PLAYER_STARTER", re.search(r"return TryGetVarValue\(varsFlags, VAR_PLAYER_STARTER\);", func_body(sv, "SystemVars_GetPlayerStarter") or "") is not None)
+            self.rec(f"{fn} is vanilla (keyed directly on canonical VAR_PLAYER_STARTER)",
+                     "playerStarter = TryGetVarValue(varsFlags, VAR_PLAYER_STARTER)" in b and "Branch" not in b and "Mystery" not in b)
+        self.rec("SystemVars_GetPlayerStarter returns canonical VAR_PLAYER_STARTER",
+                 re.search(r"return TryGetVarValue\(varsFlags, VAR_PLAYER_STARTER\);",
+                           func_body(sv, "SystemVars_GetPlayerStarter") or "") is not None)
         self.rec("SystemVars_Get/SetMysteryStarterSpecies use VAR_MYSTERY_STARTER_SPECIES",
                  "TryGetVarValue(varsFlags, VAR_MYSTERY_STARTER_SPECIES)" in (func_body(sv, "SystemVars_GetMysteryStarterSpecies") or "") and
                  "TrySetVarToValue(varsFlags, VAR_MYSTERY_STARTER_SPECIES, species)" in (func_body(sv, "SystemVars_SetMysteryStarterSpecies") or ""))
-        self.rec("no custom branch-remap layer (SystemVars_GetPlayerStarterBranch / GetPlayerStarterBranch removed)",
-                 "SystemVars_GetPlayerStarterBranch" not in sv and not any("GetPlayerStarterBranch" in self.read(os.path.relpath(pp, ROOT))
-                     for pp in glob.glob(os.path.join(ROOT, "src", "**", "*.[ch]"), recursive=True) + glob.glob(os.path.join(ROOT, "include", "**", "*.h"), recursive=True) +
-                     glob.glob(os.path.join(ROOT, "res/field/scripts/*.s")) + [os.path.join(ROOT, "asm/macros/scrcmd.inc")]))
-        self.rec("MysteryStarter_GetRivalBranch has no consumer besides SaveChosenStarter",
-                 sum(len(re.findall(r"\bMysteryStarter_GetRivalBranch\s*\(", strip_comments(self.read(os.path.relpath(pp, ROOT)))))
-                     for pp in glob.glob(os.path.join(ROOT, "src", "**", "*.c"), recursive=True) if not pp.endswith("mystery_egg_starter.c")) == 1)
+        self.rec("no custom branch-remap layer",
+                 "SystemVars_GetPlayerStarterBranch" not in sv and not any(
+                     "GetPlayerStarterBranch" in self.read(os.path.relpath(pp, ROOT))
+                     for pp in glob.glob(os.path.join(ROOT, "src", "**", "*.[ch]"), recursive=True)
+                     + glob.glob(os.path.join(ROOT, "include", "**", "*.h"), recursive=True)
+                     + glob.glob(os.path.join(ROOT, "res/field/scripts/*.s"))
+                     + [os.path.join(ROOT, "asm/macros/scrcmd.inc")]))
+
         vf = self.read("generated/vars_flags.txt").split()
-        self.rec("VAR_MYSTERY_STARTER_SPECIES takes the former VAR_UNUSED_0x4031 slot (directly after VAR_PLAYER_STARTER)",
-                 "VAR_UNUSED_0x4031" not in vf and "VAR_MYSTERY_STARTER_SPECIES" in vf and vf.index("VAR_MYSTERY_STARTER_SPECIES") == vf.index("VAR_PLAYER_STARTER") + 1)
+        self.rec("VAR_MYSTERY_STARTER_SPECIES takes the former VAR_UNUSED_0x4031 slot",
+                 "VAR_UNUSED_0x4031" not in vf and "VAR_MYSTERY_STARTER_SPECIES" in vf and
+                 vf.index("VAR_MYSTERY_STARTER_SPECIES") == vf.index("VAR_PLAYER_STARTER") + 1)
         base_vf = (git_show("generated/vars_flags.txt") or "").split()
         self.rec("var table size unchanged and rename is the only delta (no save-size change)",
-                 bool(base_vf) and len(base_vf) == len(vf) and [x for x in base_vf if x not in vf] == ["VAR_UNUSED_0x4031"] and [x for x in vf if x not in base_vf] == ["VAR_MYSTERY_STARTER_SPECIES"])
-        self.rec("the renamed var has no other consumer than the Mystery starter helpers",
-                 vf.count("VAR_MYSTERY_STARTER_SPECIES") == 1 and not any("VAR_UNUSED_0x4031" in self.read(os.path.relpath(pp, ROOT))
-                     for pp in glob.glob(os.path.join(ROOT, "src", "**", "*.[ch]"), recursive=True) + glob.glob(os.path.join(ROOT, "res/field/scripts/*.s"))))
+                 bool(base_vf) and len(base_vf) == len(vf) and
+                 [x for x in base_vf if x not in vf] == ["VAR_UNUSED_0x4031"] and
+                 [x for x in vf if x not in base_vf] == ["VAR_MYSTERY_STARTER_SPECIES"])
+
         strs = strip_comments(self.read("src/scrcmd_strings.c"))
-        self.rec("player starter name buffer uses the actual Mystery species", "SystemVars_GetMysteryStarterSpecies(" in (func_body(strs, "ScrCmd_BufferPlayerStarterSpeciesName") or ""))
+        self.rec("player starter name buffer uses actual species with vanilla fallback",
+                 "SystemVars_GetMysteryStarterSpecies(" in (func_body(strs, "ScrCmd_BufferPlayerStarterSpeciesName") or "") and
+                 "species == SPECIES_NONE" in (func_body(strs, "ScrCmd_BufferPlayerStarterSpeciesName") or "") and
+                 "SystemVars_GetPlayerStarter(" in (func_body(strs, "ScrCmd_BufferPlayerStarterSpeciesName") or ""))
         self.rec("rival / counterpart name buffers stay on canonical vanilla helpers",
                  "SystemVars_GetRivalStarter(" in (func_body(strs, "ScrCmd_BufferRivalStarterSpeciesName") or "") and
                  "SystemVars_GetPlayerCounterpartStarter(" in (func_body(strs, "ScrCmd_BufferPlayerCounterpartStarterSpeciesName") or "") and
-                 "Mystery" not in (func_body(strs, "ScrCmd_BufferRivalStarterSpeciesName") or "") + (func_body(strs, "ScrCmd_BufferPlayerCounterpartStarterSpeciesName") or ""))
-        mystery_users, wrong, drift = [], [], []
+                 "Mystery" not in (func_body(strs, "ScrCmd_BufferRivalStarterSpeciesName") or "") +
+                 (func_body(strs, "ScrCmd_BufferPlayerCounterpartStarterSpeciesName") or ""))
+
+        mystery_cmd_users, wrong, drift = [], [], []
         for p in sorted(glob.glob(os.path.join(ROOT, "res/field/scripts/*.s"))):
             rel = os.path.relpath(p, ROOT)
             t = self.read(rel)
             if "GetMysteryStarterSpecies" in t:
-                mystery_users.append(os.path.basename(rel))
+                mystery_cmd_users.append(os.path.basename(rel))
             if "GetPlayerStarterSpecies VAR_RESULT" in t:
                 for m in re.finditer(r"(GoToIfEq|CallIfEq) VAR_RESULT, (SPECIES_\w+)", t):
                     if m.group(2) not in SINNOH:
                         wrong.append(f"{os.path.basename(rel)}:{m.group(2)}")
-            if not rel.endswith(("scripts_route_201.s", "sandgem_town_pokemon_research_lab.s")):
+            if not rel.endswith(("scripts_route_201.s", "scripts_sandgem_town_pokemon_research_lab.s")):
                 base = git_show(rel)
                 if base is not None and base != t:
                     drift.append(os.path.basename(rel))
-        self.rec("GetMysteryStarterSpecies is used only by the Route 201 award and the Sandgem lab gift skip", sorted(mystery_users) == ["scripts_route_201.s", "scripts_sandgem_town_pokemon_research_lab.s"], ",".join(mystery_users))
-        self.rec("every other script is byte-identical to the vanilla starting SHA (all Rival/branch consumers use canonical VAR_PLAYER_STARTER)", not drift, ",".join(drift))
+
+        self.rec("custom GetMysteryStarterSpecies script command has no active script users",
+                 not mystery_cmd_users, ",".join(mystery_cmd_users))
+        self.rec("every other field script remains byte-identical to the starting SHA",
+                 not drift, ",".join(drift))
+
         r201t = self.read("res/field/scripts/scripts_route_201.s")
-        self.rec("Route 201 uses GetMysteryStarterSpecies once (award) and GetPlayerStarterSpecies once (Rival branch)", r201t.count("GetMysteryStarterSpecies") == 1 and r201t.count("GetPlayerStarterSpecies VAR_RESULT") == 1)
-        self.rec("Sandgem lab starter-gift skip keeps the actual species (later gifts unchanged)", "GetMysteryStarterSpecies VAR_0x8000" in self.read("res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s"))
+        self.rec("Route 201 persists actual species directly and later Rival logic still reads canonical player starter",
+                 "SetVar VAR_MYSTERY_STARTER_SPECIES" in r201t and
+                 "GivePokemon VAR_MYSTERY_STARTER_SPECIES, 5" in r201t and
+                 r201t.count("GetPlayerStarterSpecies VAR_RESULT") == 1)
+        sand = self.read("res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s")
+        self.rec("Sandgem starter-gift skip reads actual species with native SetVarFromVar",
+                 "SetVarFromVar VAR_0x8000, VAR_MYSTERY_STARTER_SPECIES" in sand and
+                 "GetMysteryStarterSpecies" not in sand)
         self.rec("branch consumers compare only against Turtwig/Chimchar/Piplup", not wrong, ",".join(wrong))
         self.rec("hatch presentation is not active: no script calls GiveMysteryStarterEgg / HatchMysteryStarterEgg",
-                 not any(re.search(r"\b(GiveMysteryStarterEgg|HatchMysteryStarterEgg)\b", self.read(os.path.relpath(pp, ROOT))) for pp in glob.glob(os.path.join(ROOT, "res/field/scripts/*.s"))))
-        rival_labels = [l for p in glob.glob(os.path.join(ROOT, "res/field/scripts/*.s")) for l in re.findall(r"^\w*Rival\w*:", self.read(os.path.relpath(p, ROOT)), flags=re.M)]
-        dup = [l for l in rival_labels if re.search(r"Bulbasaur|Charmander|Squirtle|Pikachu|Chikorita|Cyndaquil|Totodile|Treecko|Torchic|Mudkip", l)]
-        self.rec("no thirteen-way Rival duplication (no Rival label for non-Sinnoh species)", not dup, ",".join(dup))
-        trainers = [t for p in glob.glob(os.path.join(ROOT, "res/field/scripts/*.s")) for t in re.findall(r"TRAINER_RIVAL_\w*(?:BULBASAUR|CHARMANDER|SQUIRTLE|PIKACHU|CHIKORITA|CYNDAQUIL|TOTODILE|TREECKO|TORCHIC|MUDKIP)\w*", self.read(os.path.relpath(p, ROOT)))]
-        self.rec("no Rival trainer IDs for non-Sinnoh starters", not trainers)
-        pool = {"Grass": "TURTWIG", "Fire": "CHIMCHAR", "Water": "PIPLUP"}
-        self.rec("manifest declares exactly three Rival branches", self.manifest.get("rival_branch_count") == 3 and len(self.manifest["rival_branches"]) == 3 and
-                 {v: k for k, v in self.manifest["rival_branches"].items()} == {k: "SPECIES_" + v for k, v in pool.items()})
-        self.rec("manifest persistence: VAR_PLAYER_STARTER canonical, actual species separate", self.manifest["persistence"].get("canonical_store", "").startswith("VAR_PLAYER_STARTER") and self.manifest["persistence"].get("actual_species_store", "").startswith("VAR_MYSTERY_STARTER_SPECIES"))
-        self.rec("manifest category->Rival mapping matches source", all(p["rival_branch"] == "SPECIES_" + got.get(p["species"][8:], "?") for p in self.manifest["pool"]))
+                 not any(re.search(r"\b(GiveMysteryStarterEgg|HatchMysteryStarterEgg)\b",
+                                   self.read(os.path.relpath(pp, ROOT)))
+                         for pp in glob.glob(os.path.join(ROOT, "res/field/scripts/*.s"))))
 
-    # -- manifest guards ---------------------------------------------------------------------------------------------------------------------------
+        rival_labels = [l for p in glob.glob(os.path.join(ROOT, "res/field/scripts/*.s"))
+                        for l in re.findall(r"^\w*Rival\w*:", self.read(os.path.relpath(p, ROOT)), flags=re.M)]
+        dup = [l for l in rival_labels if re.search(
+            r"Bulbasaur|Charmander|Squirtle|Pikachu|Chikorita|Cyndaquil|Totodile|Treecko|Torchic|Mudkip", l)]
+        self.rec("no thirteen-way Rival duplication (no Rival label for non-Sinnoh species)", not dup, ",".join(dup))
+        trainers = [t for p in glob.glob(os.path.join(ROOT, "res/field/scripts/*.s"))
+                    for t in re.findall(
+                        r"TRAINER_RIVAL_\w*(?:BULBASAUR|CHARMANDER|SQUIRTLE|PIKACHU|CHIKORITA|CYNDAQUIL|TOTODILE|TREECKO|TORCHIC|MUDKIP)\w*",
+                        self.read(os.path.relpath(p, ROOT)))]
+        self.rec("no Rival trainer IDs for non-Sinnoh starters", not trainers)
+
+        pool = {"Grass": "TURTWIG", "Fire": "CHIMCHAR", "Water": "PIPLUP"}
+        self.rec("manifest declares exactly three Rival branches",
+                 self.manifest.get("rival_branch_count") == 3 and len(self.manifest["rival_branches"]) == 3 and
+                 {v: k for k, v in self.manifest["rival_branches"].items()} ==
+                 {k: "SPECIES_" + v for k, v in pool.items()})
+        self.rec("manifest persistence: VAR_PLAYER_STARTER canonical, actual species separate",
+                 self.manifest["persistence"].get("canonical_store", "").startswith("VAR_PLAYER_STARTER") and
+                 self.manifest["persistence"].get("actual_species_store", "").startswith("VAR_MYSTERY_STARTER_SPECIES"))
+        self.rec("manifest category->Rival mapping matches the locked mapping",
+                 all(p["rival_branch"] == "SPECIES_" + LOCKED_BRANCH[p["species"][8:]]
+                     for p in self.manifest["pool"]))
+
     def check_manifest(self):
         m = self.manifest
         self.rec("manifest starting SHA", m["starting_sha"] == START_SHA)
@@ -359,9 +428,17 @@ class V:
                 drift.append(path)
         self.rec("every guarded source path exists", not miss, ",".join(miss))
         self.rec("before-blob guards match the starting SHA", not drift, ",".join(drift))
-        self.rec("manifest records the deferred hatch presentation", m["reveal"]["hatch_presentation"] == "DEFERRED_DISABLED" and m["reveal"]["mechanism"].startswith("GivePokemon"))
-        self.rec("manifest visual equivalence flags", all(m["visual_equivalence"][k] is False for k in ("species_preview", "species_name_preview", "type_hint", "cry_before_hatch", "table_depends_on_position")))
-        self.rec("manifest RNG timing: one draw, no rerolls", m["rng"]["draws"] == 1 and not any(m["rng"][k] for k in ("position_is_input", "reroll_on_hatch", "reroll_on_field_return", "reroll_on_battle_start")))
+        self.rec("manifest records the deferred hatch presentation",
+                 m["reveal"]["hatch_presentation"] == "DEFERRED_DISABLED" and
+                 m["reveal"]["mechanism"].startswith("GivePokemon"))
+        self.rec("manifest visual equivalence flags",
+                 all(m["visual_equivalence"][k] is False for k in
+                     ("species_preview", "species_name_preview", "type_hint", "cry_before_hatch", "table_depends_on_position")))
+        self.rec("manifest RNG timing: one native field-script draw, no rerolls",
+                 m["rng"]["draws"] == 1 and m["rng"].get("function") == "GetRandom" and
+                 "after ReturnToField" in m["rng"].get("timing", "") and
+                 not any(m["rng"][k] for k in
+                         ("position_is_input", "reroll_on_hatch", "reroll_on_field_return", "reroll_on_battle_start")))
         self.rec("manifest output level == 5", m["output"]["level"] == 5)
         self.rec("manifest has no save-format change", m["persistence"]["save_format_change"] is False)
 
