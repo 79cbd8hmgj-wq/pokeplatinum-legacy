@@ -34,7 +34,7 @@ The user has already approved the G7 direction:
 
 G7.1–G7.2 are implemented. G7.3 was audited and intentionally deferred for runtime-sensitive battle-impact additions. G7.4 core menus and G7.5 global windows are implemented and merged.
 
-**Current implementation section: G7.6 — Overworld Atmosphere Escalation.**
+**G7.6 — Overworld Atmosphere Escalation is implemented** (`G7_6_OVERWORLD_ATMOSPHERE.md`); runtime review pending. **Next implementation section: G7.7**, once G7.6 is merged.
 
 Complete all of G7.6 in one Claude session.
 

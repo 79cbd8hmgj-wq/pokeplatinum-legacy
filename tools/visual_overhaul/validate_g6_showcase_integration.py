@@ -153,7 +153,7 @@ def validate_eterna() -> dict:
     for needle in (
         "#define DEEP_FOREST_MIST_ALPHA       8",
         "#define DEEP_FOREST_FOG_OFFSET       (0x6F6F - 1900)",
-        "#define DEEP_FOREST_FOG_COLOR        GX_RGB(20, 24, 22)",
+        "#define DEEP_FOREST_FOG_COLOR        GX_RGB(15, 21, 21)",
         "#define DEEP_FOREST_SCROLL_SCALE     FX32_CONST(0.75)",
     ):
         require(weather_source, needle, "Canopy weather treatment")
@@ -279,9 +279,9 @@ def validate_snow_region() -> dict:
 
     weather_source = read_text("src/overlay005/ov5_021D5EB8.c")
     for needle in (
-        "#define LIGHT_SNOW_FOG_COLOR  GX_RGB(21, 26, 31)",
-        "#define HEAVY_SNOW_FOG_COLOR  GX_RGB(19, 24, 31)",
-        "#define BLIZZARD_FOG_COLOR    GX_RGB(18, 23, 31)",
+        "#define LIGHT_SNOW_FOG_COLOR  GX_RGB(19, 24, 30)",
+        "#define HEAVY_SNOW_FOG_COLOR  GX_RGB(16, 22, 30)",
+        "#define BLIZZARD_FOG_COLOR    GX_RGB(15, 20, 29)",
     ):
         require(weather_source, needle, "Snow atmosphere treatment")
 
@@ -352,7 +352,7 @@ def validate_distortion_world() -> dict:
         "if (FieldMap_InDistortionWorld(fieldSystem) == TRUE) {",
         "v1 = sDistWorldFieldEffectRenderers;",
         "case AREA_LIGHT_SET_DISTORTION_WORLD:",
-        "color = GX_RGB(14, 8, 22);",
+        "color = GX_RGB(10, 5, 22);",
         "offset = 0x5000;",
         "densityTable = sDistortionFogDensity;",
     ):
@@ -419,7 +419,7 @@ def validate_spear_pillar() -> dict:
     for needle in (
         "case AREA_LIGHT_SET_SPEAR_PILLAR:",
         "case AREA_LIGHT_SET_SPEAR_PILLAR_GRADE:",
-        "color = GX_RGB(16, 18, 22);",
+        "color = GX_RGB(13, 16, 23);",
         "offset = 0x6000;",
         "densityTable = sSpearPillarFogDensity;",
     ):
@@ -589,7 +589,7 @@ def validate_galactic_interiors() -> dict:
     expected_warehouse = {
         "mapPropSet": "prop_model_set_027",
         "mapTextureSet": "map_texture_set_076",
-        "lightingSet": "lighting_set_001",
+        "lightingSet": "lighting_set_006",
     }
     for key, expected in expected_warehouse.items():
         actual = warehouse_area.get(key)
@@ -629,7 +629,7 @@ def validate_galactic_interiors() -> dict:
         "main_lighting_set": "lighting_set_006",
         "warehouse_area_data": "area_data_077",
         "warehouse_texture_set": "map_texture_set_076",
-        "warehouse_lighting_set": "lighting_set_001",
+        "warehouse_lighting_set": "lighting_set_006",
         "main_lighting_keyframes": len(main_lighting),
         "grade_report_sections": sorted(results),
     }
