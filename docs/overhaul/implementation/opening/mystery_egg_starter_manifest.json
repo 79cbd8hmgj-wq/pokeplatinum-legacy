@@ -9,7 +9,14 @@
   "FieldSystem_HatchEgg_hatchLevel": 0,
   "untouched_files": [
    "include/constants/daycare.h",
+   "include/egg_hatch.h",
+   "include/overlay005/daycare.h",
+   "include/struct_defs/daycare.h",
+   "include/unk_0203D1B8.h",
    "src/daycare_save.c",
+   "src/egg_hatch.c",
+   "src/overlay005/daycare.c",
+   "src/unk_0203D1B8.c",
    "docs/overhaul/implementation/breeding/"
   ]
  },
@@ -18,7 +25,7 @@
   "level": 5,
   "level_constant": "Route 201 GivePokemon literal 5",
   "owner": "player",
-  "pikachu_hatches_as": "SPECIES_PIKACHU"
+  "pikachu_output_species": "SPECIES_PIKACHU"
  },
  "persistence": {
   "actual_species_store": "VAR_MYSTERY_STARTER_SPECIES (existing u16 var, formerly VAR_UNUSED_0x4031; actual 13-way species)",
@@ -279,15 +286,15 @@
   },
   "src/egg_hatch.c": {
    "before_blob": "ffc8c2ab57f2c7bd6ed02bd88bd868301b8cbdd4",
-   "target": "hatchLevel > 1 selects Egg_CreateHatchedMonAtLevel"
+   "target": "unchanged from pre-D8; no Mystery starter hatch override"
   },
   "src/mystery_egg_starter.c": {
    "before_blob": null,
-   "target": "NEW: weighted table, single draw, Rival-branch mapping"
+   "target": "validator/reference-only weighted table and branch mapping; not linked into ROM"
   },
   "src/overlay005/daycare.c": {
    "before_blob": "f687c17376d6b3020e2b6a00c9d811a5430d7f50",
-   "target": "level-parameterised internals; ordinary entry points keep level 1"
+   "target": "unchanged from pre-D8; ordinary breeding untouched"
   },
   "src/scrcmd.c": {
    "before_blob": "ac5180b574353f8f9e755077b893db4b4c9b29b6",
@@ -299,11 +306,11 @@
   },
   "src/system_vars.c": {
    "before_blob": "e6ea14aff470b1768487e623aa27d7468c0f9a80",
-   "target": "SystemVars_Get/SetMysteryStarterSpecies; Rival/counterpart starter vanilla (canonical VAR_PLAYER_STARTER)"
+   "target": "SystemVars_GetMysteryStarterSpecies only; Rival/counterpart starter vanilla (canonical VAR_PLAYER_STARTER)"
   },
   "src/unk_0203D1B8.c": {
    "before_blob": "eba7d7bdc853517ca25c8f4ea25591ec769d8a52",
-   "target": "FieldSystem_HatchMysteryStarterEgg (no TV segment); FieldSystem_HatchEgg hatchLevel = 0"
+   "target": "unchanged from pre-D8; no Mystery starter hatch field-system path"
   }
  },
  "starting_sha": "6fc1eedfec637041733b5e5d9626a49c7524daa9",
