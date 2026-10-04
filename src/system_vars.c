@@ -72,16 +72,6 @@ u16 SystemVars_GetPlayerStarter(VarsFlags *varsFlags)
     return TryGetVarValue(varsFlags, VAR_PLAYER_STARTER);
 }
 
-BOOL SystemVars_SetMysteryStarterSpecies(VarsFlags *varsFlags, u16 species)
-{
-    return TrySetVarToValue(varsFlags, VAR_MYSTERY_STARTER_SPECIES, species);
-}
-
-u16 SystemVars_GetMysteryStarterSpecies(VarsFlags *varsFlags)
-{
-    return TryGetVarValue(varsFlags, VAR_MYSTERY_STARTER_SPECIES);
-}
-
 u16 SystemVars_GetRivalStarter(VarsFlags *varsFlags)
 {
     u16 rivalStarter;
