@@ -1,0 +1,39 @@
+name: d8-mystery-starter
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/choose_starter/**'
+      - 'src/scrcmd.c'
+      - 'src/scrcmd_strings.c'
+      - 'src/mystery_egg_starter.c'
+      - 'src/system_vars.c'
+      - 'src/overlay005/daycare.c'
+      - 'src/unk_0203D1B8.c'
+      - 'include/mystery_egg_starter.h'
+      - 'include/struct_defs/choose_starter_data.h'
+      - 'generated/vars_flags.txt'
+      - 'res/field/scripts/scripts_route_201.s'
+      - 'res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s'
+      - 'res/text/unk_0360.json'
+      - 'tools/overhaul/validate_mystery_starter.py'
+      - 'tools/overhaul/opening/test_validate_mystery_starter.py'
+      - 'docs/overhaul/implementation/opening/mystery_egg_starter_manifest.json'
+      - '.github/workflows/d8-mystery-starter.yml'
+  workflow_dispatch: {}
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Validate Mystery Egg starter
+        run: python3 tools/overhaul/validate_mystery_starter.py --no-report
+
+      - name: Run deterministic D8 mutation suite
+        working-directory: tools/overhaul/opening
+        run: python3 test_validate_mystery_starter.py
