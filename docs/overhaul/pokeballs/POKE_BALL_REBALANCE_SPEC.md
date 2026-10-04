@@ -148,20 +148,23 @@ Do not raise Quick Ball's price merely because its first-turn multiplier increas
 
 General progression:
 - Poké Ball: opening game.
-- Great Ball: available immediately after first badge.
-- Ultra Ball: available by midgame, around 4 badges.
-- Heal Ball: Jubilife/Oreburgh/Floaroma as currently thematic.
-- Net Ball: Oreburgh/Floaroma onward.
-- Nest Ball: Eterna onward.
-- Dusk Ball: Solaceon onward.
-- Quick Ball: Pastoria onward.
-- Timer Ball: Celestic/Snowpoint onward.
-- Repeat Ball: Canalave onward.
-- Dive Ball: Pastoria or Canalave onward.
-- Luxury Ball: Sunyshore onward.
+- Great Ball: opening game, alongside Poké Ball.
+- Heal Ball: opening game as the early utility alternative.
+- Ultra Ball: available by midgame, around 3–4 badges.
+- Quick Ball: Jubilife onward, so turn-one catching exists before the first badge.
+- Timer Ball: Oreburgh onward, so the opposite long-battle strategy arrives around the first badge.
+- Net Ball: Oreburgh/Floaroma onward as the Water/Bug target specialist.
+- Nest Ball: Eterna onward as the overhaul's Level Ball-role specialist.
+- Dive Ball: Eterna onward as the overhaul's Lure/water-environment specialist.
+- Dusk Ball: Hearthome/Solaceon onward, after the earliest specialist wave.
+- Repeat Ball: Solaceon onward for midgame collection and repeat catches.
+- Luxury Ball: Sunyshore onward as a flavor/friendship option rather than a capture-rate upgrade.
+- Later marts should preserve access to the early specialist tools instead of replacing them with a completely different set.
 - League shop: broad specialist selection.
 
-Exact badge/vendor flags are implementation data, but no specialist should be postgame-only if its use case is relevant during the campaign.
+This availability curve is intentional: the player should be making meaningful capture-strategy choices before Badge 1 rather than spending the early campaign on Poké Balls alone.
+
+Exact badge/vendor flags remain implementation data, but no specialist should be postgame-only if its use case is relevant during the campaign.
 
 ## 12. Catching philosophy
 
