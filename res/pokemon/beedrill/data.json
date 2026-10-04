@@ -1,9 +1,9 @@
 {
     "base_stats": {
         "hp": 65,
-        "attack": 80,
-        "defense": 40,
-        "speed": 75,
+        "attack": 95,
+        "defense": 50,
+        "speed": 105,
         "special_attack": 45,
         "special_defense": 80
     },
@@ -35,7 +35,7 @@
     ],
     "abilities": [
         "ABILITY_SWARM",
-        "ABILITY_NONE"
+        "ABILITY_SNIPER"
     ],
     "safari_flee_rate": 0,
     "body_color": "MON_COLOR_YELLOW",
@@ -148,7 +148,7 @@
     },
     "pokedex_data": {
         "height_inches": 39,
-        "weight_pounds": 65.0,
+        "weight_pounds": 65,
         "body_shape": "SHAPE_MULTI_WINGED",
         "trainer_scale_f": 272,
         "pokemon_scale_f": 249,
