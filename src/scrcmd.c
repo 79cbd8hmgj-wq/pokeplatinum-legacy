@@ -3413,16 +3413,13 @@ static BOOL ScrCmd_StartChooseStarterScene(ScriptContext *ctx)
 static BOOL ScrCmd_SaveChosenStarter(ScriptContext *ctx)
 {
     void **fieldSysDataPtr = FieldSystem_GetScriptMemberPtr(ctx->fieldSystem, SCRIPT_MANAGER_DATA_PTR);
+    ChooseStarterData *chooseStarterData = (*fieldSysDataPtr);
 
-    // The one and only weighted draw. The egg position is not an input.
-    u16 species = MysteryStarter_Draw();
-    u16 branch = MysteryStarter_GetRivalBranch(species);
-    VarsFlags *varsFlags = SaveData_GetVarsFlags(ctx->fieldSystem->saveData);
+    // Diagnostic C: execute the 13-way RNG once, but discard it.
+    (void)MysteryStarter_Draw();
 
-    // VAR_PLAYER_STARTER keeps its vanilla invariant (Turtwig / Chimchar / Piplup only);
-    // the actual species lives in its own variable.
-    SystemVars_SetMysteryStarterSpecies(varsFlags, species);
-    SystemVars_SetPlayerStarter(varsFlags, branch);
+    // Everything persistent/awarded remains vanilla.
+    SystemVars_SetPlayerStarter(SaveData_GetVarsFlags(ctx->fieldSystem->saveData), chooseStarterData->species);
 
     Heap_Free(*fieldSysDataPtr);
 
