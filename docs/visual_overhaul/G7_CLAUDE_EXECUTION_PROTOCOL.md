@@ -241,12 +241,8 @@ Merged on `main`:
 - G7.2A healthboxes — implemented
 - G7.2B message frames — implemented
 - G7.3 encounter intensity hierarchy — audited; risky runtime-sensitive additions intentionally deferred
-- G7.4 core menus — implemented and merged via PR #53:
-  - Party
-  - Pokémon Summary
-  - Bag
-  - Start Menu
-  - Shop / secondary UI
+- G7.4 core menus — implemented
+- G7.5 global windows / typography-adjacent polish — implemented, including the all-20-frame scroll-cursor/wait-dial contrast follow-up
 
-**Next implementation section: G7.5 — Global Window / Typography-Adjacent Polish.**
+**Next implementation section: G7.6 — Overworld Atmosphere Escalation.**
 
