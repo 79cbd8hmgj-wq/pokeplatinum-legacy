@@ -160,10 +160,8 @@
  ],
  "pool_size": 13,
  "reveal": {
-  "hatch_code_retained_unused": [
-   "Egg_CreateMysteryStarterEgg / FieldSystem_HatchMysteryStarterEgg lower-level support remains source-only and is not called by field scripts"
-  ],
-  "hatch_presentation": "DEFERRED_DISABLED",
+  "hatch_code_retained_unused": [],
+  "hatch_presentation": "REMOVED_FROM_RUNTIME; direct Lv5 award only",
   "mechanism": "GivePokemon (vanilla Route 201 award path, Lv5); actual species copied from VAR_MYSTERY_STARTER_SPECIES with SetVarFromVar",
   "timing": "after field return and the single native script RNG draw, before Rowan/counterpart departure and before Barry's first battle",
   "tv_segment": false
