@@ -14,22 +14,25 @@ This protocol exists to reduce token waste, avoid runaway sessions, keep phases 
 
 ## 1. Session scope rule
 
-**One implementation batch per Claude session.**
+**One complete numbered G7 section per Claude session.**
 
-A batch may contain tightly coupled subparts already grouped by the implementation plan, for example:
-- G7.4A = Party + Summary
-- G7.4B = Bag + Start + Shop
+Examples:
+- G7.4 means complete **all of G7.4A + G7.4B** in one session.
+- G7.5 means complete the whole global-window / typography-adjacent section.
+- G7.6 means complete the whole overworld-atmosphere section.
 
-Do not automatically continue into the next numbered batch after the current batch is complete.
+Subparts inside a numbered section are implementation checkpoints, **not separate Claude sessions**.
 
-At the end of the batch:
-1. validate;
-2. build;
-3. commit;
-4. write/update the batch report;
+Do not automatically continue into the next numbered section after the current section is complete.
+
+At the end of the section:
+1. run the section's complete validation set once;
+2. build Rev 0 and Rev 1 once;
+3. commit coherent subparts as needed;
+4. write/update the section report;
 5. stop and return a concise status summary.
 
-This replaces the earlier open-ended "continue through the plan" behavior.
+This replaces both the earlier open-ended "continue through the plan" behavior and the overly narrow one-subpart-per-session rule.
 
 ## 2. Context / token discipline
 
@@ -38,9 +41,9 @@ Do not spend context re-reading the entire repository.
 At session start, read only:
 1. this execution protocol;
 2. the G7 design document;
-3. the relevant section of the G7 implementation plan for the current batch;
+3. the relevant section of the G7 implementation plan for the current section;
 4. the latest implementation report for the immediately preceding batch if relevant;
-5. the exact source/assets/generators touched by the current batch.
+5. the exact source/assets/generators touched by the current section.
 
 Use targeted search first:
 - `rg`
@@ -62,23 +65,26 @@ If a large source file is relevant, search for symbols first and read only the s
 Target execution pattern:
 
 ### Discovery
-Target: **10–15 minutes**
-- identify ownership;
+Target: **10–20 minutes for the entire numbered section**
+- identify ownership for all subparts before deep implementation;
 - identify shared-resource risk;
-- identify existing generator/validator;
-- decide lowest-risk implementation path.
+- identify existing generators/validators;
+- decide the lowest-risk path for each subpart.
 
-If ownership is still unclear after targeted search, spend at most one additional focused investigation pass before reporting a blocker.
+If ownership for one subpart is still unclear after targeted search, isolate that subpart rather than re-auditing the whole repository.
 
 ### Implementation
-Target: **20–40 minutes**
-- make the smallest coherent change that satisfies the batch;
+Target: **30–70 minutes for the entire numbered section**
+- complete every required subpart in the numbered section;
 - prefer palette/asset/generator changes over C changes where the design can be achieved safely;
-- avoid optional enhancements that expand the batch.
+- finish one subpart before moving to the next;
+- avoid optional enhancements that expand beyond the numbered section.
 
 ### Validation
-Target: **15–25 minutes**
-Run only the validation required to prove the batch.
+Target: **15–30 minutes**
+Run the complete section validation once after all subparts are implemented.
+
+Do not run full dual-revision builds between subparts unless a specific failure requires it.
 
 Do not spend an hour building experimental runtime harnesses.
 
@@ -90,10 +96,10 @@ During implementation:
 - use generator/validator checks;
 - use targeted compile/resource checks if available.
 
-At the **end of the batch only**:
+At the **end of the section only**:
 1. run relevant G7 visual validators;
 2. rerun all touched generators and confirm no diff;
-3. run `python3 tools/overhaul/validate_overhaul.py --no-write` if shared integration/code/resource plumbing changed or if the batch plan requires it;
+3. run `python3 tools/overhaul/validate_overhaul.py --no-write` if shared integration/code/resource plumbing changed or if the section plan requires it;
 4. build US Rev 0;
 5. build US Rev 1.
 
@@ -136,7 +142,7 @@ Do not ask the user to choose between minor palette values, border thicknesses, 
 
 ## 7. Scope-control rules
 
-For the current batch:
+For the current section:
 
 **Required work gets implemented.**
 **Optional work gets implemented only if it is low-risk and naturally falls out of the required work.**
@@ -165,7 +171,7 @@ If an asset is not yet generator-owned and the transformation is deterministic:
 
 Do not write hundreds of lines of narrative for every batch.
 
-Each batch report should be concise and contain:
+Each section report should be concise and contain:
 - ownership trace;
 - exact files changed;
 - what changed visually;
@@ -178,13 +184,16 @@ Prefer tables and short bullets over long prose.
 
 ## 10. Commit policy
 
-One coherent commit per subpart where useful, but avoid micro-commits.
+Use one coherent commit per major subpart where useful, but avoid micro-commits.
 
-Examples:
-- G7.4A Party
-- G7.4A Summary
+For example, a G7.4 session may reasonably produce:
+- G7.4A Party + Summary
+- G7.4B Bag + Start + Shop
+- G7.4 documentation/validation update
 
-or one G7.4A commit if the changes are tightly coupled and easy to review.
+or fewer commits if the changes are tightly coupled and easy to review.
+
+Do not stop the session after G7.4A; complete G7.4B before final validation and handoff.
 
 Before finishing:
 - `git status` must be clean;
@@ -194,7 +203,7 @@ Before finishing:
 
 ## 11. Stop conditions
 
-Stop the session after the current batch is complete.
+Stop the session only after the **entire current numbered G7 section** is complete.
 
 Stop early only if:
 - ownership cannot be established safely;
@@ -233,4 +242,4 @@ Merged on `main` through PR #50:
 - G7.2B message frames — implemented
 - G7.3 encounter intensity hierarchy — audited; risky runtime-sensitive additions intentionally deferred
 
-**Next implementation batch: G7.4A — Party + Summary.**
+**Next implementation section: G7.4 — Core Menu Modernization (G7.4A Party + Summary, then G7.4B Bag + Start + Shop).**
