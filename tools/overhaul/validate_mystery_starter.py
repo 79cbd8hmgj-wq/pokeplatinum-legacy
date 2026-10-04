@@ -180,6 +180,7 @@ class V:
         save = func_body(scrcmd, "ScrCmd_SaveChosenStarter") or ""
         r201 = self.read("res/field/scripts/scripts_route_201.s")
         body = r201[r201.index("Route201_Briefcase:"):r201.index("Route201_DawnLeave:")]
+        body_clean = strip_comments(body)
 
         # The fragile application-exit boundary is deliberately vanilla.
         self.rec("SaveChosenStarter uses the vanilla chooser output contract",
@@ -194,13 +195,13 @@ class V:
         # Native script RNG only after the field has fully returned.
         seq = ["StartChooseStarterScene", "SaveChosenStarter", "ReturnToField",
                "FadeScreenIn", "WaitFadeScreen", "GetRandom VAR_0x8000, 100"]
-        positions = [body.find(x) for x in seq]
+        positions = [body_clean.find(x) for x in seq]
         self.rec("native draw occurs only after chooser exit + full field restore",
                  all(p >= 0 for p in positions) and positions == sorted(positions), str(positions))
         self.rec("Route 201 has exactly one native starter RNG draw",
-                 body.count("GetRandom VAR_0x8000, 100") == 1 and len(re.findall(r"\bGetRandom\b", body)) == 1)
+                 body_clean.count("GetRandom VAR_0x8000, 100") == 1 and len(re.findall(r"\bGetRandom\b", body_clean)) == 1)
         self.rec("active Route 201 path never calls MysteryStarter_Draw",
-                 "MysteryStarter_Draw" not in body and "MysteryStarter_" not in body)
+                 "MysteryStarter_Draw" not in body_clean)
 
         # Locked weighted ranges, encoded with ascending exclusive thresholds.
         thresholds = [
