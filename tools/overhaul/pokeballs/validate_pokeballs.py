@@ -56,6 +56,32 @@ def validate(bs: str, marts: str, prices: dict, man: dict, shop: dict) -> list[s
     for vendor, balls in shop["vendors"].items():
         if arrays.get(vendor) != balls:
             P.append(f"{vendor}: balls {arrays.get(vendor)} != {balls}")
+
+    retired = set(shop.get("retired_from_progression_shops", []))
+    for vendor, balls in arrays.items():
+        leaked = sorted(retired.intersection(balls))
+        if leaked:
+            P.append(f"{vendor}: retired progression balls present {leaked}")
+
+    repurposed = shop.get("repurposed_slots", {})
+    if repurposed.get("ITEM_NEST_BALL") != "Level Ball":
+        P.append("ITEM_NEST_BALL must remain the Level Ball backing slot")
+    if repurposed.get("ITEM_DIVE_BALL") != "Lure Ball":
+        P.append("ITEM_DIVE_BALL must remain the Lure Ball backing slot")
+
+    if shop["common"].get("ITEM_GREAT_BALL") != 1 or shop["common"].get("ITEM_HEAL_BALL") != 1:
+        P.append("Great Ball and Heal Ball must be common-stock at zero badges")
+    if "ITEM_QUICK_BALL" not in arrays.get("JubilifeMartSpecialties", []):
+        P.append("Quick Ball must be available in Jubilife before Badge 1")
+    if "ITEM_TIMER_BALL" not in arrays.get("OreburghMartSpecialties", []):
+        P.append("Timer Ball must be available in Oreburgh by Badge 1")
+    eterna = arrays.get("EternaMartSpecialties", [])
+    if "ITEM_NEST_BALL" not in eterna or "ITEM_DIVE_BALL" not in eterna:
+        P.append("Level/Lure backing slots must be available by Eterna")
+    if "ITEM_REPEAT_BALL" not in arrays.get("SolaceonMartSpecialties", []):
+        P.append("Repeat Ball must be available by Solaceon")
+    if shop["common"].get("ITEM_ULTRA_BALL", 0) < 4:
+        P.append("Ultra Ball common-stock gate is too early")
     return P
 
 
