@@ -29,8 +29,6 @@ u16 Party_StringTemplateSetNicknameReturnSpecies(Party *party, int slot, StringT
 u8 Daycare_GetState(Daycare *daycare);
 u32 Daycare_GetCompatibilityLevel(Daycare *daycare);
 void Egg_CreateHatchedMon(Pokemon *egg, enum HeapID heapID);
-void Egg_CreateHatchedMonAtLevel(Pokemon *egg, enum HeapID heapID, u8 level);
-void Egg_CreateMysteryStarterEgg(Pokemon *egg, u16 species, TrainerInfo *trainerInfo, int metLocation);
 u32 BoxMon_GetPairDaycareCompatibilityLevel(BoxPokemon **boxMonPair);
 
 #endif // POKEPLATINUM_DAYCARE_H
