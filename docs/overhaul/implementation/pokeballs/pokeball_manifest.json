@@ -9,31 +9,9 @@
       "source": "battle_script.c BattleScript_CalcCatchShakes",
       "source_contains": [
         "ballMod = 35;"
-      ]
-    },
-    "dive": {
-      "item": "ITEM_DIVE_BALL",
-      "vanilla": "35 water terrain",
-      "target": "40 water terrain",
-      "source": "battle_script.c BattleScript_CalcCatchShakes",
-      "source_contains": [
-        "TERRAIN_WATER",
-        "ballMod = 40;"
-      ]
-    },
-    "nest": {
-      "item": "ITEM_NEST_BALL",
-      "vanilla": "40-targetLevel (<40)",
-      "target": "user>=target 20; >=2x 35; >=4x 50; else 10",
-      "source": "battle_script.c BattleScript_CalcCatchShakes",
-      "source_contains": [
-        "battleCtx->attacker",
-        "targetLevel * 4",
-        "ballMod = 50;",
-        "targetLevel * 2",
-        "ballMod = 35;",
-        "ballMod = 20;"
-      ]
+      ],
+      "active_distribution": false,
+      "note": "Legacy mechanic retained internally but removed from progression shops."
     },
     "repeat": {
       "item": "ITEM_REPEAT_BALL",
@@ -81,6 +59,32 @@
       "source_contains": [
         "ballMod = 15;"
       ]
+    },
+    "level": {
+      "item": "ITEM_NEST_BALL",
+      "display_identity": "Level Ball",
+      "backing_slot": "Nest Ball",
+      "target": "user>=target 20; >=2x 35; >=4x 50; else 10",
+      "source": "src/battle/battle_script.c BattleScript_CalcCatchShakes",
+      "source_contains": [
+        "battleCtx->attacker",
+        "targetLevel * 4",
+        "ballMod = 50;",
+        "targetLevel * 2",
+        "ballMod = 35;",
+        "ballMod = 20;"
+      ]
+    },
+    "lure": {
+      "item": "ITEM_DIVE_BALL",
+      "display_identity": "Lure Ball",
+      "backing_slot": "Dive Ball",
+      "target": "40 on water terrain; 10 otherwise",
+      "source": "src/battle/battle_script.c BattleScript_CalcCatchShakes",
+      "source_contains": [
+        "TERRAIN_WATER",
+        "ballMod = 40;"
+      ]
     }
   },
   "prices": {
@@ -89,12 +93,16 @@
     "ultra_ball": 1200,
     "heal_ball": 300,
     "net_ball": 1000,
-    "nest_ball": 1000,
     "dusk_ball": 1000,
     "quick_ball": 1000,
     "timer_ball": 1000,
     "repeat_ball": 1000,
-    "dive_ball": 1000,
-    "luxury_ball": 1000
-  }
+    "luxury_ball": 1000,
+    "level_ball": 1000,
+    "lure_ball": 1000
+  },
+  "retired_from_progression_shops": [
+    "ITEM_NET_BALL",
+    "ITEM_LUXURY_BALL"
+  ]
 }
