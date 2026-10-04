@@ -7,6 +7,10 @@ on:
       - 'tools/visual_overhaul/generate_ui_foundation.py'
       - 'tools/visual_overhaul/generate_start_menu_ui.py'
       - 'tools/visual_overhaul/generate_battle_ui.py'
+      - 'tools/visual_overhaul/generate_battle_command_ui.py'
+      - 'tools/visual_overhaul/nitro_narc.py'
+      - 'tools/visual_overhaul/generate_message_frames.py'
+      - 'tools/visual_overhaul/generate_move_select_palettes.py'
       - 'tools/visual_overhaul/generate_party_menu_ui.py'
       - 'tools/visual_overhaul/generate_summary_ui.py'
       - 'tools/visual_overhaul/generate_bag_ui.py'
@@ -34,6 +38,9 @@ jobs:
           python tools/visual_overhaul/generate_ui_foundation.py
           python tools/visual_overhaul/generate_start_menu_ui.py
           python tools/visual_overhaul/generate_battle_ui.py
+          python tools/visual_overhaul/generate_battle_command_ui.py
+          python tools/visual_overhaul/generate_move_select_palettes.py
+          python tools/visual_overhaul/generate_message_frames.py
           python tools/visual_overhaul/generate_party_menu_ui.py
           python tools/visual_overhaul/generate_summary_ui.py
           python tools/visual_overhaul/generate_bag_ui.py
@@ -41,13 +48,13 @@ jobs:
 
       - name: Commit generated PNG assets
         run: |
-          if git diff --quiet -- res/graphics/windows/standard_system.png res/graphics/windows/standard_field.png res/graphics/windows/scroll_cursor.png res/graphics/windows/wait_dial.png res/graphics/start_menu/cursor.png res/graphics/battle/healthbox/player_singles.png res/graphics/battle/healthbox/player_doubles.png res/graphics/battle/healthbox/enemy.png res/graphics/battle/healthbox/healthbox_parts.png res/graphics/battle/interface/cursor.png res/graphics/party_menu/shared.pal res/graphics/party_menu/cursor.png res/graphics/party_menu/button.png res/graphics/pokemon_summary_screen/tiles_main.pal res/graphics/pokemon_summary_screen/sprites.pal res/graphics/pokemon_summary_screen/tab_arrow.png res/graphics/pokemon_summary_screen/move_cursor.png res/graphics/bag/bag_ui_main.pal res/graphics/bag/ui_elements.pal res/graphics/shop_menu/default.pal res/graphics/shop_menu/frontier.pal res/graphics/shop_menu/sprites.pal; then
+          if git diff --quiet -- res/graphics/windows/standard_system.png res/graphics/windows/standard_field.png res/graphics/windows/scroll_cursor.png res/graphics/windows/wait_dial.png res/graphics/start_menu/cursor.png res/graphics/battle/healthbox/player_singles.png res/graphics/battle/healthbox/player_doubles.png res/graphics/battle/healthbox/enemy.png res/graphics/battle/healthbox/healthbox_parts.png res/graphics/battle/interface/cursor.png res/prebuilt/battle/graphic/pl_batt_bg.narc src/overlay011/move_palettes.c res/graphics/windows/message_box_00.png res/graphics/windows/message_box_01.png res/graphics/windows/message_box_02.png res/graphics/windows/message_box_03.png res/graphics/windows/message_box_04.png res/graphics/party_menu/shared.pal res/graphics/party_menu/cursor.png res/graphics/party_menu/button.png res/graphics/pokemon_summary_screen/tiles_main.pal res/graphics/pokemon_summary_screen/sprites.pal res/graphics/pokemon_summary_screen/tab_arrow.png res/graphics/pokemon_summary_screen/move_cursor.png res/graphics/bag/bag_ui_main.pal res/graphics/bag/ui_elements.pal res/graphics/shop_menu/default.pal res/graphics/shop_menu/frontier.pal res/graphics/shop_menu/sprites.pal; then
             echo "UI assets already up to date."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add res/graphics/windows/standard_system.png res/graphics/windows/standard_field.png res/graphics/windows/scroll_cursor.png res/graphics/windows/wait_dial.png res/graphics/start_menu/cursor.png res/graphics/battle/healthbox/player_singles.png res/graphics/battle/healthbox/player_doubles.png res/graphics/battle/healthbox/enemy.png res/graphics/battle/healthbox/healthbox_parts.png res/graphics/battle/interface/cursor.png res/graphics/party_menu/shared.pal res/graphics/party_menu/cursor.png res/graphics/party_menu/button.png res/graphics/pokemon_summary_screen/tiles_main.pal res/graphics/pokemon_summary_screen/sprites.pal res/graphics/pokemon_summary_screen/tab_arrow.png res/graphics/pokemon_summary_screen/move_cursor.png res/graphics/bag/bag_ui_main.pal res/graphics/bag/ui_elements.pal res/graphics/shop_menu/default.pal res/graphics/shop_menu/frontier.pal res/graphics/shop_menu/sprites.pal
+          git add res/graphics/windows/standard_system.png res/graphics/windows/standard_field.png res/graphics/windows/scroll_cursor.png res/graphics/windows/wait_dial.png res/graphics/start_menu/cursor.png res/graphics/battle/healthbox/player_singles.png res/graphics/battle/healthbox/player_doubles.png res/graphics/battle/healthbox/enemy.png res/graphics/battle/healthbox/healthbox_parts.png res/graphics/battle/interface/cursor.png res/prebuilt/battle/graphic/pl_batt_bg.narc src/overlay011/move_palettes.c res/graphics/windows/message_box_00.png res/graphics/windows/message_box_01.png res/graphics/windows/message_box_02.png res/graphics/windows/message_box_03.png res/graphics/windows/message_box_04.png res/graphics/party_menu/shared.pal res/graphics/party_menu/cursor.png res/graphics/party_menu/button.png res/graphics/pokemon_summary_screen/tiles_main.pal res/graphics/pokemon_summary_screen/sprites.pal res/graphics/pokemon_summary_screen/tab_arrow.png res/graphics/pokemon_summary_screen/move_cursor.png res/graphics/bag/bag_ui_main.pal res/graphics/bag/ui_elements.pal res/graphics/shop_menu/default.pal res/graphics/shop_menu/frontier.pal res/graphics/shop_menu/sprites.pal
           git commit -m "visual: regenerate global UI foundation assets"
           # The branch may advance while this generator is running because PR
           # validation and other UI-generator runs overlap. Rebase the tiny
