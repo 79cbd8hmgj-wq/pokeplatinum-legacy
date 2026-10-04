@@ -220,7 +220,7 @@ class V:
             (20, "CHIKORITA"), (30, "CYNDAQUIL"), (40, "TOTODILE"), (50, "TREECKO"),
             (60, "TORCHIC"), (70, "MUDKIP"), (80, "TURTWIG"), (90, "CHIMCHAR"),
         ]
-        threshold_lines = [(int(n), sp) for n, sp in re.findall(
+        threshold_lines = [(int(n), sp.upper()) for n, sp in re.findall(
             r"GoToIfLt VAR_0x8000, (\d+), Route201_MysteryStarter_(\w+)", body)]
         self.rec("native script thresholds exactly encode the locked 0-99 distribution",
                  threshold_lines == thresholds and "GoTo Route201_MysteryStarter_Piplup" in body,
