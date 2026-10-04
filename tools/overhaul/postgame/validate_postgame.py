@@ -151,6 +151,9 @@ class V:
             d = json.load(open(L.p(c["source_path"])))
             if d["moves"] != c["target"] or (c.get("nature") and d["nature"] != c["nature"]["target"]):
                 drift.append(c["source_path"])
+                continue
+            if c.get("evFlags") and d["evFlags"] != c["evFlags"]["target"]:
+                drift.append(c["source_path"])
         self.rec("set-change manifest matches source (no drift)", not drift, ",".join(drift))
         listed = {c["source_path"] for c in man["changes"]}
         edited = {f for f in self.changed_files() if f.startswith(L.SETS_DIR + "/")}
