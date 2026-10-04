@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
-"""Deterministic mutation tests for the D8 Mystery Egg starter validator. Each mutation edits one source file in memory; the validator must
-report at least one FAIL for it, and the unmutated tree must be clean. Writes docs/overhaul/implementation/opening/mutation_results.json
-(no timestamps; byte-stable on an unchanged tree)."""
+"""Deterministic mutation tests for the hardened D8 Mystery Egg starter validator.
+
+Each mutation edits one source file in memory. The validator must report at least
+one FAIL for every mutation, while the unmutated tree must have zero failures.
+"""
 import json
 import os
 import sys
@@ -10,79 +12,79 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 import validate_mystery_starter as VM  # noqa: E402
 
 OUT = os.path.join(VM.ROOT, "docs/overhaul/implementation/opening/mutation_results.json")
-SRC = "src/mystery_egg_starter.c"
+SRC = "src/mystery_egg_starter.c"  # validator/reference-only; not linked into ROM
 HDR = "include/mystery_egg_starter.h"
 APP = "src/choose_starter/choose_starter_app.c"
 SC = "src/scrcmd.c"
 SV = "src/system_vars.c"
-DC = "src/overlay005/daycare.c"
 R201 = "res/field/scripts/scripts_route_201.s"
 R203 = "res/field/scripts/scripts_route_203.s"
+LAB = "res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s"
 TXT = "res/text/unk_0360.json"
 STR = "src/scrcmd_strings.c"
+MESON = "src/meson.build"
 
 # name -> (path, old, new)
 MUTATIONS = {
+    # Locked reference pool / position independence.
     "Pikachu weight 1 -> 2": (SRC, "{ SPECIES_PIKACHU, 1 }", "{ SPECIES_PIKACHU, 2 }"),
-    "Gen I weight (Bulbasaur) 3 -> 4": (SRC, "{ SPECIES_BULBASAUR, 3 }", "{ SPECIES_BULBASAUR, 4 }"),
-    "Gen II weight (Chikorita) 10 -> 9": (SRC, "{ SPECIES_CHIKORITA, 10 }", "{ SPECIES_CHIKORITA, 9 }"),
-    "Gen III weight (Mudkip) 10 -> 11": (SRC, "{ SPECIES_MUDKIP, 10 }", "{ SPECIES_MUDKIP, 11 }"),
-    "Gen IV weight (Piplup) 10 -> 11 (total 101)": (SRC, "{ SPECIES_PIPLUP, 10 }", "{ SPECIES_PIPLUP, 11 }"),
-    "total weight 100 -> 99 via Torchic": (SRC, "{ SPECIES_TORCHIC, 10 }", "{ SPECIES_TORCHIC, 9 }"),
-    "egg position becomes a table input": (HDR, "u16 MysteryStarter_SpeciesFromRoll(u32 roll);", "u16 MysteryStarter_SpeciesFromRoll(u32 roll, u32 position);"),
-    "draw takes the egg position": (HDR, "u16 MysteryStarter_Draw(void);", "u16 MysteryStarter_Draw(u32 position);"),
-    "second RNG call in the draw": (SRC, "u32 roll = LCRNG_Next() % MYSTERY_STARTER_ROLL_RANGE;", "LCRNG_Next();\n    u32 roll = LCRNG_Next() % MYSTERY_STARTER_ROLL_RANGE;"),
-    "draw called a second time (hatch reroll)": (SC, "Egg_CreateMysteryStarterEgg(egg, species,", "species = MysteryStarter_Draw();\n    Egg_CreateMysteryStarterEgg(egg, species,"),
-    "Pikachu Rival mapping -> Chimchar branch": (SRC, "    case SPECIES_PIPLUP:\n    case SPECIES_PIKACHU:\n    default:\n        return SPECIES_PIPLUP;", "    case SPECIES_PIPLUP:\n    default:\n        return SPECIES_PIPLUP;\n    case SPECIES_PIKACHU:\n        return SPECIES_CHIMCHAR;"),
-    "Pikachu Rival mapping -> Turtwig branch": (SRC, "    case SPECIES_PIPLUP:\n    case SPECIES_PIKACHU:\n    default:\n        return SPECIES_PIPLUP;", "    case SPECIES_PIPLUP:\n    default:\n        return SPECIES_PIPLUP;\n    case SPECIES_PIKACHU:\n        return SPECIES_TURTWIG;"),
-    "Grass category mapped to Water (Treecko)": (SRC, "    case SPECIES_TREECKO:\n", "    case SPECIES_TREECKO:\n        return SPECIES_PIPLUP;\n"),
-    "Route 203 Rival branch reads the actual Mystery species": (R203, "GetPlayerStarterSpecies VAR_RESULT", "GetMysteryStarterSpecies VAR_RESULT"),
-    "Rival starter keyed on the Mystery species": (SV, "u16 playerStarter = TryGetVarValue(varsFlags, VAR_PLAYER_STARTER);\n\n    if (playerStarter == SPECIES_TURTWIG) {\n        rivalStarter",
-                                                      "u16 playerStarter = TryGetVarValue(varsFlags, VAR_MYSTERY_STARTER_SPECIES);\n\n    if (playerStarter == SPECIES_TURTWIG) {\n        rivalStarter"),
-    "Rival branch compared against a non-Sinnoh species": (R203, "GoToIfEq VAR_RESULT, SPECIES_TURTWIG, Route203_StartRivalBattleTurtwig", "GoToIfEq VAR_RESULT, SPECIES_BULBASAUR, Route203_StartRivalBattleTurtwig"),
-    "thirteen-way Rival duplication (extra Rival label)": (R203, "Route203_StartRivalBattlePiplup:", "Route203_StartRivalBattleBulbasaur:\n    GoTo Route203_StartRivalBattlePiplup\n\nRoute203_StartRivalBattlePiplup:"),
-    "output level 5 -> 1": (HDR, "#define MYSTERY_STARTER_LEVEL      5", "#define MYSTERY_STARTER_LEVEL      1"),
-    "starter hatch level reset to ordinary": ("src/unk_0203D1B8.c", "args.hatchLevel = MYSTERY_STARTER_LEVEL;", "args.hatchLevel = 0;"),
-    "species preview: chooser sprite built from a real species": (APP, "BuildPokemonSpriteTemplate(&spriteTemplate, SPECIES_EGG, 0,", "BuildPokemonSpriteTemplate(&spriteTemplate, SPECIES_PIPLUP, 0,"),
-    "species cry before hatch": (APP, "            app->chooseStarterStep++;\n        }\n        break;\n    case CHOOSE_STARTER_STEP_UPDATE_CURSOR_POSITION:", "            Sound_PlayPokemonCry(SPECIES_PIPLUP, 0);\n            app->chooseStarterStep++;\n        }\n        break;\n    case CHOOSE_STARTER_STEP_UPDATE_CURSOR_POSITION:"),
+    "Bulbasaur weight 3 -> 4": (SRC, "{ SPECIES_BULBASAUR, 3 }", "{ SPECIES_BULBASAUR, 4 }"),
+    "Piplup weight 10 -> 11": (SRC, "{ SPECIES_PIPLUP, 10 }", "{ SPECIES_PIPLUP, 11 }"),
+    "extra species in reference pool": (SRC, "    { SPECIES_PIPLUP, 10 },\n};", "    { SPECIES_PIPLUP, 10 },\n    { SPECIES_EEVEE, 0 },\n};"),
+    "missing species in reference pool": (SRC, "    { SPECIES_MUDKIP, 10 },\n", ""),
+    "reference lookup takes egg position": (HDR, "u16 MysteryStarter_SpeciesFromRoll(u32 roll);", "u16 MysteryStarter_SpeciesFromRoll(u32 roll, u32 position);"),
+
+    # Egg chooser presentation / vanilla exit contract.
+    "chooser uses real species sprite": (APP, "BuildPokemonSpriteTemplate(&spriteTemplate, SPECIES_EGG, 0,", "BuildPokemonSpriteTemplate(&spriteTemplate, SPECIES_PIPLUP, 0,"),
+    "chooser plays species cry": (APP, "            app->chooseStarterStep++;\n        }\n        break;\n    case CHOOSE_STARTER_STEP_UPDATE_CURSOR_POSITION:", "            Sound_PlayPokemonCry(SPECIES_PIPLUP, 0);\n            app->chooseStarterStep++;\n        }\n        break;\n    case CHOOSE_STARTER_STEP_UPDATE_CURSOR_POSITION:"),
     "per-position confirmation text": (APP, "SetMessageWindowText(app->messageWindow, heapID, 360, 1, TEXT_COLOR(1, 2, 15), TEXT_SPEED_NO_TRANSFER);", "SetMessageWindowText(app->messageWindow, heapID, 360, 1 + app->cursorPosition, TEXT_COLOR(1, 2, 15), TEXT_SPEED_NO_TRANSFER);"),
-    "Poke Ball models hidden again (non-vanilla visibility)": (APP, "            Set3DGraphicsIsVisible(&app->starter3DGraphics[4], TRUE);\n", ""),
-    "custom resting-state plumbing reintroduced": (APP, "static BOOL IsSelectionMade(ChooseStarterApp *app, enum HeapID heapID);", "static void SetMysteryEggRestingState(ChooseStarterApp *app, int position);\nstatic BOOL IsSelectionMade(ChooseStarterApp *app, enum HeapID heapID);"),
-    "preview movement offset changed": (APP, "[1] + 48) << FX32_SHIFT", "[1] + 40) << FX32_SHIFT"),
-    "eggPosition output reintroduced": ("include/struct_defs/choose_starter_data.h", "const Options *options;", "int eggPosition;\n    const Options *options;"),
-    "ChooseStarterData species field removed (non-vanilla layout)": ("include/struct_defs/choose_starter_data.h", "    int species;\n", ""),
-    "ChooseStarterData field order swapped": ("include/struct_defs/choose_starter_data.h", "    int species;\n    const Options *options;", "    const Options *options;\n    int species;"),
+    "fourth egg option": (APP, "#define NUM_STARTER_OPTIONS 3", "#define NUM_STARTER_OPTIONS 4"),
+    "ChooseStarterData species field removed": ("include/struct_defs/choose_starter_data.h", "    int species;\n", ""),
     "ChooseStarter_Exit species assignment removed": (APP, "    data->species = GetSelectedSpecies(app->cursorPosition);\n\n", ""),
-    "ChooseStarter_Exit teardown reordered (VramTransfer_Free before DeleteDrawing)": (APP, "    DeleteDrawing();\n\n    VramTransfer_Free();", "    VramTransfer_Free();\n\n    DeleteDrawing();"),
-    "fourth egg sprite / wrong option count": (APP, "#define NUM_STARTER_OPTIONS 3", "#define NUM_STARTER_OPTIONS 4"),
-    "SaveChosenStarter reads chooser species": (SC, "u16 species = MysteryStarter_Draw();", "ChooseStarterData *chooseStarterData = (*fieldSysDataPtr);\n    u16 species = MysteryStarter_Draw() + 0 * chooseStarterData->species;"),
-    "SaveChosenStarter frees chooser data twice": (SC, "    Heap_Free(*fieldSysDataPtr);\n\n    return FALSE;\n}\n\nstatic BOOL ScrCmd_OpenBag", "    Heap_Free(*fieldSysDataPtr);\n    Heap_Free(*fieldSysDataPtr);\n\n    return FALSE;\n}\n\nstatic BOOL ScrCmd_OpenBag"),
-    "Route 201 calls GiveMysteryStarterEgg again": (R201, "    GetMysteryStarterSpecies VAR_0x8000\n    GivePokemon", "    GiveMysteryStarterEgg\n    GetMysteryStarterSpecies VAR_0x8000\n    GivePokemon"),
-    "Route 201 calls HatchMysteryStarterEgg again": (R201, "    GetMysteryStarterSpecies VAR_0x8000\n    GivePokemon", "    HatchMysteryStarterEgg\n    GetMysteryStarterSpecies VAR_0x8000\n    GivePokemon"),
-    "Route 201 award GivePokemon removed": (R201, "    GivePokemon VAR_0x8000, 5, ITEM_NONE, VAR_RESULT\n    ApplyMovement LOCALID_PROF_ROWAN", "    ApplyMovement LOCALID_PROF_ROWAN"),
-    "Route 201 award level changed": (R201, "GivePokemon VAR_0x8000, 5,", "GivePokemon VAR_0x8000, 6,"),
-    "Route 201 award before FadeScreenIn": (R201, "    FadeScreenIn\n    WaitFadeScreen\n    GetMysteryStarterSpecies VAR_0x8000\n", "    GetMysteryStarterSpecies VAR_0x8000\n    FadeScreenIn\n    WaitFadeScreen\n"),
+    "chooser teardown reordered": (APP, "    DeleteDrawing();\n\n    VramTransfer_Free();", "    VramTransfer_Free();\n\n    DeleteDrawing();"),
     "chooser text differs per egg": (TXT, '"A Mystery Egg!\\n"', '"A Mystery Egg?!\\n"'),
-    "missing persistence after roll": (SC, "SystemVars_SetMysteryStarterSpecies(varsFlags, species);", "SystemVars_SetPlayerStarter(varsFlags, 0);"),
-    "extra species in the pool": (SRC, "    { SPECIES_PIPLUP, 10 },\n};", "    { SPECIES_PIPLUP, 10 },\n    { SPECIES_EEVEE, 0 },\n};"),
-    "missing species in the pool": (SRC, "    { SPECIES_MUDKIP, 10 },\n", ""),
-    "ordinary Egg_CreateEgg level changed": (DC, "Egg_CreateEggAtLevel(egg, species, param2, trainerInfo, param4, metLocation, 1);", "Egg_CreateEggAtLevel(egg, species, param2, trainerInfo, param4, metLocation, 5);"),
-    "ordinary hatch level changed": (DC, "Egg_CreateHatchedMonAtLevel(egg, heapID, 1);", "Egg_CreateHatchedMonAtLevel(egg, heapID, 5);"),
-    "breeding logic edited (hatch friendship)": (DC, "friendship = 120;", "friendship = 70;"),
-    "Day Care hatch-cycle constants edited": ("include/constants/daycare.h", None, "\n#define MUTATED_HATCH_CONSTANT 1\n"),
-    "Counterpart starter keyed on the Mystery species": (SV, "u16 playerStarter = TryGetVarValue(varsFlags, VAR_PLAYER_STARTER);\n\n    if (playerStarter == SPECIES_TURTWIG) {\n        counterpartStarter",
-                                                            "u16 playerStarter = TryGetVarValue(varsFlags, VAR_MYSTERY_STARTER_SPECIES);\n\n    if (playerStarter == SPECIES_TURTWIG) {\n        counterpartStarter"),
-    "VAR_PLAYER_STARTER receives the actual species": (SC, "SystemVars_SetPlayerStarter(varsFlags, branch);", "SystemVars_SetPlayerStarter(varsFlags, species);"),
-    "actual species never stored": (SC, "SystemVars_SetMysteryStarterSpecies(varsFlags, species);", "(void)species;"),
-    "branch computed with a second helper (not the single draw)": (SC, "u16 branch = MysteryStarter_GetRivalBranch(species);", "u16 branch = MysteryStarter_GetRivalBranch(MysteryStarter_Draw());"),
-    "Pikachu branch store -> Chimchar via mapping": (SRC, "    case SPECIES_PIPLUP:\n    case SPECIES_PIKACHU:\n    default:\n        return SPECIES_PIPLUP;", "    case SPECIES_PIPLUP:\n    default:\n        return SPECIES_PIPLUP;\n    case SPECIES_PIKACHU:\n        return SPECIES_CHIMCHAR;"),
-    "branch-remap layer reintroduced (SystemVars_GetPlayerStarterBranch)": (SV, "u16 SystemVars_GetRivalStarter(VarsFlags *varsFlags)\n{", "u16 SystemVars_GetPlayerStarterBranch(VarsFlags *varsFlags)\n{\n    return 0;\n}\n\nu16 SystemVars_GetRivalStarter(VarsFlags *varsFlags)\n{"),
-    "renamed var reverted to VAR_UNUSED_0x4031": ("generated/vars_flags.txt", "VAR_MYSTERY_STARTER_SPECIES\n", "VAR_UNUSED_0x4031\n"),
-    "extra var added to the table (save-size change)": ("generated/vars_flags.txt", "VAR_MYSTERY_STARTER_SPECIES\n", "VAR_MYSTERY_STARTER_SPECIES\nVAR_EXTRA_NEW\n"),
-    "player name buffer uses the canonical branch": (STR, "u16 species = SystemVars_GetMysteryStarterSpecies(varsFlags);", "u16 species = SystemVars_GetPlayerStarter(varsFlags);"),
-    "rival name buffer uses the Mystery species": (STR, "u16 species = SystemVars_GetRivalStarter(SaveData_GetVarsFlags(ctx->fieldSystem->saveData));", "u16 species = SystemVars_GetMysteryStarterSpecies(SaveData_GetVarsFlags(ctx->fieldSystem->saveData));"),
-    "Route 201 award reads VAR_PLAYER_STARTER again": (R201, "    GetMysteryStarterSpecies VAR_0x8000\n    GivePokemon", "    GetPlayerStarterSpecies VAR_0x8000\n    GivePokemon"),
-    "Sandgem lab gift skip reads the canonical branch": ("res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s", "GetMysteryStarterSpecies VAR_0x8000", "GetPlayerStarterSpecies VAR_0x8000"),
+
+    # Vanilla application-exit boundary.
+    "SaveChosenStarter frees chooser data twice": (SC, "    Heap_Free(*fieldSysDataPtr);\n\n    return FALSE;\n}\n\nstatic BOOL ScrCmd_OpenBag", "    Heap_Free(*fieldSysDataPtr);\n    Heap_Free(*fieldSysDataPtr);\n\n    return FALSE;\n}\n\nstatic BOOL ScrCmd_OpenBag"),
+    "SaveChosenStarter writes Mystery variable": (SC, "    SystemVars_SetPlayerStarter(SaveData_GetVarsFlags(ctx->fieldSystem->saveData), chooseStarterData->species);", "    SystemVars_SetPlayerStarter(SaveData_GetVarsFlags(ctx->fieldSystem->saveData), chooseStarterData->species);\n    VAR_MYSTERY_STARTER_SPECIES;"),
+
+    # Native post-return RNG timing and weighted thresholds.
+    "native RNG upper bound 100 -> 99": (R201, "    GetRandom VAR_0x8000, 100", "    GetRandom VAR_0x8000, 99"),
+    "second starter RNG draw": (R201, "    GetRandom VAR_0x8000, 100", "    GetRandom VAR_0x8000, 100\n    GetRandom VAR_0x8001, 100"),
+    "Bulbasaur threshold 3 -> 4": (R201, "GoToIfLt VAR_0x8000, 3, Route201_MysteryStarter_Bulbasaur", "GoToIfLt VAR_0x8000, 4, Route201_MysteryStarter_Bulbasaur"),
+    "Pikachu threshold 10 -> 11": (R201, "GoToIfLt VAR_0x8000, 10, Route201_MysteryStarter_Pikachu", "GoToIfLt VAR_0x8000, 11, Route201_MysteryStarter_Pikachu"),
+    "Chimchar threshold 90 -> 91": (R201, "GoToIfLt VAR_0x8000, 90, Route201_MysteryStarter_Chimchar", "GoToIfLt VAR_0x8000, 91, Route201_MysteryStarter_Chimchar"),
+    "Piplup fallback removed": (R201, "    GoTo Route201_MysteryStarter_Piplup\n    End", "    End"),
+    "RNG moved before field fade completion": (R201, "    FadeScreenIn\n    WaitFadeScreen\n\n    // D8 Mystery Starter hardening:", "    GetRandom VAR_0x8000, 100\n    FadeScreenIn\n    WaitFadeScreen\n\n    // D8 Mystery Starter hardening:"),
+
+    # Actual species / canonical Rival branch persistence.
+    "Pikachu actual store wrong": (R201, "Route201_MysteryStarter_Pikachu:\n    SetVar VAR_MYSTERY_STARTER_SPECIES, SPECIES_PIKACHU", "Route201_MysteryStarter_Pikachu:\n    SetVar VAR_MYSTERY_STARTER_SPECIES, SPECIES_PIPLUP"),
+    "Pikachu canonical branch -> Chimchar": (R201, "Route201_MysteryStarter_Pikachu:\n    SetVar VAR_MYSTERY_STARTER_SPECIES, SPECIES_PIKACHU\n    SetVar VAR_PLAYER_STARTER, SPECIES_PIPLUP", "Route201_MysteryStarter_Pikachu:\n    SetVar VAR_MYSTERY_STARTER_SPECIES, SPECIES_PIKACHU\n    SetVar VAR_PLAYER_STARTER, SPECIES_CHIMCHAR"),
+    "Treecko canonical branch -> Piplup": (R201, "Route201_MysteryStarter_Treecko:\n    SetVar VAR_MYSTERY_STARTER_SPECIES, SPECIES_TREECKO\n    SetVar VAR_PLAYER_STARTER, SPECIES_TURTWIG", "Route201_MysteryStarter_Treecko:\n    SetVar VAR_MYSTERY_STARTER_SPECIES, SPECIES_TREECKO\n    SetVar VAR_PLAYER_STARTER, SPECIES_PIPLUP"),
+    "actual species copied from canonical var": (R201, "SetVarFromVar VAR_0x8000, VAR_MYSTERY_STARTER_SPECIES", "SetVarFromVar VAR_0x8000, VAR_PLAYER_STARTER"),
+    "starter award removed": (R201, "    GivePokemon VAR_0x8000, 5, ITEM_NONE, VAR_RESULT\n", ""),
+    "starter award level 5 -> 6": (R201, "GivePokemon VAR_0x8000, 5,", "GivePokemon VAR_0x8000, 6,"),
+
+    # Custom engine plumbing must stay gone.
+    "custom getter macro reintroduced": ("asm/macros/scrcmd.inc", None, "\n    .macro GetMysteryStarterSpecies destVar\n    .short SCRCMD_GETMYSTERYSTARTERSPECIES\n    .short \\destVar\n    .endm\n"),
+    "custom getter opcode reintroduced": ("include/data/scripts/scrcmd.h", None, "\nScriptCommand(SCRCMD_GETMYSTERYSTARTERSPECIES, ScrCmd_GetMysteryStarterSpecies)\n"),
+    "reference C module linked into ROM": (MESON, None, "\n# mutation\n'mystery_egg_starter.c',\n"),
+
+    # Downstream semantics.
+    "Route 203 Rival reads actual Mystery species": (R203, "GetPlayerStarterSpecies VAR_RESULT", "SetVarFromVar VAR_RESULT, VAR_MYSTERY_STARTER_SPECIES"),
+    "Rival helper keyed on actual Mystery species": (SV, "u16 playerStarter = TryGetVarValue(varsFlags, VAR_PLAYER_STARTER);\n\n    if (playerStarter == SPECIES_TURTWIG) {", "u16 playerStarter = TryGetVarValue(varsFlags, VAR_MYSTERY_STARTER_SPECIES);\n\n    if (playerStarter == SPECIES_TURTWIG) {"),
+    "player name buffer uses canonical branch": (STR, "u16 species = SystemVars_GetMysteryStarterSpecies(varsFlags);", "u16 species = SystemVars_GetPlayerStarter(varsFlags);"),
+    "Sandgem lab reads canonical branch": (LAB, "SetVarFromVar VAR_0x8000, VAR_MYSTERY_STARTER_SPECIES", "SetVarFromVar VAR_0x8000, VAR_PLAYER_STARTER"),
+    "Mystery variable renamed back to unused": ("generated/vars_flags.txt", "VAR_MYSTERY_STARTER_SPECIES\n", "VAR_UNUSED_0x4031\n"),
+
+    # Breeding / hatch engine must remain byte-identical to pre-D8.
+    "ordinary daycare source edited": ("src/overlay005/daycare.c", None, "\n/* D8 mutation */\n"),
+    "egg hatch engine edited": ("src/egg_hatch.c", None, "\n/* D8 mutation */\n"),
+    "field hatch engine edited": ("src/unk_0203D1B8.c", None, "\n/* D8 mutation */\n"),
+    "daycare header edited": ("include/overlay005/daycare.h", None, "\n/* D8 mutation */\n"),
+    "egg hatch args edited": ("include/egg_hatch.h", None, "\n/* D8 mutation */\n"),
+    "daycare constants edited": ("include/constants/daycare.h", None, "\n#define MUTATED_HATCH_CONSTANT 1\n"),
+
     "manifest/source drift (manifest weight)": ("MANIFEST", None, None),
 }
 
