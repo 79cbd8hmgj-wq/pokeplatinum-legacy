@@ -8,12 +8,14 @@ HEALTHBOX_DIR = ROOT / "res" / "graphics" / "battle" / "healthbox"
 
 # Normal battle healthboxes share the palette generated from player_singles.png.
 # Only the chrome entries change here; HP/status colors remain untouched.
+# G7.2A: deeper outline / rail / panel so the white name + HP glyphs sit on a
+# dark, high-contrast field (palette-only; pixel geometry and cells unchanged).
 CHROME_PALETTE_OVERRIDES = {
-    1: (190, 207, 220),  # cool edge highlight
-    2: (24, 37, 52),     # deep navy outline
-    3: (62, 89, 112),    # steel-blue rail
-    4: (232, 241, 247),  # bright highlight
-    15: (78, 101, 119),  # slate panel fill
+    1: (176, 208, 236),  # cool edge highlight
+    2: (12, 20, 40),     # deep navy outline
+    3: (46, 70, 98),     # steel-blue rail (HP numeral field)
+    4: (236, 244, 250),  # bright highlight
+    15: (36, 54, 80),    # panel fill (name field, gauge track)
 }
 
 PREVIEW_SYNC_FILES = (
