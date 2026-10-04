@@ -11,8 +11,6 @@ BOOL SystemVars_SetPartnerTrainerID(VarsFlags *varsFlags, u16 trainerID);
 u16 SystemVars_GetPartnerTrainerID(VarsFlags *varsFlags);
 BOOL SystemVars_SetPlayerStarter(VarsFlags *varsFlags, u16 species);
 u16 SystemVars_GetPlayerStarter(VarsFlags *varsFlags);
-BOOL SystemVars_SetMysteryStarterSpecies(VarsFlags *varsFlags, u16 species);
-u16 SystemVars_GetMysteryStarterSpecies(VarsFlags *varsFlags);
 u16 SystemVars_GetRivalStarter(VarsFlags *varsFlags);
 u16 SystemVars_GetPlayerCounterpartStarter(VarsFlags *varsFlags);
 u16 SystemVars_GetSizeContestRecord(VarsFlags *varsFlags);
