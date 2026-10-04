@@ -230,19 +230,17 @@ def data_checks(res, species):
     moved = [s for s in und if json.loads(git_show(f"res/pokemon/{s[8:].lower()}/data.json"))["hatch_cycles"] != species[s]["hatch_cycles"]]
     res.check(S, f"{len(und)} Undiscovered-only non-egg-result species untouched", not moved, str(moved[:5]))
 
-    eg_changed, em_changed, other = [], [], []
+    # Permanent validator owns breeding fields only. Later locked passes may legitimately
+    # change stats/types/abilities/level-up/TM data in the same species JSON files.
+    eg_changed, em_changed = [], []
     for f in changed_files():
         if not f.startswith("res/pokemon/") or not f.endswith("data.json"):
             continue
         a, b = json.loads(git_show(f)), json.load(open(os.path.join(R, f)))
-        a["hatch_cycles"] = b["hatch_cycles"]
-        if a != b:
-            if a["egg_groups"] != b["egg_groups"]:
-                eg_changed.append(f)
-            elif a["learnset"].get("egg_moves") != b["learnset"].get("egg_moves"):
-                em_changed.append(f)
-            else:
-                other.append(f)
+        if a["egg_groups"] != b["egg_groups"]:
+            eg_changed.append(f)
+        if a["learnset"].get("egg_moves") != b["learnset"].get("egg_moves"):
+            em_changed.append(f)
     egm = json.load(open(os.path.join(L.IMPL, "egg_group_changes.json")))
     emm = json.load(open(os.path.join(L.IMPL, "egg_move_changes.json")))
     approved = {e["species"] for e in emm["entries"]}
@@ -258,7 +256,7 @@ def data_checks(res, species):
     res.check(S, "only added egg moves are the 9 ruled Marill->Azurill / Snorlax->Munchlax migrations", set(added) == mig and len(added) == 9, str(added))
     rem = {(e["species"], m) for e in emm["entries"] for m in e["before"] if m not in e["target"]}
     res.check(S, "only removed egg moves are the 5 ruled entries", rem == {(x["egg_species"], x["move"]) for x in emm["removed_moves"]} and len(rem) == 5, str(rem))
-    res.check(S, "species data diff limited to hatch_cycles", not other, str(other))
+    res.check(S, "no unapproved breeding-owned species-field changes", not eg_changed and {f.split("/")[2].upper() for f in em_changed} == {x[8:] for x in approved})
 
     for baby, adult, inc in L.NO_INCENSE_BABIES:
         res.check(S, f"no-incense family {baby[8:]}: {adult[8:]} offspring -> {baby[8:]}, baby is an egg result",
