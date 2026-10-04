@@ -29,16 +29,6 @@ LOCKED_BRANCH = {"BULBASAUR": "TURTWIG", "CHIKORITA": "TURTWIG", "TREECKO": "TUR
                  "SQUIRTLE": "PIPLUP", "TOTODILE": "PIPLUP", "MUDKIP": "PIPLUP", "PIPLUP": "PIPLUP", "PIKACHU": "PIPLUP"}
 RNG_CALL = re.compile(r"\b(LCRNG_Next|ARNG_Next|MTRNG_Next|MTRNG_Range|LCRNG_Range|GetRandom\w*|rand)\s*\(")
 SINNOH = {"SPECIES_TURTWIG", "SPECIES_CHIMCHAR", "SPECIES_PIPLUP"}
-# Lines the ordinary Day Care source may gain/lose in D8 (everything else in daycare.c must be byte-identical to the starting SHA).
-DAYCARE_ALLOWED = [
-    r"^static void Egg_CreateEggAtLevel\(", r"^void Egg_CreateEgg\(", r"Egg_CreateEggAtLevel\(egg, species, param2, trainerInfo, param4, metLocation, 1\);",
-    r"Pokemon_InitWith\(egg, species, (1|level), INIT_IVS_RANDOM, FALSE, 0, OTID_NOT_SET, 0\);",
-    r"^void Egg_CreateMysteryStarterEgg\(", r"Egg_CreateEggAtLevel\(egg, species, 1, trainerInfo, 4, metLocation, MYSTERY_STARTER_LEVEL\);",
-    r"^static void Egg_CreateHatchedMonInternal\(", r"Pokemon_InitWith\(mon, species, (1|level), INIT_IVS_RANDOM, TRUE, personality, OTID_NOT_SET, 0\);",
-    r"^void Egg_CreateHatchedMon\(", r"Egg_CreateHatchedMonAtLevel\(egg, heapID, 1\);", r"^void Egg_CreateHatchedMonAtLevel\(",
-    r"Egg_CreateHatchedMonInternal\(egg, heapID(, level)?\);", r'#include "mystery_egg_starter.h"', r"^// Scripted Mystery Egg starter",
-]
-
 
 def git_show(path, sha=START_SHA):
     r = subprocess.run(["git", "show", f"{sha}:{path}"], cwd=ROOT, capture_output=True, text=True)
