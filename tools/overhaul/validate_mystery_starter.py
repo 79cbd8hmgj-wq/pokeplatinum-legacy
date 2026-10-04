@@ -210,8 +210,10 @@ class V:
 
         self.rec("exactly one native field-script RNG draw", body.count("GetRandom VAR_0x8000, 100") == 1 and
                  len(re.findall(r"^\s*GetRandom\b", body, flags=re.M)) == 1)
+        wait_fade_pos = body.find("WaitFadeScreen")
+        rng_pos = body.find("GetRandom VAR_0x8000, 100")
         self.rec("RNG happens only after the field fade has completed",
-                 body.index("WaitFadeScreen") < body.index("GetRandom VAR_0x8000, 100"))
+                 wait_fade_pos >= 0 and rng_pos >= 0 and wait_fade_pos < rng_pos)
         self.rec("active Route 201 path does not call custom MysteryStarter_Draw/GetMysteryStarterSpecies",
                  "MysteryStarter_Draw" not in body and "GetMysteryStarterSpecies" not in body)
 
