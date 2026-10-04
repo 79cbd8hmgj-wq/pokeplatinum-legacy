@@ -195,7 +195,12 @@ class V:
         # Native script RNG only after the field has fully returned.
         seq = ["StartChooseStarterScene", "SaveChosenStarter", "ReturnToField",
                "FadeScreenIn", "WaitFadeScreen", "GetRandom VAR_0x8000, 100"]
-        positions = [body_clean.find(x) for x in seq]
+        positions, search_from = [], 0
+        for token in seq:
+            pos = body_clean.find(token, search_from)
+            positions.append(pos)
+            if pos >= 0:
+                search_from = pos + len(token)
         self.rec("native draw occurs only after chooser exit + full field restore",
                  all(p >= 0 for p in positions) and positions == sorted(positions), str(positions))
         self.rec("Route 201 has exactly one native starter RNG draw",
