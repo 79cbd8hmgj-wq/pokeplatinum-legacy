@@ -147,6 +147,36 @@ def draw_round_left_outline(
     draw.line(inner_points + [inner_points[0]], fill=inner, width=1)
 
 
+def draw_focus_brackets(
+    draw: ImageDraw.ImageDraw,
+    box: tuple[int, int, int, int],
+    color: int,
+    left_run: int,
+    left_rise: int,
+) -> None:
+    """Thicken the four corners of a focused cursor so selection is not color-only.
+
+    Brackets sit on the existing frame inset (rows/columns 2-4 from the edge)
+    and never leave the 128x48 cell, so OAM geometry is unchanged.
+    """
+    left, top, right, bottom = box
+    run = 10
+    rise = 8
+    # (x0, x1, y0, y1) rectangles: horizontal then vertical bar per corner.
+    rects = (
+        (left + left_run, left + left_run + run, top + 2, top + 4),
+        (left + 2, left + 4, top + left_rise, top + left_rise + rise),
+        (right - run - 3, right - 3, top + 2, top + 4),
+        (right - 4, right - 2, top + 5, top + 5 + rise),
+        (left + left_run, left + left_run + run, bottom - 4, bottom - 2),
+        (left + 2, left + 4, bottom - left_rise - rise, bottom - left_rise),
+        (right - run - 3, right - 3, bottom - 4, bottom - 2),
+        (right - 4, right - 2, bottom - 5 - rise, bottom - 5),
+    )
+    for x0, x1, y0, y1 in rects:
+        draw.rectangle((x0, y0, x1, y1), fill=color)
+
+
 def make_cursor() -> None:
     """Rebuild the four 128x48 party cursor states without changing cell/OAM geometry."""
     image = Image.new("P", (128, 195), 0)
@@ -165,8 +195,13 @@ def make_cursor() -> None:
         box = (1, y + 2, 126, y + 45)
         if shape == "chamfer":
             draw_chamfered_outline(draw, box, outer, inner, chamfer=6)
+            run, rise = 8, 8
         else:
             draw_round_left_outline(draw, box, outer, inner)
+            run, rise = 14, 14
+        if outer == 15:
+            # G7.4A: focused member card gets heavy corner brackets (shape cue).
+            draw_focus_brackets(draw, box, 15, run, rise)
 
     image.save(PARTY_DIR / "cursor.png")
 
@@ -190,6 +225,17 @@ def draw_button(
         (left, top + 5),
     ]
     draw.polygon(points, fill=fill, outline=outline)
+
+    # G7.4A: inset second ring on focused buttons (white) so focus is a shape
+    # change as well as a color change; normal buttons get a deep base edge.
+    if outline == 15:
+        draw.line(
+            [(left + 3, top + 2), (left + 3, bottom - 4), (left + 5, bottom - 2),
+             (right - 5, bottom - 2), (right - 3, bottom - 4), (right - 3, top + 4)],
+            fill=2, width=1,
+        )
+    else:
+        draw.line([(left + 5, bottom - 1), (right - 5, bottom - 1)], fill=3, width=1)
 
     # One-pixel top/left highlight gives depth without returning to the heavy
     # retail bevel.

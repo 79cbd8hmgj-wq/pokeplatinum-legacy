@@ -51,6 +51,24 @@ def make_cursor() -> None:
     for x, y in chevron:
         pixels[x, y] = accent
 
+    # G7.4B: mirrored trailing chevron plus corner studs make the frame read as
+    # a deliberate focus plate instead of a thin outline.
+    for x, y in chevron:
+        pixels[95 - x, y] = accent
+    for cx, cy in ((7, 8), (88, 8), (7, 23), (88, 23)):
+        for dx in (-1, 0):
+            for dy in (-1, 0):
+                pixels[cx + dx + (1 if cx > 48 else 0), cy + dy + (1 if cy > 16 else 0)] = accent
+
+    # Dark rim (palette entry 1) on every transparent pixel touching the
+    # accent so the frame stays crisp over any panel color.
+    accent_px = {(x, y) for y in range(32) for x in range(96) if pixels[x, y] == accent}
+    for x, y in accent_px:
+        for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+            nx, ny = x + dx, y + dy
+            if 0 <= nx < 96 and 0 <= ny < 32 and pixels[nx, ny] == 0:
+                pixels[nx, ny] = 1
+
     image.save(START_MENU_DIR / "cursor.png")
 
 

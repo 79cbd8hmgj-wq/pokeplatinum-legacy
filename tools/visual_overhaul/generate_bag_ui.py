@@ -10,17 +10,20 @@ BAG_DIR = ROOT / "res" / "graphics" / "bag"
 MAIN_PALETTE_OVERRIDES = {
     1: (248, 252, 255),  # cool white
     2: (232, 241, 247),  # bright edge
-    3: (188, 207, 220),  # light steel
-    4: (130, 162, 190),  # medium steel-blue
-    5: (62, 89, 112),    # deep rail
+    3: (176, 198, 216),  # light steel
+    4: (112, 148, 184),  # medium steel-blue (G7.4B: firmer row/pocket separation)
+    5: (44, 68, 98),     # deep rail (G7.4B: stronger pocket rail)
 }
 
 # ui_elements.pal is sparse; entries 2-4 are the existing blue UI accent
 # ramp. Red/black and every unused entry remain untouched.
+# Entry 1 is the item/pocket focus frame (item_highlight, pocket_highlight);
+# G7.4B moves it from retail red to the G7 gold focus accent shared with Party.
 UI_ELEMENT_OVERRIDES = {
+    1: (246, 172, 57),
     2: (130, 199, 246),
     3: (47, 130, 230),
-    4: (41, 89, 184),
+    4: (28, 64, 150),
 }
 
 
