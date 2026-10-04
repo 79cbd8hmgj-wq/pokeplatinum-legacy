@@ -32,45 +32,78 @@ The user has already approved the G7 direction:
 
 ## Current target
 
-PR #50 merged G7.1A, G7.1B, G7.2A and G7.2B. G7.3 was audited and intentionally deferred for runtime-sensitive additions. PR #53 merged the complete G7.4 core-menu section.
+G7.1–G7.2 are implemented. G7.3 was audited and intentionally deferred for runtime-sensitive battle-impact additions. G7.4 core menus and G7.5 global windows are implemented and merged.
 
-**Current implementation section: G7.5 — Global Window / Typography-Adjacent Polish.**
+**Current implementation section: G7.6 — Overworld Atmosphere Escalation.**
 
-Complete all of G7.5 in one Claude session.
+Complete all of G7.6 in one Claude session.
+
+Priority environments:
+1. Eterna / deep forest
+2. Route 217 / Snowpoint
+3. Galactic interiors
+4. Mt. Coronet / Spear Pillar
+5. Distortion World
+6. lakes / coastal routes
+7. caves / Turnback Cave
+
+Use the existing G4/G6 environment work as the foundation. Do not restart from retail assets and do not blindly recolor shared resources.
+
+Primary prior records:
+- `docs/visual_overhaul/G4_ENVIRONMENT_RECONSTRUCTION_COMPLETE.md`
+- `docs/visual_overhaul/G4A_ETERNA_FOREST.md`
+- `docs/visual_overhaul/G4B_SNOW_ENVIRONMENT.md`
+- `docs/visual_overhaul/G4C_DISTORTION_WORLD.md`
+- `docs/visual_overhaul/G4D_G4F_SHOWCASE_ENVIRONMENTS.md`
+- `docs/visual_overhaul/G4G_GALACTIC_INTERIORS.md`
+- `docs/visual_overhaul/G6_SHOWCASE_INTEGRATION_COMPLETE.md`
+
+Primary tools/contracts:
+- `tools/visual_overhaul/apply_g4_showcase_passes.py`
+- the existing `recolor_g4*.c` tools
+- the existing `validate_g4*.py` validators
+- `tools/visual_overhaul/validate_area_light_contract.py`
+- `src/overlay005/area_light.c`
+- `src/overlay005/fieldmap.c`
+- `res/field/lighting/`
+- `res/field/area_data/`
 
 Goals:
-- audit the full message-box/window frame family before changing shared resources;
-- modernize standard field/system frames where needed for G7 consistency;
-- modernize scroll cursor and wait dial where needed;
-- remove remaining high-frequency beige/olive or mismatched legacy chrome;
-- keep text readability and printer behavior unchanged;
-- preserve message speed, line capacity, encoding, and font behavior;
-- do not replace the core font unless the font pipeline is first proven safe and the benefit clearly justifies it;
-- use per-context frame variants only if the current resource contract supports them cleanly and without invasive source work.
+- deepen authored atmosphere and regional identity;
+- preserve player/NPC silhouette readability;
+- preserve terrain/collision/navigation clarity;
+- keep weather/fog coherent;
+- avoid accidental cross-map-family grade leakage;
+- use selective dedicated resource slots only when shared retail resources would otherwise cause collateral changes.
 
-Primary source surfaces:
-- `res/graphics/windows/`
-- `tools/visual_overhaul/generate_ui_foundation.py`
-- `tools/visual_overhaul/generate_message_frames.py`
-- existing window/message-box load paths only where ownership must be traced
+Allowed:
+- stronger palette separation;
+- safe fog tuning;
+- reuse of proven existing field effects;
+- small atmosphere emitters through already-proven resource paths;
+- dedicated resource isolation where the current G4/G6 pipeline supports it.
 
-Implementation principle:
-- first determine which assets are global vs player-selectable decorative frames;
-- preserve decorative Frames 6–20 unless a concrete high-frequency inconsistency requires action;
-- prefer generator-backed palette/art updates over C changes;
-- do not turn G7.5 into a font-engine or text-renderer rewrite.
+Do not:
+- replace whole map texture families blindly;
+- churn geometry;
+- change collision;
+- alter scripts/gameplay for aesthetics;
+- perform opaque NARC patching without a verified pipeline;
+- make navigation harder;
+- begin G7.7.
 
-Do not continue to G7.6 in the same session.
+If one environment has a genuine isolation blocker, document that environment precisely, continue the other G7.6 environments, and stop the whole section only for a section-wide blocker.
 
 ## Validation
 
-At the end of the full G7.5 section:
-- relevant window/frame/UI validators;
-- rerun every touched generator and confirm no diff;
-- core master validator if shared integration/resource plumbing is changed;
+At the end of the full G7.6 section:
+- all relevant existing G4/G6 environment validators;
+- area-light contract validator;
+- rerun every touched deterministic generator/recolor/apply step and confirm reproducibility;
+- core master validator if shared code/resource plumbing changed;
 - US Rev 0 build;
 - US Rev 1 build;
-- concise G7.5 implementation report;
+- concise G7.6 implementation report covering all seven priority environment groups;
 - clean git status.
 
-Then stop before G7.6.
+Then stop before G7.7.
