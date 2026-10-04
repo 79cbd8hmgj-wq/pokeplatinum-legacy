@@ -45,7 +45,7 @@ VALIDATORS = [
     (12, "graphs", "Completion graphs (493 / evolution / events / gates), artifacts current", [f"{T}/qa/build_qa_graphs.py", "--check"]),
     (12, "runtime_matrix", "Runtime matrix integrity (no PASS without evidence)", [f"{T}/qa/validate_runtime_matrix.py"]),
     (12, "smoke", "Structural smoke (host-side, not runtime)", [f"{T}/qa/smoke_structural.py"]),
-    (14, "mystery_starter", "Mystery Egg starter (D8)", [f"{T}/validate_mystery_starter.py", "--no-report"]),
+    (14, "mystery_starter", "Mystery Egg starter (D8)", [f"{T}/opening/validate_mystery_starter_script_native.py"]),
 ]
 SUITES = [  # mutation / regression suites (run with their own directory as cwd)
     ("c1_tests", f"{T}/moves/test_validate_c1.py"), ("c2_tests", f"{T}/c2/test_validate_c2.py"),
@@ -56,7 +56,7 @@ SUITES = [  # mutation / regression suites (run with their own directory as cwd)
     ("pokeball_tests", f"{T}/pokeballs/test_pokeballs.py"), ("breeding_tests", f"{T}/breeding/test_validate_breeding.py"),
     ("event_tests", f"{T}/events/test_validate_legendary.py"), ("postgame_tests", f"{T}/postgame/test_validate_postgame.py"),
     ("qa_graph_tests", f"{T}/qa/test_qa_graphs.py"), ("qa_validator_tests", f"{T}/qa/test_qa_validators.py"),
-    ("mystery_starter_tests", f"{T}/opening/test_validate_mystery_starter.py"),
+    ("mystery_starter_tests", f"{T}/opening/test_mystery_starter_script_native.py"),
 ]
 KEEP = re.compile(r"pass|fail|ok\b|error|warning|result|mutation|hits|reachable|integrity|checks|PASS|FAIL", re.I)
 
