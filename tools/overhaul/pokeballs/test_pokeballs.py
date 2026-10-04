@@ -55,8 +55,9 @@ class ValidatorMutationTests(unittest.TestCase):
             ("bs", "10 + 3 * battleCtx->totalTurns", "10 + battleCtx->totalTurns"),
             ("bs", "catchRate *= 2;", "catchRate *= 3;"),
             ("bs", "ballMod = 15;\n            break;\n    ", "ballMod = 10;\n            break;\n    "),
-            ("marts", "{ ITEM_GREAT_BALL, 0x2 }", "{ ITEM_GREAT_BALL, 0x3 }"),
-            ("marts", "    ITEM_QUICK_BALL,\n    ITEM_DIVE_BALL,", "    ITEM_QUICK_BALL,"),
+            ("marts", "{ ITEM_GREAT_BALL, 0x1 }", "{ ITEM_GREAT_BALL, 0x2 }"),
+            ("marts", "    ITEM_QUICK_BALL,\n    SHOP_ITEM_END\n};", "    SHOP_ITEM_END\n};"),
+            ("marts", "    ITEM_QUICK_BALL,\n    ITEM_TIMER_BALL,\n    SHOP_ITEM_END\n};", "    ITEM_QUICK_BALL,\n    SHOP_ITEM_END\n};"),
         ]
         for tgt, a, b in muts:
             args = {"bs": bs, "marts": marts}
