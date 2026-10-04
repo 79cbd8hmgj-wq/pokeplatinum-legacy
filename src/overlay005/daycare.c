@@ -22,7 +22,6 @@
 #include "math_util.h"
 #include "message.h"
 #include "message_util.h"
-#include "mystery_egg_starter.h"
 #include "party.h"
 #include "pokemon.h"
 #include "save_player.h"
@@ -577,14 +576,14 @@ static u16 Egg_DetermineEggSpeciesAndParentSlots(Daycare *daycare, u8 parentSlot
     return eggSpecies;
 }
 
-static void Egg_CreateEggAtLevel(Pokemon *egg, u16 species, u8 param2, TrainerInfo *trainerInfo, int param4, int metLocation, u8 level)
+void Egg_CreateEgg(Pokemon *egg, u16 species, u8 param2, TrainerInfo *trainerInfo, int param4, int metLocation)
 {
     u8 metLvl, isEgg;
     u16 ball;
     u8 hatchCycles = SpeciesData_GetSpeciesValue(species, SPECIES_DATA_HATCH_CYCLES);
     String *eggName;
 
-    Pokemon_InitWith(egg, species, level, INIT_IVS_RANDOM, FALSE, 0, OTID_NOT_SET, 0);
+    Pokemon_InitWith(egg, species, 1, INIT_IVS_RANDOM, FALSE, 0, OTID_NOT_SET, 0);
 
     metLvl = 0;
     ball = ITEM_POKE_BALL;
@@ -616,17 +615,6 @@ static void Egg_CreateEggAtLevel(Pokemon *egg, u16 species, u8 param2, TrainerIn
     }
 
     UpdateMonStatusAndTrainerInfo(egg, trainerInfo, param4, metLocation, HEAP_ID_SYSTEM);
-}
-
-void Egg_CreateEgg(Pokemon *egg, u16 species, u8 param2, TrainerInfo *trainerInfo, int param4, int metLocation)
-{
-    Egg_CreateEggAtLevel(egg, species, param2, trainerInfo, param4, metLocation, 1);
-}
-
-// Scripted Mystery Egg starter: not a Day Care egg (no parents, no inheritance).
-void Egg_CreateMysteryStarterEgg(Pokemon *egg, u16 species, TrainerInfo *trainerInfo, int metLocation)
-{
-    Egg_CreateEggAtLevel(egg, species, 1, trainerInfo, 4, metLocation, MYSTERY_STARTER_LEVEL);
 }
 
 // Ability slot (personality bit 0) of a parent, as the engine derives it.
@@ -1050,7 +1038,7 @@ extern u32 Daycare_GetCompatibilityLevel(Daycare *daycare)
     return v1;
 }
 
-static void Egg_CreateHatchedMonInternal(Pokemon *egg, enum HeapID heapID, u8 level)
+static void Egg_CreateHatchedMonInternal(Pokemon *egg, enum HeapID heapID)
 {
     u16 species;
     u16 moves[LEARNED_MOVES_MAX];
@@ -1094,7 +1082,7 @@ static void Egg_CreateHatchedMonInternal(Pokemon *egg, enum HeapID heapID, u8 le
         }
     }
 
-    Pokemon_InitWith(mon, species, level, INIT_IVS_RANDOM, TRUE, personality, OTID_NOT_SET, 0);
+    Pokemon_InitWith(mon, species, 1, INIT_IVS_RANDOM, TRUE, personality, OTID_NOT_SET, 0);
 
     for (i = 0; i < LEARNED_MOVES_MAX; i++) {
         Pokemon_SetValue(mon, MON_DATA_MOVE1 + i, &(moves[i]));
@@ -1146,11 +1134,6 @@ static void Egg_CreateHatchedMonInternal(Pokemon *egg, enum HeapID heapID, u8 le
 
 void Egg_CreateHatchedMon(Pokemon *egg, enum HeapID heapID)
 {
-    Egg_CreateHatchedMonAtLevel(egg, heapID, 1);
-}
-
-void Egg_CreateHatchedMonAtLevel(Pokemon *egg, enum HeapID heapID, u8 level)
-{
     u8 isEgg, hasNickname;
     u8 ball, metLevel;
     u16 species;
@@ -1161,7 +1144,7 @@ void Egg_CreateHatchedMonAtLevel(Pokemon *egg, enum HeapID heapID, u8 level)
     ball = ITEM_POKE_BALL;
     metLevel = 0;
 
-    Egg_CreateHatchedMonInternal(egg, heapID, level);
+    Egg_CreateHatchedMonInternal(egg, heapID);
     Pokemon_SetValue(egg, MON_DATA_IS_EGG, &isEgg);
 
     species = Pokemon_GetValue(egg, MON_DATA_SPECIES, NULL);
