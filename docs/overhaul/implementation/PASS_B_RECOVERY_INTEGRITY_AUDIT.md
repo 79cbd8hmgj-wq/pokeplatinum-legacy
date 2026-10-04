@@ -98,17 +98,32 @@ PRs #41/#42 do not intentionally alter level-up learnsets or TM compatibility. A
 
 **No C3 authority conflict found.**
 
-## Verification boundary
+## Post-recovery static validation
 
-The repository's last recorded D7 master validation before this recovery was:
+The first full-history post-recovery master run correctly exposed downstream integration drift rather than a Pass B design mismatch:
 
-- 19 validators PASS
-- 14 mutation/regression suites PASS
-- 0 failed children
+- the availability validator still expected the retired custom Mystery-starter getter instead of hardened D8's native `SetVarFromVar VAR_0x8000, VAR_MYSTERY_STARTER_SPECIES`;
+- the breeding validator incorrectly froze unrelated later species JSON fields against its historical start SHA;
+- the postgame scope validator incorrectly treated all later subsystem edits as D6 scope violations;
+- the D8 validator searched the first `WaitFadeScreen` in Route 201 instead of the ordered post-`ReturnToField` lifecycle;
+- seven Frontier sets no longer fit the restored offensive stat profiles: Girafarig 2, Hypno 1, Hypno 3, Pachirisu 1, Poliwrath 1, Poliwrath 3, and Whiscash 1.
 
-That historical result remains useful baseline evidence, but it is not being relabeled as a post-recovery validator run.
+The validator issues were made forward-compatible without weakening their owned invariants. The seven Frontier sets were reconciled through the existing D6 set-manifest system rather than suppressing the STAT audit.
 
-The Pass B recovery itself has dual-revision build evidence from PRs #41/#42. A fresh `python3 tools/overhaul/validate_overhaul.py --no-write` run should be performed in the next heavy-tool/Claude Code session to produce explicit post-recovery static validation evidence.
+Final post-recovery master run:
+
+- commit: `bb81e7438b6cb7a74e4a2d478e6e5606d6cd64d1`
+- Actions run: `37210902045`
+- **19/19 validators PASS**
+- **14/14 mutation/regression suites PASS**
+- **33/33 children PASS**
+- availability: 0 failures / 0 warnings
+- breeding: 107 pass / 0 fail / 0 pending
+- postgame: 119 pass / 0 fail
+- D8 Mystery starter: 109 pass / 0 fail
+- completion graph: 493/493 reachable
+
+This is static/source verification only. Runtime verification remains separate.
 
 ## Current integrity state
 
@@ -121,15 +136,9 @@ The Pass B recovery itself has dual-revision build evidence from PRs #41/#42. A 
 - C2.5: no recovery conflict found
 - C3/C3H: guarded-ledger overlap reconciled
 - Dual-revision build gate for recovery PRs: PASS
-- Fresh post-recovery master static validator: PENDING
+- Fresh post-recovery master static validator: **PASS — 33/33 children**
 - Runtime QA: still PENDING
 
 ## Next action
 
-Hand the current `main` tree to the heavy-tool workflow and run:
-
-```bash
-python3 tools/overhaul/validate_overhaul.py --no-write
-```
-
-If green, record that as the post-recovery D7 static baseline and move directly to the remaining runtime QA / D8 runtime blocker work rather than reopening Pokémon design.
+Source-side recovery/integration work is closed unless a later audit or the user's runtime testing produces a concrete defect. Runtime QA is intentionally user-owned.
