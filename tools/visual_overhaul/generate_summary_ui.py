@@ -12,10 +12,10 @@ SUMMARY_DIR = ROOT / "res" / "graphics" / "pokemon_summary_screen"
 # normalized across every bank.
 MAIN_SHARED_CHROME = {
     1: (28, 45, 66),      # deep navy outline
-    2: (164, 198, 228),   # cool blue edge
+    2: (112, 160, 208),   # cool blue edge (G7.4A: stronger section separation)
     3: (220, 233, 243),   # pale panel highlight
     5: (248, 252, 255),   # cool white
-    15: (205, 217, 226),  # neutral panel separator
+    15: (172, 192, 210),  # neutral panel separator (G7.4A: firmer row dividers)
 }
 
 # Palette entry 6 is shared chrome in these banks only. Banks 7 and 8 use
@@ -96,13 +96,18 @@ def make_tab_arrow() -> None:
 
     # One compact left-facing chevron; the existing NCER horizontal flip
     # supplies the right-facing version and NANR supplies the bounce motion.
-    for y in range(3, 13):
-        distance = abs(7 - y)
-        x_start = min(5, distance)
-        for x in range(x_start, 7):
+    for y in range(2, 14):
+        distance = abs(7.5 - y)
+        x_start = min(5, int(distance - 0.5))
+        for x in range(max(0, x_start), 7):
             pixels[x, y] = 2
-    for y in range(5, 11):
-        pixels[6, y] = 1
+    # G7.4A: navy rim around the whole chevron so it reads on any tab color.
+    fill = {(x, y) for y in range(16) for x in range(8) if pixels[x, y] == 2}
+    for x, y in fill:
+        for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+            nx, ny = x + dx, y + dy
+            if 0 <= nx < 8 and 0 <= ny < 16 and pixels[nx, ny] == 0:
+                pixels[nx, ny] = 1
 
     image.save(SUMMARY_DIR / "tab_arrow.png")
 
@@ -129,7 +134,7 @@ def tile_linearize(source: Image.Image) -> Image.Image:
     return out
 
 
-def make_move_cursor_half(outer: int, inner: int, palette: list[int]) -> Image.Image:
+def make_move_cursor_half(outer: int, inner: int, palette: list[int], bracket: bool = False) -> Image.Image:
     """Create the left/open-center half used twice by the mirrored NCER cell."""
     image = Image.new("P", (64, 32), 0)
     image.putpalette(palette)
@@ -147,13 +152,21 @@ def make_move_cursor_half(outer: int, inner: int, palette: list[int]) -> Image.I
     draw.line([(4, 5), (4, 26)], fill=inner, width=1)
     draw.line([(5, 28), (63, 28)], fill=inner, width=1)
 
+    if bracket:
+        # G7.4A: heavy corner brackets on the active cursor only, so selection
+        # differs by shape from the alternate (thin) state.
+        draw.rectangle((1, 0, 14, 3), fill=outer)
+        draw.rectangle((1, 3, 4, 12), fill=outer)
+        draw.rectangle((1, 28, 14, 31), fill=outer)
+        draw.rectangle((1, 19, 4, 28), fill=outer)
+
     return image
 
 
 def make_move_cursor() -> None:
     """Rebuild both move-selection cursor states in the existing tile-strip format."""
     palette = indexed_palette("move_cursor.png")
-    active = tile_linearize(make_move_cursor_half(3, 1, palette))
+    active = tile_linearize(make_move_cursor_half(3, 1, palette, bracket=True))
     alternate = tile_linearize(make_move_cursor_half(2, 1, palette))
 
     image = Image.new("P", (8, 512), 0)

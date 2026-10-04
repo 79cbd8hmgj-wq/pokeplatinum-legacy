@@ -12,17 +12,20 @@ SHARED_CHROME = {
     2: (205, 217, 226),
     4: (82, 101, 119),
     5: (232, 241, 247),
-    6: (188, 207, 220),
-    7: (130, 162, 190),
-    8: (62, 89, 112),
+    6: (176, 198, 216),
+    7: (112, 148, 184),
+    8: (44, 68, 98),
 }
 
 # The shop cursor/arrow palette uses the same sparse blue ramp layout as the
 # bag UI. Keep red, black, and all unused entries unchanged.
+# Entry 1 (shop selection cursor frame) moves from retail red to the G7 gold
+# focus accent used by Party and Bag.
 SPRITE_OVERRIDES = {
+    1: (246, 172, 57),
     2: (130, 199, 246),
     3: (47, 130, 230),
-    4: (41, 89, 184),
+    4: (28, 64, 150),
 }
 
 
