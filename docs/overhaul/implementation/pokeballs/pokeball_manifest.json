@@ -98,11 +98,15 @@
     "timer_ball": 1000,
     "repeat_ball": 1000,
     "luxury_ball": 1000,
-    "level_ball": 1000,
-    "lure_ball": 1000
+    "nest_ball": 1000,
+    "dive_ball": 1000
   },
   "retired_from_progression_shops": [
     "ITEM_NET_BALL",
     "ITEM_LUXURY_BALL"
-  ]
+  ],
+  "display_identities": {
+    "ITEM_NEST_BALL": "Level Ball",
+    "ITEM_DIVE_BALL": "Lure Ball"
+  }
 }
