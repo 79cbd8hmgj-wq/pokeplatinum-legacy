@@ -82,7 +82,7 @@ They are provenance sources, not current implementation targets.
 | Battle Frontier/postgame (D6) | LOCKED | IMPLEMENTED (source + validator + dual-revision build) | validator 119 checks + 12 mutation cases; cross-system validators pass; runtime Frontier/rematch/Print QA pending — not VERIFIED; see `implementation/postgame/POSTGAME_VALIDATION_REPORT.md` |
 | Battle Frontier/postgame merge record | n/a | merged via PR #21 (`19cbadaa`) | see row above |
 | Full QA/release (D7) | LOCKED | STATIC/FRAMEWORK COMPLETE and merged via PR #22; runtime campaign/493 run NOT performed | **CORE 1.0 SOURCE-COMPLETE — RUNTIME QA PENDING**; not VERIFIED / not a release candidate |
-| Mystery Egg starter (D8) | LOCKED | not implemented | Design + Claude implementation plan committed on `design/mystery-egg-starter`; runtime QA pending after implementation |
+| Mystery Egg starter (D8) | LOCKED | **IMPLEMENTED — hardened native-script backend production candidate** | static validator/mutation coverage recorded; Rev 0/Rev 1 candidate builds recorded; **runtime intro verification still pending — not VERIFIED** |
 
 ## C1 authority
 
@@ -195,9 +195,9 @@ Do not invent one. This is not a build blocker.
 
 ## Immediate next actions
 
-1. Implement D8 Mystery Egg starter from `opening/MYSTERY_EGG_STARTER_SPEC.md` and `opening/MYSTERY_EGG_STARTER_IMPLEMENTATION_PLAN.md`.
-2. Rerun the D7 master/static QA outputs after D8 lands, because the opening and Rival-branch assumptions will have changed.
-3. Complete human/emulator runtime QA (`qa/RUNTIME_TEST_MATRIX.md`), the full campaign (`qa/FULL_CAMPAIGN_REPORT.md`), the 493 completion run (`qa/POKEDEX_493_COMPLETION_REPORT.md`) and save-import testing (`qa/SAVE_COMPATIBILITY_REPORT.md`) before VERIFIED / release-candidate status.
+1. Run a fresh post-Pass-B-recovery master static validation: `python3 tools/overhaul/validate_overhaul.py --no-write`.
+2. Runtime-test the current **D8 hardened native-script backend** through the Route 201 chooser → field return → weighted draw → Lv5 award → first Rival battle flow on Rev 0 and Rev 1. Do not reopen the earlier custom hatch backend unless this hardened candidate fails.
+3. Complete the remaining human/emulator runtime QA (`qa/RUNTIME_TEST_MATRIX.md`), full campaign (`qa/FULL_CAMPAIGN_REPORT.md`), 493 completion run (`qa/POKEDEX_493_COMPLETION_REPORT.md`) and save-import testing (`qa/SAVE_COMPATIBILITY_REPORT.md`) before VERIFIED / release-candidate status.
 
 ## Rule for future sessions
 
@@ -340,23 +340,24 @@ Branch `claude/platinum-availability-impl-c651fe` (follow-up to PR #10). Canonic
 
 ## Mystery Egg starter (D8)
 
-Status: **LOCKED SPEC — awaiting implementation**
+Status: **IMPLEMENTED — HARDENED NATIVE-SCRIPT BACKEND; RUNTIME VERIFICATION PENDING**
 
 Canonical authority:
 - `docs/overhaul/opening/MYSTERY_EGG_STARTER_SPEC.md`
 - `docs/overhaul/opening/MYSTERY_EGG_STARTER_IMPLEMENTATION_PLAN.md`
+- current implementation record: `docs/overhaul/implementation/opening/D8_HARDENED_BACKEND_REPORT.md`
 
-Locked design:
-- Route 201 presents three visually identical Mystery Eggs;
-- all three positions use the same weighted draw;
-- Bulbasaur/Charmander/Squirtle are 3% each;
-- Pikachu is 1%;
-- Chikorita/Cyndaquil/Totodile, Treecko/Torchic/Mudkip and Turtwig/Chimchar/Piplup are 10% each;
-- species is rolled exactly once after confirmation and hidden until the hatch/reveal;
-- starter enters play at level 5 before Barry's first battle;
-- existing three Rival branches are preserved by species-category mapping (Grass→Turtwig branch, Fire→Chimchar branch, Water→Piplup branch, Pikachu→Piplup branch);
-- ordinary Breeding 2.0 egg behavior and later starter availability remain unchanged.
+Current active architecture:
+- chooser presents three identical Mystery Egg previews with neutral wording;
+- chooser exit contract remains vanilla;
+- after `ReturnToField → FadeScreenIn → WaitFadeScreen`, Route 201 performs exactly one native `GetRandom ..., 100` draw;
+- the exact 13-species 3/3/3/1/10×9 distribution is routed with native script branches;
+- `VAR_MYSTERY_STARTER_SPECIES` stores the actual awarded species;
+- `VAR_PLAYER_STARTER` remains restricted to the canonical Turtwig/Chimchar/Piplup story branch;
+- the selected Pokémon is awarded through vanilla `GivePokemon` at Lv5;
+- native/custom starter-hatch integration is **deferred/disabled** and is not part of the active runtime path;
+- ordinary Breeding 2.0 egg/hatch behavior remains untouched.
 
-Interim architecture (current): the egg presentation lives entirely inside the chooser; after returning to Route 201 the rolled species is awarded directly at Lv. 5 through the vanilla `GivePokemon` path. The native hatch cutscene (`GiveMysteryStarterEgg` / `HatchMysteryStarterEgg`) is DEFERRED / DISABLED until a runtime-safe implementation exists; its code remains in source but is not called. "Hidden until the hatch/reveal" above is therefore satisfied by hiding the species until the award message.
+The hardened backend deliberately removed the earlier custom Mystery-starter script commands/C runtime path from the active ROM design. Static validation and dual-revision builds are recorded, but the final Route 201 intro flow still requires runtime verification before D8 or the project can be marked VERIFIED.
 
 Because D8 is post-D7, the D7 static/master reports must be regenerated after implementation and release-candidate status remains blocked on runtime QA.
