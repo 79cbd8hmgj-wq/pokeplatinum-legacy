@@ -517,6 +517,88 @@
           "special_defense": false
         }
       }
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/poliwrath_3.json",
+      "field": "moves",
+      "before": [
+        "MOVE_HYDRO_PUMP",
+        "MOVE_FOCUS_BLAST",
+        "MOVE_BLIZZARD",
+        "MOVE_MUD_BOMB"
+      ],
+      "target": [
+        "MOVE_HYDRO_PUMP",
+        "MOVE_DYNAMIC_PUNCH",
+        "MOVE_BLIZZARD",
+        "MOVE_MUD_BOMB"
+      ],
+      "authority": "post-Pass-B recovery integrity follow-up; D6 F3 stat-redistribution reconciliation",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "STAT: recovered Poliwrath is strongly physical (100 Atk / 60 SpA); convert one coverage slot to Dynamic Punch while preserving the Wide Lens mixed-attacker identity",
+      "nature": {
+        "before": "NATURE_MODEST",
+        "target": "NATURE_HARDY"
+      },
+      "evFlags": {
+        "before": {
+          "hp": true,
+          "attack": false,
+          "defense": false,
+          "speed": false,
+          "special_attack": true,
+          "special_defense": false
+        },
+        "target": {
+          "hp": true,
+          "attack": true,
+          "defense": false,
+          "speed": false,
+          "special_attack": false,
+          "special_defense": false
+        }
+      }
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/whiscash_1.json",
+      "field": "moves",
+      "before": [
+        "MOVE_SURF",
+        "MOVE_EARTH_POWER",
+        "MOVE_ICY_WIND",
+        "MOVE_AMNESIA"
+      ],
+      "target": [
+        "MOVE_AQUA_TAIL",
+        "MOVE_EARTH_POWER",
+        "MOVE_ICY_WIND",
+        "MOVE_AMNESIA"
+      ],
+      "authority": "post-Pass-B recovery integrity follow-up; D6 F3 stat-redistribution reconciliation",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "STAT: recovered Whiscash is physical-leaning (90 Atk / 70 SpA); make the defensive Shell Bell set mixed without duplicating its dedicated physical sets",
+      "nature": {
+        "before": "NATURE_MODEST",
+        "target": "NATURE_HARDY"
+      },
+      "evFlags": {
+        "before": {
+          "hp": true,
+          "attack": false,
+          "defense": false,
+          "speed": false,
+          "special_attack": true,
+          "special_defense": false
+        },
+        "target": {
+          "hp": true,
+          "attack": true,
+          "defense": false,
+          "speed": false,
+          "special_attack": false,
+          "special_defense": false
+        }
+      }
     }
   ],
   "hall_pool_type_changes": [
