@@ -17,9 +17,12 @@ Starting commit: `49aaf40b` (main, post-G7.4).
 Key trace: the cursor/dial are blitted onto the message frame's right-hand bar
 (frame tiles +10/+11, cell at `x+width+1..+2`, `y+2..+3`) and drawn with the
 **frame palette** (bank passed to `Window_DrawMessageBox`), not the standard
-window palette. Only entries 1-4 (white / per-frame dark / light grey / mid
-grey) are stable across the frame family, so the art uses only those. The bar
-is 11 px wide; cols 11+ are the frame outline/halo/transparent edge.
+window palette. No single bright palette index is safe across all 20 selectable
+frames. Entries **1 and 10** form a complementary polarity pair instead: across
+the full frame family, at least one of the two has >= 4.67:1 contrast against
+the right-hand bar. The generated cursor/dial therefore use both indices in
+their visible shape. The bar is 11 px wide; cols 11+ are the frame
+outline/halo/transparent edge.
 
 Tile layout: `scroll_cursor.NCGR` = 12 tiles = 3 frames × 2×2 tiles (printer
 cycles frames 0,1,2,1; blit takes source cols 4.. → bar cols 1..). `wait_dial`
@@ -32,15 +35,17 @@ cycles frames 0,1,2,1; blit takes source cols 4.. → bar cols 1..). `wait_dial`
   scattered/cropped across four tiles per frame. Now authored in 16×16 cell
   coordinates and scattered into the tile strip.
 * The wait dial spanned cols 1-14, painting over the frame outline and the
-  transparent edge; trail used entry 2 (dark on dark bar). Now confined to cols
-  0-9, head = white, trail = light grey, ring = mid grey.
+  transparent edge. It is now confined to cols 0-9 and every visible dot uses
+  the entry-1/entry-10 polarity pair so decorative frames cannot turn the
+  spinner into a same-tone indicator.
 
 ## 3. Visual changes
 
-* Scroll cursor: 9×6 white triangle with dark (entry 2) outline, readable on every
-  plain-frame bar (navy, steel, blue, crimson, emerald) and on decorative bars;
-  3-frame 1 px bounce (y 4/5/6) preserved.
-* Wait dial: radius-4 ring of 2×2 dots, same 8 positions and order.
+* Scroll cursor: 9×6 two-tone triangle using entries 1 and 10; the same shape
+  remains readable whether a selected frame maps entry 1 light/dark or uses a
+  near-white right-hand bar. Three-frame 1 px bounce (y 4/5/6) is preserved.
+* Wait dial: radius-4 ring at the same 8 positions/order. Head/trail/rest differ
+  by pixel shape, while each visible dot includes both polarity colors.
 
 ## 4. Preserved
 
@@ -59,7 +64,7 @@ No C, save, or gameplay change.
 ## 6. Validators
 
 `validate_g7_global_windows.py` (standard palette, cursor/dial tile geometry and
-bounds, bounce, plain-frame contrast, frames 6-20 SHA pins); re-run of
+bounds, bounce, **all-20-frame polarity contrast**, frames 6-20 SHA pins); re-run of
 `validate_g7_message_frames/battle_hud/battle_command_ui/core_menus`; generators
 re-run with no diff.
 
@@ -80,8 +85,6 @@ is the build evidence; both results are pending.
 * Battle-only vs field-only frame variants: frame art and palette are chosen
   once from Options > Frame for every consumer; separating them needs C changes.
 * Cool text-field fill: font palette and frame fill must change together.
-* Frames 14 and 17 (entry 1 is dark) get a dark-fill cursor; frames 6-20 left as
-  player-choice decorative art.
 * Font/typography: untouched. Font palette is `PL_FONT` member 7 (bank 11); font
   glyph pipeline not changed.
 
