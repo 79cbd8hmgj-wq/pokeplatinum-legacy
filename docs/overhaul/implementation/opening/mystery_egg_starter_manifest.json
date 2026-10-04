@@ -202,7 +202,7 @@
   },
   "include/struct_defs/choose_starter_data.h": {
    "before_blob": "4c92688379f2d8cfaa39dcd39ad4d7b78156fd69",
-   "target": "species output removed (ChooseStarterData holds options only)"
+   "target": "vanilla layout preserved: int species + options; chooser position output is not used for Mystery RNG"
   },
   "res/field/scripts/scripts_canalave_city.s": {
    "before_blob": "f5839853e918e98f2ee5ddb13bb9c46aba0a5125",
@@ -234,7 +234,7 @@
   },
   "res/field/scripts/scripts_route_201.s": {
    "before_blob": "64a320fb05bf05e6a2e1585286069e81e51d1081",
-   "target": "Route201_Briefcase vanilla award flow; award reads GetMysteryStarterSpecies"
+   "target": "vanilla chooser/save/field-return boundary; native GetRandom + direct VAR_MYSTERY_STARTER_SPECIES award after WaitFadeScreen"
   },
   "res/field/scripts/scripts_route_203.s": {
    "before_blob": "3447e9f71d60f1df07fb7a08ba842d49956ac1d5",
@@ -246,7 +246,7 @@
   },
   "res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s": {
    "before_blob": "d720e40086461915fef73ea4dc96b2900b3311d8",
-   "target": "starter-gift skip reads GetMysteryStarterSpecies"
+   "target": "starter-gift skip reads VAR_MYSTERY_STARTER_SPECIES via native SetVarFromVar"
   },
   "res/field/scripts/scripts_spear_pillar.s": {
    "before_blob": "12bca1e70d288066af0b413b267e1eea24342b9f",
@@ -286,7 +286,7 @@
   },
   "src/mystery_egg_starter.c": {
    "before_blob": null,
-   "target": "NEW: weighted table, single draw, Rival-branch mapping"
+   "target": "reference weighted table + mapping helpers retained for validation/deferred code; no active runtime caller"
   },
   "src/overlay005/daycare.c": {
    "before_blob": "f687c17376d6b3020e2b6a00c9d811a5430d7f50",
@@ -294,7 +294,7 @@
   },
   "src/scrcmd.c": {
    "before_blob": "ac5180b574353f8f9e755077b893db4b4c9b29b6",
-   "target": "SaveChosenStarter draws once; actual species -> VAR_MYSTERY_STARTER_SPECIES, branch -> VAR_PLAYER_STARTER; GetMysteryStarterSpecies; GiveMysteryStarterEgg / HatchMysteryStarterEgg retained but unused"
+   "target": "SaveChosenStarter restored to vanilla; legacy Mystery getter/hatch commands retained but unused by active Route 201/Sandgem flow"
   },
   "src/scrcmd_strings.c": {
    "before_blob": "d1cc9829c4a306dba2d067d3a919b12ff5edbadb",
