@@ -427,6 +427,52 @@
         "before": "NATURE_MODEST",
         "target": "NATURE_HARDY"
       }
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/poliwrath_3.json",
+      "field": "moves",
+      "before": [
+        "MOVE_HYDRO_PUMP",
+        "MOVE_FOCUS_BLAST",
+        "MOVE_BLIZZARD",
+        "MOVE_MUD_BOMB"
+      ],
+      "target": [
+        "MOVE_HYDRO_PUMP",
+        "MOVE_DYNAMIC_PUNCH",
+        "MOVE_BLIZZARD",
+        "MOVE_MUD_BOMB"
+      ],
+      "authority": "Pass B recovery integration; D6 spec s5 stat-redistribution audit",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "STAT after recovered Poliwrath 100 Atk / 60 SpA: Wide Lens set becomes mixed by using DynamicPunch while preserving inaccurate-attack identity",
+      "nature": {
+        "before": "NATURE_MODEST",
+        "target": "NATURE_HARDY"
+      }
+    },
+    {
+      "source_path": "res/trainers/frontier/pokemon/whiscash_1.json",
+      "field": "moves",
+      "before": [
+        "MOVE_SURF",
+        "MOVE_EARTH_POWER",
+        "MOVE_ICY_WIND",
+        "MOVE_AMNESIA"
+      ],
+      "target": [
+        "MOVE_AQUA_TAIL",
+        "MOVE_EARTH_POWER",
+        "MOVE_ICY_WIND",
+        "MOVE_AMNESIA"
+      ],
+      "authority": "Pass B recovery integration; D6 spec s5 stat-redistribution audit",
+      "guard": "live moves equal before-value at apply time",
+      "reason": "STAT after recovered Whiscash 90 Atk / 70 SpA: Aqua Tail uses the stronger physical stat while Earth Power/Icy Wind preserve mixed coverage",
+      "nature": {
+        "before": "NATURE_MODEST",
+        "target": "NATURE_HARDY"
+      }
     }
   ],
   "hall_pool_type_changes": [
