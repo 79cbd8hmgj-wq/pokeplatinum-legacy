@@ -9,13 +9,11 @@ permissions:
   contents: read
 
 jobs:
-  diagnose:
+  validate:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - name: Diagnose postgame
-        run: python3 tools/overhaul/postgame/validate_postgame.py || true
-      - name: Diagnose mystery starter
-        run: python3 tools/overhaul/validate_mystery_starter.py --no-report || true
+      - name: Run master validator
+        run: python3 tools/overhaul/validate_overhaul.py --no-write
