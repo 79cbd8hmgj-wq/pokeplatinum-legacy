@@ -91,39 +91,75 @@ def make_window_frame(filename: str, outer: int, mid: int, light: int, fill: int
 
 
 
+# The scroll cursor and wait dial are NOT drawn with the standard window
+# palette at runtime: they are blitted onto the right-hand bar of the *message
+# frame* tiles (frame tiles +10/+11) and rendered with that frame's palette.
+# Only entries 1-4 are stable across the frame family (1 white, 2 per-frame
+# dark, 3 light grey, 4 mid grey), so the art uses a white fill with a dark
+# outline (and a grey dial ring) that reads on any frame's dark bar colour.
+# The bar is 11 px wide (cols 0-10 of the 16x16 cell); cols 11+ are the frame's
+# own outline/halo/transparent edge and must not be painted over.
+DIAL_HEAD = 1
+DIAL_TRAIL = 3
+DIAL_REST = 4
+
+# 9x6 down-pointing triangle; '.' leaves the frame bar visible.
+CURSOR_ART = (
+    "222222222",
+    "211111112",
+    ".2111112.",
+    "..21112..",
+    "...212...",
+    "....2....",
+)
+CURSOR_TOP = (4, 5, 6)  # per-frame bounce; the printer cycles frames 0,1,2,1
+# DrawMessageBoxScrollCursor blits source cell cols 4.. to bar cols 1.., so the
+# art starts at source col 4 (bar col 1) and ends at source col 12 (bar col 9).
+CURSOR_SRC_X = 4
+
+
 def make_scroll_cursor(palette: list[int]) -> None:
-    """Build the 12-frame 8x8 scroll cursor strip without changing its resource contract."""
-    frame_count = 12
-    frame_width = 8
-    frame_height = 8
-    image = Image.new("P", (frame_count * frame_width, frame_height), 0)
+    """Build the 3-frame scroll cursor tile sheet without changing its resource contract.
+
+    The NCGR is 12 tiles = 3 frames x (2x2 tiles); frame ``f`` owns tiles
+    ``4f..4f+3`` in TL, TR, BL, BR order.  The sheet is therefore authored in
+    16x16 cell coordinates and scattered into the 8x8 tile strip.
+    """
+    frame_count = 3
+    image = Image.new("P", (frame_count * 4 * 8, 8), 0)
     image.putpalette(palette)
     pixels = image.load()
 
-    # A restrained bounce keeps the retail 12-frame timing while replacing the
-    # old cursor with a cleaner Pokemon-style down chevron.
-    y_offsets = [0, 0, 1, 1, 2, 2, 1, 1, 0, 0, 1, 0]
-    chevron = (
-        (1, 1, 4), (6, 1, 4),
-        (1, 2, 2), (2, 2, 4), (5, 2, 4), (6, 2, 2),
-        (2, 3, 1), (3, 3, 4), (4, 3, 4), (5, 3, 1),
-        (3, 4, 2), (4, 4, 2),
-        (3, 5, 4), (4, 5, 4),
-    )
+    for frame, top in enumerate(CURSOR_TOP):
+        for row, line in enumerate(CURSOR_ART):
+            for col, char in enumerate(line):
+                if char == ".":
+                    continue
 
-    for frame, y_offset in enumerate(y_offsets):
-        x_origin = frame * frame_width
-
-        for x, y, palette_index in chevron:
-            shifted_y = y + y_offset
-            if shifted_y < frame_height:
-                pixels[x_origin + x, shifted_y] = palette_index
+                cell_x = CURSOR_SRC_X + col
+                cell_y = top + row
+                tile = frame * 4 + (cell_y // 8) * 2 + (cell_x // 8)
+                pixels[tile * 8 + cell_x % 8, cell_y % 8] = int(char)
 
     image.save(WINDOW_DIR / "scroll_cursor.png")
 
 
+# 2x2 dot top-left corners on a radius-4 ring, clockwise from north, all inside
+# cell cols 0-9 so nothing reaches the frame outline at col 11.
+DIAL_POINTS = (
+    (4, 3),
+    (7, 4),
+    (8, 7),
+    (7, 10),
+    (4, 11),
+    (1, 10),
+    (0, 7),
+    (1, 4),
+)
+
+
 def make_wait_dial(palette: list[int]) -> None:
-    """Build the 8-frame 16x16 wait spinner using the shared window palette."""
+    """Build the 8-frame 16x16 wait spinner (white head, light trail, grey ring)."""
     frame_count = 8
     frame_width = 16
     frame_height = 16
@@ -131,33 +167,23 @@ def make_wait_dial(palette: list[int]) -> None:
     image.putpalette(palette)
     pixels = image.load()
 
-    points = (
-        (7, 1),
-        (11, 3),
-        (13, 7),
-        (11, 11),
-        (7, 13),
-        (3, 11),
-        (1, 7),
-        (3, 3),
-    )
-
     for frame in range(frame_count):
         y_origin = frame * frame_height
 
-        for point_index, (x, y) in enumerate(points):
+        for point_index, (x, y) in enumerate(DIAL_POINTS):
             if point_index == frame:
-                palette_index = 1
+                palette_index = DIAL_HEAD
             elif point_index == (frame - 1) % frame_count:
-                palette_index = 2
+                palette_index = DIAL_TRAIL
             else:
-                palette_index = 3
+                palette_index = DIAL_REST
 
             for dy in range(2):
                 for dx in range(2):
                     pixels[x + dx, y_origin + y + dy] = palette_index
 
     image.save(WINDOW_DIR / "wait_dial.png")
+
 
 def main() -> None:
     palette = shared_palette()
