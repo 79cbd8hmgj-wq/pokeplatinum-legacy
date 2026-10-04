@@ -126,6 +126,11 @@ terrain. IDs 10-13 and the new outdoor coast IDs are now classified outdoors; ca
   retail lighting 001 is still used by interiors/gyms and is untouched.
 * Deferred: Iron Island (lighting 002), Snowpoint Temple, Lost Tower — not in the G7.6 set.
 
+## G7.7 amendment
+`lighting_set_012` (Spear Pillar) and `lighting_set_015` (natural caves) were retuned in G7.7 to restore the
+visual-intensity hierarchy (caves had out-graded the legendary summit). The values above for those two sets
+describe the G7.6 merge state; current authority is `generate_g76_atmosphere.py` / `G7_7_FINAL_COHESION_REPORT.md`.
+
 ## Not changed (explicit)
 Map geometry, collision, scripts, events, matrices, encounters, camera types, weather behaviour,
 renderers and gameplay were not intentionally changed. The validator fails on any change under

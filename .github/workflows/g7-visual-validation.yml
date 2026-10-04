@@ -1,0 +1,76 @@
+name: g7-visual-validation
+
+# Static guard for the complete G7 visual overhaul (G7.1-G7.7). The G7 validators used to
+# run only on developer machines; this wires them into every PR that touches visual assets.
+on:
+  pull_request:
+    paths:
+      - 'res/graphics/**'
+      - 'res/field/lighting/**'
+      - 'res/field/area_data/**'
+      - 'res/field/maps/texture_sets/**'
+      - 'res/prebuilt/battle/**'
+      - 'src/overlay011/move_palettes.c'
+      - 'src/overlay005/area_data.c'
+      - 'src/overlay005/fieldmap.c'
+      - 'include/constants/field/area_light.h'
+      - 'tools/visual_overhaul/**'
+      - 'docs/visual_overhaul/**'
+      - '.github/workflows/g7-visual-validation.yml'
+  workflow_dispatch: {}
+
+concurrency:
+  group: g7-visual-validation-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: G7 visual validators
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0   # validators diff against pinned baseline commits
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install pillow
+          sudo apt-get update -y
+          sudo apt-get install -y --no-install-recommends gcc libpng-dev
+
+      - name: Run G7 validators
+        shell: bash
+        run: |
+          set -euo pipefail
+          for v in \
+            validate_area_light_contract \
+            validate_g6_showcase_integration \
+            validate_g76_atmosphere \
+            validate_g7_battle_command_ui \
+            validate_g7_battle_hud \
+            validate_g7_core_menus \
+            validate_g7_global_windows \
+            validate_g7_message_frames \
+            validate_g77_final_cohesion
+          do
+            echo "::group::$v"
+            python tools/visual_overhaul/$v.py
+            echo "::endgroup::"
+          done
+
+      - name: Generators are baseline-pinned and idempotent
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/visual_overhaul/generate_g76_atmosphere.py
+          git diff --exit-code -- res docs/visual_overhaul/G7_6_ATMOSPHERE_REPORT.json
+          # a second run must be byte-identical to the first (no compounding grades)
+          python tools/visual_overhaul/generate_g76_atmosphere.py
+          git diff --exit-code -- res docs/visual_overhaul/G7_6_ATMOSPHERE_REPORT.json

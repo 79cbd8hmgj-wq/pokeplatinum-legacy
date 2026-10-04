@@ -1,0 +1,577 @@
+{
+  "baseline": "76f27a81895d93b6d9c8772a49a4cdec667f649a",
+  "lighting_sets": {
+    "lighting_set_006": {
+      "area_records": [
+        "area_data_058",
+        "area_data_068",
+        "area_data_077"
+      ],
+      "maps": [
+        "MAP_HEADER_TEAM_GALACTIC_ETERNA_BUILDING_1F [INDOORS/TeamGalacticEternaBuilding]",
+        "MAP_HEADER_TEAM_GALACTIC_ETERNA_BUILDING_2F [INDOORS/TeamGalacticEternaBuilding]",
+        "MAP_HEADER_TEAM_GALACTIC_ETERNA_BUILDING_3F [INDOORS/TeamGalacticEternaBuilding]",
+        "MAP_HEADER_TEAM_GALACTIC_ETERNA_BUILDING_4F [INDOORS/TeamGalacticEternaBuilding]",
+        "MAP_HEADER_VEILSTONE_CITY_GALACTIC_WAREHOUSE [INDOORS/VeilstoneCity]",
+        "MAP_HEADER_GALACTIC_HQ_1F [INDOORS/GalacticHQ]",
+        "MAP_HEADER_GALACTIC_HQ_2F [INDOORS/GalacticHQ]",
+        "MAP_HEADER_GALACTIC_HQ_3F [INDOORS/GalacticHQ]",
+        "MAP_HEADER_GALACTIC_HQ_4F [INDOORS/GalacticHQ]",
+        "MAP_HEADER_GALACTIC_HQ_B1F [INDOORS/GalacticHQ]",
+        "MAP_HEADER_GALACTIC_HQ_B2F [INDOORS/GalacticHQ]",
+        "MAP_HEADER_GALACTIC_HQ_CONTROL_ROOM [INDOORS/GalacticHQ]",
+        "MAP_HEADER_GALACTIC_HQ_LABORATORY [INDOORS/GalacticHQ]",
+        "MAP_HEADER_GALACTIC_HQ_HALL [INDOORS/GalacticHQ]",
+        "MAP_HEADER_ROTOMS_ROOM [INDOORS/RotomsRoom]",
+        "MAP_HEADER_UNKNOWN_572 [INDOORS/TeamGalacticEternaBuilding]"
+      ]
+    },
+    "lighting_set_007": {
+      "area_records": [
+        "area_data_069"
+      ],
+      "maps": [
+        "MAP_HEADER_MT_CORONET_1F_SOUTH [CAVE/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_2F [CAVE/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_3F [CAVE/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_1F_TUNNEL_ROOM [CAVE/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_1F_NORTH_ROOM_2 [CAVE/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_1F_NORTH_ROOM_1 [CAVE/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_B1F [CAVE/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_ICEBERG_RUINS [CAVE/MtCoronet]",
+        "MAP_HEADER_ICEBERG_RUINS [CAVE/IcebergRuins]"
+      ]
+    },
+    "lighting_set_009": {
+      "area_records": [
+        "area_data_074"
+      ],
+      "maps": [
+        "MAP_HEADER_UNKNOWN_570 [CAVE/DistortionWorld]",
+        "MAP_HEADER_DISTORTION_WORLD_1F [CAVE/DistortionWorld]",
+        "MAP_HEADER_DISTORTION_WORLD_B1F [CAVE/DistortionWorld]",
+        "MAP_HEADER_DISTORTION_WORLD_B2F [CAVE/DistortionWorld]",
+        "MAP_HEADER_DISTORTION_WORLD_B3F [CAVE/DistortionWorld]",
+        "MAP_HEADER_DISTORTION_WORLD_B4F [CAVE/DistortionWorld]",
+        "MAP_HEADER_UNKNOWN_578 [CAVE/DistortionWorld]",
+        "MAP_HEADER_DISTORTION_WORLD_B5F [CAVE/DistortionWorld]",
+        "MAP_HEADER_DISTORTION_WORLD_B6F [CAVE/DistortionWorld]",
+        "MAP_HEADER_DISTORTION_WORLD_B7F [CAVE/DistortionWorld]",
+        "MAP_HEADER_DISTORTION_WORLD_GIRATINA_ROOM [CAVE/DistortionWorld]",
+        "MAP_HEADER_DISTORTION_WORLD_TURNBACK_CAVE_ROOM [CAVE/DistortionWorld]"
+      ]
+    },
+    "lighting_set_010": {
+      "area_records": [
+        "area_data_075"
+      ],
+      "maps": [
+        "MAP_HEADER_ETERNA_FOREST [CAVE/EternaForest]"
+      ]
+    },
+    "lighting_set_011": {
+      "area_records": [
+        "area_data_014"
+      ],
+      "maps": [
+        "MAP_HEADER_SNOWPOINT_CITY [TOWN_CITY/SnowpointCity]",
+        "MAP_HEADER_MT_CORONET_OUTSIDE_NORTH [OUTDOORS/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_OUTSIDE_SOUTH [OUTDOORS/MtCoronet]",
+        "MAP_HEADER_UNKNOWN_243 [CAVE/MysteryZone]",
+        "MAP_HEADER_LAKE_ACUITY_LOW_WATER [CAVE/LakeAcuity]",
+        "MAP_HEADER_LAKE_ACUITY [CAVE/LakeAcuity]",
+        "MAP_HEADER_ACUITY_LAKEFRONT [OUTDOORS/AcuityLakefront]",
+        "MAP_HEADER_ROUTE_216 [OUTDOORS/Route216]",
+        "MAP_HEADER_ROUTE_217 [OUTDOORS/Route217]"
+      ]
+    },
+    "lighting_set_012": {
+      "area_records": [
+        "area_data_060"
+      ],
+      "maps": [
+        "MAP_HEADER_SPEAR_PILLAR [OUTDOORS/SpearPillar]",
+        "MAP_HEADER_SPEAR_PILLAR_DISTORTED [OUTDOORS/SpearPillar]",
+        "MAP_HEADER_HALL_OF_ORIGIN [OUTDOORS/HallOfOrigin]",
+        "MAP_HEADER_UNKNOWN_511 [OUTDOORS/HallOfOrigin]",
+        "MAP_HEADER_SPEAR_PILLAR_DIALGA [CAVE/SpearPillar]",
+        "MAP_HEADER_SPEAR_PILLAR_PALKIA [CAVE/SpearPillar]"
+      ]
+    },
+    "lighting_set_013": {
+      "area_records": [
+        "area_data_062"
+      ],
+      "maps": [
+        "MAP_HEADER_SENDOFF_SPRING [CAVE/SendoffSpring]",
+        "MAP_HEADER_LAKE_VERITY_LOW_WATER [CAVE/LakeVerity]",
+        "MAP_HEADER_LAKE_VERITY [CAVE/LakeVerity]",
+        "MAP_HEADER_LAKE_VALOR_DRAINED [CAVE/LakeValor]",
+        "MAP_HEADER_LAKE_VALOR [CAVE/LakeValor]"
+      ]
+    },
+    "lighting_set_014": {
+      "area_records": [
+        "area_data_076"
+      ],
+      "maps": [
+        "MAP_HEADER_TURNBACK_CAVE_ENTRANCE [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_ROOM [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_GIRATINA_ROOM [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_1_ROOM_1 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_1_ROOM_2 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_1_ROOM_3 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_1_ROOM_4 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_1_ROOM_5 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_1_ROOM_6 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_2_ROOM_1 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_2_ROOM_2 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_2_ROOM_3 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_2_ROOM_4 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_2_ROOM_5 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_2_ROOM_6 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_1 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_2 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_3 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_4 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_5 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_6 [CAVE/TurnbackCave]"
+      ]
+    },
+    "lighting_set_015": {
+      "area_records": [
+        "area_data_053",
+        "area_data_055",
+        "area_data_056",
+        "area_data_057",
+        "area_data_071"
+      ],
+      "maps": [
+        "MAP_HEADER_UNKNOWN_197 [CAVE/OreburghMine]",
+        "MAP_HEADER_OREBURGH_MINE_B1F [CAVE/OreburghMine]",
+        "MAP_HEADER_OREBURGH_MINE_B2F [CAVE/OreburghMine]",
+        "MAP_HEADER_SOLACEON_RUINS_MANIAC_TUNNEL_ROOM [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_1 [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_2_NORTHEAST_DEAD_END [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_1_NORTHWEST_DEAD_END [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_2 [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_1_SOUTHEAST_DEAD_END [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_3 [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_2_SOUTHEAST_DEAD_END [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_6_SOUTHEAST_DEAD_END [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_5_SOUTHWEST_DEAD_END [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_3_NORTHWEST_DEAD_END [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_3_SOUTHWEST_DEAD_END [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_4 [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_6 [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_5 [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_7 [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_4_SOUTHEAST_DEAD_END [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_6_NORTHWEST_DEAD_END [CAVE/SolaceonRuins]",
+        "MAP_HEADER_VICTORY_ROAD_1F [CAVE/VictoryRoad]",
+        "MAP_HEADER_VICTORY_ROAD_2F [CAVE/VictoryRoad]",
+        "MAP_HEADER_VICTORY_ROAD_B1F [CAVE/VictoryRoad]",
+        "MAP_HEADER_VICTORY_ROAD_1F_ROOM_2 [CAVE/VictoryRoad]",
+        "MAP_HEADER_VICTORY_ROAD_1F_ROOM_1 [CAVE/VictoryRoad]",
+        "MAP_HEADER_VICTORY_ROAD_1F_ROOM_3 [CAVE/VictoryRoad]",
+        "MAP_HEADER_RAVAGED_PATH [CAVE/RavagedPath]",
+        "MAP_HEADER_OREBURGH_GATE_1F [CAVE/OreburghGate]",
+        "MAP_HEADER_OREBURGH_GATE_B1F [CAVE/OreburghGate]",
+        "MAP_HEADER_STARK_MOUNTAIN_ROOM_1 [CAVE/StarkMountain]",
+        "MAP_HEADER_STARK_MOUNTAIN_ROOM_2 [CAVE/StarkMountain]",
+        "MAP_HEADER_STARK_MOUNTAIN_ROOM_3 [CAVE/StarkMountain]",
+        "MAP_HEADER_WAYWARD_CAVE_1F [CAVE/WaywardCave]",
+        "MAP_HEADER_WAYWARD_CAVE_B1F [CAVE/WaywardCave]",
+        "MAP_HEADER_RUIN_MANIAC_CAVE_SHORT [CAVE/RuinManiacCave]",
+        "MAP_HEADER_VERITY_CAVERN [CAVE/VerityCavern]",
+        "MAP_HEADER_VALOR_CAVERN [CAVE/ValorCavern]",
+        "MAP_HEADER_ACUITY_CAVERN [CAVE/AcuityCavern]",
+        "MAP_HEADER_CELESTIC_TOWN_CAVE [INDOORS/CelesticTown]",
+        "MAP_HEADER_RUIN_MANIAC_CAVE_LONG [CAVE/RuinManiacCave]",
+        "MAP_HEADER_MANIAC_TUNNEL [CAVE/ManiacTunnel]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_5_SOUTHEAST_DEADEND [CAVE/SolaceonRuins]",
+        "MAP_HEADER_UNKNOWN_533 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_534 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_535 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_536 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_537 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_538 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_539 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_540 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_541 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_542 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_543 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_544 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_545 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_546 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_547 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_548 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_549 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_550 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_551 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_552 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_553 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_554 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_555 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_556 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_557 [CAVE/TurnbackCave]",
+        "MAP_HEADER_ROUTE_228_ROCK_PEAK_RUINS [CAVE/Route228]",
+        "MAP_HEADER_ROCK_PEAK_RUINS [CAVE/RockPeakRuins]"
+      ]
+    },
+    "lighting_set_016": {
+      "area_records": [
+        "area_data_070"
+      ],
+      "maps": [
+        "MAP_HEADER_MT_CORONET_4F_ROOMS_1_AND_2 [CAVE/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_4F_ROOM_3 [CAVE/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_5F [CAVE/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_6F [CAVE/MtCoronet]"
+      ]
+    },
+    "lighting_set_017": {
+      "area_records": [
+        "area_data_013"
+      ],
+      "maps": [
+        "MAP_HEADER_SUNYSHORE_CITY [TOWN_CITY/SunyshoreCity]",
+        "MAP_HEADER_POKEMON_LEAGUE [TOWN_CITY/PokemonLeague]",
+        "MAP_HEADER_FLOWER_PARADISE [OUTDOORS/FlowerParadise]",
+        "MAP_HEADER_ROUTE_224 [OUTDOORS/Route224]",
+        "MAP_HEADER_ROUTE_223 [OUTDOORS/Route223]",
+        "MAP_HEADER_SEABREAK_PATH [OUTDOORS/SeabreakPath]"
+      ]
+    },
+    "lighting_set_018": {
+      "area_records": [
+        "area_data_015"
+      ],
+      "maps": [
+        "MAP_HEADER_CANALAVE_CITY [TOWN_CITY/CanalaveCity]",
+        "MAP_HEADER_FULLMOON_ISLAND [OUTDOORS/FullmoonIsland]",
+        "MAP_HEADER_IRON_ISLAND [OUTDOORS/IronIsland]",
+        "MAP_HEADER_NEWMOON_ISLAND [CAVE/NewmoonIsland]",
+        "MAP_HEADER_ROUTE_218 [OUTDOORS/Route218]"
+      ]
+    },
+    "lighting_set_019": {
+      "area_records": [
+        "area_data_018"
+      ],
+      "maps": [
+        "MAP_HEADER_UNKNOWN_266 [CAVE/MysteryZone]",
+        "MAP_HEADER_VALOR_LAKEFRONT [OUTDOORS/ValorLakefront]",
+        "MAP_HEADER_SPRING_PATH [OUTDOORS/SpringPath]",
+        "MAP_HEADER_ROUTE_213 [OUTDOORS/Route213]",
+        "MAP_HEADER_ROUTE_214 [OUTDOORS/Route214]",
+        "MAP_HEADER_ROUTE_222 [OUTDOORS/Route222]"
+      ]
+    }
+  },
+  "texture_sets": {
+    "map_texture_set_013": {
+      "area_records": [
+        "area_data_013"
+      ],
+      "maps": [
+        "MAP_HEADER_SUNYSHORE_CITY [TOWN_CITY/SunyshoreCity]",
+        "MAP_HEADER_POKEMON_LEAGUE [TOWN_CITY/PokemonLeague]",
+        "MAP_HEADER_FLOWER_PARADISE [OUTDOORS/FlowerParadise]",
+        "MAP_HEADER_ROUTE_224 [OUTDOORS/Route224]",
+        "MAP_HEADER_ROUTE_223 [OUTDOORS/Route223]",
+        "MAP_HEADER_SEABREAK_PATH [OUTDOORS/SeabreakPath]"
+      ]
+    },
+    "map_texture_set_014": {
+      "area_records": [
+        "area_data_014"
+      ],
+      "maps": [
+        "MAP_HEADER_SNOWPOINT_CITY [TOWN_CITY/SnowpointCity]",
+        "MAP_HEADER_MT_CORONET_OUTSIDE_NORTH [OUTDOORS/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_OUTSIDE_SOUTH [OUTDOORS/MtCoronet]",
+        "MAP_HEADER_UNKNOWN_243 [CAVE/MysteryZone]",
+        "MAP_HEADER_LAKE_ACUITY_LOW_WATER [CAVE/LakeAcuity]",
+        "MAP_HEADER_LAKE_ACUITY [CAVE/LakeAcuity]",
+        "MAP_HEADER_ACUITY_LAKEFRONT [OUTDOORS/AcuityLakefront]",
+        "MAP_HEADER_ROUTE_216 [OUTDOORS/Route216]",
+        "MAP_HEADER_ROUTE_217 [OUTDOORS/Route217]"
+      ]
+    },
+    "map_texture_set_015": {
+      "area_records": [
+        "area_data_015"
+      ],
+      "maps": [
+        "MAP_HEADER_CANALAVE_CITY [TOWN_CITY/CanalaveCity]",
+        "MAP_HEADER_FULLMOON_ISLAND [OUTDOORS/FullmoonIsland]",
+        "MAP_HEADER_IRON_ISLAND [OUTDOORS/IronIsland]",
+        "MAP_HEADER_NEWMOON_ISLAND [CAVE/NewmoonIsland]",
+        "MAP_HEADER_ROUTE_218 [OUTDOORS/Route218]"
+      ]
+    },
+    "map_texture_set_018": {
+      "area_records": [
+        "area_data_018"
+      ],
+      "maps": [
+        "MAP_HEADER_UNKNOWN_266 [CAVE/MysteryZone]",
+        "MAP_HEADER_VALOR_LAKEFRONT [OUTDOORS/ValorLakefront]",
+        "MAP_HEADER_SPRING_PATH [OUTDOORS/SpringPath]",
+        "MAP_HEADER_ROUTE_213 [OUTDOORS/Route213]",
+        "MAP_HEADER_ROUTE_214 [OUTDOORS/Route214]",
+        "MAP_HEADER_ROUTE_222 [OUTDOORS/Route222]"
+      ]
+    },
+    "map_texture_set_052": {
+      "area_records": [
+        "area_data_053"
+      ],
+      "maps": [
+        "MAP_HEADER_RAVAGED_PATH [CAVE/RavagedPath]",
+        "MAP_HEADER_OREBURGH_GATE_1F [CAVE/OreburghGate]",
+        "MAP_HEADER_OREBURGH_GATE_B1F [CAVE/OreburghGate]",
+        "MAP_HEADER_WAYWARD_CAVE_1F [CAVE/WaywardCave]",
+        "MAP_HEADER_WAYWARD_CAVE_B1F [CAVE/WaywardCave]",
+        "MAP_HEADER_RUIN_MANIAC_CAVE_SHORT [CAVE/RuinManiacCave]",
+        "MAP_HEADER_VERITY_CAVERN [CAVE/VerityCavern]",
+        "MAP_HEADER_VALOR_CAVERN [CAVE/ValorCavern]",
+        "MAP_HEADER_ACUITY_CAVERN [CAVE/AcuityCavern]",
+        "MAP_HEADER_RUIN_MANIAC_CAVE_LONG [CAVE/RuinManiacCave]",
+        "MAP_HEADER_MANIAC_TUNNEL [CAVE/ManiacTunnel]"
+      ]
+    },
+    "map_texture_set_054": {
+      "area_records": [
+        "area_data_055"
+      ],
+      "maps": [
+        "MAP_HEADER_UNKNOWN_197 [CAVE/OreburghMine]",
+        "MAP_HEADER_OREBURGH_MINE_B1F [CAVE/OreburghMine]",
+        "MAP_HEADER_OREBURGH_MINE_B2F [CAVE/OreburghMine]"
+      ]
+    },
+    "map_texture_set_055": {
+      "area_records": [
+        "area_data_056"
+      ],
+      "maps": [
+        "MAP_HEADER_SOLACEON_RUINS_MANIAC_TUNNEL_ROOM [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_1 [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_2_NORTHEAST_DEAD_END [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_1_NORTHWEST_DEAD_END [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_2 [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_1_SOUTHEAST_DEAD_END [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_3 [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_2_SOUTHEAST_DEAD_END [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_6_SOUTHEAST_DEAD_END [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_5_SOUTHWEST_DEAD_END [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_3_NORTHWEST_DEAD_END [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_3_SOUTHWEST_DEAD_END [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_4 [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_6 [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_5 [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_7 [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_4_SOUTHEAST_DEAD_END [CAVE/SolaceonRuins]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_6_NORTHWEST_DEAD_END [CAVE/SolaceonRuins]",
+        "MAP_HEADER_CELESTIC_TOWN_CAVE [INDOORS/CelesticTown]",
+        "MAP_HEADER_SOLACEON_RUINS_ROOM_5_SOUTHEAST_DEADEND [CAVE/SolaceonRuins]",
+        "MAP_HEADER_UNKNOWN_533 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_534 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_535 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_536 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_537 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_538 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_539 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_540 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_541 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_542 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_543 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_544 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_545 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_546 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_547 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_548 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_549 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_550 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_551 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_552 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_553 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_554 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_555 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_556 [CAVE/TurnbackCave]",
+        "MAP_HEADER_UNKNOWN_557 [CAVE/TurnbackCave]"
+      ]
+    },
+    "map_texture_set_056": {
+      "area_records": [
+        "area_data_057"
+      ],
+      "maps": [
+        "MAP_HEADER_STARK_MOUNTAIN_ROOM_1 [CAVE/StarkMountain]",
+        "MAP_HEADER_STARK_MOUNTAIN_ROOM_2 [CAVE/StarkMountain]",
+        "MAP_HEADER_STARK_MOUNTAIN_ROOM_3 [CAVE/StarkMountain]",
+        "MAP_HEADER_ROUTE_228_ROCK_PEAK_RUINS [CAVE/Route228]",
+        "MAP_HEADER_ROCK_PEAK_RUINS [CAVE/RockPeakRuins]"
+      ]
+    },
+    "map_texture_set_057": {
+      "area_records": [
+        "area_data_058"
+      ],
+      "maps": [
+        "MAP_HEADER_TEAM_GALACTIC_ETERNA_BUILDING_1F [INDOORS/TeamGalacticEternaBuilding]",
+        "MAP_HEADER_TEAM_GALACTIC_ETERNA_BUILDING_2F [INDOORS/TeamGalacticEternaBuilding]",
+        "MAP_HEADER_TEAM_GALACTIC_ETERNA_BUILDING_3F [INDOORS/TeamGalacticEternaBuilding]",
+        "MAP_HEADER_TEAM_GALACTIC_ETERNA_BUILDING_4F [INDOORS/TeamGalacticEternaBuilding]",
+        "MAP_HEADER_GALACTIC_HQ_1F [INDOORS/GalacticHQ]",
+        "MAP_HEADER_GALACTIC_HQ_2F [INDOORS/GalacticHQ]",
+        "MAP_HEADER_GALACTIC_HQ_3F [INDOORS/GalacticHQ]",
+        "MAP_HEADER_GALACTIC_HQ_4F [INDOORS/GalacticHQ]",
+        "MAP_HEADER_GALACTIC_HQ_B1F [INDOORS/GalacticHQ]",
+        "MAP_HEADER_GALACTIC_HQ_B2F [INDOORS/GalacticHQ]",
+        "MAP_HEADER_GALACTIC_HQ_HALL [INDOORS/GalacticHQ]",
+        "MAP_HEADER_ROTOMS_ROOM [INDOORS/RotomsRoom]",
+        "MAP_HEADER_UNKNOWN_572 [INDOORS/TeamGalacticEternaBuilding]"
+      ]
+    },
+    "map_texture_set_059": {
+      "area_records": [
+        "area_data_060"
+      ],
+      "maps": [
+        "MAP_HEADER_SPEAR_PILLAR [OUTDOORS/SpearPillar]",
+        "MAP_HEADER_SPEAR_PILLAR_DISTORTED [OUTDOORS/SpearPillar]",
+        "MAP_HEADER_HALL_OF_ORIGIN [OUTDOORS/HallOfOrigin]",
+        "MAP_HEADER_UNKNOWN_511 [OUTDOORS/HallOfOrigin]",
+        "MAP_HEADER_SPEAR_PILLAR_DIALGA [CAVE/SpearPillar]",
+        "MAP_HEADER_SPEAR_PILLAR_PALKIA [CAVE/SpearPillar]"
+      ]
+    },
+    "map_texture_set_061": {
+      "area_records": [
+        "area_data_062"
+      ],
+      "maps": [
+        "MAP_HEADER_SENDOFF_SPRING [CAVE/SendoffSpring]",
+        "MAP_HEADER_LAKE_VERITY_LOW_WATER [CAVE/LakeVerity]",
+        "MAP_HEADER_LAKE_VERITY [CAVE/LakeVerity]",
+        "MAP_HEADER_LAKE_VALOR_DRAINED [CAVE/LakeValor]",
+        "MAP_HEADER_LAKE_VALOR [CAVE/LakeValor]"
+      ]
+    },
+    "map_texture_set_067": {
+      "area_records": [
+        "area_data_068"
+      ],
+      "maps": [
+        "MAP_HEADER_GALACTIC_HQ_CONTROL_ROOM [INDOORS/GalacticHQ]",
+        "MAP_HEADER_GALACTIC_HQ_LABORATORY [INDOORS/GalacticHQ]"
+      ]
+    },
+    "map_texture_set_068": {
+      "area_records": [
+        "area_data_069"
+      ],
+      "maps": [
+        "MAP_HEADER_MT_CORONET_1F_SOUTH [CAVE/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_2F [CAVE/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_3F [CAVE/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_1F_TUNNEL_ROOM [CAVE/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_1F_NORTH_ROOM_2 [CAVE/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_1F_NORTH_ROOM_1 [CAVE/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_B1F [CAVE/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_ICEBERG_RUINS [CAVE/MtCoronet]",
+        "MAP_HEADER_ICEBERG_RUINS [CAVE/IcebergRuins]"
+      ]
+    },
+    "map_texture_set_069": {
+      "area_records": [
+        "area_data_070"
+      ],
+      "maps": [
+        "MAP_HEADER_MT_CORONET_4F_ROOMS_1_AND_2 [CAVE/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_4F_ROOM_3 [CAVE/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_5F [CAVE/MtCoronet]",
+        "MAP_HEADER_MT_CORONET_6F [CAVE/MtCoronet]"
+      ]
+    },
+    "map_texture_set_070": {
+      "area_records": [
+        "area_data_071"
+      ],
+      "maps": [
+        "MAP_HEADER_VICTORY_ROAD_1F [CAVE/VictoryRoad]",
+        "MAP_HEADER_VICTORY_ROAD_2F [CAVE/VictoryRoad]",
+        "MAP_HEADER_VICTORY_ROAD_B1F [CAVE/VictoryRoad]",
+        "MAP_HEADER_VICTORY_ROAD_1F_ROOM_2 [CAVE/VictoryRoad]",
+        "MAP_HEADER_VICTORY_ROAD_1F_ROOM_1 [CAVE/VictoryRoad]",
+        "MAP_HEADER_VICTORY_ROAD_1F_ROOM_3 [CAVE/VictoryRoad]"
+      ]
+    },
+    "map_texture_set_073": {
+      "area_records": [
+        "area_data_074"
+      ],
+      "maps": [
+        "MAP_HEADER_UNKNOWN_570 [CAVE/DistortionWorld]",
+        "MAP_HEADER_DISTORTION_WORLD_1F [CAVE/DistortionWorld]",
+        "MAP_HEADER_DISTORTION_WORLD_B1F [CAVE/DistortionWorld]",
+        "MAP_HEADER_DISTORTION_WORLD_B2F [CAVE/DistortionWorld]",
+        "MAP_HEADER_DISTORTION_WORLD_B3F [CAVE/DistortionWorld]",
+        "MAP_HEADER_DISTORTION_WORLD_B4F [CAVE/DistortionWorld]",
+        "MAP_HEADER_UNKNOWN_578 [CAVE/DistortionWorld]",
+        "MAP_HEADER_DISTORTION_WORLD_B5F [CAVE/DistortionWorld]",
+        "MAP_HEADER_DISTORTION_WORLD_B6F [CAVE/DistortionWorld]",
+        "MAP_HEADER_DISTORTION_WORLD_B7F [CAVE/DistortionWorld]",
+        "MAP_HEADER_DISTORTION_WORLD_GIRATINA_ROOM [CAVE/DistortionWorld]",
+        "MAP_HEADER_DISTORTION_WORLD_TURNBACK_CAVE_ROOM [CAVE/DistortionWorld]"
+      ]
+    },
+    "map_texture_set_074": {
+      "area_records": [
+        "area_data_075"
+      ],
+      "maps": [
+        "MAP_HEADER_ETERNA_FOREST [CAVE/EternaForest]"
+      ]
+    },
+    "map_texture_set_075": {
+      "area_records": [
+        "area_data_076"
+      ],
+      "maps": [
+        "MAP_HEADER_TURNBACK_CAVE_ENTRANCE [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_ROOM [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_GIRATINA_ROOM [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_1_ROOM_1 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_1_ROOM_2 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_1_ROOM_3 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_1_ROOM_4 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_1_ROOM_5 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_1_ROOM_6 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_2_ROOM_1 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_2_ROOM_2 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_2_ROOM_3 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_2_ROOM_4 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_2_ROOM_5 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_2_ROOM_6 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_1 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_2 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_3 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_4 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_5 [CAVE/TurnbackCave]",
+        "MAP_HEADER_TURNBACK_CAVE_PILLAR_3_ROOM_6 [CAVE/TurnbackCave]"
+      ]
+    },
+    "map_texture_set_076": {
+      "area_records": [
+        "area_data_077"
+      ],
+      "maps": [
+        "MAP_HEADER_VEILSTONE_CITY_GALACTIC_WAREHOUSE [INDOORS/VeilstoneCity]"
+      ]
+    }
+  }
+}

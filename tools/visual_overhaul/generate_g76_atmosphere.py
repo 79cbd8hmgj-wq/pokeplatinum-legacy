@@ -137,6 +137,14 @@ LIGHTING_INPLACE = {
         ("day", "ambient", (0.88, 0.92, 1.08), Z),
         ("day", "specular", (0.95, 0.98, 1.04), Z),
         ("all", "ambient", (0.95, 0.97, 1.04), Z),
+        # G7.7 hierarchy pass: legendary summit must out-grade ordinary caves and
+        # standard environments. Colour-driven (cool/blue), luma nearly neutral so
+        # shade stays readable.
+        ("all", "light0", (0.96, 0.98, 1.10), Z),
+        ("all", "diffuse", (0.94, 0.96, 1.08), Z),
+        ("all", "ambient", (0.92, 0.95, 1.14), Z),
+        ("all", "specular", (0.92, 0.95, 1.08), Z),
+        ("all", "emission", (0.94, 0.96, 1.06), Z),
     ]),
     # 5 Distortion World: indigo/violet, deeper ambient, cyan-violet fill.
     "lighting_set_009": ("lighting_set_009", [
@@ -168,12 +176,14 @@ LIGHTING_INPLACE = {
 # New dedicated sets: (new id, base set it is derived from, spec)
 LIGHTING_NEW = {
     "lighting_set_015": ("lighting_set_001", [  # natural caves
-        ("all", "light0", (0.88, 0.92, 1.04), Z),
-        ("all", "light2", (0.90, 0.95, 1.05), Z),
-        ("all", "diffuse", (0.88, 0.92, 1.00), Z),
-        ("all", "ambient", (0.82, 0.88, 0.98), Z),
-        ("all", "specular", (0.88, 0.92, 1.02), Z),
-        ("all", "emission", (0.85, 0.90, 1.00), Z),
+        # G7.7 hierarchy pass: ordinary natural caves sit below the standard
+        # environment tier (was ~Distortion/Turnback strength).
+        ("all", "light0", (0.94, 0.96, 1.02), Z),
+        ("all", "light2", (0.95, 0.975, 1.025), Z),
+        ("all", "diffuse", (0.94, 0.96, 1.00), Z),
+        ("all", "ambient", (0.91, 0.94, 0.99), Z),
+        ("all", "specular", (0.94, 0.96, 1.01), Z),
+        ("all", "emission", (0.925, 0.95, 1.00), Z),
     ]),
     "lighting_set_016": ("lighting_set_007", [  # Mt. Coronet upper floors
         ("all", "light0", (0.92, 0.96, 1.06), Z),

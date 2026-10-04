@@ -244,7 +244,6 @@ Merged on `main`:
 - G7.4 core menus — implemented
 - G7.5 global windows / typography-adjacent polish — implemented, including the all-20-frame scroll-cursor/wait-dial contrast follow-up
 
-- G7.6 overworld atmosphere escalation — implemented on `claude/g7-6-overworld-atmosphere-1aih7r` (see `G7_6_OVERWORLD_ATMOSPHERE.md`; owner runtime review pending)
-
-**Next implementation section: G7.7 — Special encounter / boss polish** (after G7.6 merges).
+- G7.6 overworld atmosphere escalation — merged (PR #59; see `G7_6_OVERWORLD_ATMOSPHERE.md`)
+- G7.7 final visual cohesion — PR #60 (see `G7_7_FINAL_COHESION_REPORT.md`, `G7_COMPLETE_SUMMARY.md`); **G7 is closed once PR #60 merges. No further numbered G7 section.**
 
