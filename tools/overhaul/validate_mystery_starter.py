@@ -334,9 +334,9 @@ class V:
             b = func_body(sv, fn) or ""
             self.rec(f"{fn} is vanilla (keyed directly on canonical VAR_PLAYER_STARTER)", "playerStarter = TryGetVarValue(varsFlags, VAR_PLAYER_STARTER)" in b and "Branch" not in b and "Mystery" not in b)
         self.rec("SystemVars_GetPlayerStarter returns canonical VAR_PLAYER_STARTER", re.search(r"return TryGetVarValue\(varsFlags, VAR_PLAYER_STARTER\);", func_body(sv, "SystemVars_GetPlayerStarter") or "") is not None)
-        self.rec("SystemVars_Get/SetMysteryStarterSpecies use VAR_MYSTERY_STARTER_SPECIES",
+        self.rec("SystemVars_GetMysteryStarterSpecies uses VAR_MYSTERY_STARTER_SPECIES",
                  "TryGetVarValue(varsFlags, VAR_MYSTERY_STARTER_SPECIES)" in (func_body(sv, "SystemVars_GetMysteryStarterSpecies") or "") and
-                 "TrySetVarToValue(varsFlags, VAR_MYSTERY_STARTER_SPECIES, species)" in (func_body(sv, "SystemVars_SetMysteryStarterSpecies") or ""))
+                 "SystemVars_SetMysteryStarterSpecies" not in sv)
         self.rec("no custom branch-remap layer (SystemVars_GetPlayerStarterBranch / GetPlayerStarterBranch removed)",
                  "SystemVars_GetPlayerStarterBranch" not in sv and not any("GetPlayerStarterBranch" in self.read(os.path.relpath(pp, ROOT))
                      for pp in glob.glob(os.path.join(ROOT, "src", "**", "*.[ch]"), recursive=True) + glob.glob(os.path.join(ROOT, "include", "**", "*.h"), recursive=True) +
@@ -410,7 +410,10 @@ class V:
                 drift.append(path)
         self.rec("every guarded source path exists", not miss, ",".join(miss))
         self.rec("before-blob guards match the starting SHA", not drift, ",".join(drift))
-        self.rec("manifest records the deferred hatch presentation", m["reveal"]["hatch_presentation"] == "DEFERRED_DISABLED" and m["reveal"]["mechanism"].startswith("GivePokemon"))
+        self.rec("manifest records direct award with hatch runtime removed",
+                 m["reveal"]["hatch_presentation"].startswith("REMOVED_FROM_RUNTIME") and
+                 m["reveal"]["mechanism"].startswith("GivePokemon") and
+                 m["reveal"]["hatch_code_retained_unused"] == [])
         self.rec("manifest visual equivalence flags", all(m["visual_equivalence"][k] is False for k in ("species_preview", "species_name_preview", "type_hint", "cry_before_hatch", "table_depends_on_position")))
         self.rec("manifest RNG timing: one draw, no rerolls", m["rng"]["draws"] == 1 and not any(m["rng"][k] for k in ("position_is_input", "reroll_on_hatch", "reroll_on_field_return", "reroll_on_battle_start")))
         self.rec("manifest output level == 5", m["output"]["level"] == 5)
