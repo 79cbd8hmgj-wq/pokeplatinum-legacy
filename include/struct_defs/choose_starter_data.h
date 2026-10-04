@@ -4,6 +4,7 @@
 #include "game_options.h"
 
 typedef struct ChooseStarterData {
+    int species;
     const Options *options;
 } ChooseStarterData;
 

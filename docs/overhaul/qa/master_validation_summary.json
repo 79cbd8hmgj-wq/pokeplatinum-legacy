@@ -1,5 +1,7 @@
 {
- "child_report_side_effects_restored": [],
+ "child_report_side_effects_restored": [
+  "docs/overhaul/implementation/opening/mutation_results.json"
+ ],
  "failed": [],
  "overall": "PASS",
  "results": [
@@ -171,7 +173,7 @@
    "kind": "validator",
    "phase": 14,
    "result": "PASS",
-   "summary": "mystery starter validation: 117 pass, 0 fail",
+   "summary": "mystery starter validation: 123 pass, 0 fail",
    "title": "Mystery Egg starter (D8)"
   },
   {

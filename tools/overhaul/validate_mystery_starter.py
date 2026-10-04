@@ -147,8 +147,27 @@ class V:
                  len(re.findall(r"\bMysteryStarterEntry\s+s\w+\[", src)) == 1)
         self.rec("chooser builds every sprite from SPECIES_EGG only", "MakeMysteryEggSprite" in cleaned and
                  len(re.findall(r"BuildPokemonSpriteTemplate\(", cleaned)) == 1 and "SPECIES_EGG" in cleaned)
-        self.rec("chooser has no per-position sprite species", not re.search(r"MakePokemonSprite\s*\(|STARTER_OPTION_\d", cleaned))
-        self.rec("no species constants in chooser other than SPECIES_EGG", not [s for s in re.findall(r"SPECIES_\w+", cleaned) if s != "SPECIES_EGG"])
+        outside = re.sub(r"#define STARTER_OPTION_\d\s+SPECIES_\w+", "", cleaned)
+        sel = func_body(cleaned, "GetSelectedSpecies") or ""
+        outside = outside.replace(sel, "") if sel else outside
+        self.rec("chooser has no per-position sprite species (STARTER_OPTION_n only in vanilla defines + GetSelectedSpecies)", not re.search(r"MakePokemonSprite\s*\(", cleaned) and not re.search(r"STARTER_OPTION_\d", outside))
+        self.rec("no species constants in chooser outside the vanilla output contract other than SPECIES_EGG", not [s for s in re.findall(r"SPECIES_\w+", outside) if s not in ("SPECIES_EGG", "SPECIES_NONE")])
+        self.rec("exactly three SPECIES_EGG chooser sprites (NUM_STARTER_OPTIONS == 3, one egg sprite per option)",
+                 re.search(r"#define NUM_STARTER_OPTIONS\s+3\b", cleaned) is not None and
+                 re.search(r"for \(int i = 0; i < NUM_STARTER_OPTIONS; i\+\+\) \{\s*MakeMysteryEggSprite\(&app->sprites\[i\], app\);", cleaned) is not None and
+                 cleaned.count("MakeMysteryEggSprite(") == 3)  # prototype + loop call + definition
+        exit_body = func_body(cleaned, "ChooseStarter_Exit") or ""
+        self.rec("ChooseStarter_Exit restores data->species = GetSelectedSpecies(app->cursorPosition) (vanilla output contract)",
+                 re.search(r"SetVBlankCallback\(NULL, NULL\);\s*data->species = GetSelectedSpecies\(app->cursorPosition\);\s*BOOL touchPadResult", exit_body) is not None)
+        self.rec("GetSelectedSpecies restored with vanilla Turtwig/Chimchar/Piplup mapping",
+                 all(re.search(r"#define STARTER_OPTION_%d\s+%s\b" % (i, sp), cleaned) for i, sp in enumerate(("SPECIES_TURTWIG", "SPECIES_CHIMCHAR", "SPECIES_PIPLUP"))) and
+                 re.search(r"case CURSOR_POSITION_LEFT:\s*return STARTER_OPTION_0;\s*case CURSOR_POSITION_CENTER:\s*return STARTER_OPTION_1;\s*case CURSOR_POSITION_RIGHT:\s*return STARTER_OPTION_2;", sel) is not None)
+        tail = exit_body[exit_body.index("BOOL touchPadResult"):] if "BOOL touchPadResult" in exit_body else ""
+        order = ["DisableTouchPad()", "DeletePreviewWindow(", "DeleteCursorCellActor(", "DeleteCursorOAM(", "StopCursorMovement(", "DeleteCamera(", "Delete3DGraphics(",
+                 "DeleteCellActors(", "DeletePokemonSprites(", "DeleteSpriteDisplay(", "DeleteMessageWindow(", "DeleteSubplaneWindows(", "DeleteBGs(", "Heap_Free(app->bgConfig)",
+                 "DeleteDrawing()", "VramTransfer_Free()", "ApplicationManager_FreeData(appMan)", "Heap_Destroy(HEAP_ID_CHOOSE_STARTER_APP)"]
+        pos = [tail.find(x) for x in order]
+        self.rec("ChooseStarter_Exit teardown order identical to pre-D8 (6fc1eedf)", all(x >= 0 for x in pos) and pos == sorted(pos))
         self.rec("no cry before hatch", "Sound_PlayPokemonCry" not in cleaned)
         self.rec("no species data lookups in chooser (gender/name/type)", not re.search(r"Pokemon_GetGenderOf|GetSpeciesName|SPECIES_NAME|GetSpeciesType|SpeciesData_", cleaned))
         self.rec("chooser message index independent of cursor position", not re.search(r"360,\s*\d\s*\+\s*app->cursorPosition", cleaned))
@@ -197,7 +216,9 @@ class V:
         self.rec("egg is bound to the persisted species (reads VAR_MYSTERY_STARTER_SPECIES)", "SystemVars_GetMysteryStarterSpecies(" in give and "Egg_CreateMysteryStarterEgg(egg, species" in give)
         csd = self.read("include/struct_defs/choose_starter_data.h")
         self.rec("save format unchanged (no new save fields)", "VAR_" not in csd)
-        self.rec("ChooseStarterData is minimal (options only; no species / eggPosition output)", re.search(r"typedef struct ChooseStarterData \{\s*const Options \*options;\s*\} ChooseStarterData;", csd) is not None)
+        self.rec("ChooseStarterData layout is exactly vanilla (int species; const Options *options;)", re.search(r"typedef struct ChooseStarterData \{\s*int species;\s*const Options \*options;\s*\} ChooseStarterData;", csd) is not None)
+        self.rec("SaveChosenStarter never reads the chooser's data->species (visual position cannot affect the roll)", "->species" not in save and "chooseStarterData" not in save)
+        self.rec("SaveChosenStarter frees the chooser data exactly once via the script data pointer", save.count("Heap_Free(*fieldSysDataPtr)") == 1 and save.index("MysteryStarter_Draw()") < save.index("Heap_Free(*fieldSysDataPtr)"))
         r201 = self.read("res/field/scripts/scripts_route_201.s")
         body = r201[r201.index("Route201_Briefcase:"):r201.index("Route201_DawnLeave:")]
         cmds = [l.strip().split()[0] for l in body.splitlines() if l.strip() and not l.strip().endswith(":")]
