@@ -186,56 +186,105 @@ class V:
 
     # -- RNG / persistence / reveal ordering ---------------------------------------------------------------------------------------
     def check_rng_and_flow(self):
-        src = strip_comments(self.read("src/mystery_egg_starter.c"))
         scrcmd = strip_comments(self.read("src/scrcmd.c"))
-        draw = func_body(src, "MysteryStarter_Draw") or ""
-        self.rec("exactly one RNG call in the starter module", len(RNG_CALL.findall(src)) == 1, f"{len(RNG_CALL.findall(src))}")
-        self.rec("the RNG call is inside MysteryStarter_Draw", len(RNG_CALL.findall(draw)) == 1)
-        self.rec("draw is LCRNG_Next() % MYSTERY_STARTER_ROLL_RANGE", "LCRNG_Next() % MYSTERY_STARTER_ROLL_RANGE" in draw)
-        self.rec("SpeciesFromRoll is RNG-free", not RNG_CALL.search(func_body(src, "MysteryStarter_SpeciesFromRoll") or "x("))
-        calls = 0
-        for path in glob.glob(os.path.join(ROOT, "src", "**", "*.c"), recursive=True):
-            rel = os.path.relpath(path, ROOT)
-            text = strip_comments(self.read(rel))
-            if rel != "src/mystery_egg_starter.c":
-                calls += len(re.findall(r"\bMysteryStarter_Draw\s*\(", text))
-        self.rec("MysteryStarter_Draw has exactly one caller", calls == 1, f"{calls}")
         save = func_body(scrcmd, "ScrCmd_SaveChosenStarter") or ""
-        self.rec("the caller is ScrCmd_SaveChosenStarter", "MysteryStarter_Draw()" in save)
-        self.rec("actual species persisted immediately in VAR_MYSTERY_STARTER_SPECIES", re.search(r"SystemVars_SetMysteryStarterSpecies\([^;]*,\s*species\)", save) is not None)
-        self.rec("canonical branch computed from the single draw via MysteryStarter_GetRivalBranch", re.search(r"u16 branch = MysteryStarter_GetRivalBranch\(species\);", save) is not None)
-        self.rec("VAR_PLAYER_STARTER receives only the branch (never the actual species)",
-                 re.search(r"SystemVars_SetPlayerStarter\([^;]*,\s*branch\)", save) is not None and not re.search(r"SystemVars_SetPlayerStarter\([^;]*species\)", save))
-        callers = sum(len(re.findall(r"\bSystemVars_SetPlayerStarter\s*\(", strip_comments(self.read(os.path.relpath(pp, ROOT)))))
-                      for pp in glob.glob(os.path.join(ROOT, "src", "**", "*.c"), recursive=True) if not pp.endswith("system_vars.c"))
-        self.rec("SystemVars_SetPlayerStarter has exactly one caller (SaveChosenStarter)", callers == 1, f"{callers}")
-        self.rec("draw happens once per call (no loop around it)", not re.search(r"\b(for|while)\b", save))
-        for fn in ("ScrCmd_GiveMysteryStarterEgg", "ScrCmd_HatchMysteryStarterEgg", "ScrCmd_GetMysteryStarterSpecies", "ScrCmd_StartChooseStarterScene"):
-            self.rec(f"no RNG/draw in {fn}", not RNG_CALL.search(func_body(scrcmd, fn) or "x(") and "MysteryStarter_Draw" not in (func_body(scrcmd, fn) or ""))
-        give = func_body(scrcmd, "ScrCmd_GiveMysteryStarterEgg") or ""
-        self.rec("egg is bound to the persisted species (reads VAR_MYSTERY_STARTER_SPECIES)", "SystemVars_GetMysteryStarterSpecies(" in give and "Egg_CreateMysteryStarterEgg(egg, species" in give)
-        csd = self.read("include/struct_defs/choose_starter_data.h")
-        self.rec("save format unchanged (no new save fields)", "VAR_" not in csd)
-        self.rec("ChooseStarterData layout is exactly vanilla (int species; const Options *options;)", re.search(r"typedef struct ChooseStarterData \{\s*int species;\s*const Options \*options;\s*\} ChooseStarterData;", csd) is not None)
-        self.rec("SaveChosenStarter never reads the chooser's data->species (visual position cannot affect the roll)", "->species" not in save and "chooseStarterData" not in save)
-        self.rec("SaveChosenStarter frees the chooser data exactly once via the script data pointer", save.count("Heap_Free(*fieldSysDataPtr)") == 1 and save.index("MysteryStarter_Draw()") < save.index("Heap_Free(*fieldSysDataPtr)"))
         r201 = self.read("res/field/scripts/scripts_route_201.s")
         body = r201[r201.index("Route201_Briefcase:"):r201.index("Route201_DawnLeave:")]
-        cmds = [l.strip().split()[0] for l in body.splitlines() if l.strip() and not l.strip().endswith(":")]
-        need = ["StartChooseStarterScene", "SaveChosenStarter", "ReturnToField", "FadeScreenIn", "WaitFadeScreen", "GetMysteryStarterSpecies", "GivePokemon"]
-        i = cmds.index("StartChooseStarterScene") if "StartChooseStarterScene" in cmds else -1
-        self.rec("Route 201 award flow is vanilla (choose, save/draw, return, fade in, read species, GivePokemon Lv5)",
-                 i >= 0 and cmds[i:i + len(need)] == need, str(cmds[i:i + len(need)] if i >= 0 else None))
-        self.rec("starter is awarded directly at Level 5 via the native GivePokemon path", "GivePokemon VAR_0x8000, 5, ITEM_NONE, VAR_RESULT" in body and body.count("GivePokemon") == 1)
-        self.rec("award happens before Rowan departure and the first Rival battle", "GivePokemon" in cmds and cmds.index("GivePokemon") < cmds.index("ApplyMovement", cmds.index("GivePokemon")) and "StartFirstBattle" not in body)
-        self.rec("hatch presentation deferred: Route 201 calls neither GiveMysteryStarterEgg nor HatchMysteryStarterEgg", not re.search(r"\b(GiveMysteryStarterEgg|HatchMysteryStarterEgg)\b", r201))
-        self.rec("hatch presentation deferred: no hatch lead-in message in Route 201", "TheEggIsHatching" not in r201)
-        self.rec("Route 201 award reads the actual species variable, not VAR_PLAYER_STARTER", "GetMysteryStarterSpecies VAR_0x8000\n    GivePokemon VAR_0x8000" in body and "GetPlayerStarterSpecies" not in body)
-        self.rec("Route 201 draws no random numbers", not re.search(r"\bGetRandom", r201))
-        self.rec("Rowan/counterpart/Barry flow labels preserved", all(x in r201 for x in ("Route201_DawnLeave:", "Route201_LucasLeave:", "Route201_CounterpartLeave:",
-                 "Route201_AskUpForABattle:", "Route201_StartRivalBattle:", "Route201_HandleRivalBattleEnd:", "StartFirstBattle TRAINER_RIVAL_ROUTE_201_TURTWIG")))
 
-    # -- level / hatch / breeding ----------------------------------------------------------------------------------------------------
+        # The fragile application-exit boundary is deliberately vanilla.
+        self.rec("SaveChosenStarter uses the vanilla chooser output contract",
+                 "ChooseStarterData *chooseStarterData = (*fieldSysDataPtr);" in save and
+                 re.search(r"SystemVars_SetPlayerStarter\([^;]*chooseStarterData->species\)", save) is not None)
+        self.rec("SaveChosenStarter performs no Mystery RNG / persistence work",
+                 "MysteryStarter_" not in save and "SystemVars_SetMysteryStarterSpecies" not in save and
+                 "VAR_MYSTERY_STARTER_SPECIES" not in save)
+        self.rec("SaveChosenStarter frees chooser data exactly once",
+                 save.count("Heap_Free(*fieldSysDataPtr)") == 1)
+
+        # Native script RNG only after the field has fully returned.
+        seq = ["StartChooseStarterScene", "SaveChosenStarter", "ReturnToField",
+               "FadeScreenIn", "WaitFadeScreen", "GetRandom VAR_0x8000, 100"]
+        positions = [body.find(x) for x in seq]
+        self.rec("native draw occurs only after chooser exit + full field restore",
+                 all(p >= 0 for p in positions) and positions == sorted(positions), str(positions))
+        self.rec("Route 201 has exactly one native starter RNG draw",
+                 body.count("GetRandom VAR_0x8000, 100") == 1 and len(re.findall(r"\bGetRandom\b", body)) == 1)
+        self.rec("active Route 201 path never calls MysteryStarter_Draw",
+                 "MysteryStarter_Draw" not in body and "MysteryStarter_" not in body)
+
+        # Locked weighted ranges, encoded with ascending exclusive thresholds.
+        thresholds = [
+            (3, "Bulbasaur"), (6, "Charmander"), (9, "Squirtle"), (10, "Pikachu"),
+            (20, "Chikorita"), (30, "Cyndaquil"), (40, "Totodile"), (50, "Treecko"),
+            (60, "Torchic"), (70, "Mudkip"), (80, "Turtwig"), (90, "Chimchar"),
+        ]
+        got = re.findall(r"GoToIfLt VAR_0x8000, (\d+), Route201_MysteryStarter_(\w+)", body)
+        got = [(int(n), s) for n, s in got]
+        self.rec("script thresholds encode the locked 0-99 weighted distribution", got == thresholds, str(got))
+        self.rec("90-99 falls through defensively to Piplup",
+                 "GoTo Route201_MysteryStarter_Piplup" in body)
+
+        branches = {
+            "Bulbasaur": ("BULBASAUR", "TURTWIG"),
+            "Charmander": ("CHARMANDER", "CHIMCHAR"),
+            "Squirtle": ("SQUIRTLE", "PIPLUP"),
+            "Pikachu": ("PIKACHU", "PIPLUP"),
+            "Chikorita": ("CHIKORITA", "TURTWIG"),
+            "Cyndaquil": ("CYNDAQUIL", "CHIMCHAR"),
+            "Totodile": ("TOTODILE", "PIPLUP"),
+            "Treecko": ("TREECKO", "TURTWIG"),
+            "Torchic": ("TORCHIC", "CHIMCHAR"),
+            "Mudkip": ("MUDKIP", "PIPLUP"),
+            "Turtwig": ("TURTWIG", "TURTWIG"),
+            "Chimchar": ("CHIMCHAR", "CHIMCHAR"),
+            "Piplup": ("PIPLUP", "PIPLUP"),
+        }
+        bad = []
+        for label, (actual, canonical) in branches.items():
+            start = body.find(f"Route201_MysteryStarter_{label}:")
+            if start < 0:
+                bad.append(label + ":missing")
+                continue
+            end_candidates = [body.find(f"\nRoute201_MysteryStarter_{x}:", start + 1) for x in list(branches) + ["Award"]]
+            end_candidates = [x for x in end_candidates if x >= 0]
+            end = min(end_candidates) if end_candidates else len(body)
+            block = body[start:end]
+            if f"SetVar VAR_MYSTERY_STARTER_SPECIES, SPECIES_{actual}" not in block:
+                bad.append(label + ":actual")
+            if f"SetVar VAR_PLAYER_STARTER, SPECIES_{canonical}" not in block:
+                bad.append(label + ":canonical")
+            if "GoTo Route201_MysteryStarter_Award" not in block:
+                bad.append(label + ":award")
+        self.rec("all 13 species persist actual + canonical branch correctly", not bad, ",".join(bad))
+
+        award = body[body.index("Route201_MysteryStarter_Award:"):]
+        self.rec("award copies the persisted actual species with vanilla SetVarFromVar",
+                 "SetVarFromVar VAR_0x8000, VAR_MYSTERY_STARTER_SPECIES" in award)
+        self.rec("starter is awarded directly at Level 5 through vanilla GivePokemon",
+                 "GivePokemon VAR_0x8000, 5, ITEM_NONE, VAR_RESULT" in award and award.count("GivePokemon") == 1)
+        self.rec("no custom Mystery starter script commands remain on Route 201",
+                 not re.search(r"\b(GetMysteryStarterSpecies|GiveMysteryStarterEgg|HatchMysteryStarterEgg)\b", body))
+
+        table = self.read("include/data/scripts/scrcmd.h")
+        macros = self.read("asm/macros/scrcmd.inc")
+        custom = ("GETMYSTERYSTARTERSPECIES", "GIVEMYSTERYSTARTEREGG", "HATCHMYSTERYSTARTEREGG")
+        self.rec("unused D8 script opcodes removed (command table restored to vanilla shape)",
+                 not any(x in table for x in custom))
+        self.rec("unused D8 script macros removed",
+                 not re.search(r"\b(GetMysteryStarterSpecies|GiveMysteryStarterEgg|HatchMysteryStarterEgg)\b", macros))
+
+        lab = self.read("res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s")
+        self.rec("Sandgem lab reads actual starter with vanilla SetVarFromVar",
+                 "SetVarFromVar VAR_0x8000, VAR_MYSTERY_STARTER_SPECIES" in lab and
+                 "GetMysteryStarterSpecies" not in lab)
+
+        csd = self.read("include/struct_defs/choose_starter_data.h")
+        self.rec("ChooseStarterData layout is exactly vanilla (int species; const Options *options;)",
+                 re.search(r"typedef struct ChooseStarterData \{\s*int species;\s*const Options \*options;\s*\} ChooseStarterData;", csd) is not None)
+        self.rec("save format unchanged (Mystery species uses existing var slot)",
+                 "VAR_" not in csd)
+
+
     def check_output_and_breeding(self):
         hdr = self.read("include/mystery_egg_starter.h")
         self.rec("output level constant == 5", re.search(r"#define MYSTERY_STARTER_LEVEL\s+5\b", hdr) is not None)
@@ -324,11 +373,13 @@ class V:
                 base = git_show(rel)
                 if base is not None and base != t:
                     drift.append(os.path.basename(rel))
-        self.rec("GetMysteryStarterSpecies is used only by the Route 201 award and the Sandgem lab gift skip", sorted(mystery_users) == ["scripts_route_201.s", "scripts_sandgem_town_pokemon_research_lab.s"], ",".join(mystery_users))
+        self.rec("custom GetMysteryStarterSpecies command is unused in all field scripts", not mystery_users, ",".join(mystery_users))
         self.rec("every other script is byte-identical to the vanilla starting SHA (all Rival/branch consumers use canonical VAR_PLAYER_STARTER)", not drift, ",".join(drift))
         r201t = self.read("res/field/scripts/scripts_route_201.s")
-        self.rec("Route 201 uses GetMysteryStarterSpecies once (award) and GetPlayerStarterSpecies once (Rival branch)", r201t.count("GetMysteryStarterSpecies") == 1 and r201t.count("GetPlayerStarterSpecies VAR_RESULT") == 1)
-        self.rec("Sandgem lab starter-gift skip keeps the actual species (later gifts unchanged)", "GetMysteryStarterSpecies VAR_0x8000" in self.read("res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s"))
+        self.rec("Route 201 persists/awards the actual Mystery species directly from VAR_MYSTERY_STARTER_SPECIES",
+                 "SetVarFromVar VAR_0x8000, VAR_MYSTERY_STARTER_SPECIES" in r201t and "GetMysteryStarterSpecies" not in r201t)
+        self.rec("Sandgem lab starter-gift skip reads the actual species directly (later gifts unchanged)",
+                 "SetVarFromVar VAR_0x8000, VAR_MYSTERY_STARTER_SPECIES" in self.read("res/field/scripts/scripts_sandgem_town_pokemon_research_lab.s"))
         self.rec("branch consumers compare only against Turtwig/Chimchar/Piplup", not wrong, ",".join(wrong))
         self.rec("hatch presentation is not active: no script calls GiveMysteryStarterEgg / HatchMysteryStarterEgg",
                  not any(re.search(r"\b(GiveMysteryStarterEgg|HatchMysteryStarterEgg)\b", self.read(os.path.relpath(pp, ROOT))) for pp in glob.glob(os.path.join(ROOT, "res/field/scripts/*.s"))))
