@@ -1,6 +1,6 @@
 {
- "total": 52,
- "detected": 52,
+ "total": 59,
+ "detected": 59,
  "baseline_failures": 0,
  "cases": [
   {
@@ -130,6 +130,41 @@
   },
   {
    "name": "eggPosition output reintroduced",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "ChooseStarterData species field removed (non-vanilla layout)",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "ChooseStarterData field order swapped",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "ChooseStarter_Exit species assignment removed",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "ChooseStarter_Exit teardown reordered (VramTransfer_Free before DeleteDrawing)",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "fourth egg sprite / wrong option count",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "SaveChosenStarter reads chooser species",
+   "detected": true,
+   "failing": 1
+  },
+  {
+   "name": "SaveChosenStarter frees chooser data twice",
    "detected": true,
    "failing": 1
   },

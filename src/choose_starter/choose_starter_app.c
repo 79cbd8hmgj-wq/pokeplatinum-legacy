@@ -47,6 +47,9 @@
 #include "vram_transfer.h"
 
 #define NUM_STARTER_OPTIONS 3
+#define STARTER_OPTION_0    SPECIES_TURTWIG
+#define STARTER_OPTION_1    SPECIES_CHIMCHAR
+#define STARTER_OPTION_2    SPECIES_PIPLUP
 
 #define OAM_MAIN_START 0
 #define OAM_MAIN_END   128
@@ -233,6 +236,7 @@ static void ChooseStarterAppMainCallback(void *data);
 static void StartFadeIn(ChooseStarterApp *app);
 static void StartFadeOut(ChooseStarterApp *app);
 static BOOL IsFadeDone(ChooseStarterApp *app);
+static u16 GetSelectedSpecies(u16 cursorPosition);
 static BOOL IsSelectionMade(ChooseStarterApp *app, enum HeapID heapID);
 static void UpdateGraphics(ChooseStarterApp *app, enum HeapID heapID);
 static void DrawScene(ChooseStarterApp *app);
@@ -441,6 +445,8 @@ BOOL ChooseStarter_Exit(ApplicationManager *appMan, int *param1)
     ChooseStarterData *data = ApplicationManager_Args(appMan);
 
     SetVBlankCallback(NULL, NULL);
+
+    data->species = GetSelectedSpecies(app->cursorPosition);
 
     BOOL touchPadResult = DisableTouchPad();
     GF_ASSERT(touchPadResult == AUTO_SAMPLING_OPERATION_RESULT_SUCCESS);
@@ -1735,4 +1741,24 @@ static void SetSubplaneWindowText(Window *window, enum HeapID heapID, int bankID
 static void DeleteSubplaneWindow(ChooseStarterApp *app)
 {
     Window_ClearAndCopyToVRAM(app->subplaneWindows[app->subplaneWindowIndex]);
+}
+
+static u16 GetSelectedSpecies(u16 cursorPosition)
+{
+    switch (cursorPosition) {
+    case CURSOR_POSITION_LEFT:
+        return STARTER_OPTION_0;
+
+    case CURSOR_POSITION_CENTER:
+        return STARTER_OPTION_1;
+
+    case CURSOR_POSITION_RIGHT:
+        return STARTER_OPTION_2;
+
+    default:
+        GF_ASSERT(FALSE);
+        break;
+    }
+
+    return SPECIES_NONE;
 }

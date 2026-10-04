@@ -3414,8 +3414,6 @@ static BOOL ScrCmd_SaveChosenStarter(ScriptContext *ctx)
 {
     void **fieldSysDataPtr = FieldSystem_GetScriptMemberPtr(ctx->fieldSystem, SCRIPT_MANAGER_DATA_PTR);
 
-    ChooseStarterData *chooseStarterData = (*fieldSysDataPtr);
-
     // The one and only weighted draw. The egg position is not an input.
     u16 species = MysteryStarter_Draw();
     u16 branch = MysteryStarter_GetRivalBranch(species);
