@@ -251,8 +251,10 @@ class V:
 
         self.rec("starter is awarded directly from VAR_MYSTERY_STARTER_SPECIES at Level 5",
                  body.count("GivePokemon VAR_MYSTERY_STARTER_SPECIES, 5, ITEM_NONE, VAR_RESULT") == 1)
+        award_pos = body.find("GivePokemon VAR_MYSTERY_STARTER_SPECIES")
+        rowan_pos = body.find("ApplyMovement LOCALID_PROF_ROWAN")
         self.rec("award happens before Rowan departure and the first Rival battle",
-                 body.index("GivePokemon VAR_MYSTERY_STARTER_SPECIES") < body.index("ApplyMovement LOCALID_PROF_ROWAN") and
+                 award_pos >= 0 and rowan_pos >= 0 and award_pos < rowan_pos and
                  "StartFirstBattle" not in body)
         self.rec("hatch presentation remains disabled in active Route 201 flow",
                  not re.search(r"\b(GiveMysteryStarterEgg|HatchMysteryStarterEgg)\b", body) and "TheEggIsHatching" not in body)
@@ -337,9 +339,11 @@ class V:
                      + [os.path.join(ROOT, "asm/macros/scrcmd.inc")]))
 
         vf = self.read("generated/vars_flags.txt").split()
+        mystery_idx = vf.index("VAR_MYSTERY_STARTER_SPECIES") if "VAR_MYSTERY_STARTER_SPECIES" in vf else -1
+        player_idx = vf.index("VAR_PLAYER_STARTER") if "VAR_PLAYER_STARTER" in vf else -1
         self.rec("VAR_MYSTERY_STARTER_SPECIES takes the former VAR_UNUSED_0x4031 slot",
-                 "VAR_UNUSED_0x4031" not in vf and "VAR_MYSTERY_STARTER_SPECIES" in vf and
-                 vf.index("VAR_MYSTERY_STARTER_SPECIES") == vf.index("VAR_PLAYER_STARTER") + 1)
+                 "VAR_UNUSED_0x4031" not in vf and mystery_idx >= 0 and player_idx >= 0 and
+                 mystery_idx == player_idx + 1)
         base_vf = (git_show("generated/vars_flags.txt") or "").split()
         self.rec("var table size unchanged and rename is the only delta (no save-size change)",
                  bool(base_vf) and len(base_vf) == len(vf) and
