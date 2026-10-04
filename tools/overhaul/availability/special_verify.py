@@ -197,7 +197,11 @@ def check_starters(manifest: dict) -> list[str]:
     file = starters[0]["gift"]["file"]
     sc = Script(file)
     text = "\n".join(sc.text(sc.labels).splitlines())
-    if "GetPlayerStarterSpecies" not in text and "GetMysteryStarterSpecies" not in text:  # D8: lab reads the actual (Mystery) species
+    if ("GetPlayerStarterSpecies" not in text
+            and "GetMysteryStarterSpecies" not in text
+            and "VAR_MYSTERY_STARTER_SPECIES" not in text):
+        # D8 hardened backend persists the actual awarded species in an existing script var and
+        # Sandgem reads it with SetVarFromVar rather than a custom script command.
         f.append("S5 starters: the chosen Sinnoh starter is never read, so it could be offered twice")
     for a in starters:
         if a["region"] == "SINNOH" and not re.search(rf"GoToIfEq VAR_0x8000, {a['gift']['species']},", text):
