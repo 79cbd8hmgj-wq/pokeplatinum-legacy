@@ -1219,7 +1219,7 @@ static void FieldMap_ApplySpecialAreaFog(FieldSystem *fieldSystem)
 
     switch (areaLightID) {
     case AREA_LIGHT_SET_MT_CORONET:
-        color = GX_RGB(8, 10, 14);
+        color = GX_RGB(7, 9, 15);
         alpha = 10;
         slope = GX_FOGSLOPE_0x0400;
         offset = 0x4800;
@@ -1227,15 +1227,15 @@ static void FieldMap_ApplySpecialAreaFog(FieldSystem *fieldSystem)
         break;
     case AREA_LIGHT_SET_SPEAR_PILLAR:
     case AREA_LIGHT_SET_SPEAR_PILLAR_GRADE:
-        color = GX_RGB(16, 18, 22);
-        alpha = 5;
+        color = GX_RGB(13, 16, 23);
+        alpha = 6;
         slope = GX_FOGSLOPE_0x0400;
         offset = 0x6000;
         densityTable = sSpearPillarFogDensity;
         break;
     case AREA_LIGHT_SET_DISTORTION_WORLD:
-        color = GX_RGB(14, 8, 22);
-        alpha = 10;
+        color = GX_RGB(10, 5, 22);
+        alpha = 12;
         slope = GX_FOGSLOPE_0x0400;
         offset = 0x5000;
         densityTable = sDistortionFogDensity;
