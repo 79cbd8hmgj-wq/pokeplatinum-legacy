@@ -1703,3 +1703,15 @@ Canonical completion record:
 `docs/visual_overhaul/G4_ENVIRONMENT_RECONSTRUCTION_COMPLETE.md`.
 
 The next visual implementation phase is **G5 — Battle Presentation**.
+
+
+## G7 — Modern DS Remaster escalation
+
+Pass G remains the completed source-side foundation. The project is now intentionally moving beyond the conservative Pass G closeout into a stronger phone-emulator-focused visual direction.
+
+Canonical G7 documents:
+- `G7_MODERN_DS_REMASTER_DESIGN.md` — locked visual/product design
+- `G7_IMPLEMENTATION_PLAN.md` — implementation order, constraints, validation gates
+- `CLAUDE_G7_HANDOFF_PROMPT.md` — implementation-agent handoff prompt
+
+G7 does not replace or invalidate G2C/G4/G5/G6. It escalates them into a more visibly modern, immersive, intense DS-native presentation while preserving dual-screen/touch behavior and the current gameplay overhaul.
