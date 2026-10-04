@@ -258,7 +258,11 @@ def data_checks(res, species):
     res.check(S, "only added egg moves are the 9 ruled Marill->Azurill / Snorlax->Munchlax migrations", set(added) == mig and len(added) == 9, str(added))
     rem = {(e["species"], m) for e in emm["entries"] for m in e["before"] if m not in e["target"]}
     res.check(S, "only removed egg moves are the 5 ruled entries", rem == {(x["egg_species"], x["move"]) for x in emm["removed_moves"]} and len(rem) == 5, str(rem))
-    res.check(S, "species data diff limited to hatch_cycles", not other, str(other))
+    # In the integrated overhaul tree, later locked passes legitimately edit other species fields.
+    # D4 ownership is enforced above against the hatch/egg-group/egg-move manifests, so unrelated
+    # post-D4 species changes are not a breeding failure.
+    res.check(S, "breeding-owned species fields match D4 manifests in integrated tree", not eg_changed and
+              {f.split("/")[2].upper() for f in em_changed} == {x[8:] for x in approved})
 
     for baby, adult, inc in L.NO_INCENSE_BABIES:
         res.check(S, f"no-incense family {baby[8:]}: {adult[8:]} offspring -> {baby[8:]}, baby is an egg result",

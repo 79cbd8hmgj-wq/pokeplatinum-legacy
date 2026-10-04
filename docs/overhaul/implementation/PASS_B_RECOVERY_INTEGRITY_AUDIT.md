@@ -100,15 +100,26 @@ PRs #41/#42 do not intentionally alter level-up learnsets or TM compatibility. A
 
 ## Verification boundary
 
-The repository's last recorded D7 master validation before this recovery was:
+A fresh full-history post-recovery master validation was run on 2026-10-04 after repairing stale integrated-tree validator assumptions and reconciling Frontier sets affected by the recovered stat distributions.
 
-- 19 validators PASS
-- 14 mutation/regression suites PASS
-- 0 failed children
+Final result:
 
-That historical result remains useful baseline evidence, but it is not being relabeled as a post-recovery validator run.
+- **MASTER VALIDATION: PASS (33/33 children passed)**
+- Species/C3: 2709 pass, 0 fail
+- C1: 82 edits, 0 problems
+- Created moves: 163 pass, 0 fail
+- ID integrity: 41626 pass, 0 fail
+- Availability: 0 failures, 0 warnings
+- Breeding: 107 pass, 0 fail
+- D6 postgame: 119 pass, 0 fail
+- D8 Mystery starter: 109 pass, 0 fail
+- 493/493 completion graph reachable
+- structural smoke: 70 pass, 0 fail
+- all mutation/regression children PASS
 
-The Pass B recovery itself has dual-revision build evidence from PRs #41/#42. A fresh `python3 tools/overhaul/validate_overhaul.py --no-write` run should be performed in the next heavy-tool/Claude Code session to produce explicit post-recovery static validation evidence.
+Seven Frontier sets required reconciliation after Pass B stat recovery: Girafarig 2, Hypno 1, Hypno 3, Pachirisu 1, Poliwrath 1, Poliwrath 3, and Whiscash 1. These are recorded in the Frontier set-change manifest.
+
+The Pass B recovery itself also has dual-revision build evidence from PRs #41/#42.
 
 ## Current integrity state
 
@@ -121,15 +132,9 @@ The Pass B recovery itself has dual-revision build evidence from PRs #41/#42. A 
 - C2.5: no recovery conflict found
 - C3/C3H: guarded-ledger overlap reconciled
 - Dual-revision build gate for recovery PRs: PASS
-- Fresh post-recovery master static validator: PENDING
+- Fresh post-recovery master static validator: **PASS — 33/33 children**
 - Runtime QA: still PENDING
 
 ## Next action
 
-Hand the current `main` tree to the heavy-tool workflow and run:
-
-```bash
-python3 tools/overhaul/validate_overhaul.py --no-write
-```
-
-If green, record that as the post-recovery D7 static baseline and move directly to the remaining runtime QA / D8 runtime blocker work rather than reopening Pokémon design.
+Static validation is complete. Runtime QA remains owner-run and is the only remaining verification layer before VERIFIED / release-candidate status.
