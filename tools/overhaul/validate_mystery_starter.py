@@ -286,41 +286,41 @@ class V:
 
 
     def check_output_and_breeding(self):
-        hdr = self.read("include/mystery_egg_starter.h")
-        self.rec("output level constant == 5", re.search(r"#define MYSTERY_STARTER_LEVEL\s+5\b", hdr) is not None)
-        dc = strip_comments(self.read("src/overlay005/daycare.c"))
-        self.rec("starter egg created at MYSTERY_STARTER_LEVEL", "metLocation, MYSTERY_STARTER_LEVEL);" in (func_body(dc, "Egg_CreateMysteryStarterEgg") or ""))
-        self.rec("ordinary Egg_CreateEgg stays level 1", "metLocation, 1);" in (func_body(dc, "Egg_CreateEgg") or ""))
-        self.rec("ordinary Egg_CreateHatchedMon stays level 1", "Egg_CreateHatchedMonAtLevel(egg, heapID, 1)" in (func_body(dc, "Egg_CreateHatchedMon") or ""))
-        hs = strip_comments(self.read("src/unk_0203D1B8.c"))
-        self.rec("starter hatch uses MYSTERY_STARTER_LEVEL", "args.hatchLevel = MYSTERY_STARTER_LEVEL;" in (func_body(hs, "FieldSystem_HatchMysteryStarterEgg") or ""))
-        self.rec("ordinary FieldSystem_HatchEgg leaves hatchLevel 0", "args.hatchLevel = 0;" in (func_body(hs, "FieldSystem_HatchEgg") or ""))
-        self.rec("starter hatch skips the Happy Happy Egg Club TV segment", "HappyHappyEggClub" not in (func_body(hs, "FieldSystem_HatchMysteryStarterEgg") or "x"))
-        eh = strip_comments(self.read("src/egg_hatch.c"))
-        self.rec("hatch scene: level override only when hatchLevel > 1", re.search(r"if \(app->args\.hatchLevel > 1\) \{\s*Egg_CreateHatchedMonAtLevel\(app->args\.mon, HEAP_ID_FIELD2, app->args\.hatchLevel\);\s*\} else \{\s*Egg_CreateHatchedMon\(", eh) is not None)
-        gen = func_body(dc, "Egg_CreateEggAtLevel") or ""
-        self.rec("starter egg has no inheritance / Day Care state", not re.search(r"Daycare|Inherit|parent|BoxMon_GetPair", gen, re.I))
-        self.rec("starter egg keeps random IV generation (no guaranteed IV/nature/shiny)", "INIT_IVS_RANDOM, FALSE, 0, OTID_NOT_SET, 0" in gen)
-        # ordinary breeding source: the only daycare.c delta vs the starting SHA is the level plumbing above
-        base = git_show("src/overlay005/daycare.c")
-        if base is None:
-            self.rec("daycare.c delta limited to level plumbing", False, "start SHA unavailable")
-        else:
-            cur = self.read("src/overlay005/daycare.c")
-            delta = [l[1:].strip() for l in difflib.unified_diff(base.splitlines(), cur.splitlines(), lineterm="", n=0)
-                     if l[:1] in "+-" and not l.startswith(("+++", "---")) and l[1:].strip()]
-            bad = [l for l in delta if not any(re.search(a, l) for a in DAYCARE_ALLOWED) and l not in ("{", "}")]
-            self.rec("daycare.c delta limited to level plumbing (breeding constants/logic unchanged)", not bad, "; ".join(bad[:4]))
-        for p in ("include/constants/daycare.h", "src/daycare_save.c", "include/struct_defs/daycare.h"):
-            b = git_show(p)
-            self.rec(f"{p} unchanged", b is None or b == self.read(p))
-        self.rec("hatch-cycle / step-counter constants unchanged", all(
-            (git_show(p) or "") == self.read(p) for p in ("include/constants/daycare.h",)))
+        r201 = self.read("res/field/scripts/scripts_route_201.s")
+        body = r201[r201.index("Route201_Briefcase:"):r201.index("Route201_DawnLeave:")]
+        self.rec("starter output is Lv5 through the native GivePokemon command",
+                 "GivePokemon VAR_0x8000, 5, ITEM_NONE, VAR_RESULT" in body)
+
+        # Hardened design: D8 must not alter ordinary breeding or the hatch engine at all.
+        untouched = (
+            "include/egg_hatch.h",
+            "include/overlay005/daycare.h",
+            "include/unk_0203D1B8.h",
+            "src/egg_hatch.c",
+            "src/overlay005/daycare.c",
+            "src/unk_0203D1B8.c",
+            "include/constants/daycare.h",
+            "src/daycare_save.c",
+            "include/struct_defs/daycare.h",
+        )
+        for path in untouched:
+            base = git_show(path)
+            self.rec(f"{path} byte-identical to pre-D8", base is not None and base == self.read(path))
+
+        meson = self.read("src/meson.build")
+        self.rec("reference Mystery starter C module is not linked into the ROM",
+                 "'mystery_egg_starter.c'" not in meson and '"mystery_egg_starter.c"' not in meson)
+
+        scripts = "\n".join(self.read(os.path.relpath(p, ROOT))
+                            for p in glob.glob(os.path.join(ROOT, "res/field/scripts/*.s")))
+        self.rec("no field script invokes custom Mystery hatch commands",
+                 not re.search(r"\b(GiveMysteryStarterEgg|HatchMysteryStarterEgg)\b", scripts))
+
         for p in sorted(glob.glob(os.path.join(ROOT, "docs/overhaul/implementation/breeding/*.json"))):
             rel = os.path.relpath(p, ROOT)
             self.rec(f"breeding manifest unchanged: {os.path.basename(rel)}", (git_show(rel) or "") == self.read(rel))
 
-    # -- Rival branch -------------------------------------------------------------------------------------------------------------------------
+
     def check_rival(self):
         src = self.read("src/mystery_egg_starter.c")
         got, has_default = parse_branch(src)
