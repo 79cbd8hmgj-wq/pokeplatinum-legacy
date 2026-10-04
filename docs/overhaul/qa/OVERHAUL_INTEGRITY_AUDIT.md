@@ -302,3 +302,71 @@ This establishes a systemic propagation failure between approved Pass B design a
 **Gen IV Role Repair**, followed by the Gen I Role Repair reconciliation.
 
 The audit remains source-history-first: current validators and C3 provenance are evidence of implementation state, not proof that all earlier approved Pass B decisions were propagated.
+
+
+---
+
+## 1D. Pass B Role Repair — recovery status
+
+The reconciliation has now confirmed that missing Pass B implementation was widespread rather than isolated.
+
+### Gen I
+
+Recovered locked assignments for Beedrill, Pidgeot, Arbok, Wigglytuff, Parasect, Primeape, Poliwrath, Golem, Rapidash, Hypno, and Marowak.
+
+The intended restraint/unchanged cases inspected alongside them remain consistent with the surviving design evidence.
+
+### Gen II
+
+Nine locked assignments were missing. After recovery the complete 14-species role-repair block matches the approved design.
+
+### Gen III
+
+Fourteen locked assignments were missing. After recovery all 21 explicit non-restraint assignments checked against surviving design evidence match; the seven restraint cases remain intentionally unchanged.
+
+### Gen IV
+
+Confirmed exact recovery has been applied for Kricketune, Rampardos, Bastiodon, all three Wormadam cloaks, Pachirisu, Purugly, Chatot, and Carnivine.
+
+Probopass, Dusknoir, Lopunny, and the five restraint cases were already correct.
+
+Mothim, Cherrim, and Lumineon remain **UNPROVEN / PENDING EXACT SOURCE RECOVERY**. Surviving evidence establishes their intended BST/role and some key stats, but not every stat field. They must not be guessed.
+
+---
+
+# 2. Evolution methods and timing — first reconciliation block
+
+The strongest surviving Pass A evidence establishes the global rule that trade and non-stone evolution-item requirements were removed, while genuine evolution stones and meaningful natural conditions remain.
+
+The following current-source evolution records were checked directly and match the locked design:
+
+- Kadabra -> Alakazam: Lv36
+- Machoke -> Machamp: Lv36
+- Graveler -> Golem: Lv36
+- Haunter -> Gengar: Lv36
+- Onix -> Steelix: Lv35
+- Scyther -> Scizor: Lv38
+- Seadra -> Kingdra: Lv42
+- Electabuzz -> Electivire: Lv42
+- Magmar -> Magmortar: Lv42
+- Rhydon -> Rhyperior: Lv52
+- Porygon -> Porygon2: Lv30
+- Porygon2 -> Porygon-Z: Lv45
+- Dusclops -> Dusknoir: Lv45
+- Gligar -> Gliscor: Lv38 at night
+- Sneasel -> Weavile: Lv38 at night
+- Poliwhirl: Lv35 stat split, Politoed when SpA > Atk and Poliwrath otherwise
+- Slowpoke: Lv37 stat split, Slowking when SpD > Def and Slowbro otherwise
+- Clamperl: Lv35 attack/special-attack split
+- Pupitar -> Tyranitar: Lv50
+- Snorunt -> Glalie: Lv42; female Snorunt -> Froslass via Dawn Stone
+- Kirlia -> Gardevoir: Lv30; male Kirlia -> Gallade via Dawn Stone
+- Nosepass -> Probopass: magnetic-field level-up
+- Roselia -> Roserade: Shiny Stone
+- Feebas -> Milotic: Beauty evolution retained
+
+### Classification
+
+**MATCH — first evolution reconciliation block**
+
+No correction is required for these evolution records.
