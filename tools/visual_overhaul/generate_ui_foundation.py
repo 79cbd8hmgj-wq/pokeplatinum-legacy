@@ -94,14 +94,17 @@ def make_window_frame(filename: str, outer: int, mid: int, light: int, fill: int
 # The scroll cursor and wait dial are NOT drawn with the standard window
 # palette at runtime: they are blitted onto the right-hand bar of the *message
 # frame* tiles (frame tiles +10/+11) and rendered with that frame's palette.
-# Only entries 1-4 are stable across the frame family (1 white, 2 per-frame
-# dark, 3 light grey, 4 mid grey), so the art uses a white fill with a dark
-# outline (and a grey dial ring) that reads on any frame's dark bar colour.
+# No single "bright" palette index stays bright across all 20 selectable
+# message frames. Entries 1 and 10 form a complementary polarity pair instead:
+# on every frame at least one of them contrasts strongly against the right-hand
+# bar. Both cursor and dial therefore use BOTH entries in their visible shape.
+# This keeps the indicators readable even on decorative frames whose entry 1
+# is dark or whose bar itself is nearly white.
+#
 # The bar is 11 px wide (cols 0-10 of the 16x16 cell); cols 11+ are the frame's
 # own outline/halo/transparent edge and must not be painted over.
-DIAL_HEAD = 1
-DIAL_TRAIL = 3
-DIAL_REST = 4
+FRAME_LIGHT = 1
+FRAME_DARK = 10
 
 # 9x6 down-pointing triangle; '.' leaves the frame bar visible.
 CURSOR_ART = (
@@ -116,6 +119,8 @@ CURSOR_TOP = (4, 5, 6)  # per-frame bounce; the printer cycles frames 0,1,2,1
 # DrawMessageBoxScrollCursor blits source cell cols 4.. to bar cols 1.., so the
 # art starts at source col 4 (bar col 1) and ends at source col 12 (bar col 9).
 CURSOR_SRC_X = 4
+CURSOR_FILL = FRAME_LIGHT
+CURSOR_OUTLINE = FRAME_DARK
 
 
 def make_scroll_cursor(palette: list[int]) -> None:
@@ -139,7 +144,8 @@ def make_scroll_cursor(palette: list[int]) -> None:
                 cell_x = CURSOR_SRC_X + col
                 cell_y = top + row
                 tile = frame * 4 + (cell_y // 8) * 2 + (cell_x // 8)
-                pixels[tile * 8 + cell_x % 8, cell_y % 8] = int(char)
+                palette_index = CURSOR_FILL if char == "1" else CURSOR_OUTLINE
+                pixels[tile * 8 + cell_x % 8, cell_y % 8] = palette_index
 
     image.save(WINDOW_DIR / "scroll_cursor.png")
 
@@ -158,8 +164,24 @@ DIAL_POINTS = (
 )
 
 
+DIAL_HEAD_PATTERN = (
+    (0, 0, FRAME_LIGHT),
+    (1, 0, FRAME_DARK),
+    (0, 1, FRAME_DARK),
+    (1, 1, FRAME_LIGHT),
+)
+DIAL_TRAIL_PATTERN = (
+    (0, 0, FRAME_LIGHT),
+    (1, 1, FRAME_DARK),
+)
+DIAL_REST_PATTERN = (
+    (0, 0, FRAME_LIGHT),
+    (1, 0, FRAME_DARK),
+)
+
+
 def make_wait_dial(palette: list[int]) -> None:
-    """Build the 8-frame 16x16 wait spinner (white head, light trail, grey ring)."""
+    """Build the 8-frame wait spinner with two-tone, frame-agnostic dots."""
     frame_count = 8
     frame_width = 16
     frame_height = 16
@@ -172,15 +194,14 @@ def make_wait_dial(palette: list[int]) -> None:
 
         for point_index, (x, y) in enumerate(DIAL_POINTS):
             if point_index == frame:
-                palette_index = DIAL_HEAD
+                pattern = DIAL_HEAD_PATTERN
             elif point_index == (frame - 1) % frame_count:
-                palette_index = DIAL_TRAIL
+                pattern = DIAL_TRAIL_PATTERN
             else:
-                palette_index = DIAL_REST
+                pattern = DIAL_REST_PATTERN
 
-            for dy in range(2):
-                for dx in range(2):
-                    pixels[x + dx, y_origin + y + dy] = palette_index
+            for dx, dy, palette_index in pattern:
+                pixels[x + dx, y_origin + y + dy] = palette_index
 
     image.save(WINDOW_DIR / "wait_dial.png")
 

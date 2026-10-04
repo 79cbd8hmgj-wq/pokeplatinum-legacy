@@ -33,7 +33,7 @@ DECORATIVE_DIGESTS = {
     "message_box_18.png": "70bebd1a4360083fb7714eb1ecb8ea18767e7f03ff6072bda934cc18ae650d96",
     "message_box_19.png": "b7eabb71785b68b489212b1c1bd1fd0a137b018e399891ea3cae91a51e3fa379",
 }
-PLAIN_FRAMES = [f"message_box_{i:02d}.png" for i in range(5)]
+ALL_FRAMES = [f"message_box_{i:02d}.png" for i in range(20)]
 failures = []
 
 
@@ -99,7 +99,11 @@ def main():
         check(cells, f"scroll cursor frame {frame} empty")
         check(min(xs) >= 1 and max(xs) <= 9, f"scroll cursor frame {frame} leaves the 1-9 bar cols: {min(xs)}..{max(xs)}")
         check(max(ys) <= 15, f"scroll cursor frame {frame} clipped")
-        check({1, 2} <= set(cells.values()) <= {1, 2}, f"scroll cursor frame {frame} must be white(1)+outline(2) only")
+        expected_cursor_indices = {gen.FRAME_LIGHT, gen.FRAME_DARK}
+        check(
+            set(cells.values()) == expected_cursor_indices,
+            f"scroll cursor frame {frame} must use both frame-polarity indices {expected_cursor_indices}",
+        )
         top = min(ys)
         shapes.add(frozenset((x, y - top, v) for (x, y), v in cells.items()))
     check(len(shapes) == 1, "scroll cursor frames must be the same art (bounce only)")
@@ -113,25 +117,40 @@ def main():
     check(dial.size == (16, 128) and dial.mode == "P", "wait_dial: size/mode changed (8 frames of 16x16)")
     px = dial.load()
     for frame in range(8):
-        counts = {}
-        for y in range(16):
-            for x in range(16):
-                value = px[x, frame * 16 + y]
-                if value:
-                    counts[value] = counts.get(value, 0) + 1
-                    check(x <= 9, f"wait dial frame {frame} paints col {x} (>9) over the frame outline")
-        check(counts.get(gen.DIAL_HEAD) == 4 and counts.get(gen.DIAL_TRAIL) == 4,
-              f"wait dial frame {frame}: need one head and one trail dot, got {counts}")
-        check(counts.get(gen.DIAL_REST) == 24, f"wait dial frame {frame}: ring dots wrong {counts}")
+        for point_index, (x, y) in enumerate(gen.DIAL_POINTS):
+            if point_index == frame:
+                pattern = gen.DIAL_HEAD_PATTERN
+            elif point_index == (frame - 1) % 8:
+                pattern = gen.DIAL_TRAIL_PATTERN
+            else:
+                pattern = gen.DIAL_REST_PATTERN
 
-    # --- plain frames: cursor/dial colours readable on the frame bar --------
-    for name in PLAIN_FRAMES:
+            expected = {(x + dx, y + dy): value for dx, dy, value in pattern}
+            for yy in range(y, y + 2):
+                for xx in range(x, x + 2):
+                    actual = px[xx, frame * 16 + yy]
+                    check(
+                        actual == expected.get((xx, yy), 0),
+                        f"wait dial frame {frame} point {point_index}: unexpected pixel at {xx},{yy}",
+                    )
+                    if actual:
+                        check(xx <= 9, f"wait dial frame {frame} paints col {xx} (>9) over the frame outline")
+
+    # --- all selectable frames: polarity pair stays readable on the bar -----
+    for name in ALL_FRAMES:
         image = Image.open(WINDOWS / name)
         pal = image.getpalette()
         entry = lambda i: tuple(pal[i * 3:i * 3 + 3])  # noqa: E731
         bar = entry(image.getpixel((32, 8)))  # frame tile +10: solid bar colour
-        check(contrast(entry(1), bar) >= 3.0, f"{name}: white cursor/dial head too faint on bar {bar}")
-        check(contrast(entry(3), bar) >= 2.0, f"{name}: dial trail too faint on bar")
+        light_contrast = contrast(entry(gen.FRAME_LIGHT), bar)
+        dark_contrast = contrast(entry(gen.FRAME_DARK), bar)
+        best_contrast = max(light_contrast, dark_contrast)
+        check(
+            best_contrast >= 4.5,
+            f"{name}: cursor/dial polarity pair too faint on bar {bar} "
+            f"(entry {gen.FRAME_LIGHT}={light_contrast:.2f}, "
+            f"entry {gen.FRAME_DARK}={dark_contrast:.2f})",
+        )
 
     # --- decorative frames untouched ----------------------------------------
     for name, digest in DECORATIVE_DIGESTS.items():
