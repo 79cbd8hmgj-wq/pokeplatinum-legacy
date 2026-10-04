@@ -119,3 +119,52 @@ Target:
 - compare exact stats/abilities against current `main`;
 - flag any reconstructed-spec or implementation drift;
 - do not use current validator/manifests as sole authority.
+
+
+---
+
+## 1C. Pass B Light Enrichment — Gen I — COMPLETE
+
+Strong surviving project-history evidence marks the Gen I Light Enrichment stage **approved and locked**.
+
+Seven explicit changes were required:
+
+| Species | Locked Pass B change | Current main before recovery | Finding |
+|---|---|---|---|
+| Butterfree | Compound Eyes / Tinted Lens | Compound Eyes / None | MISSING IMPLEMENTATION |
+| Fearow | Keen Eye / Sniper | Keen Eye / None | MISSING IMPLEMENTATION |
+| Sandslash | 75/100/110/35/65/65 | vanilla 75/100/110/45/55/65 | MISSING IMPLEMENTATION |
+| Vileplume | Chlorophyll / Effect Spore | Chlorophyll / None | MISSING IMPLEMENTATION |
+| Dugtrio | Attack 90 | vanilla Attack 80 | MISSING IMPLEMENTATION |
+| Dodrio | Tangled Feet / Early Bird | Run Away / Early Bird | MISSING IMPLEMENTATION |
+| Muk | Liquid Ooze / Sticky Hold | Stench / Sticky Hold | MISSING IMPLEMENTATION |
+
+### Result
+
+**0 / 7 were present on main.**
+
+This is a major integrity finding: the approved Pass B design was not fully carried into the historical C3 species implementation snapshot, so later validators could pass while the intended species redesign was incomplete.
+
+### Recovery
+
+A dedicated source-fix branch/PR restores all seven locked changes and was rechecked against the approved values: **7 / 7 match, 0 mismatches after patching**.
+
+This proves the full Pass B layer cannot be considered trustworthy solely because C3/source validators pass.
+
+### Classification
+
+**MISSING IMPLEMENTATION — CONFIRMED AND PATCHED**
+
+---
+
+## Revised next active block
+
+Continue Pass B reconciliation generation by generation:
+
+1. Gen II Light Enrichment
+2. Gen III Light Enrichment
+3. Gen IV Light Enrichment
+4. Role Repair groups across Gen I–IV
+5. auto-preserved/restraint population spot-check and count reconciliation
+
+Any missing locked changes should be repaired in dedicated recovery PRs rather than folded silently into the audit document.
