@@ -341,9 +341,9 @@ class V:
                  "SystemVars_GetPlayerStarterBranch" not in sv and not any("GetPlayerStarterBranch" in self.read(os.path.relpath(pp, ROOT))
                      for pp in glob.glob(os.path.join(ROOT, "src", "**", "*.[ch]"), recursive=True) + glob.glob(os.path.join(ROOT, "include", "**", "*.h"), recursive=True) +
                      glob.glob(os.path.join(ROOT, "res/field/scripts/*.s")) + [os.path.join(ROOT, "asm/macros/scrcmd.inc")]))
-        self.rec("MysteryStarter_GetRivalBranch has no consumer besides SaveChosenStarter",
+        self.rec("legacy MysteryStarter_GetRivalBranch helper has no runtime consumer",
                  sum(len(re.findall(r"\bMysteryStarter_GetRivalBranch\s*\(", strip_comments(self.read(os.path.relpath(pp, ROOT)))))
-                     for pp in glob.glob(os.path.join(ROOT, "src", "**", "*.c"), recursive=True) if not pp.endswith("mystery_egg_starter.c")) == 1)
+                     for pp in glob.glob(os.path.join(ROOT, "src", "**", "*.c"), recursive=True) if not pp.endswith("mystery_egg_starter.c")) == 0)
         vf = self.read("generated/vars_flags.txt").split()
         self.rec("VAR_MYSTERY_STARTER_SPECIES takes the former VAR_UNUSED_0x4031 slot (directly after VAR_PLAYER_STARTER)",
                  "VAR_UNUSED_0x4031" not in vf and "VAR_MYSTERY_STARTER_SPECIES" in vf and vf.index("VAR_MYSTERY_STARTER_SPECIES") == vf.index("VAR_PLAYER_STARTER") + 1)
