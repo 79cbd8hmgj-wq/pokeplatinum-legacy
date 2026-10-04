@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""G7.1A battle command-center generator.
+"""G7.1A/B battle command-center generator.
 
 Owner of the visual treatment of the battle bottom-screen command menu
-(Fight / Bag / Pokemon / Run) and the shared sub-screen "deck" backdrop.
+(Fight / Bag / Pokemon / Run), the shared sub-screen "deck" backdrop and the
+muted empty-slot ramp used by the move-select menu.
 
 All art lives inside the prebuilt ``res/prebuilt/battle/graphic/pl_batt_bg.narc``
 (Nitro NCGR / NCLR / NSCR members).  This script rewrites only the members
@@ -89,9 +90,11 @@ def rgb(value):
     return bgr555(((value >> 16) & 255, (value >> 8) & 255, value & 255))
 
 
-# Action button banks (main palette, bank = index // 16).  Entry semantics:
+# Command key banks (main palette, bank = index // 16).  Entry semantics:
 # 1 white, 2..9 light -> dark ramp, 10 structural outline.  Entries 11-15
-# (accent, greys, black) keep their retail values.
+# (accent, greys, black) keep their retail values except where listed.
+# Bank 14 is the muted "empty / unavailable slot" ramp used for empty move
+# slots and cleared target slots (G7.1B); banks 1-4 are the G7.1A keys.
 ACTION_BANKS = {
     1: {  # Fight - hot crimson
         2: 0xFFD4CC, 3: 0xFF9C8C, 4: 0xFF6258, 5: 0xE8302C,
@@ -108,6 +111,11 @@ ACTION_BANKS = {
     4: {  # Run - azure
         2: 0xD0F0FF, 3: 0x58D0FF, 4: 0x28B0F8, 5: 0x1C8CDC,
         6: 0x1C6CB4, 7: 0x1C4C8C, 8: 0x143464, 9: 0xA8E4FF, 10: 0x0A1230,
+    },
+    14: {  # Empty / unavailable slot - muted slate (disabled state)
+        2: 0x6C7686, 3: 0x646E7E, 4: 0x5C6676, 5: 0x4C5668,
+        6: 0x3E4858, 7: 0x323A4A, 8: 0x262E3C, 9: 0x8A94A6, 10: 0x0A1230,
+        13: 0x20283A, 14: 0x36405A,
     },
 }
 

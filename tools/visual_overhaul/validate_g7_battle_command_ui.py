@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the G7.1A battle command-center resources.
+"""Validate the G7.1A/B battle command-center and move-select resources.
 
 Checks
   * the committed pl_batt_bg.narc is exactly what the generator emits
@@ -10,6 +10,10 @@ Checks
     greys, black) and the command-bank ramps are monotonic in luminance
   * button label outlines keep >= 3:1 contrast against their button fill
   * the focus cursor keeps its 16x16 canvas
+  * (G7.1B) src/overlay011/move_palettes.c matches its generator, every type
+    ramp is monotonic with a navy outline, and the PP text colors keep >= 3:1
+    contrast against the label plate; the empty-slot bank stays visibly
+    dimmer than every active type ramp
 """
 
 import hashlib
@@ -19,6 +23,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import generate_battle_command_ui as gen  # noqa: E402
+import generate_move_select_palettes as movepal  # noqa: E402
 from nitro_narc import nclr_colors, read_narc, write_narc  # noqa: E402
 
 ROOT = gen.ROOT
@@ -100,6 +105,34 @@ def main():
         check(colors[:8] == nclr_colors(members[0xF3])[:8],
               f"terrain palette {member:#x}: entries 0-7 changed")
 
+    # --- G7.1B: move-select palettes -------------------------------------
+    source = movepal.SOURCE.read_text()
+    check(movepal.generate(source) == source, "move_palettes.c differs from generator output")
+
+    plate = gen.bgr555(tuple(round(c * 255 / 31) for c in movepal.PLATE_FILL))
+    for name, (hue, sat, val) in movepal.TYPE_SPECS.items():
+        entries = [gen.bgr555(tuple(round(c * 255 / 31) for c in e)) for e in movepal.ramp(hue, sat, val)]
+        steps = [lum(entries[i]) for i in (3, 4, 5, 6, 7, 8)]
+        check(all(a >= b for a, b in zip(steps, steps[1:])),
+              f"{name}: ramp is not monotonic")
+        check(entries[10] == gen.bgr555(tuple(round(c * 255 / 31) for c in movepal.OUTLINE)),
+              f"{name}: outline entry changed")
+        check(contrast(entries[14], entries[5]) >= 1.3,
+              f"{name}: label plate barely separates from the slot frame")
+
+    for entry, label in ((1, "normal"), (3, "low"), (5, "very low"), (7, "empty")):
+        ratio = contrast(text[4 * 16 + entry], plate)
+        check(ratio >= 3.0, f"PP '{label}' letter vs label plate contrast {ratio:.2f} < 3")
+
+    dim = lum(main_pal[14 * 16 + 5])
+    for name, (hue, sat, val) in movepal.TYPE_SPECS.items():
+        if name in ("sMovePaletteNone", "sMovePaletteDark", "sMovePaletteGhost"):
+            continue  # intentionally dark types; empty slots are also plate-less
+        active = lum(gen.bgr555(tuple(round(c * 255 / 31) for c in movepal.ramp(hue, sat, val)[5])))
+        check(dim < active, f"empty-slot ramp is not dimmer than {name}")
+    check(contrast(main_pal[14 * 16 + 14], main_pal[14 * 16 + 5]) < contrast(plate, main_pal[14 * 16 + 5]),
+          "empty slot plate must be dimmer than an active label plate")
+
     try:
         from PIL import Image
 
@@ -109,11 +142,11 @@ def main():
         print("Pillow unavailable; skipped cursor.png check")
 
     if failures:
-        print("G7.1A battle command UI validation FAILED:")
+        print("G7.1A/B battle command UI validation FAILED:")
         for failure in failures:
             print(" -", failure)
         sys.exit(1)
-    print("G7.1A battle command UI validation passed")
+    print("G7.1A/B battle command UI validation passed")
 
 
 if __name__ == "__main__":
