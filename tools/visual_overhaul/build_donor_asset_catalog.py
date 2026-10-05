@@ -129,10 +129,62 @@ def ranger_inventory_assets(path: Path) -> list[dict]:
     return assets
 
 
+
+def ranger_deep_assets(path: Path) -> list[dict]:
+    data = json.loads(path.read_text())
+    assets = []
+    for row in data.get("embedded_resources", []):
+        package_path = row.get("package_path", "")
+        index = row.get("member_index")
+        name = row.get("member_name")
+        kind = row.get("member_kind")
+        category = row.get("category")
+        member_key = name or f"member_{int(index):04d}"
+        safe_pkg = package_path.replace("/", ":")
+        asset_id = f"{RANGER_SOURCE_ID}:embedded:{safe_pkg}:{member_key}"
+        tags = list(row.get("package_target_tags", []))
+        if kind in {"ncgr", "nclr", "ncer", "nanr", "nscr", "nsbmd", "nsbtx", "nsbca", "nsbta", "nsbtp", "nsbma"}:
+            tags = sorted(set(tags + ["nitro_resource"]))
+        assets.append(
+            {
+                "asset_id": asset_id,
+                "source_id": RANGER_SOURCE_ID,
+                "asset_type": "embedded_visual_resource",
+                "species_dex": None,
+                "form": None,
+                "variant": None,
+                "group": category,
+                "frame": None,
+                "source_path": package_path,
+                "render_path": None,
+                "native_width": None,
+                "native_height": None,
+                "bbox_width": None,
+                "bbox_height": None,
+                "opaque_pixels": None,
+                "geometry_class": None,
+                "review_status": row.get("review_status", "unreviewed"),
+                "target_tags": tags,
+                "quality_notes": (
+                    "Embedded resource inventoried from a Ranger compressed visual package. "
+                    "Not yet visually validated."
+                ),
+                "source_metadata": {
+                    "member_index": index,
+                    "member_name": name,
+                    "member_kind": kind,
+                    "member_size": row.get("member_size"),
+                    "category": category,
+                },
+            }
+        )
+    return assets
+
 def main() -> int:
     p = argparse.ArgumentParser()
     p.add_argument("--ranger-compatibility", type=Path)
     p.add_argument("--ranger-inventory", type=Path)
+    p.add_argument("--ranger-deep-inventory", type=Path)
     p.add_argument("--write-json", required=True, type=Path)
     p.add_argument("--write-md", type=Path)
     args = p.parse_args()
@@ -141,12 +193,22 @@ def main() -> int:
     assets = []
 
     if args.ranger_inventory:
-        sources.append(
-            ranger_source_record(
-                "Source-wide Ranger visual inventory plus Pokémon frame census where available."
+        if not any(s.get("source_id") == RANGER_SOURCE_ID for s in sources):
+            sources.append(
+                ranger_source_record(
+                    "Source-wide Ranger visual inventory plus Pokémon frame census where available."
+                )
             )
-        )
         assets.extend(ranger_inventory_assets(args.ranger_inventory))
+
+    if args.ranger_deep_inventory:
+        if not any(s.get("source_id") == RANGER_SOURCE_ID for s in sources):
+            sources.append(
+                ranger_source_record(
+                    "Ranger source-wide and embedded-resource inventory."
+                )
+            )
+        assets.extend(ranger_deep_assets(args.ranger_deep_inventory))
 
     if args.ranger_compatibility:
         if not any(s.get("source_id") == RANGER_SOURCE_ID for s in sources):
