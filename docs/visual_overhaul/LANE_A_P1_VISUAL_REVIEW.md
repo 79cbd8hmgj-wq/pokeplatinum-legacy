@@ -7,14 +7,14 @@ Visual validation only. No donor assets imported, no Platinum resources changed,
 - P1 candidates reviewed: **19950** (each accounted for exactly once)
 - Contact sheets inspected: **369**; species: **282**
 - valid_render: **129**
-- reject: **19016**
-- decode_issue: **0** (none newly assigned; see note)
+- decode_issue (unresolved Ranger reconstruction issue): **19016**
 - needs_review (ambiguous, left open): **805**
+- reject: **0** (no donor asset independently proven invalid in this pass)
 - Assets covered incl. exact-duplicate members: **35133**
 
 ## Findings
 
-- The overwhelming majority of Ranger frames reconstruct as horizontally sliced / scrambled tile soup, consistent with the still-open reconstruction concern recorded in `DDA1J_RANGER_RENDER_VISUAL_QA.md`. These are `reject`.
+- The overwhelming majority of Ranger frames reconstruct as horizontally sliced / scrambled tile soup, consistent with the still-open reconstruction concern recorded in `DDA1J_RANGER_RENDER_VISUAL_QA.md`. These are `decode_issue` (reason `ranger_reconstruction_issue`), **not** `reject`: the current rendered output is visibly invalid, but the underlying donor asset has NOT been proven invalid. The failure may originate in the Ranger reconstruction pipeline (stride, tile ordering, NCER/OAM interpretation, palette/geometry, or another renderer defect). Re-review these after renderer correction.
 - Only these slots visibly reconstruct correctly (`valid_render`):
   - `species:421:p001` slots 1-36: Cherubi body frames render as clean, recognisable sprites
   - `species:422:p001` slots 45-76: Shellos (west sea) frames render as clean, recognisable sprites
@@ -23,7 +23,7 @@ Visual validation only. No donor assets imported, no Platinum resources changed,
   - `species:490:p001` slots 33-33: small round icon-style frame renders cleanly (Manaphy-egg-like)
 - `valid_render` means the pixels look like a correct reconstruction only. It does **not** mean usable/alternate for Platinum; no semantic/use review was done.
 - Slots with alpha bbox area <= 256 px are `needs_review`: too little visible art to judge at contact-sheet scale. This is a deterministic metadata rule, not a visual verdict.
-- No `decode_issue` was assigned: no decode failure occurred in this pass, and the root cause of the scrambling (stride/geometry vs. other) was not isolated here. Treating the scrambling as a reconstruction defect is a hypothesis for the renderer owner, not a conclusion of this review.
+- `decode_issue` here means an unresolved reconstruction failure, not a proven-bad donor asset and not a file-level decode error. The root cause was not isolated in this pass. Nothing in this P1 pass is `reject`.
 
 ## Limits of this review
 
@@ -36,7 +36,7 @@ Visual validation only. No donor assets imported, no Platinum resources changed,
 
 ## Per-species counts
 
-| Dex | valid_render | reject | needs_review |
+| Dex | valid_render | decode_issue | needs_review |
 |---:|---:|---:|---:|
 | 004 | 0 | 46 | 26 |
 | 005 | 0 | 64 | 0 |

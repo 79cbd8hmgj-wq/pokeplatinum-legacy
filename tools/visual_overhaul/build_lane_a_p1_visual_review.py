@@ -10,8 +10,10 @@ Rules, in precedence order:
   1. COHERENT_SLOTS   -> valid_render (reconstruction visibly appears correct).
   2. alpha-bbox area <= SPARSE_MAX_BBOX_AREA -> needs_review (too little visible
      art on a contact-sheet thumbnail to judge as correct or broken).
-  3. everything else on a P1 sheet -> reject (visibly scrambled / horizontally
-     sliced / fragmented reconstruction; not a recognisable complete frame).
+  3. everything else on a P1 sheet -> decode_issue (unresolved Ranger
+     reconstruction failure: the CURRENT rendered output is visibly scrambled /
+     horizontally sliced / fragmented). The donor asset itself is NOT proven
+     invalid, so nothing here is `reject`; re-review after renderer correction.
 """
 import json
 import sys
@@ -44,9 +46,13 @@ COHERENT_SLOTS = [
 REASONS = {
     "valid_render": ("coherent_reconstruction",
                      "Contact-sheet inspection: reconstruction visibly appears correct."),
-    "reject": ("scrambled_reconstruction",
-               "Contact-sheet inspection: horizontally sliced / scrambled / fragmented "
-               "tile reconstruction; not a recognisable complete frame."),
+    "decode_issue": ("ranger_reconstruction_issue",
+                     "Current rendered output is visibly invalid (horizontally sliced / "
+                     "scrambled / fragmented; not a recognisable complete frame). The "
+                     "underlying donor asset has NOT been proven invalid; the failure may "
+                     "originate in the Ranger reconstruction pipeline (stride, tile order, "
+                     "NCER/OAM interpretation, palette/geometry, or another renderer "
+                     "defect). Re-review after renderer correction. Not a reject."),
     "needs_review": ("too_sparse_to_judge",
                      "Alpha bbox area <= %d px; too little visible art at contact-sheet "
                      "scale to call correct or broken." % SPARSE_MAX_BBOX_AREA),
@@ -99,7 +105,7 @@ def main():
                 status = "needs_review"
                 note = None
             else:
-                status = "reject"
+                status = "decode_issue"
                 note = None
             code, reason = REASONS[status]
             mem = members[aid]
@@ -187,14 +193,19 @@ def main():
     md.append("- P1 candidates reviewed: **%d** (each accounted for exactly once)" % len(records))
     md.append("- Contact sheets inspected: **%d**; species: **%d**" % (len(sheet_ids), len(by_species)))
     md.append("- valid_render: **%d**" % counts["valid_render"])
-    md.append("- reject: **%d**" % counts["reject"])
-    md.append("- decode_issue: **%d** (none newly assigned; see note)" % counts["decode_issue"])
+    md.append("- decode_issue (unresolved Ranger reconstruction issue): **%d**" % counts["decode_issue"])
     md.append("- needs_review (ambiguous, left open): **%d**" % counts["needs_review"])
+    md.append("- reject: **%d** (no donor asset independently proven invalid in this pass)" % counts["reject"])
     md.append("- Assets covered incl. exact-duplicate members: **%d**\n" % len(dup_members))
     md.append("## Findings\n")
     md.append("- The overwhelming majority of Ranger frames reconstruct as horizontally "
               "sliced / scrambled tile soup, consistent with the still-open reconstruction "
-              "concern recorded in `DDA1J_RANGER_RENDER_VISUAL_QA.md`. These are `reject`.")
+              "concern recorded in `DDA1J_RANGER_RENDER_VISUAL_QA.md`. These are `decode_issue` "
+              "(reason `ranger_reconstruction_issue`), **not** `reject`: the current rendered "
+              "output is visibly invalid, but the underlying donor asset has NOT been proven "
+              "invalid. The failure may originate in the Ranger reconstruction pipeline "
+              "(stride, tile ordering, NCER/OAM interpretation, palette/geometry, or another "
+              "renderer defect). Re-review these after renderer correction.")
     md.append("- Only these slots visibly reconstruct correctly (`valid_render`):")
     for s, a, b, n in COHERENT_SLOTS:
         md.append("  - `%s` slots %d-%d: %s" % (s, a, b, n))
@@ -203,10 +214,9 @@ def main():
     md.append("- Slots with alpha bbox area <= %d px are `needs_review`: too little visible "
               "art to judge at contact-sheet scale. This is a deterministic metadata rule, "
               "not a visual verdict." % SPARSE_MAX_BBOX_AREA)
-    md.append("- No `decode_issue` was assigned: no decode failure occurred in this pass, and "
-              "the root cause of the scrambling (stride/geometry vs. other) was not isolated "
-              "here. Treating the scrambling as a reconstruction defect is a hypothesis for "
-              "the renderer owner, not a conclusion of this review.\n")
+    md.append("- `decode_issue` here means an unresolved reconstruction failure, not a "
+              "proven-bad donor asset and not a file-level decode error. The root cause was "
+              "not isolated in this pass. Nothing in this P1 pass is `reject`.\n")
     md.append("## Limits of this review\n")
     md.append("- Judgement was made on 96px contact-sheet thumbnails; the raw per-frame PNGs "
               "are CI artifacts not present in the repo. The `valid_render` slots are clear at "
@@ -215,11 +225,11 @@ def main():
     md.append("## Species with any valid_render\n")
     md.append(", ".join("%03d" % d for d in ok) + "\n")
     md.append("## Per-species counts\n")
-    md.append("| Dex | valid_render | reject | needs_review |")
+    md.append("| Dex | valid_render | decode_issue | needs_review |")
     md.append("|---:|---:|---:|---:|")
     for d in sorted(by_species):
         c = by_species[d]
-        md.append("| %03d | %d | %d | %d |" % (d, c["valid_render"], c["reject"], c["needs_review"]))
+        md.append("| %03d | %d | %d | %d |" % (d, c["valid_render"], c["decode_issue"], c["needs_review"]))
     with open(OUT_MD, "w") as f:
         f.write("\n".join(md) + "\n")
     print(json.dumps(out["status_counts"]), len(records), len(by_species), len(dup_members))
