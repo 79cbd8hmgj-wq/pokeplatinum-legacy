@@ -46,7 +46,7 @@ jobs:
           python3 tools/visual_overhaul/inspect_ranger_assets.py \
             --ranger-root ../ranger2 \
             --asset-root poke \
-            --limit 14 \
+            --limit 40 \
             --extract-dir /tmp/ranger_extract
           PKG_DIR=$(find /tmp/ranger_extract -type d -name 'p025_00_LZ' | head -1)
           test -n "$PKG_DIR"
