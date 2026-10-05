@@ -1,0 +1,64 @@
+name: Lane A visual review priority
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/visual_overhaul/build_lane_a_visual_review_priority.py"
+      - "docs/visual_overhaul/LANE_A_VISUAL_REVIEW_SET.json"
+      - ".github/workflows/lane-a-visual-review-priority.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build review priority
+        run: |
+          python3 tools/visual_overhaul/build_lane_a_visual_review_priority.py \
+            --review-set docs/visual_overhaul/LANE_A_VISUAL_REVIEW_SET.json \
+            --write-json docs/visual_overhaul/LANE_A_VISUAL_REVIEW_PRIORITY.json \
+            --write-md docs/visual_overhaul/LANE_A_VISUAL_REVIEW_PRIORITY.md
+
+      - name: Validate complete candidate coverage
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          review = json.loads(Path("docs/visual_overhaul/LANE_A_VISUAL_REVIEW_SET.json").read_text())
+          priority = json.loads(Path("docs/visual_overhaul/LANE_A_VISUAL_REVIEW_PRIORITY.json").read_text())
+
+          assert priority["candidate_count"] == review["unique_visual_candidates"]
+          ids = [r["asset_id"] for r in priority["records"]]
+          assert len(ids) == len(set(ids))
+          assert len(ids) == review["unique_visual_candidates"]
+          assert set(priority["priority_counts"]) <= {
+              "P1_ranger_species_render",
+              "P2_other_species",
+              "P3_native_source_png",
+              "P4_other_render_ready",
+          }
+          print("Candidate coverage:", len(ids))
+          print("Priority counts:", priority["priority_counts"])
+          PY
+
+      - name: Commit priority queue
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            docs/visual_overhaul/LANE_A_VISUAL_REVIEW_PRIORITY.json \
+            docs/visual_overhaul/LANE_A_VISUAL_REVIEW_PRIORITY.md
+          if git diff --cached --quiet; then
+            echo "No Lane A priority changes."
+            exit 0
+          fi
+          git commit -m "visual: prioritize Lane A visual review"
+          git pull --rebase origin main
+          git push
