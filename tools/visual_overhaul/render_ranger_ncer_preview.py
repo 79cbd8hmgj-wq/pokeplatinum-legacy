@@ -61,8 +61,8 @@ def read_chars(path: Path) -> tuple[int, int, list[list[int]]]:
     raw = path.read_bytes()
     if raw[:4] != b"RGCN" or raw[0x10:0x14] != b"RAHC":
         raise ValueError(f"{path}: not a standard RGCN")
-    height_tiles = u16(raw, 0x18)
-    width_tiles = u16(raw, 0x1A)
+    width_tiles = u16(raw, 0x18)
+    height_tiles = u16(raw, 0x1A)
     fmt = u16(raw, 0x1C)
     size = u32(raw, 0x28)
     body = raw[0x30:0x30 + size]
