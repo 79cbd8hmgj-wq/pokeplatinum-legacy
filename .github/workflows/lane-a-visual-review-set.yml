@@ -1,0 +1,83 @@
+name: Lane A visual review set
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/visual_overhaul/build_lane_a_visual_review_set.py"
+      - "docs/visual_overhaul/LANE_A_RENDER_INTEGRITY.json"
+      - ".github/workflows/lane-a-visual-review-set.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build deduplicated Lane A review set
+        run: |
+          python3 tools/visual_overhaul/build_lane_a_visual_review_set.py \
+            --integrity docs/visual_overhaul/LANE_A_RENDER_INTEGRITY.json \
+            --write-json docs/visual_overhaul/LANE_A_VISUAL_REVIEW_SET.json \
+            --write-md docs/visual_overhaul/LANE_A_VISUAL_REVIEW_SET.md \
+            --write-decode-json docs/visual_overhaul/LANE_A_DECODE_ERRORS.json \
+            --write-blank-json docs/visual_overhaul/LANE_A_BLANKS.json
+
+      - name: Validate Lane A triage
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          integrity = json.loads(Path("docs/visual_overhaul/LANE_A_RENDER_INTEGRITY.json").read_text())
+          review = json.loads(Path("docs/visual_overhaul/LANE_A_VISUAL_REVIEW_SET.json").read_text())
+          decode = json.loads(Path("docs/visual_overhaul/LANE_A_DECODE_ERRORS.json").read_text())
+          blanks = json.loads(Path("docs/visual_overhaul/LANE_A_BLANKS.json").read_text())
+
+          assert review["audited_assets"] == integrity["asset_count"]
+          assert review["nonblank_assets"] == integrity["technical_state_counts"]["verified_nonblank"]
+          assert decode["count"] == integrity["technical_state_counts"]["decode_error"]
+          assert blanks["count"] == integrity["technical_state_counts"]["blank"]
+
+          candidates = review["candidates"]
+          hashes = [c["visual_key"] for c in candidates]
+          assert len(hashes) == len(set(hashes))
+          assert review["unique_visual_candidates"] == len(candidates)
+          assert (
+              review["unique_visual_candidates"]
+              + review["redundant_exact_duplicate_assets"]
+              == review["nonblank_assets"]
+          )
+          assert (
+              review["nonblank_assets"]
+              + review["decode_error_assets"]
+              + review["blank_assets"]
+              == review["audited_assets"]
+          )
+
+          print("Unique visual candidates:", review["unique_visual_candidates"])
+          print("Redundant duplicates:", review["redundant_exact_duplicate_assets"])
+          print("Decode errors:", decode["count"])
+          print("Blanks:", blanks["count"])
+          PY
+
+      - name: Commit Lane A review set
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            docs/visual_overhaul/LANE_A_VISUAL_REVIEW_SET.json \
+            docs/visual_overhaul/LANE_A_VISUAL_REVIEW_SET.md \
+            docs/visual_overhaul/LANE_A_DECODE_ERRORS.json \
+            docs/visual_overhaul/LANE_A_BLANKS.json
+          if git diff --cached --quiet; then
+            echo "No Lane A review-set changes."
+            exit 0
+          fi
+          git commit -m "visual: build Lane A deduplicated review set"
+          git pull --rebase origin main
+          git push
