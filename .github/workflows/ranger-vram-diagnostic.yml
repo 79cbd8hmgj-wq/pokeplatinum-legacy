@@ -6,6 +6,7 @@ on:
     paths:
       - ".github/workflows/ranger-vram-diagnostic.yml"
       - "tools/visual_overhaul/render_ranger_ncer_preview.py"
+      - "tools/visual_overhaul/render_ranger_nitro_preview.py"
       - "tools/visual_overhaul/render_ranger_pokemon_package.py"
 
 jobs:
