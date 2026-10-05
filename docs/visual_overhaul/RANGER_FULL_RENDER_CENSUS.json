@@ -1,0 +1,2386 @@
+{
+  "schema_version": 1,
+  "ranger_root": "/home/runner/work/pokeplatinum-legacy/pokeplatinum-legacy/ranger2",
+  "packages_considered": 297,
+  "successes": 296,
+  "failures": 1,
+  "rendered_cells": 35806,
+  "rows": [
+    {
+      "species": 0,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p000_00_LZ.bin",
+      "output": "/tmp/ranger_all/000/00",
+      "status": "error",
+      "error": "ValueError: /tmp/ranger_pkg_9aidwagp/p000_00_s.NCGR: character geometry/data mismatch"
+    },
+    {
+      "species": 4,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p004_00_LZ.bin",
+      "output": "/tmp/ranger_all/004/00",
+      "status": "ok",
+      "rendered_cells": 108
+    },
+    {
+      "species": 5,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p005_00_LZ.bin",
+      "output": "/tmp/ranger_all/005/00",
+      "status": "ok",
+      "rendered_cells": 68
+    },
+    {
+      "species": 6,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p006_00_LZ.bin",
+      "output": "/tmp/ranger_all/006/00",
+      "status": "ok",
+      "rendered_cells": 216
+    },
+    {
+      "species": 6,
+      "variant": 1,
+      "package": "res/prebuilt/data/poke/p006_01_LZ.bin",
+      "output": "/tmp/ranger_all/006/01",
+      "status": "ok",
+      "rendered_cells": 48
+    },
+    {
+      "species": 7,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p007_00_LZ.bin",
+      "output": "/tmp/ranger_all/007/00",
+      "status": "ok",
+      "rendered_cells": 58
+    },
+    {
+      "species": 8,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p008_00_LZ.bin",
+      "output": "/tmp/ranger_all/008/00",
+      "status": "ok",
+      "rendered_cells": 64
+    },
+    {
+      "species": 9,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p009_00_LZ.bin",
+      "output": "/tmp/ranger_all/009/00",
+      "status": "ok",
+      "rendered_cells": 74
+    },
+    {
+      "species": 13,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p013_00_LZ.bin",
+      "output": "/tmp/ranger_all/013/00",
+      "status": "ok",
+      "rendered_cells": 64
+    },
+    {
+      "species": 15,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p015_00_LZ.bin",
+      "output": "/tmp/ranger_all/015/00",
+      "status": "ok",
+      "rendered_cells": 100
+    },
+    {
+      "species": 19,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p019_00_LZ.bin",
+      "output": "/tmp/ranger_all/019/00",
+      "status": "ok",
+      "rendered_cells": 52
+    },
+    {
+      "species": 20,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p020_00_LZ.bin",
+      "output": "/tmp/ranger_all/020/00",
+      "status": "ok",
+      "rendered_cells": 60
+    },
+    {
+      "species": 21,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p021_00_LZ.bin",
+      "output": "/tmp/ranger_all/021/00",
+      "status": "ok",
+      "rendered_cells": 76
+    },
+    {
+      "species": 22,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p022_00_LZ.bin",
+      "output": "/tmp/ranger_all/022/00",
+      "status": "ok",
+      "rendered_cells": 92
+    },
+    {
+      "species": 25,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p025_00_LZ.bin",
+      "output": "/tmp/ranger_all/025/00",
+      "status": "ok",
+      "rendered_cells": 52
+    },
+    {
+      "species": 26,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p026_00_LZ.bin",
+      "output": "/tmp/ranger_all/026/00",
+      "status": "ok",
+      "rendered_cells": 56
+    },
+    {
+      "species": 27,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p027_00_LZ.bin",
+      "output": "/tmp/ranger_all/027/00",
+      "status": "ok",
+      "rendered_cells": 192
+    },
+    {
+      "species": 28,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p028_00_LZ.bin",
+      "output": "/tmp/ranger_all/028/00",
+      "status": "ok",
+      "rendered_cells": 200
+    },
+    {
+      "species": 37,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p037_00_LZ.bin",
+      "output": "/tmp/ranger_all/037/00",
+      "status": "ok",
+      "rendered_cells": 146
+    },
+    {
+      "species": 38,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p038_00_LZ.bin",
+      "output": "/tmp/ranger_all/038/00",
+      "status": "ok",
+      "rendered_cells": 142
+    },
+    {
+      "species": 39,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p039_00_LZ.bin",
+      "output": "/tmp/ranger_all/039/00",
+      "status": "ok",
+      "rendered_cells": 67
+    },
+    {
+      "species": 40,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p040_00_LZ.bin",
+      "output": "/tmp/ranger_all/040/00",
+      "status": "ok",
+      "rendered_cells": 68
+    },
+    {
+      "species": 41,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p041_00_LZ.bin",
+      "output": "/tmp/ranger_all/041/00",
+      "status": "ok",
+      "rendered_cells": 56
+    },
+    {
+      "species": 42,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p042_00_LZ.bin",
+      "output": "/tmp/ranger_all/042/00",
+      "status": "ok",
+      "rendered_cells": 108
+    },
+    {
+      "species": 43,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p043_00_LZ.bin",
+      "output": "/tmp/ranger_all/043/00",
+      "status": "ok",
+      "rendered_cells": 122
+    },
+    {
+      "species": 44,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p044_00_LZ.bin",
+      "output": "/tmp/ranger_all/044/00",
+      "status": "ok",
+      "rendered_cells": 76
+    },
+    {
+      "species": 45,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p045_00_LZ.bin",
+      "output": "/tmp/ranger_all/045/00",
+      "status": "ok",
+      "rendered_cells": 80
+    },
+    {
+      "species": 56,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p056_00_LZ.bin",
+      "output": "/tmp/ranger_all/056/00",
+      "status": "ok",
+      "rendered_cells": 170
+    },
+    {
+      "species": 57,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p057_00_LZ.bin",
+      "output": "/tmp/ranger_all/057/00",
+      "status": "ok",
+      "rendered_cells": 168
+    },
+    {
+      "species": 58,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p058_00_LZ.bin",
+      "output": "/tmp/ranger_all/058/00",
+      "status": "ok",
+      "rendered_cells": 76
+    },
+    {
+      "species": 59,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p059_00_LZ.bin",
+      "output": "/tmp/ranger_all/059/00",
+      "status": "ok",
+      "rendered_cells": 80
+    },
+    {
+      "species": 63,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p063_00_LZ.bin",
+      "output": "/tmp/ranger_all/063/00",
+      "status": "ok",
+      "rendered_cells": 162
+    },
+    {
+      "species": 65,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p065_00_LZ.bin",
+      "output": "/tmp/ranger_all/065/00",
+      "status": "ok",
+      "rendered_cells": 154
+    },
+    {
+      "species": 66,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p066_00_LZ.bin",
+      "output": "/tmp/ranger_all/066/00",
+      "status": "ok",
+      "rendered_cells": 104
+    },
+    {
+      "species": 67,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p067_00_LZ.bin",
+      "output": "/tmp/ranger_all/067/00",
+      "status": "ok",
+      "rendered_cells": 62
+    },
+    {
+      "species": 68,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p068_00_LZ.bin",
+      "output": "/tmp/ranger_all/068/00",
+      "status": "ok",
+      "rendered_cells": 66
+    },
+    {
+      "species": 71,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p071_00_LZ.bin",
+      "output": "/tmp/ranger_all/071/00",
+      "status": "ok",
+      "rendered_cells": 92
+    },
+    {
+      "species": 73,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p073_00_LZ.bin",
+      "output": "/tmp/ranger_all/073/00",
+      "status": "ok",
+      "rendered_cells": 96
+    },
+    {
+      "species": 74,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p074_00_LZ.bin",
+      "output": "/tmp/ranger_all/074/00",
+      "status": "ok",
+      "rendered_cells": 84
+    },
+    {
+      "species": 75,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p075_00_LZ.bin",
+      "output": "/tmp/ranger_all/075/00",
+      "status": "ok",
+      "rendered_cells": 88
+    },
+    {
+      "species": 76,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p076_00_LZ.bin",
+      "output": "/tmp/ranger_all/076/00",
+      "status": "ok",
+      "rendered_cells": 160
+    },
+    {
+      "species": 77,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p077_00_LZ.bin",
+      "output": "/tmp/ranger_all/077/00",
+      "status": "ok",
+      "rendered_cells": 96
+    },
+    {
+      "species": 78,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p078_00_LZ.bin",
+      "output": "/tmp/ranger_all/078/00",
+      "status": "ok",
+      "rendered_cells": 236
+    },
+    {
+      "species": 81,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p081_00_LZ.bin",
+      "output": "/tmp/ranger_all/081/00",
+      "status": "ok",
+      "rendered_cells": 120
+    },
+    {
+      "species": 82,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p082_00_LZ.bin",
+      "output": "/tmp/ranger_all/082/00",
+      "status": "ok",
+      "rendered_cells": 44
+    },
+    {
+      "species": 84,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p084_00_LZ.bin",
+      "output": "/tmp/ranger_all/084/00",
+      "status": "ok",
+      "rendered_cells": 44
+    },
+    {
+      "species": 85,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p085_00_LZ.bin",
+      "output": "/tmp/ranger_all/085/00",
+      "status": "ok",
+      "rendered_cells": 108
+    },
+    {
+      "species": 89,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p089_00_LZ.bin",
+      "output": "/tmp/ranger_all/089/00",
+      "status": "ok",
+      "rendered_cells": 96
+    },
+    {
+      "species": 92,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p092_00_LZ.bin",
+      "output": "/tmp/ranger_all/092/00",
+      "status": "ok",
+      "rendered_cells": 138
+    },
+    {
+      "species": 93,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p093_00_LZ.bin",
+      "output": "/tmp/ranger_all/093/00",
+      "status": "ok",
+      "rendered_cells": 146
+    },
+    {
+      "species": 94,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p094_00_LZ.bin",
+      "output": "/tmp/ranger_all/094/00",
+      "status": "ok",
+      "rendered_cells": 170
+    },
+    {
+      "species": 96,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p096_00_LZ.bin",
+      "output": "/tmp/ranger_all/096/00",
+      "status": "ok",
+      "rendered_cells": 148
+    },
+    {
+      "species": 97,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p097_00_LZ.bin",
+      "output": "/tmp/ranger_all/097/00",
+      "status": "ok",
+      "rendered_cells": 276
+    },
+    {
+      "species": 100,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p100_00_LZ.bin",
+      "output": "/tmp/ranger_all/100/00",
+      "status": "ok",
+      "rendered_cells": 118
+    },
+    {
+      "species": 101,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p101_00_LZ.bin",
+      "output": "/tmp/ranger_all/101/00",
+      "status": "ok",
+      "rendered_cells": 136
+    },
+    {
+      "species": 109,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p109_00_LZ.bin",
+      "output": "/tmp/ranger_all/109/00",
+      "status": "ok",
+      "rendered_cells": 56
+    },
+    {
+      "species": 110,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p110_00_LZ.bin",
+      "output": "/tmp/ranger_all/110/00",
+      "status": "ok",
+      "rendered_cells": 56
+    },
+    {
+      "species": 111,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p111_00_LZ.bin",
+      "output": "/tmp/ranger_all/111/00",
+      "status": "ok",
+      "rendered_cells": 80
+    },
+    {
+      "species": 112,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p112_00_LZ.bin",
+      "output": "/tmp/ranger_all/112/00",
+      "status": "ok",
+      "rendered_cells": 112
+    },
+    {
+      "species": 115,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p115_00_LZ.bin",
+      "output": "/tmp/ranger_all/115/00",
+      "status": "ok",
+      "rendered_cells": 316
+    },
+    {
+      "species": 116,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p116_00_LZ.bin",
+      "output": "/tmp/ranger_all/116/00",
+      "status": "ok",
+      "rendered_cells": 84
+    },
+    {
+      "species": 117,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p117_00_LZ.bin",
+      "output": "/tmp/ranger_all/117/00",
+      "status": "ok",
+      "rendered_cells": 88
+    },
+    {
+      "species": 120,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p120_00_LZ.bin",
+      "output": "/tmp/ranger_all/120/00",
+      "status": "ok",
+      "rendered_cells": 176
+    },
+    {
+      "species": 121,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p121_00_LZ.bin",
+      "output": "/tmp/ranger_all/121/00",
+      "status": "ok",
+      "rendered_cells": 285
+    },
+    {
+      "species": 122,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p122_00_LZ.bin",
+      "output": "/tmp/ranger_all/122/00",
+      "status": "ok",
+      "rendered_cells": 220
+    },
+    {
+      "species": 123,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p123_00_LZ.bin",
+      "output": "/tmp/ranger_all/123/00",
+      "status": "ok",
+      "rendered_cells": 84
+    },
+    {
+      "species": 124,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p124_00_LZ.bin",
+      "output": "/tmp/ranger_all/124/00",
+      "status": "ok",
+      "rendered_cells": 64
+    },
+    {
+      "species": 125,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p125_00_LZ.bin",
+      "output": "/tmp/ranger_all/125/00",
+      "status": "ok",
+      "rendered_cells": 128
+    },
+    {
+      "species": 126,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p126_00_LZ.bin",
+      "output": "/tmp/ranger_all/126/00",
+      "status": "ok",
+      "rendered_cells": 90
+    },
+    {
+      "species": 127,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p127_00_LZ.bin",
+      "output": "/tmp/ranger_all/127/00",
+      "status": "ok",
+      "rendered_cells": 84
+    },
+    {
+      "species": 128,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p128_00_LZ.bin",
+      "output": "/tmp/ranger_all/128/00",
+      "status": "ok",
+      "rendered_cells": 86
+    },
+    {
+      "species": 133,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p133_00_LZ.bin",
+      "output": "/tmp/ranger_all/133/00",
+      "status": "ok",
+      "rendered_cells": 88
+    },
+    {
+      "species": 134,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p134_00_LZ.bin",
+      "output": "/tmp/ranger_all/134/00",
+      "status": "ok",
+      "rendered_cells": 88
+    },
+    {
+      "species": 135,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p135_00_LZ.bin",
+      "output": "/tmp/ranger_all/135/00",
+      "status": "ok",
+      "rendered_cells": 44
+    },
+    {
+      "species": 136,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p136_00_LZ.bin",
+      "output": "/tmp/ranger_all/136/00",
+      "status": "ok",
+      "rendered_cells": 52
+    },
+    {
+      "species": 138,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p138_00_LZ.bin",
+      "output": "/tmp/ranger_all/138/00",
+      "status": "ok",
+      "rendered_cells": 60
+    },
+    {
+      "species": 139,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p139_00_LZ.bin",
+      "output": "/tmp/ranger_all/139/00",
+      "status": "ok",
+      "rendered_cells": 120
+    },
+    {
+      "species": 142,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p142_00_LZ.bin",
+      "output": "/tmp/ranger_all/142/00",
+      "status": "ok",
+      "rendered_cells": 72
+    },
+    {
+      "species": 147,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p147_00_LZ.bin",
+      "output": "/tmp/ranger_all/147/00",
+      "status": "ok",
+      "rendered_cells": 80
+    },
+    {
+      "species": 148,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p148_00_LZ.bin",
+      "output": "/tmp/ranger_all/148/00",
+      "status": "ok",
+      "rendered_cells": 76
+    },
+    {
+      "species": 167,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p167_00_LZ.bin",
+      "output": "/tmp/ranger_all/167/00",
+      "status": "ok",
+      "rendered_cells": 48
+    },
+    {
+      "species": 168,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p168_00_LZ.bin",
+      "output": "/tmp/ranger_all/168/00",
+      "status": "ok",
+      "rendered_cells": 72
+    },
+    {
+      "species": 169,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p169_00_LZ.bin",
+      "output": "/tmp/ranger_all/169/00",
+      "status": "ok",
+      "rendered_cells": 64
+    },
+    {
+      "species": 170,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p170_00_LZ.bin",
+      "output": "/tmp/ranger_all/170/00",
+      "status": "ok",
+      "rendered_cells": 132
+    },
+    {
+      "species": 171,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p171_00_LZ.bin",
+      "output": "/tmp/ranger_all/171/00",
+      "status": "ok",
+      "rendered_cells": 132
+    },
+    {
+      "species": 172,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p172_00_LZ.bin",
+      "output": "/tmp/ranger_all/172/00",
+      "status": "ok",
+      "rendered_cells": 192
+    },
+    {
+      "species": 179,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p179_00_LZ.bin",
+      "output": "/tmp/ranger_all/179/00",
+      "status": "ok",
+      "rendered_cells": 132
+    },
+    {
+      "species": 180,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p180_00_LZ.bin",
+      "output": "/tmp/ranger_all/180/00",
+      "status": "ok",
+      "rendered_cells": 116
+    },
+    {
+      "species": 181,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p181_00_LZ.bin",
+      "output": "/tmp/ranger_all/181/00",
+      "status": "ok",
+      "rendered_cells": 124
+    },
+    {
+      "species": 182,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p182_00_LZ.bin",
+      "output": "/tmp/ranger_all/182/00",
+      "status": "ok",
+      "rendered_cells": 106
+    },
+    {
+      "species": 185,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p185_00_LZ.bin",
+      "output": "/tmp/ranger_all/185/00",
+      "status": "ok",
+      "rendered_cells": 72
+    },
+    {
+      "species": 190,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p190_00_LZ.bin",
+      "output": "/tmp/ranger_all/190/00",
+      "status": "ok",
+      "rendered_cells": 72
+    },
+    {
+      "species": 193,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p193_00_LZ.bin",
+      "output": "/tmp/ranger_all/193/00",
+      "status": "ok",
+      "rendered_cells": 146
+    },
+    {
+      "species": 196,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p196_00_LZ.bin",
+      "output": "/tmp/ranger_all/196/00",
+      "status": "ok",
+      "rendered_cells": 126
+    },
+    {
+      "species": 197,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p197_00_LZ.bin",
+      "output": "/tmp/ranger_all/197/00",
+      "status": "ok",
+      "rendered_cells": 78
+    },
+    {
+      "species": 198,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p198_00_LZ.bin",
+      "output": "/tmp/ranger_all/198/00",
+      "status": "ok",
+      "rendered_cells": 360
+    },
+    {
+      "species": 200,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p200_00_LZ.bin",
+      "output": "/tmp/ranger_all/200/00",
+      "status": "ok",
+      "rendered_cells": 145
+    },
+    {
+      "species": 203,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p203_00_LZ.bin",
+      "output": "/tmp/ranger_all/203/00",
+      "status": "ok",
+      "rendered_cells": 68
+    },
+    {
+      "species": 204,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p204_00_LZ.bin",
+      "output": "/tmp/ranger_all/204/00",
+      "status": "ok",
+      "rendered_cells": 122
+    },
+    {
+      "species": 205,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p205_00_LZ.bin",
+      "output": "/tmp/ranger_all/205/00",
+      "status": "ok",
+      "rendered_cells": 138
+    },
+    {
+      "species": 207,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p207_00_LZ.bin",
+      "output": "/tmp/ranger_all/207/00",
+      "status": "ok",
+      "rendered_cells": 96
+    },
+    {
+      "species": 211,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p211_00_LZ.bin",
+      "output": "/tmp/ranger_all/211/00",
+      "status": "ok",
+      "rendered_cells": 85
+    },
+    {
+      "species": 212,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p212_00_LZ.bin",
+      "output": "/tmp/ranger_all/212/00",
+      "status": "ok",
+      "rendered_cells": 52
+    },
+    {
+      "species": 215,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p215_00_LZ.bin",
+      "output": "/tmp/ranger_all/215/00",
+      "status": "ok",
+      "rendered_cells": 56
+    },
+    {
+      "species": 218,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p218_00_LZ.bin",
+      "output": "/tmp/ranger_all/218/00",
+      "status": "ok",
+      "rendered_cells": 72
+    },
+    {
+      "species": 219,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p219_00_LZ.bin",
+      "output": "/tmp/ranger_all/219/00",
+      "status": "ok",
+      "rendered_cells": 72
+    },
+    {
+      "species": 220,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p220_00_LZ.bin",
+      "output": "/tmp/ranger_all/220/00",
+      "status": "ok",
+      "rendered_cells": 80
+    },
+    {
+      "species": 221,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p221_00_LZ.bin",
+      "output": "/tmp/ranger_all/221/00",
+      "status": "ok",
+      "rendered_cells": 80
+    },
+    {
+      "species": 222,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p222_00_LZ.bin",
+      "output": "/tmp/ranger_all/222/00",
+      "status": "ok",
+      "rendered_cells": 128
+    },
+    {
+      "species": 225,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p225_00_LZ.bin",
+      "output": "/tmp/ranger_all/225/00",
+      "status": "ok",
+      "rendered_cells": 56
+    },
+    {
+      "species": 226,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p226_00_LZ.bin",
+      "output": "/tmp/ranger_all/226/00",
+      "status": "ok",
+      "rendered_cells": 72
+    },
+    {
+      "species": 227,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p227_00_LZ.bin",
+      "output": "/tmp/ranger_all/227/00",
+      "status": "ok",
+      "rendered_cells": 76
+    },
+    {
+      "species": 228,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p228_00_LZ.bin",
+      "output": "/tmp/ranger_all/228/00",
+      "status": "ok",
+      "rendered_cells": 96
+    },
+    {
+      "species": 229,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p229_00_LZ.bin",
+      "output": "/tmp/ranger_all/229/00",
+      "status": "ok",
+      "rendered_cells": 112
+    },
+    {
+      "species": 230,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p230_00_LZ.bin",
+      "output": "/tmp/ranger_all/230/00",
+      "status": "ok",
+      "rendered_cells": 100
+    },
+    {
+      "species": 236,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p236_00_LZ.bin",
+      "output": "/tmp/ranger_all/236/00",
+      "status": "ok",
+      "rendered_cells": 98
+    },
+    {
+      "species": 239,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p239_00_LZ.bin",
+      "output": "/tmp/ranger_all/239/00",
+      "status": "ok",
+      "rendered_cells": 120
+    },
+    {
+      "species": 240,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p240_00_LZ.bin",
+      "output": "/tmp/ranger_all/240/00",
+      "status": "ok",
+      "rendered_cells": 66
+    },
+    {
+      "species": 241,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p241_00_LZ.bin",
+      "output": "/tmp/ranger_all/241/00",
+      "status": "ok",
+      "rendered_cells": 68
+    },
+    {
+      "species": 246,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p246_00_LZ.bin",
+      "output": "/tmp/ranger_all/246/00",
+      "status": "ok",
+      "rendered_cells": 68
+    },
+    {
+      "species": 247,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p247_00_LZ.bin",
+      "output": "/tmp/ranger_all/247/00",
+      "status": "ok",
+      "rendered_cells": 44
+    },
+    {
+      "species": 248,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p248_00_LZ.bin",
+      "output": "/tmp/ranger_all/248/00",
+      "status": "ok",
+      "rendered_cells": 92
+    },
+    {
+      "species": 251,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p251_00_LZ.bin",
+      "output": "/tmp/ranger_all/251/00",
+      "status": "ok",
+      "rendered_cells": 228
+    },
+    {
+      "species": 252,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p252_00_LZ.bin",
+      "output": "/tmp/ranger_all/252/00",
+      "status": "ok",
+      "rendered_cells": 108
+    },
+    {
+      "species": 253,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p253_00_LZ.bin",
+      "output": "/tmp/ranger_all/253/00",
+      "status": "ok",
+      "rendered_cells": 108
+    },
+    {
+      "species": 254,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p254_00_LZ.bin",
+      "output": "/tmp/ranger_all/254/00",
+      "status": "ok",
+      "rendered_cells": 84
+    },
+    {
+      "species": 255,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p255_00_LZ.bin",
+      "output": "/tmp/ranger_all/255/00",
+      "status": "ok",
+      "rendered_cells": 76
+    },
+    {
+      "species": 256,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p256_00_LZ.bin",
+      "output": "/tmp/ranger_all/256/00",
+      "status": "ok",
+      "rendered_cells": 80
+    },
+    {
+      "species": 257,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p257_00_LZ.bin",
+      "output": "/tmp/ranger_all/257/00",
+      "status": "ok",
+      "rendered_cells": 144
+    },
+    {
+      "species": 258,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p258_00_LZ.bin",
+      "output": "/tmp/ranger_all/258/00",
+      "status": "ok",
+      "rendered_cells": 72
+    },
+    {
+      "species": 259,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p259_00_LZ.bin",
+      "output": "/tmp/ranger_all/259/00",
+      "status": "ok",
+      "rendered_cells": 68
+    },
+    {
+      "species": 260,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p260_00_LZ.bin",
+      "output": "/tmp/ranger_all/260/00",
+      "status": "ok",
+      "rendered_cells": 56
+    },
+    {
+      "species": 273,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p273_00_LZ.bin",
+      "output": "/tmp/ranger_all/273/00",
+      "status": "ok",
+      "rendered_cells": 80
+    },
+    {
+      "species": 274,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p274_00_LZ.bin",
+      "output": "/tmp/ranger_all/274/00",
+      "status": "ok",
+      "rendered_cells": 36
+    },
+    {
+      "species": 275,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p275_00_LZ.bin",
+      "output": "/tmp/ranger_all/275/00",
+      "status": "ok",
+      "rendered_cells": 36
+    },
+    {
+      "species": 276,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p276_00_LZ.bin",
+      "output": "/tmp/ranger_all/276/00",
+      "status": "ok",
+      "rendered_cells": 78
+    },
+    {
+      "species": 277,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p277_00_LZ.bin",
+      "output": "/tmp/ranger_all/277/00",
+      "status": "ok",
+      "rendered_cells": 88
+    },
+    {
+      "species": 278,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p278_00_LZ.bin",
+      "output": "/tmp/ranger_all/278/00",
+      "status": "ok",
+      "rendered_cells": 84
+    },
+    {
+      "species": 279,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p279_00_LZ.bin",
+      "output": "/tmp/ranger_all/279/00",
+      "status": "ok",
+      "rendered_cells": 76
+    },
+    {
+      "species": 280,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p280_00_LZ.bin",
+      "output": "/tmp/ranger_all/280/00",
+      "status": "ok",
+      "rendered_cells": 105
+    },
+    {
+      "species": 281,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p281_00_LZ.bin",
+      "output": "/tmp/ranger_all/281/00",
+      "status": "ok",
+      "rendered_cells": 159
+    },
+    {
+      "species": 282,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p282_00_LZ.bin",
+      "output": "/tmp/ranger_all/282/00",
+      "status": "ok",
+      "rendered_cells": 398
+    },
+    {
+      "species": 287,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p287_00_LZ.bin",
+      "output": "/tmp/ranger_all/287/00",
+      "status": "ok",
+      "rendered_cells": 56
+    },
+    {
+      "species": 291,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p291_00_LZ.bin",
+      "output": "/tmp/ranger_all/291/00",
+      "status": "ok",
+      "rendered_cells": 36
+    },
+    {
+      "species": 296,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p296_00_LZ.bin",
+      "output": "/tmp/ranger_all/296/00",
+      "status": "ok",
+      "rendered_cells": 84
+    },
+    {
+      "species": 297,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p297_00_LZ.bin",
+      "output": "/tmp/ranger_all/297/00",
+      "status": "ok",
+      "rendered_cells": 100
+    },
+    {
+      "species": 299,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p299_00_LZ.bin",
+      "output": "/tmp/ranger_all/299/00",
+      "status": "ok",
+      "rendered_cells": 56
+    },
+    {
+      "species": 302,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p302_00_LZ.bin",
+      "output": "/tmp/ranger_all/302/00",
+      "status": "ok",
+      "rendered_cells": 64
+    },
+    {
+      "species": 303,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p303_00_LZ.bin",
+      "output": "/tmp/ranger_all/303/00",
+      "status": "ok",
+      "rendered_cells": 122
+    },
+    {
+      "species": 304,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p304_00_LZ.bin",
+      "output": "/tmp/ranger_all/304/00",
+      "status": "ok",
+      "rendered_cells": 64
+    },
+    {
+      "species": 305,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p305_00_LZ.bin",
+      "output": "/tmp/ranger_all/305/00",
+      "status": "ok",
+      "rendered_cells": 64
+    },
+    {
+      "species": 306,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p306_00_LZ.bin",
+      "output": "/tmp/ranger_all/306/00",
+      "status": "ok",
+      "rendered_cells": 99
+    },
+    {
+      "species": 311,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p311_00_LZ.bin",
+      "output": "/tmp/ranger_all/311/00",
+      "status": "ok",
+      "rendered_cells": 96
+    },
+    {
+      "species": 312,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p312_00_LZ.bin",
+      "output": "/tmp/ranger_all/312/00",
+      "status": "ok",
+      "rendered_cells": 96
+    },
+    {
+      "species": 315,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p315_00_LZ.bin",
+      "output": "/tmp/ranger_all/315/00",
+      "status": "ok",
+      "rendered_cells": 52
+    },
+    {
+      "species": 319,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p319_00_LZ.bin",
+      "output": "/tmp/ranger_all/319/00",
+      "status": "ok",
+      "rendered_cells": 72
+    },
+    {
+      "species": 320,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p320_00_LZ.bin",
+      "output": "/tmp/ranger_all/320/00",
+      "status": "ok",
+      "rendered_cells": 148
+    },
+    {
+      "species": 322,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p322_00_LZ.bin",
+      "output": "/tmp/ranger_all/322/00",
+      "status": "ok",
+      "rendered_cells": 56
+    },
+    {
+      "species": 323,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p323_00_LZ.bin",
+      "output": "/tmp/ranger_all/323/00",
+      "status": "ok",
+      "rendered_cells": 75
+    },
+    {
+      "species": 324,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p324_00_LZ.bin",
+      "output": "/tmp/ranger_all/324/00",
+      "status": "ok",
+      "rendered_cells": 203
+    },
+    {
+      "species": 330,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p330_00_LZ.bin",
+      "output": "/tmp/ranger_all/330/00",
+      "status": "ok",
+      "rendered_cells": 80
+    },
+    {
+      "species": 331,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p331_00_LZ.bin",
+      "output": "/tmp/ranger_all/331/00",
+      "status": "ok",
+      "rendered_cells": 69
+    },
+    {
+      "species": 332,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p332_00_LZ.bin",
+      "output": "/tmp/ranger_all/332/00",
+      "status": "ok",
+      "rendered_cells": 80
+    },
+    {
+      "species": 334,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p334_00_LZ.bin",
+      "output": "/tmp/ranger_all/334/00",
+      "status": "ok",
+      "rendered_cells": 92
+    },
+    {
+      "species": 344,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p344_00_LZ.bin",
+      "output": "/tmp/ranger_all/344/00",
+      "status": "ok",
+      "rendered_cells": 116
+    },
+    {
+      "species": 353,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p353_00_LZ.bin",
+      "output": "/tmp/ranger_all/353/00",
+      "status": "ok",
+      "rendered_cells": 146
+    },
+    {
+      "species": 354,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p354_00_LZ.bin",
+      "output": "/tmp/ranger_all/354/00",
+      "status": "ok",
+      "rendered_cells": 68
+    },
+    {
+      "species": 355,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p355_00_LZ.bin",
+      "output": "/tmp/ranger_all/355/00",
+      "status": "ok",
+      "rendered_cells": 146
+    },
+    {
+      "species": 356,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p356_00_LZ.bin",
+      "output": "/tmp/ranger_all/356/00",
+      "status": "ok",
+      "rendered_cells": 80
+    },
+    {
+      "species": 359,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p359_00_LZ.bin",
+      "output": "/tmp/ranger_all/359/00",
+      "status": "ok",
+      "rendered_cells": 105
+    },
+    {
+      "species": 361,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p361_00_LZ.bin",
+      "output": "/tmp/ranger_all/361/00",
+      "status": "ok",
+      "rendered_cells": 60
+    },
+    {
+      "species": 362,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p362_00_LZ.bin",
+      "output": "/tmp/ranger_all/362/00",
+      "status": "ok",
+      "rendered_cells": 72
+    },
+    {
+      "species": 363,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p363_00_LZ.bin",
+      "output": "/tmp/ranger_all/363/00",
+      "status": "ok",
+      "rendered_cells": 96
+    },
+    {
+      "species": 364,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p364_00_LZ.bin",
+      "output": "/tmp/ranger_all/364/00",
+      "status": "ok",
+      "rendered_cells": 84
+    },
+    {
+      "species": 365,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p365_00_LZ.bin",
+      "output": "/tmp/ranger_all/365/00",
+      "status": "ok",
+      "rendered_cells": 72
+    },
+    {
+      "species": 367,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p367_00_LZ.bin",
+      "output": "/tmp/ranger_all/367/00",
+      "status": "ok",
+      "rendered_cells": 64
+    },
+    {
+      "species": 368,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p368_00_LZ.bin",
+      "output": "/tmp/ranger_all/368/00",
+      "status": "ok",
+      "rendered_cells": 88
+    },
+    {
+      "species": 371,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p371_00_LZ.bin",
+      "output": "/tmp/ranger_all/371/00",
+      "status": "ok",
+      "rendered_cells": 75
+    },
+    {
+      "species": 372,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p372_00_LZ.bin",
+      "output": "/tmp/ranger_all/372/00",
+      "status": "ok",
+      "rendered_cells": 116
+    },
+    {
+      "species": 373,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p373_00_LZ.bin",
+      "output": "/tmp/ranger_all/373/00",
+      "status": "ok",
+      "rendered_cells": 132
+    },
+    {
+      "species": 377,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p377_00_LZ.bin",
+      "output": "/tmp/ranger_all/377/00",
+      "status": "ok",
+      "rendered_cells": 76
+    },
+    {
+      "species": 378,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p378_00_LZ.bin",
+      "output": "/tmp/ranger_all/378/00",
+      "status": "ok",
+      "rendered_cells": 140
+    },
+    {
+      "species": 379,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p379_00_LZ.bin",
+      "output": "/tmp/ranger_all/379/00",
+      "status": "ok",
+      "rendered_cells": 228
+    },
+    {
+      "species": 387,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p387_00_LZ.bin",
+      "output": "/tmp/ranger_all/387/00",
+      "status": "ok",
+      "rendered_cells": 92
+    },
+    {
+      "species": 388,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p388_00_LZ.bin",
+      "output": "/tmp/ranger_all/388/00",
+      "status": "ok",
+      "rendered_cells": 121
+    },
+    {
+      "species": 389,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p389_00_LZ.bin",
+      "output": "/tmp/ranger_all/389/00",
+      "status": "ok",
+      "rendered_cells": 148
+    },
+    {
+      "species": 390,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p390_00_LZ.bin",
+      "output": "/tmp/ranger_all/390/00",
+      "status": "ok",
+      "rendered_cells": 104
+    },
+    {
+      "species": 391,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p391_00_LZ.bin",
+      "output": "/tmp/ranger_all/391/00",
+      "status": "ok",
+      "rendered_cells": 164
+    },
+    {
+      "species": 392,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p392_00_LZ.bin",
+      "output": "/tmp/ranger_all/392/00",
+      "status": "ok",
+      "rendered_cells": 200
+    },
+    {
+      "species": 393,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p393_00_LZ.bin",
+      "output": "/tmp/ranger_all/393/00",
+      "status": "ok",
+      "rendered_cells": 85
+    },
+    {
+      "species": 394,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p394_00_LZ.bin",
+      "output": "/tmp/ranger_all/394/00",
+      "status": "ok",
+      "rendered_cells": 117
+    },
+    {
+      "species": 395,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p395_00_LZ.bin",
+      "output": "/tmp/ranger_all/395/00",
+      "status": "ok",
+      "rendered_cells": 207
+    },
+    {
+      "species": 396,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p396_00_LZ.bin",
+      "output": "/tmp/ranger_all/396/00",
+      "status": "ok",
+      "rendered_cells": 84
+    },
+    {
+      "species": 397,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p397_00_LZ.bin",
+      "output": "/tmp/ranger_all/397/00",
+      "status": "ok",
+      "rendered_cells": 84
+    },
+    {
+      "species": 398,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p398_00_LZ.bin",
+      "output": "/tmp/ranger_all/398/00",
+      "status": "ok",
+      "rendered_cells": 116
+    },
+    {
+      "species": 399,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p399_00_LZ.bin",
+      "output": "/tmp/ranger_all/399/00",
+      "status": "ok",
+      "rendered_cells": 76
+    },
+    {
+      "species": 400,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p400_00_LZ.bin",
+      "output": "/tmp/ranger_all/400/00",
+      "status": "ok",
+      "rendered_cells": 109
+    },
+    {
+      "species": 401,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p401_00_LZ.bin",
+      "output": "/tmp/ranger_all/401/00",
+      "status": "ok",
+      "rendered_cells": 120
+    },
+    {
+      "species": 402,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p402_00_LZ.bin",
+      "output": "/tmp/ranger_all/402/00",
+      "status": "ok",
+      "rendered_cells": 136
+    },
+    {
+      "species": 403,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p403_00_LZ.bin",
+      "output": "/tmp/ranger_all/403/00",
+      "status": "ok",
+      "rendered_cells": 184
+    },
+    {
+      "species": 404,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p404_00_LZ.bin",
+      "output": "/tmp/ranger_all/404/00",
+      "status": "ok",
+      "rendered_cells": 184
+    },
+    {
+      "species": 405,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p405_00_LZ.bin",
+      "output": "/tmp/ranger_all/405/00",
+      "status": "ok",
+      "rendered_cells": 190
+    },
+    {
+      "species": 406,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p406_00_LZ.bin",
+      "output": "/tmp/ranger_all/406/00",
+      "status": "ok",
+      "rendered_cells": 140
+    },
+    {
+      "species": 407,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p407_00_LZ.bin",
+      "output": "/tmp/ranger_all/407/00",
+      "status": "ok",
+      "rendered_cells": 172
+    },
+    {
+      "species": 408,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p408_00_LZ.bin",
+      "output": "/tmp/ranger_all/408/00",
+      "status": "ok",
+      "rendered_cells": 90
+    },
+    {
+      "species": 409,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p409_00_LZ.bin",
+      "output": "/tmp/ranger_all/409/00",
+      "status": "ok",
+      "rendered_cells": 127
+    },
+    {
+      "species": 410,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p410_00_LZ.bin",
+      "output": "/tmp/ranger_all/410/00",
+      "status": "ok",
+      "rendered_cells": 88
+    },
+    {
+      "species": 411,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p411_00_LZ.bin",
+      "output": "/tmp/ranger_all/411/00",
+      "status": "ok",
+      "rendered_cells": 112
+    },
+    {
+      "species": 412,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p412_00_LZ.bin",
+      "output": "/tmp/ranger_all/412/00",
+      "status": "ok",
+      "rendered_cells": 8
+    },
+    {
+      "species": 412,
+      "variant": 1,
+      "package": "res/prebuilt/data/poke/p412_01_LZ.bin",
+      "output": "/tmp/ranger_all/412/01",
+      "status": "ok",
+      "rendered_cells": 8
+    },
+    {
+      "species": 412,
+      "variant": 2,
+      "package": "res/prebuilt/data/poke/p412_02_LZ.bin",
+      "output": "/tmp/ranger_all/412/02",
+      "status": "ok",
+      "rendered_cells": 8
+    },
+    {
+      "species": 413,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p413_00_LZ.bin",
+      "output": "/tmp/ranger_all/413/00",
+      "status": "ok",
+      "rendered_cells": 8
+    },
+    {
+      "species": 413,
+      "variant": 1,
+      "package": "res/prebuilt/data/poke/p413_01_LZ.bin",
+      "output": "/tmp/ranger_all/413/01",
+      "status": "ok",
+      "rendered_cells": 8
+    },
+    {
+      "species": 413,
+      "variant": 2,
+      "package": "res/prebuilt/data/poke/p413_02_LZ.bin",
+      "output": "/tmp/ranger_all/413/02",
+      "status": "ok",
+      "rendered_cells": 8
+    },
+    {
+      "species": 414,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p414_00_LZ.bin",
+      "output": "/tmp/ranger_all/414/00",
+      "status": "ok",
+      "rendered_cells": 76
+    },
+    {
+      "species": 415,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p415_00_LZ.bin",
+      "output": "/tmp/ranger_all/415/00",
+      "status": "ok",
+      "rendered_cells": 266
+    },
+    {
+      "species": 416,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p416_00_LZ.bin",
+      "output": "/tmp/ranger_all/416/00",
+      "status": "ok",
+      "rendered_cells": 156
+    },
+    {
+      "species": 417,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p417_00_LZ.bin",
+      "output": "/tmp/ranger_all/417/00",
+      "status": "ok",
+      "rendered_cells": 200
+    },
+    {
+      "species": 418,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p418_00_LZ.bin",
+      "output": "/tmp/ranger_all/418/00",
+      "status": "ok",
+      "rendered_cells": 500
+    },
+    {
+      "species": 419,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p419_00_LZ.bin",
+      "output": "/tmp/ranger_all/419/00",
+      "status": "ok",
+      "rendered_cells": 475
+    },
+    {
+      "species": 420,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p420_00_LZ.bin",
+      "output": "/tmp/ranger_all/420/00",
+      "status": "ok",
+      "rendered_cells": 84
+    },
+    {
+      "species": 421,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p421_00_LZ.bin",
+      "output": "/tmp/ranger_all/421/00",
+      "status": "ok",
+      "rendered_cells": 36
+    },
+    {
+      "species": 421,
+      "variant": 1,
+      "package": "res/prebuilt/data/poke/p421_01_LZ.bin",
+      "output": "/tmp/ranger_all/421/01",
+      "status": "ok",
+      "rendered_cells": 133
+    },
+    {
+      "species": 422,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p422_00_LZ.bin",
+      "output": "/tmp/ranger_all/422/00",
+      "status": "ok",
+      "rendered_cells": 81
+    },
+    {
+      "species": 422,
+      "variant": 1,
+      "package": "res/prebuilt/data/poke/p422_01_LZ.bin",
+      "output": "/tmp/ranger_all/422/01",
+      "status": "ok",
+      "rendered_cells": 32
+    },
+    {
+      "species": 423,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p423_00_LZ.bin",
+      "output": "/tmp/ranger_all/423/00",
+      "status": "ok",
+      "rendered_cells": 32
+    },
+    {
+      "species": 423,
+      "variant": 1,
+      "package": "res/prebuilt/data/poke/p423_01_LZ.bin",
+      "output": "/tmp/ranger_all/423/01",
+      "status": "ok",
+      "rendered_cells": 81
+    },
+    {
+      "species": 424,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p424_00_LZ.bin",
+      "output": "/tmp/ranger_all/424/00",
+      "status": "ok",
+      "rendered_cells": 195
+    },
+    {
+      "species": 425,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p425_00_LZ.bin",
+      "output": "/tmp/ranger_all/425/00",
+      "status": "ok",
+      "rendered_cells": 68
+    },
+    {
+      "species": 426,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p426_00_LZ.bin",
+      "output": "/tmp/ranger_all/426/00",
+      "status": "ok",
+      "rendered_cells": 84
+    },
+    {
+      "species": 427,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p427_00_LZ.bin",
+      "output": "/tmp/ranger_all/427/00",
+      "status": "ok",
+      "rendered_cells": 104
+    },
+    {
+      "species": 428,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p428_00_LZ.bin",
+      "output": "/tmp/ranger_all/428/00",
+      "status": "ok",
+      "rendered_cells": 129
+    },
+    {
+      "species": 429,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p429_00_LZ.bin",
+      "output": "/tmp/ranger_all/429/00",
+      "status": "ok",
+      "rendered_cells": 396
+    },
+    {
+      "species": 430,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p430_00_LZ.bin",
+      "output": "/tmp/ranger_all/430/00",
+      "status": "ok",
+      "rendered_cells": 148
+    },
+    {
+      "species": 431,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p431_00_LZ.bin",
+      "output": "/tmp/ranger_all/431/00",
+      "status": "ok",
+      "rendered_cells": 170
+    },
+    {
+      "species": 432,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p432_00_LZ.bin",
+      "output": "/tmp/ranger_all/432/00",
+      "status": "ok",
+      "rendered_cells": 122
+    },
+    {
+      "species": 433,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p433_00_LZ.bin",
+      "output": "/tmp/ranger_all/433/00",
+      "status": "ok",
+      "rendered_cells": 170
+    },
+    {
+      "species": 434,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p434_00_LZ.bin",
+      "output": "/tmp/ranger_all/434/00",
+      "status": "ok",
+      "rendered_cells": 131
+    },
+    {
+      "species": 435,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p435_00_LZ.bin",
+      "output": "/tmp/ranger_all/435/00",
+      "status": "ok",
+      "rendered_cells": 80
+    },
+    {
+      "species": 436,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p436_00_LZ.bin",
+      "output": "/tmp/ranger_all/436/00",
+      "status": "ok",
+      "rendered_cells": 285
+    },
+    {
+      "species": 437,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p437_00_LZ.bin",
+      "output": "/tmp/ranger_all/437/00",
+      "status": "ok",
+      "rendered_cells": 195
+    },
+    {
+      "species": 438,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p438_00_LZ.bin",
+      "output": "/tmp/ranger_all/438/00",
+      "status": "ok",
+      "rendered_cells": 222
+    },
+    {
+      "species": 439,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p439_00_LZ.bin",
+      "output": "/tmp/ranger_all/439/00",
+      "status": "ok",
+      "rendered_cells": 124
+    },
+    {
+      "species": 440,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p440_00_LZ.bin",
+      "output": "/tmp/ranger_all/440/00",
+      "status": "ok",
+      "rendered_cells": 66
+    },
+    {
+      "species": 441,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p441_00_LZ.bin",
+      "output": "/tmp/ranger_all/441/00",
+      "status": "ok",
+      "rendered_cells": 93
+    },
+    {
+      "species": 442,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p442_00_LZ.bin",
+      "output": "/tmp/ranger_all/442/00",
+      "status": "ok",
+      "rendered_cells": 375
+    },
+    {
+      "species": 443,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p443_00_LZ.bin",
+      "output": "/tmp/ranger_all/443/00",
+      "status": "ok",
+      "rendered_cells": 78
+    },
+    {
+      "species": 444,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p444_00_LZ.bin",
+      "output": "/tmp/ranger_all/444/00",
+      "status": "ok",
+      "rendered_cells": 153
+    },
+    {
+      "species": 445,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p445_00_LZ.bin",
+      "output": "/tmp/ranger_all/445/00",
+      "status": "ok",
+      "rendered_cells": 134
+    },
+    {
+      "species": 446,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p446_00_LZ.bin",
+      "output": "/tmp/ranger_all/446/00",
+      "status": "ok",
+      "rendered_cells": 84
+    },
+    {
+      "species": 447,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p447_00_LZ.bin",
+      "output": "/tmp/ranger_all/447/00",
+      "status": "ok",
+      "rendered_cells": 460
+    },
+    {
+      "species": 447,
+      "variant": 1,
+      "package": "res/prebuilt/data/poke/p447_01_LZ.bin",
+      "output": "/tmp/ranger_all/447/01",
+      "status": "ok",
+      "rendered_cells": 375
+    },
+    {
+      "species": 448,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p448_00_LZ.bin",
+      "output": "/tmp/ranger_all/448/00",
+      "status": "ok",
+      "rendered_cells": 534
+    },
+    {
+      "species": 448,
+      "variant": 1,
+      "package": "res/prebuilt/data/poke/p448_01_LZ.bin",
+      "output": "/tmp/ranger_all/448/01",
+      "status": "ok",
+      "rendered_cells": 292
+    },
+    {
+      "species": 449,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p449_00_LZ.bin",
+      "output": "/tmp/ranger_all/449/00",
+      "status": "ok",
+      "rendered_cells": 95
+    },
+    {
+      "species": 450,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p450_00_LZ.bin",
+      "output": "/tmp/ranger_all/450/00",
+      "status": "ok",
+      "rendered_cells": 174
+    },
+    {
+      "species": 451,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p451_00_LZ.bin",
+      "output": "/tmp/ranger_all/451/00",
+      "status": "ok",
+      "rendered_cells": 134
+    },
+    {
+      "species": 452,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p452_00_LZ.bin",
+      "output": "/tmp/ranger_all/452/00",
+      "status": "ok",
+      "rendered_cells": 183
+    },
+    {
+      "species": 453,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p453_00_LZ.bin",
+      "output": "/tmp/ranger_all/453/00",
+      "status": "ok",
+      "rendered_cells": 136
+    },
+    {
+      "species": 454,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p454_00_LZ.bin",
+      "output": "/tmp/ranger_all/454/00",
+      "status": "ok",
+      "rendered_cells": 104
+    },
+    {
+      "species": 455,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p455_00_LZ.bin",
+      "output": "/tmp/ranger_all/455/00",
+      "status": "ok",
+      "rendered_cells": 88
+    },
+    {
+      "species": 456,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p456_00_LZ.bin",
+      "output": "/tmp/ranger_all/456/00",
+      "status": "ok",
+      "rendered_cells": 112
+    },
+    {
+      "species": 457,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p457_00_LZ.bin",
+      "output": "/tmp/ranger_all/457/00",
+      "status": "ok",
+      "rendered_cells": 100
+    },
+    {
+      "species": 458,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p458_00_LZ.bin",
+      "output": "/tmp/ranger_all/458/00",
+      "status": "ok",
+      "rendered_cells": 112
+    },
+    {
+      "species": 459,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p459_00_LZ.bin",
+      "output": "/tmp/ranger_all/459/00",
+      "status": "ok",
+      "rendered_cells": 117
+    },
+    {
+      "species": 460,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p460_00_LZ.bin",
+      "output": "/tmp/ranger_all/460/00",
+      "status": "ok",
+      "rendered_cells": 181
+    },
+    {
+      "species": 461,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p461_00_LZ.bin",
+      "output": "/tmp/ranger_all/461/00",
+      "status": "ok",
+      "rendered_cells": 96
+    },
+    {
+      "species": 462,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p462_00_LZ.bin",
+      "output": "/tmp/ranger_all/462/00",
+      "status": "ok",
+      "rendered_cells": 282
+    },
+    {
+      "species": 463,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p463_00_LZ.bin",
+      "output": "/tmp/ranger_all/463/00",
+      "status": "ok",
+      "rendered_cells": 100
+    },
+    {
+      "species": 464,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p464_00_LZ.bin",
+      "output": "/tmp/ranger_all/464/00",
+      "status": "ok",
+      "rendered_cells": 164
+    },
+    {
+      "species": 465,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p465_00_LZ.bin",
+      "output": "/tmp/ranger_all/465/00",
+      "status": "ok",
+      "rendered_cells": 116
+    },
+    {
+      "species": 466,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p466_00_LZ.bin",
+      "output": "/tmp/ranger_all/466/00",
+      "status": "ok",
+      "rendered_cells": 164
+    },
+    {
+      "species": 467,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p467_00_LZ.bin",
+      "output": "/tmp/ranger_all/467/00",
+      "status": "ok",
+      "rendered_cells": 131
+    },
+    {
+      "species": 468,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p468_00_LZ.bin",
+      "output": "/tmp/ranger_all/468/00",
+      "status": "ok",
+      "rendered_cells": 60
+    },
+    {
+      "species": 469,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p469_00_LZ.bin",
+      "output": "/tmp/ranger_all/469/00",
+      "status": "ok",
+      "rendered_cells": 154
+    },
+    {
+      "species": 470,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p470_00_LZ.bin",
+      "output": "/tmp/ranger_all/470/00",
+      "status": "ok",
+      "rendered_cells": 94
+    },
+    {
+      "species": 471,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p471_00_LZ.bin",
+      "output": "/tmp/ranger_all/471/00",
+      "status": "ok",
+      "rendered_cells": 116
+    },
+    {
+      "species": 472,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p472_00_LZ.bin",
+      "output": "/tmp/ranger_all/472/00",
+      "status": "ok",
+      "rendered_cells": 256
+    },
+    {
+      "species": 473,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p473_00_LZ.bin",
+      "output": "/tmp/ranger_all/473/00",
+      "status": "ok",
+      "rendered_cells": 185
+    },
+    {
+      "species": 474,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p474_00_LZ.bin",
+      "output": "/tmp/ranger_all/474/00",
+      "status": "ok",
+      "rendered_cells": 108
+    },
+    {
+      "species": 475,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p475_00_LZ.bin",
+      "output": "/tmp/ranger_all/475/00",
+      "status": "ok",
+      "rendered_cells": 168
+    },
+    {
+      "species": 476,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p476_00_LZ.bin",
+      "output": "/tmp/ranger_all/476/00",
+      "status": "ok",
+      "rendered_cells": 282
+    },
+    {
+      "species": 477,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p477_00_LZ.bin",
+      "output": "/tmp/ranger_all/477/00",
+      "status": "ok",
+      "rendered_cells": 205
+    },
+    {
+      "species": 478,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p478_00_LZ.bin",
+      "output": "/tmp/ranger_all/478/00",
+      "status": "ok",
+      "rendered_cells": 140
+    },
+    {
+      "species": 483,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p483_00_LZ.bin",
+      "output": "/tmp/ranger_all/483/00",
+      "status": "ok",
+      "rendered_cells": 174
+    },
+    {
+      "species": 484,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p484_00_LZ.bin",
+      "output": "/tmp/ranger_all/484/00",
+      "status": "ok",
+      "rendered_cells": 203
+    },
+    {
+      "species": 485,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p485_00_LZ.bin",
+      "output": "/tmp/ranger_all/485/00",
+      "status": "ok",
+      "rendered_cells": 201
+    },
+    {
+      "species": 485,
+      "variant": 1,
+      "package": "res/prebuilt/data/poke/p485_01_LZ.bin",
+      "output": "/tmp/ranger_all/485/01",
+      "status": "ok",
+      "rendered_cells": 100
+    },
+    {
+      "species": 486,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p486_00_LZ.bin",
+      "output": "/tmp/ranger_all/486/00",
+      "status": "ok",
+      "rendered_cells": 218
+    },
+    {
+      "species": 488,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p488_00_LZ.bin",
+      "output": "/tmp/ranger_all/488/00",
+      "status": "ok",
+      "rendered_cells": 360
+    },
+    {
+      "species": 488,
+      "variant": 1,
+      "package": "res/prebuilt/data/poke/p488_01_LZ.bin",
+      "output": "/tmp/ranger_all/488/01",
+      "status": "ok",
+      "rendered_cells": 235
+    },
+    {
+      "species": 489,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p489_00_LZ.bin",
+      "output": "/tmp/ranger_all/489/00",
+      "status": "ok",
+      "rendered_cells": 32
+    },
+    {
+      "species": 490,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p490_00_LZ.bin",
+      "output": "/tmp/ranger_all/490/00",
+      "status": "ok",
+      "rendered_cells": 37
+    },
+    {
+      "species": 490,
+      "variant": 1,
+      "package": "res/prebuilt/data/poke/p490_01_LZ.bin",
+      "output": "/tmp/ranger_all/490/01",
+      "status": "ok",
+      "rendered_cells": 1
+    },
+    {
+      "species": 491,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p491_00_LZ.bin",
+      "output": "/tmp/ranger_all/491/00",
+      "status": "ok",
+      "rendered_cells": 174
+    },
+    {
+      "species": 491,
+      "variant": 1,
+      "package": "res/prebuilt/data/poke/p491_01_LZ.bin",
+      "output": "/tmp/ranger_all/491/01",
+      "status": "ok",
+      "rendered_cells": 103
+    },
+    {
+      "species": 492,
+      "variant": 0,
+      "package": "res/prebuilt/data/poke/p492_00_LZ.bin",
+      "output": "/tmp/ranger_all/492/00",
+      "status": "ok",
+      "rendered_cells": 96
+    }
+  ]
+}
