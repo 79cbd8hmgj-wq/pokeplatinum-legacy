@@ -35,6 +35,7 @@ def main() -> int:
     p.add_argument("--output-dir", required=True, type=Path)
     p.add_argument("--species", action="append", type=int, default=[])
     p.add_argument("--limit", type=int, default=0)
+    p.add_argument("--include-p000", action="store_true", help="Include non-species package p000_00_LZ.bin.")
     p.add_argument("--write-json", type=Path)
     p.add_argument("--vram-stride-tiles", type=int, default=32)
     args = p.parse_args()
@@ -45,6 +46,8 @@ def main() -> int:
     wanted = set(args.species)
 
     packages = list(discover(source))
+    if not args.include_p000:
+        packages = [x for x in packages if x["species"] != 0]
     if wanted:
         packages = [x for x in packages if x["species"] in wanted]
     if args.limit:
