@@ -48,8 +48,8 @@ def read_rgcn(path: Path) -> tuple[int, int, list[int]]:
     if raw[0x10:0x14] != b"RAHC":
         raise ValueError(f"{path}: missing RAHC")
 
-    height_tiles = u16(raw, 0x18)
-    width_tiles = u16(raw, 0x1A)
+    width_tiles = u16(raw, 0x18)
+    height_tiles = u16(raw, 0x1A)
     pixel_format = u16(raw, 0x1C)
     data_size = struct.unpack_from("<I", raw, 0x28)[0]
     data_off = 0x30
