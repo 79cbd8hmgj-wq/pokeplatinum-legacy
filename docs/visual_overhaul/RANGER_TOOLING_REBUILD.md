@@ -1,57 +1,63 @@
-# Ranger Sprite Tooling Rebuild
+# Ranger Tooling Recovery
 
-## Rebuild status
+## Correction
 
-The lost Ranger batch tooling has now been reconstructed in-repo instead of being left as chat-only state.
+The Ranger renderer tooling was not actually lost.
 
-Added:
+While reconstructing it, an open feature branch was found:
 
-- `tools/visual_overhaul/ranger_package.py`
+- branch: `feature/ds-donor-asset-framework`
+- pull request: **#62 — Add DS donor asset compatibility framework**
+
+That branch already contained the original Ranger decoder/render pipeline and the DDA-1A through DDA-1F documentation.
+
+The temporary reconstruction has therefore been removed and the original implementation has been recovered onto `main`.
+
+## Recovered tools
+
+- `tools/visual_overhaul/nitro_narc.py`
+- `tools/visual_overhaul/inspect_ranger_assets.py`
+- `tools/visual_overhaul/render_ranger_nitro_preview.py`
+- `tools/visual_overhaul/render_ranger_ncer_preview.py`
+- `tools/visual_overhaul/render_ranger_pokemon_package.py`
 - `tools/visual_overhaul/render_ranger_pokemon_batch.py`
 - `tools/visual_overhaul/audit_ranger_render_compatibility.py`
 
-### What is restored now
+## Recovered documentation
 
-The batch layer can:
+- `DDA1_RANGER_DECODER_FOUNDATION.md`
+- `DDA1A_RANGER_PIKACHU_PACKAGE_MAP.md`
+- `DDA1B_RANGER_RAW_PREVIEW_RENDERER.md`
+- `DDA1C_RANGER_NCER_CELL_RENDERER.md`
+- `DDA1D_RANGER_PACKAGE_RENDERER.md`
+- `DDA1E_RANGER_BATCH_RENDERER.md`
+- `DDA1F_RANGER_STRUCTURAL_GENERALIZATION.md`
 
-- discover all `p###_##_LZ.bin` Ranger Pokémon packages;
-- preserve package variants;
-- decompress Nintendo DS LZ10;
-- extract NARC members;
-- recover flat FNTB filenames when present;
-- classify `.cac`, NCLR, NCBR, and NCER resources without hard-coded Pikachu suffixes;
-- continue after per-package failures;
-- emit deterministic JSON manifests;
-- optionally invoke a Ranger cell-rendering backend per package.
+## Verified pre-census state
 
-The compatibility auditor can:
+The original DDA-1F checkpoint had already validated the generalized pipeline on:
 
-- consume backend render candidates;
-- measure nontransparent bounding boxes;
-- record native canvas size and opaque-pixel counts;
-- calculate width/height/max-axis ratios against Platinum's 80x80 target;
-- classify candidates as `fits_small`, `fits`, `geometry_close`, or `oversize`;
-- emit JSON plus a compact Markdown report.
+- Charizard #006
+- Pikachu #025
+- Gengar #094
+- Spinarak #167
+- Garchomp #445
 
-## Important boundary
+The original single-package renderer already implements:
 
-The lower-level Ranger `.cac`/NCER cell-composition decoder is **not being guessed**.
+`LZ10 -> NARC -> named members -> shared NCLR + NCBR/RGCN + NCER -> rendered PNG cells`
 
-The recovered prior work said a generalized renderer existed, but the implementation was not committed. The rebuilt batch tool therefore uses an explicit backend contract rather than fabricating undocumented Ranger cell semantics.
+The batch renderer dynamically discovers graphics/cell pairs and preserves Ranger package variants.
 
-That leaves one concrete implementation task before the complete visual census can run:
+## Active next step
 
-> reconstruct the single-package Ranger cell renderer backend from the extracted `.cac` + NCBR + NCER + shared NCLR resources.
+A GitHub Actions census now runs the original renderer against the complete `pokeranger2` Pokémon donor pool and commits:
 
-## Next execution
+- `RANGER_FULL_RENDER_CENSUS.json`
+- `RANGER_FULL_RENDER_CENSUS.md`
+- `RANGER_RENDER_COMPATIBILITY.json`
+- `RANGER_RENDER_COMPATIBILITY.md`
 
-1. Run the structural census over all 296 real Ranger packages.
-2. Use the resulting extracted resource layouts to reconstruct/validate the cell backend against the five-species regression fixture:
-   - Charizard #006
-   - Pikachu #025
-   - Gengar #094
-   - Spinarak #167
-   - Garchomp #445
-3. Run the full render census.
-4. Run the 80x80 compatibility auditor.
-5. Commit both manifests/reports before defining any automatic resize/anchor policy.
+Rendered PNG cells are retained as an Actions artifact for visual QA rather than committed wholesale.
+
+The full-corpus results, not provisional assumptions, will drive the next resize/anchor and candidate-selection work.
