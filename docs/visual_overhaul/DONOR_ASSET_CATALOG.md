@@ -5,13 +5,14 @@ or modify Platinum graphics.
 
 ## Summary
 
-- Sources: **2**
-- Assets: **54838**
+- Sources: **3**
+- Assets: **62710**
 
 ### Assets by source
 
 | Source | Assets |
 |---|---:|
+| diamond | 7872 |
 | hgss | 5784 |
 | ranger2 | 49054 |
 
@@ -19,17 +20,17 @@ or modify Platinum graphics.
 
 | Type | Assets |
 |---|---:|
-| binary_visual_candidate | 302 |
+| binary_visual_candidate | 2582 |
 | compressed_visual_package | 3057 |
 | embedded_visual_resource | 10157 |
-| nitro_visual_resource | 183 |
+| nitro_visual_resource | 900 |
 | pokemon_sprite_frame | 35806 |
 | raw_visual_resource | 30 |
-| source_metadata | 499 |
-| source_png | 2804 |
-| visual_candidate_file | 20 |
+| source_metadata | 505 |
+| source_png | 4753 |
+| visual_candidate_file | 35 |
 | visual_container | 6 |
-| visual_metadata | 1974 |
+| visual_metadata | 4879 |
 
 ### Ranger source categories
 
@@ -51,13 +52,15 @@ or modify Platinum graphics.
 | opening | 29 |
 | player | 378 |
 | pokeOBJ | 1410 |
-| pokemon_battle | 4115 |
-| pokemon_icons | 553 |
+| pokemon_animation | 2 |
+| pokemon_battle | 11227 |
+| pokemon_icons | 1095 |
 | sendbin | 2 |
 | system | 4 |
 | target | 2262 |
 | targetOBJ | 505 |
 | title | 55 |
+| trainer_graphics | 216 |
 | uppict | 8 |
 
 ### Review status
@@ -65,4 +68,4 @@ or modify Platinum graphics.
 | Status | Assets |
 |---|---:|
 | reject | 673 |
-| unreviewed | 54165 |
+| unreviewed | 62037 |
