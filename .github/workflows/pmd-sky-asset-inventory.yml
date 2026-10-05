@@ -1,0 +1,95 @@
+name: PMD Sky donor asset inventory
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/visual_overhaul/inventory_pmd_sky_visual_assets.py"
+      - "tools/visual_overhaul/merge_pmd_sky_donor_catalog.py"
+      - ".github/workflows/pmd-sky-asset-inventory.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Platinum overhaul
+        uses: actions/checkout@v4
+        with:
+          path: platinum
+
+      - name: Checkout PMD Sky donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pmd-sky
+          path: pmd-sky
+
+      - name: Inventory PMD Sky visual assets
+        working-directory: platinum
+        run: |
+          python3 tools/visual_overhaul/inventory_pmd_sky_visual_assets.py \
+            --pmd-root ../pmd-sky \
+            --write-json docs/visual_overhaul/PMD_SKY_VISUAL_ASSET_INVENTORY.json \
+            --write-md docs/visual_overhaul/PMD_SKY_VISUAL_ASSET_INVENTORY.md
+
+      - name: Merge PMD Sky into unified donor catalog
+        working-directory: platinum
+        run: |
+          python3 tools/visual_overhaul/merge_pmd_sky_donor_catalog.py \
+            --catalog-json docs/visual_overhaul/DONOR_ASSET_CATALOG.json \
+            --catalog-md docs/visual_overhaul/DONOR_ASSET_CATALOG.md \
+            --pmd-sky-inventory docs/visual_overhaul/PMD_SKY_VISUAL_ASSET_INVENTORY.json
+
+      - name: Validate PMD Sky inventory and catalog
+        working-directory: platinum
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          inv = json.loads(Path("docs/visual_overhaul/PMD_SKY_VISUAL_ASSET_INVENTORY.json").read_text())
+          cat = json.loads(Path("docs/visual_overhaul/DONOR_ASSET_CATALOG.json").read_text())
+
+          assert inv["candidate_files"] > 0
+          assert sum(inv["category_counts"].values()) == inv["candidate_files"]
+          paths = [r["source_path"] for r in inv["records"]]
+          assert len(paths) == len(set(paths))
+          assert all(r["review_status"] == "unreviewed" for r in inv["records"])
+
+          ids = [a["asset_id"] for a in cat["assets"]]
+          assert len(ids) == len(set(ids))
+          sky_sources = [s for s in cat["sources"] if s["source_id"] == "pmd_sky"]
+          assert len(sky_sources) == 1
+          sky_assets = [a for a in cat["assets"] if a["source_id"] == "pmd_sky"]
+          assert len(sky_assets) == inv["candidate_files"]
+
+          existing = {s["source_id"] for s in cat["sources"]}
+          for expected in {"ranger2", "hgss", "diamond", "pmd_sky"}:
+              assert expected in existing, (expected, existing)
+
+          print("PMD Sky candidates:", inv["candidate_files"])
+          print("PMD Sky categories:", inv["category_counts"])
+          print("Missing roots:", inv["missing_roots"])
+          print("Catalog sources:", len(cat["sources"]))
+          print("Catalog assets:", len(cat["assets"]))
+          PY
+
+      - name: Commit PMD Sky inventory and donor catalog
+        working-directory: platinum
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            docs/visual_overhaul/PMD_SKY_VISUAL_ASSET_INVENTORY.json \
+            docs/visual_overhaul/PMD_SKY_VISUAL_ASSET_INVENTORY.md \
+            docs/visual_overhaul/DONOR_ASSET_CATALOG.json \
+            docs/visual_overhaul/DONOR_ASSET_CATALOG.md
+          if git diff --cached --quiet; then
+            echo "No report changes."
+            exit 0
+          fi
+          git commit -m "visual: catalog PMD Sky donor assets"
+          git pull --rebase origin main
+          git push
