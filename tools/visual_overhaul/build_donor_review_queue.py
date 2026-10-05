@@ -2,7 +2,8 @@
 """Build deterministic cross-source review queues from DONOR_ASSET_CATALOG.json.
 
 This tool does not modify catalog review statuses and does not choose replacement
-winners. It only groups existing donor records into practical review batches.
+winners. It groups existing donor records into practical, lane-specific batches
+while keeping related assets adjacent for review.
 """
 from __future__ import annotations
 
@@ -24,6 +25,14 @@ ENV_UI_TAGS = {
     "icon", "title", "scene",
 }
 
+LANE_BATCH_SIZES = {
+    "A_render_ready": 750,
+    "B_pokemon_facing": 300,
+    "C_effects_animation": 150,
+    "D_environment_ui": 300,
+    "E_decode_or_context_needed": 75,
+}
+
 
 def lane_for(asset: dict) -> str:
     tags = set(asset.get("target_tags") or [])
@@ -41,6 +50,21 @@ def lane_for(asset: dict) -> str:
     return "E_decode_or_context_needed"
 
 
+def logical_group(asset: dict, lane: str) -> tuple:
+    tags = tuple(sorted(asset.get("target_tags") or []))
+    species = asset.get("species_dex")
+    group = str(asset.get("group") or "")
+    asset_type = str(asset.get("asset_type") or "")
+
+    if lane in {"A_render_ready", "B_pokemon_facing"} and species is not None:
+        return ("species", species, group, asset_type)
+    if lane == "C_effects_animation":
+        return ("effect", group, tags, asset_type)
+    if lane == "D_environment_ui":
+        return ("env_ui", group, tags, asset_type)
+    return ("generic", group, asset_type, tags)
+
+
 def priority(asset: dict, lane: str) -> tuple:
     status_rank = {"valid_render": 0, "usable": 1, "alternate": 2, "unreviewed": 3, "decode_issue": 4, "reject": 5}
     source_rank = {"hgss": 0, "diamond": 1, "pmd_sky": 2, "ranger2": 3}
@@ -54,13 +78,50 @@ def priority(asset: dict, lane: str) -> tuple:
         "embedded_visual_resource": 6,
     }
     return (
+        logical_group(asset, lane),
         status_rank.get(asset.get("review_status"), 9),
         source_rank.get(asset.get("source_id"), 9),
         type_rank.get(asset.get("asset_type"), 9),
-        asset.get("species_dex") if asset.get("species_dex") is not None else 999999,
-        str(asset.get("group") or ""),
         str(asset.get("asset_id") or ""),
     )
+
+
+def chunk_rows(rows: list[dict], lane: str) -> list[list[dict]]:
+    """Create batches without splitting a logical group unless the group itself is oversized."""
+    limit = LANE_BATCH_SIZES[lane]
+    grouped: list[list[dict]] = []
+    current_group: list[dict] = []
+    current_key = None
+
+    for asset in rows:
+        key = logical_group(asset, lane)
+        if current_group and key != current_key:
+            grouped.append(current_group)
+            current_group = []
+        current_key = key
+        current_group.append(asset)
+    if current_group:
+        grouped.append(current_group)
+
+    batches: list[list[dict]] = []
+    current: list[dict] = []
+    for group in grouped:
+        if len(group) > limit:
+            if current:
+                batches.append(current)
+                current = []
+            for start in range(0, len(group), limit):
+                batches.append(group[start:start + limit])
+            continue
+
+        if current and len(current) + len(group) > limit:
+            batches.append(current)
+            current = []
+        current.extend(group)
+
+    if current:
+        batches.append(current)
+    return batches
 
 
 def main() -> int:
@@ -68,11 +129,7 @@ def main() -> int:
     p.add_argument("--catalog", required=True, type=Path)
     p.add_argument("--write-json", required=True, type=Path)
     p.add_argument("--write-md", required=True, type=Path)
-    p.add_argument("--batch-size", type=int, default=100)
     args = p.parse_args()
-
-    if args.batch_size < 1:
-        raise SystemExit("--batch-size must be >= 1")
 
     catalog = json.loads(args.catalog.read_text())
     assets = catalog.get("assets", [])
@@ -88,36 +145,37 @@ def main() -> int:
 
     for lane in sorted(lanes):
         rows = sorted(lanes[lane], key=lambda a: priority(a, lane))
-        for index, asset in enumerate(rows):
-            asset_id = asset["asset_id"]
-            if asset_id in seen:
-                raise RuntimeError(f"Duplicate catalog asset_id in review queue: {asset_id}")
-            seen.add(asset_id)
-            batch_no = index // args.batch_size + 1
-            review_id = f"{lane}:{batch_no:04d}:{index % args.batch_size:03d}"
-            record = {
-                "review_id": review_id,
-                "lane": lane,
-                "batch": batch_no,
-                "asset_id": asset_id,
-                "source_id": asset.get("source_id"),
-                "asset_type": asset.get("asset_type"),
-                "species_dex": asset.get("species_dex"),
-                "group": asset.get("group"),
-                "source_path": asset.get("source_path"),
-                "render_path": asset.get("render_path"),
-                "review_status": asset.get("review_status"),
-                "target_tags": asset.get("target_tags") or [],
-            }
-            records.append(record)
+        lane_batches = chunk_rows(rows, lane)
 
-        for start in range(0, len(rows), args.batch_size):
-            batch_rows = rows[start:start + args.batch_size]
-            batch_no = start // args.batch_size + 1
+        for batch_no, batch_rows in enumerate(lane_batches, 1):
+            for index, asset in enumerate(batch_rows):
+                asset_id = asset["asset_id"]
+                if asset_id in seen:
+                    raise RuntimeError(f"Duplicate catalog asset_id in review queue: {asset_id}")
+                seen.add(asset_id)
+                review_id = f"{lane}:{batch_no:04d}:{index:04d}"
+                records.append({
+                    "review_id": review_id,
+                    "lane": lane,
+                    "batch": batch_no,
+                    "logical_group": list(logical_group(asset, lane)),
+                    "asset_id": asset_id,
+                    "source_id": asset.get("source_id"),
+                    "asset_type": asset.get("asset_type"),
+                    "species_dex": asset.get("species_dex"),
+                    "group": asset.get("group"),
+                    "source_path": asset.get("source_path"),
+                    "render_path": asset.get("render_path"),
+                    "review_status": asset.get("review_status"),
+                    "target_tags": asset.get("target_tags") or [],
+                })
+
             batches.append({
                 "lane": lane,
                 "batch": batch_no,
+                "limit": LANE_BATCH_SIZES[lane],
                 "count": len(batch_rows),
+                "logical_groups": len({logical_group(a, lane) for a in batch_rows}),
                 "sources": dict(sorted(Counter(a.get("source_id") for a in batch_rows).items())),
                 "asset_types": dict(sorted(Counter(a.get("asset_type") for a in batch_rows).items())),
             })
@@ -128,9 +186,9 @@ def main() -> int:
     lane_counts = Counter(r["lane"] for r in records)
     source_counts = Counter(r["source_id"] for r in records)
     payload = {
-        "schema_version": 1,
+        "schema_version": 2,
         "source_catalog": str(args.catalog),
-        "batch_size": args.batch_size,
+        "lane_batch_sizes": LANE_BATCH_SIZES,
         "asset_count": len(records),
         "lane_counts": dict(sorted(lane_counts.items())),
         "source_counts": dict(sorted(source_counts.items())),
@@ -150,13 +208,13 @@ def main() -> int:
         "## Summary",
         "",
         f"- Catalog assets covered: **{len(records)}**",
-        f"- Review batch size: **{args.batch_size}**",
         f"- Review batches: **{len(batches)}**",
+        "- Related species/purpose/category records are kept together when practical.",
         "",
         "## Review lanes",
         "",
-        "| Lane | Assets | Purpose |",
-        "|---|---:|---|",
+        "| Lane | Assets | Target batch size | Purpose |",
+        "|---|---:|---:|---|",
     ]
     purposes = {
         "A_render_ready": "Already has a render path/source PNG; inspect first.",
@@ -166,7 +224,7 @@ def main() -> int:
         "E_decode_or_context_needed": "Opaque/container/context-heavy candidates requiring more decoding or source interpretation.",
     }
     for lane in sorted(lane_counts):
-        lines.append(f"| {lane} | {lane_counts[lane]} | {purposes[lane]} |")
+        lines.append(f"| {lane} | {lane_counts[lane]} | {LANE_BATCH_SIZES[lane]} | {purposes[lane]} |")
 
     lines += [
         "",
@@ -195,6 +253,7 @@ def main() -> int:
         "",
         "- Review lane assignment is organizational only.",
         "- Existing catalog review status is preserved.",
+        "- Logical groups are kept intact unless a single group exceeds its lane limit.",
         "- No donor asset is promoted to usable automatically.",
         "- Replacement/import decisions remain deferred until candidate review is complete.",
     ]
@@ -202,9 +261,9 @@ def main() -> int:
     args.write_md.parent.mkdir(parents=True, exist_ok=True)
     args.write_md.write_text("\n".join(lines) + "\n")
 
-    print(f"Queued {len(records)} assets into {len(batches)} batches.")
+    print(f"Queued {len(records)} assets into {len(batches)} adaptive batches.")
     for lane in sorted(lane_counts):
-        print(f"{lane}: {lane_counts[lane]}")
+        print(f"{lane}: {lane_counts[lane]} assets, target {LANE_BATCH_SIZES[lane]} per batch")
     return 0
 
 
