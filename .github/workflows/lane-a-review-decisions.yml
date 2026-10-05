@@ -1,0 +1,68 @@
+name: Lane A review decisions
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/visual_overhaul/build_lane_a_review_decisions.py"
+      - "docs/visual_overhaul/LANE_A_RENDER_INTEGRITY.json"
+      - ".github/workflows/lane-a-review-decisions.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build evidence-backed decisions
+        run: |
+          python3 tools/visual_overhaul/build_lane_a_review_decisions.py \
+            --integrity docs/visual_overhaul/LANE_A_RENDER_INTEGRITY.json \
+            --write-json docs/visual_overhaul/LANE_A_REVIEW_DECISIONS.json \
+            --write-md docs/visual_overhaul/LANE_A_REVIEW_DECISIONS.md
+
+      - name: Validate decision coverage
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          audit = json.loads(Path("docs/visual_overhaul/LANE_A_RENDER_INTEGRITY.json").read_text())
+          dec = json.loads(Path("docs/visual_overhaul/LANE_A_REVIEW_DECISIONS.json").read_text())
+
+          expected = (
+              audit["technical_state_counts"].get("blank", 0)
+              + audit["technical_state_counts"].get("decode_error", 0)
+          )
+          assert dec["decision_count"] == expected
+          assert dec["status_counts"].get("reject", 0) == audit["technical_state_counts"].get("blank", 0)
+          assert dec["status_counts"].get("decode_issue", 0) == audit["technical_state_counts"].get("decode_error", 0)
+
+          ids = [d["asset_id"] for d in dec["decisions"]]
+          assert len(ids) == len(set(ids))
+
+          allowed = {"reject", "decode_issue"}
+          assert {d["review_status"] for d in dec["decisions"]} <= allowed
+
+          print("Decisions:", dec["decision_count"])
+          print("Status counts:", dec["status_counts"])
+          PY
+
+      - name: Commit decisions
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            docs/visual_overhaul/LANE_A_REVIEW_DECISIONS.json \
+            docs/visual_overhaul/LANE_A_REVIEW_DECISIONS.md
+          if git diff --cached --quiet; then
+            echo "No Lane A decision changes."
+            exit 0
+          fi
+          git commit -m "visual: record Lane A evidence-backed decisions"
+          git pull --rebase origin main
+          git push
