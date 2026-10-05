@@ -15,6 +15,7 @@ on:
       - "tools/visual_overhaul/build_donor_asset_catalog.py"
       - "tools/visual_overhaul/inventory_ranger_visual_assets.py"
       - "tools/visual_overhaul/deep_inventory_ranger_visual_packages.py"
+      - "tools/visual_overhaul/classify_ranger_visual_bundles.py"
       - "docs/visual_overhaul/DONOR_ASSET_CATALOG.schema.json"
       - ".github/workflows/ranger-structural-census.yml"
 
@@ -75,6 +76,14 @@ jobs:
             --inventory-json docs/visual_overhaul/RANGER_VISUAL_ASSET_INVENTORY.json \
             --write-json docs/visual_overhaul/RANGER_DEEP_VISUAL_PACKAGE_INVENTORY.json \
             --write-md docs/visual_overhaul/RANGER_DEEP_VISUAL_PACKAGE_INVENTORY.md
+
+      - name: Classify Ranger visual bundles
+        working-directory: platinum
+        run: |
+          python3 tools/visual_overhaul/classify_ranger_visual_bundles.py \
+            --deep-inventory docs/visual_overhaul/RANGER_DEEP_VISUAL_PACKAGE_INVENTORY.json \
+            --write-json docs/visual_overhaul/RANGER_VISUAL_BUNDLE_CLASSIFICATION.json \
+            --write-md docs/visual_overhaul/RANGER_VISUAL_BUNDLE_CLASSIFICATION.md
 
       - name: Build donor asset catalog
         working-directory: platinum
@@ -155,6 +164,8 @@ jobs:
             docs/visual_overhaul/RANGER_VISUAL_ASSET_INVENTORY.md \
             docs/visual_overhaul/RANGER_DEEP_VISUAL_PACKAGE_INVENTORY.json \
             docs/visual_overhaul/RANGER_DEEP_VISUAL_PACKAGE_INVENTORY.md \
+            docs/visual_overhaul/RANGER_VISUAL_BUNDLE_CLASSIFICATION.json \
+            docs/visual_overhaul/RANGER_VISUAL_BUNDLE_CLASSIFICATION.md \
             docs/visual_overhaul/DONOR_ASSET_CATALOG.json \
             docs/visual_overhaul/DONOR_ASSET_CATALOG.md
           if git diff --cached --quiet; then
