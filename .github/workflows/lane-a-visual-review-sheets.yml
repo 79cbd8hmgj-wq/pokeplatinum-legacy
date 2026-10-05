@@ -1,0 +1,120 @@
+name: Lane A visual review sheets
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/visual_overhaul/generate_lane_a_review_sheets.py"
+      - "docs/visual_overhaul/LANE_A_VISUAL_REVIEW_SET.json"
+      - "docs/visual_overhaul/LANE_A_RENDER_INTEGRITY.json"
+      - ".github/workflows/lane-a-visual-review-sheets.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Platinum overhaul
+        uses: actions/checkout@v4
+        with:
+          path: platinum
+
+      - name: Checkout Ranger donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pokeranger2
+          path: ranger2
+
+      - name: Checkout HGSS donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pokeheartgold
+          path: hgss
+
+      - name: Checkout Diamond donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pokediamond
+          path: diamond
+
+      - name: Checkout PMD Sky donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pmd-sky
+          path: pmd-sky
+
+      - name: Install image tooling
+        run: python3 -m pip install --disable-pip-version-check pillow
+
+      - name: Re-render Ranger Pokemon corpus
+        working-directory: platinum
+        run: |
+          python3 tools/visual_overhaul/render_ranger_pokemon_batch.py \
+            --ranger-root ../ranger2 \
+            --output-dir /tmp/ranger_all \
+            --write-json /tmp/ranger_full_render_census.json
+
+      - name: Generate all Lane A contact sheets
+        working-directory: platinum
+        run: |
+          python3 tools/visual_overhaul/generate_lane_a_review_sheets.py \
+            --review-set docs/visual_overhaul/LANE_A_VISUAL_REVIEW_SET.json \
+            --integrity docs/visual_overhaul/LANE_A_RENDER_INTEGRITY.json \
+            --platinum-root . \
+            --ranger-render-root /tmp/ranger_all \
+            --ranger-root ../ranger2 \
+            --hgss-root ../hgss \
+            --diamond-root ../diamond \
+            --pmd-sky-root ../pmd-sky \
+            --output-dir docs/visual_overhaul/review/lane_a \
+            --write-index-json docs/visual_overhaul/LANE_A_REVIEW_SHEETS.json \
+            --write-index-md docs/visual_overhaul/LANE_A_REVIEW_SHEETS.md \
+            --per-sheet 80 \
+            --columns 8 \
+            --thumb-size 96
+
+      - name: Validate complete visual-sheet coverage
+        working-directory: platinum
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          review = json.loads(Path("docs/visual_overhaul/LANE_A_VISUAL_REVIEW_SET.json").read_text())
+          index = json.loads(Path("docs/visual_overhaul/LANE_A_REVIEW_SHEETS.json").read_text())
+
+          assert index["candidate_count"] == review["unique_visual_candidates"]
+          assert sum(sheet["count"] for sheet in index["sheets"]) == review["unique_visual_candidates"]
+
+          seen = []
+          for sheet in index["sheets"]:
+              p = Path(sheet["path"])
+              assert p.is_file(), p
+              assert sheet["count"] == len(sheet["entries"])
+              seen.extend(e["asset_id"] for e in sheet["entries"])
+
+          assert len(seen) == len(set(seen))
+          assert len(seen) == review["unique_visual_candidates"]
+          print("Candidates covered:", len(seen))
+          print("Sheets:", index["sheet_count"])
+          print("Kinds:", index["kind_counts"])
+          PY
+
+      - name: Commit visual review sheets
+        working-directory: platinum
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            docs/visual_overhaul/review/lane_a \
+            docs/visual_overhaul/LANE_A_REVIEW_SHEETS.json \
+            docs/visual_overhaul/LANE_A_REVIEW_SHEETS.md
+          if git diff --cached --quiet; then
+            echo "No Lane A sheet changes."
+            exit 0
+          fi
+          git commit -m "visual: generate Lane A review sheets"
+          git pull --rebase origin main
+          git push
