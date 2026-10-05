@@ -1,0 +1,64 @@
+name: HGSS donor asset inventory
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/visual_overhaul/inventory_hgss_visual_assets.py"
+      - "tools/visual_overhaul/build_donor_asset_catalog.py"
+      - ".github/workflows/hgss-asset-inventory.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Platinum overhaul
+        uses: actions/checkout@v4
+        with:
+          path: platinum
+
+      - name: Checkout HGSS donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pokeheartgold
+          path: pokeheartgold
+
+      - name: Inventory HGSS visual assets
+        working-directory: platinum
+        run: |
+          python3 tools/visual_overhaul/inventory_hgss_visual_assets.py \
+            --hgss-root ../pokeheartgold \
+            --write-json docs/visual_overhaul/HGSS_VISUAL_ASSET_INVENTORY.json \
+            --write-md docs/visual_overhaul/HGSS_VISUAL_ASSET_INVENTORY.md
+
+      - name: Rebuild unified donor catalog
+        working-directory: platinum
+        run: |
+          python3 tools/visual_overhaul/build_donor_asset_catalog.py \
+            --hgss-inventory docs/visual_overhaul/HGSS_VISUAL_ASSET_INVENTORY.json \
+            --ranger-inventory docs/visual_overhaul/RANGER_VISUAL_ASSET_INVENTORY.json \
+            --ranger-deep-inventory docs/visual_overhaul/RANGER_DEEP_VISUAL_PACKAGE_INVENTORY.json \
+            --ranger-compatibility docs/visual_overhaul/RANGER_RENDER_COMPATIBILITY.json \
+            --write-json docs/visual_overhaul/DONOR_ASSET_CATALOG.json \
+            --write-md docs/visual_overhaul/DONOR_ASSET_CATALOG.md
+
+      - name: Commit HGSS inventory and donor catalog
+        working-directory: platinum
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            docs/visual_overhaul/HGSS_VISUAL_ASSET_INVENTORY.json \
+            docs/visual_overhaul/HGSS_VISUAL_ASSET_INVENTORY.md \
+            docs/visual_overhaul/DONOR_ASSET_CATALOG.json \
+            docs/visual_overhaul/DONOR_ASSET_CATALOG.md
+          if git diff --cached --quiet; then
+            echo "No report changes."
+            exit 0
+          fi
+          git commit -m "visual: catalog HGSS donor assets"
+          git pull --rebase origin main
+          git push
