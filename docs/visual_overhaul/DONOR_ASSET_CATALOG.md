@@ -6,19 +6,20 @@ or modify Platinum graphics.
 ## Summary
 
 - Sources: **1**
-- Assets: **38897**
+- Assets: **49054**
 
 ### Assets by source
 
 | Source | Assets |
 |---|---:|
-| ranger2 | 38897 |
+| ranger2 | 49054 |
 
 ### Asset types
 
 | Type | Assets |
 |---|---:|
 | compressed_visual_package | 3057 |
+| embedded_visual_resource | 10157 |
 | pokemon_sprite_frame | 35806 |
 | raw_visual_resource | 30 |
 | visual_candidate_file | 4 |
@@ -27,31 +28,31 @@ or modify Platinum graphics.
 
 | Category | Assets/files |
 |---|---:|
-| _root | 8 |
-| battle | 68 |
-| effect | 200 |
+| _root | 32 |
+| battle | 281 |
+| effect | 1555 |
 | encyclo | 1 |
-| ending | 32 |
-| event | 76 |
-| eventicon | 1 |
-| field | 913 |
+| ending | 129 |
+| event | 304 |
+| eventicon | 5 |
+| field | 2612 |
 | font | 6 |
-| interface | 78 |
-| menu | 809 |
-| npc | 157 |
-| opening | 1 |
-| player | 6 |
-| pokeOBJ | 282 |
+| interface | 398 |
+| menu | 1863 |
+| npc | 1409 |
+| opening | 29 |
+| player | 378 |
+| pokeOBJ | 1410 |
 | sendbin | 2 |
-| system | 1 |
-| target | 335 |
-| targetOBJ | 101 |
-| title | 12 |
-| uppict | 2 |
+| system | 4 |
+| target | 2262 |
+| targetOBJ | 505 |
+| title | 55 |
+| uppict | 8 |
 
 ### Review status
 
 | Status | Assets |
 |---|---:|
 | reject | 673 |
-| unreviewed | 38224 |
+| unreviewed | 48381 |
