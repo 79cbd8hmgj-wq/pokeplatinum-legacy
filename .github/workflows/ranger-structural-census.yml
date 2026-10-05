@@ -12,6 +12,8 @@ on:
       - "tools/visual_overhaul/render_ranger_pokemon_batch.py"
       - "tools/visual_overhaul/audit_ranger_render_compatibility.py"
       - "tools/visual_overhaul/select_ranger_geometry_candidates.py"
+      - "tools/visual_overhaul/build_donor_asset_catalog.py"
+      - "docs/visual_overhaul/DONOR_ASSET_CATALOG.schema.json"
       - ".github/workflows/ranger-structural-census.yml"
 
 permissions:
@@ -54,6 +56,14 @@ jobs:
             --target-size 80 \
             --write-json docs/visual_overhaul/RANGER_RENDER_COMPATIBILITY.json \
             --write-md docs/visual_overhaul/RANGER_RENDER_COMPATIBILITY.md
+
+      - name: Build donor asset catalog
+        working-directory: platinum
+        run: |
+          python3 tools/visual_overhaul/build_donor_asset_catalog.py \
+            --ranger-compatibility docs/visual_overhaul/RANGER_RENDER_COMPATIBILITY.json \
+            --write-json docs/visual_overhaul/DONOR_ASSET_CATALOG.json \
+            --write-md docs/visual_overhaul/DONOR_ASSET_CATALOG.md
 
       - name: Build geometry candidate shortlist
         working-directory: platinum
@@ -119,7 +129,9 @@ jobs:
             docs/visual_overhaul/RANGER_RENDER_COMPATIBILITY.json \
             docs/visual_overhaul/RANGER_RENDER_COMPATIBILITY.md \
             docs/visual_overhaul/RANGER_GEOMETRY_CANDIDATES.json \
-            docs/visual_overhaul/RANGER_GEOMETRY_CANDIDATES.md
+            docs/visual_overhaul/RANGER_GEOMETRY_CANDIDATES.md \
+            docs/visual_overhaul/DONOR_ASSET_CATALOG.json \
+            docs/visual_overhaul/DONOR_ASSET_CATALOG.md
           if git diff --cached --quiet; then
             echo "No report changes."
             exit 0
