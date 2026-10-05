@@ -133,7 +133,34 @@ def inspect_narc(data: bytes) -> dict:
     }
 
 
-def inspect_file(path: Path, donor_root: Path) -> dict:
+def extract_narc_members(data: bytes, out_dir: Path) -> list[str]:
+    """Write NARC members using recovered names when available."""
+    parsed = inspect_narc(data)
+    header_size = struct.unpack_from("<H", data, 0x0C)[0]
+    pos = header_size
+    fat_size = u32(data, pos + 4)
+    count = u32(data, pos + 8)
+    entries = [
+        struct.unpack_from("<II", data, pos + 12 + i * 8)
+        for i in range(count)
+    ]
+    fnt = pos + fat_size
+    fnt_size = u32(data, fnt + 4)
+    fimg = fnt + fnt_size
+    base = fimg + 8
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    written = []
+    for meta, (start, end) in zip(parsed["members"], entries):
+        name = meta["name"] or f'{meta["index"]:04d}_{meta["kind"]}.bin'
+        safe = name.replace("/", "_").replace("\\", "_")
+        target = out_dir / safe
+        target.write_bytes(data[base+start:base+end])
+        written.append(str(target))
+    return written
+
+
+def inspect_file(path: Path, donor_root: Path, extract_root: Path | None = None) -> dict:
     src = path.read_bytes()
     record = {
         "path": str(path.relative_to(donor_root)),
@@ -176,6 +203,10 @@ def inspect_file(path: Path, donor_root: Path) -> dict:
     if payload[:4] == b"NARC":
         try:
             record["narc"] = inspect_narc(payload)
+            if extract_root is not None:
+                rel = path.relative_to(donor_root)
+                out_dir = extract_root / rel.parent / path.stem
+                record["extracted_members"] = extract_narc_members(payload, out_dir)
         except Exception as exc:
             record["narc_error"] = str(exc)
     return record
@@ -203,6 +234,11 @@ def main() -> int:
     )
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--write-json", type=Path)
+    parser.add_argument(
+        "--extract-dir",
+        type=Path,
+        help="Optional output directory for decompressed NARC members.",
+    )
     args = parser.parse_args()
 
     donor_root = args.ranger_root.expanduser().resolve()
@@ -222,7 +258,8 @@ def main() -> int:
             )
             continue
         for path in iter_candidates(root):
-            records.append(inspect_file(path, donor_root))
+            extract_root = args.extract_dir.expanduser().resolve() if args.extract_dir else None
+            records.append(inspect_file(path, donor_root, extract_root))
             inspected += 1
             if args.limit and inspected >= args.limit:
                 break
