@@ -1,0 +1,71 @@
+name: Ranger VRAM mapping diagnostic
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/ranger-vram-diagnostic.yml"
+      - "tools/visual_overhaul/render_ranger_ncer_preview.py"
+      - "tools/visual_overhaul/render_ranger_pokemon_package.py"
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Platinum overhaul
+        uses: actions/checkout@v4
+        with:
+          path: platinum
+
+      - name: Checkout Ranger donor corpus
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pokeranger2
+          path: ranger2
+
+      - name: Render shape-diverse fixtures at candidate VRAM strides
+        working-directory: platinum
+        run: |
+          set -e
+          for stride in 8 16 32 64; do
+            python3 tools/visual_overhaul/render_ranger_pokemon_batch.py \
+              --ranger-root ../ranger2 \
+              --species 6 \
+              --species 25 \
+              --species 94 \
+              --species 167 \
+              --species 445 \
+              --output-dir "/tmp/ranger_stride_${stride}" \
+              --vram-stride-tiles "${stride}" \
+              --write-json "/tmp/ranger_stride_${stride}.json"
+          done
+
+      - name: Extract Pikachu package and render raw Nitro sheets
+        working-directory: platinum
+        run: |
+          python3 tools/visual_overhaul/inspect_ranger_assets.py \
+            --ranger-root ../ranger2 \
+            --asset-root poke \
+            --limit 14 \
+            --extract-dir /tmp/ranger_extract
+          PKG_DIR=$(find /tmp/ranger_extract -type d -name 'p025_00_LZ' | head -1)
+          test -n "$PKG_DIR"
+          python3 tools/visual_overhaul/render_ranger_nitro_preview.py \
+            --package-dir "$PKG_DIR" \
+            --output-dir /tmp/ranger_raw_pikachu
+
+      - name: Upload diagnostic renders
+        uses: actions/upload-artifact@v4
+        with:
+          name: ranger-vram-diagnostic
+          path: |
+            /tmp/ranger_stride_8
+            /tmp/ranger_stride_16
+            /tmp/ranger_stride_32
+            /tmp/ranger_stride_64
+            /tmp/ranger_stride_8.json
+            /tmp/ranger_stride_16.json
+            /tmp/ranger_stride_32.json
+            /tmp/ranger_stride_64.json
+            /tmp/ranger_raw_pikachu
+          retention-days: 14
