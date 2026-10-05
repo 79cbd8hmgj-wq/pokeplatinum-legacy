@@ -16,6 +16,7 @@ from pathlib import Path
 
 
 RANGER_SOURCE_ID = "ranger2"
+HGSS_SOURCE_ID = "hgss"
 
 
 def ranger_source_record(notes: str) -> dict:
@@ -180,17 +181,70 @@ def ranger_deep_assets(path: Path) -> list[dict]:
         )
     return assets
 
+
+def hgss_inventory_assets(path: Path) -> list[dict]:
+    data = json.loads(path.read_text())
+    assets = []
+    for row in data.get("records", []):
+        rel = row.get("source_path", "")
+        category = row.get("category")
+        safe = rel.replace("/", ":")
+        assets.append(
+            {
+                "asset_id": f"{HGSS_SOURCE_ID}:source:{safe}",
+                "source_id": HGSS_SOURCE_ID,
+                "asset_type": row.get("asset_type", "visual_candidate_file"),
+                "species_dex": None,
+                "form": None,
+                "variant": None,
+                "group": category,
+                "frame": None,
+                "source_path": rel,
+                "render_path": rel if row.get("asset_type") == "source_png" else None,
+                "native_width": None,
+                "native_height": None,
+                "bbox_width": None,
+                "bbox_height": None,
+                "opaque_pixels": None,
+                "geometry_class": None,
+                "review_status": row.get("review_status", "unreviewed"),
+                "target_tags": row.get("target_tags", []),
+                "quality_notes": (
+                    "HGSS source-backed visual asset. Deferred to cross-source bulk review."
+                ),
+                "source_metadata": {
+                    "category": category,
+                    "size_bytes": row.get("size_bytes"),
+                    "suffix": row.get("suffix"),
+                },
+            }
+        )
+    return assets
+
 def main() -> int:
     p = argparse.ArgumentParser()
     p.add_argument("--ranger-compatibility", type=Path)
     p.add_argument("--ranger-inventory", type=Path)
     p.add_argument("--ranger-deep-inventory", type=Path)
+    p.add_argument("--hgss-inventory", type=Path)
     p.add_argument("--write-json", required=True, type=Path)
     p.add_argument("--write-md", type=Path)
     args = p.parse_args()
 
     sources = []
     assets = []
+
+    if args.hgss_inventory:
+        sources.append(
+            {
+                "source_id": HGSS_SOURCE_ID,
+                "source_game": "Pokemon HeartGold/SoulSilver",
+                "source_repo": "79cbd8hmgj-wq/pokeheartgold",
+                "source_commit": None,
+                "notes": "Direct-donor extraction/catalog inventory. Bulk visual review deferred.",
+            }
+        )
+        assets.extend(hgss_inventory_assets(args.hgss_inventory))
 
     if args.ranger_inventory:
         if not any(s.get("source_id") == RANGER_SOURCE_ID for s in sources):
