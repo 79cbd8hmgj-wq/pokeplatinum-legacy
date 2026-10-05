@@ -76,3 +76,30 @@ visual reconstruction gate passes.
 
 If no fixed stride is correct across the sample, the renderer must derive the OBJ
 mapping mode/stride from Nitro/Ranger metadata instead of using a global constant.
+
+
+## Root cause found: RAHC geometry field order
+
+The first diagnostic artifact exposed a concrete decoder bug rather than merely a
+bad global VRAM stride.
+
+The raw Pikachu preview for `p025_00_a01.NCBR` rendered as **128x32**, while the
+earlier package map had already established the resource geometry as **32x128**
+(4 x 16 tiles).
+
+That contradiction identified the bug:
+
+- the renderer treated offset `0x18` as height and `0x1A` as width;
+- the Ranger RGCN/NCBR resources in this pipeline require `0x18` as width and
+  `0x1A` as height.
+
+Both renderers have now been corrected:
+
+- `render_ranger_ncer_preview.py`
+- `render_ranger_nitro_preview.py`
+
+This affects source-sheet geometry used by NCER tile lookup, so it can materially
+change cell reconstruction rather than only rotating a diagnostic preview.
+
+A new stride diagnostic run is now validating the corrected geometry across the
+five-species fixture before the full 296-package census is regenerated.
