@@ -6,7 +6,7 @@ battle poses and does not infer Ranger animation-group semantics.
 ## Summary
 
 - Species represented: **282**
-- Candidate cells: **2875**
+- Candidate cells: **2853**
 - Maximum candidates per species: **12**
 - Maximum candidates retained per package/group before species ranking: **2**
 
@@ -14,9 +14,9 @@ battle poses and does not infer Ranger animation-group semantics.
 
 | Class | Candidates |
 |---|---:|
-| fits | 926 |
+| fits | 940 |
 | geometry_close | 14 |
-| fits_small | 1935 |
+| fits_small | 1899 |
 | oversize | 0 |
 
 ## Review rule
