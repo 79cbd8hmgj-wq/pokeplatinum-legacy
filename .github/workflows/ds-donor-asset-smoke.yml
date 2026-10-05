@@ -50,6 +50,7 @@ jobs:
             tools/visual_overhaul/inspect_ranger_assets.py \
             tools/visual_overhaul/render_ranger_nitro_preview.py \
             tools/visual_overhaul/render_ranger_ncer_preview.py \
+            tools/visual_overhaul/render_ranger_pokemon_package.py \
             tools/visual_overhaul/inspect_pmd_sky_assets.py
 
       - name: Inventory donor pools
@@ -78,24 +79,12 @@ jobs:
           test -n "$package"
           echo "path=$package" >> "$GITHUB_OUTPUT"
 
-      - name: Render Ranger raw Pikachu resources
+      - name: Render Ranger Pikachu package
         working-directory: pokeplatinum-legacy
         run: |
-          python3 tools/visual_overhaul/render_ranger_nitro_preview.py \
-            --package-dir "${{ steps.ranger_package.outputs.path }}" \
-            --output-dir /tmp/ranger_raw_preview
-
-      - name: Render Ranger Pikachu NCER cells
-        working-directory: pokeplatinum-legacy
-        run: |
-          package="${{ steps.ranger_package.outputs.path }}"
-          for stem in a01 a02 p01 s t w; do
-            python3 tools/visual_overhaul/render_ranger_ncer_preview.py \
-              --graphics "$package/p025_00_${stem}.NCBR" \
-              --palette "$package/p025_00.NCLR" \
-              --cells "$package/p025_00_${stem}.NCER" \
-              --output-dir "/tmp/ranger_cells/${stem}"
-          done
+          python3 tools/visual_overhaul/render_ranger_pokemon_package.py \
+            --package ../pokeranger2/res/prebuilt/data/poke/p025_00_LZ.bin \
+            --output-dir /tmp/ranger_cells
 
       - name: Inspect PMD Sky donor
         working-directory: pokeplatinum-legacy
@@ -114,6 +103,5 @@ jobs:
             /tmp/ds_donor_inventory.json
             /tmp/ds_donor_inventory.md
             /tmp/ranger_pilot.json
-            /tmp/ranger_raw_preview
             /tmp/ranger_cells
             /tmp/pmd_sky_pilot.json
