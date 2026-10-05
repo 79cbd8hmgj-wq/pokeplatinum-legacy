@@ -51,6 +51,8 @@ jobs:
             tools/visual_overhaul/render_ranger_nitro_preview.py \
             tools/visual_overhaul/render_ranger_ncer_preview.py \
             tools/visual_overhaul/render_ranger_pokemon_package.py \
+            tools/visual_overhaul/render_ranger_pokemon_batch.py \
+            tools/visual_overhaul/audit_ranger_render_compatibility.py \
             tools/visual_overhaul/inspect_pmd_sky_assets.py
 
       - name: Inventory donor pools
@@ -86,6 +88,27 @@ jobs:
             --package ../pokeranger2/res/prebuilt/data/poke/p025_00_LZ.bin \
             --output-dir /tmp/ranger_cells
 
+      - name: Render Ranger shape-diverse pilot
+        working-directory: pokeplatinum-legacy
+        run: |
+          python3 tools/visual_overhaul/render_ranger_pokemon_batch.py \
+            --ranger-root ../pokeranger2 \
+            --species 6 \
+            --species 25 \
+            --species 94 \
+            --species 167 \
+            --species 445 \
+            --output-dir /tmp/ranger_shape_pilot \
+            --write-json /tmp/ranger_shape_pilot.json
+
+      - name: Audit Ranger pilot geometry
+        working-directory: pokeplatinum-legacy
+        run: |
+          python3 tools/visual_overhaul/audit_ranger_render_compatibility.py \
+            --render-root /tmp/ranger_shape_pilot \
+            --write-json /tmp/ranger_shape_compatibility.json \
+            --write-md /tmp/ranger_shape_compatibility.md
+
       - name: Inspect PMD Sky donor
         working-directory: pokeplatinum-legacy
         run: |
@@ -104,4 +127,8 @@ jobs:
             /tmp/ds_donor_inventory.md
             /tmp/ranger_pilot.json
             /tmp/ranger_cells
+            /tmp/ranger_shape_pilot
+            /tmp/ranger_shape_pilot.json
+            /tmp/ranger_shape_compatibility.json
+            /tmp/ranger_shape_compatibility.md
             /tmp/pmd_sky_pilot.json
