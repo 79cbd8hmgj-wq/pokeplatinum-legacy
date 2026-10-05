@@ -1,0 +1,59 @@
+name: Prepare donor review batch A0001
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/visual_overhaul/prepare_donor_review_batch.py"
+      - ".github/workflows/prepare-donor-review-a0001.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Prepare Lane A batch 1
+        run: |
+          python3 tools/visual_overhaul/prepare_donor_review_batch.py \
+            --queue docs/visual_overhaul/DONOR_REVIEW_QUEUE.json \
+            --lane A_render_ready \
+            --batch 1 \
+            --write-json docs/visual_overhaul/review_batches/A_render_ready_0001.json \
+            --write-md docs/visual_overhaul/review_batches/A_render_ready_0001.md
+
+      - name: Validate batch
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("docs/visual_overhaul/review_batches/A_render_ready_0001.json")
+          d = json.loads(p.read_text())
+          assert d["lane"] == "A_render_ready"
+          assert d["batch"] == 1
+          assert d["count"] == 100
+          ids = [r["asset_id"] for r in d["records"]]
+          assert len(ids) == len(set(ids))
+          print("Sources:", d["source_counts"])
+          print("Types:", d["asset_type_counts"])
+          print("Statuses:", d["review_status_counts"])
+          PY
+
+      - name: Commit prepared batch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            docs/visual_overhaul/review_batches/A_render_ready_0001.json \
+            docs/visual_overhaul/review_batches/A_render_ready_0001.md
+          if git diff --cached --quiet; then
+            echo "No batch changes."
+            exit 0
+          fi
+          git commit -m "visual: prepare donor review batch A0001"
+          git pull --rebase origin main
+          git push
