@@ -1,150 +1,113 @@
 #!/usr/bin/env python3
-"""Audit rendered Ranger candidates against Platinum's 80x80 battle-sprite geometry."""
+"""Audit rendered Ranger Pokémon PNG cells against Platinum-friendly geometry.
+
+This is a curation aid, not an importer. It reads PNG dimensions directly and
+classifies obvious fit/outlier cases for an 80x80 Platinum battle-sprite cell.
+"""
 from __future__ import annotations
 
 import argparse
 import json
+import struct
+from collections import Counter
 from pathlib import Path
-from typing import Any
-
-from PIL import Image
-
-TARGET_W = 80
-TARGET_H = 80
 
 
-def parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser()
-    p.add_argument("--render-manifest", required=True, type=Path)
-    p.add_argument("--output", required=True, type=Path)
-    p.add_argument("--report", type=Path)
-    return p.parse_args()
+def png_size(path: Path) -> tuple[int, int]:
+    raw = path.read_bytes()
+    if raw[:8] != b"\x89PNG\r\n\x1a\n" or raw[12:16] != b"IHDR":
+        raise ValueError(f"{path}: not PNG")
+    return struct.unpack(">II", raw[16:24])
 
 
-def bbox_rgba(path: Path) -> tuple[tuple[int, int, int, int] | None, int, tuple[int, int]]:
-    with Image.open(path) as im:
-        rgba = im.convert("RGBA")
-        alpha = rgba.getchannel("A")
-        bbox = alpha.getbbox()
-        opaque = sum(1 for v in alpha.getdata() if v)
-        return bbox, opaque, rgba.size
-
-
-def classify(width: int, height: int) -> str:
-    # These are deliberately coarse census classes, not final resize policy.
-    # Exact transform thresholds must be data-derived from the full corpus.
-    if width <= 56 and height <= 56:
-        return "fits_small"
-    if width <= TARGET_W and height <= TARGET_H:
+def classify(width: int, height: int, target: int) -> str:
+    if width <= target and height <= target:
+        if width <= target // 2 and height <= target // 2:
+            return "fits_small"
         return "fits"
-    if width <= 96 and height <= 96:
+    if width <= target + 16 and height <= target + 16:
         return "geometry_close"
     return "oversize"
 
 
-def main() -> None:
-    args = parse_args()
-    source = json.loads(args.render_manifest.read_text())
-    out_records: list[dict[str, Any]] = []
-    counts: dict[str, int] = {}
-    missing = 0
+def main() -> int:
+    p = argparse.ArgumentParser()
+    p.add_argument("--render-root", required=True, type=Path)
+    p.add_argument("--target-size", type=int, default=80)
+    p.add_argument("--write-json", type=Path)
+    p.add_argument("--write-md", type=Path)
+    args = p.parse_args()
 
-    base = args.render_manifest.resolve().parent
-    for pkg in source.get("packages", []):
-        for candidate in pkg.get("renders", []):
-            raw_path = candidate.get("render_path")
-            row: dict[str, Any] = {
-                "national_dex": pkg.get("national_dex"),
-                "package_variant": pkg.get("package_variant"),
-                **candidate,
+    root = args.render_root.expanduser().resolve()
+    rows = []
+    counts = Counter()
+
+    for png in sorted(root.rglob("cell_*.png")):
+        width, height = png_size(png)
+        status = classify(width, height, args.target_size)
+        counts[status] += 1
+        parts = png.relative_to(root).parts
+        species = int(parts[0]) if len(parts) > 0 and parts[0].isdigit() else None
+        variant = int(parts[1]) if len(parts) > 1 and parts[1].isdigit() else None
+        group = parts[2] if len(parts) > 2 else None
+        rows.append(
+            {
+                "species": species,
+                "variant": variant,
+                "group": group,
+                "file": str(png.relative_to(root)),
+                "width": width,
+                "height": height,
+                "status": status,
             }
-            if not raw_path:
-                row["status"] = "failed"
-                row["warnings"] = ["render_path missing"]
-                missing += 1
-                out_records.append(row)
-                continue
+        )
 
-            path = Path(raw_path)
-            if not path.is_absolute():
-                path = (base / path).resolve()
-            if not path.exists():
-                row["status"] = "failed"
-                row["warnings"] = [f"render_path not found: {path}"]
-                missing += 1
-                out_records.append(row)
-                continue
-
-            bbox, opaque, canvas = bbox_rgba(path)
-            row["native_canvas_width"] = canvas[0]
-            row["native_canvas_height"] = canvas[1]
-            row["opaque_pixel_count"] = opaque
-            if bbox is None:
-                row.update({
-                    "bbox_x": None,
-                    "bbox_y": None,
-                    "bbox_width": 0,
-                    "bbox_height": 0,
-                    "width_ratio": 0.0,
-                    "height_ratio": 0.0,
-                    "max_axis_ratio": 0.0,
-                    "compatibility_class": "fits_small",
-                    "status": "blank",
-                })
-                row.setdefault("warnings", []).append("render is fully transparent")
-            else:
-                l, t, r, b = bbox
-                w, h = r - l, b - t
-                wr = w / TARGET_W
-                hr = h / TARGET_H
-                row.update({
-                    "bbox_x": l,
-                    "bbox_y": t,
-                    "bbox_width": w,
-                    "bbox_height": h,
-                    "width_ratio": round(wr, 6),
-                    "height_ratio": round(hr, 6),
-                    "max_axis_ratio": round(max(wr, hr), 6),
-                    "compatibility_class": classify(w, h),
-                    "status": "ok",
-                })
-                counts[row["compatibility_class"]] = counts.get(row["compatibility_class"], 0) + 1
-            out_records.append(row)
-
-    payload = {
+    report = {
         "schema_version": 1,
-        "target": {"width": TARGET_W, "height": TARGET_H},
-        "policy": "Compatibility classes are census labels only; final scaling/anchoring thresholds remain data-derived.",
-        "summary": {
-            "candidates": len(out_records),
-            "missing_or_invalid": missing,
-            "classes": dict(sorted(counts.items())),
-        },
-        "candidates": out_records,
+        "target_cell": [args.target_size, args.target_size],
+        "cells": len(rows),
+        "status_counts": dict(sorted(counts.items())),
+        "rows": rows,
     }
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
 
-    if args.report:
+    print(f"Audited {len(rows)} Ranger cells")
+    print("Statuses:", report["status_counts"])
+
+    if args.write_json:
+        args.write_json.parent.mkdir(parents=True, exist_ok=True)
+        args.write_json.write_text(json.dumps(report, indent=2) + "\n")
+
+    if args.write_md:
         lines = [
-            "# Ranger -> Platinum Render Compatibility Census",
+            "# Ranger Pokémon Render Compatibility Audit",
             "",
-            "Target battle-sprite cell: **80x80**.",
+            f"Target comparison cell: **{args.target_size}x{args.target_size}**",
             "",
-            "These classes are triage labels, not final automatic conversion thresholds.",
-            "",
-            "## Summary",
-            "",
-            f"- Candidates: **{len(out_records)}**",
-            f"- Missing/invalid renders: **{missing}**",
+            "| Status | Cells |",
+            "|---|---:|",
         ]
-        for key in ("fits_small", "fits", "geometry_close", "oversize"):
-            lines.append(f"- {key}: **{counts.get(key, 0)}**")
-        args.report.parent.mkdir(parents=True, exist_ok=True)
-        args.report.write_text("\n".join(lines) + "\n")
+        for key, value in sorted(counts.items()):
+            lines.append(f"| {key} | {value} |")
+        lines.extend(
+            [
+                "",
+                "## Cell inventory",
+                "",
+                "| Species | Variant | Group | Cell | Size | Status |",
+                "|---:|---:|---|---|---:|---|",
+            ]
+        )
+        for row in rows:
+            lines.append(
+                f"| {row['species']} | {row['variant']} | {row['group']} | "
+                f"`{row['file']}` | {row['width']}x{row['height']} | "
+                f"{row['status']} |"
+            )
+        args.write_md.parent.mkdir(parents=True, exist_ok=True)
+        args.write_md.write_text("\n".join(lines) + "\n")
 
-    print(f"Audited {len(out_records)} Ranger render candidates; {missing} invalid.")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
