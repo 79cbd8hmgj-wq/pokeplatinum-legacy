@@ -1,0 +1,105 @@
+name: Lane A render integrity
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/visual_overhaul/audit_lane_a_render_integrity.py"
+      - ".github/workflows/lane-a-render-integrity.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Platinum overhaul
+        uses: actions/checkout@v4
+        with:
+          path: platinum
+
+      - name: Checkout Ranger donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pokeranger2
+          path: ranger2
+
+      - name: Checkout HGSS donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pokeheartgold
+          path: hgss
+
+      - name: Checkout Diamond donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pokediamond
+          path: diamond
+
+      - name: Checkout PMD Sky donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pmd-sky
+          path: pmd-sky
+
+      - name: Install image tooling
+        run: python3 -m pip install --disable-pip-version-check pillow
+
+      - name: Re-render Ranger Pokemon corpus
+        working-directory: platinum
+        run: |
+          python3 tools/visual_overhaul/render_ranger_pokemon_batch.py \
+            --ranger-root ../ranger2 \
+            --output-dir /tmp/ranger_all \
+            --write-json /tmp/ranger_full_render_census.json
+
+      - name: Audit all Lane A images
+        working-directory: platinum
+        run: |
+          python3 tools/visual_overhaul/audit_lane_a_render_integrity.py \
+            --queue docs/visual_overhaul/DONOR_REVIEW_QUEUE.json \
+            --platinum-root . \
+            --ranger-render-root /tmp/ranger_all \
+            --ranger-root ../ranger2 \
+            --hgss-root ../hgss \
+            --diamond-root ../diamond \
+            --pmd-sky-root ../pmd-sky \
+            --write-json docs/visual_overhaul/LANE_A_RENDER_INTEGRITY.json \
+            --write-md docs/visual_overhaul/LANE_A_RENDER_INTEGRITY.md
+
+      - name: Validate complete Lane A coverage
+        working-directory: platinum
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          queue = json.loads(Path("docs/visual_overhaul/DONOR_REVIEW_QUEUE.json").read_text())
+          audit = json.loads(Path("docs/visual_overhaul/LANE_A_RENDER_INTEGRITY.json").read_text())
+
+          expected = queue["lane_counts"]["A_render_ready"]
+          assert audit["asset_count"] == expected
+          assert sum(audit["technical_state_counts"].values()) == expected
+          assert audit["technical_state_counts"].get("missing", 0) == 0
+          assert audit["technical_state_counts"].get("decode_error", 0) == 0
+          print("Lane A audited:", expected)
+          print("States:", audit["technical_state_counts"])
+          print("Duplicate groups:", audit["exact_visual_duplicate_groups"])
+          PY
+
+      - name: Commit Lane A technical evidence
+        working-directory: platinum
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            docs/visual_overhaul/LANE_A_RENDER_INTEGRITY.json \
+            docs/visual_overhaul/LANE_A_RENDER_INTEGRITY.md
+          if git diff --cached --quiet; then
+            echo "No Lane A audit changes."
+            exit 0
+          fi
+          git commit -m "visual: audit full Lane A render integrity"
+          git pull --rebase origin main
+          git push
