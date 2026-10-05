@@ -3,8 +3,8 @@
 Persistent contact sheets for every unique Lane A visual candidate.
 These sheets are review material only and do not change donor review status.
 
-- Unique visual candidates covered: **23115**
-- Contact sheets: **411**
+- Unique visual candidates covered: **21496**
+- Contact sheets: **385**
 - Maximum candidates per sheet: **80**
 
 ## Sheet groups
@@ -12,7 +12,7 @@ These sheets are review material only and do not change donor review status.
 | Kind | Sheets |
 |---|---:|
 | source_group | 42 |
-| species | 369 |
+| species | 343 |
 
 ## Review workflow
 

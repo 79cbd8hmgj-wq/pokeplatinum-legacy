@@ -57,19 +57,49 @@ def read_palette(path: Path) -> list[tuple[int, int, int]]:
     return [bgr555_to_rgb(u16(raw, p)) for p in range(0x28, 0x28 + size, 2)]
 
 
-def read_chars(path: Path) -> tuple[int, int, list[list[int]]]:
+def read_chars(
+    path: Path,
+    honor_scanned: bool = True,
+    cells: list[list[tuple[int, int, int]]] | None = None,
+) -> tuple[int, int, list[list[int]]]:
+    """Return (width_tiles, height_tiles, tiles) from a standard RGCN.
+
+    RAHC scan flag (+0x24): 0 = tile-ordered data (Ranger NCGR, a 32-tile-wide
+    OBJ VRAM sheet); 1 = scanline raster data (every Ranger NCBR).  The NCBR
+    header's tile width/height only describe the tile *count*; the real raster
+    row width is the VRAM sheet width, which is not stored in the file and is
+    inferred from the paired NCER via infer_raster_width_tiles().  Scanned data
+    is re-cut into 8x8 tiles so both forms yield the same tile list.
+    """
     raw = path.read_bytes()
     if raw[:4] != b"RGCN" or raw[0x10:0x14] != b"RAHC":
         raise ValueError(f"{path}: not a standard RGCN")
     width_tiles = u16(raw, 0x18)
     height_tiles = u16(raw, 0x1A)
     fmt = u16(raw, 0x1C)
+    scanned = u32(raw, 0x24) == 1
     size = u32(raw, 0x28)
     body = raw[0x30:0x30 + size]
     if fmt != 3:
         raise ValueError(f"{path}: expected 4bpp format 3, got {fmt}")
     if len(body) != width_tiles * height_tiles * 32:
         raise ValueError(f"{path}: character geometry/data mismatch")
+
+    total = width_tiles * height_tiles
+    if scanned and honor_scanned:
+        row_tiles = infer_raster_width_tiles(cells, total)
+        col_tiles = total // row_tiles
+        stride = row_tiles * 4  # bytes per pixel row (4bpp)
+        tiles = []
+        for ty in range(col_tiles):
+            for tx in range(row_tiles):
+                px = []
+                for y in range(8):
+                    start = (ty * 8 + y) * stride + tx * 4
+                    for byte in body[start:start + 4]:
+                        px.extend((byte & 0x0F, byte >> 4))
+                tiles.append(px)
+        return row_tiles, col_tiles, tiles
 
     tiles = []
     for pos in range(0, len(body), 32):
@@ -78,6 +108,36 @@ def read_chars(path: Path) -> tuple[int, int, list[list[int]]]:
             px.extend((byte & 0x0F, byte >> 4))
         tiles.append(px)
     return width_tiles, height_tiles, tiles
+
+
+def infer_raster_width_tiles(
+    cells: list[list[tuple[int, int, int]]] | None, total_tiles: int
+) -> int:
+    """Raster row width (tiles) of scanline character data.
+
+    The width is not stored in the file.  The data is the 32-tile-wide OBJ VRAM
+    sheet cropped to the rows the cell bank uses, possibly also cropped in
+    columns for tiny sheets.  Choose the widest power-of-two width (<= 32,
+    dividing the tile count) that still holds every column and every tile row
+    the cell bank addresses under 2D OBJ mapping, i.e. the tightest row crop.
+    Verified pixel-exact against paired NCGR sheets (incl. the 2-wide p490_01
+    case) and visually on groups whose cells only touch a few columns.
+    """
+    used_cols = 1
+    used_rows = 1
+    for oams in cells or []:
+        for attr0, attr1, attr2 in oams:
+            shape = (attr0 >> 14) & 0x3
+            if shape not in SHAPE_SIZE:
+                continue
+            w, h = SHAPE_SIZE[shape][(attr1 >> 14) & 0x3]
+            tile = attr2 & 0x3FF
+            used_cols = max(used_cols, tile % 32 + w // 8)
+            used_rows = max(used_rows, tile // 32 + h // 8)
+    for width in (32, 16, 8, 4, 2, 1):
+        if total_tiles % width == 0 and width >= used_cols and total_tiles // width >= used_rows:
+            return width
+    return 32
 
 
 def read_cells(path: Path) -> list[list[tuple[int, int, int]]]:
@@ -112,6 +172,8 @@ def tile_pixel(
     vram_stride_tiles: int,
 ) -> int:
     row, col = divmod(logical_tile, vram_stride_tiles)
+    if col >= sheet_width_tiles:
+        return 0
     source = row * sheet_width_tiles + col
     if source < 0 or source >= len(tiles):
         return 0
@@ -138,6 +200,7 @@ def render_cell(
                 "width": width,
                 "height": height,
                 "tile": attr2 & 0x3FF,
+                "palette_row": attr2 >> 12,
                 "hflip": bool(attr1 & 0x1000),
                 "vflip": bool(attr1 & 0x2000),
             }
@@ -168,6 +231,8 @@ def render_cell(
                 )
                 if color == 0:
                     continue
+                # 4bpp OBJ: OAM palette number selects a 16-colour NCLR row.
+                color += obj["palette_row"] * 16
                 dx = obj["x"] - min_x + px
                 dy = obj["y"] - min_y + py
                 if 0 <= dx < width and 0 <= dy < height:
@@ -221,8 +286,8 @@ def main() -> int:
     args = parser.parse_args()
 
     palette = read_palette(args.palette)
-    sheet_width, _sheet_height, tiles = read_chars(args.graphics)
     cells = read_cells(args.cells)
+    sheet_width, _sheet_height, tiles = read_chars(args.graphics, cells=cells)
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
     for i, oams in enumerate(cells):

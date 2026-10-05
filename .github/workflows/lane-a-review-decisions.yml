@@ -22,6 +22,7 @@ jobs:
         run: |
           python3 tools/visual_overhaul/build_lane_a_review_decisions.py \
             --integrity docs/visual_overhaul/LANE_A_RENDER_INTEGRITY.json \
+            --ranger-structural docs/visual_overhaul/RANGER_RENDER_STRUCTURAL_VALIDATION.json \
             --write-json docs/visual_overhaul/LANE_A_REVIEW_DECISIONS.json \
             --write-md docs/visual_overhaul/LANE_A_REVIEW_DECISIONS.md
 
@@ -39,8 +40,13 @@ jobs:
               + audit["technical_state_counts"].get("decode_error", 0)
           )
           assert dec["decision_count"] == expected
-          assert dec["status_counts"].get("reject", 0) == audit["technical_state_counts"].get("blank", 0)
-          assert dec["status_counts"].get("decode_issue", 0) == audit["technical_state_counts"].get("decode_error", 0)
+          reasons = dec["reason_counts"]
+          assert dec["status_counts"].get("reject", 0) == reasons.get("blank_render", 0)
+          assert (
+              reasons.get("blank_render", 0) + reasons.get("ranger_reconstruction_issue", 0)
+              == audit["technical_state_counts"].get("blank", 0)
+          )
+          assert reasons.get("image_decode_error", 0) == audit["technical_state_counts"].get("decode_error", 0)
 
           ids = [d["asset_id"] for d in dec["decisions"]]
           assert len(ids) == len(set(ids))
