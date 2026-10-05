@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Build the source-agnostic visual donor asset catalog.
 
-Current importer: Pokémon Ranger: Shadows of Almia compatibility census.
+Current importers:
+- Ranger Pokémon NCER frame census
+- Ranger source-wide visual file/package inventory
+
 Additional donor sources should be added as separate importer functions rather
 than altering the normalized asset record contract.
 """
@@ -15,7 +18,17 @@ from pathlib import Path
 RANGER_SOURCE_ID = "ranger2"
 
 
-def ranger_assets(path: Path) -> list[dict]:
+def ranger_source_record(notes: str) -> dict:
+    return {
+        "source_id": RANGER_SOURCE_ID,
+        "source_game": "Pokémon Ranger: Shadows of Almia",
+        "source_repo": "79cbd8hmgj-wq/pokeranger2",
+        "source_commit": None,
+        "notes": notes,
+    }
+
+
+def ranger_frame_assets(path: Path) -> list[dict]:
     data = json.loads(path.read_text())
     assets = []
     for row in data.get("rows", []):
@@ -23,7 +36,6 @@ def ranger_assets(path: Path) -> list[dict]:
         if species in (None, 0):
             continue
 
-        # Geometry alone never proves visual usability.
         status = "unreviewed"
         if row.get("status") == "blank":
             status = "reject"
@@ -75,9 +87,52 @@ def ranger_assets(path: Path) -> list[dict]:
     return assets
 
 
+def ranger_inventory_assets(path: Path) -> list[dict]:
+    data = json.loads(path.read_text())
+    assets = []
+    for row in data.get("records", []):
+        rel = row.get("source_path", "")
+        category = row.get("category")
+        safe = rel.replace("/", ":")
+        assets.append(
+            {
+                "asset_id": f"{RANGER_SOURCE_ID}:source:{safe}",
+                "source_id": RANGER_SOURCE_ID,
+                "asset_type": row.get("asset_type", "visual_candidate_file"),
+                "species_dex": None,
+                "form": None,
+                "variant": None,
+                "group": category,
+                "frame": None,
+                "source_path": rel,
+                "render_path": None,
+                "native_width": None,
+                "native_height": None,
+                "bbox_width": None,
+                "bbox_height": None,
+                "opaque_pixels": None,
+                "geometry_class": None,
+                "review_status": row.get("review_status", "unreviewed"),
+                "target_tags": row.get("target_tags", []),
+                "quality_notes": (
+                    "Source-level visual candidate. Internal resources may still "
+                    "require extraction, decoding, or visual validation."
+                ),
+                "source_metadata": {
+                    "category": category,
+                    "size_bytes": row.get("size_bytes"),
+                    "suffix": row.get("suffix"),
+                    "signature": row.get("signature"),
+                },
+            }
+        )
+    return assets
+
+
 def main() -> int:
     p = argparse.ArgumentParser()
     p.add_argument("--ranger-compatibility", type=Path)
+    p.add_argument("--ranger-inventory", type=Path)
     p.add_argument("--write-json", required=True, type=Path)
     p.add_argument("--write-md", type=Path)
     args = p.parse_args()
@@ -85,28 +140,32 @@ def main() -> int:
     sources = []
     assets = []
 
-    if args.ranger_compatibility:
+    if args.ranger_inventory:
         sources.append(
-            {
-                "source_id": RANGER_SOURCE_ID,
-                "source_game": "Pokémon Ranger: Shadows of Almia",
-                "source_repo": "79cbd8hmgj-wq/pokeranger2",
-                "source_commit": None,
-                "notes": (
-                    "Ranger frame catalog seeded from the NCER render compatibility "
-                    "census. Entries remain unreviewed until visual decoder validation."
-                ),
-            }
+            ranger_source_record(
+                "Source-wide Ranger visual inventory plus Pokémon frame census where available."
+            )
         )
-        assets.extend(ranger_assets(args.ranger_compatibility))
+        assets.extend(ranger_inventory_assets(args.ranger_inventory))
+
+    if args.ranger_compatibility:
+        if not any(s.get("source_id") == RANGER_SOURCE_ID for s in sources):
+            sources.append(
+                ranger_source_record(
+                    "Ranger frame catalog seeded from the NCER render compatibility census."
+                )
+            )
+        assets.extend(ranger_frame_assets(args.ranger_compatibility))
 
     assets.sort(
         key=lambda a: (
             a["source_id"],
             a["species_dex"] if a["species_dex"] is not None else 999999,
+            str(a["asset_type"]),
             str(a["variant"]),
             str(a["group"]),
             str(a["frame"]),
+            str(a["source_path"]),
         )
     )
 
@@ -121,9 +180,15 @@ def main() -> int:
     if args.write_md:
         by_status = {}
         by_source = {}
+        by_type = {}
+        by_group = {}
         for asset in assets:
             by_status[asset["review_status"]] = by_status.get(asset["review_status"], 0) + 1
             by_source[asset["source_id"]] = by_source.get(asset["source_id"], 0) + 1
+            by_type[asset["asset_type"]] = by_type.get(asset["asset_type"], 0) + 1
+            if asset.get("species_dex") is None:
+                group = asset.get("group") or "unknown"
+                by_group[group] = by_group.get(group, 0) + 1
 
         lines = [
             "# Donor Asset Catalog",
@@ -143,6 +208,26 @@ def main() -> int:
         ]
         for source_id, count in sorted(by_source.items()):
             lines.append(f"| {source_id} | {count} |")
+
+        lines += [
+            "",
+            "### Asset types",
+            "",
+            "| Type | Assets |",
+            "|---|---:|",
+        ]
+        for asset_type, count in sorted(by_type.items()):
+            lines.append(f"| {asset_type} | {count} |")
+
+        lines += [
+            "",
+            "### Ranger source categories",
+            "",
+            "| Category | Assets/files |",
+            "|---|---:|",
+        ]
+        for group, count in sorted(by_group.items()):
+            lines.append(f"| {group} | {count} |")
 
         lines += [
             "",
