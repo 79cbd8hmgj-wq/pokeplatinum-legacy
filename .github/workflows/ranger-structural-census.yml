@@ -1,0 +1,98 @@
+name: Ranger structural census
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/visual_overhaul/ranger_package.py"
+      - "tools/visual_overhaul/render_ranger_pokemon_batch.py"
+      - ".github/workflows/ranger-structural-census.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Platinum overhaul
+        uses: actions/checkout@v4
+        with:
+          path: platinum
+
+      - name: Checkout Ranger donor corpus
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pokeranger2
+          path: ranger2
+
+      - name: Run structural census
+        working-directory: platinum
+        run: |
+          python3 tools/visual_overhaul/render_ranger_pokemon_batch.py \
+            --poke-root ../ranger2/res/prebuilt/data/poke \
+            --output-root .work/ranger_structural \
+            --manifest docs/visual_overhaul/RANGER_STRUCTURAL_CENSUS.json
+
+      - name: Build Markdown summary
+        working-directory: platinum
+        run: |
+          python3 - <<'PY'
+          import json
+          from collections import Counter
+          from pathlib import Path
+
+          src = Path("docs/visual_overhaul/RANGER_STRUCTURAL_CENSUS.json")
+          out = Path("docs/visual_overhaul/RANGER_STRUCTURAL_CENSUS.md")
+          data = json.loads(src.read_text())
+          packages = data["packages"]
+          statuses = Counter(p["status"] for p in packages)
+          types = Counter()
+          named = 0
+          for p in packages:
+              for k, v in p.get("resource_type_counts", {}).items():
+                  types[k] += v
+              if any(not r["name"].startswith("member_") for r in p.get("resources", [])):
+                  named += 1
+
+          lines = [
+              "# Ranger Structural Census",
+              "",
+              "Generated automatically from the pokeranger2 donor corpus.",
+              "",
+              "## Summary",
+              "",
+              f"- Packages discovered: **{len(packages)}**",
+              f"- Structural OK: **{statuses.get('structural_ok', 0)}**",
+              f"- Failed: **{statuses.get('failed', 0)}**",
+              f"- Packages with recovered member filenames: **{named}**",
+              "",
+              "## Resource totals",
+              "",
+          ]
+          for k in sorted(types):
+              lines.append(f"- {k}: **{types[k]}**")
+          failures = [p for p in packages if p["status"] == "failed"]
+          lines += ["", "## Failures", ""]
+          if failures:
+              lines += [
+                  f"- #{p['national_dex']:03d} variant {p['package_variant']:02d}: {p.get('error', 'unknown error')}"
+                  for p in failures
+              ]
+          else:
+              lines.append("- None")
+          out.write_text("\n".join(lines) + "\n")
+          PY
+
+      - name: Commit census
+        working-directory: platinum
+        run: |
+          if git diff --quiet -- docs/visual_overhaul/RANGER_STRUCTURAL_CENSUS.json docs/visual_overhaul/RANGER_STRUCTURAL_CENSUS.md; then
+            echo "No census changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/visual_overhaul/RANGER_STRUCTURAL_CENSUS.json docs/visual_overhaul/RANGER_STRUCTURAL_CENSUS.md
+          git commit -m "visual: record Ranger structural census"
+          git push
