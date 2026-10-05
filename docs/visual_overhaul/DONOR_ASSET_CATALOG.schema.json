@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Pokémon Platinum Visual Overhaul Donor Asset Catalog",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "sources",
+    "assets"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_id",
+          "source_game",
+          "source_repo"
+        ],
+        "properties": {
+          "source_id": {
+            "type": "string"
+          },
+          "source_game": {
+            "type": "string"
+          },
+          "source_repo": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "notes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "asset_id",
+          "source_id",
+          "asset_type",
+          "review_status",
+          "source_path",
+          "target_tags"
+        ],
+        "properties": {
+          "asset_id": {
+            "type": "string"
+          },
+          "source_id": {
+            "type": "string"
+          },
+          "asset_type": {
+            "type": "string"
+          },
+          "species_dex": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "form": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "variant": {
+            "type": [
+              "integer",
+              "string",
+              "null"
+            ]
+          },
+          "group": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "frame": {
+            "type": [
+              "integer",
+              "string",
+              "null"
+            ]
+          },
+          "source_path": {
+            "type": "string"
+          },
+          "render_path": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "native_width": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "native_height": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "bbox_width": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "bbox_height": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "opaque_pixels": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "geometry_class": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "review_status": {
+            "type": "string",
+            "enum": [
+              "unreviewed",
+              "valid_render",
+              "usable",
+              "alternate",
+              "reject",
+              "decode_issue"
+            ]
+          },
+          "target_tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "quality_notes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_metadata": {
+            "type": "object"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
