@@ -1,19 +1,11 @@
 {
   "schema_version": 1,
   "ranger_root": "/home/runner/work/pokeplatinum-legacy/pokeplatinum-legacy/ranger2",
-  "packages_considered": 297,
+  "packages_considered": 296,
   "successes": 296,
-  "failures": 1,
+  "failures": 0,
   "rendered_cells": 35806,
   "rows": [
-    {
-      "species": 0,
-      "variant": 0,
-      "package": "res/prebuilt/data/poke/p000_00_LZ.bin",
-      "output": "/tmp/ranger_all/000/00",
-      "status": "error",
-      "error": "ValueError: /tmp/ranger_pkg_9aidwagp/p000_00_s.NCGR: character geometry/data mismatch"
-    },
     {
       "species": 4,
       "variant": 0,
