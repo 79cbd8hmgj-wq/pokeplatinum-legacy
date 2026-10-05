@@ -110,7 +110,7 @@ def write_png(
     rows = bytearray()
     for y in range(height):
         rows.append(0)
-        rows.extend(pixels[y * width:(y + 1) * width)
+        rows.extend(pixels[y * width:(y + 1) * width])
 
     ihdr = struct.pack(">IIBBBBB", width, height, 8, 3, 0, 0, 0)
     data = (
