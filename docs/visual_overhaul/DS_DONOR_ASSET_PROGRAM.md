@@ -100,8 +100,7 @@ Every candidate must end in one of these classes:
 - **CONVERTIBLE** — donor-specific decoding plus deterministic Platinum conversion is required.
 - **MANUAL_ART_REQUIRED** — source material is useful, but an authored redraw/recomposition is necessary.
 - **ENGINE_WORK_REQUIRED** — cannot fit the current Platinum resource contract without source/runtime changes.
-- **REFERENCE_ONLY** — useful for design direction but not for asset transfer.
-- **UNSUITABLE** — no worthwhile Platinum use identified.
+- **TECHNIQUE_ONLY** — useful implementation/animation/presentation behavior, but not an asset transplant.\n- **REFERENCE_ONLY** — useful for design direction but not for asset transfer.\n- **UNSUITABLE** — no worthwhile Platinum use identified.
 
 ## First implementation sequence
 
@@ -183,4 +182,4 @@ Before integration it must have:
 - build verification;
 - a runtime QA target.
 
-This keeps the donor program additive without destabilizing the G7 visual foundation.
+Raw donor ROMs are never committed. External donor repositories and user-supplied ROMs remain inputs to reproducible extraction/conversion tooling; Platinum stores manifests, converters, reports, and intentionally integrated converted source assets.\n\nThis keeps the donor program additive without destabilizing the G7 visual foundation.\n
