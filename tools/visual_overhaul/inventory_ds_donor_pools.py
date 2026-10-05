@@ -19,7 +19,7 @@ DEFAULT_MANIFEST = ROOT / "tools" / "visual_overhaul" / "ds_donor_manifest.json"
 DIRECT_EDITABLE = {".png", ".pal", ".json"}
 NITRO_2D = {".ncgr", ".nclr", ".ncer", ".nanr", ".nscr", ".ncbr", ".ntft", ".ntfp"}
 NITRO_3D = {".nsbmd", ".nsbtx", ".nsbca", ".nsbta", ".nsbtp", ".nsbma"}
-PMD_FORMATS = {".wan", ".bgp", ".bma", ".bpc", ".bpl", ".bpa"}
+PMD_FORMATS = {".wan", ".bgp", ".bma", ".bpc", ".bpl", ".bpa", ".wte", ".wtu", ".wat", ".wba"}
 TEXT_META = {".txt", ".csv", ".mk"}
 
 
