@@ -1,15 +1,9 @@
 #!/usr/bin/env python3
 """Build a compact semantic-review plan for Lane A.
 
-This is a curation-planning artifact only. It does not modify catalog review
-statuses, choose preferred donors, or write Platinum resources.
-
-The purpose is to collapse the 21k+ Lane A unique visual candidates into a small
-set of semantic groups that can be reviewed efficiently:
-- P1 Ranger Pokémon frames are summarized by species and technical status.
-- P3 native HGSS/Diamond PNGs are grouped by source/group/tags/path family.
-
-Final usable/alternate/reject decisions remain a separate step.
+Planning only: no review_status mutation, preferred-donor choice, or Platinum writes.
+P1 Ranger frames are summarized from the structural review ledger. P3 native
+HGSS/Diamond PNGs are collapsed into semantic groups using review-queue metadata.
 """
 from __future__ import annotations
 
@@ -21,14 +15,13 @@ from pathlib import Path
 
 def path_family(path: str) -> str:
     parts = [p for p in str(path or "").replace("\\", "/").split("/") if p]
-    if not parts:
-        return ""
-    return "/".join(parts[:3])
+    return "/".join(parts[:3]) if parts else ""
 
 
 def main() -> int:
     p = argparse.ArgumentParser()
     p.add_argument("--catalog", required=True, type=Path)
+    p.add_argument("--queue", required=True, type=Path)
     p.add_argument("--priority", required=True, type=Path)
     p.add_argument("--p1-review", required=True, type=Path)
     p.add_argument("--write-json", required=True, type=Path)
@@ -36,10 +29,12 @@ def main() -> int:
     args = p.parse_args()
 
     catalog = json.loads(args.catalog.read_text())
+    queue = json.loads(args.queue.read_text())
     priority = json.loads(args.priority.read_text())
     p1_review = json.loads(args.p1_review.read_text())
 
-    assets = {a["asset_id"]: a for a in catalog.get("assets", [])}
+    catalog_assets = catalog.get("assets", [])
+    queue_assets = {a["asset_id"]: a for a in queue.get("records", [])}
     priority_rows = priority.get("records", [])
 
     p1 = [r for r in priority_rows if r.get("priority") == "P1_ranger_species_render"]
@@ -54,13 +49,13 @@ def main() -> int:
     for row in p1_decisions.values():
         p1_species[row.get("species_dex")][row.get("review_status")] += 1
 
-    missing = [r["asset_id"] for r in p3 if r["asset_id"] not in assets]
+    missing = [r["asset_id"] for r in p3 if r["asset_id"] not in queue_assets]
     if missing:
-        raise SystemExit("P3 candidate missing from catalog: " + missing[0])
+        raise SystemExit("P3 candidate missing from review queue: " + missing[0])
 
     grouped = defaultdict(list)
     for r in p3:
-        a = assets[r["asset_id"]]
+        a = queue_assets[r["asset_id"]]
         key = (
             a.get("source_id"),
             a.get("group"),
@@ -75,15 +70,6 @@ def main() -> int:
         source, group, tags, asset_type, family = key
         widths = Counter((r.get("width"), r.get("height")) for r, _ in rows)
         statuses = Counter((a.get("review_status") or "unreviewed") for _, a in rows)
-        examples = []
-        for r, a in rows[:8]:
-            examples.append({
-                "asset_id": r["asset_id"],
-                "source_path": a.get("source_path"),
-                "width": r.get("width"),
-                "height": r.get("height"),
-                "alpha_bbox": r.get("alpha_bbox"),
-            })
         groups.append({
             "source_id": source,
             "group": group,
@@ -91,19 +77,29 @@ def main() -> int:
             "target_tags": list(tags),
             "path_family": family,
             "candidate_count": len(rows),
-            "catalog_status_counts": dict(sorted(statuses.items())),
+            "queue_status_counts": dict(sorted(statuses.items())),
             "dimension_counts": [
                 {"width": wh[0], "height": wh[1], "count": count}
                 for wh, count in sorted(widths.items(), key=lambda kv: (str(kv[0][0]), str(kv[0][1])))
             ],
-            "examples": examples,
+            "examples": [
+                {
+                    "asset_id": r["asset_id"],
+                    "source_path": a.get("source_path"),
+                    "width": r.get("width"),
+                    "height": r.get("height"),
+                    "alpha_bbox": r.get("alpha_bbox"),
+                }
+                for r, a in rows[:8]
+            ],
         })
 
     payload = {
         "schema_version": 1,
         "lane": "A_render_ready",
         "scope": "Semantic review planning only; no review_status mutation and no Platinum writes.",
-        "catalog_asset_count": len(assets),
+        "catalog_asset_count": len(catalog_assets),
+        "queue_asset_count": len(queue_assets),
         "lane_a_candidate_count": len(priority_rows),
         "p1": {
             "candidate_count": len(p1),
@@ -121,6 +117,7 @@ def main() -> int:
     args.write_json.parent.mkdir(parents=True, exist_ok=True)
     args.write_json.write_text(json.dumps(payload, indent=2) + "\n")
 
+    tick = chr(96)
     lines = [
         "# Lane A Semantic Review Plan",
         "",
@@ -129,7 +126,8 @@ def main() -> int:
         "",
         "## Coverage",
         "",
-        f"- Unified catalog assets: **{len(assets)}**",
+        f"- Unified catalog assets: **{len(catalog_assets)}**",
+        f"- Review queue assets: **{len(queue_assets)}**",
         f"- Lane A unique candidates: **{len(priority_rows)}**",
         f"- P1 Ranger candidates: **{len(p1)}**",
         f"- P3 native HGSS/Diamond PNG candidates: **{len(p3)}**",
@@ -147,15 +145,15 @@ def main() -> int:
         "",
         "## P3 semantic groups",
         "",
-        "| # | Source | Group | Tags | Path family | Candidates | Catalog status |",
+        "| # | Source | Group | Tags | Path family | Candidates | Queue status |",
         "|---:|---|---|---|---|---:|---|",
     ]
     for i, g in enumerate(groups, 1):
         tags = ", ".join(g["target_tags"]) or "—"
-        st = ", ".join(f"{k}={v}" for k, v in g["catalog_status_counts"].items())
+        st = ", ".join(f"{k}={v}" for k, v in g["queue_status_counts"].items())
         lines.append(
             f"| {i} | {g['source_id']} | {g['group'] or '—'} | {tags} | "
-            f"\`{g['path_family']}\` | {g['candidate_count']} | {st} |"
+            f"{tick}{g['path_family']}{tick} | {g['candidate_count']} | {st} |"
         )
 
     lines += [
