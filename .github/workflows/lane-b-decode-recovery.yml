@@ -1,0 +1,87 @@
+name: Lane B decode recovery audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/visual_overhaul/audit_lane_b_decode_recovery.py"
+      - "docs/visual_overhaul/LANE_B_FINAL_CURATION.json"
+      - ".github/workflows/lane-b-decode-recovery.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Platinum overhaul
+        uses: actions/checkout@v4
+        with:
+          path: platinum
+
+      - name: Checkout Diamond donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pokediamond
+          path: pokediamond
+
+      - name: Checkout HGSS donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pokeheartgold
+          path: pokeheartgold
+
+      - name: Checkout PMD Sky donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pmd-sky
+          path: pmd-sky
+
+      - name: Checkout Ranger donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pokeranger2
+          path: pokeranger2
+
+      - name: Audit Lane B recovery routes
+        working-directory: platinum
+        run: |
+          python3 tools/visual_overhaul/audit_lane_b_decode_recovery.py \
+            --curation docs/visual_overhaul/LANE_B_FINAL_CURATION.json \
+            --diamond-root ../pokediamond \
+            --hgss-root ../pokeheartgold \
+            --pmd-root ../pmd-sky \
+            --ranger-root ../pokeranger2 \
+            --write-json docs/visual_overhaul/LANE_B_DECODE_RECOVERY.json \
+            --write-md docs/visual_overhaul/LANE_B_DECODE_RECOVERY.md
+
+      - name: Validate recovery coverage
+        working-directory: platinum
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p = json.loads(Path("docs/visual_overhaul/LANE_B_DECODE_RECOVERY.json").read_text())
+          assert p["decode_issue_count"] == 7183
+          assert sum(p["route_counts"].values()) == 7183
+          ids = [r["asset_id"] for r in p["records"]]
+          assert len(ids) == len(set(ids)) == 7183
+          print("Recovery routes:", p["route_counts"])
+          print("Source routes:", p["source_route_counts"])
+          PY
+
+      - name: Commit recovery audit
+        working-directory: platinum
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            docs/visual_overhaul/LANE_B_DECODE_RECOVERY.json \
+            docs/visual_overhaul/LANE_B_DECODE_RECOVERY.md
+          if git diff --cached --quiet; then
+            echo "No Lane B recovery changes."
+            exit 0
+          fi
+          git commit -m "visual: audit Lane B decode recovery routes"
+          git push
