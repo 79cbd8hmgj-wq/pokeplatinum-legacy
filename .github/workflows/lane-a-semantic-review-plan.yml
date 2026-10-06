@@ -37,6 +37,7 @@ jobs:
 
           p = json.loads(Path("docs/visual_overhaul/LANE_A_SEMANTIC_REVIEW_PLAN.json").read_text())
           assert p["catalog_asset_count"] == 64841
+          assert p["queue_asset_count"] == 64841
           assert p["lane_a_candidate_count"] == 21496
           assert p["p1"]["candidate_count"] == 18331
           assert p["p3"]["candidate_count"] == 3165
