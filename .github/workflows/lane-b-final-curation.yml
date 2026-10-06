@@ -1,0 +1,56 @@
+name: Lane B final curation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/visual_overhaul/build_lane_b_final_curation.py"
+      - "docs/visual_overhaul/DONOR_REVIEW_QUEUE.json"
+      - ".github/workflows/lane-b-final-curation.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build final Lane B curation
+        run: |
+          python3 tools/visual_overhaul/build_lane_b_final_curation.py \
+            --queue docs/visual_overhaul/DONOR_REVIEW_QUEUE.json \
+            --write-json docs/visual_overhaul/LANE_B_FINAL_CURATION.json \
+            --write-md docs/visual_overhaul/LANE_B_FINAL_CURATION.md
+
+      - name: Validate complete Lane B coverage
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p = json.loads(Path("docs/visual_overhaul/LANE_B_FINAL_CURATION.json").read_text())
+          assert p["asset_count"] == 15157
+          assert sum(p["status_counts"].values()) == 15157
+          assert set(p["status_counts"]) <= {"usable", "alternate", "reject", "decode_issue"}
+          assert "unreviewed" not in p["status_counts"]
+          ids = [r["asset_id"] for r in p["records"]]
+          assert len(ids) == len(set(ids)) == 15157
+          print("Lane B final status counts:", p["status_counts"])
+          print("Lane B source counts:", p["source_status_counts"])
+          PY
+
+      - name: Commit final Lane B curation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            docs/visual_overhaul/LANE_B_FINAL_CURATION.json \
+            docs/visual_overhaul/LANE_B_FINAL_CURATION.md
+          if git diff --cached --quiet; then
+            echo "No Lane B final curation changes."
+            exit 0
+          fi
+          git commit -m "visual: complete Lane B curation"
+          git push
