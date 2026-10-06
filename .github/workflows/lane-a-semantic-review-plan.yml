@@ -6,6 +6,7 @@ on:
     paths:
       - "tools/visual_overhaul/build_lane_a_semantic_review_plan.py"
       - "docs/visual_overhaul/DONOR_ASSET_CATALOG.json"
+      - "docs/visual_overhaul/DONOR_REVIEW_QUEUE.json"
       - "docs/visual_overhaul/LANE_A_VISUAL_REVIEW_PRIORITY.json"
       - "docs/visual_overhaul/LANE_A_P1_VISUAL_REVIEW.json"
       - ".github/workflows/lane-a-semantic-review-plan.yml"
@@ -24,6 +25,7 @@ jobs:
         run: |
           python3 tools/visual_overhaul/build_lane_a_semantic_review_plan.py \
             --catalog docs/visual_overhaul/DONOR_ASSET_CATALOG.json \
+            --queue docs/visual_overhaul/DONOR_REVIEW_QUEUE.json \
             --priority docs/visual_overhaul/LANE_A_VISUAL_REVIEW_PRIORITY.json \
             --p1-review docs/visual_overhaul/LANE_A_P1_VISUAL_REVIEW.json \
             --write-json docs/visual_overhaul/LANE_A_SEMANTIC_REVIEW_PLAN.json \
