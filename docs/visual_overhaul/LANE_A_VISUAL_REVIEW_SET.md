@@ -6,12 +6,12 @@ It does not change donor review status or select a preferred donor.
 ## Summary
 
 - Audited Lane A assets: **40559**
-- Verified nonblank assets: **39722**
-- Unique visual candidates after exact deduplication: **23115**
-- Redundant exact-duplicate assets removed from direct visual review: **16607**
-- Exact duplicate sets: **10133**
+- Verified nonblank assets: **40219**
+- Unique visual candidates after exact deduplication: **21496**
+- Redundant exact-duplicate assets removed from direct visual review: **18723**
+- Exact duplicate sets: **10686**
 - Decode-error assets isolated: **164**
-- Blank assets isolated: **673**
+- Blank assets isolated: **176**
 - Species represented among candidate records: **282**
 
 ## Candidate representatives by source
@@ -20,7 +20,7 @@ It does not change donor review status or select a preferred donor.
 |---|---:|
 | diamond | 1183 |
 | hgss | 1982 |
-| ranger2 | 19950 |
+| ranger2 | 18331 |
 
 ## Review boundary
 

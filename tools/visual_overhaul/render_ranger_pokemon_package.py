@@ -45,10 +45,10 @@ def render_package(package: Path, output: Path, vram_stride_tiles: int) -> int:
         palette_path = palettes[0]
         palette = read_palette(palette_path)
 
-        graphics = {
-            p.stem: p
-            for p in sorted([*extract_dir.glob("*.NCGR"), *extract_dir.glob("*.NCBR")])
-        }
+        # NCGR (tile-ordered sheet) and NCBR (scanline raster) carry the same
+        # image; prefer NCGR when a stem has both so the choice is explicit.
+        graphics = {p.stem: p for p in sorted(extract_dir.glob("*.NCBR"))}
+        graphics.update({p.stem: p for p in sorted(extract_dir.glob("*.NCGR"))})
         cells = {p.stem: p for p in sorted(extract_dir.glob("*.NCER"))}
 
         output.mkdir(parents=True, exist_ok=True)
@@ -56,8 +56,8 @@ def render_package(package: Path, output: Path, vram_stride_tiles: int) -> int:
         for stem in sorted(set(graphics) & set(cells)):
             gfx_path = graphics[stem]
             cell_path = cells[stem]
-            sheet_width, _sheet_height, tiles = read_chars(gfx_path)
             cell_bank = read_cells(cell_path)
+            sheet_width, _sheet_height, tiles = read_chars(gfx_path, cells=cell_bank)
             group_dir = output / stem
             group_dir.mkdir(parents=True, exist_ok=True)
 

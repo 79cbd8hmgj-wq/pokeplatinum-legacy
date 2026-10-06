@@ -1,0 +1,35 @@
+{
+ "schema_version": 1,
+ "before_status_counts": {
+  "decode_issue": 19016,
+  "needs_review": 805,
+  "valid_render": 129
+ },
+ "after_status_counts": {
+  "decode_issue": 19,
+  "valid_render": 18312
+ },
+ "candidate_level_transitions": {
+  "decode_issue -> decode_issue": 18,
+  "decode_issue -> no_longer_a_p1_asset": 13,
+  "decode_issue -> valid_render": 18985,
+  "needs_review -> decode_issue": 1,
+  "needs_review -> no_longer_a_p1_asset": 21,
+  "needs_review -> valid_render": 783,
+  "valid_render -> valid_render": 129
+ },
+ "asset_level_transitions": {
+  "decode_issue -> decode_issue": 25,
+  "decode_issue -> no_longer_a_p1_asset": 18,
+  "decode_issue -> valid_render": 33734,
+  "needs_review -> decode_issue": 3,
+  "needs_review -> no_longer_a_p1_asset": 31,
+  "needs_review -> valid_render": 1193,
+  "valid_render -> valid_render": 129
+ },
+ "assets_new_to_p1_ledger": 546,
+ "previous_decode_issue_candidates": 19016,
+ "previous_decode_issue_now_valid_render_candidates": 18985,
+ "previous_decode_issue_assets": 33777,
+ "previous_decode_issue_now_valid_render_assets": 33734
+}

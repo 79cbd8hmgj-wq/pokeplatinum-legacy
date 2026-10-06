@@ -9,18 +9,18 @@ Palette index 0 is treated as transparent.
 
 | Status | Cells | Share |
 |---|---:|---:|
-| fits_small | 25792 | 72.03% |
-| fits | 8942 | 24.97% |
-| geometry_close | 355 | 0.99% |
-| oversize | 44 | 0.12% |
-| blank | 673 | 1.88% |
+| fits_small | 27144 | 75.81% |
+| fits | 8164 | 22.80% |
+| geometry_close | 270 | 0.75% |
+| oversize | 52 | 0.15% |
+| blank | 176 | 0.49% |
 
 ## Species with oversize cells
 
 | Species | Oversize cells | Total cells |
 |---:|---:|---:|
 | 484 | 32 | 203 |
-| 483 | 12 | 174 |
+| 483 | 20 | 174 |
 
 ## Interpretation
 

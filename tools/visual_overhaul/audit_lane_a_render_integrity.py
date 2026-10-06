@@ -105,12 +105,29 @@ def main() -> int:
     p.add_argument("--platinum-root", required=True, type=Path)
     p.add_argument("--ranger-render-root", required=True, type=Path)
     p.add_argument("--ranger-root", required=True, type=Path)
-    p.add_argument("--hgss-root", required=True, type=Path)
-    p.add_argument("--diamond-root", required=True, type=Path)
-    p.add_argument("--pmd-sky-root", required=True, type=Path)
+    p.add_argument("--hgss-root", type=Path, default=Path("/nonexistent/hgss"))
+    p.add_argument("--diamond-root", type=Path, default=Path("/nonexistent/diamond"))
+    p.add_argument("--pmd-sky-root", type=Path, default=Path("/nonexistent/pmd-sky"))
     p.add_argument("--write-json", required=True, type=Path)
     p.add_argument("--write-md", required=True, type=Path)
+    p.add_argument(
+        "--refresh-source",
+        action="append",
+        default=[],
+        help="Only re-materialise records of this source_id; all other records are "
+        "carried over unchanged from --base-integrity (donor roots for them are then "
+        "not needed). Use after a renderer-only change.",
+    )
+    p.add_argument("--base-integrity", type=Path, help="Existing integrity JSON for --refresh-source.")
     args = p.parse_args()
+    refresh = set(args.refresh_source)
+    base_by_review = {}
+    if refresh:
+        if not args.base_integrity:
+            p.error("--refresh-source requires --base-integrity")
+        base_by_review = {
+            r["review_id"]: r for r in json.loads(args.base_integrity.read_text())["records"]
+        }
 
     queue = json.loads(args.queue.read_text())
     rows = [r for r in queue.get("records", []) if r.get("lane") == "A_render_ready"]
@@ -125,6 +142,9 @@ def main() -> int:
 
     results = []
     for row in rows:
+        if refresh and str(row.get("source_id")) not in refresh:
+            results.append(base_by_review[row.get("review_id")])
+            continue
         path, provenance = locate(row, roots, ranger_render_root, platinum_root)
         result = {
             "review_id": row.get("review_id"),

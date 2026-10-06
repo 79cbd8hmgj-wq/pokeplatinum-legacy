@@ -8,16 +8,16 @@ nonblank PNG is not automatically a visually confirmed valid_render or usable as
 ## Summary
 
 - Lane A assets: **40559**
-- Exact visual duplicate groups: **10196**
-- Assets participating in exact duplicate groups: **27399**
+- Exact visual duplicate groups: **10717**
+- Assets participating in exact duplicate groups: **29565**
 
 ### Technical states
 
 | State | Assets |
 |---|---:|
-| blank | 673 |
+| blank | 176 |
 | decode_error | 164 |
-| verified_nonblank | 39722 |
+| verified_nonblank | 40219 |
 
 ### By source
 
@@ -25,7 +25,7 @@ nonblank PNG is not automatically a visually confirmed valid_render or usable as
 |---|---:|---|
 | diamond | 1949 | verified_nonblank=1949 |
 | hgss | 2804 | decode_error=164, verified_nonblank=2640 |
-| ranger2 | 35806 | blank=673, verified_nonblank=35133 |
+| ranger2 | 35806 | blank=176, verified_nonblank=35630 |
 
 ## Interpretation
 

@@ -1,21 +1,24 @@
 #!/usr/bin/env python3
 """Build the Lane A P1 (Ranger species render) visual-review decision ledger.
 
-Visual validation only. Inputs are the generated Lane A artifacts; the visual
-findings below were recorded by direct inspection of every P1 contact sheet
-(docs/visual_overhaul/review/lane_a/species/*.png). Nothing here imports donor
-assets, edits Platinum resources, or picks preferred/usable/alternate donors.
+Validation only. Inputs are the generated Lane A artifacts plus the Ranger
+structural-validation ledger emitted by diagnose_ranger_structure.py --corpus.
+Nothing here imports donor assets, edits Platinum resources, or picks
+preferred/usable/alternate donors.
 
 Rules, in precedence order:
-  1. COHERENT_SLOTS   -> valid_render (reconstruction visibly appears correct).
-  2. alpha-bbox area <= SPARSE_MAX_BBOX_AREA -> needs_review (too little visible
-     art on a contact-sheet thumbnail to judge as correct or broken).
-  3. everything else on a P1 sheet -> decode_issue (unresolved Ranger
-     reconstruction failure: the CURRENT rendered output is visibly scrambled /
-     horizontally sliced / fragmented). The donor asset itself is NOT proven
-     invalid, so nothing here is `reject`; re-review after renderer correction.
+  1. Every duplicate member's NCER cell has all of its OAM tile references inside
+     the character data of its own group (RANGER_RENDER_STRUCTURAL_VALIDATION.json)
+     -> valid_render.  The reader/mapping behind that is validated pixel-exact
+     against paired NCGR/NCBR resources (see RANGER_RENDERER_ROOT_CAUSE.md).
+  2. Some member cell references tiles that do not exist in its group's character
+     data (they live in another resource) -> decode_issue, reason
+     ranger_reconstruction_issue.  Renderer-side limitation; the donor asset is
+     NOT proven invalid, so nothing here is `reject`.
+valid_render means reconstruction validity only, never usable/alternate.
 """
 import json
+import re
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -23,6 +26,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 VO = ROOT / "docs" / "visual_overhaul"
 
+STRUCT = VO / "RANGER_RENDER_STRUCTURAL_VALIDATION.json"
 PRIORITY = VO / "LANE_A_VISUAL_REVIEW_PRIORITY.json"
 SHEETS = VO / "LANE_A_REVIEW_SHEETS.json"
 REVIEW_SET = VO / "LANE_A_VISUAL_REVIEW_SET.json"
@@ -31,31 +35,20 @@ OUT_JSON = VO / "LANE_A_P1_VISUAL_REVIEW.json"
 OUT_MD = VO / "LANE_A_P1_VISUAL_REVIEW.md"
 
 P1 = "P1_ranger_species_render"
-SPARSE_MAX_BBOX_AREA = 256
-
-# Sheet slots whose renders visibly reconstruct a coherent Pokemon/object frame.
-# (sheet_id, first_slot, last_slot, what_was_seen)
-COHERENT_SLOTS = [
-    ("species:421:p001", 1, 36, "Cherubi body frames render as clean, recognisable sprites"),
-    ("species:422:p001", 45, 76, "Shellos (west sea) frames render as clean, recognisable sprites"),
-    ("species:465:p001", 29, 80, "Tangrowth frames render as clean, recognisable sprites"),
-    ("species:465:p002", 1, 8, "Tangrowth frames render as clean, recognisable sprites"),
-    ("species:490:p001", 33, 33, "small round icon-style frame renders cleanly (Manaphy-egg-like)"),
-]
+RANGER_ID_RE = re.compile(
+    r"^ranger2:pokemon:(?P<species>\d{3}):(?P<variant>\d{2}):(?P<group>[^:]+):cell_(?P<cell>\d+)$"
+)
 
 REASONS = {
-    "valid_render": ("coherent_reconstruction",
-                     "Contact-sheet inspection: reconstruction visibly appears correct."),
+    "valid_render": ("structurally_verified_reconstruction",
+                     "All OAM tile references of every duplicate member resolve inside the "
+                     "group's own character data under the validated Ranger mapping "
+                     "(scanline NCBR raster width inferred, palette row applied)."),
     "decode_issue": ("ranger_reconstruction_issue",
-                     "Current rendered output is visibly invalid (horizontally sliced / "
-                     "scrambled / fragmented; not a recognisable complete frame). The "
-                     "underlying donor asset has NOT been proven invalid; the failure may "
-                     "originate in the Ranger reconstruction pipeline (stride, tile order, "
-                     "NCER/OAM interpretation, palette/geometry, or another renderer "
-                     "defect). Re-review after renderer correction. Not a reject."),
-    "needs_review": ("too_sparse_to_judge",
-                     "Alpha bbox area <= %d px; too little visible art at contact-sheet "
-                     "scale to call correct or broken." % SPARSE_MAX_BBOX_AREA),
+                     "At least one OAM object of a duplicate member references tiles that "
+                     "are absent from its group's character data (they live in another "
+                     "resource), so this frame cannot be fully reconstructed from the group "
+                     "alone. The donor asset has NOT been proven invalid; not a reject."),
 }
 
 
@@ -74,19 +67,21 @@ def main():
     rset = load(REVIEW_SET)
     decisions = load(DECISIONS)
 
+    struct = load(STRUCT)["group_ledger"]
     p1 = {r["asset_id"]: r for r in prio["records"] if r["priority"] == P1}
     members = {c["representative_asset_id"]: c["member_asset_ids"] for c in rset["candidates"]}
     prior_ids = {d["asset_id"] for d in decisions["decisions"]}
 
-    coherent = {}
-    for sid, lo, hi, note in COHERENT_SLOTS:
-        for s in range(lo, hi + 1):
-            coherent[(sid, s)] = note
+    def member_ok(asset_id):
+        m = RANGER_ID_RE.match(asset_id)
+        if not m:
+            raise SystemExit("unparseable ranger asset id: " + asset_id)
+        g = struct[m.group("group")]
+        return int(m.group("cell")) not in set(g["oob_cells"]), g
 
     records = []
     seen = set()
     sheet_ids = [s["sheet_id"] for s in sheets["sheets"] if s["kind"] == "species"]
-    coherent_hit = set()
     for sh in sheets["sheets"]:
         if sh["kind"] != "species":
             continue
@@ -96,19 +91,12 @@ def main():
                 raise SystemExit("asset on more than one sheet slot: " + aid)
             seen.add(aid)
             r = p1[aid]
-            key = (sh["sheet_id"], e["slot"])
-            if key in coherent:
-                status = "valid_render"
-                coherent_hit.add(key)
-                note = coherent[key]
-            elif bbox_area(r["alpha_bbox"]) <= SPARSE_MAX_BBOX_AREA:
-                status = "needs_review"
-                note = None
-            else:
-                status = "decode_issue"
-                note = None
-            code, reason = REASONS[status]
             mem = members[aid]
+            checks = [member_ok(m) for m in mem]
+            ok = all(c[0] for c in checks)
+            status = "valid_render" if ok else "decode_issue"
+            code, reason = REASONS[status]
+            _, g = member_ok(aid)
             records.append({
                 "asset_id": aid,
                 "species_dex": r["species_dex"],
@@ -122,12 +110,14 @@ def main():
                 "reason_code": code,
                 "reason": reason,
                 "evidence": {
-                    "method": "contact_sheet_visual_inspection",
+                    "method": "structural_validation",
                     "sheet_path": sh["path"],
+                    "char_source": g["src"],
+                    "raster_width_tiles": g["raster_w"],
+                    "members_with_missing_tiles": sum(1 for c in checks if not c[0]),
                     "alpha_bbox": r["alpha_bbox"],
                     "alpha_bbox_area": bbox_area(r["alpha_bbox"]),
                     "unique_rgba_colors": r["unique_rgba_colors"],
-                    **({"observation": note} if note else {}),
                 },
             })
 
@@ -136,9 +126,6 @@ def main():
     if set(p1) != seen or len(records) != len(p1):
         errors.append("P1 candidates not covered exactly once: %d records vs %d P1"
                       % (len(records), len(p1)))
-    if coherent_hit != set(coherent):
-        errors.append("coherent slot list references slots that do not exist: %s"
-                      % sorted(set(coherent) - coherent_hit)[:5])
     if prior_ids & seen:
         errors.append("P1 records overlap preserved blank/decode decisions: %d"
                       % len(prior_ids & seen))
@@ -167,12 +154,9 @@ def main():
         "schema_version": 1,
         "lane": "A_render_ready",
         "priority": P1,
-        "scope": "Visual validation only. No donor import, no usable/alternate selection, "
+        "scope": "Reconstruction validation only. No donor import, no usable/alternate selection, "
                  "no Platinum resource changes. Preserves LANE_A_REVIEW_DECISIONS.json unchanged.",
-        "inputs": [str(p.relative_to(ROOT)) for p in (PRIORITY, SHEETS, REVIEW_SET, DECISIONS)],
-        "sparse_max_bbox_area": SPARSE_MAX_BBOX_AREA,
-        "coherent_slots": [{"sheet_id": s, "first_slot": a, "last_slot": b, "observation": n}
-                           for s, a, b, n in COHERENT_SLOTS],
+        "inputs": [str(p.relative_to(ROOT)) for p in (STRUCT, PRIORITY, SHEETS, REVIEW_SET, DECISIONS)],
         "candidate_count": len(records),
         "sheet_count": len(sheet_ids),
         "species_count": len(by_species),
@@ -198,30 +182,19 @@ def main():
     md.append("- reject: **%d** (no donor asset independently proven invalid in this pass)" % counts["reject"])
     md.append("- Assets covered incl. exact-duplicate members: **%d**\n" % len(dup_members))
     md.append("## Findings\n")
-    md.append("- The overwhelming majority of Ranger frames reconstruct as horizontally "
-              "sliced / scrambled tile soup, consistent with the still-open reconstruction "
-              "concern recorded in `DDA1J_RANGER_RENDER_VISUAL_QA.md`. These are `decode_issue` "
-              "(reason `ranger_reconstruction_issue`), **not** `reject`: the current rendered "
-              "output is visibly invalid, but the underlying donor asset has NOT been proven "
-              "invalid. The failure may originate in the Ranger reconstruction pipeline "
-              "(stride, tile ordering, NCER/OAM interpretation, palette/geometry, or another "
-              "renderer defect). Re-review these after renderer correction.")
-    md.append("- Only these slots visibly reconstruct correctly (`valid_render`):")
-    for s, a, b, n in COHERENT_SLOTS:
-        md.append("  - `%s` slots %d-%d: %s" % (s, a, b, n))
-    md.append("- `valid_render` means the pixels look like a correct reconstruction only. "
-              "It does **not** mean usable/alternate for Platinum; no semantic/use review was done.")
-    md.append("- Slots with alpha bbox area <= %d px are `needs_review`: too little visible "
-              "art to judge at contact-sheet scale. This is a deterministic metadata rule, "
-              "not a visual verdict." % SPARSE_MAX_BBOX_AREA)
-    md.append("- `decode_issue` here means an unresolved reconstruction failure, not a "
-              "proven-bad donor asset and not a file-level decode error. The root cause was "
-              "not isolated in this pass. Nothing in this P1 pass is `reject`.\n")
-    md.append("## Limits of this review\n")
-    md.append("- Judgement was made on 96px contact-sheet thumbnails; the raw per-frame PNGs "
-              "are CI artifacts not present in the repo. The `valid_render` slots are clear at "
-              "that scale; borderline cases fall to `needs_review`, not `valid_render`.")
-    md.append("- Species sheet slot -> `asset_id` mapping comes from `LANE_A_REVIEW_SHEETS.json`.\n")
+    md.append("- Root cause of the earlier scrambled output was in the Ranger renderer, not the "
+              "donor assets (see `RANGER_RENDERER_ROOT_CAUSE.md`). After the fix, status is "
+              "derived deterministically from structural validation rather than by-eye slot "
+              "ranges.")
+    md.append("- `valid_render`: every duplicate member's cell resolves all OAM tile references "
+              "inside its own group's character data. Reconstruction validity only; **not** "
+              "usable/alternate for Platinum, and no semantic/use review was done.")
+    md.append("- `decode_issue` (`ranger_reconstruction_issue`): some member cell references "
+              "tiles absent from its own group (they live in another resource). Renderer-side "
+              "limitation; the donor asset is not proven invalid. Nothing in this pass is "
+              "`reject`.")
+    md.append("- `needs_review`: none; the old sparse-bbox rule only existed because of "
+              "contact-sheet judging limits and is superseded by the structural rule.\n")
     md.append("## Species with any valid_render\n")
     md.append(", ".join("%03d" % d for d in ok) + "\n")
     md.append("## Per-species counts\n")

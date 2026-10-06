@@ -86,9 +86,16 @@ def main() -> int:
     p.add_argument("--platinum-root", required=True, type=Path)
     p.add_argument("--ranger-render-root", required=True, type=Path)
     p.add_argument("--ranger-root", required=True, type=Path)
-    p.add_argument("--hgss-root", required=True, type=Path)
-    p.add_argument("--diamond-root", required=True, type=Path)
-    p.add_argument("--pmd-sky-root", required=True, type=Path)
+    p.add_argument("--hgss-root", type=Path, default=Path("/nonexistent/hgss"))
+    p.add_argument("--diamond-root", type=Path, default=Path("/nonexistent/diamond"))
+    p.add_argument("--pmd-sky-root", type=Path, default=Path("/nonexistent/pmd-sky"))
+    p.add_argument(
+        "--only-kind",
+        action="append",
+        default=[],
+        help="Regenerate only sheets of this kind (e.g. species). Other kinds are kept "
+        "from the existing --write-index-json and their PNGs are left untouched.",
+    )
     p.add_argument("--output-dir", required=True, type=Path)
     p.add_argument("--write-index-json", required=True, type=Path)
     p.add_argument("--write-index-md", required=True, type=Path)
@@ -108,13 +115,25 @@ def main() -> int:
     }
 
     out = args.output_dir
-    if out.exists():
-        shutil.rmtree(out)
+    only = set(args.only_kind)
+    kept_sheets: list[dict] = []
+    if only:
+        previous = json.loads(args.write_index_json.read_text())
+        kept_sheets = [s for s in previous["sheets"] if s["kind"] not in only]
+        for kind in only:
+            if (out / kind).exists():
+                shutil.rmtree(out / kind)
+    else:
+        if out.exists():
+            shutil.rmtree(out)
     out.mkdir(parents=True, exist_ok=True)
 
     grouped: dict[tuple[str, str], list[dict]] = defaultdict(list)
     for candidate in review.get("candidates", []):
-        grouped[group_key(candidate)].append(candidate)
+        key = group_key(candidate)
+        if only and key[0] not in only:
+            continue
+        grouped[key].append(candidate)
 
     font = ImageFont.load_default()
     cell_w = args.thumb_size + 20
@@ -196,6 +215,11 @@ def main() -> int:
             })
             candidate_count += len(part)
 
+    if only:
+        sheets = sorted(
+            [*kept_sheets, *sheets], key=lambda s: (s["kind"], s["group_key"], s["part"])
+        )
+        candidate_count = sum(s["count"] for s in sheets)
     if candidate_count != review["unique_visual_candidates"]:
         raise RuntimeError(
             f"Sheet coverage mismatch: {candidate_count} != {review['unique_visual_candidates']}"
