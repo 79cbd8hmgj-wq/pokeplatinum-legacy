@@ -1,0 +1,60 @@
+name: Lane A P3 curation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/visual_overhaul/build_lane_a_p3_curation.py"
+      - "docs/visual_overhaul/DONOR_REVIEW_QUEUE.json"
+      - "docs/visual_overhaul/LANE_A_VISUAL_REVIEW_PRIORITY.json"
+      - "docs/visual_overhaul/LANE_A_RENDER_INTEGRITY.json"
+      - "docs/visual_overhaul/LANE_A_VISUAL_REVIEW_SET.json"
+      - ".github/workflows/lane-a-p3-curation.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build P3 curation ledger
+        run: |
+          python3 tools/visual_overhaul/build_lane_a_p3_curation.py \
+            --queue docs/visual_overhaul/DONOR_REVIEW_QUEUE.json \
+            --priority docs/visual_overhaul/LANE_A_VISUAL_REVIEW_PRIORITY.json \
+            --integrity docs/visual_overhaul/LANE_A_RENDER_INTEGRITY.json \
+            --review-set docs/visual_overhaul/LANE_A_VISUAL_REVIEW_SET.json \
+            --write-json docs/visual_overhaul/LANE_A_P3_CURATION.json \
+            --write-md docs/visual_overhaul/LANE_A_P3_CURATION.md
+
+      - name: Validate P3 decisions
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          p = json.loads(Path("docs/visual_overhaul/LANE_A_P3_CURATION.json").read_text())
+          assert p["candidate_count"] == 3165
+          assert p["status_counts"] == {"usable": 3165}
+          ids = [r["asset_id"] for r in p["decisions"]]
+          assert len(ids) == len(set(ids)) == 3165
+          print("P3 curation:", p["status_counts"])
+          PY
+
+      - name: Commit P3 curation ledger
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            docs/visual_overhaul/LANE_A_P3_CURATION.json \
+            docs/visual_overhaul/LANE_A_P3_CURATION.md
+          if git diff --cached --quiet; then
+            echo "No P3 curation changes."
+            exit 0
+          fi
+          git commit -m "visual: curate Lane A P3 native PNGs"
+          git push
