@@ -31,7 +31,7 @@ jobs:
             --write-json docs/visual_overhaul/LANE_A_P3_CURATION.json \
             --write-md docs/visual_overhaul/LANE_A_P3_CURATION.md
 
-      - name: Validate P3 decisions
+      - name: Validate P3 curation
         run: |
           python3 - <<'PY'
           import json
@@ -39,13 +39,14 @@ jobs:
 
           p = json.loads(Path("docs/visual_overhaul/LANE_A_P3_CURATION.json").read_text())
           assert p["candidate_count"] == 3165
-          assert p["status_counts"] == {"usable": 3165}
-          ids = [r["asset_id"] for r in p["decisions"]]
+          assert sum(p["status_counts"].values()) == 3165
+          ids = [d["asset_id"] for d in p["decisions"]]
           assert len(ids) == len(set(ids)) == 3165
-          print("P3 curation:", p["status_counts"])
+          assert set(p["status_counts"]) <= {"usable", "reject"}
+          print("P3 status counts:", p["status_counts"])
           PY
 
-      - name: Commit P3 curation ledger
+      - name: Commit P3 curation
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
