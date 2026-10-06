@@ -1,0 +1,55 @@
+name: Lane B semantic review plan
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/visual_overhaul/build_lane_b_semantic_review_plan.py"
+      - "docs/visual_overhaul/DONOR_REVIEW_QUEUE.json"
+      - ".github/workflows/lane-b-semantic-review-plan.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Lane B semantic plan
+        run: |
+          python3 tools/visual_overhaul/build_lane_b_semantic_review_plan.py \
+            --queue docs/visual_overhaul/DONOR_REVIEW_QUEUE.json \
+            --write-json docs/visual_overhaul/LANE_B_SEMANTIC_REVIEW_PLAN.json \
+            --write-md docs/visual_overhaul/LANE_B_SEMANTIC_REVIEW_PLAN.md
+
+      - name: Validate Lane B coverage
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p = json.loads(Path("docs/visual_overhaul/LANE_B_SEMANTIC_REVIEW_PLAN.json").read_text())
+          assert p["asset_count"] == 15157
+          assert p["semantic_group_count"] > 0
+          assert sum(p["source_counts"].values()) == 15157
+          assert sum(p["asset_type_counts"].values()) == 15157
+          print("Lane B semantic groups:", p["semantic_group_count"])
+          print("Lane B sources:", p["source_counts"])
+          print("Lane B types:", p["asset_type_counts"])
+          PY
+
+      - name: Commit Lane B semantic plan
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            docs/visual_overhaul/LANE_B_SEMANTIC_REVIEW_PLAN.json \
+            docs/visual_overhaul/LANE_B_SEMANTIC_REVIEW_PLAN.md
+          if git diff --cached --quiet; then
+            echo "No Lane B semantic plan changes."
+            exit 0
+          fi
+          git commit -m "visual: build Lane B semantic review plan"
+          git push
