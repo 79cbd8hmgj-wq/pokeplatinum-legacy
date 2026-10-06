@@ -1,0 +1,55 @@
+name: Lane B source PNG recovery
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/visual_overhaul/resolve_lane_b_source_png_equivalents.py"
+      - "docs/visual_overhaul/LANE_B_DECODE_RECOVERY.json"
+      - "docs/visual_overhaul/LANE_A_P3_CURATION.json"
+      - ".github/workflows/lane-b-source-png-recovery.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Resolve source PNG equivalents
+        run: |
+          python3 tools/visual_overhaul/resolve_lane_b_source_png_equivalents.py \
+            --recovery docs/visual_overhaul/LANE_B_DECODE_RECOVERY.json \
+            --p3-curation docs/visual_overhaul/LANE_A_P3_CURATION.json \
+            --write-json docs/visual_overhaul/LANE_B_SOURCE_PNG_RECOVERY.json \
+            --write-md docs/visual_overhaul/LANE_B_SOURCE_PNG_RECOVERY.md
+
+      - name: Validate source PNG recovery
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p = json.loads(Path("docs/visual_overhaul/LANE_B_SOURCE_PNG_RECOVERY.json").read_text())
+          assert p["asset_count"] == 76
+          assert sum(p["status_counts"].values()) == 76
+          ids = [d["asset_id"] for d in p["decisions"]]
+          assert len(ids) == len(set(ids)) == 76
+          print("Source-PNG recovery:", p["status_counts"])
+          PY
+
+      - name: Commit recovery results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            docs/visual_overhaul/LANE_B_SOURCE_PNG_RECOVERY.json \
+            docs/visual_overhaul/LANE_B_SOURCE_PNG_RECOVERY.md
+          if git diff --cached --quiet; then
+            echo "No source-PNG recovery changes."
+            exit 0
+          fi
+          git commit -m "visual: resolve Lane B source PNG equivalents"
+          git push
