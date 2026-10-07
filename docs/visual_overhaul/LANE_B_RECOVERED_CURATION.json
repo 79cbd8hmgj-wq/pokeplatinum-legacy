@@ -3,27 +3,22 @@
   "lane": "B_pokemon_facing",
   "asset_count": 15157,
   "status_counts": {
-    "decode_issue": 2614,
-    "reject": 7978,
+    "decode_issue": 2602,
+    "reject": 7990,
     "usable": 4565
   },
   "recovery_changes": {
-    "decode_issue_to_reject": 4,
+    "decode_issue_to_reject": 16,
     "decode_issue_to_usable": 4565
   },
   "remaining_decode_routes": {
-    "container_unpack_then_decode": 898,
-    "format_context_unknown": 9,
+    "container_unpack_then_decode": 895,
     "pmd_format_decode": 19,
     "ranger_embedded_decode": 1688
   },
   "remaining_decode_source_routes": {
-    "diamond": {
-      "format_context_unknown": 6
-    },
     "hgss": {
-      "container_unpack_then_decode": 5,
-      "format_context_unknown": 3
+      "container_unpack_then_decode": 2
     },
     "pmd_sky": {
       "pmd_format_decode": 19
@@ -62,9 +57,12 @@
         "party_icon",
         "summary_icon"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "candidate_file_needs_format_context",
-      "reason": "Pok\u00e9mon-facing candidate exists but its visual format/context is not yet trustworthy."
+      "review_status": "reject",
+      "reason_code": "build_list_text_file",
+      "reason": "Plain-text knarc build list; contains no visual data.",
+      "recovery_evidence": {
+        "detail": "3 text lines"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:icongra:poke_icon:narc_0000.pal",
@@ -18155,9 +18153,12 @@
         "pokemon",
         "battle_animation"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "candidate_file_needs_format_context",
-      "reason": "Pok\u00e9mon-facing candidate exists but its visual format/context is not yet trustworthy."
+      "review_status": "reject",
+      "reason_code": "build_list_text_file",
+      "reason": "Plain-text knarc build list; contains no visual data.",
+      "recovery_evidence": {
+        "detail": "2 text lines"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokeanm:pokeanm:narc_0000.bin",
@@ -52010,9 +52011,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "candidate_file_needs_format_context",
-      "reason": "Pok\u00e9mon-facing candidate exists but its visual format/context is not yet trustworthy."
+      "review_status": "reject",
+      "reason_code": "build_list_text_file",
+      "reason": "Plain-text knarc build list; contains no visual data.",
+      "recovery_evidence": {
+        "detail": "2 text lines"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0000.NCGR",
@@ -56185,9 +56189,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "candidate_file_needs_format_context",
-      "reason": "Pok\u00e9mon-facing candidate exists but its visual format/context is not yet trustworthy."
+      "review_status": "reject",
+      "reason_code": "build_list_text_file",
+      "reason": "Plain-text knarc build list; contains no visual data.",
+      "recovery_evidence": {
+        "detail": "3 text lines"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:pokegra:narc_0000.png.key",
@@ -103645,9 +103652,12 @@
         "trainer",
         "portrait"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "candidate_file_needs_format_context",
-      "reason": "Pok\u00e9mon-facing candidate exists but its visual format/context is not yet trustworthy."
+      "review_status": "reject",
+      "reason_code": "build_list_text_file",
+      "reason": "Plain-text knarc build list; contains no visual data.",
+      "recovery_evidence": {
+        "detail": "3 text lines"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:trgra:trbgra:narc_0000.png.key",
@@ -103795,9 +103805,12 @@
         "trainer",
         "portrait"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "candidate_file_needs_format_context",
-      "reason": "Pok\u00e9mon-facing candidate exists but its visual format/context is not yet trustworthy."
+      "review_status": "reject",
+      "reason_code": "build_list_text_file",
+      "reason": "Plain-text knarc build list; contains no visual data.",
+      "recovery_evidence": {
+        "detail": "3 text lines"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:trgra:trfgra:narc_0000.png.key",
@@ -112765,9 +112778,12 @@
         "field",
         "overworld"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "candidate_file_needs_format_context",
-      "reason": "Pok\u00e9mon-facing candidate exists but its visual format/context is not yet trustworthy."
+      "review_status": "reject",
+      "reason_code": "build_list_text_file",
+      "reason": "Plain-text knarc build list; contains no visual data.",
+      "recovery_evidence": {
+        "detail": "3 text lines"
+      }
     },
     {
       "asset_id": "hgss:source:files:fielddata:graphic:preview_graphic:preview_graphic:.narcorder",
@@ -112780,9 +112796,12 @@
         "field",
         "overworld"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "candidate_file_needs_format_context",
-      "reason": "Pok\u00e9mon-facing candidate exists but its visual format/context is not yet trustworthy."
+      "review_status": "reject",
+      "reason_code": "build_list_text_file",
+      "reason": "Plain-text knarc build list; contains no visual data.",
+      "recovery_evidence": {
+        "detail": "228 text lines"
+      }
     },
     {
       "asset_id": "hgss:source:files:fielddata:graphic:preview_graphic:preview_graphic:preview_graphic_bell_tower_day.NSCR",
@@ -118680,9 +118699,12 @@
         "field",
         "overworld"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "small_data_table_narc",
+      "reason": "NARC of tiny non-Nitro data records (offset/height/move-list tables), not visual art.",
+      "recovery_evidence": {
+        "detail": "1 members, max 4092 bytes, no Nitro/3D magics"
+      }
     },
     {
       "asset_id": "hgss:source:files:fielddata:wazaoshie:.gitignore",
@@ -118742,9 +118764,12 @@
         "party_icon",
         "summary_icon"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "candidate_file_needs_format_context",
-      "reason": "Pok\u00e9mon-facing candidate exists but its visual format/context is not yet trustworthy."
+      "review_status": "reject",
+      "reason_code": "build_list_text_file",
+      "reason": "Plain-text knarc build list; contains no visual data.",
+      "recovery_evidence": {
+        "detail": "9 text lines"
+      }
     },
     {
       "asset_id": "hgss:source:files:poketool:icongra:poke_icon:poke_icon_00000000.pal",
@@ -118886,9 +118911,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "small_data_table_narc",
+      "reason": "NARC of tiny non-Nitro data records (offset/height/move-list tables), not visual art.",
+      "recovery_evidence": {
+        "detail": "1976 members, max 1 bytes, no Nitro/3D magics"
+      }
     },
     {
       "asset_id": "hgss:source:files:poketool:pokegra:height_o.narc",
@@ -118902,9 +118930,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "small_data_table_narc",
+      "reason": "NARC of tiny non-Nitro data records (offset/height/move-list tables), not visual art.",
+      "recovery_evidence": {
+        "detail": "160 members, max 1 bytes, no Nitro/3D magics"
+      }
     },
     {
       "asset_id": "hgss:source:files:poketool:pokegra:otherpoke:arceus:bug:back.png.key",

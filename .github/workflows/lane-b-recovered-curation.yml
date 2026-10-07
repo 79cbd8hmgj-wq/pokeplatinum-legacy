@@ -12,6 +12,7 @@ on:
       - "docs/visual_overhaul/LANE_B_RANGER_EMBEDDED_RECOVERY.json"
       - "docs/visual_overhaul/LANE_B_PMD_SKY_RECOVERY.json"
       - "docs/visual_overhaul/LANE_B_NITRO2D_PAIR_RECOVERY.json"
+      - "docs/visual_overhaul/LANE_B_EXTRA_SUPPORT_RECOVERY.json"
       - ".github/workflows/lane-b-recovered-curation.yml"
 
 permissions:
@@ -34,6 +35,7 @@ jobs:
             --extra-overlay docs/visual_overhaul/LANE_B_RANGER_EMBEDDED_RECOVERY.json \
             --extra-overlay docs/visual_overhaul/LANE_B_PMD_SKY_RECOVERY.json \
             --extra-overlay docs/visual_overhaul/LANE_B_NITRO2D_PAIR_RECOVERY.json \
+            --extra-overlay docs/visual_overhaul/LANE_B_EXTRA_SUPPORT_RECOVERY.json \
             --write-json docs/visual_overhaul/LANE_B_RECOVERED_CURATION.json \
             --write-md docs/visual_overhaul/LANE_B_RECOVERED_CURATION.md
 
@@ -46,7 +48,7 @@ jobs:
           assert p["asset_count"] == 15157
           assert sum(p["status_counts"].values()) == 15157
           assert p["status_counts"].get("usable", 0) >= 4565
-          assert p["status_counts"].get("decode_issue", 0) <= 2614
+          assert p["status_counts"].get("decode_issue", 0) <= 2602
           assert "unreviewed" not in p["status_counts"]
           print("Lane B recovered status:", p["status_counts"])
           print("Remaining routes:", p["remaining_decode_routes"])
