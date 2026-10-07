@@ -47,6 +47,7 @@
   "identical": 0,
   "missing_in_native": null,
   "palette_only": 1,
+  "subject_unverified": null,
   "unmeasured": null
  },
  "ranking_key": [
@@ -71,7 +72,8 @@
   "weak_evidence_share"
  ],
  "relation_notes": {
-  "art_diff_minor": "Rendered-pixel difference ratio (differing pixels / opaque union, over compared frames) below thresholds.minor_diff_ratio; evidence providers emit this relation instead of art_diff_geometry_*."
+  "art_diff_minor": "Rendered-pixel difference ratio (differing pixels / opaque union, over compared frames) below thresholds.minor_diff_ratio; evidence providers emit this relation instead of art_diff_geometry_*.",
+  "subject_unverified": "Slot-aligned sprite differs beyond art_diff_minor, but slot identity (shared model slot name) does not prove the donor depicts the same subject as the native sprite; needs human/visual confirmation. Gain unmeasured => reference_only/needs_evidence."
  },
  "risk_flag_bumps": {
   "frame_layout_differs": 1,
@@ -90,7 +92,7 @@
   "reference_only",
   "not_selected"
  ],
- "rules_version": "1.4",
+ "rules_version": "1.5",
  "runtime_validation_relations": [
   "art_diff_geometry_close",
   "art_diff_geometry_review",

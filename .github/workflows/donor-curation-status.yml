@@ -37,10 +37,12 @@ jobs:
           python3 tools/visual_overhaul/build_donor_curation_status.py \
             --catalog $D/DONOR_ASSET_CATALOG.json \
             --catalog-extension $D/catalog_extensions/hgss_trainer_sprites/CATALOG.json \
+            --catalog-extension $D/catalog_extensions/hgss_field_sprites/CATALOG.json \
             --ledger A=$D/LANE_A_RECOVERED_CURATION.json \
             --ledger B=$D/LANE_B_RECOVERED_CURATION.json \
             --ledger CDE=$D/LANE_CDE_RECOVERED_CURATION.json \
             --ledger X_hgss_trainer_sprites=$D/catalog_extensions/hgss_trainer_sprites/CURATION.json \
+            --ledger X_hgss_field_sprites=$D/catalog_extensions/hgss_field_sprites/CURATION.json \
             --write-json $D/DONOR_CURATION_STATUS.json --write-md $D/DONOR_CURATION_STATUS.md
 
       - name: Validate coverage invariants

@@ -1,12 +1,12 @@
 {
  "candidate_group_totals": {
-  "groups": 8369,
+  "groups": 8581,
   "groups_by_subsystem": {
    "battle_backgrounds_hud": 68,
    "battle_effects_particles": 636,
    "field_effects_overlays": 523,
    "field_environment_art": 1485,
-   "field_npc_player_sprites": 163,
+   "field_npc_player_sprites": 375,
    "menu_ui_frames": 913,
    "no_platinum_target": 282,
    "party_summary_ui": 1,
@@ -22,7 +22,7 @@
    "battle_effects_particles": 4266,
    "field_effects_overlays": 538,
    "field_environment_art": 3060,
-   "field_npc_player_sprites": 1780,
+   "field_npc_player_sprites": 1992,
    "menu_ui_frames": 2315,
    "no_platinum_target": 1410,
    "party_summary_ui": 27,
@@ -34,10 +34,10 @@
    "trainer_battle_sprites": 252
   },
   "records_with_undefined_source_role": 0,
-  "targets": 1805,
+  "targets": 2007,
   "unresolved_decode_issue_in_unit": 106,
   "unresolved_decode_issue_without_usable_unit": 67,
-  "usable_records_grouped": 55303
+  "usable_records_grouped": 55515
  },
  "schema_version": 1,
  "subsystems": [
@@ -99,18 +99,20 @@
    "targets": 1
   },
   {
-   "groups": 163,
-   "members": 1780,
-   "needs_evidence": 0,
+   "groups": 375,
+   "members": 1992,
+   "needs_evidence": 4,
    "roles": {
-    "not_selected": 163
+    "alternate": 1,
+    "not_selected": 259,
+    "reference_only": 115
    },
    "state": "selected",
    "subsystem": "field_npc_player_sprites",
    "target_resolution": {
-    "native": 1
+    "native": 203
    },
-   "targets": 1
+   "targets": 203
   },
   {
    "groups": 913,

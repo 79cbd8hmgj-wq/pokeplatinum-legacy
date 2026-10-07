@@ -120,7 +120,7 @@ def build(want_membership: bool = False) -> dict:
         "inputs": {
             "recovered_ledger_sha256": ledger_hashes(),
             "subsystems_sha256": file_sha256(SUBSYSTEMS_JSON),
-            "alignment_sha256": file_sha256(SEL / "alignment" / "trainer_classes.json"),
+            "alignment_sha256": {n: file_sha256(SEL / "alignment" / n) for n in ("trainer_classes.json", "field_sprites.json")},
             "rules_version": rules["rules_version"],
             "curation_status": {"usable": status["status_totals"]["usable"] if "status_totals" in status else None},
         },

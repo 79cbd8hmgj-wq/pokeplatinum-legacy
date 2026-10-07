@@ -1,0 +1,1281 @@
+{
+ "hgss": {
+  "files/data/mmodel/mmodel/mmodel_00000000.NSBTX": {
+   "base": "babyboy1",
+   "method": "basename_match",
+   "platinum_file": "npc/ninja_boy.png",
+   "target": "fs_npc_ninja_boy"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000001.NSBTX": {
+   "base": "babygirl1",
+   "method": "basename_match",
+   "platinum_file": "npc/twin.png",
+   "target": "fs_npc_twin"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000002.NSBTX": {
+   "base": "boy1",
+   "method": "basename_match",
+   "platinum_file": "npc/school_kid_m.png",
+   "target": "fs_npc_school_kid_m"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000003.NSBTX": {
+   "base": "boy2",
+   "method": "basename_match",
+   "platinum_file": "npc/youngster.png",
+   "target": "fs_npc_youngster"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000004.NSBTX": {
+   "base": "boy3",
+   "method": "basename_match",
+   "platinum_file": "npc/bug_catcher.png",
+   "target": "fs_npc_bug_catcher"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000005.NSBTX": {
+   "base": "girl1",
+   "method": "basename_match",
+   "platinum_file": "npc/lass.png",
+   "target": "fs_npc_lass"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000006.NSBTX": {
+   "base": "girl2",
+   "method": "basename_match",
+   "platinum_file": "npc/battle_girl.png",
+   "target": "fs_npc_battle_girl"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000007.NSBTX": {
+   "base": "girl3",
+   "method": "basename_match",
+   "platinum_file": "npc/school_kid_f.png",
+   "target": "fs_npc_school_kid_f"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000008.NSBTX": {
+   "base": "man1",
+   "method": "basename_match_multi",
+   "platinum_file": "npc/pokemon_breeder_m.png",
+   "target": "fs_npc_pokemon_breeder_m"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000009.NSBTX": {
+   "base": "man2",
+   "method": "basename_match",
+   "platinum_file": "npc/guitarist.png",
+   "target": "fs_npc_guitarist"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000010.NSBTX": {
+   "base": "man3",
+   "method": "basename_match",
+   "platinum_file": "npc/ace_trainer_m.png",
+   "target": "fs_npc_ace_trainer_m"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000011.NSBTX": {
+   "base": "man5",
+   "method": "basename_match",
+   "platinum_file": "npc/ace_trainer_snow_m.png",
+   "target": "fs_npc_ace_trainer_snow_m"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000012.NSBTX": {
+   "base": "woman1",
+   "method": "basename_match",
+   "platinum_file": "npc/pokemon_breeder_f.png",
+   "target": "fs_npc_pokemon_breeder_f"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000013.NSBTX": {
+   "base": "woman2",
+   "method": "basename_match",
+   "platinum_file": "npc/beauty.png",
+   "target": "fs_npc_beauty"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000014.NSBTX": {
+   "base": "woman3",
+   "method": "basename_match",
+   "platinum_file": "npc/ace_trainer_f.png",
+   "target": "fs_npc_ace_trainer_f"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000015.NSBTX": {
+   "base": "woman5",
+   "method": "basename_match",
+   "platinum_file": "npc/ace_trainer_snow_f.png",
+   "target": "fs_npc_ace_trainer_snow_f"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000016.NSBTX": {
+   "base": "middleman1",
+   "method": "basename_match",
+   "platinum_file": "npc/pokefan_m.png",
+   "target": "fs_npc_pokefan_m"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000017.NSBTX": {
+   "base": "middlewoman1",
+   "method": "basename_match",
+   "platinum_file": "npc/pokefan_f.png",
+   "target": "fs_npc_pokefan_f"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000018.NSBTX": {
+   "base": "oldman1",
+   "method": "basename_match",
+   "platinum_file": "npc/expert_m.png",
+   "target": "fs_npc_expert_m"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000019.NSBTX": {
+   "base": "oldwoman1",
+   "method": "basename_match",
+   "platinum_file": "npc/expert_f.png",
+   "target": "fs_npc_expert_f"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000020.NSBTX": {
+   "base": "cyclem",
+   "method": "basename_match",
+   "platinum_file": "npc/cyclist_m.png",
+   "target": "fs_npc_cyclist_m"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000021.NSBTX": {
+   "base": "cyclew",
+   "method": "basename_match",
+   "platinum_file": "npc/cyclist_f.png",
+   "target": "fs_npc_cyclist_f"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000022.NSBTX": {
+   "base": "skierw",
+   "method": "basename_match",
+   "platinum_file": "npc/skier_f.png",
+   "target": "fs_npc_skier_f"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000023.NSBTX": {
+   "base": "shopm1",
+   "method": "basename_match",
+   "platinum_file": "npc/cashier_m.png",
+   "target": "fs_npc_cashier_m"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000024.NSBTX": {
+   "base": "shopw1",
+   "method": "basename_match",
+   "platinum_file": "npc/cashier_f.png",
+   "target": "fs_npc_cashier_f"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000025.NSBTX": {
+   "base": "assistantm",
+   "method": "basename_match",
+   "platinum_file": "npc/scientist_m.png",
+   "target": "fs_npc_scientist_m"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000026.NSBTX": {
+   "base": "assistantw",
+   "method": "basename_match",
+   "platinum_file": "npc/scientist_f.png",
+   "target": "fs_npc_scientist_f"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000027.NSBTX": {
+   "base": "gorggeousm",
+   "method": "basename_match",
+   "platinum_file": "npc/rich_boy.png",
+   "target": "fs_npc_rich_boy"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000028.NSBTX": {
+   "base": "gorggeousw",
+   "method": "basename_match",
+   "platinum_file": "npc/lady.png",
+   "target": "fs_npc_lady"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000029.NSBTX": {
+   "base": "waiter",
+   "method": "basename_match",
+   "platinum_file": "npc/waiter.png",
+   "target": "fs_npc_waiter"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000030.NSBTX": {
+   "base": "waitress",
+   "method": "basename_match",
+   "platinum_file": "npc/waitress.png",
+   "target": "fs_npc_waitress"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000031.NSBTX": {
+   "base": "reporter",
+   "method": "basename_match",
+   "platinum_file": "npc/reporter.png",
+   "target": "fs_npc_reporter"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000032.NSBTX": {
+   "base": "cameraman",
+   "method": "basename_match",
+   "platinum_file": "npc/cameraman.png",
+   "target": "fs_npc_cameraman"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000033.NSBTX": {
+   "base": "mystery",
+   "method": "basename_match",
+   "platinum_file": "npc/psychic.png",
+   "target": "fs_npc_psychic"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000034.NSBTX": {
+   "base": "bigman",
+   "method": "basename_match",
+   "platinum_file": "npc/collector.png",
+   "target": "fs_npc_collector"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000035.NSBTX": {
+   "base": "mount",
+   "method": "basename_match",
+   "platinum_file": "npc/hiker.png",
+   "target": "fs_npc_hiker"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000036.NSBTX": {
+   "base": "badman",
+   "method": "basename_match",
+   "platinum_file": "npc/roughneck.png",
+   "target": "fs_npc_roughneck"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000037.NSBTX": {
+   "base": "policeman",
+   "method": "basename_match",
+   "platinum_file": "npc/policeman.png",
+   "target": "fs_npc_policeman"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000038.NSBTX": {
+   "base": "idol",
+   "method": "basename_match",
+   "platinum_file": "npc/idol.png",
+   "target": "fs_npc_idol"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000039.NSBTX": {
+   "base": "gentleman",
+   "method": "basename_match",
+   "platinum_file": "npc/gentleman.png",
+   "target": "fs_npc_gentleman"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000040.NSBTX": {
+   "base": "lady",
+   "method": "basename_match",
+   "platinum_file": "npc/socialite.png",
+   "target": "fs_npc_socialite"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000041.NSBTX": {
+   "base": "workman",
+   "method": "basename_match",
+   "platinum_file": "npc/worker.png",
+   "target": "fs_npc_worker"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000042.NSBTX": {
+   "base": "farmer",
+   "method": "basename_match",
+   "platinum_file": "npc/rancher.png",
+   "target": "fs_npc_rancher"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000043.NSBTX": {
+   "base": "cowgirl",
+   "method": "basename_match",
+   "platinum_file": "npc/cowgirl.png",
+   "target": "fs_npc_cowgirl"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000044.NSBTX": {
+   "base": "clown",
+   "method": "basename_match",
+   "platinum_file": "npc/clown.png",
+   "target": "fs_npc_clown"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000045.NSBTX": {
+   "base": "artist",
+   "method": "basename_match",
+   "platinum_file": "npc/artist.png",
+   "target": "fs_npc_artist"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000046.NSBTX": {
+   "base": "sportsman",
+   "method": "basename_match",
+   "platinum_file": "npc/jogger.png",
+   "target": "fs_npc_jogger"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000047.NSBTX": {
+   "base": "explore",
+   "method": "basename_match",
+   "platinum_file": "npc/ruin_maniac.png",
+   "target": "fs_npc_ruin_maniac"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000048.NSBTX": {
+   "base": "fighter",
+   "method": "basename_match",
+   "platinum_file": "npc/black_belt.png",
+   "target": "fs_npc_black_belt"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000049.NSBTX": {
+   "base": "campboy",
+   "method": "basename_match",
+   "platinum_file": "npc/camper.png",
+   "target": "fs_npc_camper"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000050.NSBTX": {
+   "base": "picnicgirl",
+   "method": "basename_match",
+   "platinum_file": "npc/picnicker.png",
+   "target": "fs_npc_picnicker"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000051.NSBTX": {
+   "base": "fishing",
+   "method": "basename_match",
+   "platinum_file": "npc/fisherman.png",
+   "target": "fs_npc_fisherman"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000052.NSBTX": {
+   "base": "ambrella",
+   "method": "basename_match",
+   "platinum_file": "npc/parasol_lady.png",
+   "target": "fs_npc_parasol_lady"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000053.NSBTX": {
+   "base": "seaman",
+   "method": "basename_match",
+   "platinum_file": "npc/sailor.png",
+   "target": "fs_npc_sailor"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000054.NSBTX": {
+   "base": "doctor",
+   "method": "basename_match",
+   "platinum_file": "npc/prof_rowan.png",
+   "target": "fs_npc_prof_rowan"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000055.NSBTX": {
+   "base": "maid",
+   "method": "basename_match",
+   "platinum_file": "npc/maid.png",
+   "target": "fs_npc_maid"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000056.NSBTX": {
+   "base": "delivery",
+   "method": "basename_match",
+   "platinum_file": "npc/mystery_gift_deliveryman.png",
+   "target": "fs_npc_mystery_gift_deliveryman"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000057.NSBTX": {
+   "base": "sunglasses",
+   "method": "basename_match",
+   "platinum_file": "npc/gym_guide.png",
+   "target": "fs_npc_gym_guide"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000058.NSBTX": {
+   "base": "gsrivel",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsrivel"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000059.NSBTX": {
+   "base": "daigo",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_daigo"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000060.NSBTX": {
+   "base": "champion",
+   "method": "basename_match",
+   "platinum_file": "npc/cynthia.png",
+   "target": "fs_npc_cynthia"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000061.NSBTX": {
+   "base": "towerboss",
+   "method": "basename_match",
+   "platinum_file": "npc/palmer.png",
+   "target": "fs_npc_palmer"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000062.NSBTX": {
+   "base": "seven1",
+   "method": "basename_match",
+   "platinum_file": "npc/cheryl.png",
+   "target": "fs_npc_cheryl"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000063.NSBTX": {
+   "base": "seven2",
+   "method": "basename_match",
+   "platinum_file": "npc/riley.png",
+   "target": "fs_npc_riley"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000064.NSBTX": {
+   "base": "seven3",
+   "method": "basename_match",
+   "platinum_file": "npc/marley.png",
+   "target": "fs_npc_marley"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000065.NSBTX": {
+   "base": "seven4",
+   "method": "basename_match",
+   "platinum_file": "npc/buck.png",
+   "target": "fs_npc_buck"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000066.NSBTX": {
+   "base": "seven5",
+   "method": "basename_match",
+   "platinum_file": "npc/mira.png",
+   "target": "fs_npc_mira"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000067.NSBTX": {
+   "base": "gsboy1",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsboy1"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000068.NSBTX": {
+   "base": "pikachu",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_pikachu"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000069.NSBTX": {
+   "base": "hero",
+   "method": "basename_match",
+   "platinum_file": "player/dp_player_m.png",
+   "target": "fs_player_dp_player_m"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000070.NSBTX": {
+   "base": "heroine",
+   "method": "basename_match",
+   "platinum_file": "player/dp_player_f.png",
+   "target": "fs_player_dp_player_f"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000071.NSBTX": {
+   "base": "cyclehero",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_cyclehero"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000072.NSBTX": {
+   "base": "cycleheroine",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_cycleheroine"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000079.NSBTX": {
+   "base": "fishinghero",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_fishinghero"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000080.NSBTX": {
+   "base": "fish_heroine",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_fish_heroine"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000083.NSBTX": {
+   "base": "itako",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_itako"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000084.NSBTX": {
+   "base": "itako_",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_itako_"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000085.NSBTX": {
+   "base": "pokehero",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_pokehero"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000086.NSBTX": {
+   "base": "pokeheroine",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_pokeheroine"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000089.NSBTX": {
+   "base": "banzaihero",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_banzaihero"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000090.NSBTX": {
+   "base": "banzaiheroine",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_banzaiheroine"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000095.NSBTX": {
+   "base": "rhero",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_rhero"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000096.NSBTX": {
+   "base": "rheroine",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_rheroine"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000097.NSBTX": {
+   "base": "rbanzaihero",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_rbanzaihero"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000098.NSBTX": {
+   "base": "rbanzaiine",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_rbanzaiine"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000099.NSBTX": {
+   "base": "pkthhero",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_pkthhero"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000100.NSBTX": {
+   "base": "pkthheroine",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_pkthheroine"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000101.NSBTX": {
+   "base": "wifism",
+   "method": "basename_match",
+   "platinum_file": "npc/wifi_plaza_attentant_m.png",
+   "target": "fs_npc_wifi_plaza_attentant_m"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000102.NSBTX": {
+   "base": "wifisf",
+   "method": "basename_match",
+   "platinum_file": "npc/wifi_plaza_attentant_f.png",
+   "target": "fs_npc_wifi_plaza_attentant_f"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000103.NSBTX": {
+   "base": "brains1",
+   "method": "basename_match",
+   "platinum_file": "npc/thorton.png",
+   "target": "fs_npc_thorton"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000104.NSBTX": {
+   "base": "brains2",
+   "method": "basename_match",
+   "platinum_file": "npc/argenta.png",
+   "target": "fs_npc_argenta"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000105.NSBTX": {
+   "base": "brains3",
+   "method": "basename_match",
+   "platinum_file": "npc/darach.png",
+   "target": "fs_npc_darach"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000106.NSBTX": {
+   "base": "brains4",
+   "method": "basename_match",
+   "platinum_file": "npc/dahlia.png",
+   "target": "fs_npc_dahlia"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000107.NSBTX": {
+   "base": "princess",
+   "method": "basename_match",
+   "platinum_file": "npc/caitlin.png",
+   "target": "fs_npc_caitlin"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000108.NSBTX": {
+   "base": "bfsm",
+   "method": "basename_match",
+   "platinum_file": "npc/frontier_single_attendant.png",
+   "target": "fs_npc_frontier_single_attendant"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000109.NSBTX": {
+   "base": "bfsw1",
+   "method": "basename_match",
+   "platinum_file": "npc/frontier_multi_attendant.png",
+   "target": "fs_npc_frontier_multi_attendant"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000110.NSBTX": {
+   "base": "bfsw2",
+   "method": "basename_match",
+   "platinum_file": "npc/frontier_booth_attendant.png",
+   "target": "fs_npc_frontier_booth_attendant"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000111.NSBTX": {
+   "base": "aji_peru",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_aji_peru"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000113.NSBTX": {
+   "base": "gsbabyboy1",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsbabyboy1"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000114.NSBTX": {
+   "base": "gsbabygirl1",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsbabygirl1"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000115.NSBTX": {
+   "base": "gsboy2",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsboy2"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000116.NSBTX": {
+   "base": "gsboy3",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsboy3"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000117.NSBTX": {
+   "base": "gsgirl1",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsgirl1"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000118.NSBTX": {
+   "base": "gsgirl2",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsgirl2"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000119.NSBTX": {
+   "base": "gsgirl3",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsgirl3"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000120.NSBTX": {
+   "base": "gsman1",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsman1"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000121.NSBTX": {
+   "base": "gsman2",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsman2"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000122.NSBTX": {
+   "base": "gsman3",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsman3"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000123.NSBTX": {
+   "base": "gswoman1",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gswoman1"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000124.NSBTX": {
+   "base": "gswoman2",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gswoman2"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000125.NSBTX": {
+   "base": "gswoman3",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gswoman3"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000126.NSBTX": {
+   "base": "gsmiddleman1",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsmiddleman1"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000127.NSBTX": {
+   "base": "middlewoman1",
+   "method": "basename_match",
+   "platinum_file": "npc/pokefan_f.png",
+   "target": "fs_npc_pokefan_f"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000128.NSBTX": {
+   "base": "gsoldman1",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsoldman1"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000129.NSBTX": {
+   "base": "gsoldwoman1",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsoldwoman1"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000130.NSBTX": {
+   "base": "gsbigman",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsbigman"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000131.NSBTX": {
+   "base": "mount",
+   "method": "basename_match",
+   "platinum_file": "npc/hiker.png",
+   "target": "fs_npc_hiker"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000132.NSBTX": {
+   "base": "shopm1",
+   "method": "basename_match",
+   "platinum_file": "npc/cashier_m.png",
+   "target": "fs_npc_cashier_m"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000133.NSBTX": {
+   "base": "pcwoman1",
+   "method": "basename_match",
+   "platinum_file": "npc/pokecenter_nurse.png",
+   "target": "fs_npc_pokecenter_nurse"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000134.NSBTX": {
+   "base": "pcwoman2",
+   "method": "basename_match",
+   "platinum_file": "npc/teala.png",
+   "target": "fs_npc_teala"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000135.NSBTX": {
+   "base": "pcwoman3",
+   "method": "basename_match",
+   "platinum_file": "npc/unused_receptionist.png",
+   "target": "fs_npc_unused_receptionist"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000136.NSBTX": {
+   "base": "gsassistantm",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsassistantm"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000137.NSBTX": {
+   "base": "gsgentleman",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsgentleman"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000138.NSBTX": {
+   "base": "gsswimmerm",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsswimmerm"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000139.NSBTX": {
+   "base": "gsswimmerw",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsswimmerw"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000140.NSBTX": {
+   "base": "gsfighter",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsfighter"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000141.NSBTX": {
+   "base": "campboy",
+   "method": "basename_match",
+   "platinum_file": "npc/camper.png",
+   "target": "fs_npc_camper"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000142.NSBTX": {
+   "base": "picnicgirl",
+   "method": "basename_match",
+   "platinum_file": "npc/picnicker.png",
+   "target": "fs_npc_picnicker"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000143.NSBTX": {
+   "base": "fishing",
+   "method": "basename_match",
+   "platinum_file": "npc/fisherman.png",
+   "target": "fs_npc_fisherman"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000144.NSBTX": {
+   "base": "seaman",
+   "method": "basename_match",
+   "platinum_file": "npc/sailor.png",
+   "target": "fs_npc_sailor"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000145.NSBTX": {
+   "base": "mystery",
+   "method": "basename_match",
+   "platinum_file": "npc/psychic.png",
+   "target": "fs_npc_psychic"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000146.NSBTX": {
+   "base": "gsleader1",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsleader1"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000147.NSBTX": {
+   "base": "gsleader2",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsleader2"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000148.NSBTX": {
+   "base": "gsleader3",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsleader3"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000149.NSBTX": {
+   "base": "gsleader4",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsleader4"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000150.NSBTX": {
+   "base": "gsleader5",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsleader5"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000151.NSBTX": {
+   "base": "gsleader6",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsleader6"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000152.NSBTX": {
+   "base": "gsleader7",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsleader7"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000153.NSBTX": {
+   "base": "gsleader8",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsleader8"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000154.NSBTX": {
+   "base": "gsbigfour1",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsbigfour1"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000155.NSBTX": {
+   "base": "gsbigfour2",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsbigfour2"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000156.NSBTX": {
+   "base": "gsbigfour3",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsbigfour3"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000157.NSBTX": {
+   "base": "gsbigfour4",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsbigfour4"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000158.NSBTX": {
+   "base": "wataru",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_wataru"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000159.NSBTX": {
+   "base": "gsmama",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsmama"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000160.NSBTX": {
+   "base": "ookido",
+   "method": "basename_match",
+   "platinum_file": "npc/prof_oak.png",
+   "target": "fs_npc_prof_oak"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000161.NSBTX": {
+   "base": "gsdsboy",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsdsboy"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000162.NSBTX": {
+   "base": "gsleader9",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsleader9"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000163.NSBTX": {
+   "base": "gsleader10",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsleader10"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000164.NSBTX": {
+   "base": "gsleader11",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsleader11"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000165.NSBTX": {
+   "base": "gsleader12",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsleader12"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000166.NSBTX": {
+   "base": "gsleader13",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsleader13"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000167.NSBTX": {
+   "base": "gsleader14",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsleader14"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000168.NSBTX": {
+   "base": "gsleader15",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsleader15"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000169.NSBTX": {
+   "base": "gsleader16",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gsleader16"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000170.NSBTX": {
+   "base": "red",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_red"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000171.NSBTX": {
+   "base": "thief",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_thief"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000172.NSBTX": {
+   "base": "bozu",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_bozu"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000173.NSBTX": {
+   "base": "rocketw",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_rocketw"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000174.NSBTX": {
+   "base": "rocketm",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_rocketm"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000175.NSBTX": {
+   "base": "rkanbuw",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_rkanbuw"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000176.NSBTX": {
+   "base": "rkanbum",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_rkanbum"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000177.NSBTX": {
+   "base": "boarder",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_boarder"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000178.NSBTX": {
+   "base": "fire",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_fire"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000179.NSBTX": {
+   "base": "gang",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gang"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000180.NSBTX": {
+   "base": "dancer",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_dancer"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000181.NSBTX": {
+   "base": "masaki",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_masaki"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000182.NSBTX": {
+   "base": "captain",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_captain"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000183.NSBTX": {
+   "base": "rgyaradosu",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_rgyaradosu"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000184.NSBTX": {
+   "base": "mania",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_mania"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000185.NSBTX": {
+   "base": "juggrer",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_juggrer"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000186.NSBTX": {
+   "base": "usokky",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_usokky"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000187.NSBTX": {
+   "base": "minaki",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_minaki"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000188.NSBTX": {
+   "base": "thlonowner",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_thlonowner"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000189.NSBTX": {
+   "base": "instructor",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_instructor"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000190.NSBTX": {
+   "base": "kurumi",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_kurumi"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000191.NSBTX": {
+   "base": "nanami",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_nanami"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000192.NSBTX": {
+   "base": "redmama",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_redmama"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000193.NSBTX": {
+   "base": "counterm",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_counterm"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000195.NSBTX": {
+   "base": "ice",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_ice"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000196.NSBTX": {
+   "base": "rotomg",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_rotomg"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000197.NSBTX": {
+   "base": "rotomi",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_rotomi"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000198.NSBTX": {
+   "base": "rotoms",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_rotoms"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000199.NSBTX": {
+   "base": "rotomw",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_rotomw"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000200.NSBTX": {
+   "base": "rotomf",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_rotomf"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000209.NSBTX": {
+   "base": "yadon",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_yadon"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000212.NSBTX": {
+   "base": "gswoman6",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gswoman6"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000213.NSBTX": {
+   "base": "hero",
+   "method": "basename_match",
+   "platinum_file": "player/dp_player_m.png",
+   "target": "fs_player_dp_player_m"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000214.NSBTX": {
+   "base": "heroine",
+   "method": "basename_match",
+   "platinum_file": "player/dp_player_f.png",
+   "target": "fs_player_dp_player_f"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000215.NSBTX": {
+   "base": "leader1",
+   "method": "basename_match",
+   "platinum_file": "npc/roark.png",
+   "target": "fs_npc_roark"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000216.NSBTX": {
+   "base": "leader2",
+   "method": "basename_match",
+   "platinum_file": "npc/gardenia.png",
+   "target": "fs_npc_gardenia"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000217.NSBTX": {
+   "base": "leader3",
+   "method": "basename_match",
+   "platinum_file": "npc/crasher_wake.png",
+   "target": "fs_npc_crasher_wake"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000218.NSBTX": {
+   "base": "leader4",
+   "method": "basename_match",
+   "platinum_file": "npc/maylene.png",
+   "target": "fs_npc_maylene"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000219.NSBTX": {
+   "base": "leader5",
+   "method": "basename_match",
+   "platinum_file": "npc/fantina.png",
+   "target": "fs_npc_fantina"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000220.NSBTX": {
+   "base": "leader6",
+   "method": "basename_match",
+   "platinum_file": "npc/candice.png",
+   "target": "fs_npc_candice"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000221.NSBTX": {
+   "base": "leader7",
+   "method": "basename_match",
+   "platinum_file": "npc/byron.png",
+   "target": "fs_npc_byron"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000222.NSBTX": {
+   "base": "leader8",
+   "method": "basename_match",
+   "platinum_file": "npc/volkner.png",
+   "target": "fs_npc_volkner"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000223.NSBTX": {
+   "base": "gantetsu",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gantetsu"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000224.NSBTX": {
+   "base": "jupetta",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_jupetta"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000225.NSBTX": {
+   "base": "sakaki",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_sakaki"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000226.NSBTX": {
+   "base": "suit",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_suit"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000227.NSBTX": {
+   "base": "chourou",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_chourou"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000228.NSBTX": {
+   "base": "rapurasu",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_rapurasu"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000229.NSBTX": {
+   "base": "gtorophy",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_gtorophy"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000230.NSBTX": {
+   "base": "storophy",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_storophy"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000231.NSBTX": {
+   "base": "btorophy",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_btorophy"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000242.NSBTX": {
+   "base": "mono_pip",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_mono_pip"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000244.NSBTX": {
+   "base": "rkanbum2",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_rkanbum2"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000245.NSBTX": {
+   "base": "rkanbum3",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_rkanbum3"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000246.NSBTX": {
+   "base": "pl_boy01c",
+   "method": "basename_match",
+   "platinum_file": "player/player_m.png",
+   "target": "fs_player_player_m"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000247.NSBTX": {
+   "base": "pl_girl01c",
+   "method": "basename_match",
+   "platinum_file": "player/player_f.png",
+   "target": "fs_player_player_f"
+  },
+  "files/data/mmodel/mmodel/mmodel_00000250.NSBTX": {
+   "base": "delivery2",
+   "method": "none",
+   "platinum_file": null,
+   "target": "fs_hgss_delivery2"
+  }
+ },
+ "inputs": {
+  "catalog_sha256": "420d47afa80692c0904cd7991d7dfabf0ecbdfd3efa54956ef12efa94610693a",
+  "platinum_meson_sha256": "6f0500a567c1d9b7b4ba9163fe206b1f9564eb387661e26019d2a67fd6e6945c"
+ },
+ "schema_version": 1
+}

@@ -8,6 +8,13 @@
       "scope": "HGSS trainer battle sprites: files/a/0/5/8 (front) and files/a/0/0/6 (back)",
       "catalog": "hgss_trainer_sprites/CATALOG.json",
       "curation": "hgss_trainer_sprites/CURATION.json"
+    },
+    {
+      "id": "hgss_field_sprites",
+      "source_id": "hgss",
+      "scope": "HGSS human overworld sprite sheets: files/data/mmodel/mmodel/*.NSBTX (NPC/player scope rule in inventory_hgss_field_sprites.py)",
+      "catalog": "hgss_field_sprites/CATALOG.json",
+      "curation": "hgss_field_sprites/CURATION.json"
     }
   ]
 }

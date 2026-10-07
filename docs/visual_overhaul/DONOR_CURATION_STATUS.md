@@ -5,10 +5,10 @@ Cross-lane coverage proof. No Platinum resources are modified; no preferred dono
 ## Invariants
 
 - base_catalog_assets: **64841**
-- extension_catalog_assets: **146**
+- extension_catalog_assets: **358**
 - extension_overlap_with_base: **0**
-- catalog_assets: **64987**
-- curated_assets: **64987**
+- catalog_assets: **65199**
+- curated_assets: **65199**
 - missing: **0**
 - extra: **0**
 - duplicates: **0**
@@ -19,7 +19,7 @@ Cross-lane coverage proof. No Platinum resources are modified; no preferred dono
 
 - decode_issue: **106**
 - reject: **9578**
-- usable: **55303**
+- usable: **55515**
 
 ## By ledger
 
@@ -29,12 +29,13 @@ Cross-lane coverage proof. No Platinum resources are modified; no preferred dono
 | B | 30 | 9155 | 5972 |
 | CDE | 56 | 94 | 8975 |
 | X_hgss_trainer_sprites | 0 | 0 | 146 |
+| X_hgss_field_sprites | 0 | 0 | 212 |
 
 ## By source
 
 | Source | decode_issue | reject | usable |
 |---|---:|---:|---:|
 | diamond | 0 | 5208 | 2664 |
-| hgss | 14 | 2949 | 2967 |
+| hgss | 14 | 2949 | 3179 |
 | pmd_sky | 41 | 25 | 2065 |
 | ranger2 | 51 | 1396 | 47607 |

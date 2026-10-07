@@ -92,8 +92,22 @@ def _family(subsystem: str, unit: str, kind: str = "family"):
     return subsystem, "family:" + subsystem, unit, kind
 
 
+_FS_ALIGN = None
+
+
+def _hgss_field_sprite(rec):
+    global _FS_ALIGN
+    if _FS_ALIGN is None:
+        _FS_ALIGN = json.loads((SEL / "alignment" / "field_sprites.json").read_text())["hgss"]
+    p = rec["source_path"]
+    e = _FS_ALIGN[p]
+    return "field_npc_player_sprites", e["target"], "hgss_" + _stem(p), "sprite_sheet"
+
+
 def _hgss(rec):
     p = rec["source_path"]
+    if p.startswith("files/data/mmodel/mmodel/"):
+        return _hgss_field_sprite(rec)
     if p.startswith(("files/a/0/5/8#", "files/a/0/0/6#")):
         return _hgss_trainer(rec)
     if "/poketool/icongra/poke_icon/" in p:

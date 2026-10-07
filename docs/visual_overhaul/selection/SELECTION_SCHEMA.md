@@ -78,3 +78,7 @@ Groups regenerate byte-identically from the recovered ledgers; every `usable` re
 ledgers cover exactly their subsystem's groups with no duplicates; ≤1 `preferred` per target; selected groups are
 `direct`/`convertible`, have measured gain, ≥50 % independent evidence, and a curation trace; evidence entries bind to
 the current `member_digest`; every ledger re-derives identically from rules + evidence; queue/status are reproducible.
+
+## Catalog extensions
+
+Targeted catalog additions live in `docs/visual_overhaul/catalog_extensions/` (see its README/MANIFEST). Alignment tables for Platinum targets live in `selection/alignment/`; their hashes are part of `CANDIDATE_GROUPS` inputs, so edits force regeneration. Slot-name alignment must never be treated as subject identity (`subject_unverified`).

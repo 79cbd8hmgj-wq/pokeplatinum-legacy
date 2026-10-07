@@ -25,9 +25,10 @@ MINOR_RATIO = jload(RULES_JSON)["thresholds"]["minor_diff_ratio"]
 
 
 def rgba(im: Image.Image):
+    """(r5,g5,b5,a) per pixel: compare in BGR555 space (decomp tools differ in 5->8 bit expansion)."""
     pal = im.getpalette() or []
     px = im.tobytes()
-    return [(0, 0, 0, 0) if i == 0 else (pal[3 * i], pal[3 * i + 1], pal[3 * i + 2], 255) for i in px], px
+    return [(0, 0, 0, 0) if i == 0 else (pal[3 * i] >> 3, pal[3 * i + 1] >> 3, pal[3 * i + 2] >> 3, 255) for i in px], px
 
 
 def bbox(px, w, h):
@@ -53,11 +54,11 @@ def normalize_dp(im: Image.Image) -> Image.Image:
     return out
 
 
-def split_frames(im: Image.Image, fh: int) -> list[Image.Image]:
-    n = (im.height + 1) // (fh + 1) if im.height > fh else 1
+def split_frames(im: Image.Image, fh: int, gap: int = 1) -> list[Image.Image]:
+    n = (im.height + gap) // (fh + gap) if im.height > fh else 1
     out = []
     for k in range(max(n, 1)):
-        f = im.crop((0, k * (fh + 1), im.width, k * (fh + 1) + fh))
+        f = im.crop((0, k * (fh + gap), im.width, k * (fh + gap) + fh))
         f.putpalette(im.getpalette())
         out.append(f)
     return out
@@ -93,9 +94,21 @@ def diff_ratio(dfs, nfs) -> float:
     return diff / union if union else 0.0
 
 
-def compare(donor: Image.Image, native: Image.Image, frame_h: int | None) -> tuple[str, list[str], dict]:
+def mask_iou(dfs, nfs) -> float:
+    """Mean opaque-mask IoU over compared frames (same-subject test for slot-aligned sprites)."""
+    vals = []
+    for d, n in zip(dfs, nfs):
+        A, _ = rgba(d)
+        B, _ = rgba(n)
+        inter = sum(1 for x, y in zip(A, B) if x[3] and y[3])
+        union = sum(1 for x, y in zip(A, B) if x[3] or y[3])
+        vals.append(inter / union if union else 1.0)
+    return sum(vals) / len(vals) if vals else 1.0
+
+
+def compare(donor: Image.Image, native: Image.Image, frame_h: int | None, gap: int = 1) -> tuple[str, list[str], dict]:
     fh = frame_h or 80
-    df, nf = split_frames(donor, fh), split_frames(native, fh)
+    df, nf = split_frames(donor, fh, gap), split_frames(native, fh, gap)
     detail = {"donor_size": list(donor.size), "native_size": list(native.size), "donor_frames": len(df), "native_frames": len(nf)}
     flags = ["frame_layout_differs"] if len(df) != len(nf) or donor.width != native.width else []
     common = min(len(df), len(nf))

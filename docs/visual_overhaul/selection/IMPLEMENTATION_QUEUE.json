@@ -17,20 +17,20 @@
  ],
  "inputs": {
   "ledger_files": {
-   "battle_backgrounds_hud": "1e04c6b603681b630a060e9f361d3714653da302d8fb023c74b9220d9547a0d7",
-   "battle_effects_particles": "4f08b0c99fa56c38033c563dd56ec14e808b54a885ba457330232dcc62859076",
-   "field_effects_overlays": "72370b42123c5925ed73917bc7d6856e73884991102fc72ea457d4fdbc769389",
-   "field_environment_art": "38c0e7c7a34f0bd690f600bb9b4924a57a8d6e36d6ab4a614e7fcf63c40b605a",
-   "field_npc_player_sprites": "541a9bf780a4015b1598a6317d148776c9912b8513d9fce025634e84c2bb1807",
-   "menu_ui_frames": "cbc74ef61faba0442027a6627b3f7cfb427bfcfd5de95c0444c047037b137006",
-   "no_platinum_target": "58925f30dac42e48d8b22c1f7da50ff0ab900e7bfbc47560975210ecbdf7c56d",
-   "party_summary_ui": "0d02bc7d3ba40ded21b30235b0e612ce0e6c3ba8011c5f95fb49a1b1d1799a39",
-   "pokedex_ui": "580c3f05942e5a60cec17cf046eb67cbfcd850ad6553f67ff059581d1e802430",
-   "pokemon_animation_reference": "a7c0e8e1d9682ece87e709f9e7b894ce89f34bd425848c051cf6ce3f1ffafadc",
-   "pokemon_battle_sprites": "ef67c388ad7039259f24a9b4abf8a20b735d500dc33c984eecee39d15f190c4f",
-   "pokemon_icons": "9d5620c4f572cf21802e2b0f18c212ee2895f9f1da1b366e25ebe58b658f0fef",
-   "title_and_presentation": "6b1271ab7f757c7d435d734af5a3db7f00f9675c4e8d4349609d38e94ecb7f55",
-   "trainer_battle_sprites": "2a47c33b9f1a3d10f228b91f066dbf882cb4a8a1a8082e1973013ef9e53ea302"
+   "battle_backgrounds_hud": "3c05b21b8e8f60d984d5338b4369b2ca1bb274d93d61c0fa9041e010c2a8482c",
+   "battle_effects_particles": "424800c4bd7138622cb30adcd1f555a6c9fab5373dedb77447ce149d4369bf92",
+   "field_effects_overlays": "ef11b7b5a9f8173f73e006178e4a9e08846bfde76deef8018997312fa6902db3",
+   "field_environment_art": "1a98f1e3b685004e2980823706f2426d58a0c2e29dd24a675ae2b5595ef00404",
+   "field_npc_player_sprites": "7bd2766d31214bfbc0b2240d6ba96b25713fc8e7dd07d7855a9f6b21e0ef99d6",
+   "menu_ui_frames": "0836adfb224bd5db378a41dcae6c28c71fd8f942a1870ee8c9dae769aa426f53",
+   "no_platinum_target": "766d72cd93270123ab3962ab4ba8d42c62b8e10b80105f1e312ad89f8f87670e",
+   "party_summary_ui": "6a9bfc4a686ded1b3f35efdf1423b7c3fe28ff43eddaed634a1b0c35e0558c7e",
+   "pokedex_ui": "12b622b5e90547354cd5d842e07351826e815585cb188c9d803d9c9c37b3827f",
+   "pokemon_animation_reference": "93b7d2180b70fa10119bf636eaf5079a086fa6b47f8fa0c535a6ea4cc0b8c2d1",
+   "pokemon_battle_sprites": "c1d0afaebe25159b9e382c7025e82baae2153746ee5219f51721bd808d70eff3",
+   "pokemon_icons": "9767cb5ca30a4203b46e2b7b8bef59dd0bee2853b103aac8be7c8d1063eb1dd4",
+   "title_and_presentation": "4c13972a3bb62c27bee873ecb19ae972435c460d29d5b9df1d605060b381fc1b",
+   "trainer_battle_sprites": "3ac5c2e095e669667a0813529379816ed1d49b333a9b71151e09b8269e478e73"
   }
  },
  "items": [
@@ -106,11 +106,28 @@
    ]
   },
   {
+   "groups": 4,
+   "kind": "evidence",
+   "members": 4,
+   "priority_score": 0.3,
+   "rank": 5,
+   "source_id": "hgss",
+   "subsystem": "field_npc_player_sprites",
+   "target_count": 4,
+   "targets": null,
+   "targets_sample": [
+    "field_npc_player_sprites/fs_npc_prof_rowan",
+    "field_npc_player_sprites/fs_npc_skier_f",
+    "field_npc_player_sprites/fs_player_dp_player_f",
+    "field_npc_player_sprites/fs_player_dp_player_m"
+   ]
+  },
+  {
    "groups": 1,
    "kind": "evidence",
    "members": 2,
    "priority_score": 0.3,
-   "rank": 5,
+   "rank": 6,
    "source_id": "hgss",
    "subsystem": "menu_ui_frames",
    "target_count": 1,
@@ -124,7 +141,7 @@
    "kind": "evidence",
    "members": 27,
    "priority_score": 0.2,
-   "rank": 6,
+   "rank": 7,
    "source_id": "hgss",
    "subsystem": "party_summary_ui",
    "target_count": 1,
@@ -138,7 +155,7 @@
    "kind": "evidence",
    "members": 123,
    "priority_score": 0.2,
-   "rank": 7,
+   "rank": 8,
    "source_id": "hgss",
    "subsystem": "pokedex_ui",
    "target_count": 1,
@@ -151,7 +168,7 @@
    "groups": 26,
    "kind": "runtime_qa",
    "priority_score": 0.0,
-   "rank": 8,
+   "rank": 9,
    "source_id": "hgss",
    "subsystem": "pokemon_battle_sprites"
   },
@@ -159,7 +176,7 @@
    "groups": 21,
    "kind": "runtime_qa",
    "priority_score": 0.0,
-   "rank": 9,
+   "rank": 10,
    "source_id": "hgss",
    "subsystem": "trainer_battle_sprites"
   }

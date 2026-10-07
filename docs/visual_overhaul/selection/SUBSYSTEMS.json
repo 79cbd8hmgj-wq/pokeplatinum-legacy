@@ -122,13 +122,19 @@
       "target_kind": "family",
       "integration_cost": 4,
       "priority_weight": 3,
-      "evidence_provider": null,
+      "evidence_provider": "field_sprites",
       "source_roles": {
         "ranger2": {
           "class": "none",
           "format_family": "ranger_npc_package",
           "conversion": "not_portable",
           "rationale": "Matrix names HGSS/Platinum/Diamond for this row; Ranger art style and packaging are unrelated."
+        },
+        "hgss": {
+          "class": "direct",
+          "format_family": "nsbtx_frame_textures_32x32_4bpp",
+          "conversion": "trivial",
+          "rationale": "HGSS NSBTX frame textures are the same 32x32 4bpp frame sheets Platinum builds from res/graphics/field_sprites PNGs (index data proven identical for aligned sprites); deterministic NSBTX->PNG decode. Alignment is by shared model-slot base name, which is NOT subject identity; non-trivial differences are classified subject_unverified."
         }
       }
     },

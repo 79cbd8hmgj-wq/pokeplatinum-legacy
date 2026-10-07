@@ -50,3 +50,8 @@ for s in <subsystem>; do python3 tools/visual_overhaul/selection/select_subsyste
 python3 tools/visual_overhaul/selection/build_queue.py && python3 tools/visual_overhaul/selection/build_status.py
 python3 tools/visual_overhaul/selection/validate_selection.py   # CI: .github/workflows/donor-selection-validate.yml
 ```
+
+
+## Update: HGSS sprite catalog gap passes
+
+Trainer battle sprites (146 sets) and NPC/player field sprites (212 sheets) are now cataloged, curated and selected; details, scope rules and caveats in `../catalog_extensions/README.md`. Net new donor selections: 21 HGSS trainer sets preferred; NPC/player sprites yield no preferred donor (96 identical, 4 unverified-subject). 3D models, textures, menus/UI and battle HUD remain unstarted.
