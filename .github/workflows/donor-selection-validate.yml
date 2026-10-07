@@ -15,6 +15,7 @@ on:
       - "docs/visual_overhaul/selection/**"
       - "docs/visual_overhaul/catalog_extensions/**"
       - "tools/visual_overhaul/*.py"
+      - ".github/workflows/donor-selection-validate.yml"
 
 jobs:
   validate:
