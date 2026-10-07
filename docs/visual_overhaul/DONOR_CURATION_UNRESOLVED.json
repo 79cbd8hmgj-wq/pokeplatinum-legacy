@@ -1,0 +1,737 @@
+{
+ "schema_version": 1,
+ "unresolved_count": 106,
+ "families": {
+  "ranger Pokemon cells: OAM tile data absent from the package or ambiguous between sibling resources": {
+   "count": 20,
+   "records": [
+    {
+     "asset_id": "ranger2:pokemon:389:00:p389_00_p01:cell_002",
+     "source_path": "389/00/p389_00_p01/cell_002.png",
+     "reason_code": "ranger_reconstruction_issue",
+     "reason": "At least one OAM object of a duplicate member references tiles that are absent from its group's character data (they live in another resource), so this frame cannot be fully reconstructed from the group alone. The donor asset has NOT been proven invalid; not a reject."
+    },
+    {
+     "asset_id": "ranger2:pokemon:389:00:p389_00_p02:cell_002",
+     "source_path": "389/00/p389_00_p02/cell_002.png",
+     "reason_code": "ranger_reconstruction_issue",
+     "reason": "At least one OAM object of a duplicate member references tiles that are absent from its group's character data (they live in another resource), so this frame cannot be fully reconstructed from the group alone. The donor asset has NOT been proven invalid; not a reject."
+    },
+    {
+     "asset_id": "ranger2:pokemon:390:00:p390_00_a01:cell_000",
+     "source_path": "390/00/p390_00_a01/cell_000.png",
+     "reason_code": "ranger_reconstruction_issue",
+     "reason": "At least one OAM object of a duplicate member references tiles that are absent from its group's character data (they live in another resource), so this frame cannot be fully reconstructed from the group alone. The donor asset has NOT been proven invalid; not a reject."
+    },
+    {
+     "asset_id": "ranger2:pokemon:390:00:p390_00_a01:cell_001",
+     "source_path": "390/00/p390_00_a01/cell_001.png",
+     "reason_code": "ranger_reconstruction_issue",
+     "reason": "At least one OAM object of a duplicate member references tiles that are absent from its group's character data (they live in another resource), so this frame cannot be fully reconstructed from the group alone. The donor asset has NOT been proven invalid; not a reject."
+    },
+    {
+     "asset_id": "ranger2:pokemon:390:00:p390_00_a01:cell_002",
+     "source_path": "390/00/p390_00_a01/cell_002.png",
+     "reason_code": "ranger_reconstruction_issue",
+     "reason": "At least one OAM object of a duplicate member references tiles that are absent from its group's character data (they live in another resource), so this frame cannot be fully reconstructed from the group alone. The donor asset has NOT been proven invalid; not a reject."
+    },
+    {
+     "asset_id": "ranger2:pokemon:390:00:p390_00_a01:cell_006",
+     "source_path": "390/00/p390_00_a01/cell_006.png",
+     "reason_code": "ranger_reconstruction_issue",
+     "reason": "At least one OAM object of a duplicate member references tiles that are absent from its group's character data (they live in another resource), so this frame cannot be fully reconstructed from the group alone. The donor asset has NOT been proven invalid; not a reject."
+    },
+    {
+     "asset_id": "ranger2:pokemon:390:00:p390_00_a02:cell_000",
+     "source_path": "390/00/p390_00_a02/cell_000.png",
+     "reason_code": "ranger_reconstruction_issue",
+     "reason": "At least one OAM object of a duplicate member references tiles that are absent from its group's character data (they live in another resource), so this frame cannot be fully reconstructed from the group alone. The donor asset has NOT been proven invalid; not a reject."
+    },
+    {
+     "asset_id": "ranger2:pokemon:390:00:p390_00_a02:cell_001",
+     "source_path": "390/00/p390_00_a02/cell_001.png",
+     "reason_code": "ranger_reconstruction_issue",
+     "reason": "At least one OAM object of a duplicate member references tiles that are absent from its group's character data (they live in another resource), so this frame cannot be fully reconstructed from the group alone. The donor asset has NOT been proven invalid; not a reject."
+    },
+    {
+     "asset_id": "ranger2:pokemon:390:00:p390_00_a02:cell_002",
+     "source_path": "390/00/p390_00_a02/cell_002.png",
+     "reason_code": "ranger_reconstruction_issue",
+     "reason": "At least one OAM object of a duplicate member references tiles that are absent from its group's character data (they live in another resource), so this frame cannot be fully reconstructed from the group alone. The donor asset has NOT been proven invalid; not a reject."
+    },
+    {
+     "asset_id": "ranger2:pokemon:390:00:p390_00_a02:cell_006",
+     "source_path": "390/00/p390_00_a02/cell_006.png",
+     "reason_code": "ranger_reconstruction_issue",
+     "reason": "At least one OAM object of a duplicate member references tiles that are absent from its group's character data (they live in another resource), so this frame cannot be fully reconstructed from the group alone. The donor asset has NOT been proven invalid; not a reject."
+    },
+    {
+     "asset_id": "ranger2:pokemon:390:00:p390_00_t:cell_000",
+     "source_path": "390/00/p390_00_t/cell_000.png",
+     "reason_code": "ranger_reconstruction_issue",
+     "reason": "At least one OAM object of a duplicate member references tiles that are absent from its group's character data (they live in another resource), so this frame cannot be fully reconstructed from the group alone. The donor asset has NOT been proven invalid; not a reject."
+    },
+    {
+     "asset_id": "ranger2:pokemon:390:00:p390_00_t:cell_001",
+     "source_path": "390/00/p390_00_t/cell_001.png",
+     "reason_code": "ranger_reconstruction_issue",
+     "reason": "At least one OAM object of a duplicate member references tiles that are absent from its group's character data (they live in another resource), so this frame cannot be fully reconstructed from the group alone. The donor asset has NOT been proven invalid; not a reject."
+    },
+    {
+     "asset_id": "ranger2:pokemon:390:00:p390_00_t:cell_002",
+     "source_path": "390/00/p390_00_t/cell_002.png",
+     "reason_code": "ranger_reconstruction_issue",
+     "reason": "At least one OAM object of a duplicate member references tiles that are absent from its group's character data (they live in another resource), so this frame cannot be fully reconstructed from the group alone. The donor asset has NOT been proven invalid; not a reject."
+    },
+    {
+     "asset_id": "ranger2:pokemon:390:00:p390_00_t:cell_006",
+     "source_path": "390/00/p390_00_t/cell_006.png",
+     "reason_code": "ranger_reconstruction_issue",
+     "reason": "At least one OAM object of a duplicate member references tiles that are absent from its group's character data (they live in another resource), so this frame cannot be fully reconstructed from the group alone. The donor asset has NOT been proven invalid; not a reject."
+    },
+    {
+     "asset_id": "ranger2:pokemon:448:00:p448_00_a06:cell_007",
+     "source_path": "448/00/p448_00_a06/cell_007.png",
+     "reason_code": "ranger_reconstruction_issue",
+     "reason": "At least one OAM object of a duplicate member references tiles that are absent from its group's character data (they live in another resource), so this frame cannot be fully reconstructed from the group alone. The donor asset has NOT been proven invalid; not a reject."
+    },
+    {
+     "asset_id": "ranger2:pokemon:448:00:p448_00_a06:cell_013",
+     "source_path": "448/00/p448_00_a06/cell_013.png",
+     "reason_code": "ranger_reconstruction_issue",
+     "reason": "At least one OAM object of a duplicate member references tiles that are absent from its group's character data (they live in another resource), so this frame cannot be fully reconstructed from the group alone. The donor asset has NOT been proven invalid; not a reject."
+    },
+    {
+     "asset_id": "ranger2:pokemon:448:00:p448_00_a09:cell_001",
+     "source_path": "448/00/p448_00_a09/cell_001.png",
+     "reason_code": "ranger_reconstruction_issue",
+     "reason": "At least one OAM object of a duplicate member references tiles that are absent from its group's character data (they live in another resource), so this frame cannot be fully reconstructed from the group alone. The donor asset has NOT been proven invalid; not a reject."
+    },
+    {
+     "asset_id": "ranger2:pokemon:448:00:p448_00_a09:cell_007",
+     "source_path": "448/00/p448_00_a09/cell_007.png",
+     "reason_code": "ranger_reconstruction_issue",
+     "reason": "At least one OAM object of a duplicate member references tiles that are absent from its group's character data (they live in another resource), so this frame cannot be fully reconstructed from the group alone. The donor asset has NOT been proven invalid; not a reject."
+    },
+    {
+     "asset_id": "ranger2:pokemon:448:00:p448_00_a09:cell_013",
+     "source_path": "448/00/p448_00_a09/cell_013.png",
+     "reason_code": "ranger_reconstruction_issue",
+     "reason": "At least one OAM object of a duplicate member references tiles that are absent from its group's character data (they live in another resource), so this frame cannot be fully reconstructed from the group alone. The donor asset has NOT been proven invalid; not a reject."
+    },
+    {
+     "asset_id": "ranger2:pokemon:448:00:p448_00_a09:cell_019",
+     "source_path": "448/00/p448_00_a09/cell_019.png",
+     "reason_code": "ranger_reconstruction_issue",
+     "reason": "At least one OAM object of a duplicate member references tiles that are absent from its group's character data (they live in another resource), so this frame cannot be fully reconstructed from the group alone. The donor asset has NOT been proven invalid; not a reject."
+    }
+   ]
+  },
+  "pmd_sky .wan": {
+   "count": 18,
+   "records": [
+    {
+     "asset_id": "pmd_sky:source:files:GROUND:s01p01a1.wan",
+     "source_path": "files/GROUND/s01p01a1.wan",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:GROUND:s01p01a2.wan",
+     "source_path": "files/GROUND/s01p01a2.wan",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:GROUND:s13p03a1.wan",
+     "source_path": "files/GROUND/s13p03a1.wan",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:GROUND:s13p03a2.wan",
+     "source_path": "files/GROUND/s13p03a2.wan",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:GROUND:s20p01a1.wan",
+     "source_path": "files/GROUND/s20p01a1.wan",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:GROUND:s20p01a2.wan",
+     "source_path": "files/GROUND/s20p01a2.wan",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:GROUND:v01p05b1.wan",
+     "source_path": "files/GROUND/v01p05b1.wan",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:GROUND:v01p05b2.wan",
+     "source_path": "files/GROUND/v01p05b2.wan",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:GROUND:v01p05b3.wan",
+     "source_path": "files/GROUND/v01p05b3.wan",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:GROUND:v19p06a1.wan",
+     "source_path": "files/GROUND/v19p06a1.wan",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:GROUND:v37p02a1.wan",
+     "source_path": "files/GROUND/v37p02a1.wan",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:DUNGEON:sub_obj.wan",
+     "source_path": "files/DUNGEON/sub_obj.wan",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:FONT:alert.wan",
+     "source_path": "files/FONT/alert.wan",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:FONT:cursor.wan",
+     "source_path": "files/FONT/cursor.wan",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:FONT:cursor16.wan",
+     "source_path": "files/FONT/cursor16.wan",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:FONT:page_l.wan",
+     "source_path": "files/FONT/page_l.wan",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:FONT:page_r.wan",
+     "source_path": "files/FONT/page_r.wan",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:FONT:pagewait.wan",
+     "source_path": "files/FONT/pagewait.wan",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    }
+   ]
+  },
+  "pmd_sky .dat": {
+   "count": 13,
+   "records": [
+    {
+     "asset_id": "pmd_sky:source:files:FONT:kanji_b.dat",
+     "source_path": "files/FONT/kanji_b.dat",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:FONT:unknown.dat",
+     "source_path": "files/FONT/unknown.dat",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:SYSTEM:hsd_eng.dat",
+     "source_path": "files/SYSTEM/hsd_eng.dat",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:SYSTEM:hsd_fre.dat",
+     "source_path": "files/SYSTEM/hsd_fre.dat",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:SYSTEM:hsd_ger.dat",
+     "source_path": "files/SYSTEM/hsd_ger.dat",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:SYSTEM:hsd_ita.dat",
+     "source_path": "files/SYSTEM/hsd_ita.dat",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:SYSTEM:hsd_jap.dat",
+     "source_path": "files/SYSTEM/hsd_jap.dat",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:SYSTEM:hsd_spa.dat",
+     "source_path": "files/SYSTEM/hsd_spa.dat",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:SYSTEM:ses_eng.dat",
+     "source_path": "files/SYSTEM/ses_eng.dat",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:SYSTEM:ses_fre.dat",
+     "source_path": "files/SYSTEM/ses_fre.dat",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:SYSTEM:ses_ger.dat",
+     "source_path": "files/SYSTEM/ses_ger.dat",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:SYSTEM:ses_ita.dat",
+     "source_path": "files/SYSTEM/ses_ita.dat",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:SYSTEM:ses_spa.dat",
+     "source_path": "files/SYSTEM/ses_spa.dat",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    }
+   ]
+  },
+  "hgss GF bitmap font (.bin)": {
+   "count": 11,
+   "records": [
+    {
+     "asset_id": "hgss:source:files:graphic:font:font_00000000.bin",
+     "source_path": "files/graphic/font/font_00000000.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "hgss:source:files:graphic:font:font_00000001.bin",
+     "source_path": "files/graphic/font/font_00000001.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "hgss:source:files:graphic:font:font_00000002.bin",
+     "source_path": "files/graphic/font/font_00000002.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "hgss:source:files:graphic:font:font_00000003.bin",
+     "source_path": "files/graphic/font/font_00000003.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "hgss:source:files:graphic:font:font_00000004.bin",
+     "source_path": "files/graphic/font/font_00000004.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "hgss:source:files:graphic:font:font_00000005.bin",
+     "source_path": "files/graphic/font/font_00000005.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "hgss:source:files:graphic:font:font_00000006.bin",
+     "source_path": "files/graphic/font/font_00000006.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "hgss:source:files:graphic:font:font_00000007.bin",
+     "source_path": "files/graphic/font/font_00000007.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "hgss:source:files:graphic:font:font_00000008.bin",
+     "source_path": "files/graphic/font/font_00000008.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "hgss:source:files:graphic:font:font_00000009.bin",
+     "source_path": "files/graphic/font/font_00000009.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "hgss:source:files:graphic:font:font_00000010.bin",
+     "source_path": "files/graphic/font/font_00000010.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    }
+   ]
+  },
+  "ranger2 npc": {
+   "count": 7,
+   "records": [
+    {
+     "asset_id": "ranger2:embedded:res:prebuilt:data:npc:n000_00_LZ.bin:n000_00.narc",
+     "source_path": "res/prebuilt/data/npc/n000_00_LZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc072_LZ.bin:npc072_w.NCER",
+     "source_path": "res/prebuilt/data/npc/npc072_LZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc072_LZ.bin:npc072_w.cac",
+     "source_path": "res/prebuilt/data/npc/npc072_LZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc107_LZ.bin:npc107_w.NCER",
+     "source_path": "res/prebuilt/data/npc/npc107_LZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc107_LZ.bin:npc107_w.cac",
+     "source_path": "res/prebuilt/data/npc/npc107_LZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc108_LZ.bin:npc108_w.NCER",
+     "source_path": "res/prebuilt/data/npc/npc108_LZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc108_LZ.bin:npc108_w.cac",
+     "source_path": "res/prebuilt/data/npc/npc108_LZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    }
+   ]
+  },
+  "pmd_sky .wat": {
+   "count": 6,
+   "records": [
+    {
+     "asset_id": "pmd_sky:source:files:GROUND:g01p03a2.wat",
+     "source_path": "files/GROUND/g01p03a2.wat",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:GROUND:p09p01a1.wat",
+     "source_path": "files/GROUND/p09p01a1.wat",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:GROUND:s20p02a1.wat",
+     "source_path": "files/GROUND/s20p02a1.wat",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:GROUND:v10p01c1.wat",
+     "source_path": "files/GROUND/v10p01c1.wat",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:GROUND:v10p01c2.wat",
+     "source_path": "files/GROUND/v10p01c2.wat",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:GROUND:v10p01c3.wat",
+     "source_path": "files/GROUND/v10p01c3.wat",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    }
+   ]
+  },
+  "ranger2 interface": {
+   "count": 6,
+   "records": [
+    {
+     "asset_id": "ranger2:embedded:res:prebuilt:data:interface:i055_LZ.bin:i056_00.NCBR",
+     "source_path": "res/prebuilt/data/interface/i055_LZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "ranger2:embedded:res:prebuilt:data:interface:i057_LZ.bin:i057.NCLR",
+     "source_path": "res/prebuilt/data/interface/i057_LZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "ranger2:embedded:res:prebuilt:data:interface:i057_LZ.bin:i057_00.NCBR",
+     "source_path": "res/prebuilt/data/interface/i057_LZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "ranger2:embedded:res:prebuilt:data:interface:i057_LZ.bin:i057_00.NCER",
+     "source_path": "res/prebuilt/data/interface/i057_LZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "ranger2:embedded:res:prebuilt:data:interface:i057_LZ.bin:i057_00.cac",
+     "source_path": "res/prebuilt/data/interface/i057_LZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "ranger2:source:res:prebuilt:data:interface:i057_LZ.bin",
+     "source_path": "res/prebuilt/data/interface/i057_LZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    }
+   ]
+  },
+  "ranger2 menu": {
+   "count": 5,
+   "records": [
+    {
+     "asset_id": "ranger2:embedded:res:prebuilt:data:menu:mb000_00_LZ.bin:mb000_00.NCER",
+     "source_path": "res/prebuilt/data/menu/mb000_00_LZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "ranger2:embedded:res:prebuilt:data:menu:mb000_00_LZ.bin:mb000_00.cac",
+     "source_path": "res/prebuilt/data/menu/mb000_00_LZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam000_bg_LZ.bin:pam000_00.NSCR",
+     "source_path": "res/prebuilt/data/menu/pam000_bg_LZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "ranger2:embedded:res:prebuilt:data:menu:title001_00_LZ.bin:title001_00.NCER",
+     "source_path": "res/prebuilt/data/menu/title001_00_LZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "ranger2:embedded:res:prebuilt:data:menu:title001_00_LZ.bin:title001_00.cac",
+     "source_path": "res/prebuilt/data/menu/title001_00_LZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    }
+   ]
+  },
+  "ranger2 system": {
+   "count": 4,
+   "records": [
+    {
+     "asset_id": "ranger2:embedded:res:prebuilt:data:system:BGFontLZ.bin:BGFontNCGRLZ.bin",
+     "source_path": "res/prebuilt/data/system/BGFontLZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "ranger2:embedded:res:prebuilt:data:system:BGFontLZ.bin:BGFontNCLRLZ.bin",
+     "source_path": "res/prebuilt/data/system/BGFontLZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "ranger2:embedded:res:prebuilt:data:system:BGFontLZ.bin:BGFontNSCRLZ.bin",
+     "source_path": "res/prebuilt/data/system/BGFontLZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "ranger2:source:res:prebuilt:data:system:BGFontLZ.bin",
+     "source_path": "res/prebuilt/data/system/BGFontLZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    }
+   ]
+  },
+  "hgss .narc": {
+   "count": 3,
+   "records": [
+    {
+     "asset_id": "hgss:source:files:fielddata:build_model:bm_field.narc",
+     "source_path": "files/fielddata/build_model/bm_field.narc",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "hgss:source:files:fielddata:build_model:bm_room.narc",
+     "source_path": "files/fielddata/build_model/bm_room.narc",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "hgss:source:files:graphic:font.narc",
+     "source_path": "files/graphic/font.narc",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    }
+   ]
+  },
+  "pmd_sky .wba": {
+   "count": 2,
+   "records": [
+    {
+     "asset_id": "pmd_sky:source:files:EFFECT:ame.wba",
+     "source_path": "files/EFFECT/ame.wba",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:EFFECT:test.wba",
+     "source_path": "files/EFFECT/test.wba",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    }
+   ]
+  },
+  "ranger2 field": {
+   "count": 2,
+   "records": [
+    {
+     "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ew008_LZ.bin:ew008.narc",
+     "source_path": "res/prebuilt/data/field/effect/ew008_LZ.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+    },
+    {
+     "asset_id": "ranger2:source:res:prebuilt:data:field:fielddata.bin",
+     "source_path": "res/prebuilt/data/field/fielddata.bin",
+     "reason_code": "candidate_file_needs_format_context",
+     "reason": "Pok\u00e9mon-facing candidate exists but its visual format/context is not yet trustworthy."
+    }
+   ]
+  },
+  "pmd_sky .bin": {
+   "count": 2,
+   "records": [
+    {
+     "asset_id": "pmd_sky:source:files:FONT:test_k.bin",
+     "source_path": "files/FONT/test_k.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "pmd_sky:source:files:FONT:test_sk.bin",
+     "source_path": "files/FONT/test_sk.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    }
+   ]
+  },
+  "ranger2 sendbin": {
+   "count": 2,
+   "records": [
+    {
+     "asset_id": "ranger2:source:res:prebuilt:data:sendbin:sendbin1.bin",
+     "source_path": "res/prebuilt/data/sendbin/sendbin1.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    },
+    {
+     "asset_id": "ranger2:source:res:prebuilt:data:sendbin:sendbin2.bin",
+     "source_path": "res/prebuilt/data/sendbin/sendbin2.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    }
+   ]
+  },
+  "ranger2 battle_line01.NCBR": {
+   "count": 1,
+   "records": [
+    {
+     "asset_id": "ranger2:source:res:prebuilt:data:battle_line01.NCBR",
+     "source_path": "res/prebuilt/data/battle_line01.NCBR",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    }
+   ]
+  },
+  "ranger2 battle_line01.NCLR": {
+   "count": 1,
+   "records": [
+    {
+     "asset_id": "ranger2:source:res:prebuilt:data:battle_line01.NCLR",
+     "source_path": "res/prebuilt/data/battle_line01.NCLR",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    }
+   ]
+  },
+  "ranger2 encyclo": {
+   "count": 1,
+   "records": [
+    {
+     "asset_id": "ranger2:source:res:prebuilt:data:encyclo:encyclopedia.bin",
+     "source_path": "res/prebuilt/data/encyclo/encyclopedia.bin",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    }
+   ]
+  },
+  "ranger2 shadow.NCBR": {
+   "count": 1,
+   "records": [
+    {
+     "asset_id": "ranger2:source:res:prebuilt:data:shadow.NCBR",
+     "source_path": "res/prebuilt/data/shadow.NCBR",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    }
+   ]
+  },
+  "ranger2 shadow.NCLR": {
+   "count": 1,
+   "records": [
+    {
+     "asset_id": "ranger2:source:res:prebuilt:data:shadow.NCLR",
+     "source_path": "res/prebuilt/data/shadow.NCLR",
+     "reason_code": "visual_resource_requires_decode",
+     "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+    }
+   ]
+  }
+ }
+}

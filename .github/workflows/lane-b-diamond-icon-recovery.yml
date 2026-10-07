@@ -1,0 +1,65 @@
+name: Lane B Diamond icon recovery
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/visual_overhaul/recover_lane_b_diamond_icons.py"
+      - "docs/visual_overhaul/LANE_B_DECODE_RECOVERY.json"
+      - ".github/workflows/lane-b-diamond-icon-recovery.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Platinum overhaul
+        uses: actions/checkout@v4
+        with:
+          path: platinum
+
+      - name: Checkout Diamond donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pokediamond
+          path: pokediamond
+
+      - name: Recover Diamond icons
+        working-directory: platinum
+        run: |
+          python3 tools/visual_overhaul/recover_lane_b_diamond_icons.py \
+            --recovery docs/visual_overhaul/LANE_B_DECODE_RECOVERY.json \
+            --diamond-root ../pokediamond \
+            --write-json docs/visual_overhaul/LANE_B_DIAMOND_ICON_RECOVERY.json \
+            --write-md docs/visual_overhaul/LANE_B_DIAMOND_ICON_RECOVERY.md
+
+      - name: Validate recovery
+        working-directory: platinum
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p = json.loads(Path("docs/visual_overhaul/LANE_B_DIAMOND_ICON_RECOVERY.json").read_text())
+          assert p["asset_count"] == 502
+          assert sum(p["status_counts"].values()) == 502
+          ids = [d["asset_id"] for d in p["decisions"]]
+          assert len(ids) == len(set(ids)) == 502
+          print("Diamond icon recovery:", p["status_counts"])
+          PY
+
+      - name: Commit recovery ledger
+        working-directory: platinum
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            docs/visual_overhaul/LANE_B_DIAMOND_ICON_RECOVERY.json \
+            docs/visual_overhaul/LANE_B_DIAMOND_ICON_RECOVERY.md
+          if git diff --cached --quiet; then
+            echo "No Diamond icon recovery changes."
+            exit 0
+          fi
+          git commit -m "visual: recover Lane B Diamond icons"
+          git push

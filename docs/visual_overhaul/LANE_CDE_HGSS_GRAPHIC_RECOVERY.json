@@ -1,0 +1,1483 @@
+{
+ "schema_version": 1,
+ "scope": "lane_cde_hgss_graphic",
+ "asset_count": 105,
+ "technical_state_counts": {
+  "game_paired_companion": 96,
+  "valid_render": 9
+ },
+ "records": [
+  {
+   "asset_id": "hgss:source:files:graphic:camera_viewfinder:camera_viewfinder.NSCR",
+   "source_path": "files/graphic/camera_viewfinder/camera_viewfinder.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; same-stem camera_viewfinder.png is its character sheet (not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000000.NANR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000000.NANR",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000002', '00000003'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000001.NCER",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000001.NCER",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000002', '00000003'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000002.NCGR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000002.NCGR",
+   "technical_state": "valid_render",
+   "detail": "4bpp character data, 440/1024 nonzero bytes (decomp loads it as BG/OBJ graphics)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000003.NCGR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000003.NCGR",
+   "technical_state": "valid_render",
+   "detail": "4bpp character data, 1914/2560 nonzero bytes (decomp loads it as BG/OBJ graphics)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000004.NCLR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000004.NCLR",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000012', '00000015', '00000024'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000005.NANR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000005.NANR",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000002', '00000003', '00000007'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000006.NCER",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000006.NCER",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000003', '00000007'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000007.NCGR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000007.NCGR",
+   "technical_state": "valid_render",
+   "detail": "4bpp character data, 1578/9216 nonzero bytes (decomp loads it as BG/OBJ graphics)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000008.NCLR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000008.NCLR",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000007', '00000011'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000009.NANR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000009.NANR",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000007', '00000011', '00000012'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000010.NCER",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000010.NCER",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000007', '00000011', '00000012'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000011.NCGR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000011.NCGR",
+   "technical_state": "valid_render",
+   "detail": "4bpp character data, 1544/1920 nonzero bytes (decomp loads it as BG/OBJ graphics)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000012.NCGR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000012.NCGR",
+   "technical_state": "valid_render",
+   "detail": "4bpp character data, 3424/8192 nonzero bytes (decomp loads it as BG/OBJ graphics)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000013.NCLR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000013.NCLR",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000012', '00000015', '00000024'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000014.NSCR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000014.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000012', '00000015', '00000024'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000015.NCGR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000015.NCGR",
+   "technical_state": "valid_render",
+   "detail": "4bpp character data, 3745/5120 nonzero bytes (decomp loads it as BG/OBJ graphics)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000016.NCLR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000016.NCLR",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000012', '00000015', '00000024'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000017.NSCR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000017.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000012', '00000015', '00000024'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000018.NANR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000018.NANR",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000012', '00000015', '00000020'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000019.NCER",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000019.NCER",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000003', '00000012', '00000015', '00000020'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000020.NCGR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000020.NCGR",
+   "technical_state": "valid_render",
+   "detail": "4bpp character data, 84/96 nonzero bytes (decomp loads it as BG/OBJ graphics)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000021.NCLR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000021.NCLR",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000012', '00000015', '00000020'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000022.NSCR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000022.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000012', '00000015', '00000020'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000023.NCLR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000023.NCLR",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000020', '00000024', '00000026'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000024.NCGR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000024.NCGR",
+   "technical_state": "valid_render",
+   "detail": "4bpp character data, 2710/8192 nonzero bytes (decomp loads it as BG/OBJ graphics)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000025.NSCR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000025.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000012', '00000015', '00000024'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000026.NCGR",
+   "source_path": "files/graphic/plist_gra/plist_gra_00000026.NCGR",
+   "technical_state": "valid_render",
+   "detail": "4bpp character data, 674/864 nonzero bytes (decomp loads it as BG/OBJ graphics)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000000.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000000.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000002.NCLR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000002.NCLR",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000005.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000005.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000006.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000006.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000007.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000007.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000008.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000008.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000009.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000009.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000010.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000010.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000011.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000011.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000013.NCER",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000013.NCER",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000012'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000014.NANR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000014.NANR",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000012', '00000017'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000015.NCLR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000015.NCLR",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000012', '00000017'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000016.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000016.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000018.NCLR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000018.NCLR",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000020.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000020.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000021.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000021.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000022.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000022.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000024.NCER",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000024.NCER",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000023', '00000026'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000025.NANR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000025.NANR",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000023', '00000026'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000027.NCER",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000027.NCER",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000026', '00000029'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000028.NANR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000028.NANR",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000026', '00000029'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000030.NCER",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000030.NCER",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000029'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000031.NANR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000031.NANR",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000029'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000032.NCLR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000032.NCLR",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000029'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000033.NCER",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000033.NCER",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000036'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000034.NANR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000034.NANR",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000036', '00000037'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000035.NCLR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000035.NCLR",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000036', '00000037', '00000038'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000054.NCER",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000054.NCER",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000051', '00000052', '00000053'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000055.NANR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000055.NANR",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000052', '00000053', '00000058'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000056.NCLR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000056.NCLR",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000053', '00000058'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000057.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000057.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000004', '00000058'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000059.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000059.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000004', '00000058'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000060.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000060.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000004', '00000058'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000061.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000061.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000058'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000062.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000062.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000063.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000063.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000064.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000064.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000065.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000065.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000066.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000066.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000067.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000067.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000068.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000068.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000069.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000069.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000070.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000070.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000071.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000071.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000073.NCER",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000073.NCER",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000072', '00000076'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000074.NANR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000074.NANR",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000072', '00000076', '00000077'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000075.NCLR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000075.NCLR",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000072', '00000076', '00000077'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000078.NCER",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000078.NCER",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000076', '00000077'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000079.NANR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000079.NANR",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000076', '00000077'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000080.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000080.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000083', '00000085', '00000087'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000081.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000081.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000083', '00000085', '00000087'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000082.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000082.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000083', '00000085', '00000087'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000084.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000084.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000083', '00000085', '00000087'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000086.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000086.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000083', '00000085', '00000087'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000088.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000088.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000089.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000089.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000090', '00000092'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000091.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000091.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000090', '00000092'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000095.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000095.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000093', '00000094'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000096.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000096.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000093', '00000094'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000097.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000097.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000093', '00000094'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000098.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000098.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000093', '00000094'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000099.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000099.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000093', '00000094'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000100.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000100.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000093', '00000094'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000101.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000101.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000102', '00000104'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000103.NSCR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000103.NSCR",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000102', '00000104'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000106.NCER",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000106.NCER",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000104', '00000105', '00000109'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000107.NANR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000107.NANR",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000104', '00000105', '00000109'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000108.NCLR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000108.NCLR",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000105', '00000109', '00000111'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000110.NCLR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000110.NCLR",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000109', '00000111'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000112.NCER",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000112.NCER",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000109', '00000111', '00000114', '00000115'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000113.NANR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000113.NANR",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000111', '00000114', '00000115'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000116.NCER",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000116.NCER",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000114', '00000115', '00000119'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000117.NANR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000117.NANR",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000114', '00000115', '00000119'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000118.NCLR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000118.NCLR",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000115', '00000119'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000120.NCER",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000120.NCER",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000119'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000121.NANR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000121.NANR",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000119'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000122.NCLR",
+   "source_path": "files/graphic/zukan_gra/zukan_gra_00000122.NCLR",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000119'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  }
+ ],
+ "decisions": [
+  {
+   "asset_id": "hgss:source:files:graphic:camera_viewfinder:camera_viewfinder.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; same-stem camera_viewfinder.png is its character sheet (not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000000.NANR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000002', '00000003'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000001.NCER",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000002', '00000003'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000002.NCGR",
+   "review_status": "usable",
+   "reason_code": "hgss_graphic_valid_nonblank",
+   "reason": "HGSS UI graphic character data decodes nonblank and is loaded by the game as graphics.",
+   "technical_state": "valid_render",
+   "detail": "4bpp character data, 440/1024 nonzero bytes (decomp loads it as BG/OBJ graphics)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000003.NCGR",
+   "review_status": "usable",
+   "reason_code": "hgss_graphic_valid_nonblank",
+   "reason": "HGSS UI graphic character data decodes nonblank and is loaded by the game as graphics.",
+   "technical_state": "valid_render",
+   "detail": "4bpp character data, 1914/2560 nonzero bytes (decomp loads it as BG/OBJ graphics)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000004.NCLR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000012', '00000015', '00000024'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000005.NANR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000002', '00000003', '00000007'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000006.NCER",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000003', '00000007'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000007.NCGR",
+   "review_status": "usable",
+   "reason_code": "hgss_graphic_valid_nonblank",
+   "reason": "HGSS UI graphic character data decodes nonblank and is loaded by the game as graphics.",
+   "technical_state": "valid_render",
+   "detail": "4bpp character data, 1578/9216 nonzero bytes (decomp loads it as BG/OBJ graphics)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000008.NCLR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000007', '00000011'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000009.NANR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000007', '00000011', '00000012'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000010.NCER",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000007', '00000011', '00000012'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000011.NCGR",
+   "review_status": "usable",
+   "reason_code": "hgss_graphic_valid_nonblank",
+   "reason": "HGSS UI graphic character data decodes nonblank and is loaded by the game as graphics.",
+   "technical_state": "valid_render",
+   "detail": "4bpp character data, 1544/1920 nonzero bytes (decomp loads it as BG/OBJ graphics)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000012.NCGR",
+   "review_status": "usable",
+   "reason_code": "hgss_graphic_valid_nonblank",
+   "reason": "HGSS UI graphic character data decodes nonblank and is loaded by the game as graphics.",
+   "technical_state": "valid_render",
+   "detail": "4bpp character data, 3424/8192 nonzero bytes (decomp loads it as BG/OBJ graphics)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000013.NCLR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000012', '00000015', '00000024'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000014.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000012', '00000015', '00000024'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000015.NCGR",
+   "review_status": "usable",
+   "reason_code": "hgss_graphic_valid_nonblank",
+   "reason": "HGSS UI graphic character data decodes nonblank and is loaded by the game as graphics.",
+   "technical_state": "valid_render",
+   "detail": "4bpp character data, 3745/5120 nonzero bytes (decomp loads it as BG/OBJ graphics)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000016.NCLR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000012', '00000015', '00000024'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000017.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000012', '00000015', '00000024'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000018.NANR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000012', '00000015', '00000020'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000019.NCER",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000003', '00000012', '00000015', '00000020'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000020.NCGR",
+   "review_status": "usable",
+   "reason_code": "hgss_graphic_valid_nonblank",
+   "reason": "HGSS UI graphic character data decodes nonblank and is loaded by the game as graphics.",
+   "technical_state": "valid_render",
+   "detail": "4bpp character data, 84/96 nonzero bytes (decomp loads it as BG/OBJ graphics)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000021.NCLR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000012', '00000015', '00000020'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000022.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000012', '00000015', '00000020'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000023.NCLR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000020', '00000024', '00000026'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000024.NCGR",
+   "review_status": "usable",
+   "reason_code": "hgss_graphic_valid_nonblank",
+   "reason": "HGSS UI graphic character data decodes nonblank and is loaded by the game as graphics.",
+   "technical_state": "valid_render",
+   "detail": "4bpp character data, 2710/8192 nonzero bytes (decomp loads it as BG/OBJ graphics)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000025.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000012', '00000015', '00000024'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:plist_gra:plist_gra_00000026.NCGR",
+   "review_status": "usable",
+   "reason_code": "hgss_graphic_valid_nonblank",
+   "reason": "HGSS UI graphic character data decodes nonblank and is loaded by the game as graphics.",
+   "technical_state": "valid_render",
+   "detail": "4bpp character data, 674/864 nonzero bytes (decomp loads it as BG/OBJ graphics)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000000.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000002.NCLR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000005.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000006.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000007.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000008.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000009.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000010.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000011.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000013.NCER",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000012'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000014.NANR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000012', '00000017'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000015.NCLR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000012', '00000017'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000016.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000018.NCLR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000020.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000021.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000022.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000024.NCER",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000023', '00000026'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000025.NANR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000023', '00000026'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000027.NCER",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000026', '00000029'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000028.NANR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000026', '00000029'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000030.NCER",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000029'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000031.NANR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000029'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000032.NCLR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000029'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000033.NCER",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000036'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000034.NANR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000036', '00000037'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000035.NCLR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000036', '00000037', '00000038'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000054.NCER",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000051', '00000052', '00000053'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000055.NANR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000052', '00000053', '00000058'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000056.NCLR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000053', '00000058'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000057.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000004', '00000058'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000059.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000004', '00000058'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000060.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000003', '00000004', '00000058'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000061.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000058'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000062.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000063.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000064.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000065.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000066.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000067.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000068.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000069.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000070.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000071.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000073.NCER",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000072', '00000076'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000074.NANR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000072', '00000076', '00000077'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000075.NCLR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000072', '00000076', '00000077'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000078.NCER",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000076', '00000077'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000079.NANR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000076', '00000077'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000080.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000083', '00000085', '00000087'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000081.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000083', '00000085', '00000087'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000082.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000083', '00000085', '00000087'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000084.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000083', '00000085', '00000087'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000086.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000083', '00000085', '00000087'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000088.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000001', '00000003', '00000004', '00000017'] in the decomp (same source file (screen/palette loaded by a helper); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000089.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000090', '00000092'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000091.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000090', '00000092'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000095.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000093', '00000094'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000096.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000093', '00000094'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000097.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000093', '00000094'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000098.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000093', '00000094'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000099.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000093', '00000094'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000100.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000093', '00000094'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000101.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000102', '00000104'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000103.NSCR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NSCR structurally valid; co-loaded with NCGR id(s) ['00000004', '00000102', '00000104'] in the decomp (same function; not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000106.NCER",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000104', '00000105', '00000109'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000107.NANR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000104', '00000105', '00000109'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000108.NCLR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000105', '00000109', '00000111'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000110.NCLR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000109', '00000111'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000112.NCER",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000109', '00000111', '00000114', '00000115'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000113.NANR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000111', '00000114', '00000115'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000116.NCER",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000114', '00000115', '00000119'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000117.NANR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000114', '00000115', '00000119'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000118.NCLR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000115', '00000119'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000120.NCER",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCER structurally valid; co-loaded with NCGR id(s) ['00000119'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000121.NANR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NANR structurally valid; co-loaded with NCGR id(s) ['00000119'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  },
+  {
+   "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000122.NCLR",
+   "review_status": "usable",
+   "reason_code": "hgss_game_paired_companion",
+   "reason": "Structurally valid palette/screen/cell/animation resource that the decomp loads together with a graphic; kept as a companion of that UI material (not independently rendered).",
+   "technical_state": "game_paired_companion",
+   "detail": "NCLR structurally valid; co-loaded with NCGR id(s) ['00000119'] in the decomp (adjacent in the NARC set (+-3); not independently rendered)"
+  }
+ ]
+}

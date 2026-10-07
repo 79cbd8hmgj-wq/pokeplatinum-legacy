@@ -1,0 +1,858 @@
+{
+  "schema_version": 1,
+  "lane": "A_render_ready",
+  "scope": "Semantic review planning only; no review_status mutation and no Platinum writes.",
+  "catalog_asset_count": 64841,
+  "queue_asset_count": 64841,
+  "lane_a_candidate_count": 21496,
+  "p1": {
+    "candidate_count": 18331,
+    "status_counts": {
+      "decode_issue": 19,
+      "valid_render": 18312
+    },
+    "species_count": 282
+  },
+  "p3": {
+    "candidate_count": 3165,
+    "semantic_group_count": 7,
+    "source_counts": {
+      "diamond": 1183,
+      "hgss": 1982
+    },
+    "groups": [
+      {
+        "source_id": "diamond",
+        "group": "pokemon_battle",
+        "asset_type": "source_png",
+        "target_tags": [
+          "battle_back",
+          "battle_front",
+          "pokemon"
+        ],
+        "path_family": "files/poketool/pokegra",
+        "candidate_count": 1079,
+        "queue_status_counts": {
+          "unreviewed": 1079
+        },
+        "dimension_counts": [
+          {
+            "width": 160,
+            "height": 80,
+            "count": 1079
+          }
+        ],
+        "examples": [
+          {
+            "asset_id": "diamond:source:files:poketool:pokegra:pokegra:narc_0000.png",
+            "source_path": "files/poketool/pokegra/pokegra/narc_0000.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              0,
+              0,
+              160,
+              80
+            ]
+          },
+          {
+            "asset_id": "diamond:source:files:poketool:pokegra:pokegra:narc_0006.png",
+            "source_path": "files/poketool/pokegra/pokegra/narc_0006.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              8,
+              18,
+              71,
+              62
+            ]
+          },
+          {
+            "asset_id": "diamond:source:files:poketool:pokegra:pokegra:narc_0008.png",
+            "source_path": "files/poketool/pokegra/pokegra/narc_0008.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              22,
+              19,
+              136,
+              60
+            ]
+          },
+          {
+            "asset_id": "diamond:source:files:poketool:pokegra:pokegra:narc_0012.png",
+            "source_path": "files/poketool/pokegra/pokegra/narc_0012.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              2,
+              10,
+              78,
+              70
+            ]
+          },
+          {
+            "asset_id": "diamond:source:files:poketool:pokegra:pokegra:narc_0014.png",
+            "source_path": "files/poketool/pokegra/pokegra/narc_0014.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              15,
+              14,
+              148,
+              65
+            ]
+          },
+          {
+            "asset_id": "diamond:source:files:poketool:pokegra:pokegra:narc_0018.png",
+            "source_path": "files/poketool/pokegra/pokegra/narc_0018.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              0,
+              13,
+              80,
+              67
+            ]
+          },
+          {
+            "asset_id": "diamond:source:files:poketool:pokegra:pokegra:narc_0019.png",
+            "source_path": "files/poketool/pokegra/pokegra/narc_0019.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              0,
+              13,
+              80,
+              67
+            ]
+          },
+          {
+            "asset_id": "diamond:source:files:poketool:pokegra:pokegra:narc_0020.png",
+            "source_path": "files/poketool/pokegra/pokegra/narc_0020.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              1,
+              6,
+              155,
+              76
+            ]
+          }
+        ]
+      },
+      {
+        "source_id": "diamond",
+        "group": "trainer_graphics",
+        "asset_type": "source_png",
+        "target_tags": [
+          "portrait",
+          "trainer"
+        ],
+        "path_family": "files/poketool/trgra",
+        "candidate_count": 104,
+        "queue_status_counts": {
+          "unreviewed": 104
+        },
+        "dimension_counts": [
+          {
+            "width": 160,
+            "height": 80,
+            "count": 104
+          }
+        ],
+        "examples": [
+          {
+            "asset_id": "diamond:source:files:poketool:trgra:trbgra:narc_0000.png",
+            "source_path": "files/poketool/trgra/trbgra/narc_0000.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              16,
+              13,
+              139,
+              80
+            ]
+          },
+          {
+            "asset_id": "diamond:source:files:poketool:trgra:trbgra:narc_0002.png",
+            "source_path": "files/poketool/trgra/trbgra/narc_0002.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              14,
+              9,
+              134,
+              80
+            ]
+          },
+          {
+            "asset_id": "diamond:source:files:poketool:trgra:trbgra:narc_0004.png",
+            "source_path": "files/poketool/trgra/trbgra/narc_0004.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              16,
+              9,
+              139,
+              80
+            ]
+          },
+          {
+            "asset_id": "diamond:source:files:poketool:trgra:trbgra:narc_0006.png",
+            "source_path": "files/poketool/trgra/trbgra/narc_0006.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              13,
+              2,
+              140,
+              80
+            ]
+          },
+          {
+            "asset_id": "diamond:source:files:poketool:trgra:trbgra:narc_0008.png",
+            "source_path": "files/poketool/trgra/trbgra/narc_0008.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              18,
+              2,
+              151,
+              80
+            ]
+          },
+          {
+            "asset_id": "diamond:source:files:poketool:trgra:trbgra:narc_0010.png",
+            "source_path": "files/poketool/trgra/trbgra/narc_0010.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              14,
+              10,
+              134,
+              80
+            ]
+          },
+          {
+            "asset_id": "diamond:source:files:poketool:trgra:trbgra:narc_0012.png",
+            "source_path": "files/poketool/trgra/trbgra/narc_0012.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              12,
+              8,
+              139,
+              80
+            ]
+          },
+          {
+            "asset_id": "diamond:source:files:poketool:trgra:trbgra:narc_0014.png",
+            "source_path": "files/poketool/trgra/trbgra/narc_0014.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              12,
+              20,
+              135,
+              80
+            ]
+          }
+        ]
+      },
+      {
+        "source_id": "hgss",
+        "group": "field",
+        "asset_type": "source_png",
+        "target_tags": [
+          "field",
+          "overworld"
+        ],
+        "path_family": "files/fielddata/graphic",
+        "candidate_count": 76,
+        "queue_status_counts": {
+          "unreviewed": 76
+        },
+        "dimension_counts": [
+          {
+            "width": 256,
+            "height": 192,
+            "count": 76
+          }
+        ],
+        "examples": [
+          {
+            "asset_id": "hgss:source:files:fielddata:graphic:preview_graphic:preview_graphic:preview_graphic_bell_tower_day.png",
+            "source_path": "files/fielddata/graphic/preview_graphic/preview_graphic/preview_graphic_bell_tower_day.png",
+            "width": 256,
+            "height": 192,
+            "alpha_bbox": [
+              0,
+              0,
+              256,
+              192
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:fielddata:graphic:preview_graphic:preview_graphic:preview_graphic_bell_tower_evening.png",
+            "source_path": "files/fielddata/graphic/preview_graphic/preview_graphic/preview_graphic_bell_tower_evening.png",
+            "width": 256,
+            "height": 192,
+            "alpha_bbox": [
+              0,
+              0,
+              256,
+              192
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:fielddata:graphic:preview_graphic:preview_graphic:preview_graphic_bell_tower_morning.png",
+            "source_path": "files/fielddata/graphic/preview_graphic/preview_graphic/preview_graphic_bell_tower_morning.png",
+            "width": 256,
+            "height": 192,
+            "alpha_bbox": [
+              0,
+              0,
+              256,
+              192
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:fielddata:graphic:preview_graphic:preview_graphic:preview_graphic_bell_tower_night.png",
+            "source_path": "files/fielddata/graphic/preview_graphic/preview_graphic/preview_graphic_bell_tower_night.png",
+            "width": 256,
+            "height": 192,
+            "alpha_bbox": [
+              0,
+              0,
+              256,
+              192
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:fielddata:graphic:preview_graphic:preview_graphic:preview_graphic_burned_tower_day.png",
+            "source_path": "files/fielddata/graphic/preview_graphic/preview_graphic/preview_graphic_burned_tower_day.png",
+            "width": 256,
+            "height": 192,
+            "alpha_bbox": [
+              0,
+              0,
+              256,
+              192
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:fielddata:graphic:preview_graphic:preview_graphic:preview_graphic_burned_tower_evening.png",
+            "source_path": "files/fielddata/graphic/preview_graphic/preview_graphic/preview_graphic_burned_tower_evening.png",
+            "width": 256,
+            "height": 192,
+            "alpha_bbox": [
+              0,
+              0,
+              256,
+              192
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:fielddata:graphic:preview_graphic:preview_graphic:preview_graphic_burned_tower_morning.png",
+            "source_path": "files/fielddata/graphic/preview_graphic/preview_graphic/preview_graphic_burned_tower_morning.png",
+            "width": 256,
+            "height": 192,
+            "alpha_bbox": [
+              0,
+              0,
+              256,
+              192
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:fielddata:graphic:preview_graphic:preview_graphic:preview_graphic_burned_tower_night.png",
+            "source_path": "files/fielddata/graphic/preview_graphic/preview_graphic/preview_graphic_burned_tower_night.png",
+            "width": 256,
+            "height": 192,
+            "alpha_bbox": [
+              0,
+              0,
+              256,
+              192
+            ]
+          }
+        ]
+      },
+      {
+        "source_id": "hgss",
+        "group": "graphics",
+        "asset_type": "source_png",
+        "target_tags": [
+          "graphics",
+          "ui"
+        ],
+        "path_family": "files/graphic/camera_viewfinder",
+        "candidate_count": 1,
+        "queue_status_counts": {
+          "unreviewed": 1
+        },
+        "dimension_counts": [
+          {
+            "width": 256,
+            "height": 16,
+            "count": 1
+          }
+        ],
+        "examples": [
+          {
+            "asset_id": "hgss:source:files:graphic:camera_viewfinder:camera_viewfinder.png",
+            "source_path": "files/graphic/camera_viewfinder/camera_viewfinder.png",
+            "width": 256,
+            "height": 16,
+            "alpha_bbox": [
+              0,
+              0,
+              256,
+              16
+            ]
+          }
+        ]
+      },
+      {
+        "source_id": "hgss",
+        "group": "graphics",
+        "asset_type": "source_png",
+        "target_tags": [
+          "graphics",
+          "ui"
+        ],
+        "path_family": "files/graphic/zukan_gra",
+        "candidate_count": 46,
+        "queue_status_counts": {
+          "unreviewed": 46
+        },
+        "dimension_counts": [
+          {
+            "width": 256,
+            "height": 16,
+            "count": 1
+          },
+          {
+            "width": 256,
+            "height": 32,
+            "count": 7
+          },
+          {
+            "width": 256,
+            "height": 40,
+            "count": 3
+          },
+          {
+            "width": 256,
+            "height": 48,
+            "count": 1
+          },
+          {
+            "width": 256,
+            "height": 64,
+            "count": 1
+          },
+          {
+            "width": 256,
+            "height": 72,
+            "count": 1
+          },
+          {
+            "width": 280,
+            "height": 64,
+            "count": 1
+          },
+          {
+            "width": 8,
+            "height": 128,
+            "count": 3
+          },
+          {
+            "width": 8,
+            "height": 160,
+            "count": 1
+          },
+          {
+            "width": 8,
+            "height": 2336,
+            "count": 1
+          },
+          {
+            "width": 8,
+            "height": 32,
+            "count": 2
+          },
+          {
+            "width": 8,
+            "height": 3376,
+            "count": 1
+          },
+          {
+            "width": 8,
+            "height": 512,
+            "count": 1
+          },
+          {
+            "width": 8,
+            "height": 576,
+            "count": 1
+          },
+          {
+            "width": 8,
+            "height": 800,
+            "count": 2
+          },
+          {
+            "width": 8,
+            "height": 816,
+            "count": 1
+          },
+          {
+            "width": 8,
+            "height": 96,
+            "count": 18
+          }
+        ],
+        "examples": [
+          {
+            "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000001.png",
+            "source_path": "files/graphic/zukan_gra/zukan_gra_00000001.png",
+            "width": 280,
+            "height": 64,
+            "alpha_bbox": [
+              0,
+              0,
+              280,
+              64
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000003.png",
+            "source_path": "files/graphic/zukan_gra/zukan_gra_00000003.png",
+            "width": 256,
+            "height": 16,
+            "alpha_bbox": [
+              0,
+              0,
+              256,
+              16
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000004.png",
+            "source_path": "files/graphic/zukan_gra/zukan_gra_00000004.png",
+            "width": 256,
+            "height": 48,
+            "alpha_bbox": [
+              0,
+              0,
+              256,
+              48
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000012.png",
+            "source_path": "files/graphic/zukan_gra/zukan_gra_00000012.png",
+            "width": 8,
+            "height": 3376,
+            "alpha_bbox": [
+              0,
+              0,
+              8,
+              3376
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000017.png",
+            "source_path": "files/graphic/zukan_gra/zukan_gra_00000017.png",
+            "width": 256,
+            "height": 32,
+            "alpha_bbox": [
+              0,
+              0,
+              256,
+              32
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000019.png",
+            "source_path": "files/graphic/zukan_gra/zukan_gra_00000019.png",
+            "width": 256,
+            "height": 32,
+            "alpha_bbox": [
+              0,
+              0,
+              256,
+              32
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000023.png",
+            "source_path": "files/graphic/zukan_gra/zukan_gra_00000023.png",
+            "width": 8,
+            "height": 2336,
+            "alpha_bbox": [
+              0,
+              0,
+              8,
+              2336
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:graphic:zukan_gra:zukan_gra_00000026.png",
+            "source_path": "files/graphic/zukan_gra/zukan_gra_00000026.png",
+            "width": 8,
+            "height": 512,
+            "alpha_bbox": [
+              0,
+              0,
+              8,
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "source_id": "hgss",
+        "group": "pokemon_battle",
+        "asset_type": "source_png",
+        "target_tags": [
+          "battle_back",
+          "battle_front",
+          "pokemon"
+        ],
+        "path_family": "files/poketool/pokegra",
+        "candidate_count": 1316,
+        "queue_status_counts": {
+          "unreviewed": 1316
+        },
+        "dimension_counts": [
+          {
+            "width": 160,
+            "height": 80,
+            "count": 1316
+          }
+        ],
+        "examples": [
+          {
+            "asset_id": "hgss:source:files:poketool:pokegra:otherpoke:arceus:bug:back.png",
+            "source_path": "files/poketool/pokegra/otherpoke/arceus/bug/back.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              4,
+              0,
+              160,
+              80
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:poketool:pokegra:otherpoke:arceus:bug:front.png",
+            "source_path": "files/poketool/pokegra/otherpoke/arceus/bug/front.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              6,
+              0,
+              153,
+              80
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:poketool:pokegra:otherpoke:arceus:dark:back.png",
+            "source_path": "files/poketool/pokegra/otherpoke/arceus/dark/back.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              4,
+              0,
+              160,
+              80
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:poketool:pokegra:otherpoke:arceus:dark:front.png",
+            "source_path": "files/poketool/pokegra/otherpoke/arceus/dark/front.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              6,
+              0,
+              153,
+              80
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:poketool:pokegra:otherpoke:arceus:dragon:back.png",
+            "source_path": "files/poketool/pokegra/otherpoke/arceus/dragon/back.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              4,
+              0,
+              160,
+              80
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:poketool:pokegra:otherpoke:arceus:dragon:front.png",
+            "source_path": "files/poketool/pokegra/otherpoke/arceus/dragon/front.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              6,
+              0,
+              153,
+              80
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:poketool:pokegra:otherpoke:arceus:electric:back.png",
+            "source_path": "files/poketool/pokegra/otherpoke/arceus/electric/back.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              4,
+              0,
+              160,
+              80
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:poketool:pokegra:otherpoke:arceus:electric:front.png",
+            "source_path": "files/poketool/pokegra/otherpoke/arceus/electric/front.png",
+            "width": 160,
+            "height": 80,
+            "alpha_bbox": [
+              6,
+              0,
+              153,
+              80
+            ]
+          }
+        ]
+      },
+      {
+        "source_id": "hgss",
+        "group": "pokemon_icons",
+        "asset_type": "source_png",
+        "target_tags": [
+          "party_icon",
+          "pokemon",
+          "summary_icon"
+        ],
+        "path_family": "files/poketool/icongra",
+        "candidate_count": 543,
+        "queue_status_counts": {
+          "unreviewed": 543
+        },
+        "dimension_counts": [
+          {
+            "width": 32,
+            "height": 64,
+            "count": 543
+          }
+        ],
+        "examples": [
+          {
+            "asset_id": "hgss:source:files:poketool:icongra:poke_icon:poke_icon_00000007.png",
+            "source_path": "files/poketool/icongra/poke_icon/poke_icon_00000007.png",
+            "width": 32,
+            "height": 64,
+            "alpha_bbox": [
+              2,
+              9,
+              31,
+              62
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:poketool:icongra:poke_icon:poke_icon_00000008.png",
+            "source_path": "files/poketool/icongra/poke_icon/poke_icon_00000008.png",
+            "width": 32,
+            "height": 64,
+            "alpha_bbox": [
+              6,
+              12,
+              26,
+              61
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:poketool:icongra:poke_icon:poke_icon_00000009.png",
+            "source_path": "files/poketool/icongra/poke_icon/poke_icon_00000009.png",
+            "width": 32,
+            "height": 64,
+            "alpha_bbox": [
+              6,
+              11,
+              27,
+              61
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:poketool:icongra:poke_icon:poke_icon_00000010.png",
+            "source_path": "files/poketool/icongra/poke_icon/poke_icon_00000010.png",
+            "width": 32,
+            "height": 64,
+            "alpha_bbox": [
+              3,
+              9,
+              30,
+              63
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:poketool:icongra:poke_icon:poke_icon_00000011.png",
+            "source_path": "files/poketool/icongra/poke_icon/poke_icon_00000011.png",
+            "width": 32,
+            "height": 64,
+            "alpha_bbox": [
+              6,
+              11,
+              27,
+              61
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:poketool:icongra:poke_icon:poke_icon_00000012.png",
+            "source_path": "files/poketool/icongra/poke_icon/poke_icon_00000012.png",
+            "width": 32,
+            "height": 64,
+            "alpha_bbox": [
+              5,
+              9,
+              27,
+              63
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:poketool:icongra:poke_icon:poke_icon_00000013.png",
+            "source_path": "files/poketool/icongra/poke_icon/poke_icon_00000013.png",
+            "width": 32,
+            "height": 64,
+            "alpha_bbox": [
+              1,
+              9,
+              31,
+              63
+            ]
+          },
+          {
+            "asset_id": "hgss:source:files:poketool:icongra:poke_icon:poke_icon_00000014.png",
+            "source_path": "files/poketool/icongra/poke_icon/poke_icon_00000014.png",
+            "width": 32,
+            "height": 64,
+            "alpha_bbox": [
+              6,
+              12,
+              27,
+              61
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

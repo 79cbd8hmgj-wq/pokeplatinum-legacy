@@ -1,0 +1,64 @@
+name: Lane A semantic review plan
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/visual_overhaul/build_lane_a_semantic_review_plan.py"
+      - "docs/visual_overhaul/DONOR_ASSET_CATALOG.json"
+      - "docs/visual_overhaul/DONOR_REVIEW_QUEUE.json"
+      - "docs/visual_overhaul/LANE_A_VISUAL_REVIEW_PRIORITY.json"
+      - "docs/visual_overhaul/LANE_A_P1_VISUAL_REVIEW.json"
+      - ".github/workflows/lane-a-semantic-review-plan.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build semantic review plan
+        run: |
+          python3 tools/visual_overhaul/build_lane_a_semantic_review_plan.py \
+            --catalog docs/visual_overhaul/DONOR_ASSET_CATALOG.json \
+            --queue docs/visual_overhaul/DONOR_REVIEW_QUEUE.json \
+            --priority docs/visual_overhaul/LANE_A_VISUAL_REVIEW_PRIORITY.json \
+            --p1-review docs/visual_overhaul/LANE_A_P1_VISUAL_REVIEW.json \
+            --write-json docs/visual_overhaul/LANE_A_SEMANTIC_REVIEW_PLAN.json \
+            --write-md docs/visual_overhaul/LANE_A_SEMANTIC_REVIEW_PLAN.md
+
+      - name: Validate plan coverage
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          p = json.loads(Path("docs/visual_overhaul/LANE_A_SEMANTIC_REVIEW_PLAN.json").read_text())
+          assert p["catalog_asset_count"] == 64841
+          assert p["queue_asset_count"] == 64841
+          assert p["lane_a_candidate_count"] == 21496
+          assert p["p1"]["candidate_count"] == 18331
+          assert p["p3"]["candidate_count"] == 3165
+          assert p["p1"]["status_counts"].get("valid_render") == 18312
+          assert p["p1"]["status_counts"].get("decode_issue") == 19
+          assert p["p3"]["semantic_group_count"] > 0
+          print("P3 semantic groups:", p["p3"]["semantic_group_count"])
+          PY
+
+      - name: Commit semantic review plan
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            docs/visual_overhaul/LANE_A_SEMANTIC_REVIEW_PLAN.json \
+            docs/visual_overhaul/LANE_A_SEMANTIC_REVIEW_PLAN.md
+          if git diff --cached --quiet; then
+            echo "No semantic review plan changes."
+            exit 0
+          fi
+          git commit -m "visual: build Lane A semantic review plan"
+          git push

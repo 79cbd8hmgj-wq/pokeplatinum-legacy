@@ -1,0 +1,91 @@
+{
+ "schema_version": 1,
+ "scope": "lane_b_support_files",
+ "decisions": [
+  {
+   "asset_id": "diamond:source:files:poketool:icongra:poke_icon:.knarcignore",
+   "review_status": "reject",
+   "reason_code": "build_list_text_file",
+   "reason": "Plain-text knarc build list; contains no visual data.",
+   "detail": "3 text lines"
+  },
+  {
+   "asset_id": "diamond:source:files:poketool:pokeanm:pokeanm:.knarcignore",
+   "review_status": "reject",
+   "reason_code": "build_list_text_file",
+   "reason": "Plain-text knarc build list; contains no visual data.",
+   "detail": "2 text lines"
+  },
+  {
+   "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:.knarcignore",
+   "review_status": "reject",
+   "reason_code": "build_list_text_file",
+   "reason": "Plain-text knarc build list; contains no visual data.",
+   "detail": "2 text lines"
+  },
+  {
+   "asset_id": "diamond:source:files:poketool:pokegra:pokegra:.knarcignore",
+   "review_status": "reject",
+   "reason_code": "build_list_text_file",
+   "reason": "Plain-text knarc build list; contains no visual data.",
+   "detail": "3 text lines"
+  },
+  {
+   "asset_id": "diamond:source:files:poketool:trgra:trbgra:.knarcignore",
+   "review_status": "reject",
+   "reason_code": "build_list_text_file",
+   "reason": "Plain-text knarc build list; contains no visual data.",
+   "detail": "3 text lines"
+  },
+  {
+   "asset_id": "diamond:source:files:poketool:trgra:trfgra:.knarcignore",
+   "review_status": "reject",
+   "reason_code": "build_list_text_file",
+   "reason": "Plain-text knarc build list; contains no visual data.",
+   "detail": "3 text lines"
+  },
+  {
+   "asset_id": "hgss:source:files:fielddata:graphic:preview_graphic:preview_graphic:.narcignore",
+   "review_status": "reject",
+   "reason_code": "build_list_text_file",
+   "reason": "Plain-text knarc build list; contains no visual data.",
+   "detail": "3 text lines"
+  },
+  {
+   "asset_id": "hgss:source:files:fielddata:graphic:preview_graphic:preview_graphic:.narcorder",
+   "review_status": "reject",
+   "reason_code": "build_list_text_file",
+   "reason": "Plain-text knarc build list; contains no visual data.",
+   "detail": "228 text lines"
+  },
+  {
+   "asset_id": "hgss:source:files:fielddata:sodateya:kowaza_list.narc",
+   "review_status": "reject",
+   "reason_code": "small_data_table_narc",
+   "reason": "NARC of tiny non-Nitro data records (offset/height/move-list tables), not visual art.",
+   "detail": "1 members, max 4092 bytes, no Nitro/3D magics"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:icongra:poke_icon:.narcignore",
+   "review_status": "reject",
+   "reason_code": "build_list_text_file",
+   "reason": "Plain-text knarc build list; contains no visual data.",
+   "detail": "9 text lines"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:height.narc",
+   "review_status": "reject",
+   "reason_code": "small_data_table_narc",
+   "reason": "NARC of tiny non-Nitro data records (offset/height/move-list tables), not visual art.",
+   "detail": "1976 members, max 1 bytes, no Nitro/3D magics"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:height_o.narc",
+   "review_status": "reject",
+   "reason_code": "small_data_table_narc",
+   "reason": "NARC of tiny non-Nitro data records (offset/height/move-list tables), not visual art.",
+   "detail": "160 members, max 1 bytes, no Nitro/3D magics"
+  }
+ ],
+ "left_unclassified_count": 797
+}

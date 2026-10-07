@@ -1,0 +1,45 @@
+name: Lane B Nitro 2D recovery plan
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/visual_overhaul/plan_lane_b_nitro2d_recovery.py"
+      - "docs/visual_overhaul/LANE_B_RECOVERED_CURATION.json"
+      - "docs/visual_overhaul/LANE_B_DECODE_RECOVERY.json"
+      - ".github/workflows/lane-b-nitro2d-recovery-plan.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build plan
+        run: |
+          python3 tools/visual_overhaul/plan_lane_b_nitro2d_recovery.py \
+            --recovered docs/visual_overhaul/LANE_B_RECOVERED_CURATION.json \
+            --audit docs/visual_overhaul/LANE_B_DECODE_RECOVERY.json \
+            --write-json docs/visual_overhaul/LANE_B_NITRO2D_RECOVERY_PLAN.json \
+            --write-md docs/visual_overhaul/LANE_B_NITRO2D_RECOVERY_PLAN.md
+      - name: Validate
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=json.loads(Path("docs/visual_overhaul/LANE_B_NITRO2D_RECOVERY_PLAN.json").read_text())
+          assert p["asset_count"] == 217
+          assert sum(p["source_counts"].values()) == 217
+          assert p["group_count"] > 0
+          print(p["source_counts"], p["suffix_counts"], p["group_count"])
+          PY
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/visual_overhaul/LANE_B_NITRO2D_RECOVERY_PLAN.json docs/visual_overhaul/LANE_B_NITRO2D_RECOVERY_PLAN.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "visual: plan remaining Lane B Nitro 2D recovery"
+          git push

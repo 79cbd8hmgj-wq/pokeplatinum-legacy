@@ -1,0 +1,72 @@
+name: Lane B Nitro 2D structural recovery
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/visual_overhaul/recover_lane_b_nitro2d_structural.py"
+      - "docs/visual_overhaul/LANE_B_NITRO2D_RECOVERY_PLAN.json"
+      - ".github/workflows/lane-b-nitro2d-structural-recovery.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Platinum overhaul
+        uses: actions/checkout@v4
+        with:
+          path: platinum
+
+      - name: Checkout Diamond donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pokediamond
+          path: pokediamond
+
+      - name: Checkout HGSS donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pokeheartgold
+          path: pokeheartgold
+
+      - name: Audit remaining Nitro 2D components
+        working-directory: platinum
+        run: |
+          python3 tools/visual_overhaul/recover_lane_b_nitro2d_structural.py \
+            --plan docs/visual_overhaul/LANE_B_NITRO2D_RECOVERY_PLAN.json \
+            --diamond-root ../pokediamond \
+            --hgss-root ../pokeheartgold \
+            --write-json docs/visual_overhaul/LANE_B_NITRO2D_STRUCTURAL_RECOVERY.json \
+            --write-md docs/visual_overhaul/LANE_B_NITRO2D_STRUCTURAL_RECOVERY.md
+
+      - name: Validate coverage
+        working-directory: platinum
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=json.loads(Path("docs/visual_overhaul/LANE_B_NITRO2D_STRUCTURAL_RECOVERY.json").read_text())
+          assert p["asset_count"] == 217
+          assert sum(p["technical_state_counts"].values()) == 217
+          assert set(p["technical_state_counts"]) <= {"structurally_valid","decode_issue"}
+          print("Nitro2D structural states:", p["technical_state_counts"])
+          print("By suffix:", p["suffix_state_counts"])
+          PY
+
+      - name: Commit structural recovery
+        working-directory: platinum
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            docs/visual_overhaul/LANE_B_NITRO2D_STRUCTURAL_RECOVERY.json \
+            docs/visual_overhaul/LANE_B_NITRO2D_STRUCTURAL_RECOVERY.md
+          if git diff --cached --quiet; then
+            echo "No Nitro2D structural recovery changes."
+            exit 0
+          fi
+          git commit -m "visual: audit Lane B Nitro 2D components"
+          git push
