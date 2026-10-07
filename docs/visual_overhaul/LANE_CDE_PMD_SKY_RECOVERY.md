@@ -8,20 +8,17 @@ SkyTemple reference-decoder audit. No Platinum resources are modified.
 |---|---:|
 | bgp:valid_render | 32 |
 | bin:dictionary_table | 2 |
-| bin:palette_only | 1 |
-| bin:unresolved | 6 |
+| bin:palette_only | 5 |
+| bin:unresolved | 2 |
 | bin:valid_render | 1 |
-| bma:blank_map | 15 |
-| bma:blank_render | 2 |
-| bma:decode_failure | 6 |
-| bma:valid_render | 444 |
+| bma:blank_map | 17 |
+| bma:valid_render | 450 |
 | bpa:companion_of_valid | 85 |
 | bpc:blank_map | 2 |
 | bpc:valid_render | 456 |
 | bpl:blank_map | 2 |
-| bpl:decode_failure | 6 |
-| bpl:no_pair | 5 |
-| bpl:valid_render | 459 |
+| bpl:palette_only | 5 |
+| bpl:valid_render | 465 |
 | chr:valid_render | 6 |
 | dat:decode_failure | 2 |
 | dat:unresolved | 11 |

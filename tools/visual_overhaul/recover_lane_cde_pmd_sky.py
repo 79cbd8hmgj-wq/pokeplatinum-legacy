@@ -108,6 +108,9 @@ def eval_misc(path: Path, rel: str):
                 c = pal[v]
                 im.putpixel((x, y), ((c & 31) * 8, ((c >> 5) & 31) * 8, ((c >> 10) & 31) * 8, 255 if v else 0))
         return ("valid_render", "32x32 4bpp DS banner-style icon with dw_plt.bin") if nonblank(im) else ("blank_render", "blank icon")
+    if ext == "bin" and path.name.startswith("b_pal") and len(data) == 64:
+        cols = {tuple(data[i:i + 3]) for i in range(0, 64, 4)}
+        return ("palette_only", f"16 RGBA entries, {len(cols)} distinct colours") if len(cols) > 1 else ("blank_render", "uniform palette")
     if path.name == "dw_plt.bin":
         return ("palette_only", "16-colour BGR555 palette of dw_icon.bin")
     if path.name in ("te_dic.bin", "te_sdic.bin"):
@@ -143,8 +146,11 @@ def main() -> int:
         if stem == "__bpa__":
             continue
         need = {k: g[k][1] for k in ("bma", "bpc", "bpl") if k in g}
+        for k in ("bma", "bpc", "bpl"):   # same-stem members that were curated earlier still exist on disk
+            if k not in need and (bg_dir / f"{stem}.{k}").exists():
+                need[k] = bg_dir / f"{stem}.{k}"
         parent_used = ""
-        if len(need) < 3 and "bma" in g:
+        if len(need) < 3 and "bma" in need:
             # Variant maps (trailing digit) may share the parent's BPC/BPL; accept only if the parent file exists on disk.
             par = stem.rstrip("0123456789") if stem[-1].isdigit() else ""
             for k in ("bpc", "bpl"):
@@ -157,8 +163,8 @@ def main() -> int:
                     rows[r["asset_id"]].update(technical_state="no_pair", detail="incomplete BMA/BPC/BPL set")
             continue
         try:
-            bpas = [p for k, (r, p) in groups.get("__bpa__", {}).items()
-                    if p.stem.startswith(stem) and len(p.stem) == len(stem) + 1 and p.stem[-1].isdigit()]
+            bases = [stem] + ([parent_used] if parent_used else [])
+            bpas = [p for b in bases for p in bg_dir.glob(f"{b}?.bpa") if len(p.stem) == len(b) + 1 and p.stem[-1].isdigit()]
             im = render_bg(stem, need, sorted(bpas))
             if nonblank(im):
                 st, det = "valid_render", f"{im.size[0]}x{im.size[1]} composed background" + (f" (BPC/BPL shared from parent {parent_used})" if parent_used else "")
@@ -189,14 +195,27 @@ def main() -> int:
             colours = len(set(sheet.get_flattened_data() if hasattr(sheet, "get_flattened_data") else sheet.getdata()))
         except Exception as e:  # noqa: BLE001
             continue
-        if "bma" in g and len(ids) <= 1:
-            rows[g["bma"][0]["asset_id"]].update(technical_state="blank_map", detail=f"layers reference only chunk id(s) {sorted(ids)}; composite fully transparent")
+        if "bma" in g:
+            rows[g["bma"][0]["asset_id"]].update(technical_state="blank_map", detail=(
+                f"layers reference only chunk id(s) {sorted(ids)}; composite fully transparent" if len(ids) <= 1
+                else f"{len(ids)} chunk ids but the composite is a single uniform colour/fully transparent (no imagery)"))
         for k in ("bpc", "bpl"):
             if k in g and need[k].parent == bg_dir and need[k].stem == stem:
                 if colours >= 3:
                     rows[g[k][0]["asset_id"]].update(technical_state="valid_render", detail=f"tile sheet holds art ({colours} colours) although this map's layers are blank")
                 else:
                     rows[g[k][0]["asset_id"]].update(technical_state="blank_map", detail=f"tile sheet has only {colours} colour(s) and the map layers are blank")
+    # lone BPL files (no map of their own): standalone palette resources
+    for stem, g in groups.items():
+        if stem != "__bpa__" and set(g) == {"bpl"} and rows[g["bpl"][0]["asset_id"]]["technical_state"] in ("unresolved", "no_pair"):
+            try:
+                from skytemple_files.graphics.bpl.handler import BplHandler
+                bpl = BplHandler.deserialize(g["bpl"][1].read_bytes())
+                cols = {tuple(c) for pal in bpl.palettes for c in [pal[i:i + 3] for i in range(0, len(pal), 3)]}
+                if len(cols) > 1:
+                    rows[g["bpl"][0]["asset_id"]].update(technical_state="palette_only", detail=f"{bpl.number_palettes} palettes, {len(cols)} distinct colours")
+            except Exception as e:  # noqa: BLE001
+                rows[g["bpl"][0]["asset_id"]].update(technical_state="decode_failure", detail=str(e)[:100])
     # palette-only BPL variants (e.g. s13p01b2.bpl): valid when a parent stem composed successfully
     for stem, g in groups.items():
         if stem != "__bpa__" and set(g) == {"bpl"} and stem[-1].isdigit() and stem.rstrip("0123456789") in ok_stems:
