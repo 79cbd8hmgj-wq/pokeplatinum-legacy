@@ -4,12 +4,12 @@
  "asset_count": 7431,
  "package_count": 1731,
  "technical_state_counts": {
-  "valid_render": 5703,
+  "valid_render": 5706,
   "companion_of_valid": 1555,
   "unsupported_member": 19,
-  "no_pair": 74,
-  "blank_package": 56,
-  "no_valid_render": 18,
+  "no_pair": 72,
+  "blank_package": 66,
+  "no_valid_render": 7,
   "decode_failure": 5,
   "blank_render": 1
  },
@@ -22,19 +22,19 @@
   "NCER:blank_package": 15,
   "NCER:decode_failure": 3,
   "NCER:valid_render": 1273,
-  "NCGR:no_pair": 16,
-  "NCGR:valid_render": 473,
-  "NCLR:no_pair": 40,
+  "NCGR:no_pair": 15,
+  "NCGR:valid_render": 474,
+  "NCLR:no_pair": 39,
   "NCLR:unsupported_member": 4,
-  "NCLR:valid_render": 1131,
+  "NCLR:valid_render": 1132,
   "NFTR:unsupported_member": 4,
   "NSCR:blank_render": 1,
   "NSCR:decode_failure": 2,
   "NSCR:valid_render": 198,
-  "bin:blank_package": 15,
-  "bin:no_valid_render": 18,
+  "bin:blank_package": 25,
+  "bin:no_valid_render": 7,
   "bin:unsupported_member": 6,
-  "bin:valid_render": 1679,
+  "bin:valid_render": 1680,
   "cac:blank_package": 15,
   "cac:companion_of_valid": 1206,
   "cac:unsupported_member": 3,
@@ -18457,7 +18457,7 @@
    "asset_id": "ranger2:embedded:res:prebuilt:data:interface:i057_LZ.bin:i057_00.NCER",
    "source_path": "res/prebuilt/data/interface/i057_LZ.bin",
    "technical_state": "decode_failure",
-   "detail": "/tmp/lbr_qpj72gfu/i057_00.NCBR: character geometry/data mismatch",
+   "detail": "/tmp/lbr_36yvg3d8/i057_00.NCBR: character geometry/data mismatch",
    "suffix": "NCER"
   },
   {
@@ -24085,7 +24085,7 @@
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam000_bg_LZ.bin:pam000_00.NSCR",
    "source_path": "res/prebuilt/data/menu/pam000_bg_LZ.bin",
    "technical_state": "blank_render",
-   "detail": "256x256 screen blank",
+   "detail": "256x256 screen blank (out-of-range tiles)",
    "suffix": "NSCR"
   },
   {
@@ -29075,7 +29075,7 @@
   {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:um001_018_LZ.bin",
    "source_path": "res/prebuilt/data/menu/um001_018_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -30041,7 +30041,7 @@
   {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:um019_019_LZ.bin",
    "source_path": "res/prebuilt/data/menu/um019_019_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -30797,7 +30797,7 @@
   {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:um029_010_LZ.bin",
    "source_path": "res/prebuilt/data/menu/um029_010_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -30986,7 +30986,7 @@
   {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:um030_027_LZ.bin",
    "source_path": "res/prebuilt/data/menu/um030_027_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -31497,14 +31497,14 @@
   {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:um039_011a_LZ.bin",
    "source_path": "res/prebuilt/data/menu/um039_011a_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:um039_011b_LZ.bin",
    "source_path": "res/prebuilt/data/menu/um039_011b_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -32001,49 +32001,49 @@
   {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:um201_001_LZ.bin",
    "source_path": "res/prebuilt/data/menu/um201_001_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:um201_002_LZ.bin",
    "source_path": "res/prebuilt/data/menu/um201_002_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:um201_003_LZ.bin",
    "source_path": "res/prebuilt/data/menu/um201_003_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:um201_004_LZ.bin",
    "source_path": "res/prebuilt/data/menu/um201_004_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:um_LZ.bin:um000.NCLR",
    "source_path": "res/prebuilt/data/menu/um_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank character/palette resource of a pure tile-resource package (consumed by sibling screens)",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:um_LZ.bin:um000_00.NCGR",
    "source_path": "res/prebuilt/data/menu/um_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank character/palette resource of a pure tile-resource package (consumed by sibling screens)",
    "suffix": "NCGR"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:um_LZ.bin",
    "source_path": "res/prebuilt/data/menu/um_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "valid_render",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -84775,6 +84775,14 @@
    "detail": "1 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:source:res:prebuilt:data:menu:um001_018_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:um002_001_LZ.bin",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -85871,6 +85879,14 @@
    "detail": "1 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:source:res:prebuilt:data:menu:um019_019_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:um020_001_LZ.bin",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -86727,6 +86743,14 @@
    "detail": "1 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:source:res:prebuilt:data:menu:um029_010_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:um030_001_LZ.bin",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -86933,6 +86957,14 @@
    "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "1 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:menu:um030_027_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:um030_028_LZ.bin",
@@ -87511,6 +87543,22 @@
    "detail": "1 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:source:res:prebuilt:data:menu:um039_011a_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:menu:um039_011b_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:um039_012_LZ.bin",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -88069,6 +88117,62 @@
    "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "1 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:menu:um201_001_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:menu:um201_002_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:menu:um201_003_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:menu:um201_004_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:um_LZ.bin:um000.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank character/palette resource of a pure tile-resource package (consumed by sibling screens)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:um_LZ.bin:um000_00.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank character/palette resource of a pure tile-resource package (consumed by sibling screens)"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:menu:um_LZ.bin",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "0 valid NCER pairs"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm00.ntfp",

@@ -9,9 +9,9 @@ Baseline plus evidence-backed recoveries. No Platinum resources are modified.
 | C_effects_animation | decode_issue | 19 |
 | C_effects_animation | reject | 4 |
 | C_effects_animation | usable | 1580 |
-| D_environment_ui | decode_issue | 115 |
-| D_environment_ui | reject | 26 |
-| D_environment_ui | usable | 4583 |
+| D_environment_ui | decode_issue | 102 |
+| D_environment_ui | reject | 36 |
+| D_environment_ui | usable | 4586 |
 | E_decode_or_context_needed | decode_issue | 40 |
 | E_decode_or_context_needed | reject | 52 |
 | E_decode_or_context_needed | usable | 2706 |
@@ -24,6 +24,6 @@ Baseline plus evidence-backed recoveries. No Platinum resources are modified.
 | pmd_sky | decode_issue | 45 |
 | pmd_sky | reject | 21 |
 | pmd_sky | usable | 1506 |
-| ranger2 | decode_issue | 117 |
-| ranger2 | reject | 56 |
-| ranger2 | usable | 7258 |
+| ranger2 | decode_issue | 104 |
+| ranger2 | reject | 66 |
+| ranger2 | usable | 7261 |

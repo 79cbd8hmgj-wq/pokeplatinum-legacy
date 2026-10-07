@@ -186,6 +186,20 @@ def _twin_of_used(path: Path, gfx_info: dict, all_cells: list) -> bool:
     return False
 
 
+def _tile_resource_pkg_ok(members: dict, name: str) -> bool:
+    try:
+        g = [p for k, p in members.items() if k.endswith((".NCBR", ".NCGR"))]
+        pal = [p for k, p in members.items() if k.endswith(".NCLR")]
+        if not g or not pal:
+            return False
+        for p in pal:
+            read_palette(p)
+        tiles = [read_chars_bg(p)[0] for p in g]
+        return all(any(any(t) for t in ts) for ts in tiles)
+    except Exception:  # noqa: BLE001
+        return False
+
+
 def _graphic_sheet_ok(path: Path, all_cells: list) -> bool:
     try:
         sent = read_chars_sentinel(path)
@@ -279,7 +293,9 @@ def evaluate_package(pkg: Path, shared_pkg: Path | None = None) -> dict:
                     img, mx = render_screen(w, h, entries, tiles, bpp, len(palette))
                     nb = sum(1 for v in img if v)
                     if nb == 0:
-                        out["members"][n] = {"state": "blank_render", "detail": f"{w}x{h} screen blank"}
+                        in_range = all((e & 0x3FF) < len(tiles) for e in entries)
+                        out["members"][n] = ({"state": "blank_screen", "detail": f"{w}x{h} screen: every tile reference is in range and lands on blank tiles"}
+                                             if in_range else {"state": "blank_render", "detail": f"{w}x{h} screen blank (out-of-range tiles)"})
                     elif mx >= len(palette):
                         out["members"][n] = {"state": "decode_failure", "detail": f"palette index {mx} >= {len(palette)}"}
                     else:
@@ -349,6 +365,8 @@ def evaluate_package(pkg: Path, shared_pkg: Path | None = None) -> dict:
                     out["members"][n] = {"state": "decode_failure", "detail": str(e)[:120]}
             elif n.endswith((".NCBR", ".NCGR")) and gfx_info and _twin_of_used(members[n], gfx_info, all_cells):
                 out["members"][n] = {"state": "valid_render", "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"}
+            elif n.endswith((".NCBR", ".NCGR", ".NCLR")) and not ncers and not any(k.endswith(".NSCR") for k in members) and _tile_resource_pkg_ok(members, n):
+                out["members"][n] = {"state": "valid_render", "detail": "nonblank character/palette resource of a pure tile-resource package (consumed by sibling screens)"}
             elif n.endswith((".NCBR", ".NCGR")) and out["pairs"] and _graphic_sheet_ok(members[n], all_cells):
                 out["members"][n] = {"state": "valid_render", "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"}
             elif n.endswith((".NCBR", ".NCGR", ".NCLR")):
@@ -393,7 +411,14 @@ def main() -> int:
             if pn.startswith("um") and pn != "um_LZ.bin" and (a.ranger_root / Path(sp).parent / "um_LZ.bin").exists():
                 shared = a.ranger_root / Path(sp).parent / "um_LZ.bin"
             ev = evaluate_package(a.ranger_root / sp, shared)
-            pkg_state[sp] = ("ok" if ev["pairs"] else "no_valid_render", "")
+            mstates = {m["state"] for m in ev["members"].values()}
+            if ev["pairs"] or "valid_render" in mstates:
+                pkg_state[sp] = ("ok", "")
+            elif mstates and mstates <= {"blank_screen", "blank_package"}:
+                ev["blank_package"] = True
+                pkg_state[sp] = ("no_valid_render", "")
+            else:
+                pkg_state[sp] = ("no_valid_render", "")
         except Exception as e:  # noqa: BLE001
             ev = {"members": {}, "pairs": []}
             pkg_state[sp] = ("package_error", str(e)[:160])
@@ -429,6 +454,11 @@ def main() -> int:
         elif x["technical_state"] == "companion_of_valid":
             code, why = ("ranger_cac_companion_of_valid_render",
                          "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.")
+        elif x["technical_state"] == "blank_screen":
+            decisions.append({"asset_id": x["asset_id"], "review_status": "reject", "reason_code": "ranger_screen_all_blank",
+                              "reason": "Screen map whose every tile reference is in range and lands on blank tiles of its paired graphics: no visible content.",
+                              "technical_state": x["technical_state"], "detail": x["detail"]})
+            continue
         elif x["technical_state"] == "blank_package":
             decisions.append({"asset_id": x["asset_id"], "review_status": "reject", "reason_code": "ranger_package_renders_blank",
                               "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
