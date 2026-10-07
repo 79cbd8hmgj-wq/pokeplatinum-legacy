@@ -1,4 +1,4 @@
-# Lanes C/D/E Recovered Curation State
+# Recovered Curation State
 
 Baseline plus evidence-backed recoveries. No Platinum resources are modified.
 
