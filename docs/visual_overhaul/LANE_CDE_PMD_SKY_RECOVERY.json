@@ -4,35 +4,41 @@
  "decoder": "skytemple-files 1.8.5",
  "asset_count": 1572,
  "technical_state_counts": {
-  "valid_render": 1334,
-  "decode_failure": 46,
-  "unresolved": 33,
-  "blank_render": 51,
-  "companion_of_valid": 59,
-  "no_pair": 49
+  "valid_render": 1417,
+  "decode_failure": 21,
+  "unresolved": 17,
+  "palette_only": 4,
+  "dictionary_table": 2,
+  "blank_map": 19,
+  "companion_of_valid": 85,
+  "no_pair": 5,
+  "blank_render": 2
  },
  "suffix_state_counts": {
   "bgp:valid_render": 32,
-  "bin:unresolved": 10,
-  "bma:blank_render": 17,
-  "bma:decode_failure": 13,
-  "bma:no_pair": 9,
-  "bma:valid_render": 428,
-  "bpa:companion_of_valid": 59,
-  "bpa:no_pair": 26,
-  "bpc:blank_render": 17,
-  "bpc:decode_failure": 13,
-  "bpc:valid_render": 428,
-  "bpl:blank_render": 17,
-  "bpl:decode_failure": 13,
-  "bpl:no_pair": 14,
-  "bpl:valid_render": 428,
+  "bin:dictionary_table": 2,
+  "bin:palette_only": 1,
+  "bin:unresolved": 6,
+  "bin:valid_render": 1,
+  "bma:blank_map": 15,
+  "bma:blank_render": 2,
+  "bma:decode_failure": 6,
+  "bma:valid_render": 444,
+  "bpa:companion_of_valid": 85,
+  "bpc:blank_map": 2,
+  "bpc:valid_render": 456,
+  "bpl:blank_map": 2,
+  "bpl:decode_failure": 6,
+  "bpl:no_pair": 5,
+  "bpl:valid_render": 459,
   "chr:valid_render": 6,
-  "dat:unresolved": 16,
-  "kao:unresolved": 1,
-  "pal:unresolved": 3,
+  "dat:decode_failure": 2,
+  "dat:unresolved": 11,
+  "dat:valid_render": 3,
+  "kao:valid_render": 1,
+  "pal:palette_only": 3,
   "pal:valid_render": 6,
-  "w16:unresolved": 3,
+  "w16:valid_render": 3,
   "wan:decode_failure": 7,
   "wte:valid_render": 6
  },
@@ -272,15 +278,15 @@
    "asset_id": "pmd_sky:source:files:FONT:clrmark1.w16",
    "source_path": "files/FONT/clrmark1.w16",
    "suffix": "w16",
-   "technical_state": "unresolved",
-   "detail": ""
+   "technical_state": "valid_render",
+   "detail": "13/13 nonblank images"
   },
   {
    "asset_id": "pmd_sky:source:files:FONT:clrmark2.w16",
    "source_path": "files/FONT/clrmark2.w16",
    "suffix": "w16",
-   "technical_state": "unresolved",
-   "detail": ""
+   "technical_state": "valid_render",
+   "detail": "5/5 nonblank images"
   },
   {
    "asset_id": "pmd_sky:source:files:FONT:cursor.wan",
@@ -300,8 +306,8 @@
    "asset_id": "pmd_sky:source:files:FONT:font.dat",
    "source_path": "files/FONT/font.dat",
    "suffix": "dat",
-   "technical_state": "unresolved",
-   "detail": ""
+   "technical_state": "valid_render",
+   "detail": "136 glyph entries, 5 glyph table(s) nonblank"
   },
   {
    "asset_id": "pmd_sky:source:files:FONT:frame.wte",
@@ -433,29 +439,29 @@
    "asset_id": "pmd_sky:source:files:FONT:kanji_b.dat",
    "source_path": "files/FONT/kanji_b.dat",
    "suffix": "dat",
-   "technical_state": "unresolved",
-   "detail": ""
+   "technical_state": "decode_failure",
+   "detail": "index out of bounds on dimension 1"
   },
   {
    "asset_id": "pmd_sky:source:files:FONT:kanji_rd.dat",
    "source_path": "files/FONT/kanji_rd.dat",
    "suffix": "dat",
-   "technical_state": "unresolved",
-   "detail": ""
+   "technical_state": "valid_render",
+   "detail": "231 glyph entries, 2 glyph table(s) nonblank"
   },
   {
    "asset_id": "pmd_sky:source:files:FONT:kaomado.kao",
    "source_path": "files/FONT/kaomado.kao",
    "suffix": "kao",
-   "technical_state": "unresolved",
-   "detail": ""
+   "technical_state": "valid_render",
+   "detail": "2050 portraits (40x40) across 1154 entries"
   },
   {
    "asset_id": "pmd_sky:source:files:FONT:markfont.pal",
    "source_path": "files/FONT/markfont.pal",
    "suffix": "pal",
-   "technical_state": "unresolved",
-   "detail": ""
+   "technical_state": "palette_only",
+   "detail": "76 distinct colours"
   },
   {
    "asset_id": "pmd_sky:source:files:FONT:page_l.wan",
@@ -482,29 +488,29 @@
    "asset_id": "pmd_sky:source:files:FONT:rankmark.w16",
    "source_path": "files/FONT/rankmark.w16",
    "suffix": "w16",
-   "technical_state": "unresolved",
-   "detail": ""
+   "technical_state": "valid_render",
+   "detail": "13/13 nonblank images"
   },
   {
    "asset_id": "pmd_sky:source:files:FONT:staffont.pal",
    "source_path": "files/FONT/staffont.pal",
    "suffix": "pal",
-   "technical_state": "unresolved",
-   "detail": ""
+   "technical_state": "palette_only",
+   "detail": "65 distinct colours"
   },
   {
    "asset_id": "pmd_sky:source:files:FONT:te_dic.bin",
    "source_path": "files/FONT/te_dic.bin",
    "suffix": "bin",
-   "technical_state": "unresolved",
-   "detail": ""
+   "technical_state": "dictionary_table",
+   "detail": "count=397, 3180 bytes"
   },
   {
    "asset_id": "pmd_sky:source:files:FONT:te_sdic.bin",
    "source_path": "files/FONT/te_sdic.bin",
    "suffix": "bin",
-   "technical_state": "unresolved",
-   "detail": ""
+   "technical_state": "dictionary_table",
+   "detail": "count=397, 3180 bytes"
   },
   {
    "asset_id": "pmd_sky:source:files:FONT:test_k.bin",
@@ -524,43 +530,43 @@
    "asset_id": "pmd_sky:source:files:FONT:text_pal.pal",
    "source_path": "files/FONT/text_pal.pal",
    "suffix": "pal",
-   "technical_state": "unresolved",
-   "detail": ""
+   "technical_state": "palette_only",
+   "detail": "30 distinct colours"
   },
   {
    "asset_id": "pmd_sky:source:files:FONT:unkno_rd.dat",
    "source_path": "files/FONT/unkno_rd.dat",
    "suffix": "dat",
-   "technical_state": "unresolved",
-   "detail": ""
+   "technical_state": "valid_render",
+   "detail": "224 glyph entries, 1 glyph table(s) nonblank"
   },
   {
    "asset_id": "pmd_sky:source:files:FONT:unknown.dat",
    "source_path": "files/FONT/unknown.dat",
    "suffix": "dat",
-   "technical_state": "unresolved",
-   "detail": ""
+   "technical_state": "decode_failure",
+   "detail": "index out of bounds on dimension 1"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d00p01.bma",
    "source_path": "files/MAP_BG/d00p01.bma",
    "suffix": "bma",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d00p01.bpc",
    "source_path": "files/MAP_BG/d00p01.bpc",
    "suffix": "bpc",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (81 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d00p01.bpl",
    "source_path": "files/MAP_BG/d00p01.bpl",
    "suffix": "bpl",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (81 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d00p02.bma",
@@ -1238,141 +1244,141 @@
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p31a.bma",
    "source_path": "files/MAP_BG/d17p31a.bma",
    "suffix": "bma",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "360x408 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p31a.bpc",
    "source_path": "files/MAP_BG/d17p31a.bpc",
    "suffix": "bpc",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "360x408 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p31a.bpl",
    "source_path": "files/MAP_BG/d17p31a.bpl",
    "suffix": "bpl",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "360x408 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p31a1.bpa",
    "source_path": "files/MAP_BG/d17p31a1.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p31a5.bpa",
    "source_path": "files/MAP_BG/d17p31a5.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p32a.bma",
    "source_path": "files/MAP_BG/d17p32a.bma",
    "suffix": "bma",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "408x456 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p32a.bpc",
    "source_path": "files/MAP_BG/d17p32a.bpc",
    "suffix": "bpc",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "408x456 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p32a.bpl",
    "source_path": "files/MAP_BG/d17p32a.bpl",
    "suffix": "bpl",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "408x456 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p32a1.bpa",
    "source_path": "files/MAP_BG/d17p32a1.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p32a5.bpa",
    "source_path": "files/MAP_BG/d17p32a5.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p33a.bma",
    "source_path": "files/MAP_BG/d17p33a.bma",
    "suffix": "bma",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "456x504 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p33a.bpc",
    "source_path": "files/MAP_BG/d17p33a.bpc",
    "suffix": "bpc",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "456x504 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p33a.bpl",
    "source_path": "files/MAP_BG/d17p33a.bpl",
    "suffix": "bpl",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "456x504 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p33a1.bpa",
    "source_path": "files/MAP_BG/d17p33a1.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p33a5.bpa",
    "source_path": "files/MAP_BG/d17p33a5.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p34a.bma",
    "source_path": "files/MAP_BG/d17p34a.bma",
    "suffix": "bma",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "696x600 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p34a.bpc",
    "source_path": "files/MAP_BG/d17p34a.bpc",
    "suffix": "bpc",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "696x600 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p34a.bpl",
    "source_path": "files/MAP_BG/d17p34a.bpl",
    "suffix": "bpl",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "696x600 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p34a1.bpa",
    "source_path": "files/MAP_BG/d17p34a1.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p34a5.bpa",
    "source_path": "files/MAP_BG/d17p34a5.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p45a.bma",
@@ -2225,64 +2231,64 @@
    "asset_id": "pmd_sky:source:files:MAP_BG:d32p41a.bma",
    "source_path": "files/MAP_BG/d32p41a.bma",
    "suffix": "bma",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d32p41a.bpc",
    "source_path": "files/MAP_BG/d32p41a.bpc",
    "suffix": "bpc",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d32p41a.bpl",
    "source_path": "files/MAP_BG/d32p41a.bpl",
    "suffix": "bpl",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d32p42a.bma",
    "source_path": "files/MAP_BG/d32p42a.bma",
    "suffix": "bma",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d32p42a.bpc",
    "source_path": "files/MAP_BG/d32p42a.bpc",
    "suffix": "bpc",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d32p42a.bpl",
    "source_path": "files/MAP_BG/d32p42a.bpl",
    "suffix": "bpl",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d32p43a.bma",
    "source_path": "files/MAP_BG/d32p43a.bma",
    "suffix": "bma",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d32p43a.bpc",
    "source_path": "files/MAP_BG/d32p43a.bpc",
    "suffix": "bpc",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d32p43a.bpl",
    "source_path": "files/MAP_BG/d32p43a.bpl",
    "suffix": "bpl",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d32p44a.bma",
@@ -2309,22 +2315,22 @@
    "asset_id": "pmd_sky:source:files:MAP_BG:d33p41a.bma",
    "source_path": "files/MAP_BG/d33p41a.bma",
    "suffix": "bma",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d33p41a.bpc",
    "source_path": "files/MAP_BG/d33p41a.bpc",
    "suffix": "bpc",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (5 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d33p41a.bpl",
    "source_path": "files/MAP_BG/d33p41a.bpl",
    "suffix": "bpl",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (5 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d34p41a.bma",
@@ -2372,22 +2378,22 @@
    "asset_id": "pmd_sky:source:files:MAP_BG:d35p41a.bma",
    "source_path": "files/MAP_BG/d35p41a.bma",
    "suffix": "bma",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d35p41a.bpc",
    "source_path": "files/MAP_BG/d35p41a.bpc",
    "suffix": "bpc",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d35p41a.bpl",
    "source_path": "files/MAP_BG/d35p41a.bpl",
    "suffix": "bpl",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d36p11a.bma",
@@ -2561,22 +2567,22 @@
    "asset_id": "pmd_sky:source:files:MAP_BG:d39p41a.bma",
    "source_path": "files/MAP_BG/d39p41a.bma",
    "suffix": "bma",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d39p41a.bpc",
    "source_path": "files/MAP_BG/d39p41a.bpc",
    "suffix": "bpc",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d39p41a.bpl",
    "source_path": "files/MAP_BG/d39p41a.bpl",
    "suffix": "bpl",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d40p11a.bma",
@@ -3744,127 +3750,127 @@
    "asset_id": "pmd_sky:source:files:MAP_BG:d65p41a.bma",
    "source_path": "files/MAP_BG/d65p41a.bma",
    "suffix": "bma",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d65p41a.bpc",
    "source_path": "files/MAP_BG/d65p41a.bpc",
    "suffix": "bpc",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d65p41a.bpl",
    "source_path": "files/MAP_BG/d65p41a.bpl",
    "suffix": "bpl",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d66p41a.bma",
    "source_path": "files/MAP_BG/d66p41a.bma",
    "suffix": "bma",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d66p41a.bpc",
    "source_path": "files/MAP_BG/d66p41a.bpc",
    "suffix": "bpc",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d66p41a.bpl",
    "source_path": "files/MAP_BG/d66p41a.bpl",
    "suffix": "bpl",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d67p41a.bma",
    "source_path": "files/MAP_BG/d67p41a.bma",
    "suffix": "bma",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d67p41a.bpc",
    "source_path": "files/MAP_BG/d67p41a.bpc",
    "suffix": "bpc",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d67p41a.bpl",
    "source_path": "files/MAP_BG/d67p41a.bpl",
    "suffix": "bpl",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d68p41a.bma",
    "source_path": "files/MAP_BG/d68p41a.bma",
    "suffix": "bma",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d68p41a.bpc",
    "source_path": "files/MAP_BG/d68p41a.bpc",
    "suffix": "bpc",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d68p41a.bpl",
    "source_path": "files/MAP_BG/d68p41a.bpl",
    "suffix": "bpl",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d69p41a.bma",
    "source_path": "files/MAP_BG/d69p41a.bma",
    "suffix": "bma",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d69p41a.bpc",
    "source_path": "files/MAP_BG/d69p41a.bpc",
    "suffix": "bpc",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d69p41a.bpl",
    "source_path": "files/MAP_BG/d69p41a.bpl",
    "suffix": "bpl",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d70p41a.bma",
    "source_path": "files/MAP_BG/d70p41a.bma",
    "suffix": "bma",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d70p41a.bpc",
    "source_path": "files/MAP_BG/d70p41a.bpc",
    "suffix": "bpc",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d70p41a.bpl",
    "source_path": "files/MAP_BG/d70p41a.bpl",
    "suffix": "bpl",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d71p41a.bma",
@@ -3891,57 +3897,57 @@
    "asset_id": "pmd_sky:source:files:MAP_BG:d72p41a.bma",
    "source_path": "files/MAP_BG/d72p41a.bma",
    "suffix": "bma",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d72p41a.bpc",
    "source_path": "files/MAP_BG/d72p41a.bpc",
    "suffix": "bpc",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (5 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d72p41a.bpl",
    "source_path": "files/MAP_BG/d72p41a.bpl",
    "suffix": "bpl",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (5 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d73p11a.bma",
    "source_path": "files/MAP_BG/d73p11a.bma",
    "suffix": "bma",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "648x552 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d73p11a.bpc",
    "source_path": "files/MAP_BG/d73p11a.bpc",
    "suffix": "bpc",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "648x552 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d73p11a.bpl",
    "source_path": "files/MAP_BG/d73p11a.bpl",
    "suffix": "bpl",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "648x552 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d73p11a1.bpa",
    "source_path": "files/MAP_BG/d73p11a1.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d73p11a5.bpa",
    "source_path": "files/MAP_BG/d73p11a5.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d73p21a.bma",
@@ -4234,22 +4240,22 @@
    "asset_id": "pmd_sky:source:files:MAP_BG:d79p41a.bma",
    "source_path": "files/MAP_BG/d79p41a.bma",
    "suffix": "bma",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d79p41a.bpc",
    "source_path": "files/MAP_BG/d79p41a.bpc",
    "suffix": "bpc",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d79p41a.bpl",
    "source_path": "files/MAP_BG/d79p41a.bpl",
    "suffix": "bpl",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d80p41a.bma",
@@ -4619,15 +4625,15 @@
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p01a2.bma",
    "source_path": "files/MAP_BG/g01p01a2.bma",
    "suffix": "bma",
-   "technical_state": "no_pair",
-   "detail": "incomplete BMA/BPC/BPL set"
+   "technical_state": "decode_failure",
+   "detail": "no BPA slot assignment accepted"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p01a2.bpl",
    "source_path": "files/MAP_BG/g01p01a2.bpl",
    "suffix": "bpl",
-   "technical_state": "no_pair",
-   "detail": "incomplete BMA/BPC/BPL set"
+   "technical_state": "decode_failure",
+   "detail": "no BPA slot assignment accepted"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p01b.bma",
@@ -4661,15 +4667,15 @@
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p01b2.bma",
    "source_path": "files/MAP_BG/g01p01b2.bma",
    "suffix": "bma",
-   "technical_state": "no_pair",
-   "detail": "incomplete BMA/BPC/BPL set"
+   "technical_state": "decode_failure",
+   "detail": "no BPA slot assignment accepted"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p01b2.bpl",
    "source_path": "files/MAP_BG/g01p01b2.bpl",
    "suffix": "bpl",
-   "technical_state": "no_pair",
-   "detail": "incomplete BMA/BPC/BPL set"
+   "technical_state": "decode_failure",
+   "detail": "no BPA slot assignment accepted"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p01c.bma",
@@ -4703,15 +4709,15 @@
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p01c2.bma",
    "source_path": "files/MAP_BG/g01p01c2.bma",
    "suffix": "bma",
-   "technical_state": "no_pair",
-   "detail": "incomplete BMA/BPC/BPL set"
+   "technical_state": "decode_failure",
+   "detail": "no BPA slot assignment accepted"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p01c2.bpl",
    "source_path": "files/MAP_BG/g01p01c2.bpl",
    "suffix": "bpl",
-   "technical_state": "no_pair",
-   "detail": "incomplete BMA/BPC/BPL set"
+   "technical_state": "decode_failure",
+   "detail": "no BPA slot assignment accepted"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p02a.bma",
@@ -4780,15 +4786,15 @@
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p04a2.bma",
    "source_path": "files/MAP_BG/g01p04a2.bma",
    "suffix": "bma",
-   "technical_state": "no_pair",
-   "detail": "incomplete BMA/BPC/BPL set"
+   "technical_state": "valid_render",
+   "detail": "648x432 composed background (BPC/BPL shared from parent g01p04a)"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p04a2.bpl",
    "source_path": "files/MAP_BG/g01p04a2.bpl",
    "suffix": "bpl",
-   "technical_state": "no_pair",
-   "detail": "incomplete BMA/BPC/BPL set"
+   "technical_state": "valid_render",
+   "detail": "648x432 composed background (BPC/BPL shared from parent g01p04a)"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p04c.bma",
@@ -4815,15 +4821,15 @@
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p04c2.bma",
    "source_path": "files/MAP_BG/g01p04c2.bma",
    "suffix": "bma",
-   "technical_state": "no_pair",
-   "detail": "incomplete BMA/BPC/BPL set"
+   "technical_state": "valid_render",
+   "detail": "648x432 composed background (BPC/BPL shared from parent g01p04c)"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p04c2.bpl",
    "source_path": "files/MAP_BG/g01p04c2.bpl",
    "suffix": "bpl",
-   "technical_state": "no_pair",
-   "detail": "incomplete BMA/BPC/BPL set"
+   "technical_state": "valid_render",
+   "detail": "648x432 composed background (BPC/BPL shared from parent g01p04c)"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p05a.bma",
@@ -5102,211 +5108,211 @@
    "asset_id": "pmd_sky:source:files:MAP_BG:h01p99a.bma",
    "source_path": "files/MAP_BG/h01p99a.bma",
    "suffix": "bma",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h01p99a.bpc",
    "source_path": "files/MAP_BG/h01p99a.bpc",
    "suffix": "bpc",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h01p99a.bpl",
    "source_path": "files/MAP_BG/h01p99a.bpl",
    "suffix": "bpl",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h01p99a1.bpa",
    "source_path": "files/MAP_BG/h01p99a1.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h01p99a5.bpa",
    "source_path": "files/MAP_BG/h01p99a5.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h01p99c.bma",
    "source_path": "files/MAP_BG/h01p99c.bma",
    "suffix": "bma",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h01p99c.bpc",
    "source_path": "files/MAP_BG/h01p99c.bpc",
    "suffix": "bpc",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h01p99c.bpl",
    "source_path": "files/MAP_BG/h01p99c.bpl",
    "suffix": "bpl",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h01p99c1.bpa",
    "source_path": "files/MAP_BG/h01p99c1.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h01p99c5.bpa",
    "source_path": "files/MAP_BG/h01p99c5.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h01p99d.bma",
    "source_path": "files/MAP_BG/h01p99d.bma",
    "suffix": "bma",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h01p99d.bpc",
    "source_path": "files/MAP_BG/h01p99d.bpc",
    "suffix": "bpc",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h01p99d.bpl",
    "source_path": "files/MAP_BG/h01p99d.bpl",
    "suffix": "bpl",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h01p99d1.bpa",
    "source_path": "files/MAP_BG/h01p99d1.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h01p99d5.bpa",
    "source_path": "files/MAP_BG/h01p99d5.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h01p99e.bma",
    "source_path": "files/MAP_BG/h01p99e.bma",
    "suffix": "bma",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h01p99e.bpc",
    "source_path": "files/MAP_BG/h01p99e.bpc",
    "suffix": "bpc",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h01p99e.bpl",
    "source_path": "files/MAP_BG/h01p99e.bpl",
    "suffix": "bpl",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h01p99e1.bpa",
    "source_path": "files/MAP_BG/h01p99e1.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h01p99e5.bpa",
    "source_path": "files/MAP_BG/h01p99e5.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h02p99a.bma",
    "source_path": "files/MAP_BG/h02p99a.bma",
    "suffix": "bma",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "528x384 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h02p99a.bpc",
    "source_path": "files/MAP_BG/h02p99a.bpc",
    "suffix": "bpc",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "528x384 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h02p99a.bpl",
    "source_path": "files/MAP_BG/h02p99a.bpl",
    "suffix": "bpl",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "528x384 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h02p99a1.bpa",
    "source_path": "files/MAP_BG/h02p99a1.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h02p99a5.bpa",
    "source_path": "files/MAP_BG/h02p99a5.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h02p99c.bma",
    "source_path": "files/MAP_BG/h02p99c.bma",
    "suffix": "bma",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "744x384 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h02p99c.bpc",
    "source_path": "files/MAP_BG/h02p99c.bpc",
    "suffix": "bpc",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "744x384 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h02p99c.bpl",
    "source_path": "files/MAP_BG/h02p99c.bpl",
    "suffix": "bpl",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "744x384 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h02p99c1.bpa",
    "source_path": "files/MAP_BG/h02p99c1.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:h02p99c5.bpa",
    "source_path": "files/MAP_BG/h02p99c5.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:p01p01a.bma",
@@ -5564,15 +5570,15 @@
    "asset_id": "pmd_sky:source:files:MAP_BG:p05p02a2.bma",
    "source_path": "files/MAP_BG/p05p02a2.bma",
    "suffix": "bma",
-   "technical_state": "no_pair",
-   "detail": "incomplete BMA/BPC/BPL set"
+   "technical_state": "valid_render",
+   "detail": "504x456 composed background (BPC/BPL shared from parent p05p02a)"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:p05p02a2.bpl",
    "source_path": "files/MAP_BG/p05p02a2.bpl",
    "suffix": "bpl",
-   "technical_state": "no_pair",
-   "detail": "incomplete BMA/BPC/BPL set"
+   "technical_state": "valid_render",
+   "detail": "504x456 composed background (BPC/BPL shared from parent p05p02a)"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:p05p03a.bma",
@@ -5851,15 +5857,15 @@
    "asset_id": "pmd_sky:source:files:MAP_BG:p14p01a2.bma",
    "source_path": "files/MAP_BG/p14p01a2.bma",
    "suffix": "bma",
-   "technical_state": "no_pair",
-   "detail": "incomplete BMA/BPC/BPL set"
+   "technical_state": "decode_failure",
+   "detail": "no BPA slot assignment accepted"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:p14p01a2.bpl",
    "source_path": "files/MAP_BG/p14p01a2.bpl",
    "suffix": "bpl",
-   "technical_state": "no_pair",
-   "detail": "incomplete BMA/BPC/BPL set"
+   "technical_state": "decode_failure",
+   "detail": "no BPA slot assignment accepted"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:p15p01a.bma",
@@ -6468,21 +6474,21 @@
    "source_path": "files/MAP_BG/s03p01a.bma",
    "suffix": "bma",
    "technical_state": "blank_render",
-   "detail": "blank background"
+   "detail": "composed background is fully transparent/uniform"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:s03p01a.bpc",
    "source_path": "files/MAP_BG/s03p01a.bpc",
    "suffix": "bpc",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "blank_map",
+   "detail": "tile sheet has only 2 colour(s) and the map layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:s03p01a.bpl",
    "source_path": "files/MAP_BG/s03p01a.bpl",
    "suffix": "bpl",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "blank_map",
+   "detail": "tile sheet has only 2 colour(s) and the map layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:s03p02a.bma",
@@ -6720,21 +6726,21 @@
    "source_path": "files/MAP_BG/s05p04a.bma",
    "suffix": "bma",
    "technical_state": "blank_render",
-   "detail": "blank background"
+   "detail": "composed background is fully transparent/uniform"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:s05p04a.bpc",
    "source_path": "files/MAP_BG/s05p04a.bpc",
    "suffix": "bpc",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "blank_map",
+   "detail": "tile sheet has only 1 colour(s) and the map layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:s05p04a.bpl",
    "source_path": "files/MAP_BG/s05p04a.bpl",
    "suffix": "bpl",
-   "technical_state": "blank_render",
-   "detail": "blank background"
+   "technical_state": "blank_map",
+   "detail": "tile sheet has only 1 colour(s) and the map layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:s05p05a.bma",
@@ -7860,15 +7866,15 @@
    "asset_id": "pmd_sky:source:files:MAP_BG:t00p04a2.bma",
    "source_path": "files/MAP_BG/t00p04a2.bma",
    "suffix": "bma",
-   "technical_state": "no_pair",
-   "detail": "incomplete BMA/BPC/BPL set"
+   "technical_state": "decode_failure",
+   "detail": "no BPA slot assignment accepted"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:t00p04a2.bpl",
    "source_path": "files/MAP_BG/t00p04a2.bpl",
    "suffix": "bpl",
-   "technical_state": "no_pair",
-   "detail": "incomplete BMA/BPC/BPL set"
+   "technical_state": "decode_failure",
+   "detail": "no BPA slot assignment accepted"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:t01p01a.bma",
@@ -7958,15 +7964,15 @@
    "asset_id": "pmd_sky:source:files:MAP_BG:t01p03a2.bma",
    "source_path": "files/MAP_BG/t01p03a2.bma",
    "suffix": "bma",
-   "technical_state": "no_pair",
-   "detail": "incomplete BMA/BPC/BPL set"
+   "technical_state": "decode_failure",
+   "detail": "no BPA slot assignment accepted"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:t01p03a2.bpl",
    "source_path": "files/MAP_BG/t01p03a2.bpl",
    "suffix": "bpl",
-   "technical_state": "no_pair",
-   "detail": "incomplete BMA/BPC/BPL set"
+   "technical_state": "decode_failure",
+   "detail": "no BPA slot assignment accepted"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:t01p04a.bma",
@@ -8924,36 +8930,36 @@
    "asset_id": "pmd_sky:source:files:MAP_BG:v10p03c.bma",
    "source_path": "files/MAP_BG/v10p03c.bma",
    "suffix": "bma",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "312x600 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v10p03c.bpc",
    "source_path": "files/MAP_BG/v10p03c.bpc",
    "suffix": "bpc",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "312x600 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v10p03c.bpl",
    "source_path": "files/MAP_BG/v10p03c.bpl",
    "suffix": "bpl",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "312x600 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v10p03c1.bpa",
    "source_path": "files/MAP_BG/v10p03c1.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v10p03c5.bpa",
    "source_path": "files/MAP_BG/v10p03c5.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v12p01a.bma",
@@ -9631,36 +9637,36 @@
    "asset_id": "pmd_sky:source:files:MAP_BG:v24p04a.bma",
    "source_path": "files/MAP_BG/v24p04a.bma",
    "suffix": "bma",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "312x240 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v24p04a.bpc",
    "source_path": "files/MAP_BG/v24p04a.bpc",
    "suffix": "bpc",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "312x240 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v24p04a.bpl",
    "source_path": "files/MAP_BG/v24p04a.bpl",
    "suffix": "bpl",
-   "technical_state": "decode_failure",
-   "detail": "no BPA slot assignment accepted"
+   "technical_state": "valid_render",
+   "detail": "312x240 composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v24p04a1.bpa",
    "source_path": "files/MAP_BG/v24p04a1.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v24p04a5.bpa",
    "source_path": "files/MAP_BG/v24p04a5.bpa",
    "suffix": "bpa",
-   "technical_state": "no_pair",
-   "detail": "no valid same-stem background"
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v24p05a.bma",
@@ -10919,15 +10925,15 @@
    "asset_id": "pmd_sky:source:files:SYSTEM:dw_icon.bin",
    "source_path": "files/SYSTEM/dw_icon.bin",
    "suffix": "bin",
-   "technical_state": "unresolved",
-   "detail": ""
+   "technical_state": "valid_render",
+   "detail": "32x32 4bpp DS banner-style icon with dw_plt.bin"
   },
   {
    "asset_id": "pmd_sky:source:files:SYSTEM:dw_plt.bin",
    "source_path": "files/SYSTEM/dw_plt.bin",
    "suffix": "bin",
-   "technical_state": "unresolved",
-   "detail": ""
+   "technical_state": "palette_only",
+   "detail": "16-colour BGR555 palette of dw_icon.bin"
   },
   {
    "asset_id": "pmd_sky:source:files:SYSTEM:hsd_eng.dat",
@@ -11260,6 +11266,30 @@
    "detail": "256x192 background"
   },
   {
+   "asset_id": "pmd_sky:source:files:FONT:clrmark1.w16",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "13/13 nonblank images"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:FONT:clrmark2.w16",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "5/5 nonblank images"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:FONT:font.dat",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "136 glyph entries, 5 glyph table(s) nonblank"
+  },
+  {
    "asset_id": "pmd_sky:source:files:FONT:frame.wte",
    "review_status": "usable",
    "reason_code": "pmd_valid_render_plausible_use",
@@ -11404,6 +11434,102 @@
    "detail": "18 tiles with paired palette"
   },
   {
+   "asset_id": "pmd_sky:source:files:FONT:kanji_rd.dat",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "231 glyph entries, 2 glyph table(s) nonblank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:FONT:kaomado.kao",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "2050 portraits (40x40) across 1154 entries"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:FONT:markfont.pal",
+   "review_status": "usable",
+   "reason_code": "pmd_standalone_palette_color_reference",
+   "reason": "Valid standalone PMD palette resource (decoded colours); usable only as a colour reference, no pixel imagery of its own.",
+   "technical_state": "palette_only",
+   "detail": "76 distinct colours"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:FONT:rankmark.w16",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "13/13 nonblank images"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:FONT:staffont.pal",
+   "review_status": "usable",
+   "reason_code": "pmd_standalone_palette_color_reference",
+   "reason": "Valid standalone PMD palette resource (decoded colours); usable only as a colour reference, no pixel imagery of its own.",
+   "technical_state": "palette_only",
+   "detail": "65 distinct colours"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:FONT:te_dic.bin",
+   "review_status": "reject",
+   "reason_code": "pmd_text_dictionary_table",
+   "reason": "Structured (offset,length) text dictionary table, not visual art.",
+   "technical_state": "dictionary_table",
+   "detail": "count=397, 3180 bytes"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:FONT:te_sdic.bin",
+   "review_status": "reject",
+   "reason_code": "pmd_text_dictionary_table",
+   "reason": "Structured (offset,length) text dictionary table, not visual art.",
+   "technical_state": "dictionary_table",
+   "detail": "count=397, 3180 bytes"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:FONT:text_pal.pal",
+   "review_status": "usable",
+   "reason_code": "pmd_standalone_palette_color_reference",
+   "reason": "Valid standalone PMD palette resource (decoded colours); usable only as a colour reference, no pixel imagery of its own.",
+   "technical_state": "palette_only",
+   "detail": "30 distinct colours"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:FONT:unkno_rd.dat",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "224 glyph entries, 1 glyph table(s) nonblank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d00p01.bma",
+   "review_status": "reject",
+   "reason_code": "pmd_blank_map_background",
+   "reason": "Map background resource with no visible content: its layers reference only a single blank chunk (composite fully transparent) and no tile art of its own.",
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d00p01.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (81 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d00p01.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (81 colours) although this map's layers are blank"
+  },
+  {
    "asset_id": "pmd_sky:source:files:MAP_BG:d00p02.bma",
    "review_status": "usable",
    "reason_code": "pmd_valid_render_plausible_use",
@@ -11454,8 +11580,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d01p11a5.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -11486,8 +11612,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d01p11b5.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -11566,8 +11692,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d02p31a5.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -11646,8 +11772,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d04p11a5.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -11774,8 +11900,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d06p11a5.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -12046,8 +12172,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d14p12a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -12170,6 +12296,166 @@
    "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "600x480 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d17p31a.bma",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "360x408 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d17p31a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "360x408 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d17p31a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "360x408 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d17p31a1.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d17p31a5.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d17p32a.bma",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "408x456 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d17p32a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "408x456 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d17p32a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "408x456 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d17p32a1.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d17p32a5.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d17p33a.bma",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "456x504 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d17p33a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "456x504 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d17p33a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "456x504 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d17p33a1.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d17p33a5.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d17p34a.bma",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "696x600 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d17p34a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "696x600 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d17p34a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "696x600 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d17p34a1.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d17p34a5.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d17p45a.bma",
@@ -12558,8 +12844,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d27p11a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -13140,6 +13426,78 @@
    "detail": "912x456 composed background"
   },
   {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d32p41a.bma",
+   "review_status": "reject",
+   "reason_code": "pmd_blank_map_background",
+   "reason": "Map background resource with no visible content: its layers reference only a single blank chunk (composite fully transparent) and no tile art of its own.",
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d32p41a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d32p41a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d32p42a.bma",
+   "review_status": "reject",
+   "reason_code": "pmd_blank_map_background",
+   "reason": "Map background resource with no visible content: its layers reference only a single blank chunk (composite fully transparent) and no tile art of its own.",
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d32p42a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d32p42a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d32p43a.bma",
+   "review_status": "reject",
+   "reason_code": "pmd_blank_map_background",
+   "reason": "Map background resource with no visible content: its layers reference only a single blank chunk (composite fully transparent) and no tile art of its own.",
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d32p43a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d32p43a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
+  },
+  {
    "asset_id": "pmd_sky:source:files:MAP_BG:d32p44a.bma",
    "review_status": "usable",
    "reason_code": "pmd_valid_render_plausible_use",
@@ -13162,6 +13520,30 @@
    "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "600x648 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d33p41a.bma",
+   "review_status": "reject",
+   "reason_code": "pmd_blank_map_background",
+   "reason": "Map background resource with no visible content: its layers reference only a single blank chunk (composite fully transparent) and no tile art of its own.",
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d33p41a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (5 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d33p41a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (5 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d34p41a.bma",
@@ -13210,6 +13592,30 @@
    "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "456x456 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d35p41a.bma",
+   "review_status": "reject",
+   "reason_code": "pmd_blank_map_background",
+   "reason": "Map background resource with no visible content: its layers reference only a single blank chunk (composite fully transparent) and no tile art of its own.",
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d35p41a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d35p41a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d36p11a.bma",
@@ -13402,6 +13808,30 @@
    "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "480x480 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d39p41a.bma",
+   "review_status": "reject",
+   "reason_code": "pmd_blank_map_background",
+   "reason": "Map background resource with no visible content: its layers reference only a single blank chunk (composite fully transparent) and no tile art of its own.",
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d39p41a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d39p41a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d40p11a.bma",
@@ -13622,8 +14052,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d44p31a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -14732,6 +15162,150 @@
    "detail": "456x456 composed background"
   },
   {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d65p41a.bma",
+   "review_status": "reject",
+   "reason_code": "pmd_blank_map_background",
+   "reason": "Map background resource with no visible content: its layers reference only a single blank chunk (composite fully transparent) and no tile art of its own.",
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d65p41a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d65p41a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d66p41a.bma",
+   "review_status": "reject",
+   "reason_code": "pmd_blank_map_background",
+   "reason": "Map background resource with no visible content: its layers reference only a single blank chunk (composite fully transparent) and no tile art of its own.",
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d66p41a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d66p41a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d67p41a.bma",
+   "review_status": "reject",
+   "reason_code": "pmd_blank_map_background",
+   "reason": "Map background resource with no visible content: its layers reference only a single blank chunk (composite fully transparent) and no tile art of its own.",
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d67p41a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d67p41a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d68p41a.bma",
+   "review_status": "reject",
+   "reason_code": "pmd_blank_map_background",
+   "reason": "Map background resource with no visible content: its layers reference only a single blank chunk (composite fully transparent) and no tile art of its own.",
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d68p41a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d68p41a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d69p41a.bma",
+   "review_status": "reject",
+   "reason_code": "pmd_blank_map_background",
+   "reason": "Map background resource with no visible content: its layers reference only a single blank chunk (composite fully transparent) and no tile art of its own.",
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d69p41a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d69p41a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d70p41a.bma",
+   "review_status": "reject",
+   "reason_code": "pmd_blank_map_background",
+   "reason": "Map background resource with no visible content: its layers reference only a single blank chunk (composite fully transparent) and no tile art of its own.",
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d70p41a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d70p41a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
+  },
+  {
    "asset_id": "pmd_sky:source:files:MAP_BG:d71p41a.bma",
    "review_status": "usable",
    "reason_code": "pmd_valid_render_plausible_use",
@@ -14754,6 +15328,70 @@
    "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "1440x960 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d72p41a.bma",
+   "review_status": "reject",
+   "reason_code": "pmd_blank_map_background",
+   "reason": "Map background resource with no visible content: its layers reference only a single blank chunk (composite fully transparent) and no tile art of its own.",
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d72p41a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (5 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d72p41a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (5 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d73p11a.bma",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "648x552 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d73p11a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "648x552 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d73p11a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "648x552 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d73p11a1.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d73p11a5.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d73p21a.bma",
@@ -14950,8 +15588,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d73p28a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -15006,8 +15644,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d73p31a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -15082,6 +15720,30 @@
    "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "456x456 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d79p41a.bma",
+   "review_status": "reject",
+   "reason_code": "pmd_blank_map_background",
+   "reason": "Map background resource with no visible content: its layers reference only a single blank chunk (composite fully transparent) and no tile art of its own.",
+   "technical_state": "blank_map",
+   "detail": "layers reference only chunk id(s) [1]; composite fully transparent"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d79p41a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:d79p41a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "tile sheet holds art (4 colours) although this map's layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:d80p41a.bma",
@@ -15494,8 +16156,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p01a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -15526,8 +16188,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p01b1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -15558,8 +16220,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p01c1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -15636,6 +16298,22 @@
    "detail": "648x432 composed background"
   },
   {
+   "asset_id": "pmd_sky:source:files:MAP_BG:g01p04a2.bma",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "648x432 composed background (BPC/BPL shared from parent g01p04a)"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:g01p04a2.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "648x432 composed background (BPC/BPL shared from parent g01p04a)"
+  },
+  {
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p04c.bma",
    "review_status": "usable",
    "reason_code": "pmd_valid_render_plausible_use",
@@ -15658,6 +16336,22 @@
    "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "648x432 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:g01p04c2.bma",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "648x432 composed background (BPC/BPL shared from parent g01p04c)"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:g01p04c2.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "648x432 composed background (BPC/BPL shared from parent g01p04c)"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p05a.bma",
@@ -15686,8 +16380,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p05a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -15718,8 +16412,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p05c1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -15750,8 +16444,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p06a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -15782,8 +16476,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p06b1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -15934,8 +16628,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p10a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -15966,8 +16660,248 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:g01p10c1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h01p99a.bma",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h01p99a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h01p99a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h01p99a1.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h01p99a5.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h01p99c.bma",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h01p99c.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h01p99c.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h01p99c1.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h01p99c5.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h01p99d.bma",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h01p99d.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h01p99d.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h01p99d1.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h01p99d5.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h01p99e.bma",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h01p99e.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h01p99e.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "504x384 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h01p99e1.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h01p99e5.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h02p99a.bma",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "528x384 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h02p99a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "528x384 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h02p99a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "528x384 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h02p99a1.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h02p99a5.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h02p99c.bma",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "744x384 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h02p99c.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "744x384 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h02p99c.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "744x384 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h02p99c1.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:h02p99c5.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -15998,8 +16932,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:p01p01a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -16030,8 +16964,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:p01p02a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -16062,8 +16996,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:p01p03a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -16142,8 +17076,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:p03p01a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -16174,8 +17108,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:p03p02a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -16206,8 +17140,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:p04p01c5.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -16258,6 +17192,22 @@
    "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "504x456 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:p05p02a2.bma",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "504x456 composed background (BPC/BPL shared from parent p05p02a)"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:p05p02a2.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "504x456 composed background (BPC/BPL shared from parent p05p02a)"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:p05p03a.bma",
@@ -16430,8 +17380,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:p10p01a5.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -16462,8 +17412,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:p11p01a5.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -16566,8 +17516,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:p14p01a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -16598,8 +17548,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:p15p01a5.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -16630,8 +17580,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:p16p01a5.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -16662,8 +17612,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:p17p01a5.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -16694,8 +17644,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:p17p02a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -16726,8 +17676,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:p17p02c1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -16806,8 +17756,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:p19p02a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -17198,8 +18148,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:s01p02a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -17250,6 +18200,22 @@
    "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "384x192 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:s03p01a.bpc",
+   "review_status": "reject",
+   "reason_code": "pmd_blank_map_background",
+   "reason": "Map background resource with no visible content: its layers reference only a single blank chunk (composite fully transparent) and no tile art of its own.",
+   "technical_state": "blank_map",
+   "detail": "tile sheet has only 2 colour(s) and the map layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:s03p01a.bpl",
+   "review_status": "reject",
+   "reason_code": "pmd_blank_map_background",
+   "reason": "Map background resource with no visible content: its layers reference only a single blank chunk (composite fully transparent) and no tile art of its own.",
+   "technical_state": "blank_map",
+   "detail": "tile sheet has only 2 colour(s) and the map layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:s03p02a.bma",
@@ -17514,6 +18480,22 @@
    "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "312x720 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:s05p04a.bpc",
+   "review_status": "reject",
+   "reason_code": "pmd_blank_map_background",
+   "reason": "Map background resource with no visible content: its layers reference only a single blank chunk (composite fully transparent) and no tile art of its own.",
+   "technical_state": "blank_map",
+   "detail": "tile sheet has only 1 colour(s) and the map layers are blank"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:s05p04a.bpl",
+   "review_status": "reject",
+   "reason_code": "pmd_blank_map_background",
+   "reason": "Map background resource with no visible content: its layers reference only a single blank chunk (composite fully transparent) and no tile art of its own.",
+   "technical_state": "blank_map",
+   "detail": "tile sheet has only 1 colour(s) and the map layers are blank"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:s05p05a.bma",
@@ -17974,8 +18956,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:s13p03a5.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -18126,8 +19108,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:s13p08a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -18662,8 +19644,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:t00p011.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -18694,8 +19676,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:t00p025.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -18726,8 +19708,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:t00p035.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -18758,8 +19740,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:t00p04a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -18790,8 +19772,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:t01p01a5.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -18822,8 +19804,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:t01p02a5.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -18854,8 +19836,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:t01p03a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -18886,8 +19868,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:t01p04a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -18918,8 +19900,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v00p011.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -18950,8 +19932,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v00p021.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -19006,8 +19988,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v01p01a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -19206,8 +20188,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v01p07b1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -19910,8 +20892,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v09p04a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -19942,8 +20924,48 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v10p01c1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:v10p03c.bma",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "312x600 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:v10p03c.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "312x600 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:v10p03c.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "312x600 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:v10p03c1.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:v10p03c5.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -20118,8 +21140,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v15p02a5.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -20150,8 +21172,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v15p03a5.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -20182,8 +21204,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v16p02a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -20598,8 +21620,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v23p04a5.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -20654,8 +21676,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v24p01a5.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -20686,8 +21708,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v24p02a5.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -20714,6 +21736,46 @@
    "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "936x720 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:v24p04a.bma",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "312x240 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:v24p04a.bpc",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "312x240 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:v24p04a.bpl",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "312x240 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:v24p04a1.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:MAP_BG:v24p04a5.bpa",
+   "review_status": "usable",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
+   "technical_state": "companion_of_valid",
+   "detail": "animated-tile (BPA) companion of valid composed background"
   },
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v24p05a.bma",
@@ -20838,8 +21900,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v24p09a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -21134,8 +22196,8 @@
   {
    "asset_id": "pmd_sky:source:files:MAP_BG:v26p09a1.bpa",
    "review_status": "usable",
-   "reason_code": "pmd_bpa_companion_of_valid_background",
-   "reason": "Animated-tile companion of a valid composed PMD background.",
+   "reason_code": "pmd_companion_of_valid_background",
+   "reason": "Animated-tile (BPA) or palette-variant (BPL) companion of a valid composed PMD background.",
    "technical_state": "companion_of_valid",
    "detail": "animated-tile (BPA) companion of valid composed background"
   },
@@ -22146,6 +23208,22 @@
    "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "240x192 composed background"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:SYSTEM:dw_icon.bin",
+   "review_status": "usable",
+   "reason_code": "pmd_valid_render_plausible_use",
+   "reason": "PMD Sky resource decodes with the SkyTemple reference decoder to nonblank imagery (background/UI/sprite material) with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "32x32 4bpp DS banner-style icon with dw_plt.bin"
+  },
+  {
+   "asset_id": "pmd_sky:source:files:SYSTEM:dw_plt.bin",
+   "review_status": "usable",
+   "reason_code": "pmd_standalone_palette_color_reference",
+   "reason": "Valid standalone PMD palette resource (decoded colours); usable only as a colour reference, no pixel imagery of its own.",
+   "technical_state": "palette_only",
+   "detail": "16-colour BGR555 palette of dw_icon.bin"
   },
   {
    "asset_id": "pmd_sky:source:files:TOP:logo_0.bgp",
