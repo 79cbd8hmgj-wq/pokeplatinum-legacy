@@ -1,0 +1,63 @@
+name: Donor curation status
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/visual_overhaul/build_lane_cde_recovered_curation.py"
+      - "tools/visual_overhaul/build_donor_curation_status.py"
+      - "docs/visual_overhaul/LANE_A_FINAL_CURATION.json"
+      - "docs/visual_overhaul/LANE_A_RESIDUAL_RECOVERY.json"
+      - "docs/visual_overhaul/LANE_CDE_BASELINE_CURATION.json"
+      - "docs/visual_overhaul/LANE_CDE_*_RECOVERY.json"
+      - "docs/visual_overhaul/LANE_B_RECOVERED_CURATION.json"
+      - ".github/workflows/donor-curation-status.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild Lane A and Lane C/D/E recovered state from committed ledgers
+        run: |
+          D=docs/visual_overhaul
+          python3 tools/visual_overhaul/build_lane_cde_recovered_curation.py \
+            --baseline $D/LANE_A_FINAL_CURATION.json --overlay $D/LANE_A_RESIDUAL_RECOVERY.json \
+            --write-json $D/LANE_A_RECOVERED_CURATION.json --write-md $D/LANE_A_RECOVERED_CURATION.md
+          python3 tools/visual_overhaul/build_lane_cde_recovered_curation.py \
+            --baseline $D/LANE_CDE_BASELINE_CURATION.json \
+            --overlay $D/LANE_CDE_RANGER_RECOVERY.json --overlay $D/LANE_CDE_PMD_SKY_RECOVERY.json \
+            --overlay $D/LANE_CDE_HGSS_GRAPHIC_RECOVERY.json \
+            --write-json $D/LANE_CDE_RECOVERED_CURATION.json --write-md $D/LANE_CDE_RECOVERED_CURATION.md
+          python3 tools/visual_overhaul/build_donor_curation_status.py \
+            --catalog $D/DONOR_ASSET_CATALOG.json \
+            --ledger A=$D/LANE_A_RECOVERED_CURATION.json \
+            --ledger B=$D/LANE_B_RECOVERED_CURATION.json \
+            --ledger CDE=$D/LANE_CDE_RECOVERED_CURATION.json \
+            --write-json $D/DONOR_CURATION_STATUS.json --write-md $D/DONOR_CURATION_STATUS.md
+
+      - name: Validate coverage invariants
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p = json.loads(Path("docs/visual_overhaul/DONOR_CURATION_STATUS.json").read_text())
+          inv = p["invariants"]
+          assert inv["catalog_assets"] == 64841 and inv["curated_assets"] == 64841
+          assert inv["missing"] == 0 and inv["extra"] == 0 and inv["duplicates"] == 0 and inv["unreviewed"] == 0
+          assert inv["complete"] is True
+          print(p["status_totals"])
+          PY
+
+      - name: Commit regenerated status
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/visual_overhaul/LANE_A_RECOVERED_CURATION.* docs/visual_overhaul/LANE_CDE_RECOVERED_CURATION.* docs/visual_overhaul/DONOR_CURATION_STATUS.*
+          if git diff --cached --quiet; then echo "No changes."; exit 0; fi
+          git commit -m "visual: refresh donor curation status"
+          git push

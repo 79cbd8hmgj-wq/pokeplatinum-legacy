@@ -13,5 +13,6 @@ No Platinum resources are modified.
 | decode_failure | 3 |
 | no_pair | 3 |
 | no_valid_render | 2 |
-| unsupported_member | 19 |
-| valid_render | 5782 |
+| palette_only | 2 |
+| unsupported_member | 13 |
+| valid_render | 5786 |

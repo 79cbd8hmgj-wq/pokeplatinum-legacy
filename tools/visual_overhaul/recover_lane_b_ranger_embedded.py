@@ -22,6 +22,7 @@ from inspect_ranger_assets import extract_narc_members
 from nitro_narc import lz10_decompress
 import struct
 
+import nftr_eval
 import ntft_tex
 import render_ranger_ncer_preview as nrp
 from render_ranger_ncer_preview import read_cells, read_chars, read_palette, render_cell
@@ -452,6 +453,17 @@ def main() -> int:
                 det = f"{len(ev['pairs'])} valid NCER pairs"
             elif Path(sp).suffix in (".ntft", ".ntfp"):
                 st, det = loose_ntft(a.ranger_root / sp)
+            elif Path(sp).suffix == ".NFTR":
+                try:
+                    st, det = nftr_eval.eval_nftr((a.ranger_root / sp).read_bytes())
+                except Exception as e:  # noqa: BLE001
+                    st, det = "decode_failure", str(e)[:100]
+            elif Path(sp).suffix == ".NCLR" and "/font/" in sp:
+                try:
+                    cols = read_palette(a.ranger_root / sp)
+                    st, det = ("palette_only", f"{len(set(cols))} distinct colours") if len(set(cols)) > 1 else ("blank_render", "uniform palette")
+                except Exception as e:  # noqa: BLE001
+                    st, det = "decode_failure", str(e)[:100]
             else:
                 st, det = "unsupported_member", "raw/candidate resource"
             rows.append({"asset_id": aid, "source_path": sp, "technical_state": st, "detail": det,
@@ -465,11 +477,16 @@ def main() -> int:
     decisions = []
     for x in rows:
         if x["technical_state"] == "valid_render":
-            code, why = ("ranger_embedded_valid_render_plausible_use",
-                         "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.")
+            code = "ranger_embedded_valid_render_plausible_use"
+            kind = {"NFTR": "font glyph bitmaps", "nbfs": "RGB555 bitmap", "NSCR": "screen composite", "ntft": "A3I5/A5I3 texture",
+                    "ntfp": "texture palette"}.get(x["suffix"], "sprite/graphic render")
+            why = (f"Ranger {x['suffix'] or 'package'} resource decodes to verified nonblank imagery ({kind}; see detail) "
+                   "with full palette coverage; sprite/effect/UI/texture material with plausible Platinum use.")
         elif x["technical_state"] == "companion_of_valid":
             code, why = ("ranger_cac_companion_of_valid_render",
                          "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.")
+        elif x["technical_state"] == "palette_only":
+            code, why = ("ranger_standalone_palette_color_reference", "Valid standalone Ranger font palette (decoded colours); usable only as a colour reference, no pixel imagery of its own.")
         elif x["technical_state"] == "blank_screen":
             decisions.append({"asset_id": x["asset_id"], "review_status": "reject", "reason_code": "ranger_screen_all_blank",
                               "reason": "Screen map whose every tile reference is in range and lands on blank tiles of its paired graphics: no visible content.",
