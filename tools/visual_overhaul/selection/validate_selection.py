@@ -44,6 +44,12 @@ def validate(sel_dir: Path | None = None, quiet: bool = False) -> list[str]:
             if a["source_id"] != ext["source_id"] or not a["source_metadata"].get("source_commit"):
                 errs.append(f"{tag}: {a['asset_id']} lacks provenance")
                 break
+    sys.path.insert(0, str(ROOT / "tools" / "visual_overhaul"))
+    import hgss_trainer_sprite_lib as _lib
+    for a in jload(EXT_DIR / "hgss_trainer_sprites" / "CATALOG.json")["assets"] if (EXT_DIR / "hgss_trainer_sprites").is_dir() else []:
+        if a["source_metadata"].get("decoder_version") != _lib.DECODER_VERSION:
+            errs.append(f"hgss_trainer_sprites: {a['asset_id']} not decoded with locked decoder {_lib.DECODER_VERSION}")
+            break
     inv = status["invariants"]
     if not inv.get("complete") or inv.get("catalog_assets") != len(base_ids) + sum(len(jload(EXT_DIR / e["catalog"])["assets"]) for e in extensions()):
         errs.append("DONOR_CURATION_STATUS invariants incomplete or stale vs catalog extensions")
@@ -132,6 +138,10 @@ def validate(sel_dir: Path | None = None, quiet: bool = False) -> list[str]:
                     errs.append(f"{tag}: {d['group_id']} preferred while unit has unresolved decode_issue members")
                 if not d["curation_trace"]["recovered_ledger_member_counts"]:
                     errs.append(f"{tag}: {d['group_id']} lacks curation trace")
+            if d["role"] == "preferred" and subs[sname].get("human_review_required"):
+                hr = d.get("human_review")
+                if not hr or hr["verdict"] != "use_hgss":
+                    errs.append(f"{tag}: {d['group_id']} preferred without human approval")
             if d["role"] == "preferred":
                 pref_per_target.setdefault(d["target_id"], []).append(d["group_id"])
         for tid, lst in pref_per_target.items():
@@ -147,7 +157,11 @@ def validate(sel_dir: Path | None = None, quiet: bool = False) -> list[str]:
         if set(tmap) != {g["target_id"] for g in sgroups}:
             errs.append(f"{tag}: targets do not cover subsystem targets")
         # reproducibility: re-derive from rules+evidence
-        fresh_led = select_subsystem.derive(sname)
+        try:
+            fresh_led = select_subsystem.derive(sname)
+        except ValueError as e:
+            errs.append(f"{tag}: derivation failed: {e}")
+            continue
         if fresh_led != led:
             errs.append(f"{tag}: not reproducible from current rules/evidence/groups")
     # asset exclusivity across selected groups follows from group exclusivity; verify group membership is a function
@@ -170,9 +184,12 @@ def validate(sel_dir: Path | None = None, quiet: bool = False) -> list[str]:
         led = SEL / "ledgers" / "trainer_battle_sprites.json"
         if man["ledger_sha256"] != file_sha256(led):
             errs.append("trainer REVIEW_MANIFEST is stale vs trainer ledger (rerun build_trainer_qa_package.py)")
-        pref = {d["group_id"] for d in jload(led)["decisions"] if d["role"] == "preferred"}
-        if {c["candidate_id"] for c in man["candidates"]} != pref:
-            errs.append("trainer REVIEW_MANIFEST candidates differ from current preferred set")
+        rd = SEL / "review" / "decisions" / "trainer_battle_sprites.json"
+        want = {d["group_id"] for d in jload(rd)["decisions"]} if rd.is_file() else {d["group_id"] for d in jload(led)["decisions"] if d["role"] == "preferred"}
+        if {c["candidate_id"] for c in man["candidates"]} != want:
+            errs.append("trainer REVIEW_MANIFEST candidates differ from the human-review set")
+        if rd.is_file() and man.get("review_decisions_sha256") != file_sha256(rd):
+            errs.append("trainer REVIEW_MANIFEST is stale vs human review decisions")
     return errs
 
 

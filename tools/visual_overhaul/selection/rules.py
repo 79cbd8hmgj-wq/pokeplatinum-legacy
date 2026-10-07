@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from common import *  # noqa: F401,F403
+import json
 
 
 def risk_bump(level: str, n: int, order) -> str:
@@ -82,16 +83,44 @@ def rank_key(g: dict, s: dict, rules: dict):
     )
 
 
-def decide(groups: list[dict], evidence: dict, rules: dict, subs: dict) -> tuple[list[dict], list[dict]]:
+def evidence_digest(entry) -> str:
+    import hashlib
+    return hashlib.sha256(json.dumps(entry, sort_keys=True).encode()).hexdigest()[:16]
+
+
+def decide(groups: list[dict], evidence: dict, rules: dict, subs: dict, reviews: dict | None = None) -> tuple[list[dict], list[dict]]:
     """groups: all candidate groups of ONE subsystem. Returns (decisions, targets)."""
     entries = evidence.get("entries", {})
+    reviews = reviews or {}
+    gids = {g["group_id"]: g for g in groups}
+    for gid, rv in reviews.items():  # human verdicts must bind to the exact group + evidence they reviewed
+        if gid not in gids:
+            raise ValueError(f"review for unknown group {gid}")
+        if rv["member_digest"] != gids[gid]["member_digest"]:
+            raise ValueError(f"stale review (member digest changed): {gid}")
+        if rv["evidence_digest"] != evidence_digest(entries.get(gid)):
+            raise ValueError(f"stale review (evidence changed): {gid}")
+        if rv["verdict"] not in ("use_hgss", "keep_platinum"):
+            raise ValueError(f"bad verdict for {gid}")
     work = []
     for g in groups:
         sub = subs[g["subsystem"]]
         ev = entries.get(g["group_id"])
         s = score_group(g, ev, rules, sub)
         role, reason = initial_role(g, s, rules)
-        work.append({"g": g, "s": s, "role": role, "reason": reason, "ev": ev})
+        rv = reviews.get(g["group_id"])
+        pending = False
+        if rv:
+            if rv["verdict"] == "keep_platinum":
+                if role.startswith("eligible_"):
+                    role, reason = "not_selected", "human_keep_platinum"
+            else:  # use_hgss: approval can only confirm a group the automated gates already consider eligible
+                if not role.startswith("eligible_"):
+                    raise ValueError(f"use_hgss verdict conflicts with automated gates ({reason}): {g['group_id']}")
+                role = "eligible_preferred"
+        elif sub.get("human_review_required") and role == "eligible_preferred":
+            role, pending = "eligible_alternate", True
+        work.append({"g": g, "s": s, "role": role, "reason": reason, "ev": ev, "review": rv, "pending": pending})
 
     by_target: dict[str, list[dict]] = {}
     for w in work:
@@ -106,9 +135,9 @@ def decide(groups: list[dict], evidence: dict, rules: dict, subs: dict) -> tuple
         top = next((w for w in elig if w["role"] == "eligible_preferred"), None)
         for w in elig:
             if w is top:
-                w["role"], w["reason"] = "preferred", "best_eligible_donor"
+                w["role"], w["reason"] = "preferred", ("human_approved" if w["review"] else "best_eligible_donor")
             else:
-                w["role"], w["reason"] = "alternate", "eligible_not_best_for_target"
+                w["role"], w["reason"] = "alternate", ("pending_human_review" if w["pending"] else "eligible_not_best_for_target")
         targets.append(
             {
                 "target_id": tid,
@@ -134,6 +163,7 @@ def decide(groups: list[dict], evidence: dict, rules: dict, subs: dict) -> tuple
                 "conversion_requirement": g["conversion_requirement"],
                 "role": w["role"],
                 "reason_code": w["reason"],
+                "human_review": w["review"],
                 "needs_evidence": w["reason"] == "needs_evidence",
                 "needs_runtime_validation": s["needs_runtime_validation"] and w["role"] in ("preferred", "alternate"),
                 "scores": {k: s[k] for k in ("visual_gain", "compat", "risk", "integration_cost", "independent_share")},

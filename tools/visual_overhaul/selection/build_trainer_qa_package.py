@@ -162,9 +162,12 @@ def paginate(blocks, name, max_w=1700, max_h=1700):
 
 def write_checklist(doc: dict) -> None:
     c = doc["counts"]
+    decided = c["verdicts"].get(None, 0) == 0
     L = ["# Trainer Sprite Visual QA Checklist", "",
-         "Status: **pending human review**. Nothing is promoted or imported; automated metrics only describe *difference*, not *quality*.", "",
-         f"- Candidates under review (currently `preferred`): **{c['candidates']}** ({c['front']} front, {c['back']} back)",
+         ("Status: **human review complete** (verdicts recorded in `../decisions/trainer_battle_sprites.json` and consumed by the selection rules as explicit evidence). "
+          "Automated metrics only describe *difference*, not *quality*." if decided else
+          "Status: **pending human review**. Nothing is promoted or imported; automated metrics only describe *difference*, not *quality*."), "",
+         f"- Candidates reviewed: **{c['candidates']}** ({c['front']} front, {c['back']} back); verdicts: {c['verdicts']}",
          f"- Needing later-frame inspection (frame 0 identical, a later frame differs): **{c['later_frame_inspection']}**",
          f"- Automated classes: {c['by_class']}",
          f"- Withdrawn from the earlier 21 after a decoder fix: **{doc['withdrawn_after_decoder_fix']['count']}** (see below)", "",
@@ -177,13 +180,14 @@ def write_checklist(doc: dict) -> None:
          "4. Geometry: feet/bottom anchor and centre within a few px of Platinum (battle placement is not re-tuned).",
          "5. Palette: 16-colour limit and index 0 transparency preserved (decoded palette fits Platinum's trainer palette slot).", "",
          "## Candidates", "",
-         "| Done | ID | View | Class | Automated class | Changed px / % | Frames (HGSS/Plat) | Identical frames | Verdict |",
+         "| Done | ID | Class | Automated class | Changed px / % | Frames | Verdict | Reason |",
          "|---|---|---|---|---|---|---|---|---|"]
     for m in doc["candidates"]:
         t = m["totals"]
-        L.append(f"| [ ] | {m['candidate_id'].split('/')[-1]} | {m['view']} | {m['platinum_target_class']} | {m['automated_class']} | "
+        rv = m["review"]
+        L.append(f"| [{'x' if rv['status'] == 'decided' else ' '}] | {m['candidate_id'].split('/')[-1]} | {m['platinum_target_class']} | {m['automated_class']} | "
                  f"{t['changed_pixels']} / {t['diff_ratio']:.1%} | {m['dimensions']['frames_hgss']}/{m['dimensions']['frames_platinum']} | "
-                 f"{m['identical_frame_indices']} | _pending_ |")
+                 f"**{rv['verdict'] or 'pending'}** | {rv.get('rationale') or ''} |")
     w = doc["withdrawn_after_decoder_fix"]
     L += ["", "## Withdrawn after decoder fix", "",
           w["reason"] + " After decoding each cell from its own VRAM-transfer chunk, these now compare as follows:", "",
@@ -201,7 +205,11 @@ def main() -> int:
     led = jload(SEL / "ledgers" / "trainer_battle_sprites.json")
     cat = {a["source_path"]: a for a in jload(EXT_DIR / "hgss_trainer_sprites" / "CATALOG.json")["assets"]}
     align = jload(SEL / "alignment" / "trainer_classes.json")
-    cands = sorted([d for d in led["decisions"] if d["role"] == "preferred"], key=lambda d: d["group_id"])
+    rpath = SEL / "review" / "decisions" / "trainer_battle_sprites.json"
+    rdoc = jload(rpath) if rpath.is_file() else None
+    reviews = {d["group_id"]: d for d in rdoc["decisions"]} if rdoc else {}
+    # review set: groups with a human verdict (or, before any verdicts exist, the automated-preferred set)
+    cands = sorted([d for d in led["decisions"] if (d["group_id"] in reviews if reviews else d["role"] == "preferred")], key=lambda d: d["group_id"])
     manifest = []
     blocks = {"front": [], "back": []}
     for d in cands:
@@ -259,14 +267,16 @@ def main() -> int:
             "change_kind_counts": dict(kinds), "automated_class": cls,
             "palette_only": cls == "recolor_only", "risk_flags": d["visual_evidence"]["risk_flags"], "risk": d["scores"]["risk"],
             "ledger_relation": d["visual_evidence"]["native_relation"], "needs_runtime_validation": d["needs_runtime_validation"],
-            "review": {"status": "pending_human_review", "verdict": None, "notes": None},
+            "review": ({"status": "decided", "verdict": reviews[d["group_id"]]["verdict"], "rationale": reviews[d["group_id"]]["rationale"],
+                        "reviewer": rdoc["reviewer"], "reviewed_at": rdoc["reviewed_at"], "final_role": d["role"], "final_reason": d["reason_code"]}
+                       if d["group_id"] in reviews else {"status": "pending_human_review", "verdict": None, "notes": None}),
         })
     withdrawn = []
     if args.prior_ref:
         prior = json.loads(subprocess.check_output(["git", "show", f"{args.prior_ref}:docs/visual_overhaul/selection/ledgers/trainer_battle_sprites.json"], cwd=ROOT, text=True))
         now = {d["group_id"]: d for d in led["decisions"]}
         for d in prior["decisions"]:
-            if d["role"] == "preferred" and now[d["group_id"]]["role"] != "preferred":
+            if d["role"] == "preferred" and now[d["group_id"]]["role"] != "preferred" and d["group_id"] not in reviews:
                 n_ = now[d["group_id"]]
                 withdrawn.append({"candidate_id": d["group_id"], "platinum_class": d["visual_evidence"]["detail"]["platinum_class"],
                                   "now_role": n_["role"], "now_reason": n_["reason_code"], "now_relation": n_["visual_evidence"]["native_relation"]})
@@ -275,11 +285,13 @@ def main() -> int:
     sheets["back"] = paginate([b for _, b in blocks["back"]], "back") if blocks["back"] else []
     doc = {"schema_version": 1, "review_of": "trainer_battle_sprites preferred candidates", "rules_version": led["rules_version"],
            "ledger_sha256": file_sha256(SEL / "ledgers" / "trainer_battle_sprites.json"),
+           "review_decisions_sha256": file_sha256(rpath) if rdoc else None,
            "legend": {"diff": "yellow=both opaque but colour differs, green=HGSS-only pixel, magenta=Platinum-only pixel, grey=same, comparison in BGR555 space"},
            "thresholds": {"negligible_changed_pixels": NEGLIGIBLE_PIXELS, "negligible_ratio": NEGLIGIBLE_RATIO},
            "contact_sheets": sheets, "counts": {"candidates": len(manifest), "front": len(blocks["front"]), "back": len(blocks["back"]),
                                                  "later_frame_inspection": sum(m["requires_later_frame_inspection"] for m in manifest),
-                                                 "by_class": dict(collections.Counter(m["automated_class"] for m in manifest))},
+                                                 "by_class": dict(collections.Counter(m["automated_class"] for m in manifest)),
+                                                 "verdicts": dict(collections.Counter(m["review"]["verdict"] for m in manifest))},
            "withdrawn_after_decoder_fix": {"prior_ref": args.prior_ref, "count": len(withdrawn), "entries": withdrawn,
                                            "reason": "Earlier renders ignored the NCER per-cell VRAM transfer table, so later animation frames were mis-decoded."},
            "candidates": manifest}

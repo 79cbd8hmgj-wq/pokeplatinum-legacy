@@ -95,5 +95,46 @@ class Rules(unittest.TestCase):
         self.assertEqual(roles, {"x/hgss/a": "preferred", "x/other/a": "alternate"})
 
 
+class HumanReview(unittest.TestCase):
+    def _fx(self, relation="art_diff_geometry_close"):
+        rules = jload(RULES_JSON)
+        subs = json.loads(json.dumps(jload(SUBSYSTEMS_JSON)["subsystems"]))
+        subs["pokemon_icons"]["human_review_required"] = True
+        g = {"group_id": "x/hgss/a", "subsystem": "pokemon_icons", "target_id": "t", "source_id": "hgss", "unit": "a", "unit_kind": "species",
+             "member_count": 1, "member_digest": "d", "independent_member_count": 1, "asset_type_counts": {}, "reason_code_counts": {},
+             "sample_paths": [], "donor_class": "direct", "format_family": "f", "conversion_requirement": "none",
+             "unresolved_decode_issue_members": 0, "ledger_member_counts": {"L": 1}}
+        ev = {"entries": {"x/hgss/a": {"native_relation": relation}}}
+        return rules, subs, g, ev
+
+    def _rv(self, ev, verdict):
+        return {"x/hgss/a": {"verdict": verdict, "member_digest": "d", "evidence_digest": engine.evidence_digest(ev["entries"]["x/hgss/a"])}}
+
+    def test_unreviewed_preferred_is_capped(self):
+        rules, subs, g, ev = self._fx()
+        d, t = engine.decide([g], ev, rules, subs)
+        self.assertEqual((d[0]["role"], d[0]["reason_code"]), ("alternate", "pending_human_review"))
+        self.assertEqual(t[0]["resolution"], "platinum_native")
+
+    def test_use_and_keep_verdicts(self):
+        rules, subs, g, ev = self._fx()
+        d, t = engine.decide([g], ev, rules, subs, self._rv(ev, "use_hgss"))
+        self.assertEqual((d[0]["role"], d[0]["reason_code"]), ("preferred", "human_approved"))
+        d, t = engine.decide([g], ev, rules, subs, self._rv(ev, "keep_platinum"))
+        self.assertEqual((d[0]["role"], d[0]["reason_code"]), ("not_selected", "human_keep_platinum"))
+
+    def test_approval_cannot_override_gates(self):
+        rules, subs, g, ev = self._fx("identical")
+        with self.assertRaises(ValueError):
+            engine.decide([g], ev, rules, subs, self._rv(ev, "use_hgss"))
+
+    def test_stale_verdict_rejected(self):
+        rules, subs, g, ev = self._fx()
+        rv = self._rv(ev, "use_hgss")
+        ev["entries"]["x/hgss/a"]["native_relation"] = "art_diff_minor"  # evidence changed after review
+        with self.assertRaises(ValueError):
+            engine.decide([g], ev, rules, subs, rv)
+
+
 if __name__ == "__main__":
     unittest.main()

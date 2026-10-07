@@ -58,9 +58,13 @@
    "platinum_target_class": "youngster",
    "requires_later_frame_inspection": false,
    "review": {
-    "notes": null,
-    "status": "pending_human_review",
-    "verdict": null
+    "final_reason": "human_approved",
+    "final_role": "preferred",
+    "rationale": "Clear art-quality improvement that preserves the trainer class identity.",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "project owner (human)",
+    "status": "decided",
+    "verdict": "use_hgss"
    },
    "risk": "medium",
    "risk_flags": [],
@@ -130,9 +134,13 @@
    "platinum_target_class": "lass",
    "requires_later_frame_inspection": false,
    "review": {
-    "notes": null,
-    "status": "pending_human_review",
-    "verdict": null
+    "final_reason": "human_approved",
+    "final_role": "preferred",
+    "rationale": "Clear art-quality improvement that preserves the trainer class identity.",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "project owner (human)",
+    "status": "decided",
+    "verdict": "use_hgss"
    },
    "risk": "medium",
    "risk_flags": [],
@@ -202,9 +210,13 @@
    "platinum_target_class": "bug_catcher",
    "requires_later_frame_inspection": false,
    "review": {
-    "notes": null,
-    "status": "pending_human_review",
-    "verdict": null
+    "final_reason": "human_approved",
+    "final_role": "preferred",
+    "rationale": "Clear art-quality improvement that preserves the trainer class identity.",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "project owner (human)",
+    "status": "decided",
+    "verdict": "use_hgss"
    },
    "risk": "medium",
    "risk_flags": [],
@@ -274,9 +286,13 @@
    "platinum_target_class": "twins",
    "requires_later_frame_inspection": false,
    "review": {
-    "notes": null,
-    "status": "pending_human_review",
-    "verdict": null
+    "final_reason": "human_approved",
+    "final_role": "preferred",
+    "rationale": "Clear art-quality improvement that preserves the trainer class identity.",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "project owner (human)",
+    "status": "decided",
+    "verdict": "use_hgss"
    },
    "risk": "medium",
    "risk_flags": [],
@@ -340,15 +356,19 @@
    "hgss_source_path": "files/a/0/5/8#class=024",
    "identical_frame_indices": [],
    "ledger_relation": "art_diff_geometry_close",
-   "needs_runtime_validation": true,
+   "needs_runtime_validation": false,
    "palette_only": false,
    "platinum_png": "res/trainers/classes/ace_trainer_male/front.png",
    "platinum_target_class": "ace_trainer_male",
    "requires_later_frame_inspection": false,
    "review": {
-    "notes": null,
-    "status": "pending_human_review",
-    "verdict": null
+    "final_reason": "human_keep_platinum",
+    "final_role": "not_selected",
+    "rationale": "Ace Trainers keep their Platinum/Sinnoh designs; HGSS is a regional redesign, not a quality upgrade.",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "project owner (human)",
+    "status": "decided",
+    "verdict": "keep_platinum"
    },
    "risk": "medium",
    "risk_flags": [],
@@ -412,15 +432,19 @@
    "hgss_source_path": "files/a/0/5/8#class=025",
    "identical_frame_indices": [],
    "ledger_relation": "art_diff_geometry_close",
-   "needs_runtime_validation": true,
+   "needs_runtime_validation": false,
    "palette_only": false,
    "platinum_png": "res/trainers/classes/ace_trainer_female/front.png",
    "platinum_target_class": "ace_trainer_female",
    "requires_later_frame_inspection": false,
    "review": {
-    "notes": null,
-    "status": "pending_human_review",
-    "verdict": null
+    "final_reason": "human_keep_platinum",
+    "final_role": "not_selected",
+    "rationale": "Ace Trainers keep their Platinum/Sinnoh designs; HGSS is a regional redesign, not a quality upgrade.",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "project owner (human)",
+    "status": "decided",
+    "verdict": "keep_platinum"
    },
    "risk": "medium",
    "risk_flags": [],
@@ -490,9 +514,13 @@
    "platinum_target_class": "beauty",
    "requires_later_frame_inspection": false,
    "review": {
-    "notes": null,
-    "status": "pending_human_review",
-    "verdict": null
+    "final_reason": "human_approved",
+    "final_role": "preferred",
+    "rationale": "Clear art-quality improvement that preserves the trainer class identity.",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "project owner (human)",
+    "status": "decided",
+    "verdict": "use_hgss"
    },
    "risk": "medium",
    "risk_flags": [],
@@ -562,9 +590,13 @@
    "platinum_target_class": "swimmer_female",
    "requires_later_frame_inspection": false,
    "review": {
-    "notes": null,
-    "status": "pending_human_review",
-    "verdict": null
+    "final_reason": "human_approved",
+    "final_role": "preferred",
+    "rationale": "Clear art-quality improvement that preserves the trainer class identity.",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "project owner (human)",
+    "status": "decided",
+    "verdict": "use_hgss"
    },
    "risk": "medium",
    "risk_flags": [],
@@ -838,15 +870,19 @@
     10
    ],
    "ledger_relation": "art_diff_geometry_close",
-   "needs_runtime_validation": true,
+   "needs_runtime_validation": false,
    "palette_only": false,
    "platinum_png": "res/trainers/classes/arcade_star/front.png",
    "platinum_target_class": "arcade_star",
    "requires_later_frame_inspection": true,
    "review": {
-    "notes": null,
-    "status": "pending_human_review",
-    "verdict": null
+    "final_reason": "human_keep_platinum",
+    "final_role": "not_selected",
+    "rationale": "Only a limited later-frame difference (3 of 11 frames); insufficient to justify replacement.",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "project owner (human)",
+    "status": "decided",
+    "verdict": "keep_platinum"
    },
    "risk": "medium",
    "risk_flags": [],
@@ -910,15 +946,19 @@
    "hgss_source_path": "files/a/0/5/8#class=122",
    "identical_frame_indices": [],
    "ledger_relation": "art_diff_geometry_close",
-   "needs_runtime_validation": true,
+   "needs_runtime_validation": false,
    "palette_only": true,
    "platinum_png": "res/trainers/classes/young_couple/front.png",
    "platinum_target_class": "young_couple",
    "requires_later_frame_inspection": false,
    "review": {
-    "notes": null,
-    "status": "pending_human_review",
-    "verdict": null
+    "final_reason": "human_keep_platinum",
+    "final_role": "not_selected",
+    "rationale": "Recolor-only/negligible change; not worth introducing a donor dependency.",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "project owner (human)",
+    "status": "decided",
+    "verdict": "keep_platinum"
    },
    "risk": "medium",
    "risk_flags": [],
@@ -946,14 +986,19 @@
   },
   "candidates": 10,
   "front": 10,
-  "later_frame_inspection": 1
+  "later_frame_inspection": 1,
+  "verdicts": {
+   "keep_platinum": 4,
+   "use_hgss": 6
+  }
  },
- "ledger_sha256": "a84808a75f0a369b15225645dfc043d30f281f8f313ede1d17a2c52116b644d9",
+ "ledger_sha256": "72e37b38572ec4d278a4921b0070a21b238d9dcf0c2f6041bb828cee96570376",
  "legend": {
   "diff": "yellow=both opaque but colour differs, green=HGSS-only pixel, magenta=Platinum-only pixel, grey=same, comparison in BGR555 space"
  },
+ "review_decisions_sha256": "285b9d099e79540216f2ae33f73057b268d77cf390f45cb5c8a8521dd72a685a",
  "review_of": "trainer_battle_sprites preferred candidates",
- "rules_version": "1.5",
+ "rules_version": "1.6",
  "schema_version": 1,
  "thresholds": {
   "negligible_changed_pixels": 40,

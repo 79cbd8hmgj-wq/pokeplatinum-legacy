@@ -33,3 +33,11 @@ extension ledgers automatically via `MANIFEST.json`. Refresh: `tools/visual_over
 | 8 | evidence | pokedex_ui | hgss | 1 |
 | 9 | runtime_qa | pokemon_battle_sprites | hgss | 26 |
 | 10 | runtime_qa | trainer_battle_sprites | hgss | 21 |
+
+## Decoder lock (authoritative)
+
+HGSS trainer sprite comparisons must use `tools/visual_overhaul/hgss_trainer_sprite_lib.decode_sheet()` (`DECODER_VERSION = ncer-vram-transfer-v1`): each NCER cell is drawn from its own VRAM-transfer chunk, and a multi-cell bank without a transfer table is rejected. Catalog assets record `decoder_version`; the validator and `test_hgss_trainer_decoder.py` (CI) fail if any asset was produced otherwise or if the first-chunk-for-every-frame behaviour returns.
+
+## Human review
+
+Verdicts live in `selection/review/decisions/trainer_battle_sprites.json` and are consumed by the rules (R0) as explicit evidence bound to the group digest and evidence-entry digest. Result: 6 `use_hgss` (youngster, lass, bug_catcher, twins, beauty, swimmer_female) -> preferred; 4 `keep_platinum` (ace_trainer_male/female, arcade_star, young_couple).

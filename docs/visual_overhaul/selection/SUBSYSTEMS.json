@@ -90,7 +90,8 @@
           "conversion": "trivial",
           "rationale": "HGSS trainer sets use the same 80x80 extended-cell NCGR/NCLR/NCER/NANR model as Platinum's trfgra/trbgra sources; deterministic NARC->PNG+cell/anim JSON decode."
         }
-      }
+      },
+      "human_review_required": true
     },
     "pokemon_animation_reference": {
       "title": "Pokemon animation timing/staging",

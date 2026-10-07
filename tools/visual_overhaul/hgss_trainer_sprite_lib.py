@@ -1,4 +1,10 @@
-"""Decode HGSS trainer battle sprite sets (a/0/5/8 front, a/0/0/6 back) without Platinum edits.
+"""AUTHORITATIVE decoder for HGSS trainer battle sprite sets (decoder lock: DECODER_VERSION below).
+
+Rule: every NCER cell is drawn from ITS OWN VRAM-transfer chunk (source offset/size into the NCGR tile data).
+Rendering all cells from the first chunk (the pre-fix behaviour) repeats frame 0 and silently invalidates every
+multi-frame comparison; use decode_sheet() so that cannot happen. test_hgss_trainer_decoder.py pins this.
+
+Decode HGSS trainer battle sprite sets (a/0/5/8 front, a/0/0/6 back) without Platinum edits.
 
 Layout (HGSS src/pokemon.c sub_02070D3C): class i uses NARC members 5i+{0:NCGR,1:NCLR,2:NCER,3:NANR,4:NCBR}.
 NCGR = tile-ordered 4bpp chars (0xFFFF geometry, 1D OBJ mapping); NCER = extended cell bank.
@@ -7,6 +13,7 @@ from __future__ import annotations
 
 import struct
 
+DECODER_VERSION = "ncer-vram-transfer-v1"
 NARC_FRONT = "files/a/0/5/8"
 NARC_BACK = "files/a/0/0/6"
 SHAPE_SIZE = {
@@ -146,3 +153,19 @@ def render_sheet(cells, tiles, gap=1, shift=0, transfers=None):
         rows.pop()  # no trailing gap
     flat = [p for r in rows for p in r]
     return w, len(rows), flat, oob, dims
+
+
+def decode_sheet(ncgr: bytes, nclr: bytes, ncer: bytes):
+    """Single supported entry point. Returns dict(width, height, pixels, palette, cells, cell_dims, transfers, shift, oob).
+
+    Fails closed: a multi-cell bank without a VRAM-transfer table cannot be rendered with per-cell chunks and is rejected
+    rather than silently drawn from the first chunk."""
+    tiles = parse_ncgr_tiles(ncgr)
+    pal = parse_nclr(nclr)
+    cells = parse_ncer(ncer)
+    transfers = parse_ncer_transfers(ncer, len(cells))
+    if len(cells) > 1 and not transfers:
+        raise ValueError("multi-cell NCER without VRAM-transfer table (refusing first-chunk rendering)")
+    shift = ncgr_unit_shift(ncgr)
+    w, h, px, oob, dims = render_sheet(cells, tiles, shift=shift, transfers=transfers)
+    return {"width": w, "height": h, "pixels": px, "palette": pal, "cells": cells, "cell_dims": dims, "transfers": transfers, "shift": shift, "oob": oob}

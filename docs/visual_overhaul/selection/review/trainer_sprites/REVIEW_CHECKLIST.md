@@ -1,8 +1,8 @@
 # Trainer Sprite Visual QA Checklist
 
-Status: **pending human review**. Nothing is promoted or imported; automated metrics only describe *difference*, not *quality*.
+Status: **human review complete** (verdicts recorded in `../decisions/trainer_battle_sprites.json` and consumed by the selection rules as explicit evidence). Automated metrics only describe *difference*, not *quality*.
 
-- Candidates under review (currently `preferred`): **10** (10 front, 0 back)
+- Candidates reviewed: **10** (10 front, 0 back); verdicts: {'use_hgss': 6, 'keep_platinum': 4}
 - Needing later-frame inspection (frame 0 identical, a later frame differs): **1**
 - Automated classes: {'redrawn_artwork': 8, 'later_frames_differ': 1, 'recolor_only': 1}
 - Withdrawn from the earlier 21 after a decoder fix: **11** (see below)
@@ -19,18 +19,18 @@ Contact sheets: `front_01.png`. Legend: yellow=both opaque but colour differs, g
 
 ## Candidates
 
-| Done | ID | View | Class | Automated class | Changed px / % | Frames (HGSS/Plat) | Identical frames | Verdict |
+| Done | ID | Class | Automated class | Changed px / % | Frames | Verdict | Reason |
 |---|---|---|---|---|---|---|---|---|
-| [ ] | hgss_front_002 | front | youngster | redrawn_artwork | 1211 / 96.7% | 1/1 | [] | _pending_ |
-| [ ] | hgss_front_003 | front | lass | redrawn_artwork | 1282 / 96.9% | 1/1 | [] | _pending_ |
-| [ ] | hgss_front_006 | front | bug_catcher | redrawn_artwork | 2401 / 99.2% | 1/1 | [] | _pending_ |
-| [ ] | hgss_front_008 | front | twins | redrawn_artwork | 1660 / 97.6% | 1/1 | [] | _pending_ |
-| [ ] | hgss_front_024 | front | ace_trainer_male | redrawn_artwork | 1720 / 98.7% | 1/1 | [] | _pending_ |
-| [ ] | hgss_front_025 | front | ace_trainer_female | redrawn_artwork | 1633 / 98.6% | 1/1 | [] | _pending_ |
-| [ ] | hgss_front_036 | front | beauty | redrawn_artwork | 1853 / 97.5% | 1/1 | [] | _pending_ |
-| [ ] | hgss_front_043 | front | swimmer_female | redrawn_artwork | 1315 / 90.5% | 1/1 | [] | _pending_ |
-| [ ] | hgss_front_101 | front | arcade_star | later_frames_differ | 2304 / 14.5% | 11/11 | [0, 1, 2, 3, 7, 8, 9, 10] | _pending_ |
-| [ ] | hgss_front_122 | front | young_couple | recolor_only | 126 / 7.1% | 1/1 | [] | _pending_ |
+| [x] | hgss_front_002 | youngster | redrawn_artwork | 1211 / 96.7% | 1/1 | **use_hgss** | Clear art-quality improvement that preserves the trainer class identity. |
+| [x] | hgss_front_003 | lass | redrawn_artwork | 1282 / 96.9% | 1/1 | **use_hgss** | Clear art-quality improvement that preserves the trainer class identity. |
+| [x] | hgss_front_006 | bug_catcher | redrawn_artwork | 2401 / 99.2% | 1/1 | **use_hgss** | Clear art-quality improvement that preserves the trainer class identity. |
+| [x] | hgss_front_008 | twins | redrawn_artwork | 1660 / 97.6% | 1/1 | **use_hgss** | Clear art-quality improvement that preserves the trainer class identity. |
+| [x] | hgss_front_024 | ace_trainer_male | redrawn_artwork | 1720 / 98.7% | 1/1 | **keep_platinum** | Ace Trainers keep their Platinum/Sinnoh designs; HGSS is a regional redesign, not a quality upgrade. |
+| [x] | hgss_front_025 | ace_trainer_female | redrawn_artwork | 1633 / 98.6% | 1/1 | **keep_platinum** | Ace Trainers keep their Platinum/Sinnoh designs; HGSS is a regional redesign, not a quality upgrade. |
+| [x] | hgss_front_036 | beauty | redrawn_artwork | 1853 / 97.5% | 1/1 | **use_hgss** | Clear art-quality improvement that preserves the trainer class identity. |
+| [x] | hgss_front_043 | swimmer_female | redrawn_artwork | 1315 / 90.5% | 1/1 | **use_hgss** | Clear art-quality improvement that preserves the trainer class identity. |
+| [x] | hgss_front_101 | arcade_star | later_frames_differ | 2304 / 14.5% | 11/11 | **keep_platinum** | Only a limited later-frame difference (3 of 11 frames); insufficient to justify replacement. |
+| [x] | hgss_front_122 | young_couple | recolor_only | 126 / 7.1% | 1/1 | **keep_platinum** | Recolor-only/negligible change; not worth introducing a donor dependency. |
 
 ## Withdrawn after decoder fix
 

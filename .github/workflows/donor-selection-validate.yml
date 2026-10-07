@@ -25,3 +25,4 @@ jobs:
       - run: pip install pillow
       - run: python3 tools/visual_overhaul/selection/validate_selection.py
       - run: cd tools/visual_overhaul/selection && python3 test_selection_framework.py
+      - run: cd tools/visual_overhaul/selection && python3 test_hgss_trainer_decoder.py

@@ -18,6 +18,10 @@ def evidence_path(subsystem: str) -> Path:
     return SEL / "evidence" / f"{subsystem}.json"
 
 
+def review_path(subsystem: str) -> Path:
+    return SEL / "review" / "decisions" / f"{subsystem}.json"
+
+
 def derive(subsystem: str) -> dict:
     subs = jload(SUBSYSTEMS_JSON)["subsystems"]
     if subsystem not in subs:
@@ -27,7 +31,10 @@ def derive(subsystem: str) -> dict:
     groups = [g for g in gdoc["groups"] if g["subsystem"] == subsystem]
     ep = evidence_path(subsystem)
     evidence = jload(ep) if ep.is_file() else {"entries": {}}
-    decisions, targets = engine.decide(groups, evidence, rules, subs)
+    rp = review_path(subsystem)
+    rdoc = jload(rp) if rp.is_file() else None
+    reviews = {d["group_id"]: {**d, "reviewer": rdoc["reviewer"], "reviewed_at": rdoc["reviewed_at"]} for d in rdoc["decisions"]} if rdoc else {}
+    decisions, targets = engine.decide(groups, evidence, rules, subs, reviews)
     roles = collections.Counter(d["role"] for d in decisions)
     reasons = collections.Counter(f'{d["role"]}:{d["reason_code"]}' for d in decisions)
     by_src = collections.Counter(f'{d["source_id"]}:{d["role"]}' for d in decisions)
@@ -41,6 +48,8 @@ def derive(subsystem: str) -> dict:
             "recovered_ledger_sha256": gdoc["inputs"]["recovered_ledger_sha256"],
             "subsystems_sha256": file_sha256(SUBSYSTEMS_JSON),
             "rules_sha256": file_sha256(RULES_JSON),
+            "review_file": str(review_path(subsystem).relative_to(ROOT)) if review_path(subsystem).is_file() else None,
+            "review_sha256": file_sha256(review_path(subsystem)) if review_path(subsystem).is_file() else None,
             "evidence_file": str(ep.relative_to(ROOT)) if ep.is_file() else None,
             "evidence_sha256": file_sha256(ep) if ep.is_file() else None,
         },

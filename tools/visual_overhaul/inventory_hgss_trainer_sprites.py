@@ -66,13 +66,10 @@ def process(narc_rel: str, view: str, hgss: Path, names: dict[int, str], commit:
         render_rel = None
         w = h = opaque = bw = bh = cells_n = 0
         try:
-            tiles = lib.parse_ncgr_tiles(m["ncgr"])
-            pal = lib.parse_nclr(m["nclr"])
-            cells = lib.parse_ncer(m["ncer"])
+            dec = lib.decode_sheet(m["ncgr"], m["nclr"], m["ncer"])
+            pal, cells, shift, transfers = dec["palette"], dec["cells"], dec["shift"], dec["transfers"]
+            w, h, px, oob, dims = dec["width"], dec["height"], dec["pixels"], dec["oob"], dec["cell_dims"]
             cells_n = len(cells)
-            shift = lib.ncgr_unit_shift(m["ncgr"])
-            transfers = lib.parse_ncer_transfers(m["ncer"], len(cells))
-            w, h, px, oob, dims = lib.render_sheet(cells, tiles, shift=shift, transfers=transfers)
             used = sorted(set(px) - {0})
             opaque = sum(1 for p in px if p)
             if oob:
@@ -92,7 +89,7 @@ def process(narc_rel: str, view: str, hgss: Path, names: dict[int, str], commit:
             render_rel = f"docs/visual_overhaul/catalog_extensions/hgss_trainer_sprites/renders/{view}_{idx}.png"
             (ROOT / render_rel).parent.mkdir(parents=True, exist_ok=True)
             img.save(ROOT / render_rel, optimize=True)
-            meta.update({"char_unit_bytes": 32 << shift, "vram_transfer": [list(t) for t in transfers] if transfers else None, "palette_colors": len(pal), "palette_rows_used": sorted({p >> 4 for p in used}),
+            meta.update({"decoder_version": lib.DECODER_VERSION, "char_unit_bytes": 32 << shift, "vram_transfer": [list(t) for t in transfers] if transfers else None, "palette_colors": len(pal), "palette_rows_used": sorted({p >> 4 for p in used}),
                          "cell_count": cells_n, "cell_dims": [list(d) for d in dims],
                          "render_sha256": hashlib.sha256(bytes(px)).hexdigest()[:16]})
         except Exception as e:  # fail closed: reject with evidence, never silently drop

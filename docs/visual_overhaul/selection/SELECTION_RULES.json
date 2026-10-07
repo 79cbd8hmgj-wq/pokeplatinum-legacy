@@ -25,6 +25,7 @@
   "trivial": 1
  },
  "decision_order": [
+  "R0 human review (subsystems with human_review_required): a `keep_platinum` verdict on an automated-eligible group -> not_selected(human_keep_platinum); `use_hgss` confirms an automated-eligible group as eligible_preferred (conflict with automated gates is an error); an unreviewed eligible_preferred is capped at alternate(pending_human_review). Verdicts bind to the group member_digest and the evidence entry digest; any change makes them stale (error).",
   "R1 no_independent_evidence: group has < min_independent_members independently evidenced members -> not_selected",
   "R2 class none -> not_selected(source_not_relevant_to_subsystem)",
   "R3 class technique/reference or conversion not_portable -> reference_only(policy_reference_class)",
@@ -69,7 +70,10 @@
   "eligible_not_best_for_target",
   "control_unmeasured",
   "no_native_target",
-  "weak_evidence_share"
+  "weak_evidence_share",
+  "human_approved",
+  "human_keep_platinum",
+  "pending_human_review"
  ],
  "relation_notes": {
   "art_diff_minor": "Rendered-pixel difference ratio (differing pixels / opaque union, over compared frames) below thresholds.minor_diff_ratio; evidence providers emit this relation instead of art_diff_geometry_*.",
@@ -92,7 +96,7 @@
   "reference_only",
   "not_selected"
  ],
- "rules_version": "1.5",
+ "rules_version": "1.6",
  "runtime_validation_relations": [
   "art_diff_geometry_close",
   "art_diff_geometry_review",
