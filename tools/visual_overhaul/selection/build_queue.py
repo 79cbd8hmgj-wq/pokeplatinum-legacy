@@ -5,6 +5,11 @@ Only subsystems with a ledger participate. Queue items:
   implement  - a preferred donor group (one item per subsystem+source batch), ranked by value/cost
   evidence   - reference_only(needs_evidence) groups whose gain could flip them into selection
   runtime_qa - preferred/alternate groups flagged needs_runtime_validation
+Every item carries a `work_lane` (USE_OUTCOMES.json work_lanes):
+  A direct_replacement  - whole-asset donor replacement (implement, runtime_qa)
+  B native_enhancement  - new Platinum-native asset from Platinum + donor components (component_review, composite_build)
+  C technique_only      - technique/timing/layout re-implemented with no donor pixels (technique_build, technique_pool)
+  evidence              - open evidence work that could change a whole-asset verdict
 Pending subsystems (no ledger yet) are listed so the queue is visibly incomplete, not silently short.
 """
 from __future__ import annotations
@@ -14,6 +19,7 @@ import collections
 import sys
 
 from common import *  # noqa: F401,F403
+import outcomes
 
 
 def derive() -> dict:
@@ -61,12 +67,47 @@ def derive() -> dict:
                       "priority_score": round(0.1 * subs[it["subsystem"]]["priority_weight"], 3)})
     for it in runtime.values():
         items.append({**it, "priority_score": 0.0})
+    for it in items:
+        it["work_lane"] = {"implement": "direct_replacement", "runtime_qa": "direct_replacement"}.get(it["kind"], "evidence")
+    vocab = outcomes.vocab()
+    use_files = outcomes.load_use_files()
+    for sname, doc in sorted(use_files.items()):
+        w = subs[sname]["priority_weight"]
+        cost = max(subs[sname]["integration_cost"], 1)
+        recs = [r for r in doc.get("records", []) if outcomes.active(r)]
+        comp = [r for r in recs if r["outcome"] in ("component_donor", "composite_input")]
+        if comp:
+            pend = [r for r in comp if r["status"] != "human_confirmed"]
+            items.append({"kind": "component_review", "work_lane": "native_enhancement", "subsystem": sname, "source_id": ",".join(sorted({r["source"]["source_id"] for r in comp})),
+                          "target_count": len({r["target"]["target_id"] for r in comp}), "targets_sample": sorted({r["target"]["target_id"] for r in comp})[:5],
+                          "records": len(comp), "awaiting_human_confirmation": len(pend), "tags": sorted({t for r in comp for t in r["tags"]}),
+                          "priority_score": round(0.25 * len(comp) * w / cost, 3)})
+        for cp in doc.get("composites", []):
+            if cp["status"] == "ready":
+                items.append({"kind": "composite_build", "work_lane": "native_enhancement", "subsystem": sname, "source_id": "composite", "target_count": 1,
+                              "targets_sample": [cp["target_id"]], "composite_id": cp["composite_id"], "priority_score": round(1.0 * w / cost, 3)})
+        tech = [r for r in recs if r["outcome"] == "technique_reference"]
+        if tech:
+            items.append({"kind": "technique_build", "work_lane": "technique_only", "subsystem": sname, "source_id": ",".join(sorted({r["source"]["source_id"] for r in tech})),
+                          "target_count": len({r["target"]["target_id"] for r in tech}), "targets_sample": sorted({r["target"]["target_id"] for r in tech})[:5],
+                          "records": len(tech), "priority_score": round(0.25 * len(tech) * w / cost, 3)})
+    pool: dict[tuple, int] = collections.Counter()
+    for name in done:
+        led = jload(SEL / "ledgers" / f"{name}.json")
+        for d in led["decisions"]:
+            if outcomes.replacement_outcome(d, vocab) == "technique_reference":
+                pool[(name, d["source_id"])] += 1
+    for (name, src), n in sorted(pool.items()):
+        items.append({"kind": "technique_pool", "work_lane": "technique_only", "subsystem": name, "source_id": src, "groups": n, "target_count": None,
+                      "priority_score": round(0.05 * subs[name]["priority_weight"], 3),
+                      "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation"})
     items.sort(key=lambda i: (-i["priority_score"], i["kind"], i["subsystem"], i["source_id"]))
     for n, it in enumerate(items, 1):
         it["rank"] = n
     return {
         "schema_version": 1,
-        "inputs": {"ledger_files": {n: file_sha256(SEL / "ledgers" / f"{n}.json") for n in done}},
+        "inputs": {"ledger_files": {n: file_sha256(SEL / "ledgers" / f"{n}.json") for n in done}, "use_outcomes_sha256": file_sha256(outcomes.USE_OUTCOMES_JSON),
+                   "use_files": {k: file_sha256(outcomes.comp_path(k)) for k in sorted(use_files)}},
         "completed_subsystems": done,
         "pending_subsystems": pending,
         "items": items,
@@ -79,10 +120,17 @@ def write_md(q: dict) -> None:
     L.append(f"- pending subsystems: {len(q['pending_subsystems'])}")
     L.append("")
     if q["items"]:
-        L += ["| # | Kind | Subsystem | Source | Targets/groups | Score |", "|---:|---|---|---|---:|---:|"]
-        for i in q["items"]:
-            n = i.get("target_count", i.get("groups"))
-            L.append(f"| {i['rank']} | {i['kind']} | {i['subsystem']} | {i['source_id']} | {n} | {i['priority_score']} |")
+        names = {"direct_replacement": "A direct replacement", "native_enhancement": "B native enhancement / composite", "technique_only": "C technique only", "evidence": "Evidence"}
+        for lane in ("direct_replacement", "native_enhancement", "technique_only", "evidence"):
+            its = [i for i in q["items"] if i["work_lane"] == lane]
+            L += ["", f"## Lane {names[lane]}", ""]
+            if not its:
+                L.append("_none_")
+                continue
+            L += ["| # | Kind | Subsystem | Source | Targets/groups | Score |", "|---:|---|---|---|---:|---:|"]
+            for i in its:
+                n = i.get("target_count") or i.get("groups")
+                L.append(f"| {i['rank']} | {i['kind']} | {i['subsystem']} | {i['source_id']} | {n} | {i['priority_score']} |")
     else:
         L.append("_No implementation work is currently justified by completed selections._")
     (SEL / "IMPLEMENTATION_QUEUE.md").write_text("\n".join(L) + "\n")

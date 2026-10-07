@@ -17,6 +17,7 @@ python3 $S/build_candidate_groups.py > /dev/null
 for s in $(python3 -c "import json;print(' '.join(json.load(open('$D/selection/SUBSYSTEMS.json'))['subsystems']))"); do
   python3 $S/select_subsystem.py --subsystem "$s" > /dev/null
 done
+python3 $S/build_outcomes.py > /dev/null
 python3 $S/build_queue.py
 python3 $S/build_status.py > /dev/null
 python3 $S/validate_selection.py

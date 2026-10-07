@@ -82,3 +82,35 @@ the current `member_digest`; every ledger re-derives identically from rules + ev
 ## Catalog extensions
 
 Targeted catalog additions live in `docs/visual_overhaul/catalog_extensions/` (see its README/MANIFEST). Alignment tables for Platinum targets live in `selection/alignment/`; their hashes are part of `CANDIDATE_GROUPS` inputs, so edits force regeneration. Slot-name alignment must never be treated as subject identity (`subject_unverified`).
+
+## Use outcomes (selection v2: donors contribute in more ways than whole-asset replacement)
+
+`USE_OUTCOMES.json` is the vocabulary; `components/<subsystem>.json` holds explicit use records; `OUTCOME_STATUS.*` is the derived summary.
+The ledgers (role/reason_code, `SELECTION_RULES.json`) are **unchanged and still reproducible**: they only answer "should this whole donor asset replace the Platinum one?". A donor that fails that test is **not** thereby useless.
+
+| Outcome | Axis | Source of truth |
+|---|---|---|
+| `direct_replacement` | replacement | derived: ledger role `preferred` (human-gated where required) |
+| `alternate` | replacement | derived: ledger role `alternate` |
+| `native_keep` | replacement | derived: `not_selected` for `identical_to_native` / `human_keep_platinum` |
+| `not_selected` | replacement | derived: other `not_selected`/non-technique `reference_only` |
+| `needs_evidence` | replacement | derived: ledger `needs_evidence` flag |
+| `component_donor` | contribution | explicit record: a specific component/property of a donor asset is useful for a Platinum target |
+| `composite_input` | contribution | explicit record committed as an input of a composite plan (new Platinum-native asset from Platinum + donor components) |
+| `technique_reference` | contribution | derived pool for technique-class groups; explicit record pins a target + technique, **never carries donor pixels** (`pixel_use: none`) |
+
+A group has exactly one derived replacement outcome and zero or more explicit contribution records. Replacement outcomes are never written as records.
+
+### Use record (`components/<target subsystem>.json: records[]`)
+Required: `record_id`, `outcome`, `status` (`proposed|human_confirmed|withdrawn`), `source` {`group_id`, `source_id`, `member_digest`, `assets[]` {`asset_id`, `source_path`, `source_commit`, `render_path?`, `render_sha256?`}}, `target` {`subsystem`, `target_id`, `native_ref` {`path`, `sha256`}}, `tags[]` (⊆ component tags: pose, silhouette, palette, shading, clothing_detail, accessory, texture_region, geometry_detail, animation_frame, animation_timing, particle_shape, layout, UI_element, environmental_motif, material_treatment), `component.property`, `pixel_use` (`donor_pixels|recolored_donor|derived|none`), `constraints[]` (compatibility), `adaptation[]` (transformation needed), `evidence` {`kind`, `summary`, `refs[]`, `evidence_entry_digest`}, `confidence`, `risk`, `reason`, `proposed_by`.
+`human_review` (only with `status: human_confirmed`) binds `member_digest`, `evidence_digest` **and** `record_digest` (content hash of the record minus status/human_review): editing a confirmed record, its source group or its evidence makes the confirmation stale (error).
+
+### Composite plan (`composites[]`) and component reviews (`component_reviews[]`)
+A plan names a `target_id` (must still resolve to `platinum_native`; native enhancement and donor replacement are exclusive), a hash-pinned `native_base`, `inputs[]` (active `composite_input` records for that target) and `technique_refs[]` (active `technique_reference` records). `ready` requires every input `human_confirmed`. Plans are metadata only: **pixel compositing is not automated** and no Platinum resource changes.
+A `component_review` records "this group was examined for component use": `none_found` (digest-bound; conflicts with any active record on that group) or `records_proposed`.
+
+### Validator additions (`validate_selection.py` → `outcomes.validate_use_records`, negative tests in `test_use_outcomes.py`)
+every ledger decision maps to an outcome; records carry complete provenance (source assets must be members of the cited group, curated `usable`, and match the catalog path/commit/render hash); source/evidence/native-file hashes are current; technique use carries no pixels; component use on a `direct_replacement` group is rejected; composites cannot reference missing/uncurated/unconfirmed inputs, orphan `composite_input` records are rejected, `component_donor` cannot enter a plan unpromoted; `OUTCOME_STATUS.json` and the queue are reproducible.
+
+### Work lanes (`IMPLEMENTATION_QUEUE`)
+A `direct_replacement` (implement, runtime_qa) · B `native_enhancement` (component_review, composite_build) · C `technique_only` (technique_build, technique_pool) · `evidence`.

@@ -13,6 +13,7 @@ import sys
 from common import *  # noqa: F401,F403
 import build_candidate_groups
 import select_subsystem
+import outcomes
 
 def validate(sel_dir: Path | None = None, quiet: bool = False) -> list[str]:
     errs: list[str] = []
@@ -168,6 +169,18 @@ def validate(sel_dir: Path | None = None, quiet: bool = False) -> list[str]:
     # (membership dict maps each asset to exactly one group by construction; compare counts)
     if sum(g["member_count"] for g in committed["groups"]) != len(membership):
         errs.append("group member counts do not sum to unique assets (an asset is in two groups)")
+
+    # V6: use outcomes (selection v2): every decision maps to an outcome; component/composite/technique use records are
+    # provenance-complete, digest-bound and distinct from direct replacement
+    all_ledgers = {p.stem: jload(p) for p in sorted(ledgers_dir.glob("*.json"))}
+    all_evidence = {}
+    for sname, led in all_ledgers.items():
+        if led["inputs"]["evidence_file"] and (ROOT / led["inputs"]["evidence_file"]).is_file():
+            all_evidence[sname] = jload(ROOT / led["inputs"]["evidence_file"])
+    errs += outcomes.validate_use_records(groups, membership, all_ledgers, all_evidence)
+    ost = SEL / "OUTCOME_STATUS.json"
+    if ost.is_file() and jload(ost) != outcomes.derive_status(committed["groups"], all_ledgers):
+        errs.append("OUTCOME_STATUS.json is stale (rerun build_outcomes.py)")
 
     # V7: queue/status freshness
     try:

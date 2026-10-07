@@ -31,7 +31,11 @@
    "pokemon_icons": "cfdd96879631028e1c1dec8ade19d1053f3fcd2ab66a5634b934a53fd09b9a5f",
    "title_and_presentation": "06c1220739490aa0ca87208d2bbda97b443a98d5af0d0dfce6f53c0010463727",
    "trainer_battle_sprites": "72e37b38572ec4d278a4921b0070a21b238d9dcf0c2f6041bb828cee96570376"
-  }
+  },
+  "use_files": {
+   "trainer_battle_sprites": "fe1986e560e3a2252e5474d29e402c9ca599a87c7b7e3452db188b66034f6f15"
+  },
+  "use_outcomes_sha256": "c785ad59751bb5e711aea8410499fd655a11b35793464e4484fef055f8ce6d8a"
  },
  "items": [
   {
@@ -51,7 +55,8 @@
     "pokemon_battle_sprites/sp_0028",
     "pokemon_battle_sprites/sp_0033",
     "pokemon_battle_sprites/sp_0035"
-   ]
+   ],
+   "work_lane": "direct_replacement"
   },
   {
    "format_families": [
@@ -70,14 +75,35 @@
     "trainer_battle_sprites/tc_lass",
     "trainer_battle_sprites/tc_swimmer_female",
     "trainer_battle_sprites/tc_twins"
-   ]
+   ],
+   "work_lane": "direct_replacement"
+  },
+  {
+   "awaiting_human_confirmation": 4,
+   "kind": "component_review",
+   "priority_score": 1.0,
+   "rank": 3,
+   "records": 4,
+   "source_id": "hgss",
+   "subsystem": "trainer_battle_sprites",
+   "tags": [
+    "accessory",
+    "clothing_detail",
+    "shading"
+   ],
+   "target_count": 2,
+   "targets_sample": [
+    "trainer_battle_sprites/tc_ace_trainer_female",
+    "trainer_battle_sprites/tc_ace_trainer_male"
+   ],
+   "work_lane": "native_enhancement"
   },
   {
    "groups": 2,
    "kind": "evidence",
    "members": 3,
    "priority_score": 0.5,
-   "rank": 3,
+   "rank": 4,
    "source_id": "hgss",
    "subsystem": "pokemon_battle_sprites",
    "target_count": 2,
@@ -85,14 +111,15 @@
    "targets_sample": [
     "pokemon_battle_sprites/form_egg",
     "pokemon_battle_sprites/form_shadow"
-   ]
+   ],
+   "work_lane": "evidence"
   },
   {
    "groups": 23,
    "kind": "evidence",
    "members": 152,
    "priority_score": 0.4,
-   "rank": 4,
+   "rank": 5,
    "source_id": "hgss",
    "subsystem": "field_environment_art",
    "target_count": 23,
@@ -103,14 +130,15 @@
     "field_environment_art/family:field_environment_art",
     "field_environment_art/family:field_environment_art",
     "field_environment_art/family:field_environment_art"
-   ]
+   ],
+   "work_lane": "evidence"
   },
   {
    "groups": 4,
    "kind": "evidence",
    "members": 4,
    "priority_score": 0.3,
-   "rank": 5,
+   "rank": 6,
    "source_id": "hgss",
    "subsystem": "field_npc_player_sprites",
    "target_count": 4,
@@ -120,65 +148,148 @@
     "field_npc_player_sprites/fs_npc_skier_f",
     "field_npc_player_sprites/fs_player_dp_player_f",
     "field_npc_player_sprites/fs_player_dp_player_m"
-   ]
+   ],
+   "work_lane": "evidence"
   },
   {
    "groups": 1,
    "kind": "evidence",
    "members": 2,
    "priority_score": 0.3,
-   "rank": 6,
+   "rank": 7,
    "source_id": "hgss",
    "subsystem": "menu_ui_frames",
    "target_count": 1,
    "targets": null,
    "targets_sample": [
     "menu_ui_frames/family:menu_ui_frames"
-   ]
+   ],
+   "work_lane": "evidence"
   },
   {
    "groups": 1,
    "kind": "evidence",
    "members": 27,
    "priority_score": 0.2,
-   "rank": 7,
+   "rank": 8,
    "source_id": "hgss",
    "subsystem": "party_summary_ui",
    "target_count": 1,
    "targets": null,
    "targets_sample": [
     "party_summary_ui/family:party_summary_ui"
-   ]
+   ],
+   "work_lane": "evidence"
   },
   {
    "groups": 1,
    "kind": "evidence",
    "members": 123,
    "priority_score": 0.2,
-   "rank": 8,
+   "rank": 9,
    "source_id": "hgss",
    "subsystem": "pokedex_ui",
    "target_count": 1,
    "targets": null,
    "targets_sample": [
     "pokedex_ui/family:pokedex_ui"
-   ]
+   ],
+   "work_lane": "evidence"
+  },
+  {
+   "groups": 467,
+   "kind": "technique_pool",
+   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
+   "priority_score": 0.2,
+   "rank": 10,
+   "source_id": "pmd_sky",
+   "subsystem": "field_environment_art",
+   "target_count": null,
+   "work_lane": "technique_only"
+  },
+  {
+   "groups": 905,
+   "kind": "technique_pool",
+   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
+   "priority_score": 0.2,
+   "rank": 11,
+   "source_id": "ranger2",
+   "subsystem": "field_environment_art",
+   "target_count": null,
+   "work_lane": "technique_only"
+  },
+  {
+   "groups": 636,
+   "kind": "technique_pool",
+   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
+   "priority_score": 0.15,
+   "rank": 12,
+   "source_id": "ranger2",
+   "subsystem": "battle_effects_particles",
+   "target_count": null,
+   "work_lane": "technique_only"
+  },
+  {
+   "groups": 523,
+   "kind": "technique_pool",
+   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
+   "priority_score": 0.15,
+   "rank": 13,
+   "source_id": "pmd_sky",
+   "subsystem": "field_effects_overlays",
+   "target_count": null,
+   "work_lane": "technique_only"
+  },
+  {
+   "groups": 20,
+   "kind": "technique_pool",
+   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
+   "priority_score": 0.15,
+   "rank": 14,
+   "source_id": "pmd_sky",
+   "subsystem": "menu_ui_frames",
+   "target_count": null,
+   "work_lane": "technique_only"
+  },
+  {
+   "groups": 30,
+   "kind": "technique_pool",
+   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
+   "priority_score": 0.1,
+   "rank": 15,
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_count": null,
+   "work_lane": "technique_only"
+  },
+  {
+   "groups": 1533,
+   "kind": "technique_pool",
+   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
+   "priority_score": 0.05,
+   "rank": 16,
+   "source_id": "ranger2",
+   "subsystem": "pokemon_animation_reference",
+   "target_count": null,
+   "work_lane": "technique_only"
   },
   {
    "groups": 26,
    "kind": "runtime_qa",
    "priority_score": 0.0,
-   "rank": 9,
+   "rank": 17,
    "source_id": "hgss",
-   "subsystem": "pokemon_battle_sprites"
+   "subsystem": "pokemon_battle_sprites",
+   "work_lane": "direct_replacement"
   },
   {
    "groups": 6,
    "kind": "runtime_qa",
    "priority_score": 0.0,
-   "rank": 10,
+   "rank": 18,
    "source_id": "hgss",
-   "subsystem": "trainer_battle_sprites"
+   "subsystem": "trainer_battle_sprites",
+   "work_lane": "direct_replacement"
   }
  ],
  "pending_subsystems": [],

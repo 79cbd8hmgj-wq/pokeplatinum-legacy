@@ -55,3 +55,13 @@ python3 tools/visual_overhaul/selection/validate_selection.py   # CI: .github/wo
 ## Update: HGSS sprite catalog gap passes
 
 Trainer battle sprites (146 sets) and NPC/player field sprites (212 sheets) are now cataloged, curated and selected; details, scope rules and caveats in `../catalog_extensions/README.md`. Net new donor selections: 10 HGSS trainer sets preferred (corrected from 21, see catalog_extensions README: NCER VRAM-transfer decoder fix); NPC/player sprites yield no preferred donor (96 identical, 4 unverified-subject). 3D models, textures, menus/UI and battle HUD remain unstarted.
+
+
+## Update: use-outcome model (donor contribution beyond replacement)
+
+Selection now has a second axis (`USE_OUTCOMES.json`, `components/*.json`, `OUTCOME_STATUS.md`; spec in `SELECTION_SCHEMA.md` "Use outcomes"). Ledgers, groups, evidence and human review decisions are untouched (byte-identical, still reproducible); the six trainer `direct_replacement` verdicts and the pilot are unchanged.
+
+First migration (`tools/visual_overhaul/selection/migrate_trainer_components.py`, trainers):
+* Ace Trainer M/F stay `keep_platinum` as whole assets (`native_keep`) but now carry 4 **proposed** `component_donor` records (jacket fold/zip shading, fingerless gloves; hair highlight banding, collar/seam detail), each `derived` pixel use, awaiting human confirmation. Evidence image: `components/evidence/ace_trainer_*_platinum_vs_hgss.png`.
+* Arcade Star and Young Couple: digest-bound `none_found` component reviews (Arcade Star frames 4-6 differ only by a ~1px row offset; Young Couple is a recolor) -> remain `native_keep`.
+* Queue now has lanes A/B/C (B: Ace component review; C: technique pools for Ranger/PMD).
