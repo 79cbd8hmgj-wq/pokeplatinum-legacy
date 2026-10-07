@@ -1,7 +1,7 @@
 {
  "dispositions": {
-  "needs_evidence": 5,
-  "promoted": 69
+  "promoted": 72,
+  "reference_only": 2
  },
  "domain": "interface_embellishments",
  "groups": 74,
@@ -1158,6 +1158,66 @@
    "src": "ranger2"
   },
   {
+   "best": 3.595,
+   "cls": [
+    "novel_detail"
+   ],
+   "disp": "promoted",
+   "dom": "interface_embellishments",
+   "fam": "ranger_interface/i",
+   "g": "menu_ui_frames/ranger2/ranger_interface/i072_00",
+   "rec": [
+    "opp:mined/menu_ui_frames/ranger2/ranger_interface/i072_00/novel_detail/component"
+   ],
+   "sig": [
+    "no_platinum_equivalent",
+    "family_library_74",
+    "previously_not_selected",
+    "evidence_resolved"
+   ],
+   "src": "ranger2"
+  },
+  {
+   "best": 3.595,
+   "cls": [
+    "novel_detail"
+   ],
+   "disp": "promoted",
+   "dom": "interface_embellishments",
+   "fam": "ranger_interface/i",
+   "g": "menu_ui_frames/ranger2/ranger_interface/i072_01",
+   "rec": [
+    "opp:mined/menu_ui_frames/ranger2/ranger_interface/i072_01/novel_detail/component"
+   ],
+   "sig": [
+    "no_platinum_equivalent",
+    "family_library_74",
+    "previously_not_selected",
+    "evidence_resolved"
+   ],
+   "src": "ranger2"
+  },
+  {
+   "best": 3.595,
+   "cls": [
+    "novel_detail"
+   ],
+   "disp": "promoted",
+   "dom": "interface_embellishments",
+   "fam": "ranger_interface/i",
+   "g": "menu_ui_frames/ranger2/ranger_interface/i072_02",
+   "rec": [
+    "opp:mined/menu_ui_frames/ranger2/ranger_interface/i072_02/novel_detail/component"
+   ],
+   "sig": [
+    "no_platinum_equivalent",
+    "family_library_74",
+    "previously_not_selected",
+    "evidence_resolved"
+   ],
+   "src": "ranger2"
+  },
+  {
    "best": 3.486,
    "cls": [
     "novel_detail"
@@ -1490,97 +1550,38 @@
    "src": "ranger2"
   },
   {
-   "best": 3.405,
+   "best": 0.0,
    "cls": [
     "novel_detail"
    ],
-   "disp": "needs_evidence",
+   "disp": "reference_only",
    "dom": "interface_embellishments",
    "fam": "ranger_interface/i",
    "g": "menu_ui_frames/ranger2/ranger_interface/i024",
-   "rec": [
-    "opp:mined/menu_ui_frames/ranger2/ranger_interface/i024/novel_detail/component"
-   ],
+   "rec": [],
    "sig": [
     "no_platinum_equivalent",
     "family_library_74",
-    "previously_not_selected"
+    "previously_not_selected",
+    "evidence_closed_reference_only"
    ],
    "src": "ranger2"
   },
   {
-   "best": 3.405,
+   "best": 0.0,
    "cls": [
     "novel_detail"
    ],
-   "disp": "needs_evidence",
+   "disp": "reference_only",
    "dom": "interface_embellishments",
    "fam": "ranger_interface/i",
    "g": "menu_ui_frames/ranger2/ranger_interface/i059",
-   "rec": [
-    "opp:mined/menu_ui_frames/ranger2/ranger_interface/i059/novel_detail/component"
-   ],
+   "rec": [],
    "sig": [
     "no_platinum_equivalent",
     "family_library_74",
-    "previously_not_selected"
-   ],
-   "src": "ranger2"
-  },
-  {
-   "best": 3.405,
-   "cls": [
-    "novel_detail"
-   ],
-   "disp": "needs_evidence",
-   "dom": "interface_embellishments",
-   "fam": "ranger_interface/i",
-   "g": "menu_ui_frames/ranger2/ranger_interface/i072_00",
-   "rec": [
-    "opp:mined/menu_ui_frames/ranger2/ranger_interface/i072_00/novel_detail/component"
-   ],
-   "sig": [
-    "no_platinum_equivalent",
-    "family_library_74",
-    "previously_not_selected"
-   ],
-   "src": "ranger2"
-  },
-  {
-   "best": 3.405,
-   "cls": [
-    "novel_detail"
-   ],
-   "disp": "needs_evidence",
-   "dom": "interface_embellishments",
-   "fam": "ranger_interface/i",
-   "g": "menu_ui_frames/ranger2/ranger_interface/i072_01",
-   "rec": [
-    "opp:mined/menu_ui_frames/ranger2/ranger_interface/i072_01/novel_detail/component"
-   ],
-   "sig": [
-    "no_platinum_equivalent",
-    "family_library_74",
-    "previously_not_selected"
-   ],
-   "src": "ranger2"
-  },
-  {
-   "best": 3.405,
-   "cls": [
-    "novel_detail"
-   ],
-   "disp": "needs_evidence",
-   "dom": "interface_embellishments",
-   "fam": "ranger_interface/i",
-   "g": "menu_ui_frames/ranger2/ranger_interface/i072_02",
-   "rec": [
-    "opp:mined/menu_ui_frames/ranger2/ranger_interface/i072_02/novel_detail/component"
-   ],
-   "sig": [
-    "no_platinum_equivalent",
-    "family_library_74",
-    "previously_not_selected"
+    "previously_not_selected",
+    "evidence_closed_reference_only"
    ],
    "src": "ranger2"
   }

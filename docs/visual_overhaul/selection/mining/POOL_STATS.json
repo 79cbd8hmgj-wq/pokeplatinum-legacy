@@ -1,32 +1,31 @@
 {
  "class_counts": {
-  "component_donor": 1284,
+  "component_donor": 1285,
   "enhancement_candidate": 111,
-  "novel_capability": 129,
-  "novel_detail": 352,
-  "reference_only": 5724,
+  "novel_capability": 86,
+  "novel_detail": 186,
+  "reference_only": 6048,
   "reject": 704,
   "replacement_candidate": 32,
-  "technique_donor": 677
+  "technique_donor": 545
  },
  "dispositions": {
-  "needs_evidence": 559,
-  "promoted": 1603,
-  "reference_only": 5716,
+  "promoted": 1839,
+  "reference_only": 6039,
   "reject": 703
  },
- "explicit_records": 16,
+ "explicit_records": 20,
  "groups_processed": 8581,
- "groups_surfaced": 2162,
- "libraries": 54,
- "mined_records": 2603,
- "mined_unsubsumed": 2578,
- "needs_evidence_records": 643,
+ "groups_surfaced": 1839,
+ "libraries": 47,
+ "mined_records": 2260,
+ "mined_unsubsumed": 2235,
+ "needs_evidence_records": 0,
  "use_mode": {
-  "component": 1555,
+  "component": 1391,
   "composite_input": 109,
   "mixed": 2,
-  "technique": 805,
-  "whole_asset": 114
+  "technique": 630,
+  "whole_asset": 113
  }
 }

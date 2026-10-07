@@ -1,8 +1,7 @@
 {
  "dispositions": {
-  "needs_evidence": 4,
-  "promoted": 77,
-  "reference_only": 198,
+  "promoted": 80,
+  "reference_only": 199,
   "reject": 96
  },
  "domain": "npc_player_sprites",
@@ -329,6 +328,44 @@
    "sig": [
     "no_platinum_equivalent",
     "family_library_212"
+   ],
+   "src": "hgss"
+  },
+  {
+   "best": 3.541,
+   "cls": [
+    "component_donor"
+   ],
+   "disp": "promoted",
+   "dom": "npc_player_sprites",
+   "fam": "hgss_mmodel",
+   "g": "field_npc_player_sprites/hgss/hgss_mmodel_00000069",
+   "rec": [
+    "opp:mined/field_npc_player_sprites/hgss/hgss_mmodel_00000069/component_donor/component"
+   ],
+   "sig": [
+    "family_library_212",
+    "ledger_needs_evidence",
+    "evidence_resolved"
+   ],
+   "src": "hgss"
+  },
+  {
+   "best": 3.541,
+   "cls": [
+    "component_donor"
+   ],
+   "disp": "promoted",
+   "dom": "npc_player_sprites",
+   "fam": "hgss_mmodel",
+   "g": "field_npc_player_sprites/hgss/hgss_mmodel_00000070",
+   "rec": [
+    "opp:mined/field_npc_player_sprites/hgss/hgss_mmodel_00000070/component_donor/component"
+   ],
+   "sig": [
+    "family_library_212",
+    "ledger_needs_evidence",
+    "evidence_resolved"
    ],
    "src": "hgss"
   },
@@ -1396,47 +1433,11 @@
    "src": "hgss"
   },
   {
-   "best": 3.378,
+   "best": 3.351,
    "cls": [
     "component_donor"
    ],
-   "disp": "needs_evidence",
-   "dom": "npc_player_sprites",
-   "fam": "hgss_mmodel",
-   "g": "field_npc_player_sprites/hgss/hgss_mmodel_00000069",
-   "rec": [
-    "opp:mined/field_npc_player_sprites/hgss/hgss_mmodel_00000069/component_donor/component"
-   ],
-   "sig": [
-    "family_library_212",
-    "ledger_needs_evidence"
-   ],
-   "src": "hgss"
-  },
-  {
-   "best": 3.378,
-   "cls": [
-    "component_donor"
-   ],
-   "disp": "needs_evidence",
-   "dom": "npc_player_sprites",
-   "fam": "hgss_mmodel",
-   "g": "field_npc_player_sprites/hgss/hgss_mmodel_00000070",
-   "rec": [
-    "opp:mined/field_npc_player_sprites/hgss/hgss_mmodel_00000070/component_donor/component"
-   ],
-   "sig": [
-    "family_library_212",
-    "ledger_needs_evidence"
-   ],
-   "src": "hgss"
-  },
-  {
-   "best": 3.189,
-   "cls": [
-    "component_donor"
-   ],
-   "disp": "needs_evidence",
+   "disp": "promoted",
    "dom": "npc_player_sprites",
    "fam": "hgss_mmodel",
    "g": "field_npc_player_sprites/hgss/hgss_mmodel_00000022",
@@ -1445,25 +1446,8 @@
    ],
    "sig": [
     "family_library_212",
-    "ledger_needs_evidence"
-   ],
-   "src": "hgss"
-  },
-  {
-   "best": 3.0,
-   "cls": [
-    "component_donor"
-   ],
-   "disp": "needs_evidence",
-   "dom": "npc_player_sprites",
-   "fam": "hgss_mmodel",
-   "g": "field_npc_player_sprites/hgss/hgss_mmodel_00000054",
-   "rec": [
-    "opp:mined/field_npc_player_sprites/hgss/hgss_mmodel_00000054/component_donor/component"
-   ],
-   "sig": [
-    "family_library_212",
-    "ledger_needs_evidence"
+    "ledger_needs_evidence",
+    "evidence_resolved"
    ],
    "src": "hgss"
   },
@@ -2312,6 +2296,24 @@
    "sig": [
     "identical_to_native",
     "family_library_212"
+   ],
+   "src": "hgss"
+  },
+  {
+   "best": 0.0,
+   "cls": [
+    "component_donor"
+   ],
+   "disp": "reference_only",
+   "dom": "npc_player_sprites",
+   "fam": "hgss_mmodel",
+   "g": "field_npc_player_sprites/hgss/hgss_mmodel_00000054",
+   "rec": [],
+   "sig": [
+    "family_library_212",
+    "ledger_needs_evidence",
+    "evidence_resolved",
+    "evidence_closed_below_threshold"
    ],
    "src": "hgss"
   },

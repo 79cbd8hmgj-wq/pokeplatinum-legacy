@@ -1,10 +1,10 @@
 {
  "counts_by_class": {
-  "component_donor": 5,
+  "component_donor": 7,
   "enhancement_candidate": 2,
   "novel_capability": 2,
-  "novel_detail": 1,
-  "reference_only": 8,
+  "novel_detail": 2,
+  "reference_only": 9,
   "reject": 3,
   "replacement_candidate": 32,
   "technique_donor": 1
@@ -12,7 +12,7 @@
  "deferred_non_ds_findings": 9,
  "inputs": {
   "classes_sha256": "24acd6faefb7f3bb88f8ab7a8d5fd545f0a93ecc045d6b54a2211ccd9f168ee9",
-  "findings_sha256": "3423a7d837af32f1f581dff34591371a2b89fb13378af4b10f251827193bb584",
+  "findings_sha256": "dc375d76d75e3c601c1de45a3a5e0791221fd4f76dffafdf2485760c3fa1ac9c",
   "use_files": {
    "trainer_battle_sprites": "fe1986e560e3a2252e5474d29e402c9ca599a87c7b7e3452db188b66034f6f15"
   }
@@ -47,6 +47,33 @@
    "verified": true
   },
   {
+   "asset_use": "whole_assets",
+   "classification": "novel_detail",
+   "confidence": "high",
+   "cost": "low",
+   "donor_game": "hgss",
+   "feasibility": 2,
+   "id": "opp:hgss/follower_sheet_library",
+   "origin": "finding",
+   "rank_score": 4.0,
+   "risk": "low",
+   "scores": {
+    "cost": 2,
+    "feasibility": 3,
+    "novelty": 5,
+    "reuse": 4,
+    "risk": 2,
+    "slice": 3,
+    "visual_impact": 4
+   },
+   "source_id": "hgss",
+   "status": "proposed",
+   "subsystem": "overworld Pokemon presence outside any follower mechanic: event/cutscene sprites, special encounters, roaming/standing Pokemon NPCs",
+   "target": null,
+   "title": "HGSS overworld Pokemon sheet library (572 species/form sheets; usable without the follower system)",
+   "verified": true
+  },
+  {
    "asset_use": "mixed",
    "classification": "novel_capability",
    "confidence": "medium",
@@ -71,6 +98,33 @@
    "subsystem": "overworld follower object (Pokemon walking behind the player) using the map-object system",
    "target": null,
    "title": "Following-Pokemon overworld presence (HGSS follower sprite sheets + FollowMon system)",
+   "verified": true
+  },
+  {
+   "asset_use": "components",
+   "classification": "component_donor",
+   "confidence": "medium",
+   "cost": "medium",
+   "donor_game": "hgss",
+   "feasibility": 2,
+   "id": "opp:hgss/map_texture_set_library",
+   "origin": "finding",
+   "rank_score": 3.571,
+   "risk": "medium",
+   "scores": {
+    "cost": 3,
+    "feasibility": 3,
+    "novelty": 3,
+    "reuse": 5,
+    "risk": 3,
+    "slice": 4,
+    "visual_impact": 4
+   },
+   "source_id": "hgss",
+   "status": "proposed",
+   "subsystem": "field_environment_art",
+   "target": "area map texture sets (NSBTX)",
+   "title": "HGSS map texture sets (106 BTX0 sets, ~1.8k novel unique textures)",
    "verified": true
   },
   {
@@ -152,6 +206,33 @@
    "subsystem": "battle_effects_particles",
    "target": "battle move animation scripts",
    "title": "Ranger 2 multi-phase effect sequencing (launch/impact/embers)",
+   "verified": true
+  },
+  {
+   "asset_use": "components",
+   "classification": "component_donor",
+   "confidence": "medium",
+   "cost": "high",
+   "donor_game": "hgss",
+   "feasibility": 1,
+   "id": "opp:hgss/field_building_model_library",
+   "origin": "finding",
+   "rank_score": 3.25,
+   "risk": "medium",
+   "scores": {
+    "cost": 4,
+    "feasibility": 2,
+    "novelty": 3,
+    "reuse": 5,
+    "risk": 3,
+    "slice": 3,
+    "visual_impact": 4
+   },
+   "source_id": "hgss",
+   "status": "proposed",
+   "subsystem": "field_environment_art",
+   "target": "field prop/building models (NSBMD props + texture sets)",
+   "title": "HGSS building/prop model library (340 outdoor + 222 interior BMD0 models)",
    "verified": true
   },
   {
@@ -1080,6 +1161,25 @@
    "subsystem": "none (Platinum has no photo feature)",
    "target": null,
    "title": "HGSS photo-camera viewfinder frame",
+   "verified": true
+  },
+  {
+   "asset_use": null,
+   "classification": "reference_only",
+   "confidence": "medium",
+   "cost": "low",
+   "donor_game": "hgss",
+   "feasibility": 1,
+   "id": "opp:hgss/land_data_terrain",
+   "origin": "finding",
+   "rank_score": null,
+   "risk": "low",
+   "scores": null,
+   "source_id": "hgss",
+   "status": "proposed",
+   "subsystem": "none (terrain is map-specific)",
+   "target": null,
+   "title": "HGSS land-data terrain models (676 maps, per-map NSBMD)",
    "verified": true
   },
   {

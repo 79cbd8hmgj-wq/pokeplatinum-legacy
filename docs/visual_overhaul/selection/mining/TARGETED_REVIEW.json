@@ -14,21 +14,25 @@
   },
   {
    "domain": "transitions_presentation",
-   "evidence_refs": [],
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/evidence/ranger_tiled_event.png"
+   ],
    "family": "ranger_event/event",
-   "note": "Tiled-background bundles (NCGR+NCLR+NSCR) cannot be rendered by the available package renderer; kept needs_evidence until a tilemap preview exists.",
+   "note": "Tiled-background bundles (NCGR+NCLR+NSCR) cannot be rendered by the available package renderer; kept needs_evidence until a tilemap preview exists. RESOLVED in the evidence-closure pass: a minimal NCGR+NCLR+NSCR tilemap preview now renders these bundles (see mining/EVIDENCE_RESOLUTIONS.json and mining/evidence/ranger_tiled_*.png).",
    "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
    "source_id": "ranger2",
-   "verdict": "unresolved"
+   "verdict": "resolved_by_evidence_closure"
   },
   {
    "domain": "ui_menus_hud",
-   "evidence_refs": [],
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/evidence/ranger_tiled_menu.png"
+   ],
    "family": "ranger_menu/um",
-   "note": "Menu bundles are not NARC/cell packages for the existing renderer (LZ10 payload is not NARC); no preview, kept needs_evidence.",
+   "note": "Menu bundles are not NARC/cell packages for the existing renderer (LZ10 payload is not NARC); no preview, kept needs_evidence. RESOLVED in the evidence-closure pass: a minimal NCGR+NCLR+NSCR tilemap preview now renders these bundles (see mining/EVIDENCE_RESOLUTIONS.json and mining/evidence/ranger_tiled_*.png).",
    "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
    "source_id": "ranger2",
-   "verdict": "unresolved"
+   "verdict": "resolved_by_evidence_closure"
   }
  ],
  "reviews": [

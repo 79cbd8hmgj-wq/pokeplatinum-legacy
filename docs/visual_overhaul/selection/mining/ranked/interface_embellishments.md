@@ -1,6 +1,6 @@
 # Ranked: interface_embellishments
 
-groups 74; promoted 69; needs_evidence 5; reference_only 0; reject 0; records 120
+groups 74; promoted 72; needs_evidence 0; reference_only 2; reject 0; records 118
 
 | # | Opportunity | Class | Use | Status | Score |
 |---:|---|---|---|---|---:|

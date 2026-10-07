@@ -1,0 +1,7977 @@
+{
+ "schema_version": 1,
+ "platinum": {
+  "textures_decoded": 7508,
+  "unique_exact": 2631,
+  "prop_models": 590,
+  "prop_texture_sets": 71,
+  "map_texture_sets": 77
+ },
+ "hgss_map_textures": {
+  "sets": 106,
+  "textures": 3659,
+  "unique_exact": 2100,
+  "identical_to_platinum": 191,
+  "near_match_only": 62,
+  "novel_unique": 1847,
+  "novel_pct": 88.0,
+  "novel_names_sample": [
+   "01yuka_14",
+   "02ragu_11",
+   "02ragu_12",
+   "03kabe_012",
+   "03kabe_15",
+   "04fuchi02",
+   "04wind_06",
+   "05fuchi03",
+   "06wind_04",
+   "07tatami_04",
+   "08kabe_02",
+   "10yuka_01",
+   "11wawind_02",
+   "11wawind_05",
+   "11wawind_06",
+   "12cloth_03",
+   "13stair_02",
+   "14cable_02",
+   "15counter_02",
+   "a12_gbb1",
+   "a12_gbb2",
+   "a12_gbb3",
+   "a12_gbb4",
+   "a17_gt01",
+   "aj_box01",
+   "aj_fl01",
+   "aji_f02",
+   "aji_f02_",
+   "aji_k01",
+   "aji_k03",
+   "aji_k05",
+   "aji_k06",
+   "aji_k07",
+   "aji_k09",
+   "aji_k10",
+   "aji_stair",
+   "aji_w01_",
+   "aka_ele_yuka",
+   "aka_glass_a",
+   "aka_glass_b",
+   "aka_glass_c",
+   "aka_wall_a",
+   "aka_wall_b",
+   "aka_wall_c",
+   "aka_yuka_a",
+   "aka_yuka_b",
+   "allpeak_pgs",
+   "allpeakgs",
+   "ar_01",
+   "ar_broken",
+   "ar_d_02",
+   "ar_d_ana",
+   "ar_d_annon1",
+   "ar_d_annon2",
+   "ar_d_annon3",
+   "ar_d_annon4",
+   "ar_d_annon5",
+   "ar_d_annon6",
+   "ar_d_ha",
+   "ar_d_hasira"
+  ]
+ },
+ "bm_field": {
+  "models": 340,
+  "decoded": 340,
+  "errors": 0,
+  "tris_total": 56437,
+  "with_any_novel_texture": 317,
+  "all_textures_identical_to_platinum": 21,
+  "no_texture": 1,
+  "rows": [
+   {
+    "name": "dmybox00",
+    "shapes": 1,
+    "tris": 12,
+    "extent": [
+     16.0,
+     16.0,
+     16.0
+    ],
+    "idx": 0,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "en_fs",
+    "shapes": 6,
+    "tris": 152,
+    "extent": [
+     82.0,
+     53.0,
+     51.0
+    ],
+    "idx": 1,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "en_pc",
+    "shapes": 4,
+    "tris": 256,
+    "extent": [
+     90.0,
+     58.5,
+     68.99
+    ],
+    "idx": 2,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "en_gate01",
+    "shapes": 5,
+    "tris": 222,
+    "extent": [
+     120.0,
+     80.4,
+     96.0
+    ],
+    "idx": 3,
+    "textures": 5,
+    "tex_novel": 2,
+    "tex_identical_pt": 3
+   },
+   {
+    "name": "en_gate02",
+    "shapes": 2,
+    "tris": 153,
+    "extent": [
+     76.04,
+     75.42,
+     48.0
+    ],
+    "idx": 4,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "en_gym",
+    "shapes": 4,
+    "tris": 308,
+    "extent": [
+     117.79,
+     68.99,
+     80.0
+    ],
+    "idx": 5,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "en_sekia",
+    "shapes": 4,
+    "tris": 203,
+    "extent": [
+     128.0,
+     83.69,
+     84.0
+    ],
+    "idx": 6,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "en_sekib",
+    "shapes": 5,
+    "tris": 221,
+    "extent": [
+     130.0,
+     83.69,
+     92.0
+    ],
+    "idx": 7,
+    "textures": 5,
+    "tex_novel": 3,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "en_yake",
+    "shapes": 5,
+    "tris": 398,
+    "extent": [
+     138.8,
+     98.25,
+     116.0
+    ],
+    "idx": 8,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "en_suzu",
+    "shapes": 5,
+    "tris": 838,
+    "extent": [
+     117.62,
+     471.94,
+     131.66
+    ],
+    "idx": 9,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "en_kabu",
+    "shapes": 5,
+    "tris": 274,
+    "extent": [
+     121.0,
+     94.0,
+     83.0
+    ],
+    "idx": 10,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "en_h01a",
+    "shapes": 4,
+    "tris": 196,
+    "extent": [
+     70.0,
+     67.2,
+     58.0
+    ],
+    "idx": 11,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "en_h01b",
+    "shapes": 4,
+    "tris": 192,
+    "extent": [
+     70.0,
+     67.2,
+     58.0
+    ],
+    "idx": 12,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "en_door1",
+    "shapes": 1,
+    "tris": 4,
+    "extent": [
+     16.89,
+     25.0,
+     2.0
+    ],
+    "idx": 13,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "en_door2",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     18.6,
+     29.0,
+     0.0
+    ],
+    "idx": 14,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "p_door",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     20.0,
+     25.0,
+     0.0
+    ],
+    "idx": 15,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "gym_door",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     21.66,
+     33.27,
+     4.0
+    ],
+    "idx": 16,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "en_door3",
+    "shapes": 2,
+    "tris": 16,
+    "extent": [
+     36.01,
+     32.0,
+     2.0
+    ],
+    "idx": 17,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "en_sp1",
+    "shapes": 4,
+    "tris": 82,
+    "extent": [
+     33.18,
+     24.55,
+     37.6
+    ],
+    "idx": 18,
+    "textures": 3,
+    "tex_novel": 3,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "en_sky",
+    "shapes": 4,
+    "tris": 77,
+    "extent": [
+     692.47,
+     674.94,
+     900.0
+    ],
+    "idx": 19,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "wk_hhouse",
+    "shapes": 4,
+    "tris": 180,
+    "extent": [
+     96.0,
+     89.02,
+     74.0
+    ],
+    "idx": 20,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "wk_labo",
+    "shapes": 4,
+    "tris": 292,
+    "extent": [
+     117.23,
+     88.84,
+     70.0
+    ],
+    "idx": 21,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "wk_h01",
+    "shapes": 3,
+    "tris": 119,
+    "extent": [
+     76.0,
+     68.85,
+     58.0
+    ],
+    "idx": 22,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "wk_h02",
+    "shapes": 3,
+    "tris": 119,
+    "extent": [
+     76.0,
+     72.85,
+     58.0
+    ],
+    "idx": 23,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "wk_door1",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     20.0,
+     24.98,
+     2.06
+    ],
+    "idx": 24,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "wk_door2",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     20.0,
+     24.98,
+     2.06
+    ],
+    "idx": 25,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "wk_door3",
+    "shapes": 2,
+    "tris": 16,
+    "extent": [
+     20.0,
+     24.98,
+     2.06
+    ],
+    "idx": 26,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "wk_sp1",
+    "shapes": 3,
+    "tris": 59,
+    "extent": [
+     35.66,
+     89.0,
+     42.27
+    ],
+    "idx": 27,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "wind",
+    "shapes": 3,
+    "tris": 154,
+    "extent": [
+     765.2,
+     0.22,
+     740.39
+    ],
+    "idx": 28,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "board_a",
+    "shapes": 3,
+    "tris": 22,
+    "extent": [
+     16.0,
+     25.75,
+     8.12
+    ],
+    "idx": 29,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "board_b",
+    "shapes": 3,
+    "tris": 44,
+    "extent": [
+     16.0,
+     29.38,
+     13.0
+    ],
+    "idx": 30,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "board_c",
+    "shapes": 2,
+    "tris": 22,
+    "extent": [
+     19.0,
+     22.0,
+     12.0
+    ],
+    "idx": 31,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "board_d",
+    "shapes": 3,
+    "tris": 48,
+    "extent": [
+     24.0,
+     39.38,
+     7.0
+    ],
+    "idx": 32,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "board_e",
+    "shapes": 3,
+    "tris": 52,
+    "extent": [
+     18.0,
+     31.75,
+     9.0
+    ],
+    "idx": 33,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "board_f",
+    "shapes": 3,
+    "tris": 34,
+    "extent": [
+     17.0,
+     27.0,
+     7.5
+    ],
+    "idx": 34,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "gate_a",
+    "shapes": 5,
+    "tris": 183,
+    "extent": [
+     100.0,
+     80.4,
+     124.09
+    ],
+    "idx": 35,
+    "textures": 5,
+    "tex_novel": 2,
+    "tex_identical_pt": 3
+   },
+   {
+    "name": "gate_b",
+    "shapes": 5,
+    "tris": 222,
+    "extent": [
+     120.0,
+     80.4,
+     96.0
+    ],
+    "idx": 36,
+    "textures": 5,
+    "tex_novel": 2,
+    "tex_identical_pt": 3
+   },
+   {
+    "name": "yo_h01",
+    "shapes": 3,
+    "tris": 138,
+    "extent": [
+     75.0,
+     60.54,
+     58.0
+    ],
+    "idx": 37,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "yo_h02",
+    "shapes": 4,
+    "tris": 128,
+    "extent": [
+     75.0,
+     75.42,
+     58.0
+    ],
+    "idx": 38,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "fs",
+    "shapes": 6,
+    "tris": 152,
+    "extent": [
+     82.0,
+     53.0,
+     51.0
+    ],
+    "idx": 39,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "pc",
+    "shapes": 4,
+    "tris": 256,
+    "extent": [
+     90.0,
+     58.5,
+     68.99
+    ],
+    "idx": 40,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "kn_h01",
+    "shapes": 3,
+    "tris": 154,
+    "extent": [
+     75.0,
+     65.08,
+     58.0
+    ],
+    "idx": 41,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "kn_gate",
+    "shapes": 5,
+    "tris": 302,
+    "extent": [
+     111.0,
+     67.07,
+     166.07
+    ],
+    "idx": 42,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "uzushio",
+    "shapes": 2,
+    "tris": 18,
+    "extent": [
+     80.0,
+     15.68,
+     69.38
+    ],
+    "idx": 43,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "kk_gym",
+    "shapes": 4,
+    "tris": 308,
+    "extent": [
+     117.79,
+     68.99,
+     80.0
+    ],
+    "idx": 44,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "hw_gym",
+    "shapes": 4,
+    "tris": 308,
+    "extent": [
+     117.79,
+     68.99,
+     80.0
+    ],
+    "idx": 45,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "hw_h01",
+    "shapes": 5,
+    "tris": 122,
+    "extent": [
+     77.23,
+     78.16,
+     65.57
+    ],
+    "idx": 46,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "hw_h02",
+    "shapes": 4,
+    "tris": 133,
+    "extent": [
+     79.09,
+     82.18,
+     58.0
+    ],
+    "idx": 47,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "hw_ido",
+    "shapes": 4,
+    "tris": 78,
+    "extent": [
+     48.0,
+     31.46,
+     51.85
+    ],
+    "idx": 48,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "time_anime",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     64.0,
+     64.0,
+     0.0
+    ],
+    "idx": 49,
+    "textures": 4,
+    "tex_novel": 4,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "yo_door1",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     20.0,
+     24.98,
+     2.06
+    ],
+    "idx": 50,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "yo_sp1",
+    "shapes": 1,
+    "tris": 36,
+    "extent": [
+     96.0,
+     24.68,
+     56.22
+    ],
+    "idx": 51,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "yo_sp2",
+    "shapes": 3,
+    "tris": 20,
+    "extent": [
+     18.0,
+     13.0,
+     34.0
+    ],
+    "idx": 52,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "r30_h01",
+    "shapes": 4,
+    "tris": 157,
+    "extent": [
+     76.0,
+     70.94,
+     58.0
+    ],
+    "idx": 53,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "kk_mada",
+    "shapes": 5,
+    "tris": 466,
+    "extent": [
+     117.62,
+     238.25,
+     131.66
+    ],
+    "idx": 54,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "kk_tourou",
+    "shapes": 4,
+    "tris": 48,
+    "extent": [
+     20.4,
+     31.7,
+     20.46
+    ],
+    "idx": 55,
+    "textures": 5,
+    "tex_novel": 4,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "kk_h01",
+    "shapes": 4,
+    "tris": 165,
+    "extent": [
+     76.0,
+     76.0,
+     58.0
+    ],
+    "idx": 56,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "kk_door1",
+    "shapes": 1,
+    "tris": 4,
+    "extent": [
+     17.89,
+     26.0,
+     2.0
+    ],
+    "idx": 57,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "kk_school",
+    "shapes": 4,
+    "tris": 457,
+    "extent": [
+     158.71,
+     114.47,
+     78.6
+    ],
+    "idx": 58,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "kk_bridge",
+    "shapes": 1,
+    "tris": 184,
+    "extent": [
+     64.0,
+     27.0,
+     102.0
+    ],
+    "idx": 59,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "kk_door2",
+    "shapes": 2,
+    "tris": 16,
+    "extent": [
+     28.0,
+     26.0,
+     3.0
+    ],
+    "idx": 60,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "kk_door3",
+    "shapes": 1,
+    "tris": 4,
+    "extent": [
+     19.13,
+     23.88,
+     2.0
+    ],
+    "idx": 61,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "kk_pc",
+    "shapes": 4,
+    "tris": 256,
+    "extent": [
+     90.0,
+     58.5,
+     68.99
+    ],
+    "idx": 62,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "kk_fs",
+    "shapes": 6,
+    "tris": 152,
+    "extent": [
+     82.0,
+     53.0,
+     51.0
+    ],
+    "idx": 63,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "d15_obj",
+    "shapes": 3,
+    "tris": 28,
+    "extent": [
+     32.0,
+     37.71,
+     24.68
+    ],
+    "idx": 64,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "d15_pillar",
+    "shapes": 3,
+    "tris": 148,
+    "extent": [
+     34.0,
+     224.0,
+     34.0
+    ],
+    "idx": 65,
+    "textures": 3,
+    "tex_novel": 3,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "d15_stairup",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     64.0,
+     55.43,
+     32.0
+    ],
+    "idx": 66,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "d15_stairdw",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     64.0,
+     41.41,
+     2.99
+    ],
+    "idx": 67,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "d15_light",
+    "shapes": 2,
+    "tris": 20,
+    "extent": [
+     48.0,
+     64.0,
+     1.0
+    ],
+    "idx": 68,
+    "textures": 9,
+    "tex_novel": 9,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "dun_stairup",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     64.0,
+     55.43,
+     32.0
+    ],
+    "idx": 69,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "dun_stairdw",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     64.0,
+     41.41,
+     2.99
+    ],
+    "idx": 70,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "uba_hokora",
+    "shapes": 2,
+    "tris": 140,
+    "extent": [
+     38.85,
+     55.3,
+     37.6
+    ],
+    "idx": 71,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "uba_eda",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     32.0,
+     0.0,
+     36.0
+    ],
+    "idx": 72,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "yado_light",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     96.0,
+     104.0,
+     0.0
+    ],
+    "idx": 73,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ko_chika",
+    "shapes": 4,
+    "tris": 123,
+    "extent": [
+     68.0,
+     43.56,
+     46.0
+    ],
+    "idx": 74,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ko_cycle",
+    "shapes": 5,
+    "tris": 190,
+    "extent": [
+     83.86,
+     67.18,
+     50.41
+    ],
+    "idx": 75,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ko_depart",
+    "shapes": 6,
+    "tris": 313,
+    "extent": [
+     92.17,
+     113.25,
+     78.6
+    ],
+    "idx": 76,
+    "textures": 5,
+    "tex_novel": 3,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "ko_flower",
+    "shapes": 3,
+    "tris": 165,
+    "extent": [
+     72.0,
+     69.3,
+     58.0
+    ],
+    "idx": 77,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ko_funsui",
+    "shapes": 4,
+    "tris": 240,
+    "extent": [
+     53.53,
+     39.64,
+     53.53
+    ],
+    "idx": 78,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ko_game",
+    "shapes": 6,
+    "tris": 239,
+    "extent": [
+     114.71,
+     69.08,
+     67.0
+    ],
+    "idx": 79,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ko_gym",
+    "shapes": 4,
+    "tris": 308,
+    "extent": [
+     117.79,
+     68.99,
+     80.0
+    ],
+    "idx": 80,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ko_h01",
+    "shapes": 3,
+    "tris": 104,
+    "extent": [
+     59.97,
+     50.57,
+     48.15
+    ],
+    "idx": 81,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "ko_h02",
+    "shapes": 3,
+    "tris": 136,
+    "extent": [
+     72.0,
+     67.82,
+     60.97
+    ],
+    "idx": 82,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "ko_h03",
+    "shapes": 7,
+    "tris": 252,
+    "extent": [
+     85.04,
+     101.37,
+     72.01
+    ],
+    "idx": 83,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "ko_foot",
+    "shapes": 1,
+    "tris": 30,
+    "extent": [
+     24.0,
+     42.0,
+     64.0
+    ],
+    "idx": 84,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ko_overpass",
+    "shapes": 1,
+    "tris": 106,
+    "extent": [
+     128.0,
+     25.53,
+     72.0
+    ],
+    "idx": 85,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ko_radio",
+    "shapes": 4,
+    "tris": 312,
+    "extent": [
+     129.35,
+     197.07,
+     121.82
+    ],
+    "idx": 86,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ko_seimei",
+    "shapes": 3,
+    "tris": 134,
+    "extent": [
+     80.54,
+     86.26,
+     64.75
+    ],
+    "idx": 87,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "ko_station",
+    "shapes": 4,
+    "tris": 400,
+    "extent": [
+     146.71,
+     113.75,
+     105.61
+    ],
+    "idx": 88,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ko_wifi",
+    "shapes": 7,
+    "tris": 527,
+    "extent": [
+     165.0,
+     340.0,
+     113.14
+    ],
+    "idx": 89,
+    "textures": 7,
+    "tex_novel": 5,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "snap_camera",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     32.0,
+     32.0,
+     0.0
+    ],
+    "idx": 90,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "hw_door1",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     18.0,
+     30.0,
+     2.0
+    ],
+    "idx": 91,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "hw_door2",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     20.56,
+     26.28,
+     2.0
+    ],
+    "idx": 92,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "hw_maki",
+    "shapes": 2,
+    "tris": 31,
+    "extent": [
+     23.18,
+     12.27,
+     21.18
+    ],
+    "idx": 93,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ko_door1",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     20.0,
+     30.3,
+     2.06
+    ],
+    "idx": 94,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ko_light",
+    "shapes": 3,
+    "tris": 81,
+    "extent": [
+     22.6,
+     49.57,
+     19.54
+    ],
+    "idx": 95,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ko_flag",
+    "shapes": 2,
+    "tris": 43,
+    "extent": [
+     32.0,
+     51.01,
+     19.27
+    ],
+    "idx": 96,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ko_arch",
+    "shapes": 2,
+    "tris": 143,
+    "extent": [
+     101.54,
+     79.95,
+     45.62
+    ],
+    "idx": 97,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ko_tetra",
+    "shapes": 2,
+    "tris": 50,
+    "extent": [
+     33.52,
+     25.18,
+     20.65
+    ],
+    "idx": 98,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ko_bell",
+    "shapes": 2,
+    "tris": 104,
+    "extent": [
+     33.69,
+     35.2,
+     14.58
+    ],
+    "idx": 99,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "hw_kemuri",
+    "shapes": 5,
+    "tris": 18,
+    "extent": [
+     32.0,
+     40.62,
+     0.0
+    ],
+    "idx": 100,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ko_h03x",
+    "shapes": 3,
+    "tris": 174,
+    "extent": [
+     85.04,
+     101.37,
+     72.01
+    ],
+    "idx": 101,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "tn_h01",
+    "shapes": 4,
+    "tris": 141,
+    "extent": [
+     74.0,
+     67.0,
+     58.0
+    ],
+    "idx": 102,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "tn_door1",
+    "shapes": 1,
+    "tris": 4,
+    "extent": [
+     20.0,
+     24.98,
+     2.06
+    ],
+    "idx": 103,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "tn_pharmacy",
+    "shapes": 5,
+    "tris": 144,
+    "extent": [
+     74.0,
+     68.33,
+     58.0
+    ],
+    "idx": 104,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "tn_photo",
+    "shapes": 6,
+    "tris": 145,
+    "extent": [
+     79.76,
+     75.0,
+     58.0
+    ],
+    "idx": 105,
+    "textures": 5,
+    "tex_novel": 3,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "tn_dried",
+    "shapes": 2,
+    "tris": 58,
+    "extent": [
+     38.47,
+     28.89,
+     23.59
+    ],
+    "idx": 106,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "tn_gymbase",
+    "shapes": 1,
+    "tris": 32,
+    "extent": [
+     112.0,
+     40.0,
+     104.0
+    ],
+    "idx": 107,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "tn_gym",
+    "shapes": 4,
+    "tris": 308,
+    "extent": [
+     117.79,
+     68.99,
+     80.0
+    ],
+    "idx": 108,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "as_h01",
+    "shapes": 3,
+    "tris": 185,
+    "extent": [
+     75.66,
+     72.5,
+     53.69
+    ],
+    "idx": 109,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "as_toudai",
+    "shapes": 7,
+    "tris": 361,
+    "extent": [
+     130.27,
+     208.63,
+     129.29
+    ],
+    "idx": 110,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "as_gym",
+    "shapes": 4,
+    "tris": 308,
+    "extent": [
+     117.79,
+     68.99,
+     80.0
+    ],
+    "idx": 111,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "r39_moumou",
+    "shapes": 5,
+    "tris": 322,
+    "extent": [
+     143.21,
+     77.36,
+     68.41
+    ],
+    "idx": 112,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "r39_naya",
+    "shapes": 2,
+    "tris": 91,
+    "extent": [
+     65.26,
+     113.6,
+     71.37
+    ],
+    "idx": 113,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "r39_door1",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     23.52,
+     22.9,
+     2.06
+    ],
+    "idx": 114,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "as_bench",
+    "shapes": 3,
+    "tris": 76,
+    "extent": [
+     72.06,
+     57.98,
+     42.93
+    ],
+    "idx": 115,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "tn_door2",
+    "shapes": 3,
+    "tris": 20,
+    "extent": [
+     20.0,
+     24.98,
+     2.06
+    ],
+    "idx": 116,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "obj_yaketa",
+    "shapes": 3,
+    "tris": 78,
+    "extent": [
+     20.0,
+     34.59,
+     23.0
+    ],
+    "idx": 117,
+    "textures": 3,
+    "tex_novel": 0,
+    "tex_identical_pt": 3
+   },
+   {
+    "name": "as_restaurant",
+    "shapes": 5,
+    "tris": 156,
+    "extent": [
+     76.29,
+     71.91,
+     49.67
+    ],
+    "idx": 118,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "as_yacht",
+    "shapes": 3,
+    "tris": 137,
+    "extent": [
+     98.87,
+     98.79,
+     46.87
+    ],
+    "idx": 119,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "as_door1",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     20.45,
+     25.24,
+     2.06
+    ],
+    "idx": 120,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "as_hata",
+    "shapes": 6,
+    "tris": 120,
+    "extent": [
+     168.51,
+     80.84,
+     41.01
+    ],
+    "idx": 121,
+    "textures": 5,
+    "tex_novel": 4,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "toudai_sky",
+    "shapes": 4,
+    "tris": 152,
+    "extent": [
+     374.41,
+     4.0,
+     291.2
+    ],
+    "idx": 122,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "tou3f_back",
+    "shapes": 21,
+    "tris": 558,
+    "extent": [
+     928.0,
+     384.0,
+     4.0
+    ],
+    "idx": 123,
+    "textures": 21,
+    "tex_novel": 21,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ele_door_dun",
+    "shapes": 1,
+    "tris": 4,
+    "extent": [
+     28.0,
+     28.0,
+     0.0
+    ],
+    "idx": 124,
+    "textures": 6,
+    "tex_novel": 6,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "map15_01kokage",
+    "shapes": 1,
+    "tris": 154,
+    "extent": [
+     420.8,
+     0.31,
+     444.8
+    ],
+    "idx": 125,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "fall03_01",
+    "shapes": 11,
+    "tris": 46,
+    "extent": [
+     50.13,
+     18.44,
+     56.05
+    ],
+    "idx": 126,
+    "textures": 12,
+    "tex_novel": 11,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "map15_02kokage",
+    "shapes": 1,
+    "tris": 92,
+    "extent": [
+     420.8,
+     0.31,
+     252.8
+    ],
+    "idx": 127,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "map16_01kokage",
+    "shapes": 1,
+    "tris": 210,
+    "extent": [
+     512.0,
+     0.25,
+     415.98
+    ],
+    "idx": 128,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "map16_02kokage",
+    "shapes": 1,
+    "tris": 24,
+    "extent": [
+     105.59,
+     0.31,
+     252.8
+    ],
+    "idx": 129,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "map17_01kokage",
+    "shapes": 1,
+    "tris": 16,
+    "extent": [
+     64.0,
+     0.24,
+     128.0
+    ],
+    "idx": 130,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "d_uzushio",
+    "shapes": 2,
+    "tris": 18,
+    "extent": [
+     80.0,
+     15.68,
+     69.38
+    ],
+    "idx": 131,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "fu_h01",
+    "shapes": 5,
+    "tris": 189,
+    "extent": [
+     72.0,
+     70.25,
+     60.5
+    ],
+    "idx": 132,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "fu_door1",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     21.45,
+     24.04,
+     2.0
+    ],
+    "idx": 133,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ch_h01",
+    "shapes": 4,
+    "tris": 132,
+    "extent": [
+     74.0,
+     69.39,
+     60.0
+    ],
+    "idx": 134,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "ch_door1",
+    "shapes": 1,
+    "tris": 4,
+    "extent": [
+     20.0,
+     24.98,
+     2.06
+    ],
+    "idx": 135,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "antena_tree",
+    "shapes": 2,
+    "tris": 4,
+    "extent": [
+     64.0,
+     49.34,
+     46.77
+    ],
+    "idx": 136,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "antena_tree_",
+    "shapes": 2,
+    "tris": 4,
+    "extent": [
+     64.0,
+     49.34,
+     46.77
+    ],
+    "idx": 137,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ch_gym",
+    "shapes": 4,
+    "tris": 308,
+    "extent": [
+     117.79,
+     68.99,
+     80.0
+    ],
+    "idx": 138,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "fu_gym",
+    "shapes": 4,
+    "tris": 308,
+    "extent": [
+     117.79,
+     68.99,
+     80.0
+    ],
+    "idx": 139,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "d17_tmpl",
+    "shapes": 7,
+    "tris": 2569,
+    "extent": [
+     177.78,
+     130.17,
+     289.59
+    ],
+    "idx": 140,
+    "textures": 6,
+    "tex_novel": 6,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "d17_tpdr",
+    "shapes": 1,
+    "tris": 4,
+    "extent": [
+     20.0,
+     24.98,
+     2.06
+    ],
+    "idx": 141,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "d22_mizu",
+    "shapes": 3,
+    "tris": 88,
+    "extent": [
+     36.65,
+     33.71,
+     31.74
+    ],
+    "idx": 142,
+    "textures": 5,
+    "tex_novel": 4,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "d22_funsui",
+    "shapes": 9,
+    "tris": 430,
+    "extent": [
+     214.91,
+     65.64,
+     214.91
+    ],
+    "idx": 143,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "fall_toujou",
+    "shapes": 11,
+    "tris": 62,
+    "extent": [
+     96.0,
+     146.44,
+     71.66
+    ],
+    "idx": 144,
+    "textures": 12,
+    "tex_novel": 11,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "pke_obj01",
+    "shapes": 3,
+    "tris": 78,
+    "extent": [
+     26.0,
+     43.0,
+     26.0
+    ],
+    "idx": 145,
+    "textures": 3,
+    "tex_novel": 0,
+    "tex_identical_pt": 3
+   },
+   {
+    "name": "pke_league",
+    "shapes": 5,
+    "tris": 396,
+    "extent": [
+     200.0,
+     120.0,
+     182.0
+    ],
+    "idx": 146,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "pke_gate",
+    "shapes": 2,
+    "tris": 111,
+    "extent": [
+     131.28,
+     82.04,
+     52.91
+    ],
+    "idx": 147,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "pke_flower",
+    "shapes": 1,
+    "tris": 404,
+    "extent": [
+     448.0,
+     56.67,
+     396.22
+    ],
+    "idx": 148,
+    "textures": 3,
+    "tex_novel": 3,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "pke_door1",
+    "shapes": 1,
+    "tris": 4,
+    "extent": [
+     23.72,
+     22.75,
+     0.0
+    ],
+    "idx": 149,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "kn_door1",
+    "shapes": 1,
+    "tris": 12,
+    "extent": [
+     16.0,
+     24.98,
+     2.06
+    ],
+    "idx": 150,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "kn_door2",
+    "shapes": 4,
+    "tris": 24,
+    "extent": [
+     32.0,
+     24.98,
+     2.06
+    ],
+    "idx": 151,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "fall_suri",
+    "shapes": 11,
+    "tris": 46,
+    "extent": [
+     250.52,
+     162.44,
+     66.72
+    ],
+    "idx": 152,
+    "textures": 12,
+    "tex_novel": 11,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ar_study",
+    "shapes": 4,
+    "tris": 110,
+    "extent": [
+     74.0,
+     51.0,
+     56.0
+    ],
+    "idx": 153,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "ar_center",
+    "shapes": 5,
+    "tris": 241,
+    "extent": [
+     108.0,
+     73.9,
+     88.42
+    ],
+    "idx": 154,
+    "textures": 5,
+    "tex_novel": 4,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ar_shrine1",
+    "shapes": 5,
+    "tris": 183,
+    "extent": [
+     112.0,
+     69.0,
+     98.0
+    ],
+    "idx": 155,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ar_shrine2",
+    "shapes": 4,
+    "tris": 173,
+    "extent": [
+     101.0,
+     69.0,
+     98.0
+    ],
+    "idx": 156,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ar_shrine3",
+    "shapes": 4,
+    "tris": 191,
+    "extent": [
+     92.0,
+     71.0,
+     104.42
+    ],
+    "idx": 157,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ar_shrine1_2",
+    "shapes": 5,
+    "tris": 197,
+    "extent": [
+     110.0,
+     69.0,
+     112.42
+    ],
+    "idx": 158,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ar_shrine1_3",
+    "shapes": 5,
+    "tris": 211,
+    "extent": [
+     103.0,
+     69.0,
+     112.42
+    ],
+    "idx": 159,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ar_shrine1_4",
+    "shapes": 5,
+    "tris": 177,
+    "extent": [
+     103.0,
+     69.0,
+     104.0
+    ],
+    "idx": 160,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ar_shrine1_5",
+    "shapes": 5,
+    "tris": 209,
+    "extent": [
+     110.0,
+     69.0,
+     118.42
+    ],
+    "idx": 161,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ar_shrine1_6",
+    "shapes": 5,
+    "tris": 189,
+    "extent": [
+     101.0,
+     69.0,
+     118.42
+    ],
+    "idx": 162,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ar_shrine1_7",
+    "shapes": 4,
+    "tris": 175,
+    "extent": [
+     110.0,
+     69.0,
+     104.0
+    ],
+    "idx": 163,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ar_study_door",
+    "shapes": 1,
+    "tris": 4,
+    "extent": [
+     20.0,
+     24.97,
+     2.06
+    ],
+    "idx": 164,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "r34_educate",
+    "shapes": 5,
+    "tris": 353,
+    "extent": [
+     132.0,
+     68.85,
+     93.48
+    ],
+    "idx": 165,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "r34_door1",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     20.0,
+     26.97,
+     2.06
+    ],
+    "idx": 166,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "as_aquagate",
+    "shapes": 9,
+    "tris": 172,
+    "extent": [
+     158.0,
+     74.0,
+     126.0
+    ],
+    "idx": 167,
+    "textures": 7,
+    "tex_novel": 5,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "aqua_go",
+    "shapes": 8,
+    "tris": 613,
+    "extent": [
+     242.41,
+     99.96,
+     120.9
+    ],
+    "idx": 168,
+    "textures": 7,
+    "tex_novel": 7,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "object_suzu",
+    "shapes": 3,
+    "tris": 78,
+    "extent": [
+     32.0,
+     47.71,
+     24.0
+    ],
+    "idx": 169,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "fall_r47",
+    "shapes": 11,
+    "tris": 46,
+    "extent": [
+     96.0,
+     162.44,
+     66.72
+    ],
+    "idx": 170,
+    "textures": 12,
+    "tex_novel": 11,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "msg_gtmn",
+    "shapes": 9,
+    "tris": 392,
+    "extent": [
+     124.2,
+     82.07,
+     158.0
+    ],
+    "idx": 171,
+    "textures": 6,
+    "tex_novel": 5,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "msg_gtob",
+    "shapes": 4,
+    "tris": 473,
+    "extent": [
+     228.83,
+     104.53,
+     46.59
+    ],
+    "idx": 172,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "msg_tn01",
+    "shapes": 4,
+    "tris": 345,
+    "extent": [
+     107.0,
+     48.25,
+     41.9
+    ],
+    "idx": 173,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "msg_tn02",
+    "shapes": 6,
+    "tris": 535,
+    "extent": [
+     123.0,
+     48.25,
+     41.9
+    ],
+    "idx": 174,
+    "textures": 5,
+    "tex_novel": 4,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "msg_tn03",
+    "shapes": 6,
+    "tris": 473,
+    "extent": [
+     126.0,
+     48.27,
+     41.9
+    ],
+    "idx": 175,
+    "textures": 5,
+    "tex_novel": 4,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "msg_tn04",
+    "shapes": 6,
+    "tris": 411,
+    "extent": [
+     123.0,
+     48.27,
+     41.9
+    ],
+    "idx": 176,
+    "textures": 5,
+    "tex_novel": 4,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "warp_j01",
+    "shapes": 2,
+    "tris": 10,
+    "extent": [
+     19.06,
+     10.83,
+     23.15
+    ],
+    "idx": 177,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "poke_c_bench",
+    "shapes": 3,
+    "tris": 32,
+    "extent": [
+     31.67,
+     19.0,
+     19.31
+    ],
+    "idx": 178,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "poke_c_dome",
+    "shapes": 4,
+    "tris": 226,
+    "extent": [
+     280.8,
+     75.56,
+     204.94
+    ],
+    "idx": 179,
+    "textures": 5,
+    "tex_novel": 4,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "poke_c_flower",
+    "shapes": 5,
+    "tris": 172,
+    "extent": [
+     216.0,
+     42.47,
+     56.0
+    ],
+    "idx": 180,
+    "textures": 4,
+    "tex_novel": 4,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "poke_c_gate",
+    "shapes": 5,
+    "tris": 333,
+    "extent": [
+     292.0,
+     80.41,
+     124.09
+    ],
+    "idx": 181,
+    "textures": 5,
+    "tex_novel": 2,
+    "tex_identical_pt": 3
+   },
+   {
+    "name": "poke_c_light",
+    "shapes": 4,
+    "tris": 85,
+    "extent": [
+     48.67,
+     91.93,
+     42.31
+    ],
+    "idx": 182,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "poke_c_mon",
+    "shapes": 4,
+    "tris": 276,
+    "extent": [
+     37.91,
+     72.09,
+     37.86
+    ],
+    "idx": 183,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "poke_c_obj",
+    "shapes": 3,
+    "tris": 491,
+    "extent": [
+     174.48,
+     79.0,
+     194.84
+    ],
+    "idx": 184,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "sg_door_op",
+    "shapes": 4,
+    "tris": 36,
+    "extent": [
+     32.0,
+     24.98,
+     2.06
+    ],
+    "idx": 185,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "d17_light",
+    "shapes": 2,
+    "tris": 20,
+    "extent": [
+     48.0,
+     64.0,
+     1.0
+    ],
+    "idx": 186,
+    "textures": 9,
+    "tex_novel": 9,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "sroof_back",
+    "shapes": 21,
+    "tris": 1142,
+    "extent": [
+     1088.0,
+     1408.0,
+     328.0
+    ],
+    "idx": 187,
+    "textures": 21,
+    "tex_novel": 21,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ku_gym",
+    "shapes": 1,
+    "tris": 14,
+    "extent": [
+     112.0,
+     62.0,
+     56.0
+    ],
+    "idx": 188,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "saf_go01",
+    "shapes": 2,
+    "tris": 57,
+    "extent": [
+     17.4,
+     13.2,
+     15.45
+    ],
+    "idx": 189,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "saf_go02",
+    "shapes": 2,
+    "tris": 26,
+    "extent": [
+     24.77,
+     13.24,
+     16.0
+    ],
+    "idx": 190,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "saf_go03",
+    "shapes": 2,
+    "tris": 26,
+    "extent": [
+     24.77,
+     13.24,
+     16.0
+    ],
+    "idx": 191,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "saf_to01",
+    "shapes": 2,
+    "tris": 4,
+    "extent": [
+     32.0,
+     16.0,
+     36.86
+    ],
+    "idx": 192,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "saf_to02",
+    "shapes": 2,
+    "tris": 44,
+    "extent": [
+     27.27,
+     15.33,
+     22.27
+    ],
+    "idx": 193,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "saf_to03",
+    "shapes": 2,
+    "tris": 59,
+    "extent": [
+     30.67,
+     9.92,
+     25.68
+    ],
+    "idx": 194,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "saf_ro01",
+    "shapes": 2,
+    "tris": 44,
+    "extent": [
+     18.68,
+     14.33,
+     15.51
+    ],
+    "idx": 195,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "saf_ro02",
+    "shapes": 2,
+    "tris": 40,
+    "extent": [
+     32.22,
+     25.09,
+     28.34
+    ],
+    "idx": 196,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "saf_ro03",
+    "shapes": 2,
+    "tris": 40,
+    "extent": [
+     32.74,
+     21.23,
+     28.18
+    ],
+    "idx": 197,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "saf_wo01",
+    "shapes": 2,
+    "tris": 48,
+    "extent": [
+     32.46,
+     3.19,
+     32.0
+    ],
+    "idx": 198,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "saf_wo02",
+    "shapes": 4,
+    "tris": 51,
+    "extent": [
+     27.0,
+     22.91,
+     27.3
+    ],
+    "idx": 199,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "saf_wo03",
+    "shapes": 3,
+    "tris": 42,
+    "extent": [
+     26.63,
+     31.6,
+     25.41
+    ],
+    "idx": 200,
+    "textures": 5,
+    "tex_novel": 4,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "saf_eo01",
+    "shapes": 2,
+    "tris": 44,
+    "extent": [
+     34.0,
+     9.0,
+     13.0
+    ],
+    "idx": 201,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "saf_eo02",
+    "shapes": 2,
+    "tris": 52,
+    "extent": [
+     16.0,
+     11.66,
+     10.0
+    ],
+    "idx": 202,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "saf_eo03",
+    "shapes": 2,
+    "tris": 52,
+    "extent": [
+     9.0,
+     11.66,
+     16.0
+    ],
+    "idx": 203,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "saf_eo04",
+    "shapes": 2,
+    "tris": 60,
+    "extent": [
+     32.0,
+     11.66,
+     8.0
+    ],
+    "idx": 204,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "saf_eo05",
+    "shapes": 2,
+    "tris": 60,
+    "extent": [
+     10.0,
+     11.66,
+     32.0
+    ],
+    "idx": 205,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "saf_eo06",
+    "shapes": 2,
+    "tris": 22,
+    "extent": [
+     18.0,
+     31.75,
+     8.12
+    ],
+    "idx": 206,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "saf_eo07m",
+    "shapes": 3,
+    "tris": 55,
+    "extent": [
+     32.0,
+     33.0,
+     33.36
+    ],
+    "idx": 207,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "saf_eo07f",
+    "shapes": 3,
+    "tris": 55,
+    "extent": [
+     32.0,
+     33.0,
+     33.36
+    ],
+    "idx": 208,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "saf_eo08m",
+    "shapes": 2,
+    "tris": 43,
+    "extent": [
+     28.88,
+     67.01,
+     19.27
+    ],
+    "idx": 209,
+    "textures": 4,
+    "tex_novel": 4,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "saf_eo08f",
+    "shapes": 2,
+    "tris": 43,
+    "extent": [
+     28.88,
+     67.01,
+     19.27
+    ],
+    "idx": 210,
+    "textures": 4,
+    "tex_novel": 4,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "saf_eo09",
+    "shapes": 2,
+    "tris": 51,
+    "extent": [
+     22.6,
+     49.57,
+     19.28
+    ],
+    "idx": 211,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "saf_eo10",
+    "shapes": 2,
+    "tris": 28,
+    "extent": [
+     16.88,
+     30.66,
+     9.49
+    ],
+    "idx": 212,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "saf_eo11",
+    "shapes": 2,
+    "tris": 28,
+    "extent": [
+     16.88,
+     30.66,
+     9.49
+    ],
+    "idx": 213,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "saf_eo12",
+    "shapes": 2,
+    "tris": 42,
+    "extent": [
+     16.0,
+     12.0,
+     16.0
+    ],
+    "idx": 214,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "kbc_h01",
+    "shapes": 4,
+    "tris": 169,
+    "extent": [
+     72.0,
+     47.48,
+     58.0
+    ],
+    "idx": 215,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "kbc_h02",
+    "shapes": 3,
+    "tris": 182,
+    "extent": [
+     72.0,
+     47.48,
+     58.0
+    ],
+    "idx": 216,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "kbc_love",
+    "shapes": 4,
+    "tris": 176,
+    "extent": [
+     72.06,
+     63.0,
+     74.0
+    ],
+    "idx": 217,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "kbc_port",
+    "shapes": 5,
+    "tris": 441,
+    "extent": [
+     133.0,
+     111.0,
+     112.0
+    ],
+    "idx": 218,
+    "textures": 5,
+    "tex_novel": 4,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "kbc_gym",
+    "shapes": 7,
+    "tris": 277,
+    "extent": [
+     117.51,
+     60.53,
+     75.78
+    ],
+    "idx": 219,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "gym_door_kn",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     21.66,
+     33.27,
+     4.0
+    ],
+    "idx": 220,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "kbc_dr01",
+    "shapes": 1,
+    "tris": 4,
+    "extent": [
+     20.0,
+     24.97,
+     2.06
+    ],
+    "idx": 221,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "kbc_dr02",
+    "shapes": 4,
+    "tris": 36,
+    "extent": [
+     32.0,
+     29.36,
+     2.06
+    ],
+    "idx": 222,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "kbc_sl",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     32.0,
+     27.71,
+     16.0
+    ],
+    "idx": 223,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "poke_c_door",
+    "shapes": 2,
+    "tris": 40,
+    "extent": [
+     56.39,
+     31.0,
+     6.17
+    ],
+    "idx": 224,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "kbc_dr03",
+    "shapes": 1,
+    "tris": 4,
+    "extent": [
+     20.0,
+     24.97,
+     2.06
+    ],
+    "idx": 225,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "poke_c_dome2",
+    "shapes": 12,
+    "tris": 889,
+    "extent": [
+     200.0,
+     189.02,
+     212.26
+    ],
+    "idx": 226,
+    "textures": 6,
+    "tex_novel": 5,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "en_light",
+    "shapes": 4,
+    "tris": 42,
+    "extent": [
+     14.4,
+     30.57,
+     17.7
+    ],
+    "idx": 227,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "d36_00_00",
+    "shapes": 10,
+    "tris": 498,
+    "extent": [
+     512.0,
+     9.58,
+     512.0
+    ],
+    "idx": 228,
+    "textures": 19,
+    "tex_novel": 18,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "d36_00_01",
+    "shapes": 9,
+    "tris": 402,
+    "extent": [
+     512.0,
+     9.58,
+     528.0
+    ],
+    "idx": 229,
+    "textures": 17,
+    "tex_novel": 16,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "d36_00_02",
+    "shapes": 7,
+    "tris": 122,
+    "extent": [
+     512.0,
+     0.0,
+     512.0
+    ],
+    "idx": 230,
+    "textures": 13,
+    "tex_novel": 12,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "d36_01_00",
+    "shapes": 6,
+    "tris": 154,
+    "extent": [
+     512.0,
+     0.0,
+     512.0
+    ],
+    "idx": 231,
+    "textures": 11,
+    "tex_novel": 10,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "d36_01_01",
+    "shapes": 7,
+    "tris": 212,
+    "extent": [
+     512.0,
+     0.0,
+     512.0
+    ],
+    "idx": 232,
+    "textures": 13,
+    "tex_novel": 12,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "d36_01_02",
+    "shapes": 4,
+    "tris": 86,
+    "extent": [
+     512.0,
+     0.0,
+     512.0
+    ],
+    "idx": 233,
+    "textures": 7,
+    "tex_novel": 6,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "fu_mon",
+    "shapes": 2,
+    "tris": 10,
+    "extent": [
+     33.0,
+     49.18,
+     42.95
+    ],
+    "idx": 234,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "fu_rock",
+    "shapes": 2,
+    "tris": 218,
+    "extent": [
+     37.29,
+     46.26,
+     35.29
+    ],
+    "idx": 235,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ta_h01",
+    "shapes": 3,
+    "tris": 156,
+    "extent": [
+     82.19,
+     54.8,
+     77.73
+    ],
+    "idx": 236,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "ta_h02",
+    "shapes": 3,
+    "tris": 179,
+    "extent": [
+     68.39,
+     73.64,
+     57.47
+    ],
+    "idx": 237,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "ta_h03",
+    "shapes": 3,
+    "tris": 214,
+    "extent": [
+     92.62,
+     95.93,
+     83.95
+    ],
+    "idx": 238,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "ta_fountain",
+    "shapes": 4,
+    "tris": 240,
+    "extent": [
+     53.53,
+     39.64,
+     53.53
+    ],
+    "idx": 239,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ta_gift",
+    "shapes": 4,
+    "tris": 164,
+    "extent": [
+     78.19,
+     48.66,
+     59.73
+    ],
+    "idx": 240,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "ta_game",
+    "shapes": 5,
+    "tris": 227,
+    "extent": [
+     130.18,
+     71.18,
+     70.89
+    ],
+    "idx": 241,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ta_depart",
+    "shapes": 8,
+    "tris": 370,
+    "extent": [
+     130.54,
+     111.63,
+     85.73
+    ],
+    "idx": 242,
+    "textures": 6,
+    "tex_novel": 4,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "ta_restaurant",
+    "shapes": 5,
+    "tris": 125,
+    "extent": [
+     82.18,
+     71.68,
+     62.52
+    ],
+    "idx": 243,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "ta_mansion",
+    "shapes": 3,
+    "tris": 474,
+    "extent": [
+     109.18,
+     101.0,
+     83.73
+    ],
+    "idx": 244,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "ta_gym",
+    "shapes": 7,
+    "tris": 277,
+    "extent": [
+     117.51,
+     60.53,
+     75.78
+    ],
+    "idx": 245,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "kn_gate_a",
+    "shapes": 5,
+    "tris": 183,
+    "extent": [
+     100.0,
+     80.4,
+     124.09
+    ],
+    "idx": 246,
+    "textures": 5,
+    "tex_novel": 2,
+    "tex_identical_pt": 3
+   },
+   {
+    "name": "kn_gate_b",
+    "shapes": 5,
+    "tris": 222,
+    "extent": [
+     120.0,
+     80.4,
+     96.0
+    ],
+    "idx": 247,
+    "textures": 5,
+    "tex_novel": 2,
+    "tex_identical_pt": 3
+   },
+   {
+    "name": "as_light",
+    "shapes": 3,
+    "tris": 81,
+    "extent": [
+     22.6,
+     49.57,
+     19.54
+    ],
+    "idx": 248,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ch_mihari",
+    "shapes": 2,
+    "tris": 170,
+    "extent": [
+     39.6,
+     71.52,
+     39.6
+    ],
+    "idx": 249,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ya_gym",
+    "shapes": 7,
+    "tris": 277,
+    "extent": [
+     117.51,
+     60.53,
+     75.78
+    ],
+    "idx": 250,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ybc_h01",
+    "shapes": 4,
+    "tris": 178,
+    "extent": [
+     72.0,
+     49.0,
+     58.0
+    ],
+    "idx": 251,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ybc_h02",
+    "shapes": 3,
+    "tris": 164,
+    "extent": [
+     72.0,
+     49.0,
+     58.0
+    ],
+    "idx": 252,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ybc_h03",
+    "shapes": 3,
+    "tris": 226,
+    "extent": [
+     72.0,
+     59.0,
+     58.0
+    ],
+    "idx": 253,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ybc_h04",
+    "shapes": 4,
+    "tris": 383,
+    "extent": [
+     88.0,
+     101.0,
+     74.0
+    ],
+    "idx": 254,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ybc_fgm",
+    "shapes": 10,
+    "tris": 262,
+    "extent": [
+     114.88,
+     66.53,
+     95.9
+    ],
+    "idx": 255,
+    "textures": 9,
+    "tex_novel": 8,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ybc_lnr",
+    "shapes": 10,
+    "tris": 370,
+    "extent": [
+     168.0,
+     105.08,
+     107.0
+    ],
+    "idx": 256,
+    "textures": 15,
+    "tex_novel": 14,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ybc_slf",
+    "shapes": 8,
+    "tris": 587,
+    "extent": [
+     184.0,
+     165.49,
+     139.0
+    ],
+    "idx": 257,
+    "textures": 14,
+    "tex_novel": 13,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ybc_mmc",
+    "shapes": 5,
+    "tris": 321,
+    "extent": [
+     72.0,
+     61.59,
+     58.0
+    ],
+    "idx": 258,
+    "textures": 5,
+    "tex_novel": 4,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ybc_dor1",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     20.0,
+     29.97,
+     2.06
+    ],
+    "idx": 259,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ybc_dor2",
+    "shapes": 2,
+    "tris": 18,
+    "extent": [
+     20.0,
+     27.61,
+     2.06
+    ],
+    "idx": 260,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ybc_dor3",
+    "shapes": 4,
+    "tris": 20,
+    "extent": [
+     32.0,
+     24.98,
+     2.06
+    ],
+    "idx": 261,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "d31_s01",
+    "shapes": 7,
+    "tris": 463,
+    "extent": [
+     277.0,
+     345.96,
+     326.0
+    ],
+    "idx": 262,
+    "textures": 9,
+    "tex_novel": 4,
+    "tex_identical_pt": 5
+   },
+   {
+    "name": "d32_s01",
+    "shapes": 9,
+    "tris": 336,
+    "extent": [
+     241.0,
+     215.91,
+     189.38
+    ],
+    "idx": 263,
+    "textures": 10,
+    "tex_novel": 0,
+    "tex_identical_pt": 10
+   },
+   {
+    "name": "d32_s02",
+    "shapes": 9,
+    "tris": 333,
+    "extent": [
+     267.47,
+     236.28,
+     260.81
+    ],
+    "idx": 264,
+    "textures": 5,
+    "tex_novel": 0,
+    "tex_identical_pt": 5
+   },
+   {
+    "name": "d32_s03",
+    "shapes": 7,
+    "tris": 370,
+    "extent": [
+     232.2,
+     196.55,
+     276.23
+    ],
+    "idx": 265,
+    "textures": 5,
+    "tex_novel": 0,
+    "tex_identical_pt": 5
+   },
+   {
+    "name": "d32_s04",
+    "shapes": 4,
+    "tris": 562,
+    "extent": [
+     207.32,
+     202.39,
+     153.3
+    ],
+    "idx": 266,
+    "textures": 4,
+    "tex_novel": 0,
+    "tex_identical_pt": 4
+   },
+   {
+    "name": "d32_s05",
+    "shapes": 3,
+    "tris": 44,
+    "extent": [
+     126.0,
+     38.0,
+     147.74
+    ],
+    "idx": 267,
+    "textures": 3,
+    "tex_novel": 0,
+    "tex_identical_pt": 3
+   },
+   {
+    "name": "d32_s06",
+    "shapes": 4,
+    "tris": 84,
+    "extent": [
+     94.14,
+     46.1,
+     96.0
+    ],
+    "idx": 268,
+    "textures": 4,
+    "tex_novel": 0,
+    "tex_identical_pt": 4
+   },
+   {
+    "name": "gym_door00",
+    "shapes": 2,
+    "tris": 4,
+    "extent": [
+     28.0,
+     42.0,
+     0.0
+    ],
+    "idx": 269,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "d32_hata",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     19.89,
+     32.0,
+     0.0
+    ],
+    "idx": 270,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "gate_pokes",
+    "shapes": 1,
+    "tris": 12,
+    "extent": [
+     224.0,
+     56.0,
+     96.0
+    ],
+    "idx": 271,
+    "textures": 0,
+    "tex_novel": 0,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "bf_h01",
+    "shapes": 3,
+    "tris": 125,
+    "extent": [
+     75.0,
+     55.5,
+     50.0
+    ],
+    "idx": 272,
+    "textures": 3,
+    "tex_novel": 0,
+    "tex_identical_pt": 3
+   },
+   {
+    "name": "bf_door1",
+    "shapes": 1,
+    "tris": 4,
+    "extent": [
+     20.0,
+     29.0,
+     2.0
+    ],
+    "idx": 273,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "tafl04_door1",
+    "shapes": 1,
+    "tris": 6,
+    "extent": [
+     22.0,
+     32.0,
+     2.0
+    ],
+    "idx": 274,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "tafl04_h01",
+    "shapes": 11,
+    "tris": 278,
+    "extent": [
+     88.0,
+     53.67,
+     64.0
+    ],
+    "idx": 275,
+    "textures": 10,
+    "tex_novel": 9,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ha_h01a",
+    "shapes": 4,
+    "tris": 162,
+    "extent": [
+     65.95,
+     49.46,
+     52.0
+    ],
+    "idx": 276,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "ha_h01b",
+    "shapes": 3,
+    "tris": 176,
+    "extent": [
+     65.95,
+     49.0,
+     52.0
+    ],
+    "idx": 277,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "ha_cycle",
+    "shapes": 8,
+    "tris": 222,
+    "extent": [
+     83.86,
+     63.0,
+     48.35
+    ],
+    "idx": 278,
+    "textures": 8,
+    "tex_novel": 6,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "misaki_h01",
+    "shapes": 4,
+    "tris": 169,
+    "extent": [
+     75.0,
+     71.0,
+     58.0
+    ],
+    "idx": 279,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "si_h01",
+    "shapes": 3,
+    "tris": 109,
+    "extent": [
+     65.07,
+     45.13,
+     50.65
+    ],
+    "idx": 280,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "si_radio",
+    "shapes": 4,
+    "tris": 510,
+    "extent": [
+     123.77,
+     280.25,
+     128.14
+    ],
+    "idx": 281,
+    "textures": 5,
+    "tex_novel": 4,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "si_temp",
+    "shapes": 3,
+    "tris": 226,
+    "extent": [
+     91.77,
+     99.0,
+     78.23
+    ],
+    "idx": 282,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "kn_power",
+    "shapes": 8,
+    "tris": 522,
+    "extent": [
+     190.27,
+     106.36,
+     136.0
+    ],
+    "idx": 283,
+    "textures": 8,
+    "tex_novel": 7,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ha_gym",
+    "shapes": 7,
+    "tris": 277,
+    "extent": [
+     117.51,
+     60.53,
+     75.78
+    ],
+    "idx": 284,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "si_gym",
+    "shapes": 4,
+    "tris": 308,
+    "extent": [
+     117.79,
+     68.99,
+     84.0
+    ],
+    "idx": 285,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ha_dr01",
+    "shapes": 1,
+    "tris": 4,
+    "extent": [
+     22.0,
+     29.0,
+     2.0
+    ],
+    "idx": 286,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "msk_dr01",
+    "shapes": 1,
+    "tris": 20,
+    "extent": [
+     20.0,
+     29.38,
+     2.06
+    ],
+    "idx": 287,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "si_door1",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     20.0,
+     30.3,
+     2.06
+    ],
+    "idx": 288,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "si_door2",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     20.0,
+     30.3,
+     2.06
+    ],
+    "idx": 289,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "kn_chika",
+    "shapes": 4,
+    "tris": 123,
+    "extent": [
+     68.0,
+     43.56,
+     46.0
+    ],
+    "idx": 290,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "a13_anemo",
+    "shapes": 3,
+    "tris": 59,
+    "extent": [
+     35.66,
+     89.0,
+     42.27
+    ],
+    "idx": 291,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "nbc_h01",
+    "shapes": 4,
+    "tris": 152,
+    "extent": [
+     73.0,
+     63.0,
+     58.0
+    ],
+    "idx": 292,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "nbc_msem",
+    "shapes": 12,
+    "tris": 445,
+    "extent": [
+     251.0,
+     95.52,
+     127.79
+    ],
+    "idx": 293,
+    "textures": 11,
+    "tex_novel": 10,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "nbc_gym",
+    "shapes": 7,
+    "tris": 277,
+    "extent": [
+     117.51,
+     60.53,
+     75.78
+    ],
+    "idx": 294,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "se_palpark",
+    "shapes": 4,
+    "tris": 278,
+    "extent": [
+     102.0,
+     80.0,
+     131.24
+    ],
+    "idx": 295,
+    "textures": 3,
+    "tex_novel": 3,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "uzu_taki",
+    "shapes": 8,
+    "tris": 208,
+    "extent": [
+     341.16,
+     170.65,
+     196.41
+    ],
+    "idx": 296,
+    "textures": 12,
+    "tex_novel": 10,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "sk_h01",
+    "shapes": 3,
+    "tris": 180,
+    "extent": [
+     76.07,
+     62.56,
+     76.0
+    ],
+    "idx": 297,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "sk_h02",
+    "shapes": 3,
+    "tris": 179,
+    "extent": [
+     76.07,
+     69.88,
+     76.0
+    ],
+    "idx": 298,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "sk_h03",
+    "shapes": 3,
+    "tris": 253,
+    "extent": [
+     76.07,
+     64.71,
+     78.0
+    ],
+    "idx": 299,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "sk_gym",
+    "shapes": 7,
+    "tris": 277,
+    "extent": [
+     117.51,
+     60.53,
+     75.78
+    ],
+    "idx": 300,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "nbc_dr1",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     20.0,
+     28.98,
+     2.06
+    ],
+    "idx": 301,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "cl_slht",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     32.0,
+     27.71,
+     16.0
+    ],
+    "idx": 302,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "cl_stbg",
+    "shapes": 4,
+    "tris": 80,
+    "extent": [
+     112.0,
+     112.05,
+     32.0
+    ],
+    "idx": 303,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "obj_hosz",
+    "shapes": 3,
+    "tris": 96,
+    "extent": [
+     15.6,
+     16.0,
+     15.6
+    ],
+    "idx": 304,
+    "textures": 6,
+    "tex_novel": 6,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "obj_lgsz",
+    "shapes": 4,
+    "tris": 98,
+    "extent": [
+     15.6,
+     32.0,
+     32.0
+    ],
+    "idx": 305,
+    "textures": 7,
+    "tex_novel": 6,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "sk_door1",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     24.0,
+     26.97,
+     2.06
+    ],
+    "idx": 306,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "sk_door2",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     20.0,
+     26.97,
+     2.06
+    ],
+    "idx": 307,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "kn_gate_l",
+    "shapes": 4,
+    "tris": 302,
+    "extent": [
+     150.07,
+     67.07,
+     111.0
+    ],
+    "idx": 308,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "kn_gate_r",
+    "shapes": 4,
+    "tris": 302,
+    "extent": [
+     150.07,
+     67.07,
+     111.0
+    ],
+    "idx": 309,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "mst_dr1",
+    "shapes": 2,
+    "tris": 22,
+    "extent": [
+     20.0,
+     24.98,
+     2.06
+    ],
+    "idx": 310,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "mst_dr2",
+    "shapes": 1,
+    "tris": 4,
+    "extent": [
+     20.0,
+     24.97,
+     2.06
+    ],
+    "idx": 311,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "mst_grh",
+    "shapes": 3,
+    "tris": 194,
+    "extent": [
+     96.0,
+     89.02,
+     74.0
+    ],
+    "idx": 312,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "mst_rdh",
+    "shapes": 5,
+    "tris": 212,
+    "extent": [
+     96.0,
+     89.02,
+     74.0
+    ],
+    "idx": 313,
+    "textures": 5,
+    "tex_novel": 3,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "mst_okl",
+    "shapes": 11,
+    "tris": 230,
+    "extent": [
+     116.0,
+     80.0,
+     70.0
+    ],
+    "idx": 314,
+    "textures": 10,
+    "tex_novel": 8,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "to_h01",
+    "shapes": 4,
+    "tris": 232,
+    "extent": [
+     74.0,
+     65.5,
+     54.0
+    ],
+    "idx": 315,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "to_h02",
+    "shapes": 3,
+    "tris": 294,
+    "extent": [
+     73.0,
+     65.5,
+     54.0
+    ],
+    "idx": 316,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "to_trainer",
+    "shapes": 4,
+    "tris": 774,
+    "extent": [
+     136.0,
+     82.5,
+     148.0
+    ],
+    "idx": 317,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "to_gym",
+    "shapes": 7,
+    "tris": 277,
+    "extent": [
+     117.51,
+     60.53,
+     75.78
+    ],
+    "idx": 318,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "dsm_fal1",
+    "shapes": 11,
+    "tris": 46,
+    "extent": [
+     160.0,
+     66.44,
+     66.71
+    ],
+    "idx": 319,
+    "textures": 12,
+    "tex_novel": 11,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "dsm_fal2",
+    "shapes": 11,
+    "tris": 48,
+    "extent": [
+     240.0,
+     66.44,
+     66.71
+    ],
+    "idx": 320,
+    "textures": 12,
+    "tex_novel": 11,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "dsm_bg1",
+    "shapes": 8,
+    "tris": 128,
+    "extent": [
+     512.0,
+     33.12,
+     223.7
+    ],
+    "idx": 321,
+    "textures": 4,
+    "tex_novel": 4,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "o_moon",
+    "shapes": 2,
+    "tris": 4,
+    "extent": [
+     33.6,
+     1.0,
+     33.6
+    ],
+    "idx": 322,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "fall_futago",
+    "shapes": 11,
+    "tris": 184,
+    "extent": [
+     536.0,
+     21.73,
+     71.66
+    ],
+    "idx": 323,
+    "textures": 12,
+    "tex_novel": 11,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "md52k_01",
+    "shapes": 1,
+    "tris": 448,
+    "extent": [
+     185.25,
+     0.0,
+     208.81
+    ],
+    "idx": 324,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "md52g_01",
+    "shapes": 1,
+    "tris": 492,
+    "extent": [
+     209.75,
+     0.0,
+     186.77
+    ],
+    "idx": 325,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "md52r_01",
+    "shapes": 1,
+    "tris": 536,
+    "extent": [
+     163.53,
+     0.0,
+     183.02
+    ],
+    "idx": 326,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "tafl_light",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     32.0,
+     14.61,
+     3.14
+    ],
+    "idx": 327,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "msp_f",
+    "shapes": 4,
+    "tris": 54,
+    "extent": [
+     20.0,
+     44.67,
+     20.0
+    ],
+    "idx": 328,
+    "textures": 6,
+    "tex_novel": 5,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "tkwa_sl",
+    "shapes": 4,
+    "tris": 95,
+    "extent": [
+     32.0,
+     59.86,
+     21.27
+    ],
+    "idx": 329,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ymbk_sl",
+    "shapes": 4,
+    "tris": 71,
+    "extent": [
+     32.0,
+     59.86,
+     21.27
+    ],
+    "idx": 330,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "hnda_sl",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     32.0,
+     27.71,
+     16.0
+    ],
+    "idx": 331,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "tmms_sl",
+    "shapes": 4,
+    "tris": 175,
+    "extent": [
+     32.0,
+     59.86,
+     22.0
+    ],
+    "idx": 332,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "sktk_sl",
+    "shapes": 4,
+    "tris": 67,
+    "extent": [
+     32.0,
+     59.86,
+     22.02
+    ],
+    "idx": 333,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "nibi_sl",
+    "shapes": 3,
+    "tris": 39,
+    "extent": [
+     32.0,
+     59.86,
+     20.85
+    ],
+    "idx": 334,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "sinto_h01",
+    "shapes": 5,
+    "tris": 128,
+    "extent": [
+     74.0,
+     54.77,
+     66.67
+    ],
+    "idx": 335,
+    "textures": 4,
+    "tex_novel": 2,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "sinto_door1",
+    "shapes": 1,
+    "tris": 4,
+    "extent": [
+     20.0,
+     24.97,
+     2.06
+    ],
+    "idx": 336,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ms01_p01",
+    "shapes": 3,
+    "tris": 51,
+    "extent": [
+     32.0,
+     61.86,
+     17.23
+    ],
+    "idx": 337,
+    "textures": 6,
+    "tex_novel": 5,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "radio",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     32.0,
+     24.51,
+     20.57
+    ],
+    "idx": 338,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "kn_chika_x",
+    "shapes": 5,
+    "tris": 117,
+    "extent": [
+     68.0,
+     43.56,
+     46.0
+    ],
+    "idx": 339,
+    "textures": 5,
+    "tex_novel": 4,
+    "tex_identical_pt": 1
+   }
+  ]
+ },
+ "bm_room": {
+  "models": 222,
+  "decoded": 222,
+  "errors": 0,
+  "tris_total": 30374,
+  "with_any_novel_texture": 85,
+  "all_textures_identical_to_platinum": 129,
+  "no_texture": 3,
+  "rows": [
+   {
+    "name": "dmybox00",
+    "shapes": 1,
+    "tris": 12,
+    "extent": [
+     16.0,
+     16.0,
+     16.0
+    ],
+    "idx": 0,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "d_mat01",
+    "shapes": 1,
+    "tris": 4,
+    "extent": [
+     28.0,
+     0.0,
+     16.0
+    ],
+    "idx": 1,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "d_mat02",
+    "shapes": 1,
+    "tris": 4,
+    "extent": [
+     16.0,
+     0.0,
+     28.0
+    ],
+    "idx": 2,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "d_mat03",
+    "shapes": 1,
+    "tris": 6,
+    "extent": [
+     44.0,
+     0.0,
+     16.0
+    ],
+    "idx": 3,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "d_mat04",
+    "shapes": 1,
+    "tris": 4,
+    "extent": [
+     14.0,
+     0.0,
+     28.0
+    ],
+    "idx": 4,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "window01",
+    "shapes": 2,
+    "tris": 10,
+    "extent": [
+     32.0,
+     29.0,
+     4.0
+    ],
+    "idx": 5,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "window02",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     14.0,
+     20.0,
+     0.0
+    ],
+    "idx": 6,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "stair_u01",
+    "shapes": 3,
+    "tris": 50,
+    "extent": [
+     33.0,
+     37.5,
+     30.0
+    ],
+    "idx": 7,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "stair_u02",
+    "shapes": 3,
+    "tris": 50,
+    "extent": [
+     33.0,
+     37.5,
+     30.0
+    ],
+    "idx": 8,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "stair_d01",
+    "shapes": 2,
+    "tris": 101,
+    "extent": [
+     28.0,
+     26.0,
+     30.0
+    ],
+    "idx": 9,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "stair_d02",
+    "shapes": 2,
+    "tris": 101,
+    "extent": [
+     28.0,
+     26.0,
+     30.0
+    ],
+    "idx": 10,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "stair_pc_u01",
+    "shapes": 3,
+    "tris": 82,
+    "extent": [
+     32.0,
+     36.0,
+     32.0
+    ],
+    "idx": 11,
+    "textures": 9,
+    "tex_novel": 0,
+    "tex_identical_pt": 9
+   },
+   {
+    "name": "stair_pc_u02",
+    "shapes": 3,
+    "tris": 82,
+    "extent": [
+     32.0,
+     36.0,
+     32.0
+    ],
+    "idx": 12,
+    "textures": 9,
+    "tex_novel": 0,
+    "tex_identical_pt": 9
+   },
+   {
+    "name": "stair_pc_d01",
+    "shapes": 3,
+    "tris": 98,
+    "extent": [
+     32.0,
+     40.0,
+     32.0
+    ],
+    "idx": 13,
+    "textures": 9,
+    "tex_novel": 0,
+    "tex_identical_pt": 9
+   },
+   {
+    "name": "stair_pc_d02",
+    "shapes": 3,
+    "tris": 98,
+    "extent": [
+     32.0,
+     40.0,
+     32.0
+    ],
+    "idx": 14,
+    "textures": 9,
+    "tex_novel": 0,
+    "tex_identical_pt": 9
+   },
+   {
+    "name": "t_map01",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     26.0,
+     20.0,
+     0.0
+    ],
+    "idx": 15,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "clock01",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     16.0,
+     20.0,
+     0.0
+    ],
+    "idx": 16,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "bed_h01",
+    "shapes": 2,
+    "tris": 152,
+    "extent": [
+     31.0,
+     15.5,
+     40.0
+    ],
+    "idx": 17,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "game_h01",
+    "shapes": 2,
+    "tris": 8,
+    "extent": [
+     16.0,
+     2.0,
+     16.0
+    ],
+    "idx": 18,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "tv01",
+    "shapes": 2,
+    "tris": 42,
+    "extent": [
+     32.0,
+     32.5,
+     16.0
+    ],
+    "idx": 19,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "sink01",
+    "shapes": 2,
+    "tris": 48,
+    "extent": [
+     32.0,
+     16.5,
+     16.0
+    ],
+    "idx": 20,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ref01",
+    "shapes": 2,
+    "tris": 32,
+    "extent": [
+     16.0,
+     30.5,
+     16.0
+    ],
+    "idx": 21,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "dustbox01",
+    "shapes": 2,
+    "tris": 54,
+    "extent": [
+     16.0,
+     12.0,
+     16.0
+    ],
+    "idx": 22,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "plant01",
+    "shapes": 2,
+    "tris": 60,
+    "extent": [
+     16.0,
+     33.75,
+     16.0
+    ],
+    "idx": 23,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "table_l01",
+    "shapes": 3,
+    "tris": 78,
+    "extent": [
+     32.0,
+     29.5,
+     16.0
+    ],
+    "idx": 24,
+    "textures": 5,
+    "tex_novel": 0,
+    "tex_identical_pt": 5
+   },
+   {
+    "name": "table_l02",
+    "shapes": 3,
+    "tris": 78,
+    "extent": [
+     16.0,
+     23.99,
+     29.0
+    ],
+    "idx": 25,
+    "textures": 5,
+    "tex_novel": 0,
+    "tex_identical_pt": 5
+   },
+   {
+    "name": "table_l03",
+    "shapes": 3,
+    "tris": 78,
+    "extent": [
+     16.0,
+     23.99,
+     30.5
+    ],
+    "idx": 26,
+    "textures": 5,
+    "tex_novel": 0,
+    "tex_identical_pt": 5
+   },
+   {
+    "name": "machine_l01",
+    "shapes": 3,
+    "tris": 54,
+    "extent": [
+     15.0,
+     27.0,
+     15.0
+    ],
+    "idx": 27,
+    "textures": 3,
+    "tex_novel": 0,
+    "tex_identical_pt": 3
+   },
+   {
+    "name": "machine_l02",
+    "shapes": 4,
+    "tris": 200,
+    "extent": [
+     37.84,
+     45.63,
+     32.77
+    ],
+    "idx": 28,
+    "textures": 3,
+    "tex_novel": 0,
+    "tex_identical_pt": 3
+   },
+   {
+    "name": "machine_l03",
+    "shapes": 3,
+    "tris": 66,
+    "extent": [
+     15.0,
+     27.0,
+     15.15
+    ],
+    "idx": 29,
+    "textures": 3,
+    "tex_novel": 0,
+    "tex_identical_pt": 3
+   },
+   {
+    "name": "shelf09a",
+    "shapes": 2,
+    "tris": 96,
+    "extent": [
+     31.0,
+     37.0,
+     18.0
+    ],
+    "idx": 30,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "shelf09b",
+    "shapes": 2,
+    "tris": 144,
+    "extent": [
+     31.0,
+     37.0,
+     28.0
+    ],
+    "idx": 31,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "chair_l01",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     16.0,
+     0.0,
+     16.0
+    ],
+    "idx": 32,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "pc01",
+    "shapes": 3,
+    "tris": 66,
+    "extent": [
+     18.45,
+     21.6,
+     6.35
+    ],
+    "idx": 33,
+    "textures": 5,
+    "tex_novel": 1,
+    "tex_identical_pt": 4
+   },
+   {
+    "name": "pc02",
+    "shapes": 2,
+    "tris": 85,
+    "extent": [
+     21.48,
+     50.52,
+     19.04
+    ],
+    "idx": 34,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "machine_pc01",
+    "shapes": 2,
+    "tris": 94,
+    "extent": [
+     18.66,
+     22.16,
+     50.0
+    ],
+    "idx": 35,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "machine_pc02",
+    "shapes": 1,
+    "tris": 212,
+    "extent": [
+     28.0,
+     24.18,
+     39.0
+    ],
+    "idx": 36,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "machine_pc03",
+    "shapes": 2,
+    "tris": 54,
+    "extent": [
+     26.0,
+     22.0,
+     3.0
+    ],
+    "idx": 37,
+    "textures": 5,
+    "tex_novel": 0,
+    "tex_identical_pt": 5
+   },
+   {
+    "name": "leage_o03",
+    "shapes": 1,
+    "tris": 12,
+    "extent": [
+     4.0,
+     4.0,
+     4.0
+    ],
+    "idx": 38,
+    "textures": 0,
+    "tex_novel": 0,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "shelf_pc01",
+    "shapes": 2,
+    "tris": 42,
+    "extent": [
+     30.0,
+     31.0,
+     14.0
+    ],
+    "idx": 39,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "flower_pc01",
+    "shapes": 3,
+    "tris": 66,
+    "extent": [
+     14.7,
+     16.1,
+     11.2
+    ],
+    "idx": 40,
+    "textures": 3,
+    "tex_novel": 0,
+    "tex_identical_pt": 3
+   },
+   {
+    "name": "counter_pc04",
+    "shapes": 1,
+    "tris": 28,
+    "extent": [
+     15.0,
+     11.0,
+     3.0
+    ],
+    "idx": 41,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "table_pc01",
+    "shapes": 3,
+    "tris": 148,
+    "extent": [
+     33.05,
+     12.5,
+     31.0
+    ],
+    "idx": 42,
+    "textures": 3,
+    "tex_novel": 0,
+    "tex_identical_pt": 3
+   },
+   {
+    "name": "counter_fs01",
+    "shapes": 2,
+    "tris": 56,
+    "extent": [
+     15.0,
+     12.0,
+     12.0
+    ],
+    "idx": 43,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "counter_fs04",
+    "shapes": 2,
+    "tris": 56,
+    "extent": [
+     15.0,
+     12.0,
+     12.0
+    ],
+    "idx": 44,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "shelf_fs01",
+    "shapes": 2,
+    "tris": 98,
+    "extent": [
+     30.0,
+     20.0,
+     16.0
+    ],
+    "idx": 45,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "shelf_fs02",
+    "shapes": 2,
+    "tris": 98,
+    "extent": [
+     17.0,
+     20.0,
+     31.0
+    ],
+    "idx": 46,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "shelf_fs03",
+    "shapes": 2,
+    "tris": 98,
+    "extent": [
+     17.0,
+     20.0,
+     31.0
+    ],
+    "idx": 47,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "shelf_fs04",
+    "shapes": 2,
+    "tris": 78,
+    "extent": [
+     31.0,
+     33.0,
+     18.0
+    ],
+    "idx": 48,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "shelf_fs05",
+    "shapes": 2,
+    "tris": 78,
+    "extent": [
+     31.0,
+     33.0,
+     17.0
+    ],
+    "idx": 49,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "shelf_fs06",
+    "shapes": 2,
+    "tris": 160,
+    "extent": [
+     33.0,
+     20.0,
+     31.0
+    ],
+    "idx": 50,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "sheet_fs01",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     16.0,
+     0.0,
+     16.0
+    ],
+    "idx": 51,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "sheet_fs02",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     16.0,
+     0.0,
+     16.0
+    ],
+    "idx": 52,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "chair01",
+    "shapes": 2,
+    "tris": 8,
+    "extent": [
+     16.0,
+     2.0,
+     16.0
+    ],
+    "idx": 53,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "chair02",
+    "shapes": 2,
+    "tris": 8,
+    "extent": [
+     16.0,
+     2.0,
+     16.0
+    ],
+    "idx": 54,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "chair03",
+    "shapes": 2,
+    "tris": 8,
+    "extent": [
+     16.0,
+     2.0,
+     16.0
+    ],
+    "idx": 55,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "chair_jpn01",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     16.0,
+     0.0,
+     16.0
+    ],
+    "idx": 56,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "chair_pc01",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     16.0,
+     0.0,
+     16.0
+    ],
+    "idx": 57,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "chair_pc02",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     16.0,
+     0.0,
+     16.0
+    ],
+    "idx": 58,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "poster_fs01",
+    "shapes": 1,
+    "tris": 10,
+    "extent": [
+     14.0,
+     16.0,
+     0.0
+    ],
+    "idx": 59,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "poster01",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     16.0,
+     20.0,
+     0.0
+    ],
+    "idx": 60,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "book01",
+    "shapes": 2,
+    "tris": 8,
+    "extent": [
+     16.0,
+     2.0,
+     16.0
+    ],
+    "idx": 61,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "bboard",
+    "shapes": 2,
+    "tris": 38,
+    "extent": [
+     48.0,
+     24.0,
+     1.82
+    ],
+    "idx": 62,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "ele_door1",
+    "shapes": 1,
+    "tris": 4,
+    "extent": [
+     28.0,
+     28.0,
+     0.0
+    ],
+    "idx": 63,
+    "textures": 6,
+    "tex_novel": 6,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "shelf01",
+    "shapes": 2,
+    "tris": 60,
+    "extent": [
+     32.0,
+     31.5,
+     16.0
+    ],
+    "idx": 64,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "shelf02",
+    "shapes": 2,
+    "tris": 60,
+    "extent": [
+     16.0,
+     31.5,
+     16.0
+    ],
+    "idx": 65,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "shelf03",
+    "shapes": 2,
+    "tris": 60,
+    "extent": [
+     32.0,
+     31.5,
+     16.0
+    ],
+    "idx": 66,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "shelf04",
+    "shapes": 2,
+    "tris": 60,
+    "extent": [
+     16.0,
+     31.5,
+     16.0
+    ],
+    "idx": 67,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "shelf05",
+    "shapes": 2,
+    "tris": 60,
+    "extent": [
+     32.0,
+     31.5,
+     16.0
+    ],
+    "idx": 68,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "shelf06",
+    "shapes": 2,
+    "tris": 60,
+    "extent": [
+     32.0,
+     31.5,
+     16.0
+    ],
+    "idx": 69,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "shelf07",
+    "shapes": 2,
+    "tris": 60,
+    "extent": [
+     16.0,
+     31.5,
+     16.0
+    ],
+    "idx": 70,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "shelf08",
+    "shapes": 2,
+    "tris": 60,
+    "extent": [
+     16.0,
+     31.5,
+     16.0
+    ],
+    "idx": 71,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "shelf10_01",
+    "shapes": 2,
+    "tris": 138,
+    "extent": [
+     30.0,
+     36.0,
+     26.5
+    ],
+    "idx": 72,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "shelf10_02",
+    "shapes": 2,
+    "tris": 138,
+    "extent": [
+     30.0,
+     69.0,
+     14.0
+    ],
+    "idx": 73,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "shelf_muse01",
+    "shapes": 2,
+    "tris": 96,
+    "extent": [
+     31.0,
+     37.0,
+     18.0
+    ],
+    "idx": 74,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "box01",
+    "shapes": 2,
+    "tris": 8,
+    "extent": [
+     16.0,
+     2.0,
+     16.0
+    ],
+    "idx": 75,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "box02",
+    "shapes": 2,
+    "tris": 24,
+    "extent": [
+     30.0,
+     24.0,
+     30.0
+    ],
+    "idx": 76,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "box03",
+    "shapes": 3,
+    "tris": 32,
+    "extent": [
+     30.0,
+     24.0,
+     30.0
+    ],
+    "idx": 77,
+    "textures": 3,
+    "tex_novel": 0,
+    "tex_identical_pt": 3
+   },
+   {
+    "name": "object01",
+    "shapes": 3,
+    "tris": 78,
+    "extent": [
+     20.0,
+     34.59,
+     23.0
+    ],
+    "idx": 78,
+    "textures": 3,
+    "tex_novel": 0,
+    "tex_identical_pt": 3
+   },
+   {
+    "name": "object03",
+    "shapes": 3,
+    "tris": 78,
+    "extent": [
+     20.0,
+     34.59,
+     23.0
+    ],
+    "idx": 79,
+    "textures": 3,
+    "tex_novel": 0,
+    "tex_identical_pt": 3
+   },
+   {
+    "name": "object04",
+    "shapes": 3,
+    "tris": 78,
+    "extent": [
+     20.0,
+     34.59,
+     23.0
+    ],
+    "idx": 80,
+    "textures": 3,
+    "tex_novel": 0,
+    "tex_identical_pt": 3
+   },
+   {
+    "name": "can02",
+    "shapes": 2,
+    "tris": 42,
+    "extent": [
+     13.0,
+     20.0,
+     15.0
+    ],
+    "idx": 81,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "can01",
+    "shapes": 2,
+    "tris": 168,
+    "extent": [
+     29.0,
+     20.0,
+     31.0
+    ],
+    "idx": 82,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "cycle_bike01",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     32.0,
+     24.51,
+     20.57
+    ],
+    "idx": 83,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "cycle_bike02",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     32.0,
+     24.51,
+     20.57
+    ],
+    "idx": 84,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "cycle_shelf01",
+    "shapes": 2,
+    "tris": 58,
+    "extent": [
+     31.0,
+     30.5,
+     18.0
+    ],
+    "idx": 85,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "dispenser01",
+    "shapes": 2,
+    "tris": 34,
+    "extent": [
+     20.0,
+     31.0,
+     14.0
+    ],
+    "idx": 86,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "globe01",
+    "shapes": 4,
+    "tris": 192,
+    "extent": [
+     48.0,
+     99.11,
+     48.0
+    ],
+    "idx": 87,
+    "textures": 4,
+    "tex_novel": 0,
+    "tex_identical_pt": 4
+   },
+   {
+    "name": "book02",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     16.0,
+     0.0,
+     16.0
+    ],
+    "idx": 88,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "table01_1",
+    "shapes": 2,
+    "tris": 104,
+    "extent": [
+     16.0,
+     12.5,
+     16.0
+    ],
+    "idx": 89,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "table01_2",
+    "shapes": 2,
+    "tris": 104,
+    "extent": [
+     32.0,
+     12.5,
+     16.0
+    ],
+    "idx": 90,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "table01_3",
+    "shapes": 2,
+    "tris": 104,
+    "extent": [
+     48.0,
+     12.5,
+     16.0
+    ],
+    "idx": 91,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "table01_4",
+    "shapes": 2,
+    "tris": 104,
+    "extent": [
+     64.0,
+     12.5,
+     16.0
+    ],
+    "idx": 92,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "table02_1",
+    "shapes": 2,
+    "tris": 104,
+    "extent": [
+     16.0,
+     12.5,
+     32.0
+    ],
+    "idx": 93,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "table02_2",
+    "shapes": 2,
+    "tris": 104,
+    "extent": [
+     32.0,
+     12.5,
+     32.0
+    ],
+    "idx": 94,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "table02_3",
+    "shapes": 2,
+    "tris": 104,
+    "extent": [
+     48.0,
+     12.5,
+     32.0
+    ],
+    "idx": 95,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "table02_4",
+    "shapes": 2,
+    "tris": 104,
+    "extent": [
+     64.0,
+     12.5,
+     32.0
+    ],
+    "idx": 96,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "table03_1",
+    "shapes": 2,
+    "tris": 104,
+    "extent": [
+     16.0,
+     12.5,
+     48.0
+    ],
+    "idx": 97,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "table03_2",
+    "shapes": 2,
+    "tris": 104,
+    "extent": [
+     32.0,
+     12.5,
+     48.0
+    ],
+    "idx": 98,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "table03_3",
+    "shapes": 2,
+    "tris": 104,
+    "extent": [
+     48.0,
+     12.5,
+     48.0
+    ],
+    "idx": 99,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "table03_4",
+    "shapes": 2,
+    "tris": 104,
+    "extent": [
+     64.0,
+     12.5,
+     48.0
+    ],
+    "idx": 100,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "sofa01_d",
+    "shapes": 2,
+    "tris": 118,
+    "extent": [
+     32.0,
+     17.0,
+     18.13
+    ],
+    "idx": 101,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "sofa01_r",
+    "shapes": 2,
+    "tris": 112,
+    "extent": [
+     18.0,
+     22.5,
+     28.0
+    ],
+    "idx": 102,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "sofa01_l",
+    "shapes": 2,
+    "tris": 112,
+    "extent": [
+     18.0,
+     22.5,
+     28.0
+    ],
+    "idx": 103,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "sofa02_d",
+    "shapes": 2,
+    "tris": 118,
+    "extent": [
+     64.0,
+     17.0,
+     18.13
+    ],
+    "idx": 104,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "sofa02_r",
+    "shapes": 2,
+    "tris": 112,
+    "extent": [
+     18.0,
+     22.5,
+     60.0
+    ],
+    "idx": 105,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "sofa02_l",
+    "shapes": 2,
+    "tris": 112,
+    "extent": [
+     18.0,
+     22.5,
+     60.0
+    ],
+    "idx": 106,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "pc_mb",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     16.0,
+     11.0,
+     11.0
+    ],
+    "idx": 107,
+    "textures": 4,
+    "tex_novel": 0,
+    "tex_identical_pt": 4
+   },
+   {
+    "name": "door_pc01",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     20.0,
+     30.5,
+     0.0
+    ],
+    "idx": 108,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "door_wi01",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     20.0,
+     30.5,
+     0.0
+    ],
+    "idx": 109,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "sheet_pc01",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     16.0,
+     0.0,
+     16.0
+    ],
+    "idx": 110,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "gym01_lift",
+    "shapes": 6,
+    "tris": 510,
+    "extent": [
+     49.0,
+     506.0,
+     49.0
+    ],
+    "idx": 111,
+    "textures": 5,
+    "tex_novel": 5,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "kaifuku_lab01",
+    "shapes": 1,
+    "tris": 212,
+    "extent": [
+     28.0,
+     25.0,
+     39.0
+    ],
+    "idx": 112,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "kk_sky",
+    "shapes": 2,
+    "tris": 34,
+    "extent": [
+     592.0,
+     508.91,
+     485.66
+    ],
+    "idx": 113,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "plant02_x",
+    "shapes": 2,
+    "tris": 24,
+    "extent": [
+     30.62,
+     27.0,
+     18.33
+    ],
+    "idx": 114,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "gym02rope_1",
+    "shapes": 2,
+    "tris": 96,
+    "extent": [
+     96.46,
+     18.75,
+     6.09
+    ],
+    "idx": 115,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "gym02rope_2",
+    "shapes": 2,
+    "tris": 96,
+    "extent": [
+     96.11,
+     18.75,
+     22.25
+    ],
+    "idx": 116,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "gym02switch",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     32.0,
+     20.0,
+     24.0
+    ],
+    "idx": 117,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "gym02lift",
+    "shapes": 22,
+    "tris": 198,
+    "extent": [
+     31.75,
+     16.71,
+     40.0
+    ],
+    "idx": 118,
+    "textures": 7,
+    "tex_novel": 6,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "labo_select",
+    "shapes": 5,
+    "tris": 432,
+    "extent": [
+     42.19,
+     55.48,
+     39.29
+    ],
+    "idx": 119,
+    "textures": 5,
+    "tex_novel": 3,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "gym08lifta",
+    "shapes": 3,
+    "tris": 283,
+    "extent": [
+     86.0,
+     56.0,
+     118.0
+    ],
+    "idx": 120,
+    "textures": 3,
+    "tex_novel": 3,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "gym08liftb",
+    "shapes": 3,
+    "tris": 306,
+    "extent": [
+     70.0,
+     56.0,
+     134.0
+    ],
+    "idx": 121,
+    "textures": 3,
+    "tex_novel": 3,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "gym02switch_r",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     32.0,
+     20.0,
+     24.0
+    ],
+    "idx": 122,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "gym03_flower",
+    "shapes": 2,
+    "tris": 60,
+    "extent": [
+     16.0,
+     33.75,
+     16.0
+    ],
+    "idx": 123,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "g04_light1",
+    "shapes": 1,
+    "tris": 16,
+    "extent": [
+     287.97,
+     143.98,
+     0.0
+    ],
+    "idx": 124,
+    "textures": 3,
+    "tex_novel": 0,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "g04_light2",
+    "shapes": 1,
+    "tris": 16,
+    "extent": [
+     287.97,
+     143.98,
+     0.0
+    ],
+    "idx": 125,
+    "textures": 3,
+    "tex_novel": 0,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "g04_light3",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     72.0,
+     72.0,
+     0.0
+    ],
+    "idx": 126,
+    "textures": 3,
+    "tex_novel": 0,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "g04_rou",
+    "shapes": 1,
+    "tris": 12,
+    "extent": [
+     16.0,
+     32.0,
+     16.0
+    ],
+    "idx": 127,
+    "textures": 0,
+    "tex_novel": 0,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "gym04spot",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     48.0,
+     48.0,
+     0.0
+    ],
+    "idx": 128,
+    "textures": 3,
+    "tex_novel": 0,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "game_machine",
+    "shapes": 7,
+    "tris": 540,
+    "extent": [
+     188.0,
+     32.0,
+     59.0
+    ],
+    "idx": 129,
+    "textures": 7,
+    "tex_novel": 5,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "game_lamp",
+    "shapes": 1,
+    "tris": 4,
+    "extent": [
+     48.0,
+     16.0,
+     0.0
+    ],
+    "idx": 130,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "snap_came_in",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     32.0,
+     32.0,
+     0.0
+    ],
+    "idx": 131,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "st_board",
+    "shapes": 2,
+    "tris": 59,
+    "extent": [
+     42.71,
+     28.0,
+     4.69
+    ],
+    "idx": 132,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "scope01",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     31.0,
+     18.0,
+     24.0
+    ],
+    "idx": 133,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "plant03",
+    "shapes": 3,
+    "tris": 54,
+    "extent": [
+     16.0,
+     27.64,
+     16.09
+    ],
+    "idx": 134,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "card_key01",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     16.0,
+     32.0,
+     0.0
+    ],
+    "idx": 135,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "pc03",
+    "shapes": 2,
+    "tris": 32,
+    "extent": [
+     16.0,
+     24.5,
+     16.0
+    ],
+    "idx": 136,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "pc04",
+    "shapes": 2,
+    "tris": 32,
+    "extent": [
+     16.0,
+     24.5,
+     16.0
+    ],
+    "idx": 137,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "pc05",
+    "shapes": 2,
+    "tris": 104,
+    "extent": [
+     20.48,
+     38.91,
+     13.35
+    ],
+    "idx": 138,
+    "textures": 5,
+    "tex_novel": 1,
+    "tex_identical_pt": 4
+   },
+   {
+    "name": "poster02",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     32.0,
+     22.0,
+     0.0
+    ],
+    "idx": 139,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "radio_sky",
+    "shapes": 4,
+    "tris": 152,
+    "extent": [
+     374.41,
+     4.0,
+     291.2
+    ],
+    "idx": 140,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "labo_mb",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     16.0,
+     11.0,
+     11.0
+    ],
+    "idx": 141,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "radio",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     32.0,
+     24.51,
+     20.57
+    ],
+    "idx": 142,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "kamidana",
+    "shapes": 2,
+    "tris": 65,
+    "extent": [
+     15.82,
+     33.81,
+     13.44
+    ],
+    "idx": 143,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ladder_dw",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     64.0,
+     41.41,
+     2.99
+    ],
+    "idx": 144,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ladder_up",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     64.0,
+     55.43,
+     32.0
+    ],
+    "idx": 145,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "r07_00bot",
+    "shapes": 3,
+    "tris": 332,
+    "extent": [
+     704.0,
+     16.0,
+     663.64
+    ],
+    "idx": 146,
+    "textures": 3,
+    "tex_novel": 3,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "r07_01bot",
+    "shapes": 3,
+    "tris": 240,
+    "extent": [
+     704.0,
+     16.0,
+     663.66
+    ],
+    "idx": 147,
+    "textures": 3,
+    "tex_novel": 3,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "r07_cs01",
+    "shapes": 2,
+    "tris": 62,
+    "extent": [
+     16.08,
+     50.0,
+     15.43
+    ],
+    "idx": 148,
+    "textures": 8,
+    "tex_novel": 8,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "aji_mech01",
+    "shapes": 6,
+    "tris": 268,
+    "extent": [
+     304.0,
+     49.3,
+     32.0
+    ],
+    "idx": 149,
+    "textures": 6,
+    "tex_novel": 6,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "name_ani",
+    "shapes": 4,
+    "tris": 52,
+    "extent": [
+     142.89,
+     41.0,
+     94.2
+    ],
+    "idx": 150,
+    "textures": 3,
+    "tex_novel": 3,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ms01_p01",
+    "shapes": 3,
+    "tris": 51,
+    "extent": [
+     32.0,
+     61.86,
+     17.23
+    ],
+    "idx": 151,
+    "textures": 6,
+    "tex_novel": 5,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "aji_mech02",
+    "shapes": 6,
+    "tris": 268,
+    "extent": [
+     304.0,
+     49.3,
+     32.0
+    ],
+    "idx": 152,
+    "textures": 6,
+    "tex_novel": 6,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "aji_mech03",
+    "shapes": 6,
+    "tris": 268,
+    "extent": [
+     304.0,
+     49.3,
+     32.0
+    ],
+    "idx": 153,
+    "textures": 6,
+    "tex_novel": 6,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "g08_00pt",
+    "shapes": 6,
+    "tris": 563,
+    "extent": [
+     344.0,
+     70.33,
+     512.0
+    ],
+    "idx": 154,
+    "textures": 11,
+    "tex_novel": 10,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "g08_01pt",
+    "shapes": 6,
+    "tris": 587,
+    "extent": [
+     360.0,
+     70.33,
+     512.0
+    ],
+    "idx": 155,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "g08_02pt",
+    "shapes": 6,
+    "tris": 279,
+    "extent": [
+     320.0,
+     70.33,
+     327.91
+    ],
+    "idx": 156,
+    "textures": 11,
+    "tex_novel": 10,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "warp01",
+    "shapes": 2,
+    "tris": 18,
+    "extent": [
+     16.0,
+     18.67,
+     20.0
+    ],
+    "idx": 157,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "warp02",
+    "shapes": 2,
+    "tris": 18,
+    "extent": [
+     16.0,
+     18.67,
+     20.0
+    ],
+    "idx": 158,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "machine_l04",
+    "shapes": 3,
+    "tris": 149,
+    "extent": [
+     31.26,
+     48.0,
+     28.0
+    ],
+    "idx": 159,
+    "textures": 3,
+    "tex_novel": 0,
+    "tex_identical_pt": 3
+   },
+   {
+    "name": "machine_l05",
+    "shapes": 3,
+    "tris": 92,
+    "extent": [
+     31.0,
+     35.0,
+     15.0
+    ],
+    "idx": 160,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "machine_l06",
+    "shapes": 2,
+    "tris": 54,
+    "extent": [
+     42.0,
+     28.0,
+     3.0
+    ],
+    "idx": 161,
+    "textures": 4,
+    "tex_novel": 3,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "maq_dr01",
+    "shapes": 1,
+    "tris": 10,
+    "extent": [
+     20.0,
+     24.98,
+     2.06
+    ],
+    "idx": 162,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "warp_j01",
+    "shapes": 2,
+    "tris": 10,
+    "extent": [
+     19.06,
+     10.83,
+     23.15
+    ],
+    "idx": 163,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "maq_eng",
+    "shapes": 8,
+    "tris": 781,
+    "extent": [
+     333.0,
+     122.0,
+     168.0
+    ],
+    "idx": 164,
+    "textures": 4,
+    "tex_novel": 4,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "psentry_rode",
+    "shapes": 1,
+    "tris": 16,
+    "extent": [
+     448.0,
+     0.0,
+     216.0
+    ],
+    "idx": 165,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "psentry_obj",
+    "shapes": 7,
+    "tris": 616,
+    "extent": [
+     472.0,
+     107.52,
+     207.3
+    ],
+    "idx": 166,
+    "textures": 4,
+    "tex_novel": 4,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "mp3_sb",
+    "shapes": 2,
+    "tris": 16,
+    "extent": [
+     256.0,
+     2.0,
+     256.0
+    ],
+    "idx": 167,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "stair_gr_u02",
+    "shapes": 3,
+    "tris": 82,
+    "extent": [
+     32.0,
+     36.0,
+     32.0
+    ],
+    "idx": 168,
+    "textures": 9,
+    "tex_novel": 1,
+    "tex_identical_pt": 8
+   },
+   {
+    "name": "stair_gr_u01",
+    "shapes": 3,
+    "tris": 82,
+    "extent": [
+     32.0,
+     36.0,
+     32.0
+    ],
+    "idx": 169,
+    "textures": 3,
+    "tex_novel": 1,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "stair_gr_d02",
+    "shapes": 3,
+    "tris": 98,
+    "extent": [
+     32.0,
+     40.0,
+     32.0
+    ],
+    "idx": 170,
+    "textures": 9,
+    "tex_novel": 1,
+    "tex_identical_pt": 8
+   },
+   {
+    "name": "stair_gr_d01",
+    "shapes": 3,
+    "tris": 98,
+    "extent": [
+     32.0,
+     36.0,
+     32.0
+    ],
+    "idx": 171,
+    "textures": 9,
+    "tex_novel": 1,
+    "tex_identical_pt": 8
+   },
+   {
+    "name": "mg06_bot",
+    "shapes": 2,
+    "tris": 142,
+    "extent": [
+     368.0,
+     2.0,
+     212.0
+    ],
+    "idx": 172,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "mg06_fl1",
+    "shapes": 29,
+    "tris": 852,
+    "extent": [
+     172.37,
+     241.81,
+     206.16
+    ],
+    "idx": 173,
+    "textures": 12,
+    "tex_novel": 11,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "mg06_fl2",
+    "shapes": 29,
+    "tris": 852,
+    "extent": [
+     172.37,
+     241.81,
+     206.16
+    ],
+    "idx": 174,
+    "textures": 12,
+    "tex_novel": 11,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "mg06_swc",
+    "shapes": 1,
+    "tris": 36,
+    "extent": [
+     15.45,
+     15.45,
+     3.0
+    ],
+    "idx": 175,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "tmc_game",
+    "shapes": 7,
+    "tris": 448,
+    "extent": [
+     236.0,
+     32.0,
+     75.0
+    ],
+    "idx": 176,
+    "textures": 7,
+    "tex_novel": 5,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "obj_sylph",
+    "shapes": 4,
+    "tris": 240,
+    "extent": [
+     79.38,
+     42.5,
+     139.12
+    ],
+    "idx": 177,
+    "textures": 4,
+    "tex_novel": 1,
+    "tex_identical_pt": 3
+   },
+   {
+    "name": "bf_pc01",
+    "shapes": 5,
+    "tris": 86,
+    "extent": [
+     17.1,
+     39.41,
+     16.0
+    ],
+    "idx": 178,
+    "textures": 4,
+    "tex_novel": 0,
+    "tex_identical_pt": 4
+   },
+   {
+    "name": "bf_object01",
+    "shapes": 2,
+    "tris": 14,
+    "extent": [
+     32.0,
+     45.97,
+     37.47
+    ],
+    "idx": 179,
+    "textures": 2,
+    "tex_novel": 0,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "bf_mat01",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     64.0,
+     0.0,
+     32.0
+    ],
+    "idx": 180,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "bf_mat02_l",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     32.0,
+     0.0,
+     64.0
+    ],
+    "idx": 181,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "bf_mat02_r",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     32.0,
+     0.0,
+     64.0
+    ],
+    "idx": 182,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "bf_idoyuka",
+    "shapes": 1,
+    "tris": 72,
+    "extent": [
+     370.0,
+     100.0,
+     140.0
+    ],
+    "idx": 183,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "bt_ele01",
+    "shapes": 2,
+    "tris": 140,
+    "extent": [
+     57.62,
+     91.7,
+     57.64
+    ],
+    "idx": 184,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "lchair01",
+    "shapes": 1,
+    "tris": 6,
+    "extent": [
+     16.0,
+     0.0,
+     64.0
+    ],
+    "idx": 185,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "object_bt",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     31.0,
+     18.0,
+     24.0
+    ],
+    "idx": 186,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "bf_roulette",
+    "shapes": 2,
+    "tris": 60,
+    "extent": [
+     328.0,
+     88.0,
+     198.0
+    ],
+    "idx": 187,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "gts_machine1f",
+    "shapes": 8,
+    "tris": 472,
+    "extent": [
+     68.0,
+     52.61,
+     138.0
+    ],
+    "idx": 188,
+    "textures": 8,
+    "tex_novel": 3,
+    "tex_identical_pt": 5
+   },
+   {
+    "name": "gts_machine2f",
+    "shapes": 8,
+    "tris": 472,
+    "extent": [
+     67.01,
+     52.6,
+     154.0
+    ],
+    "idx": 189,
+    "textures": 8,
+    "tex_novel": 3,
+    "tex_identical_pt": 5
+   },
+   {
+    "name": "gts_machine3f",
+    "shapes": 8,
+    "tris": 214,
+    "extent": [
+     70.01,
+     52.6,
+     58.0
+    ],
+    "idx": 190,
+    "textures": 8,
+    "tex_novel": 3,
+    "tex_identical_pt": 5
+   },
+   {
+    "name": "gts_wall1f",
+    "shapes": 4,
+    "tris": 92,
+    "extent": [
+     416.0,
+     72.59,
+     58.0
+    ],
+    "idx": 191,
+    "textures": 19,
+    "tex_novel": 16,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "gts_wall2f",
+    "shapes": 4,
+    "tris": 144,
+    "extent": [
+     336.0,
+     80.0,
+     82.0
+    ],
+    "idx": 192,
+    "textures": 19,
+    "tex_novel": 16,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "gts_wall3f",
+    "shapes": 4,
+    "tris": 142,
+    "extent": [
+     288.0,
+     80.0,
+     82.0
+    ],
+    "idx": 193,
+    "textures": 19,
+    "tex_novel": 16,
+    "tex_identical_pt": 2
+   },
+   {
+    "name": "warp_gts01",
+    "shapes": 4,
+    "tris": 160,
+    "extent": [
+     22.36,
+     23.49,
+     21.26
+    ],
+    "idx": 194,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "warp_gts02",
+    "shapes": 4,
+    "tris": 160,
+    "extent": [
+     22.36,
+     23.49,
+     21.26
+    ],
+    "idx": 195,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "warp_gts03",
+    "shapes": 4,
+    "tris": 160,
+    "extent": [
+     22.36,
+     23.49,
+     21.26
+    ],
+    "idx": 196,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "ch_r_door",
+    "shapes": 1,
+    "tris": 8,
+    "extent": [
+     22.0,
+     24.98,
+     2.06
+    ],
+    "idx": 197,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ch_r_cool",
+    "shapes": 1,
+    "tris": 138,
+    "extent": [
+     848.0,
+     0.0,
+     300.0
+    ],
+    "idx": 198,
+    "textures": 1,
+    "tex_novel": 0,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "mg09_es1",
+    "shapes": 8,
+    "tris": 274,
+    "extent": [
+     80.08,
+     47.0,
+     20.0
+    ],
+    "idx": 199,
+    "textures": 10,
+    "tex_novel": 10,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "mg09_es2",
+    "shapes": 8,
+    "tris": 260,
+    "extent": [
+     80.08,
+     47.0,
+     20.0
+    ],
+    "idx": 200,
+    "textures": 10,
+    "tex_novel": 10,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "soul_f",
+    "shapes": 3,
+    "tris": 12,
+    "extent": [
+     20.2,
+     31.03,
+     14.64
+    ],
+    "idx": 201,
+    "textures": 3,
+    "tex_novel": 3,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ta_j_obj1",
+    "shapes": 11,
+    "tris": 2247,
+    "extent": [
+     232.58,
+     125.78,
+     581.81
+    ],
+    "idx": 202,
+    "textures": 9,
+    "tex_novel": 8,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "mpwr_ge",
+    "shapes": 13,
+    "tris": 838,
+    "extent": [
+     94.18,
+     104.91,
+     66.56
+    ],
+    "idx": 203,
+    "textures": 6,
+    "tex_novel": 5,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "y_j_warp",
+    "shapes": 8,
+    "tris": 2971,
+    "extent": [
+     496.0,
+     90.77,
+     402.0
+    ],
+    "idx": 204,
+    "textures": 6,
+    "tex_novel": 6,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ha_j_pool",
+    "shapes": 4,
+    "tris": 195,
+    "extent": [
+     207.7,
+     53.0,
+     191.0
+    ],
+    "idx": 205,
+    "textures": 4,
+    "tex_novel": 4,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "mpwr_ge_off",
+    "shapes": 7,
+    "tris": 838,
+    "extent": [
+     194.26,
+     116.91,
+     66.73
+    ],
+    "idx": 206,
+    "textures": 6,
+    "tex_novel": 5,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "psentry_d",
+    "shapes": 1,
+    "tris": 10,
+    "extent": [
+     15.0,
+     3.0,
+     3.0
+    ],
+    "idx": 207,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "ev_o01",
+    "shapes": 2,
+    "tris": 4,
+    "extent": [
+     72.0,
+     52.0,
+     73.0
+    ],
+    "idx": 208,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "warp_hiroba",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     12.0,
+     0.0,
+     12.0
+    ],
+    "idx": 209,
+    "textures": 5,
+    "tex_novel": 5,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "o_kido_obj",
+    "shapes": 5,
+    "tris": 342,
+    "extent": [
+     42.19,
+     54.48,
+     32.0
+    ],
+    "idx": 210,
+    "textures": 4,
+    "tex_novel": 4,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "mono_no",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     32.0,
+     16.0,
+     27.71
+    ],
+    "idx": 211,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "mono_che",
+    "shapes": 1,
+    "tris": 2,
+    "extent": [
+     32.0,
+     16.0,
+     27.71
+    ],
+    "idx": 212,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "leage_light",
+    "shapes": 1,
+    "tris": 12,
+    "extent": [
+     2.0,
+     15.5,
+     1.0
+    ],
+    "idx": 213,
+    "textures": 0,
+    "tex_novel": 0,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "gof_01",
+    "shapes": 13,
+    "tris": 106,
+    "extent": [
+     32.0,
+     24.0,
+     32.0
+    ],
+    "idx": 214,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "gof_02",
+    "shapes": 4,
+    "tris": 64,
+    "extent": [
+     222.0,
+     32.41,
+     228.55
+    ],
+    "idx": 215,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "gof_03",
+    "shapes": 2,
+    "tris": 404,
+    "extent": [
+     742.38,
+     203.28,
+     604.84
+    ],
+    "idx": 216,
+    "textures": 2,
+    "tex_novel": 2,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "chp_obj1",
+    "shapes": 4,
+    "tris": 336,
+    "extent": [
+     234.7,
+     114.28,
+     12.5
+    ],
+    "idx": 217,
+    "textures": 1,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "gof_04",
+    "shapes": 8,
+    "tris": 449,
+    "extent": [
+     268.27,
+     202.19,
+     303.0
+    ],
+    "idx": 218,
+    "textures": 11,
+    "tex_novel": 11,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "gof_05",
+    "shapes": 2,
+    "tris": 44,
+    "extent": [
+     192.0,
+     69.28,
+     40.0
+    ],
+    "idx": 219,
+    "textures": 2,
+    "tex_novel": 1,
+    "tex_identical_pt": 0
+   },
+   {
+    "name": "desk_cg",
+    "shapes": 4,
+    "tris": 164,
+    "extent": [
+     48.0,
+     14.0,
+     32.0
+    ],
+    "idx": 220,
+    "textures": 5,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   },
+   {
+    "name": "msg_pc",
+    "shapes": 3,
+    "tris": 82,
+    "extent": [
+     20.14,
+     41.06,
+     15.12
+    ],
+    "idx": 221,
+    "textures": 3,
+    "tex_novel": 2,
+    "tex_identical_pt": 1
+   }
+  ]
+ },
+ "hgss_land_data": {
+  "maps": 676,
+  "terrain_models_decoded": 591,
+  "tris_median": 912,
+  "tris_max": 2862
+ }
+}

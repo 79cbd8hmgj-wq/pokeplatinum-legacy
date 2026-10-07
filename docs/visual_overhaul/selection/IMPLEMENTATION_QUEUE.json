@@ -17,7 +17,7 @@
  ],
  "inputs": {
   "classes_sha256": "24acd6faefb7f3bb88f8ab7a8d5fd545f0a93ecc045d6b54a2211ccd9f168ee9",
-  "pool_sha256": "75b3e2b831bbfd47be3ef07d671b2fdb1c08804ab7c018a30821afa8028ecd40",
+  "pool_sha256": "659c94f586404367e72baf11169a1d83caaa087388b12982cb501b0e53984058",
   "scope_sha256": "ad5632421f94dfc2ce72394d28633654a144ff1f48e852c230011baf87933f74"
  },
  "pending_subsystems": [],
@@ -60,13 +60,13 @@
    "host": "battle/menu feedback layer (cursor pulses, glows, gauges)",
    "kind": "library",
    "library_id": "lib:ranger2/interface_embellishments/ranger_interface/i/novel_detail/component",
-   "members": 392,
-   "needs_evidence": 5,
+   "members": 384,
+   "needs_evidence": 0,
    "opportunity_class": "novel_detail",
-   "promoted": 69,
+   "promoted": 72,
    "rank": 2,
-   "rank_score": 4.248,
-   "records": 69,
+   "rank_score": 4.251,
+   "records": 72,
    "source_id": "ranger2",
    "subsystem": "interface_embellishments",
    "techniques": [
@@ -186,6 +186,61 @@
    "use_mode": "technique"
   },
   {
+   "components": [],
+   "host": "field/title transition and event presentation",
+   "kind": "library",
+   "library_id": "lib:ranger2/transitions_presentation/ranger_event/event/technique_donor/technique",
+   "members": 304,
+   "needs_evidence": 0,
+   "opportunity_class": "technique_donor",
+   "promoted": 76,
+   "rank": 7,
+   "rank_score": 4.105,
+   "records": 76,
+   "source_id": "ranger2",
+   "subsystem": "transitions_presentation",
+   "techniques": [
+    "event_presentation",
+    "screen_composition"
+   ],
+   "title": "ranger_event/event [ranger2/transitions_presentation] technique_donor",
+   "top_records": [
+    "opp:mined/title_and_presentation/ranger2/ranger_event/event020_00/technique_donor/technique",
+    "opp:mined/title_and_presentation/ranger2/ranger_event/event020_01/technique_donor/technique",
+    "opp:mined/title_and_presentation/ranger2/ranger_event/event021_00/technique_donor/technique"
+   ],
+   "use_mode": "technique"
+  },
+  {
+   "components": [
+    "environmental_motif",
+    "layout"
+   ],
+   "host": "field/title transition and event presentation",
+   "kind": "library",
+   "library_id": "lib:ranger2/transitions_presentation/ranger_event/event/novel_capability/technique",
+   "members": 256,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_capability",
+   "promoted": 64,
+   "rank": 8,
+   "rank_score": 4.09,
+   "records": 64,
+   "source_id": "ranger2",
+   "subsystem": "transitions_presentation",
+   "techniques": [
+    "event_presentation",
+    "screen_composition"
+   ],
+   "title": "ranger_event/event [ranger2/transitions_presentation] novel_capability",
+   "top_records": [
+    "opp:mined/title_and_presentation/ranger2/ranger_event/event020_00/novel_capability/technique",
+    "opp:mined/title_and_presentation/ranger2/ranger_event/event020_01/novel_capability/technique",
+    "opp:mined/title_and_presentation/ranger2/ranger_event/event021_00/novel_capability/technique"
+   ],
+   "use_mode": "technique"
+  },
+  {
    "components": [
     "material_treatment",
     "texture_region"
@@ -197,7 +252,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 309,
-   "rank": 7,
+   "rank": 9,
    "rank_score": 4.064,
    "records": 309,
    "source_id": "ranger2",
@@ -224,7 +279,7 @@
    "needs_evidence": 0,
    "opportunity_class": "enhancement_candidate",
    "promoted": 15,
-   "rank": 8,
+   "rank": 10,
    "rank_score": 4.062,
    "records": 15,
    "source_id": "hgss",
@@ -251,7 +306,7 @@
    "needs_evidence": 0,
    "opportunity_class": "novel_detail",
    "promoted": 76,
-   "rank": 9,
+   "rank": 11,
    "rank_score": 4.051,
    "records": 76,
    "source_id": "hgss",
@@ -267,6 +322,60 @@
   },
   {
    "components": [],
+   "host": "environment palette/texture animation and weather/atmosphere layer",
+   "kind": "library",
+   "library_id": "lib:pmd_sky/environmental_effects/pmd_mapbg_d/technique_donor/technique",
+   "members": 17,
+   "needs_evidence": 0,
+   "opportunity_class": "technique_donor",
+   "promoted": 17,
+   "rank": 12,
+   "rank_score": 4.029,
+   "records": 17,
+   "source_id": "pmd_sky",
+   "subsystem": "environmental_effects",
+   "techniques": [
+    "background_movement",
+    "environmental_animation",
+    "palette_cycling"
+   ],
+   "title": "pmd_mapbg_d [pmd_sky/environmental_effects] technique_donor",
+   "top_records": [
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_d01p11a5/technique_donor/technique",
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_d01p11b5/technique_donor/technique",
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_d04p11a5/technique_donor/technique"
+   ],
+   "use_mode": "technique"
+  },
+  {
+   "components": [],
+   "host": "environment palette/texture animation and weather/atmosphere layer",
+   "kind": "library",
+   "library_id": "lib:pmd_sky/environmental_effects/pmd_mapbg_v/technique_donor/technique",
+   "members": 16,
+   "needs_evidence": 0,
+   "opportunity_class": "technique_donor",
+   "promoted": 16,
+   "rank": 13,
+   "rank_score": 4.024,
+   "records": 16,
+   "source_id": "pmd_sky",
+   "subsystem": "environmental_effects",
+   "techniques": [
+    "background_movement",
+    "environmental_animation",
+    "palette_cycling"
+   ],
+   "title": "pmd_mapbg_v [pmd_sky/environmental_effects] technique_donor",
+   "top_records": [
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_v00p011/technique_donor/technique",
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_v00p021/technique_donor/technique",
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_v01p01a1/technique_donor/technique"
+   ],
+   "use_mode": "technique"
+  },
+  {
+   "components": [],
    "host": "field overlay/object animation (field task + overworld animation manager)",
    "kind": "library",
    "library_id": "lib:pmd_sky/field_effects/pmd_ground_d/technique_donor/technique",
@@ -274,7 +383,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 49,
-   "rank": 10,
+   "rank": 14,
    "rank_score": 4.013,
    "records": 49,
    "source_id": "pmd_sky",
@@ -303,7 +412,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 219,
-   "rank": 11,
+   "rank": 15,
    "rank_score": 3.98,
    "records": 219,
    "source_id": "ranger2",
@@ -330,7 +439,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 329,
-   "rank": 12,
+   "rank": 16,
    "rank_score": 3.961,
    "records": 329,
    "source_id": "hgss",
@@ -353,7 +462,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 25,
-   "rank": 13,
+   "rank": 17,
    "rank_score": 3.955,
    "records": 25,
    "source_id": "pmd_sky",
@@ -379,7 +488,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 22,
-   "rank": 14,
+   "rank": 18,
    "rank_score": 3.944,
    "records": 22,
    "source_id": "pmd_sky",
@@ -398,6 +507,33 @@
   },
   {
    "components": [],
+   "host": "environment palette/texture animation and weather/atmosphere layer",
+   "kind": "library",
+   "library_id": "lib:pmd_sky/environmental_effects/pmd_mapbg_h/technique_donor/technique",
+   "members": 12,
+   "needs_evidence": 0,
+   "opportunity_class": "technique_donor",
+   "promoted": 12,
+   "rank": 19,
+   "rank_score": 3.918,
+   "records": 12,
+   "source_id": "pmd_sky",
+   "subsystem": "environmental_effects",
+   "techniques": [
+    "background_movement",
+    "environmental_animation",
+    "palette_cycling"
+   ],
+   "title": "pmd_mapbg_h [pmd_sky/environmental_effects] technique_donor",
+   "top_records": [
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_h01p99a1/technique_donor/technique",
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_h01p99a5/technique_donor/technique",
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_h01p99c1/technique_donor/technique"
+   ],
+   "use_mode": "technique"
+  },
+  {
+   "components": [],
    "host": "3D field texture/material set (environment art)",
    "kind": "library",
    "library_id": "lib:ranger2/field_graphics/ranger_field/m/technique_donor/technique",
@@ -405,7 +541,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 72,
-   "rank": 15,
+   "rank": 20,
    "rank_score": 3.911,
    "records": 72,
    "source_id": "ranger2",
@@ -434,7 +570,7 @@
    "needs_evidence": 0,
    "opportunity_class": "novel_capability",
    "promoted": 20,
-   "rank": 16,
+   "rank": 21,
    "rank_score": 3.887,
    "records": 20,
    "source_id": "pmd_sky",
@@ -463,7 +599,7 @@
    "needs_evidence": 0,
    "opportunity_class": "enhancement_candidate",
    "promoted": 91,
-   "rank": 17,
+   "rank": 22,
    "rank_score": 3.849,
    "records": 91,
    "source_id": "hgss",
@@ -488,7 +624,7 @@
    "needs_evidence": 0,
    "opportunity_class": "novel_detail",
    "promoted": 29,
-   "rank": 18,
+   "rank": 23,
    "rank_score": 3.832,
    "records": 29,
    "source_id": "hgss",
@@ -503,6 +639,33 @@
    "use_mode": "component"
   },
   {
+   "components": [],
+   "host": "environment palette/texture animation and weather/atmosphere layer",
+   "kind": "library",
+   "library_id": "lib:pmd_sky/environmental_effects/pmd_mapbg_p/technique_donor/technique",
+   "members": 7,
+   "needs_evidence": 0,
+   "opportunity_class": "technique_donor",
+   "promoted": 7,
+   "rank": 24,
+   "rank_score": 3.812,
+   "records": 7,
+   "source_id": "pmd_sky",
+   "subsystem": "environmental_effects",
+   "techniques": [
+    "background_movement",
+    "environmental_animation",
+    "palette_cycling"
+   ],
+   "title": "pmd_mapbg_p [pmd_sky/environmental_effects] technique_donor",
+   "top_records": [
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_p03p01a1/technique_donor/technique",
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_p03p02a1/technique_donor/technique",
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_p10p01a5/technique_donor/technique"
+   ],
+   "use_mode": "technique"
+  },
+  {
    "components": [
     "palette",
     "pose",
@@ -515,7 +678,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 74,
-   "rank": 19,
+   "rank": 25,
    "rank_score": 3.805,
    "records": 74,
    "source_id": "hgss",
@@ -543,7 +706,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 6,
-   "rank": 20,
+   "rank": 26,
    "rank_score": 3.799,
    "records": 6,
    "source_id": "hgss",
@@ -568,7 +731,7 @@
    "needs_evidence": 0,
    "opportunity_class": "novel_detail",
    "promoted": 4,
-   "rank": 21,
+   "rank": 27,
    "rank_score": 3.796,
    "records": 4,
    "source_id": "hgss",
@@ -591,7 +754,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 23,
-   "rank": 22,
+   "rank": 28,
    "rank_score": 3.785,
    "records": 23,
    "source_id": "hgss",
@@ -610,6 +773,56 @@
   },
   {
    "components": [
+    "pose",
+    "animation_frame"
+   ],
+   "finding_id": "opp:hgss/follower_sheet_library",
+   "host": "overworld Pokemon presence outside any follower mechanic: event/cutscene sprites, special encounters, roaming/standing Pokemon NPCs",
+   "kind": "explicit",
+   "members": 0,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_detail",
+   "promoted": 1,
+   "rank": 29,
+   "rank_score": 3.784,
+   "records": 1,
+   "source_id": "hgss",
+   "subsystem": "overworld Pokemon presence outside any follower mechanic: event/cutscene sprites, special encounters, roaming/standing Pokemon NPCs",
+   "techniques": [],
+   "title": "HGSS overworld Pokemon sheet library (572 species/form sheets; usable without the follower system)",
+   "top_records": [
+    "opp:hgss/follower_sheet_library"
+   ],
+   "use_mode": "whole_asset"
+  },
+  {
+   "components": [],
+   "host": "Pokemon animation/summary presentation",
+   "kind": "library",
+   "library_id": "lib:ranger2/pokemon_animation/ranger_poke_a/technique_donor/technique",
+   "members": 6167,
+   "needs_evidence": 0,
+   "opportunity_class": "technique_donor",
+   "promoted": 96,
+   "rank": 30,
+   "rank_score": 3.773,
+   "records": 96,
+   "source_id": "ranger2",
+   "subsystem": "pokemon_animation",
+   "techniques": [
+    "animation_sequencing",
+    "frame_timing"
+   ],
+   "title": "ranger_poke_a [ranger2/pokemon_animation] technique_donor",
+   "top_records": [
+    "opp:mined/pokemon_animation_reference/ranger2/p006_00_a01/technique_donor/technique",
+    "opp:mined/pokemon_animation_reference/ranger2/p056_00_a02/technique_donor/technique",
+    "opp:mined/pokemon_animation_reference/ranger2/p063_00_a01/technique_donor/technique"
+   ],
+   "use_mode": "technique"
+  },
+  {
+   "components": [
     "environmental_motif",
     "texture_region"
    ],
@@ -620,7 +833,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 66,
-   "rank": 23,
+   "rank": 31,
    "rank_score": 3.741,
    "records": 66,
    "source_id": "ranger2",
@@ -647,7 +860,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 28,
-   "rank": 24,
+   "rank": 32,
    "rank_score": 3.72,
    "records": 28,
    "source_id": "pmd_sky",
@@ -674,7 +887,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 19,
-   "rank": 25,
+   "rank": 33,
    "rank_score": 3.687,
    "records": 19,
    "source_id": "pmd_sky",
@@ -700,7 +913,7 @@
    "needs_evidence": 0,
    "opportunity_class": "novel_capability",
    "promoted": 1,
-   "rank": 26,
+   "rank": 34,
    "rank_score": 3.676,
    "records": 1,
    "source_id": "hgss",
@@ -721,7 +934,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 14,
-   "rank": 27,
+   "rank": 35,
    "rank_score": 3.666,
    "records": 14,
    "source_id": "pmd_sky",
@@ -744,12 +957,12 @@
    "kind": "library",
    "library_id": "lib:pmd_sky/field_effects/pmd_ground_p/technique_donor/technique",
    "members": 7,
-   "needs_evidence": 1,
+   "needs_evidence": 0,
    "opportunity_class": "technique_donor",
-   "promoted": 6,
-   "rank": 28,
-   "rank_score": 3.641,
-   "records": 6,
+   "promoted": 7,
+   "rank": 36,
+   "rank_score": 3.654,
+   "records": 7,
    "source_id": "pmd_sky",
    "subsystem": "field_effects",
    "techniques": [
@@ -777,7 +990,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 11,
-   "rank": 29,
+   "rank": 37,
    "rank_score": 3.64,
    "records": 11,
    "source_id": "pmd_sky",
@@ -788,6 +1001,31 @@
     "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_s01p01a/component_donor/component",
     "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_s01p02a/component_donor/component",
     "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_s05p01a/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "texture_region",
+    "material_treatment",
+    "environmental_motif"
+   ],
+   "finding_id": "opp:hgss/map_texture_set_library",
+   "host": "area map texture sets (NSBTX)",
+   "kind": "explicit",
+   "members": 0,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 1,
+   "rank": 38,
+   "rank_score": 3.622,
+   "records": 1,
+   "source_id": "hgss",
+   "subsystem": "field_environment_art",
+   "techniques": [],
+   "title": "HGSS map texture sets (106 BTX0 sets, ~1.8k novel unique textures)",
+   "top_records": [
+    "opp:hgss/map_texture_set_library"
    ],
    "use_mode": "component"
   },
@@ -804,7 +1042,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 1,
-   "rank": 30,
+   "rank": 39,
    "rank_score": 3.622,
    "records": 1,
    "source_id": "ranger2",
@@ -818,6 +1056,58 @@
   },
   {
    "components": [],
+   "host": "environment palette/texture animation and weather/atmosphere layer",
+   "kind": "library",
+   "library_id": "lib:pmd_sky/environmental_effects/pmd_mapbg_s/technique_donor/technique",
+   "members": 3,
+   "needs_evidence": 0,
+   "opportunity_class": "technique_donor",
+   "promoted": 3,
+   "rank": 40,
+   "rank_score": 3.609,
+   "records": 3,
+   "source_id": "pmd_sky",
+   "subsystem": "environmental_effects",
+   "techniques": [
+    "background_movement",
+    "environmental_animation",
+    "palette_cycling"
+   ],
+   "title": "pmd_mapbg_s [pmd_sky/environmental_effects] technique_donor",
+   "top_records": [
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_s01p02a1/technique_donor/technique",
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_s13p03a5/technique_donor/technique",
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_s13p08a1/technique_donor/technique"
+   ],
+   "use_mode": "technique"
+  },
+  {
+   "components": [],
+   "host": "environment palette/texture animation and weather/atmosphere layer",
+   "kind": "library",
+   "library_id": "lib:pmd_sky/environmental_effects/pmd_mapbg_t/technique_donor/technique",
+   "members": 1,
+   "needs_evidence": 0,
+   "opportunity_class": "technique_donor",
+   "promoted": 1,
+   "rank": 41,
+   "rank_score": 3.595,
+   "records": 1,
+   "source_id": "pmd_sky",
+   "subsystem": "environmental_effects",
+   "techniques": [
+    "background_movement",
+    "environmental_animation",
+    "palette_cycling"
+   ],
+   "title": "pmd_mapbg_t [pmd_sky/environmental_effects] technique_donor",
+   "top_records": [
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_t00p011/technique_donor/technique"
+   ],
+   "use_mode": "technique"
+  },
+  {
+   "components": [],
    "host": "field overlay/object animation (field task + overworld animation manager)",
    "kind": "library",
    "library_id": "lib:pmd_sky/field_effects/pmd_ground_g/technique_donor/technique",
@@ -825,7 +1115,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 3,
-   "rank": 31,
+   "rank": 42,
    "rank_score": 3.581,
    "records": 3,
    "source_id": "pmd_sky",
@@ -855,7 +1145,7 @@
    "needs_evidence": 0,
    "opportunity_class": "enhancement_candidate",
    "promoted": 2,
-   "rank": 32,
+   "rank": 43,
    "rank_score": 3.574,
    "records": 2,
    "source_id": "hgss",
@@ -870,17 +1160,43 @@
   },
   {
    "components": [
+    "clothing_detail",
+    "pose"
+   ],
+   "host": "overworld NPC/player sprites",
+   "kind": "library",
+   "library_id": "lib:hgss/npc_player_sprites/hgss_mmodel/component_donor/component",
+   "members": 3,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 3,
+   "rank": 44,
+   "rank_score": 3.573,
+   "records": 3,
+   "source_id": "hgss",
+   "subsystem": "npc_player_sprites",
+   "techniques": [],
+   "title": "hgss_mmodel [hgss/npc_player_sprites] component_donor",
+   "top_records": [
+    "opp:mined/field_npc_player_sprites/hgss/hgss_mmodel_00000069/component_donor/component",
+    "opp:mined/field_npc_player_sprites/hgss/hgss_mmodel_00000070/component_donor/component",
+    "opp:mined/field_npc_player_sprites/hgss/hgss_mmodel_00000022/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
     "animation_frame",
     "pose"
    ],
    "host": "Pokemon animation/summary presentation",
    "kind": "library",
    "library_id": "lib:ranger2/pokemon_animation/ranger_poke_w/novel_detail/component",
-   "members": 3191,
-   "needs_evidence": 163,
+   "members": 20,
+   "needs_evidence": 0,
    "opportunity_class": "novel_detail",
    "promoted": 1,
-   "rank": 33,
+   "rank": 45,
    "rank_score": 3.568,
    "records": 1,
    "source_id": "ranger2",
@@ -888,9 +1204,7 @@
    "techniques": [],
    "title": "ranger_poke_w [ranger2/pokemon_animation] novel_detail",
    "top_records": [
-    "opp:mined/pokemon_animation_reference/ranger2/p089_00_w/novel_detail/component",
-    "opp:mined/pokemon_animation_reference/ranger2/p097_00_w/novel_detail/component",
-    "opp:mined/pokemon_animation_reference/ranger2/p121_00_w/novel_detail/component"
+    "opp:mined/pokemon_animation_reference/ranger2/p089_00_w/novel_detail/component"
    ],
    "use_mode": "component"
   },
@@ -906,7 +1220,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 10,
-   "rank": 34,
+   "rank": 46,
    "rank_score": 3.523,
    "records": 10,
    "source_id": "ranger2",
@@ -933,7 +1247,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 7,
-   "rank": 35,
+   "rank": 47,
    "rank_score": 3.519,
    "records": 7,
    "source_id": "pmd_sky",
@@ -958,7 +1272,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 1,
-   "rank": 36,
+   "rank": 48,
    "rank_score": 3.459,
    "records": 1,
    "source_id": "ranger2",
@@ -981,7 +1295,7 @@
    "needs_evidence": 0,
    "opportunity_class": "novel_detail",
    "promoted": 2,
-   "rank": 37,
+   "rank": 49,
    "rank_score": 3.411,
    "records": 2,
    "source_id": "hgss",
@@ -1006,7 +1320,7 @@
    "needs_evidence": 0,
    "opportunity_class": "novel_detail",
    "promoted": 1,
-   "rank": 38,
+   "rank": 50,
    "rank_score": 3.405,
    "records": 1,
    "source_id": "pmd_sky",
@@ -1029,7 +1343,7 @@
    "needs_evidence": 0,
    "opportunity_class": "enhancement_candidate",
    "promoted": 1,
-   "rank": 39,
+   "rank": 51,
    "rank_score": 3.405,
    "records": 1,
    "source_id": "hgss",
@@ -1042,6 +1356,56 @@
    "use_mode": "composite_input"
   },
   {
+   "components": [
+    "texture_region",
+    "material_treatment",
+    "environmental_motif",
+    "silhouette"
+   ],
+   "finding_id": "opp:hgss/field_building_model_library",
+   "host": "field prop/building models (NSBMD props + texture sets)",
+   "kind": "explicit",
+   "members": 0,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 1,
+   "rank": 52,
+   "rank_score": 3.351,
+   "records": 1,
+   "source_id": "hgss",
+   "subsystem": "field_environment_art",
+   "techniques": [],
+   "title": "HGSS building/prop model library (340 outdoor + 222 interior BMD0 models)",
+   "top_records": [
+    "opp:hgss/field_building_model_library"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "UI_element",
+    "layout"
+   ],
+   "host": "Platinum menu/party/dex UI resources",
+   "kind": "library",
+   "library_id": "lib:ranger2/ui_menus_hud/ranger_menu/um/component_donor/component",
+   "members": 3,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 1,
+   "rank": 53,
+   "rank_score": 3.351,
+   "records": 1,
+   "source_id": "ranger2",
+   "subsystem": "ui_menus_hud",
+   "techniques": [],
+   "title": "ranger_menu/um [ranger2/ui_menus_hud] component_donor",
+   "top_records": [
+    "opp:mined/menu_ui_frames/ranger2/ranger_menu/um/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
    "components": [],
    "host": "Pokemon battle sprites",
    "kind": "library",
@@ -1050,7 +1414,7 @@
    "needs_evidence": 0,
    "opportunity_class": "replacement_candidate",
    "promoted": 26,
-   "rank": 40,
+   "rank": 54,
    "rank_score": 3.298,
    "records": 26,
    "source_id": "hgss",
@@ -1073,7 +1437,7 @@
    "needs_evidence": 0,
    "opportunity_class": "replacement_candidate",
    "promoted": 6,
-   "rank": 41,
+   "rank": 55,
    "rank_score": 3.02,
    "records": 6,
    "source_id": "hgss",
@@ -1099,7 +1463,7 @@
    "needs_evidence": 0,
    "opportunity_class": "enhancement_candidate",
    "promoted": 1,
-   "rank": 42,
+   "rank": 56,
    "rank_score": 2.811,
    "records": 1,
    "source_id": "hgss",
@@ -1124,7 +1488,7 @@
    "needs_evidence": 0,
    "opportunity_class": "enhancement_candidate",
    "promoted": 1,
-   "rank": 43,
+   "rank": 57,
    "rank_score": 2.811,
    "records": 1,
    "source_id": "hgss",
@@ -1139,216 +1503,6 @@
  ],
  "schema_version": 4,
  "unranked": [
-  {
-   "best_composite": 3.757,
-   "domain": "transitions_presentation",
-   "family": "ranger_event/event",
-   "kind": "needs_evidence_cluster",
-   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
-   "opportunity_class": "novel_capability",
-   "records": 76,
-   "source_id": "ranger2"
-  },
-  {
-   "best_composite": 3.568,
-   "domain": "transitions_presentation",
-   "family": "ranger_ending/edu",
-   "kind": "needs_evidence_cluster",
-   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
-   "opportunity_class": "novel_capability",
-   "records": 31,
-   "source_id": "ranger2"
-  },
-  {
-   "best_composite": 3.568,
-   "domain": "transitions_presentation",
-   "family": "ranger_event/event",
-   "kind": "needs_evidence_cluster",
-   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
-   "opportunity_class": "technique_donor",
-   "records": 53,
-   "source_id": "ranger2"
-  },
-  {
-   "best_composite": 3.432,
-   "domain": "environmental_effects",
-   "family": "pmd_mapbg_d",
-   "kind": "needs_evidence_cluster",
-   "next_evidence": "render a small sample with the SkyTemple-based decoder and review",
-   "opportunity_class": "technique_donor",
-   "records": 20,
-   "source_id": "pmd_sky"
-  },
-  {
-   "best_composite": 3.432,
-   "domain": "environmental_effects",
-   "family": "pmd_mapbg_p",
-   "kind": "needs_evidence_cluster",
-   "next_evidence": "render a small sample with the SkyTemple-based decoder and review",
-   "opportunity_class": "technique_donor",
-   "records": 15,
-   "source_id": "pmd_sky"
-  },
-  {
-   "best_composite": 3.432,
-   "domain": "environmental_effects",
-   "family": "pmd_mapbg_v",
-   "kind": "needs_evidence_cluster",
-   "next_evidence": "render a small sample with the SkyTemple-based decoder and review",
-   "opportunity_class": "technique_donor",
-   "records": 18,
-   "source_id": "pmd_sky"
-  },
-  {
-   "best_composite": 3.405,
-   "domain": "interface_embellishments",
-   "family": "ranger_interface/i",
-   "kind": "needs_evidence_cluster",
-   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
-   "opportunity_class": "novel_detail",
-   "records": 5,
-   "source_id": "ranger2"
-  },
-  {
-   "best_composite": 3.405,
-   "domain": "pokemon_animation",
-   "family": "ranger_poke_w",
-   "kind": "needs_evidence_cluster",
-   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
-   "opportunity_class": "novel_detail",
-   "records": 163,
-   "source_id": "ranger2"
-  },
-  {
-   "best_composite": 3.378,
-   "domain": "npc_player_sprites",
-   "family": "hgss_mmodel",
-   "kind": "needs_evidence_cluster",
-   "next_evidence": "compare against the Platinum counterpart / verify subject identity with a render",
-   "opportunity_class": "component_donor",
-   "records": 4,
-   "source_id": "hgss"
-  },
-  {
-   "best_composite": 3.378,
-   "domain": "transitions_presentation",
-   "family": "ranger_ending/edu",
-   "kind": "needs_evidence_cluster",
-   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
-   "opportunity_class": "technique_donor",
-   "records": 31,
-   "source_id": "ranger2"
-  },
-  {
-   "best_composite": 3.351,
-   "domain": "environmental_effects",
-   "family": "pmd_mapbg_h",
-   "kind": "needs_evidence_cluster",
-   "next_evidence": "render a small sample with the SkyTemple-based decoder and review",
-   "opportunity_class": "technique_donor",
-   "records": 12,
-   "source_id": "pmd_sky"
-  },
-  {
-   "best_composite": 3.243,
-   "domain": "environmental_effects",
-   "family": "pmd_mapbg_g",
-   "kind": "needs_evidence_cluster",
-   "next_evidence": "render a small sample with the SkyTemple-based decoder and review",
-   "opportunity_class": "technique_donor",
-   "records": 9,
-   "source_id": "pmd_sky"
-  },
-  {
-   "best_composite": 3.243,
-   "domain": "environmental_effects",
-   "family": "pmd_mapbg_t",
-   "kind": "needs_evidence_cluster",
-   "next_evidence": "render a small sample with the SkyTemple-based decoder and review",
-   "opportunity_class": "technique_donor",
-   "records": 8,
-   "source_id": "pmd_sky"
-  },
-  {
-   "best_composite": 3.189,
-   "domain": "transitions_presentation",
-   "family": "ranger_title/title",
-   "kind": "needs_evidence_cluster",
-   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
-   "opportunity_class": "technique_donor",
-   "records": 6,
-   "source_id": "ranger2"
-  },
-  {
-   "best_composite": 3.189,
-   "domain": "ui_menus_hud",
-   "family": "ranger_menu/um",
-   "kind": "needs_evidence_cluster",
-   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
-   "opportunity_class": "component_donor",
-   "records": 1,
-   "source_id": "ranger2"
-  },
-  {
-   "best_composite": 3.162,
-   "domain": "environmental_effects",
-   "family": "pmd_mapbg_s",
-   "kind": "needs_evidence_cluster",
-   "next_evidence": "render a small sample with the SkyTemple-based decoder and review",
-   "opportunity_class": "technique_donor",
-   "records": 3,
-   "source_id": "pmd_sky"
-  },
-  {
-   "best_composite": 3.081,
-   "domain": "field_effects",
-   "family": "pmd_ground_p",
-   "kind": "needs_evidence_cluster",
-   "next_evidence": "render a small sample with the SkyTemple-based decoder and review",
-   "opportunity_class": "technique_donor",
-   "records": 1,
-   "source_id": "pmd_sky"
-  },
-  {
-   "best_composite": 3.054,
-   "domain": "pokemon_animation",
-   "family": "ranger_poke_a",
-   "kind": "needs_evidence_cluster",
-   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
-   "opportunity_class": "technique_donor",
-   "records": 96,
-   "source_id": "ranger2"
-  },
-  {
-   "best_composite": 3.054,
-   "domain": "pokemon_animation",
-   "family": "ranger_poke_s",
-   "kind": "needs_evidence_cluster",
-   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
-   "opportunity_class": "technique_donor",
-   "records": 52,
-   "source_id": "ranger2"
-  },
-  {
-   "best_composite": 3.054,
-   "domain": "pokemon_animation",
-   "family": "ranger_poke_t",
-   "kind": "needs_evidence_cluster",
-   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
-   "opportunity_class": "technique_donor",
-   "records": 37,
-   "source_id": "ranger2"
-  },
-  {
-   "best_composite": 2.811,
-   "domain": "pokemon_sprites",
-   "family": "hgss_battle_forms",
-   "kind": "needs_evidence_cluster",
-   "next_evidence": "compare against the Platinum counterpart / verify subject identity with a render",
-   "opportunity_class": "novel_detail",
-   "records": 2,
-   "source_id": "hgss"
-  },
   {
    "domain": "pokemon_battle_sprites",
    "kind": "runtime_qa_gate",

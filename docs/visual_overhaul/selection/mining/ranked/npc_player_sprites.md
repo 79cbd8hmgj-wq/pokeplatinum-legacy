@@ -1,6 +1,6 @@
 # Ranked: npc_player_sprites
 
-groups 375; promoted 77; needs_evidence 4; reference_only 198; reject 96; records 81
+groups 375; promoted 80; needs_evidence 0; reference_only 199; reject 96; records 80
 
 | # | Opportunity | Class | Use | Status | Score |
 |---:|---|---|---|---|---:|
@@ -22,10 +22,10 @@ groups 375; promoted 77; needs_evidence 4; reference_only 198; reject 96; record
 | 16 | hgss/hgss_mmodel_00000229/novel_detail/whole_asset | novel_detail | whole_asset | promoted | 3.676 |
 | 17 | hgss/hgss_mmodel_00000230/novel_detail/whole_asset | novel_detail | whole_asset | promoted | 3.676 |
 | 18 | hgss/hgss_mmodel_00000231/novel_detail/whole_asset | novel_detail | whole_asset | promoted | 3.676 |
-| 19 | hgss/hgss_mmodel_00000058/novel_detail/whole_asset | novel_detail | whole_asset | promoted | 3.486 |
-| 20 | hgss/hgss_mmodel_00000059/novel_detail/whole_asset | novel_detail | whole_asset | promoted | 3.486 |
-| 21 | hgss/hgss_mmodel_00000079/novel_detail/whole_asset | novel_detail | whole_asset | promoted | 3.486 |
-| 22 | hgss/hgss_mmodel_00000083/novel_detail/whole_asset | novel_detail | whole_asset | promoted | 3.486 |
-| 23 | hgss/hgss_mmodel_00000084/novel_detail/whole_asset | novel_detail | whole_asset | promoted | 3.486 |
-| 24 | hgss/hgss_mmodel_00000115/novel_detail/whole_asset | novel_detail | whole_asset | promoted | 3.486 |
-| 25 | hgss/hgss_mmodel_00000116/novel_detail/whole_asset | novel_detail | whole_asset | promoted | 3.486 |
+| 19 | hgss/hgss_mmodel_00000069/component_donor/component | component_donor | component | promoted | 3.541 |
+| 20 | hgss/hgss_mmodel_00000070/component_donor/component | component_donor | component | promoted | 3.541 |
+| 21 | hgss/hgss_mmodel_00000058/novel_detail/whole_asset | novel_detail | whole_asset | promoted | 3.486 |
+| 22 | hgss/hgss_mmodel_00000059/novel_detail/whole_asset | novel_detail | whole_asset | promoted | 3.486 |
+| 23 | hgss/hgss_mmodel_00000079/novel_detail/whole_asset | novel_detail | whole_asset | promoted | 3.486 |
+| 24 | hgss/hgss_mmodel_00000083/novel_detail/whole_asset | novel_detail | whole_asset | promoted | 3.486 |
+| 25 | hgss/hgss_mmodel_00000084/novel_detail/whole_asset | novel_detail | whole_asset | promoted | 3.486 |

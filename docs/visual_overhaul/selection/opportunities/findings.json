@@ -582,9 +582,12 @@
     "refs": [
      "docs/visual_overhaul/selection/ledgers/party_summary_ui.json",
      "docs/visual_overhaul/selection/ledgers/pokedex_ui.json",
-     "docs/visual_overhaul/G7_COMPLETE_SUMMARY.md"
+     "docs/visual_overhaul/G7_COMPLETE_SUMMARY.md",
+     "docs/visual_overhaul/selection/mining/evidence/hgss_zukan_screens.png",
+     "docs/visual_overhaul/selection/mining/evidence/hgss_camera_plist.png",
+     "docs/visual_overhaul/selection/mining/evidence/hgss_ui_targeted.json"
     ],
-    "summary": "needs_evidence ledgers for party_summary_ui/pokedex_ui; G7 already shipped native UI."
+    "summary": "Targeted renders of 4 party and ~40 Pokedex tilemap screens (partial NSCR/NCGR pairing, some screens blank); G7 already shipped native UI. Verdict: reference_only confirmed."
    },
    "feasibility": 1,
    "finding_id": "opp:hgss/ui_dex_party_reference",
@@ -601,7 +604,7 @@
     "kind": "none"
    },
    "useful": "Design reference for dex/party layout and animation.",
-   "why": "Platinum party/summary/dex screens were rebuilt natively in G7; the three HGSS UI families were never visually compared, so there is no demonstrated gain."
+   "why": "Targeted evidence closure composed the HGSS party-list screens (plist_gra: Pokeball-motif backdrop + slot-tab panels) and the Pokedex screens (zukan_gra: SEARCH/OPEN/QUIT/CRY/DETAILS/SIZE/FORMS/BACK button strips, red header + grid panels, cry dial). Each has a Platinum counterpart already rebuilt natively in G7; no element adds a capability Platinum lacks, so the family is confirmed reference-only."
   },
   {
    "adaptation": [
@@ -959,6 +962,270 @@
    },
    "useful": "None: indexed art and palettes are identical.",
    "why": "Swapping icons yields no visual payoff (G3 icon ruling: direct but reject)."
+  },
+  {
+   "adaptation": [
+    "target extension: catalog bm_field/bm_room as ~560 model groups + per-model texture hashes",
+    "convert BMD0 -> NSBMD props through the Platinum prop-model path; regrade textures with the G4 environment pipeline",
+    "start with 5-10 props that Sinnoh lacks (fountain, signposts, lamps, bridges)"
+   ],
+   "asset_use": "components",
+   "classification": "component_donor",
+   "confidence": "medium",
+   "constraints": [
+    "Johto/Kanto architecture: use as parts/kit-bash and texture detail, not as drop-in Sinnoh buildings",
+    "building placement, material/shape tables (matshp) and area texture sets must be rebuilt per Platinum area",
+    "texture palette/format budgets per area; preview shows model parts without node transforms (some multi-node models are approximate)"
+   ],
+   "cost": "high",
+   "donor": {
+    "cataloged": false,
+    "game": "hgss",
+    "locator": "HGSS files/fielddata/build_model/bm_field.narc (340 BMD0), bm_room.narc (222 BMD0) + bm_*_matshp.dat; uncataloged (the catalog has no model groups)",
+    "source_id": "hgss",
+    "verification": [
+     {
+      "commit": "9d8b7591f09b65804da2fb2dfd56f320633e0d36",
+      "fact": "340 BMD0 outdoor buildings/props decoded with the committed NSBMD previewer (56437 triangles; 317 models carry a texture absent from Platinum)",
+      "path": "files/fielddata/build_model/bm_field.narc",
+      "repo": "pokeheartgold"
+     },
+     {
+      "commit": "9d8b7591f09b65804da2fb2dfd56f320633e0d36",
+      "fact": "222 BMD0 interiors decoded (30374 triangles); 129 reuse only textures Platinum already has, 85 bring novel textures",
+      "path": "files/fielddata/build_model/bm_room.narc",
+      "repo": "pokeheartgold"
+     }
+    ]
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "refs": [
+     "docs/visual_overhaul/selection/mining/evidence/hgss_bm_field_models.png",
+     "docs/visual_overhaul/selection/mining/evidence/hgss_bm_room_models.png",
+     "docs/visual_overhaul/selection/mining/evidence/hgss_3d_census.json"
+    ],
+    "summary": "Decoded and rendered all 562 BMD0 models and their textures (committed sheets); Platinum comparison by exact texture hash against 7508 Platinum textures."
+   },
+   "feasibility": 1,
+   "finding_id": "opp:hgss/field_building_model_library",
+   "pixel_use": "recolored_donor",
+   "proposed_by": "claude (DS reassessment; not human-approved)",
+   "risk": "medium",
+   "scores": {
+    "cost": 4,
+    "feasibility": 2,
+    "novelty": 3,
+    "reuse": 5,
+    "risk": 3,
+    "slice": 3,
+    "visual_impact": 4
+   },
+   "status": "proposed",
+   "subject": "HGSS building/prop model library (340 outdoor + 222 interior BMD0 models)",
+   "tags": [
+    "texture_region",
+    "material_treatment",
+    "environmental_motif",
+    "silhouette"
+   ],
+   "target": {
+    "kind": "system",
+    "refs": [
+     "res/field/props/models",
+     "res/field/props/texture_sets"
+    ],
+    "subsystem": "field_environment_art",
+    "system": "field prop/building models (NSBMD props + texture sets)"
+   },
+   "useful": "Pokemon Centers/Marts/gyms, Japanese-style town houses, pagoda/tower, fountains, bridges, gates, fences, signs, lamps, doors, market stalls and interiors as DS-native models + textures.",
+   "why": "Same Gen IV BMD0/NSBMD format family as Platinum's 590 prop models, so geometry and textures can be reused as components (kit-bash new Sinnoh props/buildings, texture detail) rather than imported wholesale. 317/340 outdoor models bring textures Platinum lacks."
+  },
+  {
+   "adaptation": [
+    "catalog the 106 sets as texture groups; hash against Platinum to keep only novel/near-match regions",
+    "feed selected regions to the G4 recolor tools for one vertical-slice area"
+   ],
+   "asset_use": "components",
+   "classification": "component_donor",
+   "confidence": "medium",
+   "constraints": [
+    "Johto palettes must be re-graded to the Sinnoh area look (G4 pipeline)",
+    "per-area texture set size/VRAM limits",
+    "palette pairing is by name; some compressed textures need per-set verification"
+   ],
+   "cost": "medium",
+   "donor": {
+    "cataloged": false,
+    "game": "hgss",
+    "locator": "HGSS files/a/0/4/4 (NARC of 106 BTX0 map texture sets, 3659 textures); uncataloged (the catalog has no texture/model groups for HGSS)",
+    "source_id": "hgss",
+    "verification": [
+     {
+      "commit": "9d8b7591f09b65804da2fb2dfd56f320633e0d36",
+      "fact": "106 BTX0 sets, 3659 textures, 2100 unique; 1847 (88.0%) have no exact match among Platinum's 2631 unique textures; 62 are near matches (variants)",
+      "path": "files/a/0/4/4",
+      "repo": "pokeheartgold"
+     }
+    ]
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "refs": [
+     "docs/visual_overhaul/selection/mining/evidence/hgss_map_textures_novel.png",
+     "docs/visual_overhaul/selection/mining/evidence/hgss_3d_census.json"
+    ],
+    "summary": "Decoded all 106 sets; exact-hash comparison with Platinum prop/map texture sets and embedded model textures; novel-texture contact sheet committed."
+   },
+   "feasibility": 2,
+   "finding_id": "opp:hgss/map_texture_set_library",
+   "pixel_use": "recolored_donor",
+   "proposed_by": "claude (DS reassessment; not human-approved)",
+   "risk": "medium",
+   "scores": {
+    "cost": 3,
+    "feasibility": 3,
+    "novelty": 3,
+    "reuse": 5,
+    "risk": 3,
+    "slice": 4,
+    "visual_impact": 4
+   },
+   "status": "proposed",
+   "subject": "HGSS map texture sets (106 BTX0 sets, ~1.8k novel unique textures)",
+   "tags": [
+    "texture_region",
+    "material_treatment",
+    "environmental_motif"
+   ],
+   "target": {
+    "kind": "system",
+    "refs": [
+     "res/field/maps/texture_sets",
+     "docs/visual_overhaul/G4_ENVIRONMENT_RECONSTRUCTION_COMPLETE.md"
+    ],
+    "subsystem": "field_environment_art",
+    "system": "area map texture sets (NSBTX)"
+   },
+   "useful": "Terrain/cliff/path/water/cave/ice/gym-floor/foliage/roof textures as a DS-native region library (tall trees, autumn foliage, tile and brick, cave walls, ice, shop interiors).",
+   "why": "Identical DS 3D texture format (TEX0 4/16/256-colour + compressed) to Platinum's map texture sets, so regions convert trivially; the novel majority gives fresh detail for the existing G4 environment-grade pipeline."
+  },
+  {
+   "adaptation": [
+    "pilot 3-5 species in one event/cutscene through the existing field-sprite path",
+    "later extension: catalog the 572 sheets as groups"
+   ],
+   "asset_use": "whole_assets",
+   "classification": "novel_detail",
+   "confidence": "high",
+   "constraints": [
+    "whole-asset sheets: art is HGSS pixels (Platinum field-sprite palette/shading must match)",
+    "needs per-species mapping + object OAM budget; no follower logic implied",
+    "34 large sheets are 64x64"
+   ],
+   "cost": "low",
+   "donor": {
+    "cataloged": false,
+    "game": "hgss",
+    "locator": "HGSS files/data/mmodel/mmodel/*.NSBTX: 572 two-palette Pokemon sheets (538 at 32x32, 34 at 64x64), 8 frames each; uncataloged (excluded from the NPC/player catalog scope)",
+    "source_id": "hgss",
+    "verification": [
+     {
+      "commit": "9d8b7591f09b65804da2fb2dfd56f320633e0d36",
+      "fact": "decoded 572 sheets: 8 distinct frames each (~7.96/8 distinct), normal + shiny palette, 4bpp 32x32 matching Platinum's field-sprite contract",
+      "path": "files/data/mmodel/mmodel",
+      "repo": "pokeheartgold"
+     }
+    ]
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "refs": [
+     "docs/visual_overhaul/selection/mining/evidence/hgss_follower_sheets.png",
+     "docs/visual_overhaul/selection/mining/evidence/hgss_follower_sheets.json"
+    ],
+    "summary": "Decoded all 572 sheets and rendered a 28-species sample (normal + shiny)."
+   },
+   "feasibility": 2,
+   "finding_id": "opp:hgss/follower_sheet_library",
+   "pixel_use": "donor_pixels",
+   "proposed_by": "claude (DS reassessment; not human-approved)",
+   "risk": "low",
+   "scores": {
+    "cost": 2,
+    "feasibility": 3,
+    "novelty": 5,
+    "reuse": 4,
+    "risk": 2,
+    "slice": 3,
+    "visual_impact": 4
+   },
+   "status": "proposed",
+   "subject": "HGSS overworld Pokemon sheet library (572 species/form sheets; usable without the follower system)",
+   "tags": [
+    "pose",
+    "animation_frame"
+   ],
+   "target": {
+    "host_system": "overworld Pokemon presence outside any follower mechanic: event/cutscene sprites, special encounters, roaming/standing Pokemon NPCs",
+    "kind": "none",
+    "refs": [
+     "res/graphics/field_sprites/pokemon",
+     "src/map_object.c"
+    ]
+   },
+   "useful": "A full-species overworld sprite set (down/up/left/right pairs + shiny palette) for events, cutscenes, special encounters and decorative field Pokemon.",
+   "why": "Platinum ships 43 overworld Pokemon sheets; HGSS adds 572 drop-in sheets in the same NSBTX/4bpp path. The system (following) stays deferred; the sheets alone enable cutscene/event/special-encounter Pokemon."
+  },
+  {
+   "adaptation": [
+    "none planned; reconsider only for relief technique"
+   ],
+   "classification": "reference_only",
+   "confidence": "medium",
+   "constraints": [
+    "Johto-specific map layouts",
+    "Platinum map matrices/permissions differ"
+   ],
+   "cost": "low",
+   "covers_pools": [],
+   "donor": {
+    "cataloged": true,
+    "game": "hgss",
+    "locator": "files/a/0/6/5 (676 land-data blobs: permissions + props + terrain NSBMD + BDHC)",
+    "source_id": "hgss",
+    "verification": [
+     {
+      "commit": "9d8b7591f09b65804da2fb2dfd56f320633e0d36",
+      "fact": "676-file land-data NARC; terrain NSBMD at offset 0x10+perm+props",
+      "path": "files/a/0/6/5",
+      "repo": "pokeheartgold"
+     }
+    ]
+   },
+   "evidence": {
+    "basis": "repo_document",
+    "refs": [
+     "docs/visual_overhaul/selection/mining/evidence/hgss_3d_census.json"
+    ],
+    "summary": "land-data decode census (676 maps)."
+   },
+   "feasibility": 1,
+   "finding_id": "opp:hgss/land_data_terrain",
+   "pixel_use": "none",
+   "proposed_by": "claude (DS reassessment; not human-approved)",
+   "risk": "low",
+   "status": "proposed",
+   "subject": "HGSS land-data terrain models (676 maps, per-map NSBMD)",
+   "tags": [
+    "layout"
+   ],
+   "target": {
+    "host_system": "none (terrain is map-specific)",
+    "kind": "none"
+   },
+   "useful": "Terrain geometry of Johto/Kanto maps.",
+   "why": "Decoded 591 terrain models (median 912 triangles): flat chunked ground specific to Johto layouts; the value is in the texture/building libraries, not the terrain meshes."
   }
  ],
  "schema_version": 2

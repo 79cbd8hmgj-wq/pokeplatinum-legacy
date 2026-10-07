@@ -1,0 +1,9774 @@
+{
+ "schema_version": 1,
+ "source": "pokeranger2 res/prebuilt/data",
+ "bundles": {
+  "event000_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 205,
+     "max_index": 239,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event000_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 223,
+     "max_index": 239,
+     "paper_pct": 0.0,
+     "green_pct": 4.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event001_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 214,
+     "max_index": 239,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event001_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 225,
+     "max_index": 239,
+     "paper_pct": 0.0,
+     "green_pct": 4.1
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event002_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 110,
+     "max_index": 239,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event002_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 119,
+     "max_index": 239,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event003_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 210,
+     "max_index": 239,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event003_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 119,
+     "max_index": 239,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event004_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 197,
+     "max_index": 239,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event004_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 120,
+     "max_index": 239,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event005_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 177,
+     "max_index": 239,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event005_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 119,
+     "max_index": 239,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event006_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 210,
+     "max_index": 239,
+     "paper_pct": 0.0,
+     "green_pct": 0.2
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event006_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 225,
+     "max_index": 239,
+     "paper_pct": 0.0,
+     "green_pct": 4.1
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event007_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 199,
+     "max_index": 239,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event007_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 226,
+     "max_index": 239,
+     "paper_pct": 0.0,
+     "green_pct": 4.4
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event008_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 182,
+     "max_index": 239,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event008_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 189,
+     "max_index": 239,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event009_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 161,
+     "max_index": 239,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event009_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 179,
+     "max_index": 239,
+     "paper_pct": 0.5,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event010_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 180,
+     "max_index": 239,
+     "paper_pct": 5.6,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event010_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 768,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 177,
+     "max_index": 239,
+     "paper_pct": 5.6,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event020_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 608,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 231,
+     "max_index": 255,
+     "paper_pct": 26.4,
+     "green_pct": 3.3
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event020_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 544,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 239,
+     "max_index": 254,
+     "paper_pct": 9.1,
+     "green_pct": 9.8
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event021_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 672,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 213,
+     "max_index": 255,
+     "paper_pct": 26.8,
+     "green_pct": 0.3
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event021_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 576,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 164,
+     "max_index": 255,
+     "paper_pct": 17.9,
+     "green_pct": 25.1
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event022_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 608,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 209,
+     "max_index": 255,
+     "paper_pct": 28.8,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event022_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 608,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 157,
+     "max_index": 255,
+     "paper_pct": 17.8,
+     "green_pct": 25.8
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event023_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 672,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 221,
+     "max_index": 255,
+     "paper_pct": 24.0,
+     "green_pct": 0.3
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event023_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 608,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 235,
+     "max_index": 255,
+     "paper_pct": 48.5,
+     "green_pct": 6.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event024_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 672,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 221,
+     "max_index": 255,
+     "paper_pct": 24.0,
+     "green_pct": 0.3
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event024_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 640,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 232,
+     "max_index": 255,
+     "paper_pct": 24.3,
+     "green_pct": 5.7
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event025_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 576,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 163,
+     "max_index": 255,
+     "paper_pct": 8.4,
+     "green_pct": 1.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event025_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 608,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 229,
+     "max_index": 255,
+     "paper_pct": 24.7,
+     "green_pct": 6.7
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event026_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 576,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 164,
+     "max_index": 255,
+     "paper_pct": 8.3,
+     "green_pct": 1.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event026_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 608,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 228,
+     "max_index": 255,
+     "paper_pct": 24.7,
+     "green_pct": 6.7
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event027_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 576,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 199,
+     "max_index": 255,
+     "paper_pct": 24.4,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event027_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 544,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 149,
+     "max_index": 255,
+     "paper_pct": 8.1,
+     "green_pct": 25.4
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event028_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 608,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 222,
+     "max_index": 255,
+     "paper_pct": 10.8,
+     "green_pct": 0.7
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event028_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 544,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 214,
+     "max_index": 255,
+     "paper_pct": 8.9,
+     "green_pct": 0.2
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event029_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 544,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 191,
+     "max_index": 255,
+     "paper_pct": 19.4,
+     "green_pct": 20.4
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event029_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 576,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 230,
+     "max_index": 255,
+     "paper_pct": 24.8,
+     "green_pct": 3.5
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event030_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 544,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 192,
+     "max_index": 255,
+     "paper_pct": 19.4,
+     "green_pct": 20.5
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event030_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 576,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 230,
+     "max_index": 255,
+     "paper_pct": 24.8,
+     "green_pct": 3.5
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event031_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 544,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 170,
+     "max_index": 255,
+     "paper_pct": 4.4,
+     "green_pct": 13.9
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event031_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 544,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 137,
+     "max_index": 255,
+     "paper_pct": 11.0,
+     "green_pct": 0.1
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event032_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 544,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 172,
+     "max_index": 255,
+     "paper_pct": 4.4,
+     "green_pct": 13.9
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event032_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 544,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 141,
+     "max_index": 255,
+     "paper_pct": 10.8,
+     "green_pct": 0.1
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event033_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 640,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 206,
+     "max_index": 253,
+     "paper_pct": 25.3,
+     "green_pct": 1.2
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event033_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 608,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 222,
+     "max_index": 255,
+     "paper_pct": 22.4,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event034_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 608,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 207,
+     "max_index": 255,
+     "paper_pct": 11.4,
+     "green_pct": 2.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event034_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 544,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 171,
+     "max_index": 255,
+     "paper_pct": 48.7,
+     "green_pct": 0.7
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event035_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 608,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 207,
+     "max_index": 255,
+     "paper_pct": 11.4,
+     "green_pct": 2.0
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event035_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 576,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 172,
+     "max_index": 255,
+     "paper_pct": 23.7,
+     "green_pct": 0.7
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event036_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 640,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 222,
+     "max_index": 255,
+     "paper_pct": 23.4,
+     "green_pct": 0.5
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event036_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 672,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 249,
+     "max_index": 255,
+     "paper_pct": 5.8,
+     "green_pct": 1.3
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event037_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 576,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 187,
+     "max_index": 255,
+     "paper_pct": 24.4,
+     "green_pct": 1.1
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event037_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 544,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 170,
+     "max_index": 255,
+     "paper_pct": 15.2,
+     "green_pct": 0.1
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event038_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 576,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 188,
+     "max_index": 255,
+     "paper_pct": 33.0,
+     "green_pct": 1.4
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event038_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 544,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 170,
+     "max_index": 255,
+     "paper_pct": 15.2,
+     "green_pct": 0.1
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event050_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 352,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 61,
+     "max_index": 86,
+     "paper_pct": 3.3,
+     "green_pct": 49.9
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event050_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 640,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 224,
+     "max_index": 255,
+     "paper_pct": 0.0,
+     "green_pct": 47.8
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event051_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 352,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 61,
+     "max_index": 71,
+     "paper_pct": 3.2,
+     "green_pct": 50.7
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event051_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 640,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 224,
+     "max_index": 255,
+     "paper_pct": 0.0,
+     "green_pct": 47.8
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event052_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 256,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 59,
+     "max_index": 69,
+     "paper_pct": 0.0,
+     "green_pct": 24.3
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event052_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 192,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 51,
+     "max_index": 52,
+     "paper_pct": 0.4,
+     "green_pct": 57.7
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event053_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 352,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 63,
+     "max_index": 88,
+     "paper_pct": 3.3,
+     "green_pct": 50.4
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event053_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 672,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 222,
+     "max_index": 255,
+     "paper_pct": 0.0,
+     "green_pct": 48.2
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event054_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 352,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 63,
+     "max_index": 83,
+     "paper_pct": 3.2,
+     "green_pct": 51.2
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event054_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 672,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 222,
+     "max_index": 255,
+     "paper_pct": 0.0,
+     "green_pct": 48.2
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event055_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 384,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 45,
+     "max_index": 47,
+     "paper_pct": 0.0,
+     "green_pct": 24.1
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event055_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 512,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 67,
+     "max_index": 67,
+     "paper_pct": 0.0,
+     "green_pct": 35.4
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event056_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 384,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 45,
+     "max_index": 47,
+     "paper_pct": 0.0,
+     "green_pct": 24.1
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event056_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 512,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 67,
+     "max_index": 67,
+     "paper_pct": 0.0,
+     "green_pct": 35.4
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event057_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 256,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 59,
+     "max_index": 69,
+     "paper_pct": 0.0,
+     "green_pct": 24.3
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "event057_01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 512,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 65,
+     "max_index": 84,
+     "paper_pct": 0.0,
+     "green_pct": 35.4
+    }
+   ],
+   "family": "ranger_event"
+  },
+  "edobj000_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_ending"
+  },
+  "edu000_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 226,
+     "max_index": 255,
+     "paper_pct": 0.2,
+     "green_pct": 2.0
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu001_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 229,
+     "max_index": 255,
+     "paper_pct": 0.1,
+     "green_pct": 1.5
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu002_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 230,
+     "max_index": 255,
+     "paper_pct": 0.5,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu003_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 189,
+     "max_index": 255,
+     "paper_pct": 0.1,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu004_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 232,
+     "max_index": 255,
+     "paper_pct": 0.0,
+     "green_pct": 41.2
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu005_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 134,
+     "max_index": 255,
+     "paper_pct": 0.1,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu006_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 172,
+     "max_index": 255,
+     "paper_pct": 0.1,
+     "green_pct": 57.1
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu007_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 170,
+     "max_index": 255,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu008_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 219,
+     "max_index": 255,
+     "paper_pct": 0.0,
+     "green_pct": 0.6
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu009_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 224,
+     "max_index": 255,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu010_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 221,
+     "max_index": 255,
+     "paper_pct": 0.1,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu011_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 231,
+     "max_index": 255,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu012_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 228,
+     "max_index": 255,
+     "paper_pct": 0.1,
+     "green_pct": 0.1
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu013_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 209,
+     "max_index": 255,
+     "paper_pct": 0.1,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu014_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 219,
+     "max_index": 255,
+     "paper_pct": 0.1,
+     "green_pct": 2.2
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu015_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 240,
+     "max_index": 255,
+     "paper_pct": 0.3,
+     "green_pct": 24.7
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu016_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 228,
+     "max_index": 255,
+     "paper_pct": 0.1,
+     "green_pct": 1.5
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu017_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 230,
+     "max_index": 255,
+     "paper_pct": 0.5,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu018_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 190,
+     "max_index": 255,
+     "paper_pct": 0.1,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu019_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 232,
+     "max_index": 255,
+     "paper_pct": 0.0,
+     "green_pct": 41.2
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu020_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 132,
+     "max_index": 255,
+     "paper_pct": 0.1,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu021_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 172,
+     "max_index": 255,
+     "paper_pct": 0.1,
+     "green_pct": 57.1
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu022_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 171,
+     "max_index": 255,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu023_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 219,
+     "max_index": 255,
+     "paper_pct": 0.0,
+     "green_pct": 0.6
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu024_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 223,
+     "max_index": 255,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu025_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 216,
+     "max_index": 255,
+     "paper_pct": 0.1,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu026_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 232,
+     "max_index": 255,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu027_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 228,
+     "max_index": 255,
+     "paper_pct": 0.1,
+     "green_pct": 0.1
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu028_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 213,
+     "max_index": 255,
+     "paper_pct": 0.1,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu029_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 220,
+     "max_index": 255,
+     "paper_pct": 0.1,
+     "green_pct": 2.2
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "edu030_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 241,
+     "max_index": 255,
+     "paper_pct": 0.3,
+     "green_pct": 24.7
+    }
+   ],
+   "family": "ranger_ending"
+  },
+  "copyright000_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 4,
+   "tiles": 96,
+   "pal_colors": 16,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 15,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_title"
+  },
+  "copyright001_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 4,
+   "tiles": 64,
+   "pal_colors": 16,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 15,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_title"
+  },
+  "copyright002_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 4,
+   "tiles": 192,
+   "pal_colors": 16,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 15,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_title"
+  },
+  "dammytitle_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 3,
+    "NCLR": 3,
+    "NSCR": 3
+   },
+   "bpp": 4,
+   "tiles": 288,
+   "pal_colors": 32,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 44.5,
+     "colors": 10,
+     "max_index": 213,
+     "paper_pct": 0.0,
+     "green_pct": 23.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 2,
+     "max_index": 5,
+     "paper_pct": 0.0,
+     "green_pct": 75.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 2,
+     "max_index": 5,
+     "paper_pct": 0.0,
+     "green_pct": 75.0
+    }
+   ],
+   "family": "ranger_title"
+  },
+  "title_ue00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 4,
+   "tiles": 128,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 4.3,
+     "colors": 4,
+     "max_index": 5,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_title"
+  },
+  "title_ue01_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 1024,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 31.0,
+     "colors": 202,
+     "max_index": 255,
+     "paper_pct": 0.0,
+     "green_pct": 17.7
+    }
+   ],
+   "family": "ranger_title"
+  },
+  "title_ue02_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 4,
+   "tiles": 320,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 512,
+     "h": 256,
+     "nonzero_pct": 9.0,
+     "colors": 10,
+     "max_index": 29,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_title"
+  },
+  "title_ue03_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 4,
+   "tiles": 320,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 512,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 15,
+     "max_index": 31,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_title"
+  },
+  "title_ue10_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 4,
+   "tiles": 128,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 4.3,
+     "colors": 5,
+     "max_index": 5,
+     "paper_pct": 0.0,
+     "green_pct": 0.6
+    }
+   ],
+   "family": "ranger_title"
+  },
+  "title_ue11_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 384,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 33.7,
+     "colors": 178,
+     "max_index": 255,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_title"
+  },
+  "title_ue12_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 4,
+   "tiles": 64,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 72.7,
+     "colors": 14,
+     "max_index": 31,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_title"
+  },
+  "title_ue13_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 4,
+   "tiles": 64,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 15,
+     "max_index": 31,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_title"
+  },
+  "cm000_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "j000_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_01_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_02_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_03_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_04_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_05_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_06_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_07_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_08_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_09_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_10_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_11_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_12_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_13_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_14_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_15_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_16_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_17_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_18_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_19_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_20_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_21_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_22_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_23_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_24_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_25_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_26_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma000_27_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma001_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma001_01_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma001_02_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma001_03_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma001_04_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma001_05_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma001_06_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma002_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma003_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma004_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma005_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ma005_64_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mam000_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mam000_01_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mam000_02_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mam000_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 2
+   },
+   "bpp": 4,
+   "tiles": 96,
+   "pal_colors": 16,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 7.3,
+     "colors": 15,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 5.5,
+     "colors": 15,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "map000_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "map000_01_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "map000_02_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "map000_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 480,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 31,
+     "max_index": 31,
+     "paper_pct": 0.0,
+     "green_pct": 37.8
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "mb000_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mb000_01_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mb000_02_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mb000_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 3
+   },
+   "bpp": 4,
+   "tiles": 1024,
+   "pal_colors": 32,
+   "screens": [
+    {
+     "w": 512,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 10,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 75.0
+    },
+    {
+     "w": 512,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 10,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 75.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 53.9,
+     "colors": 11,
+     "max_index": 31,
+     "paper_pct": 0.0,
+     "green_pct": 53.7
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "mb001_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mb001_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 2
+   },
+   "bpp": 4,
+   "tiles": 32,
+   "pal_colors": 16,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 21.9,
+     "colors": 2,
+     "max_index": 13,
+     "paper_pct": 0.0,
+     "green_pct": 21.9
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 2,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 75.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "mc000_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 3
+   },
+   "bpp": 4,
+   "tiles": 96,
+   "pal_colors": 48,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 46.1,
+     "colors": 6,
+     "max_index": 47,
+     "paper_pct": 0.0,
+     "green_pct": 15.5
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 21.8,
+     "colors": 12,
+     "max_index": 31,
+     "paper_pct": 3.0,
+     "green_pct": 7.4
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 6,
+     "max_index": 38,
+     "paper_pct": 0.0,
+     "green_pct": 75.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "mc000_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 3
+   },
+   "bpp": 4,
+   "tiles": 96,
+   "pal_colors": 48,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 46.1,
+     "colors": 6,
+     "max_index": 47,
+     "paper_pct": 0.0,
+     "green_pct": 15.5
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 21.8,
+     "colors": 12,
+     "max_index": 31,
+     "paper_pct": 3.0,
+     "green_pct": 7.4
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 6,
+     "max_index": 38,
+     "paper_pct": 0.0,
+     "green_pct": 75.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "md000_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "md000_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 3
+   },
+   "bpp": 4,
+   "tiles": 32,
+   "pal_colors": 48,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 47.4,
+     "colors": 4,
+     "max_index": 13,
+     "paper_pct": 0.0,
+     "green_pct": 47.4
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 2,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 75.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 67.6,
+     "colors": 3,
+     "max_index": 12,
+     "paper_pct": 0.0,
+     "green_pct": 67.6
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "md001_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "md001_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 3
+   },
+   "bpp": 4,
+   "tiles": 32,
+   "pal_colors": 48,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 7.4,
+     "colors": 9,
+     "max_index": 13,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 48.4,
+     "colors": 5,
+     "max_index": 13,
+     "paper_pct": 0.0,
+     "green_pct": 47.4
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 2,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 75.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "mit000_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit001_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit002_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit003_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit004_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit005_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit006_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit007_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit008_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit009_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit010_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit011_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit012_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit013_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit014_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit015_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit016_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit017_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit018_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit050_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit051_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit070_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit071_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit072_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit073_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit074_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit075_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit100_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit101_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit102_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit103_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mit104_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ml000_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 3
+   },
+   "bpp": 4,
+   "tiles": 1024,
+   "pal_colors": 32,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 1,
+     "max_index": 1,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 1,
+     "max_index": 2,
+     "paper_pct": 75.0,
+     "green_pct": 0.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 11,
+     "max_index": 27,
+     "paper_pct": 11.2,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "mm000_LZ.bin": {
+   "members": {
+    "NCLR": 1,
+    "NCGR": 1,
+    "NSCR": 2
+   },
+   "bpp": 4,
+   "tiles": 64,
+   "pal_colors": 48,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 21.8,
+     "colors": 12,
+     "max_index": 31,
+     "paper_pct": 3.0,
+     "green_pct": 7.4
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 6,
+     "max_index": 38,
+     "paper_pct": 0.0,
+     "green_pct": 75.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "mm001_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mm001_01_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mm001_02_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mm001_03_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mm001_LZ.bin": {
+   "members": {
+    "NCLR": 1,
+    "NCER": 1,
+    "NCGR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mmq000_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mmq000_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 3
+   },
+   "bpp": 4,
+   "tiles": 768,
+   "pal_colors": 32,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 11.0,
+     "colors": 5,
+     "max_index": 24,
+     "paper_pct": 0.0,
+     "green_pct": 11.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 5.7,
+     "colors": 11,
+     "max_index": 31,
+     "paper_pct": 0.0,
+     "green_pct": 4.5
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 7,
+     "max_index": 7,
+     "paper_pct": 0.0,
+     "green_pct": 75.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "mnd000_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 4,
+   "tiles": 64,
+   "pal_colors": 16,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 15,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 25.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "mnd000_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 4,
+   "tiles": 160,
+   "pal_colors": 16,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 7,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "mnd001_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 480,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 225,
+     "max_index": 239,
+     "paper_pct": 1.4,
+     "green_pct": 4.3
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "mni000_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mni000_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 2
+   },
+   "bpp": 4,
+   "tiles": 64,
+   "pal_colors": 16,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 50.0,
+     "colors": 11,
+     "max_index": 12,
+     "paper_pct": 34.0,
+     "green_pct": 0.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 2,
+     "max_index": 14,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "mo000_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mo000_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 2
+   },
+   "bpp": 4,
+   "tiles": 32,
+   "pal_colors": 32,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 39.1,
+     "colors": 15,
+     "max_index": 31,
+     "paper_pct": 0.0,
+     "green_pct": 39.1
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 2,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 75.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "mp000_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 3
+   },
+   "bpp": 4,
+   "tiles": 96,
+   "pal_colors": 48,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 20.1,
+     "colors": 5,
+     "max_index": 47,
+     "paper_pct": 0.0,
+     "green_pct": 20.1
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 16.5,
+     "colors": 11,
+     "max_index": 31,
+     "paper_pct": 3.0,
+     "green_pct": 8.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 6,
+     "max_index": 38,
+     "paper_pct": 0.0,
+     "green_pct": 75.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "mp000_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 3
+   },
+   "bpp": 4,
+   "tiles": 96,
+   "pal_colors": 48,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 20.1,
+     "colors": 5,
+     "max_index": 47,
+     "paper_pct": 0.0,
+     "green_pct": 20.1
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 16.5,
+     "colors": 11,
+     "max_index": 31,
+     "paper_pct": 3.0,
+     "green_pct": 8.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 6,
+     "max_index": 38,
+     "paper_pct": 0.0,
+     "green_pct": 75.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "mp001_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mp002_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mp003_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mp004_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mp005_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mp006_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mp007_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mp008_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mps000_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mps000_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 4,
+   "tiles": 32,
+   "pal_colors": 16,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 2,
+     "max_index": 3,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "mps001_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mps002_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mr000_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mr000_01_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mr000_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 4,
+   "tiles": 1024,
+   "pal_colors": 16,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 8.7,
+     "colors": 1,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "mr001_00_LZ.bin": {
+   "members": {
+    "NCLR": 1,
+    "NCBR": 1,
+    "NCER": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mre000_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mre000_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 4,
+   "tiles": 32,
+   "pal_colors": 16,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 7,
+     "max_index": 9,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "mre001_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 4,
+   "tiles": 32,
+   "pal_colors": 16,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 9,
+     "max_index": 9,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "ms000_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ms000_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 3
+   },
+   "bpp": 4,
+   "tiles": 96,
+   "pal_colors": 32,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 52.8,
+     "colors": 4,
+     "max_index": 27,
+     "paper_pct": 0.0,
+     "green_pct": 9.4
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 16.6,
+     "colors": 12,
+     "max_index": 24,
+     "paper_pct": 3.0,
+     "green_pct": 8.1
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 6,
+     "max_index": 22,
+     "paper_pct": 0.0,
+     "green_pct": 75.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "ms001_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "msp000_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "msp000_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 3
+   },
+   "bpp": 4,
+   "tiles": 64,
+   "pal_colors": 16,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 44.1,
+     "colors": 2,
+     "max_index": 5,
+     "paper_pct": 0.0,
+     "green_pct": 44.1
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 2,
+     "max_index": 3,
+     "paper_pct": 0.0,
+     "green_pct": 75.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 27.1,
+     "colors": 2,
+     "max_index": 6,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "mt000_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "mt000_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 4
+   },
+   "bpp": 4,
+   "tiles": 64,
+   "pal_colors": 48,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 35.0,
+     "colors": 15,
+     "max_index": 31,
+     "paper_pct": 14.4,
+     "green_pct": 2.3
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 35.0,
+     "colors": 15,
+     "max_index": 31,
+     "paper_pct": 14.4,
+     "green_pct": 2.3
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 21.9,
+     "colors": 15,
+     "max_index": 47,
+     "paper_pct": 0.0,
+     "green_pct": 21.9
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 2,
+     "max_index": 3,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "mt001_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "pam000_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 19,
+    "NSCR": 3
+   },
+   "bpp": 4,
+   "tiles": 256,
+   "pal_colors": 48,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 33.5,
+     "colors": 15,
+     "max_index": 47,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 18.4,
+     "colors": 8,
+     "max_index": 12,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 6,
+     "max_index": 22,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "pam000_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 19,
+    "NSCR": 3
+   },
+   "bpp": 4,
+   "tiles": 12,
+   "pal_colors": 96,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 0.0,
+     "colors": 0,
+     "max_index": 0,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 10.5,
+     "colors": 7,
+     "max_index": 28,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 2,
+     "max_index": 18,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "pam001_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "pam001_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NSCR": 1,
+    "NCLR": 1
+   },
+   "bpp": 8,
+   "tiles": 320,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 128,
+     "nonzero_pct": 14.4,
+     "colors": 16,
+     "max_index": 47,
+     "paper_pct": 0.0,
+     "green_pct": 0.1
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "pam001_bg_LZ.bin": {
+   "members": {
+    "NCLR": 19,
+    "NCGR": 1,
+    "NSCR": 1
+   },
+   "bpp": 8,
+   "tiles": 256,
+   "pal_colors": 256,
+   "screens": [
+    {
+     "w": 256,
+     "h": 128,
+     "nonzero_pct": 6.5,
+     "colors": 15,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "pam002_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "pam003_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ql000_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ql000_01_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "ql000_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 3
+   },
+   "bpp": 4,
+   "tiles": 96,
+   "pal_colors": 32,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 51.1,
+     "colors": 11,
+     "max_index": 29,
+     "paper_pct": 0.4,
+     "green_pct": 42.3
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 2,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 75.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 67.6,
+     "colors": 2,
+     "max_index": 27,
+     "paper_pct": 0.0,
+     "green_pct": 63.4
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "rd000_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd001_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd002_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd003_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd004_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd005_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd006_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd007_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd008_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd009_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd010_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd011_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd012_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd013_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd014_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd015_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd016_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd017_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd018_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd019_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd020_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd021_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd022_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd023_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd024_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd025_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd026_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd027_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd028_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd029_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd030_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd031_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd032_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd033_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd034_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd035_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd036_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd037_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd038_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd039_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd040_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd041_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd042_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd043_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd044_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd045_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd046_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd047_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd048_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd049_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd050_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd051_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd052_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd053_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd054_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd055_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd056_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd057_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd058_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd059_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd060_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd061_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd062_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd063_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd064_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd065_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd066_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd067_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd068_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd069_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd070_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd071_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd072_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd073_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd074_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd075_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd076_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd077_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd078_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd079_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd080_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd081_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd082_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd083_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd084_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd085_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd086_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd087_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd088_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd089_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd090_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd093_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd094_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd095_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd096_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd097_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd099_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd100_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd101_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd102_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd103_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd104_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd105_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd106_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd107_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd108_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd109_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd110_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd111_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd113_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd114_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd118_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd119_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd120_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd128_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd129_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd130_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd131_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd132_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd133_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd134_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd135_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd136_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd137_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd138_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd139_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd140_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd141_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd142_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd143_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd144_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd145_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd146_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd147_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd500_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd501_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd502_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd503_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd504_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd505_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd506_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd507_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd508_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd509_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd510_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd511_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd512_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd513_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd514_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd515_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd516_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd517_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd518_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd519_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd520_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd521_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd522_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rd523_LZ.bin": {
+   "members": {
+    "nbfs": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn000_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn000_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 2
+   },
+   "bpp": 4,
+   "tiles": 768,
+   "pal_colors": 80,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 5.7,
+     "colors": 11,
+     "max_index": 31,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 7,
+     "max_index": 7,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "rn001_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_01_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_02_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_03_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_04_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_05_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_06_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_07_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_08_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_09_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_10_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_11_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_12_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_13_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_14_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_15_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_16_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_17_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_18_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_19_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_20_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_21_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_22_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_23_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_24_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_25_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_26_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_27_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_28_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_29_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_30_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_31_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "rn001_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 5
+   },
+   "bpp": 4,
+   "tiles": 32,
+   "pal_colors": 16,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 41.2,
+     "colors": 2,
+     "max_index": 6,
+     "paper_pct": 0.0,
+     "green_pct": 4.6
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 13.8,
+     "colors": 2,
+     "max_index": 4,
+     "paper_pct": 0.0,
+     "green_pct": 10.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 2,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 10.0,
+     "colors": 2,
+     "max_index": 6,
+     "paper_pct": 0.0,
+     "green_pct": 5.3
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "stl000_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "stl000_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 2
+   },
+   "bpp": 4,
+   "tiles": 64,
+   "pal_colors": 80,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 4,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 75.0
+    },
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 45.3,
+     "colors": 4,
+     "max_index": 20,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "stl001_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "stl001_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 4,
+   "tiles": 64,
+   "pal_colors": 16,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 100.0,
+     "colors": 8,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 60.5
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "stl002_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "title000_00_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 4,
+   "tiles": 32,
+   "pal_colors": 16,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 4,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "title000_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 4,
+   "tiles": 32,
+   "pal_colors": 16,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 4,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "title001_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "title002_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "title003_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "title004_bg_LZ.bin": {
+   "members": {
+    "NCGR": 1,
+    "NCLR": 1,
+    "NSCR": 1
+   },
+   "bpp": 4,
+   "tiles": 32,
+   "pal_colors": 16,
+   "screens": [
+    {
+     "w": 256,
+     "h": 256,
+     "nonzero_pct": 75.0,
+     "colors": 6,
+     "max_index": 15,
+     "paper_pct": 0.0,
+     "green_pct": 0.0
+    }
+   ],
+   "family": "ranger_menu"
+  },
+  "title005_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "title005_01_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "title100_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "title100_01_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "title100_02_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "title101_00_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "title101_01_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "title101_02_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "title101_03_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "title101_04_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "tp000_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "tp001_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "tp002_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "tp003_LZ.bin": {
+   "members": {
+    "NCER": 1,
+    "NCGR": 1,
+    "NCLR": 1,
+    "cac": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um000_00_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um001_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um001_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um001_003a_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um001_003b_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um001_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um001_005_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um001_006_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um001_007_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um001_008_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um001_009_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um001_010_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um001_011_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um001_012_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um001_013_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um001_014_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um001_015_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um001_016_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um001_017_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um001_018_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um002_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um003_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um004_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um004_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um004_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um004_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um004_005_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um004_006_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um004_007_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um004_008_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um004_009_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um004_010_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um004_011_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um004_012_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um004_013_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um005_001a_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um005_001b_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um005_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um005_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um005_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um006_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um006_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um006_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um006_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um007_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um008_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um008_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um008_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um008_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um008_005_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um008_006_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um008_007_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um008_008_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um008_009_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um008_010_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um008_011_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um009_001a_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um009_001b_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um009_001c_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um009_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um009_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um009_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um009_005_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um009_006_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um009_008_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um009_009_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um009_010_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um009_011_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um009_012_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um009_013_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um009_014_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um009_015_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um009_016_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_006_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_007_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_008_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_009_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_010_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_012_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_013_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_014_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_015_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_016_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_017_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_018_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_019_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_020_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_022_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_023_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_024_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um010_025_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um011_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um011_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um011_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um011_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um011_005_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um014_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um014_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um014_003a_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um014_003b_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um014_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um014_005_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um014_006_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um014_007_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um014_008_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um015_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um015_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um015_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um015_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um015_005_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um015_006_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um016_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um016_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um016_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um016_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um017_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um017_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um017_003a_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um017_003b_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um017_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um017_005_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um017_006_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um017_007_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um017_008_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um017_009_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um017_010_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um017_011_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um017_012_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um017_013_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um017_014_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um018_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um018_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um018_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um018_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um018_005_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um018_006_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um019_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um019_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um019_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um019_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um019_005_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um019_006_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um019_007_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um019_008_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um019_009_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um019_010_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um019_011_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um019_012_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um019_013_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um019_014_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um019_015_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um019_016_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um019_017_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um019_019_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um020_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um020_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um020_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um020_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um020_005_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um020_006_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um020_007_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um020_008_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um020_009_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um020_010_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um020_011_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um020_012_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um020_013_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um020_014_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um020_015_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um020_016_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um021_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um021_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um021_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um022_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um022_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um022_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um022_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um023_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um023_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um023_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um023_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um023_005_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um023_006_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um023_007_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um023_008_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um023_009_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um023_010_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um023_011_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um023_012_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um023_013_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um023_014_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um023_015_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um023_016_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um023_017_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um023_018_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um023_019_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um024_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um024_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um024_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um024_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um024_005_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um024_006_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um024_007_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um025_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um025_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um025_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um025_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um025_005_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um025_006_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um026_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um026_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um027_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um027_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um027_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um027_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um027_005_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_005_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_006_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_007_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_008_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_009_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_010_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_011_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_012_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_013_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_014_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_015_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_016_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_017_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_018_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_019_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_020_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_021_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_022a_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_022b_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_023_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_024_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_025_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_026_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_027_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_028_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_029_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_030_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_031_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_032_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_033_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_034_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um028_035_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um029_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um029_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um029_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um029_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um029_005_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um029_006_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um029_007_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um029_008_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um029_009_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um029_010_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_005_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_006_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_007_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_008_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_009_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_010_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_011_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_012_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_013_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_014_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_015_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_016_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_017_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_018_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_019_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_020_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_021_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_022_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_023_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_024_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_025_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_026_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_027_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um030_028_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um032_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um033_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um033_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um033_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um033_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um033_005_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um033_006_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um033_007_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um033_008_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um034_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um035_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_005_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_007_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_008_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_009_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_010_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_011_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_012_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_013_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_014_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_015_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_016_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_017_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_018_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_019_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_020_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_021_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_022_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_023_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um036_024_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um038_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um038_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um038_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um038_005_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um038_006_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um038_007_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um038_008_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um038_009_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um038_010_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um038_011_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um038_012_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um038_015_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um038_016_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um038_018_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um038_019_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um038_020_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um038_021_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um038_022_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um038_023_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um038_024_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_003a_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_003b_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_004a_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_004b_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_005a_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_005b_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_006a_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_006b_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_007a_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_007b_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_008a_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_008b_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_009_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_010a_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_010b_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_011a_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_011b_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_012_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_013_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_014_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_015_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_016_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_017_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_018_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_019_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_020_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_021_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_022_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_023_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_024_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_025_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_026_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um039_027_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um041_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um041_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um041_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um042_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um042_010_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um042_011_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um042_012_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um042_020_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um042_021_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um042_022_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um042_030_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um042_031_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um042_032_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um042_033_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um042_040_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um042_041_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um042_042_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um042_043_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um042_050_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um042_051_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um042_052_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um042_053_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um042_056_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_010_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_011_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_012_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_013_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_014_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_015_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_020_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_021_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_022_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_023_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_024_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_025_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_030_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_031_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_032_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_033_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_034_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_035_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_036_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_040_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_041_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_042_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_043_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_044_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_045_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um043_046_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um044_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um044_011_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um044_021_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um044_031_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um201_001_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um201_002_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um201_003_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um201_004_LZ.bin": {
+   "members": {
+    "NSCR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  },
+  "um_LZ.bin": {
+   "members": {
+    "NCLR": 1,
+    "NCGR": 1
+   },
+   "error": "no NSCR+NCGR+NCLR",
+   "family": "ranger_menu"
+  }
+ },
+ "sheets": {
+  "event": {
+   "png": "docs/visual_overhaul/selection/mining/evidence/ranger_tiled_event.png",
+   "n": 76
+  },
+  "ending": {
+   "png": "docs/visual_overhaul/selection/mining/evidence/ranger_tiled_ending.png",
+   "n": 31
+  },
+  "title": {
+   "png": "docs/visual_overhaul/selection/mining/evidence/ranger_tiled_title.png",
+   "n": 12
+  },
+  "menu": {
+   "png": "docs/visual_overhaul/selection/mining/evidence/ranger_tiled_menu.png",
+   "n": 37
+  }
+ }
+}

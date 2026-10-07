@@ -122,6 +122,39 @@ def validate_pool(groups: dict, membership: dict, pool: dict | None = None, chec
     ne_ids = {r["opportunity_id"] for r in recs if r["origin"] == "mined" and r["status"] == "needs_evidence"}
     if {x["opportunity_id"] for x in ne["items"]} != ne_ids:
         errs.append("needs-evidence queue differs from needs_evidence pool records")
+    # evidence closure: resolutions are pinned to the frozen baseline scope, cite existing evidence, and every baseline needs-evidence record is accounted for
+    if mine_pool.RES_JSON.is_file():
+        res = jload(mine_pool.RES_JSON)
+        scope_p = mine_pool.MINING / "EVIDENCE_CLOSURE_SCOPE.json"
+        scope = jload(scope_p)
+        if res["scope_sha256"] != file_sha256(scope_p):
+            errs.append("evidence resolutions: stale vs EVIDENCE_CLOSURE_SCOPE.json (rerun resolve_evidence.py)")
+        if set(res["scope_groups"]) != set(scope["group_ids"]):
+            errs.append("evidence resolutions: scope_groups differ from the frozen closure scope")
+        for gid in res["group_resolutions"]:
+            if gid not in groups:
+                errs.append(f"evidence resolutions: unknown group {gid}")
+            elif gid not in set(scope["group_ids"]):
+                errs.append(f"evidence resolutions: {gid} is outside the frozen closure scope")
+        for x in list(res["family_resolutions"]) + list(res["group_resolutions"].values()):
+            if x["verdict"] not in ("confirm", "reference_only"):
+                errs.append(f"evidence resolutions: bad verdict {x['verdict']}")
+            for rp in x.get("evidence_refs", []):
+                if not (ROOT / rp).exists():
+                    errs.append(f"evidence resolutions: evidence ref {rp} missing")
+        closed = set()
+        for p in sorted((SEL / "mining" / "passes").glob("*.json")):
+            for x in jload(p)["ranked"]:
+                if any(sg.startswith("evidence_closed") for sg in x["sig"]):
+                    closed.add(x["g"])
+        by_id = {r["opportunity_id"]: r for r in recs}
+        for oid in scope["opportunity_ids"]:
+            gid = oid[len("opp:mined/"):].rsplit("/", 2)[0]
+            r = by_id.get(oid)
+            if r is None and gid not in closed:
+                errs.append(f"evidence closure: baseline record {oid} vanished without an evidence_closed disposition")
+            if r is not None and r["status"] == "promoted" and not r.get("evidence_resolution") and gid in set(res["scope_groups"]):
+                errs.append(f"evidence closure: {oid} promoted without an evidence_resolution block")
     if check_reproducible:
         try:
             res = mine_pool.derive()

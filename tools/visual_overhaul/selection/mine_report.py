@@ -9,12 +9,12 @@ import mine_rules as MR
 MINING = SEL / "mining"
 CLASS_ORDER = ["novel_capability", "novel_detail", "technique_donor", "enhancement_candidate", "component_donor", "replacement_candidate", "reference_only", "reject"]
 BLIND_SPOTS = [
-    ("HGSS follower Pokemon sheets (572 NSBTX in files/data/mmodel)", "scanned but excluded from the NPC/player catalog scope; 0 groups (see opp:hgss/follower_pokemon, explicit finding)"),
-    ("HGSS 3D field models/textures/building models", "not present as discrete files in the decomp checkout and never cataloged: the `models` and most `textures` domains have no HGSS groups"),
-    ("PMD Sky manpu_* / effect.bin / status-icon art", "uncataloged; PMD `.wan` groups are 'valid render' by ledger but have no committed previews"),
+    ("HGSS follower Pokemon sheets (572 NSBTX in files/data/mmodel)", "evidence closure decoded all 572 (8 frames each, normal+shiny); recorded as explicit findings opp:hgss/follower_sheet_library (sheets) and opp:hgss/follower_pokemon (system, deferred); still 0 catalog groups"),
+    ("HGSS 3D field models/textures/building models", "evidence closure decoded bm_field (340) / bm_room (222) models and 106 map texture sets (explicit findings opp:hgss/field_building_model_library, opp:hgss/map_texture_set_library); still no catalog groups: a targeted catalog extension is recommended (see DS_EVIDENCE_CLOSURE.md)"),
+    ("PMD Sky manpu_* / effect.bin / status-icon art", "uncataloged and still undecoded (status-icon art container not identified); PMD MAP_BG BPA/BPL animation and a WAN sample were decoded in the closure pass"),
     ("Diamond trainer/field/model assets beyond sprites", "Diamond is control only; no field/model catalog"),
-    ("Ranger 2 poke/ battle frames semantic pose approval", "catalog quality note: pose suitability not approved; frames are field-scale, not 160x80 battle contract"),
-    ("HGSS UI (zukan_gra/plist_gra/camera) visual comparison with Platinum", "ledgers are needs_evidence; no render comparison exists"),
+    ("Ranger 2 poke/ battle frames semantic pose approval", "w/a/s/t sets rendered (295/596/296/272); poses are field-scale (~40px), not the 160x80 battle contract; walk/s/t sets closed as reference, attack sets kept as a technique library"),
+    ("HGSS UI (zukan_gra/plist_gra/camera) visual comparison with Platinum", "targeted renders composed (partial NSCR/NCGR pairing); reference_only confirmed (opp:hgss/ui_dex_party_reference)"),
 ]
 
 
@@ -112,7 +112,7 @@ def write_reports(res: dict, doc: dict) -> dict:
     rvw = jload(MINING / "TARGETED_REVIEW.json") if (MINING / "TARGETED_REVIEW.json").is_file() else {"reviews": [], "family_reviews": []}
     S += ["", "## Targeted review of ambiguous high-value groups", "",
           f"{len(rvw['reviews'])} group reviews (confirm) and {len(rvw['family_reviews'])} family reviews from committed or targeted renders (`mining/TARGETED_REVIEW.json`, images under `mining/review/` and `opportunities/evidence/`). Findings: HGSS-only trainer classes are clean multi-frame sets; Ranger walk frames form genuine cycles; Ranger effect/interface primitives are shaded multi-frame Nitro cells; Ranger composed maps are 2D tile art (motif/prop library, low feasibility); Ranger menu/event/ending bundles have no available renderer and stay needs-evidence.",
-          "", "## Top-level recommendation", "", "Targeted evidence for the needs-evidence clusters first (tilemap preview for Ranger menu/event/ending; WAN/BPA samples for PMD Sky; follower/3D HGSS extraction), then pick vertical slices from the ranked queue."]
+          "", "## Evidence closure", "", "`mining/EVIDENCE_RESOLUTIONS.json` (built by `resolve_evidence.py` from the committed decoder evidence under `mining/evidence/`) resolved the frozen baseline needs-evidence queue (`mining/EVIDENCE_CLOSURE_SCOPE.json`, 643 records): records were promoted with measured evidence or the group was closed to reference_only. See `DS_EVIDENCE_CLOSURE.md`.", "", "## Top-level recommendation", "", "Pick vertical slices from the ranked queue (`IMPLEMENTATION_QUEUE.md`); the HGSS 3D field resources need a targeted catalog extension before any import."]
     (SEL / "DS_OPPORTUNITY_MINING_SUMMARY.md").write_text("\n".join(S) + "\n")
     return stats
 

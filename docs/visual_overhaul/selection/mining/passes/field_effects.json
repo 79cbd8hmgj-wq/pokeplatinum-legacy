@@ -1,7 +1,6 @@
 {
  "dispositions": {
-  "needs_evidence": 1,
-  "promoted": 105,
+  "promoted": 106,
   "reference_only": 417
  },
  "domain": "field_effects",
@@ -2003,11 +2002,11 @@
    "src": "pmd_sky"
   },
   {
-   "best": 3.081,
+   "best": 3.324,
    "cls": [
     "technique_donor"
    ],
-   "disp": "needs_evidence",
+   "disp": "promoted",
    "dom": "field_effects",
    "fam": "pmd_ground_p",
    "g": "field_effects_overlays/pmd_sky/pmd_ground_p09p01a1",
@@ -2018,7 +2017,9 @@
     "animated_structure",
     "multi_phase_or_many_frames",
     "family_library_39",
-    "unresolved_decode_members"
+    "unresolved_decode_members",
+    "evidence_resolved",
+    "evidence_closed_below_threshold"
    ],
    "src": "pmd_sky"
   },
