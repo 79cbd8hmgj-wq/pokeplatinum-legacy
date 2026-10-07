@@ -9,7 +9,7 @@ extension ledgers automatically via `MANIFEST.json`. Refresh: `tools/visual_over
 ## hgss_trainer_sprites (146 sets)
 * Source: `files/a/0/5/8` (129 front classes) and `files/a/0/0/6` (17 back pics), 5 members per class
   (NCGR, NCLR, NCER, NANR, NCBR; loader `src/pokemon.c:sub_02070D3C`). Source paths are `files/a/0/5/8#class=NNN` (fragment = NARC class index).
-* Format: same extended-cell NCER / 80x80 4bpp NCGR model as Platinum trfgra/trbgra; OBJ char unit = 64 B (RAHC mapping mode 1D_64K) — decoded renders in `hgss_trainer_sprites/renders/` (all usable usable, none rejected).
+* Format: same extended-cell NCER / 80x80 4bpp NCGR model as Platinum trfgra/trbgra; OBJ char unit = 64 B (RAHC mapping mode 1D_64K) — decoded renders in `hgss_trainer_sprites/renders/` (all 146 usable, none rejected).
 * Alignment (`selection/alignment/trainer_classes.json`): HGSS class -> Platinum class by exact/suffix/alias name (75/137 front, 11/17 back); Diamond class index == Platinum class index (98/98).
 * Selection ({'alternate': 17, 'not_selected': 48, 'preferred': 21, 'reference_only': 166}): 21 preferred, 17 alternate, 48 identical to native, 166 reference_only (60 HGSS-only classes without a Platinum counterpart + Diamond control).
 * Caveat: 8 preferred back pics have an identical first frame; their gain is in later animation frames (runtime QA).
