@@ -13,6 +13,7 @@ import sys
 from common import *  # noqa: F401,F403
 import build_candidate_groups
 import select_subsystem
+import opportunities
 import outcomes
 
 def validate(sel_dir: Path | None = None, quiet: bool = False) -> list[str]:
@@ -181,6 +182,16 @@ def validate(sel_dir: Path | None = None, quiet: bool = False) -> list[str]:
     ost = SEL / "OUTCOME_STATUS.json"
     if ost.is_file() and jload(ost) != outcomes.derive_status(committed["groups"], all_ledgers):
         errs.append("OUTCOME_STATUS.json is stale (rerun build_outcomes.py)")
+
+    # V6b: opportunity layer (selection v3): findings are classified, provenance-complete, evidence-bound; register is reproducible
+    errs += opportunities.validate_findings(groups, all_ledgers, all_evidence, outcomes.load_use_files())
+    orp = SEL / "OPPORTUNITY_REGISTER.json"
+    if orp.is_file():
+        import build_opportunities
+        if jload(orp) != build_opportunities.derive():
+            errs.append("OPPORTUNITY_REGISTER.json is stale (rerun build_opportunities.py)")
+    else:
+        errs.append("OPPORTUNITY_REGISTER.json missing (run build_opportunities.py)")
 
     # V7: queue/status freshness
     try:

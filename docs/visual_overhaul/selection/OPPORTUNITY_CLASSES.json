@@ -1,0 +1,36 @@
+{
+ "schema_version": 1,
+ "description": "Canonical donor OPPORTUNITY classification (selection v3). Replacement is one outcome among eight, not the primary one. This layer is additive: ledgers (role/reason_code), SELECTION_RULES.json and USE_OUTCOMES.json keep their meaning and stay reproducible; this file defines how every donor finding is classified and ordered for implementation.",
+ "classes": {
+  "novel_capability": {"tier": 1, "target_policy": "none_allowed", "pixel_policy": "any", "meaning": "A donor reveals a visual/presentation feature Platinum does not currently expose in the same way (e.g. FireRed-style location preview cards built with new Sinnoh artwork). No existing Platinum target is required; a hosting Platinum system is named instead."},
+  "novel_detail": {"tier": 1, "target_policy": "none_allowed", "pixel_policy": "any", "meaning": "A smaller new visual layer or feedback element that adds information/presentation without replacing an existing system (e.g. temporary PMD-style status indicators above battlers)."},
+  "technique_donor": {"tier": 2, "target_policy": "target_required", "pixel_policy": "none", "meaning": "Reuse choreography, timing, palette sequencing, state-machine logic, layering, camera behaviour or animation structure, re-implemented through Platinum-native systems. Never implies donor asset transfer (pixel_use none)."},
+  "enhancement_candidate": {"tier": 3, "target_policy": "target_required", "pixel_policy": "any", "meaning": "Improve an existing Platinum asset/system using donor-derived components or techniques while preserving Platinum identity. Target-level aggregate of component/technique records; resolves to platinum_native + composite."},
+  "component_donor": {"tier": 4, "target_policy": "target_required", "pixel_policy": "any", "meaning": "Reuse only part of an asset or visual primitive: pose, silhouette, shading, palette concept, accessory, texture region, effect primitive, particle shape, animation frame, environmental motif."},
+  "replacement_candidate": {"tier": 5, "target_policy": "target_required", "pixel_policy": "donor_pixels", "meaning": "Whole donor asset is preferable and compatible enough to replace the Platinum equivalent. Valid, but one outcome among several."},
+  "reference_only": {"tier": 6, "target_policy": "none_allowed", "pixel_policy": "none", "meaning": "Useful for design understanding; not intended for direct implementation."},
+  "reject": {"tier": 7, "target_policy": "none_allowed", "pixel_policy": "none", "meaning": "No useful visual or technical value for the overhaul."}
+ },
+ "implementation_order": ["novel_capability", "novel_detail", "technique_donor", "enhancement_candidate", "component_donor", "replacement_candidate"],
+ "implementation_order_note": "Queue priority within feasibility: novel capability/detail first, then native-implementable techniques, then enhancement, component, and finally direct replacement. reference_only/reject are never queued.",
+ "required_finding_fields": ["finding_id", "classification", "status", "donor", "target", "useful", "why", "constraints", "adaptation", "cost", "risk", "confidence", "feasibility", "evidence", "pixel_use", "proposed_by"],
+ "preserved_fields_note": "Component/technique/enhancement findings preserve: exact donor source/provenance (donor), intended Platinum target or system (target), what is useful (useful), why (why), compatibility constraints (constraints), adaptation (adaptation), implementation cost/risk (cost, risk), confidence, evidence. Novel capability/detail findings may have target.kind 'none' (no existing Platinum target) and must then name host_system.",
+ "target_kinds": {"asset": "an existing Platinum asset (native_ref path + sha256 required)", "system": "an existing Platinum system/code path (refs[] must exist in the repo)", "none": "no existing Platinum counterpart (novel capability/detail, reference_only, reject only); host_system names where it would live"},
+ "cost_levels": ["low", "medium", "high"],
+ "feasibility_levels": {"3": "strong: implementable with existing Platinum systems and verified evidence", "2": "moderate: needs new code/art or partial evidence", "1": "weak: unverified or large unknowns"},
+ "confidence_levels": ["low", "medium", "high"],
+ "pixel_use": ["donor_pixels", "recolored_donor", "derived", "none"],
+ "status": {"proposed": "assessment by tooling/agent; not human approved", "human_confirmed": "reviewed by the owner", "withdrawn": "retained for provenance, ignored"},
+ "evidence_basis": {
+  "catalog_evidence": "backed by cataloged donor assets and a committed selection evidence entry (donor.group_ids + evidence refs required; member_digest bound)",
+  "repo_document": "backed by a committed repository document (refs[] must exist)",
+  "prior_session_unrecorded": "finding was produced in an earlier session but its evidence artifacts are NOT in this repo. Kept so it is not lost; capped at confidence low and feasibility 1, cannot be human_confirmed, and the queue marks it needs_donor_verification. The donor game is not a cataloged source here."
+ },
+ "map_existing": {
+  "comment": "How existing machine outputs read in the canonical classes. Derived, never written as findings.",
+  "replacement_outcomes": {"direct_replacement": "replacement_candidate", "alternate": "replacement_candidate", "technique_reference": "technique_donor", "native_keep": "reject", "not_selected": null, "needs_evidence": null},
+  "replacement_outcomes_note": "null = unreviewed for opportunity use (no class assigned, NOT reject). native_keep -> reject only means 'whole asset identical/kept'; a component review may still add findings.",
+  "use_record_outcomes": {"component_donor": "component_donor", "composite_input": "enhancement_candidate", "technique_reference": "technique_donor"},
+  "component_review_none_found": "reject"
+ }
+}

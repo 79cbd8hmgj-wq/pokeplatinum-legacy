@@ -114,3 +114,26 @@ every ledger decision maps to an outcome; records carry complete provenance (sou
 
 ### Work lanes (`IMPLEMENTATION_QUEUE`)
 A `direct_replacement` (implement, runtime_qa) · B `native_enhancement` (component_review, composite_build) · C `technique_only` (technique_build, technique_pool) · `evidence`.
+
+## Opportunity classes (selection v3: replacement is one outcome among eight)
+
+`OPPORTUNITY_CLASSES.json` is the canonical classification; it is additive (ledgers, rules, `USE_OUTCOMES.json`, `components/*.json` unchanged).
+
+| Tier | Class | Meaning (short) | Target | Donor pixels |
+|---:|---|---|---|---|
+| 1 | `novel_capability` | feature Platinum does not expose in the same way | none allowed (name `host_system`) | any |
+| 1 | `novel_detail` | small new layer/feedback element, replaces nothing | none allowed (name `host_system`) | any |
+| 2 | `technique_donor` | choreography/timing/palette sequencing/state logic, re-implemented natively | system or asset | **none** |
+| 3 | `enhancement_candidate` | improve an existing Platinum asset/system from donor components/techniques; target stays `platinum_native` | asset/system + linked records | any |
+| 4 | `component_donor` | only part of an asset/primitive | asset/system | any |
+| 5 | `replacement_candidate` | whole donor asset replaces the Platinum equivalent | asset | `donor_pixels` |
+| 6 | `reference_only` | design understanding only | none | none |
+| 7 | `reject` | no value | none | none |
+
+Sources of classified rows (`OPPORTUNITY_REGISTER.*`, built by `build_opportunities.py`): explicit findings (`opportunities/findings.json`, validated by `opportunities.validate_findings`), existing use records (`component_donor`→component_donor, `composite_input`→enhancement_candidate, `technique_reference`→technique_donor), ledger `preferred` verdicts (→replacement_candidate), and digest-bound `none_found` component reviews (→reject). Group-level pools (technique-class groups, `no_native_target` groups, alternates) are counted as **unscoped pools**, not findings. `not_selected`/`needs_evidence` groups are unclassified (not reject).
+
+Finding fields: `finding_id, classification, status, donor{game, source_id, cataloged, group_ids?, locator}, target{kind asset|system|none, subsystem, target_id|system, native_ref?, refs[], host_system?}, useful, why, constraints[], adaptation[], cost, risk, confidence, feasibility(1-3), evidence{basis, summary, refs[], bound_digest?}, pixel_use, tags[], links{use_records[]}?, needs_donor_verification?`.
+
+Evidence basis: `catalog_evidence` (cited groups bound by digest; stale = error), `repo_document` (refs must exist), `prior_session_unrecorded` (evidence artifacts are not in this repo and the donor is not a cataloged source: capped at confidence low / feasibility 1, never `human_confirmed`, queue shows **verify donor first**). Nothing is invented for such findings beyond what was reported.
+
+Queue: `IMPLEMENTATION_QUEUE.*` items carry `opportunity_class`, `feasibility`; ranking is tier → feasibility → score, so novel capability/detail precede technique, enhancement, component and replacement work. Tests: `test_opportunities.py`. Pixel compositing remains manual; no Platinum asset is modified.
