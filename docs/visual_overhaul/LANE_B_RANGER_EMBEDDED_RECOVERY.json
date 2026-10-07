@@ -4,31 +4,30 @@
  "asset_count": 3338,
  "package_count": 477,
  "technical_state_counts": {
-  "valid_render": 2455,
-  "unsupported_member": 51,
-  "no_pair": 22,
-  "companion_of_valid": 781,
-  "no_valid_render": 10,
+  "valid_render": 2479,
+  "companion_of_valid": 792,
+  "no_pair": 10,
+  "unsupported_member": 38,
+  "no_valid_render": 4,
   "member_not_found": 12,
-  "decode_failure": 7
+  "decode_failure": 3
  },
  "suffix_state_counts": {
   "(none):member_not_found": 12,
-  "NANR:unsupported_member": 7,
+  "NANR:companion_of_valid": 7,
   "NCBR:no_pair": 5,
   "NCBR:valid_render": 490,
-  "NCER:decode_failure": 7,
-  "NCER:valid_render": 781,
-  "NCGR:no_pair": 11,
-  "NCGR:valid_render": 280,
-  "NCLR:no_pair": 6,
-  "NCLR:valid_render": 452,
-  "NSCR:unsupported_member": 2,
-  "bin:no_valid_render": 10,
+  "NCER:decode_failure": 3,
+  "NCER:valid_render": 785,
+  "NCGR:no_pair": 5,
+  "NCGR:valid_render": 286,
+  "NCLR:valid_render": 458,
+  "NSCR:valid_render": 2,
+  "bin:no_valid_render": 4,
   "bin:unsupported_member": 1,
-  "bin:valid_render": 452,
-  "cac:companion_of_valid": 781,
-  "cac:unsupported_member": 7,
+  "bin:valid_render": 458,
+  "cac:companion_of_valid": 785,
+  "cac:unsupported_member": 3,
   "narc:unsupported_member": 2,
   "ntfp:unsupported_member": 16,
   "ntft:unsupported_member": 16
@@ -44,8 +43,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:character:heroine_LZ.bin:heroine_stand.NANR",
    "source_path": "res/prebuilt/data/field/character/heroine_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "companion_of_valid",
+   "detail": "Nitro animation (NANR) of a package with valid NCER renders",
    "suffix": "NANR"
   },
   {
@@ -751,8 +750,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ew000_LZ.bin:ew000.NANR",
    "source_path": "res/prebuilt/data/field/effect/ew000_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "companion_of_valid",
+   "detail": "Nitro animation (NANR) of a package with valid NCER renders",
    "suffix": "NANR"
   },
   {
@@ -835,8 +834,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ew008_LZ.bin:ew008.NANR",
    "source_path": "res/prebuilt/data/field/effect/ew008_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "companion_of_valid",
+   "detail": "Nitro animation (NANR) of a package with valid NCER renders",
    "suffix": "NANR"
   },
   {
@@ -982,8 +981,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:npc:n000_00_LZ.bin:n000_00_s.NANR",
    "source_path": "res/prebuilt/data/npc/n000_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "companion_of_valid",
+   "detail": "Nitro animation (NANR) of a package with valid NCER renders",
    "suffix": "NANR"
   },
   {
@@ -1017,8 +1016,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:npc:n000_00_LZ.bin:n000_00_w.NANR",
    "source_path": "res/prebuilt/data/npc/n000_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "companion_of_valid",
+   "detail": "Nitro animation (NANR) of a package with valid NCER renders",
    "suffix": "NANR"
   },
   {
@@ -6981,8 +6980,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc104_LZ.bin:npc104_s.NANR",
    "source_path": "res/prebuilt/data/npc/npc104_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "companion_of_valid",
+   "detail": "Nitro animation (NANR) of a package with valid NCER renders",
    "suffix": "NANR"
   },
   {
@@ -7016,8 +7015,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc104_LZ.bin:npc104_w.NANR",
    "source_path": "res/prebuilt/data/npc/npc104_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "companion_of_valid",
+   "detail": "Nitro animation (NANR) of a package with valid NCER renders",
    "suffix": "NANR"
   },
   {
@@ -18937,36 +18936,36 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp321_LZ.bin:bp321.NCER",
    "source_path": "res/prebuilt/data/pokeOBJ/bp321_LZ.bin",
-   "technical_state": "decode_failure",
-   "detail": "mixed object widths under 1D mapping",
+   "technical_state": "valid_render",
+   "detail": "1/1 nonblank cells",
    "suffix": "NCER"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp321_LZ.bin:bp321.NCGR",
    "source_path": "res/prebuilt/data/pokeOBJ/bp321_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render",
    "suffix": "NCGR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp321_LZ.bin:bp321.NCLR",
    "source_path": "res/prebuilt/data/pokeOBJ/bp321_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp321_LZ.bin:bp321.cac",
    "source_path": "res/prebuilt/data/pokeOBJ/bp321_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "companion_of_valid",
+   "detail": "cell-animation companion of valid NCER",
    "suffix": "cac"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:pokeOBJ:bp321_LZ.bin",
    "source_path": "res/prebuilt/data/pokeOBJ/bp321_LZ.bin",
-   "technical_state": "no_valid_render",
-   "detail": "0 valid NCER pairs",
+   "technical_state": "valid_render",
+   "detail": "1 valid NCER pairs",
    "suffix": "bin"
   },
   {
@@ -23032,71 +23031,71 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp483_LZ.bin:bp483.NCER",
    "source_path": "res/prebuilt/data/pokeOBJ/bp483_LZ.bin",
-   "technical_state": "decode_failure",
-   "detail": "mixed object widths under 1D mapping",
+   "technical_state": "valid_render",
+   "detail": "1/1 nonblank cells",
    "suffix": "NCER"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp483_LZ.bin:bp483.NCGR",
    "source_path": "res/prebuilt/data/pokeOBJ/bp483_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render",
    "suffix": "NCGR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp483_LZ.bin:bp483.NCLR",
    "source_path": "res/prebuilt/data/pokeOBJ/bp483_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp483_LZ.bin:bp483.cac",
    "source_path": "res/prebuilt/data/pokeOBJ/bp483_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "companion_of_valid",
+   "detail": "cell-animation companion of valid NCER",
    "suffix": "cac"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:pokeOBJ:bp483_LZ.bin",
    "source_path": "res/prebuilt/data/pokeOBJ/bp483_LZ.bin",
-   "technical_state": "no_valid_render",
-   "detail": "0 valid NCER pairs",
+   "technical_state": "valid_render",
+   "detail": "1 valid NCER pairs",
    "suffix": "bin"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp484_LZ.bin:bp484.NCER",
    "source_path": "res/prebuilt/data/pokeOBJ/bp484_LZ.bin",
-   "technical_state": "decode_failure",
-   "detail": "mixed object widths under 1D mapping",
+   "technical_state": "valid_render",
+   "detail": "1/1 nonblank cells",
    "suffix": "NCER"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp484_LZ.bin:bp484.NCGR",
    "source_path": "res/prebuilt/data/pokeOBJ/bp484_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render",
    "suffix": "NCGR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp484_LZ.bin:bp484.NCLR",
    "source_path": "res/prebuilt/data/pokeOBJ/bp484_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp484_LZ.bin:bp484.cac",
    "source_path": "res/prebuilt/data/pokeOBJ/bp484_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "companion_of_valid",
+   "detail": "cell-animation companion of valid NCER",
    "suffix": "cac"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:pokeOBJ:bp484_LZ.bin",
    "source_path": "res/prebuilt/data/pokeOBJ/bp484_LZ.bin",
-   "technical_state": "no_valid_render",
-   "detail": "0 valid NCER pairs",
+   "technical_state": "valid_render",
+   "detail": "1 valid NCER pairs",
    "suffix": "bin"
   },
   {
@@ -23137,36 +23136,36 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp486_LZ.bin:bp486.NCER",
    "source_path": "res/prebuilt/data/pokeOBJ/bp486_LZ.bin",
-   "technical_state": "decode_failure",
-   "detail": "mixed object widths under 1D mapping",
+   "technical_state": "valid_render",
+   "detail": "1/1 nonblank cells",
    "suffix": "NCER"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp486_LZ.bin:bp486.NCGR",
    "source_path": "res/prebuilt/data/pokeOBJ/bp486_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render",
    "suffix": "NCGR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp486_LZ.bin:bp486.NCLR",
    "source_path": "res/prebuilt/data/pokeOBJ/bp486_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp486_LZ.bin:bp486.cac",
    "source_path": "res/prebuilt/data/pokeOBJ/bp486_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "companion_of_valid",
+   "detail": "cell-animation companion of valid NCER",
    "suffix": "cac"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:pokeOBJ:bp486_LZ.bin",
    "source_path": "res/prebuilt/data/pokeOBJ/bp486_LZ.bin",
-   "technical_state": "no_valid_render",
-   "detail": "0 valid NCER pairs",
+   "technical_state": "valid_render",
+   "detail": "1 valid NCER pairs",
    "suffix": "bin"
   },
   {
@@ -23347,57 +23346,57 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:uppict:uppict000_LZ.bin:uppict000_00.NCGR",
    "source_path": "res/prebuilt/data/uppict/uppict000_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render",
    "suffix": "NCGR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:uppict:uppict000_LZ.bin:uppict000_00.NCLR",
    "source_path": "res/prebuilt/data/uppict/uppict000_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:uppict:uppict000_LZ.bin:uppict000_00.NSCR",
    "source_path": "res/prebuilt/data/uppict/uppict000_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "valid_render",
+   "detail": "256x256 screen, 49152 nonblank px",
    "suffix": "NSCR"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:uppict:uppict000_LZ.bin",
    "source_path": "res/prebuilt/data/uppict/uppict000_LZ.bin",
-   "technical_state": "no_valid_render",
-   "detail": "0 valid NCER pairs",
+   "technical_state": "valid_render",
+   "detail": "1 valid NCER pairs",
    "suffix": "bin"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:uppict:uppict001_LZ.bin:uppict001_00.NCGR",
    "source_path": "res/prebuilt/data/uppict/uppict001_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render",
    "suffix": "NCGR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:uppict:uppict001_LZ.bin:uppict001_00.NCLR",
    "source_path": "res/prebuilt/data/uppict/uppict001_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:uppict:uppict001_LZ.bin:uppict001_00.NSCR",
    "source_path": "res/prebuilt/data/uppict/uppict001_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "valid_render",
+   "detail": "256x256 screen, 49152 nonblank px",
    "suffix": "NSCR"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:uppict:uppict001_LZ.bin",
    "source_path": "res/prebuilt/data/uppict/uppict001_LZ.bin",
-   "technical_state": "no_valid_render",
-   "detail": "0 valid NCER pairs",
+   "technical_state": "valid_render",
+   "detail": "1 valid NCER pairs",
    "suffix": "bin"
   }
  ],
@@ -23409,6 +23408,14 @@
    "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "used by valid NCER render"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:character:heroine_LZ.bin:heroine_stand.NANR",
+   "review_status": "usable",
+   "reason_code": "ranger_cac_companion_of_valid_render",
+   "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+   "technical_state": "companion_of_valid",
+   "detail": "Nitro animation (NANR) of a package with valid NCER renders"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:character:heroine_LZ.bin:heroine_stand.NCER",
@@ -23899,6 +23906,14 @@
    "detail": "1 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ew000_LZ.bin:ew000.NANR",
+   "review_status": "usable",
+   "reason_code": "ranger_cac_companion_of_valid_render",
+   "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+   "technical_state": "companion_of_valid",
+   "detail": "Nitro animation (NANR) of a package with valid NCER renders"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ew000_LZ.bin:ew000.NCBR",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -23979,6 +23994,14 @@
    "detail": "1 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ew008_LZ.bin:ew008.NANR",
+   "review_status": "usable",
+   "reason_code": "ranger_cac_companion_of_valid_render",
+   "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+   "technical_state": "companion_of_valid",
+   "detail": "Nitro animation (NANR) of a package with valid NCER renders"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ew008_LZ.bin:ew008.NCBR",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -24027,6 +24050,14 @@
    "detail": "used by valid NCER render"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:npc:n000_00_LZ.bin:n000_00_s.NANR",
+   "review_status": "usable",
+   "reason_code": "ranger_cac_companion_of_valid_render",
+   "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+   "technical_state": "companion_of_valid",
+   "detail": "Nitro animation (NANR) of a package with valid NCER renders"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:npc:n000_00_LZ.bin:n000_00_s.NCER",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -24049,6 +24080,14 @@
    "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
    "technical_state": "companion_of_valid",
    "detail": "cell-animation companion of valid NCER"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:npc:n000_00_LZ.bin:n000_00_w.NANR",
+   "review_status": "usable",
+   "reason_code": "ranger_cac_companion_of_valid_render",
+   "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+   "technical_state": "companion_of_valid",
+   "detail": "Nitro animation (NANR) of a package with valid NCER renders"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:npc:n000_00_LZ.bin:n000_00_w.NCBR",
@@ -30827,6 +30866,14 @@
    "detail": "used by valid NCER render"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc104_LZ.bin:npc104_s.NANR",
+   "review_status": "usable",
+   "reason_code": "ranger_cac_companion_of_valid_render",
+   "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+   "technical_state": "companion_of_valid",
+   "detail": "Nitro animation (NANR) of a package with valid NCER renders"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc104_LZ.bin:npc104_s.NCBR",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -30849,6 +30896,14 @@
    "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
    "technical_state": "companion_of_valid",
    "detail": "cell-animation companion of valid NCER"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc104_LZ.bin:npc104_w.NANR",
+   "review_status": "usable",
+   "reason_code": "ranger_cac_companion_of_valid_render",
+   "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+   "technical_state": "companion_of_valid",
+   "detail": "Nitro animation (NANR) of a package with valid NCER renders"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc104_LZ.bin:npc104_w.NCBR",
@@ -44411,6 +44466,46 @@
    "detail": "1 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp321_LZ.bin:bp321.NCER",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "1/1 nonblank cells"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp321_LZ.bin:bp321.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp321_LZ.bin:bp321.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp321_LZ.bin:bp321.cac",
+   "review_status": "usable",
+   "reason_code": "ranger_cac_companion_of_valid_render",
+   "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+   "technical_state": "companion_of_valid",
+   "detail": "cell-animation companion of valid NCER"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:pokeOBJ:bp321_LZ.bin",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "1 valid NCER pairs"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp322_LZ.bin:bp322.NCER",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -49051,6 +49146,86 @@
    "detail": "1 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp483_LZ.bin:bp483.NCER",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "1/1 nonblank cells"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp483_LZ.bin:bp483.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp483_LZ.bin:bp483.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp483_LZ.bin:bp483.cac",
+   "review_status": "usable",
+   "reason_code": "ranger_cac_companion_of_valid_render",
+   "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+   "technical_state": "companion_of_valid",
+   "detail": "cell-animation companion of valid NCER"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:pokeOBJ:bp483_LZ.bin",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "1 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp484_LZ.bin:bp484.NCER",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "1/1 nonblank cells"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp484_LZ.bin:bp484.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp484_LZ.bin:bp484.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp484_LZ.bin:bp484.cac",
+   "review_status": "usable",
+   "reason_code": "ranger_cac_companion_of_valid_render",
+   "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+   "technical_state": "companion_of_valid",
+   "detail": "cell-animation companion of valid NCER"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:pokeOBJ:bp484_LZ.bin",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "1 valid NCER pairs"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp485_LZ.bin:bp485.NCER",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -49084,6 +49259,46 @@
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:pokeOBJ:bp485_LZ.bin",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "1 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp486_LZ.bin:bp486.NCER",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "1/1 nonblank cells"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp486_LZ.bin:bp486.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp486_LZ.bin:bp486.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp486_LZ.bin:bp486.cac",
+   "review_status": "usable",
+   "reason_code": "ranger_cac_companion_of_valid_render",
+   "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+   "technical_state": "companion_of_valid",
+   "detail": "cell-animation companion of valid NCER"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:pokeOBJ:bp486_LZ.bin",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
    "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
@@ -49284,6 +49499,70 @@
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:pokeOBJ:bp492_LZ.bin",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "1 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:uppict:uppict000_LZ.bin:uppict000_00.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:uppict:uppict000_LZ.bin:uppict000_00.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:uppict:uppict000_LZ.bin:uppict000_00.NSCR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "256x256 screen, 49152 nonblank px"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:uppict:uppict000_LZ.bin",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "1 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:uppict:uppict001_LZ.bin:uppict001_00.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:uppict:uppict001_LZ.bin:uppict001_00.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:uppict:uppict001_LZ.bin:uppict001_00.NSCR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "256x256 screen, 49152 nonblank px"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:uppict:uppict001_LZ.bin",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
    "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
