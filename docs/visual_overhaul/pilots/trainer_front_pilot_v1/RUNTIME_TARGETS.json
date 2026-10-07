@@ -1,0 +1,294 @@
+{
+ "pilot": "trainer_front_pilot_v1",
+ "schema_version": 1,
+ "targets": [
+  {
+   "class": "youngster",
+   "comparison_image": "compare/youngster.png (left: Platinum original, right: HGSS)",
+   "files": {
+    "front.png": {
+     "after": "a0fc402a3a08",
+     "before": "109a6eeec0d7"
+    },
+    "front_scan.png": {
+     "after": "cd2546a9e273",
+     "before": "51fff989d56a"
+    },
+    "front_scan.png.key": {
+     "after": "6b60e4fecf72",
+     "before": "354122a8dbd5"
+    }
+   },
+   "front_sprite_contexts": [
+    "battle intro (enemy front sprite slide-in)",
+    "battle idle",
+    "battle end / trainer defeated fade"
+   ],
+   "hgss_class": "TRAINERCLASS_YOUNGSTER",
+   "suggested_test_trainers": [
+    {
+     "constant": "TRAINER_YOUNGSTER_TRISTAN",
+     "double_battle": false,
+     "id": 1,
+     "name": "Tristan",
+     "party_size": 1
+    },
+    {
+     "constant": "TRAINER_YOUNGSTER_LOGAN",
+     "double_battle": false,
+     "id": 2,
+     "name": "Logan",
+     "party_size": 1
+    },
+    {
+     "constant": "TRAINER_YOUNGSTER_MICHAEL",
+     "double_battle": false,
+     "id": 4,
+     "name": "Michael",
+     "party_size": 2
+    }
+   ],
+   "trainers_using_class": 30
+  },
+  {
+   "class": "lass",
+   "comparison_image": "compare/lass.png (left: Platinum original, right: HGSS)",
+   "files": {
+    "front.png": {
+     "after": "8f35c82b09ae",
+     "before": "3046a329bc5f"
+    },
+    "front_scan.png": {
+     "after": "bc3cd9ceb60e",
+     "before": "bebc7f09be1b"
+    },
+    "front_scan.png.key": {
+     "after": "81e6cff8379f",
+     "before": "e9e74f75197a"
+    }
+   },
+   "front_sprite_contexts": [
+    "battle intro (enemy front sprite slide-in)",
+    "battle idle",
+    "battle end / trainer defeated fade"
+   ],
+   "hgss_class": "TRAINERCLASS_LASS",
+   "suggested_test_trainers": [
+    {
+     "constant": "TRAINER_LASS_NATALIE",
+     "double_battle": false,
+     "id": 3,
+     "name": "Natalie",
+     "party_size": 1
+    },
+    {
+     "constant": "TRAINER_LASS_SAMANTHA",
+     "double_battle": false,
+     "id": 11,
+     "name": "Samantha",
+     "party_size": 1
+    },
+    {
+     "constant": "TRAINER_LASS_SARAH",
+     "double_battle": false,
+     "id": 12,
+     "name": "Sarah",
+     "party_size": 1
+    }
+   ],
+   "trainers_using_class": 22
+  },
+  {
+   "class": "bug_catcher",
+   "comparison_image": "compare/bug_catcher.png (left: Platinum original, right: HGSS)",
+   "files": {
+    "front.png": {
+     "after": "007c2b0e374d",
+     "before": "2b5b2ef92c05"
+    },
+    "front_scan.png": {
+     "after": "dfad630ee03f",
+     "before": "57eecc246a98"
+    },
+    "front_scan.png.key": {
+     "after": "4894dcddff96",
+     "before": "7d90dc75ef72"
+    }
+   },
+   "front_sprite_contexts": [
+    "battle intro (enemy front sprite slide-in)",
+    "battle idle",
+    "battle end / trainer defeated fade"
+   ],
+   "hgss_class": "TRAINERCLASS_BUG_CATCHER",
+   "suggested_test_trainers": [
+    {
+     "constant": "TRAINER_BUG_CATCHER_BRANDON",
+     "double_battle": false,
+     "id": 13,
+     "name": "Brandon",
+     "party_size": 2
+    },
+    {
+     "constant": "TRAINER_BUG_CATCHER_JACK",
+     "double_battle": false,
+     "id": 201,
+     "name": "Jack",
+     "party_size": 3
+    },
+    {
+     "constant": "TRAINER_BUG_CATCHER_PHILLIP",
+     "double_battle": false,
+     "id": 202,
+     "name": "Phillip",
+     "party_size": 3
+    }
+   ],
+   "trainers_using_class": 7
+  },
+  {
+   "class": "twins",
+   "comparison_image": "compare/twins.png (left: Platinum original, right: HGSS)",
+   "files": {
+    "front.png": {
+     "after": "3b629b2ee9b0",
+     "before": "f1c4eeeaa5c5"
+    },
+    "front_scan.png": {
+     "after": "f1196e2d263e",
+     "before": "839e4ca57d73"
+    },
+    "front_scan.png.key": {
+     "after": "96b44943cfed",
+     "before": "cdb01f5b4ae1"
+    }
+   },
+   "front_sprite_contexts": [
+    "battle intro (enemy front sprite slide-in)",
+    "battle idle",
+    "battle end / trainer defeated fade"
+   ],
+   "hgss_class": "TRAINERCLASS_TWINS",
+   "suggested_test_trainers": [
+    {
+     "constant": "TRAINER_TWINS_LIV_AND_LIZ",
+     "double_battle": true,
+     "id": 15,
+     "name": "Liv & Liz",
+     "party_size": 2
+    },
+    {
+     "constant": "TRAINER_TWINS_TERI_AND_TIA",
+     "double_battle": true,
+     "id": 65,
+     "name": "Teri & Tia",
+     "party_size": 2
+    },
+    {
+     "constant": "TRAINER_TWINS_EMMA_AND_LIL",
+     "double_battle": true,
+     "id": 294,
+     "name": "Emma & Lil",
+     "party_size": 2
+    }
+   ],
+   "trainers_using_class": 5
+  },
+  {
+   "class": "beauty",
+   "comparison_image": "compare/beauty.png (left: Platinum original, right: HGSS)",
+   "files": {
+    "front.png": {
+     "after": "41c75c1c1835",
+     "before": "a8a39d6bcb25"
+    },
+    "front_scan.png": {
+     "after": "e779066f7c50",
+     "before": "263c9c27bde1"
+    },
+    "front_scan.png.key": {
+     "after": "8e7a5a629ee3",
+     "before": "cb1cea9ae19b"
+    }
+   },
+   "front_sprite_contexts": [
+    "battle intro (enemy front sprite slide-in)",
+    "battle idle",
+    "battle end / trainer defeated fade"
+   ],
+   "hgss_class": "TRAINERCLASS_BEAUTY",
+   "suggested_test_trainers": [
+    {
+     "constant": "TRAINER_BEAUTY_CYNDY",
+     "double_battle": false,
+     "id": 346,
+     "name": "Cyndy",
+     "party_size": 1
+    },
+    {
+     "constant": "TRAINER_BEAUTY_LINDSAY",
+     "double_battle": false,
+     "id": 348,
+     "name": "Lindsay",
+     "party_size": 1
+    },
+    {
+     "constant": "TRAINER_BEAUTY_DEVON",
+     "double_battle": false,
+     "id": 491,
+     "name": "Devon",
+     "party_size": 3
+    }
+   ],
+   "trainers_using_class": 13
+  },
+  {
+   "class": "swimmer_female",
+   "comparison_image": "compare/swimmer_female.png (left: Platinum original, right: HGSS)",
+   "files": {
+    "front.png": {
+     "after": "335ef879c3ee",
+     "before": "f87220bcadf2"
+    },
+    "front_scan.png": {
+     "after": "38c42d0c34eb",
+     "before": "003a55238177"
+    },
+    "front_scan.png.key": {
+     "after": "39b5d65d2d77",
+     "before": "63de07b6c916"
+    }
+   },
+   "front_sprite_contexts": [
+    "battle intro (enemy front sprite slide-in)",
+    "battle idle",
+    "battle end / trainer defeated fade"
+   ],
+   "hgss_class": "TRAINERCLASS_SWIMMER_F",
+   "suggested_test_trainers": [
+    {
+     "constant": "TRAINER_SWIMMER_HALEY",
+     "double_battle": false,
+     "id": 105,
+     "name": "Haley",
+     "party_size": 2
+    },
+    {
+     "constant": "TRAINER_SWIMMER_MARY",
+     "double_battle": false,
+     "id": 106,
+     "name": "Mary",
+     "party_size": 2
+    },
+    {
+     "constant": "TRAINER_SWIMMER_JESSICA",
+     "double_battle": false,
+     "id": 162,
+     "name": "Jessica",
+     "party_size": 4
+    }
+   ],
+   "trainers_using_class": 25
+  }
+ ]
+}
