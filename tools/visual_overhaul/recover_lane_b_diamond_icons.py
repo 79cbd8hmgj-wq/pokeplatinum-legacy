@@ -40,6 +40,18 @@ def read_rgcn(path: Path) -> tuple[int, int, list[int]]:
     body = raw[0x30:0x30 + data_size]
     if pixel_format != 3:
         raise ValueError(f"unsupported pixel format {pixel_format}")
+
+    # Diamond icon NCGRs use 0xFFFF/0xFFFF as "dimensions unspecified" in
+    # RAHC even though the payload is valid. For this icon family the source
+    # contract is independently known to be two stacked 32x32 frames, i.e.
+    # 32x64 = 4x8 tiles = 1024 bytes at 4bpp.
+    if width_tiles == 0xFFFF and height_tiles == 0xFFFF:
+        if len(body) != 1024:
+            raise ValueError(
+                f"unspecified RAHC geometry with unexpected payload {len(body)} bytes"
+            )
+        width_tiles, height_tiles = 4, 8
+
     expected = width_tiles * height_tiles * 32
     if expected != len(body):
         raise ValueError(f"geometry expects {expected} bytes, got {len(body)}")
