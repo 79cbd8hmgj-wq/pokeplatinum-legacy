@@ -1,0 +1,61 @@
+name: Lane B recovered curation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "tools/visual_overhaul/build_lane_b_recovered_curation.py"
+      - "docs/visual_overhaul/LANE_B_FINAL_CURATION.json"
+      - "docs/visual_overhaul/LANE_B_DECODE_RECOVERY.json"
+      - "docs/visual_overhaul/LANE_B_SOURCE_PNG_RECOVERY.json"
+      - "docs/visual_overhaul/LANE_B_DIAMOND_ICON_RECOVERY.json"
+      - ".github/workflows/lane-b-recovered-curation.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build recovered Lane B state
+        run: |
+          python3 tools/visual_overhaul/build_lane_b_recovered_curation.py \
+            --baseline docs/visual_overhaul/LANE_B_FINAL_CURATION.json \
+            --recovery-audit docs/visual_overhaul/LANE_B_DECODE_RECOVERY.json \
+            --source-png docs/visual_overhaul/LANE_B_SOURCE_PNG_RECOVERY.json \
+            --diamond-icons docs/visual_overhaul/LANE_B_DIAMOND_ICON_RECOVERY.json \
+            --write-json docs/visual_overhaul/LANE_B_RECOVERED_CURATION.json \
+            --write-md docs/visual_overhaul/LANE_B_RECOVERED_CURATION.md
+
+      - name: Validate recovered Lane B coverage
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p = json.loads(Path("docs/visual_overhaul/LANE_B_RECOVERED_CURATION.json").read_text())
+          assert p["asset_count"] == 15157
+          assert sum(p["status_counts"].values()) == 15157
+          assert p["status_counts"].get("usable", 0) >= 578
+          assert p["status_counts"].get("decode_issue", 0) <= 6605
+          assert "unreviewed" not in p["status_counts"]
+          print("Lane B recovered status:", p["status_counts"])
+          print("Remaining routes:", p["remaining_decode_routes"])
+          PY
+
+      - name: Commit recovered Lane B state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            docs/visual_overhaul/LANE_B_RECOVERED_CURATION.json \
+            docs/visual_overhaul/LANE_B_RECOVERED_CURATION.md
+          if git diff --cached --quiet; then
+            echo "No recovered Lane B changes."
+            exit 0
+          fi
+          git commit -m "visual: update Lane B recovery state"
+          git push
