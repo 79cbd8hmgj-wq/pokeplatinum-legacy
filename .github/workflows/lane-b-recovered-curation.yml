@@ -13,6 +13,7 @@ on:
       - "docs/visual_overhaul/LANE_B_PMD_SKY_RECOVERY.json"
       - "docs/visual_overhaul/LANE_B_NITRO2D_PAIR_RECOVERY.json"
       - "docs/visual_overhaul/LANE_B_EXTRA_SUPPORT_RECOVERY.json"
+      - "docs/visual_overhaul/LANE_B_RANGER_MAPS_RECOVERY.json"
       - ".github/workflows/lane-b-recovered-curation.yml"
 
 permissions:
@@ -36,6 +37,7 @@ jobs:
             --extra-overlay docs/visual_overhaul/LANE_B_PMD_SKY_RECOVERY.json \
             --extra-overlay docs/visual_overhaul/LANE_B_NITRO2D_PAIR_RECOVERY.json \
             --extra-overlay docs/visual_overhaul/LANE_B_EXTRA_SUPPORT_RECOVERY.json \
+            --extra-overlay docs/visual_overhaul/LANE_B_RANGER_MAPS_RECOVERY.json \
             --write-json docs/visual_overhaul/LANE_B_RECOVERED_CURATION.json \
             --write-md docs/visual_overhaul/LANE_B_RECOVERED_CURATION.md
 
