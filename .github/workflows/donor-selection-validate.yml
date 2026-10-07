@@ -27,4 +27,5 @@ jobs:
       - run: cd tools/visual_overhaul/selection && python3 test_selection_framework.py
       - run: cd tools/visual_overhaul/selection && python3 test_use_outcomes.py
       - run: cd tools/visual_overhaul/selection && python3 test_opportunities.py
+      - run: cd tools/visual_overhaul/selection && python3 test_mining.py
       - run: cd tools/visual_overhaul/selection && python3 test_hgss_trainer_decoder.py

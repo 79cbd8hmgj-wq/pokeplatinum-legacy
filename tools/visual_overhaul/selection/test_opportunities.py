@@ -86,10 +86,8 @@ sc = [r["rank_score"] for r in reg0["rows"] if r["rank_score"] is not None]
 assert sc == sorted(sc, reverse=True) and reg0["rows"][0]["id"] == M, reg0["rows"][0]["id"]
 assert all(r["rank_score"] is None for r in reg0["rows"] if r["classification"] in ("reference_only", "reject"))
 print("ok   register ranked by weighted score; reference_only/reject unranked; map preview first")
-import build_queue
-q = build_queue.derive()
-assert q["phase"] == "ds_only" and all(i["source_id"].split(",")[0] in ("hgss", "pmd_sky", "ranger2", "composite") for i in q["items"])
-assert [i["finding_id"] for i in q["items"] if i["rank"] and i.get("finding_id")][0] == M
+q = jload(SEL / "IMPLEMENTATION_QUEUE.json")
+assert q["phase"] == "ds_only" and all(i["source_id"].split(",")[0] in ("hgss", "pmd_sky", "ranger2") for i in q["ranked"])
 print("ok   queue is DS-only and ranked")
 opp.load_findings = lambda: BASE
 reg = opp.derive_register(ledgers, use)

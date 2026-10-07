@@ -83,3 +83,7 @@ Migrated (`migrate_opportunities.py`): 11 explicit findings + 4 existing compone
 ## Update: DS-only phase (supersedes the previous opportunity update's non-DS entries)
 
 GBA/GBC findings moved to `opportunities/deferred/non_ds_findings.json` (preserved, unused). Active set rebuilt from DS evidence with targeted HGSS/PMD Sky/Ranger 2 verification; queue re-ranked across all eight classes by the weighted opportunity score. Details: `DS_OPPORTUNITY_REASSESSMENT.md`.
+
+## Update: DS catalog mining pass
+
+All 8,581 candidate groups were processed by deterministic mining passes (see `DS_OPPORTUNITY_MINING_SUMMARY.md`, `OPPORTUNITY_POOL_SUMMARY.md`); the implementation queue is rebuilt from the pool. Ledgers/groups/evidence unchanged. No implementation started.

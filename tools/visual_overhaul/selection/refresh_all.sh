@@ -19,6 +19,7 @@ for s in $(python3 -c "import json;print(' '.join(json.load(open('$D/selection/S
 done
 python3 $S/build_outcomes.py > /dev/null
 python3 $S/build_opportunities.py > /dev/null
+python3 $S/mine_pool.py
 python3 $S/build_queue.py
 python3 $S/build_status.py > /dev/null
 python3 $S/validate_selection.py

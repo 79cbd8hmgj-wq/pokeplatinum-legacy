@@ -1,0 +1,226 @@
+{
+ "description": "Targeted visual reviews of high-value ambiguous groups, using committed renders or a handful of targeted renders (no bulk decode). 'confirm' lifts evidence quality for that group; family_reviews are informational.",
+ "family_reviews": [
+  {
+   "domain": "field_graphics",
+   "evidence_refs": [
+    "docs/visual_overhaul/LANE_B_RANGER_MAP_COMPOSITES_SAMPLE.png"
+   ],
+   "family": "ranger_field/m",
+   "note": "Composed maps are 2D tile art (interiors with detailed furniture/props, forests, caves; magenta = transparent): strong prop/motif library but a different projection/art language from Platinum's 3D world; motif/redraw use only, no direct import.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "source_id": "ranger2",
+   "verdict": "confirm_low_feasibility"
+  },
+  {
+   "domain": "transitions_presentation",
+   "evidence_refs": [],
+   "family": "ranger_event/event",
+   "note": "Tiled-background bundles (NCGR+NCLR+NSCR) cannot be rendered by the available package renderer; kept needs_evidence until a tilemap preview exists.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "source_id": "ranger2",
+   "verdict": "unresolved"
+  },
+  {
+   "domain": "ui_menus_hud",
+   "evidence_refs": [],
+   "family": "ranger_menu/um",
+   "note": "Menu bundles are not NARC/cell packages for the existing renderer (LZ10 payload is not NARC); no preview, kept needs_evidence.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "source_id": "ranger2",
+   "verdict": "unresolved"
+  }
+ ],
+ "reviews": [
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/hgss_only_trainers_and_ranger_walk_frames.png"
+   ],
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_066",
+   "note": "HGSS-only trainer class renders as a clean multi-frame (stacked) 80x80 set: usable as outfit/pose/accessory parts and as extra animation frames; subject identity still to be matched to a Platinum class.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/hgss_only_trainers_and_ranger_walk_frames.png"
+   ],
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_067",
+   "note": "HGSS-only trainer class renders as a clean multi-frame (stacked) 80x80 set: usable as outfit/pose/accessory parts and as extra animation frames; subject identity still to be matched to a Platinum class.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/hgss_only_trainers_and_ranger_walk_frames.png"
+   ],
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_073",
+   "note": "HGSS-only trainer class renders as a clean multi-frame (stacked) 80x80 set: usable as outfit/pose/accessory parts and as extra animation frames; subject identity still to be matched to a Platinum class.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/hgss_only_trainers_and_ranger_walk_frames.png"
+   ],
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_075",
+   "note": "HGSS-only trainer class renders as a clean multi-frame (stacked) 80x80 set: usable as outfit/pose/accessory parts and as extra animation frames; subject identity still to be matched to a Platinum class.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/hgss_only_trainers_and_ranger_walk_frames.png"
+   ],
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_076",
+   "note": "HGSS-only trainer class renders as a clean multi-frame (stacked) 80x80 set: usable as outfit/pose/accessory parts and as extra animation frames; subject identity still to be matched to a Platinum class.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/hgss_only_trainers_and_ranger_walk_frames.png"
+   ],
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_086",
+   "note": "HGSS-only trainer class renders as a clean multi-frame (stacked) 80x80 set: usable as outfit/pose/accessory parts and as extra animation frames; subject identity still to be matched to a Platinum class.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/hgss_only_trainers_and_ranger_walk_frames.png"
+   ],
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_104",
+   "note": "HGSS-only trainer class renders as a clean multi-frame (stacked) 80x80 set: usable as outfit/pose/accessory parts and as extra animation frames; subject identity still to be matched to a Platinum class.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/hgss_only_trainers_and_ranger_walk_frames.png"
+   ],
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_105",
+   "note": "HGSS-only trainer class renders as a clean multi-frame (stacked) 80x80 set: usable as outfit/pose/accessory parts and as extra animation frames; subject identity still to be matched to a Platinum class.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/hgss_only_trainers_and_ranger_walk_frames.png"
+   ],
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_106",
+   "note": "HGSS-only trainer class renders as a clean multi-frame (stacked) 80x80 set: usable as outfit/pose/accessory parts and as extra animation frames; subject identity still to be matched to a Platinum class.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/hgss_only_trainers_and_ranger_walk_frames.png"
+   ],
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_108",
+   "note": "HGSS-only trainer class renders as a clean multi-frame (stacked) 80x80 set: usable as outfit/pose/accessory parts and as extra animation frames; subject identity still to be matched to a Platinum class.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/hgss_only_trainers_and_ranger_walk_frames.png"
+   ],
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_112",
+   "note": "HGSS-only trainer class renders as a clean multi-frame (stacked) 80x80 set: usable as outfit/pose/accessory parts and as extra animation frames; subject identity still to be matched to a Platinum class.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/hgss_only_trainers_and_ranger_walk_frames.png"
+   ],
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_123",
+   "note": "HGSS-only trainer class renders as a clean multi-frame (stacked) 80x80 set: usable as outfit/pose/accessory parts and as extra animation frames; subject identity still to be matched to a Platinum class.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/hgss_only_trainers_and_ranger_walk_frames.png"
+   ],
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_124",
+   "note": "HGSS-only trainer class renders as a clean multi-frame (stacked) 80x80 set: usable as outfit/pose/accessory parts and as extra animation frames; subject identity still to be matched to a Platinum class.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/hgss_only_trainers_and_ranger_walk_frames.png"
+   ],
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_097",
+   "note": "HGSS-only trainer class renders as a clean multi-frame (stacked) 80x80 set: usable as outfit/pose/accessory parts and as extra animation frames; subject identity still to be matched to a Platinum class.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/hgss_only_trainers_and_ranger_walk_frames.png"
+   ],
+   "group_id": "pokemon_animation_reference/ranger2/p089_00_w",
+   "note": "Walk frames form two coherent facing sets at about 36px: a genuine walk cycle, compatible with the 32x32 field-sprite contract; pose/orientation approval still pending.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/opportunities/evidence/ranger2_effect_ui_sample.png"
+   ],
+   "group_id": "battle_effects_particles/ranger2/ranger_effect/e010",
+   "note": "Shaded multi-frame effect art (fire/tornado/lightning) in standard Nitro cells; matches the earlier DS reassessment sample.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/opportunities/evidence/ranger2_effect_ui_sample.png"
+   ],
+   "group_id": "battle_effects_particles/ranger2/ranger_effect/e030",
+   "note": "Shaded multi-frame effect art (fire/tornado/lightning) in standard Nitro cells; matches the earlier DS reassessment sample.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/opportunities/evidence/ranger2_effect_ui_sample.png"
+   ],
+   "group_id": "battle_effects_particles/ranger2/ranger_effect/e100",
+   "note": "Shaded multi-frame effect art (fire/tornado/lightning) in standard Nitro cells; matches the earlier DS reassessment sample.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/opportunities/evidence/ranger2_effect_ui_sample.png"
+   ],
+   "group_id": "menu_ui_frames/ranger2/ranger_interface/i005",
+   "note": "Glow-ring / spark feedback primitives with growth states; suitable as feedback-layer parts.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/opportunities/evidence/ranger2_effect_ui_sample.png"
+   ],
+   "group_id": "menu_ui_frames/ranger2/ranger_interface/i010",
+   "note": "Glow-ring / spark feedback primitives with growth states; suitable as feedback-layer parts.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/opportunities/evidence/ranger2_effect_ui_sample.png"
+   ],
+   "group_id": "menu_ui_frames/ranger2/ranger_interface/i020",
+   "note": "Glow-ring / spark feedback primitives with growth states; suitable as feedback-layer parts.",
+   "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  }
+ ],
+ "schema_version": 1
+}
