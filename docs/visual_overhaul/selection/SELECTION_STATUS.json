@@ -1,0 +1,151 @@
+{
+ "candidate_group_totals": {
+  "groups": 8223,
+  "groups_by_subsystem": {
+   "battle_backgrounds_hud": 68,
+   "battle_effects_particles": 636,
+   "field_effects_overlays": 523,
+   "field_environment_art": 1485,
+   "field_npc_player_sprites": 163,
+   "menu_ui_frames": 913,
+   "no_platinum_target": 282,
+   "party_summary_ui": 1,
+   "pokedex_ui": 1,
+   "pokemon_animation_reference": 1533,
+   "pokemon_battle_sprites": 1282,
+   "pokemon_icons": 1077,
+   "title_and_presentation": 153,
+   "trainer_battle_sprites": 106
+  },
+  "members_by_subsystem": {
+   "battle_backgrounds_hud": 281,
+   "battle_effects_particles": 4266,
+   "field_effects_overlays": 538,
+   "field_environment_art": 3060,
+   "field_npc_player_sprites": 1780,
+   "menu_ui_frames": 2315,
+   "no_platinum_target": 1410,
+   "party_summary_ui": 27,
+   "pokedex_ui": 123,
+   "pokemon_animation_reference": 35621,
+   "pokemon_battle_sprites": 3998,
+   "pokemon_icons": 1077,
+   "title_and_presentation": 555,
+   "trainer_battle_sprites": 106
+  },
+  "records_with_undefined_source_role": 0,
+  "targets": 1730,
+  "unresolved_decode_issue_in_unit": 106,
+  "unresolved_decode_issue_without_usable_unit": 67,
+  "usable_records_grouped": 55157
+ },
+ "schema_version": 1,
+ "subsystems": [
+  {
+   "groups": 68,
+   "members": 281,
+   "state": "pending",
+   "subsystem": "battle_backgrounds_hud",
+   "targets": 1
+  },
+  {
+   "groups": 636,
+   "members": 4266,
+   "state": "pending",
+   "subsystem": "battle_effects_particles",
+   "targets": 1
+  },
+  {
+   "groups": 523,
+   "members": 538,
+   "state": "pending",
+   "subsystem": "field_effects_overlays",
+   "targets": 1
+  },
+  {
+   "groups": 1485,
+   "members": 3060,
+   "state": "pending",
+   "subsystem": "field_environment_art",
+   "targets": 1
+  },
+  {
+   "groups": 163,
+   "members": 1780,
+   "state": "pending",
+   "subsystem": "field_npc_player_sprites",
+   "targets": 1
+  },
+  {
+   "groups": 913,
+   "members": 2315,
+   "state": "pending",
+   "subsystem": "menu_ui_frames",
+   "targets": 1
+  },
+  {
+   "groups": 282,
+   "members": 1410,
+   "state": "pending",
+   "subsystem": "no_platinum_target",
+   "targets": 1
+  },
+  {
+   "groups": 1,
+   "members": 27,
+   "state": "pending",
+   "subsystem": "party_summary_ui",
+   "targets": 1
+  },
+  {
+   "groups": 1,
+   "members": 123,
+   "state": "pending",
+   "subsystem": "pokedex_ui",
+   "targets": 1
+  },
+  {
+   "groups": 1533,
+   "members": 35621,
+   "state": "pending",
+   "subsystem": "pokemon_animation_reference",
+   "targets": 282
+  },
+  {
+   "groups": 1282,
+   "members": 3998,
+   "state": "pending",
+   "subsystem": "pokemon_battle_sprites",
+   "targets": 788
+  },
+  {
+   "groups": 1077,
+   "members": 1077,
+   "needs_evidence": 4,
+   "roles": {
+    "not_selected": 1071,
+    "reference_only": 6
+   },
+   "state": "selected",
+   "subsystem": "pokemon_icons",
+   "target_resolution": {
+    "native": 544
+   },
+   "targets": 544
+  },
+  {
+   "groups": 153,
+   "members": 555,
+   "state": "pending",
+   "subsystem": "title_and_presentation",
+   "targets": 1
+  },
+  {
+   "groups": 106,
+   "members": 106,
+   "state": "pending",
+   "subsystem": "trainer_battle_sprites",
+   "targets": 106
+  }
+ ]
+}

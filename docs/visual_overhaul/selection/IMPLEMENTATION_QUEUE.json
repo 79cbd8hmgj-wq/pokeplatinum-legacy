@@ -1,0 +1,84 @@
+{
+ "completed_subsystems": [
+  "pokemon_icons"
+ ],
+ "inputs": {
+  "ledger_files": {
+   "pokemon_icons": "e79bcecfe70f06ac979b4818821c37defdb6ca5479de65712c8d0396cfac1fc4"
+  }
+ },
+ "items": [
+  {
+   "groups": 4,
+   "kind": "evidence",
+   "members": 4,
+   "priority_score": 0.2,
+   "rank": 1,
+   "source_id": "hgss",
+   "subsystem": "pokemon_icons",
+   "target_count": 4,
+   "targets": null,
+   "targets_sample": [
+    "pokemon_icons/icon_extra_0547",
+    "pokemon_icons/icon_extra_0548",
+    "pokemon_icons/icon_extra_0549",
+    "pokemon_icons/icon_extra_0550"
+   ]
+  }
+ ],
+ "pending_subsystems": [
+  {
+   "groups": 68,
+   "subsystem": "battle_backgrounds_hud"
+  },
+  {
+   "groups": 636,
+   "subsystem": "battle_effects_particles"
+  },
+  {
+   "groups": 523,
+   "subsystem": "field_effects_overlays"
+  },
+  {
+   "groups": 1485,
+   "subsystem": "field_environment_art"
+  },
+  {
+   "groups": 163,
+   "subsystem": "field_npc_player_sprites"
+  },
+  {
+   "groups": 913,
+   "subsystem": "menu_ui_frames"
+  },
+  {
+   "groups": 282,
+   "subsystem": "no_platinum_target"
+  },
+  {
+   "groups": 1,
+   "subsystem": "party_summary_ui"
+  },
+  {
+   "groups": 1,
+   "subsystem": "pokedex_ui"
+  },
+  {
+   "groups": 1533,
+   "subsystem": "pokemon_animation_reference"
+  },
+  {
+   "groups": 1282,
+   "subsystem": "pokemon_battle_sprites"
+  },
+  {
+   "groups": 153,
+   "subsystem": "title_and_presentation"
+  },
+  {
+   "groups": 106,
+   "subsystem": "trainer_battle_sprites"
+  }
+ ],
+ "schema_version": 1
+}
