@@ -348,6 +348,66 @@
           "rationale": "Ranger-specific Pokemon objects (pokeOBJ); no Platinum counterpart."
         }
       }
+    },
+    "field_building_models": {
+      "title": "Field building and prop models",
+      "matrix_row": "Field textures / 3D field models / Foliage / Water / Urban",
+      "native_baseline": {
+        "kind": "res_dir",
+        "path": "res/field/props/models"
+      },
+      "target_kind": "family",
+      "integration_cost": 4,
+      "priority_weight": 4,
+      "evidence_provider": "field_3d",
+      "source_roles": {
+        "hgss": {
+          "class": "convertible",
+          "format_family": "nitro_bmd0_model",
+          "conversion": "structural",
+          "rationale": "HGSS bm_field/bm_room BMD0 models (MDL0+TEX0) share the Gen IV NSBMD format family with Platinum prop models, but placement tables (matshp, area data, hitboxes) and texture sets must be rebuilt per use; whole-model transfer is not assumed, components are the primary value."
+        }
+      }
+    },
+    "field_texture_sets": {
+      "title": "Field map texture sets",
+      "matrix_row": "Field textures / 3D field models / Foliage / Water / Urban",
+      "native_baseline": {
+        "kind": "res_dir",
+        "path": "res/field/maps/texture_sets"
+      },
+      "target_kind": "family",
+      "integration_cost": 3,
+      "priority_weight": 4,
+      "evidence_provider": "field_3d",
+      "source_roles": {
+        "hgss": {
+          "class": "convertible",
+          "format_family": "nitro_btx0_texture_set",
+          "conversion": "trivial",
+          "rationale": "HGSS a/0/4/4 BTX0 texture sets use the same TEX0 texture/palette formats as Platinum map texture sets; colour grading to the Sinnoh look is art work (G4 pipeline), not a format conversion."
+        }
+      }
+    },
+    "overworld_pokemon_sheets": {
+      "title": "Overworld Pokemon sheets (follower sheet library)",
+      "matrix_row": "NPC/player field sprites",
+      "native_baseline": {
+        "kind": "res_dir",
+        "path": "res/graphics/field_sprites/pokemon"
+      },
+      "target_kind": "family",
+      "integration_cost": 3,
+      "priority_weight": 3,
+      "evidence_provider": "field_3d",
+      "source_roles": {
+        "hgss": {
+          "class": "direct",
+          "format_family": "nsbtx_frame_textures_32x32_4bpp",
+          "conversion": "trivial",
+          "rationale": "HGSS follower sheets are 8-frame 32x32 4bpp NSBTX frame textures with normal+shiny palettes; the follower system is out of scope, the sheets are a component library for event/cutscene/encounter Pokemon."
+        }
+      }
     }
   }
 }

@@ -2,11 +2,14 @@
  "completed_subsystems": [
   "battle_backgrounds_hud",
   "battle_effects_particles",
+  "field_building_models",
   "field_effects_overlays",
   "field_environment_art",
   "field_npc_player_sprites",
+  "field_texture_sets",
   "menu_ui_frames",
   "no_platinum_target",
+  "overworld_pokemon_sheets",
   "party_summary_ui",
   "pokedex_ui",
   "pokemon_animation_reference",
@@ -17,7 +20,7 @@
  ],
  "inputs": {
   "classes_sha256": "24acd6faefb7f3bb88f8ab7a8d5fd545f0a93ecc045d6b54a2211ccd9f168ee9",
-  "pool_sha256": "659c94f586404367e72baf11169a1d83caaa087388b12982cb501b0e53984058",
+  "pool_sha256": "cbdc24130f77a35da60d92bb334051dc568d7467aae0561d683d1c65306a6725",
   "scope_sha256": "ad5632421f94dfc2ce72394d28633654a144ff1f48e852c230011baf87933f74"
  },
  "pending_subsystems": [],
@@ -53,6 +56,86 @@
   },
   {
    "components": [
+    "animation_frame",
+    "pose"
+   ],
+   "host": "overworld Pokemon field sprites / event objects",
+   "kind": "library",
+   "library_id": "lib:hgss/overworld_pokemon/hgss_follower_legendary/novel_detail/whole_asset",
+   "members": 46,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_detail",
+   "promoted": 46,
+   "rank": 2,
+   "rank_score": 4.304,
+   "records": 46,
+   "source_id": "hgss",
+   "subsystem": "overworld_pokemon",
+   "techniques": [],
+   "title": "hgss_follower_legendary [hgss/overworld_pokemon] novel_detail",
+   "top_records": [
+    "opp:mined/overworld_pokemon_sheets/hgss/hgss_follower_00000580/novel_detail/whole_asset",
+    "opp:mined/overworld_pokemon_sheets/hgss/hgss_follower_00000712/novel_detail/whole_asset",
+    "opp:mined/overworld_pokemon_sheets/hgss/hgss_follower_00000713/novel_detail/whole_asset"
+   ],
+   "use_mode": "whole_asset"
+  },
+  {
+   "components": [
+    "architectural_detail",
+    "door",
+    "floor_material",
+    "geometry_motif"
+   ],
+   "host": "field prop/building models (NSBMD prop models, model sets, area data)",
+   "kind": "library",
+   "library_id": "lib:hgss/models/hgss_bm_field_building_exterior/component_donor/component",
+   "members": 95,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 95,
+   "rank": 3,
+   "rank_score": 4.297,
+   "records": 95,
+   "source_id": "hgss",
+   "subsystem": "models",
+   "techniques": [],
+   "title": "hgss_bm_field_building_exterior [hgss/models] component_donor",
+   "top_records": [
+    "opp:mined/field_building_models/hgss/hgss_bm_field_187/component_donor/component",
+    "opp:mined/field_building_models/hgss/hgss_bm_field_218/component_donor/component",
+    "opp:mined/field_building_models/hgss/hgss_bm_field_257/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "animation_frame",
+    "pose"
+   ],
+   "host": "overworld Pokemon field sprites / event objects",
+   "kind": "library",
+   "library_id": "lib:hgss/overworld_pokemon/hgss_follower_species/novel_detail/whole_asset",
+   "members": 428,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_detail",
+   "promoted": 428,
+   "rank": 4,
+   "rank_score": 4.254,
+   "records": 428,
+   "source_id": "hgss",
+   "subsystem": "overworld_pokemon",
+   "techniques": [],
+   "title": "hgss_follower_species [hgss/overworld_pokemon] novel_detail",
+   "top_records": [
+    "opp:mined/overworld_pokemon_sheets/hgss/hgss_follower_00000299/novel_detail/whole_asset",
+    "opp:mined/overworld_pokemon_sheets/hgss/hgss_follower_00000303/novel_detail/whole_asset",
+    "opp:mined/overworld_pokemon_sheets/hgss/hgss_follower_00000306/novel_detail/whole_asset"
+   ],
+   "use_mode": "whole_asset"
+  },
+  {
+   "components": [
     "UI_element",
     "animation_frame",
     "particle_shape"
@@ -64,7 +147,7 @@
    "needs_evidence": 0,
    "opportunity_class": "novel_detail",
    "promoted": 72,
-   "rank": 2,
+   "rank": 5,
    "rank_score": 4.251,
    "records": 72,
    "source_id": "ranger2",
@@ -89,7 +172,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 55,
-   "rank": 3,
+   "rank": 6,
    "rank_score": 4.201,
    "records": 55,
    "source_id": "ranger2",
@@ -120,7 +203,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 127,
-   "rank": 4,
+   "rank": 7,
    "rank_score": 4.193,
    "records": 127,
    "source_id": "ranger2",
@@ -147,7 +230,7 @@
    "needs_evidence": 0,
    "opportunity_class": "novel_capability",
    "promoted": 1,
-   "rank": 5,
+   "rank": 8,
    "rank_score": 4.189,
    "records": 1,
    "source_id": "hgss",
@@ -168,7 +251,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 46,
-   "rank": 6,
+   "rank": 9,
    "rank_score": 4.159,
    "records": 46,
    "source_id": "ranger2",
@@ -194,7 +277,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 76,
-   "rank": 7,
+   "rank": 10,
    "rank_score": 4.105,
    "records": 76,
    "source_id": "ranger2",
@@ -213,6 +296,62 @@
   },
   {
    "components": [
+    "architectural_detail",
+    "door",
+    "fence",
+    "floor_material"
+   ],
+   "host": "3D field/map texture resources (NSBTX materials)",
+   "kind": "library",
+   "library_id": "lib:hgss/textures/hgss_texset_floor_interior/component_donor/component",
+   "members": 907,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 20,
+   "rank": 11,
+   "rank_score": 4.097,
+   "records": 20,
+   "source_id": "hgss",
+   "subsystem": "textures",
+   "techniques": [],
+   "title": "hgss_texset_floor_interior [hgss/textures] component_donor",
+   "top_records": [
+    "opp:mined/field_texture_sets/hgss/hgss_texset_027/component_donor/component",
+    "opp:mined/field_texture_sets/hgss/hgss_texset_039/component_donor/component",
+    "opp:mined/field_texture_sets/hgss/hgss_texset_040/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "fence",
+    "floor_material",
+    "foliage",
+    "material_treatment"
+   ],
+   "host": "3D field/map texture resources (NSBTX materials)",
+   "kind": "library",
+   "library_id": "lib:hgss/textures/hgss_texset_foliage_ground/component_donor/component",
+   "members": 904,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 20,
+   "rank": 12,
+   "rank_score": 4.097,
+   "records": 20,
+   "source_id": "hgss",
+   "subsystem": "textures",
+   "techniques": [],
+   "title": "hgss_texset_foliage_ground [hgss/textures] component_donor",
+   "top_records": [
+    "opp:mined/field_texture_sets/hgss/hgss_texset_006/component_donor/component",
+    "opp:mined/field_texture_sets/hgss/hgss_texset_008/component_donor/component",
+    "opp:mined/field_texture_sets/hgss/hgss_texset_013/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
     "environmental_motif",
     "layout"
    ],
@@ -223,7 +362,7 @@
    "needs_evidence": 0,
    "opportunity_class": "novel_capability",
    "promoted": 64,
-   "rank": 8,
+   "rank": 13,
    "rank_score": 4.09,
    "records": 64,
    "source_id": "ranger2",
@@ -242,29 +381,29 @@
   },
   {
    "components": [
-    "material_treatment",
-    "texture_region"
+    "animation_frame",
+    "pose"
    ],
-   "host": "3D field/map texture resources (NSBTX materials)",
+   "host": "overworld Pokemon field sprites / event objects",
    "kind": "library",
-   "library_id": "lib:ranger2/textures/ranger_field/m/component_donor/component",
-   "members": 309,
+   "library_id": "lib:hgss/overworld_pokemon/hgss_follower_form/novel_detail/whole_asset",
+   "members": 53,
    "needs_evidence": 0,
-   "opportunity_class": "component_donor",
-   "promoted": 309,
-   "rank": 9,
-   "rank_score": 4.064,
-   "records": 309,
-   "source_id": "ranger2",
-   "subsystem": "textures",
+   "opportunity_class": "novel_detail",
+   "promoted": 53,
+   "rank": 14,
+   "rank_score": 4.074,
+   "records": 53,
+   "source_id": "hgss",
+   "subsystem": "overworld_pokemon",
    "techniques": [],
-   "title": "ranger_field/m [ranger2/textures] component_donor",
+   "title": "hgss_follower_form [hgss/overworld_pokemon] novel_detail",
    "top_records": [
-    "opp:mined/field_environment_art/ranger2/ranger_field/m001_001.map.tex/component_donor/component",
-    "opp:mined/field_environment_art/ranger2/ranger_field/m001_002.map.tex/component_donor/component",
-    "opp:mined/field_environment_art/ranger2/ranger_field/m001_005.map.tex/component_donor/component"
+    "opp:mined/overworld_pokemon_sheets/hgss/hgss_follower_00000300/novel_detail/whole_asset",
+    "opp:mined/overworld_pokemon_sheets/hgss/hgss_follower_00000453/novel_detail/whole_asset",
+    "opp:mined/overworld_pokemon_sheets/hgss/hgss_follower_00000788/novel_detail/whole_asset"
    ],
-   "use_mode": "component"
+   "use_mode": "whole_asset"
   },
   {
    "components": [
@@ -279,7 +418,7 @@
    "needs_evidence": 0,
    "opportunity_class": "enhancement_candidate",
    "promoted": 15,
-   "rank": 10,
+   "rank": 15,
    "rank_score": 4.062,
    "records": 15,
    "source_id": "hgss",
@@ -295,6 +434,34 @@
   },
   {
    "components": [
+    "floor_material",
+    "foliage",
+    "geometry_motif",
+    "overlay_decal"
+   ],
+   "host": "field prop/building models (NSBMD prop models, model sets, area data)",
+   "kind": "library",
+   "library_id": "lib:hgss/models/hgss_bm_room_interior_room_shell/component_donor/component",
+   "members": 19,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 19,
+   "rank": 16,
+   "rank_score": 4.055,
+   "records": 19,
+   "source_id": "hgss",
+   "subsystem": "models",
+   "techniques": [],
+   "title": "hgss_bm_room_interior_room_shell [hgss/models] component_donor",
+   "top_records": [
+    "opp:mined/field_building_models/hgss/hgss_bm_room_173/component_donor/component",
+    "opp:mined/field_building_models/hgss/hgss_bm_room_202/component_donor/component",
+    "opp:mined/field_building_models/hgss/hgss_bm_room_204/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
     "accessory",
     "clothing_detail",
     "pose"
@@ -306,7 +473,7 @@
    "needs_evidence": 0,
    "opportunity_class": "novel_detail",
    "promoted": 76,
-   "rank": 11,
+   "rank": 17,
    "rank_score": 4.051,
    "records": 76,
    "source_id": "hgss",
@@ -329,7 +496,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 17,
-   "rank": 12,
+   "rank": 18,
    "rank_score": 4.029,
    "records": 17,
    "source_id": "pmd_sky",
@@ -356,7 +523,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 16,
-   "rank": 13,
+   "rank": 19,
    "rank_score": 4.024,
    "records": 16,
    "source_id": "pmd_sky",
@@ -383,7 +550,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 49,
-   "rank": 14,
+   "rank": 20,
    "rank_score": 4.013,
    "records": 49,
    "source_id": "pmd_sky",
@@ -402,6 +569,34 @@
   },
   {
    "components": [
+    "architectural_detail",
+    "fence",
+    "floor_material",
+    "foliage"
+   ],
+   "host": "3D field/map texture resources (NSBTX materials)",
+   "kind": "library",
+   "library_id": "lib:hgss/textures/hgss_texset_wall_architecture/component_donor/component",
+   "members": 562,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 15,
+   "rank": 21,
+   "rank_score": 3.997,
+   "records": 15,
+   "source_id": "hgss",
+   "subsystem": "textures",
+   "techniques": [],
+   "title": "hgss_texset_wall_architecture [hgss/textures] component_donor",
+   "top_records": [
+    "opp:mined/field_texture_sets/hgss/hgss_texset_011/component_donor/component",
+    "opp:mined/field_texture_sets/hgss/hgss_texset_014/component_donor/component",
+    "opp:mined/field_texture_sets/hgss/hgss_texset_094/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
     "UI_element",
     "animation_frame"
    ],
@@ -412,7 +607,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 219,
-   "rank": 15,
+   "rank": 22,
    "rank_score": 3.98,
    "records": 219,
    "source_id": "ranger2",
@@ -439,7 +634,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 329,
-   "rank": 16,
+   "rank": 23,
    "rank_score": 3.961,
    "records": 329,
    "source_id": "hgss",
@@ -454,6 +649,34 @@
    "use_mode": "component"
   },
   {
+   "components": [
+    "architectural_detail",
+    "door",
+    "floor_material",
+    "geometry_motif"
+   ],
+   "host": "field prop/building models (NSBMD prop models, model sets, area data)",
+   "kind": "library",
+   "library_id": "lib:hgss/models/hgss_bm_field_building_exterior/novel_detail/whole_asset",
+   "members": 29,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_detail",
+   "promoted": 29,
+   "rank": 24,
+   "rank_score": 3.957,
+   "records": 29,
+   "source_id": "hgss",
+   "subsystem": "models",
+   "techniques": [],
+   "title": "hgss_bm_field_building_exterior [hgss/models] novel_detail",
+   "top_records": [
+    "opp:mined/field_building_models/hgss/hgss_bm_field_258/novel_detail/whole_asset",
+    "opp:mined/field_building_models/hgss/hgss_bm_field_004/novel_detail/whole_asset",
+    "opp:mined/field_building_models/hgss/hgss_bm_field_056/novel_detail/whole_asset"
+   ],
+   "use_mode": "whole_asset"
+  },
+  {
    "components": [],
    "host": "field overlay/object animation (field task + overworld animation manager)",
    "kind": "library",
@@ -462,7 +685,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 25,
-   "rank": 17,
+   "rank": 25,
    "rank_score": 3.955,
    "records": 25,
    "source_id": "pmd_sky",
@@ -488,7 +711,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 22,
-   "rank": 18,
+   "rank": 26,
    "rank_score": 3.944,
    "records": 22,
    "source_id": "pmd_sky",
@@ -514,7 +737,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 12,
-   "rank": 19,
+   "rank": 27,
    "rank_score": 3.918,
    "records": 12,
    "source_id": "pmd_sky",
@@ -541,7 +764,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 72,
-   "rank": 20,
+   "rank": 28,
    "rank_score": 3.911,
    "records": 72,
    "source_id": "ranger2",
@@ -560,6 +783,32 @@
   },
   {
    "components": [
+    "material_treatment",
+    "texture_region"
+   ],
+   "host": "3D field/map texture resources (NSBTX materials)",
+   "kind": "library",
+   "library_id": "lib:ranger2/textures/ranger_field/m/component_donor/component",
+   "members": 440,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 440,
+   "rank": 29,
+   "rank_score": 3.905,
+   "records": 440,
+   "source_id": "ranger2",
+   "subsystem": "textures",
+   "techniques": [],
+   "title": "ranger_field/m [ranger2/textures] component_donor",
+   "top_records": [
+    "opp:mined/field_environment_art/ranger2/ranger_field/m001_001.map.tex/component_donor/component",
+    "opp:mined/field_environment_art/ranger2/ranger_field/m001_002.map.tex/component_donor/component",
+    "opp:mined/field_environment_art/ranger2/ranger_field/m001_003a.map.tex/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
     "environmental_motif",
     "layout"
    ],
@@ -570,7 +819,7 @@
    "needs_evidence": 0,
    "opportunity_class": "novel_capability",
    "promoted": 20,
-   "rank": 21,
+   "rank": 30,
    "rank_score": 3.887,
    "records": 20,
    "source_id": "pmd_sky",
@@ -599,7 +848,7 @@
    "needs_evidence": 0,
    "opportunity_class": "enhancement_candidate",
    "promoted": 91,
-   "rank": 22,
+   "rank": 31,
    "rank_score": 3.849,
    "records": 91,
    "source_id": "hgss",
@@ -624,7 +873,7 @@
    "needs_evidence": 0,
    "opportunity_class": "novel_detail",
    "promoted": 29,
-   "rank": 23,
+   "rank": 32,
    "rank_score": 3.832,
    "records": 29,
    "source_id": "hgss",
@@ -639,6 +888,34 @@
    "use_mode": "component"
   },
   {
+   "components": [
+    "floor_material",
+    "foliage",
+    "material_treatment",
+    "terrain_material"
+   ],
+   "host": "3D field/map texture resources (NSBTX materials)",
+   "kind": "library",
+   "library_id": "lib:hgss/textures/hgss_texset_mixed/component_donor/component",
+   "members": 429,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 8,
+   "rank": 33,
+   "rank_score": 3.824,
+   "records": 8,
+   "source_id": "hgss",
+   "subsystem": "textures",
+   "techniques": [],
+   "title": "hgss_texset_mixed [hgss/textures] component_donor",
+   "top_records": [
+    "opp:mined/field_texture_sets/hgss/hgss_texset_002/component_donor/component",
+    "opp:mined/field_texture_sets/hgss/hgss_texset_003/component_donor/component",
+    "opp:mined/field_texture_sets/hgss/hgss_texset_005/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
    "components": [],
    "host": "environment palette/texture animation and weather/atmosphere layer",
    "kind": "library",
@@ -647,7 +924,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 7,
-   "rank": 24,
+   "rank": 34,
    "rank_score": 3.812,
    "records": 7,
    "source_id": "pmd_sky",
@@ -678,7 +955,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 74,
-   "rank": 25,
+   "rank": 35,
    "rank_score": 3.805,
    "records": 74,
    "source_id": "hgss",
@@ -706,7 +983,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 6,
-   "rank": 26,
+   "rank": 36,
    "rank_score": 3.799,
    "records": 6,
    "source_id": "hgss",
@@ -731,7 +1008,7 @@
    "needs_evidence": 0,
    "opportunity_class": "novel_detail",
    "promoted": 4,
-   "rank": 27,
+   "rank": 37,
    "rank_score": 3.796,
    "records": 4,
    "source_id": "hgss",
@@ -746,6 +1023,33 @@
    "use_mode": "whole_asset"
   },
   {
+   "components": [
+    "overlay_decal",
+    "signage",
+    "texture_region"
+   ],
+   "host": "3D field/map texture resources (NSBTX materials)",
+   "kind": "library",
+   "library_id": "lib:hgss/textures/hgss_texset_floor_interior/novel_detail/component",
+   "members": 250,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_detail",
+   "promoted": 4,
+   "rank": 38,
+   "rank_score": 3.789,
+   "records": 4,
+   "source_id": "hgss",
+   "subsystem": "textures",
+   "techniques": [],
+   "title": "hgss_texset_floor_interior [hgss/textures] novel_detail",
+   "top_records": [
+    "opp:mined/field_texture_sets/hgss/hgss_texset_027/novel_detail/component",
+    "opp:mined/field_texture_sets/hgss/hgss_texset_026/novel_detail/component",
+    "opp:mined/field_texture_sets/hgss/hgss_texset_044/novel_detail/component"
+   ],
+   "use_mode": "component"
+  },
+  {
    "components": [],
    "host": "area-preview layer beside the map-name popup",
    "kind": "library",
@@ -754,7 +1058,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 23,
-   "rank": 28,
+   "rank": 39,
    "rank_score": 3.785,
    "records": 23,
    "source_id": "hgss",
@@ -783,7 +1087,7 @@
    "needs_evidence": 0,
    "opportunity_class": "novel_detail",
    "promoted": 1,
-   "rank": 29,
+   "rank": 40,
    "rank_score": 3.784,
    "records": 1,
    "source_id": "hgss",
@@ -804,7 +1108,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 96,
-   "rank": 30,
+   "rank": 41,
    "rank_score": 3.773,
    "records": 96,
    "source_id": "ranger2",
@@ -833,7 +1137,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 66,
-   "rank": 31,
+   "rank": 42,
    "rank_score": 3.741,
    "records": 66,
    "source_id": "ranger2",
@@ -844,6 +1148,34 @@
     "opp:mined/field_environment_art/ranger2/ranger_field/m001_002.map.dat/component_donor/component",
     "opp:mined/field_environment_art/ranger2/ranger_field/m001_014.map.dat/component_donor/component",
     "opp:mined/field_environment_art/ranger2/ranger_field/m001_017.map.dat/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "geometry_motif",
+    "machinery",
+    "texture_region",
+    "water_surface"
+   ],
+   "host": "field prop/building models (NSBMD prop models, model sets, area data)",
+   "kind": "library",
+   "library_id": "lib:hgss/models/hgss_bm_room_machinery_terminal/component_donor/component",
+   "members": 6,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 6,
+   "rank": 43,
+   "rank_score": 3.739,
+   "records": 6,
+   "source_id": "hgss",
+   "subsystem": "models",
+   "techniques": [],
+   "title": "hgss_bm_room_machinery_terminal [hgss/models] component_donor",
+   "top_records": [
+    "opp:mined/field_building_models/hgss/hgss_bm_room_203/component_donor/component",
+    "opp:mined/field_building_models/hgss/hgss_bm_room_206/component_donor/component",
+    "opp:mined/field_building_models/hgss/hgss_bm_room_129/component_donor/component"
    ],
    "use_mode": "component"
   },
@@ -860,7 +1192,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 28,
-   "rank": 32,
+   "rank": 44,
    "rank_score": 3.72,
    "records": 28,
    "source_id": "pmd_sky",
@@ -876,6 +1208,34 @@
   },
   {
    "components": [
+    "door",
+    "floor_material",
+    "geometry_motif",
+    "stairs"
+   ],
+   "host": "field prop/building models (NSBMD prop models, model sets, area data)",
+   "kind": "library",
+   "library_id": "lib:hgss/models/hgss_bm_field_door_window_panel/novel_detail/whole_asset",
+   "members": 9,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_detail",
+   "promoted": 9,
+   "rank": 45,
+   "rank_score": 3.687,
+   "records": 9,
+   "source_id": "hgss",
+   "subsystem": "models",
+   "techniques": [],
+   "title": "hgss_bm_field_door_window_panel [hgss/models] novel_detail",
+   "top_records": [
+    "opp:mined/field_building_models/hgss/hgss_bm_field_060/novel_detail/whole_asset",
+    "opp:mined/field_building_models/hgss/hgss_bm_field_017/novel_detail/whole_asset",
+    "opp:mined/field_building_models/hgss/hgss_bm_field_026/novel_detail/whole_asset"
+   ],
+   "use_mode": "whole_asset"
+  },
+  {
+   "components": [
     "environmental_motif",
     "palette",
     "texture_region"
@@ -887,7 +1247,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 19,
-   "rank": 33,
+   "rank": 46,
    "rank_score": 3.687,
    "records": 19,
    "source_id": "pmd_sky",
@@ -913,7 +1273,7 @@
    "needs_evidence": 0,
    "opportunity_class": "novel_capability",
    "promoted": 1,
-   "rank": 34,
+   "rank": 47,
    "rank_score": 3.676,
    "records": 1,
    "source_id": "hgss",
@@ -934,7 +1294,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 14,
-   "rank": 35,
+   "rank": 48,
    "rank_score": 3.666,
    "records": 14,
    "source_id": "pmd_sky",
@@ -960,7 +1320,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 7,
-   "rank": 36,
+   "rank": 49,
    "rank_score": 3.654,
    "records": 7,
    "source_id": "pmd_sky",
@@ -979,6 +1339,56 @@
   },
   {
    "components": [
+    "furniture",
+    "geometry_motif"
+   ],
+   "host": "field prop/building models (NSBMD prop models, model sets, area data)",
+   "kind": "library",
+   "library_id": "lib:hgss/models/hgss_bm_room_furniture_interior/novel_detail/whole_asset",
+   "members": 1,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_detail",
+   "promoted": 1,
+   "rank": 50,
+   "rank_score": 3.649,
+   "records": 1,
+   "source_id": "hgss",
+   "subsystem": "models",
+   "techniques": [],
+   "title": "hgss_bm_room_furniture_interior [hgss/models] novel_detail",
+   "top_records": [
+    "opp:mined/field_building_models/hgss/hgss_bm_room_220/novel_detail/whole_asset"
+   ],
+   "use_mode": "whole_asset"
+  },
+  {
+   "components": [
+    "floor_material",
+    "material_treatment",
+    "terrain_material",
+    "texture_region"
+   ],
+   "host": "3D field/map texture resources (NSBTX materials)",
+   "kind": "library",
+   "library_id": "lib:hgss/textures/hgss_texset_rock_cliff/component_donor/component",
+   "members": 39,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 1,
+   "rank": 51,
+   "rank_score": 3.649,
+   "records": 1,
+   "source_id": "hgss",
+   "subsystem": "textures",
+   "techniques": [],
+   "title": "hgss_texset_rock_cliff [hgss/textures] component_donor",
+   "top_records": [
+    "opp:mined/field_texture_sets/hgss/hgss_texset_086/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
     "environmental_motif",
     "palette",
     "texture_region"
@@ -990,7 +1400,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 11,
-   "rank": 37,
+   "rank": 52,
    "rank_score": 3.64,
    "records": 11,
    "source_id": "pmd_sky",
@@ -1001,6 +1411,111 @@
     "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_s01p01a/component_donor/component",
     "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_s01p02a/component_donor/component",
     "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_s05p01a/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "animation_frame",
+    "pose"
+   ],
+   "host": "overworld Pokemon field sprites / event objects",
+   "kind": "library",
+   "library_id": "lib:hgss/overworld_pokemon/hgss_follower_large/novel_detail/whole_asset",
+   "members": 3,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_detail",
+   "promoted": 3,
+   "rank": 53,
+   "rank_score": 3.636,
+   "records": 3,
+   "source_id": "hgss",
+   "subsystem": "overworld_pokemon",
+   "techniques": [],
+   "title": "hgss_follower_large [hgss/overworld_pokemon] novel_detail",
+   "top_records": [
+    "opp:mined/overworld_pokemon_sheets/hgss/hgss_follower_00000536/novel_detail/whole_asset",
+    "opp:mined/overworld_pokemon_sheets/hgss/hgss_follower_00000537/novel_detail/whole_asset",
+    "opp:mined/overworld_pokemon_sheets/hgss/hgss_follower_00000651/novel_detail/whole_asset"
+   ],
+   "use_mode": "whole_asset"
+  },
+  {
+   "components": [
+    "architectural_detail",
+    "geometry_motif",
+    "texture_region"
+   ],
+   "host": "field prop/building models (NSBMD prop models, model sets, area data)",
+   "kind": "library",
+   "library_id": "lib:hgss/models/hgss_bm_field_gym_structure/component_donor/component",
+   "members": 2,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 2,
+   "rank": 54,
+   "rank_score": 3.628,
+   "records": 2,
+   "source_id": "hgss",
+   "subsystem": "models",
+   "techniques": [],
+   "title": "hgss_bm_field_gym_structure [hgss/models] component_donor",
+   "top_records": [
+    "opp:mined/field_building_models/hgss/hgss_bm_field_005/component_donor/component",
+    "opp:mined/field_building_models/hgss/hgss_bm_field_285/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "geometry_motif",
+    "lighting_prop",
+    "overlay_decal",
+    "texture_region"
+   ],
+   "host": "field prop/building models (NSBMD prop models, model sets, area data)",
+   "kind": "library",
+   "library_id": "lib:hgss/models/hgss_bm_field_lighting_prop/component_donor/component",
+   "members": 2,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 2,
+   "rank": 55,
+   "rank_score": 3.628,
+   "records": 2,
+   "source_id": "hgss",
+   "subsystem": "models",
+   "techniques": [],
+   "title": "hgss_bm_field_lighting_prop [hgss/models] component_donor",
+   "top_records": [
+    "opp:mined/field_building_models/hgss/hgss_bm_field_123/component_donor/component",
+    "opp:mined/field_building_models/hgss/hgss_bm_field_154/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "geometry_motif",
+    "machinery",
+    "texture_region"
+   ],
+   "host": "field prop/building models (NSBMD prop models, model sets, area data)",
+   "kind": "library",
+   "library_id": "lib:hgss/models/hgss_bm_field_machinery_terminal/component_donor/component",
+   "members": 2,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 2,
+   "rank": 56,
+   "rank_score": 3.628,
+   "records": 2,
+   "source_id": "hgss",
+   "subsystem": "models",
+   "techniques": [],
+   "title": "hgss_bm_field_machinery_terminal [hgss/models] component_donor",
+   "top_records": [
+    "opp:mined/field_building_models/hgss/hgss_bm_field_184/component_donor/component",
+    "opp:mined/field_building_models/hgss/hgss_bm_field_226/component_donor/component"
    ],
    "use_mode": "component"
   },
@@ -1017,7 +1532,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 1,
-   "rank": 38,
+   "rank": 57,
    "rank_score": 3.622,
    "records": 1,
    "source_id": "hgss",
@@ -1042,7 +1557,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 1,
-   "rank": 39,
+   "rank": 58,
    "rank_score": 3.622,
    "records": 1,
    "source_id": "ranger2",
@@ -1063,7 +1578,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 3,
-   "rank": 40,
+   "rank": 59,
    "rank_score": 3.609,
    "records": 3,
    "source_id": "pmd_sky",
@@ -1082,6 +1597,32 @@
    "use_mode": "technique"
   },
   {
+   "components": [
+    "overlay_decal",
+    "signage",
+    "texture_region"
+   ],
+   "host": "3D field/map texture resources (NSBTX materials)",
+   "kind": "library",
+   "library_id": "lib:hgss/textures/hgss_texset_mixed/novel_detail/component",
+   "members": 107,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_detail",
+   "promoted": 2,
+   "rank": 60,
+   "rank_score": 3.601,
+   "records": 2,
+   "source_id": "hgss",
+   "subsystem": "textures",
+   "techniques": [],
+   "title": "hgss_texset_mixed [hgss/textures] novel_detail",
+   "top_records": [
+    "opp:mined/field_texture_sets/hgss/hgss_texset_070/novel_detail/component",
+    "opp:mined/field_texture_sets/hgss/hgss_texset_079/novel_detail/component"
+   ],
+   "use_mode": "component"
+  },
+  {
    "components": [],
    "host": "environment palette/texture animation and weather/atmosphere layer",
    "kind": "library",
@@ -1090,7 +1631,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 1,
-   "rank": 41,
+   "rank": 61,
    "rank_score": 3.595,
    "records": 1,
    "source_id": "pmd_sky",
@@ -1107,6 +1648,59 @@
    "use_mode": "technique"
   },
   {
+   "components": [
+    "architectural_detail",
+    "geometry_motif",
+    "texture_region"
+   ],
+   "host": "field prop/building models (NSBMD prop models, model sets, area data)",
+   "kind": "library",
+   "library_id": "lib:hgss/models/hgss_bm_room_gym_structure/component_donor/component",
+   "members": 4,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 4,
+   "rank": 62,
+   "rank_score": 3.593,
+   "records": 4,
+   "source_id": "hgss",
+   "subsystem": "models",
+   "techniques": [],
+   "title": "hgss_bm_room_gym_structure [hgss/models] component_donor",
+   "top_records": [
+    "opp:mined/field_building_models/hgss/hgss_bm_room_120/component_donor/component",
+    "opp:mined/field_building_models/hgss/hgss_bm_room_121/component_donor/component",
+    "opp:mined/field_building_models/hgss/hgss_bm_room_115/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "overlay_decal",
+    "signage",
+    "texture_region"
+   ],
+   "host": "3D field/map texture resources (NSBTX materials)",
+   "kind": "library",
+   "library_id": "lib:hgss/textures/hgss_texset_wall_architecture/novel_detail/component",
+   "members": 44,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_detail",
+   "promoted": 2,
+   "rank": 63,
+   "rank_score": 3.587,
+   "records": 2,
+   "source_id": "hgss",
+   "subsystem": "textures",
+   "techniques": [],
+   "title": "hgss_texset_wall_architecture [hgss/textures] novel_detail",
+   "top_records": [
+    "opp:mined/field_texture_sets/hgss/hgss_texset_091/novel_detail/component",
+    "opp:mined/field_texture_sets/hgss/hgss_texset_028/novel_detail/component"
+   ],
+   "use_mode": "component"
+  },
+  {
    "components": [],
    "host": "field overlay/object animation (field task + overworld animation manager)",
    "kind": "library",
@@ -1115,7 +1709,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 3,
-   "rank": 42,
+   "rank": 64,
    "rank_score": 3.581,
    "records": 3,
    "source_id": "pmd_sky",
@@ -1145,7 +1739,7 @@
    "needs_evidence": 0,
    "opportunity_class": "enhancement_candidate",
    "promoted": 2,
-   "rank": 43,
+   "rank": 65,
    "rank_score": 3.574,
    "records": 2,
    "source_id": "hgss",
@@ -1170,7 +1764,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 3,
-   "rank": 44,
+   "rank": 66,
    "rank_score": 3.573,
    "records": 3,
    "source_id": "hgss",
@@ -1196,7 +1790,7 @@
    "needs_evidence": 0,
    "opportunity_class": "novel_detail",
    "promoted": 1,
-   "rank": 45,
+   "rank": 67,
    "rank_score": 3.568,
    "records": 1,
    "source_id": "ranger2",
@@ -1205,6 +1799,110 @@
    "title": "ranger_poke_w [ranger2/pokemon_animation] novel_detail",
    "top_records": [
     "opp:mined/pokemon_animation_reference/ranger2/p089_00_w/novel_detail/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "furniture",
+    "geometry_motif",
+    "texture_region"
+   ],
+   "host": "field prop/building models (NSBMD prop models, model sets, area data)",
+   "kind": "library",
+   "library_id": "lib:hgss/models/hgss_bm_room_furniture_interior/component_donor/component",
+   "members": 1,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 1,
+   "rank": 68,
+   "rank_score": 3.568,
+   "records": 1,
+   "source_id": "hgss",
+   "subsystem": "models",
+   "techniques": [],
+   "title": "hgss_bm_room_furniture_interior [hgss/models] component_donor",
+   "top_records": [
+    "opp:mined/field_building_models/hgss/hgss_bm_room_220/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "palette",
+    "shading",
+    "texture_region"
+   ],
+   "host": "3D field/map texture resources (NSBTX materials)",
+   "kind": "library",
+   "library_id": "lib:hgss/textures/hgss_texset_wall_architecture/enhancement_candidate/composite_input",
+   "members": 135,
+   "needs_evidence": 0,
+   "opportunity_class": "enhancement_candidate",
+   "promoted": 2,
+   "rank": 69,
+   "rank_score": 3.546,
+   "records": 2,
+   "source_id": "hgss",
+   "subsystem": "textures",
+   "techniques": [],
+   "title": "hgss_texset_wall_architecture [hgss/textures] enhancement_candidate",
+   "top_records": [
+    "opp:mined/field_texture_sets/hgss/hgss_texset_014/enhancement_candidate/composite_input",
+    "opp:mined/field_texture_sets/hgss/hgss_texset_094/enhancement_candidate/composite_input"
+   ],
+   "use_mode": "composite_input"
+  },
+  {
+   "components": [
+    "door",
+    "geometry_motif",
+    "texture_region"
+   ],
+   "host": "field prop/building models (NSBMD prop models, model sets, area data)",
+   "kind": "library",
+   "library_id": "lib:hgss/models/hgss_bm_field_door_window_panel/component_donor/component",
+   "members": 1,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 1,
+   "rank": 70,
+   "rank_score": 3.541,
+   "records": 1,
+   "source_id": "hgss",
+   "subsystem": "models",
+   "techniques": [],
+   "title": "hgss_bm_field_door_window_panel [hgss/models] component_donor",
+   "top_records": [
+    "opp:mined/field_building_models/hgss/hgss_bm_field_151/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "foliage",
+    "geometry_motif",
+    "machinery",
+    "texture_region"
+   ],
+   "host": "field prop/building models (NSBMD prop models, model sets, area data)",
+   "kind": "library",
+   "library_id": "lib:hgss/models/hgss_bm_field_foliage_prop/component_donor/component",
+   "members": 3,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 3,
+   "rank": 71,
+   "rank_score": 3.536,
+   "records": 3,
+   "source_id": "hgss",
+   "subsystem": "models",
+   "techniques": [],
+   "title": "hgss_bm_field_foliage_prop [hgss/models] component_donor",
+   "top_records": [
+    "opp:mined/field_building_models/hgss/hgss_bm_field_148/component_donor/component",
+    "opp:mined/field_building_models/hgss/hgss_bm_field_180/component_donor/component",
+    "opp:mined/field_building_models/hgss/hgss_bm_field_296/component_donor/component"
    ],
    "use_mode": "component"
   },
@@ -1220,7 +1918,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 10,
-   "rank": 46,
+   "rank": 72,
    "rank_score": 3.523,
    "records": 10,
    "source_id": "ranger2",
@@ -1247,7 +1945,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 7,
-   "rank": 47,
+   "rank": 73,
    "rank_score": 3.519,
    "records": 7,
    "source_id": "pmd_sky",
@@ -1263,6 +1961,58 @@
   },
   {
    "components": [
+    "foliage",
+    "geometry_motif",
+    "texture_region"
+   ],
+   "host": "field prop/building models (NSBMD prop models, model sets, area data)",
+   "kind": "library",
+   "library_id": "lib:hgss/models/hgss_bm_field_ground_surface/component_donor/component",
+   "members": 4,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 4,
+   "rank": 74,
+   "rank_score": 3.518,
+   "records": 4,
+   "source_id": "hgss",
+   "subsystem": "models",
+   "techniques": [],
+   "title": "hgss_bm_field_ground_surface [hgss/models] component_donor",
+   "top_records": [
+    "opp:mined/field_building_models/hgss/hgss_bm_field_326/component_donor/component",
+    "opp:mined/field_building_models/hgss/hgss_bm_field_228/component_donor/component",
+    "opp:mined/field_building_models/hgss/hgss_bm_field_324/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "palette",
+    "shading",
+    "texture_region"
+   ],
+   "host": "3D field/map texture resources (NSBTX materials)",
+   "kind": "library",
+   "library_id": "lib:hgss/textures/hgss_texset_foliage_ground/enhancement_candidate/composite_input",
+   "members": 120,
+   "needs_evidence": 0,
+   "opportunity_class": "enhancement_candidate",
+   "promoted": 1,
+   "rank": 75,
+   "rank_score": 3.486,
+   "records": 1,
+   "source_id": "hgss",
+   "subsystem": "textures",
+   "techniques": [],
+   "title": "hgss_texset_foliage_ground [hgss/textures] enhancement_candidate",
+   "top_records": [
+    "opp:mined/field_texture_sets/hgss/hgss_texset_075/enhancement_candidate/composite_input"
+   ],
+   "use_mode": "composite_input"
+  },
+  {
+   "components": [
     "animation_timing"
    ],
    "finding_id": "opp:ranger2/effect_sequencing",
@@ -1272,7 +2022,7 @@
    "needs_evidence": 0,
    "opportunity_class": "technique_donor",
    "promoted": 1,
-   "rank": 48,
+   "rank": 76,
    "rank_score": 3.459,
    "records": 1,
    "source_id": "ranger2",
@@ -1286,6 +2036,161 @@
   },
   {
    "components": [
+    "geometry_motif",
+    "signage",
+    "texture_region"
+   ],
+   "host": "field prop/building models (NSBMD prop models, model sets, area data)",
+   "kind": "library",
+   "library_id": "lib:hgss/models/hgss_bm_field_sign_info_board/component_donor/component",
+   "members": 1,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 1,
+   "rank": 77,
+   "rank_score": 3.459,
+   "records": 1,
+   "source_id": "hgss",
+   "subsystem": "models",
+   "techniques": [],
+   "title": "hgss_bm_field_sign_info_board [hgss/models] component_donor",
+   "top_records": [
+    "opp:mined/field_building_models/hgss/hgss_bm_field_295/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "geometry_motif",
+    "texture_region",
+    "water_surface"
+   ],
+   "host": "field prop/building models (NSBMD prop models, model sets, area data)",
+   "kind": "library",
+   "library_id": "lib:hgss/models/hgss_bm_field_water_feature/component_donor/component",
+   "members": 1,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 1,
+   "rank": 78,
+   "rank_score": 3.459,
+   "records": 1,
+   "source_id": "hgss",
+   "subsystem": "models",
+   "techniques": [],
+   "title": "hgss_bm_field_water_feature [hgss/models] component_donor",
+   "top_records": [
+    "opp:mined/field_building_models/hgss/hgss_bm_field_168/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "architectural_detail",
+    "foliage",
+    "geometry_motif",
+    "texture_region"
+   ],
+   "host": "field prop/building models (NSBMD prop models, model sets, area data)",
+   "kind": "library",
+   "library_id": "lib:hgss/models/hgss_bm_room_foliage_prop/component_donor/component",
+   "members": 1,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 1,
+   "rank": 79,
+   "rank_score": 3.459,
+   "records": 1,
+   "source_id": "hgss",
+   "subsystem": "models",
+   "techniques": [],
+   "title": "hgss_bm_room_foliage_prop [hgss/models] component_donor",
+   "top_records": [
+    "opp:mined/field_building_models/hgss/hgss_bm_room_111/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "floor_material",
+    "material_treatment",
+    "texture_region",
+    "wall_material"
+   ],
+   "host": "3D field/map texture resources (NSBTX materials)",
+   "kind": "library",
+   "library_id": "lib:hgss/textures/hgss_texset_water/component_donor/component",
+   "members": 49,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 1,
+   "rank": 80,
+   "rank_score": 3.459,
+   "records": 1,
+   "source_id": "hgss",
+   "subsystem": "textures",
+   "techniques": [],
+   "title": "hgss_texset_water [hgss/textures] component_donor",
+   "top_records": [
+    "opp:mined/field_texture_sets/hgss/hgss_texset_041/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "door",
+    "geometry_motif",
+    "texture_region",
+    "wall_material"
+   ],
+   "host": "field prop/building models (NSBMD prop models, model sets, area data)",
+   "kind": "library",
+   "library_id": "lib:hgss/models/hgss_bm_field_small_prop_misc/component_donor/component",
+   "members": 3,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 3,
+   "rank": 81,
+   "rank_score": 3.455,
+   "records": 3,
+   "source_id": "hgss",
+   "subsystem": "models",
+   "techniques": [],
+   "title": "hgss_bm_field_small_prop_misc [hgss/models] component_donor",
+   "top_records": [
+    "opp:mined/field_building_models/hgss/hgss_bm_field_194/component_donor/component",
+    "opp:mined/field_building_models/hgss/hgss_bm_field_055/component_donor/component",
+    "opp:mined/field_building_models/hgss/hgss_bm_field_304/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "overlay_decal",
+    "signage",
+    "texture_region"
+   ],
+   "host": "3D field/map texture resources (NSBTX materials)",
+   "kind": "library",
+   "library_id": "lib:hgss/textures/hgss_texset_water/novel_detail/component",
+   "members": 49,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_detail",
+   "promoted": 1,
+   "rank": 82,
+   "rank_score": 3.432,
+   "records": 1,
+   "source_id": "hgss",
+   "subsystem": "textures",
+   "techniques": [],
+   "title": "hgss_texset_water [hgss/textures] novel_detail",
+   "top_records": [
+    "opp:mined/field_texture_sets/hgss/hgss_texset_041/novel_detail/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
     "animation_frame"
    ],
    "host": "trainer class sprites",
@@ -1295,7 +2200,7 @@
    "needs_evidence": 0,
    "opportunity_class": "novel_detail",
    "promoted": 2,
-   "rank": 49,
+   "rank": 83,
    "rank_score": 3.411,
    "records": 2,
    "source_id": "hgss",
@@ -1320,7 +2225,7 @@
    "needs_evidence": 0,
    "opportunity_class": "novel_detail",
    "promoted": 1,
-   "rank": 50,
+   "rank": 84,
    "rank_score": 3.405,
    "records": 1,
    "source_id": "pmd_sky",
@@ -1343,7 +2248,7 @@
    "needs_evidence": 0,
    "opportunity_class": "enhancement_candidate",
    "promoted": 1,
-   "rank": 51,
+   "rank": 85,
    "rank_score": 3.405,
    "records": 1,
    "source_id": "hgss",
@@ -1354,6 +2259,81 @@
     "opp:mined/field_npc_player_sprites/hgss/hgss_mmodel_00000061/enhancement_candidate/composite_input"
    ],
    "use_mode": "composite_input"
+  },
+  {
+   "components": [
+    "palette",
+    "shading",
+    "texture_region"
+   ],
+   "host": "3D field/map texture resources (NSBTX materials)",
+   "kind": "library",
+   "library_id": "lib:hgss/textures/hgss_texset_mixed/enhancement_candidate/composite_input",
+   "members": 62,
+   "needs_evidence": 0,
+   "opportunity_class": "enhancement_candidate",
+   "promoted": 1,
+   "rank": 86,
+   "rank_score": 3.405,
+   "records": 1,
+   "source_id": "hgss",
+   "subsystem": "textures",
+   "techniques": [],
+   "title": "hgss_texset_mixed [hgss/textures] enhancement_candidate",
+   "top_records": [
+    "opp:mined/field_texture_sets/hgss/hgss_texset_003/enhancement_candidate/composite_input"
+   ],
+   "use_mode": "composite_input"
+  },
+  {
+   "components": [
+    "foliage",
+    "geometry_motif",
+    "window"
+   ],
+   "host": "field prop/building models (NSBMD prop models, model sets, area data)",
+   "kind": "library",
+   "library_id": "lib:hgss/models/hgss_bm_field_foliage_prop/novel_detail/whole_asset",
+   "members": 1,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_detail",
+   "promoted": 1,
+   "rank": 87,
+   "rank_score": 3.378,
+   "records": 1,
+   "source_id": "hgss",
+   "subsystem": "models",
+   "techniques": [],
+   "title": "hgss_bm_field_foliage_prop [hgss/models] novel_detail",
+   "top_records": [
+    "opp:mined/field_building_models/hgss/hgss_bm_field_278/novel_detail/whole_asset"
+   ],
+   "use_mode": "whole_asset"
+  },
+  {
+   "components": [
+    "foliage",
+    "geometry_motif",
+    "signage"
+   ],
+   "host": "field prop/building models (NSBMD prop models, model sets, area data)",
+   "kind": "library",
+   "library_id": "lib:hgss/models/hgss_bm_field_sign_panel/novel_detail/whole_asset",
+   "members": 1,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_detail",
+   "promoted": 1,
+   "rank": 88,
+   "rank_score": 3.378,
+   "records": 1,
+   "source_id": "hgss",
+   "subsystem": "models",
+   "techniques": [],
+   "title": "hgss_bm_field_sign_panel [hgss/models] novel_detail",
+   "top_records": [
+    "opp:mined/field_building_models/hgss/hgss_bm_field_129/novel_detail/whole_asset"
+   ],
+   "use_mode": "whole_asset"
   },
   {
    "components": [
@@ -1369,7 +2349,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 1,
-   "rank": 52,
+   "rank": 89,
    "rank_score": 3.351,
    "records": 1,
    "source_id": "hgss",
@@ -1393,7 +2373,7 @@
    "needs_evidence": 0,
    "opportunity_class": "component_donor",
    "promoted": 1,
-   "rank": 53,
+   "rank": 90,
    "rank_score": 3.351,
    "records": 1,
    "source_id": "ranger2",
@@ -1414,7 +2394,7 @@
    "needs_evidence": 0,
    "opportunity_class": "replacement_candidate",
    "promoted": 26,
-   "rank": 54,
+   "rank": 91,
    "rank_score": 3.298,
    "records": 26,
    "source_id": "hgss",
@@ -1437,7 +2417,7 @@
    "needs_evidence": 0,
    "opportunity_class": "replacement_candidate",
    "promoted": 6,
-   "rank": 55,
+   "rank": 92,
    "rank_score": 3.02,
    "records": 6,
    "source_id": "hgss",
@@ -1463,7 +2443,7 @@
    "needs_evidence": 0,
    "opportunity_class": "enhancement_candidate",
    "promoted": 1,
-   "rank": 56,
+   "rank": 93,
    "rank_score": 2.811,
    "records": 1,
    "source_id": "hgss",
@@ -1488,7 +2468,7 @@
    "needs_evidence": 0,
    "opportunity_class": "enhancement_candidate",
    "promoted": 1,
-   "rank": 57,
+   "rank": 94,
    "rank_score": 2.811,
    "records": 1,
    "source_id": "hgss",

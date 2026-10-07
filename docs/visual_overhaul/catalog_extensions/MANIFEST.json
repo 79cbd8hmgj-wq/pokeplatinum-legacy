@@ -15,6 +15,13 @@
       "scope": "HGSS human overworld sprite sheets: files/data/mmodel/mmodel/*.NSBTX (NPC/player scope rule in inventory_hgss_field_sprites.py)",
       "catalog": "hgss_field_sprites/CATALOG.json",
       "curation": "hgss_field_sprites/CURATION.json"
+    },
+    {
+      "id": "hgss_field_3d",
+      "source_id": "hgss",
+      "scope": "HGSS field/building models (files/fielddata/build_model bm_field+bm_room), map texture sets (files/a/0/4/4) and follower sheets (MMODEL_FOLLOWER_MON* in files/data/mmodel/mmodel)",
+      "catalog": "hgss_field_3d/CATALOG.json",
+      "curation": "hgss_field_3d/CURATION.json"
     }
   ]
 }

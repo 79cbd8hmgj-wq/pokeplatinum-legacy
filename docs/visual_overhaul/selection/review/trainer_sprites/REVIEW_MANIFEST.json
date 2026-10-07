@@ -992,7 +992,7 @@
    "use_hgss": 6
   }
  },
- "ledger_sha256": "72e37b38572ec4d278a4921b0070a21b238d9dcf0c2f6041bb828cee96570376",
+ "ledger_sha256": "6f5f006959d404e4818555ee433db41ee8a19d46911cc07e4c7a6311df75fffe",
  "legend": {
   "diff": "yellow=both opaque but colour differs, green=HGSS-only pixel, magenta=Platinum-only pixel, grey=same, comparison in BGR555 space"
  },
@@ -1005,87 +1005,9 @@
   "negligible_ratio": 0.02
  },
  "withdrawn_after_decoder_fix": {
-  "count": 11,
-  "entries": [
-   {
-    "candidate_id": "trainer_battle_sprites/hgss/hgss_back_004",
-    "now_reason": "identical_to_native",
-    "now_relation": "identical",
-    "now_role": "not_selected",
-    "platinum_class": "trainer_cheryl"
-   },
-   {
-    "candidate_id": "trainer_battle_sprites/hgss/hgss_back_005",
-    "now_reason": "identical_to_native",
-    "now_relation": "identical",
-    "now_role": "not_selected",
-    "platinum_class": "trainer_riley"
-   },
-   {
-    "candidate_id": "trainer_battle_sprites/hgss/hgss_back_009",
-    "now_reason": "identical_to_native",
-    "now_relation": "identical",
-    "now_role": "not_selected",
-    "platinum_class": "dp_player_male"
-   },
-   {
-    "candidate_id": "trainer_battle_sprites/hgss/hgss_back_010",
-    "now_reason": "identical_to_native",
-    "now_relation": "identical",
-    "now_role": "not_selected",
-    "platinum_class": "dp_player_female"
-   },
-   {
-    "candidate_id": "trainer_battle_sprites/hgss/hgss_back_011",
-    "now_reason": "identical_to_native",
-    "now_relation": "identical",
-    "now_role": "not_selected",
-    "platinum_class": "dp_rival"
-   },
-   {
-    "candidate_id": "trainer_battle_sprites/hgss/hgss_back_012",
-    "now_reason": "identical_to_native",
-    "now_relation": "identical",
-    "now_role": "not_selected",
-    "platinum_class": "player_male"
-   },
-   {
-    "candidate_id": "trainer_battle_sprites/hgss/hgss_back_013",
-    "now_reason": "identical_to_native",
-    "now_relation": "identical",
-    "now_role": "not_selected",
-    "platinum_class": "player_female"
-   },
-   {
-    "candidate_id": "trainer_battle_sprites/hgss/hgss_back_014",
-    "now_reason": "identical_to_native",
-    "now_relation": "identical",
-    "now_role": "not_selected",
-    "platinum_class": "rival"
-   },
-   {
-    "candidate_id": "trainer_battle_sprites/hgss/hgss_front_097",
-    "now_reason": "eligible_not_best_for_target",
-    "now_relation": "art_diff_minor",
-    "now_role": "alternate",
-    "platinum_class": "tower_tycoon"
-   },
-   {
-    "candidate_id": "trainer_battle_sprites/hgss/hgss_front_099",
-    "now_reason": "identical_to_native",
-    "now_relation": "identical",
-    "now_role": "not_selected",
-    "platinum_class": "hall_matron"
-   },
-   {
-    "candidate_id": "trainer_battle_sprites/hgss/hgss_front_100",
-    "now_reason": "identical_to_native",
-    "now_relation": "identical",
-    "now_role": "not_selected",
-    "platinum_class": "factory_head"
-   }
-  ],
-  "prior_ref": "9f25c528",
+  "count": 0,
+  "entries": [],
+  "prior_ref": null,
   "reason": "Earlier renders ignored the NCER per-cell VRAM transfer table, so later animation frames were mis-decoded."
  }
 }

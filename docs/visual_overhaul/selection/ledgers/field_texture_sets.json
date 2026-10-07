@@ -1,0 +1,5025 @@
+{
+ "decisions": [
+  {
+   "asset_identity": {
+    "member_count": 9,
+    "member_digest": "ffa57913b30307435a27",
+    "sample_paths": [
+     "files/a/0/4/4#set=000&tex=000",
+     "files/a/0/4/4#set=000&tex=001",
+     "files/a/0/4/4#set=000&tex=002"
+    ],
+    "unit": "hgss_texset_000"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 9
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_000",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 0,
+     "textures": 9
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 9,
+    "member_digest": "7590a81b31558ea91574",
+    "sample_paths": [
+     "files/a/0/4/4#set=001&tex=000",
+     "files/a/0/4/4#set=001&tex=001",
+     "files/a/0/4/4#set=001&tex=002"
+    ],
+    "unit": "hgss_texset_001"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 9
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_001",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 0,
+     "textures": 9
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 67,
+    "member_digest": "4b0dc5bbc6671ffe842e",
+    "sample_paths": [
+     "files/a/0/4/4#set=002&tex=000",
+     "files/a/0/4/4#set=002&tex=001",
+     "files/a/0/4/4#set=002&tex=002"
+    ],
+    "unit": "hgss_texset_002"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 67
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_002",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 1,
+     "textures": 67
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 62,
+    "member_digest": "3dbe55f3dbde4baf1122",
+    "sample_paths": [
+     "files/a/0/4/4#set=003&tex=000",
+     "files/a/0/4/4#set=003&tex=001",
+     "files/a/0/4/4#set=003&tex=002"
+    ],
+    "unit": "hgss_texset_003"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 62
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_003",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 2,
+     "textures": 62
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 31,
+    "member_digest": "7a0063177be39164c7c8",
+    "sample_paths": [
+     "files/a/0/4/4#set=004&tex=000",
+     "files/a/0/4/4#set=004&tex=001",
+     "files/a/0/4/4#set=004&tex=002"
+    ],
+    "unit": "hgss_texset_004"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 31
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_004",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 1,
+     "textures": 31
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 57,
+    "member_digest": "a9fb8ad3dad5649c3471",
+    "sample_paths": [
+     "files/a/0/4/4#set=005&tex=000",
+     "files/a/0/4/4#set=005&tex=001",
+     "files/a/0/4/4#set=005&tex=002"
+    ],
+    "unit": "hgss_texset_005"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 57
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_005",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 3,
+     "near_match": 3,
+     "textures": 57
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 68,
+    "member_digest": "c69cc7db9ab02d727273",
+    "sample_paths": [
+     "files/a/0/4/4#set=006&tex=000",
+     "files/a/0/4/4#set=006&tex=001",
+     "files/a/0/4/4#set=006&tex=002"
+    ],
+    "unit": "hgss_texset_006"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 68
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_006",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 1,
+     "textures": 68
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 63,
+    "member_digest": "73e07c474be4d98ca9db",
+    "sample_paths": [
+     "files/a/0/4/4#set=007&tex=000",
+     "files/a/0/4/4#set=007&tex=001",
+     "files/a/0/4/4#set=007&tex=002"
+    ],
+    "unit": "hgss_texset_007"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 63
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_007",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 3,
+     "near_match": 2,
+     "textures": 63
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 53,
+    "member_digest": "dd7b0cf7c05eb68cb237",
+    "sample_paths": [
+     "files/a/0/4/4#set=008&tex=000",
+     "files/a/0/4/4#set=008&tex=001",
+     "files/a/0/4/4#set=008&tex=002"
+    ],
+    "unit": "hgss_texset_008"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 53
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_008",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 1,
+     "textures": 53
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 45,
+    "member_digest": "880f0bb0a512e2a6859d",
+    "sample_paths": [
+     "files/a/0/4/4#set=009&tex=000",
+     "files/a/0/4/4#set=009&tex=001",
+     "files/a/0/4/4#set=009&tex=002"
+    ],
+    "unit": "hgss_texset_009"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 45
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_009",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 2,
+     "near_match": 1,
+     "textures": 45
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 43,
+    "member_digest": "6942df6e29512dd3e29b",
+    "sample_paths": [
+     "files/a/0/4/4#set=010&tex=000",
+     "files/a/0/4/4#set=010&tex=001",
+     "files/a/0/4/4#set=010&tex=002"
+    ],
+    "unit": "hgss_texset_010"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 43
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_010",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 1,
+     "textures": 43
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 76,
+    "member_digest": "c03573344411e720ccd0",
+    "sample_paths": [
+     "files/a/0/4/4#set=011&tex=000",
+     "files/a/0/4/4#set=011&tex=001",
+     "files/a/0/4/4#set=011&tex=002"
+    ],
+    "unit": "hgss_texset_011"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 76
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_011",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 2,
+     "near_match": 3,
+     "textures": 76
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 35,
+    "member_digest": "972de2370da2d1bff8dc",
+    "sample_paths": [
+     "files/a/0/4/4#set=012&tex=000",
+     "files/a/0/4/4#set=012&tex=001",
+     "files/a/0/4/4#set=012&tex=002"
+    ],
+    "unit": "hgss_texset_012"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 35
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_012",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 1,
+     "textures": 35
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 59,
+    "member_digest": "235bd752296452ba9f93",
+    "sample_paths": [
+     "files/a/0/4/4#set=013&tex=000",
+     "files/a/0/4/4#set=013&tex=001",
+     "files/a/0/4/4#set=013&tex=002"
+    ],
+    "unit": "hgss_texset_013"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 59
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_013",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 3,
+     "near_match": 1,
+     "textures": 59
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 70,
+    "member_digest": "a2bc24c99fef1436da1a",
+    "sample_paths": [
+     "files/a/0/4/4#set=014&tex=000",
+     "files/a/0/4/4#set=014&tex=001",
+     "files/a/0/4/4#set=014&tex=002"
+    ],
+    "unit": "hgss_texset_014"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 70
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_014",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 2,
+     "near_match": 3,
+     "textures": 70
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 49,
+    "member_digest": "7ffbbf49f53be574c451",
+    "sample_paths": [
+     "files/a/0/4/4#set=015&tex=000",
+     "files/a/0/4/4#set=015&tex=001",
+     "files/a/0/4/4#set=015&tex=002"
+    ],
+    "unit": "hgss_texset_015"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 49
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_015",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 1,
+     "textures": 49
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 59,
+    "member_digest": "25473b9cabf069c83b47",
+    "sample_paths": [
+     "files/a/0/4/4#set=016&tex=000",
+     "files/a/0/4/4#set=016&tex=001",
+     "files/a/0/4/4#set=016&tex=002"
+    ],
+    "unit": "hgss_texset_016"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 59
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_016",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 2,
+     "near_match": 1,
+     "textures": 59
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 40,
+    "member_digest": "8654524d15d82a96c00a",
+    "sample_paths": [
+     "files/a/0/4/4#set=017&tex=000",
+     "files/a/0/4/4#set=017&tex=001",
+     "files/a/0/4/4#set=017&tex=002"
+    ],
+    "unit": "hgss_texset_017"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 40
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_017",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 2,
+     "near_match": 1,
+     "textures": 40
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 44,
+    "member_digest": "eeef930a1a024a63bfbb",
+    "sample_paths": [
+     "files/a/0/4/4#set=018&tex=000",
+     "files/a/0/4/4#set=018&tex=001",
+     "files/a/0/4/4#set=018&tex=002"
+    ],
+    "unit": "hgss_texset_018"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 44
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_018",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 1,
+     "textures": 44
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 43,
+    "member_digest": "0c798c6cb2bb50779308",
+    "sample_paths": [
+     "files/a/0/4/4#set=019&tex=001",
+     "files/a/0/4/4#set=019&tex=002",
+     "files/a/0/4/4#set=019&tex=003"
+    ],
+    "unit": "hgss_texset_019"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 43
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_019",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 0,
+     "textures": 43
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 35,
+    "member_digest": "e27b2adc107a236cf829",
+    "sample_paths": [
+     "files/a/0/4/4#set=020&tex=000",
+     "files/a/0/4/4#set=020&tex=001",
+     "files/a/0/4/4#set=020&tex=002"
+    ],
+    "unit": "hgss_texset_020"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 35
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_020",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 1,
+     "textures": 35
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 10,
+    "member_digest": "f0b4d4b08f723abcb545",
+    "sample_paths": [
+     "files/a/0/4/4#set=021&tex=000",
+     "files/a/0/4/4#set=021&tex=001",
+     "files/a/0/4/4#set=021&tex=002"
+    ],
+    "unit": "hgss_texset_021"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 10
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_021",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 0,
+     "textures": 10
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 10,
+    "member_digest": "924b9f2fc165361ac692",
+    "sample_paths": [
+     "files/a/0/4/4#set=022&tex=000",
+     "files/a/0/4/4#set=022&tex=001",
+     "files/a/0/4/4#set=022&tex=002"
+    ],
+    "unit": "hgss_texset_022"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 10
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_022",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 0,
+     "textures": 10
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 10,
+    "member_digest": "2f0e3865867f3d21e93b",
+    "sample_paths": [
+     "files/a/0/4/4#set=023&tex=000",
+     "files/a/0/4/4#set=023&tex=001",
+     "files/a/0/4/4#set=023&tex=002"
+    ],
+    "unit": "hgss_texset_023"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 10
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_023",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 0,
+     "textures": 10
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 10,
+    "member_digest": "e0488f19ff4c1f69daef",
+    "sample_paths": [
+     "files/a/0/4/4#set=024&tex=000",
+     "files/a/0/4/4#set=024&tex=001",
+     "files/a/0/4/4#set=024&tex=002"
+    ],
+    "unit": "hgss_texset_024"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 10
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_024",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 0,
+     "textures": 10
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 37,
+    "member_digest": "1d80f7faf28522b021e9",
+    "sample_paths": [
+     "files/a/0/4/4#set=025&tex=000",
+     "files/a/0/4/4#set=025&tex=001",
+     "files/a/0/4/4#set=025&tex=002"
+    ],
+    "unit": "hgss_texset_025"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 37
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_025",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 6,
+     "near_match": 1,
+     "textures": 37
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 60,
+    "member_digest": "7b986b2121b13927963e",
+    "sample_paths": [
+     "files/a/0/4/4#set=026&tex=000",
+     "files/a/0/4/4#set=026&tex=001",
+     "files/a/0/4/4#set=026&tex=002"
+    ],
+    "unit": "hgss_texset_026"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 60
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_026",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 35,
+     "near_match": 3,
+     "textures": 60
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 99,
+    "member_digest": "f776c9a0c2e0bd983245",
+    "sample_paths": [
+     "files/a/0/4/4#set=027&tex=000",
+     "files/a/0/4/4#set=027&tex=001",
+     "files/a/0/4/4#set=027&tex=002"
+    ],
+    "unit": "hgss_texset_027"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 99
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_027",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 19,
+     "near_match": 5,
+     "textures": 99
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 15,
+    "member_digest": "6285d24d628d95dc9a1c",
+    "sample_paths": [
+     "files/a/0/4/4#set=028&tex=000",
+     "files/a/0/4/4#set=028&tex=001",
+     "files/a/0/4/4#set=028&tex=002"
+    ],
+    "unit": "hgss_texset_028"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 15
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_028",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 1,
+     "textures": 15
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 27,
+    "member_digest": "bf74552dbfb20edd6009",
+    "sample_paths": [
+     "files/a/0/4/4#set=029&tex=000",
+     "files/a/0/4/4#set=029&tex=001",
+     "files/a/0/4/4#set=029&tex=002"
+    ],
+    "unit": "hgss_texset_029"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 27
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_029",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 0,
+     "textures": 27
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 17,
+    "member_digest": "8c7f4c24ebe17cb80c95",
+    "sample_paths": [
+     "files/a/0/4/4#set=030&tex=000",
+     "files/a/0/4/4#set=030&tex=001",
+     "files/a/0/4/4#set=030&tex=002"
+    ],
+    "unit": "hgss_texset_030"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 17
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_030",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 0,
+     "textures": 17
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 11,
+    "member_digest": "2bc7e140be08a0109ea3",
+    "sample_paths": [
+     "files/a/0/4/4#set=031&tex=000",
+     "files/a/0/4/4#set=031&tex=001",
+     "files/a/0/4/4#set=031&tex=002"
+    ],
+    "unit": "hgss_texset_031"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 11
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_031",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 0,
+     "textures": 11
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 16,
+    "member_digest": "b157cbc5c9aa50ed3001",
+    "sample_paths": [
+     "files/a/0/4/4#set=032&tex=000",
+     "files/a/0/4/4#set=032&tex=001",
+     "files/a/0/4/4#set=032&tex=002"
+    ],
+    "unit": "hgss_texset_032"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 16
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_032",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 0,
+     "textures": 16
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 16,
+    "member_digest": "6cb9b336f8b090b5f4e9",
+    "sample_paths": [
+     "files/a/0/4/4#set=033&tex=000",
+     "files/a/0/4/4#set=033&tex=001",
+     "files/a/0/4/4#set=033&tex=002"
+    ],
+    "unit": "hgss_texset_033"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 16
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_033",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 0,
+     "textures": 16
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 11,
+    "member_digest": "cc74c49d65ebb923ae41",
+    "sample_paths": [
+     "files/a/0/4/4#set=034&tex=000",
+     "files/a/0/4/4#set=034&tex=001",
+     "files/a/0/4/4#set=034&tex=002"
+    ],
+    "unit": "hgss_texset_034"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 11
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_034",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 1,
+     "textures": 11
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 12,
+    "member_digest": "307cf68fb3afac6020d4",
+    "sample_paths": [
+     "files/a/0/4/4#set=035&tex=000",
+     "files/a/0/4/4#set=035&tex=001",
+     "files/a/0/4/4#set=035&tex=002"
+    ],
+    "unit": "hgss_texset_035"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 12
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_035",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 0,
+     "textures": 12
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 39,
+    "member_digest": "34cf79b72f893f01cc6e",
+    "sample_paths": [
+     "files/a/0/4/4#set=036&tex=000",
+     "files/a/0/4/4#set=036&tex=001",
+     "files/a/0/4/4#set=036&tex=002"
+    ],
+    "unit": "hgss_texset_036"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 39
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_036",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 7,
+     "near_match": 2,
+     "textures": 39
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 41,
+    "member_digest": "5093110e9c1ca9953acc",
+    "sample_paths": [
+     "files/a/0/4/4#set=037&tex=000",
+     "files/a/0/4/4#set=037&tex=001",
+     "files/a/0/4/4#set=037&tex=002"
+    ],
+    "unit": "hgss_texset_037"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 41
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_037",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 4,
+     "near_match": 1,
+     "textures": 41
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 7,
+    "member_digest": "9f542cabd6e447ec7fdd",
+    "sample_paths": [
+     "files/a/0/4/4#set=038&tex=000",
+     "files/a/0/4/4#set=038&tex=001",
+     "files/a/0/4/4#set=038&tex=002"
+    ],
+    "unit": "hgss_texset_038"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 7
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_038",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 5,
+     "near_match": 0,
+     "textures": 7
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 126,
+    "member_digest": "6fca02d9e391e672fa98",
+    "sample_paths": [
+     "files/a/0/4/4#set=039&tex=000",
+     "files/a/0/4/4#set=039&tex=001",
+     "files/a/0/4/4#set=039&tex=002"
+    ],
+    "unit": "hgss_texset_039"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 126
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_039",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 14,
+     "near_match": 3,
+     "textures": 126
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 80,
+    "member_digest": "b57c787d5a00bc2dd7b1",
+    "sample_paths": [
+     "files/a/0/4/4#set=040&tex=000",
+     "files/a/0/4/4#set=040&tex=001",
+     "files/a/0/4/4#set=040&tex=002"
+    ],
+    "unit": "hgss_texset_040"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 80
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_040",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 7,
+     "near_match": 2,
+     "textures": 80
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 49,
+    "member_digest": "1a14b674cd1506f99cbf",
+    "sample_paths": [
+     "files/a/0/4/4#set=041&tex=000",
+     "files/a/0/4/4#set=041&tex=001",
+     "files/a/0/4/4#set=041&tex=002"
+    ],
+    "unit": "hgss_texset_041"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 49
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_041",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 0,
+     "textures": 49
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 125,
+    "member_digest": "0ac035eff700f61c81c4",
+    "sample_paths": [
+     "files/a/0/4/4#set=042&tex=000",
+     "files/a/0/4/4#set=042&tex=001",
+     "files/a/0/4/4#set=042&tex=002"
+    ],
+    "unit": "hgss_texset_042"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 125
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_042",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 6,
+     "near_match": 5,
+     "textures": 125
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 47,
+    "member_digest": "7157d0309ce6e69b7330",
+    "sample_paths": [
+     "files/a/0/4/4#set=043&tex=000",
+     "files/a/0/4/4#set=043&tex=001",
+     "files/a/0/4/4#set=043&tex=002"
+    ],
+    "unit": "hgss_texset_043"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 47
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_043",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 3,
+     "near_match": 1,
+     "textures": 47
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 59,
+    "member_digest": "cb6b55d0e3b1a44dd064",
+    "sample_paths": [
+     "files/a/0/4/4#set=044&tex=000",
+     "files/a/0/4/4#set=044&tex=001",
+     "files/a/0/4/4#set=044&tex=002"
+    ],
+    "unit": "hgss_texset_044"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 59
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_044",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 15,
+     "near_match": 2,
+     "textures": 59
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 31,
+    "member_digest": "4c281974dcfc584bb578",
+    "sample_paths": [
+     "files/a/0/4/4#set=045&tex=000",
+     "files/a/0/4/4#set=045&tex=001",
+     "files/a/0/4/4#set=045&tex=002"
+    ],
+    "unit": "hgss_texset_045"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 31
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_045",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 22,
+     "near_match": 0,
+     "textures": 31
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 5,
+    "member_digest": "e1e576e978dd17157fc2",
+    "sample_paths": [
+     "files/a/0/4/4#set=046&tex=000",
+     "files/a/0/4/4#set=046&tex=001",
+     "files/a/0/4/4#set=046&tex=002"
+    ],
+    "unit": "hgss_texset_046"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 5
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_046",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 0,
+     "textures": 5
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 19,
+    "member_digest": "3c00f441bcf8adef6d0e",
+    "sample_paths": [
+     "files/a/0/4/4#set=047&tex=000",
+     "files/a/0/4/4#set=047&tex=001",
+     "files/a/0/4/4#set=047&tex=002"
+    ],
+    "unit": "hgss_texset_047"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 19
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_047",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 1,
+     "textures": 19
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 47,
+    "member_digest": "d1bbb22c31bdbf511d7a",
+    "sample_paths": [
+     "files/a/0/4/4#set=048&tex=001",
+     "files/a/0/4/4#set=048&tex=002",
+     "files/a/0/4/4#set=048&tex=003"
+    ],
+    "unit": "hgss_texset_048"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 47
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_048",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 2,
+     "near_match": 2,
+     "textures": 47
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 13,
+    "member_digest": "cfe2054606e2a7cdf56c",
+    "sample_paths": [
+     "files/a/0/4/4#set=049&tex=000",
+     "files/a/0/4/4#set=049&tex=001",
+     "files/a/0/4/4#set=049&tex=002"
+    ],
+    "unit": "hgss_texset_049"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 13
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_049",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 0,
+     "textures": 13
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 5,
+    "member_digest": "7d112593bd27d113ce53",
+    "sample_paths": [
+     "files/a/0/4/4#set=050&tex=000",
+     "files/a/0/4/4#set=050&tex=001",
+     "files/a/0/4/4#set=050&tex=002"
+    ],
+    "unit": "hgss_texset_050"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 5
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_050",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 0,
+     "textures": 5
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 12,
+    "member_digest": "5d7945c373f5ebce2d68",
+    "sample_paths": [
+     "files/a/0/4/4#set=051&tex=000",
+     "files/a/0/4/4#set=051&tex=001",
+     "files/a/0/4/4#set=051&tex=002"
+    ],
+    "unit": "hgss_texset_051"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 12
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_051",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 0,
+     "textures": 12
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 15,
+    "member_digest": "df59093be4178ee9ea0f",
+    "sample_paths": [
+     "files/a/0/4/4#set=052&tex=000",
+     "files/a/0/4/4#set=052&tex=001",
+     "files/a/0/4/4#set=052&tex=002"
+    ],
+    "unit": "hgss_texset_052"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 15
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_052",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 2,
+     "near_match": 0,
+     "textures": 15
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 12,
+    "member_digest": "14543fa904afacb3951d",
+    "sample_paths": [
+     "files/a/0/4/4#set=053&tex=000",
+     "files/a/0/4/4#set=053&tex=001",
+     "files/a/0/4/4#set=053&tex=002"
+    ],
+    "unit": "hgss_texset_053"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 12
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_053",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 0,
+     "textures": 12
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 24,
+    "member_digest": "bd54e8d0eca5688d11dd",
+    "sample_paths": [
+     "files/a/0/4/4#set=054&tex=000",
+     "files/a/0/4/4#set=054&tex=001",
+     "files/a/0/4/4#set=054&tex=002"
+    ],
+    "unit": "hgss_texset_054"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 24
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_054",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 0,
+     "textures": 24
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 10,
+    "member_digest": "7a3921ecef3d5658fa4f",
+    "sample_paths": [
+     "files/a/0/4/4#set=055&tex=000",
+     "files/a/0/4/4#set=055&tex=001",
+     "files/a/0/4/4#set=055&tex=002"
+    ],
+    "unit": "hgss_texset_055"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 10
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_055",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 0,
+     "textures": 10
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 13,
+    "member_digest": "6044a9766ea5a0ffcd6b",
+    "sample_paths": [
+     "files/a/0/4/4#set=056&tex=000",
+     "files/a/0/4/4#set=056&tex=001",
+     "files/a/0/4/4#set=056&tex=002"
+    ],
+    "unit": "hgss_texset_056"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 13
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_056",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 11,
+     "near_match": 0,
+     "textures": 13
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 7,
+    "member_digest": "7ba15a21b99bf12718fe",
+    "sample_paths": [
+     "files/a/0/4/4#set=057&tex=000",
+     "files/a/0/4/4#set=057&tex=001",
+     "files/a/0/4/4#set=057&tex=002"
+    ],
+    "unit": "hgss_texset_057"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 7
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_057",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 3,
+     "near_match": 0,
+     "textures": 7
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 10,
+    "member_digest": "264a0ceadbd7f25246d6",
+    "sample_paths": [
+     "files/a/0/4/4#set=058&tex=000",
+     "files/a/0/4/4#set=058&tex=001",
+     "files/a/0/4/4#set=058&tex=002"
+    ],
+    "unit": "hgss_texset_058"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 10
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_058",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 7,
+     "near_match": 0,
+     "textures": 10
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 16,
+    "member_digest": "a74467065dd88beca236",
+    "sample_paths": [
+     "files/a/0/4/4#set=059&tex=000",
+     "files/a/0/4/4#set=059&tex=001",
+     "files/a/0/4/4#set=059&tex=002"
+    ],
+    "unit": "hgss_texset_059"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 16
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_059",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 6,
+     "near_match": 0,
+     "textures": 16
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 10,
+    "member_digest": "5522ef25b4a6516af653",
+    "sample_paths": [
+     "files/a/0/4/4#set=060&tex=000",
+     "files/a/0/4/4#set=060&tex=001",
+     "files/a/0/4/4#set=060&tex=002"
+    ],
+    "unit": "hgss_texset_060"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 10
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_060",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 6,
+     "near_match": 0,
+     "textures": 10
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 79,
+    "member_digest": "09b04a5011229315bc33",
+    "sample_paths": [
+     "files/a/0/4/4#set=061&tex=000",
+     "files/a/0/4/4#set=061&tex=001",
+     "files/a/0/4/4#set=061&tex=002"
+    ],
+    "unit": "hgss_texset_061"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 79
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_061",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 7,
+     "near_match": 4,
+     "textures": 79
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 58,
+    "member_digest": "d9d5e6cd869ced1b0196",
+    "sample_paths": [
+     "files/a/0/4/4#set=062&tex=000",
+     "files/a/0/4/4#set=062&tex=001",
+     "files/a/0/4/4#set=062&tex=002"
+    ],
+    "unit": "hgss_texset_062"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 58
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_062",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 9,
+     "near_match": 3,
+     "textures": 58
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 47,
+    "member_digest": "be7f8dadaaf90ac05a12",
+    "sample_paths": [
+     "files/a/0/4/4#set=063&tex=000",
+     "files/a/0/4/4#set=063&tex=001",
+     "files/a/0/4/4#set=063&tex=002"
+    ],
+    "unit": "hgss_texset_063"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 47
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_063",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 4,
+     "near_match": 2,
+     "textures": 47
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 22,
+    "member_digest": "e1b0ffefa508a0e52d7a",
+    "sample_paths": [
+     "files/a/0/4/4#set=064&tex=000",
+     "files/a/0/4/4#set=064&tex=001",
+     "files/a/0/4/4#set=064&tex=002"
+    ],
+    "unit": "hgss_texset_064"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 22
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_064",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 2,
+     "near_match": 1,
+     "textures": 22
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 21,
+    "member_digest": "e1bec13be6fa917ec85c",
+    "sample_paths": [
+     "files/a/0/4/4#set=065&tex=000",
+     "files/a/0/4/4#set=065&tex=001",
+     "files/a/0/4/4#set=065&tex=002"
+    ],
+    "unit": "hgss_texset_065"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 21
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_065",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 0,
+     "textures": 21
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 22,
+    "member_digest": "b60626db09f127f372c9",
+    "sample_paths": [
+     "files/a/0/4/4#set=066&tex=000",
+     "files/a/0/4/4#set=066&tex=001",
+     "files/a/0/4/4#set=066&tex=002"
+    ],
+    "unit": "hgss_texset_066"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 22
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_066",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 0,
+     "textures": 22
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "0d1a09c38efdda0c9df8",
+    "sample_paths": [
+     "files/a/0/4/4#set=067&tex=000"
+    ],
+    "unit": "hgss_texset_067"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_067",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 0,
+     "textures": 1
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "a3377a48de378cbe710f",
+    "sample_paths": [
+     "files/a/0/4/4#set=068&tex=000"
+    ],
+    "unit": "hgss_texset_068"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_068",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 0,
+     "textures": 1
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "d175b4cb21a4ca0e0688",
+    "sample_paths": [
+     "files/a/0/4/4#set=069&tex=000"
+    ],
+    "unit": "hgss_texset_069"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_069",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 0,
+     "textures": 1
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 55,
+    "member_digest": "bf96ffa9d7102c4e81dc",
+    "sample_paths": [
+     "files/a/0/4/4#set=070&tex=000",
+     "files/a/0/4/4#set=070&tex=001",
+     "files/a/0/4/4#set=070&tex=002"
+    ],
+    "unit": "hgss_texset_070"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 55
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_070",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 4,
+     "near_match": 2,
+     "textures": 55
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 40,
+    "member_digest": "3635bd0a7767a8865afd",
+    "sample_paths": [
+     "files/a/0/4/4#set=071&tex=000",
+     "files/a/0/4/4#set=071&tex=001",
+     "files/a/0/4/4#set=071&tex=002"
+    ],
+    "unit": "hgss_texset_071"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 40
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_071",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 1,
+     "textures": 40
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 23,
+    "member_digest": "1a76696d1917657e3dd2",
+    "sample_paths": [
+     "files/a/0/4/4#set=072&tex=000",
+     "files/a/0/4/4#set=072&tex=001",
+     "files/a/0/4/4#set=072&tex=002"
+    ],
+    "unit": "hgss_texset_072"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 23
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_072",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 0,
+     "textures": 23
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 33,
+    "member_digest": "d739598b6075819d2bfd",
+    "sample_paths": [
+     "files/a/0/4/4#set=073&tex=000",
+     "files/a/0/4/4#set=073&tex=001",
+     "files/a/0/4/4#set=073&tex=002"
+    ],
+    "unit": "hgss_texset_073"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 33
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_073",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 2,
+     "near_match": 2,
+     "textures": 33
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 41,
+    "member_digest": "441727692bd2ff28173d",
+    "sample_paths": [
+     "files/a/0/4/4#set=074&tex=000",
+     "files/a/0/4/4#set=074&tex=001",
+     "files/a/0/4/4#set=074&tex=002"
+    ],
+    "unit": "hgss_texset_074"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 41
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_074",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 2,
+     "textures": 41
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 120,
+    "member_digest": "910241a68fe97844ae80",
+    "sample_paths": [
+     "files/a/0/4/4#set=075&tex=000",
+     "files/a/0/4/4#set=075&tex=001",
+     "files/a/0/4/4#set=075&tex=002"
+    ],
+    "unit": "hgss_texset_075"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 120
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_075",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 6,
+     "near_match": 6,
+     "textures": 120
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 31,
+    "member_digest": "4e00f266ecfa32c077fc",
+    "sample_paths": [
+     "files/a/0/4/4#set=076&tex=000",
+     "files/a/0/4/4#set=076&tex=001",
+     "files/a/0/4/4#set=076&tex=002"
+    ],
+    "unit": "hgss_texset_076"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 31
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_076",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 2,
+     "textures": 31
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 22,
+    "member_digest": "48c23adfee52747015d1",
+    "sample_paths": [
+     "files/a/0/4/4#set=077&tex=000",
+     "files/a/0/4/4#set=077&tex=001",
+     "files/a/0/4/4#set=077&tex=002"
+    ],
+    "unit": "hgss_texset_077"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 22
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_077",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 6,
+     "textures": 22
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 20,
+    "member_digest": "2e031f41771e48b17272",
+    "sample_paths": [
+     "files/a/0/4/4#set=078&tex=000",
+     "files/a/0/4/4#set=078&tex=001",
+     "files/a/0/4/4#set=078&tex=002"
+    ],
+    "unit": "hgss_texset_078"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 20
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_078",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 1,
+     "textures": 20
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 52,
+    "member_digest": "140bc7e9b2a50e1bf523",
+    "sample_paths": [
+     "files/a/0/4/4#set=079&tex=000",
+     "files/a/0/4/4#set=079&tex=001",
+     "files/a/0/4/4#set=079&tex=002"
+    ],
+    "unit": "hgss_texset_079"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 52
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_079",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 3,
+     "near_match": 2,
+     "textures": 52
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 28,
+    "member_digest": "f147ac3213b34a827331",
+    "sample_paths": [
+     "files/a/0/4/4#set=080&tex=000",
+     "files/a/0/4/4#set=080&tex=001",
+     "files/a/0/4/4#set=080&tex=002"
+    ],
+    "unit": "hgss_texset_080"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 28
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_080",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 2,
+     "textures": 28
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 23,
+    "member_digest": "ea897e622265c8bfc399",
+    "sample_paths": [
+     "files/a/0/4/4#set=081&tex=000",
+     "files/a/0/4/4#set=081&tex=001",
+     "files/a/0/4/4#set=081&tex=002"
+    ],
+    "unit": "hgss_texset_081"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 23
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_081",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 2,
+     "near_match": 0,
+     "textures": 23
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 24,
+    "member_digest": "e9d3be958ad56a845b4c",
+    "sample_paths": [
+     "files/a/0/4/4#set=082&tex=000",
+     "files/a/0/4/4#set=082&tex=001",
+     "files/a/0/4/4#set=082&tex=002"
+    ],
+    "unit": "hgss_texset_082"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 24
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_082",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 2,
+     "near_match": 1,
+     "textures": 24
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 24,
+    "member_digest": "1722fd6333dda3b86fd2",
+    "sample_paths": [
+     "files/a/0/4/4#set=083&tex=000",
+     "files/a/0/4/4#set=083&tex=001",
+     "files/a/0/4/4#set=083&tex=002"
+    ],
+    "unit": "hgss_texset_083"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 24
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_083",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 1,
+     "textures": 24
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 35,
+    "member_digest": "1961af819ea885f9caf1",
+    "sample_paths": [
+     "files/a/0/4/4#set=084&tex=000",
+     "files/a/0/4/4#set=084&tex=001",
+     "files/a/0/4/4#set=084&tex=002"
+    ],
+    "unit": "hgss_texset_084"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 35
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_084",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 1,
+     "textures": 35
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 38,
+    "member_digest": "ec329350e328a2ba9ee9",
+    "sample_paths": [
+     "files/a/0/4/4#set=085&tex=000",
+     "files/a/0/4/4#set=085&tex=001",
+     "files/a/0/4/4#set=085&tex=002"
+    ],
+    "unit": "hgss_texset_085"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 38
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_085",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 2,
+     "textures": 38
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 39,
+    "member_digest": "99c297f598223b6edcd9",
+    "sample_paths": [
+     "files/a/0/4/4#set=086&tex=000",
+     "files/a/0/4/4#set=086&tex=001",
+     "files/a/0/4/4#set=086&tex=002"
+    ],
+    "unit": "hgss_texset_086"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 39
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_086",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 2,
+     "near_match": 2,
+     "textures": 39
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 30,
+    "member_digest": "13ec3d2bb310e885007c",
+    "sample_paths": [
+     "files/a/0/4/4#set=087&tex=000",
+     "files/a/0/4/4#set=087&tex=001",
+     "files/a/0/4/4#set=087&tex=002"
+    ],
+    "unit": "hgss_texset_087"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 30
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_087",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 2,
+     "textures": 30
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 20,
+    "member_digest": "6cd91790c282d8ec42d5",
+    "sample_paths": [
+     "files/a/0/4/4#set=088&tex=000",
+     "files/a/0/4/4#set=088&tex=001",
+     "files/a/0/4/4#set=088&tex=002"
+    ],
+    "unit": "hgss_texset_088"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 20
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_088",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 0,
+     "textures": 20
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 17,
+    "member_digest": "b59046aa89b6bdbdb3bc",
+    "sample_paths": [
+     "files/a/0/4/4#set=089&tex=000",
+     "files/a/0/4/4#set=089&tex=001",
+     "files/a/0/4/4#set=089&tex=002"
+    ],
+    "unit": "hgss_texset_089"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 17
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_089",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 1,
+     "textures": 17
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 32,
+    "member_digest": "53049d8773dfcd0344d6",
+    "sample_paths": [
+     "files/a/0/4/4#set=090&tex=000",
+     "files/a/0/4/4#set=090&tex=001",
+     "files/a/0/4/4#set=090&tex=002"
+    ],
+    "unit": "hgss_texset_090"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 32
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_090",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 1,
+     "textures": 32
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 29,
+    "member_digest": "4189b6efb0cd669991ca",
+    "sample_paths": [
+     "files/a/0/4/4#set=091&tex=000",
+     "files/a/0/4/4#set=091&tex=001",
+     "files/a/0/4/4#set=091&tex=002"
+    ],
+    "unit": "hgss_texset_091"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 29
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_091",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 0,
+     "textures": 29
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 51,
+    "member_digest": "64793187256d38e7773a",
+    "sample_paths": [
+     "files/a/0/4/4#set=092&tex=000",
+     "files/a/0/4/4#set=092&tex=001",
+     "files/a/0/4/4#set=092&tex=002"
+    ],
+    "unit": "hgss_texset_092"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 51
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_092",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 33,
+     "near_match": 0,
+     "textures": 51
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 47,
+    "member_digest": "dee8fb8d1d445860ebeb",
+    "sample_paths": [
+     "files/a/0/4/4#set=093&tex=000",
+     "files/a/0/4/4#set=093&tex=001",
+     "files/a/0/4/4#set=093&tex=002"
+    ],
+    "unit": "hgss_texset_093"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 47
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_093",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 19,
+     "near_match": 1,
+     "textures": 47
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 65,
+    "member_digest": "fb890d9374e05eca3be9",
+    "sample_paths": [
+     "files/a/0/4/4#set=094&tex=000",
+     "files/a/0/4/4#set=094&tex=001",
+     "files/a/0/4/4#set=094&tex=002"
+    ],
+    "unit": "hgss_texset_094"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 65
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_094",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 4,
+     "near_match": 3,
+     "textures": 65
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 21,
+    "member_digest": "6a907d05d7a3f876e7eb",
+    "sample_paths": [
+     "files/a/0/4/4#set=095&tex=000",
+     "files/a/0/4/4#set=095&tex=001",
+     "files/a/0/4/4#set=095&tex=002"
+    ],
+    "unit": "hgss_texset_095"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 21
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_095",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 0,
+     "textures": 21
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 22,
+    "member_digest": "fd392e681f1c09d01910",
+    "sample_paths": [
+     "files/a/0/4/4#set=096&tex=000",
+     "files/a/0/4/4#set=096&tex=001",
+     "files/a/0/4/4#set=096&tex=002"
+    ],
+    "unit": "hgss_texset_096"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 22
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_096",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 1,
+     "textures": 22
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 32,
+    "member_digest": "91d18bb4dd8d9cbd9555",
+    "sample_paths": [
+     "files/a/0/4/4#set=097&tex=000",
+     "files/a/0/4/4#set=097&tex=001",
+     "files/a/0/4/4#set=097&tex=002"
+    ],
+    "unit": "hgss_texset_097"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 32
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_097",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 1,
+     "textures": 32
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 28,
+    "member_digest": "667cbe0e57f347219bf6",
+    "sample_paths": [
+     "files/a/0/4/4#set=098&tex=000",
+     "files/a/0/4/4#set=098&tex=001",
+     "files/a/0/4/4#set=098&tex=002"
+    ],
+    "unit": "hgss_texset_098"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 28
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_098",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 0,
+     "textures": 28
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 18,
+    "member_digest": "0c60862339e4bb9ad4dd",
+    "sample_paths": [
+     "files/a/0/4/4#set=099&tex=000",
+     "files/a/0/4/4#set=099&tex=001",
+     "files/a/0/4/4#set=099&tex=002"
+    ],
+    "unit": "hgss_texset_099"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 18
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_099",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 0,
+     "near_match": 1,
+     "textures": 18
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 14,
+    "member_digest": "806bb1b553d76bf9ac5f",
+    "sample_paths": [
+     "files/a/0/4/4#set=100&tex=000",
+     "files/a/0/4/4#set=100&tex=001",
+     "files/a/0/4/4#set=100&tex=002"
+    ],
+    "unit": "hgss_texset_100"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 14
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_100",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 1,
+     "textures": 14
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 17,
+    "member_digest": "dbe3d3b645e8d10e5e50",
+    "sample_paths": [
+     "files/a/0/4/4#set=101&tex=000",
+     "files/a/0/4/4#set=101&tex=001",
+     "files/a/0/4/4#set=101&tex=002"
+    ],
+    "unit": "hgss_texset_101"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 17
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_101",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 0,
+     "textures": 17
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 24,
+    "member_digest": "8ee870324ed00f9f2715",
+    "sample_paths": [
+     "files/a/0/4/4#set=102&tex=000",
+     "files/a/0/4/4#set=102&tex=001",
+     "files/a/0/4/4#set=102&tex=002"
+    ],
+    "unit": "hgss_texset_102"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 24
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_102",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 0,
+     "textures": 24
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 30,
+    "member_digest": "5650187f775eaa8dd77e",
+    "sample_paths": [
+     "files/a/0/4/4#set=103&tex=000",
+     "files/a/0/4/4#set=103&tex=001",
+     "files/a/0/4/4#set=103&tex=002"
+    ],
+    "unit": "hgss_texset_103"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 30
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_103",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 0,
+     "textures": 30
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 35,
+    "member_digest": "758308ba87bb2ebf4e62",
+    "sample_paths": [
+     "files/a/0/4/4#set=104&tex=000",
+     "files/a/0/4/4#set=104&tex=001",
+     "files/a/0/4/4#set=104&tex=002"
+    ],
+    "unit": "hgss_texset_104"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 35
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_104",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 2,
+     "near_match": 2,
+     "textures": 35
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 15,
+    "member_digest": "2caee5e0f019b20a53b8",
+    "sample_paths": [
+     "files/a/0/4/4#set=105&tex=000",
+     "files/a/0/4/4#set=105&tex=001",
+     "files/a/0/4/4#set=105&tex=002"
+    ],
+    "unit": "hgss_texset_105"
+   },
+   "conversion_requirement": "trivial",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "hgss_field_3d/CURATION.json": 15
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_btx0_texture_set",
+   "group_id": "field_texture_sets/hgss/hgss_texset_105",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "no_native_target",
+   "role": "reference_only",
+   "scores": {
+    "compat": 2,
+    "independent_share": 1.0,
+    "integration_cost": 4,
+    "risk": "low",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "field_texture_sets",
+   "target_id": "field_texture_sets/family:field_texture_sets",
+   "visual_evidence": {
+    "detail": {
+     "basis": "exact RGBA hash against Platinum prop/map texture sets and prop-model textures",
+     "identical_to_platinum": 1,
+     "near_match": 0,
+     "textures": 15
+    },
+    "native_relation": "missing_in_native",
+    "risk_flags": []
+   }
+  }
+ ],
+ "inputs": {
+  "evidence_file": "docs/visual_overhaul/selection/evidence/field_texture_sets.json",
+  "evidence_sha256": "75756ca8c5908fc1ecbd5ed72ff139940a1fb7a82f9f2e9a20d2b9073d0aff42",
+  "recovered_ledger_sha256": {
+   "LANE_A_RECOVERED_CURATION.json": "9d915a805df0ac9a32d336916e31e3251feeb427b15f05ce3512fcbb19b4266b",
+   "LANE_B_RECOVERED_CURATION.json": "efe2bfe24fbff3a47ebbcb7779b87e957bec28e135cc8171d883c7ed7e6fe368",
+   "LANE_CDE_RECOVERED_CURATION.json": "d68b973505c02dc51b912250b0340bed8a0cddcd208d0803d56c1f9e1c5c2d99",
+   "hgss_field_3d/CURATION.json": "fafb17553fa9d76e1ea0c0bbee49c90637a4bb06a758111e42a8692a310f77d7",
+   "hgss_field_sprites/CURATION.json": "65c7624fa33d644b9fac5c15465440dc1540f8f0a894d84d01fcb3e02b3a3aa1",
+   "hgss_trainer_sprites/CURATION.json": "e67d1a6b4f8f5019653cf0fb9c004cbb98d53bda5efe5a0bb2fdf842f0762546"
+  },
+  "review_file": null,
+  "review_sha256": null,
+  "rules_sha256": "32982c7ccd7a5bfad5c3fb260b6324732037fdb121536a51438ba49c3d8a3c47",
+  "subsystem_groups_digest": "a7ea3be712cc95fd0a63",
+  "subsystems_sha256": "fb9a3f954230dc0e3f724ed5e9b10d79bc1d6e2779cddc4ee75b3fbb30f0cad8"
+ },
+ "rules_version": "1.6",
+ "schema_version": 1,
+ "subsystem": "field_texture_sets",
+ "summary": {
+  "groups": 106,
+  "needs_evidence": 0,
+  "role_reason": {
+   "reference_only:no_native_target": 106
+  },
+  "roles": {
+   "reference_only": 106
+  },
+  "source_role": {
+   "hgss:reference_only": 106
+  },
+  "target_resolution": {
+   "native": 1
+  },
+  "targets": 1
+ },
+ "targets": [
+  {
+   "alternates": [],
+   "preferred": null,
+   "resolution": "platinum_native",
+   "target_id": "field_texture_sets/family:field_texture_sets"
+  }
+ ]
+}

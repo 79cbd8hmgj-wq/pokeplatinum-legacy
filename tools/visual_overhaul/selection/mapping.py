@@ -104,9 +104,29 @@ def _hgss_field_sprite(rec):
     return "field_npc_player_sprites", e["target"], "hgss_" + _stem(p), "sprite_sheet"
 
 
+FOLLOWER_MMODEL = set(range(201, 207)) | set(range(297, 863))  # MMODEL_FOLLOWER_MON, _2.._6 and MMODEL_FOLLOWER_MON_* (include/constants/mmodel.h)
+
+
+def _hgss_field_3d(rec):
+    """hgss_field_3d extension: building models, map texture sets, follower sheets (one group per model / texture set / sheet)."""
+    p = rec["source_path"]
+    if p.startswith("files/fielddata/build_model/"):
+        m = re.match(r"files/fielddata/build_model/(bm_\w+)\.narc#member=(\d+)$", p)
+        return "field_building_models", "family:field_building_models", f"hgss_{m.group(1)}_{m.group(2)}", "model"
+    if p.startswith("files/a/0/4/4#"):
+        m = re.match(r"files/a/0/4/4#set=(\d+)&tex=\d+$", p)
+        return "field_texture_sets", "family:field_texture_sets", f"hgss_texset_{m.group(1)}", "texture_set"
+    n = int(re.search(r"mmodel_(\d+)\.NSBTX$", p).group(1))
+    return "overworld_pokemon_sheets", "family:overworld_pokemon_sheets", f"hgss_follower_{n:08d}", "sprite_sheet"
+
+
 def _hgss(rec):
     p = rec["source_path"]
+    if p.startswith("files/fielddata/build_model/") and "#member=" in p or p.startswith("files/a/0/4/4#"):
+        return _hgss_field_3d(rec)
     if p.startswith("files/data/mmodel/mmodel/"):
+        if int(re.search(r"mmodel_(\d+)\.NSBTX$", p).group(1)) in FOLLOWER_MMODEL:
+            return _hgss_field_3d(rec)
         return _hgss_field_sprite(rec)
     if p.startswith(("files/a/0/5/8#", "files/a/0/0/6#")):
         return _hgss_trainer(rec)

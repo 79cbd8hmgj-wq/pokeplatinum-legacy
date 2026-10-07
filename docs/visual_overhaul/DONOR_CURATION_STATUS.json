@@ -2,10 +2,10 @@
  "schema_version": 1,
  "invariants": {
   "base_catalog_assets": 64841,
-  "extension_catalog_assets": 358,
+  "extension_catalog_assets": 5151,
   "extension_overlap_with_base": 0,
-  "catalog_assets": 65199,
-  "curated_assets": 65199,
+  "catalog_assets": 69992,
+  "curated_assets": 69992,
   "missing": 0,
   "extra": 0,
   "duplicates": 0,
@@ -14,8 +14,8 @@
  },
  "status_totals": {
   "decode_issue": 106,
-  "reject": 9578,
-  "usable": 55515
+  "reject": 9590,
+  "usable": 60296
  },
  "ledger_status_counts": {
   "A": {
@@ -38,6 +38,10 @@
   },
   "X_hgss_field_sprites": {
    "usable": 212
+  },
+  "X_hgss_field_3d": {
+   "reject": 12,
+   "usable": 4781
   }
  },
  "source_status_counts": {
@@ -47,8 +51,8 @@
   },
   "hgss": {
    "decode_issue": 14,
-   "reject": 2949,
-   "usable": 3179
+   "reject": 2961,
+   "usable": 7960
   },
   "pmd_sky": {
    "decode_issue": 41,

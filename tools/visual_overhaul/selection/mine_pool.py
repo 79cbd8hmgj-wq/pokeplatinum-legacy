@@ -22,7 +22,7 @@ REVIEW_JSON = MINING / "TARGETED_REVIEW.json"
 NE_JSON = MINING / "NEEDS_EVIDENCE_QUEUE.json"
 RES_JSON = MINING / "EVIDENCE_RESOLUTIONS.json"
 DOMAINS = ["trainer_sprites", "pokemon_sprites", "pokemon_animation", "npc_player_sprites", "field_graphics", "environmental_effects", "battle_effects", "field_effects", "ui_menus_hud",
-           "location_area", "textures", "models", "interface_embellishments", "transitions_presentation", "icons", "backgrounds", "misc"]
+           "location_area", "textures", "models", "overworld_pokemon", "interface_embellishments", "transitions_presentation", "icons", "backgrounds", "misc"]
 EVID_PTR = {"hgss": ["docs/visual_overhaul/DONOR_ASSET_CATALOG.json", "docs/visual_overhaul/catalog_extensions/MANIFEST.json"], "pmd_sky": ["docs/visual_overhaul/LANE_CDE_PMD_SKY_RECOVERY.json"],
             "ranger2": ["docs/visual_overhaul/LANE_B_RANGER_EMBEDDED_RECOVERY.json", "docs/visual_overhaul/RANGER_VISUAL_BUNDLE_CLASSIFICATION.json"], "diamond": ["docs/visual_overhaul/DONOR_ASSET_CATALOG.json"]}
 SUBSYS_EVID = {"pokemon_battle_sprites", "trainer_battle_sprites", "field_npc_player_sprites", "field_environment_art", "pokemon_icons"}
@@ -126,6 +126,8 @@ def build_records(data: dict, reviews: dict, res: dict | None = None) -> tuple[l
         scored = []
         for p in props:
             d = MR.score(g, f, p)
+            if p.get("dims_override"):  # rule-level adjustment of non-base dimensions (e.g. library/reuse of whole-asset sheet families)
+                d.update(p["dims_override"])
             if rs and not closed and rs.get("techniques") and p["class"] in ("technique_donor", "novel_capability"):
                 p = {**p, "techniques": list(rs["techniques"])}
             if rs and not closed:
@@ -311,6 +313,9 @@ def main() -> int:
     byd = collections.defaultdict(list)
     for pg in res["per_group"].values():
         byd[pg["dom"]].append(pg)
+    for old in (MINING / "passes").glob("*.json"):  # a domain that no longer has groups must not leave a stale pass behind
+        if old.stem not in byd:
+            old.unlink()
     for d, gs in byd.items():
         gs.sort(key=lambda x: (-x["best"], x["g"]))
         jdump(MINING / "passes" / f"{d}.json", {"domain": d, "groups": len(gs), "dispositions": dict(collections.Counter(x["disp"] for x in gs)), "ranked": gs})

@@ -6,6 +6,8 @@ from __future__ import annotations
 
 import math
 
+import mine_x3d as X3
+
 PROMOTE = 3.3          # composite >= PROMOTE -> promoted opportunity record
 NEEDS_EVIDENCE = 3.0   # composite >= this but evidence too weak -> needs_evidence queue
 WEIGHTS = {"visual_impact": 7, "novelty": 6, "feasibility": 5, "reuse": 4, "library": 3, "evidence": 3, "cost": 3, "risk": 2, "dependency": 2, "slice": 2}
@@ -25,6 +27,8 @@ HOST = {
     "field_graphics": ("3D field texture/material set (environment art)", ["res/graphics/field_sprites", "docs/visual_overhaul/G4_ENVIRONMENT_RECONSTRUCTION_COMPLETE.md"]),
     "textures": ("3D field/map texture resources (NSBTX materials)", ["docs/visual_overhaul/G4_ENVIRONMENT_RECONSTRUCTION_COMPLETE.md"]),
     "ui_menus_hud": ("Platinum menu/party/dex UI resources", ["res/graphics/party_menu", "res/graphics/pokedex"]),
+    "models": ("field prop/building models (NSBMD prop models, model sets, area data)", ["res/field/props/models", "res/field/props/model_sets"]),
+    "overworld_pokemon": ("overworld Pokemon field sprites / event objects", ["res/graphics/field_sprites/pokemon", "src/map_object.c"]),
     "interface_embellishments": ("battle/menu feedback layer (cursor pulses, glows, gauges)", ["res/graphics/battle/interface", "src/battle/healthbox.c"]),
     "transitions_presentation": ("field/title transition and event presentation", ["src/field_transition.c", "res/graphics/title_screen"]),
     "trainer_sprites": ("trainer class sprites", ["res/trainers/classes"]),
@@ -38,9 +42,9 @@ HOST = {
 IMPACT_TEXT = {1: "negligible", 2: "small, localized", 3: "noticeable in specific scenes", 4: "strong, frequently visible", 5: "transformative"}
 
 
-def P(cls, comps, why, impact, nov, feas, cost, risk, slice_, techs=(), pixel="derived", mode=None, adapt=None, note=""):
-    return {"class": cls, "use_mode": mode or USE_MODE.get(cls, "component"), "components": list(comps), "techniques": list(techs), "why_surfaced": why,
-            "base": {"visual_impact": impact, "novelty": nov, "feasibility": feas, "cost": cost, "risk": risk, "slice": slice_}, "pixel_use": pixel, "adaptation": adapt or [], "note": note}
+def P(cls, comps, why, impact, nov, feas, cost, risk, slice_, techs=(), pixel="derived", mode=None, adapt=None, note="", dims=None):
+    return {"dims_override": dict(dims or {}), **{"class": cls, "use_mode": mode or USE_MODE.get(cls, "component"), "components": list(comps), "techniques": list(techs), "why_surfaced": why,
+            "base": {"visual_impact": impact, "novelty": nov, "feasibility": feas, "cost": cost, "risk": risk, "slice": slice_}, "pixel_use": pixel, "adaptation": adapt or [], "note": note}}
 
 
 def tier(n: int, cuts=(4, 15, 50, 200)) -> int:
@@ -59,6 +63,8 @@ def proposals(g: dict, f: dict) -> list[dict]:
         return [P("reject", [], "identical to the Platinum asset (no visual difference)", 1, 1, 1, 1, 1, 1)]
     if f["companion_only"] and dom not in ("pokemon_sprites", "icons") and not f["has_animated_tiles"]:
         return [P("reject", [], "companion/metadata-only members; no independent visual content", 1, 1, 1, 1, 1, 1)]
+    if "x3d" in f:
+        return X3.proposals(P, g, f)
     if dom == "trainer_sprites":
         multi = f["cell_count"] > 1
         if rel == "missing_in_native":
@@ -174,6 +180,8 @@ def proposals(g: dict, f: dict) -> list[dict]:
 
 
 def evidence_quality(g: dict, f: dict) -> int:
+    if "x3d" in f:  # decoded + rendered from the pinned donor; model previews are approximate (no node transforms), textures/sheets decode exactly
+        return {"model": 3, "texture_set": 4, "follower": 4}[f["x3d"]["kind"]]
     rel = f["native_relation"]
     if g["subsystem"] == "pokemon_animation_reference":  # catalog quality note: semantic pose suitability not yet approved
         return 2

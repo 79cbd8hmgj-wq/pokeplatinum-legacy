@@ -5,7 +5,7 @@ Status: **human review complete** (verdicts recorded in `../decisions/trainer_ba
 - Candidates reviewed: **10** (10 front, 0 back); verdicts: {'use_hgss': 6, 'keep_platinum': 4}
 - Needing later-frame inspection (frame 0 identical, a later frame differs): **1**
 - Automated classes: {'redrawn_artwork': 8, 'later_frames_differ': 1, 'recolor_only': 1}
-- Withdrawn from the earlier 21 after a decoder fix: **11** (see below)
+- Withdrawn from the earlier 21 after a decoder fix: **0** (see below)
 
 Contact sheets: `front_01.png`. Legend: yellow=both opaque but colour differs, green=HGSS-only pixel, magenta=Platinum-only pixel, grey=same, comparison in BGR555 space.
 
@@ -38,14 +38,3 @@ Earlier renders ignored the NCER per-cell VRAM transfer table, so later animatio
 
 | ID | Class | Now | Relation |
 |---|---|---|---|
-| hgss_back_004 | trainer_cheryl | not_selected | identical |
-| hgss_back_005 | trainer_riley | not_selected | identical |
-| hgss_back_009 | dp_player_male | not_selected | identical |
-| hgss_back_010 | dp_player_female | not_selected | identical |
-| hgss_back_011 | dp_rival | not_selected | identical |
-| hgss_back_012 | player_male | not_selected | identical |
-| hgss_back_013 | player_female | not_selected | identical |
-| hgss_back_014 | rival | not_selected | identical |
-| hgss_front_097 | tower_tycoon | alternate | art_diff_minor |
-| hgss_front_099 | hall_matron | not_selected | identical |
-| hgss_front_100 | factory_head | not_selected | identical |
