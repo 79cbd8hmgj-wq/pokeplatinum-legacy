@@ -6,24 +6,24 @@ No preferred donor is selected and no Platinum resources are modified.
 ## Status
 
 - Assets: **15157**
-- decode_issue: **923**
+- decode_issue: **41**
 - reject: **9147**
-- usable: **5087**
+- usable: **5969**
 
 ## Recovery changes
 
 | Change | Assets |
 |---|---:|
 | decode_issue -> reject | 1173 |
-| decode_issue -> usable | 5087 |
+| decode_issue -> usable | 5969 |
 
 ## Remaining decode routes
 
 | Route | Assets |
 |---|---:|
-| container_unpack_then_decode | 444 |
+| container_unpack_then_decode | 3 |
 | pmd_format_decode | 19 |
-| ranger_embedded_decode | 460 |
+| ranger_embedded_decode | 19 |
 
 ## Remaining routes by source
 
@@ -31,5 +31,5 @@ No preferred donor is selected and no Platinum resources are modified.
 |---|---|---:|
 | hgss | container_unpack_then_decode | 2 |
 | pmd_sky | pmd_format_decode | 19 |
-| ranger2 | container_unpack_then_decode | 442 |
-| ranger2 | ranger_embedded_decode | 460 |
+| ranger2 | container_unpack_then_decode | 1 |
+| ranger2 | ranger_embedded_decode | 19 |

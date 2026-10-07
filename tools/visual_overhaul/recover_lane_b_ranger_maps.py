@@ -11,7 +11,8 @@ Facts established from the corpus (441 maps):
 Outcomes:
   tex package + chips  -> valid_render when every chip decodes nonblank with full palette coverage
   dat MPIF/TXIF/CTA/PLA -> non-visual structured tables (parsed; no pixel payload): reject
-  dat LYR / dat package -> remain decode_issue until layers are composed against the chips
+  dat LYR / dat package -> valid_render when the quad layers (loader-verified format, exact size match)
+                           compose against the chips into a nonblank map image (ranger_map_compose.py)
 No Platinum resources are modified.
 """
 from __future__ import annotations
@@ -23,6 +24,7 @@ from collections import Counter
 from pathlib import Path
 
 from nitro_narc import lz10_decompress
+import ranger_map_compose
 
 TABLE_MAGICS = {b"MPIF": "map header (dimensions/chip size)", b"TXIF": "chip index table",
                 b"CTA\x00": "attribute table", b"PLA\x00": "placement table"}
@@ -60,6 +62,16 @@ def decode_chip(inner: list[bytes]) -> tuple[int, int, int]:
     return wt * 4, ht * 8, nonkey
 
 
+def compose_state(ev: dict):
+    c = ev.get("compose")
+    if c is None:
+        return "decode_failure", ev.get("compose_error", "composition failed")
+    ok = c["layers"] >= 1 and c["quads"] >= 1 and c["painted"] > 0 and not (c["oob_src"] or c["oob_bank"] or c["bad_pal"])
+    det = (f"composed {c['w']}x{c['h']} map from {c['layers']} quad layer(s), {c['quads']} quads "
+           f"({c['wrapped']} repeat-tiled), {c['painted']} painted px")
+    return ("valid_render", det) if ok else ("decode_failure", "composition has out-of-range quads or is blank: " + det)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--curation", type=Path, required=True)
@@ -85,6 +97,12 @@ def main() -> int:
                 ev = {"kind": "tex", "chips": len(chips), "bad": bad, "sizes": sorted({(w, h) for w, h, _ in chips})[:6]}
             elif sp.endswith(".map.dat.lz") and raw[:4] == b"NARC":
                 ev = {"kind": "dat", "members": [m[:4] for m in narc_members(raw)], "sizes": [len(m) for m in narc_members(raw)]}
+                stem = p.name[:-len(".map.dat.lz")]
+                try:
+                    w, h, _cv, st = ranger_map_compose.compose(p, p.parent / f"{stem}.map.tex.lz")
+                    ev["compose"] = dict(st, w=w, h=h)
+                except Exception as e:  # noqa: BLE001
+                    ev["compose_error"] = str(e)[:100]
             else:
                 ev = {"kind": "unknown", "magic": raw[:4].hex()}
         except Exception as e:  # noqa: BLE001
@@ -106,15 +124,15 @@ def main() -> int:
             if mg in TABLE_MAGICS:
                 st, det = "non_visual_table", f"{mg!r} {TABLE_MAGICS[mg]}, {ev['sizes'][idx]} bytes, no pixel payload"
             elif mg == b"LYR\x00":
-                st, det = "layers_not_composed", "layer data needs composition against the chips"
+                st, det = compose_state(ev)
         elif ev["kind"] == "dat":
-            st, det = "layers_not_composed", "package holds layer data not yet composed"
+            st, det = compose_state(ev)
         rows.append({"asset_id": aid, "source_path": r["source_path"], "technical_state": st, "detail": det})
     decisions = []
     for x in rows:
         if x["technical_state"] == "valid_render":
             decisions.append({"asset_id": x["asset_id"], "review_status": "usable", "reason_code": "ranger_map_chips_valid_render",
-                              "reason": "Ranger field-map texture package: every chip decodes (verified 8bpp scanline layout) to nonblank map art with full palette coverage; environment/field texture material.",
+                              "reason": "Ranger field-map resource: texture chips decode (4bpp raster atlas) and the quad layers compose them into a nonblank map image (every quad in range, exact layer size match); environment/field map material. Layer blending semantics are simplified (all quad layers drawn opaque in file order).",
                               "technical_state": x["technical_state"], "detail": x["detail"]})
         elif x["technical_state"] == "non_visual_table":
             decisions.append({"asset_id": x["asset_id"], "review_status": "reject", "reason_code": "ranger_map_structured_table",
