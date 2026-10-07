@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "status": "design_proposal_not_human_approved",
+  "baseline_commit": "ad2b61bb04f721f2765da0347bdf642643135d79",
+  "plan": "docs/visual_overhaul/selection/CROSS_DONOR_IMPLEMENTATION_PLAN.md",
+  "platinum_assets_modified": false,
+  "scoring": "10 criteria, 1-5 (5=best/lowest burden), hand-scored; automated pool score used for shortlisting only",
+  "ranking": [
+    {
+      "order": 1,
+      "slice_id": "S1",
+      "track": "A",
+      "title": "Ace Trainer M/F HGSS shading components",
+      "use_mode": "component",
+      "donor": "hgss",
+      "opportunity_class": "enhancement_candidate",
+      "opportunity_ids": [
+        "opp:trainer/tc_ace_trainer_male/enhancement",
+        "opp:trainer/tc_ace_trainer_female/enhancement",
+        "uc:trainer_battle_sprites/tc_ace_trainer_male/01",
+        "uc:trainer_battle_sprites/tc_ace_trainer_male/02",
+        "uc:trainer_battle_sprites/tc_ace_trainer_female/01",
+        "uc:trainer_battle_sprites/tc_ace_trainer_female/02",
+        "lib:hgss/trainer_sprites/hgss_front/component_donor/component"
+      ],
+      "platinum_host": [
+        "res/trainers/classes/ace_trainer_male/front.png",
+        "res/trainers/classes/ace_trainer_female/front.png"
+      ],
+      "donor_pixels_reused": 0,
+      "manual_score": 41,
+      "cost": "S",
+      "risk": "low",
+      "why_first": "lowest risk, working pipeline, proves the component-transfer + review gate; human review can start immediately",
+      "human_review": "final hand-authored sprites, per-component accept/reject, in-battle context",
+      "rollback_boundary": "restore the two front.png files",
+      "evidence": "docs/visual_overhaul/selection/synthesis/track_a_ace_trainer_comparison.png",
+      "closest_alternatives_rejected": [
+        "hgss building exterior details (no NSBMD authoring pipeline)",
+        "hgss texture-set regions (already graded; second risky pass)",
+        "whole-sprite HGSS swaps (not component use)"
+      ]
+    },
+    {
+      "order": 2,
+      "slice_id": "S2",
+      "track": "B",
+      "title": "PMD palette/tile cycling on battle terrain palettes",
+      "use_mode": "technique",
+      "donor": "pmd_sky",
+      "opportunity_class": "technique_donor",
+      "opportunity_ids": [
+        "lib:pmd_sky/environmental_effects/pmd_mapbg_d/technique_donor/technique",
+        "lib:pmd_sky/environmental_effects/pmd_mapbg_v/technique_donor/technique",
+        "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_d01p11a5/technique_donor/technique"
+      ],
+      "platinum_host": [
+        "src/battle/terrain.c",
+        "res/graphics/battle/terrain/water",
+        "res/graphics/battle/terrain/distortion_world"
+      ],
+      "donor_pixels_reused": 0,
+      "manual_score": 41,
+      "cost": "M",
+      "risk": "medium-low",
+      "why_second": "one small runtime spike then a reusable palette-cycle service; reuse across many terrains/screens",
+      "human_review": "animated capture at game speed day/evening/night; subtle-vs-busy; photosensitivity check",
+      "rollback_boundary": "remove tick call + table; revert reauthored terrain PNG/PAL",
+      "evidence": "docs/visual_overhaul/selection/synthesis/track_b_water_platform_palette_cycle.png",
+      "closest_alternatives_rejected": [
+        "ranger effect sequencing (G5 already applied; low novelty)",
+        "ranger interface pulses (G7 owns UI)",
+        "pmd ground overlays (no decoder/evidence)"
+      ]
+    },
+    {
+      "order": 3,
+      "slice_id": "S3",
+      "track": "C",
+      "title": "Solaceon News Press still-scene newspaper card",
+      "use_mode": "technique",
+      "donor": "ranger2",
+      "opportunity_class": "novel_capability",
+      "opportunity_ids": [
+        "lib:ranger2/transitions_presentation/ranger_event/event/novel_capability/technique",
+        "lib:ranger2/transitions_presentation/ranger_event/event/technique_donor/technique"
+      ],
+      "platinum_host": [
+        "res/field/scripts/scripts_solaceon_town_pokemon_news_press.s",
+        "src/bg_window.c"
+      ],
+      "donor_pixels_reused": 0,
+      "manual_score": 41,
+      "cost": "M-L",
+      "risk": "medium",
+      "why_third": "highest novelty but most unknowns (new screen type); art-direction review runs in parallel with S1/S2",
+      "human_review": "art direction before engineering; in-engine screenshots and text fit before merge",
+      "rollback_boundary": "revert the 2-line script edit; new commands/resources become inert",
+      "evidence": "docs/visual_overhaul/selection/synthesis/track_c_news_press_card_mockup.png",
+      "closest_alternatives_rejected": [
+        "area/location preview card (needs UI state + new art; kept as S4)",
+        "hgss follower sheets (whole-asset dependence, identity risk)",
+        "pmd title cards (style mismatch)"
+      ]
+    }
+  ],
+  "deferred_next": [
+    {
+      "slice_id": "S4",
+      "title": "Sinnoh area/location preview card",
+      "depends_on": "S3 card host",
+      "opportunity_ids": [
+        "opp:hgss/map_location_preview"
+      ]
+    }
+  ],
+  "blockers_requiring_donor_discovery": [],
+  "platinum_side_open_items": [
+    "OBJ/BG slot-7 palette write path (S2 spike)",
+    "card BG layer / VRAM availability while field locked (S3 spike)"
+  ]
+}
