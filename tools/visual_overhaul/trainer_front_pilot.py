@@ -155,8 +155,9 @@ def cmd_apply(a) -> None:
                 raise SystemExit(f"HGSS checkout {head} != pinned {e['hgss_source']['commit']}")
             pdir = CLASSES / e["class"]
             cur = {f: fsha(pdir / f) for f in FILES}
-            state = "before" if all(cur[f] == e["files"][f]["before_sha256"] for f in FILES) else (
-                "after" if all(cur[f] == e["files"][f]["after_sha256"] for f in FILES if e["files"][f]["after_sha256"]) and e["files"][f]["after_sha256"] else "unexpected")
+            is_before = all(cur[f] == e["files"][f]["before_sha256"] for f in FILES)
+            is_after = all(e["files"][f]["after_sha256"] and cur[f] == e["files"][f]["after_sha256"] for f in FILES)
+            state = "before" if is_before else ("after" if is_after else "unexpected")
             if state == "unexpected":
                 raise SystemExit(f"{e['class']}: current files match neither before nor after hashes (guard)")
             work = Path(t) / e["class"]
@@ -167,6 +168,7 @@ def cmd_apply(a) -> None:
             if a.dry_run:
                 print(f"{e['class']}: state={state} derive OK (dry run)")
                 continue
+            e["hgss_source"]["nclr_row0_sha256_prefix"] = sha(narc[e["hgss_class_index"] * 5 + 1][:0x48])[:16]
             orig = PILOT / "originals" / e["class"]
             orig.mkdir(parents=True, exist_ok=True)
             for f in FILES:
@@ -239,9 +241,13 @@ def cmd_verify(a) -> None:
             if state_of(e) != "pilot":
                 continue
             for k, i in zip(MEMBERS, range(5)):
-                got = sha(narc[base_i + i])[:16]
-                if got != hs[k.lower()]:
-                    errs.append(f"{e['class']}: built trfgra member {base_i + i} ({k}) {got} != HGSS {hs[k.lower()]}")
+                blob = narc[base_i + i]
+                if k == "NCLR":  # only palette row 0 is used by the sprite; HGSS NCLRs may carry unused data in later rows
+                    got, want = sha(blob[:0x48])[:16], e["hgss_source"]["nclr_row0_sha256_prefix"]
+                else:
+                    got, want = sha(blob)[:16], hs[k.lower()]
+                if got != want:
+                    errs.append(f"{e['class']}: built trfgra member {base_i + i} ({k}) {got} != HGSS {want}")
         print(f"built archive checked: {len(narc)} members")
     if errs:
         print("\n".join("FAIL: " + x for x in errs), file=sys.stderr)
