@@ -3,29 +3,27 @@
   "lane": "B_pokemon_facing",
   "asset_count": 15157,
   "status_counts": {
-    "decode_issue": 2831,
-    "reject": 7974,
-    "usable": 4352
+    "decode_issue": 2614,
+    "reject": 7978,
+    "usable": 4565
   },
   "recovery_changes": {
-    "decode_issue_to_usable": 4352
+    "decode_issue_to_reject": 4,
+    "decode_issue_to_usable": 4565
   },
   "remaining_decode_routes": {
     "container_unpack_then_decode": 898,
     "format_context_unknown": 9,
-    "nitro_2d_decode": 217,
     "pmd_format_decode": 19,
     "ranger_embedded_decode": 1688
   },
   "remaining_decode_source_routes": {
     "diamond": {
-      "format_context_unknown": 6,
-      "nitro_2d_decode": 215
+      "format_context_unknown": 6
     },
     "hgss": {
       "container_unpack_then_decode": 5,
-      "format_context_unknown": 3,
-      "nitro_2d_decode": 2
+      "format_context_unknown": 3
     },
     "pmd_sky": {
       "pmd_format_decode": 19
@@ -52028,9 +52026,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2720 paired narc_0134.NCLR (Deoxys)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0001.NCGR",
@@ -52044,9 +52045,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=3292 paired narc_0134.NCLR (Deoxys)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0002.NCGR",
@@ -52060,9 +52064,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2692 paired narc_0134.NCLR (Deoxys)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0003.NCGR",
@@ -52076,9 +52083,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=4183 paired narc_0134.NCLR (Deoxys)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0004.NCGR",
@@ -52092,9 +52102,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=3270 paired narc_0134.NCLR (Deoxys)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0005.NCGR",
@@ -52108,9 +52121,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=4674 paired narc_0134.NCLR (Deoxys)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0006.NCGR",
@@ -52124,9 +52140,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2455 paired narc_0134.NCLR (Deoxys)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0007.NCGR",
@@ -52140,9 +52159,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=3838 paired narc_0134.NCLR (Deoxys)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0008.NCGR",
@@ -52156,9 +52178,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=706 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0009.NCGR",
@@ -52172,9 +52197,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=374 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0010.NCGR",
@@ -52188,9 +52216,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=721 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0011.NCGR",
@@ -52204,9 +52235,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=372 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0012.NCGR",
@@ -52220,9 +52254,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1172 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0013.NCGR",
@@ -52236,9 +52273,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=513 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0014.NCGR",
@@ -52252,9 +52292,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=898 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0015.NCGR",
@@ -52268,9 +52311,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=452 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0016.NCGR",
@@ -52284,9 +52330,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=762 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0017.NCGR",
@@ -52300,9 +52349,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=374 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0018.NCGR",
@@ -52316,9 +52368,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=821 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0019.NCGR",
@@ -52332,9 +52387,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=421 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0020.NCGR",
@@ -52348,9 +52406,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=913 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0021.NCGR",
@@ -52364,9 +52425,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=417 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0022.NCGR",
@@ -52380,9 +52444,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1224 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0023.NCGR",
@@ -52396,9 +52463,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=610 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0024.NCGR",
@@ -52412,9 +52482,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=584 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0025.NCGR",
@@ -52428,9 +52501,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=280 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0026.NCGR",
@@ -52444,9 +52520,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=675 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0027.NCGR",
@@ -52460,9 +52539,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=354 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0028.NCGR",
@@ -52476,9 +52558,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=738 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0029.NCGR",
@@ -52492,9 +52577,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=374 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0030.NCGR",
@@ -52508,9 +52596,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=690 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0031.NCGR",
@@ -52524,9 +52615,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=306 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0032.NCGR",
@@ -52540,9 +52634,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1142 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0033.NCGR",
@@ -52556,9 +52653,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=596 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0034.NCGR",
@@ -52572,9 +52672,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=976 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0035.NCGR",
@@ -52588,9 +52691,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=465 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0036.NCGR",
@@ -52604,9 +52710,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1288 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0037.NCGR",
@@ -52620,9 +52729,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=660 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0038.NCGR",
@@ -52636,9 +52748,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=615 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0039.NCGR",
@@ -52652,9 +52767,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=308 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0040.NCGR",
@@ -52668,9 +52786,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=590 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0041.NCGR",
@@ -52684,9 +52805,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=323 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0042.NCGR",
@@ -52700,9 +52824,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=615 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0043.NCGR",
@@ -52716,9 +52843,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=307 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0044.NCGR",
@@ -52732,9 +52862,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=890 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0045.NCGR",
@@ -52748,9 +52881,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=436 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0046.NCGR",
@@ -52764,9 +52900,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=663 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0047.NCGR",
@@ -52780,9 +52919,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=352 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0048.NCGR",
@@ -52796,9 +52938,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1016 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0049.NCGR",
@@ -52812,9 +52957,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=506 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0050.NCGR",
@@ -52828,9 +52976,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=812 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0051.NCGR",
@@ -52844,9 +52995,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=405 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0052.NCGR",
@@ -52860,9 +53014,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=706 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0053.NCGR",
@@ -52876,9 +53033,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=372 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0054.NCGR",
@@ -52892,9 +53052,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=704 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0055.NCGR",
@@ -52908,9 +53071,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=352 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0056.NCGR",
@@ -52924,9 +53090,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=691 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0057.NCGR",
@@ -52940,9 +53109,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=364 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0058.NCGR",
@@ -52956,9 +53128,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=632 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0059.NCGR",
@@ -52972,9 +53147,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=322 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0060.NCGR",
@@ -52988,9 +53166,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=712 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0061.NCGR",
@@ -53004,9 +53185,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=328 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0062.NCGR",
@@ -53020,9 +53204,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=729 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0063.NCGR",
@@ -53036,9 +53223,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=368 paired narc_0136.NCLR (Unown)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0064.NCGR",
@@ -53052,9 +53242,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1362 paired narc_0138.NCLR (Castform)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0065.NCGR",
@@ -53068,9 +53261,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2811 paired narc_0139.NCLR (Castform)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0066.NCGR",
@@ -53084,9 +53280,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2009 paired narc_0140.NCLR (Castform)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0067.NCGR",
@@ -53100,9 +53299,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2633 paired narc_0141.NCLR (Castform)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0068.NCGR",
@@ -53116,9 +53318,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=965 paired narc_0138.NCLR (Castform)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0069.NCGR",
@@ -53132,9 +53337,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2426 paired narc_0139.NCLR (Castform)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0070.NCGR",
@@ -53148,9 +53356,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1996 paired narc_0140.NCLR (Castform)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0071.NCGR",
@@ -53164,9 +53375,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2794 paired narc_0141.NCLR (Castform)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0072.NCGR",
@@ -53180,9 +53394,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1702 paired narc_0146.NCLR (Burmy)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0073.NCGR",
@@ -53196,9 +53413,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1144 paired narc_0146.NCLR (Burmy)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0074.NCGR",
@@ -53212,9 +53432,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1703 paired narc_0148.NCLR (Burmy)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0075.NCGR",
@@ -53228,9 +53451,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1154 paired narc_0148.NCLR (Burmy)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0076.NCGR",
@@ -53244,9 +53470,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1904 paired narc_0150.NCLR (Burmy)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0077.NCGR",
@@ -53260,9 +53489,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1237 paired narc_0150.NCLR (Burmy)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0078.NCGR",
@@ -53276,9 +53508,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2271 paired narc_0152.NCLR (Wormadam)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0079.NCGR",
@@ -53292,9 +53527,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1666 paired narc_0152.NCLR (Wormadam)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0080.NCGR",
@@ -53308,9 +53546,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2295 paired narc_0154.NCLR (Wormadam)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0081.NCGR",
@@ -53324,9 +53565,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1857 paired narc_0154.NCLR (Wormadam)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0082.NCGR",
@@ -53340,9 +53584,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2214 paired narc_0156.NCLR (Wormadam)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0083.NCGR",
@@ -53356,9 +53603,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1706 paired narc_0156.NCLR (Wormadam)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0084.NCGR",
@@ -53372,9 +53622,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1747 paired narc_0158.NCLR (Shellos)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0085.NCGR",
@@ -53388,9 +53641,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1836 paired narc_0160.NCLR (Shellos)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0086.NCGR",
@@ -53404,9 +53660,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1320 paired narc_0158.NCLR (Shellos)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0087.NCGR",
@@ -53420,9 +53679,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1489 paired narc_0160.NCLR (Shellos)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0088.NCGR",
@@ -53436,9 +53698,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2717 paired narc_0162.NCLR (Gastrodon)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0089.NCGR",
@@ -53452,9 +53717,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2676 paired narc_0164.NCLR (Gastrodon)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0090.NCGR",
@@ -53468,9 +53736,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2758 paired narc_0162.NCLR (Gastrodon)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0091.NCGR",
@@ -53484,9 +53755,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2836 paired narc_0164.NCLR (Gastrodon)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0092.NCGR",
@@ -53500,9 +53774,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2205 paired narc_0166.NCLR (Cherrim)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0093.NCGR",
@@ -53516,9 +53793,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2242 paired narc_0167.NCLR (Cherrim)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0094.NCGR",
@@ -53532,9 +53812,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1881 paired narc_0166.NCLR (Cherrim)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0095.NCGR",
@@ -53548,9 +53831,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1741 paired narc_0167.NCLR (Cherrim)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0096.NCGR",
@@ -53564,9 +53850,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2141 paired narc_0170.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0097.NCGR",
@@ -53580,9 +53869,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=4652 paired narc_0170.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0098.NCGR",
@@ -53596,9 +53888,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2141 paired narc_0172.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0099.NCGR",
@@ -53612,9 +53907,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=4652 paired narc_0172.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0100.NCGR",
@@ -53628,9 +53926,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2141 paired narc_0174.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0101.NCGR",
@@ -53644,9 +53945,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=4652 paired narc_0174.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0102.NCGR",
@@ -53660,9 +53964,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2141 paired narc_0176.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0103.NCGR",
@@ -53676,9 +53983,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=4652 paired narc_0176.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0104.NCGR",
@@ -53692,9 +54002,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2141 paired narc_0178.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0105.NCGR",
@@ -53708,9 +54021,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=4652 paired narc_0178.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0106.NCGR",
@@ -53724,9 +54040,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2141 paired narc_0180.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0107.NCGR",
@@ -53740,9 +54059,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=4652 paired narc_0180.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0108.NCGR",
@@ -53756,9 +54078,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2141 paired narc_0182.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0109.NCGR",
@@ -53772,9 +54097,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=4652 paired narc_0182.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0110.NCGR",
@@ -53788,9 +54116,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2141 paired narc_0184.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0111.NCGR",
@@ -53804,9 +54135,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=4652 paired narc_0184.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0112.NCGR",
@@ -53820,9 +54154,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2141 paired narc_0186.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0113.NCGR",
@@ -53836,9 +54173,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=4652 paired narc_0186.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0114.NCGR",
@@ -53852,9 +54192,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2141 paired narc_0188.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0115.NCGR",
@@ -53868,9 +54211,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=4652 paired narc_0188.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0116.NCGR",
@@ -53884,9 +54230,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2141 paired narc_0190.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0117.NCGR",
@@ -53900,9 +54249,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=4652 paired narc_0190.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0118.NCGR",
@@ -53916,9 +54268,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2141 paired narc_0192.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0119.NCGR",
@@ -53932,9 +54287,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=4652 paired narc_0192.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0120.NCGR",
@@ -53948,9 +54306,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2141 paired narc_0194.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0121.NCGR",
@@ -53964,9 +54325,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=4652 paired narc_0194.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0122.NCGR",
@@ -53980,9 +54344,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2141 paired narc_0196.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0123.NCGR",
@@ -53996,9 +54363,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=4652 paired narc_0196.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0124.NCGR",
@@ -54012,9 +54382,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2141 paired narc_0198.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0125.NCGR",
@@ -54028,9 +54401,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=4652 paired narc_0198.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0126.NCGR",
@@ -54044,9 +54420,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2141 paired narc_0200.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0127.NCGR",
@@ -54060,9 +54439,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=4652 paired narc_0200.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0128.NCGR",
@@ -54076,9 +54458,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2141 paired narc_0202.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0129.NCGR",
@@ -54092,9 +54477,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=4652 paired narc_0202.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0130.NCGR",
@@ -54108,9 +54496,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=2141 paired narc_0204.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0131.NCGR",
@@ -54124,9 +54515,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=4652 paired narc_0204.NCLR (Arceus)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0132.NCGR",
@@ -54140,9 +54534,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=624 paired narc_0206.NCLR (Egg)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0133.NCGR",
@@ -54156,9 +54553,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=630 paired narc_0207.NCLR (Egg)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0134.NCLR",
@@ -54172,9 +54572,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0135.NCLR",
@@ -54188,9 +54591,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0136.NCLR",
@@ -54204,9 +54610,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0137.NCLR",
@@ -54220,9 +54629,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0138.NCLR",
@@ -54236,9 +54648,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0139.NCLR",
@@ -54252,9 +54667,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0140.NCLR",
@@ -54268,9 +54686,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0141.NCLR",
@@ -54284,9 +54705,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0142.NCLR",
@@ -54300,9 +54724,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0143.NCLR",
@@ -54316,9 +54743,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0144.NCLR",
@@ -54332,9 +54762,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0145.NCLR",
@@ -54348,9 +54781,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0146.NCLR",
@@ -54364,9 +54800,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0147.NCLR",
@@ -54380,9 +54819,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0148.NCLR",
@@ -54396,9 +54838,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0149.NCLR",
@@ -54412,9 +54857,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0150.NCLR",
@@ -54428,9 +54876,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0151.NCLR",
@@ -54444,9 +54895,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0152.NCLR",
@@ -54460,9 +54914,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0153.NCLR",
@@ -54476,9 +54933,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0154.NCLR",
@@ -54492,9 +54952,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0155.NCLR",
@@ -54508,9 +54971,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0156.NCLR",
@@ -54524,9 +54990,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0157.NCLR",
@@ -54540,9 +55009,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0158.NCLR",
@@ -54556,9 +55028,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0159.NCLR",
@@ -54572,9 +55047,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0160.NCLR",
@@ -54588,9 +55066,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0161.NCLR",
@@ -54604,9 +55085,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0162.NCLR",
@@ -54620,9 +55104,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0163.NCLR",
@@ -54636,9 +55123,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0164.NCLR",
@@ -54652,9 +55142,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0165.NCLR",
@@ -54668,9 +55161,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0166.NCLR",
@@ -54684,9 +55180,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0167.NCLR",
@@ -54700,9 +55199,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0168.NCLR",
@@ -54716,9 +55218,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0169.NCLR",
@@ -54732,9 +55237,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0170.NCLR",
@@ -54748,9 +55256,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0171.NCLR",
@@ -54764,9 +55275,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0172.NCLR",
@@ -54780,9 +55294,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0173.NCLR",
@@ -54796,9 +55313,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0174.NCLR",
@@ -54812,9 +55332,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0175.NCLR",
@@ -54828,9 +55351,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0176.NCLR",
@@ -54844,9 +55370,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0177.NCLR",
@@ -54860,9 +55389,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0178.NCLR",
@@ -54876,9 +55408,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0179.NCLR",
@@ -54892,9 +55427,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0180.NCLR",
@@ -54908,9 +55446,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0181.NCLR",
@@ -54924,9 +55465,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0182.NCLR",
@@ -54940,9 +55484,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0183.NCLR",
@@ -54956,9 +55503,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0184.NCLR",
@@ -54972,9 +55522,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0185.NCLR",
@@ -54988,9 +55541,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0186.NCLR",
@@ -55004,9 +55560,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0187.NCLR",
@@ -55020,9 +55579,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0188.NCLR",
@@ -55036,9 +55598,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0189.NCLR",
@@ -55052,9 +55617,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0190.NCLR",
@@ -55068,9 +55636,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0191.NCLR",
@@ -55084,9 +55655,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0192.NCLR",
@@ -55100,9 +55674,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0193.NCLR",
@@ -55116,9 +55693,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0194.NCLR",
@@ -55132,9 +55712,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0195.NCLR",
@@ -55148,9 +55731,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0196.NCLR",
@@ -55164,9 +55750,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0197.NCLR",
@@ -55180,9 +55769,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0198.NCLR",
@@ -55196,9 +55788,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0199.NCLR",
@@ -55212,9 +55807,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0200.NCLR",
@@ -55228,9 +55826,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0201.NCLR",
@@ -55244,9 +55845,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0202.NCLR",
@@ -55260,9 +55864,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0203.NCLR",
@@ -55276,9 +55883,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0204.NCLR",
@@ -55292,9 +55902,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0205.NCLR",
@@ -55308,9 +55921,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0206.NCLR",
@@ -55324,9 +55940,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0207.NCLR",
@@ -55340,9 +55959,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0208.NCGR",
@@ -55356,9 +55978,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=1299 paired narc_0210.NCLR (Substitute(render-verified))"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0209.NCGR",
@@ -55372,9 +55997,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=603 paired narc_0210.NCLR (Substitute(render-verified))"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0210.NCLR",
@@ -55388,9 +56016,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0211.NCGR",
@@ -55404,9 +56035,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "160x80 nonzero=770 paired narc_0212.NCLR (Shadow(render-verified))"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:otherpoke:narc_0212.NCLR",
@@ -55420,9 +56054,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "nitro2d_decomp_paired_valid_render",
+      "reason": "Diamond otherpoke NCGR/NCLR resource paired via the decomp's sprite-load index mapping (arm9/src/pokemon.c) and rendered nonblank with full palette coverage; Pokemon form/egg battle sprite material.",
+      "recovery_evidence": {
+        "detail": "palette referenced by pokemon.c for a valid NCGR render"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:poke_shadow:.knarcignore",
@@ -55628,9 +56265,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "blank_placeholder_palette",
+      "reason": "Species-0 placeholder palette: every entry is the same colour, so it carries no visual content; no sprite can be paired with it.",
+      "recovery_evidence": {
+        "detail": "all 16 palette entries identical (0xffff)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:pokegra:narc_0005.NCLR",
@@ -55644,9 +56284,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "blank_placeholder_palette",
+      "reason": "Species-0 placeholder palette: every entry is the same colour, so it carries no visual content; no sprite can be paired with it.",
+      "recovery_evidence": {
+        "detail": "all 16 palette entries identical (0xffff)"
+      }
     },
     {
       "asset_id": "diamond:source:files:poketool:pokegra:pokegra:narc_0006.png.key",
@@ -120851,9 +121494,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "blank_placeholder_palette",
+      "reason": "Species-0 placeholder palette: every entry is the same colour, so it carries no visual content; no sprite can be paired with it.",
+      "recovery_evidence": {
+        "detail": "all 16 palette entries identical (0xffff)"
+      }
     },
     {
       "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0000:4_0005.NCLR",
@@ -120867,9 +121513,12 @@
         "battle_front",
         "battle_back"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "blank_placeholder_palette",
+      "reason": "Species-0 placeholder palette: every entry is the same colour, so it carries no visual content; no sprite can be paired with it.",
+      "recovery_evidence": {
+        "detail": "all 16 palette entries identical (0xffff)"
+      }
     },
     {
       "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0000:female:back.png.key",
