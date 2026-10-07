@@ -1,0 +1,4932 @@
+{
+ "entries": {
+  "trainer_battle_sprites/diamond/dp_trbgra_000": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "back"
+   },
+   "member_digest": "bdd42f4e343041943d62",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/diamond/dp_trbgra_001": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "back"
+   },
+   "member_digest": "a3a51df0c125ca8d317a",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/diamond/dp_trbgra_002": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "back"
+   },
+   "member_digest": "bfc4c6f53f98eeb50899",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/diamond/dp_trbgra_003": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "back"
+   },
+   "member_digest": "8584e0fa240c04073d9d",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/diamond/dp_trbgra_004": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "back"
+   },
+   "member_digest": "56e458811742abaa5994",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/diamond/dp_trbgra_005": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "back"
+   },
+   "member_digest": "0232af9edb66e8791275",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/diamond/dp_trbgra_006": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "back"
+   },
+   "member_digest": "debf6afd29a522d2ec1e",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/diamond/dp_trbgra_007": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "back"
+   },
+   "member_digest": "90f537e1170bce9a749d",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_000": {
+   "detail": {
+    "alignment_method": "alias",
+    "diff_ratio": 0.9451,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [
+     "center shift (-10.0,+0.0)px"
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/player_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "player_male",
+    "view": "front"
+   },
+   "member_digest": "2b049364f6af6872407f",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_001": {
+   "detail": {
+    "alignment_method": "alias",
+    "diff_ratio": 0.8741,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [
+     "center shift (+4.5,+0.5)px",
+     "bbox size delta (+11,-1)px"
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/player_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "player_female",
+    "view": "front"
+   },
+   "member_digest": "90b8d45de864bf7aae22",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_002": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/youngster/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "youngster",
+    "view": "front"
+   },
+   "member_digest": "8d1173572547f537cdd5",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_003": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/lass/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "lass",
+    "view": "front"
+   },
+   "member_digest": "724d5f62dd72535ce0cb",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_004": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/camper/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "camper",
+    "view": "front"
+   },
+   "member_digest": "e5896c202f4170dba94b",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_005": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/picnicker/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "picnicker",
+    "view": "front"
+   },
+   "member_digest": "050bc001ccdcfdf9ed07",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_006": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/bug_catcher/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "bug_catcher",
+    "view": "front"
+   },
+   "member_digest": "7d27e83878699b54dd05",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_007": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/aroma_lady/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "aroma_lady",
+    "view": "front"
+   },
+   "member_digest": "275bd5f15bf9d91ece37",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_008": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/twins/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "twins",
+    "view": "front"
+   },
+   "member_digest": "17c76fd6113cca223062",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_009": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/hiker/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "hiker",
+    "view": "front"
+   },
+   "member_digest": "972de3d06bd26751f406",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_010": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/battle_girl/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "battle_girl",
+    "view": "front"
+   },
+   "member_digest": "e87504c3a06e96484a5b",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_011": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/fisherman/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "fisherman",
+    "view": "front"
+   },
+   "member_digest": "c82c18e9d722d0d6da19",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_012": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/cyclist_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "cyclist_male",
+    "view": "front"
+   },
+   "member_digest": "b4dc10316991d74cae4c",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_013": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/cyclist_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "cyclist_female",
+    "view": "front"
+   },
+   "member_digest": "8605842b30a0a93b1495",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_014": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/black_belt/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "black_belt",
+    "view": "front"
+   },
+   "member_digest": "8d610ea4a62cf3b23ca6",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_015": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/artist/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "artist",
+    "view": "front"
+   },
+   "member_digest": "573b08fca27edf5c89c6",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_016": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/breeder_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "breeder_male",
+    "view": "front"
+   },
+   "member_digest": "ab44b33e13a25459c950",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_017": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/breeder_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "breeder_female",
+    "view": "front"
+   },
+   "member_digest": "41fdd43e8d6f25cb84c8",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_018": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/cowgirl/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "cowgirl",
+    "view": "front"
+   },
+   "member_digest": "4155898da6e70e04acf3",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_019": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/jogger/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "jogger",
+    "view": "front"
+   },
+   "member_digest": "6841ed2117c7f9c9afc8",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_020": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/pokefan_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "pokefan_male",
+    "view": "front"
+   },
+   "member_digest": "f2fa1e083dc0264c4f66",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_021": {
+   "detail": {
+    "alignment_method": "alias",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/pokefan_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "pokefan_female",
+    "view": "front"
+   },
+   "member_digest": "f2f2d7a009bad693be01",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_022": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/poke_kid/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "poke_kid",
+    "view": "front"
+   },
+   "member_digest": "42106ac55ad37ab844e9",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_023": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/young_couple/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "young_couple",
+    "view": "front"
+   },
+   "member_digest": "4dc09a2ef0699e1baacb",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_024": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/ace_trainer_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "ace_trainer_male",
+    "view": "front"
+   },
+   "member_digest": "e6fda4722a7c9d9b20bf",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_025": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/ace_trainer_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "ace_trainer_female",
+    "view": "front"
+   },
+   "member_digest": "1a85e6fa927310be00fc",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_026": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/waitress/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "waitress",
+    "view": "front"
+   },
+   "member_digest": "9a9723d5c555a9425250",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_027": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/veteran/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "veteran",
+    "view": "front"
+   },
+   "member_digest": "5fd24a19b3b580ca797b",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_028": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/ninja_boy/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "ninja_boy",
+    "view": "front"
+   },
+   "member_digest": "dca46871ed0228815649",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_029": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/dragon_tamer/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "dragon_tamer",
+    "view": "front"
+   },
+   "member_digest": "f04e56b47525983c7cd0",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_030": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/bird_keeper/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "bird_keeper",
+    "view": "front"
+   },
+   "member_digest": "1bd305c0147fb30b5229",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_031": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/double_team/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "double_team",
+    "view": "front"
+   },
+   "member_digest": "96ec8d1579dc4439e264",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_032": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/rich_boy/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "rich_boy",
+    "view": "front"
+   },
+   "member_digest": "9f2546c974e903f5181e",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_033": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/lady/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "lady",
+    "view": "front"
+   },
+   "member_digest": "a06ed6121d3a9a44beda",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_034": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/gentleman/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "gentleman",
+    "view": "front"
+   },
+   "member_digest": "e513478602bf9520473b",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_035": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/socialite/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "socialite",
+    "view": "front"
+   },
+   "member_digest": "c07c735970109920b07c",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_036": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/beauty/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "beauty",
+    "view": "front"
+   },
+   "member_digest": "19633ef7a600637e1615",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_037": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/collector/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "collector",
+    "view": "front"
+   },
+   "member_digest": "54a699c53167535152bf",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_038": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/policeman/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "policeman",
+    "view": "front"
+   },
+   "member_digest": "1398b54333d64e06458a",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_039": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/ranger_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "ranger_male",
+    "view": "front"
+   },
+   "member_digest": "6ac944fc48102b0324d0",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_040": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/ranger_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "ranger_female",
+    "view": "front"
+   },
+   "member_digest": "db6be5c62d37060ba944",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_041": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/scientist/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "scientist",
+    "view": "front"
+   },
+   "member_digest": "73d7f9d2c875c8d70128",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_042": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "diff_ratio": 0.002,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/swimmer_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "swimmer_male",
+    "view": "front"
+   },
+   "member_digest": "7361766ca3f515c1d7ce",
+   "native_relation": "art_diff_minor",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_043": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/swimmer_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "swimmer_female",
+    "view": "front"
+   },
+   "member_digest": "2a47a7c71de3fa4a830c",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_044": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/tuber_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "tuber_male",
+    "view": "front"
+   },
+   "member_digest": "14bbb3c734e0bdb5c9ae",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_045": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/tuber_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "tuber_female",
+    "view": "front"
+   },
+   "member_digest": "d82f1ec672d23a28e126",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_046": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/sailor/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "sailor",
+    "view": "front"
+   },
+   "member_digest": "4fe33293347bb0cc17b1",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_047": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.0011,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/sis_and_bro/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "sis_and_bro",
+    "view": "front"
+   },
+   "member_digest": "eae81def87a048d68ee8",
+   "native_relation": "art_diff_minor",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_048": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/ruin_maniac/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "ruin_maniac",
+    "view": "front"
+   },
+   "member_digest": "1826181ea7a25fb0dc15",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_049": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/psychic_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "psychic_male",
+    "view": "front"
+   },
+   "member_digest": "afc17ad866740c46f723",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_050": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/psychic_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "psychic_female",
+    "view": "front"
+   },
+   "member_digest": "33b92fb677b7a72b7fba",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_051": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/pi/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "pi",
+    "view": "front"
+   },
+   "member_digest": "283f2389ef7774f14e51",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_052": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/guitarist/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "guitarist",
+    "view": "front"
+   },
+   "member_digest": "f8bb4f89fcd88c15177e",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_053": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/ace_trainer_snow_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "ace_trainer_snow_male",
+    "view": "front"
+   },
+   "member_digest": "a70204e8b6d14e3fb36b",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_054": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/ace_trainer_snow_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "ace_trainer_snow_female",
+    "view": "front"
+   },
+   "member_digest": "cda3ae918b3173061abe",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_055": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/skier_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "skier_male",
+    "view": "front"
+   },
+   "member_digest": "5094e2d8dc6e1737b000",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_056": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/skier_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "skier_female",
+    "view": "front"
+   },
+   "member_digest": "2bbe280c98ae1912fa2b",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_057": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/roughneck/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "roughneck",
+    "view": "front"
+   },
+   "member_digest": "ebd113b4496451865ed6",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_058": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/clown/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "clown",
+    "view": "front"
+   },
+   "member_digest": "9e423b2da2e89b8e16d5",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_059": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/worker/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "worker",
+    "view": "front"
+   },
+   "member_digest": "39615d3ec7a0b66144d3",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_060": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/school_kid_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "school_kid_male",
+    "view": "front"
+   },
+   "member_digest": "0fd13961c2e2eff764dd",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_061": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/school_kid_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "school_kid_female",
+    "view": "front"
+   },
+   "member_digest": "5dc6a4bd2784c4249c8a",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_062": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.9176,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [],
+    "native_frames": 7,
+    "native_path": "res/trainers/classes/leader_roark/front.png",
+    "native_size": [
+     80,
+     566
+    ],
+    "platinum_class": "leader_roark",
+    "view": "front"
+   },
+   "member_digest": "5916f1cf8257583b5be7",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_063": {
+   "detail": {
+    "alignment_method": "alias",
+    "diff_ratio": 0.9477,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [
+     "center shift (+6.0,-2.0)px"
+    ],
+    "native_frames": 6,
+    "native_path": "res/trainers/classes/rival/front.png",
+    "native_size": [
+     80,
+     485
+    ],
+    "platinum_class": "rival",
+    "view": "front"
+   },
+   "member_digest": "1e8771f848ff39b6fcd1",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_064": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.5683,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [],
+    "native_frames": 5,
+    "native_path": "res/trainers/classes/leader_byron/front.png",
+    "native_size": [
+     80,
+     404
+    ],
+    "platinum_class": "leader_byron",
+    "view": "front"
+   },
+   "member_digest": "b74b9c946cc6b5d4b190",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_065": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.9773,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [
+     "bottom shift +27px",
+     "center shift (+1.5,+13.0)px",
+     "bbox size delta (+1,+28)px"
+    ],
+    "native_frames": 9,
+    "native_path": "res/trainers/classes/elite_four_aaron/front.png",
+    "native_size": [
+     80,
+     728
+    ],
+    "platinum_class": "elite_four_aaron",
+    "view": "front"
+   },
+   "member_digest": "7cb24e0debb7d068dcfe",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_066": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.4827,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [],
+    "native_frames": 3,
+    "native_path": "res/trainers/classes/elite_four_bertha/front.png",
+    "native_size": [
+     80,
+     242
+    ],
+    "platinum_class": "elite_four_bertha",
+    "view": "front"
+   },
+   "member_digest": "6c09b05c9ab71d8549a2",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_067": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.7895,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [],
+    "native_frames": 4,
+    "native_path": "res/trainers/classes/elite_four_flint/front.png",
+    "native_size": [
+     80,
+     323
+    ],
+    "platinum_class": "elite_four_flint",
+    "view": "front"
+   },
+   "member_digest": "a471939a72b8b25e3c75",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_068": {
+   "detail": {
+    "alignment_method": "alias",
+    "diff_ratio": 0.9487,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [],
+    "native_frames": 5,
+    "native_path": "res/trainers/classes/elite_four_lucian/front.png",
+    "native_size": [
+     80,
+     404
+    ],
+    "platinum_class": "elite_four_lucian",
+    "view": "front"
+   },
+   "member_digest": "9728d46b34cebe4b145e",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_069": {
+   "detail": {
+    "alignment_method": "alias",
+    "diff_ratio": 0.8184,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [
+     "center shift (-4.5,+0.5)px",
+     "bbox size delta (-11,-1)px"
+    ],
+    "native_frames": 5,
+    "native_path": "res/trainers/classes/champion_cynthia/front.png",
+    "native_size": [
+     80,
+     404
+    ],
+    "platinum_class": "champion_cynthia",
+    "view": "front"
+   },
+   "member_digest": "9c40032ab39ef55dbc76",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_070": {
+   "detail": {
+    "alignment_method": "alias",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/belle_and_pa/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "belle_and_pa",
+    "view": "front"
+   },
+   "member_digest": "b2eab913c3fd7039e7de",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_071": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/rancher/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "rancher",
+    "view": "front"
+   },
+   "member_digest": "75b19c7f9d7b133cec41",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_072": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/commander_mars/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "commander_mars",
+    "view": "front"
+   },
+   "member_digest": "0e463279ace783c5187b",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_073": {
+   "detail": {
+    "alignment_method": "alias",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/galactic_grunt_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "galactic_grunt_male",
+    "view": "front"
+   },
+   "member_digest": "1202324e369144fc550f",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_074": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.7881,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [
+     "center shift (-4.5,+0.5)px",
+     "bbox size delta (+13,-1)px"
+    ],
+    "native_frames": 6,
+    "native_path": "res/trainers/classes/leader_gardenia/front.png",
+    "native_size": [
+     80,
+     485
+    ],
+    "platinum_class": "leader_gardenia",
+    "view": "front"
+   },
+   "member_digest": "9a77cb4b6b635078bf7e",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_075": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.5969,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [],
+    "native_frames": 4,
+    "native_path": "res/trainers/classes/leader_wake/front.png",
+    "native_size": [
+     80,
+     323
+    ],
+    "platinum_class": "leader_wake",
+    "view": "front"
+   },
+   "member_digest": "0f5c7aeaab8f9cc48d3e",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_076": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.9857,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [
+     "center shift (+8.5,+6.5)px",
+     "bbox size delta (+21,-13)px"
+    ],
+    "native_frames": 7,
+    "native_path": "res/trainers/classes/leader_maylene/front.png",
+    "native_size": [
+     80,
+     566
+    ],
+    "platinum_class": "leader_maylene",
+    "view": "front"
+   },
+   "member_digest": "b97c970f8dc01798a74b",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_077": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.8945,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [
+     "center shift (+5.0,-1.5)px"
+    ],
+    "native_frames": 8,
+    "native_path": "res/trainers/classes/leader_fantina/front.png",
+    "native_size": [
+     80,
+     647
+    ],
+    "platinum_class": "leader_fantina",
+    "view": "front"
+   },
+   "member_digest": "4841703486f3230fd205",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_078": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.9269,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [
+     "center shift (+8.0,-10.0)px",
+     "bbox size delta (+2,+18)px"
+    ],
+    "native_frames": 6,
+    "native_path": "res/trainers/classes/leader_candice/front.png",
+    "native_size": [
+     80,
+     485
+    ],
+    "platinum_class": "leader_candice",
+    "view": "front"
+   },
+   "member_digest": "b48cb9fb3ee9fe14ea11",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_079": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.9756,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [
+     "center shift (-10.5,-11.5)px",
+     "bbox size delta (-7,+21)px"
+    ],
+    "native_frames": 6,
+    "native_path": "res/trainers/classes/leader_volkner/front.png",
+    "native_size": [
+     80,
+     485
+    ],
+    "platinum_class": "leader_volkner",
+    "view": "front"
+   },
+   "member_digest": "1b5d39d2c70670c3dcc0",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_080": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/parasol_lady/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "parasol_lady",
+    "view": "front"
+   },
+   "member_digest": "9897b04b36e654f68b3b",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_081": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/waiter/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "waiter",
+    "view": "front"
+   },
+   "member_digest": "9c7daead347bd7131cfc",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_082": {
+   "detail": {
+    "alignment_method": "alias",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/interviewers/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "interviewers",
+    "view": "front"
+   },
+   "member_digest": "ed64e097d8735ee75e28",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_083": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/cameraman/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "cameraman",
+    "view": "front"
+   },
+   "member_digest": "14a348b9b43859eec2d7",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_084": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/reporter/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "reporter",
+    "view": "front"
+   },
+   "member_digest": "1380a580a725a77165b4",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_085": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/idol/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "idol",
+    "view": "front"
+   },
+   "member_digest": "966e184b40c5d185fd69",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_086": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.8777,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [
+     "center shift (-5.5,+0.0)px",
+     "bbox size delta (+17,+0)px"
+    ],
+    "native_frames": 6,
+    "native_path": "res/trainers/classes/galactic_boss/front.png",
+    "native_size": [
+     80,
+     485
+    ],
+    "platinum_class": "galactic_boss",
+    "view": "front"
+   },
+   "member_digest": "eb596906f06a39570705",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_087": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/commander_jupiter/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "commander_jupiter",
+    "view": "front"
+   },
+   "member_digest": "17692405f31f179c38d2",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_088": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/commander_saturn/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "commander_saturn",
+    "view": "front"
+   },
+   "member_digest": "7038f135d85f23da9d6e",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_089": {
+   "detail": {
+    "alignment_method": "alias",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/galactic_grunt_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "galactic_grunt_female",
+    "view": "front"
+   },
+   "member_digest": "5b3914f2187f8a748c05",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_090": {
+   "detail": {
+    "alignment_method": "alias",
+    "diff_ratio": 0.9974,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [
+     "center shift (+5.5,+3.5)px",
+     "bbox size delta (+19,-9)px"
+    ],
+    "native_frames": 8,
+    "native_path": "res/trainers/classes/trainer_cheryl/front.png",
+    "native_size": [
+     80,
+     647
+    ],
+    "platinum_class": "trainer_cheryl",
+    "view": "front"
+   },
+   "member_digest": "cedaf1ff09f744adaf7e",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_091": {
+   "detail": {
+    "alignment_method": "alias",
+    "diff_ratio": 0.9978,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [
+     "center shift (-5.0,+4.0)px"
+    ],
+    "native_frames": 5,
+    "native_path": "res/trainers/classes/trainer_riley/front.png",
+    "native_size": [
+     80,
+     404
+    ],
+    "platinum_class": "trainer_riley",
+    "view": "front"
+   },
+   "member_digest": "c589e066e9d50a13ac51",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_092": {
+   "detail": {
+    "alignment_method": "alias",
+    "diff_ratio": 0.9971,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [
+     "center shift (+2.5,+10.5)px",
+     "bbox size delta (+7,-23)px"
+    ],
+    "native_frames": 3,
+    "native_path": "res/trainers/classes/trainer_marley/front.png",
+    "native_size": [
+     80,
+     242
+    ],
+    "platinum_class": "trainer_marley",
+    "view": "front"
+   },
+   "member_digest": "5d1a398d48ed8844b502",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_093": {
+   "detail": {
+    "alignment_method": "alias",
+    "diff_ratio": 0.9964,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [
+     "center shift (-4.0,+9.0)px",
+     "bbox size delta (+2,-18)px"
+    ],
+    "native_frames": 5,
+    "native_path": "res/trainers/classes/trainer_buck/front.png",
+    "native_size": [
+     80,
+     404
+    ],
+    "platinum_class": "trainer_buck",
+    "view": "front"
+   },
+   "member_digest": "64ec14f0d0cf9162c845",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_094": {
+   "detail": {
+    "alignment_method": "alias",
+    "diff_ratio": 0.9982,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [
+     "center shift (-10.5,+9.5)px",
+     "bbox size delta (-7,-13)px"
+    ],
+    "native_frames": 8,
+    "native_path": "res/trainers/classes/trainer_mira/front.png",
+    "native_size": [
+     80,
+     647
+    ],
+    "platinum_class": "trainer_mira",
+    "view": "front"
+   },
+   "member_digest": "d052db866e46a4f99427",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_095": {
+   "detail": {
+    "alignment_method": "alias",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/dp_player_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "dp_player_male",
+    "view": "front"
+   },
+   "member_digest": "e55c8cca2ae85765358e",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_096": {
+   "detail": {
+    "alignment_method": "alias",
+    "common_frames_identical": true,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/dp_player_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "dp_player_female",
+    "view": "front"
+   },
+   "member_digest": "568e3a058f557f9371c3",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/diamond/dp_trfgra_097": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.8488,
+    "donor_frames": 2,
+    "donor_size": [
+     80,
+     161
+    ],
+    "geometry_reasons": [],
+    "native_frames": 5,
+    "native_path": "res/trainers/classes/tower_tycoon/front.png",
+    "native_size": [
+     80,
+     404
+    ],
+    "platinum_class": "tower_tycoon",
+    "view": "front"
+   },
+   "member_digest": "f7f903bb543324d1d43f",
+   "native_relation": "art_diff_geometry_close",
+   "risk_flags": [
+    "frame_layout_differs"
+   ]
+  },
+  "trainer_battle_sprites/hgss/hgss_back_000": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "back"
+   },
+   "member_digest": "7dda381fe426fe3f94cf",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_back_001": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "back"
+   },
+   "member_digest": "e0a94ce7f2c3b3589759",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_back_002": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "back"
+   },
+   "member_digest": "2b9ba190a4e3c8216308",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_back_003": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "back"
+   },
+   "member_digest": "b5bdff39e8b3426b46fd",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_back_004": {
+   "detail": {
+    "alignment_method": "backpic_constant_alias",
+    "donor_frames": 5,
+    "donor_size": [
+     80,
+     404
+    ],
+    "native_frames": 5,
+    "native_path": "res/trainers/classes/trainer_cheryl/back.png",
+    "native_size": [
+     80,
+     404
+    ],
+    "platinum_class": "trainer_cheryl",
+    "view": "back"
+   },
+   "member_digest": "78864cc19f6323d23590",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_back_005": {
+   "detail": {
+    "alignment_method": "backpic_constant_alias",
+    "donor_frames": 5,
+    "donor_size": [
+     80,
+     404
+    ],
+    "native_frames": 5,
+    "native_path": "res/trainers/classes/trainer_riley/back.png",
+    "native_size": [
+     80,
+     404
+    ],
+    "platinum_class": "trainer_riley",
+    "view": "back"
+   },
+   "member_digest": "8821c330982aae3accf7",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_back_006": {
+   "detail": {
+    "alignment_method": "backpic_constant_alias",
+    "diff_ratio": 0.9623,
+    "donor_frames": 5,
+    "donor_size": [
+     80,
+     404
+    ],
+    "geometry_reasons": [
+     "center shift (+4.5,+1.0)px"
+    ],
+    "native_frames": 5,
+    "native_path": "res/trainers/classes/trainer_buck/back.png",
+    "native_size": [
+     80,
+     404
+    ],
+    "platinum_class": "trainer_buck",
+    "view": "back"
+   },
+   "member_digest": "1c06b916deba0d1031c5",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/hgss/hgss_back_007": {
+   "detail": {
+    "alignment_method": "backpic_constant_alias",
+    "diff_ratio": 0.9877,
+    "donor_frames": 5,
+    "donor_size": [
+     80,
+     404
+    ],
+    "geometry_reasons": [
+     "center shift (-0.5,-6.0)px",
+     "bbox size delta (-1,+12)px"
+    ],
+    "native_frames": 5,
+    "native_path": "res/trainers/classes/trainer_mira/back.png",
+    "native_size": [
+     80,
+     404
+    ],
+    "platinum_class": "trainer_mira",
+    "view": "back"
+   },
+   "member_digest": "f1811d3b04e94bcf68f3",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/hgss/hgss_back_008": {
+   "detail": {
+    "alignment_method": "backpic_constant_alias",
+    "diff_ratio": 0.9701,
+    "donor_frames": 5,
+    "donor_size": [
+     80,
+     404
+    ],
+    "geometry_reasons": [
+     "center shift (-4.0,+5.0)px"
+    ],
+    "native_frames": 5,
+    "native_path": "res/trainers/classes/trainer_marley/back.png",
+    "native_size": [
+     80,
+     404
+    ],
+    "platinum_class": "trainer_marley",
+    "view": "back"
+   },
+   "member_digest": "b02c6fc90448fa94c14d",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/hgss/hgss_back_009": {
+   "detail": {
+    "alignment_method": "backpic_constant_alias",
+    "donor_frames": 8,
+    "donor_size": [
+     80,
+     647
+    ],
+    "native_frames": 8,
+    "native_path": "res/trainers/classes/dp_player_male/back.png",
+    "native_size": [
+     80,
+     647
+    ],
+    "platinum_class": "dp_player_male",
+    "view": "back"
+   },
+   "member_digest": "3a05b152a4f843b6394c",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_back_010": {
+   "detail": {
+    "alignment_method": "backpic_constant_alias",
+    "donor_frames": 8,
+    "donor_size": [
+     80,
+     647
+    ],
+    "native_frames": 8,
+    "native_path": "res/trainers/classes/dp_player_female/back.png",
+    "native_size": [
+     80,
+     647
+    ],
+    "platinum_class": "dp_player_female",
+    "view": "back"
+   },
+   "member_digest": "fde3eee98d96e17e2846",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_back_011": {
+   "detail": {
+    "alignment_method": "backpic_constant_alias",
+    "donor_frames": 8,
+    "donor_size": [
+     80,
+     647
+    ],
+    "native_frames": 8,
+    "native_path": "res/trainers/classes/dp_rival/back.png",
+    "native_size": [
+     80,
+     647
+    ],
+    "platinum_class": "dp_rival",
+    "view": "back"
+   },
+   "member_digest": "a1071357049c59f287db",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_back_012": {
+   "detail": {
+    "alignment_method": "backpic_constant_alias",
+    "donor_frames": 8,
+    "donor_size": [
+     80,
+     647
+    ],
+    "native_frames": 8,
+    "native_path": "res/trainers/classes/player_male/back.png",
+    "native_size": [
+     80,
+     647
+    ],
+    "platinum_class": "player_male",
+    "view": "back"
+   },
+   "member_digest": "2ae89d6f59c224e65bb5",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_back_013": {
+   "detail": {
+    "alignment_method": "backpic_constant_alias",
+    "donor_frames": 8,
+    "donor_size": [
+     80,
+     647
+    ],
+    "native_frames": 8,
+    "native_path": "res/trainers/classes/player_female/back.png",
+    "native_size": [
+     80,
+     647
+    ],
+    "platinum_class": "player_female",
+    "view": "back"
+   },
+   "member_digest": "a99c420d8f1b6f3bfbf1",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_back_014": {
+   "detail": {
+    "alignment_method": "backpic_constant_alias",
+    "donor_frames": 8,
+    "donor_size": [
+     80,
+     647
+    ],
+    "native_frames": 8,
+    "native_path": "res/trainers/classes/rival/back.png",
+    "native_size": [
+     80,
+     647
+    ],
+    "platinum_class": "rival",
+    "view": "back"
+   },
+   "member_digest": "ac257af178598052520e",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_back_015": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "back"
+   },
+   "member_digest": "785e50cba08622e4d1ab",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_back_016": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "back"
+   },
+   "member_digest": "dfcc8604056f203ab950",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_000": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "e0f4b175053753b540da",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_001": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "cdc0abecaa0169490652",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_002": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.9665,
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "geometry_reasons": [],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/youngster/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "youngster",
+    "view": "front"
+   },
+   "member_digest": "706dffde332a72ce002b",
+   "native_relation": "art_diff_geometry_close"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_003": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.969,
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "geometry_reasons": [],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/lass/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "lass",
+    "view": "front"
+   },
+   "member_digest": "eb916998a355f2a05303",
+   "native_relation": "art_diff_geometry_close"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_004": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/camper/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "camper",
+    "view": "front"
+   },
+   "member_digest": "77be1322024763fd9d13",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_005": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/picnicker/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "picnicker",
+    "view": "front"
+   },
+   "member_digest": "128b8ffa7992a66d4201",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_006": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.9921,
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "geometry_reasons": [],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/bug_catcher/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "bug_catcher",
+    "view": "front"
+   },
+   "member_digest": "142fd6a7a6d595e2888e",
+   "native_relation": "art_diff_geometry_close"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_007": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/aroma_lady/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "aroma_lady",
+    "view": "front"
+   },
+   "member_digest": "83b072f287e26e192a13",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_008": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.9759,
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "geometry_reasons": [],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/twins/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "twins",
+    "view": "front"
+   },
+   "member_digest": "8087cf0a000867ebc4d4",
+   "native_relation": "art_diff_geometry_close"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_009": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/hiker/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "hiker",
+    "view": "front"
+   },
+   "member_digest": "ce78d55251e93418fdbc",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_010": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/battle_girl/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "battle_girl",
+    "view": "front"
+   },
+   "member_digest": "d3c768978b2cb431d9a9",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_011": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/fisherman/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "fisherman",
+    "view": "front"
+   },
+   "member_digest": "267d3a7bac9a6490d68b",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_012": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/cyclist_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "cyclist_male",
+    "view": "front"
+   },
+   "member_digest": "d239a688e4a8a32e34ca",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_013": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/cyclist_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "cyclist_female",
+    "view": "front"
+   },
+   "member_digest": "70236dec9e41ec03f7be",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_014": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.9447,
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "geometry_reasons": [
+     "center shift (-1.5,-4.5)px"
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/black_belt/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "black_belt",
+    "view": "front"
+   },
+   "member_digest": "90dd1195e251b17a201e",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/hgss/hgss_front_015": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/artist/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "artist",
+    "view": "front"
+   },
+   "member_digest": "9b69cab415aa17b74a0d",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_016": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/breeder_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "breeder_male",
+    "view": "front"
+   },
+   "member_digest": "14eef9b82594752d5445",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_017": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/breeder_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "breeder_female",
+    "view": "front"
+   },
+   "member_digest": "71aecaceaf8c3cd5d213",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_018": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/cowgirl/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "cowgirl",
+    "view": "front"
+   },
+   "member_digest": "1653c469e54f38a630e3",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_019": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/jogger/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "jogger",
+    "view": "front"
+   },
+   "member_digest": "0da73d7c9f4d412fabdb",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_020": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/pokefan_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "pokefan_male",
+    "view": "front"
+   },
+   "member_digest": "8ec6ebc67c6ab0fdfb8b",
+   "native_relation": "palette_only"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_021": {
+   "detail": {
+    "alignment_method": "alias",
+    "diff_ratio": 1.0,
+    "donor_frames": 1,
+    "donor_size": [
+     72,
+     80
+    ],
+    "geometry_reasons": [
+     "width differs"
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/pokefan_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "pokefan_female",
+    "view": "front"
+   },
+   "member_digest": "58c75880e4a1e6a6babc",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/hgss/hgss_front_022": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/poke_kid/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "poke_kid",
+    "view": "front"
+   },
+   "member_digest": "888c76b138b9666f4dd9",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_023": {
+   "detail": {
+    "alignment_method": "alias",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "9db06b8e2b8fb4ebccdd",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_024": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "diff_ratio": 0.9868,
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "geometry_reasons": [],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/ace_trainer_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "ace_trainer_male",
+    "view": "front"
+   },
+   "member_digest": "c1016e48a13aebabc527",
+   "native_relation": "art_diff_geometry_close"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_025": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "diff_ratio": 0.9855,
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "geometry_reasons": [],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/ace_trainer_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "ace_trainer_female",
+    "view": "front"
+   },
+   "member_digest": "e7866772885f461c2a6c",
+   "native_relation": "art_diff_geometry_close"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_026": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/waitress/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "waitress",
+    "view": "front"
+   },
+   "member_digest": "c071beb1935d63deb5c6",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_027": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/veteran/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "veteran",
+    "view": "front"
+   },
+   "member_digest": "5a62d655c69d26e6e3b5",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_028": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/ninja_boy/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "ninja_boy",
+    "view": "front"
+   },
+   "member_digest": "0916581988d8debcebff",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_029": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/dragon_tamer/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "dragon_tamer",
+    "view": "front"
+   },
+   "member_digest": "e84b2491a39b6cd8599b",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_030": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/bird_keeper/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "bird_keeper",
+    "view": "front"
+   },
+   "member_digest": "e2d81b9132b0da5e2048",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_031": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "dbc2051b5e0aebe5f34e",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_032": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/rich_boy/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "rich_boy",
+    "view": "front"
+   },
+   "member_digest": "a725ffcc3128d140c41d",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_033": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/lady/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "lady",
+    "view": "front"
+   },
+   "member_digest": "873f081c3a25d5733870",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_034": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.9837,
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "geometry_reasons": [
+     "bbox size delta (-23,+1)px"
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/gentleman/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "gentleman",
+    "view": "front"
+   },
+   "member_digest": "d41578c209366bedad1d",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/hgss/hgss_front_035": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/socialite/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "socialite",
+    "view": "front"
+   },
+   "member_digest": "f0f834416ecfeb3777f1",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_036": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.9748,
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "geometry_reasons": [],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/beauty/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "beauty",
+    "view": "front"
+   },
+   "member_digest": "63c331ef59d3f903cdf1",
+   "native_relation": "art_diff_geometry_close"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_037": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/collector/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "collector",
+    "view": "front"
+   },
+   "member_digest": "a697afcd4c600a97b2e5",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_038": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/policeman/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "policeman",
+    "view": "front"
+   },
+   "member_digest": "f437f4377955e3817643",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_039": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/ranger_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "ranger_male",
+    "view": "front"
+   },
+   "member_digest": "400f03ab48754418b875",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_040": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/ranger_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "ranger_female",
+    "view": "front"
+   },
+   "member_digest": "327e9227948a4ae0a659",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_041": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/scientist/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "scientist",
+    "view": "front"
+   },
+   "member_digest": "93502ba670df97a57225",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_042": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "diff_ratio": 0.9297,
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "geometry_reasons": [
+     "bbox size delta (+16,-1)px"
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/swimmer_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "swimmer_male",
+    "view": "front"
+   },
+   "member_digest": "e822ce8cb951da8aef19",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/hgss/hgss_front_043": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "diff_ratio": 0.905,
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "geometry_reasons": [],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/swimmer_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "swimmer_female",
+    "view": "front"
+   },
+   "member_digest": "269789fa48ab12035195",
+   "native_relation": "art_diff_geometry_close"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_044": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/tuber_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "tuber_male",
+    "view": "front"
+   },
+   "member_digest": "bf969565e923422ecdb9",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_045": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/tuber_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "tuber_female",
+    "view": "front"
+   },
+   "member_digest": "04ae53dbe2aaaf38c23a",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_046": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/sailor/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "sailor",
+    "view": "front"
+   },
+   "member_digest": "052b6bb5bec6e446965c",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_047": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "4bce112239187354420b",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_048": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/ruin_maniac/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "ruin_maniac",
+    "view": "front"
+   },
+   "member_digest": "51adf45f89e26031872e",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_049": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/psychic_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "psychic_male",
+    "view": "front"
+   },
+   "member_digest": "783ec8c23ff81a7e6ae9",
+   "native_relation": "palette_only"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_050": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/psychic_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "psychic_female",
+    "view": "front"
+   },
+   "member_digest": "8c53619f2698d09894e8",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_051": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/pi/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "pi",
+    "view": "front"
+   },
+   "member_digest": "df8e3061d59bb42ef177",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_052": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/guitarist/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "guitarist",
+    "view": "front"
+   },
+   "member_digest": "d44404130b5f1db3392a",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_053": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "5622161799a84c0a3d6b",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_054": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "dcb1ad55382a5686a40b",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_055": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "34efdbd8d8efdfd480c8",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_056": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "f2f141fa4bf737cd56ea",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_057": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/roughneck/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "roughneck",
+    "view": "front"
+   },
+   "member_digest": "a9845d1903c91ec1f205",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_058": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/clown/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "clown",
+    "view": "front"
+   },
+   "member_digest": "5cb9b864b5231efdd1d3",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_059": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/worker/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "worker",
+    "view": "front"
+   },
+   "member_digest": "157e89d657ac1d266bb9",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_060": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "diff_ratio": 0.9863,
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "geometry_reasons": [
+     "bbox size delta (+11,+0)px"
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/school_kid_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "school_kid_male",
+    "view": "front"
+   },
+   "member_digest": "ed0933dbf4bbf5f4923f",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/hgss/hgss_front_061": {
+   "detail": {
+    "alignment_method": "suffix_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/school_kid_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "school_kid_female",
+    "view": "front"
+   },
+   "member_digest": "63efcf20277afe6b88ac",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_062": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "f7448a3c38bedb2dfd2c",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_063": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "dceb77b8233772b96740",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_064": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "3ec3e1c8469035ca329e",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_065": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "9cd67ddc33759829d75f",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_066": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "d5f6f21a655005f5cc10",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_067": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "46adfb934a2a32ce7887",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_068": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "47e506f54d16594cd22a",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_069": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "f16809c20cd8d38c69d9",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_070": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "a6ba6fd6b6a0395d04fd",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_071": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/rancher/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "rancher",
+    "view": "front"
+   },
+   "member_digest": "22daffdcf1d248e06686",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_072": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "0ad1aa21b0882c9be944",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_073": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "5a0d8ee1b618588313e2",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_074": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "351c084759da952b6a47",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_075": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "b0680f503ce33fde6145",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_076": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "d8b0ddd577438fbf2094",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_077": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "abb8b68eaad561597326",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_078": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "53566c021478a322e926",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_079": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "43f5760b87937c0858a9",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_080": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/parasol_lady/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "parasol_lady",
+    "view": "front"
+   },
+   "member_digest": "7adc2dda13a32b64ec7b",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_081": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/waiter/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "waiter",
+    "view": "front"
+   },
+   "member_digest": "f4dd1b32c836894eb95b",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_082": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "8c4cedde0ddf45d88e8a",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_083": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/cameraman/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "cameraman",
+    "view": "front"
+   },
+   "member_digest": "1e69af223ebd4216bbd5",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_084": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/reporter/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "reporter",
+    "view": "front"
+   },
+   "member_digest": "dc57e4647e7b46900a6c",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_085": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/idol/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "idol",
+    "view": "front"
+   },
+   "member_digest": "c58ac00edae4caddb780",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_086": {
+   "detail": {
+    "alignment_method": "alias",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "e425eaa5444bc9b0cb6d",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_087": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "bb6368a8109fc4ede6b7",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_088": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "524d134a7b73377df216",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_089": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "7d8085f387610e1f8249",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_090": {
+   "detail": {
+    "alignment_method": "alias",
+    "diff_ratio": 0.9954,
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "geometry_reasons": [
+     "center shift (+5.5,+3.5)px",
+     "bbox size delta (+19,-9)px"
+    ],
+    "native_frames": 8,
+    "native_path": "res/trainers/classes/trainer_cheryl/front.png",
+    "native_size": [
+     80,
+     647
+    ],
+    "platinum_class": "trainer_cheryl",
+    "view": "front"
+   },
+   "member_digest": "b3b187f54daac15b9401",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/hgss/hgss_front_091": {
+   "detail": {
+    "alignment_method": "alias",
+    "diff_ratio": 0.9962,
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "geometry_reasons": [
+     "center shift (-5.0,+4.0)px"
+    ],
+    "native_frames": 5,
+    "native_path": "res/trainers/classes/trainer_riley/front.png",
+    "native_size": [
+     80,
+     404
+    ],
+    "platinum_class": "trainer_riley",
+    "view": "front"
+   },
+   "member_digest": "4adc30c9ed0bf7bd65ba",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/hgss/hgss_front_092": {
+   "detail": {
+    "alignment_method": "alias",
+    "diff_ratio": 0.9952,
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "geometry_reasons": [
+     "center shift (-3.5,+10.0)px",
+     "bbox size delta (+5,-20)px"
+    ],
+    "native_frames": 5,
+    "native_path": "res/trainers/classes/trainer_buck/front.png",
+    "native_size": [
+     80,
+     404
+    ],
+    "platinum_class": "trainer_buck",
+    "view": "front"
+   },
+   "member_digest": "eccbf48db83c4a0a6a0a",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/hgss/hgss_front_093": {
+   "detail": {
+    "alignment_method": "alias",
+    "diff_ratio": 0.9969,
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "geometry_reasons": [
+     "center shift (-11.0,+6.5)px",
+     "bbox size delta (-18,-7)px"
+    ],
+    "native_frames": 8,
+    "native_path": "res/trainers/classes/trainer_mira/front.png",
+    "native_size": [
+     80,
+     647
+    ],
+    "platinum_class": "trainer_mira",
+    "view": "front"
+   },
+   "member_digest": "3f144ed16158309962ae",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/hgss/hgss_front_094": {
+   "detail": {
+    "alignment_method": "alias",
+    "diff_ratio": 0.9936,
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "geometry_reasons": [
+     "center shift (+2.5,+12.5)px",
+     "bbox size delta (+15,-27)px"
+    ],
+    "native_frames": 3,
+    "native_path": "res/trainers/classes/trainer_marley/front.png",
+    "native_size": [
+     80,
+     242
+    ],
+    "platinum_class": "trainer_marley",
+    "view": "front"
+   },
+   "member_digest": "55650dbf9d3045ba9ebb",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/hgss/hgss_front_095": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "042a83995ce719816020",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_096": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "d2e8a6d01a63f3bcb2ad",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_097": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.0081,
+    "donor_frames": 5,
+    "donor_size": [
+     80,
+     405
+    ],
+    "native_frames": 5,
+    "native_path": "res/trainers/classes/tower_tycoon/front.png",
+    "native_size": [
+     80,
+     404
+    ],
+    "platinum_class": "tower_tycoon",
+    "view": "front"
+   },
+   "member_digest": "e39f07ab5f8d24879815",
+   "native_relation": "art_diff_minor"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_098": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "e3c6cce5e51410b567e0",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_099": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 6,
+    "donor_size": [
+     80,
+     485
+    ],
+    "native_frames": 6,
+    "native_path": "res/trainers/classes/hall_matron/front.png",
+    "native_size": [
+     80,
+     485
+    ],
+    "platinum_class": "hall_matron",
+    "view": "front"
+   },
+   "member_digest": "14361ad6a0aa89da90b4",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_100": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "donor_frames": 5,
+    "donor_size": [
+     80,
+     404
+    ],
+    "native_frames": 5,
+    "native_path": "res/trainers/classes/factory_head/front.png",
+    "native_size": [
+     80,
+     404
+    ],
+    "platinum_class": "factory_head",
+    "view": "front"
+   },
+   "member_digest": "f9089c12b111725ff043",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_101": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.1447,
+    "donor_frames": 11,
+    "donor_size": [
+     80,
+     891
+    ],
+    "geometry_reasons": [],
+    "native_frames": 11,
+    "native_path": "res/trainers/classes/arcade_star/front.png",
+    "native_size": [
+     80,
+     890
+    ],
+    "platinum_class": "arcade_star",
+    "view": "front"
+   },
+   "member_digest": "f01ecfdc454aa5b67701",
+   "native_relation": "art_diff_geometry_close"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_102": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 1.0,
+    "donor_frames": 7,
+    "donor_size": [
+     72,
+     566
+    ],
+    "geometry_reasons": [
+     "width differs"
+    ],
+    "native_frames": 7,
+    "native_path": "res/trainers/classes/castle_valet/front.png",
+    "native_size": [
+     80,
+     566
+    ],
+    "platinum_class": "castle_valet",
+    "view": "front"
+   },
+   "member_digest": "cd2a98c9b16985c9bdd0",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "frame_layout_differs",
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/hgss/hgss_front_103": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "785ca3f42ada618bb0cb",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_104": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "6127cbd9c4998a76b1f4",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_105": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "fdc39a45b0859f7765a1",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_106": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "e0b1271e933a937c9f66",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_107": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "977b8662dfaed94a24ab",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_108": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "6256b52c32548e224e99",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_109": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "80baa181e551978a1ccd",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_110": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "1848a0758d37d81cb7c4",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_111": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "dccbb975b7b0cd31d2a8",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_112": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "8125c31d96f2bd5ea569",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_113": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "2274ad18fca6b899648b",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_114": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "d8d366438e5648d1472c",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_115": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "1da6df6f57a69f9436e9",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_116": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "aec0af8f320158ea21f9",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_117": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "f3e3d0dac56f68cdcb07",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_118": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "83532d259b1b16919cad",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_119": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "84dc13320072d91391cf",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_120": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "b494c4ff828a419abd30",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_121": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.9844,
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "geometry_reasons": [
+     "bbox size delta (+11,+3)px"
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/double_team/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "double_team",
+    "view": "front"
+   },
+   "member_digest": "b0262c100bb26d89b2bd",
+   "native_relation": "art_diff_geometry_review",
+   "risk_flags": [
+    "geometry_review"
+   ]
+  },
+  "trainer_battle_sprites/hgss/hgss_front_122": {
+   "detail": {
+    "alignment_method": "exact_name",
+    "diff_ratio": 0.0713,
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "geometry_reasons": [],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/young_couple/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "young_couple",
+    "view": "front"
+   },
+   "member_digest": "c26476a73ba760f5cf7f",
+   "native_relation": "art_diff_geometry_close"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_123": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "eb100dcaa8c9dcc5263f",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_124": {
+   "detail": {
+    "alignment_method": "none",
+    "platinum_class": null,
+    "view": "front"
+   },
+   "member_digest": "3b0059eeeed787b18022",
+   "native_relation": "missing_in_native"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_125": {
+   "detail": {
+    "alignment_method": "alias",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/dp_player_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "dp_player_male",
+    "view": "front"
+   },
+   "member_digest": "55f23f26595a167697c6",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_126": {
+   "detail": {
+    "alignment_method": "alias",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/dp_player_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "dp_player_female",
+    "view": "front"
+   },
+   "member_digest": "e5acccc70e270ea2c852",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_127": {
+   "detail": {
+    "alignment_method": "alias",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/player_male/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "player_male",
+    "view": "front"
+   },
+   "member_digest": "c02b232c1d139dfc855a",
+   "native_relation": "identical"
+  },
+  "trainer_battle_sprites/hgss/hgss_front_128": {
+   "detail": {
+    "alignment_method": "alias",
+    "donor_frames": 1,
+    "donor_size": [
+     80,
+     80
+    ],
+    "native_frames": 1,
+    "native_path": "res/trainers/classes/player_female/front.png",
+    "native_size": [
+     80,
+     80
+    ],
+    "platinum_class": "player_female",
+    "view": "front"
+   },
+   "member_digest": "5c9b24c1fe0cdd62367d",
+   "native_relation": "identical"
+  }
+ },
+ "generated_by": "tools/visual_overhaul/selection/evidence_trainer_sprites.py",
+ "inputs": {
+  "alignment_sha256": "22a970f16a98b8b321b5469e80787246950c77f33919f5350d58b2ad0c9f7ac2",
+  "diamond_commit": "5bc4b1a3d8f100f77a4c64e59a0d544a0e29b3ec",
+  "hgss_commit": "9d8b7591f09b65804da2fb2dfd56f320633e0d36",
+  "method": "frame-sheet pixel/palette comparison; frame-0 bbox geometry thresholds bottom<=3, center<=4, size<=10"
+ },
+ "provider": "trainer_sprites",
+ "schema_version": 1,
+ "subsystem": "trainer_battle_sprites",
+ "summary": {
+  "diamond:art_diff_geometry_close": 80,
+  "diamond:art_diff_geometry_review": 16,
+  "diamond:art_diff_minor": 2,
+  "diamond:missing_in_native": 8,
+  "hgss:art_diff_geometry_close": 10,
+  "hgss:art_diff_geometry_review": 15,
+  "hgss:art_diff_minor": 1,
+  "hgss:identical": 58,
+  "hgss:missing_in_native": 60,
+  "hgss:palette_only": 2
+ }
+}

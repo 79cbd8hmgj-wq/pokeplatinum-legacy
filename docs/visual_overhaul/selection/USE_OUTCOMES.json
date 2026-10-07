@@ -1,0 +1,60 @@
+{
+ "schema_version": 1,
+ "description": "Donor-use outcome vocabulary (selection layer v2). Orthogonal to SELECTION_RULES.json: the rules/ledgers keep deciding WHOLE-ASSET replacement (role + reason_code, unchanged and reproducible); this file defines how those results are read as outcomes and what explicit component/composite/technique use records must contain. A donor that is unsuitable as a whole-asset replacement is NOT thereby useless.",
+ "outcomes": {
+  "native_keep": {"axis": "replacement", "derived": true, "lane": null, "meaning": "Platinum-native asset stays as the shipped result for this group (identical, or a human keep verdict). Says nothing about component use."},
+  "direct_replacement": {"axis": "replacement", "derived": true, "lane": "direct_replacement", "meaning": "Whole donor asset replaces the Platinum asset (ledger role preferred)."},
+  "alternate": {"axis": "replacement", "derived": true, "lane": "direct_replacement", "meaning": "Eligible whole-asset replacement, not the chosen one for its target."},
+  "not_selected": {"axis": "replacement", "derived": true, "lane": null, "meaning": "No use identified at selection level (irrelevant source, no independent evidence, no Platinum counterpart, below thresholds). Component review may still find use."},
+  "needs_evidence": {"axis": "replacement", "derived": true, "lane": null, "meaning": "Whole-asset verdict blocked on missing/unmeasured evidence."},
+  "technique_reference": {"axis": "contribution", "derived": "pool", "lane": "technique_only", "meaning": "Method/timing/staging/layout idea only; NO donor pixels or data enter the Platinum asset. Derived as a pool for technique-class groups; explicit records pin a target and a technique."},
+  "component_donor": {"axis": "contribution", "derived": false, "lane": "native_enhancement", "meaning": "A specific component/property of the donor asset is useful for a Platinum target. Candidate finding; not yet committed to a build plan."},
+  "composite_input": {"axis": "contribution", "derived": false, "lane": "native_enhancement", "meaning": "A component committed as an input of a composite plan that builds a NEW Platinum-native asset from Platinum + donor components/techniques."}
+ },
+ "legacy_role_map": {
+  "comment": "(role, reason_code) of a ledger decision -> derived replacement-axis outcome. The ledger needs_evidence flag (reason needs_evidence) wins over everything; control_unmeasured / weak_evidence_share are not evidence requests (control is never selectable; weak share is a curation weakness) so they read as not_selected. Every (role, reason) pair present in a ledger must resolve here (validator).",
+  "by_role": {"preferred": "direct_replacement", "alternate": "alternate"},
+  "by_role_reason": {
+   "not_selected/identical_to_native": "native_keep",
+   "not_selected/human_keep_platinum": "native_keep",
+   "not_selected/no_independent_evidence": "not_selected",
+   "not_selected/source_not_relevant_to_subsystem": "not_selected",
+   "reference_only/policy_reference_class": "technique_reference",
+   "reference_only/needs_evidence": "needs_evidence",
+   "reference_only/control_unmeasured": "not_selected",
+   "reference_only/weak_evidence_share": "not_selected",
+   "reference_only/no_native_target": "not_selected",
+   "reference_only/control_differs_from_native": "not_selected",
+   "reference_only/below_integration_thresholds": "not_selected"
+  }
+ },
+ "work_lanes": {
+  "direct_replacement": "A: whole-asset donor replacement (ledger preferred; runtime QA gated)",
+  "native_enhancement": "B: new Platinum-native asset built from Platinum + selected donor components (composite plans)",
+  "technique_only": "C: technique/timing/layout implemented in Platinum with no donor pixels"
+ },
+ "component_tags": ["pose", "silhouette", "palette", "shading", "clothing_detail", "accessory", "texture_region", "geometry_detail", "animation_frame", "animation_timing", "particle_shape", "layout", "UI_element", "environmental_motif", "material_treatment"],
+ "pixel_use": {
+  "donor_pixels": "donor pixels are copied into the Platinum-native result",
+  "recolored_donor": "donor pixels copied after a palette remap",
+  "derived": "result is redrawn/re-derived using the donor as a reference overlay; no pixel copied verbatim",
+  "none": "technique only; nothing from the donor asset enters the result (required for technique_reference)"
+ },
+ "confidence_levels": ["low", "medium", "high"],
+ "risk_levels": ["low", "medium", "high"],
+ "record_status": {
+  "proposed": "assessment by tooling/agent; NOT human approved; cannot be a `ready` composite input",
+  "human_confirmed": "digest-bound human confirmation (human_review block bound to source member_digest, evidence digest and record content digest)",
+  "withdrawn": "retained for provenance; ignored by queue"
+ },
+ "composite_status": {
+  "design_pending": "inputs not all human_confirmed or technique not specified",
+  "ready": "all inputs human_confirmed, native base pinned by hash; implementation (not automated compositing) may start",
+  "implemented": "reserved for after a built asset lands"
+ },
+ "evidence_kinds": ["render_comparison", "measured_metrics", "human_review", "document"],
+ "required_record_fields": ["record_id", "outcome", "status", "source", "target", "tags", "component", "constraints", "adaptation", "evidence", "confidence", "risk", "reason", "pixel_use", "proposed_by"],
+ "required_source_fields": ["group_id", "source_id", "member_digest", "assets"],
+ "required_source_asset_fields": ["asset_id", "source_path", "source_commit"],
+ "component_review_findings": ["none_found", "records_proposed"]
+}

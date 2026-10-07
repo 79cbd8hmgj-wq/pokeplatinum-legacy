@@ -1,0 +1,6417 @@
+{
+ "decisions": [
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "03b12eab3f9a031b721b",
+    "sample_paths": [
+     "files/BACK/expback.bgp"
+    ],
+    "unit": "pmd_back_expback"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_expback",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "b06cc0e05ca3867df301",
+    "sample_paths": [
+     "files/BACK/n_logo.bgp"
+    ],
+    "unit": "pmd_back_n_logo"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_n_logo",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "b871cc48676856e2b54f",
+    "sample_paths": [
+     "files/BACK/s01p04a0.bgp"
+    ],
+    "unit": "pmd_back_s01p04a0"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_s01p04a0",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "396dc842f88f7ee8eb5e",
+    "sample_paths": [
+     "files/BACK/s01p04a1.bgp"
+    ],
+    "unit": "pmd_back_s01p04a1"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_s01p04a1",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "c3bbf0dbadf09afd5de1",
+    "sample_paths": [
+     "files/BACK/s06p01a.bgp"
+    ],
+    "unit": "pmd_back_s06p01a"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_s06p01a",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "a6b0ddabcc202f76a2e8",
+    "sample_paths": [
+     "files/BACK/s07p02a.bgp"
+    ],
+    "unit": "pmd_back_s07p02a"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_s07p02a",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "6a58bd05ba203ce0c455",
+    "sample_paths": [
+     "files/BACK/s09p01a.bgp"
+    ],
+    "unit": "pmd_back_s09p01a"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_s09p01a",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "cab890e3170912b7698c",
+    "sample_paths": [
+     "files/BACK/s09p02a.bgp"
+    ],
+    "unit": "pmd_back_s09p02a"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_s09p02a",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "af525e200afc0d4ca3dc",
+    "sample_paths": [
+     "files/BACK/s09p03a.bgp"
+    ],
+    "unit": "pmd_back_s09p03a"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_s09p03a",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "1b6b7f5f22ae6ccedf5d",
+    "sample_paths": [
+     "files/BACK/s09p04a.bgp"
+    ],
+    "unit": "pmd_back_s09p04a"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_s09p04a",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "5378c52ad39e41009082",
+    "sample_paths": [
+     "files/BACK/s09p05a.bgp"
+    ],
+    "unit": "pmd_back_s09p05a"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_s09p05a",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "387357228ef5c7258465",
+    "sample_paths": [
+     "files/BACK/s09p06a.bgp"
+    ],
+    "unit": "pmd_back_s09p06a"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_s09p06a",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "fb169a5a8ff440f7983c",
+    "sample_paths": [
+     "files/BACK/s09p07a.bgp"
+    ],
+    "unit": "pmd_back_s09p07a"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_s09p07a",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "8c3024b13983974046ea",
+    "sample_paths": [
+     "files/BACK/s09p08a.bgp"
+    ],
+    "unit": "pmd_back_s09p08a"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_s09p08a",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "974fbd5a0f1436c84679",
+    "sample_paths": [
+     "files/BACK/s09p09a.bgp"
+    ],
+    "unit": "pmd_back_s09p09a"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_s09p09a",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "3a1f8a01b3b035e98cc7",
+    "sample_paths": [
+     "files/BACK/s09p10a.bgp"
+    ],
+    "unit": "pmd_back_s09p10a"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_s09p10a",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "780a46f3dec1006000e4",
+    "sample_paths": [
+     "files/BACK/s14p02a.bgp"
+    ],
+    "unit": "pmd_back_s14p02a"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_s14p02a",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "617e4a13bba9257bb9cd",
+    "sample_paths": [
+     "files/BACK/s16p01a.bgp"
+    ],
+    "unit": "pmd_back_s16p01a"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_s16p01a",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "e3d18740ca8c7d602f7e",
+    "sample_paths": [
+     "files/BACK/s18p01a.bgp"
+    ],
+    "unit": "pmd_back_s18p01a"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_s18p01a",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "9736df6edb6b5d1b5f60",
+    "sample_paths": [
+     "files/BACK/s18p02a.bgp"
+    ],
+    "unit": "pmd_back_s18p02a"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_s18p02a",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "d685d47ab6d638286745",
+    "sample_paths": [
+     "files/BACK/s19p01a.bgp"
+    ],
+    "unit": "pmd_back_s19p01a"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_s19p01a",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "dbd9cf72b30c2bb29b48",
+    "sample_paths": [
+     "files/BACK/s20p01a.bgp"
+    ],
+    "unit": "pmd_back_s20p01a"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_s20p01a",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "365b02797649861b33bf",
+    "sample_paths": [
+     "files/BACK/v02p07a.bgp"
+    ],
+    "unit": "pmd_back_v02p07a"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_v02p07a",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "1e4358651781fcf57594",
+    "sample_paths": [
+     "files/BACK/v03p01a.bgp"
+    ],
+    "unit": "pmd_back_v03p01a"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_v03p01a",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "91d990dab48e9a19aa72",
+    "sample_paths": [
+     "files/BACK/w_esrb.bgp"
+    ],
+    "unit": "pmd_back_w_esrb"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_back_w_esrb",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "52136c45e589d7ac8d81",
+    "sample_paths": [
+     "files/TOP/logo_0.bgp"
+    ],
+    "unit": "pmd_top_logo_0"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_top_logo_0",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "8c27e5cd201f047f49d3",
+    "sample_paths": [
+     "files/TOP/logo_1.bgp"
+    ],
+    "unit": "pmd_top_logo_1"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_top_logo_1",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "8b61d1338dac2b63aa0f",
+    "sample_paths": [
+     "files/TOP/test.bgp"
+    ],
+    "unit": "pmd_top_test"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_top_test",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "bde70c237fd3ed191cd5",
+    "sample_paths": [
+     "files/TOP/title_0.bgp"
+    ],
+    "unit": "pmd_top_title_0"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_top_title_0",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 1,
+    "member_digest": "361b0f77fe7b66a60cbc",
+    "sample_paths": [
+     "files/TOP/title_1.bgp"
+    ],
+    "unit": "pmd_top_title_1"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 1
+    },
+    "status": "usable"
+   },
+   "donor_class": "technique",
+   "format_family": "pmd_bpc_bgp",
+   "group_id": "title_and_presentation/pmd_sky/pmd_top_title_1",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "policy_reference_class",
+   "role": "reference_only",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 5,
+    "member_digest": "9cf4bc420757da8c28f8",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edobj000_LZ.bin",
+     "res/prebuilt/data/ending/edobj000_LZ.bin",
+     "res/prebuilt/data/ending/edobj000_LZ.bin"
+    ],
+    "unit": "ranger_ending/edobj000"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 5
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edobj000",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.8,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "b4fbcd905351ae05326d",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu000_LZ.bin",
+     "res/prebuilt/data/ending/edu000_LZ.bin",
+     "res/prebuilt/data/ending/edu000_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu000"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu000",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "e6c5430cc5430a95d42e",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu001_LZ.bin",
+     "res/prebuilt/data/ending/edu001_LZ.bin",
+     "res/prebuilt/data/ending/edu001_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu001"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu001",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "a15ced43bebc7eafc15f",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu002_LZ.bin",
+     "res/prebuilt/data/ending/edu002_LZ.bin",
+     "res/prebuilt/data/ending/edu002_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu002"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu002",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "8e80179c1351ad9129a7",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu003_LZ.bin",
+     "res/prebuilt/data/ending/edu003_LZ.bin",
+     "res/prebuilt/data/ending/edu003_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu003"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu003",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "b773facef8db2dd04d2f",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu004_LZ.bin",
+     "res/prebuilt/data/ending/edu004_LZ.bin",
+     "res/prebuilt/data/ending/edu004_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu004"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu004",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "a62361bebcf3b0fa646a",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu005_LZ.bin",
+     "res/prebuilt/data/ending/edu005_LZ.bin",
+     "res/prebuilt/data/ending/edu005_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu005"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu005",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "513b60365efadd164cf8",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu006_LZ.bin",
+     "res/prebuilt/data/ending/edu006_LZ.bin",
+     "res/prebuilt/data/ending/edu006_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu006"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu006",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "90ab3e5aab6b7c323a34",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu007_LZ.bin",
+     "res/prebuilt/data/ending/edu007_LZ.bin",
+     "res/prebuilt/data/ending/edu007_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu007"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu007",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "86f1deecaa834b4964a8",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu008_LZ.bin",
+     "res/prebuilt/data/ending/edu008_LZ.bin",
+     "res/prebuilt/data/ending/edu008_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu008"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu008",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "7bb3386d56bdd0866665",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu009_LZ.bin",
+     "res/prebuilt/data/ending/edu009_LZ.bin",
+     "res/prebuilt/data/ending/edu009_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu009"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu009",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "67671d3e560ada2d2c7a",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu010_LZ.bin",
+     "res/prebuilt/data/ending/edu010_LZ.bin",
+     "res/prebuilt/data/ending/edu010_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu010"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu010",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "c77335b530f0a1f3f73f",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu011_LZ.bin",
+     "res/prebuilt/data/ending/edu011_LZ.bin",
+     "res/prebuilt/data/ending/edu011_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu011"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu011",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "2ce4ba984d562b83062e",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu012_LZ.bin",
+     "res/prebuilt/data/ending/edu012_LZ.bin",
+     "res/prebuilt/data/ending/edu012_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu012"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu012",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "e3d160f5fefc3f9e81ff",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu013_LZ.bin",
+     "res/prebuilt/data/ending/edu013_LZ.bin",
+     "res/prebuilt/data/ending/edu013_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu013"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu013",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "dabf34de7e250fd2bfa1",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu014_LZ.bin",
+     "res/prebuilt/data/ending/edu014_LZ.bin",
+     "res/prebuilt/data/ending/edu014_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu014"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu014",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "3e663a175e50654be295",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu015_LZ.bin",
+     "res/prebuilt/data/ending/edu015_LZ.bin",
+     "res/prebuilt/data/ending/edu015_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu015"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu015",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "290cffb588dafbdec5f9",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu016_LZ.bin",
+     "res/prebuilt/data/ending/edu016_LZ.bin",
+     "res/prebuilt/data/ending/edu016_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu016"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu016",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "90f4496c5fcf4de77785",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu017_LZ.bin",
+     "res/prebuilt/data/ending/edu017_LZ.bin",
+     "res/prebuilt/data/ending/edu017_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu017"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu017",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "efc55f9930631d956d3b",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu018_LZ.bin",
+     "res/prebuilt/data/ending/edu018_LZ.bin",
+     "res/prebuilt/data/ending/edu018_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu018"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu018",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "5332f9470dbf4a7324f1",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu019_LZ.bin",
+     "res/prebuilt/data/ending/edu019_LZ.bin",
+     "res/prebuilt/data/ending/edu019_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu019"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu019",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "2959cc5e4a18795dd69a",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu020_LZ.bin",
+     "res/prebuilt/data/ending/edu020_LZ.bin",
+     "res/prebuilt/data/ending/edu020_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu020"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu020",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "b9e8fa0bea6f9d83f01f",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu021_LZ.bin",
+     "res/prebuilt/data/ending/edu021_LZ.bin",
+     "res/prebuilt/data/ending/edu021_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu021"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu021",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "6ec60730033181b8d22d",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu022_LZ.bin",
+     "res/prebuilt/data/ending/edu022_LZ.bin",
+     "res/prebuilt/data/ending/edu022_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu022"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu022",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "2042915889b9a44d94eb",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu023_LZ.bin",
+     "res/prebuilt/data/ending/edu023_LZ.bin",
+     "res/prebuilt/data/ending/edu023_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu023"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu023",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "db07af74e674456eecd3",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu024_LZ.bin",
+     "res/prebuilt/data/ending/edu024_LZ.bin",
+     "res/prebuilt/data/ending/edu024_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu024"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu024",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "965da1e32e1fbab1bc9a",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu025_LZ.bin",
+     "res/prebuilt/data/ending/edu025_LZ.bin",
+     "res/prebuilt/data/ending/edu025_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu025"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu025",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "a4f22152d090cac7c7d3",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu026_LZ.bin",
+     "res/prebuilt/data/ending/edu026_LZ.bin",
+     "res/prebuilt/data/ending/edu026_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu026"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu026",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "d0d8920947f6cab1b490",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu027_LZ.bin",
+     "res/prebuilt/data/ending/edu027_LZ.bin",
+     "res/prebuilt/data/ending/edu027_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu027"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu027",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "bee0c055450b4d66bfee",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu028_LZ.bin",
+     "res/prebuilt/data/ending/edu028_LZ.bin",
+     "res/prebuilt/data/ending/edu028_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu028"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu028",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "4ec0684a8d0ef873b5f1",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu029_LZ.bin",
+     "res/prebuilt/data/ending/edu029_LZ.bin",
+     "res/prebuilt/data/ending/edu029_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu029"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu029",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "96fb4768e7cc05a9ad72",
+    "sample_paths": [
+     "res/prebuilt/data/ending/edu030_LZ.bin",
+     "res/prebuilt/data/ending/edu030_LZ.bin",
+     "res/prebuilt/data/ending/edu030_LZ.bin"
+    ],
+    "unit": "ranger_ending/edu030"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_ending/edu030",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "d85a5055d81a001a2bbd",
+    "sample_paths": [
+     "res/prebuilt/data/event/event000_00_LZ.bin",
+     "res/prebuilt/data/event/event000_00_LZ.bin",
+     "res/prebuilt/data/event/event000_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event000_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event000_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "5b4c3d748806f765f3c7",
+    "sample_paths": [
+     "res/prebuilt/data/event/event000_01_LZ.bin",
+     "res/prebuilt/data/event/event000_01_LZ.bin",
+     "res/prebuilt/data/event/event000_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event000_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event000_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "9c4ab7e4d4ba3f827d00",
+    "sample_paths": [
+     "res/prebuilt/data/event/event001_00_LZ.bin",
+     "res/prebuilt/data/event/event001_00_LZ.bin",
+     "res/prebuilt/data/event/event001_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event001_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event001_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "d0c256af7ec9dd016390",
+    "sample_paths": [
+     "res/prebuilt/data/event/event001_01_LZ.bin",
+     "res/prebuilt/data/event/event001_01_LZ.bin",
+     "res/prebuilt/data/event/event001_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event001_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event001_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "41048b0eee3f23c39670",
+    "sample_paths": [
+     "res/prebuilt/data/event/event002_00_LZ.bin",
+     "res/prebuilt/data/event/event002_00_LZ.bin",
+     "res/prebuilt/data/event/event002_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event002_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event002_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "41016e5b143de8b3750d",
+    "sample_paths": [
+     "res/prebuilt/data/event/event002_01_LZ.bin",
+     "res/prebuilt/data/event/event002_01_LZ.bin",
+     "res/prebuilt/data/event/event002_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event002_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event002_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "7c8004b7b22f58f9ad4d",
+    "sample_paths": [
+     "res/prebuilt/data/event/event003_00_LZ.bin",
+     "res/prebuilt/data/event/event003_00_LZ.bin",
+     "res/prebuilt/data/event/event003_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event003_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event003_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "bcb39a06062eceaf3573",
+    "sample_paths": [
+     "res/prebuilt/data/event/event003_01_LZ.bin",
+     "res/prebuilt/data/event/event003_01_LZ.bin",
+     "res/prebuilt/data/event/event003_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event003_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event003_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "c01cb87392014ec3daa8",
+    "sample_paths": [
+     "res/prebuilt/data/event/event004_00_LZ.bin",
+     "res/prebuilt/data/event/event004_00_LZ.bin",
+     "res/prebuilt/data/event/event004_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event004_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event004_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "90e069b1e7d5d17ba385",
+    "sample_paths": [
+     "res/prebuilt/data/event/event004_01_LZ.bin",
+     "res/prebuilt/data/event/event004_01_LZ.bin",
+     "res/prebuilt/data/event/event004_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event004_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event004_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "49b12d185db486a75840",
+    "sample_paths": [
+     "res/prebuilt/data/event/event005_00_LZ.bin",
+     "res/prebuilt/data/event/event005_00_LZ.bin",
+     "res/prebuilt/data/event/event005_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event005_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event005_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "125a0f4a83e0b8d7a939",
+    "sample_paths": [
+     "res/prebuilt/data/event/event005_01_LZ.bin",
+     "res/prebuilt/data/event/event005_01_LZ.bin",
+     "res/prebuilt/data/event/event005_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event005_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event005_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "b24d7167480f2c133e86",
+    "sample_paths": [
+     "res/prebuilt/data/event/event006_00_LZ.bin",
+     "res/prebuilt/data/event/event006_00_LZ.bin",
+     "res/prebuilt/data/event/event006_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event006_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event006_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "b5f59e6c61c711658b1d",
+    "sample_paths": [
+     "res/prebuilt/data/event/event006_01_LZ.bin",
+     "res/prebuilt/data/event/event006_01_LZ.bin",
+     "res/prebuilt/data/event/event006_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event006_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event006_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "744c0bcc395dae208344",
+    "sample_paths": [
+     "res/prebuilt/data/event/event007_00_LZ.bin",
+     "res/prebuilt/data/event/event007_00_LZ.bin",
+     "res/prebuilt/data/event/event007_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event007_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event007_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "c54baf5733cb83e6164f",
+    "sample_paths": [
+     "res/prebuilt/data/event/event007_01_LZ.bin",
+     "res/prebuilt/data/event/event007_01_LZ.bin",
+     "res/prebuilt/data/event/event007_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event007_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event007_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "22376b0f9d853a8a5389",
+    "sample_paths": [
+     "res/prebuilt/data/event/event008_00_LZ.bin",
+     "res/prebuilt/data/event/event008_00_LZ.bin",
+     "res/prebuilt/data/event/event008_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event008_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event008_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "46baea3d3569486e7905",
+    "sample_paths": [
+     "res/prebuilt/data/event/event008_01_LZ.bin",
+     "res/prebuilt/data/event/event008_01_LZ.bin",
+     "res/prebuilt/data/event/event008_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event008_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event008_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "a0400ed337acdd5af71e",
+    "sample_paths": [
+     "res/prebuilt/data/event/event009_00_LZ.bin",
+     "res/prebuilt/data/event/event009_00_LZ.bin",
+     "res/prebuilt/data/event/event009_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event009_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event009_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "4a4da3805b6a505b131f",
+    "sample_paths": [
+     "res/prebuilt/data/event/event009_01_LZ.bin",
+     "res/prebuilt/data/event/event009_01_LZ.bin",
+     "res/prebuilt/data/event/event009_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event009_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event009_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "fb244b911ba0229d045b",
+    "sample_paths": [
+     "res/prebuilt/data/event/event010_00_LZ.bin",
+     "res/prebuilt/data/event/event010_00_LZ.bin",
+     "res/prebuilt/data/event/event010_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event010_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event010_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "7184dfe1ad5cde245c43",
+    "sample_paths": [
+     "res/prebuilt/data/event/event010_01_LZ.bin",
+     "res/prebuilt/data/event/event010_01_LZ.bin",
+     "res/prebuilt/data/event/event010_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event010_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event010_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "91b035528ee15dd21503",
+    "sample_paths": [
+     "res/prebuilt/data/event/event020_00_LZ.bin",
+     "res/prebuilt/data/event/event020_00_LZ.bin",
+     "res/prebuilt/data/event/event020_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event020_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event020_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "aa8f28f4da52d801fa65",
+    "sample_paths": [
+     "res/prebuilt/data/event/event020_01_LZ.bin",
+     "res/prebuilt/data/event/event020_01_LZ.bin",
+     "res/prebuilt/data/event/event020_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event020_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event020_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "7af4982d8cb5c9d6e674",
+    "sample_paths": [
+     "res/prebuilt/data/event/event021_00_LZ.bin",
+     "res/prebuilt/data/event/event021_00_LZ.bin",
+     "res/prebuilt/data/event/event021_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event021_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event021_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "db139bc2c3bc647dc273",
+    "sample_paths": [
+     "res/prebuilt/data/event/event021_01_LZ.bin",
+     "res/prebuilt/data/event/event021_01_LZ.bin",
+     "res/prebuilt/data/event/event021_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event021_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event021_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "c864248e6cc2c939a9e9",
+    "sample_paths": [
+     "res/prebuilt/data/event/event022_00_LZ.bin",
+     "res/prebuilt/data/event/event022_00_LZ.bin",
+     "res/prebuilt/data/event/event022_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event022_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event022_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "b5350076147a8baaaa27",
+    "sample_paths": [
+     "res/prebuilt/data/event/event022_01_LZ.bin",
+     "res/prebuilt/data/event/event022_01_LZ.bin",
+     "res/prebuilt/data/event/event022_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event022_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event022_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "c80598f6001bf15080bd",
+    "sample_paths": [
+     "res/prebuilt/data/event/event023_00_LZ.bin",
+     "res/prebuilt/data/event/event023_00_LZ.bin",
+     "res/prebuilt/data/event/event023_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event023_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event023_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "bde3d4c5021c7d21fe56",
+    "sample_paths": [
+     "res/prebuilt/data/event/event023_01_LZ.bin",
+     "res/prebuilt/data/event/event023_01_LZ.bin",
+     "res/prebuilt/data/event/event023_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event023_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event023_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "20fb378170d1e67063f5",
+    "sample_paths": [
+     "res/prebuilt/data/event/event024_00_LZ.bin",
+     "res/prebuilt/data/event/event024_00_LZ.bin",
+     "res/prebuilt/data/event/event024_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event024_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event024_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "faa18192ebe1bab9e678",
+    "sample_paths": [
+     "res/prebuilt/data/event/event024_01_LZ.bin",
+     "res/prebuilt/data/event/event024_01_LZ.bin",
+     "res/prebuilt/data/event/event024_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event024_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event024_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "cb195837b16c77f0dd2d",
+    "sample_paths": [
+     "res/prebuilt/data/event/event025_00_LZ.bin",
+     "res/prebuilt/data/event/event025_00_LZ.bin",
+     "res/prebuilt/data/event/event025_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event025_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event025_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "e2503014e7c634e7a9cb",
+    "sample_paths": [
+     "res/prebuilt/data/event/event025_01_LZ.bin",
+     "res/prebuilt/data/event/event025_01_LZ.bin",
+     "res/prebuilt/data/event/event025_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event025_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event025_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "9fab824134146dd4d903",
+    "sample_paths": [
+     "res/prebuilt/data/event/event026_00_LZ.bin",
+     "res/prebuilt/data/event/event026_00_LZ.bin",
+     "res/prebuilt/data/event/event026_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event026_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event026_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "e23234c0e7970a932281",
+    "sample_paths": [
+     "res/prebuilt/data/event/event026_01_LZ.bin",
+     "res/prebuilt/data/event/event026_01_LZ.bin",
+     "res/prebuilt/data/event/event026_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event026_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event026_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "28e315001647a298d8c9",
+    "sample_paths": [
+     "res/prebuilt/data/event/event027_00_LZ.bin",
+     "res/prebuilt/data/event/event027_00_LZ.bin",
+     "res/prebuilt/data/event/event027_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event027_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event027_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "4b2c89d79b771f3528af",
+    "sample_paths": [
+     "res/prebuilt/data/event/event027_01_LZ.bin",
+     "res/prebuilt/data/event/event027_01_LZ.bin",
+     "res/prebuilt/data/event/event027_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event027_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event027_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "38b2b9ed680e9c48bad8",
+    "sample_paths": [
+     "res/prebuilt/data/event/event028_00_LZ.bin",
+     "res/prebuilt/data/event/event028_00_LZ.bin",
+     "res/prebuilt/data/event/event028_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event028_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event028_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "aba33d18080901dfdbaa",
+    "sample_paths": [
+     "res/prebuilt/data/event/event028_01_LZ.bin",
+     "res/prebuilt/data/event/event028_01_LZ.bin",
+     "res/prebuilt/data/event/event028_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event028_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event028_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "03f2564d39490068e06d",
+    "sample_paths": [
+     "res/prebuilt/data/event/event029_00_LZ.bin",
+     "res/prebuilt/data/event/event029_00_LZ.bin",
+     "res/prebuilt/data/event/event029_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event029_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event029_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "ff96a05f3f523062b0e8",
+    "sample_paths": [
+     "res/prebuilt/data/event/event029_01_LZ.bin",
+     "res/prebuilt/data/event/event029_01_LZ.bin",
+     "res/prebuilt/data/event/event029_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event029_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event029_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "2214b900e5f2b433809e",
+    "sample_paths": [
+     "res/prebuilt/data/event/event030_00_LZ.bin",
+     "res/prebuilt/data/event/event030_00_LZ.bin",
+     "res/prebuilt/data/event/event030_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event030_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event030_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "427e27af6310b9603ec9",
+    "sample_paths": [
+     "res/prebuilt/data/event/event030_01_LZ.bin",
+     "res/prebuilt/data/event/event030_01_LZ.bin",
+     "res/prebuilt/data/event/event030_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event030_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event030_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "ee908740bbac4a9cdd9c",
+    "sample_paths": [
+     "res/prebuilt/data/event/event031_00_LZ.bin",
+     "res/prebuilt/data/event/event031_00_LZ.bin",
+     "res/prebuilt/data/event/event031_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event031_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event031_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "406765cddba7df8dba00",
+    "sample_paths": [
+     "res/prebuilt/data/event/event031_01_LZ.bin",
+     "res/prebuilt/data/event/event031_01_LZ.bin",
+     "res/prebuilt/data/event/event031_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event031_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event031_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "fda5a7659cb08b46c795",
+    "sample_paths": [
+     "res/prebuilt/data/event/event032_00_LZ.bin",
+     "res/prebuilt/data/event/event032_00_LZ.bin",
+     "res/prebuilt/data/event/event032_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event032_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event032_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "fd84e4116db4e5cc1ec1",
+    "sample_paths": [
+     "res/prebuilt/data/event/event032_01_LZ.bin",
+     "res/prebuilt/data/event/event032_01_LZ.bin",
+     "res/prebuilt/data/event/event032_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event032_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event032_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "2ad3b5461ddbba000e22",
+    "sample_paths": [
+     "res/prebuilt/data/event/event033_00_LZ.bin",
+     "res/prebuilt/data/event/event033_00_LZ.bin",
+     "res/prebuilt/data/event/event033_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event033_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event033_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "bbb9946d4d2034279dc7",
+    "sample_paths": [
+     "res/prebuilt/data/event/event033_01_LZ.bin",
+     "res/prebuilt/data/event/event033_01_LZ.bin",
+     "res/prebuilt/data/event/event033_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event033_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event033_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "e9b032c0ce3ae69b4cd7",
+    "sample_paths": [
+     "res/prebuilt/data/event/event034_00_LZ.bin",
+     "res/prebuilt/data/event/event034_00_LZ.bin",
+     "res/prebuilt/data/event/event034_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event034_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event034_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "9842ade9b3c20784d2b7",
+    "sample_paths": [
+     "res/prebuilt/data/event/event034_01_LZ.bin",
+     "res/prebuilt/data/event/event034_01_LZ.bin",
+     "res/prebuilt/data/event/event034_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event034_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event034_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "4d69d94ed66f564ff6e3",
+    "sample_paths": [
+     "res/prebuilt/data/event/event035_00_LZ.bin",
+     "res/prebuilt/data/event/event035_00_LZ.bin",
+     "res/prebuilt/data/event/event035_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event035_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event035_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "f386148a67ce705c8953",
+    "sample_paths": [
+     "res/prebuilt/data/event/event035_01_LZ.bin",
+     "res/prebuilt/data/event/event035_01_LZ.bin",
+     "res/prebuilt/data/event/event035_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event035_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event035_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "e37058a82976382b7985",
+    "sample_paths": [
+     "res/prebuilt/data/event/event036_00_LZ.bin",
+     "res/prebuilt/data/event/event036_00_LZ.bin",
+     "res/prebuilt/data/event/event036_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event036_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event036_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "546873d5c17a21bff955",
+    "sample_paths": [
+     "res/prebuilt/data/event/event036_01_LZ.bin",
+     "res/prebuilt/data/event/event036_01_LZ.bin",
+     "res/prebuilt/data/event/event036_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event036_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event036_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "fea6998f61f38a84790d",
+    "sample_paths": [
+     "res/prebuilt/data/event/event037_00_LZ.bin",
+     "res/prebuilt/data/event/event037_00_LZ.bin",
+     "res/prebuilt/data/event/event037_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event037_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event037_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "f5e920e9a8854bad59bd",
+    "sample_paths": [
+     "res/prebuilt/data/event/event037_01_LZ.bin",
+     "res/prebuilt/data/event/event037_01_LZ.bin",
+     "res/prebuilt/data/event/event037_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event037_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event037_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "001e14fd3aceae316c02",
+    "sample_paths": [
+     "res/prebuilt/data/event/event038_00_LZ.bin",
+     "res/prebuilt/data/event/event038_00_LZ.bin",
+     "res/prebuilt/data/event/event038_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event038_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event038_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "1db6aad721f84f124bea",
+    "sample_paths": [
+     "res/prebuilt/data/event/event038_01_LZ.bin",
+     "res/prebuilt/data/event/event038_01_LZ.bin",
+     "res/prebuilt/data/event/event038_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event038_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event038_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "b534d4994ef249b06c43",
+    "sample_paths": [
+     "res/prebuilt/data/event/event050_00_LZ.bin",
+     "res/prebuilt/data/event/event050_00_LZ.bin",
+     "res/prebuilt/data/event/event050_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event050_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event050_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "a4a95494c86a67fc23a9",
+    "sample_paths": [
+     "res/prebuilt/data/event/event050_01_LZ.bin",
+     "res/prebuilt/data/event/event050_01_LZ.bin",
+     "res/prebuilt/data/event/event050_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event050_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event050_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "8305e9dafc615aa3f65a",
+    "sample_paths": [
+     "res/prebuilt/data/event/event051_00_LZ.bin",
+     "res/prebuilt/data/event/event051_00_LZ.bin",
+     "res/prebuilt/data/event/event051_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event051_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event051_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "67abf94e56b0b8de3d48",
+    "sample_paths": [
+     "res/prebuilt/data/event/event051_01_LZ.bin",
+     "res/prebuilt/data/event/event051_01_LZ.bin",
+     "res/prebuilt/data/event/event051_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event051_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event051_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "b38a47cde766f63e9dfa",
+    "sample_paths": [
+     "res/prebuilt/data/event/event052_00_LZ.bin",
+     "res/prebuilt/data/event/event052_00_LZ.bin",
+     "res/prebuilt/data/event/event052_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event052_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event052_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "face0a73a52167703b8c",
+    "sample_paths": [
+     "res/prebuilt/data/event/event052_01_LZ.bin",
+     "res/prebuilt/data/event/event052_01_LZ.bin",
+     "res/prebuilt/data/event/event052_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event052_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event052_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "8a4b36cc60c7ed406641",
+    "sample_paths": [
+     "res/prebuilt/data/event/event053_00_LZ.bin",
+     "res/prebuilt/data/event/event053_00_LZ.bin",
+     "res/prebuilt/data/event/event053_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event053_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event053_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "bcb57b468d3d54aab877",
+    "sample_paths": [
+     "res/prebuilt/data/event/event053_01_LZ.bin",
+     "res/prebuilt/data/event/event053_01_LZ.bin",
+     "res/prebuilt/data/event/event053_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event053_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event053_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "441b5cb62ffbf2baaa67",
+    "sample_paths": [
+     "res/prebuilt/data/event/event054_00_LZ.bin",
+     "res/prebuilt/data/event/event054_00_LZ.bin",
+     "res/prebuilt/data/event/event054_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event054_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event054_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "aab1d9da3ab5194b1e7c",
+    "sample_paths": [
+     "res/prebuilt/data/event/event054_01_LZ.bin",
+     "res/prebuilt/data/event/event054_01_LZ.bin",
+     "res/prebuilt/data/event/event054_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event054_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event054_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "177bebc490ba1e1badf4",
+    "sample_paths": [
+     "res/prebuilt/data/event/event055_00_LZ.bin",
+     "res/prebuilt/data/event/event055_00_LZ.bin",
+     "res/prebuilt/data/event/event055_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event055_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event055_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "27c8956a115575ffa336",
+    "sample_paths": [
+     "res/prebuilt/data/event/event055_01_LZ.bin",
+     "res/prebuilt/data/event/event055_01_LZ.bin",
+     "res/prebuilt/data/event/event055_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event055_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event055_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "ba43d75ed7f8bb2e4640",
+    "sample_paths": [
+     "res/prebuilt/data/event/event056_00_LZ.bin",
+     "res/prebuilt/data/event/event056_00_LZ.bin",
+     "res/prebuilt/data/event/event056_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event056_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event056_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "5bf3daab91dbd5d9efec",
+    "sample_paths": [
+     "res/prebuilt/data/event/event056_01_LZ.bin",
+     "res/prebuilt/data/event/event056_01_LZ.bin",
+     "res/prebuilt/data/event/event056_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event056_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event056_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "1ecf132fd7350f731263",
+    "sample_paths": [
+     "res/prebuilt/data/event/event057_00_LZ.bin",
+     "res/prebuilt/data/event/event057_00_LZ.bin",
+     "res/prebuilt/data/event/event057_00_LZ.bin"
+    ],
+    "unit": "ranger_event/event057_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event057_00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "db9f3d5dcc5ae8613343",
+    "sample_paths": [
+     "res/prebuilt/data/event/event057_01_LZ.bin",
+     "res/prebuilt/data/event/event057_01_LZ.bin",
+     "res/prebuilt/data/event/event057_01_LZ.bin"
+    ],
+    "unit": "ranger_event/event057_01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_event/event057_01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 29,
+    "member_digest": "d3d8212ded6a0b630efc",
+    "sample_paths": [
+     "res/prebuilt/data/opening/opdm_LZ.bin",
+     "res/prebuilt/data/opening/opdm_LZ.bin",
+     "res/prebuilt/data/opening/opdm_LZ.bin"
+    ],
+    "unit": "ranger_opening/opdm"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 29
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_opening/opdm",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "bf51bcec226c5c29dff9",
+    "sample_paths": [
+     "res/prebuilt/data/title/copyright000_LZ.bin",
+     "res/prebuilt/data/title/copyright000_LZ.bin",
+     "res/prebuilt/data/title/copyright000_LZ.bin"
+    ],
+    "unit": "ranger_title/copyright000"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_title/copyright000",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "73f707c9a6e76d111f32",
+    "sample_paths": [
+     "res/prebuilt/data/title/copyright001_LZ.bin",
+     "res/prebuilt/data/title/copyright001_LZ.bin",
+     "res/prebuilt/data/title/copyright001_LZ.bin"
+    ],
+    "unit": "ranger_title/copyright001"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_title/copyright001",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "14210eed635021492a87",
+    "sample_paths": [
+     "res/prebuilt/data/title/copyright002_LZ.bin",
+     "res/prebuilt/data/title/copyright002_LZ.bin",
+     "res/prebuilt/data/title/copyright002_LZ.bin"
+    ],
+    "unit": "ranger_title/copyright002"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_title/copyright002",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 11,
+    "member_digest": "abcdb901badf28ffec4f",
+    "sample_paths": [
+     "res/prebuilt/data/title/dammytitle_LZ.bin",
+     "res/prebuilt/data/title/dammytitle_LZ.bin",
+     "res/prebuilt/data/title/dammytitle_LZ.bin"
+    ],
+    "unit": "ranger_title/dammytitle"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 11
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_title/dammytitle",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "db932c153437e0dc43b5",
+    "sample_paths": [
+     "res/prebuilt/data/title/title_ue00_LZ.bin",
+     "res/prebuilt/data/title/title_ue00_LZ.bin",
+     "res/prebuilt/data/title/title_ue00_LZ.bin"
+    ],
+    "unit": "ranger_title/title_ue00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_title/title_ue00",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "be0866083f0ed3f2d2ff",
+    "sample_paths": [
+     "res/prebuilt/data/title/title_ue01_LZ.bin",
+     "res/prebuilt/data/title/title_ue01_LZ.bin",
+     "res/prebuilt/data/title/title_ue01_LZ.bin"
+    ],
+    "unit": "ranger_title/title_ue01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_title/title_ue01",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "bd659fda26e6f946be52",
+    "sample_paths": [
+     "res/prebuilt/data/title/title_ue02_LZ.bin",
+     "res/prebuilt/data/title/title_ue02_LZ.bin",
+     "res/prebuilt/data/title/title_ue02_LZ.bin"
+    ],
+    "unit": "ranger_title/title_ue02"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_title/title_ue02",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "c2c2dab5c90bc784e37f",
+    "sample_paths": [
+     "res/prebuilt/data/title/title_ue03_LZ.bin",
+     "res/prebuilt/data/title/title_ue03_LZ.bin",
+     "res/prebuilt/data/title/title_ue03_LZ.bin"
+    ],
+    "unit": "ranger_title/title_ue03"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_title/title_ue03",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "1d361d8931bb98f27255",
+    "sample_paths": [
+     "res/prebuilt/data/title/title_ue10_LZ.bin",
+     "res/prebuilt/data/title/title_ue10_LZ.bin",
+     "res/prebuilt/data/title/title_ue10_LZ.bin"
+    ],
+    "unit": "ranger_title/title_ue10"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_title/title_ue10",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "4adc1e5aeb3c305a5458",
+    "sample_paths": [
+     "res/prebuilt/data/title/title_ue11_LZ.bin",
+     "res/prebuilt/data/title/title_ue11_LZ.bin",
+     "res/prebuilt/data/title/title_ue11_LZ.bin"
+    ],
+    "unit": "ranger_title/title_ue11"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_title/title_ue11",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "8f8e74959fdf360360a4",
+    "sample_paths": [
+     "res/prebuilt/data/title/title_ue12_LZ.bin",
+     "res/prebuilt/data/title/title_ue12_LZ.bin",
+     "res/prebuilt/data/title/title_ue12_LZ.bin"
+    ],
+    "unit": "ranger_title/title_ue12"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_title/title_ue12",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "5e91825f01184140d67c",
+    "sample_paths": [
+     "res/prebuilt/data/title/title_ue13_LZ.bin",
+     "res/prebuilt/data/title/title_ue13_LZ.bin",
+     "res/prebuilt/data/title/title_ue13_LZ.bin"
+    ],
+    "unit": "ranger_title/title_ue13"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_title/title_ue13",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "2e71569f6c40b9763357",
+    "sample_paths": [
+     "res/prebuilt/data/uppict/uppict000_LZ.bin",
+     "res/prebuilt/data/uppict/uppict000_LZ.bin",
+     "res/prebuilt/data/uppict/uppict000_LZ.bin"
+    ],
+    "unit": "ranger_uppict/uppict000"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_uppict/uppict000",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "154c9fbebb062d263b81",
+    "sample_paths": [
+     "res/prebuilt/data/uppict/uppict001_LZ.bin",
+     "res/prebuilt/data/uppict/uppict001_LZ.bin",
+     "res/prebuilt/data/uppict/uppict001_LZ.bin"
+    ],
+    "unit": "ranger_uppict/uppict001"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_event_package",
+   "group_id": "title_and_presentation/ranger2/ranger_uppict/uppict001",
+   "human_review": null,
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "title_and_presentation",
+   "target_id": "title_and_presentation/family:title_and_presentation",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  }
+ ],
+ "inputs": {
+  "evidence_file": null,
+  "evidence_sha256": null,
+  "recovered_ledger_sha256": {
+   "LANE_A_RECOVERED_CURATION.json": "9d915a805df0ac9a32d336916e31e3251feeb427b15f05ce3512fcbb19b4266b",
+   "LANE_B_RECOVERED_CURATION.json": "efe2bfe24fbff3a47ebbcb7779b87e957bec28e135cc8171d883c7ed7e6fe368",
+   "LANE_CDE_RECOVERED_CURATION.json": "d68b973505c02dc51b912250b0340bed8a0cddcd208d0803d56c1f9e1c5c2d99",
+   "hgss_field_sprites/CURATION.json": "65c7624fa33d644b9fac5c15465440dc1540f8f0a894d84d01fcb3e02b3a3aa1",
+   "hgss_trainer_sprites/CURATION.json": "e67d1a6b4f8f5019653cf0fb9c004cbb98d53bda5efe5a0bb2fdf842f0762546"
+  },
+  "review_file": null,
+  "review_sha256": null,
+  "rules_sha256": "32982c7ccd7a5bfad5c3fb260b6324732037fdb121536a51438ba49c3d8a3c47",
+  "subsystem_groups_digest": "bb96c936504b152d1c5c",
+  "subsystems_sha256": "20abe0b5b92a572ce49d246c26612d31eacaf5768e8f62f351ed295ce51e37ae"
+ },
+ "rules_version": "1.6",
+ "schema_version": 1,
+ "subsystem": "title_and_presentation",
+ "summary": {
+  "groups": 153,
+  "needs_evidence": 0,
+  "role_reason": {
+   "not_selected:source_not_relevant_to_subsystem": 123,
+   "reference_only:policy_reference_class": 30
+  },
+  "roles": {
+   "not_selected": 123,
+   "reference_only": 30
+  },
+  "source_role": {
+   "pmd_sky:reference_only": 30,
+   "ranger2:not_selected": 123
+  },
+  "target_resolution": {
+   "native": 1
+  },
+  "targets": 1
+ },
+ "targets": [
+  {
+   "alternates": [],
+   "preferred": null,
+   "resolution": "platinum_native",
+   "target_id": "title_and_presentation/family:title_and_presentation"
+  }
+ ]
+}

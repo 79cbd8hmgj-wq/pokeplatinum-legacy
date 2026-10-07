@@ -1,0 +1,97 @@
+{
+ "decisions": [
+  {
+   "evidence_digest": "68942a65a43c3690",
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_002",
+   "member_digest": "706dffde332a72ce002b",
+   "rationale": "Clear art-quality improvement that preserves the trainer class identity.",
+   "trainer_class": "youngster",
+   "verdict": "use_hgss"
+  },
+  {
+   "evidence_digest": "bf4e0ab434c8df6c",
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_003",
+   "member_digest": "eb916998a355f2a05303",
+   "rationale": "Clear art-quality improvement that preserves the trainer class identity.",
+   "trainer_class": "lass",
+   "verdict": "use_hgss"
+  },
+  {
+   "evidence_digest": "a56dfdeeb8d1e5d7",
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_006",
+   "member_digest": "142fd6a7a6d595e2888e",
+   "rationale": "Clear art-quality improvement that preserves the trainer class identity.",
+   "trainer_class": "bug_catcher",
+   "verdict": "use_hgss"
+  },
+  {
+   "evidence_digest": "8fbb61e50e9dc433",
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_008",
+   "member_digest": "8087cf0a000867ebc4d4",
+   "rationale": "Clear art-quality improvement that preserves the trainer class identity.",
+   "trainer_class": "twins",
+   "verdict": "use_hgss"
+  },
+  {
+   "evidence_digest": "3b1b703bb5a29136",
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_024",
+   "member_digest": "c1016e48a13aebabc527",
+   "rationale": "Ace Trainers keep their Platinum/Sinnoh designs; HGSS is a regional redesign, not a quality upgrade.",
+   "trainer_class": "ace_trainer_male",
+   "verdict": "keep_platinum"
+  },
+  {
+   "evidence_digest": "fb2ea2cb8ee9eecf",
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_025",
+   "member_digest": "e7866772885f461c2a6c",
+   "rationale": "Ace Trainers keep their Platinum/Sinnoh designs; HGSS is a regional redesign, not a quality upgrade.",
+   "trainer_class": "ace_trainer_female",
+   "verdict": "keep_platinum"
+  },
+  {
+   "evidence_digest": "649f2937cc065baf",
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_036",
+   "member_digest": "63c331ef59d3f903cdf1",
+   "rationale": "Clear art-quality improvement that preserves the trainer class identity.",
+   "trainer_class": "beauty",
+   "verdict": "use_hgss"
+  },
+  {
+   "evidence_digest": "91d5a4d8c60bfff0",
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_043",
+   "member_digest": "269789fa48ab12035195",
+   "rationale": "Clear art-quality improvement that preserves the trainer class identity.",
+   "trainer_class": "swimmer_female",
+   "verdict": "use_hgss"
+  },
+  {
+   "evidence_digest": "b9f9d4d02824224e",
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_101",
+   "member_digest": "f01ecfdc454aa5b67701",
+   "rationale": "Only a limited later-frame difference (3 of 11 frames); insufficient to justify replacement.",
+   "trainer_class": "arcade_star",
+   "verdict": "keep_platinum"
+  },
+  {
+   "evidence_digest": "4d746db590d7f329",
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_122",
+   "member_digest": "c26476a73ba760f5cf7f",
+   "rationale": "Recolor-only/negligible change; not worth introducing a donor dependency.",
+   "trainer_class": "young_couple",
+   "verdict": "keep_platinum"
+  }
+ ],
+ "kind": "human_visual_review",
+ "method": "Visual review of the corrected contact sheet selection/review/trainer_sprites/front_01.png",
+ "policy": [
+  "HGSS does not win merely because it is newer or pixel-different.",
+  "Prefer HGSS when it is a clear visual/art-quality improvement and preserves the trainer class identity.",
+  "Preserve Platinum when the HGSS version is primarily a regional redesign rather than a quality upgrade.",
+  "Negligible/recolor-only changes are not worth introducing a donor dependency."
+ ],
+ "reviewed_at": "2026-10-07",
+ "reviewed_manifest_ledger_sha256": "a84808a75f0a369b15225645dfc043d30f281f8f313ede1d17a2c52116b644d9",
+ "reviewer": "project owner (human)",
+ "schema_version": 1,
+ "subsystem": "trainer_battle_sprites"
+}

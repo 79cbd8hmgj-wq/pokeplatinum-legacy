@@ -1,0 +1,133 @@
+{
+ "base_risk_by_conversion": {
+  "none": "low",
+  "not_portable": "high",
+  "reimplement": "high",
+  "structural": "medium",
+  "trivial": "low"
+ },
+ "class_rank": {
+  "convertible": 1,
+  "direct": 0
+ },
+ "compat_score_by_conversion": {
+  "none": 3,
+  "not_portable": 0,
+  "reimplement": 0,
+  "structural": 1,
+  "trivial": 2
+ },
+ "conversion_scale": {
+  "none": 0,
+  "not_portable": 4,
+  "reimplement": 3,
+  "structural": 2,
+  "trivial": 1
+ },
+ "decision_order": [
+  "R0 human review (subsystems with human_review_required): a `keep_platinum` verdict on an automated-eligible group -> not_selected(human_keep_platinum); `use_hgss` confirms an automated-eligible group as eligible_preferred (conflict with automated gates is an error); an unreviewed eligible_preferred is capped at alternate(pending_human_review). Verdicts bind to the group member_digest and the evidence entry digest; any change makes them stale (error).",
+  "R1 no_independent_evidence: group has < min_independent_members independently evidenced members -> not_selected",
+  "R2 class none -> not_selected(source_not_relevant_to_subsystem)",
+  "R3 class technique/reference or conversion not_portable -> reference_only(policy_reference_class)",
+  "R4 relation missing_in_native (no Platinum counterpart to replace) -> reference_only(no_native_target)",
+  "R5 class control: identical/content_match_native -> not_selected(identical_to_native); unmeasured -> reference_only(control_unmeasured); other -> reference_only(control_differs_from_native). Control is never selectable.",
+  "R6 class direct/convertible: gain 0 -> not_selected(identical_to_native); gain unmeasured -> reference_only(needs_evidence)",
+  "R7 direct/convertible: independent_share < selection_min_independent_share -> reference_only(weak_evidence_share); compat >= preferred_min_compat, risk <= preferred_max_risk, gain >= preferred_min_gain -> eligible_preferred; compat >= alternate_min_compat and gain >= alternate_min_gain -> eligible_alternate; else reference_only(below_integration_thresholds)",
+  "R8 per target: best eligible_preferred by ranking key becomes preferred; remaining eligible become alternate",
+  "R9 targets with no preferred resolve to platinum_native"
+ ],
+ "description": "Deterministic selection rules. The code in tools/visual_overhaul/selection/rules.py implements exactly these tables; validate_selection.py re-derives every decision from them.",
+ "native_relation_to_gain": {
+  "art_diff": 2,
+  "art_diff_geometry_close": 2,
+  "art_diff_geometry_review": 2,
+  "art_diff_minor": 1,
+  "content_match_native": 0,
+  "contract_mismatch": null,
+  "different": null,
+  "identical": 0,
+  "missing_in_native": null,
+  "palette_only": 1,
+  "subject_unverified": null,
+  "unmeasured": null
+ },
+ "ranking_key": [
+  "visual_gain desc",
+  "compat desc",
+  "risk asc",
+  "class_rank asc (direct<convertible)",
+  "source_preference asc"
+ ],
+ "reason_codes": [
+  "no_independent_evidence",
+  "source_not_relevant_to_subsystem",
+  "policy_reference_class",
+  "identical_to_native",
+  "control_differs_from_native",
+  "needs_evidence",
+  "below_integration_thresholds",
+  "best_eligible_donor",
+  "eligible_not_best_for_target",
+  "control_unmeasured",
+  "no_native_target",
+  "weak_evidence_share",
+  "human_approved",
+  "human_keep_platinum",
+  "pending_human_review"
+ ],
+ "relation_notes": {
+  "art_diff_minor": "Rendered-pixel difference ratio (differing pixels / opaque union, over compared frames) below thresholds.minor_diff_ratio; evidence providers emit this relation instead of art_diff_geometry_*.",
+  "subject_unverified": "Slot-aligned sprite differs beyond art_diff_minor, but slot identity (shared model slot name) does not prove the donor depicts the same subject as the native sprite; needs human/visual confirmation. Gain unmeasured => reference_only/needs_evidence."
+ },
+ "risk_flag_bumps": {
+  "frame_layout_differs": 1,
+  "geometry_review": 1,
+  "palette_mismatch": 1,
+  "palette_reorder_suspected": 2
+ },
+ "risk_order": [
+  "low",
+  "medium",
+  "high"
+ ],
+ "roles": [
+  "preferred",
+  "alternate",
+  "reference_only",
+  "not_selected"
+ ],
+ "rules_version": "1.6",
+ "runtime_validation_relations": [
+  "art_diff_geometry_close",
+  "art_diff_geometry_review",
+  "palette_only",
+  "art_diff",
+  "art_diff_minor"
+ ],
+ "schema_version": 1,
+ "source_preference": [
+  "hgss",
+  "diamond",
+  "pmd_sky",
+  "ranger2"
+ ],
+ "thresholds": {
+  "alternate_min_compat": 1,
+  "alternate_min_gain": 1,
+  "min_independent_members": 1,
+  "minor_diff_ratio": 0.05,
+  "preferred_max_risk": "medium",
+  "preferred_min_compat": 2,
+  "preferred_min_gain": 2,
+  "selection_min_independent_share": 0.5
+ },
+ "weak_reason_codes": [
+  "ranger_cac_companion_of_valid_render",
+  "hgss_game_paired_companion",
+  "pmd_companion_of_valid_background",
+  "pmd_wtu_companion_of_valid_wte",
+  "pmd_standalone_palette_color_reference",
+  "ranger_standalone_palette_color_reference",
+  "ranger_tiles_in_sibling_resource"
+ ]
+}

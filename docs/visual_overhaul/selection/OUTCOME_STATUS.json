@@ -1,0 +1,168 @@
+{
+ "inputs": {
+  "use_files": {
+   "trainer_battle_sprites": "fe1986e560e3a2252e5474d29e402c9ca599a87c7b7e3452db188b66034f6f15"
+  },
+  "use_outcomes_sha256": "c785ad59751bb5e711aea8410499fd655a11b35793464e4484fef055f8ce6d8a"
+ },
+ "schema_version": 1,
+ "subsystems": [
+  {
+   "component_reviews": 0,
+   "composites": {},
+   "records_human_confirmed": 0,
+   "replacement_outcomes": {
+    "not_selected": 68
+   },
+   "subsystem": "battle_backgrounds_hud",
+   "use_records": {}
+  },
+  {
+   "component_reviews": 0,
+   "composites": {},
+   "records_human_confirmed": 0,
+   "replacement_outcomes": {
+    "technique_reference": 636
+   },
+   "subsystem": "battle_effects_particles",
+   "use_records": {}
+  },
+  {
+   "component_reviews": 0,
+   "composites": {},
+   "records_human_confirmed": 0,
+   "replacement_outcomes": {
+    "technique_reference": 523
+   },
+   "subsystem": "field_effects_overlays",
+   "use_records": {}
+  },
+  {
+   "component_reviews": 0,
+   "composites": {},
+   "records_human_confirmed": 0,
+   "replacement_outcomes": {
+    "not_selected": 113,
+    "technique_reference": 1372
+   },
+   "subsystem": "field_environment_art",
+   "use_records": {}
+  },
+  {
+   "component_reviews": 0,
+   "composites": {},
+   "records_human_confirmed": 0,
+   "replacement_outcomes": {
+    "alternate": 1,
+    "native_keep": 96,
+    "needs_evidence": 4,
+    "not_selected": 274
+   },
+   "subsystem": "field_npc_player_sprites",
+   "use_records": {}
+  },
+  {
+   "component_reviews": 0,
+   "composites": {},
+   "records_human_confirmed": 0,
+   "replacement_outcomes": {
+    "needs_evidence": 1,
+    "not_selected": 892,
+    "technique_reference": 20
+   },
+   "subsystem": "menu_ui_frames",
+   "use_records": {}
+  },
+  {
+   "component_reviews": 0,
+   "composites": {},
+   "records_human_confirmed": 0,
+   "replacement_outcomes": {
+    "not_selected": 282
+   },
+   "subsystem": "no_platinum_target",
+   "use_records": {}
+  },
+  {
+   "component_reviews": 0,
+   "composites": {},
+   "records_human_confirmed": 0,
+   "replacement_outcomes": {
+    "needs_evidence": 1
+   },
+   "subsystem": "party_summary_ui",
+   "use_records": {}
+  },
+  {
+   "component_reviews": 0,
+   "composites": {},
+   "records_human_confirmed": 0,
+   "replacement_outcomes": {
+    "needs_evidence": 1
+   },
+   "subsystem": "pokedex_ui",
+   "use_records": {}
+  },
+  {
+   "component_reviews": 0,
+   "composites": {},
+   "records_human_confirmed": 0,
+   "replacement_outcomes": {
+    "technique_reference": 1533
+   },
+   "subsystem": "pokemon_animation_reference",
+   "use_records": {}
+  },
+  {
+   "component_reviews": 0,
+   "composites": {},
+   "records_human_confirmed": 0,
+   "replacement_outcomes": {
+    "alternate": 537,
+    "direct_replacement": 26,
+    "native_keep": 14,
+    "needs_evidence": 2,
+    "not_selected": 703
+   },
+   "subsystem": "pokemon_battle_sprites",
+   "use_records": {}
+  },
+  {
+   "component_reviews": 0,
+   "composites": {},
+   "records_human_confirmed": 0,
+   "replacement_outcomes": {
+    "native_keep": 1071,
+    "not_selected": 6
+   },
+   "subsystem": "pokemon_icons",
+   "use_records": {}
+  },
+  {
+   "component_reviews": 0,
+   "composites": {},
+   "records_human_confirmed": 0,
+   "replacement_outcomes": {
+    "not_selected": 123,
+    "technique_reference": 30
+   },
+   "subsystem": "title_and_presentation",
+   "use_records": {}
+  },
+  {
+   "component_reviews": 4,
+   "composites": {},
+   "records_human_confirmed": 0,
+   "replacement_outcomes": {
+    "alternate": 18,
+    "direct_replacement": 6,
+    "native_keep": 62,
+    "not_selected": 166
+   },
+   "subsystem": "trainer_battle_sprites",
+   "use_records": {
+    "component_donor": 4
+   }
+  }
+ ]
+}

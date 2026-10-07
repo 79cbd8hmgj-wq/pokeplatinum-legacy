@@ -66,3 +66,7 @@ HGSS GF bitmap fonts (11) and 3D building-model NARCs (`bm_field`, `bm_room`: BM
 `tools/visual_overhaul/` scripts take donor checkouts as arguments (`pokeranger2`, `pmd-sky`, `pokeheartgold`, `pokediamond`),
 so recovery passes ran locally; `lane-b-recovered-curation.yml` and `donor-curation-status.yml` regenerate the recovered
 ledgers/status from the committed overlay ledgers and assert the coverage invariants.
+
+## Next phase: donor selection
+
+See `selection/SELECTION_SCHEMA.md` (framework) and `selection/SELECTION_CHECKPOINT.md` (state, queue, gaps). The decode backlog above is unchanged.

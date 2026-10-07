@@ -1,0 +1,29 @@
+name: Donor selection validate
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "tools/visual_overhaul/selection/**"
+      - "docs/visual_overhaul/selection/**"
+      - "docs/visual_overhaul/LANE_*_RECOVERED_CURATION.json"
+      - ".github/workflows/donor-selection-validate.yml"
+  push:
+    branches: [main, "claude/**"]
+    paths:
+      - "tools/visual_overhaul/selection/**"
+      - "docs/visual_overhaul/selection/**"
+      - "docs/visual_overhaul/catalog_extensions/**"
+      - "tools/visual_overhaul/*.py"
+      - ".github/workflows/donor-selection-validate.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install pillow
+      - run: python3 tools/visual_overhaul/selection/validate_selection.py
+      - run: cd tools/visual_overhaul/selection && python3 test_selection_framework.py
+      - run: cd tools/visual_overhaul/selection && python3 test_use_outcomes.py
+      - run: cd tools/visual_overhaul/selection && python3 test_hgss_trainer_decoder.py

@@ -1,0 +1,309 @@
+{
+ "component_reviews": [
+  {
+   "basis": [
+    "docs/visual_overhaul/selection/components/evidence/ace_trainer_male_platinum_vs_hgss.png"
+   ],
+   "evidence_digest": "3b1b703bb5a29136",
+   "finding": "records_proposed",
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_024",
+   "member_digest": "c1016e48a13aebabc527",
+   "note": "Whole-asset replacement stays keep_platinum (human verdict); component candidates proposed on the contribution axis.",
+   "reviewed_at": "2026-10-07",
+   "reviewer": "claude (automated visual assessment; not human-approved)",
+   "target_id": "trainer_battle_sprites/tc_ace_trainer_male"
+  },
+  {
+   "basis": [
+    "docs/visual_overhaul/selection/components/evidence/ace_trainer_female_platinum_vs_hgss.png"
+   ],
+   "evidence_digest": "fb2ea2cb8ee9eecf",
+   "finding": "records_proposed",
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_025",
+   "member_digest": "e7866772885f461c2a6c",
+   "note": "Whole-asset replacement stays keep_platinum (human verdict); component candidates proposed on the contribution axis.",
+   "reviewed_at": "2026-10-07",
+   "reviewer": "claude (automated visual assessment; not human-approved)",
+   "target_id": "trainer_battle_sprites/tc_ace_trainer_female"
+  },
+  {
+   "basis": [
+    "res/trainers/classes/arcade_star/front.png",
+    "docs/visual_overhaul/catalog_extensions/hgss_trainer_sprites/renders/front_101.png"
+   ],
+   "evidence_digest": "b9f9d4d02824224e",
+   "finding": "none_found",
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_101",
+   "member_digest": "f01ecfdc454aa5b67701",
+   "note": "Only frames 4-6 differ (768 changed px each, identical-looking art); the HGSS sheet is 1px taller, so the difference is a positional/row artifact, not new art. No component worth extracting; stays native_keep.",
+   "reviewed_at": "2026-10-07",
+   "reviewer": "claude (automated visual assessment; not human-approved)",
+   "target_id": "trainer_battle_sprites/tc_arcade_star"
+  },
+  {
+   "basis": [
+    "res/trainers/classes/young_couple/front.png",
+    "docs/visual_overhaul/catalog_extensions/hgss_trainer_sprites/renders/front_122.png"
+   ],
+   "evidence_digest": "4d746db590d7f329",
+   "finding": "none_found",
+   "group_id": "trainer_battle_sprites/hgss/hgss_front_122",
+   "member_digest": "c26476a73ba760f5cf7f",
+   "note": "Recolor-only (7.1% changed px): outfit colorway change on identical line art. Platinum colorway is the class identity; no pose/shading/detail component beyond a palette swap that adds nothing. Stays native_keep.",
+   "reviewed_at": "2026-10-07",
+   "reviewer": "claude (automated visual assessment; not human-approved)",
+   "target_id": "trainer_battle_sprites/tc_young_couple"
+  }
+ ],
+ "composites": [],
+ "records": [
+  {
+   "adaptation": [
+    "re-express the fold/zip shading in the Platinum brown torso+sleeve ramp (map HGSS dark/mid/light to the existing Platinum brown ramp)",
+    "paint on the Platinum silhouette; do not import the HGSS jacket shape or midriff coverage"
+   ],
+   "component": {
+    "property": "HGSS jacket treatment: 3-tone fold shading, centre-zip highlight line and hem seam on the torso/sleeves",
+    "region": null,
+    "views": [
+     "front"
+    ]
+   },
+   "confidence": "medium",
+   "constraints": [
+    "80x80 single-cell Platinum front contract (res/trainers/classes/<class>/front.png); no cell/animation changes",
+    "must reuse the Platinum 16-color palette row of the target (no new colors introduced beyond the existing palette budget)",
+    "Platinum/Sinnoh class identity stays authoritative: hair, outfit colorway and silhouette remain Platinum-native (human verdict keep_platinum on the whole HGSS asset)"
+   ],
+   "evidence": {
+    "evidence_entry_digest": "3b1b703bb5a29136",
+    "kind": "render_comparison",
+    "refs": [
+     "res/trainers/classes/ace_trainer_male/front.png",
+     "docs/visual_overhaul/catalog_extensions/hgss_trainer_sprites/renders/front_024.png",
+     "docs/visual_overhaul/selection/components/evidence/ace_trainer_male_platinum_vs_hgss.png"
+    ],
+    "summary": "Platinum torso/sleeves are largely 2-tone flat fills; HGSS render shows 3-tone folds and a zip/hem highlight on a comparable pose region. Visual comparison only; no pixel-level overlay measured."
+   },
+   "outcome": "component_donor",
+   "pixel_use": "derived",
+   "proposed_by": "claude (automated visual assessment; not human-approved)",
+   "reason": "Adds depth to the Platinum outfit without changing the Sinnoh design the owner chose to keep.",
+   "record_id": "uc:trainer_battle_sprites/tc_ace_trainer_male/01",
+   "risk": "medium",
+   "source": {
+    "assets": [
+     {
+      "asset_id": "hgss:narc:files:a:0:5:8:front_024",
+      "render_path": "docs/visual_overhaul/catalog_extensions/hgss_trainer_sprites/renders/front_024.png",
+      "render_sha256": "fbc7d853becd1b08",
+      "source_commit": "9d8b7591f09b65804da2fb2dfd56f320633e0d36",
+      "source_path": "files/a/0/5/8#class=024"
+     }
+    ],
+    "group_id": "trainer_battle_sprites/hgss/hgss_front_024",
+    "member_digest": "c1016e48a13aebabc527",
+    "source_id": "hgss"
+   },
+   "status": "proposed",
+   "tags": [
+    "clothing_detail",
+    "shading"
+   ],
+   "target": {
+    "native_ref": {
+     "path": "res/trainers/classes/ace_trainer_male/front.png",
+     "sha256": "32e64640d8a395f9"
+    },
+    "subsystem": "trainer_battle_sprites",
+    "target_id": "trainer_battle_sprites/tc_ace_trainer_male"
+   }
+  },
+  {
+   "adaptation": [
+    "add glove shapes to the Platinum hand regions using existing outline/dark palette indices",
+    "hand positions differ from HGSS pose; redraw rather than copy"
+   ],
+   "component": {
+    "property": "Fingerless gloves on both hands",
+    "region": null,
+    "views": [
+     "front"
+    ]
+   },
+   "confidence": "low",
+   "constraints": [
+    "80x80 single-cell Platinum front contract (res/trainers/classes/<class>/front.png); no cell/animation changes",
+    "must reuse the Platinum 16-color palette row of the target (no new colors introduced beyond the existing palette budget)",
+    "Platinum/Sinnoh class identity stays authoritative: hair, outfit colorway and silhouette remain Platinum-native (human verdict keep_platinum on the whole HGSS asset)"
+   ],
+   "evidence": {
+    "evidence_entry_digest": "3b1b703bb5a29136",
+    "kind": "render_comparison",
+    "refs": [
+     "res/trainers/classes/ace_trainer_male/front.png",
+     "docs/visual_overhaul/catalog_extensions/hgss_trainer_sprites/renders/front_024.png",
+     "docs/visual_overhaul/selection/components/evidence/ace_trainer_male_platinum_vs_hgss.png"
+    ],
+    "summary": "HGSS render shows fingerless gloves; Platinum hands are bare skin tone. Visual comparison only."
+   },
+   "outcome": "component_donor",
+   "pixel_use": "derived",
+   "proposed_by": "claude (automated visual assessment; not human-approved)",
+   "reason": "Small accessory that reads as an upgrade; optional and independently rejectable.",
+   "record_id": "uc:trainer_battle_sprites/tc_ace_trainer_male/02",
+   "risk": "low",
+   "source": {
+    "assets": [
+     {
+      "asset_id": "hgss:narc:files:a:0:5:8:front_024",
+      "render_path": "docs/visual_overhaul/catalog_extensions/hgss_trainer_sprites/renders/front_024.png",
+      "render_sha256": "fbc7d853becd1b08",
+      "source_commit": "9d8b7591f09b65804da2fb2dfd56f320633e0d36",
+      "source_path": "files/a/0/5/8#class=024"
+     }
+    ],
+    "group_id": "trainer_battle_sprites/hgss/hgss_front_024",
+    "member_digest": "c1016e48a13aebabc527",
+    "source_id": "hgss"
+   },
+   "status": "proposed",
+   "tags": [
+    "accessory"
+   ],
+   "target": {
+    "native_ref": {
+     "path": "res/trainers/classes/ace_trainer_male/front.png",
+     "sha256": "32e64640d8a395f9"
+    },
+    "subsystem": "trainer_battle_sprites",
+    "target_id": "trainer_battle_sprites/tc_ace_trainer_male"
+   }
+  },
+  {
+   "adaptation": [
+    "re-derive highlight clusters on the Platinum green hair using its existing 3 greens",
+    "keep Platinum hair outline and silhouette"
+   ],
+   "component": {
+    "property": "Hair mass highlight banding (ponytail/crown highlight clusters)",
+    "region": null,
+    "views": [
+     "front"
+    ]
+   },
+   "confidence": "low",
+   "constraints": [
+    "80x80 single-cell Platinum front contract (res/trainers/classes/<class>/front.png); no cell/animation changes",
+    "must reuse the Platinum 16-color palette row of the target (no new colors introduced beyond the existing palette budget)",
+    "Platinum/Sinnoh class identity stays authoritative: hair, outfit colorway and silhouette remain Platinum-native (human verdict keep_platinum on the whole HGSS asset)"
+   ],
+   "evidence": {
+    "evidence_entry_digest": "fb2ea2cb8ee9eecf",
+    "kind": "render_comparison",
+    "refs": [
+     "res/trainers/classes/ace_trainer_female/front.png",
+     "docs/visual_overhaul/catalog_extensions/hgss_trainer_sprites/renders/front_025.png",
+     "docs/visual_overhaul/selection/components/evidence/ace_trainer_female_platinum_vs_hgss.png"
+    ],
+    "summary": "HGSS hair uses clustered highlight bands on a dark base; Platinum hair is a flatter two-green fill. Visual comparison only."
+   },
+   "outcome": "component_donor",
+   "pixel_use": "derived",
+   "proposed_by": "claude (automated visual assessment; not human-approved)",
+   "reason": "Hair is the most visible low-detail area of the Platinum sprite.",
+   "record_id": "uc:trainer_battle_sprites/tc_ace_trainer_female/01",
+   "risk": "low",
+   "source": {
+    "assets": [
+     {
+      "asset_id": "hgss:narc:files:a:0:5:8:front_025",
+      "render_path": "docs/visual_overhaul/catalog_extensions/hgss_trainer_sprites/renders/front_025.png",
+      "render_sha256": "fbb03e3097bc3359",
+      "source_commit": "9d8b7591f09b65804da2fb2dfd56f320633e0d36",
+      "source_path": "files/a/0/5/8#class=025"
+     }
+    ],
+    "group_id": "trainer_battle_sprites/hgss/hgss_front_025",
+    "member_digest": "e7866772885f461c2a6c",
+    "source_id": "hgss"
+   },
+   "status": "proposed",
+   "tags": [
+    "shading"
+   ],
+   "target": {
+    "native_ref": {
+     "path": "res/trainers/classes/ace_trainer_female/front.png",
+     "sha256": "485a7a43c9314b99"
+    },
+    "subsystem": "trainer_battle_sprites",
+    "target_id": "trainer_battle_sprites/tc_ace_trainer_female"
+   }
+  },
+  {
+   "adaptation": [
+    "translate collar/seam highlights into the Platinum brown/orange ramp",
+    "do not import the HGSS jacket/skirt silhouette or boot shape"
+   ],
+   "component": {
+    "property": "Jacket collar, zip seam and skirt-hem highlight detail",
+    "region": null,
+    "views": [
+     "front"
+    ]
+   },
+   "confidence": "low",
+   "constraints": [
+    "80x80 single-cell Platinum front contract (res/trainers/classes/<class>/front.png); no cell/animation changes",
+    "must reuse the Platinum 16-color palette row of the target (no new colors introduced beyond the existing palette budget)",
+    "Platinum/Sinnoh class identity stays authoritative: hair, outfit colorway and silhouette remain Platinum-native (human verdict keep_platinum on the whole HGSS asset)"
+   ],
+   "evidence": {
+    "evidence_entry_digest": "fb2ea2cb8ee9eecf",
+    "kind": "render_comparison",
+    "refs": [
+     "res/trainers/classes/ace_trainer_female/front.png",
+     "docs/visual_overhaul/catalog_extensions/hgss_trainer_sprites/renders/front_025.png",
+     "docs/visual_overhaul/selection/components/evidence/ace_trainer_female_platinum_vs_hgss.png"
+    ],
+    "summary": "HGSS render has defined collar, zip seam and hem highlights absent in the Platinum two-tone outfit. Visual comparison only."
+   },
+   "outcome": "component_donor",
+   "pixel_use": "derived",
+   "proposed_by": "claude (automated visual assessment; not human-approved)",
+   "reason": "Outfit readability; same rationale as the male jacket treatment.",
+   "record_id": "uc:trainer_battle_sprites/tc_ace_trainer_female/02",
+   "risk": "medium",
+   "source": {
+    "assets": [
+     {
+      "asset_id": "hgss:narc:files:a:0:5:8:front_025",
+      "render_path": "docs/visual_overhaul/catalog_extensions/hgss_trainer_sprites/renders/front_025.png",
+      "render_sha256": "fbb03e3097bc3359",
+      "source_commit": "9d8b7591f09b65804da2fb2dfd56f320633e0d36",
+      "source_path": "files/a/0/5/8#class=025"
+     }
+    ],
+    "group_id": "trainer_battle_sprites/hgss/hgss_front_025",
+    "member_digest": "e7866772885f461c2a6c",
+    "source_id": "hgss"
+   },
+   "status": "proposed",
+   "tags": [
+    "clothing_detail",
+    "shading"
+   ],
+   "target": {
+    "native_ref": {
+     "path": "res/trainers/classes/ace_trainer_female/front.png",
+     "sha256": "485a7a43c9314b99"
+    },
+    "subsystem": "trainer_battle_sprites",
+    "target_id": "trainer_battle_sprites/tc_ace_trainer_female"
+   }
+  }
+ ],
+ "schema_version": 1,
+ "subsystem": "trainer_battle_sprites"
+}

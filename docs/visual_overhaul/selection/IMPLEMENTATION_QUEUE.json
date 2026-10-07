@@ -1,0 +1,344 @@
+{
+ "completed_subsystems": [
+  "battle_backgrounds_hud",
+  "battle_effects_particles",
+  "field_effects_overlays",
+  "field_environment_art",
+  "field_npc_player_sprites",
+  "menu_ui_frames",
+  "no_platinum_target",
+  "party_summary_ui",
+  "pokedex_ui",
+  "pokemon_animation_reference",
+  "pokemon_battle_sprites",
+  "pokemon_icons",
+  "title_and_presentation",
+  "trainer_battle_sprites"
+ ],
+ "inputs": {
+  "ledger_files": {
+   "battle_backgrounds_hud": "1efd63a09386d2ef5c1467efb9450fb46f94badbed1ae2d56f45ea0a3cdab53d",
+   "battle_effects_particles": "010dddf4143dc259fa20e2b3be8b992a1ef39b30c61890780ad7546e0d9b18ec",
+   "field_effects_overlays": "10223f577df8130e087cba4a6bb86ded4b66d4d299923e92be06463692121a1e",
+   "field_environment_art": "25c2006325cff6a8854f2e8591d62df9d3b2b261e27d285144490c057db5c3e7",
+   "field_npc_player_sprites": "e60d8ef38b8008d603be4769e0baee5229901997e4744b4d7d2038836d8c1788",
+   "menu_ui_frames": "4f728d0b9aa73a00f3dfa3cae7e46516550f1549f758360e1f7dad48605109be",
+   "no_platinum_target": "65c23c8ac0e7d200780090c4d47b1d235cad33c9f0be5c95a1e0e376017043db",
+   "party_summary_ui": "d24aa518f04a6fd87c2a3e328d93c03a049b27eb4cf18f893f3fb52d435cfb6a",
+   "pokedex_ui": "38a28a84b0d944ce595d63632a7636eb13089c1d8e786de3b6d99ee1dc1d87d2",
+   "pokemon_animation_reference": "44d20bd0ec7c05780af1ab32bc7cacc0f1f6e5852c0a297923faa0633ba41887",
+   "pokemon_battle_sprites": "729a6e9d87184f1b3e072692632affad9cb3940ea0071737b4125688239f4556",
+   "pokemon_icons": "cfdd96879631028e1c1dec8ade19d1053f3fcd2ab66a5634b934a53fd09b9a5f",
+   "title_and_presentation": "06c1220739490aa0ca87208d2bbda97b443a98d5af0d0dfce6f53c0010463727",
+   "trainer_battle_sprites": "72e37b38572ec4d278a4921b0070a21b238d9dcf0c2f6041bb828cee96570376"
+  },
+  "use_files": {
+   "trainer_battle_sprites": "fe1986e560e3a2252e5474d29e402c9ca599a87c7b7e3452db188b66034f6f15"
+  },
+  "use_outcomes_sha256": "c785ad59751bb5e711aea8410499fd655a11b35793464e4484fef055f8ce6d8a"
+ },
+ "items": [
+  {
+   "format_families": [
+    "nitro_indexed_png_160x80"
+   ],
+   "integration_cost": 3,
+   "kind": "implement",
+   "priority_score": 86.667,
+   "rank": 1,
+   "source_id": "hgss",
+   "subsystem": "pokemon_battle_sprites",
+   "target_count": 26,
+   "targets_sample": [
+    "pokemon_battle_sprites/sp_0003",
+    "pokemon_battle_sprites/sp_0011",
+    "pokemon_battle_sprites/sp_0028",
+    "pokemon_battle_sprites/sp_0033",
+    "pokemon_battle_sprites/sp_0035"
+   ],
+   "work_lane": "direct_replacement"
+  },
+  {
+   "format_families": [
+    "nitro_sprite_set_ncgr_nclr_ncer_nanr"
+   ],
+   "integration_cost": 4,
+   "kind": "implement",
+   "priority_score": 9.0,
+   "rank": 2,
+   "source_id": "hgss",
+   "subsystem": "trainer_battle_sprites",
+   "target_count": 6,
+   "targets_sample": [
+    "trainer_battle_sprites/tc_beauty",
+    "trainer_battle_sprites/tc_bug_catcher",
+    "trainer_battle_sprites/tc_lass",
+    "trainer_battle_sprites/tc_swimmer_female",
+    "trainer_battle_sprites/tc_twins"
+   ],
+   "work_lane": "direct_replacement"
+  },
+  {
+   "awaiting_human_confirmation": 4,
+   "kind": "component_review",
+   "priority_score": 1.0,
+   "rank": 3,
+   "records": 4,
+   "source_id": "hgss",
+   "subsystem": "trainer_battle_sprites",
+   "tags": [
+    "accessory",
+    "clothing_detail",
+    "shading"
+   ],
+   "target_count": 2,
+   "targets_sample": [
+    "trainer_battle_sprites/tc_ace_trainer_female",
+    "trainer_battle_sprites/tc_ace_trainer_male"
+   ],
+   "work_lane": "native_enhancement"
+  },
+  {
+   "groups": 2,
+   "kind": "evidence",
+   "members": 3,
+   "priority_score": 0.5,
+   "rank": 4,
+   "source_id": "hgss",
+   "subsystem": "pokemon_battle_sprites",
+   "target_count": 2,
+   "targets": null,
+   "targets_sample": [
+    "pokemon_battle_sprites/form_egg",
+    "pokemon_battle_sprites/form_shadow"
+   ],
+   "work_lane": "evidence"
+  },
+  {
+   "groups": 4,
+   "kind": "evidence",
+   "members": 4,
+   "priority_score": 0.3,
+   "rank": 5,
+   "source_id": "hgss",
+   "subsystem": "field_npc_player_sprites",
+   "target_count": 4,
+   "targets": null,
+   "targets_sample": [
+    "field_npc_player_sprites/fs_npc_prof_rowan",
+    "field_npc_player_sprites/fs_npc_skier_f",
+    "field_npc_player_sprites/fs_player_dp_player_f",
+    "field_npc_player_sprites/fs_player_dp_player_m"
+   ],
+   "work_lane": "evidence"
+  },
+  {
+   "groups": 1,
+   "kind": "evidence",
+   "members": 2,
+   "priority_score": 0.3,
+   "rank": 6,
+   "source_id": "hgss",
+   "subsystem": "menu_ui_frames",
+   "target_count": 1,
+   "targets": null,
+   "targets_sample": [
+    "menu_ui_frames/family:menu_ui_frames"
+   ],
+   "work_lane": "evidence"
+  },
+  {
+   "groups": 1,
+   "kind": "component_pool",
+   "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped",
+   "priority_score": 0.25,
+   "rank": 7,
+   "source_id": "hgss",
+   "subsystem": "pokemon_battle_sprites",
+   "target_count": null,
+   "work_lane": "native_enhancement"
+  },
+  {
+   "groups": 23,
+   "kind": "component_pool",
+   "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped",
+   "priority_score": 0.2,
+   "rank": 8,
+   "source_id": "hgss",
+   "subsystem": "field_environment_art",
+   "target_count": null,
+   "work_lane": "native_enhancement"
+  },
+  {
+   "groups": 1,
+   "kind": "evidence",
+   "members": 27,
+   "priority_score": 0.2,
+   "rank": 9,
+   "source_id": "hgss",
+   "subsystem": "party_summary_ui",
+   "target_count": 1,
+   "targets": null,
+   "targets_sample": [
+    "party_summary_ui/family:party_summary_ui"
+   ],
+   "work_lane": "evidence"
+  },
+  {
+   "groups": 1,
+   "kind": "evidence",
+   "members": 123,
+   "priority_score": 0.2,
+   "rank": 10,
+   "source_id": "hgss",
+   "subsystem": "pokedex_ui",
+   "target_count": 1,
+   "targets": null,
+   "targets_sample": [
+    "pokedex_ui/family:pokedex_ui"
+   ],
+   "work_lane": "evidence"
+  },
+  {
+   "groups": 467,
+   "kind": "technique_pool",
+   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
+   "priority_score": 0.2,
+   "rank": 11,
+   "source_id": "pmd_sky",
+   "subsystem": "field_environment_art",
+   "target_count": null,
+   "work_lane": "technique_only"
+  },
+  {
+   "groups": 905,
+   "kind": "technique_pool",
+   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
+   "priority_score": 0.2,
+   "rank": 12,
+   "source_id": "ranger2",
+   "subsystem": "field_environment_art",
+   "target_count": null,
+   "work_lane": "technique_only"
+  },
+  {
+   "groups": 111,
+   "kind": "component_pool",
+   "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped",
+   "priority_score": 0.15,
+   "rank": 13,
+   "source_id": "hgss",
+   "subsystem": "field_npc_player_sprites",
+   "target_count": null,
+   "work_lane": "native_enhancement"
+  },
+  {
+   "groups": 8,
+   "kind": "component_pool",
+   "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped",
+   "priority_score": 0.15,
+   "rank": 14,
+   "source_id": "diamond",
+   "subsystem": "trainer_battle_sprites",
+   "target_count": null,
+   "work_lane": "native_enhancement"
+  },
+  {
+   "groups": 60,
+   "kind": "component_pool",
+   "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped",
+   "priority_score": 0.15,
+   "rank": 15,
+   "source_id": "hgss",
+   "subsystem": "trainer_battle_sprites",
+   "target_count": null,
+   "work_lane": "native_enhancement"
+  },
+  {
+   "groups": 636,
+   "kind": "technique_pool",
+   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
+   "priority_score": 0.15,
+   "rank": 16,
+   "source_id": "ranger2",
+   "subsystem": "battle_effects_particles",
+   "target_count": null,
+   "work_lane": "technique_only"
+  },
+  {
+   "groups": 523,
+   "kind": "technique_pool",
+   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
+   "priority_score": 0.15,
+   "rank": 17,
+   "source_id": "pmd_sky",
+   "subsystem": "field_effects_overlays",
+   "target_count": null,
+   "work_lane": "technique_only"
+  },
+  {
+   "groups": 20,
+   "kind": "technique_pool",
+   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
+   "priority_score": 0.15,
+   "rank": 18,
+   "source_id": "pmd_sky",
+   "subsystem": "menu_ui_frames",
+   "target_count": null,
+   "work_lane": "technique_only"
+  },
+  {
+   "groups": 4,
+   "kind": "component_pool",
+   "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped",
+   "priority_score": 0.1,
+   "rank": 19,
+   "source_id": "hgss",
+   "subsystem": "pokemon_icons",
+   "target_count": null,
+   "work_lane": "native_enhancement"
+  },
+  {
+   "groups": 30,
+   "kind": "technique_pool",
+   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
+   "priority_score": 0.1,
+   "rank": 20,
+   "source_id": "pmd_sky",
+   "subsystem": "title_and_presentation",
+   "target_count": null,
+   "work_lane": "technique_only"
+  },
+  {
+   "groups": 1533,
+   "kind": "technique_pool",
+   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
+   "priority_score": 0.05,
+   "rank": 21,
+   "source_id": "ranger2",
+   "subsystem": "pokemon_animation_reference",
+   "target_count": null,
+   "work_lane": "technique_only"
+  },
+  {
+   "groups": 26,
+   "kind": "runtime_qa",
+   "priority_score": 0.0,
+   "rank": 22,
+   "source_id": "hgss",
+   "subsystem": "pokemon_battle_sprites",
+   "work_lane": "direct_replacement"
+  },
+  {
+   "groups": 6,
+   "kind": "runtime_qa",
+   "priority_score": 0.0,
+   "rank": 23,
+   "source_id": "hgss",
+   "subsystem": "trainer_battle_sprites",
+   "work_lane": "direct_replacement"
+  }
+ ],
+ "pending_subsystems": [],
+ "schema_version": 1
+}

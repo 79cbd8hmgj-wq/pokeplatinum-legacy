@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "description": "Targeted donor-catalog extensions. The base DONOR_ASSET_CATALOG.json is not rewritten; each extension adds catalog-schema assets plus a curation ledger (recovered-curation schema). Coverage invariant: base catalog + extension catalogs == base curation ledgers + extension curation ledgers, one record per asset.",
+  "extensions": [
+    {
+      "id": "hgss_trainer_sprites",
+      "source_id": "hgss",
+      "scope": "HGSS trainer battle sprites: files/a/0/5/8 (front) and files/a/0/0/6 (back)",
+      "catalog": "hgss_trainer_sprites/CATALOG.json",
+      "curation": "hgss_trainer_sprites/CURATION.json"
+    },
+    {
+      "id": "hgss_field_sprites",
+      "source_id": "hgss",
+      "scope": "HGSS human overworld sprite sheets: files/data/mmodel/mmodel/*.NSBTX (NPC/player scope rule in inventory_hgss_field_sprites.py)",
+      "catalog": "hgss_field_sprites/CATALOG.json",
+      "curation": "hgss_field_sprites/CURATION.json"
+    }
+  ]
+}

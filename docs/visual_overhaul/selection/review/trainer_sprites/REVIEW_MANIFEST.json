@@ -1,0 +1,1091 @@
+{
+ "candidates": [
+  {
+   "alignment_method": "exact_name",
+   "automated_class": "redrawn_artwork",
+   "candidate_id": "trainer_battle_sprites/hgss/hgss_front_002",
+   "change_kind_counts": {
+    "artwork": 1
+   },
+   "dimensions": {
+    "frame_height": 80,
+    "frames_hgss": 1,
+    "frames_platinum": 1,
+    "hgss": [
+     80,
+     80
+    ],
+    "platinum": [
+     80,
+     80
+    ]
+   },
+   "donor_frames_identical_to_some_native_frame": [
+    null
+   ],
+   "first_frame_identical": false,
+   "frame_metrics": [
+    {
+     "changed_pixels": 1211,
+     "diff_ratio": 0.9665,
+     "geometry": {
+      "bbox_size_delta": [
+       -6,
+       3
+      ],
+      "bottom_shift": 0,
+      "center_shift": [
+       -1.0,
+       -1.5
+      ]
+     },
+     "kind": "artwork",
+     "mask_equal": false,
+     "mask_iou": 0.357,
+     "opaque_union": 1253
+    }
+   ],
+   "frames_compared": 1,
+   "hgss_class_index": "002",
+   "hgss_name": "youngster",
+   "hgss_render": "docs/visual_overhaul/catalog_extensions/hgss_trainer_sprites/renders/front_002.png",
+   "hgss_source_path": "files/a/0/5/8#class=002",
+   "identical_frame_indices": [],
+   "ledger_relation": "art_diff_geometry_close",
+   "needs_runtime_validation": true,
+   "palette_only": false,
+   "platinum_png": "res/trainers/classes/youngster/front.png",
+   "platinum_target_class": "youngster",
+   "requires_later_frame_inspection": false,
+   "review": {
+    "final_reason": "human_approved",
+    "final_role": "preferred",
+    "rationale": "Clear art-quality improvement that preserves the trainer class identity.",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "project owner (human)",
+    "status": "decided",
+    "verdict": "use_hgss"
+   },
+   "risk": "medium",
+   "risk_flags": [],
+   "target_id": "trainer_battle_sprites/tc_youngster",
+   "totals": {
+    "changed_pixels": 1211,
+    "diff_ratio": 0.9665,
+    "opaque_union": 1253
+   },
+   "view": "front"
+  },
+  {
+   "alignment_method": "exact_name",
+   "automated_class": "redrawn_artwork",
+   "candidate_id": "trainer_battle_sprites/hgss/hgss_front_003",
+   "change_kind_counts": {
+    "artwork": 1
+   },
+   "dimensions": {
+    "frame_height": 80,
+    "frames_hgss": 1,
+    "frames_platinum": 1,
+    "hgss": [
+     80,
+     80
+    ],
+    "platinum": [
+     80,
+     80
+    ]
+   },
+   "donor_frames_identical_to_some_native_frame": [
+    null
+   ],
+   "first_frame_identical": false,
+   "frame_metrics": [
+    {
+     "changed_pixels": 1282,
+     "diff_ratio": 0.969,
+     "geometry": {
+      "bbox_size_delta": [
+       8,
+       2
+      ],
+      "bottom_shift": 0,
+      "center_shift": [
+       0.0,
+       -1.0
+      ]
+     },
+     "kind": "artwork",
+     "mask_equal": false,
+     "mask_iou": 0.493,
+     "opaque_union": 1323
+    }
+   ],
+   "frames_compared": 1,
+   "hgss_class_index": "003",
+   "hgss_name": "lass",
+   "hgss_render": "docs/visual_overhaul/catalog_extensions/hgss_trainer_sprites/renders/front_003.png",
+   "hgss_source_path": "files/a/0/5/8#class=003",
+   "identical_frame_indices": [],
+   "ledger_relation": "art_diff_geometry_close",
+   "needs_runtime_validation": true,
+   "palette_only": false,
+   "platinum_png": "res/trainers/classes/lass/front.png",
+   "platinum_target_class": "lass",
+   "requires_later_frame_inspection": false,
+   "review": {
+    "final_reason": "human_approved",
+    "final_role": "preferred",
+    "rationale": "Clear art-quality improvement that preserves the trainer class identity.",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "project owner (human)",
+    "status": "decided",
+    "verdict": "use_hgss"
+   },
+   "risk": "medium",
+   "risk_flags": [],
+   "target_id": "trainer_battle_sprites/tc_lass",
+   "totals": {
+    "changed_pixels": 1282,
+    "diff_ratio": 0.969,
+    "opaque_union": 1323
+   },
+   "view": "front"
+  },
+  {
+   "alignment_method": "exact_name",
+   "automated_class": "redrawn_artwork",
+   "candidate_id": "trainer_battle_sprites/hgss/hgss_front_006",
+   "change_kind_counts": {
+    "artwork": 1
+   },
+   "dimensions": {
+    "frame_height": 80,
+    "frames_hgss": 1,
+    "frames_platinum": 1,
+    "hgss": [
+     80,
+     80
+    ],
+    "platinum": [
+     80,
+     80
+    ]
+   },
+   "donor_frames_identical_to_some_native_frame": [
+    null
+   ],
+   "first_frame_identical": false,
+   "frame_metrics": [
+    {
+     "changed_pixels": 2401,
+     "diff_ratio": 0.9921,
+     "geometry": {
+      "bbox_size_delta": [
+       1,
+       5
+      ],
+      "bottom_shift": 2,
+      "center_shift": [
+       -1.5,
+       -0.5
+      ]
+     },
+     "kind": "artwork",
+     "mask_equal": false,
+     "mask_iou": 0.19,
+     "opaque_union": 2420
+    }
+   ],
+   "frames_compared": 1,
+   "hgss_class_index": "006",
+   "hgss_name": "bug_catcher",
+   "hgss_render": "docs/visual_overhaul/catalog_extensions/hgss_trainer_sprites/renders/front_006.png",
+   "hgss_source_path": "files/a/0/5/8#class=006",
+   "identical_frame_indices": [],
+   "ledger_relation": "art_diff_geometry_close",
+   "needs_runtime_validation": true,
+   "palette_only": false,
+   "platinum_png": "res/trainers/classes/bug_catcher/front.png",
+   "platinum_target_class": "bug_catcher",
+   "requires_later_frame_inspection": false,
+   "review": {
+    "final_reason": "human_approved",
+    "final_role": "preferred",
+    "rationale": "Clear art-quality improvement that preserves the trainer class identity.",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "project owner (human)",
+    "status": "decided",
+    "verdict": "use_hgss"
+   },
+   "risk": "medium",
+   "risk_flags": [],
+   "target_id": "trainer_battle_sprites/tc_bug_catcher",
+   "totals": {
+    "changed_pixels": 2401,
+    "diff_ratio": 0.9921,
+    "opaque_union": 2420
+   },
+   "view": "front"
+  },
+  {
+   "alignment_method": "exact_name",
+   "automated_class": "redrawn_artwork",
+   "candidate_id": "trainer_battle_sprites/hgss/hgss_front_008",
+   "change_kind_counts": {
+    "artwork": 1
+   },
+   "dimensions": {
+    "frame_height": 80,
+    "frames_hgss": 1,
+    "frames_platinum": 1,
+    "hgss": [
+     80,
+     80
+    ],
+    "platinum": [
+     80,
+     80
+    ]
+   },
+   "donor_frames_identical_to_some_native_frame": [
+    null
+   ],
+   "first_frame_identical": false,
+   "frame_metrics": [
+    {
+     "changed_pixels": 1660,
+     "diff_ratio": 0.9759,
+     "geometry": {
+      "bbox_size_delta": [
+       -10,
+       -1
+      ],
+      "bottom_shift": 0,
+      "center_shift": [
+       1.0,
+       0.5
+      ]
+     },
+     "kind": "artwork",
+     "mask_equal": false,
+     "mask_iou": 0.45,
+     "opaque_union": 1701
+    }
+   ],
+   "frames_compared": 1,
+   "hgss_class_index": "008",
+   "hgss_name": "twins",
+   "hgss_render": "docs/visual_overhaul/catalog_extensions/hgss_trainer_sprites/renders/front_008.png",
+   "hgss_source_path": "files/a/0/5/8#class=008",
+   "identical_frame_indices": [],
+   "ledger_relation": "art_diff_geometry_close",
+   "needs_runtime_validation": true,
+   "palette_only": false,
+   "platinum_png": "res/trainers/classes/twins/front.png",
+   "platinum_target_class": "twins",
+   "requires_later_frame_inspection": false,
+   "review": {
+    "final_reason": "human_approved",
+    "final_role": "preferred",
+    "rationale": "Clear art-quality improvement that preserves the trainer class identity.",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "project owner (human)",
+    "status": "decided",
+    "verdict": "use_hgss"
+   },
+   "risk": "medium",
+   "risk_flags": [],
+   "target_id": "trainer_battle_sprites/tc_twins",
+   "totals": {
+    "changed_pixels": 1660,
+    "diff_ratio": 0.9759,
+    "opaque_union": 1701
+   },
+   "view": "front"
+  },
+  {
+   "alignment_method": "suffix_name",
+   "automated_class": "redrawn_artwork",
+   "candidate_id": "trainer_battle_sprites/hgss/hgss_front_024",
+   "change_kind_counts": {
+    "artwork": 1
+   },
+   "dimensions": {
+    "frame_height": 80,
+    "frames_hgss": 1,
+    "frames_platinum": 1,
+    "hgss": [
+     80,
+     80
+    ],
+    "platinum": [
+     80,
+     80
+    ]
+   },
+   "donor_frames_identical_to_some_native_frame": [
+    null
+   ],
+   "first_frame_identical": false,
+   "frame_metrics": [
+    {
+     "changed_pixels": 1720,
+     "diff_ratio": 0.9868,
+     "geometry": {
+      "bbox_size_delta": [
+       7,
+       1
+      ],
+      "bottom_shift": 0,
+      "center_shift": [
+       0.5,
+       -0.5
+      ]
+     },
+     "kind": "artwork",
+     "mask_equal": false,
+     "mask_iou": 0.454,
+     "opaque_union": 1743
+    }
+   ],
+   "frames_compared": 1,
+   "hgss_class_index": "024",
+   "hgss_name": "ace_trainer_m",
+   "hgss_render": "docs/visual_overhaul/catalog_extensions/hgss_trainer_sprites/renders/front_024.png",
+   "hgss_source_path": "files/a/0/5/8#class=024",
+   "identical_frame_indices": [],
+   "ledger_relation": "art_diff_geometry_close",
+   "needs_runtime_validation": false,
+   "palette_only": false,
+   "platinum_png": "res/trainers/classes/ace_trainer_male/front.png",
+   "platinum_target_class": "ace_trainer_male",
+   "requires_later_frame_inspection": false,
+   "review": {
+    "final_reason": "human_keep_platinum",
+    "final_role": "not_selected",
+    "rationale": "Ace Trainers keep their Platinum/Sinnoh designs; HGSS is a regional redesign, not a quality upgrade.",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "project owner (human)",
+    "status": "decided",
+    "verdict": "keep_platinum"
+   },
+   "risk": "medium",
+   "risk_flags": [],
+   "target_id": "trainer_battle_sprites/tc_ace_trainer_male",
+   "totals": {
+    "changed_pixels": 1720,
+    "diff_ratio": 0.9868,
+    "opaque_union": 1743
+   },
+   "view": "front"
+  },
+  {
+   "alignment_method": "suffix_name",
+   "automated_class": "redrawn_artwork",
+   "candidate_id": "trainer_battle_sprites/hgss/hgss_front_025",
+   "change_kind_counts": {
+    "artwork": 1
+   },
+   "dimensions": {
+    "frame_height": 80,
+    "frames_hgss": 1,
+    "frames_platinum": 1,
+    "hgss": [
+     80,
+     80
+    ],
+    "platinum": [
+     80,
+     80
+    ]
+   },
+   "donor_frames_identical_to_some_native_frame": [
+    null
+   ],
+   "first_frame_identical": false,
+   "frame_metrics": [
+    {
+     "changed_pixels": 1633,
+     "diff_ratio": 0.9855,
+     "geometry": {
+      "bbox_size_delta": [
+       5,
+       2
+      ],
+      "bottom_shift": 1,
+      "center_shift": [
+       -1.5,
+       0.0
+      ]
+     },
+     "kind": "artwork",
+     "mask_equal": false,
+     "mask_iou": 0.401,
+     "opaque_union": 1657
+    }
+   ],
+   "frames_compared": 1,
+   "hgss_class_index": "025",
+   "hgss_name": "ace_trainer_f",
+   "hgss_render": "docs/visual_overhaul/catalog_extensions/hgss_trainer_sprites/renders/front_025.png",
+   "hgss_source_path": "files/a/0/5/8#class=025",
+   "identical_frame_indices": [],
+   "ledger_relation": "art_diff_geometry_close",
+   "needs_runtime_validation": false,
+   "palette_only": false,
+   "platinum_png": "res/trainers/classes/ace_trainer_female/front.png",
+   "platinum_target_class": "ace_trainer_female",
+   "requires_later_frame_inspection": false,
+   "review": {
+    "final_reason": "human_keep_platinum",
+    "final_role": "not_selected",
+    "rationale": "Ace Trainers keep their Platinum/Sinnoh designs; HGSS is a regional redesign, not a quality upgrade.",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "project owner (human)",
+    "status": "decided",
+    "verdict": "keep_platinum"
+   },
+   "risk": "medium",
+   "risk_flags": [],
+   "target_id": "trainer_battle_sprites/tc_ace_trainer_female",
+   "totals": {
+    "changed_pixels": 1633,
+    "diff_ratio": 0.9855,
+    "opaque_union": 1657
+   },
+   "view": "front"
+  },
+  {
+   "alignment_method": "exact_name",
+   "automated_class": "redrawn_artwork",
+   "candidate_id": "trainer_battle_sprites/hgss/hgss_front_036",
+   "change_kind_counts": {
+    "artwork": 1
+   },
+   "dimensions": {
+    "frame_height": 80,
+    "frames_hgss": 1,
+    "frames_platinum": 1,
+    "hgss": [
+     80,
+     80
+    ],
+    "platinum": [
+     80,
+     80
+    ]
+   },
+   "donor_frames_identical_to_some_native_frame": [
+    null
+   ],
+   "first_frame_identical": false,
+   "frame_metrics": [
+    {
+     "changed_pixels": 1853,
+     "diff_ratio": 0.9748,
+     "geometry": {
+      "bbox_size_delta": [
+       2,
+       2
+      ],
+      "bottom_shift": 0,
+      "center_shift": [
+       1.0,
+       -1.0
+      ]
+     },
+     "kind": "artwork",
+     "mask_equal": false,
+     "mask_iou": 0.452,
+     "opaque_union": 1901
+    }
+   ],
+   "frames_compared": 1,
+   "hgss_class_index": "036",
+   "hgss_name": "beauty",
+   "hgss_render": "docs/visual_overhaul/catalog_extensions/hgss_trainer_sprites/renders/front_036.png",
+   "hgss_source_path": "files/a/0/5/8#class=036",
+   "identical_frame_indices": [],
+   "ledger_relation": "art_diff_geometry_close",
+   "needs_runtime_validation": true,
+   "palette_only": false,
+   "platinum_png": "res/trainers/classes/beauty/front.png",
+   "platinum_target_class": "beauty",
+   "requires_later_frame_inspection": false,
+   "review": {
+    "final_reason": "human_approved",
+    "final_role": "preferred",
+    "rationale": "Clear art-quality improvement that preserves the trainer class identity.",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "project owner (human)",
+    "status": "decided",
+    "verdict": "use_hgss"
+   },
+   "risk": "medium",
+   "risk_flags": [],
+   "target_id": "trainer_battle_sprites/tc_beauty",
+   "totals": {
+    "changed_pixels": 1853,
+    "diff_ratio": 0.9748,
+    "opaque_union": 1901
+   },
+   "view": "front"
+  },
+  {
+   "alignment_method": "suffix_name",
+   "automated_class": "redrawn_artwork",
+   "candidate_id": "trainer_battle_sprites/hgss/hgss_front_043",
+   "change_kind_counts": {
+    "artwork": 1
+   },
+   "dimensions": {
+    "frame_height": 80,
+    "frames_hgss": 1,
+    "frames_platinum": 1,
+    "hgss": [
+     80,
+     80
+    ],
+    "platinum": [
+     80,
+     80
+    ]
+   },
+   "donor_frames_identical_to_some_native_frame": [
+    null
+   ],
+   "first_frame_identical": false,
+   "frame_metrics": [
+    {
+     "changed_pixels": 1315,
+     "diff_ratio": 0.905,
+     "geometry": {
+      "bbox_size_delta": [
+       0,
+       7
+      ],
+      "bottom_shift": 1,
+      "center_shift": [
+       2.0,
+       -2.5
+      ]
+     },
+     "kind": "artwork",
+     "mask_equal": false,
+     "mask_iou": 0.418,
+     "opaque_union": 1453
+    }
+   ],
+   "frames_compared": 1,
+   "hgss_class_index": "043",
+   "hgss_name": "swimmer_f",
+   "hgss_render": "docs/visual_overhaul/catalog_extensions/hgss_trainer_sprites/renders/front_043.png",
+   "hgss_source_path": "files/a/0/5/8#class=043",
+   "identical_frame_indices": [],
+   "ledger_relation": "art_diff_geometry_close",
+   "needs_runtime_validation": true,
+   "palette_only": false,
+   "platinum_png": "res/trainers/classes/swimmer_female/front.png",
+   "platinum_target_class": "swimmer_female",
+   "requires_later_frame_inspection": false,
+   "review": {
+    "final_reason": "human_approved",
+    "final_role": "preferred",
+    "rationale": "Clear art-quality improvement that preserves the trainer class identity.",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "project owner (human)",
+    "status": "decided",
+    "verdict": "use_hgss"
+   },
+   "risk": "medium",
+   "risk_flags": [],
+   "target_id": "trainer_battle_sprites/tc_swimmer_female",
+   "totals": {
+    "changed_pixels": 1315,
+    "diff_ratio": 0.905,
+    "opaque_union": 1453
+   },
+   "view": "front"
+  },
+  {
+   "alignment_method": "exact_name",
+   "automated_class": "later_frames_differ",
+   "candidate_id": "trainer_battle_sprites/hgss/hgss_front_101",
+   "change_kind_counts": {
+    "artwork": 3,
+    "identical": 8
+   },
+   "dimensions": {
+    "frame_height": 80,
+    "frames_hgss": 11,
+    "frames_platinum": 11,
+    "hgss": [
+     80,
+     891
+    ],
+    "platinum": [
+     80,
+     890
+    ]
+   },
+   "donor_frames_identical_to_some_native_frame": [
+    9,
+    3,
+    3,
+    3,
+    null,
+    null,
+    null,
+    10,
+    10,
+    9,
+    10
+   ],
+   "first_frame_identical": true,
+   "frame_metrics": [
+    {
+     "changed_pixels": 0,
+     "diff_ratio": 0.0,
+     "geometry": {
+      "bbox_size_delta": [
+       0,
+       0
+      ],
+      "bottom_shift": 0,
+      "center_shift": [
+       0.0,
+       0.0
+      ]
+     },
+     "kind": "identical",
+     "mask_equal": true,
+     "mask_iou": 1.0,
+     "opaque_union": 1330
+    },
+    {
+     "changed_pixels": 0,
+     "diff_ratio": 0.0,
+     "geometry": {
+      "bbox_size_delta": [
+       0,
+       0
+      ],
+      "bottom_shift": 0,
+      "center_shift": [
+       0.0,
+       0.0
+      ]
+     },
+     "kind": "identical",
+     "mask_equal": true,
+     "mask_iou": 1.0,
+     "opaque_union": 1341
+    },
+    {
+     "changed_pixels": 0,
+     "diff_ratio": 0.0,
+     "geometry": {
+      "bbox_size_delta": [
+       0,
+       0
+      ],
+      "bottom_shift": 0,
+      "center_shift": [
+       0.0,
+       0.0
+      ]
+     },
+     "kind": "identical",
+     "mask_equal": true,
+     "mask_iou": 1.0,
+     "opaque_union": 1341
+    },
+    {
+     "changed_pixels": 0,
+     "diff_ratio": 0.0,
+     "geometry": {
+      "bbox_size_delta": [
+       0,
+       0
+      ],
+      "bottom_shift": 0,
+      "center_shift": [
+       0.0,
+       0.0
+      ]
+     },
+     "kind": "identical",
+     "mask_equal": true,
+     "mask_iou": 1.0,
+     "opaque_union": 1341
+    },
+    {
+     "changed_pixels": 768,
+     "diff_ratio": 0.5127,
+     "geometry": {
+      "bbox_size_delta": [
+       -18,
+       0
+      ],
+      "bottom_shift": 0,
+      "center_shift": [
+       8.0,
+       0.0
+      ]
+     },
+     "kind": "artwork",
+     "mask_equal": false,
+     "mask_iou": 0.791,
+     "opaque_union": 1498
+    },
+    {
+     "changed_pixels": 768,
+     "diff_ratio": 0.5127,
+     "geometry": {
+      "bbox_size_delta": [
+       -18,
+       0
+      ],
+      "bottom_shift": 0,
+      "center_shift": [
+       8.0,
+       0.0
+      ]
+     },
+     "kind": "artwork",
+     "mask_equal": false,
+     "mask_iou": 0.791,
+     "opaque_union": 1498
+    },
+    {
+     "changed_pixels": 768,
+     "diff_ratio": 0.5127,
+     "geometry": {
+      "bbox_size_delta": [
+       -18,
+       0
+      ],
+      "bottom_shift": 0,
+      "center_shift": [
+       8.0,
+       0.0
+      ]
+     },
+     "kind": "artwork",
+     "mask_equal": false,
+     "mask_iou": 0.791,
+     "opaque_union": 1498
+    },
+    {
+     "changed_pixels": 0,
+     "diff_ratio": 0.0,
+     "geometry": {
+      "bbox_size_delta": [
+       0,
+       0
+      ],
+      "bottom_shift": 0,
+      "center_shift": [
+       0.0,
+       0.0
+      ]
+     },
+     "kind": "identical",
+     "mask_equal": true,
+     "mask_iou": 1.0,
+     "opaque_union": 1582
+    },
+    {
+     "changed_pixels": 0,
+     "diff_ratio": 0.0,
+     "geometry": {
+      "bbox_size_delta": [
+       0,
+       0
+      ],
+      "bottom_shift": 0,
+      "center_shift": [
+       0.0,
+       0.0
+      ]
+     },
+     "kind": "identical",
+     "mask_equal": true,
+     "mask_iou": 1.0,
+     "opaque_union": 1582
+    },
+    {
+     "changed_pixels": 0,
+     "diff_ratio": 0.0,
+     "geometry": {
+      "bbox_size_delta": [
+       0,
+       0
+      ],
+      "bottom_shift": 0,
+      "center_shift": [
+       0.0,
+       0.0
+      ]
+     },
+     "kind": "identical",
+     "mask_equal": true,
+     "mask_iou": 1.0,
+     "opaque_union": 1330
+    },
+    {
+     "changed_pixels": 0,
+     "diff_ratio": 0.0,
+     "geometry": {
+      "bbox_size_delta": [
+       0,
+       0
+      ],
+      "bottom_shift": 0,
+      "center_shift": [
+       0.0,
+       0.0
+      ]
+     },
+     "kind": "identical",
+     "mask_equal": true,
+     "mask_iou": 1.0,
+     "opaque_union": 1582
+    }
+   ],
+   "frames_compared": 11,
+   "hgss_class_index": "101",
+   "hgss_name": "arcade_star",
+   "hgss_render": "docs/visual_overhaul/catalog_extensions/hgss_trainer_sprites/renders/front_101.png",
+   "hgss_source_path": "files/a/0/5/8#class=101",
+   "identical_frame_indices": [
+    0,
+    1,
+    2,
+    3,
+    7,
+    8,
+    9,
+    10
+   ],
+   "ledger_relation": "art_diff_geometry_close",
+   "needs_runtime_validation": false,
+   "palette_only": false,
+   "platinum_png": "res/trainers/classes/arcade_star/front.png",
+   "platinum_target_class": "arcade_star",
+   "requires_later_frame_inspection": true,
+   "review": {
+    "final_reason": "human_keep_platinum",
+    "final_role": "not_selected",
+    "rationale": "Only a limited later-frame difference (3 of 11 frames); insufficient to justify replacement.",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "project owner (human)",
+    "status": "decided",
+    "verdict": "keep_platinum"
+   },
+   "risk": "medium",
+   "risk_flags": [],
+   "target_id": "trainer_battle_sprites/tc_arcade_star",
+   "totals": {
+    "changed_pixels": 2304,
+    "diff_ratio": 0.1447,
+    "opaque_union": 15923
+   },
+   "view": "front"
+  },
+  {
+   "alignment_method": "exact_name",
+   "automated_class": "recolor_only",
+   "candidate_id": "trainer_battle_sprites/hgss/hgss_front_122",
+   "change_kind_counts": {
+    "recolor_only": 1
+   },
+   "dimensions": {
+    "frame_height": 80,
+    "frames_hgss": 1,
+    "frames_platinum": 1,
+    "hgss": [
+     80,
+     80
+    ],
+    "platinum": [
+     80,
+     80
+    ]
+   },
+   "donor_frames_identical_to_some_native_frame": [
+    null
+   ],
+   "first_frame_identical": false,
+   "frame_metrics": [
+    {
+     "changed_pixels": 126,
+     "diff_ratio": 0.0713,
+     "geometry": {
+      "bbox_size_delta": [
+       0,
+       0
+      ],
+      "bottom_shift": 0,
+      "center_shift": [
+       0.0,
+       0.0
+      ]
+     },
+     "kind": "recolor_only",
+     "mask_equal": true,
+     "mask_iou": 1.0,
+     "opaque_union": 1767
+    }
+   ],
+   "frames_compared": 1,
+   "hgss_class_index": "122",
+   "hgss_name": "young_couple",
+   "hgss_render": "docs/visual_overhaul/catalog_extensions/hgss_trainer_sprites/renders/front_122.png",
+   "hgss_source_path": "files/a/0/5/8#class=122",
+   "identical_frame_indices": [],
+   "ledger_relation": "art_diff_geometry_close",
+   "needs_runtime_validation": false,
+   "palette_only": true,
+   "platinum_png": "res/trainers/classes/young_couple/front.png",
+   "platinum_target_class": "young_couple",
+   "requires_later_frame_inspection": false,
+   "review": {
+    "final_reason": "human_keep_platinum",
+    "final_role": "not_selected",
+    "rationale": "Recolor-only/negligible change; not worth introducing a donor dependency.",
+    "reviewed_at": "2026-10-07",
+    "reviewer": "project owner (human)",
+    "status": "decided",
+    "verdict": "keep_platinum"
+   },
+   "risk": "medium",
+   "risk_flags": [],
+   "target_id": "trainer_battle_sprites/tc_young_couple",
+   "totals": {
+    "changed_pixels": 126,
+    "diff_ratio": 0.0713,
+    "opaque_union": 1767
+   },
+   "view": "front"
+  }
+ ],
+ "contact_sheets": {
+  "back": [],
+  "front": [
+   "front_01.png"
+  ]
+ },
+ "counts": {
+  "back": 0,
+  "by_class": {
+   "later_frames_differ": 1,
+   "recolor_only": 1,
+   "redrawn_artwork": 8
+  },
+  "candidates": 10,
+  "front": 10,
+  "later_frame_inspection": 1,
+  "verdicts": {
+   "keep_platinum": 4,
+   "use_hgss": 6
+  }
+ },
+ "ledger_sha256": "72e37b38572ec4d278a4921b0070a21b238d9dcf0c2f6041bb828cee96570376",
+ "legend": {
+  "diff": "yellow=both opaque but colour differs, green=HGSS-only pixel, magenta=Platinum-only pixel, grey=same, comparison in BGR555 space"
+ },
+ "review_decisions_sha256": "285b9d099e79540216f2ae33f73057b268d77cf390f45cb5c8a8521dd72a685a",
+ "review_of": "trainer_battle_sprites preferred candidates",
+ "rules_version": "1.6",
+ "schema_version": 1,
+ "thresholds": {
+  "negligible_changed_pixels": 40,
+  "negligible_ratio": 0.02
+ },
+ "withdrawn_after_decoder_fix": {
+  "count": 11,
+  "entries": [
+   {
+    "candidate_id": "trainer_battle_sprites/hgss/hgss_back_004",
+    "now_reason": "identical_to_native",
+    "now_relation": "identical",
+    "now_role": "not_selected",
+    "platinum_class": "trainer_cheryl"
+   },
+   {
+    "candidate_id": "trainer_battle_sprites/hgss/hgss_back_005",
+    "now_reason": "identical_to_native",
+    "now_relation": "identical",
+    "now_role": "not_selected",
+    "platinum_class": "trainer_riley"
+   },
+   {
+    "candidate_id": "trainer_battle_sprites/hgss/hgss_back_009",
+    "now_reason": "identical_to_native",
+    "now_relation": "identical",
+    "now_role": "not_selected",
+    "platinum_class": "dp_player_male"
+   },
+   {
+    "candidate_id": "trainer_battle_sprites/hgss/hgss_back_010",
+    "now_reason": "identical_to_native",
+    "now_relation": "identical",
+    "now_role": "not_selected",
+    "platinum_class": "dp_player_female"
+   },
+   {
+    "candidate_id": "trainer_battle_sprites/hgss/hgss_back_011",
+    "now_reason": "identical_to_native",
+    "now_relation": "identical",
+    "now_role": "not_selected",
+    "platinum_class": "dp_rival"
+   },
+   {
+    "candidate_id": "trainer_battle_sprites/hgss/hgss_back_012",
+    "now_reason": "identical_to_native",
+    "now_relation": "identical",
+    "now_role": "not_selected",
+    "platinum_class": "player_male"
+   },
+   {
+    "candidate_id": "trainer_battle_sprites/hgss/hgss_back_013",
+    "now_reason": "identical_to_native",
+    "now_relation": "identical",
+    "now_role": "not_selected",
+    "platinum_class": "player_female"
+   },
+   {
+    "candidate_id": "trainer_battle_sprites/hgss/hgss_back_014",
+    "now_reason": "identical_to_native",
+    "now_relation": "identical",
+    "now_role": "not_selected",
+    "platinum_class": "rival"
+   },
+   {
+    "candidate_id": "trainer_battle_sprites/hgss/hgss_front_097",
+    "now_reason": "eligible_not_best_for_target",
+    "now_relation": "art_diff_minor",
+    "now_role": "alternate",
+    "platinum_class": "tower_tycoon"
+   },
+   {
+    "candidate_id": "trainer_battle_sprites/hgss/hgss_front_099",
+    "now_reason": "identical_to_native",
+    "now_relation": "identical",
+    "now_role": "not_selected",
+    "platinum_class": "hall_matron"
+   },
+   {
+    "candidate_id": "trainer_battle_sprites/hgss/hgss_front_100",
+    "now_reason": "identical_to_native",
+    "now_relation": "identical",
+    "now_role": "not_selected",
+    "platinum_class": "factory_head"
+   }
+  ],
+  "prior_ref": "9f25c528",
+  "reason": "Earlier renders ignored the NCER per-cell VRAM transfer table, so later animation frames were mis-decoded."
+ }
+}
