@@ -4,33 +4,32 @@
  "asset_count": 3338,
  "package_count": 477,
  "technical_state_counts": {
-  "valid_render": 2479,
+  "valid_render": 2519,
   "companion_of_valid": 792,
-  "no_pair": 10,
-  "unsupported_member": 38,
-  "no_valid_render": 4,
-  "member_not_found": 12,
+  "non_art_text": 8,
+  "unsupported_member": 10,
+  "no_pair": 6,
   "decode_failure": 3
  },
  "suffix_state_counts": {
-  "(none):member_not_found": 12,
+  "(none):non_art_text": 8,
+  "(none):unsupported_member": 4,
   "NANR:companion_of_valid": 7,
-  "NCBR:no_pair": 5,
-  "NCBR:valid_render": 490,
+  "NCBR:no_pair": 4,
+  "NCBR:valid_render": 491,
   "NCER:decode_failure": 3,
   "NCER:valid_render": 785,
-  "NCGR:no_pair": 5,
-  "NCGR:valid_render": 286,
+  "NCGR:no_pair": 2,
+  "NCGR:valid_render": 289,
   "NCLR:valid_render": 458,
   "NSCR:valid_render": 2,
-  "bin:no_valid_render": 4,
   "bin:unsupported_member": 1,
-  "bin:valid_render": 458,
+  "bin:valid_render": 462,
   "cac:companion_of_valid": 785,
   "cac:unsupported_member": 3,
   "narc:unsupported_member": 2,
-  "ntfp:unsupported_member": 16,
-  "ntft:unsupported_member": 16
+  "ntfp:valid_render": 16,
+  "ntft:valid_render": 16
  },
  "records": [
   {
@@ -50,8 +49,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:character:heroine_LZ.bin:heroine_stand.NCBR",
    "source_path": "res/prebuilt/data/field/character/heroine_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render",
    "suffix": "NCBR"
   },
   {
@@ -85,29 +84,29 @@
   {
    "asset_id": "ranger2:source:res:prebuilt:data:field:effect:dokarimo02.ntfp",
    "source_path": "res/prebuilt/data/field/effect/dokarimo02.ntfp",
-   "technical_state": "unsupported_member",
-   "detail": "raw/candidate resource",
+   "technical_state": "valid_render",
+   "detail": "A5I3 64x64 texture (format proven by palette index coverage)",
    "suffix": "ntfp"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:field:effect:dokarimo02.ntft",
    "source_path": "res/prebuilt/data/field/effect/dokarimo02.ntft",
-   "technical_state": "unsupported_member",
-   "detail": "raw/candidate resource",
+   "technical_state": "valid_render",
+   "detail": "A5I3 64x64 texture (format proven by palette index coverage)",
    "suffix": "ntft"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:field:effect:dokarimo03.ntfp",
    "source_path": "res/prebuilt/data/field/effect/dokarimo03.ntfp",
-   "technical_state": "unsupported_member",
-   "detail": "raw/candidate resource",
+   "technical_state": "valid_render",
+   "detail": "A5I3 32x32 texture (format proven by palette index coverage)",
    "suffix": "ntfp"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:field:effect:dokarimo03.ntft",
    "source_path": "res/prebuilt/data/field/effect/dokarimo03.ntft",
-   "technical_state": "unsupported_member",
-   "detail": "raw/candidate resource",
+   "technical_state": "valid_render",
+   "detail": "A5I3 32x32 texture (format proven by palette index coverage)",
    "suffix": "ntft"
   },
   {
@@ -442,141 +441,141 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_00.ntfp",
    "source_path": "res/prebuilt/data/field/effect/ef100_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "valid_render",
+   "detail": "palette of valid ntft texture",
    "suffix": "ntfp"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_00.ntft",
    "source_path": "res/prebuilt/data/field/effect/ef100_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "valid_render",
+   "detail": "A5I3 64x64 texture (format proven by palette index coverage)",
    "suffix": "ntft"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_01.ntfp",
    "source_path": "res/prebuilt/data/field/effect/ef100_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "valid_render",
+   "detail": "palette of valid ntft texture",
    "suffix": "ntfp"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_01.ntft",
    "source_path": "res/prebuilt/data/field/effect/ef100_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "valid_render",
+   "detail": "A5I3 64x64 texture (format proven by palette index coverage)",
    "suffix": "ntft"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_02.ntfp",
    "source_path": "res/prebuilt/data/field/effect/ef100_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "valid_render",
+   "detail": "palette of valid ntft texture",
    "suffix": "ntfp"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_02.ntft",
    "source_path": "res/prebuilt/data/field/effect/ef100_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "valid_render",
+   "detail": "A5I3 64x64 texture (format proven by palette index coverage)",
    "suffix": "ntft"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_03.ntfp",
    "source_path": "res/prebuilt/data/field/effect/ef100_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "valid_render",
+   "detail": "palette of valid ntft texture",
    "suffix": "ntfp"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_03.ntft",
    "source_path": "res/prebuilt/data/field/effect/ef100_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "valid_render",
+   "detail": "A5I3 64x64 texture (format proven by palette index coverage)",
    "suffix": "ntft"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:field:effect:ef100_LZ.bin",
    "source_path": "res/prebuilt/data/field/effect/ef100_LZ.bin",
-   "technical_state": "no_valid_render",
-   "detail": "0 valid NCER pairs",
+   "technical_state": "valid_render",
+   "detail": "4 valid NCER pairs",
    "suffix": "bin"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef101_LZ.bin:ef101_00.ntfp",
    "source_path": "res/prebuilt/data/field/effect/ef101_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "valid_render",
+   "detail": "palette of valid ntft texture",
    "suffix": "ntfp"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef101_LZ.bin:ef101_00.ntft",
    "source_path": "res/prebuilt/data/field/effect/ef101_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "valid_render",
+   "detail": "A5I3 64x64 texture (format proven by palette index coverage)",
    "suffix": "ntft"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:field:effect:ef101_LZ.bin",
    "source_path": "res/prebuilt/data/field/effect/ef101_LZ.bin",
-   "technical_state": "no_valid_render",
-   "detail": "0 valid NCER pairs",
+   "technical_state": "valid_render",
+   "detail": "1 valid NCER pairs",
    "suffix": "bin"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:ef102_00.ntfp",
    "source_path": "res/prebuilt/data/field/effect/ef102_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "valid_render",
+   "detail": "palette of valid ntft texture",
    "suffix": "ntfp"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:ef102_00.ntft",
    "source_path": "res/prebuilt/data/field/effect/ef102_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "valid_render",
+   "detail": "A5I3 32x32 texture (format proven by palette index coverage)",
    "suffix": "ntft"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:ef102_07.ntfp",
    "source_path": "res/prebuilt/data/field/effect/ef102_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "valid_render",
+   "detail": "palette of valid ntft texture",
    "suffix": "ntfp"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:ef102_07.ntft",
    "source_path": "res/prebuilt/data/field/effect/ef102_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "valid_render",
+   "detail": "A5I3 8x16 texture (format proven by palette index coverage)",
    "suffix": "ntft"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:member_0004",
    "source_path": "res/prebuilt/data/field/effect/ef102_LZ.bin",
-   "technical_state": "member_not_found",
-   "detail": "",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (98 bytes)",
    "suffix": ""
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:member_0005",
    "source_path": "res/prebuilt/data/field/effect/ef102_LZ.bin",
-   "technical_state": "member_not_found",
+   "technical_state": "unsupported_member",
    "detail": "",
    "suffix": ""
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:member_0006",
    "source_path": "res/prebuilt/data/field/effect/ef102_LZ.bin",
-   "technical_state": "member_not_found",
-   "detail": "",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (2 bytes)",
    "suffix": ""
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:field:effect:ef102_LZ.bin",
    "source_path": "res/prebuilt/data/field/effect/ef102_LZ.bin",
-   "technical_state": "no_valid_render",
-   "detail": "0 valid NCER pairs",
+   "technical_state": "valid_render",
+   "detail": "2 valid NCER pairs",
    "suffix": "bin"
   },
   {
@@ -610,22 +609,22 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef103_LZ.bin:member_0004",
    "source_path": "res/prebuilt/data/field/effect/ef103_LZ.bin",
-   "technical_state": "member_not_found",
-   "detail": "",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (98 bytes)",
    "suffix": ""
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef103_LZ.bin:member_0005",
    "source_path": "res/prebuilt/data/field/effect/ef103_LZ.bin",
-   "technical_state": "member_not_found",
+   "technical_state": "unsupported_member",
    "detail": "",
    "suffix": ""
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef103_LZ.bin:member_0006",
    "source_path": "res/prebuilt/data/field/effect/ef103_LZ.bin",
-   "technical_state": "member_not_found",
-   "detail": "",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (2 bytes)",
    "suffix": ""
   },
   {
@@ -638,57 +637,57 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:ef104_00.ntfp",
    "source_path": "res/prebuilt/data/field/effect/ef104_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "valid_render",
+   "detail": "palette of valid ntft texture",
    "suffix": "ntfp"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:ef104_00.ntft",
    "source_path": "res/prebuilt/data/field/effect/ef104_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "valid_render",
+   "detail": "A5I3 128x128 texture (format proven by palette index coverage)",
    "suffix": "ntft"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:ef104_01.ntfp",
    "source_path": "res/prebuilt/data/field/effect/ef104_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "valid_render",
+   "detail": "palette of valid ntft texture",
    "suffix": "ntfp"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:ef104_01.ntft",
    "source_path": "res/prebuilt/data/field/effect/ef104_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "valid_render",
+   "detail": "A3I5 128x128 texture (format proven by palette index coverage)",
    "suffix": "ntft"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:member_0004",
    "source_path": "res/prebuilt/data/field/effect/ef104_LZ.bin",
-   "technical_state": "member_not_found",
-   "detail": "",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (98 bytes)",
    "suffix": ""
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:member_0005",
    "source_path": "res/prebuilt/data/field/effect/ef104_LZ.bin",
-   "technical_state": "member_not_found",
+   "technical_state": "unsupported_member",
    "detail": "",
    "suffix": ""
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:member_0006",
    "source_path": "res/prebuilt/data/field/effect/ef104_LZ.bin",
-   "technical_state": "member_not_found",
-   "detail": "",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (2 bytes)",
    "suffix": ""
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:field:effect:ef104_LZ.bin",
    "source_path": "res/prebuilt/data/field/effect/ef104_LZ.bin",
-   "technical_state": "no_valid_render",
-   "detail": "0 valid NCER pairs",
+   "technical_state": "valid_render",
+   "detail": "2 valid NCER pairs",
    "suffix": "bin"
   },
   {
@@ -722,22 +721,22 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef105_LZ.bin:member_0004",
    "source_path": "res/prebuilt/data/field/effect/ef105_LZ.bin",
-   "technical_state": "member_not_found",
-   "detail": "",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (98 bytes)",
    "suffix": ""
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef105_LZ.bin:member_0005",
    "source_path": "res/prebuilt/data/field/effect/ef105_LZ.bin",
-   "technical_state": "member_not_found",
+   "technical_state": "unsupported_member",
    "detail": "",
    "suffix": ""
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef105_LZ.bin:member_0006",
    "source_path": "res/prebuilt/data/field/effect/ef105_LZ.bin",
-   "technical_state": "member_not_found",
-   "detail": "",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (2 bytes)",
    "suffix": ""
   },
   {
@@ -890,71 +889,71 @@
   {
    "asset_id": "ranger2:source:res:prebuilt:data:field:effect:kiri01.ntfp",
    "source_path": "res/prebuilt/data/field/effect/kiri01.ntfp",
-   "technical_state": "unsupported_member",
-   "detail": "raw/candidate resource",
+   "technical_state": "valid_render",
+   "detail": "A5I3 128x128 texture (format proven by palette index coverage)",
    "suffix": "ntfp"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:field:effect:kiri01.ntft",
    "source_path": "res/prebuilt/data/field/effect/kiri01.ntft",
-   "technical_state": "unsupported_member",
-   "detail": "raw/candidate resource",
+   "technical_state": "valid_render",
+   "detail": "A5I3 128x128 texture (format proven by palette index coverage)",
    "suffix": "ntft"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:field:effect:kiri02.ntfp",
    "source_path": "res/prebuilt/data/field/effect/kiri02.ntfp",
-   "technical_state": "unsupported_member",
-   "detail": "raw/candidate resource",
+   "technical_state": "valid_render",
+   "detail": "A5I3 64x64 texture (format proven by palette index coverage)",
    "suffix": "ntfp"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:field:effect:kiri02.ntft",
    "source_path": "res/prebuilt/data/field/effect/kiri02.ntft",
-   "technical_state": "unsupported_member",
-   "detail": "raw/candidate resource",
+   "technical_state": "valid_render",
+   "detail": "A5I3 64x64 texture (format proven by palette index coverage)",
    "suffix": "ntft"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:field:effect:komorebi.ntfp",
    "source_path": "res/prebuilt/data/field/effect/komorebi.ntfp",
-   "technical_state": "unsupported_member",
-   "detail": "raw/candidate resource",
+   "technical_state": "valid_render",
+   "detail": "A5I3 32x32 texture (format proven by palette index coverage)",
    "suffix": "ntfp"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:field:effect:komorebi.ntft",
    "source_path": "res/prebuilt/data/field/effect/komorebi.ntft",
-   "technical_state": "unsupported_member",
-   "detail": "raw/candidate resource",
+   "technical_state": "valid_render",
+   "detail": "A5I3 32x32 texture (format proven by palette index coverage)",
    "suffix": "ntft"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:field:effect:suna01.ntfp",
    "source_path": "res/prebuilt/data/field/effect/suna01.ntfp",
-   "technical_state": "unsupported_member",
-   "detail": "raw/candidate resource",
+   "technical_state": "valid_render",
+   "detail": "A5I3 32x128 texture (format proven by palette index coverage)",
    "suffix": "ntfp"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:field:effect:suna01.ntft",
    "source_path": "res/prebuilt/data/field/effect/suna01.ntft",
-   "technical_state": "unsupported_member",
-   "detail": "raw/candidate resource",
+   "technical_state": "valid_render",
+   "detail": "A5I3 32x128 texture (format proven by palette index coverage)",
    "suffix": "ntft"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:field:effect:suna02.ntfp",
    "source_path": "res/prebuilt/data/field/effect/suna02.ntfp",
-   "technical_state": "unsupported_member",
-   "detail": "raw/candidate resource",
+   "technical_state": "valid_render",
+   "detail": "A5I3 32x128 texture (format proven by palette index coverage)",
    "suffix": "ntfp"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:field:effect:suna02.ntft",
    "source_path": "res/prebuilt/data/field/effect/suna02.ntft",
-   "technical_state": "unsupported_member",
-   "detail": "raw/candidate resource",
+   "technical_state": "valid_render",
+   "detail": "A5I3 32x128 texture (format proven by palette index coverage)",
    "suffix": "ntft"
   },
   {
@@ -1037,8 +1036,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:npc:n000_00_LZ.bin:n000_00_w.NCGR",
    "source_path": "res/prebuilt/data/npc/n000_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render",
    "suffix": "NCGR"
   },
   {
@@ -7001,8 +7000,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc104_LZ.bin:npc104_s.NCGR",
    "source_path": "res/prebuilt/data/npc/npc104_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render",
    "suffix": "NCGR"
   },
   {
@@ -7036,8 +7035,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc104_LZ.bin:npc104_w.NCGR",
    "source_path": "res/prebuilt/data/npc/npc104_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render",
    "suffix": "NCGR"
   },
   {
@@ -23418,6 +23417,14 @@
    "detail": "Nitro animation (NANR) of a package with valid NCER renders"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:character:heroine_LZ.bin:heroine_stand.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:character:heroine_LZ.bin:heroine_stand.NCER",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -23448,6 +23455,38 @@
    "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "1 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:field:effect:dokarimo02.ntfp",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 64x64 texture (format proven by palette index coverage)"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:field:effect:dokarimo02.ntft",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 64x64 texture (format proven by palette index coverage)"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:field:effect:dokarimo03.ntfp",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 32x32 texture (format proven by palette index coverage)"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:field:effect:dokarimo03.ntft",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 32x32 texture (format proven by palette index coverage)"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef001_LZ.bin:ef001.NCBR",
@@ -23826,6 +23865,158 @@
    "detail": "1 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_00.ntfp",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette of valid ntft texture"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_00.ntft",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 64x64 texture (format proven by palette index coverage)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_01.ntfp",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette of valid ntft texture"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_01.ntft",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 64x64 texture (format proven by palette index coverage)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_02.ntfp",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette of valid ntft texture"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_02.ntft",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 64x64 texture (format proven by palette index coverage)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_03.ntfp",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette of valid ntft texture"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_03.ntft",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 64x64 texture (format proven by palette index coverage)"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:field:effect:ef100_LZ.bin",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "4 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef101_LZ.bin:ef101_00.ntfp",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette of valid ntft texture"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef101_LZ.bin:ef101_00.ntft",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 64x64 texture (format proven by palette index coverage)"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:field:effect:ef101_LZ.bin",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "1 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:ef102_00.ntfp",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette of valid ntft texture"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:ef102_00.ntft",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 32x32 texture (format proven by palette index coverage)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:ef102_07.ntfp",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette of valid ntft texture"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:ef102_07.ntft",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 8x16 texture (format proven by palette index coverage)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:member_0004",
+   "review_status": "reject",
+   "reason_code": "stray_ascii_text_member",
+   "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (98 bytes)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:member_0006",
+   "review_status": "reject",
+   "reason_code": "stray_ascii_text_member",
+   "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (2 bytes)"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:field:effect:ef102_LZ.bin",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "2 valid NCER pairs"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef103_LZ.bin:ef103.NCBR",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -23858,12 +24049,84 @@
    "detail": "cell-animation companion of valid NCER"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef103_LZ.bin:member_0004",
+   "review_status": "reject",
+   "reason_code": "stray_ascii_text_member",
+   "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (98 bytes)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef103_LZ.bin:member_0006",
+   "review_status": "reject",
+   "reason_code": "stray_ascii_text_member",
+   "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (2 bytes)"
+  },
+  {
    "asset_id": "ranger2:source:res:prebuilt:data:field:effect:ef103_LZ.bin",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
    "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "1 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:ef104_00.ntfp",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette of valid ntft texture"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:ef104_00.ntft",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 128x128 texture (format proven by palette index coverage)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:ef104_01.ntfp",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette of valid ntft texture"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:ef104_01.ntft",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A3I5 128x128 texture (format proven by palette index coverage)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:member_0004",
+   "review_status": "reject",
+   "reason_code": "stray_ascii_text_member",
+   "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (98 bytes)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:member_0006",
+   "review_status": "reject",
+   "reason_code": "stray_ascii_text_member",
+   "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (2 bytes)"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:field:effect:ef104_LZ.bin",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "2 valid NCER pairs"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef105_LZ.bin:ef105.NCBR",
@@ -23896,6 +24159,22 @@
    "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
    "technical_state": "companion_of_valid",
    "detail": "cell-animation companion of valid NCER"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef105_LZ.bin:member_0004",
+   "review_status": "reject",
+   "reason_code": "stray_ascii_text_member",
+   "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (98 bytes)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef105_LZ.bin:member_0006",
+   "review_status": "reject",
+   "reason_code": "stray_ascii_text_member",
+   "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (2 bytes)"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:field:effect:ef105_LZ.bin",
@@ -24042,6 +24321,86 @@
    "detail": "1 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:source:res:prebuilt:data:field:effect:kiri01.ntfp",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 128x128 texture (format proven by palette index coverage)"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:field:effect:kiri01.ntft",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 128x128 texture (format proven by palette index coverage)"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:field:effect:kiri02.ntfp",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 64x64 texture (format proven by palette index coverage)"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:field:effect:kiri02.ntft",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 64x64 texture (format proven by palette index coverage)"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:field:effect:komorebi.ntfp",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 32x32 texture (format proven by palette index coverage)"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:field:effect:komorebi.ntft",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 32x32 texture (format proven by palette index coverage)"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:field:effect:suna01.ntfp",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 32x128 texture (format proven by palette index coverage)"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:field:effect:suna01.ntft",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 32x128 texture (format proven by palette index coverage)"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:field:effect:suna02.ntfp",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 32x128 texture (format proven by palette index coverage)"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:field:effect:suna02.ntft",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "A5I3 32x128 texture (format proven by palette index coverage)"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:npc:n000_00_LZ.bin:n000_00.NCLR",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -24104,6 +24463,14 @@
    "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "40/40 nonblank cells"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:npc:n000_00_LZ.bin:n000_00_w.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:npc:n000_00_LZ.bin:n000_00_w.cac",
@@ -30890,6 +31257,14 @@
    "detail": "16/16 nonblank cells"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc104_LZ.bin:npc104_s.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc104_LZ.bin:npc104_s.cac",
    "review_status": "usable",
    "reason_code": "ranger_cac_companion_of_valid_render",
@@ -30920,6 +31295,14 @@
    "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "17/17 nonblank cells"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc104_LZ.bin:npc104_w.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc104_LZ.bin:npc104_w.cac",

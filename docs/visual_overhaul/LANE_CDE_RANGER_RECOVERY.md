@@ -10,7 +10,7 @@ No Platinum resources are modified.
 | blank_render | 16 |
 | companion_of_valid | 1555 |
 | decode_failure | 5 |
-| no_pair | 117 |
-| no_valid_render | 34 |
-| unsupported_member | 79 |
-| valid_render | 5625 |
+| no_pair | 89 |
+| no_valid_render | 33 |
+| unsupported_member | 45 |
+| valid_render | 5688 |

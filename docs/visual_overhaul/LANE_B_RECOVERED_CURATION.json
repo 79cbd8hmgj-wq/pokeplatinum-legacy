@@ -3,18 +3,18 @@
   "lane": "B_pokemon_facing",
   "asset_count": 15157,
   "status_counts": {
-    "decode_issue": 2602,
-    "reject": 7990,
-    "usable": 4565
+    "decode_issue": 2519,
+    "reject": 7998,
+    "usable": 4640
   },
   "recovery_changes": {
-    "decode_issue_to_reject": 16,
-    "decode_issue_to_usable": 4565
+    "decode_issue_to_reject": 24,
+    "decode_issue_to_usable": 4640
   },
   "remaining_decode_routes": {
-    "container_unpack_then_decode": 895,
+    "container_unpack_then_decode": 885,
     "pmd_format_decode": 19,
-    "ranger_embedded_decode": 1688
+    "ranger_embedded_decode": 1615
   },
   "remaining_decode_source_routes": {
     "hgss": {
@@ -24,8 +24,8 @@
       "pmd_format_decode": 19
     },
     "ranger2": {
-      "container_unpack_then_decode": 893,
-      "ranger_embedded_decode": 1688
+      "container_unpack_then_decode": 883,
+      "ranger_embedded_decode": 1615
     }
   },
   "records": [
@@ -161671,9 +161671,13 @@
         "nitro_resource",
         "overworld"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_cac_companion_of_valid_render",
+      "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+      "recovery_evidence": {
+        "technical_state": "companion_of_valid",
+        "detail": "Nitro animation (NANR) of a package with valid NCER renders"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:character:heroine_LZ.bin:heroine_stand.NCBR",
@@ -161687,9 +161691,13 @@
         "nitro_resource",
         "overworld"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:character:heroine_LZ.bin:heroine_stand.NCER",
@@ -162585,9 +162593,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "palette of valid ntft texture"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_00.ntft",
@@ -162600,9 +162612,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 64x64 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_01.ntfp",
@@ -162615,9 +162631,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "palette of valid ntft texture"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_01.ntft",
@@ -162630,9 +162650,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 64x64 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_02.ntfp",
@@ -162645,9 +162669,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "palette of valid ntft texture"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_02.ntft",
@@ -162660,9 +162688,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 64x64 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_03.ntfp",
@@ -162675,9 +162707,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "palette of valid ntft texture"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef100_LZ.bin:ef100_03.ntft",
@@ -162690,9 +162726,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 64x64 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef101_LZ.bin:ef101_00.ntfp",
@@ -162705,9 +162745,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "palette of valid ntft texture"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef101_LZ.bin:ef101_00.ntft",
@@ -162720,9 +162764,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 64x64 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:ef102_00.ntfp",
@@ -162735,9 +162783,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "palette of valid ntft texture"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:ef102_00.ntft",
@@ -162750,9 +162802,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 32x32 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:ef102_07.ntfp",
@@ -162765,9 +162821,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "palette of valid ntft texture"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:ef102_07.ntft",
@@ -162780,9 +162840,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 8x16 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:member_0004",
@@ -162795,9 +162859,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "stray_ascii_text_member",
+      "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+      "recovery_evidence": {
+        "technical_state": "non_art_text",
+        "detail": "unnamed NARC member is plain ASCII text (98 bytes)"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:member_0005",
@@ -162825,9 +162893,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "stray_ascii_text_member",
+      "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+      "recovery_evidence": {
+        "technical_state": "non_art_text",
+        "detail": "unnamed NARC member is plain ASCII text (2 bytes)"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef103_LZ.bin:ef103.NCBR",
@@ -162919,9 +162991,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "stray_ascii_text_member",
+      "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+      "recovery_evidence": {
+        "technical_state": "non_art_text",
+        "detail": "unnamed NARC member is plain ASCII text (98 bytes)"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef103_LZ.bin:member_0005",
@@ -162949,9 +163025,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "stray_ascii_text_member",
+      "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+      "recovery_evidence": {
+        "technical_state": "non_art_text",
+        "detail": "unnamed NARC member is plain ASCII text (2 bytes)"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:ef104_00.ntfp",
@@ -162964,9 +163044,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "palette of valid ntft texture"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:ef104_00.ntft",
@@ -162979,9 +163063,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 128x128 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:ef104_01.ntfp",
@@ -162994,9 +163082,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "palette of valid ntft texture"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:ef104_01.ntft",
@@ -163009,9 +163101,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A3I5 128x128 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:member_0004",
@@ -163024,9 +163120,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "stray_ascii_text_member",
+      "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+      "recovery_evidence": {
+        "technical_state": "non_art_text",
+        "detail": "unnamed NARC member is plain ASCII text (98 bytes)"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:member_0005",
@@ -163054,9 +163154,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "stray_ascii_text_member",
+      "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+      "recovery_evidence": {
+        "technical_state": "non_art_text",
+        "detail": "unnamed NARC member is plain ASCII text (2 bytes)"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef105_LZ.bin:ef105.NCBR",
@@ -163148,9 +163252,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "stray_ascii_text_member",
+      "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+      "recovery_evidence": {
+        "technical_state": "non_art_text",
+        "detail": "unnamed NARC member is plain ASCII text (98 bytes)"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef105_LZ.bin:member_0005",
@@ -163178,9 +163286,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "stray_ascii_text_member",
+      "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+      "recovery_evidence": {
+        "technical_state": "non_art_text",
+        "detail": "unnamed NARC member is plain ASCII text (2 bytes)"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ew000_LZ.bin:ew000.NANR",
@@ -163194,9 +163306,13 @@
         "nitro_resource",
         "overworld"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_cac_companion_of_valid_render",
+      "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+      "recovery_evidence": {
+        "technical_state": "companion_of_valid",
+        "detail": "Nitro animation (NANR) of a package with valid NCER renders"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ew000_LZ.bin:ew000.NCBR",
@@ -163384,9 +163500,13 @@
         "nitro_resource",
         "overworld"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_cac_companion_of_valid_render",
+      "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+      "recovery_evidence": {
+        "technical_state": "companion_of_valid",
+        "detail": "Nitro animation (NANR) of a package with valid NCER renders"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ew008_LZ.bin:ew008.NCBR",
@@ -187488,9 +187608,13 @@
         "overworld",
         "trainer_candidate"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_cac_companion_of_valid_render",
+      "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+      "recovery_evidence": {
+        "technical_state": "companion_of_valid",
+        "detail": "Nitro animation (NANR) of a package with valid NCER renders"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:npc:n000_00_LZ.bin:n000_00_s.NCBR",
@@ -187584,9 +187708,13 @@
         "overworld",
         "trainer_candidate"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_cac_companion_of_valid_render",
+      "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+      "recovery_evidence": {
+        "technical_state": "companion_of_valid",
+        "detail": "Nitro animation (NANR) of a package with valid NCER renders"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:npc:n000_00_LZ.bin:n000_00_w.NCBR",
@@ -187643,9 +187771,13 @@
         "overworld",
         "trainer_candidate"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:npc:n000_00_LZ.bin:n000_00_w.cac",
@@ -203119,9 +203251,13 @@
         "overworld",
         "trainer_candidate"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_cac_companion_of_valid_render",
+      "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+      "recovery_evidence": {
+        "technical_state": "companion_of_valid",
+        "detail": "Nitro animation (NANR) of a package with valid NCER renders"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc104_LZ.bin:npc104_s.NCBR",
@@ -203178,9 +203314,13 @@
         "overworld",
         "trainer_candidate"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc104_LZ.bin:npc104_s.cac",
@@ -203215,9 +203355,13 @@
         "overworld",
         "trainer_candidate"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_cac_companion_of_valid_render",
+      "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+      "recovery_evidence": {
+        "technical_state": "companion_of_valid",
+        "detail": "Nitro animation (NANR) of a package with valid NCER renders"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc104_LZ.bin:npc104_w.NCBR",
@@ -203274,9 +203418,13 @@
         "overworld",
         "trainer_candidate"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc104_LZ.bin:npc104_w.cac",
@@ -232324,9 +232472,13 @@
         "nitro_resource",
         "pokemon_object"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "1/1 nonblank cells"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp321_LZ.bin:bp321.NCGR",
@@ -232339,9 +232491,13 @@
         "nitro_resource",
         "pokemon_object"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "used by valid NCER render"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp321_LZ.bin:bp321.NCLR",
@@ -232354,9 +232510,13 @@
         "nitro_resource",
         "pokemon_object"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "used by valid NCER render"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp321_LZ.bin:bp321.cac",
@@ -232368,9 +232528,13 @@
       "target_tags": [
         "pokemon_object"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_cac_companion_of_valid_render",
+      "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+      "recovery_evidence": {
+        "technical_state": "companion_of_valid",
+        "detail": "cell-animation companion of valid NCER"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp322_LZ.bin:bp322.NCER",
@@ -241083,9 +241247,13 @@
         "nitro_resource",
         "pokemon_object"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "1/1 nonblank cells"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp483_LZ.bin:bp483.NCGR",
@@ -241098,9 +241266,13 @@
         "nitro_resource",
         "pokemon_object"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "used by valid NCER render"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp483_LZ.bin:bp483.NCLR",
@@ -241113,9 +241285,13 @@
         "nitro_resource",
         "pokemon_object"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "used by valid NCER render"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp483_LZ.bin:bp483.cac",
@@ -241127,9 +241303,13 @@
       "target_tags": [
         "pokemon_object"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_cac_companion_of_valid_render",
+      "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+      "recovery_evidence": {
+        "technical_state": "companion_of_valid",
+        "detail": "cell-animation companion of valid NCER"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp484_LZ.bin:bp484.NCER",
@@ -241142,9 +241322,13 @@
         "nitro_resource",
         "pokemon_object"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "1/1 nonblank cells"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp484_LZ.bin:bp484.NCGR",
@@ -241157,9 +241341,13 @@
         "nitro_resource",
         "pokemon_object"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "used by valid NCER render"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp484_LZ.bin:bp484.NCLR",
@@ -241172,9 +241360,13 @@
         "nitro_resource",
         "pokemon_object"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "used by valid NCER render"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp484_LZ.bin:bp484.cac",
@@ -241186,9 +241378,13 @@
       "target_tags": [
         "pokemon_object"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_cac_companion_of_valid_render",
+      "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+      "recovery_evidence": {
+        "technical_state": "companion_of_valid",
+        "detail": "cell-animation companion of valid NCER"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp485_LZ.bin:bp485.NCER",
@@ -241276,9 +241472,13 @@
         "nitro_resource",
         "pokemon_object"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "1/1 nonblank cells"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp486_LZ.bin:bp486.NCGR",
@@ -241291,9 +241491,13 @@
         "nitro_resource",
         "pokemon_object"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "used by valid NCER render"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp486_LZ.bin:bp486.NCLR",
@@ -241306,9 +241510,13 @@
         "nitro_resource",
         "pokemon_object"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "used by valid NCER render"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp486_LZ.bin:bp486.cac",
@@ -241320,9 +241528,13 @@
       "target_tags": [
         "pokemon_object"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_cac_companion_of_valid_render",
+      "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
+      "recovery_evidence": {
+        "technical_state": "companion_of_valid",
+        "detail": "cell-animation companion of valid NCER"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:pokeOBJ:bp488_LZ.bin:bp488.NCER",
@@ -241711,9 +241923,13 @@
         "portrait",
         "ui"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "used by valid NCER render"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:uppict:uppict000_LZ.bin:uppict000_00.NCLR",
@@ -241727,9 +241943,13 @@
         "portrait",
         "ui"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "used by valid NCER render"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:uppict:uppict000_LZ.bin:uppict000_00.NSCR",
@@ -241743,9 +241963,13 @@
         "portrait",
         "ui"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "256x256 screen, 49152 nonblank px"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:uppict:uppict001_LZ.bin:uppict001_00.NCGR",
@@ -241759,9 +241983,13 @@
         "portrait",
         "ui"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "used by valid NCER render"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:uppict:uppict001_LZ.bin:uppict001_00.NCLR",
@@ -241775,9 +242003,13 @@
         "portrait",
         "ui"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "used by valid NCER render"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:uppict:uppict001_LZ.bin:uppict001_00.NSCR",
@@ -241791,9 +242023,13 @@
         "portrait",
         "ui"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "256x256 screen, 49152 nonblank px"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:field:character:heroine_LZ.bin",
@@ -241825,9 +242061,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 64x64 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:field:effect:dokarimo02.ntft",
@@ -241840,9 +242080,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 64x64 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:field:effect:dokarimo03.ntfp",
@@ -241855,9 +242099,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 32x32 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:field:effect:dokarimo03.ntft",
@@ -241870,9 +242118,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 32x32 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:field:effect:ef001_LZ.bin",
@@ -241980,9 +242232,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "4 valid NCER pairs"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:field:effect:ef101_LZ.bin",
@@ -241995,9 +242251,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "1 valid NCER pairs"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:field:effect:ef102_LZ.bin",
@@ -242010,9 +242270,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "2 valid NCER pairs"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:field:effect:ef103_LZ.bin",
@@ -242044,9 +242308,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "2 valid NCER pairs"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:field:effect:ef105_LZ.bin",
@@ -242135,9 +242403,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 128x128 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:field:effect:kiri01.ntft",
@@ -242150,9 +242422,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 128x128 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:field:effect:kiri02.ntfp",
@@ -242165,9 +242441,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 64x64 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:field:effect:kiri02.ntft",
@@ -242180,9 +242460,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 64x64 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:field:effect:komorebi.ntfp",
@@ -242195,9 +242479,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 32x32 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:field:effect:komorebi.ntft",
@@ -242210,9 +242498,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 32x32 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:field:effect:suna01.ntfp",
@@ -242225,9 +242517,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 32x128 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:field:effect:suna01.ntft",
@@ -242240,9 +242536,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 32x128 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:field:effect:suna02.ntfp",
@@ -242255,9 +242555,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 32x128 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:field:effect:suna02.ntft",
@@ -242270,9 +242574,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "A5I3 32x128 texture (format proven by palette index coverage)"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:field:fielddata.bin",
@@ -261606,9 +261914,13 @@
       "target_tags": [
         "pokemon_object"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "1 valid NCER pairs"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:pokeOBJ:bp322_LZ.bin",
@@ -263708,9 +264020,13 @@
       "target_tags": [
         "pokemon_object"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "1 valid NCER pairs"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:pokeOBJ:bp484_LZ.bin",
@@ -263722,9 +264038,13 @@
       "target_tags": [
         "pokemon_object"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "1 valid NCER pairs"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:pokeOBJ:bp485_LZ.bin",
@@ -263754,9 +264074,13 @@
       "target_tags": [
         "pokemon_object"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "1 valid NCER pairs"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:pokeOBJ:bp488_LZ.bin",
@@ -263859,9 +264183,13 @@
         "portrait",
         "ui"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "1 valid NCER pairs"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:uppict:uppict001_LZ.bin",
@@ -263874,9 +264202,13 @@
         "portrait",
         "ui"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_embedded_valid_render_plausible_use",
+      "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "1 valid NCER pairs"
+      }
     }
   ]
 }

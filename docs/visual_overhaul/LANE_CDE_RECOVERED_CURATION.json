@@ -3,24 +3,24 @@
  "scope": "lanes C/D/E recovered state",
  "asset_count": 9125,
  "lane_status_counts": {
-  "C_effects_animation:decode_issue": 35,
-  "C_effects_animation:usable": 1568,
-  "D_environment_ui:decode_issue": 368,
+  "C_effects_animation:decode_issue": 28,
+  "C_effects_animation:usable": 1575,
+  "D_environment_ui:decode_issue": 355,
   "D_environment_ui:reject": 5,
-  "D_environment_ui:usable": 4351,
-  "E_decode_or_context_needed:decode_issue": 144,
-  "E_decode_or_context_needed:usable": 2654
+  "D_environment_ui:usable": 4364,
+  "E_decode_or_context_needed:decode_issue": 101,
+  "E_decode_or_context_needed:usable": 2697
  },
  "source_status_counts": {
   "hgss:decode_issue": 117,
   "hgss:reject": 5,
   "pmd_sky:decode_issue": 179,
   "pmd_sky:usable": 1393,
-  "ranger2:decode_issue": 251,
-  "ranger2:usable": 7180
+  "ranger2:decode_issue": 188,
+  "ranger2:usable": 7243
  },
  "recovery_changes": {
-  "decode_issue_to_usable": 8573
+  "decode_issue_to_usable": 8636
  },
  "records": [
   {
@@ -40359,9 +40359,14 @@
     "nitro_resource",
     "ui"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:cursor_LZ.bin:cursor.NCLR",
@@ -40557,9 +40562,14 @@
     "nitro_resource",
     "ui"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:disk_break_LZ.bin:disk_break.NCER",
@@ -49189,9 +49199,14 @@
     "effect",
     "nitro_resource"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e065_LZ.bin:e065_a01.NCER",
@@ -49303,9 +49318,14 @@
     "effect",
     "nitro_resource"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e066_LZ.bin:e066_a01.NCER",
@@ -58655,9 +58675,14 @@
     "effect",
     "nitro_resource"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e126_LZ.bin:e126_a01.cac",
@@ -58749,9 +58774,14 @@
     "effect",
     "nitro_resource"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e126_LZ.bin:e126_a02.cac",
@@ -58803,9 +58833,14 @@
     "effect",
     "nitro_resource"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e126_LZ.bin:e126_a03.NCER",
@@ -78492,9 +78527,14 @@
     "nitro_resource",
     "ui"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:interface:i048_LZ.bin:i048_00.cac",
@@ -78606,9 +78646,14 @@
     "nitro_resource",
     "ui"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:interface:i049_LZ.bin:i049_00.cac",
@@ -78680,9 +78725,14 @@
     "nitro_resource",
     "ui"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:interface:i050_LZ.bin:i050_00.NCER",
@@ -78834,9 +78884,14 @@
     "nitro_resource",
     "ui"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:interface:i051_LZ.bin:i051_00.cac",
@@ -78948,9 +79003,14 @@
     "nitro_resource",
     "ui"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:interface:i052_LZ.bin:i052_00.cac",
@@ -79062,9 +79122,14 @@
     "nitro_resource",
     "ui"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:interface:i053_LZ.bin:i053_00.cac",
@@ -79136,9 +79201,14 @@
     "nitro_resource",
     "ui"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:interface:i054_LZ.bin:i054_00.NCER",
@@ -102198,9 +102268,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "palette of valid ntft texture"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm00.ntft",
@@ -102212,9 +102287,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "A5I3 64x64 texture (format proven by palette index coverage)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm01.ntfp",
@@ -102226,9 +102306,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "palette of valid ntft texture"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm01.ntft",
@@ -102240,9 +102325,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "A5I3 32x64 texture (format proven by palette index coverage)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm02.ntfp",
@@ -102254,9 +102344,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "palette of valid ntft texture"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm02.ntft",
@@ -102268,9 +102363,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "A5I3 8x256 texture (format proven by palette index coverage)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm03.ntfp",
@@ -102282,9 +102382,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "palette of valid ntft texture"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm03.ntft",
@@ -102296,9 +102401,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "A5I3 256x256 texture (format proven by palette index coverage)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm04.ntfp",
@@ -102310,9 +102420,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "palette of valid ntft texture"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm04.ntft",
@@ -102324,9 +102439,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "A5I3 32x64 texture (format proven by palette index coverage)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm05.ntfp",
@@ -102338,9 +102458,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "palette of valid ntft texture"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm05.ntft",
@@ -102352,9 +102477,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "A3I5 256x128 texture (format proven by palette index coverage)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm06.ntfp",
@@ -102366,9 +102496,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "palette of valid ntft texture"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm06.ntft",
@@ -102380,9 +102515,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "A3I5 256x128 texture (format proven by palette index coverage)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm08.ntfp",
@@ -102394,9 +102534,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "palette of valid ntft texture"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm08.ntft",
@@ -102408,9 +102553,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "A5I3 16x16 texture (format proven by palette index coverage)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm09.ntfp",
@@ -102422,9 +102572,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "palette of valid ntft texture"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm09.ntft",
@@ -102436,9 +102591,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "A5I3 256x16 texture (format proven by palette index coverage)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm10.ntfp",
@@ -102450,9 +102610,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "palette of valid ntft texture"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm10.ntft",
@@ -102464,9 +102629,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "A5I3 128x32 texture (format proven by palette index coverage)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm11.ntfp",
@@ -102478,9 +102648,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "palette of valid ntft texture"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm11.ntft",
@@ -102492,9 +102667,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "A3I5 32x32 texture (format proven by palette index coverage)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm12.ntfp",
@@ -102506,9 +102686,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "palette of valid ntft texture"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm12.ntft",
@@ -102520,9 +102705,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "A5I3 32x32 texture (format proven by palette index coverage)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm13.ntfp",
@@ -102534,9 +102724,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "palette of valid ntft texture"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm13.ntft",
@@ -102548,9 +102743,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "A3I5 256x64 texture (format proven by palette index coverage)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm14.ntfp",
@@ -102562,9 +102762,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "palette of valid ntft texture"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:opening:opdm_LZ.bin:opdm14.ntft",
@@ -102576,9 +102781,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "A3I5 8x512 texture (format proven by palette index coverage)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:system:BGFontLZ.bin:BGFontNCGRLZ.bin",
@@ -114915,9 +115125,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t080_00_LZ.bin:t080_00.NCLR",
@@ -115076,9 +115291,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t081_00_LZ.bin:t081_00.NCGR",
@@ -116056,9 +116276,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t086_00_LZ.bin:t086_00.NCGR",
@@ -120987,9 +121212,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t220_00_LZ.bin:t220_00.NCLR",
@@ -121169,9 +121399,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t220_01_LZ.bin:t220_01.NCLR",
@@ -123289,9 +123524,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t228_00_LZ.bin:t228_00.NCGR",
@@ -123653,9 +123893,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t230_00_LZ.bin:t230_00.NCLR",
@@ -123897,9 +124142,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t230_01_LZ.bin:t230_01.NCLR",
@@ -124141,9 +124391,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t231_00_LZ.bin:t231_00.NCLR",
@@ -124385,9 +124640,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t231_01_LZ.bin:t231_01.NCLR",
@@ -124629,9 +124889,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t231_02_LZ.bin:t231_02.NCLR",
@@ -137338,9 +137603,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t379_00_LZ.bin:t379_00.NCLR",
@@ -139067,9 +139337,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t389_00_LZ.bin:t389_00.NCLR",
@@ -139348,9 +139623,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t391_00_LZ.bin:t391_00.NCGR",
@@ -160289,9 +160569,14 @@
    "target_tags": [
     "ui"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "A3I5 32x32 texture (format proven by palette index coverage)"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:interface:i072_00.ntft",
@@ -160303,9 +160588,14 @@
    "target_tags": [
     "ui"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "A3I5 32x32 texture (format proven by palette index coverage)"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:interface:i072_01.ntfp",
@@ -160317,9 +160607,14 @@
    "target_tags": [
     "ui"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "A5I3 16x16 texture (format proven by palette index coverage)"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:interface:i072_01.ntft",
@@ -160331,9 +160626,14 @@
    "target_tags": [
     "ui"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "A5I3 16x16 texture (format proven by palette index coverage)"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:interface:i072_02.ntfp",
@@ -160345,9 +160645,14 @@
    "target_tags": [
     "ui"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "A5I3 8x16 texture (format proven by palette index coverage)"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:interface:i072_02.ntft",
@@ -160359,9 +160664,14 @@
    "target_tags": [
     "ui"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "A5I3 8x16 texture (format proven by palette index coverage)"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:cm000_00_LZ.bin",
@@ -176478,9 +176788,14 @@
    "target_tags": [
     "presentation"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "14 valid NCER pairs"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:sendbin:sendbin1.bin",

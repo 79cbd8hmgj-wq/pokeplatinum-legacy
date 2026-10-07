@@ -22,6 +22,7 @@ from inspect_ranger_assets import extract_narc_members
 from nitro_narc import lz10_decompress
 import struct
 
+import ntft_tex
 import render_ranger_ncer_preview as nrp
 from render_ranger_ncer_preview import read_cells, read_chars, read_palette, render_cell
 
@@ -170,6 +171,21 @@ def pick(stem: str, table: dict[str, Path]) -> Path | None:
     return next(iter(table.values())) if len(table) == 1 else None
 
 
+def _twin_of_used(path: Path, gfx_info: dict, all_cells: list) -> bool:
+    """True if this NCBR/NCGR decodes to the same tiles as a graphic already proven by a render."""
+    try:
+        for cells in all_cells:
+            sent = read_chars_sentinel(path)
+            tiles = sent if sent is not None else read_chars(path, cells=cells)[2]
+            for _gp, ref in gfx_info.values():
+                n = min(len(tiles), len(ref))
+                if n and sum(1 for a, b in zip(tiles[:n], ref[:n]) if a == b) >= 0.9 * n and any(any(t) for t in tiles[:n]):
+                    return True
+    except Exception:  # noqa: BLE001
+        return False
+    return False
+
+
 def evaluate_package(pkg: Path, shared_pkg: Path | None = None) -> dict:
     out = {"members": {}, "pairs": []}
     with tempfile.TemporaryDirectory(prefix="lbr_") as t, tempfile.TemporaryDirectory(prefix="lbs_") as t2:
@@ -178,9 +194,14 @@ def evaluate_package(pkg: Path, shared_pkg: Path | None = None) -> dict:
         pal_tab = {p.stem: p for n, p in {**shared, **members}.items() if n.endswith(".NCLR")}
         gfx_tab = {p.stem: p for n, p in {**shared, **members}.items() if n.endswith((".NCBR", ".NCGR"))}
         ncers = {p.stem: p for n, p in members.items() if n.endswith(".NCER")}
-        for n in members:
+        for n, mp in members.items():
             out["members"][n] = {"state": "unsupported_member", "detail": ""}
+            data = mp.read_bytes()
+            if n[:4].isdigit() and n[4:5] == "_" and data and all(c in b"\n\r\t" or 32 <= c < 127 for c in data):
+                out["members"][n] = {"state": "non_art_text", "detail": f"unnamed NARC member is plain ASCII text ({len(data)} bytes)"}
         used_gfx, used_pal, ok_ncer = set(), set(), set()
+        gfx_info: dict = {}
+        all_cells: list = []
         for stem, ncer in sorted(ncers.items()):
             name = ncer.name
             gp, pp = pick(stem, gfx_tab), pick(stem, pal_tab)
@@ -209,6 +230,8 @@ def evaluate_package(pkg: Path, shared_pkg: Path | None = None) -> dict:
                 else:
                     out["members"][name] = {"state": "valid_render", "detail": f"{nonblank}/{len(cells)} nonblank cells"}
                     used_gfx.add(gp.name); used_pal.add(pp.name); ok_ncer.add(stem)
+                    gfx_info[gp.name] = (gp, sent if sent is not None else tiles)
+                    all_cells.append(cells)
                     out["pairs"].append([name, gp.name, pp.name])
             except Exception as e:  # noqa: BLE001
                 out["members"][name] = {"state": "decode_failure", "detail": str(e)[:160]}
@@ -244,6 +267,19 @@ def evaluate_package(pkg: Path, shared_pkg: Path | None = None) -> dict:
                         out["pairs"].append([n, "", ""])
                 except Exception as e:  # noqa: BLE001
                     out["members"][n] = {"state": "decode_failure", "detail": str(e)[:160]}
+            elif n.endswith(".ntft"):
+                npal = {q.stem: q for k2, q in members.items() if k2.endswith(".ntfp")}
+                pf = npal.get(path.stem) or (next(iter(npal.values())) if len(npal) == 1 else None)
+                if pf is None:
+                    out["members"][n] = {"state": "no_pair", "detail": "no same-stem .ntfp palette"}
+                else:
+                    try:
+                        mode, w, h, _px, _sc = ntft_tex.decode_ntft(path.read_bytes(), ntft_tex.read_ntfp(pf))
+                        out["members"][n] = {"state": "valid_render", "detail": f"{mode} {w}x{h} texture (format proven by palette index coverage)"}
+                        out["members"][pf.name] = {"state": "valid_render", "detail": "palette of valid ntft texture"}
+                        out["pairs"].append([n, pf.name, ""])
+                    except Exception as e:  # noqa: BLE001
+                        out["members"][n] = {"state": "decode_failure", "detail": str(e)[:120]}
             elif n.endswith(".NANR"):
                 raw = path.read_bytes()
                 if raw[:4] == b"RNAN" and (path.stem in ok_ncer or ok_ncer):
@@ -265,9 +301,23 @@ def evaluate_package(pkg: Path, shared_pkg: Path | None = None) -> dict:
                     out["members"][n] = {"state": "valid_render", "detail": "palette variant of a package with valid renders"}
                 except Exception as e:  # noqa: BLE001
                     out["members"][n] = {"state": "decode_failure", "detail": str(e)[:120]}
+            elif n.endswith((".NCBR", ".NCGR")) and gfx_info and _twin_of_used(members[n], gfx_info, all_cells):
+                out["members"][n] = {"state": "valid_render", "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"}
             elif n.endswith((".NCBR", ".NCGR", ".NCLR")):
                 out["members"][n] = {"state": "no_pair", "detail": "not consumed by any valid render"}
     return out
+
+
+def loose_ntft(path: Path):
+    mate = path.with_suffix(".ntfp" if path.suffix == ".ntft" else ".ntft")
+    if not mate.exists():
+        return "no_pair", "no same-stem mate"
+    tf, pf = (path, mate) if path.suffix == ".ntft" else (mate, path)
+    try:
+        mode, w, h, _px, _sc = ntft_tex.decode_ntft(tf.read_bytes(), ntft_tex.read_ntfp(pf))
+        return "valid_render", f"{mode} {w}x{h} texture (format proven by palette index coverage)"
+    except Exception as e:  # noqa: BLE001
+        return "decode_failure", str(e)[:120]
 
 
 def main() -> int:
@@ -303,11 +353,16 @@ def main() -> int:
             aid = r["asset_id"]
             if ":embedded:" in aid:
                 mem = aid.rsplit(":", 1)[1]
+                if mem.startswith("member_"):
+                    pre = f"{int(mem[7:]):04d}_"
+                    mem = next((k for k in ev["members"] if k.startswith(pre)), mem)
                 m = ev["members"].get(mem)
                 st, det = (m["state"], m["detail"]) if m else ("member_not_found", "")
             elif r["asset_type"] == "compressed_visual_package":
                 st = "valid_render" if pkg_state[sp][0] == "ok" else pkg_state[sp][0]
                 det = f"{len(ev['pairs'])} valid NCER pairs"
+            elif Path(sp).suffix in (".ntft", ".ntfp"):
+                st, det = loose_ntft(a.ranger_root / sp)
             else:
                 st, det = "unsupported_member", "raw/candidate resource"
             rows.append({"asset_id": aid, "source_path": sp, "technical_state": st, "detail": det,
@@ -326,6 +381,11 @@ def main() -> int:
         elif x["technical_state"] == "companion_of_valid":
             code, why = ("ranger_cac_companion_of_valid_render",
                          "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.")
+        elif x["technical_state"] == "non_art_text":
+            decisions.append({"asset_id": x["asset_id"], "review_status": "reject", "reason_code": "stray_ascii_text_member",
+                              "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+                              "technical_state": x["technical_state"], "detail": x["detail"]})
+            continue
         else:
             continue
         decisions.append({"asset_id": x["asset_id"], "review_status": "usable", "reason_code": code,
