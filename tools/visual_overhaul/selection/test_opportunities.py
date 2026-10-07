@@ -83,14 +83,14 @@ assert reg0["deferred_non_ds_findings"] == 9
 assert not any(r["source_id"] in ("firered", "emerald", "pmd_red", "crystal", "yellow") for r in reg0["rows"]), "non-DS row leaked into register"
 print("ok   deferred findings absent from the register")
 sc = [r["rank_score"] for r in reg0["rows"] if r["rank_score"] is not None]
-assert sc == sorted(sc, reverse=True) and reg0["rows"][0]["id"] == M, reg0["rows"][0]["id"]
+assert sc == sorted(sc, reverse=True) and M in [r["id"] for r in reg0["rows"][:5]], [r["id"] for r in reg0["rows"][:5]]  # map preview stays a top-5 finding (evidence closure added higher-scored libraries)
 assert all(r["rank_score"] is None for r in reg0["rows"] if r["classification"] in ("reference_only", "reject"))
-print("ok   register ranked by weighted score; reference_only/reject unranked; map preview first")
+print("ok   register ranked by weighted score; reference_only/reject unranked; map preview in the top 5")
 q = jload(SEL / "IMPLEMENTATION_QUEUE.json")
 assert q["phase"] == "ds_only" and all(i["source_id"].split(",")[0] in ("hgss", "pmd_sky", "ranger2") for i in q["ranked"])
 print("ok   queue is DS-only and ranked")
 opp.load_findings = lambda: BASE
 reg = opp.derive_register(ledgers, use)
-assert reg["counts_by_class"] == {"novel_capability": 2, "novel_detail": 1, "technique_donor": 1, "enhancement_candidate": 2, "component_donor": 5, "replacement_candidate": 32, "reference_only": 8, "reject": 3}, reg["counts_by_class"]
+assert reg["counts_by_class"] == {"novel_capability": 2, "novel_detail": 2, "technique_donor": 1, "enhancement_candidate": 2, "component_donor": 7, "replacement_candidate": 32, "reference_only": 9, "reject": 3}, reg["counts_by_class"]
 print("ok   register counts by class")
 sys.exit(1 if fails else 0)

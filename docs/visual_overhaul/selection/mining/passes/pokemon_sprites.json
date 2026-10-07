@@ -1,8 +1,7 @@
 {
  "dispositions": {
-  "needs_evidence": 2,
   "promoted": 403,
-  "reference_only": 868,
+  "reference_only": 870,
   "reject": 9
  },
  "domain": "pokemon_sprites",
@@ -7874,42 +7873,6 @@
     "richer_or_revised_variant",
     "family_library_494",
     "previously_alternate"
-   ],
-   "src": "hgss"
-  },
-  {
-   "best": 2.811,
-   "cls": [
-    "novel_detail"
-   ],
-   "disp": "needs_evidence",
-   "dom": "pokemon_sprites",
-   "fam": "hgss_battle_forms",
-   "g": "pokemon_battle_sprites/hgss/form_egg",
-   "rec": [
-    "opp:mined/pokemon_battle_sprites/hgss/form_egg/novel_detail/whole_asset"
-   ],
-   "sig": [
-    "family_library_81",
-    "ledger_needs_evidence"
-   ],
-   "src": "hgss"
-  },
-  {
-   "best": 2.811,
-   "cls": [
-    "novel_detail"
-   ],
-   "disp": "needs_evidence",
-   "dom": "pokemon_sprites",
-   "fam": "hgss_battle_forms",
-   "g": "pokemon_battle_sprites/hgss/form_shadow",
-   "rec": [
-    "opp:mined/pokemon_battle_sprites/hgss/form_shadow/novel_detail/whole_asset"
-   ],
-   "sig": [
-    "family_library_81",
-    "ledger_needs_evidence"
    ],
    "src": "hgss"
   },
@@ -19775,11 +19738,45 @@
    "disp": "reference_only",
    "dom": "pokemon_sprites",
    "fam": "hgss_battle_forms",
+   "g": "pokemon_battle_sprites/hgss/form_egg",
+   "rec": [],
+   "sig": [
+    "family_library_81",
+    "ledger_needs_evidence",
+    "evidence_closed_reference_only"
+   ],
+   "src": "hgss"
+  },
+  {
+   "best": 0.0,
+   "cls": [
+    "novel_detail"
+   ],
+   "disp": "reference_only",
+   "dom": "pokemon_sprites",
+   "fam": "hgss_battle_forms",
    "g": "pokemon_battle_sprites/hgss/form_pichu_spiky",
    "rec": [],
    "sig": [
     "no_platinum_equivalent",
     "family_library_81"
+   ],
+   "src": "hgss"
+  },
+  {
+   "best": 0.0,
+   "cls": [
+    "novel_detail"
+   ],
+   "disp": "reference_only",
+   "dom": "pokemon_sprites",
+   "fam": "hgss_battle_forms",
+   "g": "pokemon_battle_sprites/hgss/form_shadow",
+   "rec": [],
+   "sig": [
+    "family_library_81",
+    "ledger_needs_evidence",
+    "evidence_closed_reference_only"
    ],
    "src": "hgss"
   },

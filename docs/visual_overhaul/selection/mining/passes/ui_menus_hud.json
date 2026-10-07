@@ -1,17 +1,17 @@
 {
  "dispositions": {
-  "needs_evidence": 1,
+  "promoted": 1,
   "reference_only": 844
  },
  "domain": "ui_menus_hud",
  "groups": 845,
  "ranked": [
   {
-   "best": 3.189,
+   "best": 3.351,
    "cls": [
     "component_donor"
    ],
-   "disp": "needs_evidence",
+   "disp": "promoted",
    "dom": "ui_menus_hud",
    "fam": "ranger_menu/um",
    "g": "menu_ui_frames/ranger2/ranger_menu/um",
@@ -21,7 +21,8 @@
    "sig": [
     "no_platinum_equivalent",
     "family_library_432",
-    "previously_not_selected"
+    "previously_not_selected",
+    "evidence_resolved"
    ],
    "src": "ranger2"
   },

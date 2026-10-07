@@ -1,6 +1,6 @@
 # Ranked: pokemon_sprites
 
-groups 1282; promoted 403; needs_evidence 2; reference_only 868; reject 9; records 524
+groups 1282; promoted 403; needs_evidence 0; reference_only 870; reject 9; records 522
 
 | # | Opportunity | Class | Use | Status | Score |
 |---:|---|---|---|---|---:|

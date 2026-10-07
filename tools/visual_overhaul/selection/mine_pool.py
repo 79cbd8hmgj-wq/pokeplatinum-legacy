@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import collections
+import fnmatch
 import math
 
 from common import *  # noqa: F401,F403
@@ -19,6 +20,7 @@ MINING = SEL / "mining"
 POOL_JSON = SEL / "OPPORTUNITY_POOL.json"
 REVIEW_JSON = MINING / "TARGETED_REVIEW.json"
 NE_JSON = MINING / "NEEDS_EVIDENCE_QUEUE.json"
+RES_JSON = MINING / "EVIDENCE_RESOLUTIONS.json"
 DOMAINS = ["trainer_sprites", "pokemon_sprites", "pokemon_animation", "npc_player_sprites", "field_graphics", "environmental_effects", "battle_effects", "field_effects", "ui_menus_hud",
            "location_area", "textures", "models", "interface_embellishments", "transitions_presentation", "icons", "backgrounds", "misc"]
 EVID_PTR = {"hgss": ["docs/visual_overhaul/DONOR_ASSET_CATALOG.json", "docs/visual_overhaul/catalog_extensions/MANIFEST.json"], "pmd_sky": ["docs/visual_overhaul/LANE_CDE_PMD_SKY_RECOVERY.json"],
@@ -90,7 +92,24 @@ def next_evidence(g, f) -> str:
     return "targeted visual review"
 
 
-def build_records(data: dict, reviews: dict) -> tuple[list[dict], dict, list[dict]]:
+def resolution_for(res: dict | None, g: dict, f: dict) -> dict | None:
+    """Evidence resolution for a group: group-level entry merged over the first matching family-level entry (see resolve_evidence.py)."""
+    if not res or g["group_id"] not in res["scope_groups"]:
+        return None
+    gr = res["group_resolutions"].get(g["group_id"])
+    fr = next((x for x in res["family_resolutions"] if x["source_id"] == g["source_id"] and x["domain"] == f["domain"] and
+               (fnmatch.fnmatchcase(f["family"], x["family"]) or x.get("match_group") == g["group_id"])), None)
+    if fr is None and gr is None:
+        return None
+    out = dict(fr or {})
+    if gr:
+        for k, v in gr.items():
+            out[k] = {**out.get(k, {}), **v} if k == "dims" and isinstance(v, dict) else v
+        out["evidence_refs"] = list(dict.fromkeys((fr or {}).get("evidence_refs", []) + gr.get("evidence_refs", [])))
+    return out
+
+
+def build_records(data: dict, reviews: dict, res: dict | None = None) -> tuple[list[dict], dict, list[dict]]:
     groups, F = data["groups"], data["features"]
     recs, per_group, ne = [], {}, []
     for g in groups:
@@ -98,21 +117,33 @@ def build_records(data: dict, reviews: dict) -> tuple[list[dict], dict, list[dic
         f = F[gid]
         props = MR.proposals(g, f)
         sig = signals(g, f)
+        rs = resolution_for(res, g, f)
+        closed = bool(rs and rs["verdict"] == "reference_only")
+        if closed:
+            sig.append("evidence_closed_reference_only")
+        elif rs:
+            sig.append("evidence_resolved")
         scored = []
         for p in props:
             d = MR.score(g, f, p)
+            if rs and not closed and rs.get("techniques") and p["class"] in ("technique_donor", "novel_capability"):
+                p = {**p, "techniques": list(rs["techniques"])}
+            if rs and not closed:
+                d.update({**rs.get("dims", {}).get("*", {}), **rs.get("dims", {}).get(p["class"], {})})
             if p["class"] in ("reference_only", "reject"):
                 scored.append((0.0, p, d))
             else:
                 scored.append((MR.composite(d), p, d))
         rv = reviews.get(gid)
         ev_floor = 4 if rv and rv["verdict"] == "confirm" else None
+        if rs and not closed:
+            ev_floor = max(ev_floor or 0, rs.get("evidence_floor", 4))
         scored.sort(key=lambda t: (-t[0], t[1]["class"]))
         made = []
         seen = set()
         for comp, p, d in scored:
             cls = p["class"]
-            if cls in ("reference_only", "reject"):
+            if cls in ("reference_only", "reject") or closed:
                 continue
             if rv and rv["verdict"] == "downgrade" and rv.get("class") in (None, cls):
                 continue
@@ -125,6 +156,14 @@ def build_records(data: dict, reviews: dict) -> tuple[list[dict], dict, list[dic
             if comp < MR.PROMOTE and cls != "replacement_candidate" and not f["needs_evidence"] and f["family_size"] >= 50 and f["rich_pct"] < 0.5 and not ev_floor:
                 continue  # large low-evidence families surface only their richer half as needs-evidence leads
             ne_flag = d["evidence"] <= 2 or f["needs_evidence"] and not ev_floor
+            if rs:
+                if comp < MR.PROMOTE and cls != "replacement_candidate":
+                    sig.append("evidence_closed_below_threshold")
+                    continue
+                status = "promoted"
+                seen.add(key)
+                made.append((comp, p, d, status))
+                continue
             if comp >= MR.PROMOTE or (cls == "replacement_candidate" and f["ledger_role"] == "preferred") or (comp >= MR.NEEDS_EVIDENCE and d["evidence"] <= 2) or (f["needs_evidence"] and comp >= 2.8):
                 status = "needs_evidence" if ne_flag or (comp < MR.PROMOTE and cls != "replacement_candidate") else "promoted"
                 seen.add(key)
@@ -137,6 +176,8 @@ def build_records(data: dict, reviews: dict) -> tuple[list[dict], dict, list[dic
                 ev_ptrs = list(EVID_PTR.get(g["source_id"], [])) + ([f"docs/visual_overhaul/selection/evidence/{g['subsystem']}.json"] if g["subsystem"] in SUBSYS_EVID else []) + [f"docs/visual_overhaul/selection/ledgers/{g['subsystem']}.json"]
                 if rv:
                     ev_ptrs += rv.get("evidence_refs", [])
+                if rs:
+                    ev_ptrs += rs.get("evidence_refs", [])
                 rec = {
                     "opportunity_id": oid, "origin": "mined", "status": status, "source_id": g["source_id"], "group_id": gid, "member_count": f["n_members"], "member_digest": g["member_digest"],
                     "member_sample": f["member_ids"][:6], "subsystem": g["subsystem"], "domain": f["domain"], "family": f["family"], "classification": p["class"],
@@ -152,6 +193,8 @@ def build_records(data: dict, reviews: dict) -> tuple[list[dict], dict, list[dic
                     "dims": d, "composite": comp, "ledger": {"role": f["ledger_role"], "reason": f["ledger_reason"], "native_relation": f["native_relation"]},
                     "targeted_review": ({"verdict": rv["verdict"], "note": rv["note"], "reviewed_by": rv["reviewed_by"]} if rv else None),
                 }
+                if rs:
+                    rec["evidence_resolution"] = {"verdict": rs["verdict"], "note": rs.get("note"), "measured": rs.get("measured"), "decided_by": rs.get("decided_by")}
                 recs.append(rec)
                 if status == "needs_evidence":
                     ne.append({"opportunity_id": oid, "group_id": gid, "domain": f["domain"], "family": f["family"], "source_id": g["source_id"], "classification": p["class"], "composite": comp,
@@ -211,13 +254,17 @@ def libraries(recs: list[dict]) -> list[dict]:
     return libs
 
 
+def load_resolutions() -> dict | None:
+    return jload(RES_JSON) if RES_JSON.is_file() else None
+
+
 def load_reviews() -> dict:
     return {r["group_id"]: r for r in jload(REVIEW_JSON)["reviews"]} if REVIEW_JSON.is_file() else {}
 
 
 def derive() -> dict:
     data = MF.build()
-    recs, per_group, ne = build_records(data, load_reviews())
+    recs, per_group, ne = build_records(data, load_reviews(), load_resolutions())
     ex = explicit_records()
     ex_groups = {gid: e["opportunity_id"] for e in ex for gid in e.get("group_ids", [])}
     ex_cls = {(gid, e["classification"]): e["opportunity_id"] for e in ex for gid in e.get("group_ids", [])}
@@ -237,7 +284,7 @@ def derive() -> dict:
 def pool_doc(res: dict) -> dict:
     data = res["data"]
     inputs = {"groups_sha256": file_sha256(GROUPS_JSON), "ledgers": {p.stem: file_sha256(p) for p in sorted((SEL / "ledgers").glob("*.json"))}, "classes_sha256": file_sha256(opp.CLASSES_JSON),
-              "scope_sha256": file_sha256(opp.SCOPE_JSON), "findings_sha256": file_sha256(opp.FINDINGS_JSON), "targeted_review_sha256": file_sha256(REVIEW_JSON) if REVIEW_JSON.is_file() else None,
+              "scope_sha256": file_sha256(opp.SCOPE_JSON), "findings_sha256": file_sha256(opp.FINDINGS_JSON), "targeted_review_sha256": file_sha256(REVIEW_JSON) if REVIEW_JSON.is_file() else None, "evidence_resolutions_sha256": file_sha256(RES_JSON) if RES_JSON.is_file() else None,
               "rules": {"promote": MR.PROMOTE, "needs_evidence": MR.NEEDS_EVIDENCE, "weights": MR.WEIGHTS}}
     return {"schema_version": 1, "phase": "ds_only", "inputs": inputs, "groups_processed": len(data["groups"]), "records": res["records"], "libraries": res["libraries"]}
 

@@ -1,0 +1,125 @@
+{
+ "schema_version": 1,
+ "rows": [
+  "ranger_interface/i024",
+  "ranger_interface/i059",
+  "ranger_interface/i072_00",
+  "ranger_interface/i072_01",
+  "ranger_interface/i072_02",
+  "hgss_mmodel_22",
+  "hgss_mmodel_54",
+  "hgss_mmodel_69",
+  "hgss_mmodel_70",
+  "form_egg_manaphy",
+  "form_egg_normal",
+  "form_shadow",
+  "pmd_ground_p09p01a1.wan"
+ ],
+ "metrics": {
+  "ranger_interface/i024": {
+   "cells": 1,
+   "sizes": [
+    [
+     32,
+     128
+    ]
+   ]
+  },
+  "ranger_interface/i059": {
+   "cells": 1,
+   "sizes": [
+    [
+     256,
+     256
+    ]
+   ]
+  },
+  "ranger_interface/i072_00": {
+   "ntft_mode": "A3I5",
+   "size": [
+    32,
+    32
+   ]
+  },
+  "ranger_interface/i072_01": {
+   "ntft_mode": "A5I3",
+   "size": [
+    16,
+    16
+   ]
+  },
+  "ranger_interface/i072_02": {
+   "ntft_mode": "A5I3",
+   "size": [
+    8,
+    16
+   ]
+  },
+  "hgss_mmodel_22": {
+   "textures": 16,
+   "sizes": [
+    [
+     32,
+     32
+    ]
+   ],
+   "palettes": 1
+  },
+  "hgss_mmodel_54": {
+   "textures": 16,
+   "sizes": [
+    [
+     32,
+     32
+    ]
+   ],
+   "palettes": 1
+  },
+  "hgss_mmodel_69": {
+   "textures": 32,
+   "sizes": [
+    [
+     32,
+     32
+    ]
+   ],
+   "palettes": 1
+  },
+  "hgss_mmodel_70": {
+   "textures": 32,
+   "sizes": [
+    [
+     32,
+     32
+    ]
+   ],
+   "palettes": 1
+  },
+  "form_egg_manaphy": {
+   "size": [
+    160,
+    80
+   ]
+  },
+  "form_egg_normal": {
+   "size": [
+    160,
+    80
+   ]
+  },
+  "form_shadow": {
+   "size": [
+    160,
+    80
+   ]
+  },
+  "pmd_ground_p09p01a1.wan": {
+   "frames": 12,
+   "anim_groups": 1,
+   "frame_size": [
+    64,
+    64
+   ]
+  }
+ }
+}

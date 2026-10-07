@@ -1,6 +1,6 @@
 # Ranked: field_effects
 
-groups 523; promoted 105; needs_evidence 1; reference_only 417; reject 0; records 106
+groups 523; promoted 106; needs_evidence 0; reference_only 417; reject 0; records 106
 
 | # | Opportunity | Class | Use | Status | Score |
 |---:|---|---|---|---|---:|
