@@ -1,14 +1,17 @@
 {
  "candidate_group_totals": {
-  "groups": 8581,
+  "groups": 9821,
   "groups_by_subsystem": {
    "battle_backgrounds_hud": 68,
    "battle_effects_particles": 636,
+   "field_building_models": 562,
    "field_effects_overlays": 523,
    "field_environment_art": 1485,
    "field_npc_player_sprites": 375,
+   "field_texture_sets": 106,
    "menu_ui_frames": 913,
    "no_platinum_target": 282,
+   "overworld_pokemon_sheets": 572,
    "party_summary_ui": 1,
    "pokedex_ui": 1,
    "pokemon_animation_reference": 1533,
@@ -20,11 +23,14 @@
   "members_by_subsystem": {
    "battle_backgrounds_hud": 281,
    "battle_effects_particles": 4266,
+   "field_building_models": 562,
    "field_effects_overlays": 538,
    "field_environment_art": 3060,
    "field_npc_player_sprites": 1992,
+   "field_texture_sets": 3647,
    "menu_ui_frames": 2315,
    "no_platinum_target": 1410,
+   "overworld_pokemon_sheets": 572,
    "party_summary_ui": 27,
    "pokedex_ui": 123,
    "pokemon_animation_reference": 35621,
@@ -34,10 +40,10 @@
    "trainer_battle_sprites": 252
   },
   "records_with_undefined_source_role": 0,
-  "targets": 2007,
+  "targets": 2010,
   "unresolved_decode_issue_in_unit": 106,
   "unresolved_decode_issue_without_usable_unit": 67,
-  "usable_records_grouped": 55515
+  "usable_records_grouped": 60296
  },
  "schema_version": 1,
  "subsystems": [
@@ -64,6 +70,22 @@
    },
    "state": "selected",
    "subsystem": "battle_effects_particles",
+   "target_resolution": {
+    "native": 1
+   },
+   "targets": 1
+  },
+  {
+   "groups": 562,
+   "members": 562,
+   "needs_evidence": 0,
+   "roles": {
+    "alternate": 50,
+    "not_selected": 104,
+    "reference_only": 408
+   },
+   "state": "selected",
+   "subsystem": "field_building_models",
    "target_resolution": {
     "native": 1
    },
@@ -115,6 +137,20 @@
    "targets": 203
   },
   {
+   "groups": 106,
+   "members": 3647,
+   "needs_evidence": 0,
+   "roles": {
+    "reference_only": 106
+   },
+   "state": "selected",
+   "subsystem": "field_texture_sets",
+   "target_resolution": {
+    "native": 1
+   },
+   "targets": 1
+  },
+  {
    "groups": 913,
    "members": 2315,
    "needs_evidence": 1,
@@ -138,6 +174,20 @@
    },
    "state": "selected",
    "subsystem": "no_platinum_target",
+   "target_resolution": {
+    "native": 1
+   },
+   "targets": 1
+  },
+  {
+   "groups": 572,
+   "members": 572,
+   "needs_evidence": 36,
+   "roles": {
+    "reference_only": 572
+   },
+   "state": "selected",
+   "subsystem": "overworld_pokemon_sheets",
    "target_resolution": {
     "native": 1
    },

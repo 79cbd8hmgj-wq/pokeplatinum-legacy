@@ -33,6 +33,61 @@
    "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
    "source_id": "ranger2",
    "verdict": "resolved_by_evidence_closure"
+  },
+  {
+   "domain": "overworld_pokemon",
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_legendary.png"
+   ],
+   "family": "followers_legendary",
+   "note": "Rendered legendary/mythical follower sheets (Ho-Oh, Kyogre, Groudon, Rayquaza, Giratina, lati@s, Deoxys, ...), normal + shiny: clean 8-frame sheets (4 facings x 2); usable as event/cutscene/special-encounter overworld sprites without the follower system.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "source_id": "hgss",
+   "verdict": "confirm"
+  },
+  {
+   "domain": "overworld_pokemon",
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_species.png"
+   ],
+   "family": "followers_species",
+   "note": "Rendered species follower sheets: clean 8-frame 32x32 sheets with shiny palette; event/NPC-Pokemon sprites, no follower system implied.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "source_id": "hgss",
+   "verdict": "confirm"
+  },
+  {
+   "domain": "models",
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "family": "models_building_exterior",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "source_id": "hgss",
+   "verdict": "confirm"
+  },
+  {
+   "domain": "models",
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "family": "models_room_gym_panels",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "source_id": "hgss",
+   "verdict": "confirm"
+  },
+  {
+   "domain": "textures",
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_textures_top_sets.png"
+   ],
+   "family": "textures_top_sets",
+   "note": "Rendered novel map-texture sets: terrain autotile chips (cliff edges, sand, water, grass, flowers), architectural tiles and interior floor/furniture chips. Mostly 16x16/32x32 tile chips: region library for the G4 regrade pipeline.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "source_id": "hgss",
+   "verdict": "confirm"
   }
  ],
  "reviews": [
@@ -223,6 +278,798 @@
    "group_id": "menu_ui_frames/ranger2/ranger_interface/i020",
    "note": "Glow-ring / spark feedback primitives with growth states; suitable as feedback-layer parts.",
    "reviewed_by": "claude (agent visual review of committed/targeted renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_legendary.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000580",
+   "note": "Rendered legendary/mythical follower sheets (Ho-Oh, Kyogre, Groudon, Rayquaza, Giratina, lati@s, Deoxys, ...), normal + shiny: clean 8-frame sheets (4 facings x 2); usable as event/cutscene/special-encounter overworld sprites without the follower system.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_legendary.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000712",
+   "note": "Rendered legendary/mythical follower sheets (Ho-Oh, Kyogre, Groudon, Rayquaza, Giratina, lati@s, Deoxys, ...), normal + shiny: clean 8-frame sheets (4 facings x 2); usable as event/cutscene/special-encounter overworld sprites without the follower system.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_legendary.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000713",
+   "note": "Rendered legendary/mythical follower sheets (Ho-Oh, Kyogre, Groudon, Rayquaza, Giratina, lati@s, Deoxys, ...), normal + shiny: clean 8-frame sheets (4 facings x 2); usable as event/cutscene/special-encounter overworld sprites without the follower system.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_legendary.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000714",
+   "note": "Rendered legendary/mythical follower sheets (Ho-Oh, Kyogre, Groudon, Rayquaza, Giratina, lati@s, Deoxys, ...), normal + shiny: clean 8-frame sheets (4 facings x 2); usable as event/cutscene/special-encounter overworld sprites without the follower system.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_legendary.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000838",
+   "note": "Rendered legendary/mythical follower sheets (Ho-Oh, Kyogre, Groudon, Rayquaza, Giratina, lati@s, Deoxys, ...), normal + shiny: clean 8-frame sheets (4 facings x 2); usable as event/cutscene/special-encounter overworld sprites without the follower system.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_legendary.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000442",
+   "note": "Rendered legendary/mythical follower sheets (Ho-Oh, Kyogre, Groudon, Rayquaza, Giratina, lati@s, Deoxys, ...), normal + shiny: clean 8-frame sheets (4 facings x 2); usable as event/cutscene/special-encounter overworld sprites without the follower system.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_legendary.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000573",
+   "note": "Rendered legendary/mythical follower sheets (Ho-Oh, Kyogre, Groudon, Rayquaza, Giratina, lati@s, Deoxys, ...), normal + shiny: clean 8-frame sheets (4 facings x 2); usable as event/cutscene/special-encounter overworld sprites without the follower system.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_legendary.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000574",
+   "note": "Rendered legendary/mythical follower sheets (Ho-Oh, Kyogre, Groudon, Rayquaza, Giratina, lati@s, Deoxys, ...), normal + shiny: clean 8-frame sheets (4 facings x 2); usable as event/cutscene/special-encounter overworld sprites without the follower system.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_legendary.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000575",
+   "note": "Rendered legendary/mythical follower sheets (Ho-Oh, Kyogre, Groudon, Rayquaza, Giratina, lati@s, Deoxys, ...), normal + shiny: clean 8-frame sheets (4 facings x 2); usable as event/cutscene/special-encounter overworld sprites without the follower system.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_legendary.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000579",
+   "note": "Rendered legendary/mythical follower sheets (Ho-Oh, Kyogre, Groudon, Rayquaza, Giratina, lati@s, Deoxys, ...), normal + shiny: clean 8-frame sheets (4 facings x 2); usable as event/cutscene/special-encounter overworld sprites without the follower system.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_legendary.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000707",
+   "note": "Rendered legendary/mythical follower sheets (Ho-Oh, Kyogre, Groudon, Rayquaza, Giratina, lati@s, Deoxys, ...), normal + shiny: clean 8-frame sheets (4 facings x 2); usable as event/cutscene/special-encounter overworld sprites without the follower system.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_legendary.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000708",
+   "note": "Rendered legendary/mythical follower sheets (Ho-Oh, Kyogre, Groudon, Rayquaza, Giratina, lati@s, Deoxys, ...), normal + shiny: clean 8-frame sheets (4 facings x 2); usable as event/cutscene/special-encounter overworld sprites without the follower system.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_legendary.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000709",
+   "note": "Rendered legendary/mythical follower sheets (Ho-Oh, Kyogre, Groudon, Rayquaza, Giratina, lati@s, Deoxys, ...), normal + shiny: clean 8-frame sheets (4 facings x 2); usable as event/cutscene/special-encounter overworld sprites without the follower system.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_legendary.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000710",
+   "note": "Rendered legendary/mythical follower sheets (Ho-Oh, Kyogre, Groudon, Rayquaza, Giratina, lati@s, Deoxys, ...), normal + shiny: clean 8-frame sheets (4 facings x 2); usable as event/cutscene/special-encounter overworld sprites without the follower system.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_legendary.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000711",
+   "note": "Rendered legendary/mythical follower sheets (Ho-Oh, Kyogre, Groudon, Rayquaza, Giratina, lati@s, Deoxys, ...), normal + shiny: clean 8-frame sheets (4 facings x 2); usable as event/cutscene/special-encounter overworld sprites without the follower system.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_legendary.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000718",
+   "note": "Rendered legendary/mythical follower sheets (Ho-Oh, Kyogre, Groudon, Rayquaza, Giratina, lati@s, Deoxys, ...), normal + shiny: clean 8-frame sheets (4 facings x 2); usable as event/cutscene/special-encounter overworld sprites without the follower system.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_species.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000299",
+   "note": "Rendered species follower sheets: clean 8-frame 32x32 sheets with shiny palette; event/NPC-Pokemon sprites, no follower system implied.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_species.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000303",
+   "note": "Rendered species follower sheets: clean 8-frame 32x32 sheets with shiny palette; event/NPC-Pokemon sprites, no follower system implied.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_species.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000306",
+   "note": "Rendered species follower sheets: clean 8-frame 32x32 sheets with shiny palette; event/NPC-Pokemon sprites, no follower system implied.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_species.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000315",
+   "note": "Rendered species follower sheets: clean 8-frame 32x32 sheets with shiny palette; event/NPC-Pokemon sprites, no follower system implied.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_species.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000336",
+   "note": "Rendered species follower sheets: clean 8-frame 32x32 sheets with shiny palette; event/NPC-Pokemon sprites, no follower system implied.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_species.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000347",
+   "note": "Rendered species follower sheets: clean 8-frame 32x32 sheets with shiny palette; event/NPC-Pokemon sprites, no follower system implied.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_species.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000357",
+   "note": "Rendered species follower sheets: clean 8-frame 32x32 sheets with shiny palette; event/NPC-Pokemon sprites, no follower system implied.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_species.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000366",
+   "note": "Rendered species follower sheets: clean 8-frame 32x32 sheets with shiny palette; event/NPC-Pokemon sprites, no follower system implied.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_species.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000369",
+   "note": "Rendered species follower sheets: clean 8-frame 32x32 sheets with shiny palette; event/NPC-Pokemon sprites, no follower system implied.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_species.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000371",
+   "note": "Rendered species follower sheets: clean 8-frame 32x32 sheets with shiny palette; event/NPC-Pokemon sprites, no follower system implied.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_species.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000374",
+   "note": "Rendered species follower sheets: clean 8-frame 32x32 sheets with shiny palette; event/NPC-Pokemon sprites, no follower system implied.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_species.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000383",
+   "note": "Rendered species follower sheets: clean 8-frame 32x32 sheets with shiny palette; event/NPC-Pokemon sprites, no follower system implied.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_species.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000389",
+   "note": "Rendered species follower sheets: clean 8-frame 32x32 sheets with shiny palette; event/NPC-Pokemon sprites, no follower system implied.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_species.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000393",
+   "note": "Rendered species follower sheets: clean 8-frame 32x32 sheets with shiny palette; event/NPC-Pokemon sprites, no follower system implied.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_species.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000397",
+   "note": "Rendered species follower sheets: clean 8-frame 32x32 sheets with shiny palette; event/NPC-Pokemon sprites, no follower system implied.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_followers_species.png"
+   ],
+   "group_id": "overworld_pokemon_sheets/hgss/hgss_follower_00000399",
+   "note": "Rendered species follower sheets: clean 8-frame 32x32 sheets with shiny palette; event/NPC-Pokemon sprites, no follower system implied.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_187",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_218",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_257",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_281",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_140",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_171",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_174",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_175",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_176",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_283",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_293",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_258",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_042",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_054",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_058",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_076",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_110",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_112",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_146",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_165",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_242",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_254",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_308",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_building_exterior.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_317",
+   "note": "Rendered HGSS city buildings (department store, tower, pagoda, market stalls, apartment blocks, Pokemon Center variants): Johto-specific architecture; value is roofs/awnings/windows/facade parts and prop geometry for kit-bashing, not whole-building transfer. Preview is approximate (no node transforms).",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_room_173",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_room_202",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_room_204",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_room_216",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_room_203",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_room_206",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_060",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_room_154",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_room_155",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_room_166",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_room_191",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_room_192",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_room_193",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_room_217",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_room_218",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_005",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_285",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_room_129",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_room_176",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_151",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_room_210",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_017",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_026",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_models_room_gym_panels.png"
+   ],
+   "group_id": "field_building_models/hgss/hgss_bm_field_057",
+   "note": "Rendered HGSS interior/gym assets: lava-floor and circuit-board floor surfaces, puzzle machinery, gym shells (recolor variants share one mesh, so only the first counts), door panels. Component/prop reference with distinctive floor-surface geometry.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_textures_top_sets.png"
+   ],
+   "group_id": "field_texture_sets/hgss/hgss_texset_006",
+   "note": "Rendered novel map-texture sets: terrain autotile chips (cliff edges, sand, water, grass, flowers), architectural tiles and interior floor/furniture chips. Mostly 16x16/32x32 tile chips: region library for the G4 regrade pipeline.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_textures_top_sets.png"
+   ],
+   "group_id": "field_texture_sets/hgss/hgss_texset_008",
+   "note": "Rendered novel map-texture sets: terrain autotile chips (cliff edges, sand, water, grass, flowers), architectural tiles and interior floor/furniture chips. Mostly 16x16/32x32 tile chips: region library for the G4 regrade pipeline.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_textures_top_sets.png"
+   ],
+   "group_id": "field_texture_sets/hgss/hgss_texset_011",
+   "note": "Rendered novel map-texture sets: terrain autotile chips (cliff edges, sand, water, grass, flowers), architectural tiles and interior floor/furniture chips. Mostly 16x16/32x32 tile chips: region library for the G4 regrade pipeline.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_textures_top_sets.png"
+   ],
+   "group_id": "field_texture_sets/hgss/hgss_texset_013",
+   "note": "Rendered novel map-texture sets: terrain autotile chips (cliff edges, sand, water, grass, flowers), architectural tiles and interior floor/furniture chips. Mostly 16x16/32x32 tile chips: region library for the G4 regrade pipeline.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_textures_top_sets.png"
+   ],
+   "group_id": "field_texture_sets/hgss/hgss_texset_014",
+   "note": "Rendered novel map-texture sets: terrain autotile chips (cliff edges, sand, water, grass, flowers), architectural tiles and interior floor/furniture chips. Mostly 16x16/32x32 tile chips: region library for the G4 regrade pipeline.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_textures_top_sets.png"
+   ],
+   "group_id": "field_texture_sets/hgss/hgss_texset_016",
+   "note": "Rendered novel map-texture sets: terrain autotile chips (cliff edges, sand, water, grass, flowers), architectural tiles and interior floor/furniture chips. Mostly 16x16/32x32 tile chips: region library for the G4 regrade pipeline.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_textures_top_sets.png"
+   ],
+   "group_id": "field_texture_sets/hgss/hgss_texset_027",
+   "note": "Rendered novel map-texture sets: terrain autotile chips (cliff edges, sand, water, grass, flowers), architectural tiles and interior floor/furniture chips. Mostly 16x16/32x32 tile chips: region library for the G4 regrade pipeline.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
+   "verdict": "confirm"
+  },
+  {
+   "evidence_refs": [
+    "docs/visual_overhaul/selection/mining/review/field_3d_textures_top_sets.png"
+   ],
+   "group_id": "field_texture_sets/hgss/hgss_texset_039",
+   "note": "Rendered novel map-texture sets: terrain autotile chips (cliff edges, sand, water, grass, flowers), architectural tiles and interior floor/furniture chips. Mostly 16x16/32x32 tile chips: region library for the G4 regrade pipeline.",
+   "reviewed_by": "claude (agent visual review of committed renders; not human-approved)",
    "verdict": "confirm"
   }
  ],

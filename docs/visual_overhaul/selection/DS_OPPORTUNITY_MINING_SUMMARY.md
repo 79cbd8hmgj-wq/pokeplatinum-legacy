@@ -14,8 +14,8 @@ Per-domain passes: `mining/passes/<domain>.json` (every group with disposition, 
 
 ## Result
 
-- groups processed 8581; surfaced 1839; dispositions promoted 1839, reference_only 6039, reject 703
-- class counts: novel_capability 86, novel_detail 186, technique_donor 545, enhancement_candidate 111, component_donor 1285, replacement_candidate 32, reference_only 6048, reject 704
+- groups processed 9821; surfaced 2722; dispositions promoted 2722, reference_only 6292, reject 807
+- class counts: novel_capability 86, novel_detail 766, technique_donor 545, enhancement_candidate 115, component_donor 1626, replacement_candidate 32, reference_only 6301, reject 808
 
 ## Catalog blind spots
 
@@ -28,7 +28,7 @@ Per-domain passes: `mining/passes/<domain>.json` (every group with disposition, 
 
 ## Targeted review of ambiguous high-value groups
 
-21 group reviews (confirm) and 3 family reviews from committed or targeted renders (`mining/TARGETED_REVIEW.json`, images under `mining/review/` and `opportunities/evidence/`). Findings: HGSS-only trainer classes are clean multi-frame sets; Ranger walk frames form genuine cycles; Ranger effect/interface primitives are shaded multi-frame Nitro cells; Ranger composed maps are 2D tile art (motif/prop library, low feasibility); Ranger menu/event/ending bundles have no available renderer and stay needs-evidence.
+109 group reviews (confirm) and 8 family reviews from committed or targeted renders (`mining/TARGETED_REVIEW.json`, images under `mining/review/` and `opportunities/evidence/`). Findings: HGSS-only trainer classes are clean multi-frame sets; Ranger walk frames form genuine cycles; Ranger effect/interface primitives are shaded multi-frame Nitro cells; Ranger composed maps are 2D tile art (motif/prop library, low feasibility); Ranger menu/event/ending bundles have no available renderer and stay needs-evidence.
 
 ## Evidence closure
 

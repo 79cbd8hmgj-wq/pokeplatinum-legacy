@@ -8,6 +8,7 @@ import re
 from common import *  # noqa: F401,F403
 import build_candidate_groups as BCG
 import outcomes
+import mine_x3d as X3
 
 R_PMD_FRAMES = re.compile(r"(\d+)/(\d+) nonblank frames, (\d+) animation groups")
 R_CELLS = re.compile(r"(\d+)/(\d+) nonblank cells")
@@ -121,6 +122,8 @@ def build() -> dict:
             f["max_w"], f["max_h"] = max(f["max_w"], a.get("native_width") or a.get("bbox_width") or 0), max(f["max_h"], a.get("native_height") or a.get("bbox_height") or 0)
             if re_.get("frames"):
                 f["frames_ok"] = max(f["frames_ok"], re_["frames"] if isinstance(re_["frames"], int) else 0)
+        if g["subsystem"] in X3.SUBSYSTEM_DOMAIN:  # hgss_field_3d: measured metadata lives in the extension catalog (no donor access)
+            f["x3d"] = X3.aggregate(g["subsystem"], g["unit"], [cat[i].get("source_metadata") or {} for i in ids], [cat[i] for i in ids])
         f["kinds"] = dict(sorted(kinds.items()))
         f["geom"] = dict(f["geom"])
         f["has_nanr"] = any(k in kinds for k in ("nanr", ".nanr")) or any("cac" in k or k == "4c020000" for k in kinds)
@@ -132,7 +135,7 @@ def build() -> dict:
         t = tgt.get((g["subsystem"], g["target_id"]))
         f["ledger_role"], f["ledger_reason"] = d["role"], d["reason_code"]
         f["native_relation"] = ev.get("native_relation")
-        f["needs_evidence"] = bool(d["needs_evidence"])
+        f["needs_evidence"] = bool(d["needs_evidence"]) and f["native_relation"] != "contract_mismatch"  # contract_mismatch is a measured disqualifier, not missing evidence
         f["needs_runtime_validation"] = bool(d["needs_runtime_validation"])
         f["has_native_target"] = f["native_relation"] not in ("missing_in_native",) and d["reason_code"] not in ("no_native_target", "source_not_relevant_to_subsystem") and g["subsystem"] != "no_platinum_target"
         f["target_resolution"] = t["resolution"] if t else None
@@ -140,6 +143,8 @@ def build() -> dict:
         f["decode_issues"] = g["unresolved_decode_issue_members"]
         f["family"] = family_of(g)
         f["domain"] = domain_of(g, f)
+        if "x3d" in f:
+            f["family"], f["domain"] = f["x3d"]["family"], X3.SUBSYSTEM_DOMAIN[g["subsystem"]]
         fam_size[(g["source_id"], f["domain"], f["family"])] += 1
         f["n_members"] = len(ids)
         f["member_ids"] = ids
@@ -151,7 +156,8 @@ def build() -> dict:
         dom = f["domain"]
         f["metric"] = float({"battle_effects": f["cells_total"], "interface_embellishments": f["cells_total"], "field_effects": f["frames_total"] + 4 * f["anim_groups"],
                              "field_graphics": f["map_w"] * f["map_h"] * max(f["quad_layers"], 1), "textures": f["tex_chips"] * 1000 + f["bytes"], "backgrounds": f["bytes"] + f["bg_w"] * f["bg_h"],
-                             "trainer_sprites": f["opaque"] + 1000 * (f["scores"]["visual_gain"] or 0), "npc_player_sprites": f["opaque"], "pokemon_sprites": 1000 * (f["scores"]["visual_gain"] or 0) + f["n_members"], "transitions_presentation": f["bytes"]}.get(dom, f["n_members"]))
+                             "models": (f["x3d"]["meta"]["tris"] if f.get("x3d", {}).get("kind") == "model" else 0), "textures": (sum(v for k, v in f["x3d"]["uses"].items() if k in ("directly_reusable", "convertible", "component_region", "enhancement_input")) if f.get("x3d", {}).get("kind") == "texture_set" else 0),
+                             "overworld_pokemon": f["opaque"], "trainer_sprites": f["opaque"] + 1000 * (f["scores"]["visual_gain"] or 0), "npc_player_sprites": f["opaque"], "pokemon_sprites": 1000 * (f["scores"]["visual_gain"] or 0) + f["n_members"], "transitions_presentation": f["bytes"]}.get(dom, f["n_members"]))
         by_fam[(g["source_id"], dom, f["family"])].append(g["group_id"])
     for key, gids in by_fam.items():  # percentile of the richness metric inside the family (deterministic, ties share the lower rank)
         vals = sorted(feats[x]["metric"] for x in gids)

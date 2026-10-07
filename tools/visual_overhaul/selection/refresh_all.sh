@@ -14,6 +14,7 @@ python3 tools/visual_overhaul/build_donor_curation_status.py --catalog $D/DONOR_
   --write-json $D/DONOR_CURATION_STATUS.json --write-md $D/DONOR_CURATION_STATUS.md
 S=tools/visual_overhaul/selection
 python3 $S/build_candidate_groups.py > /dev/null
+python3 $S/evidence_field_3d.py > /dev/null
 for s in $(python3 -c "import json;print(' '.join(json.load(open('$D/selection/SUBSYSTEMS.json'))['subsystems']))"); do
   python3 $S/select_subsystem.py --subsystem "$s" > /dev/null
 done
@@ -23,4 +24,5 @@ python3 $S/resolve_evidence.py
 python3 $S/mine_pool.py
 python3 $S/build_queue.py
 python3 $S/build_status.py > /dev/null
+python3 $S/build_trainer_qa_package.py > /dev/null 2>&1
 python3 $S/validate_selection.py

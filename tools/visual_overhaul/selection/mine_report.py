@@ -118,4 +118,4 @@ def write_reports(res: dict, doc: dict) -> dict:
 
 
 MINING_DOMAINS = ["trainer_sprites", "pokemon_sprites", "pokemon_animation", "npc_player_sprites", "field_graphics", "environmental_effects", "battle_effects", "field_effects", "ui_menus_hud",
-                  "location_area", "textures", "models", "interface_embellishments", "transitions_presentation", "icons", "backgrounds", "misc"]
+                  "location_area", "textures", "models", "overworld_pokemon", "interface_embellishments", "transitions_presentation", "icons", "backgrounds", "misc"]
