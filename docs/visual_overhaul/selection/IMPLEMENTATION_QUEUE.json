@@ -16,8 +16,8 @@
   "trainer_battle_sprites"
  ],
  "inputs": {
-  "classes_sha256": "615e8cb32810afb61dd2e2a254806ad963165da59ece65de480c971a557d0c1f",
-  "findings_sha256": "1d07cc45420b17581618c19baeb0adb821a17f59eb43fc31bd2365db00b87824",
+  "classes_sha256": "24acd6faefb7f3bb88f8ab7a8d5fd545f0a93ecc045d6b54a2211ccd9f168ee9",
+  "findings_sha256": "3423a7d837af32f1f581dff34591371a2b89fb13378af4b10f251827193bb584",
   "ledger_files": {
    "battle_backgrounds_hud": "1efd63a09386d2ef5c1467efb9450fb46f94badbed1ae2d56f45ea0a3cdab53d",
    "battle_effects_particles": "010dddf4143dc259fa20e2b3be8b992a1ef39b30c61890780ad7546e0d9b18ec",
@@ -34,6 +34,7 @@
    "title_and_presentation": "06c1220739490aa0ca87208d2bbda97b443a98d5af0d0dfce6f53c0010463727",
    "trainer_battle_sprites": "72e37b38572ec4d278a4921b0070a21b238d9dcf0c2f6041bb828cee96570376"
   },
+  "scope_sha256": "ad5632421f94dfc2ce72394d28633654a144ff1f48e852c230011baf87933f74",
   "use_files": {
    "trainer_battle_sprites": "fe1986e560e3a2252e5474d29e402c9ca599a87c7b7e3452db188b66034f6f15"
   },
@@ -41,235 +42,164 @@
  },
  "items": [
   {
+   "asset_use": "techniques",
    "cost": "high",
-   "feasibility": 2,
-   "finding_id": "opp:firered/map_location_preview",
+   "finding_id": "opp:hgss/map_location_preview",
    "kind": "opportunity",
-   "needs_donor_verification": false,
    "opportunity_class": "novel_capability",
-   "priority_score": 0.667,
+   "priority_score": 4.143,
    "rank": 1,
+   "rank_score": 4.143,
+   "risk": "medium",
+   "scores": {
+    "cost": 3,
+    "feasibility": 4,
+    "novelty": 5,
+    "reuse": 4,
+    "risk": 2,
+    "slice": 5,
+    "visual_impact": 4
+   },
    "source_id": "hgss",
-   "subsystem": "new area-preview screen shown on map entry, beside the existing map-name popup",
+   "subsystem": "new area-preview layer shown on map entry beside the existing map-name popup",
    "target_count": 1,
    "targets_sample": [
     null
    ],
-   "title": "Area/location preview card (novel Sinnoh artwork)",
-   "work_lane": "novel"
+   "title": "Area/location preview card (new Sinnoh artwork; HGSS module + layout as the DS reference)",
+   "work_lane": "opportunity"
   },
   {
-   "cost": "medium",
-   "feasibility": 1,
-   "finding_id": "opp:pmd_red/battler_status_overlays",
+   "asset_use": "mixed",
+   "cost": "high",
+   "finding_id": "opp:hgss/follower_pokemon",
    "kind": "opportunity",
-   "needs_donor_verification": true,
-   "opportunity_class": "novel_detail",
-   "priority_score": 0.25,
+   "opportunity_class": "novel_capability",
+   "priority_score": 3.714,
    "rank": 2,
-   "source_id": "pmd_red",
+   "rank_score": 3.714,
+   "risk": "high",
+   "scores": {
+    "cost": 5,
+    "feasibility": 2,
+    "novelty": 5,
+    "reuse": 5,
+    "risk": 4,
+    "slice": 2,
+    "visual_impact": 5
+   },
+   "source_id": "hgss",
+   "subsystem": "overworld follower object (Pokemon walking behind the player) using the map-object system",
+   "target_count": 1,
+   "targets_sample": [
+    null
+   ],
+   "title": "Following-Pokemon overworld presence (HGSS follower sprite sheets + FollowMon system)",
+   "work_lane": "opportunity"
+  },
+  {
+   "asset_use": "components",
+   "cost": "medium",
+   "finding_id": "opp:ranger2/effect_primitives",
+   "kind": "opportunity",
+   "opportunity_class": "component_donor",
+   "priority_score": 3.571,
+   "rank": 3,
+   "rank_score": 3.571,
+   "risk": "medium",
+   "scores": {
+    "cost": 3,
+    "feasibility": 3,
+    "novelty": 3,
+    "reuse": 5,
+    "risk": 3,
+    "slice": 4,
+    "visual_impact": 4
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_effects_particles",
+   "target_count": 1,
+   "targets_sample": [
+    "battle move particle/2D effect resources"
+   ],
+   "title": "Ranger 2 2D effect primitives (fire/tornado/lightning/glow)",
+   "work_lane": "opportunity"
+  },
+  {
+   "asset_use": "mixed",
+   "cost": "medium",
+   "finding_id": "opp:pmd_sky/battler_status_indicators",
+   "kind": "opportunity",
+   "opportunity_class": "novel_detail",
+   "priority_score": 3.393,
+   "rank": 4,
+   "rank_score": 3.393,
+   "risk": "medium",
+   "scores": {
+    "cost": 3,
+    "feasibility": 3,
+    "novelty": 4,
+    "reuse": 4,
+    "risk": 3,
+    "slice": 4,
+    "visual_impact": 3
+   },
+   "source_id": "pmd_sky",
    "subsystem": "battle: temporary indicator layer above battler sprites (alongside the healthbox status icon)",
    "target_count": 1,
    "targets_sample": [
     null
    ],
-   "title": "Temporary status indicators above battlers",
-   "work_lane": "novel"
+   "title": "Temporary status indicators above battlers (PMD Sky status-icon model)",
+   "work_lane": "opportunity"
   },
   {
-   "cost": "medium",
-   "feasibility": 1,
-   "finding_id": "opp:firered/interactive_object_states",
-   "kind": "opportunity",
-   "needs_donor_verification": true,
-   "opportunity_class": "novel_detail",
-   "priority_score": 0.25,
-   "rank": 3,
-   "source_id": "firered",
-   "subsystem": "overworld interactive objects (extra visual states, no new object type)",
-   "target_count": 1,
-   "targets_sample": [
-    null
-   ],
-   "title": "Interactive-object visual states",
-   "work_lane": "novel"
-  },
-  {
+   "asset_use": "techniques",
    "cost": "low",
-   "feasibility": 1,
-   "finding_id": "opp:crystal/battle_anim_choreography",
+   "finding_id": "opp:ranger2/effect_sequencing",
    "kind": "opportunity",
-   "needs_donor_verification": true,
    "opportunity_class": "technique_donor",
-   "priority_score": 0.5,
-   "rank": 4,
-   "source_id": "crystal",
+   "priority_score": 3.321,
+   "rank": 5,
+   "rank_score": 3.321,
+   "risk": "low",
+   "scores": {
+    "cost": 2,
+    "feasibility": 4,
+    "novelty": 2,
+    "reuse": 4,
+    "risk": 2,
+    "slice": 4,
+    "visual_impact": 3
+   },
+   "source_id": "ranger2",
    "subsystem": "battle_effects_particles",
    "target_count": 1,
    "targets_sample": [
     "battle move animation scripts"
    ],
-   "title": "Unusual battle-animation choreography",
+   "title": "Ranger 2 multi-phase effect sequencing (launch/impact/embers)",
    "work_lane": "opportunity"
   },
   {
+   "asset_use": "components",
    "cost": "medium",
-   "feasibility": 1,
-   "finding_id": "opp:emerald/field_action_choreography",
-   "kind": "opportunity",
-   "needs_donor_verification": true,
-   "opportunity_class": "technique_donor",
-   "priority_score": 0.25,
-   "rank": 5,
-   "source_id": "emerald",
-   "subsystem": "field_effects_overlays",
-   "target_count": 1,
-   "targets_sample": [
-    "field move task sequences"
-   ],
-   "title": "Field-action choreography",
-   "work_lane": "opportunity"
-  },
-  {
-   "cost": "medium",
-   "feasibility": 1,
-   "finding_id": "opp:firered/animated_palette_sequences",
-   "kind": "opportunity",
-   "needs_donor_verification": true,
-   "opportunity_class": "technique_donor",
-   "priority_score": 0.25,
-   "rank": 6,
-   "source_id": "firered",
-   "subsystem": "field_environment_art",
-   "target_count": 1,
-   "targets_sample": [
-    "environment palette/lighting animation"
-   ],
-   "title": "Animated environmental palette sequences",
-   "work_lane": "opportunity"
-  },
-  {
-   "feasibility": 1,
-   "groups": 467,
-   "kind": "technique_pool",
-   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
-   "opportunity_class": "technique_donor",
-   "priority_score": 0.2,
-   "rank": 7,
-   "source_id": "pmd_sky",
-   "subsystem": "field_environment_art",
-   "target_count": null,
-   "work_lane": "technique_only"
-  },
-  {
-   "feasibility": 1,
-   "groups": 905,
-   "kind": "technique_pool",
-   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
-   "opportunity_class": "technique_donor",
-   "priority_score": 0.2,
-   "rank": 8,
-   "source_id": "ranger2",
-   "subsystem": "field_environment_art",
-   "target_count": null,
-   "work_lane": "technique_only"
-  },
-  {
-   "feasibility": 1,
-   "groups": 636,
-   "kind": "technique_pool",
-   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
-   "opportunity_class": "technique_donor",
-   "priority_score": 0.15,
-   "rank": 9,
-   "source_id": "ranger2",
-   "subsystem": "battle_effects_particles",
-   "target_count": null,
-   "work_lane": "technique_only"
-  },
-  {
-   "feasibility": 1,
-   "groups": 523,
-   "kind": "technique_pool",
-   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
-   "opportunity_class": "technique_donor",
-   "priority_score": 0.15,
-   "rank": 10,
-   "source_id": "pmd_sky",
-   "subsystem": "field_effects_overlays",
-   "target_count": null,
-   "work_lane": "technique_only"
-  },
-  {
-   "feasibility": 1,
-   "groups": 20,
-   "kind": "technique_pool",
-   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
-   "opportunity_class": "technique_donor",
-   "priority_score": 0.15,
-   "rank": 11,
-   "source_id": "pmd_sky",
-   "subsystem": "menu_ui_frames",
-   "target_count": null,
-   "work_lane": "technique_only"
-  },
-  {
-   "feasibility": 1,
-   "groups": 30,
-   "kind": "technique_pool",
-   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
-   "opportunity_class": "technique_donor",
-   "priority_score": 0.1,
-   "rank": 12,
-   "source_id": "pmd_sky",
-   "subsystem": "title_and_presentation",
-   "target_count": null,
-   "work_lane": "technique_only"
-  },
-  {
-   "feasibility": 1,
-   "groups": 1533,
-   "kind": "technique_pool",
-   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
-   "opportunity_class": "technique_donor",
-   "priority_score": 0.05,
-   "rank": 13,
-   "source_id": "ranger2",
-   "subsystem": "pokemon_animation_reference",
-   "target_count": null,
-   "work_lane": "technique_only"
-  },
-  {
-   "awaiting_human_confirmation": 4,
-   "feasibility": 2,
-   "kind": "component_review",
-   "opportunity_class": "enhancement_candidate",
-   "priority_score": 1.0,
-   "rank": 14,
-   "records": 4,
-   "source_id": "hgss",
-   "subsystem": "trainer_battle_sprites",
-   "tags": [
-    "accessory",
-    "clothing_detail",
-    "shading"
-   ],
-   "target_count": 2,
-   "targets_sample": [
-    "trainer_battle_sprites/tc_ace_trainer_female",
-    "trainer_battle_sprites/tc_ace_trainer_male"
-   ],
-   "work_lane": "native_enhancement"
-  },
-  {
-   "cost": "medium",
-   "feasibility": 2,
    "finding_id": "opp:trainer/tc_ace_trainer_female/enhancement",
    "kind": "opportunity",
-   "needs_donor_verification": false,
    "opportunity_class": "enhancement_candidate",
-   "priority_score": 1.0,
-   "rank": 15,
+   "priority_score": 2.714,
+   "rank": 6,
+   "rank_score": 2.714,
+   "risk": "medium",
+   "scores": {
+    "cost": 2,
+    "feasibility": 4,
+    "novelty": 2,
+    "reuse": 2,
+    "risk": 3,
+    "slice": 4,
+    "visual_impact": 2
+   },
    "source_id": "hgss",
    "subsystem": "trainer_battle_sprites",
    "target_count": 1,
@@ -280,14 +210,24 @@
    "work_lane": "opportunity"
   },
   {
+   "asset_use": "components",
    "cost": "medium",
-   "feasibility": 2,
    "finding_id": "opp:trainer/tc_ace_trainer_male/enhancement",
    "kind": "opportunity",
-   "needs_donor_verification": false,
    "opportunity_class": "enhancement_candidate",
-   "priority_score": 1.0,
-   "rank": 16,
+   "priority_score": 2.714,
+   "rank": 7,
+   "rank_score": 2.714,
+   "risk": "medium",
+   "scores": {
+    "cost": 2,
+    "feasibility": 4,
+    "novelty": 2,
+    "reuse": 2,
+    "risk": 3,
+    "slice": 4,
+    "visual_impact": 2
+   },
    "source_id": "hgss",
    "subsystem": "trainer_battle_sprites",
    "target_count": 1,
@@ -298,139 +238,7 @@
    "work_lane": "opportunity"
   },
   {
-   "feasibility": 1,
-   "groups": 1,
-   "kind": "component_pool",
-   "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped",
-   "opportunity_class": "component_donor",
-   "priority_score": 0.25,
-   "rank": 17,
-   "source_id": "hgss",
-   "subsystem": "pokemon_battle_sprites",
-   "target_count": null,
-   "work_lane": "native_enhancement"
-  },
-  {
-   "cost": "medium",
-   "feasibility": 1,
-   "finding_id": "opp:crystal/battle_anim_artwork",
-   "kind": "opportunity",
-   "needs_donor_verification": true,
-   "opportunity_class": "component_donor",
-   "priority_score": 0.25,
-   "rank": 18,
-   "source_id": "crystal",
-   "subsystem": "battle_effects_particles",
-   "target_count": 1,
-   "targets_sample": [
-    "battle move particle resources"
-   ],
-   "title": "Unusual battle-animation artwork",
-   "work_lane": "opportunity"
-  },
-  {
-   "cost": "medium",
-   "feasibility": 1,
-   "finding_id": "opp:emerald/environment_effect_primitives",
-   "kind": "opportunity",
-   "needs_donor_verification": true,
-   "opportunity_class": "component_donor",
-   "priority_score": 0.25,
-   "rank": 19,
-   "source_id": "emerald",
-   "subsystem": "field_effects_overlays",
-   "target_count": 1,
-   "targets_sample": [
-    "field overlay/effect primitives"
-   ],
-   "title": "Environmental effect primitives",
-   "work_lane": "opportunity"
-  },
-  {
-   "cost": "medium",
-   "feasibility": 1,
-   "finding_id": "opp:yellow/pikachu_presentation",
-   "kind": "opportunity",
-   "needs_donor_verification": true,
-   "opportunity_class": "component_donor",
-   "priority_score": 0.25,
-   "rank": 20,
-   "source_id": "yellow",
-   "subsystem": "pokemon_battle_sprites",
-   "target_count": 1,
-   "targets_sample": [
-    "Pikachu presentation"
-   ],
-   "title": "Pikachu-specific presentation assets",
-   "work_lane": "opportunity"
-  },
-  {
-   "feasibility": 1,
-   "groups": 23,
-   "kind": "component_pool",
-   "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped",
-   "opportunity_class": "component_donor",
-   "priority_score": 0.2,
-   "rank": 21,
-   "source_id": "hgss",
-   "subsystem": "field_environment_art",
-   "target_count": null,
-   "work_lane": "native_enhancement"
-  },
-  {
-   "feasibility": 1,
-   "groups": 111,
-   "kind": "component_pool",
-   "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped",
-   "opportunity_class": "component_donor",
-   "priority_score": 0.15,
-   "rank": 22,
-   "source_id": "hgss",
-   "subsystem": "field_npc_player_sprites",
-   "target_count": null,
-   "work_lane": "native_enhancement"
-  },
-  {
-   "feasibility": 1,
-   "groups": 8,
-   "kind": "component_pool",
-   "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped",
-   "opportunity_class": "component_donor",
-   "priority_score": 0.15,
-   "rank": 23,
-   "source_id": "diamond",
-   "subsystem": "trainer_battle_sprites",
-   "target_count": null,
-   "work_lane": "native_enhancement"
-  },
-  {
-   "feasibility": 1,
-   "groups": 60,
-   "kind": "component_pool",
-   "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped",
-   "opportunity_class": "component_donor",
-   "priority_score": 0.15,
-   "rank": 24,
-   "source_id": "hgss",
-   "subsystem": "trainer_battle_sprites",
-   "target_count": null,
-   "work_lane": "native_enhancement"
-  },
-  {
-   "feasibility": 1,
-   "groups": 4,
-   "kind": "component_pool",
-   "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped",
-   "opportunity_class": "component_donor",
-   "priority_score": 0.1,
-   "rank": 25,
-   "source_id": "hgss",
-   "subsystem": "pokemon_icons",
-   "target_count": null,
-   "work_lane": "native_enhancement"
-  },
-  {
-   "feasibility": 3,
+   "asset_use": "whole_assets",
    "format_families": [
     "nitro_indexed_png_160x80"
    ],
@@ -438,7 +246,17 @@
    "kind": "implement",
    "opportunity_class": "replacement_candidate",
    "priority_score": 86.667,
-   "rank": 26,
+   "rank": 8,
+   "rank_score": 2.643,
+   "scores": {
+    "cost": 3,
+    "feasibility": 4,
+    "novelty": 1,
+    "reuse": 2,
+    "risk": 3,
+    "slice": 4,
+    "visual_impact": 3
+   },
    "source_id": "hgss",
    "subsystem": "pokemon_battle_sprites",
    "target_count": 26,
@@ -452,7 +270,7 @@
    "work_lane": "direct_replacement"
   },
   {
-   "feasibility": 3,
+   "asset_use": "whole_assets",
    "format_families": [
     "nitro_sprite_set_ncgr_nclr_ncer_nanr"
    ],
@@ -460,7 +278,17 @@
    "kind": "implement",
    "opportunity_class": "replacement_candidate",
    "priority_score": 9.0,
-   "rank": 27,
+   "rank": 9,
+   "rank_score": 2.643,
+   "scores": {
+    "cost": 3,
+    "feasibility": 4,
+    "novelty": 1,
+    "reuse": 2,
+    "risk": 3,
+    "slice": 4,
+    "visual_impact": 3
+   },
    "source_id": "hgss",
    "subsystem": "trainer_battle_sprites",
    "target_count": 6,
@@ -474,35 +302,14 @@
    "work_lane": "direct_replacement"
   },
   {
-   "feasibility": 3,
-   "groups": 26,
-   "kind": "runtime_qa",
-   "opportunity_class": "replacement_candidate",
-   "priority_score": 0.0,
-   "rank": 28,
-   "source_id": "hgss",
-   "subsystem": "pokemon_battle_sprites",
-   "work_lane": "direct_replacement"
-  },
-  {
-   "feasibility": 3,
-   "groups": 6,
-   "kind": "runtime_qa",
-   "opportunity_class": "replacement_candidate",
-   "priority_score": 0.0,
-   "rank": 29,
-   "source_id": "hgss",
-   "subsystem": "trainer_battle_sprites",
-   "work_lane": "direct_replacement"
-  },
-  {
-   "feasibility": 1,
+   "asset_use": null,
    "groups": 2,
    "kind": "evidence",
    "members": 3,
    "opportunity_class": null,
    "priority_score": 0.5,
-   "rank": 30,
+   "rank": null,
+   "rank_score": null,
    "source_id": "hgss",
    "subsystem": "pokemon_battle_sprites",
    "target_count": 2,
@@ -514,13 +321,14 @@
    "work_lane": "evidence"
   },
   {
-   "feasibility": 1,
+   "asset_use": null,
    "groups": 4,
    "kind": "evidence",
    "members": 4,
    "opportunity_class": null,
    "priority_score": 0.3,
-   "rank": 31,
+   "rank": null,
+   "rank_score": null,
    "source_id": "hgss",
    "subsystem": "field_npc_player_sprites",
    "target_count": 4,
@@ -534,13 +342,14 @@
    "work_lane": "evidence"
   },
   {
-   "feasibility": 1,
+   "asset_use": null,
    "groups": 1,
    "kind": "evidence",
    "members": 2,
    "opportunity_class": null,
    "priority_score": 0.3,
-   "rank": 32,
+   "rank": null,
+   "rank_score": null,
    "source_id": "hgss",
    "subsystem": "menu_ui_frames",
    "target_count": 1,
@@ -551,13 +360,14 @@
    "work_lane": "evidence"
   },
   {
-   "feasibility": 1,
+   "asset_use": null,
    "groups": 1,
    "kind": "evidence",
    "members": 27,
    "opportunity_class": null,
    "priority_score": 0.2,
-   "rank": 33,
+   "rank": null,
+   "rank_score": null,
    "source_id": "hgss",
    "subsystem": "party_summary_ui",
    "target_count": 1,
@@ -568,13 +378,14 @@
    "work_lane": "evidence"
   },
   {
-   "feasibility": 1,
+   "asset_use": null,
    "groups": 1,
    "kind": "evidence",
    "members": 123,
    "opportunity_class": null,
    "priority_score": 0.2,
-   "rank": 34,
+   "rank": null,
+   "rank_score": null,
    "source_id": "hgss",
    "subsystem": "pokedex_ui",
    "target_count": 1,
@@ -583,8 +394,89 @@
     "pokedex_ui/family:pokedex_ui"
    ],
    "work_lane": "evidence"
+  },
+  {
+   "asset_use": "components",
+   "groups": 1,
+   "kind": "component_pool",
+   "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped",
+   "opportunity_class": "component_donor",
+   "priority_score": 0.25,
+   "rank": null,
+   "rank_score": null,
+   "source_id": "hgss",
+   "subsystem": "pokemon_battle_sprites",
+   "target_count": null,
+   "work_lane": "native_enhancement"
+  },
+  {
+   "asset_use": "components",
+   "groups": 4,
+   "kind": "component_pool",
+   "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped",
+   "opportunity_class": "component_donor",
+   "priority_score": 0.1,
+   "rank": null,
+   "rank_score": null,
+   "source_id": "hgss",
+   "subsystem": "pokemon_icons",
+   "target_count": null,
+   "work_lane": "native_enhancement"
+  },
+  {
+   "asset_use": "whole_assets",
+   "groups": 26,
+   "kind": "runtime_qa",
+   "opportunity_class": "replacement_candidate",
+   "priority_score": 0.0,
+   "rank": null,
+   "rank_score": null,
+   "source_id": "hgss",
+   "subsystem": "pokemon_battle_sprites",
+   "work_lane": "direct_replacement"
+  },
+  {
+   "asset_use": "whole_assets",
+   "groups": 6,
+   "kind": "runtime_qa",
+   "opportunity_class": "replacement_candidate",
+   "priority_score": 0.0,
+   "rank": null,
+   "rank_score": null,
+   "source_id": "hgss",
+   "subsystem": "trainer_battle_sprites",
+   "work_lane": "direct_replacement"
+  },
+  {
+   "asset_use": "techniques",
+   "groups": 905,
+   "kind": "technique_pool",
+   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
+   "opportunity_class": "technique_donor",
+   "priority_score": 0.2,
+   "rank": null,
+   "rank_score": null,
+   "source_id": "ranger2",
+   "subsystem": "field_environment_art",
+   "target_count": null,
+   "work_lane": "technique_only"
+  },
+  {
+   "asset_use": "techniques",
+   "groups": 20,
+   "kind": "technique_pool",
+   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
+   "opportunity_class": "technique_donor",
+   "priority_score": 0.15,
+   "rank": null,
+   "rank_score": null,
+   "source_id": "pmd_sky",
+   "subsystem": "menu_ui_frames",
+   "target_count": null,
+   "work_lane": "technique_only"
   }
  ],
  "pending_subsystems": [],
- "schema_version": 2
+ "phase": "ds_only",
+ "schema_version": 3
 }

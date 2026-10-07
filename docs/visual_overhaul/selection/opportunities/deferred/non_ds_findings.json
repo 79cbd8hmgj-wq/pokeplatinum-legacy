@@ -1,0 +1,476 @@
+{
+ "description": "GBA/GBC donor findings preserved verbatim for the next phase. NOT loaded by the register, queue or ranking. Do not edit to make them active; re-derive with DS or GBA/GBC checkouts when that phase starts.",
+ "findings": [
+  {
+   "adaptation": [
+    "redraw selected shapes into Platinum particle resources",
+    "tie each shape to one move script"
+   ],
+   "classification": "component_donor",
+   "confidence": "low",
+   "constraints": [
+    "GBC 2bpp/1-bit art needs redraw for DS particle formats",
+    "per-move use only; no wholesale replacement"
+   ],
+   "cost": "medium",
+   "donor": {
+    "cataloged": false,
+    "game": "crystal (not cataloged)",
+    "locator": "Crystal battle animation art distinct from later games; exact assets not recorded",
+    "source_id": "crystal"
+   },
+   "evidence": {
+    "basis": "prior_session_unrecorded",
+    "refs": [],
+    "summary": "Crystal unusual battle-animation artwork. Finding reported in an earlier session; its evidence artifacts are not committed here and the donor game is not a cataloged source. Treat as a lead until re-verified against the donor checkout."
+   },
+   "feasibility": 1,
+   "finding_id": "opp:crystal/battle_anim_artwork",
+   "needs_donor_verification": true,
+   "phase": "deferred_gba_gbc",
+   "pixel_use": "derived",
+   "proposed_by": "claude (migration of prior findings; not human-approved)",
+   "risk": "medium",
+   "status": "proposed",
+   "subject": "Unusual battle-animation artwork",
+   "tags": [
+    "particle_shape",
+    "animation_frame"
+   ],
+   "target": {
+    "kind": "system",
+    "refs": [
+     "res/graphics/battle/particles"
+    ],
+    "subsystem": "battle_effects_particles",
+    "system": "battle move particle resources"
+   },
+   "useful": "Distinctive effect artwork pieces from Crystal move animations usable as component shapes.",
+   "why": "Selective historical effect shapes can add identity to specific moves where the Platinum art is generic."
+  },
+  {
+   "adaptation": [
+    "translate sequencing to anim.s commands; no donor assets"
+   ],
+   "classification": "technique_donor",
+   "confidence": "low",
+   "constraints": [
+    "Platinum move scripts (res/moves/*/anim.s) are the only implementation path",
+    "must keep existing particle resources"
+   ],
+   "cost": "low",
+   "donor": {
+    "cataloged": false,
+    "game": "crystal (not cataloged)",
+    "locator": "Crystal battle animation sequencing for unusual moves; exact scripts not recorded",
+    "source_id": "crystal"
+   },
+   "evidence": {
+    "basis": "prior_session_unrecorded",
+    "refs": [
+     "docs/visual_overhaul/G5_DONOR_TECHNIQUE_AUDIT.md"
+    ],
+    "summary": "Crystal unusual battle-animation choreography. Finding reported in an earlier session; its evidence artifacts are not committed here and the donor game is not a cataloged source. Treat as a lead until re-verified against the donor checkout."
+   },
+   "feasibility": 1,
+   "finding_id": "opp:crystal/battle_anim_choreography",
+   "needs_donor_verification": true,
+   "phase": "deferred_gba_gbc",
+   "pixel_use": "none",
+   "proposed_by": "claude (migration of prior findings; not human-approved)",
+   "risk": "low",
+   "status": "proposed",
+   "subject": "Unusual battle-animation choreography",
+   "tags": [
+    "animation_timing"
+   ],
+   "target": {
+    "kind": "system",
+    "refs": [
+     "res/moves/brave_bird/anim.s"
+    ],
+    "subsystem": "battle_effects_particles",
+    "system": "battle move animation scripts"
+   },
+   "useful": "Sequencing/timing of unusual move animations expressed through Platinum anim scripts.",
+   "why": "Technique only via Platinum's native script/particle system; same approach already used for G5 staging."
+  },
+  {
+   "adaptation": [
+    "redraw primitives against the Platinum palette (derived pixel use)",
+    "assemble through Platinum effect/overlay systems"
+   ],
+   "classification": "component_donor",
+   "confidence": "low",
+   "constraints": [
+    "GBA 4bpp tiles must be redrawn/converted for DS formats",
+    "primitives must match Platinum field overlay scale and palette budget"
+   ],
+   "cost": "medium",
+   "donor": {
+    "cataloged": false,
+    "game": "emerald (not cataloged)",
+    "locator": "Emerald field/environment effect primitives (particle shapes/frames); exact assets not recorded",
+    "source_id": "emerald"
+   },
+   "evidence": {
+    "basis": "prior_session_unrecorded",
+    "refs": [],
+    "summary": "Emerald environmental effect primitives. Finding reported in an earlier session; its evidence artifacts are not committed here and the donor game is not a cataloged source. Treat as a lead until re-verified against the donor checkout."
+   },
+   "feasibility": 1,
+   "finding_id": "opp:emerald/environment_effect_primitives",
+   "needs_donor_verification": true,
+   "phase": "deferred_gba_gbc",
+   "pixel_use": "derived",
+   "proposed_by": "claude (migration of prior findings; not human-approved)",
+   "risk": "medium",
+   "status": "proposed",
+   "subject": "Environmental effect primitives",
+   "tags": [
+    "particle_shape",
+    "animation_frame",
+    "environmental_motif"
+   ],
+   "target": {
+    "kind": "system",
+    "refs": [
+     "src/field_overworld_weather.c",
+     "src/overworld_anim_manager.c"
+    ],
+    "subsystem": "field_effects_overlays",
+    "system": "field overlay/effect primitives"
+   },
+   "useful": "Small reusable effect primitives (particle shapes, short frame sets) for environmental effects.",
+   "why": "Primitive shapes can be redrawn in Platinum palette for field overlays without importing a whole effect."
+  },
+  {
+   "adaptation": [
+    "re-express timings as Platinum field task states",
+    "no donor assets or code imported"
+   ],
+   "classification": "technique_donor",
+   "confidence": "low",
+   "constraints": [
+    "Platinum field task/state-machine structure differs from the GBA task model",
+    "must preserve script/flag behaviour of the field moves"
+   ],
+   "cost": "medium",
+   "donor": {
+    "cataloged": false,
+    "game": "emerald (not cataloged)",
+    "locator": "Emerald field-action (field move) sequences: timing/ordering of player, object and effect steps; exact files not recorded",
+    "source_id": "emerald"
+   },
+   "evidence": {
+    "basis": "prior_session_unrecorded",
+    "refs": [
+     "docs/visual_overhaul/G5_DONOR_TECHNIQUE_AUDIT.md"
+    ],
+    "summary": "Emerald field-action choreography. Finding reported in an earlier session; its evidence artifacts are not committed here and the donor game is not a cataloged source. Treat as a lead until re-verified against the donor checkout."
+   },
+   "feasibility": 1,
+   "finding_id": "opp:emerald/field_action_choreography",
+   "needs_donor_verification": true,
+   "phase": "deferred_gba_gbc",
+   "pixel_use": "none",
+   "proposed_by": "claude (migration of prior findings; not human-approved)",
+   "risk": "low",
+   "status": "proposed",
+   "subject": "Field-action choreography",
+   "tags": [
+    "animation_timing"
+   ],
+   "target": {
+    "kind": "system",
+    "refs": [
+     "src/field_move_tasks.c"
+    ],
+    "subsystem": "field_effects_overlays",
+    "system": "field move task sequences"
+   },
+   "useful": "Step ordering and timing of field-action sequences (player pose, effect, object reaction, release).",
+   "why": "Technique only; re-implemented natively in Platinum field tasks. Precedent: G5 applied the Emerald battle-layer separation natively via Func_ShakeBg without donor assets."
+  },
+  {
+   "adaptation": [
+    "re-express cycles as Platinum palette animation resources/tasks",
+    "no donor pixels; sequence design only"
+   ],
+   "classification": "technique_donor",
+   "confidence": "low",
+   "constraints": [
+    "Platinum 3D map textures use NSBTP/palette resources, not GBA palette-cycle tables",
+    "must coexist with the G7.6 atmosphere/lighting system"
+   ],
+   "cost": "medium",
+   "donor": {
+    "cataloged": false,
+    "game": "firered (not cataloged)",
+    "locator": "FireRed animated environment palette cycling/sequencing; exact tables not recorded",
+    "source_id": "firered"
+   },
+   "evidence": {
+    "basis": "prior_session_unrecorded",
+    "refs": [
+     "docs/visual_overhaul/G7_6_OVERWORLD_ATMOSPHERE.md"
+    ],
+    "summary": "FireRed animated environmental palette sequences. Finding reported in an earlier session; its evidence artifacts are not committed here and the donor game is not a cataloged source. Treat as a lead until re-verified against the donor checkout."
+   },
+   "feasibility": 1,
+   "finding_id": "opp:firered/animated_palette_sequences",
+   "needs_donor_verification": true,
+   "phase": "deferred_gba_gbc",
+   "pixel_use": "none",
+   "proposed_by": "claude (migration of prior findings; not human-approved)",
+   "risk": "medium",
+   "status": "proposed",
+   "subject": "Animated environmental palette sequences",
+   "tags": [
+    "palette",
+    "animation_timing",
+    "environmental_motif"
+   ],
+   "target": {
+    "kind": "system",
+    "refs": [
+     "docs/visual_overhaul/G7_6_OVERWORLD_ATMOSPHERE.md",
+     "src/field_overworld_weather.c"
+    ],
+    "subsystem": "field_environment_art",
+    "system": "environment palette/lighting animation"
+   },
+   "useful": "Palette sequencing (cycle timing/order) that animates water, foliage, lights without new tiles.",
+   "why": "Technique only, built on Platinum's existing palette/atmosphere pipeline; cheap animation gain without new art."
+  },
+  {
+   "adaptation": [
+    "map each reported state to an existing/added Platinum object frame",
+    "author Sinnoh-styled frames; donor used as state-design reference"
+   ],
+   "classification": "novel_detail",
+   "confidence": "low",
+   "constraints": [
+    "Platinum map objects use fixed OAM sprite sheets; extra states cost sprite resources",
+    "must not change object logic or script flags"
+   ],
+   "cost": "medium",
+   "donor": {
+    "cataloged": false,
+    "game": "firered",
+    "locator": "FireRed interactive overworld objects (state sprites); exact assets not recorded",
+    "source_id": "firered"
+   },
+   "evidence": {
+    "basis": "prior_session_unrecorded",
+    "refs": [],
+    "summary": "Interactive-object visual states. Finding reported in an earlier session; its evidence artifacts are not committed here and the donor game is not a cataloged source. Treat as a lead until re-verified against the donor checkout."
+   },
+   "feasibility": 1,
+   "finding_id": "opp:firered/interactive_object_states",
+   "needs_donor_verification": true,
+   "phase": "deferred_gba_gbc",
+   "pixel_use": "derived",
+   "proposed_by": "claude (migration of prior findings; not human-approved)",
+   "risk": "medium",
+   "status": "proposed",
+   "subject": "Interactive-object visual states",
+   "tags": [
+    "animation_frame",
+    "UI_element"
+   ],
+   "target": {
+    "host_system": "overworld interactive objects (extra visual states, no new object type)",
+    "kind": "none",
+    "refs": [
+     "src/map_object.c"
+    ]
+   },
+   "useful": "Distinct visual states for interactive objects (e.g. before/after interaction) as presentation feedback.",
+   "why": "Adds feedback about object state without replacing any object system."
+  },
+  {
+   "adaptation": [
+    "author Sinnoh-specific preview art per location tier (start with a vertical slice of 2-3 locations)",
+    "implement the card as a Platinum-native BG/OAM layer triggered from the existing map-header popup path",
+    "decide time-of-day variants after the slice"
+   ],
+   "classification": "novel_capability",
+   "confidence": "medium",
+   "constraints": [
+    "no Platinum area-preview code or resources exist (new UI state + art required)",
+    "HGSS preview art depicts Johto/Kanto: use only as layout/composition reference; Sinnoh artwork must be newly authored",
+    "256x192 DS background budget and Platinum palette/VRAM bank limits"
+   ],
+   "cost": "high",
+   "donor": {
+    "cataloged": true,
+    "game": "firered (design reference, not cataloged) + hgss (cataloged area previews)",
+    "group_ids": [
+     "field_environment_art/hgss/hgss_preview_bell_tower",
+     "field_environment_art/hgss/hgss_preview_burned_tower",
+     "field_environment_art/hgss/hgss_preview_cerulean_cave",
+     "field_environment_art/hgss/hgss_preview_dark_cave_r31",
+     "field_environment_art/hgss/hgss_preview_dark_cave_r45",
+     "field_environment_art/hgss/hgss_preview_diglett_cave",
+     "field_environment_art/hgss/hgss_preview_dragons_den",
+     "field_environment_art/hgss/hgss_preview_ice_path",
+     "field_environment_art/hgss/hgss_preview_ilex_forest",
+     "field_environment_art/hgss/hgss_preview_mt_moon",
+     "field_environment_art/hgss/hgss_preview_mt_mortar",
+     "field_environment_art/hgss/hgss_preview_mt_silver",
+     "field_environment_art/hgss/hgss_preview_national_park",
+     "field_environment_art/hgss/hgss_preview_rock_tunnel",
+     "field_environment_art/hgss/hgss_preview_ruins_of_alph",
+     "field_environment_art/hgss/hgss_preview_seafoam_islands",
+     "field_environment_art/hgss/hgss_preview_slowpoke_well",
+     "field_environment_art/hgss/hgss_preview_sprout_tower",
+     "field_environment_art/hgss/hgss_preview_tohjo_falls",
+     "field_environment_art/hgss/hgss_preview_union_cave",
+     "field_environment_art/hgss/hgss_preview_victory_road",
+     "field_environment_art/hgss/hgss_preview_viridian_forest",
+     "field_environment_art/hgss/hgss_preview_whirl_islands"
+    ],
+    "locator": "HGSS fielddata/graphic/preview_graphic (23 area groups, 76 time-of-day variants); FireRed map/location preview behaviour is the design reference (unrecorded)",
+    "source_id": "hgss"
+   },
+   "evidence": {
+    "basis": "catalog_evidence",
+    "bound_digest": "ae67a5f407753a5711ed",
+    "refs": [
+     "docs/visual_overhaul/selection/ledgers/field_environment_art.json",
+     "docs/visual_overhaul/selection/evidence/field_environment_art.json",
+     "docs/visual_overhaul/selection/review/environment_previews/previews_contact_sheet.png",
+     "docs/visual_overhaul/selection/SELECTION_CHECKPOINT.md"
+    ],
+    "summary": "ledger field_environment_art: 23 HGSS preview groups are reference_only/no_native_target (missing_in_native); composed previews in review/environment_previews. FireRed-specific provenance is not recorded."
+   },
+   "feasibility": 2,
+   "finding_id": "opp:firered/map_location_preview",
+   "phase": "deferred_gba_gbc",
+   "pixel_use": "none",
+   "proposed_by": "claude (migration of prior findings; not human-approved)",
+   "risk": "medium",
+   "status": "proposed",
+   "subject": "Area/location preview card (novel Sinnoh artwork)",
+   "tags": [
+    "UI_element",
+    "layout",
+    "environmental_motif"
+   ],
+   "target": {
+    "host_system": "new area-preview screen shown on map entry, beside the existing map-name popup",
+    "kind": "none",
+    "refs": [
+     "res/graphics/map_popups",
+     "src/map_header.c"
+    ]
+   },
+   "useful": "A location preview card (artwork + name) shown on entering an area; Platinum currently exposes only 136x48 name signs.",
+   "why": "Committed evidence shows Platinum has no area-preview screen (native_relation missing_in_native) while the HGSS previews prove the layout and time-of-day variant structure on the DS. Adds area identity and presentation Platinum lacks."
+  },
+  {
+   "adaptation": [
+    "implement as a Platinum-native OAM layer driven by status-change battle events",
+    "redraw indicators in Platinum palette; PMD used as concept/timing reference"
+   ],
+   "classification": "novel_detail",
+   "confidence": "low",
+   "constraints": [
+    "DS OAM/sprite budget during battle",
+    "must not collide with healthbox, HP bar or move animations",
+    "indicator art must read at 2x DS battle scale"
+   ],
+   "cost": "medium",
+   "donor": {
+    "cataloged": false,
+    "game": "pmd_red (not cataloged)",
+    "locator": "PMD Red status overlay indicators above Pokemon; exact assets not recorded",
+    "source_id": "pmd_red"
+   },
+   "evidence": {
+    "basis": "prior_session_unrecorded",
+    "refs": [
+     "docs/visual_overhaul/DONOR_ASSET_CATALOG.json"
+    ],
+    "summary": "PMD Red status overlays. A path search of the cataloged pmd_sky assets for 'status'/'condition' found 0 assets (DONOR_ASSET_CATALOG.json), so no in-repo donor asset supports this yet. Finding reported in an earlier session; its evidence artifacts are not committed here and the donor game is not a cataloged source. Treat as a lead until re-verified against the donor checkout."
+   },
+   "feasibility": 1,
+   "finding_id": "opp:pmd_red/battler_status_overlays",
+   "needs_donor_verification": true,
+   "phase": "deferred_gba_gbc",
+   "pixel_use": "derived",
+   "proposed_by": "claude (migration of prior findings; not human-approved)",
+   "risk": "medium",
+   "status": "proposed",
+   "subject": "Temporary status indicators above battlers",
+   "tags": [
+    "UI_element",
+    "animation_frame"
+   ],
+   "target": {
+    "host_system": "battle: temporary indicator layer above battler sprites (alongside the healthbox status icon)",
+    "kind": "none",
+    "refs": [
+     "src/battle/healthbox.c"
+    ]
+   },
+   "useful": "Short-lived status indicators above battlers (PMD-style) that show status application/clearing at the battler.",
+   "why": "Adds at-a-glance status feedback on the battler itself; Platinum shows status only in the healthbox."
+  },
+  {
+   "adaptation": [
+    "enumerate candidate frames from the Yellow checkout, then redraw selected frames as derived art"
+   ],
+   "classification": "component_donor",
+   "confidence": "low",
+   "constraints": [
+    "GB-era art must be redrawn; Platinum Pikachu sprite contract unchanged",
+    "specific usable frames are not enumerated in the repo"
+   ],
+   "cost": "medium",
+   "donor": {
+    "cataloged": false,
+    "game": "yellow (not cataloged)",
+    "locator": "Yellow Pikachu-specific animation/presentation resources (named in PASS_G_VISUAL_OVERHAUL.md and CROSS_GAME_DONOR_MATRIX.md)",
+    "source_id": "yellow"
+   },
+   "evidence": {
+    "basis": "prior_session_unrecorded",
+    "refs": [
+     "docs/visual_overhaul/PASS_G_VISUAL_OVERHAUL.md",
+     "docs/visual_overhaul/CROSS_GAME_DONOR_MATRIX.md"
+    ],
+    "summary": "Yellow's Pikachu-specific animation resources are named in repo docs but no specific assets/frames are recorded. Finding reported in an earlier session; its evidence artifacts are not committed here and the donor game is not a cataloged source. Treat as a lead until re-verified against the donor checkout."
+   },
+   "feasibility": 1,
+   "finding_id": "opp:yellow/pikachu_presentation",
+   "needs_donor_verification": true,
+   "phase": "deferred_gba_gbc",
+   "pixel_use": "derived",
+   "proposed_by": "claude (migration of prior findings; not human-approved)",
+   "risk": "medium",
+   "status": "proposed",
+   "subject": "Pikachu-specific presentation assets",
+   "tags": [
+    "animation_frame",
+    "pose"
+   ],
+   "target": {
+    "kind": "system",
+    "refs": [
+     "res/pokemon/pikachu"
+    ],
+    "subsystem": "pokemon_battle_sprites",
+    "system": "Pikachu presentation"
+   },
+   "useful": "Pikachu-specific animation frames/expressions as components for Pikachu presentation.",
+   "why": "Documented as available donor material; matrix rates it low priority/ideas-only, so it is a component lead rather than a replacement."
+  }
+ ],
+ "phase": "deferred_gba_gbc",
+ "schema_version": 1,
+ "superseded_by": {
+  "opp:firered/map_location_preview": "opp:hgss/map_location_preview"
+ }
+}

@@ -15,11 +15,41 @@ import rules as engine
 
 CLASSES_JSON = SEL / "OPPORTUNITY_CLASSES.json"
 FINDINGS_JSON = SEL / "opportunities" / "findings.json"
+DEFERRED_JSON = SEL / "opportunities" / "deferred" / "non_ds_findings.json"
+SCOPE_JSON = SEL / "PHASE_SCOPE.json"
 UNVERIFIED_BASIS = "prior_session_unrecorded"
+ASSET_USES = ("whole_assets", "components", "techniques", "mixed")
+SCORE_KEYS = ("visual_impact", "novelty", "feasibility", "reuse", "cost", "risk", "slice")
+INVERTED = ("cost", "risk")
 
 
 def taxonomy() -> dict:
     return jload(CLASSES_JSON)
+
+
+def scope() -> dict:
+    return jload(SCOPE_JSON)
+
+
+def names_deferred_game(f: dict, sc: dict | None = None) -> bool:
+    """True when a finding's donor game/locator names a deferred (GBA/GBC) game."""
+    import re
+    sc = sc or scope()
+    txt = f"{f['donor'].get('game', '')} {f['donor'].get('source_id', '')}".lower()
+    return any(re.search(rf"(?<![a-z]){g}(?![a-z])", txt) for g in sc["deferred_games"])
+
+
+def rank_score(scores: dict | None) -> float | None:
+    """Weighted 1..5 score; weights follow the owner's ranking order (impact > novelty > feasibility > reuse > cost > risk > slice)."""
+    if not scores:
+        return None
+    w = taxonomy()["ranking"]["weights"]
+    tot = sum(w[k] * ((6 - scores[k]) if k in INVERTED else scores[k]) for k in SCORE_KEYS)
+    return round(tot / sum(w.values()), 3)
+
+
+def load_deferred() -> dict:
+    return jload(DEFERRED_JSON)
 
 
 def load_findings() -> dict:
@@ -87,6 +117,31 @@ def validate_findings(groups: dict, ledgers: dict, evidence: dict, use_files: di
         for k in ("game", "source_id", "locator"):
             if not (d.get(k) or "").strip():
                 errs.append(f"{t}: donor.{k} missing (provenance cannot be lost)")
+        # phase scope (DS-only): active findings may only name DS donors
+        sco = scope()
+        if d.get("source_id") not in sco["ds_sources"] or d.get("source_id") == "platinum" or names_deferred_game(f, sco):
+            errs.append(f"{t}: donor {d.get('game')}/{d.get('source_id')} is outside the active DS-only phase (belongs in the deferred file)")
+        for vf in d.get("verification") or []:
+            if not all(vf.get(k) for k in ("repo", "commit", "path", "fact")) or len(vf["commit"]) != 40:
+                errs.append(f"{t}: donor.verification entries need repo, 40-hex commit, path, fact")
+        # ranking inputs (required for anything that can be queued)
+        sco_ = f.get("scores")
+        if cl in ("reference_only", "reject"):
+            if sco_ is not None:
+                errs.append(f"{t}: {cl} is never ranked; scores must be omitted")
+        else:
+            if not isinstance(sco_, dict) or set(sco_) != set(SCORE_KEYS) or any(not isinstance(sco_[k], int) or not 1 <= sco_[k] <= 5 for k in SCORE_KEYS):
+                errs.append(f"{t}: scores must carry integer 1..5 for {', '.join(SCORE_KEYS)}")
+            elif f.get("feasibility") != (3 if sco_["feasibility"] >= 4 else 2 if sco_["feasibility"] == 3 else 1):
+                errs.append(f"{t}: feasibility field disagrees with scores.feasibility")
+            if f.get("asset_use") not in ASSET_USES:
+                errs.append(f"{t}: asset_use must be one of {ASSET_USES}")
+            elif cl == "technique_donor" and f["asset_use"] != "techniques":
+                errs.append(f"{t}: technique_donor must have asset_use techniques")
+            elif cl == "replacement_candidate" and f["asset_use"] != "whole_assets":
+                errs.append(f"{t}: replacement_candidate must have asset_use whole_assets")
+            elif cl in ("component_donor", "enhancement_candidate") and f["asset_use"] not in ("components", "mixed"):
+                errs.append(f"{t}: {cl} must have asset_use components or mixed")
         # target
         tg = f.get("target") or {}
         kind = tg.get("kind")
@@ -125,6 +180,8 @@ def validate_findings(groups: dict, ledgers: dict, evidence: dict, use_files: di
                 errs.append(f"{t}: evidence ref {p} missing")
         if basis in ("repo_document", "catalog_evidence") and not ev.get("refs"):
             errs.append(f"{t}: {basis} evidence needs refs[]")
+        if basis == "donor_checkout_verification" and not d.get("verification"):
+            errs.append(f"{t}: donor_checkout_verification needs donor.verification[]")
         if basis == "catalog_evidence":
             gids = d.get("group_ids") or []
             if not gids or any(g not in groups for g in gids):
@@ -156,7 +213,27 @@ def validate_findings(groups: dict, ledgers: dict, evidence: dict, use_files: di
             res = {x["target_id"]: x["resolution"] for x in led.get("targets", [])}.get(tg.get("target_id"))
             if res is not None and res != "platinum_native":
                 errs.append(f"{t}: enhancement target resolves to {res}; enhancement and donor replacement are exclusive")
+    # deferred (non-DS) findings: preserved, never active
+    sco = scope()
+    if not DEFERRED_JSON.is_file():
+        errs.append("deferred non-DS findings file missing (must be preserved)")
+    else:
+        dd = load_deferred()
+        for f in dd["findings"]:
+            if f.get("phase") != "deferred_gba_gbc":
+                errs.append(f"deferred:{f.get('finding_id')}: phase must be deferred_gba_gbc")
+            if f["finding_id"] in seen:
+                errs.append(f"deferred:{f['finding_id']}: id also active")
+            if f["donor"]["source_id"] in sco["ds_sources"] and not names_deferred_game(f, sco):
+                errs.append(f"deferred:{f['finding_id']}: is a DS finding; deferred file holds non-DS donors only")
     return errs
+
+
+PROFILES = {  # derived rows (not explicit findings) use a documented profile instead of per-item judgement
+    "replacement_candidate": {"visual_impact": 3, "novelty": 1, "feasibility": 4, "reuse": 2, "cost": 3, "risk": 3, "slice": 4},
+    "component_donor": {"visual_impact": 2, "novelty": 2, "feasibility": 3, "reuse": 2, "cost": 3, "risk": 3, "slice": 3},
+    "technique_donor": {"visual_impact": 2, "novelty": 2, "feasibility": 4, "reuse": 2, "cost": 2, "risk": 2, "slice": 3},
+}
 
 
 def replacement_rows(ledgers: dict) -> list[dict]:
@@ -166,7 +243,8 @@ def replacement_rows(ledgers: dict) -> list[dict]:
             if d["role"] == "preferred":
                 rows.append({"id": f"ledger:{d['group_id']}", "classification": "replacement_candidate", "origin": "ledger", "status": "preferred" ,
                              "subsystem": sname, "target": d["target_id"], "source_id": d["source_id"], "feasibility": 3, "verified": True,
-                             "needs_runtime_validation": bool(d["needs_runtime_validation"])})
+                             "needs_runtime_validation": bool(d["needs_runtime_validation"]), "asset_use": "whole_assets",
+                             "scores": PROFILES["replacement_candidate"], "rank_score": rank_score(PROFILES["replacement_candidate"])})
     return rows
 
 
@@ -180,20 +258,22 @@ def derive_register(ledgers: dict, use_files: dict) -> dict:
         rows.append({"id": f["finding_id"], "classification": f["classification"], "origin": "finding", "status": f["status"],
                      "subsystem": f["target"].get("subsystem") or f["target"].get("host_system"), "target": f["target"].get("target_id") or f["target"].get("system"),
                      "source_id": f["donor"]["source_id"], "donor_game": f["donor"]["game"], "feasibility": f["feasibility"], "cost": f["cost"], "risk": f["risk"],
-                     "confidence": f["confidence"], "verified": not needs_verification(f), "title": f.get("subject", "")})
+                     "confidence": f["confidence"], "verified": not needs_verification(f), "title": f.get("subject", ""),
+                     "asset_use": f.get("asset_use"), "scores": f.get("scores"), "rank_score": rank_score(f.get("scores"))})
     m = tx["map_existing"]["use_record_outcomes"]
     for sname, doc in sorted(use_files.items()):
         for r in doc.get("records", []):
             if outcomes.active(r) and r["outcome"] in m:
                 rows.append({"id": r["record_id"], "classification": m[r["outcome"]], "origin": "use_record", "status": r["status"], "subsystem": sname,
                              "target": r["target"]["target_id"], "source_id": r["source"]["source_id"], "feasibility": 2, "cost": "medium", "risk": r["risk"],
-                             "confidence": r["confidence"], "verified": True})
+                             "confidence": r["confidence"], "verified": True, "asset_use": "components" if r["outcome"] == "component_donor" else "techniques",
+                             "scores": PROFILES[m[r["outcome"]]], "rank_score": rank_score(PROFILES[m[r["outcome"]]])})
         for cr in doc.get("component_reviews", []):
             if cr["finding"] == "none_found":
                 rows.append({"id": f"review:{cr['group_id']}", "classification": tx["map_existing"]["component_review_none_found"], "origin": "component_review", "status": "reviewed",
-                             "subsystem": sname, "target": cr.get("target_id"), "source_id": cr["group_id"].split("/")[1], "verified": True, "feasibility": None})
+                             "subsystem": sname, "target": cr.get("target_id"), "source_id": cr["group_id"].split("/")[1], "verified": True, "feasibility": None, "asset_use": None, "scores": None, "rank_score": None})
     rows += replacement_rows(ledgers)
-    rows.sort(key=lambda r: (tier[r["classification"]], -(r.get("feasibility") or 0), r["id"]))
+    rows.sort(key=lambda r: (-(r.get("rank_score") or 0), tier[r["classification"]], r["id"]))
     counts = {c: 0 for c in tx["classes"]}
     for r in rows:
         counts[r["classification"]] += 1
@@ -216,4 +296,5 @@ def derive_register(ledgers: dict, use_files: dict) -> dict:
             "inputs": {"classes_sha256": file_sha256(CLASSES_JSON), "findings_sha256": file_sha256(FINDINGS_JSON) if FINDINGS_JSON.is_file() else None,
                        "use_files": {k: file_sha256(outcomes.comp_path(k)) for k in sorted(use_files)}},
             "counts_by_class": counts, "unscoped_pools": pools,
+            "deferred_non_ds_findings": len(load_deferred()["findings"]) if DEFERRED_JSON.is_file() else 0,
             "needs_donor_verification": sorted(r["id"] for r in rows if not r["verified"]), "rows": rows}

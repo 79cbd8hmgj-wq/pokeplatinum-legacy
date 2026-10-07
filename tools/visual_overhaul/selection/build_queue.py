@@ -104,36 +104,60 @@ def derive() -> dict:
                 pool[(name, d["source_id"])] += 1
             elif d["role"] == "reference_only" and d["reason_code"] == "no_native_target":
                 cpool[(name, d["source_id"])] += 1
+    cov = {c for f in opp.load_findings()["findings"] if opp.active(f) for c in f.get("covers_pools", [])}
     for (name, src), n in sorted(cpool.items()):
+        if src == "diamond" or f"{name}/{src}" in cov:
+            continue
         items.append({"kind": "component_pool", "work_lane": "native_enhancement", "subsystem": name, "source_id": src, "groups": n, "target_count": None,
                       "priority_score": round(0.05 * subs[name]["priority_weight"], 3),
                       "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped"})
     for (name, src), n in sorted(pool.items()):
+        if src == "diamond" or f"{name}/{src}" in cov:
+            continue
         items.append({"kind": "technique_pool", "work_lane": "technique_only", "subsystem": name, "source_id": src, "groups": n, "target_count": None,
                       "priority_score": round(0.05 * subs[name]["priority_weight"], 3),
                       "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation"})
     tx = opp.taxonomy()
     tier = {k: v["tier"] for k, v in tx["classes"].items()}
+    ds = set(opp.scope()["ds_sources"])
     cls_of = {"implement": "replacement_candidate", "runtime_qa": "replacement_candidate", "component_review": "enhancement_candidate", "composite_build": "enhancement_candidate",
               "technique_build": "technique_donor", "component_pool": "component_donor", "technique_pool": "technique_donor", "evidence": None}
-    feas_of = {"implement": 3, "runtime_qa": 3, "composite_build": 3, "component_review": 2, "technique_build": 2, "component_pool": 1, "technique_pool": 1, "evidence": 1}
-    cost_n = {"low": 1, "medium": 2, "high": 3}
+    reg = opp.derive_register({n: jload(SEL / "ledgers" / f"{n}.json") for n in done}, use_files)
+    covered = {rid for f in opp.load_findings()["findings"] if opp.active(f) for rid in (f.get("links") or {}).get("use_records", [])}
+    items = [i for i in items if not (i["kind"] == "component_review" and covered >= {r["record_id"] for r in use_files[i["subsystem"]]["records"] if r["outcome"] in ("component_donor", "composite_input") and outcomes.active(r)})]
     for it in items:
         it["opportunity_class"] = cls_of[it["kind"]]
-        it["feasibility"] = feas_of[it["kind"]]
-    for r in opp.derive_register({n: jload(SEL / "ledgers" / f"{n}.json") for n in done}, use_files)["rows"]:
-        if r["origin"] != "finding":
+        if it["kind"] == "runtime_qa":  # gate on the matching implement item, not a separate opportunity
+            it["rank_score"], it["asset_use"] = None, "whole_assets"
+        elif it["kind"] == "implement":  # grouped replacement work: documented derived profile
+            it["scores"] = opp.PROFILES["replacement_candidate"]
+            it["rank_score"] = opp.rank_score(it["scores"])
+            it["asset_use"] = "whole_assets"
+        elif it["kind"] in ("component_review", "technique_build"):
+            cl = "component_donor" if it["kind"] == "component_review" else "technique_donor"
+            it["scores"] = opp.PROFILES[cl]
+            it["rank_score"] = opp.rank_score(it["scores"])
+            it["asset_use"] = "components" if it["kind"] == "component_review" else "techniques"
+        else:  # unscoped pools / open evidence: not ranked until a target + technique/component is scoped
+            it["rank_score"] = None
+            it["asset_use"] = {"component_pool": "components", "technique_pool": "techniques"}.get(it["kind"])
+    for r in reg["rows"]:
+        if r["origin"] != "finding" or r["rank_score"] is None:
             continue
-        items.append({"kind": "opportunity", "work_lane": {"novel_capability": "novel", "novel_detail": "novel"}.get(r["classification"], "opportunity"), "opportunity_class": r["classification"],
-                      "subsystem": r["subsystem"], "source_id": r["source_id"], "target_count": 1, "targets_sample": [r["target"]], "finding_id": r["id"], "title": r["title"],
-                      "feasibility": r["feasibility"], "cost": r["cost"], "needs_donor_verification": not r["verified"],
-                      "priority_score": round(r["feasibility"] * (1.0 if r["verified"] else 0.5) / cost_n[r["cost"]], 3)})
-    items.sort(key=lambda i: (tier.get(i["opportunity_class"], 99), -i["feasibility"], -i["priority_score"], i["kind"], i["subsystem"], i["source_id"], i.get("finding_id", "")))
-    for n, it in enumerate(items, 1):
+        items.append({"kind": "opportunity", "work_lane": "opportunity", "opportunity_class": r["classification"], "subsystem": r["subsystem"], "source_id": r["source_id"],
+                      "target_count": 1, "targets_sample": [r["target"]], "finding_id": r["id"], "title": r["title"], "scores": r["scores"], "rank_score": r["rank_score"],
+                      "asset_use": r["asset_use"], "cost": r["cost"], "risk": r["risk"], "priority_score": r["rank_score"]})
+    assert all(i["source_id"].split(",")[0] in ds or i["source_id"] == "composite" for i in items), "non-DS donor leaked into the queue"
+    ranked = sorted([i for i in items if i["rank_score"] is not None], key=lambda i: (-i["rank_score"], tier[i["opportunity_class"]], i["kind"], i["subsystem"], i["source_id"], i.get("finding_id", "")))
+    unranked = sorted([i for i in items if i["rank_score"] is None], key=lambda i: (i["kind"] != "evidence", i["kind"], -i["priority_score"], i["subsystem"], i["source_id"]))
+    for n, it in enumerate(ranked, 1):
         it["rank"] = n
+    for it in unranked:
+        it["rank"] = None
+    items = ranked + unranked
     return {
-        "schema_version": 2,
-        "inputs": {"classes_sha256": file_sha256(opp.CLASSES_JSON), "findings_sha256": file_sha256(opp.FINDINGS_JSON) if opp.FINDINGS_JSON.is_file() else None, "ledger_files": {n: file_sha256(SEL / "ledgers" / f"{n}.json") for n in done}, "use_outcomes_sha256": file_sha256(outcomes.USE_OUTCOMES_JSON),
+        "schema_version": 3,
+        "phase": "ds_only", "inputs": {"scope_sha256": file_sha256(opp.SCOPE_JSON), "classes_sha256": file_sha256(opp.CLASSES_JSON), "findings_sha256": file_sha256(opp.FINDINGS_JSON) if opp.FINDINGS_JSON.is_file() else None, "ledger_files": {n: file_sha256(SEL / "ledgers" / f"{n}.json") for n in done}, "use_outcomes_sha256": file_sha256(outcomes.USE_OUTCOMES_JSON),
                    "use_files": {k: file_sha256(outcomes.comp_path(k)) for k in sorted(use_files)}},
         "completed_subsystems": done,
         "pending_subsystems": pending,
@@ -142,27 +166,20 @@ def derive() -> dict:
 
 
 def write_md(q: dict) -> None:
-    L = ["# Donor Implementation Queue", "", "Generated by `build_queue.py`, organised by opportunity type (OPPORTUNITY_CLASSES.json): novel capability/detail, technique, enhancement, component, then replacement. Feasibility 3=verified evidence + existing systems, 2=needs new code/art or partial evidence, 1=unverified/unscoped. No Platinum resource is modified.", ""]
+    L = ["# Donor Implementation Queue", "", "Generated by `build_queue.py`. Phase: **DS-only** (PHASE_SCOPE.json; GBA/GBC findings are deferred and excluded). Ranked by opportunity score across all eight classes; reference_only/reject are never queued. No Platinum resource is modified.", ""]
     L.append(f"- completed subsystems: {', '.join(q['completed_subsystems']) or 'none'}")
     L.append(f"- pending subsystems: {len(q['pending_subsystems'])}")
     L.append("")
-    if q["items"]:
-        tx = opp.taxonomy()
-        order = tx["implementation_order"] + [None]
-        for cl in order:
-            its = [i for i in q["items"] if i["opportunity_class"] == cl]
-            head = "Evidence (open whole-asset verdicts)" if cl is None else f"{cl} (tier {tx['classes'][cl]['tier']})"
-            L += ["", f"## {head}", ""]
-            if not its:
-                L.append("_none_")
-                continue
-            L += ["| # | Kind | Subsystem / host | Source | Items | Feas. | Score | Note |", "|---:|---|---|---|---:|---:|---:|---|"]
-            for i in its:
-                n = i.get("target_count") or i.get("groups")
-                note = (i.get("title") or "") + (" - **verify donor first**" if i.get("needs_donor_verification") else "")
-                L.append(f"| {i['rank']} | {i['kind']} | {i['subsystem']} | {i['source_id']} | {n} | {i['feasibility']} | {i['priority_score']} | {note} |")
-    else:
-        L.append("_No implementation work is currently justified by completed selections._")
+    ranked = [i for i in q["items"] if i["rank"] is not None]
+    L += ["## Ranked opportunities (DS-only)", "", "Score = weighted mean of visual impact(7), novelty(6), feasibility(5), reuse(4), cost(3, inverted), risk(2, inverted), vertical-slice usefulness(1); 1-5 scale.", "",
+          "| # | Class | Opportunity / work | Source | Asset use | Score |", "|---:|---|---|---|---|---:|"]
+    for i in ranked:
+        what = i.get("title") or f"{i['kind']}: {i['subsystem']} ({i.get('target_count') or i.get('groups')})"
+        L.append(f"| {i['rank']} | {i['opportunity_class']} | {what} | {i['source_id']} | {i['asset_use']} | {i['rank_score']} |")
+    L += ["", "## Unranked: open evidence and unscoped pools", "", "| Kind | Class | Subsystem | Source | Groups |", "|---|---|---|---|---:|"]
+    for i in q["items"]:
+        if i["rank"] is None:
+            L.append(f"| {i['kind']} | {i['opportunity_class'] or '-'} | {i['subsystem']} | {i['source_id']} | {i.get('target_count') or i.get('groups')} |")
     (SEL / "IMPLEMENTATION_QUEUE.md").write_text("\n".join(L) + "\n")
 
 

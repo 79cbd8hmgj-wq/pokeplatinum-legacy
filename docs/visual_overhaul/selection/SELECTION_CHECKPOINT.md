@@ -79,3 +79,7 @@ First migration (`tools/visual_overhaul/selection/migrate_trainer_components.py`
 Canonical 8-class classification added (`OPPORTUNITY_CLASSES.json`, `opportunities/findings.json`, `OPPORTUNITY_REGISTER.*`; spec in `SELECTION_SCHEMA.md`). Replacement is now one class among eight; the queue is organised by opportunity type. Ledgers, rules, groups, evidence and components are unchanged.
 
 Migrated (`migrate_opportunities.py`): 11 explicit findings + 4 existing component records + 32 ledger replacement verdicts + 2 none_found reviews. **Blocker:** the evidence for FireRed (palette sequences, interactive-object states), Emerald (field action, effect primitives), PMD Red, Crystal and Yellow Pikachu specifics was never committed to this repo and none of those games is a cataloged source (the cataloged PMD Sky has no assets matching 'status'). They are recorded as `prior_session_unrecorded` leads (low confidence, verify-first), not fabricated evidence. The location-preview finding is the only novel finding with committed evidence (23 HGSS preview groups, `missing_in_native`).
+
+## Update: DS-only phase (supersedes the previous opportunity update's non-DS entries)
+
+GBA/GBC findings moved to `opportunities/deferred/non_ds_findings.json` (preserved, unused). Active set rebuilt from DS evidence with targeted HGSS/PMD Sky/Ranger 2 verification; queue re-ranked across all eight classes by the weighted opportunity score. Details: `DS_OPPORTUNITY_REASSESSMENT.md`.

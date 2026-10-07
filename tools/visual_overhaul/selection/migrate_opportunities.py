@@ -26,6 +26,9 @@ def unrec(summary, refs=()):
     return {"basis": U, "summary": f"{summary} {UNREC}", "refs": list(refs)}
 
 
+from ds_findings import augment_existing, ds_findings  # noqa: E402
+
+
 def main() -> int:
     groups = {g["group_id"]: g for g in jload(GROUPS_JSON)["groups"]}
     ev = {p.stem: jload(p) for p in (SEL / "evidence").glob("*.json")}
@@ -141,8 +144,17 @@ def main() -> int:
              "bound_digest": opp.bound_digest(gids, groups, ev)},
             "derived", sorted({t for r in recs for t in r["tags"]}), links={"use_records": sorted(r["record_id"] for r in recs)}))
 
-    jdump(opp.FINDINGS_JSON, {"schema_version": 1, "description": "Explicit opportunity findings (see OPPORTUNITY_CLASSES.json). Replacement/reject findings are derived from ledgers/component reviews, not written here.", "findings": out})
-    print(f"wrote {len(out)} findings")
+    scope = jload(SEL / "PHASE_SCOPE.json")
+    deferred = [f for f in out if f["donor"]["source_id"] not in scope["ds_sources"] or opp.names_deferred_game(f, scope)]
+    active = [f for f in out if f not in deferred]
+    for f in deferred:
+        f["phase"] = "deferred_gba_gbc"
+    jdump(opp.DEFERRED_JSON, {"schema_version": 1, "phase": "deferred_gba_gbc", "description": "GBA/GBC donor findings preserved verbatim for the next phase. NOT loaded by the register, queue or ranking. Do not edit to make them active; re-derive with DS or GBA/GBC checkouts when that phase starts.",
+                              "superseded_by": {"opp:firered/map_location_preview": "opp:hgss/map_location_preview"}, "findings": sorted(deferred, key=lambda f: f["finding_id"])})
+    active = [augment_existing(f) for f in active]
+    active += ds_findings(groups, ev)
+    jdump(opp.FINDINGS_JSON, {"schema_version": 2, "description": "Active (DS-only) opportunity findings; see PHASE_SCOPE.json and OPPORTUNITY_CLASSES.json. Replacement/reject-by-review findings are derived from ledgers/component reviews, not written here.", "findings": active})
+    print(f"wrote {len(active)} active, {len(deferred)} deferred findings")
     return 0
 
 
