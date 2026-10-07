@@ -4,7 +4,7 @@ Deterministic recovery of raw Diamond party/summary icon NCGR resources.
 No Platinum resources are modified.
 
 - Assets checked: **502**
-- decode_issue: **502**
+- usable: **502**
 
 ## Validation contract
 
