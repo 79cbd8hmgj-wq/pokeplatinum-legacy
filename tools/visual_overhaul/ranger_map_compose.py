@@ -28,8 +28,11 @@ def narc_members(b: bytes) -> list[bytes]:
 
 
 def load_banks(tex_lz: Path):
+    return banks_from_tex(lz10_decompress(tex_lz.read_bytes()))
+
+
+def banks_from_tex(raw: bytes):
     import numpy as np
-    raw = lz10_decompress(tex_lz.read_bytes())
     banks = []
     for o in narc_members(raw[4:]):
         inner = narc_members(o)
@@ -73,8 +76,12 @@ def parse_quad_layer(b: bytes):
 
 
 def layers_of(dat_lz: Path):
-    d = narc_members(lz10_decompress(dat_lz.read_bytes()))
-    mw, mh, cw, ch = struct.unpack_from("<4I", d[0], 4)
+    return layers_from_members(narc_members(lz10_decompress(dat_lz.read_bytes())))
+
+
+def layers_from_members(d: list[bytes]):
+    mp = next(m for m in d if m[:4] == b"MPIF")
+    mw, mh, cw, ch = struct.unpack_from("<4I", mp, 4)
     lyr = next(m for m in d if m[:4] == b"LYR\x00")
     entries = narc_members(narc_members(lyr[4:])[0])
     out = []
@@ -90,11 +97,21 @@ def layers_of(dat_lz: Path):
     return (mw, mh, cw), out
 
 
+def compose_single(map_lz: Path):
+    """Single-archive form (e.g. test.map.lz): MPIF, TEX, TXIF, LYR, CTA, PLA in one NARC."""
+    d = narc_members(lz10_decompress(map_lz.read_bytes()))
+    tex = next(m for m in d if m[:4] == b"TEX\x00")
+    return _compose(layers_from_members(d), banks_from_tex(tex))
+
+
 def compose(dat_lz: Path, tex_lz: Path):
     """Return (width, height, RGBA ndarray, stats)."""
+    return _compose(layers_of(dat_lz), load_banks(tex_lz))
+
+
+def _compose(layers_info, banks):
     import numpy as np
-    (mw, mh, _cell), layers = layers_of(dat_lz)
-    banks = load_banks(tex_lz)
+    (mw, mh, _cell), layers = layers_info
     canvas = np.zeros((mh, mw, 4), dtype=np.uint8)
     stats = {"layers": len(layers), "quads": 0, "oob_src": 0, "wrapped": 0, "oob_bank": 0, "clipped": 0, "bad_pal": 0}
     for data in layers:

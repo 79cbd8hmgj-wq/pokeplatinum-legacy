@@ -3,18 +3,18 @@
   "lane": "B_pokemon_facing",
   "asset_count": 15157,
   "status_counts": {
-    "decode_issue": 41,
-    "reject": 9147,
-    "usable": 5969
+    "decode_issue": 30,
+    "reject": 9155,
+    "usable": 5972
   },
   "recovery_changes": {
-    "decode_issue_to_reject": 1173,
-    "decode_issue_to_usable": 5969
+    "decode_issue_to_reject": 1181,
+    "decode_issue_to_usable": 5972
   },
   "remaining_decode_routes": {
-    "container_unpack_then_decode": 3,
+    "container_unpack_then_decode": 2,
     "pmd_format_decode": 19,
-    "ranger_embedded_decode": 19
+    "ranger_embedded_decode": 9
   },
   "remaining_decode_source_routes": {
     "hgss": {
@@ -24,8 +24,7 @@
       "pmd_format_decode": 19
     },
     "ranger2": {
-      "container_unpack_then_decode": 1,
-      "ranger_embedded_decode": 19
+      "ranger_embedded_decode": 9
     }
   },
   "records": [
@@ -162878,9 +162877,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "stray_ascii_text_member",
+      "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+      "recovery_evidence": {
+        "technical_state": "non_art_text",
+        "detail": "unnamed NARC member is plain ASCII text (221 bytes)"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:member_0006",
@@ -163010,9 +163013,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "stray_ascii_text_member",
+      "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+      "recovery_evidence": {
+        "technical_state": "non_art_text",
+        "detail": "unnamed NARC member is plain ASCII text (269 bytes)"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef103_LZ.bin:member_0006",
@@ -163139,9 +163146,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "stray_ascii_text_member",
+      "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+      "recovery_evidence": {
+        "technical_state": "non_art_text",
+        "detail": "unnamed NARC member is plain ASCII text (221 bytes)"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:member_0006",
@@ -163271,9 +163282,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "stray_ascii_text_member",
+      "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+      "recovery_evidence": {
+        "technical_state": "non_art_text",
+        "detail": "unnamed NARC member is plain ASCII text (221 bytes)"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef105_LZ.bin:member_0006",
@@ -193847,9 +193862,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "ranger_map_structured_table",
+      "reason": "Ranger field-map header/index/attribute table: parsed structured data with no pixel payload, not standalone visual art.",
+      "recovery_evidence": {
+        "technical_state": "non_visual_table",
+        "detail": "b'MPIF' map header (dimensions/chip size), 20 bytes, no pixel payload"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:map:test.map.lz:member_0001",
@@ -193862,9 +193881,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_map_chips_valid_render",
+      "reason": "Ranger field-map resource: texture chips decode (4bpp raster atlas) and the quad layers compose them into a nonblank map image (every quad in range, exact layer size match); environment/field map material. Layer blending semantics are simplified (all quad layers drawn opaque in file order).",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "composed 1792x1344 map from 16 quad layer(s), 4380 quads (226 repeat-tiled), 2162527 painted px"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:map:test.map.lz:member_0002",
@@ -193877,9 +193900,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "ranger_map_structured_table",
+      "reason": "Ranger field-map header/index/attribute table: parsed structured data with no pixel payload, not standalone visual art.",
+      "recovery_evidence": {
+        "technical_state": "non_visual_table",
+        "detail": "b'TXIF' chip index table, 56 bytes, no pixel payload"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:map:test.map.lz:member_0003",
@@ -193892,9 +193919,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_map_chips_valid_render",
+      "reason": "Ranger field-map resource: texture chips decode (4bpp raster atlas) and the quad layers compose them into a nonblank map image (every quad in range, exact layer size match); environment/field map material. Layer blending semantics are simplified (all quad layers drawn opaque in file order).",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "composed 1792x1344 map from 16 quad layer(s), 4380 quads (226 repeat-tiled), 2162527 painted px"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:map:test.map.lz:member_0004",
@@ -193907,9 +193938,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "ranger_map_structured_table",
+      "reason": "Ranger field-map header/index/attribute table: parsed structured data with no pixel payload, not standalone visual art.",
+      "recovery_evidence": {
+        "technical_state": "non_visual_table",
+        "detail": "b'CTA\\x00' attribute table, 208 bytes, no pixel payload"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:field:map:test.map.lz:member_0005",
@@ -193922,9 +193957,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "reject",
+      "reason_code": "ranger_map_structured_table",
+      "reason": "Ranger field-map header/index/attribute table: parsed structured data with no pixel payload, not standalone visual art.",
+      "recovery_evidence": {
+        "technical_state": "non_visual_table",
+        "detail": "b'PLA\\x00' placement table, 76 bytes, no pixel payload"
+      }
     },
     {
       "asset_id": "ranger2:embedded:res:prebuilt:data:npc:n000_00_LZ.bin:n000_00.NCLR",
@@ -265750,9 +265789,13 @@
         "overworld",
         "field"
       ],
-      "review_status": "decode_issue",
-      "reason_code": "visual_resource_requires_decode",
-      "reason": "Source is a plausible Pok\u00e9mon-facing visual resource/container but lacks a trustworthy rendered form."
+      "review_status": "usable",
+      "reason_code": "ranger_map_chips_valid_render",
+      "reason": "Ranger field-map resource: texture chips decode (4bpp raster atlas) and the quad layers compose them into a nonblank map image (every quad in range, exact layer size match); environment/field map material. Layer blending semantics are simplified (all quad layers drawn opaque in file order).",
+      "recovery_evidence": {
+        "technical_state": "valid_render",
+        "detail": "composed 1792x1344 map from 16 quad layer(s), 4380 quads (226 repeat-tiled), 2162527 painted px"
+      }
     },
     {
       "asset_id": "ranger2:source:res:prebuilt:data:npc:n000_00_LZ.bin",

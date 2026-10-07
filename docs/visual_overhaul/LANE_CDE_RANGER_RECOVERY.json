@@ -4,37 +4,35 @@
  "asset_count": 7431,
  "package_count": 1731,
  "technical_state_counts": {
-  "valid_render": 5706,
+  "valid_render": 5782,
   "companion_of_valid": 1555,
   "unsupported_member": 19,
-  "no_pair": 72,
   "blank_package": 66,
-  "no_valid_render": 7,
-  "decode_failure": 5,
+  "no_pair": 3,
+  "decode_failure": 3,
+  "no_valid_render": 2,
   "blank_render": 1
  },
  "suffix_state_counts": {
   "NANR:blank_package": 11,
   "NANR:companion_of_valid": 349,
-  "NCBR:no_pair": 18,
+  "NCBR:no_pair": 2,
   "NCBR:unsupported_member": 2,
-  "NCBR:valid_render": 757,
+  "NCBR:valid_render": 773,
   "NCER:blank_package": 15,
   "NCER:decode_failure": 3,
   "NCER:valid_render": 1273,
-  "NCGR:no_pair": 15,
-  "NCGR:valid_render": 474,
-  "NCLR:no_pair": 39,
+  "NCGR:valid_render": 489,
+  "NCLR:no_pair": 1,
   "NCLR:unsupported_member": 4,
-  "NCLR:valid_render": 1132,
+  "NCLR:valid_render": 1170,
   "NFTR:unsupported_member": 4,
   "NSCR:blank_render": 1,
-  "NSCR:decode_failure": 2,
-  "NSCR:valid_render": 198,
+  "NSCR:valid_render": 200,
   "bin:blank_package": 25,
-  "bin:no_valid_render": 7,
+  "bin:no_valid_render": 2,
   "bin:unsupported_member": 6,
-  "bin:valid_render": 1680,
+  "bin:valid_render": 1685,
   "cac:blank_package": 15,
   "cac:companion_of_valid": 1206,
   "cac:unsupported_member": 3,
@@ -2223,8 +2221,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e000_LZ.bin:e000.NCLR",
    "source_path": "res/prebuilt/data/effect/e000_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
@@ -2237,8 +2235,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e000_LZ.bin:e000_a01.NCBR",
    "source_path": "res/prebuilt/data/effect/e000_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
@@ -2251,8 +2249,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e000_LZ.bin:e000_a01.NCGR",
    "source_path": "res/prebuilt/data/effect/e000_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCGR"
   },
   {
@@ -17147,21 +17145,21 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:interface:i024_LZ.bin:i024.NCLR",
    "source_path": "res/prebuilt/data/interface/i024_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:interface:i024_LZ.bin:i024_00.NCBR",
    "source_path": "res/prebuilt/data/interface/i024_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:interface:i024_LZ.bin",
    "source_path": "res/prebuilt/data/interface/i024_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "valid_render",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -18457,7 +18455,7 @@
    "asset_id": "ranger2:embedded:res:prebuilt:data:interface:i057_LZ.bin:i057_00.NCER",
    "source_path": "res/prebuilt/data/interface/i057_LZ.bin",
    "technical_state": "decode_failure",
-   "detail": "/tmp/lbr_36yvg3d8/i057_00.NCBR: character geometry/data mismatch",
+   "detail": "/tmp/lbr_0et78b8o/i057_00.NCBR: character geometry/data mismatch",
    "suffix": "NCER"
   },
   {
@@ -20759,15 +20757,15 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:mb000_00_LZ.bin:mb000_00.NCGR",
    "source_path": "res/prebuilt/data/menu/mb000_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCGR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:mb000_00_LZ.bin:mb000_00.NCLR",
    "source_path": "res/prebuilt/data/menu/mb000_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
@@ -20780,7 +20778,7 @@
   {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:mb000_00_LZ.bin",
    "source_path": "res/prebuilt/data/menu/mb000_00_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "valid_render",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -24273,183 +24271,183 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_LZ.bin:pam001.NCGR",
    "source_path": "res/prebuilt/data/menu/pam001_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render",
    "suffix": "NCGR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_LZ.bin:pam001.NSCR",
    "source_path": "res/prebuilt/data/menu/pam001_LZ.bin",
-   "technical_state": "decode_failure",
-   "detail": "NSCR geometry/data mismatch",
+   "technical_state": "valid_render",
+   "detail": "256x128 screen, 4706 nonblank px",
    "suffix": "NSCR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_LZ.bin:pam018.NCLR",
    "source_path": "res/prebuilt/data/menu/pam001_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:pam001_LZ.bin",
    "source_path": "res/prebuilt/data/menu/pam001_LZ.bin",
-   "technical_state": "no_valid_render",
-   "detail": "0 valid NCER pairs",
+   "technical_state": "valid_render",
+   "detail": "1 valid NCER pairs",
    "suffix": "bin"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam000.NCLR",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam001.NCGR",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render",
    "suffix": "NCGR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam001.NCLR",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam001_00.NSCR",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "decode_failure",
-   "detail": "NSCR geometry/data mismatch",
+   "technical_state": "valid_render",
+   "detail": "256x128 screen, 2123 nonblank px",
    "suffix": "NSCR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam002.NCLR",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam003.NCLR",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam004.NCLR",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam005.NCLR",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam006.NCLR",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam007.NCLR",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam008.NCLR",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam009.NCLR",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam010.NCLR",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam011.NCLR",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam012.NCLR",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam013.NCLR",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam014.NCLR",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam015.NCLR",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam016.NCLR",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam017.NCLR",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam018.NCLR",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:pam001_bg_LZ.bin",
    "source_path": "res/prebuilt/data/menu/pam001_bg_LZ.bin",
-   "technical_state": "no_valid_render",
-   "detail": "0 valid NCER pairs",
+   "technical_state": "valid_render",
+   "detail": "1 valid NCER pairs",
    "suffix": "bin"
   },
   {
@@ -28326,15 +28324,15 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:title001_00_LZ.bin:title001_00.NCGR",
    "source_path": "res/prebuilt/data/menu/title001_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCGR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:title001_00_LZ.bin:title001_00.NCLR",
    "source_path": "res/prebuilt/data/menu/title001_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
@@ -28347,7 +28345,7 @@
   {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:title001_00_LZ.bin",
    "source_path": "res/prebuilt/data/menu/title001_00_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "valid_render",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -32030,7 +32028,7 @@
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:um_LZ.bin:um000.NCLR",
    "source_path": "res/prebuilt/data/menu/um_LZ.bin",
    "technical_state": "valid_render",
-   "detail": "nonblank character/palette resource of a pure tile-resource package (consumed by sibling screens)",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
@@ -44426,15 +44424,15 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t356_00_LZ.bin:t356_00.NCBR",
    "source_path": "res/prebuilt/data/target/t356_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t356_00_LZ.bin:t356_00.NCLR",
    "source_path": "res/prebuilt/data/target/t356_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
@@ -45567,15 +45565,15 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t371_00_LZ.bin:t371_00.NCBR",
    "source_path": "res/prebuilt/data/target/t371_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t371_00_LZ.bin:t371_00.NCLR",
    "source_path": "res/prebuilt/data/target/t371_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
@@ -46043,15 +46041,15 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t376_00_LZ.bin:t376_00.NCBR",
    "source_path": "res/prebuilt/data/target/t376_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t376_00_LZ.bin:t376_00.NCLR",
    "source_path": "res/prebuilt/data/target/t376_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
@@ -46078,15 +46076,15 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t377_00_LZ.bin:t377_00.NCBR",
    "source_path": "res/prebuilt/data/target/t377_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t377_00_LZ.bin:t377_00.NCLR",
    "source_path": "res/prebuilt/data/target/t377_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
@@ -47653,22 +47651,22 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t700_00_LZ.bin:t700_00.NCBR",
    "source_path": "res/prebuilt/data/target/t700_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t700_00_LZ.bin:t700_00.NCGR",
    "source_path": "res/prebuilt/data/target/t700_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCGR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t700_00_LZ.bin:t700_00.NCLR",
    "source_path": "res/prebuilt/data/target/t700_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
@@ -47702,22 +47700,22 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t701_00_LZ.bin:t701_00.NCBR",
    "source_path": "res/prebuilt/data/target/t701_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t701_00_LZ.bin:t701_00.NCGR",
    "source_path": "res/prebuilt/data/target/t701_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCGR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t701_00_LZ.bin:t701_00.NCLR",
    "source_path": "res/prebuilt/data/target/t701_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
@@ -47751,22 +47749,22 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t702_00_LZ.bin:t702_00.NCBR",
    "source_path": "res/prebuilt/data/target/t702_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t702_00_LZ.bin:t702_00.NCGR",
    "source_path": "res/prebuilt/data/target/t702_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCGR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t702_00_LZ.bin:t702_00.NCLR",
    "source_path": "res/prebuilt/data/target/t702_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
@@ -47800,22 +47798,22 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t703_00_LZ.bin:t703_00.NCBR",
    "source_path": "res/prebuilt/data/target/t703_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t703_00_LZ.bin:t703_00.NCGR",
    "source_path": "res/prebuilt/data/target/t703_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCGR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t703_00_LZ.bin:t703_00.NCLR",
    "source_path": "res/prebuilt/data/target/t703_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
@@ -47849,22 +47847,22 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t704_00_LZ.bin:t704_00.NCBR",
    "source_path": "res/prebuilt/data/target/t704_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t704_00_LZ.bin:t704_00.NCGR",
    "source_path": "res/prebuilt/data/target/t704_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCGR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t704_00_LZ.bin:t704_00.NCLR",
    "source_path": "res/prebuilt/data/target/t704_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
@@ -47898,22 +47896,22 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t705_00_LZ.bin:t705_00.NCBR",
    "source_path": "res/prebuilt/data/target/t705_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t705_00_LZ.bin:t705_00.NCGR",
    "source_path": "res/prebuilt/data/target/t705_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCGR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t705_00_LZ.bin:t705_00.NCLR",
    "source_path": "res/prebuilt/data/target/t705_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
@@ -47947,22 +47945,22 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t706_00_LZ.bin:t706_00.NCBR",
    "source_path": "res/prebuilt/data/target/t706_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t706_00_LZ.bin:t706_00.NCGR",
    "source_path": "res/prebuilt/data/target/t706_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCGR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t706_00_LZ.bin:t706_00.NCLR",
    "source_path": "res/prebuilt/data/target/t706_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
@@ -47996,22 +47994,22 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t707_00_LZ.bin:t707_00.NCBR",
    "source_path": "res/prebuilt/data/target/t707_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t707_00_LZ.bin:t707_00.NCGR",
    "source_path": "res/prebuilt/data/target/t707_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCGR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t707_00_LZ.bin:t707_00.NCLR",
    "source_path": "res/prebuilt/data/target/t707_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
@@ -48045,22 +48043,22 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t800_00_LZ.bin:t800_00.NCBR",
    "source_path": "res/prebuilt/data/target/t800_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t800_00_LZ.bin:t800_00.NCGR",
    "source_path": "res/prebuilt/data/target/t800_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCGR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t800_00_LZ.bin:t800_00.NCLR",
    "source_path": "res/prebuilt/data/target/t800_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
@@ -48094,22 +48092,22 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t801_00_LZ.bin:t801_00.NCBR",
    "source_path": "res/prebuilt/data/target/t801_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t801_00_LZ.bin:t801_00.NCGR",
    "source_path": "res/prebuilt/data/target/t801_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCGR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t801_00_LZ.bin:t801_00.NCLR",
    "source_path": "res/prebuilt/data/target/t801_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders",
    "suffix": "NCLR"
   },
   {
@@ -54535,6 +54533,14 @@
    "detail": "1 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e000_LZ.bin:e000.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e000_LZ.bin:e000_a01.NANR",
    "review_status": "reject",
    "reason_code": "ranger_package_renders_blank",
@@ -54543,12 +54549,28 @@
    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e000_LZ.bin:e000_a01.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e000_LZ.bin:e000_a01.NCER",
    "review_status": "reject",
    "reason_code": "ranger_package_renders_blank",
    "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
    "technical_state": "blank_package",
    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e000_LZ.bin:e000_a01.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e000_LZ.bin:e000_a01.cac",
@@ -71511,6 +71533,30 @@
    "detail": "1 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:interface:i024_LZ.bin:i024.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:interface:i024_LZ.bin:i024_00.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:interface:i024_LZ.bin",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "0 valid NCER pairs"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:interface:i025_LZ.bin:i025.NCLR",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -75559,6 +75605,30 @@
    "detail": "1 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:mb000_00_LZ.bin:mb000_00.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:mb000_00_LZ.bin:mb000_00.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:menu:mb000_00_LZ.bin",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "0 valid NCER pairs"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:mb000_01_LZ.bin:mb000_01.NCER",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -79528,6 +79598,214 @@
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:menu:pam001_00_LZ.bin",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "1 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_LZ.bin:pam001.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_LZ.bin:pam001.NSCR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "256x128 screen, 4706 nonblank px"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_LZ.bin:pam018.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:menu:pam001_LZ.bin",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "1 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam000.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam001.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam001.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "used by valid NCER render"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam001_00.NSCR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "256x128 screen, 2123 nonblank px"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam002.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam003.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam004.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam005.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam006.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam007.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam008.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam009.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam010.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam011.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam012.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam013.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam014.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam015.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam016.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam017.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:pam001_bg_LZ.bin:pam018.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:menu:pam001_bg_LZ.bin",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
    "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
@@ -83951,6 +84229,30 @@
    "detail": "1 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:title001_00_LZ.bin:title001_00.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:menu:title001_00_LZ.bin:title001_00.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:menu:title001_00_LZ.bin",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "0 valid NCER pairs"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:title002_00_LZ.bin:title002_00.NCER",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -88156,7 +88458,7 @@
    "reason_code": "ranger_embedded_valid_render_plausible_use",
    "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
    "technical_state": "valid_render",
-   "detail": "nonblank character/palette resource of a pure tile-resource package (consumed by sibling screens)"
+   "detail": "palette variant of a package with valid renders"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:menu:um_LZ.bin:um000_00.NCGR",
@@ -102255,6 +102557,22 @@
    "detail": "3 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t356_00_LZ.bin:t356_00.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t356_00_LZ.bin:t356_00.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t356_00_LZ.bin:t356_00_s.NCER",
    "review_status": "reject",
    "reason_code": "ranger_package_renders_blank",
@@ -103543,6 +103861,22 @@
    "detail": "1 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t371_00_LZ.bin:t371_00.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t371_00_LZ.bin:t371_00.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t371_00_LZ.bin:t371_00_s.NCER",
    "review_status": "reject",
    "reason_code": "ranger_package_renders_blank",
@@ -104071,6 +104405,22 @@
    "detail": "1 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t376_00_LZ.bin:t376_00.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t376_00_LZ.bin:t376_00.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t376_00_LZ.bin:t376_00_s.NCER",
    "review_status": "reject",
    "reason_code": "ranger_package_renders_blank",
@@ -104093,6 +104443,22 @@
    "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
    "technical_state": "blank_package",
    "detail": "0 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t377_00_LZ.bin:t377_00.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t377_00_LZ.bin:t377_00.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t377_00_LZ.bin:t377_00_s.NCER",
@@ -105879,6 +106245,30 @@
    "detail": "1 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t700_00_LZ.bin:t700_00.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t700_00_LZ.bin:t700_00.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t700_00_LZ.bin:t700_00.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t700_00_LZ.bin:t700_00_s.NANR",
    "review_status": "reject",
    "reason_code": "ranger_package_renders_blank",
@@ -105909,6 +106299,30 @@
    "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
    "technical_state": "blank_package",
    "detail": "0 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t701_00_LZ.bin:t701_00.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t701_00_LZ.bin:t701_00.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t701_00_LZ.bin:t701_00.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t701_00_LZ.bin:t701_00_s.NANR",
@@ -105943,6 +106357,30 @@
    "detail": "0 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t702_00_LZ.bin:t702_00.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t702_00_LZ.bin:t702_00.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t702_00_LZ.bin:t702_00.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t702_00_LZ.bin:t702_00_s.NANR",
    "review_status": "reject",
    "reason_code": "ranger_package_renders_blank",
@@ -105973,6 +106411,30 @@
    "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
    "technical_state": "blank_package",
    "detail": "0 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t703_00_LZ.bin:t703_00.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t703_00_LZ.bin:t703_00.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t703_00_LZ.bin:t703_00.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t703_00_LZ.bin:t703_00_s.NANR",
@@ -106007,6 +106469,30 @@
    "detail": "0 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t704_00_LZ.bin:t704_00.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t704_00_LZ.bin:t704_00.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t704_00_LZ.bin:t704_00.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t704_00_LZ.bin:t704_00_s.NANR",
    "review_status": "reject",
    "reason_code": "ranger_package_renders_blank",
@@ -106037,6 +106523,30 @@
    "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
    "technical_state": "blank_package",
    "detail": "0 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t705_00_LZ.bin:t705_00.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t705_00_LZ.bin:t705_00.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t705_00_LZ.bin:t705_00.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t705_00_LZ.bin:t705_00_s.NANR",
@@ -106071,6 +106581,30 @@
    "detail": "0 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t706_00_LZ.bin:t706_00.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t706_00_LZ.bin:t706_00.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t706_00_LZ.bin:t706_00.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t706_00_LZ.bin:t706_00_s.NANR",
    "review_status": "reject",
    "reason_code": "ranger_package_renders_blank",
@@ -106101,6 +106635,30 @@
    "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
    "technical_state": "blank_package",
    "detail": "0 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t707_00_LZ.bin:t707_00.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t707_00_LZ.bin:t707_00.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t707_00_LZ.bin:t707_00.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t707_00_LZ.bin:t707_00_s.NANR",
@@ -106135,6 +106693,30 @@
    "detail": "0 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t800_00_LZ.bin:t800_00.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t800_00_LZ.bin:t800_00.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t800_00_LZ.bin:t800_00.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t800_00_LZ.bin:t800_00_s.NANR",
    "review_status": "reject",
    "reason_code": "ranger_package_renders_blank",
@@ -106165,6 +106747,30 @@
    "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
    "technical_state": "blank_package",
    "detail": "0 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t801_00_LZ.bin:t801_00.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t801_00_LZ.bin:t801_00.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t801_00_LZ.bin:t801_00.NCLR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "palette variant of a package with valid renders"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t801_00_LZ.bin:t801_00_s.NANR",

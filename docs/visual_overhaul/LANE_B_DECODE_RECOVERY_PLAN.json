@@ -3,9 +3,9 @@
  "scope": "Lane B original decode_issue population and current disposition",
  "original_decode_issue": 7183,
  "current": {
-  "usable": 5969,
-  "reject": 1173,
-  "decode_issue": 41
+  "usable": 5972,
+  "reject": 1181,
+  "decode_issue": 30
  },
  "by_source": {
   "diamond": {
@@ -28,18 +28,18 @@
   },
   "ranger2": {
    "total": 5817,
-   "usable": 4640,
-   "reject": 1157,
-   "decode_issue": 20
+   "usable": 4643,
+   "reject": 1165,
+   "decode_issue": 9
   }
  },
  "by_route": {
   "container_unpack_then_decode": {
    "method": "same package pipelines as ranger_embedded_decode, applied at package level",
    "total": 1350,
-   "usable": 1344,
+   "usable": 1345,
    "reject": 3,
-   "decode_issue": 3
+   "decode_issue": 2
   },
   "format_context_unknown": {
    "method": "evidence-based non-art classification (classify_lane_b_support_files.py)",
@@ -65,9 +65,9 @@
   "ranger_embedded_decode": {
    "method": "Ranger LZ10->NARC->NCLR/NCBR/NCGR/NCER render incl. 1D OBJ mapping + sentinel NCGR (recover_lane_b_ranger_embedded.py); map chips (recover_lane_b_ranger_maps.py)",
    "total": 4472,
-   "usable": 3296,
-   "reject": 1157,
-   "decode_issue": 19
+   "usable": 3298,
+   "reject": 1165,
+   "decode_issue": 9
   },
   "source_png_equivalent": {
    "method": "same-stem native PNG already curated usable (resolve_lane_b_source_png_equivalents.py)",
@@ -86,9 +86,9 @@
    "path_family": "field/map",
    "route": "ranger_embedded_decode",
    "total": 1596,
-   "usable": 441,
-   "reject": 1149,
-   "decode_issue": 6
+   "usable": 443,
+   "reject": 1153,
+   "decode_issue": 0
   },
   {
    "source": "ranger2",
@@ -98,9 +98,9 @@
    "path_family": "field/map",
    "route": "container_unpack_then_decode",
    "total": 883,
-   "usable": 882,
+   "usable": 883,
    "reject": 0,
-   "decode_issue": 1
+   "decode_issue": 0
   },
   {
    "source": "diamond",
@@ -339,8 +339,8 @@
    "route": "ranger_embedded_decode",
    "total": 12,
    "usable": 0,
-   "reject": 8,
-   "decode_issue": 4
+   "reject": 12,
+   "decode_issue": 0
   },
   {
    "source": "ranger2",

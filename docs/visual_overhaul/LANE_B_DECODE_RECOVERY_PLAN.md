@@ -4,7 +4,7 @@ Original Lane B `decode_issue` population (7,183) grouped by family with current
 No Platinum resources are modified.
 
 - Original decode_issue: **7183**
-- Now usable: **5969**  ·  reject: **1173**  ·  still decode_issue: **41**
+- Now usable: **5972**  ·  reject: **1181**  ·  still decode_issue: **30**
 
 ## By source
 
@@ -13,26 +13,23 @@ No Platinum resources are modified.
 | diamond | 723 | 715 | 8 | 0 |
 | hgss | 86 | 76 | 8 | 2 |
 | pmd_sky | 557 | 538 | 0 | 19 |
-| ranger2 | 5817 | 4640 | 1157 | 20 |
+| ranger2 | 5817 | 4643 | 1165 | 9 |
 
 ## By route and method
 
 | Route | Original | usable | reject | decode_issue | Method |
 |---|---:|---:|---:|---:|---|
-| container_unpack_then_decode | 1350 | 1344 | 3 | 3 | same package pipelines as ranger_embedded_decode, applied at package level |
+| container_unpack_then_decode | 1350 | 1345 | 3 | 2 | same package pipelines as ranger_embedded_decode, applied at package level |
 | format_context_unknown | 9 | 0 | 9 | 0 | evidence-based non-art classification (classify_lane_b_support_files.py) |
 | nitro_2d_decode | 719 | 715 | 4 | 0 | Diamond icon NCGR sentinel geometry (recover_lane_b_diamond_icons.py); otherpoke NCGR/NCLR pairing from decomp pokemon.c with back-to-front LCG decrypt (recover_lane_b_nitro2d_pairs.py) |
 | pmd_format_decode | 557 | 538 | 0 | 19 | SkyTemple reference decoder (recover_lane_b_pmd_sky.py) |
-| ranger_embedded_decode | 4472 | 3296 | 1157 | 19 | Ranger LZ10->NARC->NCLR/NCBR/NCGR/NCER render incl. 1D OBJ mapping + sentinel NCGR (recover_lane_b_ranger_embedded.py); map chips (recover_lane_b_ranger_maps.py) |
+| ranger_embedded_decode | 4472 | 3298 | 1165 | 9 | Ranger LZ10->NARC->NCLR/NCBR/NCGR/NCER render incl. 1D OBJ mapping + sentinel NCGR (recover_lane_b_ranger_embedded.py); map chips (recover_lane_b_ranger_maps.py) |
 | source_png_equivalent | 76 | 76 | 0 | 0 | same-stem native PNG already curated usable (resolve_lane_b_source_png_equivalents.py) |
 
 ## Families still needing work
 
 | Source | Type | Group | Kind | Path family | Remaining |
 |---|---|---|---|---|---:|
-| ranger2 | embedded_visual_resource | field | member_N | `field/map` | 6 |
-| ranger2 | compressed_visual_package | field | lz | `field/map` | 1 |
-| ranger2 | embedded_visual_resource | field | member_N | `field/effect` | 4 |
 | hgss | visual_container | field | narc | `files/fielddata/build_model` | 2 |
 | ranger2 | embedded_visual_resource | npc | NCER | `npc/npc072_LZ.bin` | 1 |
 | ranger2 | embedded_visual_resource | npc | cac | `npc/npc072_LZ.bin` | 1 |

@@ -6,13 +6,12 @@
  "technical_state_counts": {
   "valid_render": 2525,
   "companion_of_valid": 792,
-  "non_art_text": 8,
-  "unsupported_member": 10,
+  "non_art_text": 12,
+  "unsupported_member": 6,
   "decode_failure": 3
  },
  "suffix_state_counts": {
-  "(none):non_art_text": 8,
-  "(none):unsupported_member": 4,
+  "(none):non_art_text": 12,
   "NANR:companion_of_valid": 7,
   "NCBR:valid_render": 495,
   "NCER:decode_failure": 3,
@@ -557,8 +556,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:member_0005",
    "source_path": "res/prebuilt/data/field/effect/ef102_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (221 bytes)",
    "suffix": ""
   },
   {
@@ -613,8 +612,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef103_LZ.bin:member_0005",
    "source_path": "res/prebuilt/data/field/effect/ef103_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (269 bytes)",
    "suffix": ""
   },
   {
@@ -669,8 +668,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:member_0005",
    "source_path": "res/prebuilt/data/field/effect/ef104_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (221 bytes)",
    "suffix": ""
   },
   {
@@ -725,8 +724,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef105_LZ.bin:member_0005",
    "source_path": "res/prebuilt/data/field/effect/ef105_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (221 bytes)",
    "suffix": ""
   },
   {
@@ -23998,6 +23997,14 @@
    "detail": "unnamed NARC member is plain ASCII text (98 bytes)"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:member_0005",
+   "review_status": "reject",
+   "reason_code": "stray_ascii_text_member",
+   "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (221 bytes)"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef102_LZ.bin:member_0006",
    "review_status": "reject",
    "reason_code": "stray_ascii_text_member",
@@ -24052,6 +24059,14 @@
    "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
    "technical_state": "non_art_text",
    "detail": "unnamed NARC member is plain ASCII text (98 bytes)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef103_LZ.bin:member_0005",
+   "review_status": "reject",
+   "reason_code": "stray_ascii_text_member",
+   "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (269 bytes)"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef103_LZ.bin:member_0006",
@@ -24110,6 +24125,14 @@
    "detail": "unnamed NARC member is plain ASCII text (98 bytes)"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:member_0005",
+   "review_status": "reject",
+   "reason_code": "stray_ascii_text_member",
+   "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (221 bytes)"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef104_LZ.bin:member_0006",
    "review_status": "reject",
    "reason_code": "stray_ascii_text_member",
@@ -24164,6 +24187,14 @@
    "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
    "technical_state": "non_art_text",
    "detail": "unnamed NARC member is plain ASCII text (98 bytes)"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef105_LZ.bin:member_0005",
+   "review_status": "reject",
+   "reason_code": "stray_ascii_text_member",
+   "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
+   "technical_state": "non_art_text",
+   "detail": "unnamed NARC member is plain ASCII text (221 bytes)"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ef105_LZ.bin:member_0006",

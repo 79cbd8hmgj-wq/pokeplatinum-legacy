@@ -103,6 +103,14 @@ def main() -> int:
                     ev["compose"] = dict(st, w=w, h=h)
                 except Exception as e:  # noqa: BLE001
                     ev["compose_error"] = str(e)[:100]
+            elif sp.endswith(".map.lz") and raw[:4] == b"NARC":
+                ms = narc_members(raw)
+                ev = {"kind": "single", "members": [m[:4] for m in ms], "sizes": [len(m) for m in ms]}
+                try:
+                    w, h, _cv, st = ranger_map_compose.compose_single(p)
+                    ev["compose"] = dict(st, w=w, h=h)
+                except Exception as e:  # noqa: BLE001
+                    ev["compose_error"] = str(e)[:100]
             else:
                 ev = {"kind": "unknown", "magic": raw[:4].hex()}
         except Exception as e:  # noqa: BLE001
@@ -125,7 +133,14 @@ def main() -> int:
                 st, det = "non_visual_table", f"{mg!r} {TABLE_MAGICS[mg]}, {ev['sizes'][idx]} bytes, no pixel payload"
             elif mg == b"LYR\x00":
                 st, det = compose_state(ev)
-        elif ev["kind"] == "dat":
+        elif ev["kind"] == "single" and ":embedded:" in aid:
+            idx = int(aid.rsplit("member_", 1)[1])
+            mg = ev["members"][idx]
+            if mg in TABLE_MAGICS:
+                st, det = "non_visual_table", f"{mg!r} {TABLE_MAGICS[mg]}, {ev['sizes'][idx]} bytes, no pixel payload"
+            else:
+                st, det = compose_state(ev)
+        elif ev["kind"] in ("dat", "single"):
             st, det = compose_state(ev)
         rows.append({"asset_id": aid, "source_path": r["source_path"], "technical_state": st, "detail": det})
     decisions = []

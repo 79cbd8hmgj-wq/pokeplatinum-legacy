@@ -84,8 +84,13 @@ def read_nscr(path: Path):
     w, h = struct.unpack_from("<HH", raw, 0x18)
     size = struct.unpack_from("<I", raw, 0x20)[0]
     data = raw[0x24:0x24 + size]
-    if len(data) != size or w % 8 or h % 8 or (w // 8) * (h // 8) * 2 != size:
+    if len(data) != size or w % 8 or h % 8:
         raise ValueError("NSCR geometry/data mismatch")
+    if (w // 8) * (h // 8) * 2 != size:
+        # header height may exceed the stored rows (data holds only the top part): derive rows from the data size
+        if size % ((w // 8) * 2) or size == 0 or size > (w // 8) * (h // 8) * 2:
+            raise ValueError("NSCR geometry/data mismatch")
+        h = size // ((w // 8) * 2) * 8
     return w, h, list(struct.unpack_from("<" + "H" * (size // 2), data, 0))
 
 
@@ -200,6 +205,17 @@ def _tile_resource_pkg_ok(members: dict, name: str) -> bool:
         return False
 
 
+def _sheet_with_palette(members: dict) -> bool:
+    """Package without any valid cell render but with a parsable palette: its graphic is rendered as a raster sheet."""
+    try:
+        pals = [p for k, p in members.items() if k.endswith(".NCLR")]
+        for p in pals:
+            read_palette(p)
+        return bool(pals)
+    except Exception:  # noqa: BLE001
+        return False
+
+
 def _graphic_sheet_ok(path: Path, all_cells: list) -> bool:
     try:
         sent = read_chars_sentinel(path)
@@ -241,7 +257,7 @@ def evaluate_package(pkg: Path, shared_pkg: Path | None = None) -> dict:
         for n, mp in members.items():
             out["members"][n] = {"state": "unsupported_member", "detail": ""}
             data = mp.read_bytes()
-            if n[:4].isdigit() and n[4:5] == "_" and data and all(c in b"\n\r\t" or 32 <= c < 127 for c in data):
+            if n[:4].isdigit() and n[4:5] == "_" and data and all(c in b"\n\r\t\x0c" or 32 <= c < 127 for c in data):
                 out["members"][n] = {"state": "non_art_text", "detail": f"unnamed NARC member is plain ASCII text ({len(data)} bytes)"}
         used_gfx, used_pal, ok_ncer = set(), set(), set()
         gfx_info: dict = {}
@@ -357,7 +373,7 @@ def evaluate_package(pkg: Path, shared_pkg: Path | None = None) -> dict:
                 st = Path(n).stem
                 if st in ok_ncer:
                     out["members"][n] = {"state": "companion_of_valid", "detail": "cell-animation companion of valid NCER"}
-            elif n.endswith(".NCLR") and out["pairs"]:
+            elif n.endswith(".NCLR") and (out["pairs"] or any(_graphic_sheet_ok(p, all_cells) for k, p in members.items() if k.endswith((".NCBR", ".NCGR")))):
                 try:
                     read_palette(members[n])
                     out["members"][n] = {"state": "valid_render", "detail": "palette variant of a package with valid renders"}
@@ -367,7 +383,7 @@ def evaluate_package(pkg: Path, shared_pkg: Path | None = None) -> dict:
                 out["members"][n] = {"state": "valid_render", "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"}
             elif n.endswith((".NCBR", ".NCGR", ".NCLR")) and not ncers and not any(k.endswith(".NSCR") for k in members) and _tile_resource_pkg_ok(members, n):
                 out["members"][n] = {"state": "valid_render", "detail": "nonblank character/palette resource of a pure tile-resource package (consumed by sibling screens)"}
-            elif n.endswith((".NCBR", ".NCGR")) and out["pairs"] and _graphic_sheet_ok(members[n], all_cells):
+            elif n.endswith((".NCBR", ".NCGR")) and (out["pairs"] or _sheet_with_palette(members)) and _graphic_sheet_ok(members[n], all_cells):
                 out["members"][n] = {"state": "valid_render", "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"}
             elif n.endswith((".NCBR", ".NCGR", ".NCLR")):
                 out["members"][n] = {"state": "no_pair", "detail": "not consumed by any valid render"}
