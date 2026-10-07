@@ -9,10 +9,12 @@ on:
       - "docs/visual_overhaul/LANE_*_RECOVERED_CURATION.json"
       - ".github/workflows/donor-selection-validate.yml"
   push:
-    branches: [main]
+    branches: [main, "claude/**"]
     paths:
       - "tools/visual_overhaul/selection/**"
       - "docs/visual_overhaul/selection/**"
+      - "docs/visual_overhaul/catalog_extensions/**"
+      - "tools/visual_overhaul/*.py"
 
 jobs:
   validate:
