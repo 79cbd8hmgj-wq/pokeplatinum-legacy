@@ -1,0 +1,21 @@
+{
+ "schema_version": 1,
+ "description": "Donor-phase scope gate. Active opportunity analysis, ranking and queue planning use ONLY the DS donor set. GBA/GBC donor findings are preserved verbatim in opportunities/deferred/non_ds_findings.json and are NOT loaded by the register, queue or rankings until the next phase.",
+ "active_phase": "ds_only",
+ "ds_sources": {
+  "platinum": "native baseline (never a donor)",
+  "diamond": "control/reference (never a preferred donor)",
+  "hgss": "primary DS donor",
+  "pmd_sky": "DS donor (effects/presentation)",
+  "ranger2": "DS donor (interface/field/effect/graphic components)"
+ },
+ "deferred_phase": "gba_gbc",
+ "deferred_games": ["firered", "leafgreen", "emerald", "ruby", "sapphire", "pmd_red", "crystal", "gold", "silver", "yellow", "red", "blue"],
+ "deferred_file": "docs/visual_overhaul/selection/opportunities/deferred/non_ds_findings.json",
+ "rules": [
+  "an active finding's donor.source_id must be a ds_sources key other than platinum",
+  "an active finding's donor.game/locator must not name a deferred game as a donor",
+  "the deferred file must exist, hold only non-DS findings with phase=deferred_gba_gbc, and is never read by build_opportunities.py or build_queue.py",
+  "existing ledgers/catalog are DS-only already (sources: hgss, diamond, pmd_sky, ranger2)"
+ ]
+}

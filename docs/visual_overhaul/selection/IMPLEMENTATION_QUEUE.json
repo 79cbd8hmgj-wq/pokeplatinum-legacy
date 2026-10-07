@@ -16,329 +16,1354 @@
   "trainer_battle_sprites"
  ],
  "inputs": {
-  "ledger_files": {
-   "battle_backgrounds_hud": "1efd63a09386d2ef5c1467efb9450fb46f94badbed1ae2d56f45ea0a3cdab53d",
-   "battle_effects_particles": "010dddf4143dc259fa20e2b3be8b992a1ef39b30c61890780ad7546e0d9b18ec",
-   "field_effects_overlays": "10223f577df8130e087cba4a6bb86ded4b66d4d299923e92be06463692121a1e",
-   "field_environment_art": "25c2006325cff6a8854f2e8591d62df9d3b2b261e27d285144490c057db5c3e7",
-   "field_npc_player_sprites": "e60d8ef38b8008d603be4769e0baee5229901997e4744b4d7d2038836d8c1788",
-   "menu_ui_frames": "4f728d0b9aa73a00f3dfa3cae7e46516550f1549f758360e1f7dad48605109be",
-   "no_platinum_target": "65c23c8ac0e7d200780090c4d47b1d235cad33c9f0be5c95a1e0e376017043db",
-   "party_summary_ui": "d24aa518f04a6fd87c2a3e328d93c03a049b27eb4cf18f893f3fb52d435cfb6a",
-   "pokedex_ui": "38a28a84b0d944ce595d63632a7636eb13089c1d8e786de3b6d99ee1dc1d87d2",
-   "pokemon_animation_reference": "44d20bd0ec7c05780af1ab32bc7cacc0f1f6e5852c0a297923faa0633ba41887",
-   "pokemon_battle_sprites": "729a6e9d87184f1b3e072692632affad9cb3940ea0071737b4125688239f4556",
-   "pokemon_icons": "cfdd96879631028e1c1dec8ade19d1053f3fcd2ab66a5634b934a53fd09b9a5f",
-   "title_and_presentation": "06c1220739490aa0ca87208d2bbda97b443a98d5af0d0dfce6f53c0010463727",
-   "trainer_battle_sprites": "72e37b38572ec4d278a4921b0070a21b238d9dcf0c2f6041bb828cee96570376"
-  },
-  "use_files": {
-   "trainer_battle_sprites": "fe1986e560e3a2252e5474d29e402c9ca599a87c7b7e3452db188b66034f6f15"
-  },
-  "use_outcomes_sha256": "c785ad59751bb5e711aea8410499fd655a11b35793464e4484fef055f8ce6d8a"
+  "classes_sha256": "24acd6faefb7f3bb88f8ab7a8d5fd545f0a93ecc045d6b54a2211ccd9f168ee9",
+  "pool_sha256": "75b3e2b831bbfd47be3ef07d671b2fdb1c08804ab7c018a30821afa8028ecd40",
+  "scope_sha256": "ad5632421f94dfc2ce72394d28633654a144ff1f48e852c230011baf87933f74"
  },
- "items": [
+ "pending_subsystems": [],
+ "phase": "ds_only",
+ "ranked": [
   {
-   "format_families": [
-    "nitro_indexed_png_160x80"
+   "components": [
+    "accessory",
+    "clothing_detail",
+    "palette",
+    "pose"
    ],
-   "integration_cost": 3,
-   "kind": "implement",
-   "priority_score": 86.667,
+   "host": "trainer class sprites",
+   "kind": "library",
+   "library_id": "lib:hgss/trainer_sprites/hgss_front/component_donor/component",
+   "members": 73,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 73,
    "rank": 1,
+   "rank_score": 4.317,
+   "records": 73,
    "source_id": "hgss",
-   "subsystem": "pokemon_battle_sprites",
-   "target_count": 26,
-   "targets_sample": [
-    "pokemon_battle_sprites/sp_0003",
-    "pokemon_battle_sprites/sp_0011",
-    "pokemon_battle_sprites/sp_0028",
-    "pokemon_battle_sprites/sp_0033",
-    "pokemon_battle_sprites/sp_0035"
+   "subsystem": "trainer_sprites",
+   "techniques": [],
+   "title": "hgss_front [hgss/trainer_sprites] component_donor",
+   "top_records": [
+    "opp:mined/trainer_battle_sprites/hgss/hgss_front_066/component_donor/component",
+    "opp:mined/trainer_battle_sprites/hgss/hgss_front_067/component_donor/component",
+    "opp:mined/trainer_battle_sprites/hgss/hgss_front_073/component_donor/component"
    ],
-   "work_lane": "direct_replacement"
+   "use_mode": "component"
   },
   {
-   "format_families": [
-    "nitro_sprite_set_ncgr_nclr_ncer_nanr"
+   "components": [
+    "UI_element",
+    "animation_frame",
+    "particle_shape"
    ],
-   "integration_cost": 4,
-   "kind": "implement",
-   "priority_score": 9.0,
+   "host": "battle/menu feedback layer (cursor pulses, glows, gauges)",
+   "kind": "library",
+   "library_id": "lib:ranger2/interface_embellishments/ranger_interface/i/novel_detail/component",
+   "members": 392,
+   "needs_evidence": 5,
+   "opportunity_class": "novel_detail",
+   "promoted": 69,
    "rank": 2,
-   "source_id": "hgss",
-   "subsystem": "trainer_battle_sprites",
-   "target_count": 6,
-   "targets_sample": [
-    "trainer_battle_sprites/tc_beauty",
-    "trainer_battle_sprites/tc_bug_catcher",
-    "trainer_battle_sprites/tc_lass",
-    "trainer_battle_sprites/tc_swimmer_female",
-    "trainer_battle_sprites/tc_twins"
+   "rank_score": 4.248,
+   "records": 69,
+   "source_id": "ranger2",
+   "subsystem": "interface_embellishments",
+   "techniques": [
+    "state_driven_visuals"
    ],
-   "work_lane": "direct_replacement"
+   "title": "ranger_interface/i [ranger2/interface_embellishments] novel_detail",
+   "top_records": [
+    "opp:mined/menu_ui_frames/ranger2/ranger_interface/i020/novel_detail/component",
+    "opp:mined/menu_ui_frames/ranger2/ranger_interface/i019/novel_detail/component",
+    "opp:mined/menu_ui_frames/ranger2/ranger_interface/i028/novel_detail/component"
+   ],
+   "use_mode": "component"
   },
   {
-   "awaiting_human_confirmation": 4,
-   "kind": "component_review",
-   "priority_score": 1.0,
+   "components": [],
+   "host": "battle move animation scripts + particle resources",
+   "kind": "library",
+   "library_id": "lib:ranger2/battle_effects/ranger_effect/e/technique_donor/technique",
+   "members": 531,
+   "needs_evidence": 0,
+   "opportunity_class": "technique_donor",
+   "promoted": 55,
    "rank": 3,
+   "rank_score": 4.201,
+   "records": 55,
+   "source_id": "ranger2",
+   "subsystem": "battle_effects",
+   "techniques": [
+    "animation_sequencing",
+    "effect_staging",
+    "frame_timing"
+   ],
+   "title": "ranger_effect/e [ranger2/battle_effects] technique_donor",
+   "top_records": [
+    "opp:mined/battle_effects_particles/ranger2/ranger_effect/e010/technique_donor/technique",
+    "opp:mined/battle_effects_particles/ranger2/ranger_effect/e002/technique_donor/technique",
+    "opp:mined/battle_effects_particles/ranger2/ranger_effect/e009/technique_donor/technique"
+   ],
+   "use_mode": "technique"
+  },
+  {
+   "components": [
+    "animation_frame",
+    "material_treatment",
+    "particle_shape"
+   ],
+   "host": "battle move animation scripts + particle resources",
+   "kind": "library",
+   "library_id": "lib:ranger2/battle_effects/ranger_effect/e/component_donor/component",
+   "members": 1115,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 127,
+   "rank": 4,
+   "rank_score": 4.193,
+   "records": 127,
+   "source_id": "ranger2",
+   "subsystem": "battle_effects",
+   "techniques": [],
+   "title": "ranger_effect/e [ranger2/battle_effects] component_donor",
+   "top_records": [
+    "opp:mined/battle_effects_particles/ranger2/ranger_effect/e010/component_donor/component",
+    "opp:mined/battle_effects_particles/ranger2/ranger_effect/e002/component_donor/component",
+    "opp:mined/battle_effects_particles/ranger2/ranger_effect/e009/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "UI_element",
+    "layout",
+    "environmental_motif"
+   ],
+   "finding_id": "opp:hgss/map_location_preview",
+   "host": "new area-preview layer shown on map entry beside the existing map-name popup",
+   "kind": "explicit",
+   "members": 23,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_capability",
+   "promoted": 1,
+   "rank": 5,
+   "rank_score": 4.189,
+   "records": 1,
+   "source_id": "hgss",
+   "subsystem": "new area-preview layer shown on map entry beside the existing map-name popup",
+   "techniques": [],
+   "title": "Area/location preview card (new Sinnoh artwork; HGSS module + layout as the DS reference)",
+   "top_records": [
+    "opp:hgss/map_location_preview"
+   ],
+   "use_mode": "technique"
+  },
+  {
+   "components": [],
+   "host": "battle/menu feedback layer (cursor pulses, glows, gauges)",
+   "kind": "library",
+   "library_id": "lib:ranger2/interface_embellishments/ranger_interface/i/technique_donor/technique",
+   "members": 262,
+   "needs_evidence": 0,
+   "opportunity_class": "technique_donor",
+   "promoted": 46,
+   "rank": 6,
+   "rank_score": 4.159,
+   "records": 46,
+   "source_id": "ranger2",
+   "subsystem": "interface_embellishments",
+   "techniques": [
+    "state_driven_visuals",
+    "ui_entrance_exit"
+   ],
+   "title": "ranger_interface/i [ranger2/interface_embellishments] technique_donor",
+   "top_records": [
+    "opp:mined/menu_ui_frames/ranger2/ranger_interface/i020/technique_donor/technique",
+    "opp:mined/menu_ui_frames/ranger2/ranger_interface/i019/technique_donor/technique",
+    "opp:mined/menu_ui_frames/ranger2/ranger_interface/i028/technique_donor/technique"
+   ],
+   "use_mode": "technique"
+  },
+  {
+   "components": [
+    "material_treatment",
+    "texture_region"
+   ],
+   "host": "3D field/map texture resources (NSBTX materials)",
+   "kind": "library",
+   "library_id": "lib:ranger2/textures/ranger_field/m/component_donor/component",
+   "members": 309,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 309,
+   "rank": 7,
+   "rank_score": 4.064,
+   "records": 309,
+   "source_id": "ranger2",
+   "subsystem": "textures",
+   "techniques": [],
+   "title": "ranger_field/m [ranger2/textures] component_donor",
+   "top_records": [
+    "opp:mined/field_environment_art/ranger2/ranger_field/m001_001.map.tex/component_donor/component",
+    "opp:mined/field_environment_art/ranger2/ranger_field/m001_002.map.tex/component_donor/component",
+    "opp:mined/field_environment_art/ranger2/ranger_field/m001_005.map.tex/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "clothing_detail",
+    "pose",
+    "shading"
+   ],
+   "host": "trainer class sprites",
+   "kind": "library",
+   "library_id": "lib:hgss/trainer_sprites/hgss_front/enhancement_candidate/composite_input",
+   "members": 15,
+   "needs_evidence": 0,
+   "opportunity_class": "enhancement_candidate",
+   "promoted": 15,
+   "rank": 8,
+   "rank_score": 4.062,
+   "records": 15,
+   "source_id": "hgss",
+   "subsystem": "trainer_sprites",
+   "techniques": [],
+   "title": "hgss_front [hgss/trainer_sprites] enhancement_candidate",
+   "top_records": [
+    "opp:mined/trainer_battle_sprites/hgss/hgss_front_097/enhancement_candidate/composite_input",
+    "opp:mined/trainer_battle_sprites/hgss/hgss_front_101/enhancement_candidate/composite_input",
+    "opp:mined/trainer_battle_sprites/hgss/hgss_front_102/enhancement_candidate/composite_input"
+   ],
+   "use_mode": "composite_input"
+  },
+  {
+   "components": [
+    "accessory",
+    "clothing_detail",
+    "pose"
+   ],
+   "host": "overworld NPC/player sprites",
+   "kind": "library",
+   "library_id": "lib:hgss/npc_player_sprites/hgss_mmodel/novel_detail/whole_asset",
+   "members": 76,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_detail",
+   "promoted": 76,
+   "rank": 9,
+   "rank_score": 4.051,
+   "records": 76,
+   "source_id": "hgss",
+   "subsystem": "npc_player_sprites",
+   "techniques": [],
+   "title": "hgss_mmodel [hgss/npc_player_sprites] novel_detail",
+   "top_records": [
+    "opp:mined/field_npc_player_sprites/hgss/hgss_mmodel_00000071/novel_detail/whole_asset",
+    "opp:mined/field_npc_player_sprites/hgss/hgss_mmodel_00000072/novel_detail/whole_asset",
+    "opp:mined/field_npc_player_sprites/hgss/hgss_mmodel_00000080/novel_detail/whole_asset"
+   ],
+   "use_mode": "whole_asset"
+  },
+  {
+   "components": [],
+   "host": "field overlay/object animation (field task + overworld animation manager)",
+   "kind": "library",
+   "library_id": "lib:pmd_sky/field_effects/pmd_ground_d/technique_donor/technique",
+   "members": 49,
+   "needs_evidence": 0,
+   "opportunity_class": "technique_donor",
+   "promoted": 49,
+   "rank": 10,
+   "rank_score": 4.013,
+   "records": 49,
+   "source_id": "pmd_sky",
+   "subsystem": "field_effects",
+   "techniques": [
+    "animation_sequencing",
+    "state_driven_visuals"
+   ],
+   "title": "pmd_ground_d [pmd_sky/field_effects] technique_donor",
+   "top_records": [
+    "opp:mined/field_effects_overlays/pmd_sky/pmd_ground_d01p11b1/technique_donor/technique",
+    "opp:mined/field_effects_overlays/pmd_sky/pmd_ground_d01p11b2/technique_donor/technique",
+    "opp:mined/field_effects_overlays/pmd_sky/pmd_ground_d21p41a1/technique_donor/technique"
+   ],
+   "use_mode": "technique"
+  },
+  {
+   "components": [
+    "UI_element",
+    "animation_frame"
+   ],
+   "host": "battle move animation scripts + particle resources",
+   "kind": "library",
+   "library_id": "lib:ranger2/battle_effects/ranger_target/t/component_donor/component",
+   "members": 1652,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 219,
+   "rank": 11,
+   "rank_score": 3.98,
+   "records": 219,
+   "source_id": "ranger2",
+   "subsystem": "battle_effects",
+   "techniques": [],
+   "title": "ranger_target/t [ranger2/battle_effects] component_donor",
+   "top_records": [
+    "opp:mined/battle_effects_particles/ranger2/ranger_target/t009_00/component_donor/component",
+    "opp:mined/battle_effects_particles/ranger2/ranger_target/t014_00/component_donor/component",
+    "opp:mined/battle_effects_particles/ranger2/ranger_target/t014_01/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "palette",
+    "pose",
+    "shading"
+   ],
+   "host": "Pokemon battle sprites",
+   "kind": "library",
+   "library_id": "lib:hgss/pokemon_sprites/hgss_battle_sprites/component_donor/component",
+   "members": 1154,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 329,
+   "rank": 12,
+   "rank_score": 3.961,
+   "records": 329,
+   "source_id": "hgss",
+   "subsystem": "pokemon_sprites",
+   "techniques": [],
+   "title": "hgss_battle_sprites [hgss/pokemon_sprites] component_donor",
+   "top_records": [
+    "opp:mined/pokemon_battle_sprites/hgss/sp_0030/component_donor/component",
+    "opp:mined/pokemon_battle_sprites/hgss/sp_0033/component_donor/component",
+    "opp:mined/pokemon_battle_sprites/hgss/sp_0081/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [],
+   "host": "field overlay/object animation (field task + overworld animation manager)",
+   "kind": "library",
+   "library_id": "lib:pmd_sky/field_effects/pmd_ground_s/technique_donor/technique",
+   "members": 25,
+   "needs_evidence": 0,
+   "opportunity_class": "technique_donor",
+   "promoted": 25,
+   "rank": 13,
+   "rank_score": 3.955,
+   "records": 25,
+   "source_id": "pmd_sky",
+   "subsystem": "field_effects",
+   "techniques": [
+    "animation_sequencing",
+    "state_driven_visuals"
+   ],
+   "title": "pmd_ground_s [pmd_sky/field_effects] technique_donor",
+   "top_records": [
+    "opp:mined/field_effects_overlays/pmd_sky/pmd_ground_s01p04a1/technique_donor/technique",
+    "opp:mined/field_effects_overlays/pmd_sky/pmd_ground_s05p03a1/technique_donor/technique",
+    "opp:mined/field_effects_overlays/pmd_sky/pmd_ground_s13p01a1/technique_donor/technique"
+   ],
+   "use_mode": "technique"
+  },
+  {
+   "components": [],
+   "host": "field overlay/object animation (field task + overworld animation manager)",
+   "kind": "library",
+   "library_id": "lib:pmd_sky/field_effects/pmd_ground_v/technique_donor/technique",
+   "members": 22,
+   "needs_evidence": 0,
+   "opportunity_class": "technique_donor",
+   "promoted": 22,
+   "rank": 14,
+   "rank_score": 3.944,
+   "records": 22,
+   "source_id": "pmd_sky",
+   "subsystem": "field_effects",
+   "techniques": [
+    "animation_sequencing",
+    "state_driven_visuals"
+   ],
+   "title": "pmd_ground_v [pmd_sky/field_effects] technique_donor",
+   "top_records": [
+    "opp:mined/field_effects_overlays/pmd_sky/pmd_ground_v24p05a5/technique_donor/technique",
+    "opp:mined/field_effects_overlays/pmd_sky/pmd_ground_v25p03a1/technique_donor/technique",
+    "opp:mined/field_effects_overlays/pmd_sky/pmd_ground_v26p05a1/technique_donor/technique"
+   ],
+   "use_mode": "technique"
+  },
+  {
+   "components": [],
+   "host": "3D field texture/material set (environment art)",
+   "kind": "library",
+   "library_id": "lib:ranger2/field_graphics/ranger_field/m/technique_donor/technique",
+   "members": 144,
+   "needs_evidence": 0,
+   "opportunity_class": "technique_donor",
+   "promoted": 72,
+   "rank": 15,
+   "rank_score": 3.911,
+   "records": 72,
+   "source_id": "ranger2",
+   "subsystem": "field_graphics",
+   "techniques": [
+    "background_movement",
+    "object_layering"
+   ],
+   "title": "ranger_field/m [ranger2/field_graphics] technique_donor",
+   "top_records": [
+    "opp:mined/field_environment_art/ranger2/ranger_field/m001_002.map.dat/technique_donor/technique",
+    "opp:mined/field_environment_art/ranger2/ranger_field/m001_014.map.dat/technique_donor/technique",
+    "opp:mined/field_environment_art/ranger2/ranger_field/m001_017.map.dat/technique_donor/technique"
+   ],
+   "use_mode": "technique"
+  },
+  {
+   "components": [
+    "environmental_motif",
+    "layout"
+   ],
+   "host": "field/title transition and event presentation",
+   "kind": "library",
+   "library_id": "lib:pmd_sky/transitions_presentation/pmd_back_s/novel_capability/technique",
+   "members": 20,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_capability",
+   "promoted": 20,
+   "rank": 16,
+   "rank_score": 3.887,
+   "records": 20,
+   "source_id": "pmd_sky",
+   "subsystem": "transitions_presentation",
+   "techniques": [
+    "event_presentation"
+   ],
+   "title": "pmd_back_s [pmd_sky/transitions_presentation] novel_capability",
+   "top_records": [
+    "opp:mined/title_and_presentation/pmd_sky/pmd_back_s16p01a/novel_capability/technique",
+    "opp:mined/title_and_presentation/pmd_sky/pmd_back_s18p01a/novel_capability/technique",
+    "opp:mined/title_and_presentation/pmd_sky/pmd_back_s18p02a/novel_capability/technique"
+   ],
+   "use_mode": "technique"
+  },
+  {
+   "components": [
+    "pose",
+    "shading",
+    "silhouette"
+   ],
+   "host": "Pokemon battle sprites",
+   "kind": "library",
+   "library_id": "lib:hgss/pokemon_sprites/hgss_battle_sprites/enhancement_candidate/composite_input",
+   "members": 292,
+   "needs_evidence": 0,
+   "opportunity_class": "enhancement_candidate",
+   "promoted": 91,
+   "rank": 17,
+   "rank_score": 3.849,
+   "records": 91,
+   "source_id": "hgss",
+   "subsystem": "pokemon_sprites",
+   "techniques": [],
+   "title": "hgss_battle_sprites [hgss/pokemon_sprites] enhancement_candidate",
+   "top_records": [
+    "opp:mined/pokemon_battle_sprites/hgss/sp_0030/enhancement_candidate/composite_input",
+    "opp:mined/pokemon_battle_sprites/hgss/sp_0033/enhancement_candidate/composite_input",
+    "opp:mined/pokemon_battle_sprites/hgss/sp_0081/enhancement_candidate/composite_input"
+   ],
+   "use_mode": "composite_input"
+  },
+  {
+   "components": [
+    "animation_frame"
+   ],
+   "host": "trainer class sprites",
+   "kind": "library",
+   "library_id": "lib:hgss/trainer_sprites/hgss_front/novel_detail/component",
+   "members": 29,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_detail",
+   "promoted": 29,
+   "rank": 18,
+   "rank_score": 3.832,
+   "records": 29,
+   "source_id": "hgss",
+   "subsystem": "trainer_sprites",
+   "techniques": [],
+   "title": "hgss_front [hgss/trainer_sprites] novel_detail",
+   "top_records": [
+    "opp:mined/trainer_battle_sprites/hgss/hgss_front_066/novel_detail/component",
+    "opp:mined/trainer_battle_sprites/hgss/hgss_front_067/novel_detail/component",
+    "opp:mined/trainer_battle_sprites/hgss/hgss_front_073/novel_detail/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "palette",
+    "pose",
+    "shading"
+   ],
+   "host": "Pokemon battle sprites",
+   "kind": "library",
+   "library_id": "lib:hgss/pokemon_sprites/hgss_battle_forms/component_donor/component",
+   "members": 148,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 74,
+   "rank": 19,
+   "rank_score": 3.805,
+   "records": 74,
+   "source_id": "hgss",
+   "subsystem": "pokemon_sprites",
+   "techniques": [],
+   "title": "hgss_battle_forms [hgss/pokemon_sprites] component_donor",
+   "top_records": [
+    "opp:mined/pokemon_battle_sprites/hgss/form_arceus_bug/component_donor/component",
+    "opp:mined/pokemon_battle_sprites/hgss/form_arceus_dark/component_donor/component",
+    "opp:mined/pokemon_battle_sprites/hgss/form_arceus_dragon/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "accessory",
+    "clothing_detail",
+    "pose",
+    "shading"
+   ],
+   "host": "trainer class sprites",
+   "kind": "library",
+   "library_id": "lib:hgss/trainer_sprites/hgss_back/component_donor/component",
+   "members": 6,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 6,
+   "rank": 20,
+   "rank_score": 3.799,
+   "records": 6,
+   "source_id": "hgss",
+   "subsystem": "trainer_sprites",
+   "techniques": [],
+   "title": "hgss_back [hgss/trainer_sprites] component_donor",
+   "top_records": [
+    "opp:mined/trainer_battle_sprites/hgss/hgss_back_003/component_donor/component",
+    "opp:mined/trainer_battle_sprites/hgss/hgss_back_015/component_donor/component",
+    "opp:mined/trainer_battle_sprites/hgss/hgss_back_000/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "UI_element"
+   ],
+   "host": "Pokemon icons",
+   "kind": "library",
+   "library_id": "lib:hgss/icons/hgss_icons/novel_detail/whole_asset",
+   "members": 4,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_detail",
+   "promoted": 4,
+   "rank": 21,
+   "rank_score": 3.796,
    "records": 4,
    "source_id": "hgss",
+   "subsystem": "icons",
+   "techniques": [],
+   "title": "hgss_icons [hgss/icons] novel_detail",
+   "top_records": [
+    "opp:mined/pokemon_icons/hgss/icon_extra_0547/novel_detail/whole_asset",
+    "opp:mined/pokemon_icons/hgss/icon_extra_0548/novel_detail/whole_asset",
+    "opp:mined/pokemon_icons/hgss/icon_extra_0549/novel_detail/whole_asset"
+   ],
+   "use_mode": "whole_asset"
+  },
+  {
+   "components": [],
+   "host": "area-preview layer beside the map-name popup",
+   "kind": "library",
+   "library_id": "lib:hgss/location_area/hgss_preview/technique_donor/technique",
+   "members": 152,
+   "needs_evidence": 0,
+   "opportunity_class": "technique_donor",
+   "promoted": 23,
+   "rank": 22,
+   "rank_score": 3.785,
+   "records": 23,
+   "source_id": "hgss",
+   "subsystem": "location_area",
+   "techniques": [
+    "palette_variants",
+    "state_driven_visuals"
+   ],
+   "title": "hgss_preview [hgss/location_area] technique_donor",
+   "top_records": [
+    "opp:mined/field_environment_art/hgss/hgss_preview_bell_tower/technique_donor/technique",
+    "opp:mined/field_environment_art/hgss/hgss_preview_burned_tower/technique_donor/technique",
+    "opp:mined/field_environment_art/hgss/hgss_preview_cerulean_cave/technique_donor/technique"
+   ],
+   "use_mode": "technique"
+  },
+  {
+   "components": [
+    "environmental_motif",
+    "texture_region"
+   ],
+   "host": "3D field texture/material set (environment art)",
+   "kind": "library",
+   "library_id": "lib:ranger2/field_graphics/ranger_field/m/component_donor/component",
+   "members": 132,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 66,
+   "rank": 23,
+   "rank_score": 3.741,
+   "records": 66,
+   "source_id": "ranger2",
+   "subsystem": "field_graphics",
+   "techniques": [],
+   "title": "ranger_field/m [ranger2/field_graphics] component_donor",
+   "top_records": [
+    "opp:mined/field_environment_art/ranger2/ranger_field/m001_002.map.dat/component_donor/component",
+    "opp:mined/field_environment_art/ranger2/ranger_field/m001_014.map.dat/component_donor/component",
+    "opp:mined/field_environment_art/ranger2/ranger_field/m001_017.map.dat/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "environmental_motif",
+    "palette",
+    "texture_region"
+   ],
+   "host": "battle terrain backgrounds / 2D special-area backdrops",
+   "kind": "library",
+   "library_id": "lib:pmd_sky/backgrounds/pmd_mapbg_d/component_donor/component",
+   "members": 84,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 28,
+   "rank": 24,
+   "rank_score": 3.72,
+   "records": 28,
+   "source_id": "pmd_sky",
+   "subsystem": "backgrounds",
+   "techniques": [],
+   "title": "pmd_mapbg_d [pmd_sky/backgrounds] component_donor",
+   "top_records": [
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_d03p41a/component_donor/component",
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_d05p31a/component_donor/component",
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_d08p11a/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "environmental_motif",
+    "palette",
+    "texture_region"
+   ],
+   "host": "battle terrain backgrounds / 2D special-area backdrops",
+   "kind": "library",
+   "library_id": "lib:pmd_sky/backgrounds/pmd_mapbg_v/component_donor/component",
+   "members": 57,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 19,
+   "rank": 25,
+   "rank_score": 3.687,
+   "records": 19,
+   "source_id": "pmd_sky",
+   "subsystem": "backgrounds",
+   "techniques": [],
+   "title": "pmd_mapbg_v [pmd_sky/backgrounds] component_donor",
+   "top_records": [
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_v03p11a/component_donor/component",
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_v12p01a/component_donor/component",
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_v14p03a/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "pose",
+    "animation_frame"
+   ],
+   "finding_id": "opp:hgss/follower_pokemon",
+   "host": "overworld follower object (Pokemon walking behind the player) using the map-object system",
+   "kind": "explicit",
+   "members": 0,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_capability",
+   "promoted": 1,
+   "rank": 26,
+   "rank_score": 3.676,
+   "records": 1,
+   "source_id": "hgss",
+   "subsystem": "overworld follower object (Pokemon walking behind the player) using the map-object system",
+   "techniques": [],
+   "title": "Following-Pokemon overworld presence (HGSS follower sprite sheets + FollowMon system)",
+   "top_records": [
+    "opp:hgss/follower_pokemon"
+   ],
+   "use_mode": "mixed"
+  },
+  {
+   "components": [],
+   "host": "field/title transition and event presentation",
+   "kind": "library",
+   "library_id": "lib:pmd_sky/transitions_presentation/pmd_back_s/technique_donor/technique",
+   "members": 14,
+   "needs_evidence": 0,
+   "opportunity_class": "technique_donor",
+   "promoted": 14,
+   "rank": 27,
+   "rank_score": 3.666,
+   "records": 14,
+   "source_id": "pmd_sky",
+   "subsystem": "transitions_presentation",
+   "techniques": [
+    "event_presentation",
+    "transition_choreography"
+   ],
+   "title": "pmd_back_s [pmd_sky/transitions_presentation] technique_donor",
+   "top_records": [
+    "opp:mined/title_and_presentation/pmd_sky/pmd_back_s16p01a/technique_donor/technique",
+    "opp:mined/title_and_presentation/pmd_sky/pmd_back_s18p01a/technique_donor/technique",
+    "opp:mined/title_and_presentation/pmd_sky/pmd_back_s18p02a/technique_donor/technique"
+   ],
+   "use_mode": "technique"
+  },
+  {
+   "components": [],
+   "host": "field overlay/object animation (field task + overworld animation manager)",
+   "kind": "library",
+   "library_id": "lib:pmd_sky/field_effects/pmd_ground_p/technique_donor/technique",
+   "members": 7,
+   "needs_evidence": 1,
+   "opportunity_class": "technique_donor",
+   "promoted": 6,
+   "rank": 28,
+   "rank_score": 3.641,
+   "records": 6,
+   "source_id": "pmd_sky",
+   "subsystem": "field_effects",
+   "techniques": [
+    "animation_sequencing",
+    "state_driven_visuals"
+   ],
+   "title": "pmd_ground_p [pmd_sky/field_effects] technique_donor",
+   "top_records": [
+    "opp:mined/field_effects_overlays/pmd_sky/pmd_ground_p03p02a1/technique_donor/technique",
+    "opp:mined/field_effects_overlays/pmd_sky/pmd_ground_p17p02c1/technique_donor/technique",
+    "opp:mined/field_effects_overlays/pmd_sky/pmd_ground_p18p01a1/technique_donor/technique"
+   ],
+   "use_mode": "technique"
+  },
+  {
+   "components": [
+    "environmental_motif",
+    "palette",
+    "texture_region"
+   ],
+   "host": "battle terrain backgrounds / 2D special-area backdrops",
+   "kind": "library",
+   "library_id": "lib:pmd_sky/backgrounds/pmd_mapbg_s/component_donor/component",
+   "members": 33,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 11,
+   "rank": 29,
+   "rank_score": 3.64,
+   "records": 11,
+   "source_id": "pmd_sky",
+   "subsystem": "backgrounds",
+   "techniques": [],
+   "title": "pmd_mapbg_s [pmd_sky/backgrounds] component_donor",
+   "top_records": [
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_s01p01a/component_donor/component",
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_s01p02a/component_donor/component",
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_s05p01a/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "particle_shape",
+    "animation_frame",
+    "material_treatment"
+   ],
+   "finding_id": "opp:ranger2/effect_primitives",
+   "host": "battle move particle/2D effect resources",
+   "kind": "explicit",
+   "members": 0,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 1,
+   "rank": 30,
+   "rank_score": 3.622,
+   "records": 1,
+   "source_id": "ranger2",
+   "subsystem": "battle_effects_particles",
+   "techniques": [],
+   "title": "Ranger 2 2D effect primitives (fire/tornado/lightning/glow)",
+   "top_records": [
+    "opp:ranger2/effect_primitives"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [],
+   "host": "field overlay/object animation (field task + overworld animation manager)",
+   "kind": "library",
+   "library_id": "lib:pmd_sky/field_effects/pmd_ground_g/technique_donor/technique",
+   "members": 3,
+   "needs_evidence": 0,
+   "opportunity_class": "technique_donor",
+   "promoted": 3,
+   "rank": 31,
+   "rank_score": 3.581,
+   "records": 3,
+   "source_id": "pmd_sky",
+   "subsystem": "field_effects",
+   "techniques": [
+    "animation_sequencing",
+    "state_driven_visuals"
+   ],
+   "title": "pmd_ground_g [pmd_sky/field_effects] technique_donor",
+   "top_records": [
+    "opp:mined/field_effects_overlays/pmd_sky/pmd_ground_g01p01a3/technique_donor/technique",
+    "opp:mined/field_effects_overlays/pmd_sky/pmd_ground_g01p05a2/technique_donor/technique",
+    "opp:mined/field_effects_overlays/pmd_sky/pmd_ground_g01p07a1/technique_donor/technique"
+   ],
+   "use_mode": "technique"
+  },
+  {
+   "components": [
+    "pose",
+    "shading",
+    "silhouette"
+   ],
+   "host": "Pokemon battle sprites",
+   "kind": "library",
+   "library_id": "lib:hgss/pokemon_sprites/hgss_battle_forms/enhancement_candidate/composite_input",
+   "members": 4,
+   "needs_evidence": 0,
+   "opportunity_class": "enhancement_candidate",
+   "promoted": 2,
+   "rank": 32,
+   "rank_score": 3.574,
+   "records": 2,
+   "source_id": "hgss",
+   "subsystem": "pokemon_sprites",
+   "techniques": [],
+   "title": "hgss_battle_forms [hgss/pokemon_sprites] enhancement_candidate",
+   "top_records": [
+    "opp:mined/pokemon_battle_sprites/hgss/form_giratina_altered/enhancement_candidate/composite_input",
+    "opp:mined/pokemon_battle_sprites/hgss/form_pichu_normal/enhancement_candidate/composite_input"
+   ],
+   "use_mode": "composite_input"
+  },
+  {
+   "components": [
+    "animation_frame",
+    "pose"
+   ],
+   "host": "Pokemon animation/summary presentation",
+   "kind": "library",
+   "library_id": "lib:ranger2/pokemon_animation/ranger_poke_w/novel_detail/component",
+   "members": 3191,
+   "needs_evidence": 163,
+   "opportunity_class": "novel_detail",
+   "promoted": 1,
+   "rank": 33,
+   "rank_score": 3.568,
+   "records": 1,
+   "source_id": "ranger2",
+   "subsystem": "pokemon_animation",
+   "techniques": [],
+   "title": "ranger_poke_w [ranger2/pokemon_animation] novel_detail",
+   "top_records": [
+    "opp:mined/pokemon_animation_reference/ranger2/p089_00_w/novel_detail/component",
+    "opp:mined/pokemon_animation_reference/ranger2/p097_00_w/novel_detail/component",
+    "opp:mined/pokemon_animation_reference/ranger2/p121_00_w/novel_detail/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "environmental_motif",
+    "palette"
+   ],
+   "host": "battle terrain backgrounds / 2D special-area backdrops",
+   "kind": "library",
+   "library_id": "lib:ranger2/backgrounds/ranger_battle/capbg/component_donor/component",
+   "members": 40,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 10,
+   "rank": 34,
+   "rank_score": 3.523,
+   "records": 10,
+   "source_id": "ranger2",
+   "subsystem": "backgrounds",
+   "techniques": [],
+   "title": "ranger_battle/capbg [ranger2/backgrounds] component_donor",
+   "top_records": [
+    "opp:mined/battle_backgrounds_hud/ranger2/ranger_battle/capbg000/component_donor/component",
+    "opp:mined/battle_backgrounds_hud/ranger2/ranger_battle/capbg001/component_donor/component",
+    "opp:mined/battle_backgrounds_hud/ranger2/ranger_battle/capbg002/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "environmental_motif",
+    "palette",
+    "texture_region"
+   ],
+   "host": "battle terrain backgrounds / 2D special-area backdrops",
+   "kind": "library",
+   "library_id": "lib:pmd_sky/backgrounds/pmd_mapbg_p/component_donor/component",
+   "members": 21,
+   "needs_evidence": 0,
+   "opportunity_class": "component_donor",
+   "promoted": 7,
+   "rank": 35,
+   "rank_score": 3.519,
+   "records": 7,
+   "source_id": "pmd_sky",
+   "subsystem": "backgrounds",
+   "techniques": [],
+   "title": "pmd_mapbg_p [pmd_sky/backgrounds] component_donor",
+   "top_records": [
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_p03p01a/component_donor/component",
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_p03p02a/component_donor/component",
+    "opp:mined/field_environment_art/pmd_sky/pmd_mapbg_p05p03a/component_donor/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "animation_timing"
+   ],
+   "finding_id": "opp:ranger2/effect_sequencing",
+   "host": "battle move animation scripts",
+   "kind": "explicit",
+   "members": 0,
+   "needs_evidence": 0,
+   "opportunity_class": "technique_donor",
+   "promoted": 1,
+   "rank": 36,
+   "rank_score": 3.459,
+   "records": 1,
+   "source_id": "ranger2",
+   "subsystem": "battle_effects_particles",
+   "techniques": [],
+   "title": "Ranger 2 multi-phase effect sequencing (launch/impact/embers)",
+   "top_records": [
+    "opp:ranger2/effect_sequencing"
+   ],
+   "use_mode": "technique"
+  },
+  {
+   "components": [
+    "animation_frame"
+   ],
+   "host": "trainer class sprites",
+   "kind": "library",
+   "library_id": "lib:hgss/trainer_sprites/hgss_back/novel_detail/component",
+   "members": 2,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_detail",
+   "promoted": 2,
+   "rank": 37,
+   "rank_score": 3.411,
+   "records": 2,
+   "source_id": "hgss",
+   "subsystem": "trainer_sprites",
+   "techniques": [],
+   "title": "hgss_back [hgss/trainer_sprites] novel_detail",
+   "top_records": [
+    "opp:mined/trainer_battle_sprites/hgss/hgss_back_003/novel_detail/component",
+    "opp:mined/trainer_battle_sprites/hgss/hgss_back_015/novel_detail/component"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
+    "UI_element",
+    "animation_frame"
+   ],
+   "finding_id": "opp:pmd_sky/battler_status_indicators",
+   "host": "battle: temporary indicator layer above battler sprites (alongside the healthbox status icon)",
+   "kind": "explicit",
+   "members": 0,
+   "needs_evidence": 0,
+   "opportunity_class": "novel_detail",
+   "promoted": 1,
+   "rank": 38,
+   "rank_score": 3.405,
+   "records": 1,
+   "source_id": "pmd_sky",
+   "subsystem": "battle: temporary indicator layer above battler sprites (alongside the healthbox status icon)",
+   "techniques": [],
+   "title": "Temporary status indicators above battlers (PMD Sky status-icon model)",
+   "top_records": [
+    "opp:pmd_sky/battler_status_indicators"
+   ],
+   "use_mode": "mixed"
+  },
+  {
+   "components": [
+    "shading"
+   ],
+   "host": "overworld NPC/player sprites",
+   "kind": "library",
+   "library_id": "lib:hgss/npc_player_sprites/hgss_mmodel/enhancement_candidate/composite_input",
+   "members": 1,
+   "needs_evidence": 0,
+   "opportunity_class": "enhancement_candidate",
+   "promoted": 1,
+   "rank": 39,
+   "rank_score": 3.405,
+   "records": 1,
+   "source_id": "hgss",
+   "subsystem": "npc_player_sprites",
+   "techniques": [],
+   "title": "hgss_mmodel [hgss/npc_player_sprites] enhancement_candidate",
+   "top_records": [
+    "opp:mined/field_npc_player_sprites/hgss/hgss_mmodel_00000061/enhancement_candidate/composite_input"
+   ],
+   "use_mode": "composite_input"
+  },
+  {
+   "components": [],
+   "host": "Pokemon battle sprites",
+   "kind": "library",
+   "library_id": "lib:hgss/pokemon_sprites/hgss_battle_sprites/replacement_candidate/whole_asset",
+   "members": 96,
+   "needs_evidence": 0,
+   "opportunity_class": "replacement_candidate",
+   "promoted": 26,
+   "rank": 40,
+   "rank_score": 3.298,
+   "records": 26,
+   "source_id": "hgss",
+   "subsystem": "pokemon_sprites",
+   "techniques": [],
+   "title": "hgss_battle_sprites [hgss/pokemon_sprites] replacement_candidate",
+   "top_records": [
+    "opp:mined/pokemon_battle_sprites/hgss/sp_0033/replacement_candidate/whole_asset",
+    "opp:mined/pokemon_battle_sprites/hgss/sp_0100/replacement_candidate/whole_asset",
+    "opp:mined/pokemon_battle_sprites/hgss/sp_0101/replacement_candidate/whole_asset"
+   ],
+   "use_mode": "whole_asset"
+  },
+  {
+   "components": [],
+   "host": "trainer class sprites",
+   "kind": "library",
+   "library_id": "lib:hgss/trainer_sprites/hgss_front/replacement_candidate/whole_asset",
+   "members": 6,
+   "needs_evidence": 0,
+   "opportunity_class": "replacement_candidate",
+   "promoted": 6,
+   "rank": 41,
+   "rank_score": 3.02,
+   "records": 6,
+   "source_id": "hgss",
+   "subsystem": "trainer_sprites",
+   "techniques": [],
+   "title": "hgss_front [hgss/trainer_sprites] replacement_candidate",
+   "top_records": [
+    "opp:mined/trainer_battle_sprites/hgss/hgss_front_002/replacement_candidate/whole_asset",
+    "opp:mined/trainer_battle_sprites/hgss/hgss_front_003/replacement_candidate/whole_asset",
+    "opp:mined/trainer_battle_sprites/hgss/hgss_front_006/replacement_candidate/whole_asset"
+   ],
+   "use_mode": "whole_asset"
+  },
+  {
+   "components": [
+    "clothing_detail",
+    "shading"
+   ],
+   "finding_id": "opp:trainer/tc_ace_trainer_female/enhancement",
+   "host": null,
+   "kind": "explicit",
+   "members": 1,
+   "needs_evidence": 0,
+   "opportunity_class": "enhancement_candidate",
+   "promoted": 1,
+   "rank": 42,
+   "rank_score": 2.811,
+   "records": 1,
+   "source_id": "hgss",
    "subsystem": "trainer_battle_sprites",
-   "tags": [
+   "techniques": [],
+   "title": "ace trainer female: Platinum sprite enhanced with HGSS shading/detail",
+   "top_records": [
+    "opp:trainer/tc_ace_trainer_female/enhancement"
+   ],
+   "use_mode": "component"
+  },
+  {
+   "components": [
     "accessory",
     "clothing_detail",
     "shading"
    ],
-   "target_count": 2,
-   "targets_sample": [
-    "trainer_battle_sprites/tc_ace_trainer_female",
-    "trainer_battle_sprites/tc_ace_trainer_male"
-   ],
-   "work_lane": "native_enhancement"
-  },
-  {
-   "groups": 2,
-   "kind": "evidence",
-   "members": 3,
-   "priority_score": 0.5,
-   "rank": 4,
-   "source_id": "hgss",
-   "subsystem": "pokemon_battle_sprites",
-   "target_count": 2,
-   "targets": null,
-   "targets_sample": [
-    "pokemon_battle_sprites/form_egg",
-    "pokemon_battle_sprites/form_shadow"
-   ],
-   "work_lane": "evidence"
-  },
-  {
-   "groups": 4,
-   "kind": "evidence",
-   "members": 4,
-   "priority_score": 0.3,
-   "rank": 5,
-   "source_id": "hgss",
-   "subsystem": "field_npc_player_sprites",
-   "target_count": 4,
-   "targets": null,
-   "targets_sample": [
-    "field_npc_player_sprites/fs_npc_prof_rowan",
-    "field_npc_player_sprites/fs_npc_skier_f",
-    "field_npc_player_sprites/fs_player_dp_player_f",
-    "field_npc_player_sprites/fs_player_dp_player_m"
-   ],
-   "work_lane": "evidence"
-  },
-  {
-   "groups": 1,
-   "kind": "evidence",
-   "members": 2,
-   "priority_score": 0.3,
-   "rank": 6,
-   "source_id": "hgss",
-   "subsystem": "menu_ui_frames",
-   "target_count": 1,
-   "targets": null,
-   "targets_sample": [
-    "menu_ui_frames/family:menu_ui_frames"
-   ],
-   "work_lane": "evidence"
-  },
-  {
-   "groups": 1,
-   "kind": "component_pool",
-   "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped",
-   "priority_score": 0.25,
-   "rank": 7,
-   "source_id": "hgss",
-   "subsystem": "pokemon_battle_sprites",
-   "target_count": null,
-   "work_lane": "native_enhancement"
-  },
-  {
-   "groups": 23,
-   "kind": "component_pool",
-   "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped",
-   "priority_score": 0.2,
-   "rank": 8,
-   "source_id": "hgss",
-   "subsystem": "field_environment_art",
-   "target_count": null,
-   "work_lane": "native_enhancement"
-  },
-  {
-   "groups": 1,
-   "kind": "evidence",
-   "members": 27,
-   "priority_score": 0.2,
-   "rank": 9,
-   "source_id": "hgss",
-   "subsystem": "party_summary_ui",
-   "target_count": 1,
-   "targets": null,
-   "targets_sample": [
-    "party_summary_ui/family:party_summary_ui"
-   ],
-   "work_lane": "evidence"
-  },
-  {
-   "groups": 1,
-   "kind": "evidence",
-   "members": 123,
-   "priority_score": 0.2,
-   "rank": 10,
-   "source_id": "hgss",
-   "subsystem": "pokedex_ui",
-   "target_count": 1,
-   "targets": null,
-   "targets_sample": [
-    "pokedex_ui/family:pokedex_ui"
-   ],
-   "work_lane": "evidence"
-  },
-  {
-   "groups": 467,
-   "kind": "technique_pool",
-   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
-   "priority_score": 0.2,
-   "rank": 11,
-   "source_id": "pmd_sky",
-   "subsystem": "field_environment_art",
-   "target_count": null,
-   "work_lane": "technique_only"
-  },
-  {
-   "groups": 905,
-   "kind": "technique_pool",
-   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
-   "priority_score": 0.2,
-   "rank": 12,
-   "source_id": "ranger2",
-   "subsystem": "field_environment_art",
-   "target_count": null,
-   "work_lane": "technique_only"
-  },
-  {
-   "groups": 111,
-   "kind": "component_pool",
-   "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped",
-   "priority_score": 0.15,
-   "rank": 13,
-   "source_id": "hgss",
-   "subsystem": "field_npc_player_sprites",
-   "target_count": null,
-   "work_lane": "native_enhancement"
-  },
-  {
-   "groups": 8,
-   "kind": "component_pool",
-   "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped",
-   "priority_score": 0.15,
-   "rank": 14,
-   "source_id": "diamond",
-   "subsystem": "trainer_battle_sprites",
-   "target_count": null,
-   "work_lane": "native_enhancement"
-  },
-  {
-   "groups": 60,
-   "kind": "component_pool",
-   "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped",
-   "priority_score": 0.15,
-   "rank": 15,
+   "finding_id": "opp:trainer/tc_ace_trainer_male/enhancement",
+   "host": null,
+   "kind": "explicit",
+   "members": 1,
+   "needs_evidence": 0,
+   "opportunity_class": "enhancement_candidate",
+   "promoted": 1,
+   "rank": 43,
+   "rank_score": 2.811,
+   "records": 1,
    "source_id": "hgss",
    "subsystem": "trainer_battle_sprites",
-   "target_count": null,
-   "work_lane": "native_enhancement"
-  },
-  {
-   "groups": 636,
-   "kind": "technique_pool",
-   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
-   "priority_score": 0.15,
-   "rank": 16,
-   "source_id": "ranger2",
-   "subsystem": "battle_effects_particles",
-   "target_count": null,
-   "work_lane": "technique_only"
-  },
-  {
-   "groups": 523,
-   "kind": "technique_pool",
-   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
-   "priority_score": 0.15,
-   "rank": 17,
-   "source_id": "pmd_sky",
-   "subsystem": "field_effects_overlays",
-   "target_count": null,
-   "work_lane": "technique_only"
-  },
-  {
-   "groups": 20,
-   "kind": "technique_pool",
-   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
-   "priority_score": 0.15,
-   "rank": 18,
-   "source_id": "pmd_sky",
-   "subsystem": "menu_ui_frames",
-   "target_count": null,
-   "work_lane": "technique_only"
-  },
-  {
-   "groups": 4,
-   "kind": "component_pool",
-   "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped",
-   "priority_score": 0.1,
-   "rank": 19,
-   "source_id": "hgss",
-   "subsystem": "pokemon_icons",
-   "target_count": null,
-   "work_lane": "native_enhancement"
-  },
-  {
-   "groups": 30,
-   "kind": "technique_pool",
-   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
-   "priority_score": 0.1,
-   "rank": 20,
-   "source_id": "pmd_sky",
-   "subsystem": "title_and_presentation",
-   "target_count": null,
-   "work_lane": "technique_only"
-  },
-  {
-   "groups": 1533,
-   "kind": "technique_pool",
-   "note": "technique-class groups without explicit technique_reference records; scope a target + technique before any implementation",
-   "priority_score": 0.05,
-   "rank": 21,
-   "source_id": "ranger2",
-   "subsystem": "pokemon_animation_reference",
-   "target_count": null,
-   "work_lane": "technique_only"
-  },
-  {
-   "groups": 26,
-   "kind": "runtime_qa",
-   "priority_score": 0.0,
-   "rank": 22,
-   "source_id": "hgss",
-   "subsystem": "pokemon_battle_sprites",
-   "work_lane": "direct_replacement"
-  },
-  {
-   "groups": 6,
-   "kind": "runtime_qa",
-   "priority_score": 0.0,
-   "rank": 23,
-   "source_id": "hgss",
-   "subsystem": "trainer_battle_sprites",
-   "work_lane": "direct_replacement"
+   "techniques": [],
+   "title": "ace trainer male: Platinum sprite enhanced with HGSS shading/detail",
+   "top_records": [
+    "opp:trainer/tc_ace_trainer_male/enhancement"
+   ],
+   "use_mode": "component"
   }
  ],
- "pending_subsystems": [],
- "schema_version": 1
+ "schema_version": 4,
+ "unranked": [
+  {
+   "best_composite": 3.757,
+   "domain": "transitions_presentation",
+   "family": "ranger_event/event",
+   "kind": "needs_evidence_cluster",
+   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
+   "opportunity_class": "novel_capability",
+   "records": 76,
+   "source_id": "ranger2"
+  },
+  {
+   "best_composite": 3.568,
+   "domain": "transitions_presentation",
+   "family": "ranger_ending/edu",
+   "kind": "needs_evidence_cluster",
+   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
+   "opportunity_class": "novel_capability",
+   "records": 31,
+   "source_id": "ranger2"
+  },
+  {
+   "best_composite": 3.568,
+   "domain": "transitions_presentation",
+   "family": "ranger_event/event",
+   "kind": "needs_evidence_cluster",
+   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
+   "opportunity_class": "technique_donor",
+   "records": 53,
+   "source_id": "ranger2"
+  },
+  {
+   "best_composite": 3.432,
+   "domain": "environmental_effects",
+   "family": "pmd_mapbg_d",
+   "kind": "needs_evidence_cluster",
+   "next_evidence": "render a small sample with the SkyTemple-based decoder and review",
+   "opportunity_class": "technique_donor",
+   "records": 20,
+   "source_id": "pmd_sky"
+  },
+  {
+   "best_composite": 3.432,
+   "domain": "environmental_effects",
+   "family": "pmd_mapbg_p",
+   "kind": "needs_evidence_cluster",
+   "next_evidence": "render a small sample with the SkyTemple-based decoder and review",
+   "opportunity_class": "technique_donor",
+   "records": 15,
+   "source_id": "pmd_sky"
+  },
+  {
+   "best_composite": 3.432,
+   "domain": "environmental_effects",
+   "family": "pmd_mapbg_v",
+   "kind": "needs_evidence_cluster",
+   "next_evidence": "render a small sample with the SkyTemple-based decoder and review",
+   "opportunity_class": "technique_donor",
+   "records": 18,
+   "source_id": "pmd_sky"
+  },
+  {
+   "best_composite": 3.405,
+   "domain": "interface_embellishments",
+   "family": "ranger_interface/i",
+   "kind": "needs_evidence_cluster",
+   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
+   "opportunity_class": "novel_detail",
+   "records": 5,
+   "source_id": "ranger2"
+  },
+  {
+   "best_composite": 3.405,
+   "domain": "pokemon_animation",
+   "family": "ranger_poke_w",
+   "kind": "needs_evidence_cluster",
+   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
+   "opportunity_class": "novel_detail",
+   "records": 163,
+   "source_id": "ranger2"
+  },
+  {
+   "best_composite": 3.378,
+   "domain": "npc_player_sprites",
+   "family": "hgss_mmodel",
+   "kind": "needs_evidence_cluster",
+   "next_evidence": "compare against the Platinum counterpart / verify subject identity with a render",
+   "opportunity_class": "component_donor",
+   "records": 4,
+   "source_id": "hgss"
+  },
+  {
+   "best_composite": 3.378,
+   "domain": "transitions_presentation",
+   "family": "ranger_ending/edu",
+   "kind": "needs_evidence_cluster",
+   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
+   "opportunity_class": "technique_donor",
+   "records": 31,
+   "source_id": "ranger2"
+  },
+  {
+   "best_composite": 3.351,
+   "domain": "environmental_effects",
+   "family": "pmd_mapbg_h",
+   "kind": "needs_evidence_cluster",
+   "next_evidence": "render a small sample with the SkyTemple-based decoder and review",
+   "opportunity_class": "technique_donor",
+   "records": 12,
+   "source_id": "pmd_sky"
+  },
+  {
+   "best_composite": 3.243,
+   "domain": "environmental_effects",
+   "family": "pmd_mapbg_g",
+   "kind": "needs_evidence_cluster",
+   "next_evidence": "render a small sample with the SkyTemple-based decoder and review",
+   "opportunity_class": "technique_donor",
+   "records": 9,
+   "source_id": "pmd_sky"
+  },
+  {
+   "best_composite": 3.243,
+   "domain": "environmental_effects",
+   "family": "pmd_mapbg_t",
+   "kind": "needs_evidence_cluster",
+   "next_evidence": "render a small sample with the SkyTemple-based decoder and review",
+   "opportunity_class": "technique_donor",
+   "records": 8,
+   "source_id": "pmd_sky"
+  },
+  {
+   "best_composite": 3.189,
+   "domain": "transitions_presentation",
+   "family": "ranger_title/title",
+   "kind": "needs_evidence_cluster",
+   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
+   "opportunity_class": "technique_donor",
+   "records": 6,
+   "source_id": "ranger2"
+  },
+  {
+   "best_composite": 3.189,
+   "domain": "ui_menus_hud",
+   "family": "ranger_menu/um",
+   "kind": "needs_evidence_cluster",
+   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
+   "opportunity_class": "component_donor",
+   "records": 1,
+   "source_id": "ranger2"
+  },
+  {
+   "best_composite": 3.162,
+   "domain": "environmental_effects",
+   "family": "pmd_mapbg_s",
+   "kind": "needs_evidence_cluster",
+   "next_evidence": "render a small sample with the SkyTemple-based decoder and review",
+   "opportunity_class": "technique_donor",
+   "records": 3,
+   "source_id": "pmd_sky"
+  },
+  {
+   "best_composite": 3.081,
+   "domain": "field_effects",
+   "family": "pmd_ground_p",
+   "kind": "needs_evidence_cluster",
+   "next_evidence": "render a small sample with the SkyTemple-based decoder and review",
+   "opportunity_class": "technique_donor",
+   "records": 1,
+   "source_id": "pmd_sky"
+  },
+  {
+   "best_composite": 3.054,
+   "domain": "pokemon_animation",
+   "family": "ranger_poke_a",
+   "kind": "needs_evidence_cluster",
+   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
+   "opportunity_class": "technique_donor",
+   "records": 96,
+   "source_id": "ranger2"
+  },
+  {
+   "best_composite": 3.054,
+   "domain": "pokemon_animation",
+   "family": "ranger_poke_s",
+   "kind": "needs_evidence_cluster",
+   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
+   "opportunity_class": "technique_donor",
+   "records": 52,
+   "source_id": "ranger2"
+  },
+  {
+   "best_composite": 3.054,
+   "domain": "pokemon_animation",
+   "family": "ranger_poke_t",
+   "kind": "needs_evidence_cluster",
+   "next_evidence": "render a sample with render_ranger_pokemon_package.py (pinned pokeranger2) and review",
+   "opportunity_class": "technique_donor",
+   "records": 37,
+   "source_id": "ranger2"
+  },
+  {
+   "best_composite": 2.811,
+   "domain": "pokemon_sprites",
+   "family": "hgss_battle_forms",
+   "kind": "needs_evidence_cluster",
+   "next_evidence": "compare against the Platinum counterpart / verify subject identity with a render",
+   "opportunity_class": "novel_detail",
+   "records": 2,
+   "source_id": "hgss"
+  },
+  {
+   "domain": "pokemon_battle_sprites",
+   "kind": "runtime_qa_gate",
+   "next_evidence": "runtime QA before any replacement import",
+   "opportunity_class": "replacement_candidate",
+   "records": 26,
+   "source_id": "hgss"
+  },
+  {
+   "domain": "trainer_battle_sprites",
+   "kind": "runtime_qa_gate",
+   "next_evidence": "runtime QA before any replacement import",
+   "opportunity_class": "replacement_candidate",
+   "records": 6,
+   "source_id": "hgss"
+  }
+ ]
 }

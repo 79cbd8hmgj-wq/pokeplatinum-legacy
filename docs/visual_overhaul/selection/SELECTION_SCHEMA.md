@@ -114,3 +114,36 @@ every ledger decision maps to an outcome; records carry complete provenance (sou
 
 ### Work lanes (`IMPLEMENTATION_QUEUE`)
 A `direct_replacement` (implement, runtime_qa) · B `native_enhancement` (component_review, composite_build) · C `technique_only` (technique_build, technique_pool) · `evidence`.
+
+## Opportunity classes (selection v3: replacement is one outcome among eight)
+
+`OPPORTUNITY_CLASSES.json` is the canonical classification; it is additive (ledgers, rules, `USE_OUTCOMES.json`, `components/*.json` unchanged).
+
+| Tier | Class | Meaning (short) | Target | Donor pixels |
+|---:|---|---|---|---|
+| 1 | `novel_capability` | feature Platinum does not expose in the same way | none allowed (name `host_system`) | any |
+| 1 | `novel_detail` | small new layer/feedback element, replaces nothing | none allowed (name `host_system`) | any |
+| 2 | `technique_donor` | choreography/timing/palette sequencing/state logic, re-implemented natively | system or asset | **none** |
+| 3 | `enhancement_candidate` | improve an existing Platinum asset/system from donor components/techniques; target stays `platinum_native` | asset/system + linked records | any |
+| 4 | `component_donor` | only part of an asset/primitive | asset/system | any |
+| 5 | `replacement_candidate` | whole donor asset replaces the Platinum equivalent | asset | `donor_pixels` |
+| 6 | `reference_only` | design understanding only | none | none |
+| 7 | `reject` | no value | none | none |
+
+Sources of classified rows (`OPPORTUNITY_REGISTER.*`, built by `build_opportunities.py`): explicit findings (`opportunities/findings.json`, validated by `opportunities.validate_findings`), existing use records (`component_donor`→component_donor, `composite_input`→enhancement_candidate, `technique_reference`→technique_donor), ledger `preferred` verdicts (→replacement_candidate), and digest-bound `none_found` component reviews (→reject). Group-level pools (technique-class groups, `no_native_target` groups, alternates) are counted as **unscoped pools**, not findings. `not_selected`/`needs_evidence` groups are unclassified (not reject).
+
+Finding fields: `finding_id, classification, status, donor{game, source_id, cataloged, group_ids?, locator}, target{kind asset|system|none, subsystem, target_id|system, native_ref?, refs[], host_system?}, useful, why, constraints[], adaptation[], cost, risk, confidence, feasibility(1-3), evidence{basis, summary, refs[], bound_digest?}, pixel_use, tags[], links{use_records[]}?, needs_donor_verification?`.
+
+Evidence basis: `catalog_evidence` (cited groups bound by digest; stale = error), `repo_document` (refs must exist), `prior_session_unrecorded` (evidence artifacts are not in this repo and the donor is not a cataloged source: capped at confidence low / feasibility 1, never `human_confirmed`, queue shows **verify donor first**). Nothing is invented for such findings beyond what was reported.
+
+Queue: `IMPLEMENTATION_QUEUE.*` items carry `opportunity_class`, `feasibility`; ranking is tier → feasibility → score, so novel capability/detail precede technique, enhancement, component and replacement work. Tests: `test_opportunities.py`. Pixel compositing remains manual; no Platinum asset is modified.
+
+## Phase scope and ranking (DS-only phase)
+
+`PHASE_SCOPE.json` gates the active set to DS donors (hgss, diamond, pmd_sky, ranger2; platinum is baseline, diamond control). GBA/GBC findings live in `opportunities/deferred/non_ds_findings.json`: validated for preservation only, never read by `build_opportunities.py`/`build_queue.py`. Active findings additionally carry `scores` (1-5: visual_impact, novelty, feasibility, reuse, cost, risk, slice), `asset_use` (whole_assets|components|techniques|mixed), optional `donor.verification[]` (repo, 40-hex commit, path, fact; required for evidence basis `donor_checkout_verification`) and optional `covers_pools[]` (suppresses an unscoped pool in the queue). `reference_only`/`reject` are never scored or queued. `rank_score` = weighted mean (weights in `OPPORTUNITY_CLASSES.json` -> `ranking`); the queue ranks across all classes by it, with unscoped pools and open evidence listed unranked. See `DS_OPPORTUNITY_REASSESSMENT.md`.
+
+## Systematic mining of the DS catalog (pool v1)
+
+`tools/visual_overhaul/selection/mine_*.py` turn every candidate group (all 8,581, not only hand-picked ones) into a classified, scored opportunity pool without opening donor repos: `mine_features.py` (member/ledger/evidence/structure features; `domain` = mining pass), `mine_rules.py` (signals -> proposals for all eight classes -> ten-dimension score), `mine_pool.py` (records, libraries, per-domain passes `mining/passes/*.json`, `mining/NEEDS_EVIDENCE_QUEUE.json`), `mine_report.py` (summaries, `mining/ranked/*.md`). Artifacts: `OPPORTUNITY_POOL.json`, `OPPORTUNITY_POOL_SUMMARY.md`, `DS_OPPORTUNITY_MINING_SUMMARY.md`; queue rebuilt from the pool (`build_queue.py`).
+
+Record fields: opportunity_id, source_id, group_id + member_digest + member_sample, subsystem/domain/family, classification (+secondary_classes), use_mode (whole_asset|component|technique|composite_input|mixed), platinum_target_exists / platinum_target / platinum_host{system, refs}, useful_property, component_categories, technique_tags, why_surfaced (signals), why_it_matters, expected_visual_gain, novelty, reuse_potential, adaptation, format_notes, cost, risk, confidence, evidence_pointers, donor_pixels_intended, pixel_use, remains_platinum_native, human_visual_review, dims (visual_impact, novelty, feasibility, reuse, library, evidence, cost, risk, dependency, slice), composite, status (promoted|needs_evidence), targeted_review, subsumed_by/related_explicit. A group may yield up to three records of different (class, use_mode). Explicit findings are merged as `origin: explicit`; mined records on their groups carry `subsumed_by`. `reference_only`/`reject` are group dispositions in `mining/passes` (never promoted records). Diamond groups are control/reference only. `validate_pool.py` + `test_mining.py` enforce provenance, scope (DS-only, deferred ids excluded), Diamond control, class/use consistency, reproducibility and that every group is processed exactly once.
