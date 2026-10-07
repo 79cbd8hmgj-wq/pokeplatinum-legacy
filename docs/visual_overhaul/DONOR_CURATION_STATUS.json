@@ -1,0 +1,58 @@
+{
+ "schema_version": 1,
+ "invariants": {
+  "catalog_assets": 64841,
+  "curated_assets": 64841,
+  "missing": 0,
+  "extra": 0,
+  "duplicates": 0,
+  "unreviewed": 0,
+  "complete": true
+ },
+ "status_totals": {
+  "decode_issue": 1631,
+  "reject": 9302,
+  "usable": 53908
+ },
+ "ledger_status_counts": {
+  "A": {
+   "decode_issue": 218,
+   "reject": 150,
+   "usable": 40191
+  },
+  "B": {
+   "decode_issue": 929,
+   "reject": 9147,
+   "usable": 5081
+  },
+  "CDE": {
+   "decode_issue": 484,
+   "reject": 5,
+   "usable": 8636
+  }
+ },
+ "source_status_counts": {
+  "diamond": {
+   "reject": 5208,
+   "usable": 2664
+  },
+  "hgss": {
+   "decode_issue": 283,
+   "reject": 2785,
+   "usable": 2716
+  },
+  "pmd_sky": {
+   "decode_issue": 198,
+   "reject": 2,
+   "usable": 1931
+  },
+  "ranger2": {
+   "decode_issue": 1150,
+   "reject": 1307,
+   "usable": 46597
+  }
+ },
+ "missing_sample": [],
+ "extra_sample": [],
+ "duplicate_sample": []
+}
