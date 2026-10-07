@@ -43,14 +43,14 @@ def main() -> int:
     recs = [rows[k] for k in sorted(rows)]
     if len(recs) != base["asset_count"] or any(r["review_status"] == "unreviewed" for r in recs):
         raise SystemExit("coverage mismatch")
-    counts = Counter((r["lane"], r["review_status"]) for r in recs)
+    counts = Counter((r.get("lane", "A_render_ready"), r["review_status"]) for r in recs)
     src = Counter((r["source_id"], r["review_status"]) for r in recs)
     payload = {"schema_version": 1, "scope": "lanes C/D/E recovered state", "asset_count": len(recs),
                "lane_status_counts": {f"{l}:{s}": n for (l, s), n in sorted(counts.items())},
                "source_status_counts": {f"{l}:{s}": n for (l, s), n in sorted(src.items())},
                "recovery_changes": {f"{x}_to_{y}": n for (x, y), n in sorted(changes.items())}, "records": recs}
     a.write_json.write_text(json.dumps(payload, indent=1) + "\n")
-    md = ["# Lanes C/D/E Recovered Curation State", "", "Baseline plus evidence-backed recoveries. No Platinum resources are modified.", "",
+    md = ["# Recovered Curation State", "", "Baseline plus evidence-backed recoveries. No Platinum resources are modified.", "",
           f"- Assets: **{len(recs)}**", "", "| Lane | Status | Assets |", "|---|---|---:|"]
     md += [f"| {l} | {s} | {n} |" for (l, s), n in sorted(counts.items())]
     md += ["", "| Source | Status | Assets |", "|---|---|---:|"] + [f"| {l} | {s} | {n} |" for (l, s), n in sorted(src.items())]

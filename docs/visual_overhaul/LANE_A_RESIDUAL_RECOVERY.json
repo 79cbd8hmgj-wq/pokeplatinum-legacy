@@ -1,0 +1,2443 @@
+{
+ "schema_version": 1,
+ "scope": "lane_a_residual",
+ "asset_count": 218,
+ "state_counts": {
+  "zero_byte": 164,
+  "usable": 19,
+  "tiles_absent_blank": 15,
+  "partial_render_missing_tiles": 14,
+  "ambiguous_candidates": 6
+ },
+ "decision_counts": {
+  "reject:ranger_cell_tiles_absent_in_package": 15,
+  "reject:zero_byte_gender_placeholder": 164,
+  "usable:ranger_tiles_in_sibling_resource": 19
+ },
+ "records": [
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0029:male:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0029:male:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0030:male:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0030:male:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0031:male:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0031:male:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0032:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0032:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0033:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0033:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0034:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0034:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0081:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0081:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0082:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0082:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0100:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0100:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0101:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0101:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0106:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0106:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0107:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0107:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0113:male:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0113:male:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0115:male:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0115:male:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0120:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0120:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0121:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0121:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0124:male:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0124:male:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0128:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0128:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0132:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0132:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0137:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0137:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0144:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0144:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0145:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0145:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0146:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0146:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0150:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0150:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0151:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0151:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0201:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0201:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0233:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0233:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0236:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0236:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0237:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0237:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0238:male:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0238:male:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0241:male:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0241:male:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0242:male:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0242:male:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0243:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0243:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0244:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0244:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0245:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0245:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0249:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0249:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0250:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0250:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0251:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0251:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0292:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0292:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0313:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0313:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0314:male:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0314:male:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0337:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0337:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0338:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0338:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0343:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0343:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0344:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0344:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0374:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0374:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0375:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0375:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0376:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0376:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0377:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0377:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0378:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0378:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0379:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0379:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0380:male:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0380:male:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0381:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0381:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0382:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0382:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0383:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0383:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0384:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0384:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0385:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0385:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0386:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0386:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0413:male:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0413:male:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0414:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0414:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0416:male:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0416:male:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0436:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0436:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0437:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0437:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0440:male:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0440:male:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0462:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0462:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0474:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0474:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0475:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0475:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0478:male:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0478:male:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0479:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0479:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0480:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0480:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0481:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0481:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0482:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0482:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0483:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0483:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0484:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0484:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0486:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0486:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0487:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0487:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0488:male:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0488:male:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0489:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0489:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0490:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0490:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0491:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0491:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0492:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0492:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0493:female:back.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0493:female:front.png",
+   "state": "zero_byte",
+   "sibling_nonempty": true
+  },
+  {
+   "asset_id": "ranger2:pokemon:004:00:p004_00_a02:cell_008",
+   "state": "usable"
+  },
+  {
+   "asset_id": "ranger2:pokemon:004:00:p004_00_a02:cell_009",
+   "state": "usable"
+  },
+  {
+   "asset_id": "ranger2:pokemon:004:00:p004_00_a02:cell_010",
+   "state": "usable"
+  },
+  {
+   "asset_id": "ranger2:pokemon:004:00:p004_00_a02:cell_012",
+   "state": "usable"
+  },
+  {
+   "asset_id": "ranger2:pokemon:004:00:p004_00_a02:cell_015",
+   "state": "usable"
+  },
+  {
+   "asset_id": "ranger2:pokemon:004:00:p004_00_a02:cell_016",
+   "state": "usable"
+  },
+  {
+   "asset_id": "ranger2:pokemon:004:00:p004_00_a02:cell_017",
+   "state": "usable"
+  },
+  {
+   "asset_id": "ranger2:pokemon:004:00:p004_00_a02:cell_019",
+   "state": "usable"
+  },
+  {
+   "asset_id": "ranger2:pokemon:092:00:p092_00_a02:cell_032",
+   "state": "tiles_absent_blank"
+  },
+  {
+   "asset_id": "ranger2:pokemon:092:00:p092_00_a03:cell_032",
+   "state": "tiles_absent_blank"
+  },
+  {
+   "asset_id": "ranger2:pokemon:147:00:p147_00_s:cell_006",
+   "state": "usable"
+  },
+  {
+   "asset_id": "ranger2:pokemon:147:00:p147_00_s:cell_010",
+   "state": "usable"
+  },
+  {
+   "asset_id": "ranger2:pokemon:193:00:p193_00_a02:cell_060",
+   "state": "tiles_absent_blank"
+  },
+  {
+   "asset_id": "ranger2:pokemon:193:00:p193_00_a03:cell_044",
+   "state": "tiles_absent_blank"
+  },
+  {
+   "asset_id": "ranger2:pokemon:200:00:p200_00_a02:cell_032",
+   "state": "tiles_absent_blank"
+  },
+  {
+   "asset_id": "ranger2:pokemon:280:00:p280_00_a02:cell_024",
+   "state": "tiles_absent_blank"
+  },
+  {
+   "asset_id": "ranger2:pokemon:389:00:p389_00_p01:cell_002",
+   "state": "partial_render_missing_tiles"
+  },
+  {
+   "asset_id": "ranger2:pokemon:389:00:p389_00_p02:cell_002",
+   "state": "partial_render_missing_tiles"
+  },
+  {
+   "asset_id": "ranger2:pokemon:390:00:p390_00_a01:cell_000",
+   "state": "partial_render_missing_tiles"
+  },
+  {
+   "asset_id": "ranger2:pokemon:390:00:p390_00_a01:cell_001",
+   "state": "partial_render_missing_tiles"
+  },
+  {
+   "asset_id": "ranger2:pokemon:390:00:p390_00_a01:cell_002",
+   "state": "partial_render_missing_tiles"
+  },
+  {
+   "asset_id": "ranger2:pokemon:390:00:p390_00_a01:cell_006",
+   "state": "partial_render_missing_tiles"
+  },
+  {
+   "asset_id": "ranger2:pokemon:390:00:p390_00_a02:cell_000",
+   "state": "partial_render_missing_tiles"
+  },
+  {
+   "asset_id": "ranger2:pokemon:390:00:p390_00_a02:cell_001",
+   "state": "partial_render_missing_tiles"
+  },
+  {
+   "asset_id": "ranger2:pokemon:390:00:p390_00_a02:cell_002",
+   "state": "partial_render_missing_tiles"
+  },
+  {
+   "asset_id": "ranger2:pokemon:390:00:p390_00_a02:cell_006",
+   "state": "partial_render_missing_tiles"
+  },
+  {
+   "asset_id": "ranger2:pokemon:390:00:p390_00_t:cell_000",
+   "state": "partial_render_missing_tiles"
+  },
+  {
+   "asset_id": "ranger2:pokemon:390:00:p390_00_t:cell_001",
+   "state": "partial_render_missing_tiles"
+  },
+  {
+   "asset_id": "ranger2:pokemon:390:00:p390_00_t:cell_002",
+   "state": "partial_render_missing_tiles"
+  },
+  {
+   "asset_id": "ranger2:pokemon:390:00:p390_00_t:cell_006",
+   "state": "partial_render_missing_tiles"
+  },
+  {
+   "asset_id": "ranger2:pokemon:392:00:p392_00_s:cell_004",
+   "state": "usable"
+  },
+  {
+   "asset_id": "ranger2:pokemon:392:00:p392_00_s:cell_007",
+   "state": "usable"
+  },
+  {
+   "asset_id": "ranger2:pokemon:392:00:p392_00_s:cell_008",
+   "state": "usable"
+  },
+  {
+   "asset_id": "ranger2:pokemon:392:00:p392_00_s:cell_011",
+   "state": "usable"
+  },
+  {
+   "asset_id": "ranger2:pokemon:402:00:p402_00_t:cell_022",
+   "state": "tiles_absent_blank"
+  },
+  {
+   "asset_id": "ranger2:pokemon:402:00:p402_00_t:cell_034",
+   "state": "tiles_absent_blank"
+  },
+  {
+   "asset_id": "ranger2:pokemon:423:01:p423_01_s:cell_016",
+   "state": "tiles_absent_blank"
+  },
+  {
+   "asset_id": "ranger2:pokemon:428:00:p428_00_w:cell_016",
+   "state": "usable"
+  },
+  {
+   "asset_id": "ranger2:pokemon:430:00:p430_00_a01:cell_014",
+   "state": "tiles_absent_blank"
+  },
+  {
+   "asset_id": "ranger2:pokemon:430:00:p430_00_a02:cell_014",
+   "state": "tiles_absent_blank"
+  },
+  {
+   "asset_id": "ranger2:pokemon:430:00:p430_00_p01:cell_014",
+   "state": "tiles_absent_blank"
+  },
+  {
+   "asset_id": "ranger2:pokemon:430:00:p430_00_t:cell_014",
+   "state": "tiles_absent_blank"
+  },
+  {
+   "asset_id": "ranger2:pokemon:443:00:p443_00_a01:cell_008",
+   "state": "usable"
+  },
+  {
+   "asset_id": "ranger2:pokemon:443:00:p443_00_a01:cell_009",
+   "state": "usable"
+  },
+  {
+   "asset_id": "ranger2:pokemon:443:00:p443_00_a01:cell_018",
+   "state": "usable"
+  },
+  {
+   "asset_id": "ranger2:pokemon:443:00:p443_00_a01:cell_019",
+   "state": "usable"
+  },
+  {
+   "asset_id": "ranger2:pokemon:448:00:p448_00_a06:cell_007",
+   "state": "ambiguous_candidates"
+  },
+  {
+   "asset_id": "ranger2:pokemon:448:00:p448_00_a06:cell_013",
+   "state": "ambiguous_candidates"
+  },
+  {
+   "asset_id": "ranger2:pokemon:448:00:p448_00_a09:cell_001",
+   "state": "ambiguous_candidates"
+  },
+  {
+   "asset_id": "ranger2:pokemon:448:00:p448_00_a09:cell_007",
+   "state": "ambiguous_candidates"
+  },
+  {
+   "asset_id": "ranger2:pokemon:448:00:p448_00_a09:cell_013",
+   "state": "ambiguous_candidates"
+  },
+  {
+   "asset_id": "ranger2:pokemon:448:00:p448_00_a09:cell_019",
+   "state": "ambiguous_candidates"
+  },
+  {
+   "asset_id": "ranger2:pokemon:460:00:p460_00_w:cell_012",
+   "state": "tiles_absent_blank"
+  },
+  {
+   "asset_id": "ranger2:pokemon:491:00:p491_00_w:cell_064",
+   "state": "tiles_absent_blank"
+  }
+ ],
+ "decisions": [
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0029:male:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0029/female/back.png is 1012 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0029:male:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0029/female/front.png is 766 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0030:male:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0030/female/back.png is 1653 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0030:male:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0030/female/front.png is 1040 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0031:male:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0031/female/back.png is 1453 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0031:male:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0031/female/front.png is 1655 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0032:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0032/male/back.png is 1247 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0032:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0032/male/front.png is 716 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0033:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0033/male/back.png is 1500 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0033:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0033/male/front.png is 1041 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0034:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0034/male/back.png is 1529 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0034:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0034/male/front.png is 2123 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0081:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0081/male/back.png is 953 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0081:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0081/male/front.png is 591 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0082:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0082/male/back.png is 1618 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0082:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0082/male/front.png is 1373 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0100:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0100/male/back.png is 685 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0100:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0100/male/front.png is 607 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0101:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0101/male/back.png is 808 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0101:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0101/male/front.png is 877 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0106:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0106/male/back.png is 1629 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0106:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0106/male/front.png is 1244 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0107:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0107/male/back.png is 1585 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0107:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0107/male/front.png is 1391 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0113:male:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0113/female/back.png is 1173 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0113:male:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0113/female/front.png is 982 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0115:male:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0115/female/back.png is 1629 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0115:male:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0115/female/front.png is 2036 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0120:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0120/male/back.png is 1225 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0120:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0120/male/front.png is 1029 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0121:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0121/male/back.png is 1649 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0121:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0121/male/front.png is 1161 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0124:male:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0124/female/back.png is 1519 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0124:male:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0124/female/front.png is 1457 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0128:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0128/male/back.png is 1309 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0128:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0128/male/front.png is 1665 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0132:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0132/male/back.png is 617 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0132:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0132/male/front.png is 586 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0137:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0137/male/back.png is 1196 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0137:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0137/male/front.png is 822 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0144:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0144/male/back.png is 1261 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0144:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0144/male/front.png is 2013 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0145:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0145/male/back.png is 1013 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0145:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0145/male/front.png is 1763 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0146:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0146/male/back.png is 1395 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0146:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0146/male/front.png is 1849 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0150:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0150/male/back.png is 1598 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0150:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0150/male/front.png is 1492 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0151:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0151/male/back.png is 1330 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0151:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0151/male/front.png is 846 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0201:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0201/male/back.png is 399 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0201:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0201/male/front.png is 355 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0233:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0233/male/back.png is 989 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0233:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0233/male/front.png is 650 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0236:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0236/male/back.png is 1053 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0236:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0236/male/front.png is 869 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0237:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0237/male/back.png is 1803 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0237:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0237/male/front.png is 1406 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0238:male:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0238/female/back.png is 941 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0238:male:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0238/female/front.png is 773 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0241:male:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0241/female/back.png is 1322 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0241:male:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0241/female/front.png is 1217 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0242:male:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0242/female/back.png is 855 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0242:male:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0242/female/front.png is 1120 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0243:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0243/male/back.png is 1392 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0243:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0243/male/front.png is 1924 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0244:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0244/male/back.png is 1386 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0244:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0244/male/front.png is 1918 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0245:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0245/male/back.png is 1709 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0245:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0245/male/front.png is 2079 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0249:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0249/male/back.png is 1232 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0249:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0249/male/front.png is 1664 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0250:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0250/male/back.png is 1543 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0250:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0250/male/front.png is 2690 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0251:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0251/male/back.png is 1337 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0251:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0251/male/front.png is 804 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0292:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0292/male/back.png is 1570 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0292:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0292/male/front.png is 1103 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0313:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0313/male/back.png is 1517 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0313:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0313/male/front.png is 946 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0314:male:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0314/female/back.png is 1380 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0314:male:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0314/female/front.png is 841 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0337:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0337/male/back.png is 1097 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0337:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0337/male/front.png is 959 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0338:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0338/male/back.png is 1814 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0338:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0338/male/front.png is 1460 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0343:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0343/male/back.png is 1075 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0343:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0343/male/front.png is 776 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0344:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0344/male/back.png is 1666 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0344:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0344/male/front.png is 1856 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0374:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0374/male/back.png is 1276 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0374:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0374/male/front.png is 773 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0375:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0375/male/back.png is 1453 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0375:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0375/male/front.png is 1476 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0376:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0376/male/back.png is 1668 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0376:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0376/male/front.png is 1446 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0377:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0377/male/back.png is 1843 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0377:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0377/male/front.png is 1840 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0378:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0378/male/back.png is 1558 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0378:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0378/male/front.png is 1278 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0379:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0379/male/back.png is 1307 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0379:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0379/male/front.png is 1662 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0380:male:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0380/female/back.png is 1205 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0380:male:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0380/female/front.png is 1431 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0381:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0381/male/back.png is 1311 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0381:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0381/male/front.png is 1802 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0382:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0382/male/back.png is 832 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0382:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0382/male/front.png is 2140 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0383:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0383/male/back.png is 1683 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0383:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0383/male/front.png is 2465 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0384:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0384/male/back.png is 1518 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0384:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0384/male/front.png is 2361 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0385:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0385/male/back.png is 1231 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0385:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0385/male/front.png is 914 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0386:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0386/male/back.png is 927 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0386:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0386/male/front.png is 1583 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0413:male:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0413/female/back.png is 652 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0413:male:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0413/female/front.png is 601 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0414:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0414/male/back.png is 1108 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0414:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0414/male/front.png is 1281 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0416:male:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0416/female/back.png is 1803 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0416:male:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0416/female/front.png is 1410 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0436:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0436/male/back.png is 1066 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0436:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0436/male/front.png is 701 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0437:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0437/male/back.png is 1683 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0437:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0437/male/front.png is 1648 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0440:male:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0440/female/back.png is 1061 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0440:male:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0440/female/front.png is 765 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0462:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0462/male/back.png is 908 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0462:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0462/male/front.png is 1631 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0474:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0474/male/back.png is 1311 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0474:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0474/male/front.png is 923 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0475:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0475/male/back.png is 1389 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0475:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0475/male/front.png is 1409 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0478:male:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0478/female/back.png is 1688 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0478:male:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0478/female/front.png is 1254 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0479:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0479/male/back.png is 1248 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0479:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0479/male/front.png is 822 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0480:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0480/male/back.png is 931 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0480:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0480/male/front.png is 1059 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0481:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0481/male/back.png is 1423 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0481:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0481/male/front.png is 1175 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0482:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0482/male/back.png is 1134 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0482:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0482/male/front.png is 1174 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0483:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0483/male/back.png is 1461 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0483:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0483/male/front.png is 2420 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0484:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0484/male/back.png is 1636 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0484:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0484/male/front.png is 2803 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0486:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0486/male/back.png is 1367 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0486:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0486/male/front.png is 2477 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0487:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0487/male/back.png is 1855 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0487:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0487/male/front.png is 2684 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0488:male:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0488/female/back.png is 1001 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0488:male:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0488/female/front.png is 1611 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0489:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0489/male/back.png is 1099 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0489:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0489/male/front.png is 768 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0490:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0490/male/back.png is 1332 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0490:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0490/male/front.png is 940 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0491:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0491/male/back.png is 1464 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0491:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0491/male/front.png is 1579 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0492:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0492/male/back.png is 1203 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0492:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0492/male/front.png is 801 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0493:female:back.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0493/male/back.png is 961 bytes"
+  },
+  {
+   "asset_id": "hgss:source:files:poketool:pokegra:pokegra:0493:female:front.png",
+   "review_status": "reject",
+   "reason_code": "zero_byte_gender_placeholder",
+   "reason": "Donor file is zero bytes (gender-duplicate placeholder): no pixel data exists. The opposite-gender sibling sprite is a real image and is curated separately.",
+   "detail": "size=0; sibling files/poketool/pokegra/pokegra/0493/male/front.png is 2240 bytes"
+  },
+  {
+   "asset_id": "ranger2:pokemon:004:00:p004_00_a02:cell_008",
+   "review_status": "usable",
+   "reason_code": "ranger_tiles_in_sibling_resource",
+   "reason": "Cell tiles are absent from its own group's character data but present in sibling graphics of the same package; every complete candidate renders identically and nonblank.",
+   "detail": "2 complete candidate(s): ['p004_00_a01.NCBR', 'p004_00_t.NCBR']"
+  },
+  {
+   "asset_id": "ranger2:pokemon:004:00:p004_00_a02:cell_009",
+   "review_status": "usable",
+   "reason_code": "ranger_tiles_in_sibling_resource",
+   "reason": "Cell tiles are absent from its own group's character data but present in sibling graphics of the same package; every complete candidate renders identically and nonblank.",
+   "detail": "2 complete candidate(s): ['p004_00_a01.NCBR', 'p004_00_t.NCBR']"
+  },
+  {
+   "asset_id": "ranger2:pokemon:004:00:p004_00_a02:cell_010",
+   "review_status": "usable",
+   "reason_code": "ranger_tiles_in_sibling_resource",
+   "reason": "Cell tiles are absent from its own group's character data but present in sibling graphics of the same package; every complete candidate renders identically and nonblank.",
+   "detail": "2 complete candidate(s): ['p004_00_a01.NCBR', 'p004_00_t.NCBR']"
+  },
+  {
+   "asset_id": "ranger2:pokemon:004:00:p004_00_a02:cell_012",
+   "review_status": "usable",
+   "reason_code": "ranger_tiles_in_sibling_resource",
+   "reason": "Cell tiles are absent from its own group's character data but present in sibling graphics of the same package; every complete candidate renders identically and nonblank.",
+   "detail": "2 complete candidate(s): ['p004_00_a01.NCBR', 'p004_00_t.NCBR']"
+  },
+  {
+   "asset_id": "ranger2:pokemon:004:00:p004_00_a02:cell_015",
+   "review_status": "usable",
+   "reason_code": "ranger_tiles_in_sibling_resource",
+   "reason": "Cell tiles are absent from its own group's character data but present in sibling graphics of the same package; every complete candidate renders identically and nonblank.",
+   "detail": "2 complete candidate(s): ['p004_00_a01.NCBR', 'p004_00_t.NCBR']"
+  },
+  {
+   "asset_id": "ranger2:pokemon:004:00:p004_00_a02:cell_016",
+   "review_status": "usable",
+   "reason_code": "ranger_tiles_in_sibling_resource",
+   "reason": "Cell tiles are absent from its own group's character data but present in sibling graphics of the same package; every complete candidate renders identically and nonblank.",
+   "detail": "2 complete candidate(s): ['p004_00_a01.NCBR', 'p004_00_t.NCBR']"
+  },
+  {
+   "asset_id": "ranger2:pokemon:004:00:p004_00_a02:cell_017",
+   "review_status": "usable",
+   "reason_code": "ranger_tiles_in_sibling_resource",
+   "reason": "Cell tiles are absent from its own group's character data but present in sibling graphics of the same package; every complete candidate renders identically and nonblank.",
+   "detail": "2 complete candidate(s): ['p004_00_a01.NCBR', 'p004_00_t.NCBR']"
+  },
+  {
+   "asset_id": "ranger2:pokemon:004:00:p004_00_a02:cell_019",
+   "review_status": "usable",
+   "reason_code": "ranger_tiles_in_sibling_resource",
+   "reason": "Cell tiles are absent from its own group's character data but present in sibling graphics of the same package; every complete candidate renders identically and nonblank.",
+   "detail": "2 complete candidate(s): ['p004_00_a01.NCBR', 'p004_00_t.NCBR']"
+  },
+  {
+   "asset_id": "ranger2:pokemon:092:00:p092_00_a02:cell_032",
+   "review_status": "reject",
+   "reason_code": "ranger_cell_tiles_absent_in_package",
+   "reason": "Cell references character tiles that no graphics resource in its package contains and the best candidate renders fully blank; the donor data cannot render it.",
+   "detail": "best candidate misses 1 tile reference(s) and renders 0 pixels"
+  },
+  {
+   "asset_id": "ranger2:pokemon:092:00:p092_00_a03:cell_032",
+   "review_status": "reject",
+   "reason_code": "ranger_cell_tiles_absent_in_package",
+   "reason": "Cell references character tiles that no graphics resource in its package contains and the best candidate renders fully blank; the donor data cannot render it.",
+   "detail": "best candidate misses 1 tile reference(s) and renders 0 pixels"
+  },
+  {
+   "asset_id": "ranger2:pokemon:147:00:p147_00_s:cell_006",
+   "review_status": "usable",
+   "reason_code": "ranger_tiles_in_sibling_resource",
+   "reason": "Cell tiles are absent from its own group's character data but present in sibling graphics of the same package; every complete candidate renders identically and nonblank.",
+   "detail": "2 complete candidate(s): ['p147_00_a01.NCBR', 'p147_00_t.NCBR']"
+  },
+  {
+   "asset_id": "ranger2:pokemon:147:00:p147_00_s:cell_010",
+   "review_status": "usable",
+   "reason_code": "ranger_tiles_in_sibling_resource",
+   "reason": "Cell tiles are absent from its own group's character data but present in sibling graphics of the same package; every complete candidate renders identically and nonblank.",
+   "detail": "2 complete candidate(s): ['p147_00_a01.NCBR', 'p147_00_t.NCBR']"
+  },
+  {
+   "asset_id": "ranger2:pokemon:193:00:p193_00_a02:cell_060",
+   "review_status": "reject",
+   "reason_code": "ranger_cell_tiles_absent_in_package",
+   "reason": "Cell references character tiles that no graphics resource in its package contains and the best candidate renders fully blank; the donor data cannot render it.",
+   "detail": "best candidate misses 1 tile reference(s) and renders 0 pixels"
+  },
+  {
+   "asset_id": "ranger2:pokemon:193:00:p193_00_a03:cell_044",
+   "review_status": "reject",
+   "reason_code": "ranger_cell_tiles_absent_in_package",
+   "reason": "Cell references character tiles that no graphics resource in its package contains and the best candidate renders fully blank; the donor data cannot render it.",
+   "detail": "best candidate misses 1 tile reference(s) and renders 0 pixels"
+  },
+  {
+   "asset_id": "ranger2:pokemon:200:00:p200_00_a02:cell_032",
+   "review_status": "reject",
+   "reason_code": "ranger_cell_tiles_absent_in_package",
+   "reason": "Cell references character tiles that no graphics resource in its package contains and the best candidate renders fully blank; the donor data cannot render it.",
+   "detail": "best candidate misses 1 tile reference(s) and renders 0 pixels"
+  },
+  {
+   "asset_id": "ranger2:pokemon:280:00:p280_00_a02:cell_024",
+   "review_status": "reject",
+   "reason_code": "ranger_cell_tiles_absent_in_package",
+   "reason": "Cell references character tiles that no graphics resource in its package contains and the best candidate renders fully blank; the donor data cannot render it.",
+   "detail": "best candidate misses 1 tile reference(s) and renders 0 pixels"
+  },
+  {
+   "asset_id": "ranger2:pokemon:392:00:p392_00_s:cell_004",
+   "review_status": "usable",
+   "reason_code": "ranger_tiles_in_sibling_resource",
+   "reason": "Cell tiles are absent from its own group's character data but present in sibling graphics of the same package; every complete candidate renders identically and nonblank.",
+   "detail": "3 complete candidate(s): ['p392_00_a01.NCBR', 'p392_00_a02.NCBR', 'p392_00_t.NCBR']"
+  },
+  {
+   "asset_id": "ranger2:pokemon:392:00:p392_00_s:cell_007",
+   "review_status": "usable",
+   "reason_code": "ranger_tiles_in_sibling_resource",
+   "reason": "Cell tiles are absent from its own group's character data but present in sibling graphics of the same package; every complete candidate renders identically and nonblank.",
+   "detail": "3 complete candidate(s): ['p392_00_a01.NCBR', 'p392_00_a02.NCBR', 'p392_00_t.NCBR']"
+  },
+  {
+   "asset_id": "ranger2:pokemon:392:00:p392_00_s:cell_008",
+   "review_status": "usable",
+   "reason_code": "ranger_tiles_in_sibling_resource",
+   "reason": "Cell tiles are absent from its own group's character data but present in sibling graphics of the same package; every complete candidate renders identically and nonblank.",
+   "detail": "3 complete candidate(s): ['p392_00_a01.NCBR', 'p392_00_a02.NCBR', 'p392_00_t.NCBR']"
+  },
+  {
+   "asset_id": "ranger2:pokemon:392:00:p392_00_s:cell_011",
+   "review_status": "usable",
+   "reason_code": "ranger_tiles_in_sibling_resource",
+   "reason": "Cell tiles are absent from its own group's character data but present in sibling graphics of the same package; every complete candidate renders identically and nonblank.",
+   "detail": "3 complete candidate(s): ['p392_00_a01.NCBR', 'p392_00_a02.NCBR', 'p392_00_t.NCBR']"
+  },
+  {
+   "asset_id": "ranger2:pokemon:402:00:p402_00_t:cell_022",
+   "review_status": "reject",
+   "reason_code": "ranger_cell_tiles_absent_in_package",
+   "reason": "Cell references character tiles that no graphics resource in its package contains and the best candidate renders fully blank; the donor data cannot render it.",
+   "detail": "best candidate misses 5 tile reference(s) and renders 0 pixels"
+  },
+  {
+   "asset_id": "ranger2:pokemon:402:00:p402_00_t:cell_034",
+   "review_status": "reject",
+   "reason_code": "ranger_cell_tiles_absent_in_package",
+   "reason": "Cell references character tiles that no graphics resource in its package contains and the best candidate renders fully blank; the donor data cannot render it.",
+   "detail": "best candidate misses 5 tile reference(s) and renders 0 pixels"
+  },
+  {
+   "asset_id": "ranger2:pokemon:423:01:p423_01_s:cell_016",
+   "review_status": "reject",
+   "reason_code": "ranger_cell_tiles_absent_in_package",
+   "reason": "Cell references character tiles that no graphics resource in its package contains and the best candidate renders fully blank; the donor data cannot render it.",
+   "detail": "best candidate misses 8 tile reference(s) and renders 0 pixels"
+  },
+  {
+   "asset_id": "ranger2:pokemon:428:00:p428_00_w:cell_016",
+   "review_status": "usable",
+   "reason_code": "ranger_tiles_in_sibling_resource",
+   "reason": "Cell tiles are absent from its own group's character data but present in sibling graphics of the same package; every complete candidate renders identically and nonblank.",
+   "detail": "3 complete candidate(s): ['p428_00_a01.NCBR', 'p428_00_a02.NCBR', 'p428_00_t.NCBR']"
+  },
+  {
+   "asset_id": "ranger2:pokemon:430:00:p430_00_a01:cell_014",
+   "review_status": "reject",
+   "reason_code": "ranger_cell_tiles_absent_in_package",
+   "reason": "Cell references character tiles that no graphics resource in its package contains and the best candidate renders fully blank; the donor data cannot render it.",
+   "detail": "best candidate misses 64 tile reference(s) and renders 0 pixels"
+  },
+  {
+   "asset_id": "ranger2:pokemon:430:00:p430_00_a02:cell_014",
+   "review_status": "reject",
+   "reason_code": "ranger_cell_tiles_absent_in_package",
+   "reason": "Cell references character tiles that no graphics resource in its package contains and the best candidate renders fully blank; the donor data cannot render it.",
+   "detail": "best candidate misses 64 tile reference(s) and renders 0 pixels"
+  },
+  {
+   "asset_id": "ranger2:pokemon:430:00:p430_00_p01:cell_014",
+   "review_status": "reject",
+   "reason_code": "ranger_cell_tiles_absent_in_package",
+   "reason": "Cell references character tiles that no graphics resource in its package contains and the best candidate renders fully blank; the donor data cannot render it.",
+   "detail": "best candidate misses 64 tile reference(s) and renders 0 pixels"
+  },
+  {
+   "asset_id": "ranger2:pokemon:430:00:p430_00_t:cell_014",
+   "review_status": "reject",
+   "reason_code": "ranger_cell_tiles_absent_in_package",
+   "reason": "Cell references character tiles that no graphics resource in its package contains and the best candidate renders fully blank; the donor data cannot render it.",
+   "detail": "best candidate misses 64 tile reference(s) and renders 0 pixels"
+  },
+  {
+   "asset_id": "ranger2:pokemon:443:00:p443_00_a01:cell_008",
+   "review_status": "usable",
+   "reason_code": "ranger_tiles_in_sibling_resource",
+   "reason": "Cell tiles are absent from its own group's character data but present in sibling graphics of the same package; every complete candidate renders identically and nonblank.",
+   "detail": "1 complete candidate(s): ['p443_00_t.NCBR']"
+  },
+  {
+   "asset_id": "ranger2:pokemon:443:00:p443_00_a01:cell_009",
+   "review_status": "usable",
+   "reason_code": "ranger_tiles_in_sibling_resource",
+   "reason": "Cell tiles are absent from its own group's character data but present in sibling graphics of the same package; every complete candidate renders identically and nonblank.",
+   "detail": "1 complete candidate(s): ['p443_00_t.NCBR']"
+  },
+  {
+   "asset_id": "ranger2:pokemon:443:00:p443_00_a01:cell_018",
+   "review_status": "usable",
+   "reason_code": "ranger_tiles_in_sibling_resource",
+   "reason": "Cell tiles are absent from its own group's character data but present in sibling graphics of the same package; every complete candidate renders identically and nonblank.",
+   "detail": "1 complete candidate(s): ['p443_00_t.NCBR']"
+  },
+  {
+   "asset_id": "ranger2:pokemon:443:00:p443_00_a01:cell_019",
+   "review_status": "usable",
+   "reason_code": "ranger_tiles_in_sibling_resource",
+   "reason": "Cell tiles are absent from its own group's character data but present in sibling graphics of the same package; every complete candidate renders identically and nonblank.",
+   "detail": "1 complete candidate(s): ['p443_00_t.NCBR']"
+  },
+  {
+   "asset_id": "ranger2:pokemon:460:00:p460_00_w:cell_012",
+   "review_status": "reject",
+   "reason_code": "ranger_cell_tiles_absent_in_package",
+   "reason": "Cell references character tiles that no graphics resource in its package contains and the best candidate renders fully blank; the donor data cannot render it.",
+   "detail": "best candidate misses 36 tile reference(s) and renders 0 pixels"
+  },
+  {
+   "asset_id": "ranger2:pokemon:491:00:p491_00_w:cell_064",
+   "review_status": "reject",
+   "reason_code": "ranger_cell_tiles_absent_in_package",
+   "reason": "Cell references character tiles that no graphics resource in its package contains and the best candidate renders fully blank; the donor data cannot render it.",
+   "detail": "best candidate misses 35 tile reference(s) and renders 0 pixels"
+  }
+ ]
+}
