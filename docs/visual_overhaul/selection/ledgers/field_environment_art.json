@@ -23,9 +23,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_bell_tower",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -38,8 +38,49 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 8,
+     "location": "bell_tower",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 4,
+     "variants": {
+      "day": {
+       "composed_sha256": "056e1c5457f0c862",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "evening": {
+       "composed_sha256": "81f4eaba24288c93",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "3292b7554692a34f",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "99d3f2225631955c",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -66,9 +107,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_burned_tower",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -81,8 +122,49 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 8,
+     "location": "burned_tower",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 4,
+     "variants": {
+      "day": {
+       "composed_sha256": "8cd63e412935ba6c",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "evening": {
+       "composed_sha256": "d421f1ab78458769",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "265c3ec86d1064f7",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "5b4cb653df272ca3",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -109,9 +191,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_cerulean_cave",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -124,8 +206,42 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 6,
+     "location": "cerulean_cave",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 3,
+     "variants": {
+      "day": {
+       "composed_sha256": "1ce3ca2999cc3f30",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "b97b82a19bce0873",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "55a652a5efb1035b",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -152,9 +268,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_dark_cave_r31",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -167,8 +283,42 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 6,
+     "location": "dark_cave_r31",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 3,
+     "variants": {
+      "day": {
+       "composed_sha256": "6998df5ca1e841e4",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "4cb5324ccc243790",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "3db2ab6b5c3c697c",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -195,9 +345,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_dark_cave_r45",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -210,8 +360,42 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 6,
+     "location": "dark_cave_r45",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 3,
+     "variants": {
+      "day": {
+       "composed_sha256": "94a3272fb98c4ee0",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "a7db781393696872",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "e9f361506d930645",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -238,9 +422,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_diglett_cave",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -253,8 +437,42 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 6,
+     "location": "diglett_cave",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 3,
+     "variants": {
+      "day": {
+       "composed_sha256": "638341bb0bef866c",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "87b674ad2ab990ec",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "087afce6928f057a",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -281,9 +499,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_dragons_den",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -296,8 +514,42 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 6,
+     "location": "dragons_den",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 3,
+     "variants": {
+      "day": {
+       "composed_sha256": "84ddef6541521375",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "0b961fcb34ccaa81",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "900498f92a782526",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -324,9 +576,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_ice_path",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -339,8 +591,42 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 6,
+     "location": "ice_path",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 3,
+     "variants": {
+      "day": {
+       "composed_sha256": "e9c908f570ebbffc",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "c03cc6f59be63d14",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "12fb0a9ece784c03",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -367,9 +653,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_ilex_forest",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -382,8 +668,49 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 8,
+     "location": "ilex_forest",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 4,
+     "variants": {
+      "day": {
+       "composed_sha256": "346c651268d98d88",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "evening": {
+       "composed_sha256": "c323e5d5fd6bdf95",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "cdbcc9ad281f2f81",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "69f0fafabf771264",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -410,9 +737,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_mt_moon",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -425,8 +752,49 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 8,
+     "location": "mt_moon",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 4,
+     "variants": {
+      "day": {
+       "composed_sha256": "7e2ca79bc834ea35",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "evening": {
+       "composed_sha256": "4ca5b5cb077d388a",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "65effd90c236bdfe",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "fe4ada6e178d21aa",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -453,9 +821,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_mt_mortar",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -468,8 +836,49 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 8,
+     "location": "mt_mortar",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 4,
+     "variants": {
+      "day": {
+       "composed_sha256": "51c3481da6b5c681",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "evening": {
+       "composed_sha256": "23eb1da6d80602f5",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "e20ccba9094594a0",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "bbf181432a78e88f",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -496,9 +905,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_mt_silver",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -511,8 +920,42 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 6,
+     "location": "mt_silver",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 3,
+     "variants": {
+      "day": {
+       "composed_sha256": "0fa9a629ed9eba55",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "f3c5f54d714e3c9c",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "5f4dd8f33628cf50",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -539,9 +982,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_national_park",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -554,8 +997,49 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 8,
+     "location": "national_park",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 4,
+     "variants": {
+      "day": {
+       "composed_sha256": "c6d4d70d0475258c",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "evening": {
+       "composed_sha256": "75ba7f492a50525c",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "f975b47dd4b1471f",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "ec1898a9e4ceedfc",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -582,9 +1066,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_rock_tunnel",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -597,8 +1081,42 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 6,
+     "location": "rock_tunnel",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 3,
+     "variants": {
+      "day": {
+       "composed_sha256": "6aad249ca24edb7a",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "168ddff1e6979b88",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "f1c38ba2328eac11",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -625,9 +1143,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_ruins_of_alph",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -640,8 +1158,42 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 6,
+     "location": "ruins_of_alph",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 3,
+     "variants": {
+      "day": {
+       "composed_sha256": "c1107d37ec25c732",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "ccc873d165eeed1c",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "963fa2eefd8101ae",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -668,9 +1220,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_seafoam_islands",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -683,8 +1235,42 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 6,
+     "location": "seafoam_islands",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 3,
+     "variants": {
+      "day": {
+       "composed_sha256": "09d44b876a017d0f",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "5b8c473ae9cf1c8e",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "4a31233d8ed3a2be",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -711,9 +1297,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_slowpoke_well",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -726,8 +1312,42 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 6,
+     "location": "slowpoke_well",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 3,
+     "variants": {
+      "day": {
+       "composed_sha256": "5992ad3ff22b6feb",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "5e6021f9b58d1483",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "50bdc5cc48648245",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -754,9 +1374,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_sprout_tower",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -769,8 +1389,42 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 6,
+     "location": "sprout_tower",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 3,
+     "variants": {
+      "day": {
+       "composed_sha256": "dd6276d2d85e789c",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "4645c0e8a6378295",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "e553541fe0df0c56",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -797,9 +1451,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_tohjo_falls",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -812,8 +1466,42 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 6,
+     "location": "tohjo_falls",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 3,
+     "variants": {
+      "day": {
+       "composed_sha256": "eb004209f7456955",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "793e7e00cfcfc94d",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "712f34f4680fc839",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -840,9 +1528,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_union_cave",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -855,8 +1543,42 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 6,
+     "location": "union_cave",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 3,
+     "variants": {
+      "day": {
+       "composed_sha256": "4cccdf9561ab734a",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "f632ca663b2a7b31",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "c94e25d082c50a50",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -883,9 +1605,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_victory_road",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -898,8 +1620,42 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 6,
+     "location": "victory_road",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 3,
+     "variants": {
+      "day": {
+       "composed_sha256": "118373a6e52761e6",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "510881cda96d7b52",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "bef26f9c7d1fff13",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -926,9 +1682,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_viridian_forest",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -941,8 +1697,49 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 8,
+     "location": "viridian_forest",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 4,
+     "variants": {
+      "day": {
+       "composed_sha256": "e9ba265f6fdd14f6",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "evening": {
+       "composed_sha256": "86af5a2929aa7420",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "3b17e3b74ae0d9e6",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "b1cc50bfa0f662b7",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -969,9 +1766,9 @@
    "format_family": "nitro_png_nscr_preview",
    "group_id": "field_environment_art/hgss/hgss_preview_whirl_islands",
    "human_review": null,
-   "needs_evidence": true,
+   "needs_evidence": false,
    "needs_runtime_validation": false,
-   "reason_code": "needs_evidence",
+   "reason_code": "no_native_target",
    "role": "reference_only",
    "scores": {
     "compat": 1,
@@ -984,8 +1781,42 @@
    "subsystem": "field_environment_art",
    "target_id": "field_environment_art/family:field_environment_art",
    "visual_evidence": {
-    "detail": null,
-    "native_relation": "unmeasured",
+    "detail": {
+     "group_member_count": 6,
+     "location": "whirl_islands",
+     "method": "NSCR tilemap composed over NCGR sheet PNG; Platinum searched for any 256x192 indexed PNG and for map/area preview code (none; the 256x192 hits are Battle Frontier battle backgrounds, unrelated)",
+     "native_256x192_png_files_reviewed_not_counterparts": [
+      "res/graphics/frontier/backgrounds/battle_arcade_corridor.png",
+      "res/graphics/frontier/backgrounds/battle_hall_battle_room_lights.png"
+     ],
+     "native_counterpart": null,
+     "platinum_src_map_preview_references": 0,
+     "variant_count": 3,
+     "variants": {
+      "day": {
+       "composed_sha256": "b96b2f90f0caa40a",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "morning": {
+       "composed_sha256": "2de82c8ee8e9fc20",
+       "size": [
+        256,
+        192
+       ]
+      },
+      "night": {
+       "composed_sha256": "b38bfcae09dd6e8a",
+       "size": [
+        256,
+        192
+       ]
+      }
+     }
+    },
+    "native_relation": "missing_in_native",
     "risk_flags": []
    }
   },
@@ -60857,8 +61688,8 @@
   }
  ],
  "inputs": {
-  "evidence_file": null,
-  "evidence_sha256": null,
+  "evidence_file": "docs/visual_overhaul/selection/evidence/field_environment_art.json",
+  "evidence_sha256": "8372054b65913f4d7a4a4cf5bb7fafb6b690407227f74f7c947f20706bc811c6",
   "recovered_ledger_sha256": {
    "LANE_A_RECOVERED_CURATION.json": "9d915a805df0ac9a32d336916e31e3251feeb427b15f05ce3512fcbb19b4266b",
    "LANE_B_RECOVERED_CURATION.json": "efe2bfe24fbff3a47ebbcb7779b87e957bec28e135cc8171d883c7ed7e6fe368",
@@ -60877,10 +61708,10 @@
  "subsystem": "field_environment_art",
  "summary": {
   "groups": 1485,
-  "needs_evidence": 23,
+  "needs_evidence": 0,
   "role_reason": {
    "not_selected:no_independent_evidence": 90,
-   "reference_only:needs_evidence": 23,
+   "reference_only:no_native_target": 23,
    "reference_only:policy_reference_class": 1372
   },
   "roles": {

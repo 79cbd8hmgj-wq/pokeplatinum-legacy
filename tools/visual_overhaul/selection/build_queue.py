@@ -7,7 +7,7 @@ Only subsystems with a ledger participate. Queue items:
   runtime_qa - preferred/alternate groups flagged needs_runtime_validation
 Every item carries a `work_lane` (USE_OUTCOMES.json work_lanes):
   A direct_replacement  - whole-asset donor replacement (implement, runtime_qa)
-  B native_enhancement  - new Platinum-native asset from Platinum + donor components (component_review, composite_build)
+  B native_enhancement  - new Platinum-native asset from Platinum + donor components (component_review, composite_build, component_pool)
   C technique_only      - technique/timing/layout re-implemented with no donor pixels (technique_build, technique_pool)
   evidence              - open evidence work that could change a whole-asset verdict
 Pending subsystems (no ledger yet) are listed so the queue is visibly incomplete, not silently short.
@@ -92,11 +92,18 @@ def derive() -> dict:
                           "target_count": len({r["target"]["target_id"] for r in tech}), "targets_sample": sorted({r["target"]["target_id"] for r in tech})[:5],
                           "records": len(tech), "priority_score": round(0.25 * len(tech) * w / cost, 3)})
     pool: dict[tuple, int] = collections.Counter()
+    cpool: dict[tuple, int] = collections.Counter()
     for name in done:
         led = jload(SEL / "ledgers" / f"{name}.json")
         for d in led["decisions"]:
             if outcomes.replacement_outcome(d, vocab) == "technique_reference":
                 pool[(name, d["source_id"])] += 1
+            elif d["role"] == "reference_only" and d["reason_code"] == "no_native_target":
+                cpool[(name, d["source_id"])] += 1
+    for (name, src), n in sorted(cpool.items()):
+        items.append({"kind": "component_pool", "work_lane": "native_enhancement", "subsystem": name, "source_id": src, "groups": n, "target_count": None,
+                      "priority_score": round(0.05 * subs[name]["priority_weight"], 3),
+                      "note": "donor groups with no Platinum counterpart (no whole-asset replacement possible); candidates for component/composite use once Platinum targets are scoped"})
     for (name, src), n in sorted(pool.items()):
         items.append({"kind": "technique_pool", "work_lane": "technique_only", "subsystem": name, "source_id": src, "groups": n, "target_count": None,
                       "priority_score": round(0.05 * subs[name]["priority_weight"], 3),

@@ -65,3 +65,11 @@ First migration (`tools/visual_overhaul/selection/migrate_trainer_components.py`
 * Ace Trainer M/F stay `keep_platinum` as whole assets (`native_keep`) but now carry 4 **proposed** `component_donor` records (jacket fold/zip shading, fingerless gloves; hair highlight banding, collar/seam detail), each `derived` pixel use, awaiting human confirmation. Evidence image: `components/evidence/ace_trainer_*_platinum_vs_hgss.png`.
 * Arcade Star and Young Couple: digest-bound `none_found` component reviews (Arcade Star frames 4-6 differ only by a ~1px row offset; Young Couple is a recolor) -> remain `native_keep`.
 * Queue now has lanes A/B/C (B: Ace component review; C: technique pools for Ranger/PMD).
+
+## Update: next subsystem — field_environment_art (HGSS map previews) under the use-outcome model
+
+* The 23 `needs_evidence` HGSS preview groups were not renderable from the cataloged PNGs (those are NCGR tile sheets, scrambled). `hgss_preview_compose.py` (NSCR tilemap over the sheet) composes all 76 time-of-day variants; contact sheet in `review/environment_previews/`.
+* Evidence (`evidence/field_environment_art.json`): Platinum has no area-preview screen (no map/area preview code in `src`/`include`; `res/graphics/map_popups` are 136x48 name signs; the only 256x192 PNGs are unrelated Battle Frontier backgrounds) -> `missing_in_native`: **no whole-asset replacement target exists** (`reference_only/no_native_target`, ledger regenerated; no other ledger changed). 23 `needs_evidence` -> 0.
+* Under the new model these are component/technique sources (environmental_motif, material_treatment, palette, texture_region, layout), surfaced in queue lane B as `component_pool` (alongside other `no_native_target` donor pools). No use records were written: they need Platinum-side targets (see STOP below).
+
+**STOP (design decision, not guessed):** `field_environment_art` has a single family target (`family:field_environment_art`) and no per-environment Platinum targets/native files, so a component/composite record cannot name an intended Platinum target + hash-pinned native base. Which Platinum environments should receive enhancement (e.g. Eterna Forest, Mt. Coronet caves, Snowpoint/Ice areas, lakes) and at what granularity is a design choice for the owner; once supplied, add a target alignment table (`alignment/`) and records via the existing schema.
