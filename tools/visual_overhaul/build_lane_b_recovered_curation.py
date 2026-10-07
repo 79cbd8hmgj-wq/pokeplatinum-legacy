@@ -24,6 +24,7 @@ def main() -> int:
     ap.add_argument("--recovery-audit", required=True, type=Path)
     ap.add_argument("--source-png", required=True, type=Path)
     ap.add_argument("--diamond-icons", required=True, type=Path)
+    ap.add_argument("--extra-overlay", type=Path, action="append", default=[])
     ap.add_argument("--write-json", required=True, type=Path)
     ap.add_argument("--write-md", required=True, type=Path)
     args = ap.parse_args()
@@ -33,7 +34,7 @@ def main() -> int:
     rows = {r["asset_id"]: dict(r) for r in baseline["records"]}
 
     overlays = []
-    for path in (args.source_png, args.diamond_icons):
+    for path in (args.source_png, args.diamond_icons, *args.extra_overlay):
         data = json.loads(path.read_text())
         overlays.extend(data.get("decisions", []))
 
