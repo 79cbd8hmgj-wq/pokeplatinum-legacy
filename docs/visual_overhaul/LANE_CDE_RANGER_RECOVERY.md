@@ -7,10 +7,11 @@ No Platinum resources are modified.
 
 | State | Assets |
 |---|---:|
-| blank_render | 16 |
+| blank_package | 56 |
+| blank_render | 1 |
 | companion_of_valid | 1555 |
 | decode_failure | 5 |
-| no_pair | 89 |
-| no_valid_render | 33 |
-| unsupported_member | 45 |
-| valid_render | 5688 |
+| no_pair | 74 |
+| no_valid_render | 18 |
+| unsupported_member | 19 |
+| valid_render | 5703 |

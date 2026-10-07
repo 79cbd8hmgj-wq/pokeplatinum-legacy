@@ -3,13 +3,15 @@
  "scope": "lanes C/D/E recovered state",
  "asset_count": 9125,
  "lane_status_counts": {
-  "C_effects_animation:decode_issue": 26,
-  "C_effects_animation:usable": 1577,
-  "D_environment_ui:decode_issue": 118,
+  "C_effects_animation:decode_issue": 19,
+  "C_effects_animation:reject": 4,
+  "C_effects_animation:usable": 1580,
+  "D_environment_ui:decode_issue": 115,
   "D_environment_ui:reject": 26,
-  "D_environment_ui:usable": 4580,
-  "E_decode_or_context_needed:decode_issue": 101,
-  "E_decode_or_context_needed:usable": 2697
+  "D_environment_ui:usable": 4583,
+  "E_decode_or_context_needed:decode_issue": 40,
+  "E_decode_or_context_needed:reject": 52,
+  "E_decode_or_context_needed:usable": 2706
  },
  "source_status_counts": {
   "hgss:decode_issue": 12,
@@ -18,12 +20,13 @@
   "pmd_sky:decode_issue": 45,
   "pmd_sky:reject": 21,
   "pmd_sky:usable": 1506,
-  "ranger2:decode_issue": 188,
-  "ranger2:usable": 7243
+  "ranger2:decode_issue": 117,
+  "ranger2:reject": 56,
+  "ranger2:usable": 7258
  },
  "recovery_changes": {
-  "decode_issue_to_reject": 21,
-  "decode_issue_to_usable": 8854
+  "decode_issue_to_reject": 77,
+  "decode_issue_to_usable": 8869
  },
  "records": [
   {
@@ -41019,9 +41022,14 @@
     "nitro_resource",
     "ui"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:battle:system:battle_number01_LZ.bin:battle_number01.NCER",
@@ -41145,9 +41153,14 @@
     "nitro_resource",
     "ui"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:battle:system:battle_status_LZ.bin:battle_status.NCER",
@@ -41315,9 +41328,14 @@
     "nitro_resource",
     "ui"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:battle:system:battle_status_debug_LZ.bin:battle_status_debug.NCLR",
@@ -41395,9 +41413,14 @@
     "nitro_resource",
     "ui"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:battle_disk01_LZ.bin:battle_disk01.NCER",
@@ -41682,9 +41705,14 @@
     "nitro_resource",
     "ui"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:disk02_LZ.bin:disk02.NCLR",
@@ -41878,9 +41906,14 @@
     "effect",
     "nitro_resource"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e000_LZ.bin:e000_a01.NCBR",
@@ -41908,9 +41941,14 @@
     "effect",
     "nitro_resource"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e000_LZ.bin:e000_a01.NCGR",
@@ -41937,9 +41975,14 @@
    "target_tags": [
     "effect"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e001_LZ.bin:e001.NCLR",
@@ -42269,9 +42312,14 @@
     "effect",
     "nitro_resource"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e003_LZ.bin:e003_a01.NCER",
@@ -106053,9 +106101,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t017_10_LZ.bin:t017_10_s.NCER",
@@ -116738,9 +116791,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t082_00_LZ.bin:t082_00.NCGR",
@@ -117003,9 +117061,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t083_00_LZ.bin:t083_00.NCLR",
@@ -117723,9 +117786,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t087_00_LZ.bin:t087_00.NCGR",
@@ -124189,9 +124257,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t226_00_LZ.bin:t226_00.NCLR",
@@ -124909,9 +124982,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t229_00_LZ.bin:t229_00.NCGR",
@@ -134707,9 +134785,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t356_00_LZ.bin:t356_00_s.cac",
@@ -134722,9 +134805,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t357_00_LZ.bin:t357_00.NCBR",
@@ -137463,9 +137551,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t371_00_LZ.bin:t371_00_s.cac",
@@ -137478,9 +137571,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t372_00_LZ.bin:t372_00.NCBR",
@@ -138603,9 +138701,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t376_00_LZ.bin:t376_00_s.cac",
@@ -138618,9 +138721,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t377_00_LZ.bin:t377_00.NCBR",
@@ -138666,9 +138774,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t377_00_LZ.bin:t377_00_s.cac",
@@ -138681,9 +138794,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t378_00_LZ.bin:t378_00.NCBR",
@@ -139277,9 +139395,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t381_00_LZ.bin:t381_00.NCGR",
@@ -140701,9 +140824,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t390_00_LZ.bin:t390_00.NCGR",
@@ -140946,9 +141074,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "valid_render",
+    "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t392_00_LZ.bin:t392_00.NCGR",
@@ -142605,9 +142738,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t700_00_LZ.bin:t700_00_s.NCER",
@@ -142621,9 +142759,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t700_00_LZ.bin:t700_00_s.cac",
@@ -142636,9 +142779,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t701_00_LZ.bin:t701_00.NCBR",
@@ -142700,9 +142848,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t701_00_LZ.bin:t701_00_s.NCER",
@@ -142716,9 +142869,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t701_00_LZ.bin:t701_00_s.cac",
@@ -142731,9 +142889,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t702_00_LZ.bin:t702_00.NCBR",
@@ -142795,9 +142958,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t702_00_LZ.bin:t702_00_s.NCER",
@@ -142811,9 +142979,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t702_00_LZ.bin:t702_00_s.cac",
@@ -142826,9 +142999,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t703_00_LZ.bin:t703_00.NCBR",
@@ -142890,9 +143068,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t703_00_LZ.bin:t703_00_s.NCER",
@@ -142906,9 +143089,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t703_00_LZ.bin:t703_00_s.cac",
@@ -142921,9 +143109,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t704_00_LZ.bin:t704_00.NCBR",
@@ -142985,9 +143178,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t704_00_LZ.bin:t704_00_s.NCER",
@@ -143001,9 +143199,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t704_00_LZ.bin:t704_00_s.cac",
@@ -143016,9 +143219,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t705_00_LZ.bin:t705_00.NCBR",
@@ -143080,9 +143288,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t705_00_LZ.bin:t705_00_s.NCER",
@@ -143096,9 +143309,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t705_00_LZ.bin:t705_00_s.cac",
@@ -143111,9 +143329,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t706_00_LZ.bin:t706_00.NCBR",
@@ -143175,9 +143398,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t706_00_LZ.bin:t706_00_s.NCER",
@@ -143191,9 +143419,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t706_00_LZ.bin:t706_00_s.cac",
@@ -143206,9 +143439,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t707_00_LZ.bin:t707_00.NCBR",
@@ -143270,9 +143508,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t707_00_LZ.bin:t707_00_s.NCER",
@@ -143286,9 +143529,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t707_00_LZ.bin:t707_00_s.cac",
@@ -143301,9 +143549,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t800_00_LZ.bin:t800_00.NCBR",
@@ -143365,9 +143618,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t800_00_LZ.bin:t800_00_s.NCER",
@@ -143381,9 +143639,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t800_00_LZ.bin:t800_00_s.cac",
@@ -143396,9 +143659,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t801_00_LZ.bin:t801_00.NCBR",
@@ -143460,9 +143728,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t801_00_LZ.bin:t801_00_s.NCER",
@@ -143476,9 +143749,14 @@
     "nitro_resource",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t801_00_LZ.bin:t801_00_s.cac",
@@ -143491,9 +143769,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+   }
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:targetOBJ:bt001_00_LZ.bin:bt001_00.NCER",
@@ -154329,9 +154612,14 @@
    "target_tags": [
     "effect"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "0 valid NCER pairs"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:effect:e001_LZ.bin",
@@ -183059,9 +183347,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "0 valid NCER pairs"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t357_00_LZ.bin",
@@ -183634,9 +183927,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "0 valid NCER pairs"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t372_00_LZ.bin",
@@ -183869,9 +184167,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "0 valid NCER pairs"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t377_00_LZ.bin",
@@ -183884,9 +184187,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "0 valid NCER pairs"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t378_00_LZ.bin",
@@ -184559,9 +184867,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "0 valid NCER pairs"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t701_00_LZ.bin",
@@ -184574,9 +184887,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "0 valid NCER pairs"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t702_00_LZ.bin",
@@ -184589,9 +184907,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "0 valid NCER pairs"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t703_00_LZ.bin",
@@ -184604,9 +184927,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "0 valid NCER pairs"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t704_00_LZ.bin",
@@ -184619,9 +184947,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "0 valid NCER pairs"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t705_00_LZ.bin",
@@ -184634,9 +184967,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "0 valid NCER pairs"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t706_00_LZ.bin",
@@ -184649,9 +184987,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "0 valid NCER pairs"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t707_00_LZ.bin",
@@ -184664,9 +185007,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "0 valid NCER pairs"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t800_00_LZ.bin",
@@ -184679,9 +185027,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "0 valid NCER pairs"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t801_00_LZ.bin",
@@ -184694,9 +185047,14 @@
     "capture",
     "target"
    ],
-   "review_status": "decode_issue",
-   "reason_code": "visual_resource_requires_decode",
-   "reason": "Plausible visual resource/container without a trustworthy decoded render yet."
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "recovery_evidence": {
+    "ledger": "LANE_CDE_RANGER_RECOVERY.json",
+    "technical_state": "blank_package",
+    "detail": "0 valid NCER pairs"
+   }
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:targetOBJ:bt001_00_LZ.bin",

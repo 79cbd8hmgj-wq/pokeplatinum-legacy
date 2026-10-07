@@ -10,9 +10,9 @@
   "complete": true
  },
  "status_totals": {
-  "decode_issue": 1299,
-  "reject": 9502,
-  "usable": 54040
+  "decode_issue": 1117,
+  "reject": 9558,
+  "usable": 54166
  },
  "ledger_status_counts": {
   "A": {
@@ -21,14 +21,14 @@
    "usable": 40210
   },
   "B": {
-   "decode_issue": 929,
+   "decode_issue": 923,
    "reject": 9147,
-   "usable": 5081
+   "usable": 5087
   },
   "CDE": {
-   "decode_issue": 350,
-   "reject": 26,
-   "usable": 8749
+   "decode_issue": 174,
+   "reject": 82,
+   "usable": 8869
   }
  },
  "source_status_counts": {
@@ -37,9 +37,9 @@
    "usable": 2664
   },
   "hgss": {
-   "decode_issue": 119,
+   "decode_issue": 14,
    "reject": 2949,
-   "usable": 2716
+   "usable": 2821
   },
   "pmd_sky": {
    "decode_issue": 64,
@@ -47,9 +47,9 @@
    "usable": 2044
   },
   "ranger2": {
-   "decode_issue": 1116,
-   "reject": 1322,
-   "usable": 46616
+   "decode_issue": 1039,
+   "reject": 1378,
+   "usable": 46637
   }
  },
  "missing_sample": [],

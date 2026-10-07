@@ -4,23 +4,20 @@
  "asset_count": 3338,
  "package_count": 477,
  "technical_state_counts": {
-  "valid_render": 2519,
+  "valid_render": 2525,
   "companion_of_valid": 792,
   "non_art_text": 8,
   "unsupported_member": 10,
-  "no_pair": 6,
   "decode_failure": 3
  },
  "suffix_state_counts": {
   "(none):non_art_text": 8,
   "(none):unsupported_member": 4,
   "NANR:companion_of_valid": 7,
-  "NCBR:no_pair": 4,
-  "NCBR:valid_render": 491,
+  "NCBR:valid_render": 495,
   "NCER:decode_failure": 3,
   "NCER:valid_render": 785,
-  "NCGR:no_pair": 2,
-  "NCGR:valid_render": 289,
+  "NCGR:valid_render": 291,
   "NCLR:valid_render": 458,
   "NSCR:valid_render": 2,
   "bin:unsupported_member": 1,
@@ -770,8 +767,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ew000_LZ.bin:ew000.NCGR",
    "source_path": "res/prebuilt/data/field/effect/ew000_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCGR"
   },
   {
@@ -854,8 +851,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ew008_LZ.bin:ew008.NCGR",
    "source_path": "res/prebuilt/data/field/effect/ew008_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCGR"
   },
   {
@@ -987,8 +984,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:npc:n000_00_LZ.bin:n000_00_s.NCBR",
    "source_path": "res/prebuilt/data/npc/n000_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
@@ -5103,8 +5100,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc072_LZ.bin:npc072_w.NCBR",
    "source_path": "res/prebuilt/data/npc/npc072_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
@@ -7364,8 +7361,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc107_LZ.bin:npc107_w.NCBR",
    "source_path": "res/prebuilt/data/npc/npc107_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
@@ -7420,8 +7417,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc108_LZ.bin:npc108_w.NCBR",
    "source_path": "res/prebuilt/data/npc/npc108_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
@@ -24209,6 +24206,14 @@
    "detail": "4/4 nonblank cells"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ew000_LZ.bin:ew000.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ew000_LZ.bin:ew000.NCLR",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -24295,6 +24300,14 @@
    "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "16/16 nonblank cells"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ew008_LZ.bin:ew008.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:field:effect:ew008_LZ.bin:ew008.NCLR",
@@ -24415,6 +24428,14 @@
    "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
    "technical_state": "companion_of_valid",
    "detail": "Nitro animation (NANR) of a package with valid NCER renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:npc:n000_00_LZ.bin:n000_00_s.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:npc:n000_00_LZ.bin:n000_00_s.NCER",
@@ -29113,6 +29134,14 @@
    "detail": "cell-animation companion of valid NCER"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc072_LZ.bin:npc072_w.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
    "asset_id": "ranger2:source:res:prebuilt:data:npc:npc072_LZ.bin",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -31673,6 +31702,14 @@
    "detail": "cell-animation companion of valid NCER"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc107_LZ.bin:npc107_w.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
    "asset_id": "ranger2:source:res:prebuilt:data:npc:npc107_LZ.bin",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -31711,6 +31748,14 @@
    "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
    "technical_state": "companion_of_valid",
    "detail": "cell-animation companion of valid NCER"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:npc:npc108_LZ.bin:npc108_w.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:npc:npc108_LZ.bin",

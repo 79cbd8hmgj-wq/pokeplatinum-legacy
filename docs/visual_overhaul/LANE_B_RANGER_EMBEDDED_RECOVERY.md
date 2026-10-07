@@ -9,7 +9,6 @@ No Platinum resources are modified.
 |---|---:|
 | companion_of_valid | 792 |
 | decode_failure | 3 |
-| no_pair | 6 |
 | non_art_text | 8 |
 | unsupported_member | 10 |
-| valid_render | 2519 |
+| valid_render | 2525 |

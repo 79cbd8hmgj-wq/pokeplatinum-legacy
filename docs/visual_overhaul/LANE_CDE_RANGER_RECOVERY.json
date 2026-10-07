@@ -4,25 +4,26 @@
  "asset_count": 7431,
  "package_count": 1731,
  "technical_state_counts": {
-  "valid_render": 5688,
+  "valid_render": 5703,
   "companion_of_valid": 1555,
-  "no_pair": 89,
-  "unsupported_member": 45,
-  "blank_render": 16,
-  "no_valid_render": 33,
-  "decode_failure": 5
+  "unsupported_member": 19,
+  "no_pair": 74,
+  "blank_package": 56,
+  "no_valid_render": 18,
+  "decode_failure": 5,
+  "blank_render": 1
  },
  "suffix_state_counts": {
+  "NANR:blank_package": 11,
   "NANR:companion_of_valid": 349,
-  "NANR:unsupported_member": 11,
-  "NCBR:no_pair": 29,
+  "NCBR:no_pair": 18,
   "NCBR:unsupported_member": 2,
-  "NCBR:valid_render": 746,
-  "NCER:blank_render": 15,
+  "NCBR:valid_render": 757,
+  "NCER:blank_package": 15,
   "NCER:decode_failure": 3,
   "NCER:valid_render": 1273,
-  "NCGR:no_pair": 20,
-  "NCGR:valid_render": 469,
+  "NCGR:no_pair": 16,
+  "NCGR:valid_render": 473,
   "NCLR:no_pair": 40,
   "NCLR:unsupported_member": 4,
   "NCLR:valid_render": 1131,
@@ -30,11 +31,13 @@
   "NSCR:blank_render": 1,
   "NSCR:decode_failure": 2,
   "NSCR:valid_render": 198,
-  "bin:no_valid_render": 33,
+  "bin:blank_package": 15,
+  "bin:no_valid_render": 18,
   "bin:unsupported_member": 6,
   "bin:valid_render": 1679,
+  "cac:blank_package": 15,
   "cac:companion_of_valid": 1206,
-  "cac:unsupported_member": 18,
+  "cac:unsupported_member": 3,
   "nbfs:valid_render": 158,
   "ntfp:valid_render": 17,
   "ntft:valid_render": 17
@@ -1870,8 +1873,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:battle:system:battle_number01_LZ.bin:battle_number01.NCBR",
    "source_path": "res/prebuilt/data/battle/system/battle_number01_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
@@ -1919,8 +1922,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:battle:system:battle_status_LZ.bin:battle_status.NCBR",
    "source_path": "res/prebuilt/data/battle/system/battle_status_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
@@ -1982,8 +1985,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:battle:system:battle_status_debug_LZ.bin:battle_status_debug.NCGR",
    "source_path": "res/prebuilt/data/battle/system/battle_status_debug_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCGR"
   },
   {
@@ -2017,8 +2020,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:battle_disk01_LZ.bin:battle_disk01.NCBR",
    "source_path": "res/prebuilt/data/battle_disk01_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
@@ -2143,8 +2146,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:disk02_LZ.bin:disk02.NCGR",
    "source_path": "res/prebuilt/data/disk02_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCGR"
   },
   {
@@ -2227,8 +2230,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e000_LZ.bin:e000_a01.NANR",
    "source_path": "res/prebuilt/data/effect/e000_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "NANR without valid NCER renders",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NANR"
   },
   {
@@ -2241,8 +2244,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e000_LZ.bin:e000_a01.NCER",
    "source_path": "res/prebuilt/data/effect/e000_LZ.bin",
-   "technical_state": "blank_render",
-   "detail": "1 cells all blank",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NCER"
   },
   {
@@ -2255,14 +2258,14 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e000_LZ.bin:e000_a01.cac",
    "source_path": "res/prebuilt/data/effect/e000_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "cac"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:effect:e000_LZ.bin",
    "source_path": "res/prebuilt/data/effect/e000_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -2395,8 +2398,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e003_LZ.bin:e003_a01.NCBR",
    "source_path": "res/prebuilt/data/effect/e003_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
@@ -18454,7 +18457,7 @@
    "asset_id": "ranger2:embedded:res:prebuilt:data:interface:i057_LZ.bin:i057_00.NCER",
    "source_path": "res/prebuilt/data/interface/i057_LZ.bin",
    "technical_state": "decode_failure",
-   "detail": "/tmp/lbr_0n68hius/i057_00.NCBR: character geometry/data mismatch",
+   "detail": "/tmp/lbr_qpj72gfu/i057_00.NCBR: character geometry/data mismatch",
    "suffix": "NCER"
   },
   {
@@ -33111,8 +33114,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t017_10_LZ.bin:t017_10_s.NCBR",
    "source_path": "res/prebuilt/data/target/t017_10_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
@@ -37339,8 +37342,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t082_00_LZ.bin:t082_00.NCBR",
    "source_path": "res/prebuilt/data/target/t082_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
@@ -37437,8 +37440,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t083_00_LZ.bin:t083_00.NCGR",
    "source_path": "res/prebuilt/data/target/t083_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCGR"
   },
   {
@@ -37710,8 +37713,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t087_00_LZ.bin:t087_00.NCBR",
    "source_path": "res/prebuilt/data/target/t087_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
@@ -40251,8 +40254,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t226_00_LZ.bin:t226_00.NCGR",
    "source_path": "res/prebuilt/data/target/t226_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCGR"
   },
   {
@@ -40531,8 +40534,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t229_00_LZ.bin:t229_00.NCBR",
    "source_path": "res/prebuilt/data/target/t229_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
@@ -44437,21 +44440,21 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t356_00_LZ.bin:t356_00_s.NCER",
    "source_path": "res/prebuilt/data/target/t356_00_LZ.bin",
-   "technical_state": "blank_render",
-   "detail": "1 cells all blank",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NCER"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t356_00_LZ.bin:t356_00_s.cac",
    "source_path": "res/prebuilt/data/target/t356_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "cac"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t356_00_LZ.bin",
    "source_path": "res/prebuilt/data/target/t356_00_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -45578,21 +45581,21 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t371_00_LZ.bin:t371_00_s.NCER",
    "source_path": "res/prebuilt/data/target/t371_00_LZ.bin",
-   "technical_state": "blank_render",
-   "detail": "1 cells all blank",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NCER"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t371_00_LZ.bin:t371_00_s.cac",
    "source_path": "res/prebuilt/data/target/t371_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "cac"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t371_00_LZ.bin",
    "source_path": "res/prebuilt/data/target/t371_00_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -46054,21 +46057,21 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t376_00_LZ.bin:t376_00_s.NCER",
    "source_path": "res/prebuilt/data/target/t376_00_LZ.bin",
-   "technical_state": "blank_render",
-   "detail": "1 cells all blank",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NCER"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t376_00_LZ.bin:t376_00_s.cac",
    "source_path": "res/prebuilt/data/target/t376_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "cac"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t376_00_LZ.bin",
    "source_path": "res/prebuilt/data/target/t376_00_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -46089,21 +46092,21 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t377_00_LZ.bin:t377_00_s.NCER",
    "source_path": "res/prebuilt/data/target/t377_00_LZ.bin",
-   "technical_state": "blank_render",
-   "detail": "1 cells all blank",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NCER"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t377_00_LZ.bin:t377_00_s.cac",
    "source_path": "res/prebuilt/data/target/t377_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "cac"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t377_00_LZ.bin",
    "source_path": "res/prebuilt/data/target/t377_00_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -46334,8 +46337,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t381_00_LZ.bin:t381_00.NCBR",
    "source_path": "res/prebuilt/data/target/t381_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
@@ -46901,8 +46904,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t390_00_LZ.bin:t390_00.NCBR",
    "source_path": "res/prebuilt/data/target/t390_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
@@ -46999,8 +47002,8 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t392_00_LZ.bin:t392_00.NCBR",
    "source_path": "res/prebuilt/data/target/t392_00_LZ.bin",
-   "technical_state": "no_pair",
-   "detail": "not consumed by any valid render",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)",
    "suffix": "NCBR"
   },
   {
@@ -47671,28 +47674,28 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t700_00_LZ.bin:t700_00_s.NANR",
    "source_path": "res/prebuilt/data/target/t700_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "NANR without valid NCER renders",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NANR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t700_00_LZ.bin:t700_00_s.NCER",
    "source_path": "res/prebuilt/data/target/t700_00_LZ.bin",
-   "technical_state": "blank_render",
-   "detail": "1 cells all blank",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NCER"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t700_00_LZ.bin:t700_00_s.cac",
    "source_path": "res/prebuilt/data/target/t700_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "cac"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t700_00_LZ.bin",
    "source_path": "res/prebuilt/data/target/t700_00_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -47720,28 +47723,28 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t701_00_LZ.bin:t701_00_s.NANR",
    "source_path": "res/prebuilt/data/target/t701_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "NANR without valid NCER renders",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NANR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t701_00_LZ.bin:t701_00_s.NCER",
    "source_path": "res/prebuilt/data/target/t701_00_LZ.bin",
-   "technical_state": "blank_render",
-   "detail": "1 cells all blank",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NCER"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t701_00_LZ.bin:t701_00_s.cac",
    "source_path": "res/prebuilt/data/target/t701_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "cac"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t701_00_LZ.bin",
    "source_path": "res/prebuilt/data/target/t701_00_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -47769,28 +47772,28 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t702_00_LZ.bin:t702_00_s.NANR",
    "source_path": "res/prebuilt/data/target/t702_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "NANR without valid NCER renders",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NANR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t702_00_LZ.bin:t702_00_s.NCER",
    "source_path": "res/prebuilt/data/target/t702_00_LZ.bin",
-   "technical_state": "blank_render",
-   "detail": "1 cells all blank",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NCER"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t702_00_LZ.bin:t702_00_s.cac",
    "source_path": "res/prebuilt/data/target/t702_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "cac"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t702_00_LZ.bin",
    "source_path": "res/prebuilt/data/target/t702_00_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -47818,28 +47821,28 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t703_00_LZ.bin:t703_00_s.NANR",
    "source_path": "res/prebuilt/data/target/t703_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "NANR without valid NCER renders",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NANR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t703_00_LZ.bin:t703_00_s.NCER",
    "source_path": "res/prebuilt/data/target/t703_00_LZ.bin",
-   "technical_state": "blank_render",
-   "detail": "1 cells all blank",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NCER"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t703_00_LZ.bin:t703_00_s.cac",
    "source_path": "res/prebuilt/data/target/t703_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "cac"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t703_00_LZ.bin",
    "source_path": "res/prebuilt/data/target/t703_00_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -47867,28 +47870,28 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t704_00_LZ.bin:t704_00_s.NANR",
    "source_path": "res/prebuilt/data/target/t704_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "NANR without valid NCER renders",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NANR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t704_00_LZ.bin:t704_00_s.NCER",
    "source_path": "res/prebuilt/data/target/t704_00_LZ.bin",
-   "technical_state": "blank_render",
-   "detail": "1 cells all blank",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NCER"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t704_00_LZ.bin:t704_00_s.cac",
    "source_path": "res/prebuilt/data/target/t704_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "cac"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t704_00_LZ.bin",
    "source_path": "res/prebuilt/data/target/t704_00_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -47916,28 +47919,28 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t705_00_LZ.bin:t705_00_s.NANR",
    "source_path": "res/prebuilt/data/target/t705_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "NANR without valid NCER renders",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NANR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t705_00_LZ.bin:t705_00_s.NCER",
    "source_path": "res/prebuilt/data/target/t705_00_LZ.bin",
-   "technical_state": "blank_render",
-   "detail": "1 cells all blank",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NCER"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t705_00_LZ.bin:t705_00_s.cac",
    "source_path": "res/prebuilt/data/target/t705_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "cac"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t705_00_LZ.bin",
    "source_path": "res/prebuilt/data/target/t705_00_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -47965,28 +47968,28 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t706_00_LZ.bin:t706_00_s.NANR",
    "source_path": "res/prebuilt/data/target/t706_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "NANR without valid NCER renders",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NANR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t706_00_LZ.bin:t706_00_s.NCER",
    "source_path": "res/prebuilt/data/target/t706_00_LZ.bin",
-   "technical_state": "blank_render",
-   "detail": "1 cells all blank",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NCER"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t706_00_LZ.bin:t706_00_s.cac",
    "source_path": "res/prebuilt/data/target/t706_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "cac"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t706_00_LZ.bin",
    "source_path": "res/prebuilt/data/target/t706_00_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -48014,28 +48017,28 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t707_00_LZ.bin:t707_00_s.NANR",
    "source_path": "res/prebuilt/data/target/t707_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "NANR without valid NCER renders",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NANR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t707_00_LZ.bin:t707_00_s.NCER",
    "source_path": "res/prebuilt/data/target/t707_00_LZ.bin",
-   "technical_state": "blank_render",
-   "detail": "1 cells all blank",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NCER"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t707_00_LZ.bin:t707_00_s.cac",
    "source_path": "res/prebuilt/data/target/t707_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "cac"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t707_00_LZ.bin",
    "source_path": "res/prebuilt/data/target/t707_00_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -48063,28 +48066,28 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t800_00_LZ.bin:t800_00_s.NANR",
    "source_path": "res/prebuilt/data/target/t800_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "NANR without valid NCER renders",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NANR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t800_00_LZ.bin:t800_00_s.NCER",
    "source_path": "res/prebuilt/data/target/t800_00_LZ.bin",
-   "technical_state": "blank_render",
-   "detail": "1 cells all blank",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NCER"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t800_00_LZ.bin:t800_00_s.cac",
    "source_path": "res/prebuilt/data/target/t800_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "cac"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t800_00_LZ.bin",
    "source_path": "res/prebuilt/data/target/t800_00_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -48112,28 +48115,28 @@
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t801_00_LZ.bin:t801_00_s.NANR",
    "source_path": "res/prebuilt/data/target/t801_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "NANR without valid NCER renders",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NANR"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t801_00_LZ.bin:t801_00_s.NCER",
    "source_path": "res/prebuilt/data/target/t801_00_LZ.bin",
-   "technical_state": "blank_render",
-   "detail": "1 cells all blank",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "NCER"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t801_00_LZ.bin:t801_00_s.cac",
    "source_path": "res/prebuilt/data/target/t801_00_LZ.bin",
-   "technical_state": "unsupported_member",
-   "detail": "",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles",
    "suffix": "cac"
   },
   {
    "asset_id": "ranger2:source:res:prebuilt:data:target:t801_00_LZ.bin",
    "source_path": "res/prebuilt/data/target/t801_00_LZ.bin",
-   "technical_state": "no_valid_render",
+   "technical_state": "blank_package",
    "detail": "0 valid NCER pairs",
    "suffix": "bin"
   },
@@ -54148,6 +54151,14 @@
    "detail": "Nitro animation (NANR) of a package with valid NCER renders"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:battle:system:battle_number01_LZ.bin:battle_number01.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:battle:system:battle_number01_LZ.bin:battle_number01.NCER",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -54194,6 +54205,14 @@
    "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
    "technical_state": "companion_of_valid",
    "detail": "Nitro animation (NANR) of a package with valid NCER renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:battle:system:battle_status_LZ.bin:battle_status.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:battle:system:battle_status_LZ.bin:battle_status.NCER",
@@ -54260,6 +54279,14 @@
    "detail": "6/6 nonblank cells"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:battle:system:battle_status_debug_LZ.bin:battle_status_debug.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:battle:system:battle_status_debug_LZ.bin:battle_status_debug.NCLR",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -54290,6 +54317,14 @@
    "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
    "technical_state": "companion_of_valid",
    "detail": "Nitro animation (NANR) of a package with valid NCER renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:battle_disk01_LZ.bin:battle_disk01.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:battle_disk01_LZ.bin:battle_disk01.NCER",
@@ -54412,6 +54447,14 @@
    "detail": "1/1 nonblank cells"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:disk02_LZ.bin:disk02.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:disk02_LZ.bin:disk02.NCLR",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -54490,6 +54533,38 @@
    "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "1 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e000_LZ.bin:e000_a01.NANR",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e000_LZ.bin:e000_a01.NCER",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e000_LZ.bin:e000_a01.cac",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:effect:e000_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e001_LZ.bin:e001.NCLR",
@@ -54634,6 +54709,14 @@
    "reason": "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.",
    "technical_state": "companion_of_valid",
    "detail": "Nitro animation (NANR) of a package with valid NCER renders"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e003_LZ.bin:e003_a01.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:effect:e003_LZ.bin:e003_a01.NCER",
@@ -89140,6 +89223,14 @@
    "detail": "Nitro animation (NANR) of a package with valid NCER renders"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t017_10_LZ.bin:t017_10_s.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t017_10_LZ.bin:t017_10_s.NCER",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -93964,6 +94055,14 @@
    "detail": "3 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t082_00_LZ.bin:t082_00.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t082_00_LZ.bin:t082_00.NCGR",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -94066,6 +94165,14 @@
    "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "used by valid NCER render"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t083_00_LZ.bin:t083_00.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t083_00_LZ.bin:t083_00.NCLR",
@@ -94370,6 +94477,14 @@
    "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "3 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t087_00_LZ.bin:t087_00.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t087_00_LZ.bin:t087_00.NCGR",
@@ -97268,6 +97383,14 @@
    "detail": "used by valid NCER render"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t226_00_LZ.bin:t226_00.NCGR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t226_00_LZ.bin:t226_00.NCLR",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -97578,6 +97701,14 @@
    "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "2 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t229_00_LZ.bin:t229_00.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t229_00_LZ.bin:t229_00.NCGR",
@@ -102020,6 +102151,30 @@
    "detail": "3 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t356_00_LZ.bin:t356_00_s.NCER",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t356_00_LZ.bin:t356_00_s.cac",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:target:t356_00_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t357_00_LZ.bin:t357_00.NCBR",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -103284,6 +103439,30 @@
    "detail": "1 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t371_00_LZ.bin:t371_00_s.NCER",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t371_00_LZ.bin:t371_00_s.cac",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:target:t371_00_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t372_00_LZ.bin:t372_00.NCBR",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -103788,6 +103967,54 @@
    "detail": "1 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t376_00_LZ.bin:t376_00_s.NCER",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t376_00_LZ.bin:t376_00_s.cac",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:target:t376_00_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t377_00_LZ.bin:t377_00_s.NCER",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t377_00_LZ.bin:t377_00_s.cac",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:target:t377_00_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t378_00_LZ.bin:t378_00.NCBR",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -104042,6 +104269,14 @@
    "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "2 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t381_00_LZ.bin:t381_00.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t381_00_LZ.bin:t381_00.NCGR",
@@ -104684,6 +104919,14 @@
    "detail": "2 valid NCER pairs"
   },
   {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t390_00_LZ.bin:t390_00.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
+  },
+  {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t390_00_LZ.bin:t390_00.NCGR",
    "review_status": "usable",
    "reason_code": "ranger_embedded_valid_render_plausible_use",
@@ -104786,6 +105029,14 @@
    "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "1 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t392_00_LZ.bin:t392_00.NCBR",
+   "review_status": "usable",
+   "reason_code": "ranger_embedded_valid_render_plausible_use",
+   "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
+   "technical_state": "valid_render",
+   "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:target:t392_00_LZ.bin:t392_00.NCGR",
@@ -105522,6 +105773,326 @@
    "reason": "Ranger package member took part in a verified nonblank NCER render (palette covered); character/effect/object sprite material with plausible Platinum use.",
    "technical_state": "valid_render",
    "detail": "1 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t700_00_LZ.bin:t700_00_s.NANR",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t700_00_LZ.bin:t700_00_s.NCER",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t700_00_LZ.bin:t700_00_s.cac",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:target:t700_00_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t701_00_LZ.bin:t701_00_s.NANR",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t701_00_LZ.bin:t701_00_s.NCER",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t701_00_LZ.bin:t701_00_s.cac",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:target:t701_00_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t702_00_LZ.bin:t702_00_s.NANR",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t702_00_LZ.bin:t702_00_s.NCER",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t702_00_LZ.bin:t702_00_s.cac",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:target:t702_00_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t703_00_LZ.bin:t703_00_s.NANR",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t703_00_LZ.bin:t703_00_s.NCER",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t703_00_LZ.bin:t703_00_s.cac",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:target:t703_00_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t704_00_LZ.bin:t704_00_s.NANR",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t704_00_LZ.bin:t704_00_s.NCER",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t704_00_LZ.bin:t704_00_s.cac",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:target:t704_00_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t705_00_LZ.bin:t705_00_s.NANR",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t705_00_LZ.bin:t705_00_s.NCER",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t705_00_LZ.bin:t705_00_s.cac",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:target:t705_00_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t706_00_LZ.bin:t706_00_s.NANR",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t706_00_LZ.bin:t706_00_s.NCER",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t706_00_LZ.bin:t706_00_s.cac",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:target:t706_00_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t707_00_LZ.bin:t707_00_s.NANR",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t707_00_LZ.bin:t707_00_s.NCER",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t707_00_LZ.bin:t707_00_s.cac",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:target:t707_00_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t800_00_LZ.bin:t800_00_s.NANR",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t800_00_LZ.bin:t800_00_s.NCER",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t800_00_LZ.bin:t800_00_s.cac",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:target:t800_00_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t801_00_LZ.bin:t801_00_s.NANR",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t801_00_LZ.bin:t801_00_s.NCER",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:embedded:res:prebuilt:data:target:t801_00_LZ.bin:t801_00_s.cac",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"
+  },
+  {
+   "asset_id": "ranger2:source:res:prebuilt:data:target:t801_00_LZ.bin",
+   "review_status": "reject",
+   "reason_code": "ranger_package_renders_blank",
+   "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+   "technical_state": "blank_package",
+   "detail": "0 valid NCER pairs"
   },
   {
    "asset_id": "ranger2:embedded:res:prebuilt:data:targetOBJ:bt001_00_LZ.bin:bt001_00.NCER",

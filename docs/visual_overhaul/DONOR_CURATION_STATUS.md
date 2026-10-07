@@ -14,23 +14,23 @@ Cross-lane coverage proof. No Platinum resources are modified; no preferred dono
 
 ## Status totals
 
-- decode_issue: **1299**
-- reject: **9502**
-- usable: **54040**
+- decode_issue: **1117**
+- reject: **9558**
+- usable: **54166**
 
 ## By ledger
 
 | Ledger | decode_issue | reject | usable |
 |---|---:|---:|---:|
 | A | 20 | 329 | 40210 |
-| B | 929 | 9147 | 5081 |
-| CDE | 350 | 26 | 8749 |
+| B | 923 | 9147 | 5087 |
+| CDE | 174 | 82 | 8869 |
 
 ## By source
 
 | Source | decode_issue | reject | usable |
 |---|---:|---:|---:|
 | diamond | 0 | 5208 | 2664 |
-| hgss | 119 | 2949 | 2716 |
+| hgss | 14 | 2949 | 2821 |
 | pmd_sky | 64 | 23 | 2044 |
-| ranger2 | 1116 | 1322 | 46616 |
+| ranger2 | 1039 | 1378 | 46637 |

@@ -186,6 +186,36 @@ def _twin_of_used(path: Path, gfx_info: dict, all_cells: list) -> bool:
     return False
 
 
+def _graphic_sheet_ok(path: Path, all_cells: list) -> bool:
+    try:
+        sent = read_chars_sentinel(path)
+        tiles = sent if sent is not None else read_chars(path, cells=all_cells[0] if all_cells else None)[2]
+        return any(any(t) for t in tiles)
+    except Exception:  # noqa: BLE001
+        return False
+
+
+def _blank_cells_confirmed(ncer: Path, gfx: Path) -> bool:
+    """True if every OAM tile reference of every cell is in range and lands on all-zero tiles."""
+    cells = read_cells(ncer)
+    sent = read_chars_sentinel(gfx)
+    if sent is not None:
+        return False
+    sw, _h, tiles = read_chars(gfx, cells=cells)
+    for oams in cells:
+        for a0, a1, a2 in oams:
+            shape = (a0 >> 14) & 3
+            if shape not in nrp.SHAPE_SIZE:
+                continue
+            w, h = nrp.SHAPE_SIZE[shape][(a1 >> 14) & 3]
+            for ty in range(h // 8):
+                for tx in range(w // 8):
+                    row, col = divmod((a2 & 0x3FF) + ty * 32 + tx, 32)
+                    if col >= sw or row * sw + col >= len(tiles) or any(tiles[row * sw + col]):
+                        return False
+    return True
+
+
 def evaluate_package(pkg: Path, shared_pkg: Path | None = None) -> dict:
     out = {"members": {}, "pairs": []}
     with tempfile.TemporaryDirectory(prefix="lbr_") as t, tempfile.TemporaryDirectory(prefix="lbs_") as t2:
@@ -286,6 +316,22 @@ def evaluate_package(pkg: Path, shared_pkg: Path | None = None) -> dict:
                     out["members"][n] = {"state": "companion_of_valid", "detail": "Nitro animation (NANR) of a package with valid NCER renders"}
                 else:
                     out["members"][n] = {"state": "unsupported_member", "detail": "NANR without valid NCER renders"}
+        if not out["pairs"] and ncers:
+            try:
+                blank_pkg = all(
+                    out["members"][nc.name]["state"] == "blank_render"
+                    and (pick(stem, gfx_tab) is not None and _blank_cells_confirmed(nc, pick(stem, gfx_tab)))
+                    for stem, nc in ncers.items())
+                frag = all(sum(1 for t in read_chars(g, cells=read_cells(next(iter(ncers.values()))))[2] if any(t)) <= 16
+                           for g in gfx_tab.values())
+            except Exception:  # noqa: BLE001
+                blank_pkg = frag = False
+            if blank_pkg and frag:
+                out["blank_package"] = True
+                for n in members:
+                    if n.endswith((".NCER", ".NCBR", ".NCGR", ".NCLR", ".NANR", ".cac")):
+                        out["members"][n] = {"state": "blank_package",
+                                             "detail": "every cell references only all-zero in-range tiles; remaining graphics are <=16 stray unreferenced tiles"}
         for n in members:
             if n.endswith((".NCBR", ".NCGR")) and n in used_gfx:
                 out["members"][n] = {"state": "valid_render", "detail": "used by valid NCER render"}
@@ -303,6 +349,8 @@ def evaluate_package(pkg: Path, shared_pkg: Path | None = None) -> dict:
                     out["members"][n] = {"state": "decode_failure", "detail": str(e)[:120]}
             elif n.endswith((".NCBR", ".NCGR")) and gfx_info and _twin_of_used(members[n], gfx_info, all_cells):
                 out["members"][n] = {"state": "valid_render", "detail": "pixel-equivalent twin (NCBR/NCGR) of a graphic used by a valid render"}
+            elif n.endswith((".NCBR", ".NCGR")) and out["pairs"] and _graphic_sheet_ok(members[n], all_cells):
+                out["members"][n] = {"state": "valid_render", "detail": "nonblank graphic sheet of a package with valid renders (not referenced by a cell bank)"}
             elif n.endswith((".NCBR", ".NCGR", ".NCLR")):
                 out["members"][n] = {"state": "no_pair", "detail": "not consumed by any valid render"}
     return out
@@ -359,7 +407,7 @@ def main() -> int:
                 m = ev["members"].get(mem)
                 st, det = (m["state"], m["detail"]) if m else ("member_not_found", "")
             elif r["asset_type"] == "compressed_visual_package":
-                st = "valid_render" if pkg_state[sp][0] == "ok" else pkg_state[sp][0]
+                st = "blank_package" if ev.get("blank_package") else ("valid_render" if pkg_state[sp][0] == "ok" else pkg_state[sp][0])
                 det = f"{len(ev['pairs'])} valid NCER pairs"
             elif Path(sp).suffix in (".ntft", ".ntfp"):
                 st, det = loose_ntft(a.ranger_root / sp)
@@ -381,6 +429,11 @@ def main() -> int:
         elif x["technical_state"] == "companion_of_valid":
             code, why = ("ranger_cac_companion_of_valid_render",
                          "Cell-animation companion of an NCER that renders nonblank; kept with its usable sprite for animation sequencing.")
+        elif x["technical_state"] == "blank_package":
+            decisions.append({"asset_id": x["asset_id"], "review_status": "reject", "reason_code": "ranger_package_renders_blank",
+                              "reason": "Package whose every cell references only blank in-range tiles; the few remaining graphic tiles are unreferenced fragments, so it contains no renderable art.",
+                              "technical_state": x["technical_state"], "detail": x["detail"]})
+            continue
         elif x["technical_state"] == "non_art_text":
             decisions.append({"asset_id": x["asset_id"], "review_status": "reject", "reason_code": "stray_ascii_text_member",
                               "reason": "Unnamed NARC member is plain ASCII text (build/VCS property data), not visual art.",
