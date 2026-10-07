@@ -50,6 +50,20 @@ def parse_nclr(raw: bytes) -> list[tuple[int, int, int]]:
     return out
 
 
+def parse_ncer_transfers(raw: bytes, count: int) -> list[tuple[int, int]] | None:
+    """Per-cell VRAM transfer (source byte offset into NCGR data, byte size), or None if the bank has none.
+    Layout (nitrogfx ReadNtrCell_CEBK): KBEC block at 0x10; u16 at block+0x14 = offset (from block+8) to
+    [maxSize u32, offset u32] followed by one (srcOffset u32, size u32) pair per cell."""
+    blk = 0x10
+    off = struct.unpack_from("<H", raw, blk + 0x14)[0]
+    if off == 0:
+        return None
+    p = blk + 8 + off + 8
+    if p + 8 * count > len(raw):
+        raise ValueError("VRAM transfer table exceeds NCER")
+    return [struct.unpack_from("<II", raw, p + 8 * i) for i in range(count)]
+
+
 def parse_ncer(raw: bytes) -> list[list[tuple[int, int, int]]]:
     if raw[:4] != b"RECN" or raw[0x10:0x14] != b"KBEC":
         raise ValueError("not NCER")
@@ -110,9 +124,15 @@ def render_cell_1d(oams, tiles, shift=0):
     return width, height, canvas, oob
 
 
-def render_sheet(cells, tiles, gap=1, shift=0):
+def render_sheet(cells, tiles, gap=1, shift=0, transfers=None):
     """Stack all cells vertically (Platinum multi-frame layout: 1px gap). Returns (w,h,pixels,oob,cell_dims)."""
-    rendered = [render_cell_1d(c, tiles, shift) for c in cells]
+    rendered = []
+    for i, c in enumerate(cells):
+        pool = tiles
+        if transfers:
+            src, size = transfers[i]
+            pool = tiles[src // 32:(src + size) // 32]
+        rendered.append(render_cell_1d(c, pool, shift))
     w = max(r[0] for r in rendered)
     rows, dims, oob = [], [], 0
     for rw, rh, cv, o in rendered:

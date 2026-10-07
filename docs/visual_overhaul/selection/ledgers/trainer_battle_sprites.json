@@ -6206,15 +6206,15 @@
    "format_family": "nitro_sprite_set_ncgr_nclr_ncer_nanr",
    "group_id": "trainer_battle_sprites/hgss/hgss_back_004",
    "needs_evidence": false,
-   "needs_runtime_validation": true,
-   "reason_code": "best_eligible_donor",
-   "role": "preferred",
+   "needs_runtime_validation": false,
+   "reason_code": "identical_to_native",
+   "role": "not_selected",
    "scores": {
     "compat": 2,
     "independent_share": 1.0,
     "integration_cost": 4,
-    "risk": "medium",
-    "visual_gain": 2
+    "risk": "low",
+    "visual_gain": 0
    },
    "source_id": "hgss",
    "subsystem": "trainer_battle_sprites",
@@ -6222,13 +6222,11 @@
    "visual_evidence": {
     "detail": {
      "alignment_method": "backpic_constant_alias",
-     "diff_ratio": 0.6877,
      "donor_frames": 5,
      "donor_size": [
       80,
       404
      ],
-     "geometry_reasons": [],
      "native_frames": 5,
      "native_path": "res/trainers/classes/trainer_cheryl/back.png",
      "native_size": [
@@ -6238,7 +6236,7 @@
      "platinum_class": "trainer_cheryl",
      "view": "back"
     },
-    "native_relation": "art_diff_geometry_close",
+    "native_relation": "identical",
     "risk_flags": []
    }
   },
@@ -6262,15 +6260,15 @@
    "format_family": "nitro_sprite_set_ncgr_nclr_ncer_nanr",
    "group_id": "trainer_battle_sprites/hgss/hgss_back_005",
    "needs_evidence": false,
-   "needs_runtime_validation": true,
-   "reason_code": "best_eligible_donor",
-   "role": "preferred",
+   "needs_runtime_validation": false,
+   "reason_code": "identical_to_native",
+   "role": "not_selected",
    "scores": {
     "compat": 2,
     "independent_share": 1.0,
     "integration_cost": 4,
-    "risk": "medium",
-    "visual_gain": 2
+    "risk": "low",
+    "visual_gain": 0
    },
    "source_id": "hgss",
    "subsystem": "trainer_battle_sprites",
@@ -6278,13 +6276,11 @@
    "visual_evidence": {
     "detail": {
      "alignment_method": "backpic_constant_alias",
-     "diff_ratio": 0.7352,
      "donor_frames": 5,
      "donor_size": [
       80,
       404
      ],
-     "geometry_reasons": [],
      "native_frames": 5,
      "native_path": "res/trainers/classes/trainer_riley/back.png",
      "native_size": [
@@ -6294,7 +6290,7 @@
      "platinum_class": "trainer_riley",
      "view": "back"
     },
-    "native_relation": "art_diff_geometry_close",
+    "native_relation": "identical",
     "risk_flags": []
    }
   },
@@ -6334,7 +6330,7 @@
    "visual_evidence": {
     "detail": {
      "alignment_method": "backpic_constant_alias",
-     "diff_ratio": 0.9928,
+     "diff_ratio": 0.9623,
      "donor_frames": 5,
      "donor_size": [
       80,
@@ -6394,7 +6390,7 @@
    "visual_evidence": {
     "detail": {
      "alignment_method": "backpic_constant_alias",
-     "diff_ratio": 0.9907,
+     "diff_ratio": 0.9877,
      "donor_frames": 5,
      "donor_size": [
       80,
@@ -6455,7 +6451,7 @@
    "visual_evidence": {
     "detail": {
      "alignment_method": "backpic_constant_alias",
-     "diff_ratio": 0.9824,
+     "diff_ratio": 0.9701,
      "donor_frames": 5,
      "donor_size": [
       80,
@@ -6499,15 +6495,15 @@
    "format_family": "nitro_sprite_set_ncgr_nclr_ncer_nanr",
    "group_id": "trainer_battle_sprites/hgss/hgss_back_009",
    "needs_evidence": false,
-   "needs_runtime_validation": true,
-   "reason_code": "best_eligible_donor",
-   "role": "preferred",
+   "needs_runtime_validation": false,
+   "reason_code": "identical_to_native",
+   "role": "not_selected",
    "scores": {
     "compat": 2,
     "independent_share": 1.0,
     "integration_cost": 4,
-    "risk": "medium",
-    "visual_gain": 2
+    "risk": "low",
+    "visual_gain": 0
    },
    "source_id": "hgss",
    "subsystem": "trainer_battle_sprites",
@@ -6515,13 +6511,11 @@
    "visual_evidence": {
     "detail": {
      "alignment_method": "backpic_constant_alias",
-     "diff_ratio": 0.8115,
      "donor_frames": 8,
      "donor_size": [
       80,
       647
      ],
-     "geometry_reasons": [],
      "native_frames": 8,
      "native_path": "res/trainers/classes/dp_player_male/back.png",
      "native_size": [
@@ -6531,7 +6525,7 @@
      "platinum_class": "dp_player_male",
      "view": "back"
     },
-    "native_relation": "art_diff_geometry_close",
+    "native_relation": "identical",
     "risk_flags": []
    }
   },
@@ -6555,15 +6549,15 @@
    "format_family": "nitro_sprite_set_ncgr_nclr_ncer_nanr",
    "group_id": "trainer_battle_sprites/hgss/hgss_back_010",
    "needs_evidence": false,
-   "needs_runtime_validation": true,
-   "reason_code": "best_eligible_donor",
-   "role": "preferred",
+   "needs_runtime_validation": false,
+   "reason_code": "identical_to_native",
+   "role": "not_selected",
    "scores": {
     "compat": 2,
     "independent_share": 1.0,
     "integration_cost": 4,
-    "risk": "medium",
-    "visual_gain": 2
+    "risk": "low",
+    "visual_gain": 0
    },
    "source_id": "hgss",
    "subsystem": "trainer_battle_sprites",
@@ -6571,13 +6565,11 @@
    "visual_evidence": {
     "detail": {
      "alignment_method": "backpic_constant_alias",
-     "diff_ratio": 0.7755,
      "donor_frames": 8,
      "donor_size": [
       80,
       647
      ],
-     "geometry_reasons": [],
      "native_frames": 8,
      "native_path": "res/trainers/classes/dp_player_female/back.png",
      "native_size": [
@@ -6587,7 +6579,7 @@
      "platinum_class": "dp_player_female",
      "view": "back"
     },
-    "native_relation": "art_diff_geometry_close",
+    "native_relation": "identical",
     "risk_flags": []
    }
   },
@@ -6611,15 +6603,15 @@
    "format_family": "nitro_sprite_set_ncgr_nclr_ncer_nanr",
    "group_id": "trainer_battle_sprites/hgss/hgss_back_011",
    "needs_evidence": false,
-   "needs_runtime_validation": true,
-   "reason_code": "best_eligible_donor",
-   "role": "preferred",
+   "needs_runtime_validation": false,
+   "reason_code": "identical_to_native",
+   "role": "not_selected",
    "scores": {
     "compat": 2,
     "independent_share": 1.0,
     "integration_cost": 4,
-    "risk": "medium",
-    "visual_gain": 2
+    "risk": "low",
+    "visual_gain": 0
    },
    "source_id": "hgss",
    "subsystem": "trainer_battle_sprites",
@@ -6627,13 +6619,11 @@
    "visual_evidence": {
     "detail": {
      "alignment_method": "backpic_constant_alias",
-     "diff_ratio": 0.7866,
      "donor_frames": 8,
      "donor_size": [
       80,
       647
      ],
-     "geometry_reasons": [],
      "native_frames": 8,
      "native_path": "res/trainers/classes/dp_rival/back.png",
      "native_size": [
@@ -6643,7 +6633,7 @@
      "platinum_class": "dp_rival",
      "view": "back"
     },
-    "native_relation": "art_diff_geometry_close",
+    "native_relation": "identical",
     "risk_flags": []
    }
   },
@@ -6667,15 +6657,15 @@
    "format_family": "nitro_sprite_set_ncgr_nclr_ncer_nanr",
    "group_id": "trainer_battle_sprites/hgss/hgss_back_012",
    "needs_evidence": false,
-   "needs_runtime_validation": true,
-   "reason_code": "best_eligible_donor",
-   "role": "preferred",
+   "needs_runtime_validation": false,
+   "reason_code": "identical_to_native",
+   "role": "not_selected",
    "scores": {
     "compat": 2,
     "independent_share": 1.0,
     "integration_cost": 4,
-    "risk": "medium",
-    "visual_gain": 2
+    "risk": "low",
+    "visual_gain": 0
    },
    "source_id": "hgss",
    "subsystem": "trainer_battle_sprites",
@@ -6683,13 +6673,11 @@
    "visual_evidence": {
     "detail": {
      "alignment_method": "backpic_constant_alias",
-     "diff_ratio": 0.8125,
      "donor_frames": 8,
      "donor_size": [
       80,
       647
      ],
-     "geometry_reasons": [],
      "native_frames": 8,
      "native_path": "res/trainers/classes/player_male/back.png",
      "native_size": [
@@ -6699,7 +6687,7 @@
      "platinum_class": "player_male",
      "view": "back"
     },
-    "native_relation": "art_diff_geometry_close",
+    "native_relation": "identical",
     "risk_flags": []
    }
   },
@@ -6723,15 +6711,15 @@
    "format_family": "nitro_sprite_set_ncgr_nclr_ncer_nanr",
    "group_id": "trainer_battle_sprites/hgss/hgss_back_013",
    "needs_evidence": false,
-   "needs_runtime_validation": true,
-   "reason_code": "best_eligible_donor",
-   "role": "preferred",
+   "needs_runtime_validation": false,
+   "reason_code": "identical_to_native",
+   "role": "not_selected",
    "scores": {
     "compat": 2,
     "independent_share": 1.0,
     "integration_cost": 4,
-    "risk": "medium",
-    "visual_gain": 2
+    "risk": "low",
+    "visual_gain": 0
    },
    "source_id": "hgss",
    "subsystem": "trainer_battle_sprites",
@@ -6739,13 +6727,11 @@
    "visual_evidence": {
     "detail": {
      "alignment_method": "backpic_constant_alias",
-     "diff_ratio": 0.7749,
      "donor_frames": 8,
      "donor_size": [
       80,
       647
      ],
-     "geometry_reasons": [],
      "native_frames": 8,
      "native_path": "res/trainers/classes/player_female/back.png",
      "native_size": [
@@ -6755,7 +6741,7 @@
      "platinum_class": "player_female",
      "view": "back"
     },
-    "native_relation": "art_diff_geometry_close",
+    "native_relation": "identical",
     "risk_flags": []
    }
   },
@@ -6779,15 +6765,15 @@
    "format_family": "nitro_sprite_set_ncgr_nclr_ncer_nanr",
    "group_id": "trainer_battle_sprites/hgss/hgss_back_014",
    "needs_evidence": false,
-   "needs_runtime_validation": true,
-   "reason_code": "best_eligible_donor",
-   "role": "preferred",
+   "needs_runtime_validation": false,
+   "reason_code": "identical_to_native",
+   "role": "not_selected",
    "scores": {
     "compat": 2,
     "independent_share": 1.0,
     "integration_cost": 4,
-    "risk": "medium",
-    "visual_gain": 2
+    "risk": "low",
+    "visual_gain": 0
    },
    "source_id": "hgss",
    "subsystem": "trainer_battle_sprites",
@@ -6795,13 +6781,11 @@
    "visual_evidence": {
     "detail": {
      "alignment_method": "backpic_constant_alias",
-     "diff_ratio": 0.788,
      "donor_frames": 8,
      "donor_size": [
       80,
       647
      ],
-     "geometry_reasons": [],
      "native_frames": 8,
      "native_path": "res/trainers/classes/rival/back.png",
      "native_size": [
@@ -6811,7 +6795,7 @@
      "platinum_class": "rival",
      "view": "back"
     },
-    "native_relation": "art_diff_geometry_close",
+    "native_relation": "identical",
     "risk_flags": []
    }
   },
@@ -11883,14 +11867,14 @@
    "group_id": "trainer_battle_sprites/hgss/hgss_front_097",
    "needs_evidence": false,
    "needs_runtime_validation": true,
-   "reason_code": "best_eligible_donor",
-   "role": "preferred",
+   "reason_code": "eligible_not_best_for_target",
+   "role": "alternate",
    "scores": {
     "compat": 2,
     "independent_share": 1.0,
     "integration_cost": 4,
     "risk": "medium",
-    "visual_gain": 2
+    "visual_gain": 1
    },
    "source_id": "hgss",
    "subsystem": "trainer_battle_sprites",
@@ -11898,13 +11882,12 @@
    "visual_evidence": {
     "detail": {
      "alignment_method": "exact_name",
-     "diff_ratio": 0.6463,
+     "diff_ratio": 0.0081,
      "donor_frames": 5,
      "donor_size": [
       80,
       405
      ],
-     "geometry_reasons": [],
      "native_frames": 5,
      "native_path": "res/trainers/classes/tower_tycoon/front.png",
      "native_size": [
@@ -11914,7 +11897,7 @@
      "platinum_class": "tower_tycoon",
      "view": "front"
     },
-    "native_relation": "art_diff_geometry_close",
+    "native_relation": "art_diff_minor",
     "risk_flags": []
    }
   },
@@ -11981,15 +11964,15 @@
    "format_family": "nitro_sprite_set_ncgr_nclr_ncer_nanr",
    "group_id": "trainer_battle_sprites/hgss/hgss_front_099",
    "needs_evidence": false,
-   "needs_runtime_validation": true,
-   "reason_code": "best_eligible_donor",
-   "role": "preferred",
+   "needs_runtime_validation": false,
+   "reason_code": "identical_to_native",
+   "role": "not_selected",
    "scores": {
     "compat": 2,
     "independent_share": 1.0,
     "integration_cost": 4,
-    "risk": "medium",
-    "visual_gain": 2
+    "risk": "low",
+    "visual_gain": 0
    },
    "source_id": "hgss",
    "subsystem": "trainer_battle_sprites",
@@ -11997,13 +11980,11 @@
    "visual_evidence": {
     "detail": {
      "alignment_method": "exact_name",
-     "diff_ratio": 0.3103,
      "donor_frames": 6,
      "donor_size": [
       80,
       485
      ],
-     "geometry_reasons": [],
      "native_frames": 6,
      "native_path": "res/trainers/classes/hall_matron/front.png",
      "native_size": [
@@ -12013,7 +11994,7 @@
      "platinum_class": "hall_matron",
      "view": "front"
     },
-    "native_relation": "art_diff_geometry_close",
+    "native_relation": "identical",
     "risk_flags": []
    }
   },
@@ -12037,15 +12018,15 @@
    "format_family": "nitro_sprite_set_ncgr_nclr_ncer_nanr",
    "group_id": "trainer_battle_sprites/hgss/hgss_front_100",
    "needs_evidence": false,
-   "needs_runtime_validation": true,
-   "reason_code": "best_eligible_donor",
-   "role": "preferred",
+   "needs_runtime_validation": false,
+   "reason_code": "identical_to_native",
+   "role": "not_selected",
    "scores": {
     "compat": 2,
     "independent_share": 1.0,
     "integration_cost": 4,
-    "risk": "medium",
-    "visual_gain": 2
+    "risk": "low",
+    "visual_gain": 0
    },
    "source_id": "hgss",
    "subsystem": "trainer_battle_sprites",
@@ -12053,13 +12034,11 @@
    "visual_evidence": {
     "detail": {
      "alignment_method": "exact_name",
-     "diff_ratio": 0.1604,
      "donor_frames": 5,
      "donor_size": [
       80,
       404
      ],
-     "geometry_reasons": [],
      "native_frames": 5,
      "native_path": "res/trainers/classes/factory_head/front.png",
      "native_size": [
@@ -12069,7 +12048,7 @@
      "platinum_class": "factory_head",
      "view": "front"
     },
-    "native_relation": "art_diff_geometry_close",
+    "native_relation": "identical",
     "risk_flags": []
    }
   },
@@ -12109,7 +12088,7 @@
    "visual_evidence": {
     "detail": {
      "alignment_method": "exact_name",
-     "diff_ratio": 0.7321,
+     "diff_ratio": 0.1447,
      "donor_frames": 11,
      "donor_size": [
       80,
@@ -13385,13 +13364,13 @@
  ],
  "inputs": {
   "evidence_file": "docs/visual_overhaul/selection/evidence/trainer_battle_sprites.json",
-  "evidence_sha256": "db8663e60fc085b6483bcdf5109ef075402f8a3f21cae035829383e392c32a4c",
+  "evidence_sha256": "525139e6e109d2651fb132c96b2b603c95f9c646308decdd17fb487a176ee691",
   "recovered_ledger_sha256": {
    "LANE_A_RECOVERED_CURATION.json": "9d915a805df0ac9a32d336916e31e3251feeb427b15f05ce3512fcbb19b4266b",
    "LANE_B_RECOVERED_CURATION.json": "efe2bfe24fbff3a47ebbcb7779b87e957bec28e135cc8171d883c7ed7e6fe368",
    "LANE_CDE_RECOVERED_CURATION.json": "d68b973505c02dc51b912250b0340bed8a0cddcd208d0803d56c1f9e1c5c2d99",
    "hgss_field_sprites/CURATION.json": "65c7624fa33d644b9fac5c15465440dc1540f8f0a894d84d01fcb3e02b3a3aa1",
-   "hgss_trainer_sprites/CURATION.json": "46c469f5fc5777031e28acaab33add318abc1d62aca2beb68cc312d7b45da037"
+   "hgss_trainer_sprites/CURATION.json": "e67d1a6b4f8f5019653cf0fb9c004cbb98d53bda5efe5a0bb2fdf842f0762546"
   },
   "rules_sha256": "59242ec741fc3dabcce6eb151ab5042dbebd28a7e95dd6f1be35c4f3ee70b003",
   "subsystem_groups_digest": "5d7b84c008a9940b808c",
@@ -13404,28 +13383,28 @@
   "groups": 252,
   "needs_evidence": 0,
   "role_reason": {
-   "alternate:eligible_not_best_for_target": 17,
-   "not_selected:identical_to_native": 48,
-   "preferred:best_eligible_donor": 21,
+   "alternate:eligible_not_best_for_target": 18,
+   "not_selected:identical_to_native": 58,
+   "preferred:best_eligible_donor": 10,
    "reference_only:control_differs_from_native": 98,
    "reference_only:no_native_target": 68
   },
   "roles": {
-   "alternate": 17,
-   "not_selected": 48,
-   "preferred": 21,
+   "alternate": 18,
+   "not_selected": 58,
+   "preferred": 10,
    "reference_only": 166
   },
   "source_role": {
    "diamond:reference_only": 106,
-   "hgss:alternate": 17,
-   "hgss:not_selected": 48,
-   "hgss:preferred": 21,
+   "hgss:alternate": 18,
+   "hgss:not_selected": 58,
+   "hgss:preferred": 10,
    "hgss:reference_only": 60
   },
   "target_resolution": {
-   "donor": 21,
-   "native": 160
+   "donor": 10,
+   "native": 171
   },
   "targets": 181
  },
@@ -13648,8 +13627,8 @@
   },
   {
    "alternates": [],
-   "preferred": "trainer_battle_sprites/hgss/hgss_front_100",
-   "resolution": "donor:trainer_battle_sprites/hgss/hgss_front_100",
+   "preferred": null,
+   "resolution": "platinum_native",
    "target_id": "trainer_battle_sprites/tc_factory_head"
   },
   {
@@ -13692,8 +13671,8 @@
   },
   {
    "alternates": [],
-   "preferred": "trainer_battle_sprites/hgss/hgss_front_099",
-   "resolution": "donor:trainer_battle_sprites/hgss/hgss_front_099",
+   "preferred": null,
+   "resolution": "platinum_native",
    "target_id": "trainer_battle_sprites/tc_hall_matron"
   },
   {
@@ -14295,9 +14274,11 @@
    "target_id": "trainer_battle_sprites/tc_swimmer_male"
   },
   {
-   "alternates": [],
-   "preferred": "trainer_battle_sprites/hgss/hgss_front_097",
-   "resolution": "donor:trainer_battle_sprites/hgss/hgss_front_097",
+   "alternates": [
+    "trainer_battle_sprites/hgss/hgss_front_097"
+   ],
+   "preferred": null,
+   "resolution": "platinum_native",
    "target_id": "trainer_battle_sprites/tc_tower_tycoon"
   },
   {
@@ -14444,20 +14425,20 @@
   },
   {
    "alternates": [],
-   "preferred": "trainer_battle_sprites/hgss/hgss_back_010",
-   "resolution": "donor:trainer_battle_sprites/hgss/hgss_back_010",
+   "preferred": null,
+   "resolution": "platinum_native",
    "target_id": "trainer_battle_sprites/tcb_dp_player_female"
   },
   {
    "alternates": [],
-   "preferred": "trainer_battle_sprites/hgss/hgss_back_009",
-   "resolution": "donor:trainer_battle_sprites/hgss/hgss_back_009",
+   "preferred": null,
+   "resolution": "platinum_native",
    "target_id": "trainer_battle_sprites/tcb_dp_player_male"
   },
   {
    "alternates": [],
-   "preferred": "trainer_battle_sprites/hgss/hgss_back_011",
-   "resolution": "donor:trainer_battle_sprites/hgss/hgss_back_011",
+   "preferred": null,
+   "resolution": "platinum_native",
    "target_id": "trainer_battle_sprites/tcb_dp_rival"
   },
   {
@@ -14498,20 +14479,20 @@
   },
   {
    "alternates": [],
-   "preferred": "trainer_battle_sprites/hgss/hgss_back_013",
-   "resolution": "donor:trainer_battle_sprites/hgss/hgss_back_013",
+   "preferred": null,
+   "resolution": "platinum_native",
    "target_id": "trainer_battle_sprites/tcb_player_female"
   },
   {
    "alternates": [],
-   "preferred": "trainer_battle_sprites/hgss/hgss_back_012",
-   "resolution": "donor:trainer_battle_sprites/hgss/hgss_back_012",
+   "preferred": null,
+   "resolution": "platinum_native",
    "target_id": "trainer_battle_sprites/tcb_player_male"
   },
   {
    "alternates": [],
-   "preferred": "trainer_battle_sprites/hgss/hgss_back_014",
-   "resolution": "donor:trainer_battle_sprites/hgss/hgss_back_014",
+   "preferred": null,
+   "resolution": "platinum_native",
    "target_id": "trainer_battle_sprites/tcb_rival"
   },
   {
@@ -14524,8 +14505,8 @@
   },
   {
    "alternates": [],
-   "preferred": "trainer_battle_sprites/hgss/hgss_back_004",
-   "resolution": "donor:trainer_battle_sprites/hgss/hgss_back_004",
+   "preferred": null,
+   "resolution": "platinum_native",
    "target_id": "trainer_battle_sprites/tcb_trainer_cheryl"
   },
   {
@@ -14546,8 +14527,8 @@
   },
   {
    "alternates": [],
-   "preferred": "trainer_battle_sprites/hgss/hgss_back_005",
-   "resolution": "donor:trainer_battle_sprites/hgss/hgss_back_005",
+   "preferred": null,
+   "resolution": "platinum_native",
    "target_id": "trainer_battle_sprites/tcb_trainer_riley"
   }
  ]

@@ -54,4 +54,4 @@ python3 tools/visual_overhaul/selection/validate_selection.py   # CI: .github/wo
 
 ## Update: HGSS sprite catalog gap passes
 
-Trainer battle sprites (146 sets) and NPC/player field sprites (212 sheets) are now cataloged, curated and selected; details, scope rules and caveats in `../catalog_extensions/README.md`. Net new donor selections: 21 HGSS trainer sets preferred; NPC/player sprites yield no preferred donor (96 identical, 4 unverified-subject). 3D models, textures, menus/UI and battle HUD remain unstarted.
+Trainer battle sprites (146 sets) and NPC/player field sprites (212 sheets) are now cataloged, curated and selected; details, scope rules and caveats in `../catalog_extensions/README.md`. Net new donor selections: 10 HGSS trainer sets preferred (corrected from 21, see catalog_extensions README: NCER VRAM-transfer decoder fix); NPC/player sprites yield no preferred donor (96 identical, 4 unverified-subject). 3D models, textures, menus/UI and battle HUD remain unstarted.

@@ -164,6 +164,15 @@ def validate(sel_dir: Path | None = None, quiet: bool = False) -> list[str]:
             errs.append("IMPLEMENTATION_QUEUE.json is stale")
     except ImportError:
         pass
+    rm = SEL / "review" / "trainer_sprites" / "REVIEW_MANIFEST.json"
+    if rm.is_file():
+        man = jload(rm)
+        led = SEL / "ledgers" / "trainer_battle_sprites.json"
+        if man["ledger_sha256"] != file_sha256(led):
+            errs.append("trainer REVIEW_MANIFEST is stale vs trainer ledger (rerun build_trainer_qa_package.py)")
+        pref = {d["group_id"] for d in jload(led)["decisions"] if d["role"] == "preferred"}
+        if {c["candidate_id"] for c in man["candidates"]} != pref:
+            errs.append("trainer REVIEW_MANIFEST candidates differ from current preferred set")
     return errs
 
 
