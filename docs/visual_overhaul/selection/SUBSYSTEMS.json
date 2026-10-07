@@ -13,176 +13,333 @@
     "pokemon_icons": {
       "title": "Pokemon party/box/summary icons",
       "matrix_row": "Pokemon icons",
-      "native_baseline": {"kind": "res_dir", "path": "res/pokemon/<species>/icon.png", "shared": "res/pokemon/.shared/pl_poke_icon.pal"},
+      "native_baseline": {
+        "kind": "res_dir",
+        "path": "res/pokemon/<species>/icon.png",
+        "shared": "res/pokemon/.shared/pl_poke_icon.pal"
+      },
       "target_kind": "species",
       "integration_cost": 2,
       "priority_weight": 2,
       "evidence_provider": "icons",
       "source_roles": {
-        "hgss": {"class": "direct", "format_family": "nitro_indexed_png_32x64", "conversion": "none", "rationale": "Same 32x64 4bpp indexed contract and shared-palette banks as Platinum."},
-        "diamond": {"class": "control", "format_family": "nitro_ncgr_raw", "conversion": "trivial", "by_asset_type": {"source_png": "none"}, "rationale": "DP/Pt lineage control; raw NCGR members need deterministic decode."}
+        "hgss": {
+          "class": "direct",
+          "format_family": "nitro_indexed_png_32x64",
+          "conversion": "none",
+          "rationale": "Same 32x64 4bpp indexed contract and shared-palette banks as Platinum."
+        },
+        "diamond": {
+          "class": "control",
+          "format_family": "nitro_ncgr_raw",
+          "conversion": "trivial",
+          "by_asset_type": {
+            "source_png": "none"
+          },
+          "rationale": "DP/Pt lineage control; raw NCGR members need deterministic decode."
+        }
       }
     },
     "pokemon_battle_sprites": {
       "title": "Pokemon battle sprites (front/back, gender, special forms)",
       "matrix_row": "Pokemon battle sprites",
-      "native_baseline": {"kind": "res_dir", "path": "res/pokemon/<species>/{male,female}_{front,back}.png"},
+      "native_baseline": {
+        "kind": "res_dir",
+        "path": "res/pokemon/<species>/{male,female}_{front,back}.png"
+      },
       "target_kind": "species",
       "integration_cost": 3,
       "priority_weight": 5,
       "evidence_provider": "battle_sprites",
       "source_roles": {
-        "hgss": {"class": "direct", "format_family": "nitro_indexed_png_160x80", "conversion": "none", "rationale": "Identical 160x80 indexed contract; palette derivation guarded separately."},
-        "diamond": {"class": "control", "format_family": "nitro_indexed_png_160x80", "conversion": "none", "rationale": "DP lineage control."}
+        "hgss": {
+          "class": "direct",
+          "format_family": "nitro_indexed_png_160x80",
+          "conversion": "none",
+          "rationale": "Identical 160x80 indexed contract; palette derivation guarded separately."
+        },
+        "diamond": {
+          "class": "control",
+          "format_family": "nitro_indexed_png_160x80",
+          "conversion": "none",
+          "rationale": "DP lineage control."
+        }
       }
     },
     "trainer_battle_sprites": {
       "title": "Trainer battle sprites",
       "matrix_row": "Trainer battle sprites",
-      "native_baseline": {"kind": "narc", "path": "res/trainers (pl_trgra)"},
+      "native_baseline": {
+        "kind": "narc",
+        "path": "res/trainers (pl_trgra)"
+      },
       "target_kind": "trainer_class",
       "integration_cost": 3,
       "priority_weight": 3,
-      "evidence_provider": null,
+      "evidence_provider": "trainer_sprites",
       "source_roles": {
-        "diamond": {"class": "control", "format_family": "nitro_indexed_png", "conversion": "none", "rationale": "Only trainer-sprite donor in the curated usable set; HGSS trainer art is not in it (see CANDIDATE_GROUPS gaps)."}
+        "diamond": {
+          "class": "control",
+          "format_family": "nitro_indexed_png",
+          "conversion": "none",
+          "rationale": "DP lineage control (Platinum class index equals DP class index; see alignment/trainer_classes.json)."
+        },
+        "hgss": {
+          "class": "direct",
+          "format_family": "nitro_sprite_set_ncgr_nclr_ncer_nanr",
+          "conversion": "trivial",
+          "rationale": "HGSS trainer sets use the same 80x80 extended-cell NCGR/NCLR/NCER/NANR model as Platinum's trfgra/trbgra sources; deterministic NARC->PNG+cell/anim JSON decode."
+        }
       }
     },
     "pokemon_animation_reference": {
       "title": "Pokemon animation timing/staging",
       "matrix_row": "Pokemon animation timing",
-      "native_baseline": {"kind": "src", "path": "res/pokemon/<species>/sprite_data.json + battle animation scripts"},
+      "native_baseline": {
+        "kind": "src",
+        "path": "res/pokemon/<species>/sprite_data.json + battle animation scripts"
+      },
       "target_kind": "species",
       "integration_cost": 5,
       "priority_weight": 1,
       "evidence_provider": null,
       "source_roles": {
-        "ranger2": {"class": "reference", "format_family": "ranger_cell_frames", "conversion": "not_portable", "rationale": "Ranger Pokemon cell animations differ in art/engine; usable only as timing/staging reference."}
+        "ranger2": {
+          "class": "reference",
+          "format_family": "ranger_cell_frames",
+          "conversion": "not_portable",
+          "rationale": "Ranger Pokemon cell animations differ in art/engine; usable only as timing/staging reference."
+        }
       }
     },
     "field_npc_player_sprites": {
       "title": "NPC/player field sprites",
       "matrix_row": "NPC/player field sprites",
-      "native_baseline": {"kind": "res_dir", "path": "res/field/ow_sprites"},
+      "native_baseline": {
+        "kind": "res_dir",
+        "path": "res/field/ow_sprites"
+      },
       "target_kind": "family",
       "integration_cost": 4,
       "priority_weight": 3,
       "evidence_provider": null,
       "source_roles": {
-        "ranger2": {"class": "none", "format_family": "ranger_npc_package", "conversion": "not_portable", "rationale": "Matrix names HGSS/Platinum/Diamond for this row; Ranger art style and packaging are unrelated."}
+        "ranger2": {
+          "class": "none",
+          "format_family": "ranger_npc_package",
+          "conversion": "not_portable",
+          "rationale": "Matrix names HGSS/Platinum/Diamond for this row; Ranger art style and packaging are unrelated."
+        }
       }
     },
     "field_environment_art": {
       "title": "Field/environment textures, maps, previews",
       "matrix_row": "Field textures / 3D field models / Foliage / Water / Urban",
-      "native_baseline": {"kind": "res_dir", "path": "res/field + res/graphics (map textures)"},
+      "native_baseline": {
+        "kind": "res_dir",
+        "path": "res/field + res/graphics (map textures)"
+      },
       "target_kind": "family",
       "integration_cost": 4,
       "priority_weight": 4,
       "evidence_provider": null,
       "source_roles": {
-        "hgss": {"class": "convertible", "format_family": "nitro_png_nscr_preview", "conversion": "structural", "rationale": "HGSS field area previews; matrix primary for late Gen IV field art."},
-        "pmd_sky": {"class": "reference", "format_family": "pmd_bma_bpc_bpl", "conversion": "not_portable", "rationale": "Matrix: foliage/water/overlay reference."},
-        "ranger2": {"class": "reference", "format_family": "ranger_map_composites", "conversion": "not_portable", "rationale": "Matrix: 2D tile/motif reference only."}
+        "hgss": {
+          "class": "convertible",
+          "format_family": "nitro_png_nscr_preview",
+          "conversion": "structural",
+          "rationale": "HGSS field area previews; matrix primary for late Gen IV field art."
+        },
+        "pmd_sky": {
+          "class": "reference",
+          "format_family": "pmd_bma_bpc_bpl",
+          "conversion": "not_portable",
+          "rationale": "Matrix: foliage/water/overlay reference."
+        },
+        "ranger2": {
+          "class": "reference",
+          "format_family": "ranger_map_composites",
+          "conversion": "not_portable",
+          "rationale": "Matrix: 2D tile/motif reference only."
+        }
       }
     },
     "field_effects_overlays": {
       "title": "Field particles, animated environmental overlays",
       "matrix_row": "Animated environmental overlays / Field particles",
-      "native_baseline": {"kind": "src", "path": "Platinum field effect/particle system"},
+      "native_baseline": {
+        "kind": "src",
+        "path": "Platinum field effect/particle system"
+      },
       "target_kind": "family",
       "integration_cost": 4,
       "priority_weight": 3,
       "evidence_provider": null,
       "source_roles": {
-        "pmd_sky": {"class": "technique", "format_family": "pmd_wan", "conversion": "not_portable", "rationale": "Matrix: PMD Sky is the strongest effects reference; recreate natively."}
+        "pmd_sky": {
+          "class": "technique",
+          "format_family": "pmd_wan",
+          "conversion": "not_portable",
+          "rationale": "Matrix: PMD Sky is the strongest effects reference; recreate natively."
+        }
       }
     },
     "battle_effects_particles": {
       "title": "Battle particles, hit impacts, effects",
       "matrix_row": "Battle particles / Hit impacts",
-      "native_baseline": {"kind": "src", "path": "Platinum battle particle/effect system"},
+      "native_baseline": {
+        "kind": "src",
+        "path": "Platinum battle particle/effect system"
+      },
       "target_kind": "family",
       "integration_cost": 4,
       "priority_weight": 3,
       "evidence_provider": null,
       "source_roles": {
-        "ranger2": {"class": "technique", "format_family": "ranger_effect_cells", "conversion": "not_portable", "rationale": "Layering/density reference; Ranger targets/effects not portable."}
+        "ranger2": {
+          "class": "technique",
+          "format_family": "ranger_effect_cells",
+          "conversion": "not_portable",
+          "rationale": "Layering/density reference; Ranger targets/effects not portable."
+        }
       }
     },
     "battle_backgrounds_hud": {
       "title": "Battle backgrounds and HUD",
       "matrix_row": "Battle backgrounds / Battle HUD",
-      "native_baseline": {"kind": "res_dir", "path": "res/battle backgrounds + HUD"},
+      "native_baseline": {
+        "kind": "res_dir",
+        "path": "res/battle backgrounds + HUD"
+      },
       "target_kind": "family",
       "integration_cost": 4,
       "priority_weight": 3,
       "evidence_provider": null,
       "source_roles": {
-        "ranger2": {"class": "none", "format_family": "ranger_battle_package", "conversion": "not_portable", "rationale": "Matrix names Platinum/Stadium/Diamond/HGSS/Ruby/Yellow; Ranger is not a reference for this row."}
+        "ranger2": {
+          "class": "none",
+          "format_family": "ranger_battle_package",
+          "conversion": "not_portable",
+          "rationale": "Matrix names Platinum/Stadium/Diamond/HGSS/Ruby/Yellow; Ranger is not a reference for this row."
+        }
       }
     },
     "menu_ui_frames": {
       "title": "Menus/UI frames, cursors, fonts",
       "matrix_row": "Menus/UI frames",
-      "native_baseline": {"kind": "res_dir", "path": "res/graphics ui + generated G7 UI"},
+      "native_baseline": {
+        "kind": "res_dir",
+        "path": "res/graphics ui + generated G7 UI"
+      },
       "target_kind": "family",
       "integration_cost": 3,
       "priority_weight": 3,
       "evidence_provider": null,
       "source_roles": {
-        "hgss": {"class": "convertible", "format_family": "nitro_ncgr_ncer_nscr", "conversion": "structural", "rationale": "Matrix primary for UI; same Nitro 2D contracts."},
-        "pmd_sky": {"class": "reference", "format_family": "pmd_ui_font", "conversion": "not_portable", "rationale": "Matrix secondary reference for panels/cursors."},
-        "ranger2": {"class": "none", "format_family": "ranger_ui_package", "conversion": "not_portable", "rationale": "Not named for the UI row; different UI grammar."}
+        "hgss": {
+          "class": "convertible",
+          "format_family": "nitro_ncgr_ncer_nscr",
+          "conversion": "structural",
+          "rationale": "Matrix primary for UI; same Nitro 2D contracts."
+        },
+        "pmd_sky": {
+          "class": "reference",
+          "format_family": "pmd_ui_font",
+          "conversion": "not_portable",
+          "rationale": "Matrix secondary reference for panels/cursors."
+        },
+        "ranger2": {
+          "class": "none",
+          "format_family": "ranger_ui_package",
+          "conversion": "not_portable",
+          "rationale": "Not named for the UI row; different UI grammar."
+        }
       }
     },
     "pokedex_ui": {
       "title": "Pokedex (zukan) UI",
       "matrix_row": "Menus/UI frames",
-      "native_baseline": {"kind": "res_dir", "path": "res/graphics pokedex"},
+      "native_baseline": {
+        "kind": "res_dir",
+        "path": "res/graphics pokedex"
+      },
       "target_kind": "family",
       "integration_cost": 3,
       "priority_weight": 2,
       "evidence_provider": null,
       "source_roles": {
-        "hgss": {"class": "convertible", "format_family": "nitro_ncgr_ncer_nscr", "conversion": "structural", "rationale": "HGSS zukan_gra resources."}
+        "hgss": {
+          "class": "convertible",
+          "format_family": "nitro_ncgr_ncer_nscr",
+          "conversion": "structural",
+          "rationale": "HGSS zukan_gra resources."
+        }
       }
     },
     "party_summary_ui": {
       "title": "Party/summary list UI",
       "matrix_row": "Menus/UI frames",
-      "native_baseline": {"kind": "res_dir", "path": "res/graphics party/summary"},
+      "native_baseline": {
+        "kind": "res_dir",
+        "path": "res/graphics party/summary"
+      },
       "target_kind": "family",
       "integration_cost": 3,
       "priority_weight": 2,
       "evidence_provider": null,
       "source_roles": {
-        "hgss": {"class": "convertible", "format_family": "nitro_ncgr_ncer_nscr", "conversion": "structural", "rationale": "HGSS plist_gra resources."}
+        "hgss": {
+          "class": "convertible",
+          "format_family": "nitro_ncgr_ncer_nscr",
+          "conversion": "structural",
+          "rationale": "HGSS plist_gra resources."
+        }
       }
     },
     "title_and_presentation": {
       "title": "Title, intro/ending, scene backgrounds, transitions",
       "matrix_row": "Screen transitions / scene presentation",
-      "native_baseline": {"kind": "res_dir", "path": "res/graphics title/intro"},
+      "native_baseline": {
+        "kind": "res_dir",
+        "path": "res/graphics title/intro"
+      },
       "target_kind": "family",
       "integration_cost": 4,
       "priority_weight": 2,
       "evidence_provider": null,
       "source_roles": {
-        "pmd_sky": {"class": "technique", "format_family": "pmd_bpc_bgp", "conversion": "not_portable", "rationale": "Matrix: layered wipes/transitions technique source."},
-        "ranger2": {"class": "none", "format_family": "ranger_event_package", "conversion": "not_portable", "rationale": "Game-specific event/ending art; no Platinum target."}
+        "pmd_sky": {
+          "class": "technique",
+          "format_family": "pmd_bpc_bgp",
+          "conversion": "not_portable",
+          "rationale": "Matrix: layered wipes/transitions technique source."
+        },
+        "ranger2": {
+          "class": "none",
+          "format_family": "ranger_event_package",
+          "conversion": "not_portable",
+          "rationale": "Game-specific event/ending art; no Platinum target."
+        }
       }
     },
     "no_platinum_target": {
       "title": "Content with no Platinum visual target",
       "matrix_row": null,
-      "native_baseline": {"kind": "none", "path": null},
+      "native_baseline": {
+        "kind": "none",
+        "path": null
+      },
       "target_kind": "family",
       "integration_cost": 0,
       "priority_weight": 0,
       "evidence_provider": null,
       "source_roles": {
-        "ranger2": {"class": "none", "format_family": "ranger_pokemon_object", "conversion": "not_portable", "rationale": "Ranger-specific Pokemon objects (pokeOBJ); no Platinum counterpart."}
+        "ranger2": {
+          "class": "none",
+          "format_family": "ranger_pokemon_object",
+          "conversion": "not_portable",
+          "rationale": "Ranger-specific Pokemon objects (pokeOBJ); no Platinum counterpart."
+        }
       }
     }
   }

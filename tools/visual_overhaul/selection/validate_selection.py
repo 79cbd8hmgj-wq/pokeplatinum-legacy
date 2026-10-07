@@ -22,6 +22,32 @@ def validate(sel_dir: Path | None = None, quiet: bool = False) -> list[str]:
     subs = jload(SUBSYSTEMS_JSON)["subsystems"]
     status = jload(STATUS_JSON)
 
+    # V0: catalog extensions (targeted inventories) are complete, disjoint from the base catalog, and pinned
+    base_ids = {a["asset_id"] for a in jload(VO / "DONOR_ASSET_CATALOG.json")["assets"]}
+    for ext in extensions():
+        cat = jload(EXT_DIR / ext["catalog"])
+        cur = jload(EXT_DIR / ext["curation"])
+        cids = [a["asset_id"] for a in cat["assets"]]
+        uids = [r["asset_id"] for r in cur["records"]]
+        tag = f"extension {ext['id']}"
+        if len(cids) != len(set(cids)) or len(uids) != len(set(uids)):
+            errs.append(f"{tag}: duplicate asset ids")
+        if set(cids) != set(uids):
+            errs.append(f"{tag}: catalog and curation ids differ")
+        if set(cids) & base_ids:
+            errs.append(f"{tag}: overlaps base catalog")
+        if any(r["review_status"] not in ("usable", "reject", "decode_issue") for r in cur["records"]):
+            errs.append(f"{tag}: unreviewed records")
+        if not all(src.get("source_commit") for src in cat["sources"]):
+            errs.append(f"{tag}: source commit not pinned")
+        for a in cat["assets"]:
+            if a["source_id"] != ext["source_id"] or not a["source_metadata"].get("source_commit"):
+                errs.append(f"{tag}: {a['asset_id']} lacks provenance")
+                break
+    inv = status["invariants"]
+    if not inv.get("complete") or inv.get("catalog_assets") != len(base_ids) + sum(len(jload(EXT_DIR / e["catalog"])["assets"]) for e in extensions()):
+        errs.append("DONOR_CURATION_STATUS invariants incomplete or stale vs catalog extensions")
+
     # V1/V2: groups reproducible from the recovered ledgers, full coverage
     fresh = build_candidate_groups.build(want_membership=True)
     membership = fresh.pop("_membership")

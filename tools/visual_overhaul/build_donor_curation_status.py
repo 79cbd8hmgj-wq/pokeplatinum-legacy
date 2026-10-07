@@ -16,11 +16,18 @@ from pathlib import Path
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--catalog", type=Path, required=True)
+    ap.add_argument("--catalog-extension", action="append", default=[], type=Path,
+                    help="targeted catalog extension (catalog-schema JSON); its assets must be curated by a --ledger")
     ap.add_argument("--ledger", action="append", required=True, help="label=path")
     ap.add_argument("--write-json", type=Path, required=True)
     ap.add_argument("--write-md", type=Path, required=True)
     a = ap.parse_args()
-    cat_ids = [x["asset_id"] for x in json.loads(a.catalog.read_text())["assets"]]
+    base_ids = [x["asset_id"] for x in json.loads(a.catalog.read_text())["assets"]]
+    ext_ids: list[str] = []
+    for ep in a.catalog_extension:
+        ext_ids += [x["asset_id"] for x in json.loads(ep.read_text())["assets"]]
+    overlap = sorted(set(base_ids) & set(ext_ids))
+    cat_ids = base_ids + ext_ids
     seen: dict[str, str] = {}
     per_label: dict[str, Counter] = {}
     per_source: dict[str, Counter] = {}
@@ -39,9 +46,10 @@ def main() -> int:
     total = Counter()
     for c in per_label.values():
         total.update(c)
-    inv = {"catalog_assets": len(cat_ids), "curated_assets": len(seen), "missing": len(missing), "extra": len(extra),
+    inv = {"base_catalog_assets": len(base_ids), "extension_catalog_assets": len(ext_ids), "extension_overlap_with_base": len(overlap),
+           "catalog_assets": len(cat_ids), "curated_assets": len(seen), "missing": len(missing), "extra": len(extra),
            "duplicates": len(dup), "unreviewed": total.get("unreviewed", 0),
-           "complete": not missing and not extra and not dup and not total.get("unreviewed", 0)}
+           "complete": not missing and not extra and not dup and not overlap and not total.get("unreviewed", 0)}
     payload = {"schema_version": 1, "invariants": inv, "status_totals": dict(sorted(total.items())),
                "ledger_status_counts": {k: dict(sorted(v.items())) for k, v in per_label.items()},
                "source_status_counts": {k: dict(sorted(v.items())) for k, v in sorted(per_source.items())},

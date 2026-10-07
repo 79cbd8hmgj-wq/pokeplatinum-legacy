@@ -40,6 +40,7 @@
   "art_diff": 2,
   "art_diff_geometry_close": 2,
   "art_diff_geometry_review": 2,
+  "art_diff_minor": 1,
   "content_match_native": 0,
   "contract_mismatch": null,
   "different": null,
@@ -69,7 +70,11 @@
   "no_native_target",
   "weak_evidence_share"
  ],
+ "relation_notes": {
+  "art_diff_minor": "Rendered-pixel difference ratio (differing pixels / opaque union, over compared frames) below thresholds.minor_diff_ratio; evidence providers emit this relation instead of art_diff_geometry_*."
+ },
  "risk_flag_bumps": {
+  "frame_layout_differs": 1,
   "geometry_review": 1,
   "palette_mismatch": 1,
   "palette_reorder_suspected": 2
@@ -85,12 +90,13 @@
   "reference_only",
   "not_selected"
  ],
- "rules_version": "1.2",
+ "rules_version": "1.4",
  "runtime_validation_relations": [
   "art_diff_geometry_close",
   "art_diff_geometry_review",
   "palette_only",
-  "art_diff"
+  "art_diff",
+  "art_diff_minor"
  ],
  "schema_version": 1,
  "source_preference": [
@@ -103,6 +109,7 @@
   "alternate_min_compat": 1,
   "alternate_min_gain": 1,
   "min_independent_members": 1,
+  "minor_diff_ratio": 0.05,
   "preferred_max_risk": "medium",
   "preferred_min_compat": 2,
   "preferred_min_gain": 2,

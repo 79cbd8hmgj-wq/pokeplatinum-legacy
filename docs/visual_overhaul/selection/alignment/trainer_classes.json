@@ -1,0 +1,1675 @@
+{
+ "diamond_back": {
+  "000": {
+   "method": "none",
+   "name": "dp_trbgra_000",
+   "platinum_class": null,
+   "target": "tcb_dp_000"
+  },
+  "001": {
+   "method": "none",
+   "name": "dp_trbgra_001",
+   "platinum_class": null,
+   "target": "tcb_dp_001"
+  },
+  "002": {
+   "method": "none",
+   "name": "dp_trbgra_002",
+   "platinum_class": null,
+   "target": "tcb_dp_002"
+  },
+  "003": {
+   "method": "none",
+   "name": "dp_trbgra_003",
+   "platinum_class": null,
+   "target": "tcb_dp_003"
+  },
+  "004": {
+   "method": "none",
+   "name": "dp_trbgra_004",
+   "platinum_class": null,
+   "target": "tcb_dp_004"
+  },
+  "005": {
+   "method": "none",
+   "name": "dp_trbgra_005",
+   "platinum_class": null,
+   "target": "tcb_dp_005"
+  },
+  "006": {
+   "method": "none",
+   "name": "dp_trbgra_006",
+   "platinum_class": null,
+   "target": "tcb_dp_006"
+  },
+  "007": {
+   "method": "none",
+   "name": "dp_trbgra_007",
+   "platinum_class": null,
+   "target": "tcb_dp_007"
+  }
+ },
+ "diamond_front": {
+  "000": {
+   "method": "alias",
+   "name": "pkmn_trainer_m",
+   "platinum_class": "player_male",
+   "platinum_index_agrees": true,
+   "target": "tc_player_male"
+  },
+  "001": {
+   "method": "alias",
+   "name": "pkmn_trainer_f",
+   "platinum_class": "player_female",
+   "platinum_index_agrees": true,
+   "target": "tc_player_female"
+  },
+  "002": {
+   "method": "exact_name",
+   "name": "youngster",
+   "platinum_class": "youngster",
+   "platinum_index_agrees": true,
+   "target": "tc_youngster"
+  },
+  "003": {
+   "method": "exact_name",
+   "name": "lass",
+   "platinum_class": "lass",
+   "platinum_index_agrees": true,
+   "target": "tc_lass"
+  },
+  "004": {
+   "method": "exact_name",
+   "name": "camper",
+   "platinum_class": "camper",
+   "platinum_index_agrees": true,
+   "target": "tc_camper"
+  },
+  "005": {
+   "method": "exact_name",
+   "name": "picnicker",
+   "platinum_class": "picnicker",
+   "platinum_index_agrees": true,
+   "target": "tc_picnicker"
+  },
+  "006": {
+   "method": "exact_name",
+   "name": "bug_catcher",
+   "platinum_class": "bug_catcher",
+   "platinum_index_agrees": true,
+   "target": "tc_bug_catcher"
+  },
+  "007": {
+   "method": "exact_name",
+   "name": "aroma_lady",
+   "platinum_class": "aroma_lady",
+   "platinum_index_agrees": true,
+   "target": "tc_aroma_lady"
+  },
+  "008": {
+   "method": "exact_name",
+   "name": "twins",
+   "platinum_class": "twins",
+   "platinum_index_agrees": true,
+   "target": "tc_twins"
+  },
+  "009": {
+   "method": "exact_name",
+   "name": "hiker",
+   "platinum_class": "hiker",
+   "platinum_index_agrees": true,
+   "target": "tc_hiker"
+  },
+  "010": {
+   "method": "exact_name",
+   "name": "battle_girl",
+   "platinum_class": "battle_girl",
+   "platinum_index_agrees": true,
+   "target": "tc_battle_girl"
+  },
+  "011": {
+   "method": "exact_name",
+   "name": "fisherman",
+   "platinum_class": "fisherman",
+   "platinum_index_agrees": true,
+   "target": "tc_fisherman"
+  },
+  "012": {
+   "method": "suffix_name",
+   "name": "cyclist_m",
+   "platinum_class": "cyclist_male",
+   "platinum_index_agrees": true,
+   "target": "tc_cyclist_male"
+  },
+  "013": {
+   "method": "suffix_name",
+   "name": "cyclist_f",
+   "platinum_class": "cyclist_female",
+   "platinum_index_agrees": true,
+   "target": "tc_cyclist_female"
+  },
+  "014": {
+   "method": "exact_name",
+   "name": "black_belt",
+   "platinum_class": "black_belt",
+   "platinum_index_agrees": true,
+   "target": "tc_black_belt"
+  },
+  "015": {
+   "method": "exact_name",
+   "name": "artist",
+   "platinum_class": "artist",
+   "platinum_index_agrees": true,
+   "target": "tc_artist"
+  },
+  "016": {
+   "method": "suffix_name",
+   "name": "pkmn_breeder_m",
+   "platinum_class": "breeder_male",
+   "platinum_index_agrees": true,
+   "target": "tc_breeder_male"
+  },
+  "017": {
+   "method": "suffix_name",
+   "name": "pkmn_breeder_f",
+   "platinum_class": "breeder_female",
+   "platinum_index_agrees": true,
+   "target": "tc_breeder_female"
+  },
+  "018": {
+   "method": "exact_name",
+   "name": "cowgirl",
+   "platinum_class": "cowgirl",
+   "platinum_index_agrees": true,
+   "target": "tc_cowgirl"
+  },
+  "019": {
+   "method": "exact_name",
+   "name": "jogger",
+   "platinum_class": "jogger",
+   "platinum_index_agrees": true,
+   "target": "tc_jogger"
+  },
+  "020": {
+   "method": "suffix_name",
+   "name": "pokefan_m",
+   "platinum_class": "pokefan_male",
+   "platinum_index_agrees": true,
+   "target": "tc_pokefan_male"
+  },
+  "021": {
+   "method": "alias",
+   "name": "pokefan_f",
+   "platinum_class": "pokefan_female",
+   "platinum_index_agrees": true,
+   "target": "tc_pokefan_female"
+  },
+  "022": {
+   "method": "exact_name",
+   "name": "poke_kid",
+   "platinum_class": "poke_kid",
+   "platinum_index_agrees": true,
+   "target": "tc_poke_kid"
+  },
+  "023": {
+   "method": "exact_name",
+   "name": "young_couple",
+   "platinum_class": "young_couple",
+   "platinum_index_agrees": true,
+   "target": "tc_young_couple"
+  },
+  "024": {
+   "method": "suffix_name",
+   "name": "ace_trainer_m",
+   "platinum_class": "ace_trainer_male",
+   "platinum_index_agrees": true,
+   "target": "tc_ace_trainer_male"
+  },
+  "025": {
+   "method": "suffix_name",
+   "name": "ace_trainer_f",
+   "platinum_class": "ace_trainer_female",
+   "platinum_index_agrees": true,
+   "target": "tc_ace_trainer_female"
+  },
+  "026": {
+   "method": "exact_name",
+   "name": "waitress",
+   "platinum_class": "waitress",
+   "platinum_index_agrees": true,
+   "target": "tc_waitress"
+  },
+  "027": {
+   "method": "exact_name",
+   "name": "veteran",
+   "platinum_class": "veteran",
+   "platinum_index_agrees": true,
+   "target": "tc_veteran"
+  },
+  "028": {
+   "method": "exact_name",
+   "name": "ninja_boy",
+   "platinum_class": "ninja_boy",
+   "platinum_index_agrees": true,
+   "target": "tc_ninja_boy"
+  },
+  "029": {
+   "method": "exact_name",
+   "name": "dragon_tamer",
+   "platinum_class": "dragon_tamer",
+   "platinum_index_agrees": true,
+   "target": "tc_dragon_tamer"
+  },
+  "030": {
+   "method": "exact_name",
+   "name": "bird_keeper",
+   "platinum_class": "bird_keeper",
+   "platinum_index_agrees": true,
+   "target": "tc_bird_keeper"
+  },
+  "031": {
+   "method": "exact_name",
+   "name": "double_team",
+   "platinum_class": "double_team",
+   "platinum_index_agrees": true,
+   "target": "tc_double_team"
+  },
+  "032": {
+   "method": "exact_name",
+   "name": "rich_boy",
+   "platinum_class": "rich_boy",
+   "platinum_index_agrees": true,
+   "target": "tc_rich_boy"
+  },
+  "033": {
+   "method": "exact_name",
+   "name": "lady",
+   "platinum_class": "lady",
+   "platinum_index_agrees": true,
+   "target": "tc_lady"
+  },
+  "034": {
+   "method": "exact_name",
+   "name": "gentleman",
+   "platinum_class": "gentleman",
+   "platinum_index_agrees": true,
+   "target": "tc_gentleman"
+  },
+  "035": {
+   "method": "exact_name",
+   "name": "socialite",
+   "platinum_class": "socialite",
+   "platinum_index_agrees": true,
+   "target": "tc_socialite"
+  },
+  "036": {
+   "method": "exact_name",
+   "name": "beauty",
+   "platinum_class": "beauty",
+   "platinum_index_agrees": true,
+   "target": "tc_beauty"
+  },
+  "037": {
+   "method": "exact_name",
+   "name": "collector",
+   "platinum_class": "collector",
+   "platinum_index_agrees": true,
+   "target": "tc_collector"
+  },
+  "038": {
+   "method": "exact_name",
+   "name": "policeman",
+   "platinum_class": "policeman",
+   "platinum_index_agrees": true,
+   "target": "tc_policeman"
+  },
+  "039": {
+   "method": "suffix_name",
+   "name": "pkmn_ranger_m",
+   "platinum_class": "ranger_male",
+   "platinum_index_agrees": true,
+   "target": "tc_ranger_male"
+  },
+  "040": {
+   "method": "suffix_name",
+   "name": "pkmn_ranger_f",
+   "platinum_class": "ranger_female",
+   "platinum_index_agrees": true,
+   "target": "tc_ranger_female"
+  },
+  "041": {
+   "method": "exact_name",
+   "name": "scientist",
+   "platinum_class": "scientist",
+   "platinum_index_agrees": true,
+   "target": "tc_scientist"
+  },
+  "042": {
+   "method": "suffix_name",
+   "name": "swimmer_m",
+   "platinum_class": "swimmer_male",
+   "platinum_index_agrees": true,
+   "target": "tc_swimmer_male"
+  },
+  "043": {
+   "method": "suffix_name",
+   "name": "swimmer_f",
+   "platinum_class": "swimmer_female",
+   "platinum_index_agrees": true,
+   "target": "tc_swimmer_female"
+  },
+  "044": {
+   "method": "suffix_name",
+   "name": "tuber_m",
+   "platinum_class": "tuber_male",
+   "platinum_index_agrees": true,
+   "target": "tc_tuber_male"
+  },
+  "045": {
+   "method": "suffix_name",
+   "name": "tuber_f",
+   "platinum_class": "tuber_female",
+   "platinum_index_agrees": true,
+   "target": "tc_tuber_female"
+  },
+  "046": {
+   "method": "exact_name",
+   "name": "sailor",
+   "platinum_class": "sailor",
+   "platinum_index_agrees": true,
+   "target": "tc_sailor"
+  },
+  "047": {
+   "method": "exact_name",
+   "name": "sis_and_bro",
+   "platinum_class": "sis_and_bro",
+   "platinum_index_agrees": true,
+   "target": "tc_sis_and_bro"
+  },
+  "048": {
+   "method": "exact_name",
+   "name": "ruin_maniac",
+   "platinum_class": "ruin_maniac",
+   "platinum_index_agrees": true,
+   "target": "tc_ruin_maniac"
+  },
+  "049": {
+   "method": "suffix_name",
+   "name": "psychic_m",
+   "platinum_class": "psychic_male",
+   "platinum_index_agrees": true,
+   "target": "tc_psychic_male"
+  },
+  "050": {
+   "method": "suffix_name",
+   "name": "psychic_f",
+   "platinum_class": "psychic_female",
+   "platinum_index_agrees": true,
+   "target": "tc_psychic_female"
+  },
+  "051": {
+   "method": "exact_name",
+   "name": "pi",
+   "platinum_class": "pi",
+   "platinum_index_agrees": true,
+   "target": "tc_pi"
+  },
+  "052": {
+   "method": "exact_name",
+   "name": "guitarist",
+   "platinum_class": "guitarist",
+   "platinum_index_agrees": true,
+   "target": "tc_guitarist"
+  },
+  "053": {
+   "method": "suffix_name",
+   "name": "ace_trainer_snow_m",
+   "platinum_class": "ace_trainer_snow_male",
+   "platinum_index_agrees": true,
+   "target": "tc_ace_trainer_snow_male"
+  },
+  "054": {
+   "method": "suffix_name",
+   "name": "ace_trainer_snow_f",
+   "platinum_class": "ace_trainer_snow_female",
+   "platinum_index_agrees": true,
+   "target": "tc_ace_trainer_snow_female"
+  },
+  "055": {
+   "method": "suffix_name",
+   "name": "skier_m",
+   "platinum_class": "skier_male",
+   "platinum_index_agrees": true,
+   "target": "tc_skier_male"
+  },
+  "056": {
+   "method": "suffix_name",
+   "name": "skier_f",
+   "platinum_class": "skier_female",
+   "platinum_index_agrees": true,
+   "target": "tc_skier_female"
+  },
+  "057": {
+   "method": "exact_name",
+   "name": "roughneck",
+   "platinum_class": "roughneck",
+   "platinum_index_agrees": true,
+   "target": "tc_roughneck"
+  },
+  "058": {
+   "method": "exact_name",
+   "name": "clown",
+   "platinum_class": "clown",
+   "platinum_index_agrees": true,
+   "target": "tc_clown"
+  },
+  "059": {
+   "method": "exact_name",
+   "name": "worker",
+   "platinum_class": "worker",
+   "platinum_index_agrees": true,
+   "target": "tc_worker"
+  },
+  "060": {
+   "method": "suffix_name",
+   "name": "school_kid_m",
+   "platinum_class": "school_kid_male",
+   "platinum_index_agrees": true,
+   "target": "tc_school_kid_male"
+  },
+  "061": {
+   "method": "suffix_name",
+   "name": "school_kid_f",
+   "platinum_class": "school_kid_female",
+   "platinum_index_agrees": true,
+   "target": "tc_school_kid_female"
+  },
+  "062": {
+   "method": "exact_name",
+   "name": "leader_roark",
+   "platinum_class": "leader_roark",
+   "platinum_index_agrees": true,
+   "target": "tc_leader_roark"
+  },
+  "063": {
+   "method": "alias",
+   "name": "pkmn_trainer_barry",
+   "platinum_class": "rival",
+   "platinum_index_agrees": true,
+   "target": "tc_rival"
+  },
+  "064": {
+   "method": "exact_name",
+   "name": "leader_byron",
+   "platinum_class": "leader_byron",
+   "platinum_index_agrees": true,
+   "target": "tc_leader_byron"
+  },
+  "065": {
+   "method": "exact_name",
+   "name": "elite_four_aaron",
+   "platinum_class": "elite_four_aaron",
+   "platinum_index_agrees": true,
+   "target": "tc_elite_four_aaron"
+  },
+  "066": {
+   "method": "exact_name",
+   "name": "elite_four_bertha",
+   "platinum_class": "elite_four_bertha",
+   "platinum_index_agrees": true,
+   "target": "tc_elite_four_bertha"
+  },
+  "067": {
+   "method": "exact_name",
+   "name": "elite_four_flint",
+   "platinum_class": "elite_four_flint",
+   "platinum_index_agrees": true,
+   "target": "tc_elite_four_flint"
+  },
+  "068": {
+   "method": "alias",
+   "name": "elite_four_lucien",
+   "platinum_class": "elite_four_lucian",
+   "platinum_index_agrees": true,
+   "target": "tc_elite_four_lucian"
+  },
+  "069": {
+   "method": "alias",
+   "name": "champion",
+   "platinum_class": "champion_cynthia",
+   "platinum_index_agrees": true,
+   "target": "tc_champion_cynthia"
+  },
+  "070": {
+   "method": "alias",
+   "name": "belle__pa",
+   "platinum_class": "belle_and_pa",
+   "platinum_index_agrees": true,
+   "target": "tc_belle_and_pa"
+  },
+  "071": {
+   "method": "exact_name",
+   "name": "rancher",
+   "platinum_class": "rancher",
+   "platinum_index_agrees": true,
+   "target": "tc_rancher"
+  },
+  "072": {
+   "method": "exact_name",
+   "name": "commander_mars",
+   "platinum_class": "commander_mars",
+   "platinum_index_agrees": true,
+   "target": "tc_commander_mars"
+  },
+  "073": {
+   "method": "alias",
+   "name": "galactic",
+   "platinum_class": "galactic_grunt_male",
+   "platinum_index_agrees": true,
+   "target": "tc_galactic_grunt_male"
+  },
+  "074": {
+   "method": "exact_name",
+   "name": "leader_gardenia",
+   "platinum_class": "leader_gardenia",
+   "platinum_index_agrees": true,
+   "target": "tc_leader_gardenia"
+  },
+  "075": {
+   "method": "exact_name",
+   "name": "leader_wake",
+   "platinum_class": "leader_wake",
+   "platinum_index_agrees": true,
+   "target": "tc_leader_wake"
+  },
+  "076": {
+   "method": "exact_name",
+   "name": "leader_maylene",
+   "platinum_class": "leader_maylene",
+   "platinum_index_agrees": true,
+   "target": "tc_leader_maylene"
+  },
+  "077": {
+   "method": "exact_name",
+   "name": "leader_fantina",
+   "platinum_class": "leader_fantina",
+   "platinum_index_agrees": true,
+   "target": "tc_leader_fantina"
+  },
+  "078": {
+   "method": "exact_name",
+   "name": "leader_candice",
+   "platinum_class": "leader_candice",
+   "platinum_index_agrees": true,
+   "target": "tc_leader_candice"
+  },
+  "079": {
+   "method": "exact_name",
+   "name": "leader_volkner",
+   "platinum_class": "leader_volkner",
+   "platinum_index_agrees": true,
+   "target": "tc_leader_volkner"
+  },
+  "080": {
+   "method": "exact_name",
+   "name": "parasol_lady",
+   "platinum_class": "parasol_lady",
+   "platinum_index_agrees": true,
+   "target": "tc_parasol_lady"
+  },
+  "081": {
+   "method": "exact_name",
+   "name": "waiter",
+   "platinum_class": "waiter",
+   "platinum_index_agrees": true,
+   "target": "tc_waiter"
+  },
+  "082": {
+   "method": "alias",
+   "name": "interviewers",
+   "platinum_class": "interviewers",
+   "platinum_index_agrees": true,
+   "target": "tc_interviewers"
+  },
+  "083": {
+   "method": "exact_name",
+   "name": "cameraman",
+   "platinum_class": "cameraman",
+   "platinum_index_agrees": true,
+   "target": "tc_cameraman"
+  },
+  "084": {
+   "method": "exact_name",
+   "name": "reporter",
+   "platinum_class": "reporter",
+   "platinum_index_agrees": true,
+   "target": "tc_reporter"
+  },
+  "085": {
+   "method": "exact_name",
+   "name": "idol",
+   "platinum_class": "idol",
+   "platinum_index_agrees": true,
+   "target": "tc_idol"
+  },
+  "086": {
+   "method": "exact_name",
+   "name": "galactic_boss",
+   "platinum_class": "galactic_boss",
+   "platinum_index_agrees": true,
+   "target": "tc_galactic_boss"
+  },
+  "087": {
+   "method": "exact_name",
+   "name": "commander_jupiter",
+   "platinum_class": "commander_jupiter",
+   "platinum_index_agrees": true,
+   "target": "tc_commander_jupiter"
+  },
+  "088": {
+   "method": "exact_name",
+   "name": "commander_saturn",
+   "platinum_class": "commander_saturn",
+   "platinum_index_agrees": true,
+   "target": "tc_commander_saturn"
+  },
+  "089": {
+   "method": "alias",
+   "name": "galactic_f",
+   "platinum_class": "galactic_grunt_female",
+   "platinum_index_agrees": true,
+   "target": "tc_galactic_grunt_female"
+  },
+  "090": {
+   "method": "alias",
+   "name": "pkmn_trainer_cheryl",
+   "platinum_class": "trainer_cheryl",
+   "platinum_index_agrees": true,
+   "target": "tc_trainer_cheryl"
+  },
+  "091": {
+   "method": "alias",
+   "name": "pkmn_trainer_riley",
+   "platinum_class": "trainer_riley",
+   "platinum_index_agrees": true,
+   "target": "tc_trainer_riley"
+  },
+  "092": {
+   "method": "alias",
+   "name": "pkmn_trainer_marley",
+   "platinum_class": "trainer_marley",
+   "platinum_index_agrees": true,
+   "target": "tc_trainer_marley"
+  },
+  "093": {
+   "method": "alias",
+   "name": "pkmn_trainer_buck",
+   "platinum_class": "trainer_buck",
+   "platinum_index_agrees": true,
+   "target": "tc_trainer_buck"
+  },
+  "094": {
+   "method": "alias",
+   "name": "pkmn_trainer_mira",
+   "platinum_class": "trainer_mira",
+   "platinum_index_agrees": true,
+   "target": "tc_trainer_mira"
+  },
+  "095": {
+   "method": "alias",
+   "name": "pkmn_trainer_lucas",
+   "platinum_class": "dp_player_male",
+   "platinum_index_agrees": true,
+   "target": "tc_dp_player_male"
+  },
+  "096": {
+   "method": "alias",
+   "name": "pkmn_trainer_dawn",
+   "platinum_class": "dp_player_female",
+   "platinum_index_agrees": true,
+   "target": "tc_dp_player_female"
+  },
+  "097": {
+   "method": "exact_name",
+   "name": "tower_tycoon",
+   "platinum_class": "tower_tycoon",
+   "platinum_index_agrees": true,
+   "target": "tc_tower_tycoon"
+  }
+ },
+ "hgss_back": {
+  "000": {
+   "method": "none",
+   "name": "ethan",
+   "platinum_class": null,
+   "target": "tcb_hgss_ethan"
+  },
+  "001": {
+   "method": "none",
+   "name": "lyra",
+   "platinum_class": null,
+   "target": "tcb_hgss_lyra"
+  },
+  "002": {
+   "method": "none",
+   "name": "rival",
+   "platinum_class": null,
+   "target": "tcb_hgss_rival"
+  },
+  "003": {
+   "method": "none",
+   "name": "lance",
+   "platinum_class": null,
+   "target": "tcb_hgss_lance"
+  },
+  "004": {
+   "method": "backpic_constant_alias",
+   "name": "cheryl",
+   "platinum_class": "trainer_cheryl",
+   "target": "tcb_trainer_cheryl"
+  },
+  "005": {
+   "method": "backpic_constant_alias",
+   "name": "riley",
+   "platinum_class": "trainer_riley",
+   "target": "tcb_trainer_riley"
+  },
+  "006": {
+   "method": "backpic_constant_alias",
+   "name": "buck",
+   "platinum_class": "trainer_buck",
+   "target": "tcb_trainer_buck"
+  },
+  "007": {
+   "method": "backpic_constant_alias",
+   "name": "mira",
+   "platinum_class": "trainer_mira",
+   "target": "tcb_trainer_mira"
+  },
+  "008": {
+   "method": "backpic_constant_alias",
+   "name": "marley",
+   "platinum_class": "trainer_marley",
+   "target": "tcb_trainer_marley"
+  },
+  "009": {
+   "method": "backpic_constant_alias",
+   "name": "lucas_dp",
+   "platinum_class": "dp_player_male",
+   "target": "tcb_dp_player_male"
+  },
+  "010": {
+   "method": "backpic_constant_alias",
+   "name": "dawn_dp",
+   "platinum_class": "dp_player_female",
+   "target": "tcb_dp_player_female"
+  },
+  "011": {
+   "method": "backpic_constant_alias",
+   "name": "barry_dp",
+   "platinum_class": "dp_rival",
+   "target": "tcb_dp_rival"
+  },
+  "012": {
+   "method": "backpic_constant_alias",
+   "name": "lucas_pt",
+   "platinum_class": "player_male",
+   "target": "tcb_player_male"
+  },
+  "013": {
+   "method": "backpic_constant_alias",
+   "name": "dawn_pt",
+   "platinum_class": "player_female",
+   "target": "tcb_player_female"
+  },
+  "014": {
+   "method": "backpic_constant_alias",
+   "name": "barry_pt",
+   "platinum_class": "rival",
+   "target": "tcb_rival"
+  },
+  "015": {
+   "method": "none",
+   "name": "ethan_2",
+   "platinum_class": null,
+   "target": "tcb_hgss_ethan_2"
+  },
+  "016": {
+   "method": "none",
+   "name": "lyra_2",
+   "platinum_class": null,
+   "target": "tcb_hgss_lyra_2"
+  }
+ },
+ "hgss_front": {
+  "000": {
+   "method": "none",
+   "name": "pkmn_trainer_ethan",
+   "platinum_class": null,
+   "target": "tc_hgss_pkmn_trainer_ethan"
+  },
+  "001": {
+   "method": "none",
+   "name": "pkmn_trainer_lyra",
+   "platinum_class": null,
+   "target": "tc_hgss_pkmn_trainer_lyra"
+  },
+  "002": {
+   "method": "exact_name",
+   "name": "youngster",
+   "platinum_class": "youngster",
+   "target": "tc_youngster"
+  },
+  "003": {
+   "method": "exact_name",
+   "name": "lass",
+   "platinum_class": "lass",
+   "target": "tc_lass"
+  },
+  "004": {
+   "method": "exact_name",
+   "name": "camper",
+   "platinum_class": "camper",
+   "target": "tc_camper"
+  },
+  "005": {
+   "method": "exact_name",
+   "name": "picnicker",
+   "platinum_class": "picnicker",
+   "target": "tc_picnicker"
+  },
+  "006": {
+   "method": "exact_name",
+   "name": "bug_catcher",
+   "platinum_class": "bug_catcher",
+   "target": "tc_bug_catcher"
+  },
+  "007": {
+   "method": "exact_name",
+   "name": "aroma_lady",
+   "platinum_class": "aroma_lady",
+   "target": "tc_aroma_lady"
+  },
+  "008": {
+   "method": "exact_name",
+   "name": "twins",
+   "platinum_class": "twins",
+   "target": "tc_twins"
+  },
+  "009": {
+   "method": "exact_name",
+   "name": "hiker",
+   "platinum_class": "hiker",
+   "target": "tc_hiker"
+  },
+  "010": {
+   "method": "exact_name",
+   "name": "battle_girl",
+   "platinum_class": "battle_girl",
+   "target": "tc_battle_girl"
+  },
+  "011": {
+   "method": "exact_name",
+   "name": "fisherman",
+   "platinum_class": "fisherman",
+   "target": "tc_fisherman"
+  },
+  "012": {
+   "method": "suffix_name",
+   "name": "cyclist_m",
+   "platinum_class": "cyclist_male",
+   "target": "tc_cyclist_male"
+  },
+  "013": {
+   "method": "suffix_name",
+   "name": "cyclist_f",
+   "platinum_class": "cyclist_female",
+   "target": "tc_cyclist_female"
+  },
+  "014": {
+   "method": "exact_name",
+   "name": "black_belt",
+   "platinum_class": "black_belt",
+   "target": "tc_black_belt"
+  },
+  "015": {
+   "method": "exact_name",
+   "name": "artist",
+   "platinum_class": "artist",
+   "target": "tc_artist"
+  },
+  "016": {
+   "method": "suffix_name",
+   "name": "pkmn_breeder_m",
+   "platinum_class": "breeder_male",
+   "target": "tc_breeder_male"
+  },
+  "017": {
+   "method": "suffix_name",
+   "name": "pkmn_breeder_f",
+   "platinum_class": "breeder_female",
+   "target": "tc_breeder_female"
+  },
+  "018": {
+   "method": "exact_name",
+   "name": "cowgirl",
+   "platinum_class": "cowgirl",
+   "target": "tc_cowgirl"
+  },
+  "019": {
+   "method": "exact_name",
+   "name": "jogger",
+   "platinum_class": "jogger",
+   "target": "tc_jogger"
+  },
+  "020": {
+   "method": "suffix_name",
+   "name": "pokefan_m",
+   "platinum_class": "pokefan_male",
+   "target": "tc_pokefan_male"
+  },
+  "021": {
+   "method": "alias",
+   "name": "pokefan",
+   "platinum_class": "pokefan_female",
+   "target": "tc_pokefan_female"
+  },
+  "022": {
+   "method": "exact_name",
+   "name": "poke_kid",
+   "platinum_class": "poke_kid",
+   "target": "tc_poke_kid"
+  },
+  "023": {
+   "method": "alias",
+   "name": "rival",
+   "platinum_class": null,
+   "target": "tc_hgss_rival"
+  },
+  "024": {
+   "method": "suffix_name",
+   "name": "ace_trainer_m",
+   "platinum_class": "ace_trainer_male",
+   "target": "tc_ace_trainer_male"
+  },
+  "025": {
+   "method": "suffix_name",
+   "name": "ace_trainer_f",
+   "platinum_class": "ace_trainer_female",
+   "target": "tc_ace_trainer_female"
+  },
+  "026": {
+   "method": "exact_name",
+   "name": "waitress",
+   "platinum_class": "waitress",
+   "target": "tc_waitress"
+  },
+  "027": {
+   "method": "exact_name",
+   "name": "veteran",
+   "platinum_class": "veteran",
+   "target": "tc_veteran"
+  },
+  "028": {
+   "method": "exact_name",
+   "name": "ninja_boy",
+   "platinum_class": "ninja_boy",
+   "target": "tc_ninja_boy"
+  },
+  "029": {
+   "method": "exact_name",
+   "name": "dragon_tamer",
+   "platinum_class": "dragon_tamer",
+   "target": "tc_dragon_tamer"
+  },
+  "030": {
+   "method": "exact_name",
+   "name": "bird_keeper",
+   "platinum_class": "bird_keeper",
+   "target": "tc_bird_keeper"
+  },
+  "031": {
+   "method": "none",
+   "name": "juggler",
+   "platinum_class": null,
+   "target": "tc_hgss_juggler"
+  },
+  "032": {
+   "method": "exact_name",
+   "name": "rich_boy",
+   "platinum_class": "rich_boy",
+   "target": "tc_rich_boy"
+  },
+  "033": {
+   "method": "exact_name",
+   "name": "lady",
+   "platinum_class": "lady",
+   "target": "tc_lady"
+  },
+  "034": {
+   "method": "exact_name",
+   "name": "gentleman",
+   "platinum_class": "gentleman",
+   "target": "tc_gentleman"
+  },
+  "035": {
+   "method": "exact_name",
+   "name": "socialite",
+   "platinum_class": "socialite",
+   "target": "tc_socialite"
+  },
+  "036": {
+   "method": "exact_name",
+   "name": "beauty",
+   "platinum_class": "beauty",
+   "target": "tc_beauty"
+  },
+  "037": {
+   "method": "exact_name",
+   "name": "collector",
+   "platinum_class": "collector",
+   "target": "tc_collector"
+  },
+  "038": {
+   "method": "exact_name",
+   "name": "policeman",
+   "platinum_class": "policeman",
+   "target": "tc_policeman"
+  },
+  "039": {
+   "method": "suffix_name",
+   "name": "pkmn_ranger_m",
+   "platinum_class": "ranger_male",
+   "target": "tc_ranger_male"
+  },
+  "040": {
+   "method": "suffix_name",
+   "name": "pkmn_ranger_f",
+   "platinum_class": "ranger_female",
+   "target": "tc_ranger_female"
+  },
+  "041": {
+   "method": "exact_name",
+   "name": "scientist",
+   "platinum_class": "scientist",
+   "target": "tc_scientist"
+  },
+  "042": {
+   "method": "suffix_name",
+   "name": "swimmer_m",
+   "platinum_class": "swimmer_male",
+   "target": "tc_swimmer_male"
+  },
+  "043": {
+   "method": "suffix_name",
+   "name": "swimmer_f",
+   "platinum_class": "swimmer_female",
+   "target": "tc_swimmer_female"
+  },
+  "044": {
+   "method": "suffix_name",
+   "name": "tuber_m",
+   "platinum_class": "tuber_male",
+   "target": "tc_tuber_male"
+  },
+  "045": {
+   "method": "suffix_name",
+   "name": "tuber_f",
+   "platinum_class": "tuber_female",
+   "target": "tc_tuber_female"
+  },
+  "046": {
+   "method": "exact_name",
+   "name": "sailor",
+   "platinum_class": "sailor",
+   "target": "tc_sailor"
+  },
+  "047": {
+   "method": "none",
+   "name": "kimono_girl",
+   "platinum_class": null,
+   "target": "tc_hgss_kimono_girl"
+  },
+  "048": {
+   "method": "exact_name",
+   "name": "ruin_maniac",
+   "platinum_class": "ruin_maniac",
+   "target": "tc_ruin_maniac"
+  },
+  "049": {
+   "method": "suffix_name",
+   "name": "psychic_m",
+   "platinum_class": "psychic_male",
+   "target": "tc_psychic_male"
+  },
+  "050": {
+   "method": "suffix_name",
+   "name": "psychic_f",
+   "platinum_class": "psychic_female",
+   "target": "tc_psychic_female"
+  },
+  "051": {
+   "method": "exact_name",
+   "name": "pi",
+   "platinum_class": "pi",
+   "target": "tc_pi"
+  },
+  "052": {
+   "method": "exact_name",
+   "name": "guitarist",
+   "platinum_class": "guitarist",
+   "target": "tc_guitarist"
+  },
+  "053": {
+   "method": "none",
+   "name": "ace_trainer_m_gs",
+   "platinum_class": null,
+   "target": "tc_hgss_ace_trainer_m_gs"
+  },
+  "054": {
+   "method": "none",
+   "name": "ace_trainer_f_gs",
+   "platinum_class": null,
+   "target": "tc_hgss_ace_trainer_f_gs"
+  },
+  "055": {
+   "method": "none",
+   "name": "team_rocket",
+   "platinum_class": null,
+   "target": "tc_hgss_team_rocket"
+  },
+  "056": {
+   "method": "none",
+   "name": "skier",
+   "platinum_class": null,
+   "target": "tc_hgss_skier"
+  },
+  "057": {
+   "method": "exact_name",
+   "name": "roughneck",
+   "platinum_class": "roughneck",
+   "target": "tc_roughneck"
+  },
+  "058": {
+   "method": "exact_name",
+   "name": "clown",
+   "platinum_class": "clown",
+   "target": "tc_clown"
+  },
+  "059": {
+   "method": "exact_name",
+   "name": "worker",
+   "platinum_class": "worker",
+   "target": "tc_worker"
+  },
+  "060": {
+   "method": "suffix_name",
+   "name": "school_kid_m",
+   "platinum_class": "school_kid_male",
+   "target": "tc_school_kid_male"
+  },
+  "061": {
+   "method": "suffix_name",
+   "name": "school_kid_f",
+   "platinum_class": "school_kid_female",
+   "target": "tc_school_kid_female"
+  },
+  "062": {
+   "method": "none",
+   "name": "team_rocket_f",
+   "platinum_class": null,
+   "target": "tc_hgss_team_rocket_f"
+  },
+  "063": {
+   "method": "none",
+   "name": "burglar",
+   "platinum_class": null,
+   "target": "tc_hgss_burglar"
+  },
+  "064": {
+   "method": "none",
+   "name": "firebreather",
+   "platinum_class": null,
+   "target": "tc_hgss_firebreather"
+  },
+  "065": {
+   "method": "none",
+   "name": "biker",
+   "platinum_class": null,
+   "target": "tc_hgss_biker"
+  },
+  "066": {
+   "method": "none",
+   "name": "leader_falkner",
+   "platinum_class": null,
+   "target": "tc_hgss_leader_falkner"
+  },
+  "067": {
+   "method": "none",
+   "name": "leader_bugsy",
+   "platinum_class": null,
+   "target": "tc_hgss_leader_bugsy"
+  },
+  "068": {
+   "method": "none",
+   "name": "poke_maniac",
+   "platinum_class": null,
+   "target": "tc_hgss_poke_maniac"
+  },
+  "069": {
+   "method": "none",
+   "name": "bird_keeper_gs",
+   "platinum_class": null,
+   "target": "tc_hgss_bird_keeper_gs"
+  },
+  "070": {
+   "method": "none",
+   "name": "leader_whitney",
+   "platinum_class": null,
+   "target": "tc_hgss_leader_whitney"
+  },
+  "071": {
+   "method": "exact_name",
+   "name": "rancher",
+   "platinum_class": "rancher",
+   "target": "tc_rancher"
+  },
+  "072": {
+   "method": "none",
+   "name": "leader_morty",
+   "platinum_class": null,
+   "target": "tc_hgss_leader_morty"
+  },
+  "073": {
+   "method": "none",
+   "name": "leader_pryce",
+   "platinum_class": null,
+   "target": "tc_hgss_leader_pryce"
+  },
+  "074": {
+   "method": "none",
+   "name": "leader_jasmine",
+   "platinum_class": null,
+   "target": "tc_hgss_leader_jasmine"
+  },
+  "075": {
+   "method": "none",
+   "name": "leader_chuck",
+   "platinum_class": null,
+   "target": "tc_hgss_leader_chuck"
+  },
+  "076": {
+   "method": "none",
+   "name": "leader_clair",
+   "platinum_class": null,
+   "target": "tc_hgss_leader_clair"
+  },
+  "077": {
+   "method": "none",
+   "name": "teacher",
+   "platinum_class": null,
+   "target": "tc_hgss_teacher"
+  },
+  "078": {
+   "method": "none",
+   "name": "super_nerd",
+   "platinum_class": null,
+   "target": "tc_hgss_super_nerd"
+  },
+  "079": {
+   "method": "none",
+   "name": "sage",
+   "platinum_class": null,
+   "target": "tc_hgss_sage"
+  },
+  "080": {
+   "method": "exact_name",
+   "name": "parasol_lady",
+   "platinum_class": "parasol_lady",
+   "target": "tc_parasol_lady"
+  },
+  "081": {
+   "method": "exact_name",
+   "name": "waiter",
+   "platinum_class": "waiter",
+   "target": "tc_waiter"
+  },
+  "082": {
+   "method": "none",
+   "name": "medium",
+   "platinum_class": null,
+   "target": "tc_hgss_medium"
+  },
+  "083": {
+   "method": "exact_name",
+   "name": "cameraman",
+   "platinum_class": "cameraman",
+   "target": "tc_cameraman"
+  },
+  "084": {
+   "method": "exact_name",
+   "name": "reporter",
+   "platinum_class": "reporter",
+   "target": "tc_reporter"
+  },
+  "085": {
+   "method": "exact_name",
+   "name": "idol",
+   "platinum_class": "idol",
+   "target": "tc_idol"
+  },
+  "086": {
+   "method": "alias",
+   "name": "champion",
+   "platinum_class": null,
+   "target": "tc_hgss_champion"
+  },
+  "087": {
+   "method": "none",
+   "name": "elite_four_will",
+   "platinum_class": null,
+   "target": "tc_hgss_elite_four_will"
+  },
+  "088": {
+   "method": "none",
+   "name": "elite_four_karen",
+   "platinum_class": null,
+   "target": "tc_hgss_elite_four_karen"
+  },
+  "089": {
+   "method": "none",
+   "name": "elite_four_koga",
+   "platinum_class": null,
+   "target": "tc_hgss_elite_four_koga"
+  },
+  "090": {
+   "method": "alias",
+   "name": "pkmn_trainer_cheryl",
+   "platinum_class": "trainer_cheryl",
+   "target": "tc_trainer_cheryl"
+  },
+  "091": {
+   "method": "alias",
+   "name": "pkmn_trainer_riley",
+   "platinum_class": "trainer_riley",
+   "target": "tc_trainer_riley"
+  },
+  "092": {
+   "method": "alias",
+   "name": "pkmn_trainer_buck",
+   "platinum_class": "trainer_buck",
+   "target": "tc_trainer_buck"
+  },
+  "093": {
+   "method": "alias",
+   "name": "pkmn_trainer_mira",
+   "platinum_class": "trainer_mira",
+   "target": "tc_trainer_mira"
+  },
+  "094": {
+   "method": "alias",
+   "name": "pkmn_trainer_marley",
+   "platinum_class": "trainer_marley",
+   "target": "tc_trainer_marley"
+  },
+  "095": {
+   "method": "none",
+   "name": "pkmn_trainer_ftr_lucas",
+   "platinum_class": null,
+   "target": "tc_hgss_pkmn_trainer_ftr_lucas"
+  },
+  "096": {
+   "method": "none",
+   "name": "pkmn_trainer_ftr_dawn",
+   "platinum_class": null,
+   "target": "tc_hgss_pkmn_trainer_ftr_dawn"
+  },
+  "097": {
+   "method": "exact_name",
+   "name": "tower_tycoon",
+   "platinum_class": "tower_tycoon",
+   "target": "tc_tower_tycoon"
+  },
+  "098": {
+   "method": "none",
+   "name": "leader_brock",
+   "platinum_class": null,
+   "target": "tc_hgss_leader_brock"
+  },
+  "099": {
+   "method": "exact_name",
+   "name": "hall_matron",
+   "platinum_class": "hall_matron",
+   "target": "tc_hall_matron"
+  },
+  "100": {
+   "method": "exact_name",
+   "name": "factory_head",
+   "platinum_class": "factory_head",
+   "target": "tc_factory_head"
+  },
+  "101": {
+   "method": "exact_name",
+   "name": "arcade_star",
+   "platinum_class": "arcade_star",
+   "target": "tc_arcade_star"
+  },
+  "102": {
+   "method": "exact_name",
+   "name": "castle_valet",
+   "platinum_class": "castle_valet",
+   "target": "tc_castle_valet"
+  },
+  "103": {
+   "method": "none",
+   "name": "leader_misty",
+   "platinum_class": null,
+   "target": "tc_hgss_leader_misty"
+  },
+  "104": {
+   "method": "none",
+   "name": "leader_lt_surge",
+   "platinum_class": null,
+   "target": "tc_hgss_leader_lt_surge"
+  },
+  "105": {
+   "method": "none",
+   "name": "leader_erika",
+   "platinum_class": null,
+   "target": "tc_hgss_leader_erika"
+  },
+  "106": {
+   "method": "none",
+   "name": "leader_janine",
+   "platinum_class": null,
+   "target": "tc_hgss_leader_janine"
+  },
+  "107": {
+   "method": "none",
+   "name": "leader_sabrina",
+   "platinum_class": null,
+   "target": "tc_hgss_leader_sabrina"
+  },
+  "108": {
+   "method": "none",
+   "name": "leader_blaine",
+   "platinum_class": null,
+   "target": "tc_hgss_leader_blaine"
+  },
+  "109": {
+   "method": "none",
+   "name": "pkmn_trainer_red",
+   "platinum_class": null,
+   "target": "tc_hgss_pkmn_trainer_red"
+  },
+  "110": {
+   "method": "none",
+   "name": "leader_blue",
+   "platinum_class": null,
+   "target": "tc_hgss_leader_blue"
+  },
+  "111": {
+   "method": "none",
+   "name": "elder",
+   "platinum_class": null,
+   "target": "tc_hgss_elder"
+  },
+  "112": {
+   "method": "none",
+   "name": "elite_four_bruno",
+   "platinum_class": null,
+   "target": "tc_hgss_elite_four_bruno"
+  },
+  "113": {
+   "method": "none",
+   "name": "scientist_gs",
+   "platinum_class": null,
+   "target": "tc_hgss_scientist_gs"
+  },
+  "114": {
+   "method": "none",
+   "name": "executive_ariana",
+   "platinum_class": null,
+   "target": "tc_hgss_executive_ariana"
+  },
+  "115": {
+   "method": "none",
+   "name": "boarder",
+   "platinum_class": null,
+   "target": "tc_hgss_boarder"
+  },
+  "116": {
+   "method": "none",
+   "name": "executive_archer",
+   "platinum_class": null,
+   "target": "tc_hgss_executive_archer"
+  },
+  "117": {
+   "method": "none",
+   "name": "executive_proton",
+   "platinum_class": null,
+   "target": "tc_hgss_executive_proton"
+  },
+  "118": {
+   "method": "none",
+   "name": "executive_petrel",
+   "platinum_class": null,
+   "target": "tc_hgss_executive_petrel"
+  },
+  "119": {
+   "method": "none",
+   "name": "passerby",
+   "platinum_class": null,
+   "target": "tc_hgss_passerby"
+  },
+  "120": {
+   "method": "none",
+   "name": "mystery_man",
+   "platinum_class": null,
+   "target": "tc_hgss_mystery_man"
+  },
+  "121": {
+   "method": "exact_name",
+   "name": "double_team",
+   "platinum_class": "double_team",
+   "target": "tc_double_team"
+  },
+  "122": {
+   "method": "exact_name",
+   "name": "young_couple",
+   "platinum_class": "young_couple",
+   "target": "tc_young_couple"
+  },
+  "123": {
+   "method": "none",
+   "name": "pkmn_trainer_lance",
+   "platinum_class": null,
+   "target": "tc_hgss_pkmn_trainer_lance"
+  },
+  "124": {
+   "method": "none",
+   "name": "rocket_boss",
+   "platinum_class": null,
+   "target": "tc_hgss_rocket_boss"
+  },
+  "125": {
+   "method": "alias",
+   "name": "pkmn_trainer_lucas_dp",
+   "platinum_class": "dp_player_male",
+   "target": "tc_dp_player_male"
+  },
+  "126": {
+   "method": "alias",
+   "name": "pkmn_trainer_dawn_dp",
+   "platinum_class": "dp_player_female",
+   "target": "tc_dp_player_female"
+  },
+  "127": {
+   "method": "alias",
+   "name": "pkmn_trainer_lucas_pt",
+   "platinum_class": "player_male",
+   "target": "tc_player_male"
+  },
+  "128": {
+   "method": "alias",
+   "name": "pkmn_trainer_dawn_pt",
+   "platinum_class": "player_female",
+   "target": "tc_player_female"
+  },
+  "200": {
+   "method": "none",
+   "name": "phone_mom",
+   "platinum_class": null,
+   "target": "tc_hgss_phone_mom"
+  },
+  "201": {
+   "method": "none",
+   "name": "phone_pokemon_professor",
+   "platinum_class": null,
+   "target": "tc_hgss_phone_pokemon_professor"
+  },
+  "202": {
+   "method": "none",
+   "name": "phone_childhood_friend",
+   "platinum_class": null,
+   "target": "tc_hgss_phone_childhood_friend"
+  },
+  "203": {
+   "method": "none",
+   "name": "phone_poke_ball_creator",
+   "platinum_class": null,
+   "target": "tc_hgss_phone_poke_ball_creator"
+  },
+  "204": {
+   "method": "none",
+   "name": "phone_day_care",
+   "platinum_class": null,
+   "target": "tc_hgss_phone_day_care"
+  },
+  "205": {
+   "method": "none",
+   "name": "phone_radio_personality",
+   "platinum_class": null,
+   "target": "tc_hgss_phone_radio_personality"
+  },
+  "206": {
+   "method": "none",
+   "name": "phone_poke_maniac",
+   "platinum_class": null,
+   "target": "tc_hgss_phone_poke_maniac"
+  },
+  "207": {
+   "method": "none",
+   "name": "phone_safari_warden",
+   "platinum_class": null,
+   "target": "tc_hgss_phone_safari_warden"
+  }
+ },
+ "inputs": {
+  "diamond_commit": "5bc4b1a3d8f100f77a4c64e59a0d544a0e29b3ec",
+  "hgss_commit": "9d8b7591f09b65804da2fb2dfd56f320633e0d36",
+  "platinum_back_classes": 11,
+  "platinum_front_classes": 105
+ },
+ "schema_version": 1
+}

@@ -9,11 +9,24 @@ ROOT = Path(__file__).resolve().parents[3]
 VO = ROOT / "docs" / "visual_overhaul"
 SEL = VO / "selection"
 
-RECOVERED_LEDGERS = [
+BASE_LEDGERS = [
     VO / "LANE_A_RECOVERED_CURATION.json",
     VO / "LANE_B_RECOVERED_CURATION.json",
     VO / "LANE_CDE_RECOVERED_CURATION.json",
 ]
+EXT_DIR = VO / "catalog_extensions"
+EXT_MANIFEST = EXT_DIR / "MANIFEST.json"
+
+
+def extensions() -> list[dict]:
+    return json.loads(EXT_MANIFEST.read_text())["extensions"] if EXT_MANIFEST.is_file() else []
+
+
+RECOVERED_LEDGERS = BASE_LEDGERS + [EXT_DIR / e["curation"] for e in extensions()]
+
+
+def ledger_label(p: Path) -> str:
+    return p.name if p.parent == VO else f"{p.parent.name}/{p.name}"
 STATUS_JSON = VO / "DONOR_CURATION_STATUS.json"
 SUBSYSTEMS_JSON = SEL / "SUBSYSTEMS.json"
 RULES_JSON = SEL / "SELECTION_RULES.json"
@@ -50,7 +63,7 @@ def load_recovered_records() -> dict[str, dict]:
     out: dict[str, dict] = {}
     for p in RECOVERED_LEDGERS:
         for r in jload(p)["records"]:
-            r["_ledger"] = p.name
+            r["_ledger"] = ledger_label(p)
             if r["asset_id"] in out:
                 raise SystemExit(f"duplicate asset across recovered ledgers: {r['asset_id']}")
             out[r["asset_id"]] = r
@@ -58,7 +71,7 @@ def load_recovered_records() -> dict[str, dict]:
 
 
 def ledger_hashes() -> dict[str, str]:
-    return {p.name: file_sha256(p) for p in RECOVERED_LEDGERS}
+    return {ledger_label(p): file_sha256(p) for p in RECOVERED_LEDGERS}
 
 
 def species_constants() -> list[str]:

@@ -6,8 +6,11 @@ bundle that is selected as one (a species' sprite set, a resource family, a pack
 """
 from __future__ import annotations
 
+import json
 import os
 import re
+
+from common import SEL
 
 ICON_MEMBER_BIAS = 7  # icon member = National Dex species index + 7 (G3 audit, HGSS+DP)
 MAX_SPECIES = 493
@@ -58,12 +61,31 @@ def _dp_other(rec):
     return "pokemon_battle_sprites", t, t, "special_form"
 
 
+_ALIGN = None
+
+
+def _align() -> dict:
+    """Trainer class alignment (selection/alignment/trainer_classes.json), built by build_trainer_alignment.py."""
+    global _ALIGN
+    if _ALIGN is None:
+        _ALIGN = json.loads((SEL / "alignment" / "trainer_classes.json").read_text())
+    return _ALIGN
+
+
 def _dp_trainer(rec):
     p = rec["source_path"]
-    pool = "trfgra" if "/trfgra/" in p else "trbgra"
-    n = int(re.search(r"narc_(\d+)", p).group(1))
-    t = f"{pool}_{n // 2:03d}"
-    return "trainer_battle_sprites", t, t, "trainer_class"
+    front = "/trfgra/" in p
+    n = int(re.search(r"narc_(\d+)", p).group(1)) // 2
+    e = _align()["diamond_front" if front else "diamond_back"][f"{n:03d}"]
+    return "trainer_battle_sprites", e["target"], f"dp_{'trfgra' if front else 'trbgra'}_{n:03d}", "trainer_class"
+
+
+def _hgss_trainer(rec):
+    p = rec["source_path"]
+    front = p.startswith("files/a/0/5/8#")
+    idx = re.search(r"#class=(\d+)", p).group(1)
+    e = _align()["hgss_front" if front else "hgss_back"][idx]
+    return "trainer_battle_sprites", e["target"], f"hgss_{'front' if front else 'back'}_{idx}", "trainer_class"
 
 
 def _family(subsystem: str, unit: str, kind: str = "family"):
@@ -72,6 +94,8 @@ def _family(subsystem: str, unit: str, kind: str = "family"):
 
 def _hgss(rec):
     p = rec["source_path"]
+    if p.startswith(("files/a/0/5/8#", "files/a/0/0/6#")):
+        return _hgss_trainer(rec)
     if "/poketool/icongra/poke_icon/" in p:
         return _icon(rec)
     if "/poketool/pokegra/pokegra/" in p:

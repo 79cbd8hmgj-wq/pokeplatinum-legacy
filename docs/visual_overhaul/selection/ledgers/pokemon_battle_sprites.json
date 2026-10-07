@@ -10195,8 +10195,7 @@
       },
       "female_front.png": {
        "audit_status": "art-diff",
-       "geometry": "geometry-review",
-       "relation": "art_diff_geometry_review"
+       "relation": "art_diff_minor"
       },
       "male_back.png": {
        "audit_status": "art-diff",
@@ -10205,8 +10204,7 @@
       },
       "male_front.png": {
        "audit_status": "art-diff",
-       "geometry": "geometry-review",
-       "relation": "art_diff_geometry_review"
+       "relation": "art_diff_minor"
       }
      }
     },
@@ -26780,8 +26778,7 @@
       },
       "female_front.png": {
        "audit_status": "art-diff",
-       "geometry": "geometry-close",
-       "relation": "art_diff_geometry_close"
+       "relation": "art_diff_minor"
       },
       "male_back.png": {
        "audit_status": "art-diff",
@@ -26790,8 +26787,7 @@
       },
       "male_front.png": {
        "audit_status": "art-diff",
-       "geometry": "geometry-close",
-       "relation": "art_diff_geometry_close"
+       "relation": "art_diff_minor"
       }
      }
     },
@@ -29196,8 +29192,7 @@
       },
       "female_front.png": {
        "audit_status": "art-diff",
-       "geometry": "geometry-close",
-       "relation": "art_diff_geometry_close"
+       "relation": "art_diff_minor"
       },
       "male_back.png": {
        "audit_status": "art-diff",
@@ -66897,8 +66892,7 @@
       },
       "female_front.png": {
        "audit_status": "art-diff",
-       "geometry": "geometry-review",
-       "relation": "art_diff_geometry_review"
+       "relation": "art_diff_minor"
       },
       "male_back.png": {
        "audit_status": "art-diff",
@@ -66907,8 +66901,7 @@
       },
       "male_front.png": {
        "audit_status": "art-diff",
-       "geometry": "geometry-review",
-       "relation": "art_diff_geometry_review"
+       "relation": "art_diff_minor"
       }
      }
     },
@@ -75682,17 +75675,18 @@
  ],
  "inputs": {
   "evidence_file": "docs/visual_overhaul/selection/evidence/pokemon_battle_sprites.json",
-  "evidence_sha256": "e932fdda6e9e6fcc81094acb083eec19bef5190178afc3d586262040c3c9c87c",
+  "evidence_sha256": "1b7502f3b10f702c59512eecd2a8f8147407f78a7ce5f5a7ea0495c058c5d455",
   "recovered_ledger_sha256": {
    "LANE_A_RECOVERED_CURATION.json": "9d915a805df0ac9a32d336916e31e3251feeb427b15f05ce3512fcbb19b4266b",
    "LANE_B_RECOVERED_CURATION.json": "efe2bfe24fbff3a47ebbcb7779b87e957bec28e135cc8171d883c7ed7e6fe368",
-   "LANE_CDE_RECOVERED_CURATION.json": "d68b973505c02dc51b912250b0340bed8a0cddcd208d0803d56c1f9e1c5c2d99"
+   "LANE_CDE_RECOVERED_CURATION.json": "d68b973505c02dc51b912250b0340bed8a0cddcd208d0803d56c1f9e1c5c2d99",
+   "hgss_trainer_sprites/CURATION.json": "46c469f5fc5777031e28acaab33add318abc1d62aca2beb68cc312d7b45da037"
   },
-  "rules_sha256": "d36e02eb82afd18f7f404c1af95dfdabf6587be98c2cc8d32990149d8137ea6c",
+  "rules_sha256": "8e638909cca3bdb4788993fc36799ee465b55b51dd3c08a82c77dfbeafa8a544",
   "subsystem_groups_digest": "1048a09592ec66a18ef1",
-  "subsystems_sha256": "b45f0170534f30b0de38e5f75fe31a6126d42f794ebc1fb94900d4388d931a47"
+  "subsystems_sha256": "2fff52e6948d422dd09682df89b70fe1c019fdd40687674030ede6327d6a5d94"
  },
- "rules_version": "1.2",
+ "rules_version": "1.4",
  "schema_version": 1,
  "subsystem": "pokemon_battle_sprites",
  "summary": {

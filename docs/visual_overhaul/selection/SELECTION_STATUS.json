@@ -1,6 +1,6 @@
 {
  "candidate_group_totals": {
-  "groups": 8223,
+  "groups": 8369,
   "groups_by_subsystem": {
    "battle_backgrounds_hud": 68,
    "battle_effects_particles": 636,
@@ -15,7 +15,7 @@
    "pokemon_battle_sprites": 1282,
    "pokemon_icons": 1077,
    "title_and_presentation": 153,
-   "trainer_battle_sprites": 106
+   "trainer_battle_sprites": 252
   },
   "members_by_subsystem": {
    "battle_backgrounds_hud": 281,
@@ -31,13 +31,13 @@
    "pokemon_battle_sprites": 3998,
    "pokemon_icons": 1077,
    "title_and_presentation": 555,
-   "trainer_battle_sprites": 106
+   "trainer_battle_sprites": 252
   },
   "records_with_undefined_source_role": 0,
-  "targets": 1730,
+  "targets": 1805,
   "unresolved_decode_issue_in_unit": 106,
   "unresolved_decode_issue_without_usable_unit": 67,
-  "usable_records_grouped": 55157
+  "usable_records_grouped": 55303
  },
  "schema_version": 1,
  "subsystems": [
@@ -232,18 +232,22 @@
    "targets": 1
   },
   {
-   "groups": 106,
-   "members": 106,
+   "groups": 252,
+   "members": 252,
    "needs_evidence": 0,
    "roles": {
-    "reference_only": 106
+    "alternate": 17,
+    "not_selected": 48,
+    "preferred": 21,
+    "reference_only": 166
    },
    "state": "selected",
    "subsystem": "trainer_battle_sprites",
    "target_resolution": {
-    "native": 106
+    "donor": 21,
+    "native": 160
    },
-   "targets": 106
+   "targets": 181
   }
  ]
 }

@@ -24,7 +24,8 @@ from common import *  # noqa: F401,F403
 PT = ROOT / "res" / "pokemon"
 VIEWS = ("female_back.png", "male_back.png", "female_front.png", "male_front.png")
 HG_REL = {"female_back.png": "female/back.png", "male_back.png": "male/back.png", "female_front.png": "female/front.png", "male_front.png": "male/front.png"}
-RANK = {"identical": 0, "palette_only": 1, "art_diff_geometry_close": 2, "art_diff_geometry_review": 3}
+RANK = {"identical": 0, "palette_only": 1, "art_diff_minor": 2, "art_diff_geometry_close": 3, "art_diff_geometry_review": 4}
+MINOR_RATIO = jload(RULES_JSON)["thresholds"]["minor_diff_ratio"]
 # HGSS otherpoke variant -> Platinum forms/<folder> (documented target-identity aliases)
 ALIAS = {"normal": "base", "plant": "base", "altered": "base", "land": "base", "a": "base", "west": "base",
          "exclamation_mark": "exc", "question_mark": "que", "sunshine": "sunny",
@@ -51,9 +52,16 @@ def to_relation(audit, pt: Path, dn: Path) -> tuple[str, dict]:
     if st == "palette-only":
         return "palette_only", {"audit_status": st}
     if st == "art-diff":
+        with Image.open(pt) as a_, Image.open(dn) as b_:
+            ra, rb = audit.rendered_rgba(a_), audit.rendered_rgba(b_)
+        px = [(ra[i:i + 4], rb[i:i + 4]) for i in range(0, len(ra), 4)]
+        union = sum(1 for x, y in px if x[3] or y[3])
+        ratio = sum(1 for x, y in px if x != y) / union if union else 0.0
+        if ratio < MINOR_RATIO:
+            return "art_diff_minor", {"audit_status": st, "diff_ratio": round(ratio, 4)}
         geo = audit.geometry_compare(pt, dn)
         rel = "art_diff_geometry_close" if geo.status == "geometry-close" else "art_diff_geometry_review"
-        return rel, {"audit_status": st, "geometry": geo.status, "geometry_reasons": geo.reasons[:3]}
+        return rel, {"audit_status": st, "geometry": geo.status, "geometry_reasons": geo.reasons[:3], "diff_ratio": round(ratio, 4)}
     return "contract_mismatch", {"audit_status": st}
 
 
