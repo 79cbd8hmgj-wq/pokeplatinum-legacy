@@ -30,7 +30,7 @@ CI: `.github/workflows/build-trainer-pilot.yml` builds both US revisions on this
 ## Minimum runtime checks (Delta / hardware), per class — see `RUNTIME_TARGETS.md` for trainers to fight
 1. Enemy front sprite appears with correct colours (no palette swap/garbage, background transparent).
 2. Slide-in/intro: no clipping at the sprite edges, no flicker.
-3. Placement: feet on the ground line like the original (geometry was identical in layout: same cell/OAM data).
+3. Placement: feet on the ground line like the original (cell/OAM layout is identical to the original; the artwork bounding box differs slightly — see `selection/review/trainer_sprites/REVIEW_MANIFEST.json` geometry per class).
 4. Sprite remains stable when the battle ends (fade-out) and in double battles where the class appears (twins, swimmer_female).
 5. Compare against `compare/<class>.png`.
 Only if all six pass: widen rollout. If any fails: revert that class only.
