@@ -1,84 +1,142 @@
 {
  "completed_subsystems": [
-  "pokemon_icons"
+  "battle_backgrounds_hud",
+  "battle_effects_particles",
+  "field_effects_overlays",
+  "field_environment_art",
+  "field_npc_player_sprites",
+  "menu_ui_frames",
+  "no_platinum_target",
+  "party_summary_ui",
+  "pokedex_ui",
+  "pokemon_animation_reference",
+  "pokemon_battle_sprites",
+  "pokemon_icons",
+  "title_and_presentation",
+  "trainer_battle_sprites"
  ],
  "inputs": {
   "ledger_files": {
-   "pokemon_icons": "e79bcecfe70f06ac979b4818821c37defdb6ca5479de65712c8d0396cfac1fc4"
+   "battle_backgrounds_hud": "629161cd4142e0eb53aefee9e9501c4b6cf164feed51117a9aaabcca27f6b9cc",
+   "battle_effects_particles": "ee12027f5a1d4acdeccf6a0992c4b2c61e73615219a338f655b8cc6f51b19e11",
+   "field_effects_overlays": "59a21a53b1f90d69b7fb59ce5c7dca9ff61e86d81420806dba163feafd8e7386",
+   "field_environment_art": "faa181ed22ff304322b208c842006b4843f865adb9fec6922615a4a0e524790d",
+   "field_npc_player_sprites": "484e6b9fe2dcec0077e12ce4b07346614df64ddbb36ccc4650f2355ded8aa7c9",
+   "menu_ui_frames": "efa40214940d54ea104de8c92271a988f744a92a170dc7c288f02d60db89d7d7",
+   "no_platinum_target": "d4cb97147fa03ffefe24dd98652530fcc38aa513258b89c90148039817ddd30d",
+   "party_summary_ui": "d82712d606f948fe4f678447401e61dd5c4c2b2e32435728aadda77adc3de04d",
+   "pokedex_ui": "fc9dc9ea1607404df2863cca0177d476caef770c6474dd762c0afd10f964f4c1",
+   "pokemon_animation_reference": "212b599b633d24247e7db3f13f568b1f37adf190f43146cb7320b275060c918e",
+   "pokemon_battle_sprites": "c6f60c2d43136fd701eb4e6c31d33a68430dfb25c0bcbabc8d270832f4d70126",
+   "pokemon_icons": "b606da18cb47ff9c05775c7c8046feff38c235893ffadd98f5ff5cdf588dd3d1",
+   "title_and_presentation": "a1ffb2fc6e218f3280b83fbbb8f91ef8a9a5dcb861da6b5bd6aa261f2ced60f6",
+   "trainer_battle_sprites": "c172ad65ab6ebc4462af63ec458dbf676d1fa3f8a33bbfe136735dc179c9d09e"
   }
  },
  "items": [
   {
-   "groups": 4,
-   "kind": "evidence",
-   "members": 4,
-   "priority_score": 0.2,
+   "format_families": [
+    "nitro_indexed_png_160x80"
+   ],
+   "integration_cost": 3,
+   "kind": "implement",
+   "priority_score": 86.667,
    "rank": 1,
    "source_id": "hgss",
-   "subsystem": "pokemon_icons",
-   "target_count": 4,
+   "subsystem": "pokemon_battle_sprites",
+   "target_count": 26,
+   "targets_sample": [
+    "pokemon_battle_sprites/sp_0003",
+    "pokemon_battle_sprites/sp_0011",
+    "pokemon_battle_sprites/sp_0028",
+    "pokemon_battle_sprites/sp_0033",
+    "pokemon_battle_sprites/sp_0035"
+   ]
+  },
+  {
+   "groups": 2,
+   "kind": "evidence",
+   "members": 3,
+   "priority_score": 0.5,
+   "rank": 2,
+   "source_id": "hgss",
+   "subsystem": "pokemon_battle_sprites",
+   "target_count": 2,
    "targets": null,
    "targets_sample": [
-    "pokemon_icons/icon_extra_0547",
-    "pokemon_icons/icon_extra_0548",
-    "pokemon_icons/icon_extra_0549",
-    "pokemon_icons/icon_extra_0550"
+    "pokemon_battle_sprites/form_egg",
+    "pokemon_battle_sprites/form_shadow"
    ]
-  }
- ],
- "pending_subsystems": [
-  {
-   "groups": 68,
-   "subsystem": "battle_backgrounds_hud"
   },
   {
-   "groups": 636,
-   "subsystem": "battle_effects_particles"
-  },
-  {
-   "groups": 523,
-   "subsystem": "field_effects_overlays"
-  },
-  {
-   "groups": 1485,
-   "subsystem": "field_environment_art"
-  },
-  {
-   "groups": 163,
-   "subsystem": "field_npc_player_sprites"
-  },
-  {
-   "groups": 913,
-   "subsystem": "menu_ui_frames"
-  },
-  {
-   "groups": 282,
-   "subsystem": "no_platinum_target"
+   "groups": 23,
+   "kind": "evidence",
+   "members": 152,
+   "priority_score": 0.4,
+   "rank": 3,
+   "source_id": "hgss",
+   "subsystem": "field_environment_art",
+   "target_count": 23,
+   "targets": null,
+   "targets_sample": [
+    "field_environment_art/family:field_environment_art",
+    "field_environment_art/family:field_environment_art",
+    "field_environment_art/family:field_environment_art",
+    "field_environment_art/family:field_environment_art",
+    "field_environment_art/family:field_environment_art"
+   ]
   },
   {
    "groups": 1,
-   "subsystem": "party_summary_ui"
+   "kind": "evidence",
+   "members": 2,
+   "priority_score": 0.3,
+   "rank": 4,
+   "source_id": "hgss",
+   "subsystem": "menu_ui_frames",
+   "target_count": 1,
+   "targets": null,
+   "targets_sample": [
+    "menu_ui_frames/family:menu_ui_frames"
+   ]
   },
   {
    "groups": 1,
-   "subsystem": "pokedex_ui"
+   "kind": "evidence",
+   "members": 27,
+   "priority_score": 0.2,
+   "rank": 5,
+   "source_id": "hgss",
+   "subsystem": "party_summary_ui",
+   "target_count": 1,
+   "targets": null,
+   "targets_sample": [
+    "party_summary_ui/family:party_summary_ui"
+   ]
   },
   {
-   "groups": 1533,
-   "subsystem": "pokemon_animation_reference"
+   "groups": 1,
+   "kind": "evidence",
+   "members": 123,
+   "priority_score": 0.2,
+   "rank": 6,
+   "source_id": "hgss",
+   "subsystem": "pokedex_ui",
+   "target_count": 1,
+   "targets": null,
+   "targets_sample": [
+    "pokedex_ui/family:pokedex_ui"
+   ]
   },
   {
-   "groups": 1282,
+   "groups": 26,
+   "kind": "runtime_qa",
+   "priority_score": 0.0,
+   "rank": 7,
+   "source_id": "hgss",
    "subsystem": "pokemon_battle_sprites"
-  },
-  {
-   "groups": 153,
-   "subsystem": "title_and_presentation"
-  },
-  {
-   "groups": 106,
-   "subsystem": "trainer_battle_sprites"
   }
  ],
+ "pending_subsystems": [],
  "schema_version": 1
 }

@@ -1,63 +1,120 @@
 {
-  "schema_version": 1,
-  "rules_version": "1.0",
-  "description": "Deterministic selection rules. The code in tools/visual_overhaul/selection/rules.py implements exactly these tables; validate_selection.py re-derives every decision from them.",
-  "roles": ["preferred", "alternate", "reference_only", "not_selected"],
-  "conversion_scale": {"none": 0, "trivial": 1, "structural": 2, "reimplement": 3, "not_portable": 4},
-  "compat_score_by_conversion": {"none": 3, "trivial": 2, "structural": 1, "reimplement": 0, "not_portable": 0},
-  "base_risk_by_conversion": {"none": "low", "trivial": "low", "structural": "medium", "reimplement": "high", "not_portable": "high"},
-  "risk_order": ["low", "medium", "high"],
-  "native_relation_to_gain": {
-    "identical": 0,
-    "content_match_native": 0,
-    "palette_only": 1,
-    "art_diff_geometry_close": 2,
-    "art_diff_geometry_review": 2,
-    "art_diff": 2,
-    "different": null,
-    "missing_in_native": 2,
-    "unmeasured": null
-  },
-  "runtime_validation_relations": ["art_diff_geometry_review", "palette_only", "art_diff", "missing_in_native"],
-  "thresholds": {
-    "preferred_min_gain": 2,
-    "alternate_min_gain": 1,
-    "preferred_min_compat": 2,
-    "alternate_min_compat": 1,
-    "preferred_max_risk": "medium",
-    "min_independent_share": 0.9
-  },
-  "weak_reason_codes": [
-    "ranger_cac_companion_of_valid_render",
-    "hgss_game_paired_companion",
-    "pmd_companion_of_valid_background",
-    "pmd_wtu_companion_of_valid_wte",
-    "pmd_standalone_palette_color_reference",
-    "ranger_standalone_palette_color_reference",
-    "ranger_tiles_in_sibling_resource"
-  ],
-  "decision_order": [
-    "R1 no_independent_evidence: independent member share < min_independent_share -> not_selected",
-    "R2 class none -> not_selected(source_not_relevant_to_subsystem)",
-    "R3 class technique/reference or conversion not_portable -> reference_only(policy_reference_class)",
-    "R4 class control: relation identical/content_match_native -> not_selected(identical_to_native); other relation -> reference_only(control_differs_from_native); unmeasured -> reference_only(needs_evidence)",
-    "R5 class direct/convertible: gain 0 -> not_selected(identical_to_native); gain unmeasured -> reference_only(needs_evidence)",
-    "R6 direct/convertible: compat >= preferred_min_compat, risk <= preferred_max_risk, gain >= preferred_min_gain -> eligible_preferred; compat >= alternate_min_compat and gain >= alternate_min_gain -> eligible_alternate; else reference_only(below_integration_thresholds)",
-    "R7 per target: best eligible_preferred by ranking key becomes preferred; remaining eligible_preferred and eligible_alternate become alternate",
-    "R8 targets with no preferred resolve to platinum_native"
-  ],
-  "ranking_key": ["visual_gain desc", "compat desc", "risk asc", "class_rank asc (direct<convertible)", "source_preference asc"],
-  "class_rank": {"direct": 0, "convertible": 1},
-  "source_preference": ["hgss", "diamond", "pmd_sky", "ranger2"],
-  "reason_codes": [
-    "no_independent_evidence",
-    "source_not_relevant_to_subsystem",
-    "policy_reference_class",
-    "identical_to_native",
-    "control_differs_from_native",
-    "needs_evidence",
-    "below_integration_thresholds",
-    "best_eligible_donor",
-    "eligible_not_best_for_target"
-  ]
+ "base_risk_by_conversion": {
+  "none": "low",
+  "not_portable": "high",
+  "reimplement": "high",
+  "structural": "medium",
+  "trivial": "low"
+ },
+ "class_rank": {
+  "convertible": 1,
+  "direct": 0
+ },
+ "compat_score_by_conversion": {
+  "none": 3,
+  "not_portable": 0,
+  "reimplement": 0,
+  "structural": 1,
+  "trivial": 2
+ },
+ "conversion_scale": {
+  "none": 0,
+  "not_portable": 4,
+  "reimplement": 3,
+  "structural": 2,
+  "trivial": 1
+ },
+ "decision_order": [
+  "R1 no_independent_evidence: group has < min_independent_members independently evidenced members -> not_selected",
+  "R2 class none -> not_selected(source_not_relevant_to_subsystem)",
+  "R3 class technique/reference or conversion not_portable -> reference_only(policy_reference_class)",
+  "R4 relation missing_in_native (no Platinum counterpart to replace) -> reference_only(no_native_target)",
+  "R5 class control: identical/content_match_native -> not_selected(identical_to_native); unmeasured -> reference_only(control_unmeasured); other -> reference_only(control_differs_from_native). Control is never selectable.",
+  "R6 class direct/convertible: gain 0 -> not_selected(identical_to_native); gain unmeasured -> reference_only(needs_evidence)",
+  "R7 direct/convertible: independent_share < selection_min_independent_share -> reference_only(weak_evidence_share); compat >= preferred_min_compat, risk <= preferred_max_risk, gain >= preferred_min_gain -> eligible_preferred; compat >= alternate_min_compat and gain >= alternate_min_gain -> eligible_alternate; else reference_only(below_integration_thresholds)",
+  "R8 per target: best eligible_preferred by ranking key becomes preferred; remaining eligible become alternate",
+  "R9 targets with no preferred resolve to platinum_native"
+ ],
+ "description": "Deterministic selection rules. The code in tools/visual_overhaul/selection/rules.py implements exactly these tables; validate_selection.py re-derives every decision from them.",
+ "native_relation_to_gain": {
+  "art_diff": 2,
+  "art_diff_geometry_close": 2,
+  "art_diff_geometry_review": 2,
+  "content_match_native": 0,
+  "contract_mismatch": null,
+  "different": null,
+  "identical": 0,
+  "missing_in_native": null,
+  "palette_only": 1,
+  "unmeasured": null
+ },
+ "ranking_key": [
+  "visual_gain desc",
+  "compat desc",
+  "risk asc",
+  "class_rank asc (direct<convertible)",
+  "source_preference asc"
+ ],
+ "reason_codes": [
+  "no_independent_evidence",
+  "source_not_relevant_to_subsystem",
+  "policy_reference_class",
+  "identical_to_native",
+  "control_differs_from_native",
+  "needs_evidence",
+  "below_integration_thresholds",
+  "best_eligible_donor",
+  "eligible_not_best_for_target",
+  "control_unmeasured",
+  "no_native_target",
+  "weak_evidence_share"
+ ],
+ "risk_flag_bumps": {
+  "geometry_review": 1,
+  "palette_mismatch": 1,
+  "palette_reorder_suspected": 2
+ },
+ "risk_order": [
+  "low",
+  "medium",
+  "high"
+ ],
+ "roles": [
+  "preferred",
+  "alternate",
+  "reference_only",
+  "not_selected"
+ ],
+ "rules_version": "1.2",
+ "runtime_validation_relations": [
+  "art_diff_geometry_close",
+  "art_diff_geometry_review",
+  "palette_only",
+  "art_diff"
+ ],
+ "schema_version": 1,
+ "source_preference": [
+  "hgss",
+  "diamond",
+  "pmd_sky",
+  "ranger2"
+ ],
+ "thresholds": {
+  "alternate_min_compat": 1,
+  "alternate_min_gain": 1,
+  "min_independent_members": 1,
+  "preferred_max_risk": "medium",
+  "preferred_min_compat": 2,
+  "preferred_min_gain": 2,
+  "selection_min_independent_share": 0.5
+ },
+ "weak_reason_codes": [
+  "ranger_cac_companion_of_valid_render",
+  "hgss_game_paired_companion",
+  "pmd_companion_of_valid_background",
+  "pmd_wtu_companion_of_valid_wte",
+  "pmd_standalone_palette_color_reference",
+  "ranger_standalone_palette_color_reference",
+  "ranger_tiles_in_sibling_resource"
+ ]
 }

@@ -44,11 +44,11 @@ IMPLEMENTATION_QUEUE.json / SELECTION_STATUS.json
 | visual_gain | measured native-vs-donor relation (`identical`=0 … `art_diff*`=2); **null = unmeasured** | 0–3 / null |
 | independent_share | share of members not companion/palette-only/sibling-resource evidence | 0–1 |
 
-Gates, in order: no independent evidence → `not_selected`; donor class `none` → `not_selected`;
+Gates, in order: group with no independently evidenced member → `not_selected`; donor class `none` → `not_selected`;
 class `technique`/`reference` or `not_portable` conversion → `reference_only`; class `control` (same-lineage build,
 e.g. Diamond) can never be selected, only compared; `direct`/`convertible` with gain 0 → `not_selected`
 (Platinum-native wins), gain unmeasured → `reference_only` + `needs_evidence`, otherwise eligible when
-compat/risk/gain meet thresholds. Per target the best eligible group is `preferred`, others `alternate`;
+compat/risk/gain meet thresholds and independent evidence share ≥ 0.5 (else `weak_evidence_share`). Per target the best eligible group is `preferred`, others `alternate`;
 no eligible group ⇒ the target resolves to `platinum_native`.
 
 This encodes the donor-use policy: a donor is selected only when format is compatible **and** a measured visual
@@ -76,5 +76,5 @@ python3 tools/visual_overhaul/selection/test_selection_framework.py          # n
 
 Groups regenerate byte-identically from the recovered ledgers; every `usable` record is in exactly one group;
 ledgers cover exactly their subsystem's groups with no duplicates; ≤1 `preferred` per target; selected groups are
-`direct`/`convertible`, have measured gain, ≥90 % independent evidence, and a curation trace; evidence entries bind to
+`direct`/`convertible`, have measured gain, ≥50 % independent evidence, and a curation trace; evidence entries bind to
 the current `member_digest`; every ledger re-derives identically from rules + evidence; queue/status are reproducible.

@@ -1,0 +1,2832 @@
+{
+ "decisions": [
+  {
+   "asset_identity": {
+    "member_count": 7,
+    "member_digest": "69ef69773fee023373b5",
+    "sample_paths": [
+     "res/prebuilt/data/battle/system/battle_number01_LZ.bin",
+     "res/prebuilt/data/battle/system/battle_number01_LZ.bin",
+     "res/prebuilt/data/battle/system/battle_number01_LZ.bin"
+    ],
+    "unit": "ranger_battle/battle_number01"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 7
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/battle_number01",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7143,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 7,
+    "member_digest": "d089cecdb7bb15bd9ddb",
+    "sample_paths": [
+     "res/prebuilt/data/battle/system/battle_status_LZ.bin",
+     "res/prebuilt/data/battle/system/battle_status_LZ.bin",
+     "res/prebuilt/data/battle/system/battle_status_LZ.bin"
+    ],
+    "unit": "ranger_battle/battle_status"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 7
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/battle_status",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7143,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 7,
+    "member_digest": "b3dfec8aa60f0c10ad16",
+    "sample_paths": [
+     "res/prebuilt/data/battle/system/battle_status_debug_LZ.bin",
+     "res/prebuilt/data/battle/system/battle_status_debug_LZ.bin",
+     "res/prebuilt/data/battle/system/battle_status_debug_LZ.bin"
+    ],
+    "unit": "ranger_battle/battle_status_debug"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 7
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/battle_status_debug",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7143,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "9a790008efaa908a321a",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg000_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg000_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg000_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg000"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg000",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "791fc3e2cacb80a9c47c",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg001_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg001_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg001_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg001"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg001",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "42b0b58cd32a88a3634d",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg002_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg002_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg002_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg002"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg002",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "b281bbf450c57f242a79",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg003_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg003_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg003_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg003"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg003",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "d5cb7bef3b2cc77a48c7",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg004_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg004_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg004_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg004"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg004",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "d0fdd338756a3a07b570",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg005_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg005_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg005_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg005"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg005",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "6cb72ed5328b71a25cdd",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg006_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg006_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg006_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg006"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg006",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "e00cc21174dbfc7c7b99",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg007_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg007_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg007_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg007"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg007",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "1bae9a0c9247e20d0b94",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg008_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg008_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg008_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg008"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg008",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "ba34a8223be8654e6d5f",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg009_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg009_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg009_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg009"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg009",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "b7a69a88b051ced4c190",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg010_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg010_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg010_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg010"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg010",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "f3876a4e4ea8f506e0b2",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg011_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg011_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg011_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg011"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg011",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "7bdee0f825aeee01a72e",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg012_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg012_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg012_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg012"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg012",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "28f2b871f5ef34c51ade",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg013_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg013_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg013_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg013"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg013",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "7a442613f9c3576f9f11",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg014_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg014_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg014_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg014"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg014",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "ce184e219b99bc895c04",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg015_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg015_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg015_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg015"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg015",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "226a6c8382bb62b8f49e",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg016_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg016_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg016_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg016"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg016",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "184c1514bd8843ced567",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg017_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg017_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg017_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg017"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg017",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "8753211f9b3d4c4f5313",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg018_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg018_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg018_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg018"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg018",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "1b97266a1f51b6c6c636",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg019_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg019_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg019_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg019"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg019",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "34b62c877c3e8db1ed74",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg020_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg020_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg020_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg020"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg020",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "48693d9439d2d273cfa0",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg021_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg021_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg021_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg021"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg021",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "626233fe67196b22c879",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg022_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg022_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg022_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg022"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg022",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "89aece622cc9b704c10d",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg023_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg023_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg023_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg023"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg023",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "8dd5bc8bc65b59e4bb07",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg024_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg024_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg024_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg024"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg024",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "8a74096a0532c9d24192",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg025_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg025_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg025_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg025"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg025",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "a0f6196d32796625b453",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg026_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg026_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg026_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg026"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg026",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "837cd3d517a32ff6edfe",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg027_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg027_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg027_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg027"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg027",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "b093b6bd4329981a0cd6",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg028_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg028_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg028_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg028"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg028",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "2e069ca0e1e4e03cc28f",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg029_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg029_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg029_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg029"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg029",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "f783252d9c9cab31ec8f",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg030_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg030_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg030_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg030"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg030",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "35b46a9b739a1e8526f6",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg031_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg031_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg031_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg031"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg031",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "0e8ab87e4ec9e5e0cd79",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg032_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg032_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg032_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg032"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg032",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "115586b22a5a9c7ac229",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg033_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg033_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg033_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg033"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg033",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "9b0ca11e99870db23b00",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg034_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg034_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg034_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg034"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg034",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "dbc535ffa8ace83c83a4",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg035_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg035_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg035_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg035"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg035",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "db541a1835c669530468",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg036_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg036_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg036_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg036"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg036",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "1ae8b70f73ff9786e15d",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg037_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg037_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg037_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg037"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg037",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "da911b51e8a3f051c8e4",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg038_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg038_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg038_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg038"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg038",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "b06c1e09da326c3dc21b",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg039_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg039_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg039_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg039"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg039",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "3c9f558e30b7d0db0a4e",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg040_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg040_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg040_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg040"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg040",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "4c1cfcbe86a69e28752f",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg041_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg041_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg041_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg041"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg041",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "6b68c258bcfb04d1dfa4",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg042_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg042_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg042_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg042"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg042",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "ae1b272863f5bfa8bc23",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg043_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg043_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg043_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg043"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg043",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "8cc2a43a3840d4c7104d",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg044_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg044_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg044_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg044"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg044",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "f369ad4d5bb1add45c7f",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg045_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg045_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg045_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg045"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg045",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "d0165eacb452d8e6dcf4",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg046_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg046_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg046_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg046"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg046",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "a9204e3d9d651c018eec",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg047_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg047_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg047_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg047"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg047",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "70b5e3dcfb8488215616",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg048_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg048_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg048_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg048"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg048",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "59c83337ed947c5ee865",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg049_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg049_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg049_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg049"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg049",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "bb4088036bf48d915ba4",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg050_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg050_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg050_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg050"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg050",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "699dcb8238bd1e0dd590",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg051_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg051_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg051_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg051"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg051",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "1a3416e5e3e3126e714a",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg052_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg052_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg052_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg052"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg052",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "3f9d91779ff7a1ab72c9",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg053_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg053_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg053_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg053"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg053",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "302659a9d7f4ebf55454",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg054_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg054_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg054_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg054"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg054",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "7fd78eaf644d948babdf",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg055_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg055_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg055_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg055"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg055",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "9575c7906e8361ff2f42",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg056_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg056_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg056_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg056"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg056",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "c3dc3596f9186e44f246",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg057_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg057_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg057_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg057"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg057",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "645b4d4f03dfbdf0e201",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg058_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg058_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg058_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg058"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg058",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "a082d3329ba40f80ca49",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg059_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg059_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg059_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg059"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg059",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "de5cfe938302303eed81",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg070_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg070_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg070_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg070"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg070",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "6651d564f311559b1d05",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg071_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg071_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg071_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg071"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg071",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "39fe81033a4668fd6823",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg072_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg072_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg072_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg072"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg072",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "af78190b6da6e979968f",
+    "sample_paths": [
+     "res/prebuilt/data/battle/bg/capbg073_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg073_LZ.bin",
+     "res/prebuilt/data/battle/bg/capbg073_LZ.bin"
+    ],
+    "unit": "ranger_battle/capbg073"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/capbg073",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 4,
+    "member_digest": "7536771289f98c0f5975",
+    "sample_paths": [
+     "res/prebuilt/data/battle/result/r000_00_LZ.bin",
+     "res/prebuilt/data/battle/result/r000_00_LZ.bin",
+     "res/prebuilt/data/battle/result/r000_00_LZ.bin"
+    ],
+    "unit": "ranger_battle/r000_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 4
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_battle_package",
+   "group_id": "battle_backgrounds_hud/ranger2/ranger_battle/r000_00",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 1.0,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "battle_backgrounds_hud",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  }
+ ],
+ "inputs": {
+  "evidence_file": null,
+  "evidence_sha256": null,
+  "recovered_ledger_sha256": {
+   "LANE_A_RECOVERED_CURATION.json": "9d915a805df0ac9a32d336916e31e3251feeb427b15f05ce3512fcbb19b4266b",
+   "LANE_B_RECOVERED_CURATION.json": "efe2bfe24fbff3a47ebbcb7779b87e957bec28e135cc8171d883c7ed7e6fe368",
+   "LANE_CDE_RECOVERED_CURATION.json": "d68b973505c02dc51b912250b0340bed8a0cddcd208d0803d56c1f9e1c5c2d99"
+  },
+  "rules_sha256": "d36e02eb82afd18f7f404c1af95dfdabf6587be98c2cc8d32990149d8137ea6c",
+  "subsystem_groups_digest": "1b69381cddc5ef6f67ee",
+  "subsystems_sha256": "b45f0170534f30b0de38e5f75fe31a6126d42f794ebc1fb94900d4388d931a47"
+ },
+ "rules_version": "1.2",
+ "schema_version": 1,
+ "subsystem": "battle_backgrounds_hud",
+ "summary": {
+  "groups": 68,
+  "needs_evidence": 0,
+  "role_reason": {
+   "not_selected:source_not_relevant_to_subsystem": 68
+  },
+  "roles": {
+   "not_selected": 68
+  },
+  "source_role": {
+   "ranger2:not_selected": 68
+  },
+  "target_resolution": {
+   "native": 1
+  },
+  "targets": 1
+ },
+ "targets": [
+  {
+   "alternates": [],
+   "preferred": null,
+   "resolution": "platinum_native",
+   "target_id": "battle_backgrounds_hud/family:battle_backgrounds_hud"
+  }
+ ]
+}

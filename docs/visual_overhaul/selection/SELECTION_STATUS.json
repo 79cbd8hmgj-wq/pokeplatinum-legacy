@@ -44,84 +44,167 @@
   {
    "groups": 68,
    "members": 281,
-   "state": "pending",
+   "needs_evidence": 0,
+   "roles": {
+    "not_selected": 68
+   },
+   "state": "selected",
    "subsystem": "battle_backgrounds_hud",
+   "target_resolution": {
+    "native": 1
+   },
    "targets": 1
   },
   {
    "groups": 636,
    "members": 4266,
-   "state": "pending",
+   "needs_evidence": 0,
+   "roles": {
+    "reference_only": 636
+   },
+   "state": "selected",
    "subsystem": "battle_effects_particles",
+   "target_resolution": {
+    "native": 1
+   },
    "targets": 1
   },
   {
    "groups": 523,
    "members": 538,
-   "state": "pending",
+   "needs_evidence": 0,
+   "roles": {
+    "reference_only": 523
+   },
+   "state": "selected",
    "subsystem": "field_effects_overlays",
+   "target_resolution": {
+    "native": 1
+   },
    "targets": 1
   },
   {
    "groups": 1485,
    "members": 3060,
-   "state": "pending",
+   "needs_evidence": 23,
+   "roles": {
+    "not_selected": 90,
+    "reference_only": 1395
+   },
+   "state": "selected",
    "subsystem": "field_environment_art",
+   "target_resolution": {
+    "native": 1
+   },
    "targets": 1
   },
   {
    "groups": 163,
    "members": 1780,
-   "state": "pending",
+   "needs_evidence": 0,
+   "roles": {
+    "not_selected": 163
+   },
+   "state": "selected",
    "subsystem": "field_npc_player_sprites",
+   "target_resolution": {
+    "native": 1
+   },
    "targets": 1
   },
   {
    "groups": 913,
    "members": 2315,
-   "state": "pending",
+   "needs_evidence": 1,
+   "roles": {
+    "not_selected": 892,
+    "reference_only": 21
+   },
+   "state": "selected",
    "subsystem": "menu_ui_frames",
+   "target_resolution": {
+    "native": 1
+   },
    "targets": 1
   },
   {
    "groups": 282,
    "members": 1410,
-   "state": "pending",
+   "needs_evidence": 0,
+   "roles": {
+    "not_selected": 282
+   },
+   "state": "selected",
    "subsystem": "no_platinum_target",
+   "target_resolution": {
+    "native": 1
+   },
    "targets": 1
   },
   {
    "groups": 1,
    "members": 27,
-   "state": "pending",
+   "needs_evidence": 1,
+   "roles": {
+    "reference_only": 1
+   },
+   "state": "selected",
    "subsystem": "party_summary_ui",
+   "target_resolution": {
+    "native": 1
+   },
    "targets": 1
   },
   {
    "groups": 1,
    "members": 123,
-   "state": "pending",
+   "needs_evidence": 1,
+   "roles": {
+    "reference_only": 1
+   },
+   "state": "selected",
    "subsystem": "pokedex_ui",
+   "target_resolution": {
+    "native": 1
+   },
    "targets": 1
   },
   {
    "groups": 1533,
    "members": 35621,
-   "state": "pending",
+   "needs_evidence": 0,
+   "roles": {
+    "reference_only": 1533
+   },
+   "state": "selected",
    "subsystem": "pokemon_animation_reference",
+   "target_resolution": {
+    "native": 282
+   },
    "targets": 282
   },
   {
    "groups": 1282,
    "members": 3998,
-   "state": "pending",
+   "needs_evidence": 2,
+   "roles": {
+    "alternate": 537,
+    "not_selected": 14,
+    "preferred": 26,
+    "reference_only": 705
+   },
+   "state": "selected",
    "subsystem": "pokemon_battle_sprites",
+   "target_resolution": {
+    "donor": 26,
+    "native": 762
+   },
    "targets": 788
   },
   {
    "groups": 1077,
    "members": 1077,
-   "needs_evidence": 4,
+   "needs_evidence": 0,
    "roles": {
     "not_selected": 1071,
     "reference_only": 6
@@ -136,15 +219,30 @@
   {
    "groups": 153,
    "members": 555,
-   "state": "pending",
+   "needs_evidence": 0,
+   "roles": {
+    "not_selected": 123,
+    "reference_only": 30
+   },
+   "state": "selected",
    "subsystem": "title_and_presentation",
+   "target_resolution": {
+    "native": 1
+   },
    "targets": 1
   },
   {
    "groups": 106,
    "members": 106,
-   "state": "pending",
+   "needs_evidence": 0,
+   "roles": {
+    "reference_only": 106
+   },
+   "state": "selected",
    "subsystem": "trainer_battle_sprites",
+   "target_resolution": {
+    "native": 106
+   },
    "targets": 106
   }
  ]

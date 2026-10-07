@@ -1,0 +1,6727 @@
+{
+ "decisions": [
+  {
+   "asset_identity": {
+    "member_count": 12,
+    "member_digest": "bac46abe73573aadc336",
+    "sample_paths": [
+     "res/prebuilt/data/npc/n000_00_LZ.bin",
+     "res/prebuilt/data/npc/n000_00_LZ.bin",
+     "res/prebuilt/data/npc/n000_00_LZ.bin"
+    ],
+    "unit": "npc/n000_00"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 12
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/n000_00",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.6667,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 11,
+    "member_digest": "ab6154641e79c6ea4a13",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc001_LZ.bin",
+     "res/prebuilt/data/npc/npc001_LZ.bin",
+     "res/prebuilt/data/npc/npc001_LZ.bin"
+    ],
+    "unit": "npc/npc001"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 11
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc001",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7273,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "35f9b0f7b9bd4d4344e2",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc002_LZ.bin",
+     "res/prebuilt/data/npc/npc002_LZ.bin",
+     "res/prebuilt/data/npc/npc002_LZ.bin"
+    ],
+    "unit": "npc/npc002"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc002",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "c59c7784381ad8bd42fd",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc003_LZ.bin",
+     "res/prebuilt/data/npc/npc003_LZ.bin",
+     "res/prebuilt/data/npc/npc003_LZ.bin"
+    ],
+    "unit": "npc/npc003"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc003",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "d017374e029dabef301a",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc004_LZ.bin",
+     "res/prebuilt/data/npc/npc004_LZ.bin",
+     "res/prebuilt/data/npc/npc004_LZ.bin"
+    ],
+    "unit": "npc/npc004"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc004",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "1f0f70a93df8818883dd",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc005_LZ.bin",
+     "res/prebuilt/data/npc/npc005_LZ.bin",
+     "res/prebuilt/data/npc/npc005_LZ.bin"
+    ],
+    "unit": "npc/npc005"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc005",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "7e55812c6951c5e8dcce",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc006_LZ.bin",
+     "res/prebuilt/data/npc/npc006_LZ.bin",
+     "res/prebuilt/data/npc/npc006_LZ.bin"
+    ],
+    "unit": "npc/npc006"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc006",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "255ec0ccbc0649f37d99",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc007_LZ.bin",
+     "res/prebuilt/data/npc/npc007_LZ.bin",
+     "res/prebuilt/data/npc/npc007_LZ.bin"
+    ],
+    "unit": "npc/npc007"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc007",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "7fe388e1f4607a2b97a1",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc008_LZ.bin",
+     "res/prebuilt/data/npc/npc008_LZ.bin",
+     "res/prebuilt/data/npc/npc008_LZ.bin"
+    ],
+    "unit": "npc/npc008"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc008",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "7264c7197b6b81db77e5",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc009_LZ.bin",
+     "res/prebuilt/data/npc/npc009_LZ.bin",
+     "res/prebuilt/data/npc/npc009_LZ.bin"
+    ],
+    "unit": "npc/npc009"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc009",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "e4b5d0cc50e6382a54a8",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc010_LZ.bin",
+     "res/prebuilt/data/npc/npc010_LZ.bin",
+     "res/prebuilt/data/npc/npc010_LZ.bin"
+    ],
+    "unit": "npc/npc010"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc010",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "3813c08e0c972d1c5958",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc011_LZ.bin",
+     "res/prebuilt/data/npc/npc011_LZ.bin",
+     "res/prebuilt/data/npc/npc011_LZ.bin"
+    ],
+    "unit": "npc/npc011"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc011",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 11,
+    "member_digest": "48f3290ff6a5646233a0",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc012_LZ.bin",
+     "res/prebuilt/data/npc/npc012_LZ.bin",
+     "res/prebuilt/data/npc/npc012_LZ.bin"
+    ],
+    "unit": "npc/npc012"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 11
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc012",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7273,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 11,
+    "member_digest": "1d4555694f380b2e02df",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc013_LZ.bin",
+     "res/prebuilt/data/npc/npc013_LZ.bin",
+     "res/prebuilt/data/npc/npc013_LZ.bin"
+    ],
+    "unit": "npc/npc013"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 11
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc013",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7273,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "02a81a4f3a6d4feb19d2",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc014_LZ.bin",
+     "res/prebuilt/data/npc/npc014_LZ.bin",
+     "res/prebuilt/data/npc/npc014_LZ.bin"
+    ],
+    "unit": "npc/npc014"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc014",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "59bd5308ae5d4ceb9a1a",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc015_LZ.bin",
+     "res/prebuilt/data/npc/npc015_LZ.bin",
+     "res/prebuilt/data/npc/npc015_LZ.bin"
+    ],
+    "unit": "npc/npc015"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc015",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "e0c41b07d9d4c941927c",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc016_LZ.bin",
+     "res/prebuilt/data/npc/npc016_LZ.bin",
+     "res/prebuilt/data/npc/npc016_LZ.bin"
+    ],
+    "unit": "npc/npc016"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc016",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "8b45f0b2eebcd13f915e",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc017_LZ.bin",
+     "res/prebuilt/data/npc/npc017_LZ.bin",
+     "res/prebuilt/data/npc/npc017_LZ.bin"
+    ],
+    "unit": "npc/npc017"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc017",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 11,
+    "member_digest": "06790225daba9854fb63",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc018_LZ.bin",
+     "res/prebuilt/data/npc/npc018_LZ.bin",
+     "res/prebuilt/data/npc/npc018_LZ.bin"
+    ],
+    "unit": "npc/npc018"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 11
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc018",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7273,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 11,
+    "member_digest": "70e8623a8e93838f64dd",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc019_LZ.bin",
+     "res/prebuilt/data/npc/npc019_LZ.bin",
+     "res/prebuilt/data/npc/npc019_LZ.bin"
+    ],
+    "unit": "npc/npc019"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 11
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc019",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7273,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 11,
+    "member_digest": "04130feaec13bf7118cb",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc020_LZ.bin",
+     "res/prebuilt/data/npc/npc020_LZ.bin",
+     "res/prebuilt/data/npc/npc020_LZ.bin"
+    ],
+    "unit": "npc/npc020"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 11
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc020",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7273,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "4fd6985b822d4f87fc56",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc021_LZ.bin",
+     "res/prebuilt/data/npc/npc021_LZ.bin",
+     "res/prebuilt/data/npc/npc021_LZ.bin"
+    ],
+    "unit": "npc/npc021"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc021",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 5,
+    "member_digest": "e0a5f5ea53d046fb94cd",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc022_LZ.bin",
+     "res/prebuilt/data/npc/npc022_LZ.bin",
+     "res/prebuilt/data/npc/npc022_LZ.bin"
+    ],
+    "unit": "npc/npc022"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 5
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc022",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.8,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "3dbb1ad2a7dfc4ae92a2",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc023_LZ.bin",
+     "res/prebuilt/data/npc/npc023_LZ.bin",
+     "res/prebuilt/data/npc/npc023_LZ.bin"
+    ],
+    "unit": "npc/npc023"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc023",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "8457d5fb662e1923791b",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc024_LZ.bin",
+     "res/prebuilt/data/npc/npc024_LZ.bin",
+     "res/prebuilt/data/npc/npc024_LZ.bin"
+    ],
+    "unit": "npc/npc024"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc024",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "04fcd53ecd731be712bc",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc025_LZ.bin",
+     "res/prebuilt/data/npc/npc025_LZ.bin",
+     "res/prebuilt/data/npc/npc025_LZ.bin"
+    ],
+    "unit": "npc/npc025"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc025",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "5e70e360712eaf4bf33d",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc026_LZ.bin",
+     "res/prebuilt/data/npc/npc026_LZ.bin",
+     "res/prebuilt/data/npc/npc026_LZ.bin"
+    ],
+    "unit": "npc/npc026"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc026",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "ca8d8120f63926ee606c",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc027_LZ.bin",
+     "res/prebuilt/data/npc/npc027_LZ.bin",
+     "res/prebuilt/data/npc/npc027_LZ.bin"
+    ],
+    "unit": "npc/npc027"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc027",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "740ef3711a1f8811f5a8",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc028_LZ.bin",
+     "res/prebuilt/data/npc/npc028_LZ.bin",
+     "res/prebuilt/data/npc/npc028_LZ.bin"
+    ],
+    "unit": "npc/npc028"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc028",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "32b997d45a021176fd9f",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc029_LZ.bin",
+     "res/prebuilt/data/npc/npc029_LZ.bin",
+     "res/prebuilt/data/npc/npc029_LZ.bin"
+    ],
+    "unit": "npc/npc029"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc029",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 11,
+    "member_digest": "53185ecc34b3648bb01b",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc030_LZ.bin",
+     "res/prebuilt/data/npc/npc030_LZ.bin",
+     "res/prebuilt/data/npc/npc030_LZ.bin"
+    ],
+    "unit": "npc/npc030"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 11
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc030",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7273,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 11,
+    "member_digest": "fd25afd1161e49bdde00",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc031_LZ.bin",
+     "res/prebuilt/data/npc/npc031_LZ.bin",
+     "res/prebuilt/data/npc/npc031_LZ.bin"
+    ],
+    "unit": "npc/npc031"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 11
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc031",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7273,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "09737270938a07f5a9bf",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc032_LZ.bin",
+     "res/prebuilt/data/npc/npc032_LZ.bin",
+     "res/prebuilt/data/npc/npc032_LZ.bin"
+    ],
+    "unit": "npc/npc032"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc032",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "194f423559431bb16c98",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc033_LZ.bin",
+     "res/prebuilt/data/npc/npc033_LZ.bin",
+     "res/prebuilt/data/npc/npc033_LZ.bin"
+    ],
+    "unit": "npc/npc033"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc033",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "adfae6d22306277c9f87",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc034_LZ.bin",
+     "res/prebuilt/data/npc/npc034_LZ.bin",
+     "res/prebuilt/data/npc/npc034_LZ.bin"
+    ],
+    "unit": "npc/npc034"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc034",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "e5eef87ae0d07ded4ebb",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc035_LZ.bin",
+     "res/prebuilt/data/npc/npc035_LZ.bin",
+     "res/prebuilt/data/npc/npc035_LZ.bin"
+    ],
+    "unit": "npc/npc035"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc035",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "9e7161afa772421976b4",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc036_LZ.bin",
+     "res/prebuilt/data/npc/npc036_LZ.bin",
+     "res/prebuilt/data/npc/npc036_LZ.bin"
+    ],
+    "unit": "npc/npc036"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc036",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "11bd3a02b4767095b3e3",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc037_LZ.bin",
+     "res/prebuilt/data/npc/npc037_LZ.bin",
+     "res/prebuilt/data/npc/npc037_LZ.bin"
+    ],
+    "unit": "npc/npc037"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc037",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "d06e03692cf431596a11",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc038_LZ.bin",
+     "res/prebuilt/data/npc/npc038_LZ.bin",
+     "res/prebuilt/data/npc/npc038_LZ.bin"
+    ],
+    "unit": "npc/npc038"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc038",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "57eecf88f0c291e5c473",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc039_LZ.bin",
+     "res/prebuilt/data/npc/npc039_LZ.bin",
+     "res/prebuilt/data/npc/npc039_LZ.bin"
+    ],
+    "unit": "npc/npc039"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc039",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "64a404fa77667a8e9741",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc040_LZ.bin",
+     "res/prebuilt/data/npc/npc040_LZ.bin",
+     "res/prebuilt/data/npc/npc040_LZ.bin"
+    ],
+    "unit": "npc/npc040"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc040",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "9ab7644fda7341946ab8",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc041_LZ.bin",
+     "res/prebuilt/data/npc/npc041_LZ.bin",
+     "res/prebuilt/data/npc/npc041_LZ.bin"
+    ],
+    "unit": "npc/npc041"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc041",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "22e89b04c0f325144764",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc042_LZ.bin",
+     "res/prebuilt/data/npc/npc042_LZ.bin",
+     "res/prebuilt/data/npc/npc042_LZ.bin"
+    ],
+    "unit": "npc/npc042"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc042",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "9601d146fbca4d147ef4",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc043_LZ.bin",
+     "res/prebuilt/data/npc/npc043_LZ.bin",
+     "res/prebuilt/data/npc/npc043_LZ.bin"
+    ],
+    "unit": "npc/npc043"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc043",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "1e90b138a893463cfcbd",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc044_LZ.bin",
+     "res/prebuilt/data/npc/npc044_LZ.bin",
+     "res/prebuilt/data/npc/npc044_LZ.bin"
+    ],
+    "unit": "npc/npc044"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc044",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "5efbd1800983a624b30e",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc045_LZ.bin",
+     "res/prebuilt/data/npc/npc045_LZ.bin",
+     "res/prebuilt/data/npc/npc045_LZ.bin"
+    ],
+    "unit": "npc/npc045"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc045",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "7ddf64ae29580e053839",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc046_LZ.bin",
+     "res/prebuilt/data/npc/npc046_LZ.bin",
+     "res/prebuilt/data/npc/npc046_LZ.bin"
+    ],
+    "unit": "npc/npc046"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc046",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "f4fdd3780e5216dc0de0",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc047_LZ.bin",
+     "res/prebuilt/data/npc/npc047_LZ.bin",
+     "res/prebuilt/data/npc/npc047_LZ.bin"
+    ],
+    "unit": "npc/npc047"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc047",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "92aa50b09c5153374130",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc048_LZ.bin",
+     "res/prebuilt/data/npc/npc048_LZ.bin",
+     "res/prebuilt/data/npc/npc048_LZ.bin"
+    ],
+    "unit": "npc/npc048"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc048",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "e9ea74dd2f13408074eb",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc049_LZ.bin",
+     "res/prebuilt/data/npc/npc049_LZ.bin",
+     "res/prebuilt/data/npc/npc049_LZ.bin"
+    ],
+    "unit": "npc/npc049"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc049",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "e2d0de7e8325851dd2a1",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc050_LZ.bin",
+     "res/prebuilt/data/npc/npc050_LZ.bin",
+     "res/prebuilt/data/npc/npc050_LZ.bin"
+    ],
+    "unit": "npc/npc050"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc050",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "a8050c3581e0761578a3",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc051_LZ.bin",
+     "res/prebuilt/data/npc/npc051_LZ.bin",
+     "res/prebuilt/data/npc/npc051_LZ.bin"
+    ],
+    "unit": "npc/npc051"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc051",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "9dc5754f0fe4c1c236d8",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc052_LZ.bin",
+     "res/prebuilt/data/npc/npc052_LZ.bin",
+     "res/prebuilt/data/npc/npc052_LZ.bin"
+    ],
+    "unit": "npc/npc052"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc052",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "16a60abfb83ff706dc20",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc053_LZ.bin",
+     "res/prebuilt/data/npc/npc053_LZ.bin",
+     "res/prebuilt/data/npc/npc053_LZ.bin"
+    ],
+    "unit": "npc/npc053"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc053",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "3387ddb110a49bf1255e",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc054_LZ.bin",
+     "res/prebuilt/data/npc/npc054_LZ.bin",
+     "res/prebuilt/data/npc/npc054_LZ.bin"
+    ],
+    "unit": "npc/npc054"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc054",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 11,
+    "member_digest": "f3021a5dbd80bc59e2a0",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc055_LZ.bin",
+     "res/prebuilt/data/npc/npc055_LZ.bin",
+     "res/prebuilt/data/npc/npc055_LZ.bin"
+    ],
+    "unit": "npc/npc055"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 11
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc055",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7273,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "e86b54a1a22d372fd835",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc056_LZ.bin",
+     "res/prebuilt/data/npc/npc056_LZ.bin",
+     "res/prebuilt/data/npc/npc056_LZ.bin"
+    ],
+    "unit": "npc/npc056"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc056",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 11,
+    "member_digest": "5ee800d609cac844047b",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc057_LZ.bin",
+     "res/prebuilt/data/npc/npc057_LZ.bin",
+     "res/prebuilt/data/npc/npc057_LZ.bin"
+    ],
+    "unit": "npc/npc057"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 11
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc057",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7273,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "9bd167ef935a1cb28b9b",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc058_LZ.bin",
+     "res/prebuilt/data/npc/npc058_LZ.bin",
+     "res/prebuilt/data/npc/npc058_LZ.bin"
+    ],
+    "unit": "npc/npc058"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc058",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "b543189badc6a65e8ec6",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc059_LZ.bin",
+     "res/prebuilt/data/npc/npc059_LZ.bin",
+     "res/prebuilt/data/npc/npc059_LZ.bin"
+    ],
+    "unit": "npc/npc059"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc059",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "8bbe3eb7a624fe8d2eb2",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc062_LZ.bin",
+     "res/prebuilt/data/npc/npc062_LZ.bin",
+     "res/prebuilt/data/npc/npc062_LZ.bin"
+    ],
+    "unit": "npc/npc062"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc062",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "fe155bd9ef8d74a360b3",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc064_LZ.bin",
+     "res/prebuilt/data/npc/npc064_LZ.bin",
+     "res/prebuilt/data/npc/npc064_LZ.bin"
+    ],
+    "unit": "npc/npc064"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc064",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "5a5dc248dcf112b9e4d6",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc065_LZ.bin",
+     "res/prebuilt/data/npc/npc065_LZ.bin",
+     "res/prebuilt/data/npc/npc065_LZ.bin"
+    ],
+    "unit": "npc/npc065"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc065",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "4a88f34c9df31458927e",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc066_LZ.bin",
+     "res/prebuilt/data/npc/npc066_LZ.bin",
+     "res/prebuilt/data/npc/npc066_LZ.bin"
+    ],
+    "unit": "npc/npc066"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc066",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "b0e98bf9d7cde292ba24",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc067_LZ.bin",
+     "res/prebuilt/data/npc/npc067_LZ.bin",
+     "res/prebuilt/data/npc/npc067_LZ.bin"
+    ],
+    "unit": "npc/npc067"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc067",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 11,
+    "member_digest": "1f618855ce28f85e0c0d",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc068_LZ.bin",
+     "res/prebuilt/data/npc/npc068_LZ.bin",
+     "res/prebuilt/data/npc/npc068_LZ.bin"
+    ],
+    "unit": "npc/npc068"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 11
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc068",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7273,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "f99433a9d3f6519fecaf",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc069_LZ.bin",
+     "res/prebuilt/data/npc/npc069_LZ.bin",
+     "res/prebuilt/data/npc/npc069_LZ.bin"
+    ],
+    "unit": "npc/npc069"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc069",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "bd29e6f3db8532c24cb9",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc070_LZ.bin",
+     "res/prebuilt/data/npc/npc070_LZ.bin",
+     "res/prebuilt/data/npc/npc070_LZ.bin"
+    ],
+    "unit": "npc/npc070"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc070",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "bdaebd638a463b9df487",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc071_LZ.bin",
+     "res/prebuilt/data/npc/npc071_LZ.bin",
+     "res/prebuilt/data/npc/npc071_LZ.bin"
+    ],
+    "unit": "npc/npc071"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc071",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 6,
+    "member_digest": "5cb80a90ef9cbbca4068",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc072_LZ.bin",
+     "res/prebuilt/data/npc/npc072_LZ.bin",
+     "res/prebuilt/data/npc/npc072_LZ.bin"
+    ],
+    "unit": "npc/npc072"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 6
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc072",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.8333,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "5d283c5bdf52e678c530",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc073_LZ.bin",
+     "res/prebuilt/data/npc/npc073_LZ.bin",
+     "res/prebuilt/data/npc/npc073_LZ.bin"
+    ],
+    "unit": "npc/npc073"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc073",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "6cbe34ecb87d613feb92",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc074_LZ.bin",
+     "res/prebuilt/data/npc/npc074_LZ.bin",
+     "res/prebuilt/data/npc/npc074_LZ.bin"
+    ],
+    "unit": "npc/npc074"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc074",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "673d5c2884d87f470940",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc075_LZ.bin",
+     "res/prebuilt/data/npc/npc075_LZ.bin",
+     "res/prebuilt/data/npc/npc075_LZ.bin"
+    ],
+    "unit": "npc/npc075"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc075",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "baed6acfcf81fc9b5936",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc076_LZ.bin",
+     "res/prebuilt/data/npc/npc076_LZ.bin",
+     "res/prebuilt/data/npc/npc076_LZ.bin"
+    ],
+    "unit": "npc/npc076"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc076",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 11,
+    "member_digest": "d807d5282c064731cbc2",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc077_LZ.bin",
+     "res/prebuilt/data/npc/npc077_LZ.bin",
+     "res/prebuilt/data/npc/npc077_LZ.bin"
+    ],
+    "unit": "npc/npc077"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 11
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc077",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7273,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 11,
+    "member_digest": "535dc0a5250f7a241209",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc078_LZ.bin",
+     "res/prebuilt/data/npc/npc078_LZ.bin",
+     "res/prebuilt/data/npc/npc078_LZ.bin"
+    ],
+    "unit": "npc/npc078"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 11
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc078",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7273,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 11,
+    "member_digest": "cec2f8c418066881d617",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc079_LZ.bin",
+     "res/prebuilt/data/npc/npc079_LZ.bin",
+     "res/prebuilt/data/npc/npc079_LZ.bin"
+    ],
+    "unit": "npc/npc079"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 11
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc079",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7273,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "e74521191be10240adfa",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc080_LZ.bin",
+     "res/prebuilt/data/npc/npc080_LZ.bin",
+     "res/prebuilt/data/npc/npc080_LZ.bin"
+    ],
+    "unit": "npc/npc080"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc080",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 20,
+    "member_digest": "fa2254c4d252b2095263",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc081_LZ.bin",
+     "res/prebuilt/data/npc/npc081_LZ.bin",
+     "res/prebuilt/data/npc/npc081_LZ.bin"
+    ],
+    "unit": "npc/npc081"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 20
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc081",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "25da5b163e33cc465a9f",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc082_LZ.bin",
+     "res/prebuilt/data/npc/npc082_LZ.bin",
+     "res/prebuilt/data/npc/npc082_LZ.bin"
+    ],
+    "unit": "npc/npc082"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc082",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "1406aa1842bcc7f48c9b",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc083_LZ.bin",
+     "res/prebuilt/data/npc/npc083_LZ.bin",
+     "res/prebuilt/data/npc/npc083_LZ.bin"
+    ],
+    "unit": "npc/npc083"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc083",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "6f28beb3d062558e7780",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc084_LZ.bin",
+     "res/prebuilt/data/npc/npc084_LZ.bin",
+     "res/prebuilt/data/npc/npc084_LZ.bin"
+    ],
+    "unit": "npc/npc084"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc084",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "1242e7184095390fb4d7",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc085_LZ.bin",
+     "res/prebuilt/data/npc/npc085_LZ.bin",
+     "res/prebuilt/data/npc/npc085_LZ.bin"
+    ],
+    "unit": "npc/npc085"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc085",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "1d2fbfc3ba3b60f5f401",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc086_LZ.bin",
+     "res/prebuilt/data/npc/npc086_LZ.bin",
+     "res/prebuilt/data/npc/npc086_LZ.bin"
+    ],
+    "unit": "npc/npc086"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc086",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "adbaf08297175de4762e",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc087_LZ.bin",
+     "res/prebuilt/data/npc/npc087_LZ.bin",
+     "res/prebuilt/data/npc/npc087_LZ.bin"
+    ],
+    "unit": "npc/npc087"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc087",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "fe254732c43004f14498",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc088_LZ.bin",
+     "res/prebuilt/data/npc/npc088_LZ.bin",
+     "res/prebuilt/data/npc/npc088_LZ.bin"
+    ],
+    "unit": "npc/npc088"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc088",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "214d6e524d5d7f97bd36",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc089_LZ.bin",
+     "res/prebuilt/data/npc/npc089_LZ.bin",
+     "res/prebuilt/data/npc/npc089_LZ.bin"
+    ],
+    "unit": "npc/npc089"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc089",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "97444c32dd555bce36ca",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc090_LZ.bin",
+     "res/prebuilt/data/npc/npc090_LZ.bin",
+     "res/prebuilt/data/npc/npc090_LZ.bin"
+    ],
+    "unit": "npc/npc090"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc090",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "dd056af2c10c8dd13e32",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc091_LZ.bin",
+     "res/prebuilt/data/npc/npc091_LZ.bin",
+     "res/prebuilt/data/npc/npc091_LZ.bin"
+    ],
+    "unit": "npc/npc091"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc091",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 5,
+    "member_digest": "35b2ed717db1df9cd821",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc092_LZ.bin",
+     "res/prebuilt/data/npc/npc092_LZ.bin",
+     "res/prebuilt/data/npc/npc092_LZ.bin"
+    ],
+    "unit": "npc/npc092"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 5
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc092",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.8,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "3e9becb0bdfbb455ea97",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc093_LZ.bin",
+     "res/prebuilt/data/npc/npc093_LZ.bin",
+     "res/prebuilt/data/npc/npc093_LZ.bin"
+    ],
+    "unit": "npc/npc093"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc093",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "6a34fa5f30114c58c23c",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc094_LZ.bin",
+     "res/prebuilt/data/npc/npc094_LZ.bin",
+     "res/prebuilt/data/npc/npc094_LZ.bin"
+    ],
+    "unit": "npc/npc094"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc094",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "9149c0bd7f9ce0387dbb",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc095_LZ.bin",
+     "res/prebuilt/data/npc/npc095_LZ.bin",
+     "res/prebuilt/data/npc/npc095_LZ.bin"
+    ],
+    "unit": "npc/npc095"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc095",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "f32ff0be41eebb0164fc",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc096_LZ.bin",
+     "res/prebuilt/data/npc/npc096_LZ.bin",
+     "res/prebuilt/data/npc/npc096_LZ.bin"
+    ],
+    "unit": "npc/npc096"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc096",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "60fdf5efa1b841acf3f4",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc097_LZ.bin",
+     "res/prebuilt/data/npc/npc097_LZ.bin",
+     "res/prebuilt/data/npc/npc097_LZ.bin"
+    ],
+    "unit": "npc/npc097"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc097",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 5,
+    "member_digest": "f180222c6243d4467033",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc098_LZ.bin",
+     "res/prebuilt/data/npc/npc098_LZ.bin",
+     "res/prebuilt/data/npc/npc098_LZ.bin"
+    ],
+    "unit": "npc/npc098"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 5
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc098",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.8,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "ee9f6ea9c5a468b17d08",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc099_LZ.bin",
+     "res/prebuilt/data/npc/npc099_LZ.bin",
+     "res/prebuilt/data/npc/npc099_LZ.bin"
+    ],
+    "unit": "npc/npc099"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc099",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "9fe3360454d4c9a7616e",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc100_LZ.bin",
+     "res/prebuilt/data/npc/npc100_LZ.bin",
+     "res/prebuilt/data/npc/npc100_LZ.bin"
+    ],
+    "unit": "npc/npc100"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc100",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "70d66c1b7ebea673d8a0",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc101_LZ.bin",
+     "res/prebuilt/data/npc/npc101_LZ.bin",
+     "res/prebuilt/data/npc/npc101_LZ.bin"
+    ],
+    "unit": "npc/npc101"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc101",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "f45a9be6f6c855dd3905",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc102_LZ.bin",
+     "res/prebuilt/data/npc/npc102_LZ.bin",
+     "res/prebuilt/data/npc/npc102_LZ.bin"
+    ],
+    "unit": "npc/npc102"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc102",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "52769ae4536eea256a65",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc103_LZ.bin",
+     "res/prebuilt/data/npc/npc103_LZ.bin",
+     "res/prebuilt/data/npc/npc103_LZ.bin"
+    ],
+    "unit": "npc/npc103"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc103",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 12,
+    "member_digest": "cb668cd6109680b1145f",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc104_LZ.bin",
+     "res/prebuilt/data/npc/npc104_LZ.bin",
+     "res/prebuilt/data/npc/npc104_LZ.bin"
+    ],
+    "unit": "npc/npc104"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 12
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc104",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.6667,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 20,
+    "member_digest": "aa7a3c36131286a9e98a",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc105_LZ.bin",
+     "res/prebuilt/data/npc/npc105_LZ.bin",
+     "res/prebuilt/data/npc/npc105_LZ.bin"
+    ],
+    "unit": "npc/npc105"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 20
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc105",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 20,
+    "member_digest": "ca8bf707d5bbe20417ec",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc106_LZ.bin",
+     "res/prebuilt/data/npc/npc106_LZ.bin",
+     "res/prebuilt/data/npc/npc106_LZ.bin"
+    ],
+    "unit": "npc/npc106"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 20
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc106",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 6,
+    "member_digest": "a60e5ee630ce4d02fbd1",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc107_LZ.bin",
+     "res/prebuilt/data/npc/npc107_LZ.bin",
+     "res/prebuilt/data/npc/npc107_LZ.bin"
+    ],
+    "unit": "npc/npc107"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 6
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc107",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.8333,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 6,
+    "member_digest": "ec42b37247fb5567310b",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc108_LZ.bin",
+     "res/prebuilt/data/npc/npc108_LZ.bin",
+     "res/prebuilt/data/npc/npc108_LZ.bin"
+    ],
+    "unit": "npc/npc108"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 6
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc108",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.8333,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "c3042ffd126f595ab8cf",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc109_LZ.bin",
+     "res/prebuilt/data/npc/npc109_LZ.bin",
+     "res/prebuilt/data/npc/npc109_LZ.bin"
+    ],
+    "unit": "npc/npc109"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc109",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 17,
+    "member_digest": "e8cbcc33d1c783ffa56d",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc110_LZ.bin",
+     "res/prebuilt/data/npc/npc110_LZ.bin",
+     "res/prebuilt/data/npc/npc110_LZ.bin"
+    ],
+    "unit": "npc/npc110"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 17
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc110",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7059,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 11,
+    "member_digest": "e1dff192c3d7e02d2a76",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc111_LZ.bin",
+     "res/prebuilt/data/npc/npc111_LZ.bin",
+     "res/prebuilt/data/npc/npc111_LZ.bin"
+    ],
+    "unit": "npc/npc111"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 11
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc111",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7273,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 11,
+    "member_digest": "265c0faa71fd6e420d24",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc112_LZ.bin",
+     "res/prebuilt/data/npc/npc112_LZ.bin",
+     "res/prebuilt/data/npc/npc112_LZ.bin"
+    ],
+    "unit": "npc/npc112"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 11
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc112",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7273,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 11,
+    "member_digest": "f8363b2598f38d800c57",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc113_LZ.bin",
+     "res/prebuilt/data/npc/npc113_LZ.bin",
+     "res/prebuilt/data/npc/npc113_LZ.bin"
+    ],
+    "unit": "npc/npc113"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 11
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc113",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7273,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 17,
+    "member_digest": "727a6718d36acd421d16",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc114_LZ.bin",
+     "res/prebuilt/data/npc/npc114_LZ.bin",
+     "res/prebuilt/data/npc/npc114_LZ.bin"
+    ],
+    "unit": "npc/npc114"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 17
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc114",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7059,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 17,
+    "member_digest": "0d22a2a9277c42e762a4",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc115_LZ.bin",
+     "res/prebuilt/data/npc/npc115_LZ.bin",
+     "res/prebuilt/data/npc/npc115_LZ.bin"
+    ],
+    "unit": "npc/npc115"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 17
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc115",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7059,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 17,
+    "member_digest": "296a87d7191716c13f7b",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc116_LZ.bin",
+     "res/prebuilt/data/npc/npc116_LZ.bin",
+     "res/prebuilt/data/npc/npc116_LZ.bin"
+    ],
+    "unit": "npc/npc116"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 17
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc116",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7059,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 17,
+    "member_digest": "8d649c332d5049ac64f6",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc117_LZ.bin",
+     "res/prebuilt/data/npc/npc117_LZ.bin",
+     "res/prebuilt/data/npc/npc117_LZ.bin"
+    ],
+    "unit": "npc/npc117"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 17
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc117",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7059,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 5,
+    "member_digest": "7d74e49bbe9a13bbca7d",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc118_LZ.bin",
+     "res/prebuilt/data/npc/npc118_LZ.bin",
+     "res/prebuilt/data/npc/npc118_LZ.bin"
+    ],
+    "unit": "npc/npc118"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 5
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc118",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.8,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "dbdb611b95f9168b2851",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc119_LZ.bin",
+     "res/prebuilt/data/npc/npc119_LZ.bin",
+     "res/prebuilt/data/npc/npc119_LZ.bin"
+    ],
+    "unit": "npc/npc119"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc119",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "8cecdf94b2fbf79291ec",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc120_LZ.bin",
+     "res/prebuilt/data/npc/npc120_LZ.bin",
+     "res/prebuilt/data/npc/npc120_LZ.bin"
+    ],
+    "unit": "npc/npc120"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc120",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "9fb61988a625ebfda504",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc121_LZ.bin",
+     "res/prebuilt/data/npc/npc121_LZ.bin",
+     "res/prebuilt/data/npc/npc121_LZ.bin"
+    ],
+    "unit": "npc/npc121"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc121",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "d2a4020201e6738cd7b3",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc122_LZ.bin",
+     "res/prebuilt/data/npc/npc122_LZ.bin",
+     "res/prebuilt/data/npc/npc122_LZ.bin"
+    ],
+    "unit": "npc/npc122"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc122",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "00bdb73948af71a0bdfe",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc123_LZ.bin",
+     "res/prebuilt/data/npc/npc123_LZ.bin",
+     "res/prebuilt/data/npc/npc123_LZ.bin"
+    ],
+    "unit": "npc/npc123"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc123",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "d61573a64f2b8ae27f24",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc124_LZ.bin",
+     "res/prebuilt/data/npc/npc124_LZ.bin",
+     "res/prebuilt/data/npc/npc124_LZ.bin"
+    ],
+    "unit": "npc/npc124"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc124",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "870c720f4afb724022c2",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc125_LZ.bin",
+     "res/prebuilt/data/npc/npc125_LZ.bin",
+     "res/prebuilt/data/npc/npc125_LZ.bin"
+    ],
+    "unit": "npc/npc125"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc125",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "bb7d6388722d48c3cd28",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc126_LZ.bin",
+     "res/prebuilt/data/npc/npc126_LZ.bin",
+     "res/prebuilt/data/npc/npc126_LZ.bin"
+    ],
+    "unit": "npc/npc126"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc126",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "9226b6deafa2efdaff99",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc127_LZ.bin",
+     "res/prebuilt/data/npc/npc127_LZ.bin",
+     "res/prebuilt/data/npc/npc127_LZ.bin"
+    ],
+    "unit": "npc/npc127"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc127",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "e936df588542fe38d0cd",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc128_LZ.bin",
+     "res/prebuilt/data/npc/npc128_LZ.bin",
+     "res/prebuilt/data/npc/npc128_LZ.bin"
+    ],
+    "unit": "npc/npc128"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc128",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "70c8e0c8a1bddfd11882",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc129_LZ.bin",
+     "res/prebuilt/data/npc/npc129_LZ.bin",
+     "res/prebuilt/data/npc/npc129_LZ.bin"
+    ],
+    "unit": "npc/npc129"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc129",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "aec5cb071abe86d0dab7",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc130_LZ.bin",
+     "res/prebuilt/data/npc/npc130_LZ.bin",
+     "res/prebuilt/data/npc/npc130_LZ.bin"
+    ],
+    "unit": "npc/npc130"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc130",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "8f8a7a9bbd5015f00230",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc131_LZ.bin",
+     "res/prebuilt/data/npc/npc131_LZ.bin",
+     "res/prebuilt/data/npc/npc131_LZ.bin"
+    ],
+    "unit": "npc/npc131"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc131",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "03cb9e4efad24408083a",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc132_LZ.bin",
+     "res/prebuilt/data/npc/npc132_LZ.bin",
+     "res/prebuilt/data/npc/npc132_LZ.bin"
+    ],
+    "unit": "npc/npc132"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc132",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "467e82af62184d61bf55",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc133_LZ.bin",
+     "res/prebuilt/data/npc/npc133_LZ.bin",
+     "res/prebuilt/data/npc/npc133_LZ.bin"
+    ],
+    "unit": "npc/npc133"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc133",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "2d97f50d09f0f443e0d2",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc134_LZ.bin",
+     "res/prebuilt/data/npc/npc134_LZ.bin",
+     "res/prebuilt/data/npc/npc134_LZ.bin"
+    ],
+    "unit": "npc/npc134"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc134",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 23,
+    "member_digest": "8d2dd6c76c9a946ebc53",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc135_LZ.bin",
+     "res/prebuilt/data/npc/npc135_LZ.bin",
+     "res/prebuilt/data/npc/npc135_LZ.bin"
+    ],
+    "unit": "npc/npc135"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 23
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc135",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.6957,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "4b8dc16df5ecf41cab0b",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc136_LZ.bin",
+     "res/prebuilt/data/npc/npc136_LZ.bin",
+     "res/prebuilt/data/npc/npc136_LZ.bin"
+    ],
+    "unit": "npc/npc136"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc136",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "b793ec5789a44f2971c1",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc137_LZ.bin",
+     "res/prebuilt/data/npc/npc137_LZ.bin",
+     "res/prebuilt/data/npc/npc137_LZ.bin"
+    ],
+    "unit": "npc/npc137"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc137",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "4c11754e3d5c65fe29eb",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc138_LZ.bin",
+     "res/prebuilt/data/npc/npc138_LZ.bin",
+     "res/prebuilt/data/npc/npc138_LZ.bin"
+    ],
+    "unit": "npc/npc138"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc138",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "4af80723b14fa903e90a",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc139_LZ.bin",
+     "res/prebuilt/data/npc/npc139_LZ.bin",
+     "res/prebuilt/data/npc/npc139_LZ.bin"
+    ],
+    "unit": "npc/npc139"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc139",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "416ea71217bc0e40487b",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc140_LZ.bin",
+     "res/prebuilt/data/npc/npc140_LZ.bin",
+     "res/prebuilt/data/npc/npc140_LZ.bin"
+    ],
+    "unit": "npc/npc140"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc140",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "13d662592f6c662e2a07",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc141_LZ.bin",
+     "res/prebuilt/data/npc/npc141_LZ.bin",
+     "res/prebuilt/data/npc/npc141_LZ.bin"
+    ],
+    "unit": "npc/npc141"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc141",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 14,
+    "member_digest": "9fca833923ecd531c951",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc142_LZ.bin",
+     "res/prebuilt/data/npc/npc142_LZ.bin",
+     "res/prebuilt/data/npc/npc142_LZ.bin"
+    ],
+    "unit": "npc/npc142"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 14
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc142",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7143,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 5,
+    "member_digest": "6bc157105743a6cedef7",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc143_LZ.bin",
+     "res/prebuilt/data/npc/npc143_LZ.bin",
+     "res/prebuilt/data/npc/npc143_LZ.bin"
+    ],
+    "unit": "npc/npc143"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 5
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc143",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.8,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 5,
+    "member_digest": "4210ca81afc849fb025d",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc145_LZ.bin",
+     "res/prebuilt/data/npc/npc145_LZ.bin",
+     "res/prebuilt/data/npc/npc145_LZ.bin"
+    ],
+    "unit": "npc/npc145"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 5
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc145",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.8,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "8856d19cef0c2ca5baaa",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc146_LZ.bin",
+     "res/prebuilt/data/npc/npc146_LZ.bin",
+     "res/prebuilt/data/npc/npc146_LZ.bin"
+    ],
+    "unit": "npc/npc146"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc146",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "efd0a7e1417d9f7696c8",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc147_LZ.bin",
+     "res/prebuilt/data/npc/npc147_LZ.bin",
+     "res/prebuilt/data/npc/npc147_LZ.bin"
+    ],
+    "unit": "npc/npc147"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc147",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "311189f37723e653c478",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc148_LZ.bin",
+     "res/prebuilt/data/npc/npc148_LZ.bin",
+     "res/prebuilt/data/npc/npc148_LZ.bin"
+    ],
+    "unit": "npc/npc148"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc148",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 14,
+    "member_digest": "3a6f6da75320f0f03292",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc149_LZ.bin",
+     "res/prebuilt/data/npc/npc149_LZ.bin",
+     "res/prebuilt/data/npc/npc149_LZ.bin"
+    ],
+    "unit": "npc/npc149"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 14
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc149",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7143,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "d2f6c9970346e8f07fc3",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc150_LZ.bin",
+     "res/prebuilt/data/npc/npc150_LZ.bin",
+     "res/prebuilt/data/npc/npc150_LZ.bin"
+    ],
+    "unit": "npc/npc150"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc150",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "94297eaacf5759df5ed7",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc151_LZ.bin",
+     "res/prebuilt/data/npc/npc151_LZ.bin",
+     "res/prebuilt/data/npc/npc151_LZ.bin"
+    ],
+    "unit": "npc/npc151"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc151",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "bfab874ace0fd8520106",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc152_LZ.bin",
+     "res/prebuilt/data/npc/npc152_LZ.bin",
+     "res/prebuilt/data/npc/npc152_LZ.bin"
+    ],
+    "unit": "npc/npc152"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc152",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "b349d7d07d15a166921b",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc153_LZ.bin",
+     "res/prebuilt/data/npc/npc153_LZ.bin",
+     "res/prebuilt/data/npc/npc153_LZ.bin"
+    ],
+    "unit": "npc/npc153"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc153",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "8fa12f2068bacc1ab977",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc154_LZ.bin",
+     "res/prebuilt/data/npc/npc154_LZ.bin",
+     "res/prebuilt/data/npc/npc154_LZ.bin"
+    ],
+    "unit": "npc/npc154"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc154",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "063c5c096f4d6f15560c",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc155_LZ.bin",
+     "res/prebuilt/data/npc/npc155_LZ.bin",
+     "res/prebuilt/data/npc/npc155_LZ.bin"
+    ],
+    "unit": "npc/npc155"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc155",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "06ef9a40163cd37f5bbe",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc156_LZ.bin",
+     "res/prebuilt/data/npc/npc156_LZ.bin",
+     "res/prebuilt/data/npc/npc156_LZ.bin"
+    ],
+    "unit": "npc/npc156"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc156",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "c7a9fa6d47fb980ebcd6",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc157_LZ.bin",
+     "res/prebuilt/data/npc/npc157_LZ.bin",
+     "res/prebuilt/data/npc/npc157_LZ.bin"
+    ],
+    "unit": "npc/npc157"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc157",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 11,
+    "member_digest": "9b13a9eceac8250aee3d",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc158_LZ.bin",
+     "res/prebuilt/data/npc/npc158_LZ.bin",
+     "res/prebuilt/data/npc/npc158_LZ.bin"
+    ],
+    "unit": "npc/npc158"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 11
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc158",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.7273,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "d38d74614a3d2054ecbd",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc159_LZ.bin",
+     "res/prebuilt/data/npc/npc159_LZ.bin",
+     "res/prebuilt/data/npc/npc159_LZ.bin"
+    ],
+    "unit": "npc/npc159"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc159",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 8,
+    "member_digest": "fc64f24af7ba6da33ec6",
+    "sample_paths": [
+     "res/prebuilt/data/npc/npc160_LZ.bin",
+     "res/prebuilt/data/npc/npc160_LZ.bin",
+     "res/prebuilt/data/npc/npc160_LZ.bin"
+    ],
+    "unit": "npc/npc160"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 8
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/npc/npc160",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.75,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 23,
+    "member_digest": "a9f72def6181e95461bd",
+    "sample_paths": [
+     "res/prebuilt/data/player/player1_LZ.bin",
+     "res/prebuilt/data/player/player1_LZ.bin",
+     "res/prebuilt/data/player/player1_LZ.bin"
+    ],
+    "unit": "player/player1"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 23
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/player/player1",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.6957,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 23,
+    "member_digest": "430425023a5acac66b5b",
+    "sample_paths": [
+     "res/prebuilt/data/player/player2_LZ.bin",
+     "res/prebuilt/data/player/player2_LZ.bin",
+     "res/prebuilt/data/player/player2_LZ.bin"
+    ],
+    "unit": "player/player2"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 23
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/player/player2",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.6957,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 86,
+    "member_digest": "e62586060f1916b62214",
+    "sample_paths": [
+     "res/prebuilt/data/player/player3_LZ.bin",
+     "res/prebuilt/data/player/player3_LZ.bin",
+     "res/prebuilt/data/player/player3_LZ.bin"
+    ],
+    "unit": "player/player3"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 86
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/player/player3",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.6744,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 86,
+    "member_digest": "2413ae37a2045108a13d",
+    "sample_paths": [
+     "res/prebuilt/data/player/player4_LZ.bin",
+     "res/prebuilt/data/player/player4_LZ.bin",
+     "res/prebuilt/data/player/player4_LZ.bin"
+    ],
+    "unit": "player/player4"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 86
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/player/player4",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.6744,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 80,
+    "member_digest": "ff28381709f2c8806158",
+    "sample_paths": [
+     "res/prebuilt/data/player/player5_LZ.bin",
+     "res/prebuilt/data/player/player5_LZ.bin",
+     "res/prebuilt/data/player/player5_LZ.bin"
+    ],
+    "unit": "player/player5"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 80
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/player/player5",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.675,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  },
+  {
+   "asset_identity": {
+    "member_count": 80,
+    "member_digest": "3376f60756376fa00602",
+    "sample_paths": [
+     "res/prebuilt/data/player/player6_LZ.bin",
+     "res/prebuilt/data/player/player6_LZ.bin",
+     "res/prebuilt/data/player/player6_LZ.bin"
+    ],
+    "unit": "player/player6"
+   },
+   "conversion_requirement": "not_portable",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_B_RECOVERED_CURATION.json": 80
+    },
+    "status": "usable"
+   },
+   "donor_class": "none",
+   "format_family": "ranger_npc_package",
+   "group_id": "field_npc_player_sprites/ranger2/player/player6",
+   "needs_evidence": false,
+   "needs_runtime_validation": false,
+   "reason_code": "source_not_relevant_to_subsystem",
+   "role": "not_selected",
+   "scores": {
+    "compat": 0,
+    "independent_share": 0.675,
+    "integration_cost": 8,
+    "risk": "high",
+    "visual_gain": null
+   },
+   "source_id": "ranger2",
+   "subsystem": "field_npc_player_sprites",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  }
+ ],
+ "inputs": {
+  "evidence_file": null,
+  "evidence_sha256": null,
+  "recovered_ledger_sha256": {
+   "LANE_A_RECOVERED_CURATION.json": "9d915a805df0ac9a32d336916e31e3251feeb427b15f05ce3512fcbb19b4266b",
+   "LANE_B_RECOVERED_CURATION.json": "efe2bfe24fbff3a47ebbcb7779b87e957bec28e135cc8171d883c7ed7e6fe368",
+   "LANE_CDE_RECOVERED_CURATION.json": "d68b973505c02dc51b912250b0340bed8a0cddcd208d0803d56c1f9e1c5c2d99"
+  },
+  "rules_sha256": "d36e02eb82afd18f7f404c1af95dfdabf6587be98c2cc8d32990149d8137ea6c",
+  "subsystem_groups_digest": "20dbc9e77506f5814f54",
+  "subsystems_sha256": "b45f0170534f30b0de38e5f75fe31a6126d42f794ebc1fb94900d4388d931a47"
+ },
+ "rules_version": "1.2",
+ "schema_version": 1,
+ "subsystem": "field_npc_player_sprites",
+ "summary": {
+  "groups": 163,
+  "needs_evidence": 0,
+  "role_reason": {
+   "not_selected:source_not_relevant_to_subsystem": 163
+  },
+  "roles": {
+   "not_selected": 163
+  },
+  "source_role": {
+   "ranger2:not_selected": 163
+  },
+  "target_resolution": {
+   "native": 1
+  },
+  "targets": 1
+ },
+ "targets": [
+  {
+   "alternates": [],
+   "preferred": null,
+   "resolution": "platinum_native",
+   "target_id": "field_npc_player_sprites/family:field_npc_player_sprites"
+  }
+ ]
+}

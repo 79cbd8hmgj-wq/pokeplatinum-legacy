@@ -15,7 +15,8 @@ def score_group(g: dict, ev: dict | None, rules: dict, sub: dict) -> dict:
     needs_rt = relation in rules["runtime_validation_relations"]
     order = rules["risk_order"]
     risk = rules["base_risk_by_conversion"][conv]
-    bumps = int(needs_rt) + int(g["unresolved_decode_issue_members"] > 0)
+    flags = (ev or {}).get("risk_flags", [])
+    bumps = int(needs_rt) + int(g["unresolved_decode_issue_members"] > 0) + sum(rules["risk_flag_bumps"][f] for f in flags)
     risk = risk_bump(risk, bumps, order)
     share = g["independent_member_count"] / g["member_count"]
     return {
@@ -25,7 +26,8 @@ def score_group(g: dict, ev: dict | None, rules: dict, sub: dict) -> dict:
         "risk": risk,
         "integration_cost": sub["integration_cost"] + rules["conversion_scale"][conv],
         "independent_share": round(share, 4),
-        "needs_runtime_validation": needs_rt,
+        "needs_runtime_validation": needs_rt or bool(flags),
+        "risk_flags": sorted(flags),
     }
 
 
@@ -35,23 +37,27 @@ def initial_role(g: dict, s: dict, rules: dict) -> tuple[str, str]:
     cls = g["donor_class"]
     rel = s["native_relation"]
     gain = s["visual_gain"]
-    if s["independent_share"] < th["min_independent_share"]:
+    if g["independent_member_count"] < th["min_independent_members"]:
         return "not_selected", "no_independent_evidence"
     if cls == "none":
         return "not_selected", "source_not_relevant_to_subsystem"
     if cls in ("technique", "reference") or g["conversion_requirement"] == "not_portable":
         return "reference_only", "policy_reference_class"
+    if rel == "missing_in_native":
+        return "reference_only", "no_native_target"
     if cls == "control":
         if rel in ("identical", "content_match_native"):
             return "not_selected", "identical_to_native"
         if rel == "unmeasured":
-            return "reference_only", "needs_evidence"
+            return "reference_only", "control_unmeasured"
         return "reference_only", "control_differs_from_native"
     # direct / convertible
     if gain == 0:
         return "not_selected", "identical_to_native"
     if gain is None:
         return "reference_only", "needs_evidence"
+    if s["independent_share"] < th["selection_min_independent_share"]:
+        return "reference_only", "weak_evidence_share"
     if (
         s["compat"] >= th["preferred_min_compat"]
         and order.index(s["risk"]) <= order.index(th["preferred_max_risk"])
@@ -131,7 +137,7 @@ def decide(groups: list[dict], evidence: dict, rules: dict, subs: dict) -> tuple
                 "needs_evidence": w["reason"] == "needs_evidence",
                 "needs_runtime_validation": s["needs_runtime_validation"] and w["role"] in ("preferred", "alternate"),
                 "scores": {k: s[k] for k in ("visual_gain", "compat", "risk", "integration_cost", "independent_share")},
-                "visual_evidence": {"native_relation": s["native_relation"], "detail": (w["ev"] or {}).get("detail")},
+                "visual_evidence": {"native_relation": s["native_relation"], "risk_flags": s["risk_flags"], "detail": (w["ev"] or {}).get("detail")},
             }
         )
     return decisions, targets

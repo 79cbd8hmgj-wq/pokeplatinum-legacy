@@ -95,8 +95,8 @@ def main() -> int:
                 rel = "content_match_native"
                 detail["matched_native_folders"] = sorted(hit)
             else:
-                rel = "different"
-                detail["note"] = "no Platinum icon has identical index pixels (form/special member)"
+                rel = "missing_in_native"
+                detail["note"] = "no Platinum icon has identical index pixels (form/special member without a Platinum counterpart)"
         entries[g["group_id"]] = {"native_relation": rel, "member_digest": g["member_digest"], "detail": detail}
 
     import collections

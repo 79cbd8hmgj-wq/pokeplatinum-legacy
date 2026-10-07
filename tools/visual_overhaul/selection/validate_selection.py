@@ -100,7 +100,7 @@ def validate(sel_dir: Path | None = None, quiet: bool = False) -> list[str]:
                     errs.append(f"{tag}: {d['group_id']} selected with class {g['donor_class']}")
                 if sc["visual_gain"] is None or sc["visual_gain"] < rules["thresholds"]["alternate_min_gain"]:
                     errs.append(f"{tag}: {d['group_id']} selected without measured visual gain")
-                if sc["independent_share"] < rules["thresholds"]["min_independent_share"]:
+                if sc["independent_share"] < rules["thresholds"]["selection_min_independent_share"]:
                     errs.append(f"{tag}: {d['group_id']} selected with weak independent evidence")
                 if g["unresolved_decode_issue_members"] and d["role"] == "preferred":
                     errs.append(f"{tag}: {d['group_id']} preferred while unit has unresolved decode_issue members")

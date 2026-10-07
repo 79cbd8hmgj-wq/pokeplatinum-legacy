@@ -1,0 +1,85 @@
+{
+ "decisions": [
+  {
+   "asset_identity": {
+    "member_count": 27,
+    "member_digest": "6602abac9a5b778fed2f",
+    "sample_paths": [
+     "files/graphic/plist_gra/plist_gra_00000000.NANR",
+     "files/graphic/plist_gra/plist_gra_00000001.NCER",
+     "files/graphic/plist_gra/plist_gra_00000002.NCGR"
+    ],
+    "unit": "plist_gra"
+   },
+   "conversion_requirement": "structural",
+   "curation_trace": {
+    "recovered_ledger_member_counts": {
+     "LANE_CDE_RECOVERED_CURATION.json": 27
+    },
+    "status": "usable"
+   },
+   "donor_class": "convertible",
+   "format_family": "nitro_ncgr_ncer_nscr",
+   "group_id": "party_summary_ui/hgss/plist_gra",
+   "needs_evidence": true,
+   "needs_runtime_validation": false,
+   "reason_code": "needs_evidence",
+   "role": "reference_only",
+   "scores": {
+    "compat": 1,
+    "independent_share": 0.3333,
+    "integration_cost": 5,
+    "risk": "medium",
+    "visual_gain": null
+   },
+   "source_id": "hgss",
+   "subsystem": "party_summary_ui",
+   "target_id": "party_summary_ui/family:party_summary_ui",
+   "visual_evidence": {
+    "detail": null,
+    "native_relation": "unmeasured",
+    "risk_flags": []
+   }
+  }
+ ],
+ "inputs": {
+  "evidence_file": null,
+  "evidence_sha256": null,
+  "recovered_ledger_sha256": {
+   "LANE_A_RECOVERED_CURATION.json": "9d915a805df0ac9a32d336916e31e3251feeb427b15f05ce3512fcbb19b4266b",
+   "LANE_B_RECOVERED_CURATION.json": "efe2bfe24fbff3a47ebbcb7779b87e957bec28e135cc8171d883c7ed7e6fe368",
+   "LANE_CDE_RECOVERED_CURATION.json": "d68b973505c02dc51b912250b0340bed8a0cddcd208d0803d56c1f9e1c5c2d99"
+  },
+  "rules_sha256": "d36e02eb82afd18f7f404c1af95dfdabf6587be98c2cc8d32990149d8137ea6c",
+  "subsystem_groups_digest": "04961d613fbd98fb2350",
+  "subsystems_sha256": "b45f0170534f30b0de38e5f75fe31a6126d42f794ebc1fb94900d4388d931a47"
+ },
+ "rules_version": "1.2",
+ "schema_version": 1,
+ "subsystem": "party_summary_ui",
+ "summary": {
+  "groups": 1,
+  "needs_evidence": 1,
+  "role_reason": {
+   "reference_only:needs_evidence": 1
+  },
+  "roles": {
+   "reference_only": 1
+  },
+  "source_role": {
+   "hgss:reference_only": 1
+  },
+  "target_resolution": {
+   "native": 1
+  },
+  "targets": 1
+ },
+ "targets": [
+  {
+   "alternates": [],
+   "preferred": null,
+   "resolution": "platinum_native",
+   "target_id": "party_summary_ui/family:party_summary_ui"
+  }
+ ]
+}

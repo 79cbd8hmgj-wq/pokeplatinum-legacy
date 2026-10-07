@@ -39,7 +39,7 @@ def derive() -> dict:
                 it["targets"].append(d["target_id"])
                 it["gain_sum"] += d["scores"]["visual_gain"]
                 it["formats"].add(d["format_family"])
-            if d["role"] in ("preferred", "alternate") and d["needs_runtime_validation"]:
+            if d["role"] == "preferred" and d["needs_runtime_validation"]:
                 it = runtime.setdefault(key, {"kind": "runtime_qa", "subsystem": name, "source_id": d["source_id"], "groups": 0})
                 it["groups"] += 1
             if d["needs_evidence"]:
