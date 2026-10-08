@@ -193,17 +193,101 @@ Do not mine the full effect corpus until status-overlay verification is complete
 
 ---
 
-## Crystal — pending exact-path pass
+## Crystal — pinned `3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6`
 
-Scope is already constrained to battle-animation graphic primitives and choreography. Do not investigate engine transplantation.
+### Battle-animation choreography
+Primary source:
+- `data/moves/animations.asm`
+- `engine/battle/effect_commands.asm`
+- `engine/battle/battle_transition.asm`
+- `data/battle_anims/framesets.asm`
+- `data/battle_anims/oam.asm`
+- `data/battle_anims/objects.asm`
 
-## Ruby — pending delta pass
+These are the first places to resolve the existing choreography seed. The goal is to characterize sequencing, duplication/layering, palette effects and timing patterns, not to port the Crystal engine.
 
-Do not broad-mine Ruby. Build a source/resource delta against the Emerald target paths above first.
+### Battle-animation component primitives
+Verified asset family:
+- `gfx/battle_anims/`
 
-## Yellow — pending exact-path pass
+High-value named primitives already present include:
+- `aeroblast.png`
+- `angels.png`
+- `beam.png`
+- `bubble.png`
+- `explosion.png`
+- `globe.png`
+- `haze.png`
+- `noise.png`
+- `psychic.png`
+- `reflect.png`
+- `rope.png`
+- `shapes.png`
+- `shine.png`
+- `skyattack.png`
+- `wave.png`
+- `web.png`
+- `wind.png`
 
-Use a high threshold. Limit initial search to battle transitions/effect timing and Pikachu-specific presentation resources.
+Binding data:
+- `data/battle_anims/object_gfx.asm`
+- `gfx/battle_anims.asm`
+
+Next step: map selected primitive files to object IDs and move animations. Do not render/catalog the whole directory unless that mapping shows broad reusable value.
+
+---
+
+## Ruby — pinned `5784633ce4ef7ade1a7f2d2d0c288e3d5e6cdd7f`
+
+Ruby exposes the same broad target surfaces as Emerald:
+- `src/field_effect.c`
+- `src/field_effect_helpers.c`
+- `src/field_weather.c`
+- `src/field_weather_effects.c`
+- `data/field_effect_scripts.s`
+- `data/field_move_scripts.inc`
+- `src/battle_anim.c`
+- `src/battle_anim_effects_3.c`
+- `src/battle_anim_mon_movement.c`
+- `src/battle_anim_special.c`
+- `src/battle_anim_status_effects.c`
+- `data/battle_anim_scripts.s`
+
+Policy: do not mine these broadly. Compare these paths against the pinned Emerald equivalents first and generate a delta list. Only Ruby-only or materially different systems/resources proceed to evidence review.
+
+This prevents duplicate Gen III Hoenn findings from inflating the opportunity pool.
+
+---
+
+## Yellow — pinned `e89ead154b9968aa50eed9328ff2b38b6c194382`
+
+### Battle presentation / effect timing
+Primary source:
+- `engine/battle/animations.asm`
+- `engine/battle/battle_transitions.asm`
+- `data/battle_anims/special_effects.asm`
+- `data/battle_anims/special_effect_pointers.asm`
+- `data/battle_anims/subanimations.asm`
+- `data/battle_anims/frame_blocks.asm`
+
+Verified graphics:
+- `gfx/battle/move_anim_0.png`
+- `gfx/battle/move_anim_1.png`
+- battle HUD graphics under `gfx/battle/`
+
+This remains a high-threshold technique/reference pass. Promote only timing, transition or silhouette ideas that are not already better represented by Emerald/Crystal/Platinum.
+
+### Pikachu-specific presentation
+Primary code:
+- `engine/battle/pikachu_entrance_anim.asm`
+
+Verified graphics:
+- `gfx/pikachu/`
+- `gfx/pikachu.asm`
+- `gfx/surfing_pikachu/`
+- `gfx/surfing_pikachu.asm`
+
+The Pikachu directory contains dozens of dedicated frames/resources. Do not bulk-promote them. First trace which sequences are actually Pikachu-specific presentation states and identify only frames/ideas with a plausible Platinum use case.
 
 ## Handoff rule
 
