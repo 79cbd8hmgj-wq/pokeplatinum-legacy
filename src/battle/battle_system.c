@@ -1188,6 +1188,11 @@ void BattleSystem_SetRenderMode(BattleSystem *battleSys, int renderMode)
     battleSys->renderMode = renderMode;
 }
 
+int BattleSystem_GetRenderMode(BattleSystem *battleSys)
+{
+    return battleSys->renderMode;
+}
+
 void BattleSystem_SetLinkServerSenderStates(BattleSystem *battleSys, u8 *lssState)
 {
     battleSys->linkServerSenderState = lssState;

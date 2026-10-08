@@ -9,6 +9,7 @@
 #include "narc.h"
 #include "palette.h"
 #include "sprite_system.h"
+#include "sys_task.h"
 
 #include "res/graphics/battle/sprites.naix"
 
@@ -136,12 +137,171 @@ ALIGN_4 static const u16 sTerrainPaletteSource[TERRAIN_MAX][3] = {
 };
 // clang-format on
 
+// IO-PAL-CYCLE (water pilot): subtle shimmer on the water terrain platform.
+//
+// Only palette entries 4-7 (the lighter mid-tone highlight bands of the water ramp) are
+// animated. Entries 0-3 (transparent / outline / brightest sparkle) and 8-15 (body and
+// shadow tones) are never touched, so the platform keeps its time-of-day identity. Each
+// step moves every animated entry at most one ramp rung (see sWaterCycleShifts), which
+// avoids a visible wrap-around jump.
+#define TERRAIN_OBJ_PALETTE_NONE      0xFF
+#define TERRAIN_BG_PALETTE_SLOT       7
+#define TERRAIN_WATER_CYCLE_FIRST_IDX 4
+#define TERRAIN_WATER_CYCLE_INTERVAL  16 // frames between steps; a full loop is 4 steps (~1.07s)
+#define TERRAIN_WATER_CYCLE_PHASES    4
+
+static const s8 sWaterCycleShifts[TERRAIN_WATER_CYCLE_PHASES] = { 0, 1, 0, -1 };
+
+static void Terrain_BuildCycleColors(const Terrain *terrain, u32 step, u16 *out)
+{
+    for (int i = 0; i < TERRAIN_WATER_CYCLE_COUNT; i++) {
+        int src = i + sWaterCycleShifts[step];
+
+        if (src < 0) {
+            src = 0;
+        } else if (src > TERRAIN_WATER_CYCLE_COUNT - 1) {
+            src = TERRAIN_WATER_CYCLE_COUNT - 1;
+        }
+
+        out[i] = terrain->cycleBaseColors[src];
+    }
+}
+
+static BOOL Terrain_RangeEquals(const u16 *a, const u16 *b)
+{
+    for (int i = 0; i < TERRAIN_WATER_CYCLE_COUNT; i++) {
+        if (a[i] != b[i]) {
+            return FALSE;
+        }
+    }
+
+    return TRUE;
+}
+
+// Updates the animated range of one palette in the given PaletteData buffer. The unfaded
+// buffer is the authoritative copy; the faded buffer and hardware palette are only touched
+// when no fade owns them. Returns FALSE (leaving everything untouched) when the range does
+// not currently hold water terrain colors or has been tinted by another effect.
+static BOOL Terrain_WriteCycleColors(Terrain *terrain, PaletteData *paletteData, enum PaletteBufferID bufferID, u16 paletteIdx, const u16 *curColors, const u16 *newColors)
+{
+    u32 start = PLTT_DEST(paletteIdx) + TERRAIN_WATER_CYCLE_FIRST_IDX;
+    u16 *unfaded = PaletteData_GetUnfadedBuffer(paletteData, bufferID) + start;
+    u16 *faded = PaletteData_GetFadedBuffer(paletteData, bufferID) + start;
+
+    if (Terrain_RangeEquals(unfaded, curColors) == FALSE && Terrain_RangeEquals(unfaded, terrain->cycleBaseColors) == FALSE) {
+        return FALSE;
+    }
+
+    if (Terrain_RangeEquals(faded, unfaded) == FALSE) {
+        return FALSE;
+    }
+
+    u32 size = TERRAIN_WATER_CYCLE_COUNT * sizeof(u16);
+    u32 hwOffset = PLTT_OFFSET(paletteIdx) + TERRAIN_WATER_CYCLE_FIRST_IDX * sizeof(u16);
+
+    MI_CpuCopy16(newColors, unfaded, size);
+    MI_CpuCopy16(newColors, faded, size);
+    DC_FlushRange(faded, size);
+
+    if (bufferID == PLTTBUF_MAIN_OBJ) {
+        GX_LoadOBJPltt(faded, hwOffset, size);
+    } else {
+        GX_LoadBGPltt(faded, hwOffset, size);
+    }
+
+    return TRUE;
+}
+
+static void SysTask_CycleWaterPalette(SysTask *task, void *param)
+{
+    Terrain *terrain = param;
+    BattleSystem *battleSys = terrain->battleSys;
+
+    // Sub-menus (bag/party/move forget) and post-battle screens own the palettes.
+    if (BattleSystem_GetRenderMode(battleSys) != 0) {
+        terrain->cycleTimer = 0;
+        return;
+    }
+
+    terrain->cycleTimer++;
+
+    if (terrain->cycleTimer < TERRAIN_WATER_CYCLE_INTERVAL) {
+        return;
+    }
+
+    terrain->cycleTimer = 0;
+
+    PaletteData *paletteData = BattleSystem_GetPaletteData(battleSys);
+
+    // While a fade is running on the buffer, leave it entirely to the fade.
+    if (PaletteData_GetSelectedBuffersMask(paletteData) & (PLTTBUF_MAIN_OBJ_F | PLTTBUF_MAIN_BG_F)) {
+        return;
+    }
+
+    u16 curColors[TERRAIN_WATER_CYCLE_COUNT];
+    u16 newColors[TERRAIN_WATER_CYCLE_COUNT];
+    u32 nextStep = (terrain->cycleStep + 1) % TERRAIN_WATER_CYCLE_PHASES;
+
+    Terrain_BuildCycleColors(terrain, terrain->cycleStep, curColors);
+    Terrain_BuildCycleColors(terrain, nextStep, newColors);
+
+    if (Terrain_WriteCycleColors(terrain, paletteData, PLTTBUF_MAIN_OBJ, terrain->objPaletteIdx, curColors, newColors) == FALSE) {
+        return;
+    }
+
+    // Keep the BG slot 7 mirror (consumed by BattleSystem_BakeSpritesToBackground) in step
+    // so a baked terrain matches what was on screen.
+    Terrain_WriteCycleColors(terrain, paletteData, PLTTBUF_MAIN_BG, TERRAIN_BG_PALETTE_SLOT, curColors, newColors);
+    terrain->cycleStep = nextStep;
+}
+
+static void Terrain_StartPaletteCycle(Terrain *terrain, PaletteData *paletteData, u8 objPaletteIdx)
+{
+    // Both terrain sides request resource 20009; only the first load allocates a palette
+    // (the second returns TERRAIN_OBJ_PALETTE_NONE), so the cycle is owned by that side.
+    if (terrain->terrainType != TERRAIN_WATER || objPaletteIdx == TERRAIN_OBJ_PALETTE_NONE) {
+        return;
+    }
+
+    u16 *unfaded = PaletteData_GetUnfadedBuffer(paletteData, PLTTBUF_MAIN_OBJ) + PLTT_DEST(objPaletteIdx) + TERRAIN_WATER_CYCLE_FIRST_IDX;
+
+    MI_CpuCopy16(unfaded, terrain->cycleBaseColors, sizeof(terrain->cycleBaseColors));
+    terrain->objPaletteIdx = objPaletteIdx;
+    terrain->cycleTimer = 0;
+    terrain->cycleStep = 0;
+    terrain->paletteTask = SysTask_Start(SysTask_CycleWaterPalette, terrain, 60001);
+}
+
+void Terrain_StopPaletteCycle(Terrain *terrain)
+{
+    if (terrain->paletteTask == NULL) {
+        return;
+    }
+
+    SysTask_Done(terrain->paletteTask);
+    terrain->paletteTask = NULL;
+
+    // Restore the pristine palette if it still holds a cycled state and nothing owns it.
+    PaletteData *paletteData = BattleSystem_GetPaletteData(terrain->battleSys);
+
+    if (terrain->cycleStep != 0 && (PaletteData_GetSelectedBuffersMask(paletteData) & (PLTTBUF_MAIN_OBJ_F | PLTTBUF_MAIN_BG_F)) == 0) {
+        u16 curColors[TERRAIN_WATER_CYCLE_COUNT];
+
+        Terrain_BuildCycleColors(terrain, terrain->cycleStep, curColors);
+        Terrain_WriteCycleColors(terrain, paletteData, PLTTBUF_MAIN_OBJ, terrain->objPaletteIdx, curColors, terrain->cycleBaseColors);
+        Terrain_WriteCycleColors(terrain, paletteData, PLTTBUF_MAIN_BG, TERRAIN_BG_PALETTE_SLOT, curColors, terrain->cycleBaseColors);
+    }
+
+    terrain->cycleStep = 0;
+}
+
 void Terrain_LoadResources(Terrain *terrain)
 {
     SpriteSystem *spriteSys;
     SpriteManager *spriteMan;
     int charNarcIdx, charResID, cellNarcIdx, cellResID, animNarcIdx, animResID;
     int bgTimeOffset;
+    u8 objPaletteIdx;
     NARC *objNarc = NARC_ctor(NARC_INDEX_BATTLE__GRAPHIC__PL_BATT_OBJ, HEAP_ID_BATTLE);
     spriteSys = BattleSystem_GetSpriteSystem(terrain->battleSys);
     spriteMan = BattleSystem_GetSpriteManager(terrain->battleSys);
@@ -164,8 +324,9 @@ void Terrain_LoadResources(Terrain *terrain)
     }
 
     SpriteSystem_LoadCharResObjFromOpenNarc(spriteSys, spriteMan, objNarc, charNarcIdx, TRUE, NNS_G2D_VRAM_TYPE_2DMAIN, charResID);
-    SpriteSystem_LoadPaletteBufferFromOpenNarc(BattleSystem_GetPaletteData(terrain->battleSys), PLTTBUF_MAIN_OBJ, spriteSys, spriteMan, objNarc, sTerrainPaletteSource[terrain->terrainType][bgTimeOffset], FALSE, 1, NNS_G2D_VRAM_TYPE_2DMAIN, 20009);
-    PaletteData_LoadBufferFromFileStart(BattleSystem_GetPaletteData(terrain->battleSys), NARC_INDEX_BATTLE__GRAPHIC__PL_BATT_OBJ, sTerrainPaletteSource[terrain->terrainType][bgTimeOffset], HEAP_ID_BATTLE, PLTTBUF_MAIN_BG, PALETTE_SIZE_BYTES, PLTT_DEST(7));
+    objPaletteIdx = SpriteSystem_LoadPaletteBufferFromOpenNarc(BattleSystem_GetPaletteData(terrain->battleSys), PLTTBUF_MAIN_OBJ, spriteSys, spriteMan, objNarc, sTerrainPaletteSource[terrain->terrainType][bgTimeOffset], FALSE, 1, NNS_G2D_VRAM_TYPE_2DMAIN, 20009);
+    PaletteData_LoadBufferFromFileStart(BattleSystem_GetPaletteData(terrain->battleSys), NARC_INDEX_BATTLE__GRAPHIC__PL_BATT_OBJ, sTerrainPaletteSource[terrain->terrainType][bgTimeOffset], HEAP_ID_BATTLE, PLTTBUF_MAIN_BG, PALETTE_SIZE_BYTES, PLTT_DEST(TERRAIN_BG_PALETTE_SLOT));
+    Terrain_StartPaletteCycle(terrain, BattleSystem_GetPaletteData(terrain->battleSys), objPaletteIdx);
     SpriteSystem_LoadCellResObjFromOpenNarc(spriteSys, spriteMan, objNarc, cellNarcIdx, TRUE, cellResID);
     SpriteSystem_LoadAnimResObjFromOpenNarc(spriteSys, spriteMan, objNarc, animNarcIdx, TRUE, animResID);
     NARC_dtor(objNarc);
@@ -246,6 +407,7 @@ void Terrain_Init(Terrain *terrain, BattleSystem *battleSys, u16 side, int terra
 
 void Terrain_Destroy(Terrain *terrain)
 {
+    Terrain_StopPaletteCycle(terrain);
     Terrain_DeleteSprite(terrain);
     Terrain_UnloadResources(terrain);
     MI_CpuClearFast(terrain, sizeof(Terrain));

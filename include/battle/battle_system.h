@@ -236,6 +236,7 @@ void PokemonSpriteData_SetNarcID(PokemonSpriteData *pokemonSpriteData, int idx, 
 void PokemonSpriteData_SetPalette(PokemonSpriteData *pokemonSpriteData, int idx, int value);
 void PokemonSpriteData_SetYOffset(PokemonSpriteData *pokemonSpriteData, int idx, int value);
 void BattleSystem_SetRenderMode(BattleSystem *battleSys, int renderMode);
+int BattleSystem_GetRenderMode(BattleSystem *battleSys);
 void BattleSystem_SetLinkServerSenderStates(BattleSystem *battleSys, u8 *lssState);
 void BattleSystem_SetLinkClientReceiverStates(BattleSystem *battleSys, u8 *lcrState);
 void BattleSystem_SetLinkServerSenderState(BattleSystem *battleSys, u8 lssState);
