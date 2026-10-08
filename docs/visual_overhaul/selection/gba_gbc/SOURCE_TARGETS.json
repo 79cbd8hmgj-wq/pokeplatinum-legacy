@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "purpose": "Exact source/path targets for token-efficient GBA/GBC donor mining. These are pre-mining anchors, not approved opportunities.",
+  "donors": {
+    "emerald": {
+      "revision": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+      "targets": [
+        {
+          "finding": "field_action_choreography",
+          "paths": [
+            "src/field_effect.c",
+            "data/scripts/field_move_scripts.inc",
+            "src/fldeff_strength.c",
+            "src/fldeff_teleport.c"
+          ],
+          "symbols": [
+            "Task_FieldMoveShowMonOutdoors",
+            "Task_FieldMoveShowMonIndoors",
+            "Task_SurfFieldEffect",
+            "Task_FlyOut",
+            "Task_FlyIn",
+            "Task_UseWaterfall",
+            "Task_TeleportWarpOut"
+          ],
+          "evidence": "field_effect.c explicitly exposes outdoor/indoor Pokemon presentation, Surf, Fly, Waterfall, fall/landing, camera-shake and teleport task chains"
+        },
+        {
+          "finding": "environment_effect_primitives",
+          "paths": [
+            "graphics/field_effects/pics",
+            "graphics/field_effects/palettes",
+            "src/field_effect.c",
+            "src/field_effect_helpers.c",
+            "src/field_weather.c",
+            "src/field_weather_effect.c"
+          ],
+          "assets": [
+            "field_move_streaks",
+            "field_move_streaks_indoors",
+            "ash_puff",
+            "ash_launch",
+            "ground_impact_dust",
+            "bird",
+            "pokeball_glow",
+            "record_mix_lights",
+            "ripple",
+            "splash",
+            "small_sparkle",
+            "sand_pillar",
+            "water_surfacing"
+          ],
+          "evidence": "named source-backed graphics and effect tasks exist at pinned revision"
+        },
+        {
+          "finding": "battle_animation_choreography",
+          "paths": [
+            "data/battle_anim_scripts.s",
+            "src/battle_anim_flying.c"
+          ],
+          "evidence": "readable battle animation scripts are the first-pass choreography source; inspect only sequences not already represented better by Platinum"
+        }
+      ]
+    },
+    "firered": {
+      "revision": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "targets": [
+        {
+          "finding": "map_location_preview",
+          "paths": [
+            "src/map_preview_screen.c",
+            "graphics/map_preview"
+          ],
+          "symbols": [
+            "sMapPreviewScreenData",
+            "Task_RunMapPreviewScreenForest"
+          ],
+          "evidence": "preview system binds map section + type + visited/world-map flag + tiles + tilemap + palette; numerous location-specific preview resources are explicitly referenced"
+        },
+        {
+          "finding": "animated_palette_sequences",
+          "paths": [
+            "src/field_specials.c",
+            "data/scripts/pokemon_league.inc",
+            "graphics/field_specials"
+          ],
+          "symbols": [
+            "DoPokemonLeagueLightingEffect",
+            "Task_RunPokemonLeagueLightingEffect",
+            "sEliteFourLightingTimers",
+            "sChampionRoomLightingTimers"
+          ],
+          "evidence": "timer arrays advance palette sequences and reload BG palette slot 7; Elite Four and Champion use distinct timing tables"
+        },
+        {
+          "finding": "interactive_object_states",
+          "paths": [
+            "src/field_specials.c",
+            "data/maps/BirthIsland_Exterior/scripts.inc"
+          ],
+          "symbols": [
+            "DoDeoxysTriangleInteraction",
+            "Task_DoDeoxysTriangleInteraction",
+            "MoveDeoxysObject",
+            "SetDeoxysTrianglePalette"
+          ],
+          "evidence": "Birth Island combines progress variables, step caps, object relocation, per-state palette loads, sound and field effects"
+        }
+      ]
+    },
+    "pmd_red": {
+      "revision": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "targets": [
+        {
+          "finding": "battler_status_overlays",
+          "paths": [
+            "src/dungeon_mon_sprite_render.c",
+            "src/status_checks.c",
+            "src/dungeon_pokemon_sprites.c"
+          ],
+          "symbols": [
+            "UpdateMonsterSprite",
+            "EntityGetStatusSprites",
+            "UpdateDungeonPokemonSprite"
+          ],
+          "evidence": "monster render path explicitly computes a statusSprites bitfield and passes it into dungeon Pokemon sprite rendering"
+        },
+        {
+          "finding": "effect_primitives",
+          "paths": [
+            "src/data/effects",
+            "src/effect_main.c",
+            "src/effect_data.c",
+            "src/effect_anim_file.c",
+            "src/move_orb_effects_1.c",
+            "src/move_orb_effects_2.c",
+            "src/move_orb_effects_3.c",
+            "src/move_orb_effects_4.c",
+            "src/move_orb_effects_5.c"
+          ],
+          "evidence": "large source-backed effect family exists; defer broad decode until status-overlay path is closed"
+        }
+      ]
+    },
+    "crystal": {
+      "revision": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+      "targets": [
+        {
+          "finding": "battle_anim_artwork",
+          "paths": [
+            "data/battle_anims/object_gfx.asm",
+            "gfx/battle_anims"
+          ],
+          "assets": [
+            "web",
+            "rope",
+            "angels",
+            "globe",
+            "noise",
+            "reflect",
+            "shapes",
+            "shine",
+            "wave",
+            "aeroblast"
+          ],
+          "evidence": "object_gfx table explicitly enumerates these graphics families and tile counts"
+        },
+        {
+          "finding": "battle_anim_choreography",
+          "paths": [
+            "engine/battle_anims/anim_commands.asm",
+            "engine/battle_anims/bg_effects.asm",
+            "engine/battle_anims/functions.asm",
+            "data/battle_anims"
+          ],
+          "symbols": [
+            "BattleAnimRunScript",
+            "RunBattleAnimScript"
+          ],
+          "evidence": "script interpreter updates BG effects, OAM and palettes each frame; mine sequencing/timing only, not engine portability"
+        }
+      ]
+    },
+    "ruby": {
+      "revision": "5784633ce4ef7ade1a7f2d2d0c288e3d5e6cdd7f",
+      "targets": [
+        {
+          "finding": "emerald_delta_only",
+          "paths": [
+            "data/battle_anim_scripts.s",
+            "data/field_effect_scripts.s",
+            "data/field_move_scripts.inc"
+          ],
+          "evidence": "same major readable-script families exist as Emerald; first action is structured diff against Emerald, not independent broad mining"
+        }
+      ]
+    },
+    "yellow": {
+      "revision": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+      "targets": [
+        {
+          "finding": "pikachu_presentation",
+          "paths": [
+            "data/pikachu/pikachu_pic_animation.asm",
+            "data/pikachu/pikachu_pic_objects.asm",
+            "data/pikachu/pikachu_pic_tilemaps.asm",
+            "engine/pikachu/pikachu_pic_animation.asm",
+            "gfx/pikachu"
+          ],
+          "symbols": [
+            "PikaPicAnimScript0",
+            "PikaPicAnimThunderboltPals"
+          ],
+          "evidence": "dedicated Pikachu presentation scripts load multiple graphics, run timed background animations, cries and palette sequences"
+        },
+        {
+          "finding": "battle_transition_reference",
+          "paths": [
+            "engine/battle/battle_transitions.asm",
+            "gfx/overworld/battle_transition.png"
+          ],
+          "symbols": [
+            "BattleTransition",
+            "BattleTransitions",
+            "BattleTransition_Spiral"
+          ],
+          "evidence": "transition selection varies by trainer/wild, level comparison and dungeon context; use only if concept is not superseded by Platinum/Ranger/PMD"
+        }
+      ]
+    }
+  },
+  "mining_order": [
+    "emerald",
+    "firered",
+    "pmd_red",
+    "crystal",
+    "ruby",
+    "yellow"
+  ],
+  "execution_rule": "Start at these exact symbols/paths, trace referenced assets/functions, and broaden only when a verified high-value family justifies it."
+}
