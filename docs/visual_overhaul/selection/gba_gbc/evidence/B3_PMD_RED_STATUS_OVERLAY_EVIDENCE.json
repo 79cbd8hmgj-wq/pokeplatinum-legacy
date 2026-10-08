@@ -1,0 +1,1295 @@
+{
+ "schema_version": 1,
+ "batch": "B3_pmd_red_status_close",
+ "donor": {
+  "repo": "79cbd8hmgj-wq/pmd-red",
+  "commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b"
+ },
+ "platinum_checkout_note": "Platinum anchors are from the repo checkout this file is committed in; they are not donor-pinned.",
+ "status_bit_ids": {
+  "SLEEPLESS": 0,
+  "BURNED": 1,
+  "POISONED": 2,
+  "BADLY_POISONED": 3,
+  "CONFUSED": 4,
+  "COWERING": 5,
+  "TAUNTED": 6,
+  "ENCORE": 7,
+  "SHIELD_BLUE": 8,
+  "SHIELD_RED": 9,
+  "SHIELD_YELLOW": 10,
+  "SHIELD_GREEN": 11,
+  "ENDURE": 12,
+  "LOWHP": 13,
+  "CURSED": 14,
+  "SNATCH": 15,
+  "SURE_SHOT": 16,
+  "WHIFFER": 17,
+  "SET_DAMAGE": 18,
+  "FOCUS_ENERGY": 19,
+  "BLINKER": 20,
+  "CROSS_EYED": 21,
+  "EYEDROPS": 22,
+  "MUZZLED": 23,
+  "GRUDGE": 24,
+  "EXPOSED": 25,
+  "SLEEP": 26,
+  "STAT_DOWN": 27,
+  "FROZEN": 28
+ },
+ "status_bit_count": 29,
+ "bit_to_graphic_and_palette": {
+  "SLEEPLESS": {
+   "gfx": "STATUS_GFX_SLEEPLESS",
+   "obj_palette_bank": 0
+  },
+  "BURNED": {
+   "gfx": "STATUS_GFX_BURNED",
+   "obj_palette_bank": 0
+  },
+  "POISONED": {
+   "gfx": "STATUS_GFX_POISONED",
+   "obj_palette_bank": 11
+  },
+  "BADLY_POISONED": {
+   "gfx": "STATUS_GFX_POISONED",
+   "obj_palette_bank": 7
+  },
+  "CONFUSED": {
+   "gfx": "STATUS_GFX_CONFUSED",
+   "obj_palette_bank": 0
+  },
+  "COWERING": {
+   "gfx": "STATUS_GFX_WHIFFER",
+   "obj_palette_bank": 0
+  },
+  "TAUNTED": {
+   "gfx": "STATUS_GFX_TAUNTED",
+   "obj_palette_bank": 0
+  },
+  "ENCORE": {
+   "gfx": "STATUS_GFX_LOWHP",
+   "obj_palette_bank": 0
+  },
+  "SHIELD_BLUE": {
+   "gfx": "STATUS_GFX_SHIELD",
+   "obj_palette_bank": 0
+  },
+  "SHIELD_RED": {
+   "gfx": "STATUS_GFX_SHIELD",
+   "obj_palette_bank": 4
+  },
+  "SHIELD_YELLOW": {
+   "gfx": "STATUS_GFX_SHIELD",
+   "obj_palette_bank": 3
+  },
+  "SHIELD_GREEN": {
+   "gfx": "STATUS_GFX_SHIELD",
+   "obj_palette_bank": 10
+  },
+  "ENDURE": {
+   "gfx": "STATUS_GFX_SHIELD",
+   "obj_palette_bank": 5
+  },
+  "LOWHP": {
+   "gfx": "STATUS_GFX_LOWHP",
+   "obj_palette_bank": 0
+  },
+  "CURSED": {
+   "gfx": "STATUS_GFX_POISONED",
+   "obj_palette_bank": 6
+  },
+  "SNATCH": {
+   "gfx": "STATUS_GFX_LOWHP",
+   "obj_palette_bank": 3
+  },
+  "SURE_SHOT": {
+   "gfx": "STATUS_GFX_SWORD",
+   "obj_palette_bank": 0
+  },
+  "WHIFFER": {
+   "gfx": "STATUS_GFX_WHIFFER",
+   "obj_palette_bank": 10
+  },
+  "SET_DAMAGE": {
+   "gfx": "STATUS_GFX_SWORD",
+   "obj_palette_bank": 5
+  },
+  "FOCUS_ENERGY": {
+   "gfx": "STATUS_GFX_SWORD",
+   "obj_palette_bank": 4
+  },
+  "BLINKER": {
+   "gfx": "STATUS_GFX_BLINKER",
+   "obj_palette_bank": 0
+  },
+  "CROSS_EYED": {
+   "gfx": "STATUS_GFX_CROSS_EYED",
+   "obj_palette_bank": 0
+  },
+  "EYEDROPS": {
+   "gfx": "STATUS_GFX_EYEDROPS",
+   "obj_palette_bank": 0
+  },
+  "MUZZLED": {
+   "gfx": "STATUS_GFX_MUZZLED",
+   "obj_palette_bank": 0
+  },
+  "GRUDGE": {
+   "gfx": "STATUS_GFX_SHIELD",
+   "obj_palette_bank": 7
+  },
+  "EXPOSED": {
+   "gfx": "STATUS_GFX_EYEDROPS",
+   "obj_palette_bank": 4
+  },
+  "SLEEP": {
+   "gfx": "STATUS_GFX_SLEEP",
+   "obj_palette_bank": 4
+  },
+  "STAT_DOWN": {
+   "gfx": "STATUS_GFX_STATDOWN",
+   "obj_palette_bank": 3
+  },
+  "FROZEN": {
+   "gfx": "STATUS_GFX_FROZEN",
+   "obj_palette_bank": 0
+  }
+ },
+ "graphic_table": {
+  "STATUS_GFX_SLEEPLESS": {
+   "w_tiles": 1,
+   "h_tiles": 1,
+   "vram_tile_index": 0,
+   "unused_field": 0,
+   "frames": 14,
+   "offset_tiles2bpp": 0
+  },
+  "STATUS_GFX_BURNED": {
+   "w_tiles": 2,
+   "h_tiles": 2,
+   "vram_tile_index": 1,
+   "unused_field": 0,
+   "frames": 7,
+   "offset_tiles2bpp": 14
+  },
+  "STATUS_GFX_POISONED": {
+   "w_tiles": 2,
+   "h_tiles": 2,
+   "vram_tile_index": 5,
+   "unused_field": 0,
+   "frames": 16,
+   "offset_tiles2bpp": 42
+  },
+  "STATUS_GFX_FROZEN": {
+   "w_tiles": 4,
+   "h_tiles": 4,
+   "vram_tile_index": 9,
+   "unused_field": 0,
+   "frames": 6,
+   "offset_tiles2bpp": 106
+  },
+  "STATUS_GFX_CONFUSED": {
+   "w_tiles": 4,
+   "h_tiles": 2,
+   "vram_tile_index": 25,
+   "unused_field": 0,
+   "frames": 4,
+   "offset_tiles2bpp": 202
+  },
+  "STATUS_GFX_WHIFFER": {
+   "w_tiles": 2,
+   "h_tiles": 2,
+   "vram_tile_index": 33,
+   "unused_field": 0,
+   "frames": 9,
+   "offset_tiles2bpp": 234
+  },
+  "STATUS_GFX_TAUNTED": {
+   "w_tiles": 2,
+   "h_tiles": 2,
+   "vram_tile_index": 37,
+   "unused_field": 0,
+   "frames": 8,
+   "offset_tiles2bpp": 270
+  },
+  "STATUS_GFX_LOWHP": {
+   "w_tiles": 1,
+   "h_tiles": 2,
+   "vram_tile_index": 41,
+   "unused_field": 0,
+   "frames": 8,
+   "offset_tiles2bpp": 302
+  },
+  "STATUS_GFX_SHIELD": {
+   "w_tiles": 2,
+   "h_tiles": 2,
+   "vram_tile_index": 43,
+   "unused_field": 0,
+   "frames": 13,
+   "offset_tiles2bpp": 318
+  },
+  "STATUS_GFX_STATDOWN": {
+   "w_tiles": 2,
+   "h_tiles": 2,
+   "vram_tile_index": 47,
+   "unused_field": 10,
+   "frames": 10,
+   "offset_tiles2bpp": 370
+  },
+  "STATUS_GFX_SWORD": {
+   "w_tiles": 2,
+   "h_tiles": 2,
+   "vram_tile_index": 51,
+   "unused_field": 0,
+   "frames": 13,
+   "offset_tiles2bpp": 410
+  },
+  "STATUS_GFX_BLINKER": {
+   "w_tiles": 1,
+   "h_tiles": 1,
+   "vram_tile_index": 55,
+   "unused_field": 0,
+   "frames": 14,
+   "offset_tiles2bpp": 462
+  },
+  "STATUS_GFX_CROSS_EYED": {
+   "w_tiles": 2,
+   "h_tiles": 2,
+   "vram_tile_index": 56,
+   "unused_field": 0,
+   "frames": 10,
+   "offset_tiles2bpp": 476
+  },
+  "STATUS_GFX_EYEDROPS": {
+   "w_tiles": 1,
+   "h_tiles": 1,
+   "vram_tile_index": 60,
+   "unused_field": 0,
+   "frames": 14,
+   "offset_tiles2bpp": 516
+  },
+  "STATUS_GFX_MUZZLED": {
+   "w_tiles": 2,
+   "h_tiles": 2,
+   "vram_tile_index": 61,
+   "unused_field": 0,
+   "frames": 8,
+   "offset_tiles2bpp": 530
+  },
+  "STATUS_GFX_SLEEP": {
+   "w_tiles": 2,
+   "h_tiles": 2,
+   "vram_tile_index": 65,
+   "unused_field": 4,
+   "frames": 10,
+   "offset_tiles2bpp": 562
+  }
+ },
+ "png_crosscheck": {
+  "STATUS_GFX_SLEEPLESS": {
+   "file": "graphics/status/sleepless.png",
+   "width": 8,
+   "height": 112,
+   "frame_px": [
+    8,
+    8
+   ],
+   "frames": 14,
+   "indexed_4bpp": true
+  },
+  "STATUS_GFX_BURNED": {
+   "file": "graphics/status/burned.png",
+   "width": 16,
+   "height": 112,
+   "frame_px": [
+    16,
+    16
+   ],
+   "frames": 7,
+   "indexed_4bpp": true
+  },
+  "STATUS_GFX_POISONED": {
+   "file": "graphics/status/poisoned.png",
+   "width": 16,
+   "height": 256,
+   "frame_px": [
+    16,
+    16
+   ],
+   "frames": 16,
+   "indexed_4bpp": true
+  },
+  "STATUS_GFX_FROZEN": {
+   "file": "graphics/status/frozen.png",
+   "width": 32,
+   "height": 192,
+   "frame_px": [
+    32,
+    32
+   ],
+   "frames": 6,
+   "indexed_4bpp": true
+  },
+  "STATUS_GFX_CONFUSED": {
+   "file": "graphics/status/confused.png",
+   "width": 32,
+   "height": 64,
+   "frame_px": [
+    32,
+    16
+   ],
+   "frames": 4,
+   "indexed_4bpp": true
+  },
+  "STATUS_GFX_WHIFFER": {
+   "file": "graphics/status/whiffer.png",
+   "width": 16,
+   "height": 144,
+   "frame_px": [
+    16,
+    16
+   ],
+   "frames": 9,
+   "indexed_4bpp": true
+  },
+  "STATUS_GFX_TAUNTED": {
+   "file": "graphics/status/taunted.png",
+   "width": 16,
+   "height": 128,
+   "frame_px": [
+    16,
+    16
+   ],
+   "frames": 8,
+   "indexed_4bpp": true
+  },
+  "STATUS_GFX_LOWHP": {
+   "file": "graphics/status/lowhp.png",
+   "width": 8,
+   "height": 128,
+   "frame_px": [
+    8,
+    16
+   ],
+   "frames": 8,
+   "indexed_4bpp": true
+  },
+  "STATUS_GFX_SHIELD": {
+   "file": "graphics/status/shield.png",
+   "width": 16,
+   "height": 208,
+   "frame_px": [
+    16,
+    16
+   ],
+   "frames": 13,
+   "indexed_4bpp": true
+  },
+  "STATUS_GFX_STATDOWN": {
+   "file": "graphics/status/statdown.png",
+   "width": 16,
+   "height": 160,
+   "frame_px": [
+    16,
+    16
+   ],
+   "frames": 10,
+   "indexed_4bpp": true
+  },
+  "STATUS_GFX_SWORD": {
+   "file": "graphics/status/sword.png",
+   "width": 16,
+   "height": 208,
+   "frame_px": [
+    16,
+    16
+   ],
+   "frames": 13,
+   "indexed_4bpp": true
+  },
+  "STATUS_GFX_BLINKER": {
+   "file": "graphics/status/blinker.png",
+   "width": 8,
+   "height": 112,
+   "frame_px": [
+    8,
+    8
+   ],
+   "frames": 14,
+   "indexed_4bpp": true
+  },
+  "STATUS_GFX_CROSS_EYED": {
+   "file": "graphics/status/cross_eyed.png",
+   "width": 16,
+   "height": 160,
+   "frame_px": [
+    16,
+    16
+   ],
+   "frames": 10,
+   "indexed_4bpp": true
+  },
+  "STATUS_GFX_EYEDROPS": {
+   "file": "graphics/status/eyedrops.png",
+   "width": 8,
+   "height": 112,
+   "frame_px": [
+    8,
+    8
+   ],
+   "frames": 14,
+   "indexed_4bpp": true
+  },
+  "STATUS_GFX_MUZZLED": {
+   "file": "graphics/status/muzzled.png",
+   "width": 16,
+   "height": 128,
+   "frame_px": [
+    16,
+    16
+   ],
+   "frames": 8,
+   "indexed_4bpp": true
+  },
+  "STATUS_GFX_SLEEP": {
+   "file": "graphics/status/sleep.png",
+   "width": 16,
+   "height": 160,
+   "frame_px": [
+    16,
+    16
+   ],
+   "frames": 10,
+   "indexed_4bpp": true
+  }
+ },
+ "graphics_shared_by_multiple_bits": {
+  "STATUS_GFX_POISONED": [
+   {
+    "bit": 2,
+    "name": "POISONED",
+    "obj_palette_bank": 11
+   },
+   {
+    "bit": 3,
+    "name": "BADLY_POISONED",
+    "obj_palette_bank": 7
+   },
+   {
+    "bit": 14,
+    "name": "CURSED",
+    "obj_palette_bank": 6
+   }
+  ],
+  "STATUS_GFX_WHIFFER": [
+   {
+    "bit": 5,
+    "name": "COWERING",
+    "obj_palette_bank": 0
+   },
+   {
+    "bit": 17,
+    "name": "WHIFFER",
+    "obj_palette_bank": 10
+   }
+  ],
+  "STATUS_GFX_LOWHP": [
+   {
+    "bit": 7,
+    "name": "ENCORE",
+    "obj_palette_bank": 0
+   },
+   {
+    "bit": 13,
+    "name": "LOWHP",
+    "obj_palette_bank": 0
+   },
+   {
+    "bit": 15,
+    "name": "SNATCH",
+    "obj_palette_bank": 3
+   }
+  ],
+  "STATUS_GFX_SHIELD": [
+   {
+    "bit": 8,
+    "name": "SHIELD_BLUE",
+    "obj_palette_bank": 0
+   },
+   {
+    "bit": 9,
+    "name": "SHIELD_RED",
+    "obj_palette_bank": 4
+   },
+   {
+    "bit": 10,
+    "name": "SHIELD_YELLOW",
+    "obj_palette_bank": 3
+   },
+   {
+    "bit": 11,
+    "name": "SHIELD_GREEN",
+    "obj_palette_bank": 10
+   },
+   {
+    "bit": 12,
+    "name": "ENDURE",
+    "obj_palette_bank": 5
+   },
+   {
+    "bit": 24,
+    "name": "GRUDGE",
+    "obj_palette_bank": 7
+   }
+  ],
+  "STATUS_GFX_SWORD": [
+   {
+    "bit": 16,
+    "name": "SURE_SHOT",
+    "obj_palette_bank": 0
+   },
+   {
+    "bit": 18,
+    "name": "SET_DAMAGE",
+    "obj_palette_bank": 5
+   },
+   {
+    "bit": 19,
+    "name": "FOCUS_ENERGY",
+    "obj_palette_bank": 4
+   }
+  ],
+  "STATUS_GFX_EYEDROPS": [
+   {
+    "bit": 22,
+    "name": "EYEDROPS",
+    "obj_palette_bank": 0
+   },
+   {
+    "bit": 25,
+    "name": "EXPOSED",
+    "obj_palette_bank": 4
+   }
+  ]
+ },
+ "graphics_count": 16,
+ "logical_condition_to_bit": [
+  {
+   "class_table": "SleepClassStatus",
+   "state": "STATUS_SLEEP",
+   "bit": 26
+  },
+  {
+   "class_table": "SleepClassStatus",
+   "state": "STATUS_SLEEPLESS",
+   "bit": 0
+  },
+  {
+   "class_table": "SleepClassStatus",
+   "state": "STATUS_NIGHTMARE",
+   "bit": 26
+  },
+  {
+   "class_table": "SleepClassStatus",
+   "state": "STATUS_NAPPING",
+   "bit": 26
+  },
+  {
+   "class_table": "BurnClassStatus",
+   "state": "STATUS_BURN",
+   "bit": 1
+  },
+  {
+   "class_table": "BurnClassStatus",
+   "state": "STATUS_POISONED",
+   "bit": 2
+  },
+  {
+   "class_table": "BurnClassStatus",
+   "state": "STATUS_BADLY_POISONED",
+   "bit": 3
+  },
+  {
+   "class_table": "FrozenClassStatus",
+   "state": "STATUS_FROZEN",
+   "bit": 28
+  },
+  {
+   "class_table": "CringeClassStatus",
+   "state": "STATUS_CONFUSED",
+   "bit": 4
+  },
+  {
+   "class_table": "CringeClassStatus",
+   "state": "STATUS_COWERING",
+   "bit": 5
+  },
+  {
+   "class_table": "CringeClassStatus",
+   "state": "STATUS_TAUNTED",
+   "bit": 6
+  },
+  {
+   "class_table": "CringeClassStatus",
+   "state": "STATUS_ENCORE",
+   "bit": 7
+  },
+  {
+   "class_table": "ReflectClassStatus",
+   "state": "STATUS_REFLECT",
+   "bit": 8
+  },
+  {
+   "class_table": "ReflectClassStatus",
+   "state": "STATUS_SAFEGUARD",
+   "bit": 9
+  },
+  {
+   "class_table": "ReflectClassStatus",
+   "state": "STATUS_LIGHT_SCREEN",
+   "bit": 10
+  },
+  {
+   "class_table": "ReflectClassStatus",
+   "state": "STATUS_COUNTER",
+   "bit": 8
+  },
+  {
+   "class_table": "ReflectClassStatus",
+   "state": "STATUS_MAGIC_COAT",
+   "bit": 10
+  },
+  {
+   "class_table": "ReflectClassStatus",
+   "state": "STATUS_PROTECT",
+   "bit": 11
+  },
+  {
+   "class_table": "ReflectClassStatus",
+   "state": "STATUS_MIRROR_COAT",
+   "bit": 9
+  },
+  {
+   "class_table": "ReflectClassStatus",
+   "state": "STATUS_ENDURING",
+   "bit": 12
+  },
+  {
+   "class_table": "ReflectClassStatus",
+   "state": "STATUS_MINI_COUNTER",
+   "bit": 8
+  },
+  {
+   "class_table": "ReflectClassStatus",
+   "state": "STATUS_MIRROR_MOVE",
+   "bit": 11
+  },
+  {
+   "class_table": "ReflectClassStatus",
+   "state": "STATUS_VITAL_THROW",
+   "bit": 11
+  },
+  {
+   "class_table": "ReflectClassStatus",
+   "state": "STATUS_MIST",
+   "bit": 8
+  },
+  {
+   "class_table": "CurseClassStatus",
+   "state": "STATUS_CURSED",
+   "bit": 14
+  },
+  {
+   "class_table": "CurseClassStatus",
+   "state": "STATUS_SNATCH",
+   "bit": 15
+  },
+  {
+   "class_table": "SureShotClassStatus",
+   "state": "STATUS_SURE_SHOT",
+   "bit": 16
+  },
+  {
+   "class_table": "SureShotClassStatus",
+   "state": "STATUS_WHIFFER",
+   "bit": 17
+  },
+  {
+   "class_table": "SureShotClassStatus",
+   "state": "STATUS_SET_DAMAGE",
+   "bit": 18
+  },
+  {
+   "class_table": "SureShotClassStatus",
+   "state": "STATUS_FOCUS_ENERGY",
+   "bit": 19
+  },
+  {
+   "class_table": "BlinkerClassStatus",
+   "state": "STATUS_BLINKER",
+   "bit": 20
+  },
+  {
+   "class_table": "BlinkerClassStatus",
+   "state": "STATUS_CROSS_EYED",
+   "bit": 21
+  },
+  {
+   "class_table": "BlinkerClassStatus",
+   "state": "STATUS_EYEDROPS",
+   "bit": 22
+  },
+  {
+   "class_table": "MuzzledStatus",
+   "state": "1",
+   "bit": 23
+  }
+ ],
+ "logical_conditions_with_a_symbol": 34,
+ "logical_states_deliberately_without_a_symbol": 33,
+ "bit_sources": {
+  "SLEEP": [
+   "SleepClassStatus:STATUS_SLEEP",
+   "SleepClassStatus:STATUS_NIGHTMARE",
+   "SleepClassStatus:STATUS_NAPPING"
+  ],
+  "SLEEPLESS": [
+   "SleepClassStatus:STATUS_SLEEPLESS"
+  ],
+  "BURNED": [
+   "BurnClassStatus:STATUS_BURN"
+  ],
+  "POISONED": [
+   "BurnClassStatus:STATUS_POISONED"
+  ],
+  "BADLY_POISONED": [
+   "BurnClassStatus:STATUS_BADLY_POISONED"
+  ],
+  "FROZEN": [
+   "FrozenClassStatus:STATUS_FROZEN"
+  ],
+  "CONFUSED": [
+   "CringeClassStatus:STATUS_CONFUSED"
+  ],
+  "COWERING": [
+   "CringeClassStatus:STATUS_COWERING"
+  ],
+  "TAUNTED": [
+   "CringeClassStatus:STATUS_TAUNTED"
+  ],
+  "ENCORE": [
+   "CringeClassStatus:STATUS_ENCORE"
+  ],
+  "SHIELD_BLUE": [
+   "ReflectClassStatus:STATUS_REFLECT",
+   "ReflectClassStatus:STATUS_COUNTER",
+   "ReflectClassStatus:STATUS_MINI_COUNTER",
+   "ReflectClassStatus:STATUS_MIST"
+  ],
+  "SHIELD_RED": [
+   "ReflectClassStatus:STATUS_SAFEGUARD",
+   "ReflectClassStatus:STATUS_MIRROR_COAT"
+  ],
+  "SHIELD_YELLOW": [
+   "ReflectClassStatus:STATUS_LIGHT_SCREEN",
+   "ReflectClassStatus:STATUS_MAGIC_COAT"
+  ],
+  "SHIELD_GREEN": [
+   "ReflectClassStatus:STATUS_PROTECT",
+   "ReflectClassStatus:STATUS_MIRROR_MOVE",
+   "ReflectClassStatus:STATUS_VITAL_THROW"
+  ],
+  "ENDURE": [
+   "ReflectClassStatus:STATUS_ENDURING"
+  ],
+  "CURSED": [
+   "CurseClassStatus:STATUS_CURSED"
+  ],
+  "SNATCH": [
+   "CurseClassStatus:STATUS_SNATCH"
+  ],
+  "SURE_SHOT": [
+   "SureShotClassStatus:STATUS_SURE_SHOT"
+  ],
+  "WHIFFER": [
+   "SureShotClassStatus:STATUS_WHIFFER"
+  ],
+  "SET_DAMAGE": [
+   "SureShotClassStatus:STATUS_SET_DAMAGE"
+  ],
+  "FOCUS_ENERGY": [
+   "SureShotClassStatus:STATUS_FOCUS_ENERGY"
+  ],
+  "BLINKER": [
+   "BlinkerClassStatus:STATUS_BLINKER"
+  ],
+  "CROSS_EYED": [
+   "BlinkerClassStatus:STATUS_CROSS_EYED"
+  ],
+  "EYEDROPS": [
+   "BlinkerClassStatus:STATUS_EYEDROPS"
+  ],
+  "MUZZLED": [
+   "MuzzledStatus:1"
+  ]
+ },
+ "non_table_sources_verified": {
+  "grudge": true,
+  "exposed": true,
+  "lowhp_team_hp_below_quarter": true,
+  "lowhp_item_holder_identified": true,
+  "stat_down_any_of_10_checks": 10,
+  "sleep_class_suppressed_when_id_0xb9_and_turns_eq_0x7f": true
+ },
+ "slot_model": {
+  "slots": 2,
+  "slot0": "bits 0..27 (all except FROZEN); a search from idle tests bit 1 first, bit 0 is reached only after wrapping past bit 27",
+  "slot1": "FROZEN (bit 28) only",
+  "hold_updates_per_glyph": 61,
+  "update_cadence": "FrameUpdateDungeonStatusSprites is called once per DungeonRunFrameActions tick (dungeon_vram.c sub_803E490); wall-clock = ~1 s per glyph is inferred from the 60-count and the 4-frame art cadence, vblank pacing of DungeonRunFrameActions not traced"
+ },
+ "cycle_order_slot0_all_bits_active": [
+  "BURNED",
+  "POISONED",
+  "BADLY_POISONED",
+  "CONFUSED",
+  "COWERING",
+  "TAUNTED",
+  "ENCORE",
+  "SHIELD_BLUE",
+  "SHIELD_RED",
+  "SHIELD_YELLOW",
+  "SHIELD_GREEN",
+  "ENDURE",
+  "LOWHP",
+  "CURSED",
+  "SNATCH",
+  "SURE_SHOT",
+  "WHIFFER",
+  "SET_DAMAGE",
+  "FOCUS_ENERGY",
+  "BLINKER",
+  "CROSS_EYED",
+  "EYEDROPS",
+  "MUZZLED",
+  "GRUDGE",
+  "EXPOSED",
+  "SLEEP",
+  "STAT_DOWN",
+  "SLEEPLESS",
+  "BURNED"
+ ],
+ "simulated_cases": {
+  "burned+confused+lowhp (3 non-frozen bits)": [
+   [
+    [
+     0,
+     "BURNED"
+    ],
+    [
+     61,
+     "CONFUSED"
+    ],
+    [
+     122,
+     "LOWHP"
+    ],
+    [
+     183,
+     "BURNED"
+    ],
+    [
+     244,
+     "CONFUSED"
+    ]
+   ],
+   [
+    [
+     0,
+     null
+    ]
+   ]
+  ],
+  "sleepless(bit0)+stat_down(bit27): wrap from top to bit0": [
+   [
+    [
+     0,
+     "STAT_DOWN"
+    ],
+    [
+     61,
+     "SLEEPLESS"
+    ],
+    [
+     122,
+     "STAT_DOWN"
+    ],
+    [
+     183,
+     "SLEEPLESS"
+    ],
+    [
+     244,
+     "STAT_DOWN"
+    ]
+   ],
+   [
+    [
+     0,
+     null
+    ]
+   ]
+  ],
+  "sleepless only (bit 0 is reachable only through wrap)": [
+   [
+    [
+     0,
+     "SLEEPLESS"
+    ]
+   ],
+   [
+    [
+     0,
+     null
+    ]
+   ]
+  ],
+  "frozen only (slot 0 can never select bit 28)": [
+   [
+    [
+     0,
+     null
+    ]
+   ],
+   [
+    [
+     0,
+     "FROZEN"
+    ]
+   ]
+  ],
+  "frozen+poisoned+confused (frozen in slot 1, others cycle in slot 0)": [
+   [
+    [
+     0,
+     "POISONED"
+    ],
+    [
+     61,
+     "CONFUSED"
+    ],
+    [
+     122,
+     "POISONED"
+    ],
+    [
+     183,
+     "CONFUSED"
+    ]
+   ],
+   [
+    [
+     0,
+     "FROZEN"
+    ]
+   ]
+  ],
+  "poisoned+confused, poison cured at update 30 mid-hold: poison glyph is still drawn until update 61 (stale glyph; only a fully empty mask clears at once)": [
+   [
+    [
+     0,
+     "POISONED"
+    ],
+    [
+     61,
+     "CONFUSED"
+    ]
+   ],
+   [
+    [
+     0,
+     null
+    ]
+   ]
+  ]
+ },
+ "draw_geometry": {
+  "STATUS_GFX_SLEEPLESS": {
+   "oam_shape": 0,
+   "oam_size": 0,
+   "oam_px": [
+    8,
+    8
+   ],
+   "x_extra": 0,
+   "y_expr": "posY - 16"
+  },
+  "STATUS_GFX_BLINKER": {
+   "oam_shape": 0,
+   "oam_size": 0,
+   "oam_px": [
+    8,
+    8
+   ],
+   "x_extra": 0,
+   "y_expr": "posY - 16"
+  },
+  "STATUS_GFX_EYEDROPS": {
+   "oam_shape": 0,
+   "oam_size": 0,
+   "oam_px": [
+    8,
+    8
+   ],
+   "x_extra": 0,
+   "y_expr": "posY - 16"
+  },
+  "STATUS_GFX_LOWHP": {
+   "oam_shape": 2,
+   "oam_size": 0,
+   "oam_px": [
+    8,
+    16
+   ],
+   "x_extra": 0,
+   "y_expr": "posY - 16"
+  },
+  "STATUS_GFX_BURNED": {
+   "oam_shape": 0,
+   "oam_size": 1,
+   "oam_px": [
+    16,
+    16
+   ],
+   "x_extra": 0,
+   "y_expr": "posY - 16"
+  },
+  "STATUS_GFX_POISONED": {
+   "oam_shape": 0,
+   "oam_size": 1,
+   "oam_px": [
+    16,
+    16
+   ],
+   "x_extra": 0,
+   "y_expr": "posY - 16"
+  },
+  "STATUS_GFX_WHIFFER": {
+   "oam_shape": 0,
+   "oam_size": 1,
+   "oam_px": [
+    16,
+    16
+   ],
+   "x_extra": 0,
+   "y_expr": "posY - 16"
+  },
+  "STATUS_GFX_TAUNTED": {
+   "oam_shape": 0,
+   "oam_size": 1,
+   "oam_px": [
+    16,
+    16
+   ],
+   "x_extra": 0,
+   "y_expr": "posY - 16"
+  },
+  "STATUS_GFX_SHIELD": {
+   "oam_shape": 0,
+   "oam_size": 1,
+   "oam_px": [
+    16,
+    16
+   ],
+   "x_extra": 0,
+   "y_expr": "posY - 16"
+  },
+  "STATUS_GFX_STATDOWN": {
+   "oam_shape": 0,
+   "oam_size": 1,
+   "oam_px": [
+    16,
+    16
+   ],
+   "x_extra": 0,
+   "y_expr": "posY - 16"
+  },
+  "STATUS_GFX_SWORD": {
+   "oam_shape": 0,
+   "oam_size": 1,
+   "oam_px": [
+    16,
+    16
+   ],
+   "x_extra": 0,
+   "y_expr": "posY - 16"
+  },
+  "STATUS_GFX_CROSS_EYED": {
+   "oam_shape": 0,
+   "oam_size": 1,
+   "oam_px": [
+    16,
+    16
+   ],
+   "x_extra": 0,
+   "y_expr": "posY - 16"
+  },
+  "STATUS_GFX_MUZZLED": {
+   "oam_shape": 0,
+   "oam_size": 1,
+   "oam_px": [
+    16,
+    16
+   ],
+   "x_extra": 0,
+   "y_expr": "posY - 16"
+  },
+  "STATUS_GFX_SLEEP": {
+   "oam_shape": 0,
+   "oam_size": 1,
+   "oam_px": [
+    16,
+    16
+   ],
+   "x_extra": 8,
+   "y_expr": "posY - 16"
+  },
+  "STATUS_GFX_CONFUSED": {
+   "oam_shape": 1,
+   "oam_size": 2,
+   "oam_px": [
+    32,
+    16
+   ],
+   "x_extra": 0,
+   "y_expr": "posY - 16"
+  },
+  "STATUS_GFX_FROZEN": {
+   "oam_shape": 0,
+   "oam_size": 2,
+   "oam_px": [
+    32,
+    32
+   ],
+   "x_extra": 0,
+   "y_expr": "posY"
+  }
+ },
+ "anchors": {
+  "include/constants/status.h::#define STATUS_SPRITE_ID_SLEEPLESS": 95,
+  "include/constants/status.h::#define STATUS_SPRITE_ID_LAST": 124,
+  "include/constants/status.h::#define STATUS_SPRITE_SHIELD_BLUE": 134,
+  "src/dungeon_pokemon_sprites.c::^typedef struct DungeonPokemonStatusSprite": 12,
+  "src/dungeon_pokemon_sprites.c::^typedef struct DungeonPokemonSprite$": 19,
+  "src/dungeon_pokemon_sprites.c::^static const struct StatusGraphicsInfo sStatusGfxInfo": 79,
+  "src/dungeon_pokemon_sprites.c::^static const u8 sStatusGfx\\[\\]": 99,
+  "src/dungeon_pokemon_sprites.c::^static const struct StatusSprite sStatusSpritesInfo": 123,
+  "src/dungeon_pokemon_sprites.c::^static u32 GetNextStatusSymbol": 186,
+  "src/dungeon_pokemon_sprites.c::^static u32 StatusSymbolBitToIndex": 231,
+  "src/dungeon_pokemon_sprites.c::^static void UpdateStatusSprite": 241,
+  "src/dungeon_pokemon_sprites.c::^static void DrawStatusSprite\\(s16": 159,
+  "src/dungeon_pokemon_sprites.c::^static void LoadStatusGraphics": 341,
+  "src/dungeon_pokemon_sprites.c::^void InitDungeonPokemonSprites": 359,
+  "src/dungeon_pokemon_sprites.c::^void UpdateDungeonPokemonSprite\\(": 389,
+  "src/dungeon_pokemon_sprites.c::^void UpdateDungeonPokemonSprite2": 505,
+  "src/dungeon_pokemon_sprites.c::^void FrameUpdateDungeonStatusSprites": 419,
+  "src/dungeon_pokemon_sprites.c::newFrame = 60;": 259,
+  "src/dungeon_pokemon_sprites.c::% graphicsCount;": 348,
+  "src/dungeon_pokemon_sprites.c::switch \\(sDungeonPokemonSprites->frame % 4\\)": 426,
+  "src/dungeon_8041AD0.c::^u32 EntityGetStatusSprites": 335,
+  "src/dungeon_8041AD0.c::^void UpdateStatusIconFlags": 360,
+  "src/dungeon_8041AD0.c::^static const u32 sStatusSpriteMasks_SleepClassStatus": 53,
+  "src/dungeon_8041AD0.c::^static const u32 sStatusSpriteMasks_MuzzledStatus": 167,
+  "src/dungeon_8041AD0.c::entityInfo->id == 0xb9": 373,
+  "src/dungeon_8041AD0.c::itemHoldersIdentified": 413,
+  "src/dungeon_8041AD0.c::spriteStatus = spriteStatus \\| STATUS_SPRITE_STAT_DOWN": 426,
+  "src/dungeon_mon_sprite_render.c::sub_8005700\\(posArray": 213,
+  "src/dungeon_mon_sprite_render.c::UpdateDungeonPokemonSprite2\\(entInfo": 214,
+  "src/dungeon_mon_sprite_render.c::statusSprites = EntityGetStatusSprites": 216,
+  "src/dungeon_mon_sprite_render.c::UpdateDungeonPokemonSprite\\(entInfo": 217,
+  "src/dungeon_vram.c::FrameUpdateDungeonStatusSprites\\(": 189,
+  "src/dungeon_util.c::UpdateDungeonPokemonSprite\\(info->dungeonSpriteId": 153,
+  "src/sprite.c::^void sub_8005700": 668,
+  "include/structs/axdata.h::#define AX_POSITION_SETS_COUNT": 59,
+  "src/status_checks.c::^bool8 HasStatusThatPreventsActing": 18
+ },
+ "platinum": {
+  "anchors": {
+   "src/battle/healthbox.c::HEALTHBOX_PART_STATUS_HEALTHY_0,": 121,
+   "src/battle/healthbox.c::if \\(flags & HEALTHBOX_INFO_STATUS\\)": 703,
+   "src/battle/healthbox.c::^static void HealthBox_DrawStatusIcon\\(.*\\)$": 1289,
+   "src/battle/battle_lib.c::^enum BattleSubAnimation Battler_StatusCondition": 1843,
+   "src/battle/battle_lib.c::^static const enum BattleSubAnimation sEffectsAlwaysShown": 7306,
+   "src/battle/battle_lib.c::^BOOL BattleSystem_ShouldShowStatusEffect": 7319,
+   "src/battle/battle_display.c::^void BattleDisplay_SetStatusIcon": 1239,
+   "src/battle/battle_controller.c::healthboxData.status = Battler_StatusCondition": 540,
+   "src/battle/battle_controller.c::message.status = Battler_StatusCondition": 1438,
+   "src/battle/indicator.c::^Indicator \\*Indicator_New": 53,
+   "src/battle_sub_menus/battle_bag_sprites.c::Indicator_New\\(spriteSystem": 462,
+   "src/battle_anim/script_funcs_status.c::^void BattleAnimSpriteFunc_Sleep": 146,
+   "src/battle_anim/script_funcs_status.c::^void BattleAnimSpriteFunc_Freeze": 257,
+   "src/battle_anim/script_funcs_status.c::^void BattleAnimSpriteFunc_Burn": 337,
+   "src/battle_anim/script_funcs_status.c::^void BattleAnimSpriteFunc_ConfusionStatus": 535,
+   "src/battle_anim/script_funcs_status.c::#define SLEEP_SPRITE_ANIM_FRAMES": 42,
+   "src/battle_anim/script_funcs_status.c::#define BURN_SPRITE_VISIBLE_FRAMES": 97,
+   "src/battle_anim/script_funcs_status.c::#define CONFUSION_STATUS_SPRITE_ORB_REV_FRAMES": 133,
+   "include/battle/healthbox.h::ManagedSprite \\*mainSprite;": 58
+  },
+  "healthbox_status_cases": [
+   "NONE",
+   "ASLEEP",
+   "POISONED",
+   "BURNED",
+   "FROZEN",
+   "PARALYZED"
+  ],
+  "battler_status_condition_priority": [
+   "ASLEEP",
+   "POISONED (poison)",
+   "BURNED",
+   "FROZEN",
+   "PARALYZED",
+   "POISONED (toxic)"
+  ],
+  "status_animation_script_uses": {
+   "BATTLE_ANIMATION_POISONED": [
+    "subscript_badly_poison.s:67:PlayBattleAnimation",
+    "subscript_badly_poison.s:81:SetHealthBoxStatusIcon",
+    "subscript_poison.s:47:PlayBattleAnimation",
+    "subscript_poison.s:61:SetHealthBoxStatusIcon",
+    "subscript_poison_damage.s:23:PlayBattleAnimation"
+   ],
+   "BATTLE_ANIMATION_BURNED": [
+    "subscript_burn.s:57:PlayBattleAnimation",
+    "subscript_burn.s:77:SetHealthBoxStatusIcon",
+    "subscript_burn_damage.s:17:PlayBattleAnimation"
+   ],
+   "BATTLE_ANIMATION_CONFUSED": [
+    "subscript_confuse.s:32:PlayBattleAnimation",
+    "subscript_confused.s:9:PlayBattleAnimation",
+    "subscript_hurt_self_in_confusion.s:9:PlayBattleAnimation"
+   ],
+   "BATTLE_ANIMATION_ASLEEP": [
+    "subscript_fall_asleep.s:57:PlayBattleAnimation",
+    "subscript_fall_asleep.s:73:SetHealthBoxStatusIcon",
+    "subscript_rest.s:33:SetHealthBoxStatusIcon",
+    "subscript_sleeping.s:9:PlayBattleAnimation"
+   ],
+   "BATTLE_ANIMATION_FROZEN": [
+    "subscript_freeze.s:31:PlayBattleAnimation",
+    "subscript_freeze.s:38:SetHealthBoxStatusIcon",
+    "subscript_frozen.s:9:PlayBattleAnimation"
+   ],
+   "BATTLE_ANIMATION_PARALYZED": [
+    "subscript_fully_paralyzed.s:9:PlayBattleAnimation",
+    "subscript_paralyze.s:34:PlayBattleAnimation",
+    "subscript_paralyze.s:48:SetHealthBoxStatusIcon"
+   ],
+   "BATTLE_ANIMATION_INFATUATED": [
+    "subscript_infatuated.s:9:PlayBattleAnimation"
+   ]
+  },
+  "volatile_condition_refs_in_healthbox_and_battle_display": 0
+ }
+}

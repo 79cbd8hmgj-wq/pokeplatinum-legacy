@@ -4,17 +4,17 @@ Separate from the DS pool (`selection/OPPORTUNITY_POOL.json` is untouched). Not 
 
 Machine-readable: `GBA_GBC_OPPORTUNITY_POOL.json`, `GBA_GBC_NEEDS_EVIDENCE.json`.
 
-## Status after B1 + B1.5 + B2 (Emerald and FireRed complete)
+## Status after B1 + B1.5 + B2 + B3 (Emerald, FireRed and PMD Red status overlay complete)
 
 | Class | Count |
 |---|---|
 | novel_capability | 0 |
-| novel_detail | 0 |
-| technique_donor | 0 |
+| novel_detail | 1 |
+| technique_donor | 1 |
 | component_donor | 0 |
 | enhancement_candidate | 0 |
 | replacement_candidate | 0 |
-| reference_only | 7 |
+| reference_only | 8 |
 | reject | 0 |
 | needs_evidence (unclassified) | 0 |
 
@@ -65,9 +65,42 @@ Elite Four: 12 sixteen-colour palettes, 11 timers (40 then ten x 12 = 160 ticks 
 - Generic half: progress variable (0-10) drives an 11-stage grey-to-orange 4-colour ramp on OBJ palette 10, re-derived on return-to-field, reset to stage 0 when the step cap is exceeded. The variable is zeroed on every map transition, so it is visit-scoped, not long-term progression. Platinum already drives stateful props this way (Pastoria Gym via `MapPropAnimationManager`).
 - Event-specific half: 11 fixed coordinates, 10 step caps, 5-frame hops (60 on reset), per-hop SE, destroy sequence with camera shake, white flash and four 8x8 fragments. Emerald already has the destroy/shake/fragment choreography (closed as reference_only in B1), so this half is a duplicate there; only the step-capped puzzle is new and has no Platinum host. `field_special_scene.c` contains no Deoxys code (21-line porthole stub).
 
+## PMD Red records (B3, pinned `aefe6a46bcc5df13142225ef673a1ee2ac1b760b`)
+
+| finding_id | disposition | pixel_use | confidence |
+|---|---|---|---|
+| `opp:pmd_red/battler_status_overlays` (persistent at-battler condition glyph) | **novel_detail** | none (redraw Platinum-native) | medium |
+| `opp:pmd_red/battler_status_overlays/multi_status_cycling` | **technique_donor** (conditional on the parent) | none | medium |
+| `opp:pmd_red/battler_status_overlays/gba_engine_and_pixels` | reference_only | none | high |
+
+### Donor behaviour (traced)
+- **Mask:** `UpdateStatusIconFlags` (`src/dungeon_8041AD0.c`) ORs 13 per-class tables into a 29-bit mask (`include/constants/status.h`, bit 0 SLEEPLESS .. bit 28 FROZEN). 34 logical states map to a bit and 33 are deliberately symbol-less (paralysis, yawning, wrap, leech seed and others). Four extra sources: grudge, exposed, LOWHP (team HP < max/4, or an identified item holder), STAT_DOWN (any of 10 multiplier/stage checks below default). `src/status_checks.c` is not part of the path.
+- **Bit to graphic:** 29 bits share 16 sheets (`graphics/status/`, 8x8 up to 32x32 frames, 4-16 frames each) and 8 OBJ palette banks. Shield (6 bits), poisoned (3), lowhp (3), sword (3), whiffer (2) and eyedrops (2) are one sheet recoloured by palette bank.
+- **Slots and order:** 2 slots per monster. Slot 0 round-robins bits 0..27 in ascending bit order and wraps 27 to 0. Slot 1 shows only FROZEN, so a frozen monster shows frozen plus one cycling glyph. The order is enum order, **not** a severity priority.
+- **Timing:** a glyph is re-picked when its hold counter reaches 0, then held for 61 updates (about 1 s at 60 updates/s; wall-clock inferred). Per-monster timers are independent.
+- **Quirks (do not copy):** from idle the first pick tests bit 1 first, so SLEEPLESS (bit 0) shows only after a wrap; clearing some but not all bits leaves the old glyph on screen until its hold expires; only an empty mask clears at once.
+- **Animation:** glyphs are not static. Each loops its sheet at 1 frame per 4 updates, independently of the symbol cycle.
+- **Position:** glyph is centred on the monster animation's attachment point (slot 0 uses attachment set 0, slot 1 set 3) and drawn 16 px above it; FROZEN is centred on it and covers the body; SLEEP is shifted +8 x. Drawn only while the monster is visible, at the monster's OAM priority.
+
+### Platinum comparison
+| Platinum feature | What it does | Equivalent to the seed? |
+|---|---|---|
+| Healthbox status icon | one icon per battler, 5 conditions + healthy, toxic shares poison, fixed priority sleep > poison > burn > freeze > paralysis > toxic | No: on the box, single-valued, no volatile conditions |
+| Battler sprite / OAM overlay | none persistent. Status sprites exist only as BattleAnimSystem sprites with fixed lifetimes (sleep 32 f, burn 16 f/flame, confusion 48 f orbit) | No: transient |
+| Application / clear feedback | animation at application and at the per-turn trigger for sleep, poison, burn, freeze, paralysis, confusion, infatuation; healthbox icon set or cleared (21 scripts clear it); no cure animation at the battler | Event feedback only |
+| Temporary battler-local indicator system | none. `battle/indicator.c` is the Catch Tutorial cursor on the bag subscreen | No |
+
+Result: Platinum shows nothing at the battler between events and nothing at all for confusion, infatuation, taunt-type, stat-drop or screen conditions once the animation ends. So the seed is not reference_only. It is classed `novel_detail` rather than `novel_capability` because it adds one small layer, not a subsystem. For the four conditions that already have healthbox icon plus animation, an overlay is additive and partly redundant, and the net-new value is the volatile/stat set.
+
+### Why the split
+The overlay concept (what and where) is the contribution. The cycling rule only matters if that concept is chosen, and a static side-by-side row might beat it on the DS screens, so it is recorded as a conditional technique rather than forced into the parent. The GBA OAM/VRAM mechanics and the PMD pixels are recorded once as reference_only so they are not re-opened.
+
+Deferred, not blocking: Platinum battle OAM/palette headroom has not been measured (`GBA_GBC_NEEDS_EVIDENCE.json` `deferred_not_blocking`); it affects cost/risk only.
+
 ## Provenance correction
 `TARGET_SOURCE_PATHS.md` ties `data/scripts/field_move_scripts.inc` to all field-move effects. At the pinned commit that file drives only Cut, Rock Smash, Strength, Waterfall and Dive. Surf comes from `src/party_menu.c` / `data/scripts/surf.inc`, Fly from `src/field_effect.c`, Teleport from `src/fldeff_teleport.c`. `TARGET_SOURCE_PATHS.md` was corrected in B1.5.
 
 ## Evidence
+`evidence/B3_PMD_RED_STATUS_OVERLAY_EVIDENCE.json` (36 donor and 19 Platinum anchors, parsed bit/graphic/palette tables, PNG-vs-table cross-check, ported cycling simulation), regenerated by `evidence/b3_verify_pmd_red.py` with `PMDRED_ROOT` at the pinned commit.
 `evidence/B2_FIRERED_SYMBOL_EVIDENCE.json` (55 FireRed symbol/line anchors plus parsed table, timer and palette facts at `037335f4c725d7c9aecdac87066f2002b4bd7e14`).
 `evidence/B1_5_PLATINUM_FLDEFF_MEMBER_NAMES.json` (44 fldeff.narc member names, regenerated by `evidence/b1_5_fldeff_member_names.py`) and `evidence/B1_EMERALD_SYMBOL_EVIDENCE.json` (76 symbol/line anchors and 32 graphics paths at `a81cfacbe53bcc229fc4d93cb10b56a58e77a15f`), regenerated by `evidence/b1_verify_emerald.py`.
