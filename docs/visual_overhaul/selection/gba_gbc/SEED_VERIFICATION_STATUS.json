@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "note": "Preflight status only. 'source_located' means exact source/resources are identified at a pinned donor revision; it does not yet mean the finding is promoted into the GBA/GBC opportunity pool.",
+  "seeds": [
+    {
+      "finding_id": "opp:emerald/field_action_choreography",
+      "status": "source_located",
+      "evidence_paths": [
+        "src/field_effect.c",
+        "data/scripts/field_move_scripts.inc",
+        "data/field_effect_scripts.s"
+      ],
+      "next": "bind specific state sequences and referenced graphics"
+    },
+    {
+      "finding_id": "opp:emerald/environment_effect_primitives",
+      "status": "source_located",
+      "evidence_paths": [
+        "data/field_effect_scripts.s",
+        "src/field_effect_helpers.c",
+        "src/field_effect.c"
+      ],
+      "next": "enumerate reusable primitive families referenced by field effects"
+    },
+    {
+      "finding_id": "opp:firered/animated_palette_sequences",
+      "status": "source_verified",
+      "evidence_paths": [
+        "src/field_specials.c",
+        "graphics/field_specials/elite_four_lighting_*.pal",
+        "graphics/field_specials/champion_room_lighting_*.pal"
+      ],
+      "verified_fact": "timer-driven cycling of BG palette slot 7 through explicit palette arrays"
+    },
+    {
+      "finding_id": "opp:firered/map_location_preview",
+      "status": "source_verified",
+      "evidence_paths": [
+        "src/map_preview_screen.c",
+        "graphics/map_preview/*"
+      ],
+      "verified_fact": "dedicated tiles/tilemap/palette resources keyed by map section/type and world-map flag"
+    },
+    {
+      "finding_id": "opp:firered/interactive_object_states",
+      "status": "source_verified",
+      "evidence_paths": [
+        "src/field_specials.c",
+        "graphics/field_specials/deoxys_rock_*.pal"
+      ],
+      "verified_fact": "Deoxys triangle interaction combines progress state, palette, coordinates, sound and field effect"
+    },
+    {
+      "finding_id": "opp:pmd_red/battler_status_overlays",
+      "status": "source_verified",
+      "evidence_paths": [
+        "src/dungeon_mon_sprite_render.c",
+        "src/dungeon_pokemon_sprites.c",
+        "graphics/status/*.4bpp"
+      ],
+      "verified_fact": "dungeon monster rendering includes two status-sprite slots and explicit status-to-graphic mappings"
+    },
+    {
+      "finding_id": "opp:crystal/battle_anim_artwork",
+      "status": "source_located",
+      "evidence_paths": [
+        "gfx/battle_anims/*.png",
+        "data/battle_anims/object_gfx.asm",
+        "data/battle_anims/framesets.asm"
+      ],
+      "next": "bind candidate primitive graphics to move scripts and framesets"
+    },
+    {
+      "finding_id": "opp:crystal/battle_anim_choreography",
+      "status": "source_located",
+      "evidence_paths": [
+        "data/moves/animations.asm",
+        "engine/battle_anims/*"
+      ],
+      "next": "extract distinctive sequencing patterns only"
+    },
+    {
+      "finding_id": "opp:yellow/pikachu_presentation",
+      "status": "source_located",
+      "evidence_paths": [
+        "engine/battle/pikachu_entrance_anim.asm",
+        "engine/pikachu/pikachu_pic_animation.asm",
+        "data/pikachu/*",
+        "gfx/pikachu/*"
+      ],
+      "next": "high-threshold review for genuinely distinctive presentation"
+    },
+    {
+      "finding_id": "seed:ruby/delta_only",
+      "status": "pending_semantic_delta",
+      "evidence_paths": [],
+      "next": "compare subsystem semantics after Emerald baseline; do not use raw path differences"
+    }
+  ]
+}
