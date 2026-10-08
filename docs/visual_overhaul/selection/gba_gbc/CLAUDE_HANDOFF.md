@@ -12,7 +12,7 @@ The DS donor database and PR #70 planning artifacts are already complete enough 
 
 1. `gba_gbc/README.md`
 2. `gba_gbc/SOURCE_AVAILABILITY.json`
-3. `gba_gbc/SOURCE_TARGETS.json`
+3. `gba_gbc/DONOR_PATH_TARGETS.json`
 4. `gba_gbc/SEED_VERIFICATION_STATUS.json`
 5. `gba_gbc/MINING_EXECUTION_PLAN.md`
 
@@ -46,7 +46,7 @@ Order:
 1. Emerald
    - formalize `field_action_choreography`
    - formalize `environment_effect_primitives`
-   - begin from exact functions/paths in `SOURCE_TARGETS.json`
+   - begin from exact functions/paths in `DONOR_PATH_TARGETS.json`
    - trace only directly referenced graphics/assets
 2. FireRed
    - the map-preview, timed-palette, and Deoxys-state seeds already have strong source verification
