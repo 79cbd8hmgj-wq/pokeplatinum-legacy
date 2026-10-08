@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "purpose": "Bounded accept/reject checklist for first GBA/GBC seed-verification tranche. Prevents broad donor archaeology.",
+  "default_rules": {
+    "promote_if": [
+      "Exact donor path/function/table is verified at pinned revision.",
+      "The finding supplies a capability/detail/technique/component not already superseded by Platinum or the DS donor pool.",
+      "The intended Platinum host or reuse mode can be named.",
+      "Evidence is sufficient to classify without broad manual asset review."
+    ],
+    "reject_or_reference_if": [
+      "Platinum already provides the same behavior more strongly and donor adds no distinctive component/technique.",
+      "The seed depends on wholesale engine transplantation rather than a transferable technique/component.",
+      "Evidence cannot be tied to exact source/resources after targeted inspection.",
+      "The same value is already represented by a stronger donor and this source adds no distinct variant."
+    ],
+    "needs_evidence_if": [
+      "Source confirms the family exists but the exact visual output or member set cannot yet be characterized cheaply.",
+      "A small deterministic render/decoder would resolve the classification."
+    ]
+  },
+  "seeds": [
+    {
+      "finding_id": "opp:emerald/field_action_choreography",
+      "inspect": [
+        "src/field_effect.c",
+        "data/scripts/field_move_scripts.inc",
+        "data/field_effect_scripts.s"
+      ],
+      "capture": [
+        "exact state sequence for one outdoor field move",
+        "one indoor Pokemon-show sequence",
+        "one travel action such as Fly/Surf/Waterfall",
+        "referenced graphics/effects"
+      ],
+      "accept_if": "At least one choreography pattern is distinct from Platinum's current field presentation and can be re-expressed through Platinum field tasks without donor code/assets.",
+      "reject_if": "All reviewed sequences reduce to behaviors Platinum already stages equivalently."
+    },
+    {
+      "finding_id": "opp:emerald/environment_effect_primitives",
+      "inspect": [
+        "data/field_effect_scripts.s",
+        "src/field_effect_helpers.c",
+        "src/field_effect.c"
+      ],
+      "capture": [
+        "primitive family name",
+        "handler",
+        "referenced sprite/palette",
+        "frame count or behavior",
+        "candidate Platinum use"
+      ],
+      "accept_if": "At least one compact primitive or short sequence provides a reusable visual motif not already better covered by Platinum/DS donors.",
+      "reject_if": "Families are generic duplicates with no distinct visual or choreography value."
+    },
+    {
+      "finding_id": "opp:firered/animated_palette_sequences",
+      "inspect": [
+        "src/field_specials.c",
+        "graphics/field_specials/elite_four_lighting_*.pal",
+        "graphics/field_specials/champion_room_lighting_*.pal"
+      ],
+      "capture": [
+        "timer arrays",
+        "palette count",
+        "runtime target slot",
+        "start/stop behavior",
+        "candidate Platinum environments"
+      ],
+      "accept_if": "Timed palette sequencing is sufficiently distinct/useful as a transferable environmental technique.",
+      "reject_if": "It adds no useful behavior beyond already-planned Platinum palette systems."
+    },
+    {
+      "finding_id": "opp:firered/map_location_preview",
+      "inspect": [
+        "src/map_preview_screen.c",
+        "graphics/map_preview/"
+      ],
+      "capture": [
+        "record schema",
+        "number of preview families",
+        "visited flag behavior",
+        "trigger path",
+        "resource dimensions/format"
+      ],
+      "accept_if": "The feature remains a clear novel capability for Platinum with Sinnoh-authored art.",
+      "reject_if": "A Platinum/DS-native equivalent already provides the same arrival presentation."
+    },
+    {
+      "finding_id": "opp:firered/interactive_object_states",
+      "inspect": [
+        "src/field_specials.c",
+        "graphics/field_specials/deoxys_rock_*.pal"
+      ],
+      "capture": [
+        "state variables",
+        "palette states",
+        "coordinate states",
+        "sound/effect links",
+        "reset/failure behavior"
+      ],
+      "accept_if": "The combined visual-state-machine pattern has reusable value for Sinnoh puzzles/legendary objects.",
+      "reject_if": "It is too Deoxys-specific to generalize beyond ordinary scripted object movement."
+    },
+    {
+      "finding_id": "opp:pmd_red/battler_status_overlays",
+      "inspect": [
+        "src/dungeon_pokemon_sprites.c",
+        "src/dungeon_mon_sprite_render.c",
+        "graphics/status/"
+      ],
+      "capture": [
+        "status-to-graphic map",
+        "cycling algorithm",
+        "slot count",
+        "graphic dimensions/formats",
+        "screen placement"
+      ],
+      "accept_if": "Overlay/cycling behavior provides useful temporary battler feedback that Platinum lacks.",
+      "reject_if": "The mechanic would only duplicate Platinum healthbox status with no presentation gain."
+    },
+    {
+      "finding_id": "opp:crystal/battle_anim_artwork",
+      "inspect": [
+        "gfx/battle_anims/",
+        "data/battle_anims/object_gfx.asm",
+        "data/battle_anims/framesets.asm",
+        "data/battle_anims/oam.asm"
+      ],
+      "capture": [
+        "selected primitive",
+        "move/script association",
+        "frameset",
+        "visual distinctiveness",
+        "Platinum analogue if any"
+      ],
+      "accept_if": "At least one primitive is visually distinctive enough to redraw/re-author as a Platinum particle/component.",
+      "reject_if": "All candidates are superseded by existing Platinum/DS particles."
+    },
+    {
+      "finding_id": "opp:crystal/battle_anim_choreography",
+      "inspect": [
+        "engine/battle_anims/anim_commands.asm",
+        "engine/battle_anims/bg_effects.asm",
+        "engine/battle_anims/functions.asm",
+        "macros/scripts/battle_anims.asm"
+      ],
+      "capture": [
+        "specific move sequence",
+        "timing/layering trick",
+        "Platinum equivalent",
+        "distinctive transferable idea"
+      ],
+      "accept_if": "A specific choreography pattern remains useful despite Platinum's stronger engine.",
+      "reject_if": "Only generic capabilities already used in Platinum are found."
+    },
+    {
+      "finding_id": "seed:ruby/delta_only",
+      "inspect": [
+        "Ruby/Emerald matching field-effect, field-move, battle-animation and weather source families"
+      ],
+      "capture": [
+        "semantic differences only",
+        "unique resources/behaviors",
+        "whether Emerald supersedes each difference"
+      ],
+      "accept_if": "A Ruby-only behavior or asset family materially differs from Emerald and has donor value.",
+      "reject_if": "No meaningful semantic delta survives."
+    },
+    {
+      "finding_id": "opp:yellow/pikachu_presentation",
+      "inspect": [
+        "data/pikachu/",
+        "engine/pikachu/",
+        "engine/battle/pikachu_entrance_anim.asm",
+        "gfx/pikachu/"
+      ],
+      "capture": [
+        "specific presentation state/frame",
+        "trigger/context",
+        "visual distinctiveness",
+        "candidate Platinum use"
+      ],
+      "accept_if": "A genuinely distinctive Pikachu presentation component survives a high-threshold comparison with later games.",
+      "reject_if": "Material is nostalgia-only or superseded by later donor art/behavior."
+    }
+  ],
+  "first_stop": "After Emerald + FireRed + PMD Red seeds are resolved, write a compact checkpoint before Crystal/Ruby/Yellow."
+}
