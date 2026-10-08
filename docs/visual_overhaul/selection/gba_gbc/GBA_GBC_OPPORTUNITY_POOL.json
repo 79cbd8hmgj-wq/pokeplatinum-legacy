@@ -5,9 +5,11 @@
  "pinned_donors": {
   "emerald": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
   "firered": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
-  "pmd_red": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b"
+  "pmd_red": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+  "crystal": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+  "yellow": "e89ead154b9968aa50eed9328ff2b38b6c194382"
  },
- "batches_complete": 4,
+ "batches_complete": 6,
  "records": [
   {
    "finding_id": "opp:emerald/field_action_choreography",
@@ -1160,6 +1162,783 @@
     "pmd_red",
     "engine_specific",
     "split"
+   ]
+  },
+  {
+   "finding_id": "opp:crystal/battle_anim_artwork",
+   "batch": "B4_crystal_yellow_specialized_donor_pass",
+   "classification": "reference_only",
+   "provisional_seed_class": null,
+   "disposition": "reference_only",
+   "status": "proposed",
+   "subject": "Crystal battle-animation primitive banks aeroblast, globe, noise, reflect, rope, shapes, shine, web, wind (9 of the 11 seed candidates), bound to object ids and move scripts",
+   "donor": {
+    "game": "crystal",
+    "source_id": "crystal",
+    "repository": "79cbd8hmgj-wq/pokecrystal",
+    "commit": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+    "locator": "data/battle_anims/object_gfx.asm; data/battle_anims/objects.asm; data/moves/animations.asm; gfx/battle_anims/*.png",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokecrystal",
+      "commit": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+      "path": "data/battle_anims/object_gfx.asm",
+      "fact": "AnimObjGFX table maps 41 BATTLE_ANIM_GFX_* banks to tile counts and gfx symbols; the 11 candidate banks are aeroblast 24, angels 35, globe 16, noise 16, reflect 10, rope 18, shapes 48, shine 38, wave 18, web 14, wind 19 tiles"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokecrystal",
+      "commit": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+      "path": "data/battle_anims/objects.asm",
+      "fact": "BattleAnimObjects has 188 entries (battleanimobj flags, y-fix, frameset, callback, palette, gfx bank); binding by gfx column gives aeroblast 1 object, angels 6, globe 1, noise 5, reflect 3, rope 2, shapes 2, shine 4, web 2, wind 4 and wave 0"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokecrystal",
+      "commit": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+      "path": "data/moves/animations.asm",
+      "fact": "299 animation labels, 278 table entries; each candidate object was traced through anim_Ngfx loads and anim_obj uses (including anim_call subroutines) to its move scripts. 47 distinct moves bind to the 10 families that have objects"
+     }
+    ]
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "tier": "asset_linked",
+    "refs": [
+     "docs/visual_overhaul/selection/gba_gbc/evidence/B4_CRYSTAL_BINDING_EVIDENCE.json",
+     "docs/visual_overhaul/selection/gba_gbc/evidence/b4_verify_crystal.py"
+    ],
+    "summary": "Bound: aeroblast (24 tiles, 1 obj, 1 moves); globe (16 tiles, 1 obj, 1 moves); noise (16 tiles, 5 obj, 8 moves); reflect (10 tiles, 3 obj, 9 moves); rope (18 tiles, 2 obj, 3 moves); shapes (48 tiles, 2 obj, 2 moves); shine (38 tiles, 4 obj, 8 moves); web (14 tiles, 2 obj, 2 moves); wind (19 tiles, 4 obj, 8 moves). Each bank is a 2bpp GBC OBJ sheet used by 1 to 9 move scripts; objects pair a sheet with a frameset, a movement callback and one of four palettes."
+   },
+   "platinum_comparison": {
+    "host_system": "Platinum per-move battle animation scripts (res/moves/<move>/anim.s) and battle particle resources",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "main at 43fc7ffa (PR #75 merge)",
+      "path": "res/moves/*/anim.s",
+      "fact": "All 47 Crystal-bound moves have a dedicated Platinum anim.s (36 of the 42 non-angels moves load a particle system, 6 use the sprite manager, the rest use battler/BG effects); none is missing. Platinum has 492 entries under res/moves"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "main at 43fc7ffa (PR #75 merge)",
+      "path": "res/graphics/battle/particles/",
+      "fact": "a particle .spa exists for every bound move except nightmare (BG switch + Func_Nightmare) and kinesis (sprite manager); Platinum animates battlers directly (MoveBattler, ScaleBattler, Shake, FadeBattlerSprite) where Crystal needs tile objects"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "main at 43fc7ffa (PR #75 merge)",
+      "path": "res/moves/seismic_toss/anim.s",
+      "fact": "Seismic Toss (Crystal globe bank) is a BG switch with a 10-value vertical BG scroll curve, ShakeBg, defender shake and a particle emitter trio; strictly richer than the single globe object"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "main at 43fc7ffa (PR #75 merge)",
+      "path": "res/moves/bind/anim.s",
+      "fact": "Bind (Crystal rope bank, 2 objects) uses particle emitters at the defender plus attacker lunge (MoveBattlerX2) and defender squash (ScaleBattlerSprite) in a loop; Wrap and Constrict have their own resources"
+     }
+    ],
+    "comparison": "Superseded: every Crystal use of these banks is a move Platinum animates with its own particle or sprite-manager resources, a BG switch or fade, and direct battler transforms. The Crystal sheets are 8x8-tile GBC art that adds no shape or sequencing Platinum lacks."
+   },
+   "target": {
+    "kind": "none",
+    "host_system": "none"
+   },
+   "useful": "Documents that nine Crystal primitive families were bound and found redundant, so they are not re-opened.",
+   "why": "Platinum covers every bound move with dedicated richer resources; 8x8 tile sheets in 4 palettes cannot improve DS particle art.",
+   "residual_ideas_not_promoted": [
+    "shapes bank (48 tiles, largest, only Defense Curl and Sharpen) is the one family worth a glance if those two Platinum moves are ever reworked, but it is geometry, not a technique"
+   ],
+   "constraints": [
+    "do not import Crystal pixels",
+    "do not treat the Crystal object/frameset engine as a backport target",
+    "do not extend this record to unbound Crystal banks (bubble, cut, fire, hit, ice, ...)"
+   ],
+   "adaptation": [],
+   "cost": null,
+   "risk": null,
+   "confidence": "medium",
+   "confidence_note": "Platinum side was compared at script and resource-structure level; no frames were rendered.",
+   "feasibility": null,
+   "pixel_use": "none",
+   "proposed_by": "claude (GBA/GBC B4; not human-approved)",
+   "tags": [
+    "crystal",
+    "superseded",
+    "bound"
+   ]
+  },
+  {
+   "finding_id": "opp:crystal/battle_anim_artwork/angels_motif",
+   "batch": "B4_crystal_yellow_specialized_donor_pass",
+   "classification": null,
+   "provisional_seed_class": null,
+   "disposition": "needs_evidence",
+   "status": "proposed",
+   "subject": "Crystal angels bank: imp (Nightmare, Spite, Lovely Kiss, in-Nightmare residual) and cherub (Sweet Kiss) character motifs, plus the Destiny Bond frameset",
+   "donor": {
+    "game": "crystal",
+    "source_id": "crystal",
+    "repository": "79cbd8hmgj-wq/pokecrystal",
+    "commit": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+    "locator": "data/battle_anims/objects.asm; data/battle_anims/framesets.asm; gfx/battle_anims/angels.png",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokecrystal",
+      "commit": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+      "path": "data/battle_anims/objects.asm",
+      "fact": "angels bank (35 tiles) backs 6 objects: NIGHTMARE (imp, dizzy callback), IN_NIGHTMARE (imp flipped, float up), LOVELY_KISS (imp), SWEET_KISS (cherub, blue palette), DESTINY_BOND (user-to-target) and SPITE (imp, powder callback)"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokecrystal",
+      "commit": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+      "path": "data/moves/animations.asm",
+      "fact": "Used by Lovely Kiss, Nightmare, Spite, Sweet Kiss, Destiny Bond and the per-turn BattleAnim_InNightmare residual; it is the only candidate bank where the sprite is a character rather than an abstract shape"
+     }
+    ]
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "tier": "asset_linked",
+    "refs": [
+     "docs/visual_overhaul/selection/gba_gbc/evidence/B4_CRYSTAL_BINDING_EVIDENCE.json"
+    ],
+    "summary": "Six objects, six move scripts; the imp/cherub is a recurring cartoon figure across four moves, unlike any other candidate."
+   },
+   "platinum_comparison": {
+    "host_system": "Platinum lovely_kiss, sweet_kiss, nightmare, spite, destiny_bond anim.s",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "main at 43fc7ffa (PR #75 merge)",
+      "path": "res/moves/lovely_kiss/anim.s",
+      "fact": "two particle emitters at the defender, kiss SE and defender shake; the contents of lovely_kiss.spa are not readable from source"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "main at 43fc7ffa (PR #75 merge)",
+      "path": "res/moves/nightmare/anim.s",
+      "fact": "no particle system: BG switch 24 with scroll, Func_Nightmare custom function and defender mon sprite shown in a pokemon-sprite manager"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "main at 43fc7ffa (PR #75 merge)",
+      "path": "res/moves/spite/anim.s",
+      "fact": "defender mon sprite copied into BG with a battler fade; Func_Spite custom function; the script loads no particle system"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "main at 43fc7ffa (PR #75 merge)",
+      "path": "res/moves/sweet_kiss/anim.s",
+      "fact": "two emitters at the defender and a light-red battler fade"
+     }
+    ],
+    "comparison": "Cannot be decided from source: whether Platinum already shows a figure/motif comparable to the Crystal imp or cherub depends on what lovely_kiss.spa, sweet_kiss.spa, spite.spa and the Func_Nightmare sprites contain."
+   },
+   "target": {
+    "kind": "none",
+    "host_system": "none"
+   },
+   "useful": "Possible: a small recurring character motif for the curse/kiss move family, redrawn Platinum-native.",
+   "why": "Only candidate where the donor idea is a character rather than a geometric primitive; needs a side-by-side to rule out Platinum already doing it.",
+   "residual_ideas_not_promoted": [
+    "Crystal destiny-bond frameset and in-Nightmare float-up residual timing are recorded only as context"
+   ],
+   "constraints": [
+    "no donor pixels; redraw if promoted",
+    "do not start broad rendering for this record; one narrow comparison sheet only"
+   ],
+   "adaptation": [],
+   "cost": null,
+   "risk": null,
+   "confidence": "low",
+   "confidence_note": "Disposition withheld until the single rendering in ne:crystal/angels_motif_vs_platinum is supplied.",
+   "feasibility": null,
+   "pixel_use": "none",
+   "proposed_by": "claude (GBA/GBC B4; not human-approved)",
+   "tags": [
+    "crystal",
+    "needs_evidence"
+   ],
+   "provisional_if_unresolved": "reference_only",
+   "needs_evidence_item": "ne:crystal/angels_motif_vs_platinum"
+  },
+  {
+   "finding_id": "opp:crystal/battle_anim_artwork/wave_bank_orphan",
+   "batch": "B4_crystal_yellow_specialized_donor_pass",
+   "classification": "reject",
+   "provisional_seed_class": null,
+   "disposition": "reject",
+   "status": "proposed",
+   "subject": "Crystal wave bank (BATTLE_ANIM_GFX_WAVE, 18 tiles) and the misleadingly named BATTLE_ANIM_OBJ_WAVE",
+   "donor": {
+    "game": "crystal",
+    "source_id": "crystal",
+    "repository": "79cbd8hmgj-wq/pokecrystal",
+    "commit": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+    "locator": "data/battle_anims/object_gfx.asm; data/battle_anims/objects.asm; constants/battle_anim_constants.asm",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokecrystal",
+      "commit": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+      "path": "constants/battle_anim_constants.asm",
+      "fact": "BATTLE_ANIM_GFX_WAVE (0x26) is defined and its sheet exists in object_gfx.asm and gfx/battle_anims.asm"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokecrystal",
+      "commit": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+      "path": "data/battle_anims/objects.asm",
+      "fact": "no object has gfx column BATTLE_ANIM_GFX_WAVE; BATTLE_ANIM_OBJ_WAVE (frameset WAVE, user-to-target-disappear callback) takes its tiles from BATTLE_ANIM_GFX_PSYCHIC"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokecrystal",
+      "commit": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+      "path": "data/moves/animations.asm",
+      "fact": "no animation label loads BATTLE_ANIM_GFX_WAVE; only the constant definition references it in the whole checkout"
+     }
+    ]
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "tier": "asset_linked",
+    "refs": [
+     "docs/visual_overhaul/selection/gba_gbc/evidence/B4_CRYSTAL_BINDING_EVIDENCE.json"
+    ],
+    "summary": "Bank loaders: none. Objects using the bank: none. The sheet is never displayed in Crystal."
+   },
+   "platinum_comparison": {
+    "host_system": "none needed",
+    "verification": [],
+    "comparison": "Not applicable: the sheet is dead data in the donor."
+   },
+   "target": {
+    "kind": "none",
+    "host_system": "none"
+   },
+   "useful": "None.",
+   "why": "The seed listed \"wave\" as a candidate; binding shows it is an unreferenced bank, so there is no choreography to learn from and the art never appears in game.",
+   "residual_ideas_not_promoted": [],
+   "constraints": [
+    "do not mine the unreferenced sheet"
+   ],
+   "adaptation": [],
+   "cost": null,
+   "risk": null,
+   "confidence": "high",
+   "confidence_note": "Absence proven by grep of the whole donor checkout, not by a sampled directory.",
+   "feasibility": null,
+   "pixel_use": "none",
+   "proposed_by": "claude (GBA/GBC B4; not human-approved)",
+   "tags": [
+    "crystal",
+    "unreferenced"
+   ]
+  },
+  {
+   "finding_id": "opp:crystal/battle_anim_choreography/move_sequencing",
+   "batch": "B4_crystal_yellow_specialized_donor_pass",
+   "classification": "reference_only",
+   "provisional_seed_class": null,
+   "disposition": "reference_only",
+   "status": "proposed",
+   "subject": "Crystal move scripts for the bound primitive moves, per-turn residual animations and the BG/palette effect vocabulary",
+   "donor": {
+    "game": "crystal",
+    "source_id": "crystal",
+    "repository": "79cbd8hmgj-wq/pokecrystal",
+    "commit": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+    "locator": "data/moves/animations.asm; engine/battle/effect_commands.asm; data/battle_anims/framesets.asm; data/battle_anims/oam.asm",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokecrystal",
+      "commit": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+      "path": "data/moves/animations.asm",
+      "fact": "scripts are linear anim_obj/anim_wait/anim_sound/anim_bgeffect lists; 47 bound moves checked. BG effects used with them: palette cycling (gray and yellow), screen shake X/Y, fade-to-black/light, alternate hues, inverted flash, whirlpool and psychic warps"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokecrystal",
+      "commit": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+      "path": "data/moves/animations.asm",
+      "fact": "per-turn residual animations: BattleAnim_InLove, BattleAnim_InSandstorm, BattleAnim_InNightmare, BattleAnim_InWhirlpool (the trap, nightmare, sandstorm and love ticks replay a short effect each turn)"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokecrystal",
+      "commit": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+      "path": "engine/battle/effect_commands.asm",
+      "fact": "in-love residual animation (ANIM_IN_LOVE) is queued from the infatuation checks; the animation script engine itself is not a backport candidate"
+     }
+    ]
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "tier": "asset_linked",
+    "refs": [
+     "docs/visual_overhaul/selection/gba_gbc/evidence/B4_CRYSTAL_BINDING_EVIDENCE.json"
+    ],
+    "summary": "Sequencing is one object timeline per move plus up to three concurrent BG effects; the residual-animation idea is the only structural feature beyond move scripts."
+   },
+   "platinum_comparison": {
+    "host_system": "Platinum battle animation script VM and res/battle/scripts/common_anims",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "main at 43fc7ffa (PR #75 merge)",
+      "path": "res/battle/scripts/common_anims/",
+      "fact": "damage_bind, damage_wrap, damage_fire_spin, damage_clamp, damage_whirlpool, damage_sand_tomb, damage_magma_storm, damage_nightmare, damage_curse, damage_ingrain, damage_leech_seed, infatuation, confusion, weather_sandstorm: Platinum already plays a per-tick residual animation for every Crystal residual case"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "main at 43fc7ffa (PR #75 merge)",
+      "path": "res/battle/scripts/subscripts/subscript_bind_effect.s",
+      "fact": "PlayBattleAnimation selects BATTLE_ANIMATION_DAMAGE_* by the active trapping move each turn, i.e. the same per-turn residual idea with per-move variants"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "main at 43fc7ffa (PR #75 merge)",
+      "path": "res/moves/perish_song/anim.s",
+      "fact": "Platinum Perish Song already combines BG fade, four battler effects and four emitters, the Crystal alternate-hues equivalent"
+     }
+    ],
+    "comparison": "Superseded: the Platinum VM has equivalents for every Crystal effect type (fades, shakes, BG switches, scaling) and already covers the residual-animation case with finer per-move variants."
+   },
+   "target": {
+    "kind": "none",
+    "host_system": "none"
+   },
+   "useful": "Nothing to implement.",
+   "why": "The one non-trivial Crystal structure (replaying a short animation every turn for trap, nightmare, love and sandstorm) is already present in Platinum.",
+   "residual_ideas_not_promoted": [
+    "Crystal tendency to reuse one object across many moves (Gust 4 moves plus the in-whirlpool residual, Glimmer 5 moves) is an economy of GBC VRAM, not a visual choice"
+   ],
+   "constraints": [
+    "do not backport the Crystal animation command engine",
+    "do not catalogue other Crystal move scripts"
+   ],
+   "adaptation": [],
+   "cost": null,
+   "risk": null,
+   "confidence": "medium",
+   "confidence_note": "Compared by script structure; no frames rendered.",
+   "feasibility": null,
+   "pixel_use": "none",
+   "proposed_by": "claude (GBA/GBC B4; not human-approved)",
+   "tags": [
+    "crystal",
+    "superseded",
+    "technique"
+   ]
+  },
+  {
+   "finding_id": "opp:crystal/battle_anim_choreography/battle_transition",
+   "batch": "B4_crystal_yellow_specialized_donor_pass",
+   "classification": "reference_only",
+   "provisional_seed_class": null,
+   "disposition": "reference_only",
+   "status": "proposed",
+   "subject": "Crystal battle transition: four starting points (cave or not x lead level+3 vs enemy) feeding four outros",
+   "donor": {
+    "game": "crystal",
+    "source_id": "crystal",
+    "repository": "79cbd8hmgj-wq/pokecrystal",
+    "commit": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+    "locator": "engine/battle/battle_transition.asm",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokecrystal",
+      "commit": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+      "path": "engine/battle/battle_transition.asm",
+      "fact": "StartTrainerBattle_DetermineWhichAnimation picks one of four starting points (BATTLETRANSITION_CAVE, BATTLETRANSITION_CAVE_STRONGER, BATTLETRANSITION_NO_CAVE, BATTLETRANSITION_NO_CAVE_STRONGER) from the lead-vs-enemy level test and the cave/dungeon environment; outros: SineWave, SpeckleToBlack, SpinToBlack, ZoomToBlack"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokecrystal",
+      "commit": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+      "path": "engine/battle/battle_transition.asm",
+      "fact": "a pokeball-tile flash sequence precedes each outro; the file notes the level test ignores the enemy level in one branch (documented donor bug)"
+     }
+    ]
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "tier": "asset_linked",
+    "refs": [
+     "docs/visual_overhaul/selection/gba_gbc/evidence/B4_CRYSTAL_BINDING_EVIDENCE.json"
+    ],
+    "summary": "Four outros over a fixed flash prelude; selection uses two inputs (environment, relative level)."
+   },
+   "platinum_comparison": {
+    "host_system": "Platinum encounter effects (src/overlay005/encounter_effect.c)",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "main at 43fc7ffa (PR #75 merge)",
+      "path": "src/overlay005/encounter_effect.c",
+      "fact": "sEncounterEffectTaskFuncs has 31 entries: grass/water/cave x lower/higher level for wild and trainer, eight gym leaders, four Elite Four, champion, mythical, legendary, Galactic grunt and boss, Frontier and double"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "main at 43fc7ffa (PR #75 merge)",
+      "path": "src/overlay005/encounter_effect.c",
+      "fact": "EncounterEffect_ScreenSlice and EncounterEffect_ScreenSplit give HBlank-driven slice and split outros; BrightnessFadeTask and EncounterEffect_Flash cover the flash prelude"
+     }
+    ],
+    "comparison": "Superseded: Platinum uses the same two selection axes plus trainer class and per-boss variants, and has stronger outro primitives."
+   },
+   "target": {
+    "kind": "none",
+    "host_system": "none"
+   },
+   "useful": "Nothing to implement.",
+   "why": "Platinum already has the same selection model with far more cases.",
+   "residual_ideas_not_promoted": [],
+   "constraints": [
+    "do not mine Crystal transition tile art"
+   ],
+   "adaptation": [],
+   "cost": null,
+   "risk": null,
+   "confidence": "high",
+   "confidence_note": null,
+   "feasibility": null,
+   "pixel_use": "none",
+   "proposed_by": "claude (GBA/GBC B4; not human-approved)",
+   "tags": [
+    "crystal",
+    "superseded",
+    "transition"
+   ]
+  },
+  {
+   "finding_id": "opp:yellow/pikachu_presentation/starter_entrance_exit",
+   "batch": "B4_crystal_yellow_specialized_donor_pass",
+   "classification": "reference_only",
+   "provisional_seed_class": null,
+   "disposition": "reference_only",
+   "status": "proposed",
+   "subject": "Starter Pikachu battle entrance (column wipe instead of poof and ball send-out), slide-off retreat, and state-dependent Pikachu cries (asleep, faint, Oak battle)",
+   "donor": {
+    "game": "yellow",
+    "source_id": "yellow",
+    "repository": "79cbd8hmgj-wq/pokeyellow",
+    "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+    "locator": "engine/battle/pikachu_entrance_anim.asm; engine/battle/core.asm; engine/battle/common_text.asm",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokeyellow",
+      "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+      "path": "engine/battle/core.asm",
+      "fact": "core.asm:1812 calls StarterPikachuBattleEntranceAnimation only when IsThisPartyMonStarterPikachu; all other mons take the POOF_ANIM (line 1802) and AnimateSendingOutMon (line 1805) path"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeyellow",
+      "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+      "path": "engine/battle/pikachu_entrance_anim.asm",
+      "fact": "8 passes x 2 frames: each pass writes the party-pic tile block into one more column of a 7-row region as a diagonal staircase (tile ids below 7*7 are blanked), so the pic is revealed left to right in ~16 frames with no ball or poof (the whole routine is 47 lines)"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeyellow",
+      "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+      "path": "engine/battle/core.asm",
+      "fact": "retreat: AnimationSlideMonOff for the starter (line 1865) versus the two-stage downscale for other mons; cry: PikachuCry37 if asleep else PikachuCry11 (lines 1814/1816), PikachuCry4 on faint (line 1058), the same asleep/awake pair in the Oak battle intro (common_text.asm:12)"
+     }
+    ]
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "tier": "asset_linked",
+    "refs": [
+     "docs/visual_overhaul/selection/gba_gbc/evidence/B4_YELLOW_PIKACHU_PRESENTATION_EVIDENCE.json",
+     "docs/visual_overhaul/selection/gba_gbc/evidence/b4_verify_yellow.py"
+    ],
+    "summary": "One partner-specific entrance and exit plus a three-way cry switch, all gated by a single starter-Pikachu test."
+   },
+   "platinum_comparison": {
+    "host_system": "Platinum battle send-out (src/battle/battle_display.c) and common_anims",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "main at 43fc7ffa (PR #75 merge)",
+      "path": "src/battle/battle_display.c",
+      "fact": "send-out runs a ball rotation/throw sequence with a quick-send-out variant (lines 2242 and 2287); no per-species or per-partner entrance exists"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "main at 43fc7ffa (PR #75 merge)",
+      "path": "res/battle/scripts/common_anims/sub_in.s",
+      "fact": "substitute and shiny/level-up/happy common animations already show Platinum has a library of per-event battler presentations"
+     }
+    ],
+    "comparison": "Not better represented in Platinum as a concept (Platinum has no designated partner), but the effect is a 7-row tile wipe on a GB tilemap and a slide-off; Platinum has 3D sprites, ScreenSlice and brightness primitives that make this trivial and less distinctive, and no design requires a partner mon."
+   },
+   "target": {
+    "kind": "none",
+    "host_system": "none"
+   },
+   "useful": "Design reference only: a special send-out for a designated partner mon.",
+   "why": "The distinctive part is that the partner skips the poof/ball ritual; the pixels and the tile-wipe mechanism add nothing. Cry variation is audio, outside the visual overhaul and dependent on Pikachu PCM clips.",
+   "residual_ideas_not_promoted": [
+    "\"partner mon enters without the ball sequence and exits by sliding away\" as a single sentence of design vocabulary",
+    "asleep-state cry choice, faint cry, Oak-battle cry (audio; not a visual finding)"
+   ],
+   "constraints": [
+    "no donor pixels",
+    "no PCM/audio import",
+    "do not backport the GB tilemap routine"
+   ],
+   "adaptation": [],
+   "cost": null,
+   "risk": null,
+   "confidence": "medium",
+   "confidence_note": "Platinum send-out was read at the function level; the ball sequence was not rendered.",
+   "feasibility": null,
+   "pixel_use": "none",
+   "proposed_by": "claude (GBA/GBC B4; not human-approved)",
+   "tags": [
+    "yellow",
+    "pikachu",
+    "partner_specific"
+   ]
+  },
+  {
+   "finding_id": "opp:yellow/pikachu_presentation/partner_reaction_table",
+   "batch": "B4_crystal_yellow_specialized_donor_pass",
+   "classification": "reference_only",
+   "provisional_seed_class": null,
+   "disposition": "reference_only",
+   "status": "proposed",
+   "subject": "Pikachu mood x happiness portrait reaction selection (7 happiness bands x 5 mood columns -> 18 of 30 pic-animation scripts), emote bubble, 34 emotion scripts and the gfx/pikachu frame set",
+   "donor": {
+    "game": "yellow",
+    "source_id": "yellow",
+    "repository": "79cbd8hmgj-wq/pokeyellow",
+    "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+    "locator": "engine/pikachu/pikachu_pic_animation.asm; engine/pikachu/pikachu_emotions.asm; data/pikachu/pikachu_pic_animation.asm; gfx/pikachu/, gfx/pikachu.asm",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokeyellow",
+      "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+      "path": "engine/pikachu/pikachu_pic_animation.asm",
+      "fact": "GetPikaPicAnimationScriptIndex: mood thresholds [40, 127, 128, 210, 255] choose a column, happiness bands [50, 100, 130, 160, 200, 250, 255] choose a row; 18 distinct scripts are referenced out of 30 labels"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeyellow",
+      "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+      "path": "engine/pikachu/pikachu_emotions.asm",
+      "fact": "the only caller is TalkToPikachu (line 251); the emotion table has 34 entries and ShowPikachuEmoteBubble is at line 112. This is the overworld follower talk reaction, not a battle sequence"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeyellow",
+      "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+      "path": "gfx/pikachu.asm",
+      "fact": "61 INCBINs and 61 PNGs under gfx/pikachu are frames of one species used through 66 pikapic_loadgfx commands"
+     }
+    ]
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "tier": "asset_linked",
+    "refs": [
+     "docs/visual_overhaul/selection/gba_gbc/evidence/B4_YELLOW_PIKACHU_PRESENTATION_EVIDENCE.json"
+    ],
+    "summary": "A two-scalar lookup (friendship band, mood column) selects a canned portrait animation; frames are single-species Pikachu art."
+   },
+   "platinum_comparison": {
+    "host_system": "Platinum Poketch Friendship Checker and overworld emotes",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "main at 43fc7ffa (PR #75 merge)",
+      "path": "src/applications/poketch/friendship_checker/graphics.c",
+      "fact": "enum IconActions (line 42) = WANDER, GATHER, RUN_AWAY, SHOW_LIKE, SHOW_DISLIKE, JUMP; GetFriendshipLevel (declared main.c:40) maps friendship through six thresholds (seven levels) to like, neutral or dislike with an intensity per party icon"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "main at 43fc7ffa (PR #75 merge)",
+      "path": "include/comm_player_manager.h",
+      "fact": "enum Emote and gMovementActionFuncs_Emote* give Platinum overworld emote bubbles"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "main at 43fc7ffa (PR #75 merge)",
+      "path": "docs/visual_overhaul/selection/OPPORTUNITY_POOL_SUMMARY.md",
+      "fact": "DS pool already carries the HGSS follower sprite set (hgss_follower_species/form/legendary, novel_detail); the mon-follows-player host is represented there"
+     }
+    ],
+    "comparison": "Friendship-keyed visual reactions already exist in Platinum (Friendship Checker icon actions) and the follower side is already in the DS pool; the Yellow table is a two-axis lookup with no feature beyond that."
+   },
+   "target": {
+    "kind": "none",
+    "host_system": "none"
+   },
+   "useful": "Design reference for any future friendship-reactive portrait or follower interaction layer.",
+   "why": "Not battle-related, not a new capability given the Friendship Checker, and its host (a following partner) is a gameplay system outside this overhaul; the 61 frames are single-species Pikachu art.",
+   "residual_ideas_not_promoted": [
+    "two-axis friendship x mood lookup to a canned reaction as a table shape",
+    "do not bulk-promote the 61 Pikachu frames"
+   ],
+   "constraints": [
+    "no donor pixels",
+    "no bulk frame import",
+    "do not mine pikachu_follow.asm / pikachu_movement.asm (overworld follower AI)"
+   ],
+   "adaptation": [],
+   "cost": null,
+   "risk": null,
+   "confidence": "medium",
+   "confidence_note": "Platinum Friendship Checker was read at enum/function level; its sprite frames were not rendered.",
+   "feasibility": null,
+   "pixel_use": "none",
+   "proposed_by": "claude (GBA/GBC B4; not human-approved)",
+   "tags": [
+    "yellow",
+    "pikachu",
+    "friendship"
+   ]
+  },
+  {
+   "finding_id": "opp:yellow/pikachu_presentation/battle_transitions_special_effects",
+   "batch": "B4_crystal_yellow_specialized_donor_pass",
+   "classification": "reference_only",
+   "provisional_seed_class": null,
+   "disposition": "reference_only",
+   "status": "proposed",
+   "subject": "Yellow battle transitions (8 bit-selected entries, 7 distinct routines) and the 24-entry special-effect table (screen flashes, shakes, ball toss/shake, poof)",
+   "donor": {
+    "game": "yellow",
+    "source_id": "yellow",
+    "repository": "79cbd8hmgj-wq/pokeyellow",
+    "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+    "locator": "engine/battle/battle_transitions.asm; data/battle_anims/special_effects.asm; data/battle_anims/special_effect_pointers.asm; data/battle_anims/subanimations.asm; data/battle_anims/frame_blocks.asm",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokeyellow",
+      "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+      "path": "engine/battle/battle_transitions.asm",
+      "fact": "BattleTransitions (line 79) is indexed by three bits (trainer, enemy >= lead+3 which also sets the spiral direction, dungeon map) and resolves to 7 routines: Circle, DoubleCircle, HorizontalStripes, Shrink, Spiral, Split, VerticalStripes"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeyellow",
+      "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+      "path": "data/battle_anims/special_effects.asm",
+      "fact": "24 animation-id -> routine entries mapping to 14 routines (flash screen, flash every 4/8 frame blocks, explode, rock slide, blizzard, growl, ball toss/shake, poof, trade ball)"
+     }
+    ]
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "tier": "asset_linked",
+    "refs": [
+     "docs/visual_overhaul/selection/gba_gbc/evidence/B4_YELLOW_PIKACHU_PRESENTATION_EVIDENCE.json"
+    ],
+    "summary": "Same selection model as Red/Blue and Crystal: trainer/wild, relative level, indoors/dungeon, with 1-bit-per-axis lookup."
+   },
+   "platinum_comparison": {
+    "host_system": "Platinum encounter effects and battle animation VM",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "main at 43fc7ffa (PR #75 merge)",
+      "path": "src/overlay005/encounter_effect.c",
+      "fact": "sEncounterEffectTaskFuncs (line 114) has 31 entries covering the same axes plus boss and legendary cases"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "main at 43fc7ffa (PR #75 merge)",
+      "path": "src/overlay005/encounter_effect.c",
+      "fact": "ScreenSlice (line 418) and ScreenSplit (line 552) are HBlank-driven outros that exceed Yellow's stripes/split/shrink"
+     }
+    ],
+    "comparison": "Superseded by Platinum, and already superseded by Crystal and Emerald-era equivalents for the same selection scheme."
+   },
+   "target": {
+    "kind": "none",
+    "host_system": "none"
+   },
+   "useful": "Nothing to implement.",
+   "why": "Generic Game Boy screen effects; the selection scheme is shared with every earlier game and Platinum exceeds it.",
+   "residual_ideas_not_promoted": [],
+   "constraints": [
+    "do not catalogue Yellow subanimations or frame blocks (GB OAM data)",
+    "do not backport the animation engine"
+   ],
+   "adaptation": [],
+   "cost": null,
+   "risk": null,
+   "confidence": "high",
+   "confidence_note": "Closes seed:yellow/battle_presentation as well.",
+   "feasibility": null,
+   "pixel_use": "none",
+   "proposed_by": "claude (GBA/GBC B4; not human-approved)",
+   "tags": [
+    "yellow",
+    "superseded",
+    "transition"
+   ],
+   "also_closes": [
+    "seed:yellow/battle_presentation"
+   ]
+  },
+  {
+   "finding_id": "opp:yellow/pikachu_presentation/surfing_pikachu",
+   "batch": "B4_crystal_yellow_specialized_donor_pass",
+   "classification": "reject",
+   "provisional_seed_class": null,
+   "disposition": "reject",
+   "status": "proposed",
+   "subject": "Surfing Pikachu minigame graphics (gfx/surfing_pikachu/*) and tilemaps",
+   "donor": {
+    "game": "yellow",
+    "source_id": "yellow",
+    "repository": "79cbd8hmgj-wq/pokeyellow",
+    "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+    "locator": "gfx/surfing_pikachu.asm; gfx/surfing_pikachu/; engine/minigame/surfing_pikachu.asm",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokeyellow",
+      "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+      "path": "engine/minigame/surfing_pikachu.asm",
+      "fact": "stand-alone minigame entry SurfingPikachuMinigame at line 13"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeyellow",
+      "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+      "path": "engine/printer/printer.asm",
+      "fact": "the only other use is the Game Boy Printer layouts (line 634); files: beach_intro.tilemap, beach_outro.tilemap, high_score_1.tilemap, high_score_2.tilemap, surfing_pikachu_1a.png, surfing_pikachu_1b.png, surfing_pikachu_1c.png, surfing_pikachu_2.png, title.tilemap, to_surf_rad.tilemap, use_control_pad.tilemap"
+     }
+    ]
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "tier": "asset_linked",
+    "refs": [
+     "docs/visual_overhaul/selection/gba_gbc/evidence/B4_YELLOW_PIKACHU_PRESENTATION_EVIDENCE.json"
+    ],
+    "summary": "Minigame and printer art for one species on a surfboard."
+   },
+   "platinum_comparison": {
+    "host_system": "none",
+    "verification": [],
+    "comparison": "No Platinum minigame or printer host; no battle or field presentation content."
+   },
+   "target": {
+    "kind": "none",
+    "host_system": "none"
+   },
+   "useful": "None.",
+   "why": "Single-species minigame art with no Platinum host; the seed listed the directory but it is not battle presentation.",
+   "residual_ideas_not_promoted": [],
+   "constraints": [
+    "do not mine"
+   ],
+   "adaptation": [],
+   "cost": null,
+   "risk": null,
+   "confidence": "high",
+   "confidence_note": null,
+   "feasibility": null,
+   "pixel_use": "none",
+   "proposed_by": "claude (GBA/GBC B4; not human-approved)",
+   "tags": [
+    "yellow",
+    "pikachu",
+    "off_scope"
    ]
   }
  ]

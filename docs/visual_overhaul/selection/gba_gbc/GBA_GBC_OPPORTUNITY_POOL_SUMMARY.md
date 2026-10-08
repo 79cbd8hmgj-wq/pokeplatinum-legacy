@@ -4,7 +4,9 @@ Separate from the DS pool (`selection/OPPORTUNITY_POOL.json` is untouched). Not 
 
 Machine-readable: `GBA_GBC_OPPORTUNITY_POOL.json`, `GBA_GBC_NEEDS_EVIDENCE.json`.
 
-## Status after B1 + B1.5 + B2 + B3 (Emerald, FireRed and PMD Red status overlay complete)
+## Status after B1 + B1.5 + B2 + B3 + B4 (Emerald, FireRed, PMD Red, Crystal and Yellow complete)
+
+19 records.
 
 | Class | Count |
 |---|---|
@@ -14,9 +16,11 @@ Machine-readable: `GBA_GBC_OPPORTUNITY_POOL.json`, `GBA_GBC_NEEDS_EVIDENCE.json`
 | component_donor | 0 |
 | enhancement_candidate | 0 |
 | replacement_candidate | 0 |
-| reference_only | 8 |
-| reject | 0 |
-| needs_evidence (unclassified) | 0 |
+| reference_only | 14 |
+| reject | 2 |
+| needs_evidence (unclassified) | 1 |
+
+By donor: Emerald 3 reference_only; FireRed 4 reference_only; PMD Red 1 novel_detail, 1 technique_donor, 1 reference_only; Crystal 3 reference_only, 1 reject, 1 needs_evidence; Yellow 3 reference_only, 1 reject.
 
 ## Emerald records
 
@@ -97,10 +101,48 @@ The overlay concept (what and where) is the contribution. The cycling rule only 
 
 Deferred, not blocking: Platinum battle OAM/palette headroom has not been measured (`GBA_GBC_NEEDS_EVIDENCE.json` `deferred_not_blocking`); it affects cost/risk only.
 
+## Crystal records (B4, pinned `3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6`)
+
+| finding_id | disposition | pixel_use | confidence |
+|---|---|---|---|
+| `opp:crystal/battle_anim_artwork` (aeroblast, globe, noise, reflect, rope, shapes, shine, web, wind) | reference_only | none | medium |
+| `opp:crystal/battle_anim_artwork/angels_motif` (imp, cherub, destiny bond) | **needs_evidence** (provisional reference_only) | none | low |
+| `opp:crystal/battle_anim_artwork/wave_bank_orphan` | reject | none | high |
+| `opp:crystal/battle_anim_choreography/move_sequencing` | reference_only | none | medium |
+| `opp:crystal/battle_anim_choreography/battle_transition` | reference_only | none | high |
+
+### Binding result
+The 11 seed candidates were bound by parsing `object_gfx.asm` (41 banks), `objects.asm` (188 objects) and `animations.asm` (278 table entries, 299 labels), following `anim_call` subroutines. Ten banks have objects; 47 distinct moves use them. The `wave` bank is never loaded by any script and no object uses it (`BATTLE_ANIM_OBJ_WAVE` takes its tiles from the psychic bank), so it is rejected rather than compared.
+
+### Platinum comparison
+All 47 bound moves already have a dedicated `res/moves/<move>/anim.s` in Platinum. 39 load a particle system, 6 use the sprite manager (a few both), and 3 (Nightmare, Spite, Future Sight) use neither and rely on BG switches and battler sprites; every one except Nightmare and Kinesis also has its own `.spa`. Platinum animates the battler directly (move, scale, shake, fade) and switches or fades the BG, which Crystal's tile objects cannot. The per-turn residual animations (in-love, in-sandstorm, in-nightmare, in-whirlpool) are covered by Platinum `common_anims` (`damage_*`, `infatuation`, `confusion`, `weather_sandstorm`). Crystal's four-start-point battle transition is a subset of Platinum's 31 encounter effects.
+
+### Why one record is left open
+The angels bank is the only candidate where the sprite is a recurring character (an imp across Nightmare, Spite and Lovely Kiss, a cherub for Sweet Kiss) rather than abstract shapes. Whether Platinum already shows a comparable motif cannot be told from scripts: it depends on what `lovely_kiss.spa`, `sweet_kiss.spa` and the Nightmare sprites contain. `ne:crystal/angels_motif_vs_platinum` asks for one five-move key-frame sheet. No broad rendering was started.
+
+## Yellow records (B4, pinned `e89ead154b9968aa50eed9328ff2b38b6c194382`)
+
+| finding_id | disposition | pixel_use | confidence |
+|---|---|---|---|
+| `opp:yellow/pikachu_presentation/starter_entrance_exit` | reference_only | none | medium |
+| `opp:yellow/pikachu_presentation/partner_reaction_table` | reference_only | none | medium |
+| `opp:yellow/pikachu_presentation/battle_transitions_special_effects` (also closes `seed:yellow/battle_presentation`) | reference_only | none | high |
+| `opp:yellow/pikachu_presentation/surfing_pikachu` | reject | none | high |
+
+### Traced
+- **Entrance and exit:** only the starter Pikachu skips the poof and ball send-out; `StarterPikachuBattleEntranceAnimation` is a 47-line, 8-pass x 2-frame tile column wipe, and the retreat is `AnimationSlideMonOff` instead of the two-stage downscale. Cries switch on asleep (Cry37), awake (Cry11), faint (Cry4) and the Oak battle intro. The cries are audio and outside this overhaul.
+- **Reaction table:** 7 happiness bands x 5 mood columns select 18 distinct portrait scripts of 30, called only from the overworld talk-to-Pikachu path (34 emotion scripts, emote bubble). The 61 `gfx/pikachu` frames are single-species art. Platinum already has friendship-keyed reactions in the Poketch Friendship Checker (like, neutral, dislike with intensity), and the follower side is in the DS pool through the HGSS follower sprites.
+- **Transitions and special effects:** 3 selector bits give 8 entries and 7 distinct routines; 24 special-effect entries are Game Boy flashes and palette tricks. Same selection model as Crystal and earlier; Platinum has 31 encounter effects.
+- **Surfing Pikachu:** a stand-alone minigame plus Game Boy Printer layouts; not battle presentation and no Platinum host.
+
+Nothing from Yellow is promoted, and no Yellow needs-evidence item was raised.
+
 ## Provenance correction
 `TARGET_SOURCE_PATHS.md` ties `data/scripts/field_move_scripts.inc` to all field-move effects. At the pinned commit that file drives only Cut, Rock Smash, Strength, Waterfall and Dive. Surf comes from `src/party_menu.c` / `data/scripts/surf.inc`, Fly from `src/field_effect.c`, Teleport from `src/fldeff_teleport.c`. `TARGET_SOURCE_PATHS.md` was corrected in B1.5.
 
 ## Evidence
+`evidence/B4_CRYSTAL_BINDING_EVIDENCE.json` (gfx-bank to object to move binding for the 11 candidates, Platinum per-move comparison rows, transition and residual-animation facts), regenerated by `evidence/b4_verify_crystal.py` with `CRYSTAL_ROOT` at the pinned commit.
+`evidence/B4_YELLOW_PIKACHU_PRESENTATION_EVIDENCE.json` (entrance routine and call sites, happiness x mood table, transition and special-effect tables, Platinum anchors), regenerated by `evidence/b4_verify_yellow.py` with `YELLOW_ROOT` at the pinned commit.
 `evidence/B3_PMD_RED_STATUS_OVERLAY_EVIDENCE.json` (36 donor and 19 Platinum anchors, parsed bit/graphic/palette tables, PNG-vs-table cross-check, ported cycling simulation), regenerated by `evidence/b3_verify_pmd_red.py` with `PMDRED_ROOT` at the pinned commit.
 `evidence/B2_FIRERED_SYMBOL_EVIDENCE.json` (55 FireRed symbol/line anchors plus parsed table, timer and palette facts at `037335f4c725d7c9aecdac87066f2002b4bd7e14`).
 `evidence/B1_5_PLATINUM_FLDEFF_MEMBER_NAMES.json` (44 fldeff.narc member names, regenerated by `evidence/b1_5_fldeff_member_names.py`) and `evidence/B1_EMERALD_SYMBOL_EVIDENCE.json` (76 symbol/line anchors and 32 graphics paths at `a81cfacbe53bcc229fc4d93cb10b56a58e77a15f`), regenerated by `evidence/b1_verify_emerald.py`.

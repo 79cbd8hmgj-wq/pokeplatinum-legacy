@@ -1,7 +1,16 @@
 {
  "schema_version": 1,
  "note": "GBA/GBC needs-evidence items. Narrow: each names the single piece of missing evidence and the disposition rule once it is supplied.",
- "items": [],
+ "items": [
+  {
+   "item_id": "ne:crystal/angels_motif_vs_platinum",
+   "raised_in": "B4_crystal_yellow_specialized_donor_pass",
+   "finding_id": "opp:crystal/battle_anim_artwork/angels_motif",
+   "what": "One side-by-side sheet: Crystal gfx/battle_anims/angels.png frames for the IMP, CHERUB and DESTINY_BOND framesets next to key frames of Platinum lovely_kiss, sweet_kiss, spite, nightmare (Func_Nightmare sprites) and destiny_bond particle/sprite resources (5 moves, key frames only).",
+   "why": "Script-level comparison cannot show whether Platinum already has a recurring character-style motif for these moves; that is the only open question.",
+   "disposition_rule": "If no Platinum frame shows a comparable recurring figure, reclassify to novel_detail (redraw Platinum-native, pixel_use none). If Platinum already shows an equal or better figure/motif, reclassify to reference_only. Rendering is limited to these five moves; do not extend to other banks."
+  }
+ ],
  "resolved": [
   {
    "item_id": "ne:emerald/env_primitives_platinum_parity",
