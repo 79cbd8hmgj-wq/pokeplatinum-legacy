@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "status_note": "Preflight source matrix verified against repositories accessible to the linked GitHub account. Exact revisions are pinned for mining.",
+  "repo_document_evidence": [
+    "docs/visual_overhaul/PASS_G_VISUAL_OVERHAUL.md",
+    "docs/visual_overhaul/CROSS_GAME_DONOR_MATRIX.md",
+    "docs/visual_overhaul/G5_DONOR_TECHNIQUE_AUDIT.md"
+  ],
+  "sources": [
+    {
+      "source_id": "emerald",
+      "repository": "79cbd8hmgj-wq/pokeemerald",
+      "branch": "master",
+      "commit": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+      "repository_verified": true,
+      "expected_value": "high",
+      "mining_policy": "full high-value subsystem pass"
+    },
+    {
+      "source_id": "firered",
+      "repository": "79cbd8hmgj-wq/pokefirered",
+      "branch": "master",
+      "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "repository_verified": true,
+      "expected_value": "high",
+      "mining_policy": "full high-value subsystem pass"
+    },
+    {
+      "source_id": "leafgreen",
+      "repository": null,
+      "branch": null,
+      "commit": null,
+      "repository_verified": false,
+      "expected_value": "sibling",
+      "mining_policy": "use FireRed shared source; only pursue LeafGreen-specific deltas if a distinct source checkout is later found"
+    },
+    {
+      "source_id": "pmd_red",
+      "repository": "79cbd8hmgj-wq/pmd-red",
+      "branch": "master",
+      "commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "repository_verified": true,
+      "expected_value": "high targeted",
+      "mining_policy": "status/effect/presentation first"
+    },
+    {
+      "source_id": "crystal",
+      "repository": "79cbd8hmgj-wq/pokecrystal",
+      "branch": "master",
+      "commit": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+      "repository_verified": true,
+      "expected_value": "medium-high targeted",
+      "mining_policy": "battle primitive/choreography first; no engine backport"
+    },
+    {
+      "source_id": "ruby",
+      "repository": "79cbd8hmgj-wq/pokeruby",
+      "branch": "master",
+      "commit": "5784633ce4ef7ade1a7f2d2d0c288e3d5e6cdd7f",
+      "repository_verified": true,
+      "expected_value": "delta/reference",
+      "mining_policy": "delta against Emerald before any broad decode"
+    },
+    {
+      "source_id": "yellow",
+      "repository": "79cbd8hmgj-wq/pokeyellow",
+      "branch": "master",
+      "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+      "repository_verified": true,
+      "expected_value": "specialized",
+      "mining_policy": "high-threshold presentation/effect/Pikachu pass"
+    }
+  ],
+  "rule": "A donor is mineable only at its pinned revision above. Missing LeafGreen source is not a blocker because FireRed covers the shared code/resource base; only unique LeafGreen deltas remain optional."
+}

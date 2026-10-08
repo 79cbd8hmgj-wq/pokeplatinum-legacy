@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "strategy": "source-code-first where readable; decode only referenced/high-value assets",
+  "subsystems": [
+    {
+      "id": "field_action_choreography",
+      "priority": "high",
+      "look_for": [
+        "player/Pokemon staging",
+        "effect ordering",
+        "camera/screen movement",
+        "release/restore timing"
+      ],
+      "best_initial_donors": [
+        "emerald",
+        "firered"
+      ]
+    },
+    {
+      "id": "environmental_effects",
+      "priority": "high",
+      "look_for": [
+        "weather",
+        "ash",
+        "dust",
+        "glow",
+        "water",
+        "fire",
+        "wind",
+        "light",
+        "palette animation",
+        "animated tiles"
+      ],
+      "best_initial_donors": [
+        "emerald",
+        "firered",
+        "pmd_red"
+      ]
+    },
+    {
+      "id": "battle_effect_primitives",
+      "priority": "high",
+      "look_for": [
+        "particles",
+        "impact shapes",
+        "rings",
+        "streaks",
+        "web/rope/wave/shine/noise shapes",
+        "short frame sets"
+      ],
+      "best_initial_donors": [
+        "emerald",
+        "crystal",
+        "yellow"
+      ]
+    },
+    {
+      "id": "battle_animation_choreography",
+      "priority": "high",
+      "look_for": [
+        "timing",
+        "layering",
+        "duplication",
+        "shake/flash beats",
+        "attacker/defender staging",
+        "background treatment"
+      ],
+      "best_initial_donors": [
+        "emerald",
+        "crystal",
+        "yellow"
+      ]
+    },
+    {
+      "id": "status_feedback",
+      "priority": "high",
+      "look_for": [
+        "temporary overlays",
+        "condition indicators",
+        "cycling multiple states",
+        "positioning/timing"
+      ],
+      "best_initial_donors": [
+        "pmd_red"
+      ]
+    },
+    {
+      "id": "location_area_presentation",
+      "priority": "high",
+      "look_for": [
+        "preview cards",
+        "arrival/entrance presentation",
+        "visited-state visuals",
+        "location art composition"
+      ],
+      "best_initial_donors": [
+        "firered"
+      ]
+    },
+    {
+      "id": "interactive_object_states",
+      "priority": "medium_high",
+      "look_for": [
+        "visual state machines",
+        "palette/state progression",
+        "position/sound/effect combinations"
+      ],
+      "best_initial_donors": [
+        "firered",
+        "emerald"
+      ]
+    },
+    {
+      "id": "ui_menus_hud",
+      "priority": "medium",
+      "look_for": [
+        "frames",
+        "panels",
+        "feedback primitives",
+        "layout",
+        "entrance/exit behavior"
+      ],
+      "best_initial_donors": [
+        "pmd_red",
+        "firered",
+        "emerald",
+        "yellow"
+      ]
+    },
+    {
+      "id": "transitions_event_presentation",
+      "priority": "medium_high",
+      "look_for": [
+        "wipes",
+        "fades",
+        "story/event cards",
+        "scene staging",
+        "screen composition"
+      ],
+      "best_initial_donors": [
+        "emerald",
+        "firered",
+        "pmd_red",
+        "yellow"
+      ]
+    },
+    {
+      "id": "sprite_pose_detail",
+      "priority": "medium",
+      "look_for": [
+        "unique poses",
+        "readable silhouettes",
+        "accessories",
+        "expression frames"
+      ],
+      "best_initial_donors": [
+        "emerald",
+        "firered",
+        "yellow"
+      ]
+    },
+    {
+      "id": "tiles_palette_motifs",
+      "priority": "medium",
+      "look_for": [
+        "palette logic",
+        "tile motifs",
+        "environmental patterns",
+        "readability"
+      ],
+      "best_initial_donors": [
+        "emerald",
+        "firered",
+        "ruby",
+        "yellow"
+      ]
+    }
+  ],
+  "evidence_policy": {
+    "preferred_order": [
+      "readable source/system reference",
+      "referenced asset family",
+      "representative render/contact sheet",
+      "manual visual review"
+    ],
+    "rule": "Do not decode broad asset families until source/system evidence shows likely payoff."
+  }
+}

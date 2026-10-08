@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "purpose": "Bound GBA/GBC mining into small evidence-first batches so later agents do not spend context rediscovering scope.",
+  "batches": [
+    {
+      "id": "B1_emerald_seed_formalization",
+      "donor": "emerald",
+      "order": 1,
+      "objective": "Convert the two source-verified Emerald seeds into formal GBA/GBC opportunity records and bind only directly referenced assets.",
+      "read_first": [
+        "docs/visual_overhaul/selection/gba_gbc/FIRST_TRANCHE_VERIFIED_FACTS.md",
+        "docs/visual_overhaul/selection/gba_gbc/TARGET_SOURCE_PATHS.md"
+      ],
+      "donor_paths": [
+        "src/field_effect.c",
+        "src/field_effect_helpers.c",
+        "data/scripts/field_move_scripts.inc",
+        "data/field_effect_scripts.s"
+      ],
+      "outputs": [
+        "formalized opportunity records",
+        "small evidence note/contact sheet only if needed",
+        "updated needs-evidence state"
+      ],
+      "stop_when": "field_action_choreography and environment_effect_primitives are promoted/rejected/needs_evidence with exact provenance",
+      "forbidden": [
+        "broad battle-animation scan",
+        "full field-effect asset dump",
+        "Platinum implementation"
+      ]
+    },
+    {
+      "id": "B2_firered_seed_formalization",
+      "donor": "firered",
+      "order": 2,
+      "objective": "Formalize map previews, timed palette animation, and Deoxys interactive-state presentation from already verified source systems.",
+      "donor_paths": [
+        "src/map_preview_screen.c",
+        "src/field_specials.c",
+        "src/field_special_scene.c",
+        "graphics/map_preview/",
+        "graphics/field_specials/"
+      ],
+      "outputs": [
+        "3 formalized seed decisions",
+        "exact tables/functions/assets referenced",
+        "compact evidence only where classification requires it"
+      ],
+      "stop_when": "all three FireRed seeds have canonical dispositions",
+      "forbidden": [
+        "generic Kanto asset inventory",
+        "wholesale preview-art transplantation",
+        "Platinum implementation"
+      ]
+    },
+    {
+      "id": "B3_pmd_red_status_close",
+      "donor": "pmd_red",
+      "order": 3,
+      "objective": "Close the battler-status-overlay seed before broader PMD Red effect mining.",
+      "donor_paths": [
+        "src/dungeon_mon_sprite_render.c",
+        "src/dungeon_pokemon_sprites.c",
+        "src/status_checks.c",
+        "graphics/status/"
+      ],
+      "outputs": [
+        "status-bit-to-symbol mapping",
+        "cycling/priority behavior summary",
+        "canonical opportunity decision"
+      ],
+      "stop_when": "status-overlay seed is fully source-backed and classified",
+      "forbidden": [
+        "broad effect archive mining",
+        "general dungeon-art inventory"
+      ]
+    },
+    {
+      "id": "B4_crystal_primitives",
+      "donor": "crystal",
+      "order": 4,
+      "objective": "Bind selected battle-animation primitive graphics to object IDs/move scripts and retain only distinctive component/technique opportunities.",
+      "donor_paths": [
+        "data/moves/animations.asm",
+        "engine/battle/effect_commands.asm",
+        "data/battle_anims/object_gfx.asm",
+        "data/battle_anims/framesets.asm",
+        "data/battle_anims/oam.asm",
+        "data/battle_anims/objects.asm",
+        "gfx/battle_anims/"
+      ],
+      "candidate_assets": [
+        "aeroblast",
+        "angels",
+        "globe",
+        "noise",
+        "reflect",
+        "rope",
+        "shapes",
+        "shine",
+        "wave",
+        "web",
+        "wind"
+      ],
+      "stop_when": "seed artwork/choreography findings are promoted/rejected/needs_evidence and no obvious distinctive primitive remains unbound",
+      "forbidden": [
+        "engine backport",
+        "full directory visual catalog unless binding proves necessary"
+      ]
+    },
+    {
+      "id": "B5_ruby_semantic_delta",
+      "donor": "ruby",
+      "order": 5,
+      "objective": "Compare Ruby against pinned Emerald only on high-value visual subsystems and mine materially unique differences.",
+      "donor_paths": [
+        "src/field_effect.c",
+        "src/field_effect_helpers.c",
+        "src/field_weather.c",
+        "src/field_weather_effects.c",
+        "data/field_effect_scripts.s",
+        "data/field_move_scripts.inc",
+        "data/battle_anim_scripts.s"
+      ],
+      "stop_when": "each target path is marked equivalent/superseded/meaningfully different, and only meaningful deltas have opportunity records",
+      "forbidden": [
+        "independent Ruby full inventory",
+        "duplicate Emerald records"
+      ]
+    },
+    {
+      "id": "B6_yellow_high_threshold",
+      "donor": "yellow",
+      "order": 6,
+      "objective": "Perform a narrow high-threshold review of battle transitions/effect timing and Pikachu-specific presentation.",
+      "donor_paths": [
+        "engine/battle/animations.asm",
+        "engine/battle/battle_transitions.asm",
+        "engine/battle/pikachu_entrance_anim.asm",
+        "data/battle_anims/special_effects.asm",
+        "data/battle_anims/special_effect_pointers.asm",
+        "data/battle_anims/subanimations.asm",
+        "data/battle_anims/frame_blocks.asm",
+        "gfx/pikachu/",
+        "gfx/surfing_pikachu/"
+      ],
+      "stop_when": "only genuinely distinctive/non-superseded ideas remain; everything else is reference_only/reject",
+      "forbidden": [
+        "nostalgia-driven promotion",
+        "bulk Pikachu frame import",
+        "engine backport"
+      ]
+    },
+    {
+      "id": "B7_cross_generation_merge",
+      "donor": "combined",
+      "order": 7,
+      "objective": "Validate the separate GBA/GBC pool, then produce combined DS + GBA/GBC ranking without rewriting DS records.",
+      "prerequisites": [
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B6"
+      ],
+      "outputs": [
+        "GBA_GBC_CATALOG_STATUS.md",
+        "GBA_GBC_OPPORTUNITY_POOL.json",
+        "GBA_GBC_OPPORTUNITY_POOL_SUMMARY.md",
+        "GBA_GBC_NEEDS_EVIDENCE.json",
+        "combined cross-generation ranking artifact"
+      ],
+      "stop_when": "no obvious high-value GBA/GBC subsystem remains unexamined and combined ranking is reproducible"
+    }
+  ]
+}

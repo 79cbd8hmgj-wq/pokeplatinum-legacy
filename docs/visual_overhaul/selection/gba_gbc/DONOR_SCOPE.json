@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "phase": "gba_gbc_database_collection",
+  "goal": "Build a verified GBA/GBC opportunity database before Platinum implementation.",
+  "taxonomy_source": "docs/visual_overhaul/selection/OPPORTUNITY_CLASSES.json",
+  "donors": [
+    {
+      "source_id": "emerald",
+      "role": "primary technique/component donor",
+      "priority": 1,
+      "policy": "full high-value subsystem pass"
+    },
+    {
+      "source_id": "firered",
+      "role": "presentation/environment technique donor",
+      "priority": 2,
+      "policy": "full high-value subsystem pass"
+    },
+    {
+      "source_id": "leafgreen",
+      "role": "FireRed sibling/control",
+      "priority": 2,
+      "policy": "mine deltas only unless shared resource evidence is needed"
+    },
+    {
+      "source_id": "pmd_red",
+      "role": "status/effect/presentation donor",
+      "priority": 3,
+      "policy": "target status feedback, effects, presentation"
+    },
+    {
+      "source_id": "crystal",
+      "role": "battle primitive/choreography donor",
+      "priority": 4,
+      "policy": "component/technique first; no engine backport"
+    },
+    {
+      "source_id": "ruby",
+      "role": "Emerald sibling/control",
+      "priority": 5,
+      "policy": "delta against Emerald; avoid duplicate work"
+    },
+    {
+      "source_id": "yellow",
+      "role": "specialized historical donor",
+      "priority": 6,
+      "policy": "high-threshold only"
+    }
+  ],
+  "default_use_bias": [
+    "technique_donor",
+    "component_donor",
+    "novel_capability",
+    "novel_detail",
+    "enhancement_candidate"
+  ],
+  "replacement_policy": "Rare. Promote only when whole-asset reuse is clearly preferable to Platinum-native reconstruction or component/technique transfer.",
+  "no_go": [
+    "Do not modify Platinum gameplay/source/assets during database collection.",
+    "Do not activate deferred findings without donor verification.",
+    "Do not rewrite the DS opportunity pool.",
+    "Do not build general-purpose renderers when a targeted decoder is enough.",
+    "Do not manually inspect thousands of assets when code/source relationships can narrow the set."
+  ],
+  "stop_conditions": [
+    "Every available donor has a source map.",
+    "Every major high-value subsystem has been considered.",
+    "Prior seed findings are verified, rejected, or explicitly left needs-evidence.",
+    "Ruby duplication against Emerald is resolved.",
+    "Yellow is high-threshold filtered.",
+    "A separate GBA/GBC opportunity pool exists.",
+    "A combined DS + GBA/GBC ranking can be generated without flattening provenance."
+  ]
+}

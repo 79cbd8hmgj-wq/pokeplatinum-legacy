@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "purpose": "Exact donor path/function targets for token-efficient GBA/GBC verification before bulk mining.",
+  "pinned_sources": {
+    "emerald": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+    "firered": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+    "pmd_red": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+    "crystal": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+    "ruby": "5784633ce4ef7ade1a7f2d2d0c288e3d5e6cdd7f",
+    "yellow": "e89ead154b9968aa50eed9328ff2b38b6c194382"
+  },
+  "targets": [
+    {
+      "donor": "emerald",
+      "seed": "opp:emerald/field_action_choreography",
+      "status": "source_paths_verified",
+      "priority": "high",
+      "source_paths": [
+        "src/field_effect.c",
+        "data/field_effect_scripts.s",
+        "data/scripts/field_move_scripts.inc",
+        "src/field_effect_helpers.c"
+      ],
+      "symbols": [
+        "Task_FieldMoveShowMonOutdoors",
+        "FieldMoveShowMonOutdoorsEffect_*",
+        "Task_FieldMoveShowMonIndoors",
+        "FieldMoveShowMonIndoorsEffect_*",
+        "Task_SurfFieldEffect",
+        "SurfFieldEffect_*",
+        "Task_FlyOut",
+        "FlyOutFieldEffect_*",
+        "Task_FlyIn",
+        "FlyInFieldEffect_*",
+        "Task_UseWaterfall",
+        "WaterfallFieldEffect_*"
+      ],
+      "verified_facts": [
+        "Emerald has distinct indoor and outdoor field-move presentation state machines.",
+        "Surf, Fly and Waterfall have explicit multi-step field-effect state machines.",
+        "Field-effect script table includes Surf, Fly, Strength, Waterfall, Dive, Teleport, ash, splash, sparkle and related effects."
+      ],
+      "next_action": "Extract concise state sequences and referenced graphics only; do not inventory all field effects yet."
+    },
+    {
+      "donor": "emerald",
+      "seed": "opp:emerald/environment_effect_primitives",
+      "status": "source_paths_verified",
+      "priority": "high",
+      "source_paths": [
+        "src/field_effect.c",
+        "src/field_effect_helpers.c",
+        "data/field_effect_scripts.s"
+      ],
+      "symbols": [
+        "FLDEFF_DUST",
+        "FLDEFF_ASH_PUFF",
+        "FLDEFF_ASH_LAUNCH",
+        "FLDEFF_BUBBLES",
+        "FLDEFF_SPARKLE",
+        "FLDEFF_RAYQUAZA_SPOTLIGHT",
+        "FLDEFF_DESTROY_DEOXYS_ROCK",
+        "FLDEFF_MOVE_DEOXYS_ROCK"
+      ],
+      "verified_facts": [
+        "The field-effect registry exposes a broad set of reusable environmental/action primitives.",
+        "These effects are source-addressable and can be mined by referenced sprite/palette resources instead of broad asset scanning."
+      ],
+      "next_action": "Trace only the highest-value primitives to graphics and timing implementations."
+    },
+    {
+      "donor": "firered",
+      "seed": "opp:firered/map_location_preview",
+      "status": "source_verified",
+      "priority": "high",
+      "source_paths": [
+        "src/map_preview_screen.c",
+        "graphics/map_preview/"
+      ],
+      "symbols": [
+        "sMapPreviewScreenData",
+        "sHasVisitedMapBefore",
+        "Task_RunMapPreviewScreenForest"
+      ],
+      "verified_facts": [
+        "Each preview entry binds a map section, visited/world-map flag, tile graphics, tilemap and palette.",
+        "Dedicated preview art exists for many major Kanto/Sevii locations.",
+        "The system tracks whether the map was visited before."
+      ],
+      "next_action": "Record trigger/visited behavior and compact resource contract; no need to inspect every preview image."
+    },
+    {
+      "donor": "firered",
+      "seed": "opp:firered/animated_palette_sequences",
+      "status": "source_verified",
+      "priority": "high",
+      "source_paths": [
+        "src/field_specials.c",
+        "graphics/field_specials/elite_four_lighting_*.pal",
+        "graphics/field_specials/champion_room_lighting_*.pal"
+      ],
+      "symbols": [
+        "sEliteFourLightingPalettes",
+        "sChampionRoomLightingPalettes",
+        "sEliteFourLightingTimers",
+        "sChampionRoomLightingTimers",
+        "DoPokemonLeagueLightingEffect",
+        "Task_RunPokemonLeagueLightingEffect"
+      ],
+      "verified_facts": [
+        "Elite Four and Champion lighting uses ordered palette arrays plus per-step timers.",
+        "The task repeatedly loads BG palette slot 7 and reapplies the global tint.",
+        "The effect is explicitly cancellable/restorable."
+      ],
+      "next_action": "Extract timer sequences and state flow; classify as technique evidence without porting palettes."
+    },
+    {
+      "donor": "firered",
+      "seed": "opp:firered/interactive_object_states",
+      "status": "source_verified",
+      "priority": "medium_high",
+      "source_paths": [
+        "src/field_specials.c",
+        "graphics/field_specials/deoxys_rock_*.pal",
+        "graphics/field_effects/pics/deoxys_rock_fragment_*.png"
+      ],
+      "symbols": [
+        "sDeoxysObjectPals",
+        "sDeoxysCoords",
+        "sDeoxysStepCaps",
+        "DoDeoxysTriangleInteraction",
+        "Task_DoDeoxysTriangleInteraction",
+        "MoveDeoxysObject",
+        "IncrementBirthIslandRockStepCount",
+        "SetDeoxysTrianglePalette"
+      ],
+      "verified_facts": [
+        "The Deoxys triangle combines progress variables, step-count gating, object relocation, palette changes, sound and a field effect.",
+        "Object coordinates and palette are indexed by interaction state."
+      ],
+      "next_action": "Summarize the state-machine pattern as technique/novel-detail evidence; donor art is not required."
+    },
+    {
+      "donor": "pmd_red",
+      "seed": "opp:pmd_red/battler_status_overlays",
+      "status": "source_verified",
+      "priority": "high",
+      "source_paths": [
+        "src/dungeon_mon_sprite_render.c",
+        "src/dungeon_pokemon_sprites.c",
+        "include/constants/status.h",
+        "include/dungeon_pokemon_sprites.h"
+      ],
+      "symbols": [
+        "EntityGetStatusSprites",
+        "UpdateDungeonPokemonSprite",
+        "sStatusSpritesInfo",
+        "GetNextStatusSymbol",
+        "UpdateStatusSprite",
+        "DrawStatusSprite",
+        "FrameUpdateDungeonStatusSprites"
+      ],
+      "verified_facts": [
+        "Dungeon monster rendering computes a status-sprite bitmask and passes it to the Pokemon sprite layer.",
+        "The status renderer has two status-sprite slots per Pokemon.",
+        "GetNextStatusSymbol cycles through active status bits.",
+        "The table maps statuses including burn, poison, confusion, taunt, shield states, curse, sure-shot, Focus Energy, sleep, stat-down and frozen to graphical families/palette variants."
+      ],
+      "next_action": "Trace sStatusGfxInfo and its backing graphics files, then capture one representative cycling sequence."
+    },
+    {
+      "donor": "crystal",
+      "seed": "opp:crystal/battle_anim_artwork",
+      "status": "asset_paths_verified",
+      "priority": "medium_high",
+      "source_paths": [
+        "gfx/battle_anims/",
+        "gfx/battle_anims.asm",
+        "data/battle_anims/object_gfx.asm",
+        "data/battle_anims/objects.asm",
+        "data/battle_anims/framesets.asm",
+        "data/battle_anims/oam.asm"
+      ],
+      "asset_examples": [
+        "gfx/battle_anims/aeroblast.png",
+        "gfx/battle_anims/angels.png",
+        "gfx/battle_anims/globe.png",
+        "gfx/battle_anims/noise.png",
+        "gfx/battle_anims/reflect.png",
+        "gfx/battle_anims/rope.png",
+        "gfx/battle_anims/shapes.png",
+        "gfx/battle_anims/shine.png",
+        "gfx/battle_anims/wave.png",
+        "gfx/battle_anims/web.png"
+      ],
+      "next_action": "Map selected graphics to move/object scripts; avoid cataloging every common effect."
+    },
+    {
+      "donor": "crystal",
+      "seed": "opp:crystal/battle_anim_choreography",
+      "status": "source_paths_verified",
+      "priority": "medium",
+      "source_paths": [
+        "engine/battle_anims/anim_commands.asm",
+        "engine/battle_anims/bg_effects.asm",
+        "engine/battle_anims/core.asm",
+        "engine/battle_anims/functions.asm",
+        "engine/battle_anims/helpers.asm",
+        "data/battle_anims/",
+        "docs/battle_anim_commands.md"
+      ],
+      "next_action": "Sample only animations using the distinctive primitive set and record timing/layering patterns Platinum does not already exploit."
+    },
+    {
+      "donor": "ruby",
+      "seed": "seed:ruby/delta_only",
+      "status": "source_paths_verified",
+      "priority": "low",
+      "source_paths": [
+        "data/battle_anim_scripts.s",
+        "data/field_effect_scripts.s",
+        "data/tilesets/primary/general/anim/",
+        "data/tilesets/primary/building/anim/"
+      ],
+      "verified_facts": [
+        "Ruby exposes the same broad source families as Emerald for battle animations, field effects and animated tiles.",
+        "Mining should begin with structural/resource deltas against Emerald, not an independent broad pass."
+      ],
+      "next_action": "Compute targeted file/resource deltas for high-value subsystems before any manual inspection."
+    },
+    {
+      "donor": "yellow",
+      "seed": "opp:yellow/pikachu_presentation",
+      "status": "source_paths_verified",
+      "priority": "specialized",
+      "source_paths": [
+        "data/pikachu/pikachu_emotions.asm",
+        "data/pikachu/pikachu_pic_animation.asm",
+        "data/pikachu/pikachu_pic_objects.asm",
+        "data/pikachu/pikachu_pic_tilemaps.asm",
+        "engine/pikachu/pikachu_emotions.asm",
+        "engine/pikachu/pikachu_pic_animation.asm",
+        "engine/battle/pikachu_entrance_anim.asm",
+        "gfx/pikachu/"
+      ],
+      "adjacent_targets": [
+        "engine/battle/animations.asm",
+        "engine/battle/battle_transitions.asm",
+        "engine/gfx/screen_effects.asm",
+        "data/battle_anims/"
+      ],
+      "next_action": "Inspect only unique Pikachu presentation states and unusually clear battle-transition/effect ideas; high rejection threshold."
+    }
+  ]
+}

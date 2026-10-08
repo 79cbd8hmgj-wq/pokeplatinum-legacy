@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "source": "docs/visual_overhaul/selection/opportunities/deferred/non_ds_findings.json",
+  "note": "Seed hypotheses only. Do not copy into the active pool without donor verification.",
+  "findings": [
+    {
+      "finding_id": "opp:emerald/field_action_choreography",
+      "class_hint": "technique_donor",
+      "priority": "high",
+      "verify": [
+        "field-move sequence ordering",
+        "Pokemon introduction/cry/motion",
+        "indoor/outdoor differences",
+        "restore-field path"
+      ]
+    },
+    {
+      "finding_id": "opp:emerald/environment_effect_primitives",
+      "class_hint": "component_donor",
+      "priority": "high",
+      "verify": [
+        "fall/landing",
+        "ash/dust",
+        "launch",
+        "teleport",
+        "surf/fly presentation",
+        "rock destruction",
+        "glow/monitor effects"
+      ]
+    },
+    {
+      "finding_id": "opp:firered/animated_palette_sequences",
+      "class_hint": "technique_donor",
+      "priority": "high",
+      "verify": [
+        "palette sequence tables",
+        "per-step timers",
+        "target palette slot",
+        "event/state trigger"
+      ]
+    },
+    {
+      "finding_id": "opp:firered/map_location_preview",
+      "class_hint": "novel_capability",
+      "priority": "high",
+      "verify": [
+        "tiles/palette/tilemap structure",
+        "map association",
+        "visited/state gating",
+        "entrance trigger"
+      ],
+      "reuse_policy": "layout/behavior only; author Sinnoh-specific art"
+    },
+    {
+      "finding_id": "opp:firered/interactive_object_states",
+      "class_hint": "novel_detail",
+      "priority": "medium_high",
+      "verify": [
+        "position changes",
+        "palette changes",
+        "sound",
+        "field effect",
+        "progress state"
+      ]
+    },
+    {
+      "finding_id": "opp:pmd_red/battler_status_overlays",
+      "class_hint": "novel_detail",
+      "priority": "high",
+      "verify": [
+        "overlay asset family",
+        "status mapping",
+        "multi-status cycling",
+        "timing/positioning"
+      ]
+    },
+    {
+      "finding_id": "opp:crystal/battle_anim_artwork",
+      "class_hint": "component_donor",
+      "priority": "medium_high",
+      "verify": [
+        "web",
+        "rope",
+        "angel",
+        "globe",
+        "noise",
+        "reflect",
+        "shine",
+        "shape",
+        "wave",
+        "Aeroblast-like primitives",
+        "palette inversion/hue sequences"
+      ]
+    },
+    {
+      "finding_id": "opp:crystal/battle_anim_choreography",
+      "class_hint": "technique_donor",
+      "priority": "medium",
+      "verify": [
+        "sprite duplication",
+        "layering",
+        "timing",
+        "palette effects"
+      ],
+      "constraint": "Platinum already has a stronger battle-animation engine; do not backport the engine."
+    },
+    {
+      "finding_id": "opp:yellow/pikachu_presentation",
+      "class_hint": "component_donor",
+      "priority": "specialized",
+      "verify": [
+        "Pikachu-specific frames",
+        "presentation states",
+        "battle/event readability"
+      ]
+    },
+    {
+      "finding_id": "seed:ruby/delta_only",
+      "class_hint": "reference_only",
+      "priority": "low",
+      "verify": [
+        "resources or behaviors genuinely absent/different in Emerald"
+      ],
+      "constraint": "Do not duplicate Emerald mining."
+    }
+  ]
+}

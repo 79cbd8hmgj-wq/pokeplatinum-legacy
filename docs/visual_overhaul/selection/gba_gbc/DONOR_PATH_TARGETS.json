@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "purpose": "Exact source/function/path targets for the first GBA/GBC mining pass. These narrow later agent work before any broad asset scan.",
+  "donors": {
+    "emerald": {
+      "revision": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+      "targets": [
+        {
+          "seed": "opp:emerald/field_action_choreography",
+          "paths": [
+            "src/field_effect.c",
+            "data/scripts/field_move_scripts.inc",
+            "data/field_effect_scripts.s"
+          ],
+          "symbols": [
+            "Task_FieldMoveShowMonOutdoors",
+            "FieldMoveShowMonOutdoorsEffect_LoadGfx",
+            "FieldMoveShowMonOutdoorsEffect_CreateBanner",
+            "Task_FieldMoveShowMonIndoors",
+            "Task_SurfFieldEffect",
+            "Task_FlyOut",
+            "Task_FlyIn",
+            "Task_UseWaterfall"
+          ],
+          "facts": [
+            "separate indoor/outdoor field-move presentation tasks",
+            "Pokemon display/cry/banner sequence exists",
+            "Surf/Fly/Waterfall have dedicated task/state sequences"
+          ]
+        },
+        {
+          "seed": "opp:emerald/environment_effect_primitives",
+          "paths": [
+            "src/field_effect_helpers.c",
+            "data/field_effect_scripts.s",
+            "src/field_effect.c"
+          ],
+          "symbols": [
+            "FLDEFF_ASH_PUFF",
+            "FLDEFF_ASH_LAUNCH",
+            "FLDEFF_DUST",
+            "FLDEFF_SPLASH",
+            "FLDEFF_SPARKLE",
+            "FLDEFF_POKEBALL_TRAIL",
+            "FLDEFF_USE_TELEPORT"
+          ],
+          "facts": [
+            "field-effect registry exposes many small reusable effect families",
+            "environment/action primitives can be traced from registry to exact native implementation/assets"
+          ]
+        }
+      ]
+    },
+    "firered": {
+      "revision": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "targets": [
+        {
+          "seed": "opp:firered/map_location_preview",
+          "paths": [
+            "src/map_preview_screen.c",
+            "graphics/map_preview/"
+          ],
+          "symbols": [
+            "sMapPreviewScreenData",
+            "sHasVisitedMapBefore"
+          ],
+          "facts": [
+            "preview entries bind map section, visited flag, tiles, tilemap and palette",
+            "dedicated preview art families exist for major locations"
+          ]
+        },
+        {
+          "seed": "opp:firered/animated_palette_sequences",
+          "paths": [
+            "src/field_specials.c",
+            "graphics/field_specials/elite_four_lighting_*.pal",
+            "graphics/field_specials/champion_room_lighting_*.pal"
+          ],
+          "symbols": [
+            "sEliteFourLightingPalettes",
+            "sChampionRoomLightingPalettes",
+            "sEliteFourLightingTimers",
+            "sChampionRoomLightingTimers",
+            "DoPokemonLeagueLightingEffect",
+            "Task_RunPokemonLeagueLightingEffect"
+          ],
+          "facts": [
+            "lighting is implemented as timed palette sequence",
+            "runtime repeatedly loads BG palette slot 7",
+            "Elite Four and Champion use distinct sequences/timers"
+          ]
+        },
+        {
+          "seed": "opp:firered/interactive_object_states",
+          "paths": [
+            "src/field_specials.c",
+            "graphics/field_specials/deoxys_rock_*.pal"
+          ],
+          "symbols": [
+            "sDeoxysObjectPals",
+            "sDeoxysCoords",
+            "sDeoxysStepCaps",
+            "DoDeoxysTriangleInteraction",
+            "Task_DoDeoxysTriangleInteraction",
+            "MoveDeoxysObject",
+            "Task_WaitDeoxysFieldEffect"
+          ],
+          "facts": [
+            "Deoxys triangle uses explicit palette states, coordinates, progression caps and a task-driven interaction sequence"
+          ]
+        }
+      ]
+    },
+    "pmd_red": {
+      "revision": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "targets": [
+        {
+          "seed": "opp:pmd_red/battler_status_overlays",
+          "paths": [
+            "src/dungeon_pokemon_sprites.c",
+            "src/dungeon_mon_sprite_render.c",
+            "graphics/status/"
+          ],
+          "symbols": [
+            "sStatusGfxInfo",
+            "sStatusSpritesInfo",
+            "GetNextStatusSymbol",
+            "DrawStatusSprite",
+            "EntityGetStatusSprites",
+            "UpdateDungeonPokemonSprite"
+          ],
+          "facts": [
+            "dedicated status graphics exist for burn, poison, frozen, confusion, taunt, shields, sleep and more",
+            "renderer derives status sprite mask per entity",
+            "status system supports choosing/cycling multiple status symbols via two status sprite slots"
+          ]
+        }
+      ]
+    },
+    "crystal": {
+      "revision": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+      "targets": [
+        {
+          "seed": "opp:crystal/battle_anim_artwork",
+          "paths": [
+            "gfx/battle_anims/",
+            "data/battle_anims/object_gfx.asm",
+            "data/battle_anims/framesets.asm",
+            "data/battle_anims/oam.asm"
+          ],
+          "assets": [
+            "web.png",
+            "rope.png",
+            "angels.png",
+            "globe.png",
+            "noise.png",
+            "reflect.png",
+            "shine.png",
+            "shapes.png",
+            "wave.png",
+            "aeroblast.png"
+          ],
+          "facts": [
+            "the previously remembered unusual primitive families are present explicitly in the repository"
+          ]
+        },
+        {
+          "seed": "opp:crystal/battle_anim_choreography",
+          "paths": [
+            "engine/battle_anims/anim_commands.asm",
+            "engine/battle_anims/bg_effects.asm",
+            "engine/battle_anims/functions.asm",
+            "macros/scripts/battle_anims.asm"
+          ],
+          "facts": [
+            "battle animation command/system sources are directly inspectable",
+            "mine choreography/timing only; Platinum remains the stronger implementation engine"
+          ]
+        }
+      ]
+    },
+    "yellow": {
+      "revision": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+      "targets": [
+        {
+          "seed": "opp:yellow/pikachu_presentation",
+          "paths": [
+            "data/pikachu/pikachu_emotions.asm",
+            "data/pikachu/pikachu_pic_animation.asm",
+            "data/pikachu/pikachu_pic_objects.asm",
+            "data/pikachu/pikachu_pic_tilemaps.asm",
+            "engine/pikachu/pikachu_pic_animation.asm",
+            "engine/battle/pikachu_entrance_anim.asm",
+            "gfx/pikachu/"
+          ],
+          "facts": [
+            "Pikachu-specific emotion, portrait/animation, entrance and graphics systems are all explicitly present"
+          ]
+        },
+        {
+          "seed": "yellow:battle_presentation_high_threshold",
+          "paths": [
+            "engine/battle/animations.asm",
+            "engine/battle/battle_transitions.asm",
+            "data/battle_anims/special_effects.asm",
+            "data/battle_anims/subanimations.asm",
+            "gfx/overworld/battle_transition.png"
+          ],
+          "facts": [
+            "battle animations/transitions are source-visible; inspect only distinctive presentation not superseded by later donors"
+          ]
+        }
+      ]
+    },
+    "ruby": {
+      "revision": "5784633ce4ef7ade1a7f2d2d0c288e3d5e6cdd7f",
+      "targets": [
+        {
+          "seed": "seed:ruby/delta_only",
+          "policy": "Compare corresponding field-effect, field-move, battle-animation, weather and palette source/resources against Emerald before opening any asset family. Catalog only behavior/assets genuinely absent or materially different in Emerald."
+        }
+      ]
+    }
+  }
+}

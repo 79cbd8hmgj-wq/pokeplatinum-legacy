@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "purpose": "Exact source anchors for verifying deferred GBA/GBC seed findings with minimal rediscovery.",
+  "seeds": [
+    {
+      "finding_id": "opp:emerald/field_action_choreography",
+      "donor": "emerald",
+      "revision": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+      "status": "source_anchor_confirmed",
+      "primary_paths": [
+        "src/field_effect.c",
+        "data/field_effect_scripts.s",
+        "data/scripts/field_move_scripts.inc"
+      ],
+      "anchors": [
+        "Task_FieldMoveShowMonOutdoors / FieldMoveShowMonOutdoorsEffect_*",
+        "Task_FieldMoveShowMonIndoors / FieldMoveShowMonIndoorsEffect_*",
+        "Task_SurfFieldEffect / SurfFieldEffect_*",
+        "Task_FlyOut / FlyOutFieldEffect_*",
+        "Task_FlyIn / FlyInFieldEffect_*",
+        "Task_UseWaterfall / WaterfallFieldEffect_*",
+        "FLDEFF_USE_SURF / FLDEFF_USE_FLY / FLDEFF_FLY_IN / FLDEFF_USE_STRENGTH / FLDEFF_USE_WATERFALL"
+      ],
+      "next_evidence": "Trace the state order and referenced graphics for each field-action family; compare indoor/outdoor show-mon paths."
+    },
+    {
+      "finding_id": "opp:emerald/environment_effect_primitives",
+      "donor": "emerald",
+      "revision": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+      "status": "source_anchor_confirmed",
+      "primary_paths": [
+        "src/field_effect.c",
+        "src/field_effect_helpers.c",
+        "data/field_effect_scripts.s",
+        "src/field_weather.c",
+        "src/field_weather_effect.c"
+      ],
+      "anchors": [
+        "FallWarpEffect_CameraShake",
+        "LavaridgeGym*AshPuff / camera-shake paths",
+        "TeleportWarpOutFieldEffect_* / TeleportWarpInFieldEffect_*",
+        "FLDEFF_ASH / FLDEFF_ASH_PUFF / FLDEFF_ASH_LAUNCH",
+        "FLDEFF_DESTROY_DEOXYS_ROCK / FLDEFF_MOVE_DEOXYS_ROCK"
+      ],
+      "next_evidence": "Enumerate referenced sprite templates/palettes and split reusable primitives from choreography-only findings."
+    },
+    {
+      "finding_id": "opp:firered/map_location_preview",
+      "donor": "firered",
+      "revision": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "status": "source_and_asset_family_confirmed",
+      "primary_paths": [
+        "src/map_preview_screen.c",
+        "graphics/map_preview/"
+      ],
+      "anchors": [
+        "sHasVisitedMapBefore",
+        "Task_RunMapPreviewScreenForest",
+        "per-location palette + tiles + tilemap INCBIN triplets"
+      ],
+      "next_evidence": "Trace the map-to-preview lookup, visited gating, trigger path, and exact preview family count."
+    },
+    {
+      "finding_id": "opp:firered/animated_palette_sequences",
+      "donor": "firered",
+      "revision": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "status": "source_and_palette_family_confirmed",
+      "primary_paths": [
+        "src/field_specials.c",
+        "graphics/field_specials/"
+      ],
+      "anchors": [
+        "Task_RunPokemonLeagueLightingEffect",
+        "Task_CancelPokemonLeagueLightingEffect",
+        "sEliteFourLightingPalettes",
+        "graphics/field_specials/elite_four_lighting_*.pal",
+        "graphics/field_specials/champion_room_lighting_*.pal"
+      ],
+      "next_evidence": "Trace timer/state progression and palette-slot writes; record exact sequence lengths and whether Champion differs structurally."
+    },
+    {
+      "finding_id": "opp:firered/interactive_object_states",
+      "donor": "firered",
+      "revision": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "status": "source_and_asset_family_confirmed",
+      "primary_paths": [
+        "src/field_specials.c",
+        "graphics/field_specials/deoxys_rock_*.pal",
+        "graphics/field_effects/pics/deoxys_rock_fragment_*.png"
+      ],
+      "anchors": [
+        "Task_DoDeoxysTriangleInteraction",
+        "MoveDeoxysObject",
+        "Task_WaitDeoxysFieldEffect"
+      ],
+      "next_evidence": "Trace the exact progression state: position, palette, sound, field-effect and completion flag/state."
+    },
+    {
+      "finding_id": "opp:pmd_red/battler_status_overlays",
+      "donor": "pmd_red",
+      "revision": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "status": "asset_family_confirmed_render_path_pending",
+      "primary_paths": [
+        "graphics/status/",
+        "include/constants/status.h",
+        "src/status_checks.c",
+        "src/dungeon_turn_effects.c"
+      ],
+      "anchors": [
+        "graphics/status/burned.png",
+        "graphics/status/confused.png",
+        "graphics/status/frozen.png",
+        "graphics/status/poisoned.png",
+        "graphics/status/shield.png",
+        "graphics/status/sleep.png",
+        "graphics/status/statdown.png",
+        "graphics/status/taunted.png"
+      ],
+      "next_evidence": "Locate the dungeon render/update path that places and cycles these symbols over actors; determine multi-status behavior."
+    },
+    {
+      "finding_id": "opp:crystal/battle_anim_artwork",
+      "donor": "crystal",
+      "revision": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+      "status": "asset_family_confirmed",
+      "primary_paths": [
+        "gfx/battle_anims/",
+        "data/battle_anims/object_gfx.asm",
+        "data/battle_anims/objects.asm",
+        "data/battle_anims/framesets.asm"
+      ],
+      "anchors": [
+        "gfx/battle_anims/aeroblast.png",
+        "gfx/battle_anims/angels.png",
+        "gfx/battle_anims/globe.png",
+        "gfx/battle_anims/noise.png",
+        "gfx/battle_anims/reflect.png",
+        "gfx/battle_anims/rope.png",
+        "gfx/battle_anims/shapes.png",
+        "gfx/battle_anims/shine.png",
+        "gfx/battle_anims/wave.png",
+        "gfx/battle_anims/web.png"
+      ],
+      "next_evidence": "Map primitives to object/frameset IDs and moves; identify which shapes remain visually distinctive versus Platinum."
+    },
+    {
+      "finding_id": "opp:crystal/battle_anim_choreography",
+      "donor": "crystal",
+      "revision": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+      "status": "engine_paths_confirmed",
+      "primary_paths": [
+        "engine/battle_anims/anim_commands.asm",
+        "engine/battle_anims/bg_effects.asm",
+        "engine/battle_anims/core.asm",
+        "engine/battle_anims/functions.asm",
+        "macros/scripts/battle_anims.asm"
+      ],
+      "anchors": [
+        "battle animation command engine",
+        "background effects",
+        "object sequencing"
+      ],
+      "next_evidence": "Sample only animations tied to distinctive primitives or choreography; do not audit the entire engine."
+    },
+    {
+      "finding_id": "opp:yellow/pikachu_presentation",
+      "donor": "yellow",
+      "revision": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+      "status": "candidate_family_confirmed_needs_narrowing",
+      "primary_paths": [
+        "constants/pikachu_emotion_constants.asm",
+        "audio/pikachu_cries.asm",
+        "data/battle_anims/"
+      ],
+      "anchors": [
+        "Pikachu emotion constants",
+        "Pikachu-specific cry/presentation resources"
+      ],
+      "next_evidence": "Narrow to visual Pikachu frames/states only; audio is provenance context, not a visual opportunity."
+    },
+    {
+      "finding_id": "seed:ruby/delta_only",
+      "donor": "ruby",
+      "revision": "5784633ce4ef7ade1a7f2d2d0c288e3d5e6cdd7f",
+      "status": "delta_policy_confirmed",
+      "primary_paths": [
+        "src/field_effect.c",
+        "data/field_effect_scripts.s",
+        "data/battle_anim_scripts.s"
+      ],
+      "anchors": [
+        "Ruby equivalents of Emerald target subsystems"
+      ],
+      "next_evidence": "Compute source/resource deltas against Emerald before any visual decoding; only unique behavior/assets proceed."
+    }
+  ]
+}
