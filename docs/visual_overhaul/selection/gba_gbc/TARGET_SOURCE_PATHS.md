@@ -40,7 +40,9 @@ Verified function/state-machine anchors in `src/field_effect.c`:
 - `WaterfallFieldEffect_ShowMon`
 - `WaterfallFieldEffect_RideUp`
 
-`data/scripts/field_move_scripts.inc` directly connects gameplay scripts to `FLDEFF_USE_STRENGTH`, `FLDEFF_USE_WATERFALL`, and other field effects.
+`data/scripts/field_move_scripts.inc` drives only Cut (`FLDEFF_USE_CUT_ON_TREE`), Rock Smash (`FLDEFF_USE_ROCK_SMASH`), Strength (`FLDEFF_USE_STRENGTH`), Waterfall (`FLDEFF_USE_WATERFALL`) and Dive (`FLDEFF_USE_DIVE`) at the pinned commit.
+
+Correction (B1/B1.5): Surf, Fly and Teleport do not come through this file. Surf is started from `src/party_menu.c` and `data/scripts/surf.inc`, Fly from `src/field_effect.c`, and Teleport from `src/fldeff_teleport.c`. Rock Smash additionally starts its show-mon effect from `src/fldeff_rocksmash.c`.
 
 `data/field_effect_scripts.s` contains the central field-effect dispatch table and explicit entries for:
 - field-move show-mon

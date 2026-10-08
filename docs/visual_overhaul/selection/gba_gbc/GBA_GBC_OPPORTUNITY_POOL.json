@@ -6,7 +6,8 @@
   "emerald": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f"
  },
  "batches_complete": [
-  "B1_emerald_seed_formalization"
+  "B1_emerald_seed_formalization",
+  "B1_5_emerald_env_parity_closure"
  ],
  "records": [
   {
@@ -207,12 +208,12 @@
   {
    "finding_id": "opp:emerald/environment_effect_primitives",
    "batch": "B1_emerald_seed_formalization",
-   "classification": null,
+   "classification": "reference_only",
    "provisional_seed_class": "component_donor",
-   "provisional_class_if_resolved": "component_donor (Platinum gap) or reference_only (Platinum overlap)",
-   "disposition": "needs_evidence",
-   "status": "needs_evidence",
-   "subject": "Emerald generic ground/water/grass/sparkle primitives (narrowed to generic families after location-specific carve-out)",
+   "provisional_class_if_resolved": null,
+   "disposition": "reference_only",
+   "status": "proposed",
+   "subject": "Emerald generic field primitives (shadow, grass, footprints/tracks, splash/ripple, dust, sparkle): Platinum parity closed in B1.5",
    "donor": {
     "game": "emerald",
     "source_id": "emerald",
@@ -272,36 +273,104 @@
     "tier": "asset_linked",
     "refs": [
      "docs/visual_overhaul/selection/gba_gbc/evidence/B1_EMERALD_SYMBOL_EVIDENCE.json",
-     "docs/visual_overhaul/PASS_G_VISUAL_OVERHAUL.md"
+     "docs/visual_overhaul/selection/gba_gbc/evidence/B1_5_PLATINUM_FLDEFF_MEMBER_NAMES.json",
+     "docs/visual_overhaul/selection/gba_gbc/evidence/b1_5_fldeff_member_names.py"
     ],
-    "summary": "Donor side complete. Platinum side only partially mapped: fldeff.narc is an opaque prebuilt archive (201 members; PASS_G_VISUAL_OVERHAUL.md L590-650 records only kusaeff/e_kusaeff1-3 and lgrass_ani1/ngrass_ani1 names); src/overlay005 effect renderers are unnamed (ov5_021F*), though a berry SparkleEffect system and Shadow code are visible by name."
+    "summary": "fldeff.narc is opaque in the build but is committed in the repo; B1.5 recovered internal resource names for the 44 members the generic renderers load (no full archive review) and tied each to its renderer, loader call and map_object_move.c trigger. All six families have a native Platinum equivalent or better."
    },
    "target": {
-    "kind": "system",
-    "host_system": "Platinum field-effect manager + fldeff.narc billboards",
-    "refs": [
-     "src/overlay005/field_effect_manager.c",
-     "src/overlay005/field_effect_renderer.c"
-    ],
-    "note": "target not yet resolvable per family"
+    "kind": "none",
+    "host_system": "Platinum field-effect manager + fldeff.narc billboard renderers"
    },
-   "useful": "Possible small Sinnoh-styled redraws of effect shapes where Platinum has no billboard equivalent.",
-   "why": "Cannot choose component_donor vs reference_only without knowing which of these families Platinum already renders; Platinum effects are 3D billboards, so donor pixels would be derived-only at best.",
+   "useful": "Design understanding only.",
+   "why": "Platinum already renders every generic family as tile-aware 3D billboards, several richer than Emerald (footprint/cycle sets with snow variants, mud ripple, directional dust). Emerald's 2D OAM art would add nothing and would need redrawing for NSBTX/NSBMD.",
    "constraints": [
-    "GBA 2D OAM art is not directly portable to Platinum NSBTX/NSBMD billboards; donor pixel use capped at derived",
-    "new fldeff.narc content needs a resource-pipeline decision (PASS_G L358-360)"
+    "GBA 2D art is not portable to Platinum billboards; no donor pixels"
    ],
    "adaptation": [],
-   "cost": "medium",
-   "risk": "medium",
-   "confidence": "low",
-   "feasibility": 1,
-   "pixel_use": "derived",
+   "cost": null,
+   "risk": null,
+   "confidence": "medium",
+   "feasibility": null,
+   "pixel_use": "none",
    "proposed_by": "claude (GBA/GBC B1; not human-approved)",
    "tags": [
     "env_effects",
-    "needs_platinum_parity_map"
-   ]
+    "superseded_by_platinum_native"
+   ],
+   "platinum_parity": {
+    "method": "parse committed fldeff.narc (201 members, sha256 recorded in evidence file) for internal names; map members to renderers via ov5_021DF9E0/ov5_021DFA3C/FieldEffectManager_LoadModel call arguments and renderer table field_effect_renderer.c:129-165; map renderers to gameplay triggers via src/map_object_move.c",
+    "families": {
+     "shadow": {
+      "emerald": "FldEff_Shadow (src/field_effect_helpers.c:233); shadow_small/medium/large/extra_large.png",
+      "platinum": {
+       "renderer": "FIELD_EFFECT_RENDERER_00 = ov5_021F134C (field_effect_renderer.c:130)",
+       "members": "fldeff.narc 17 'kage' (loaded via table Unk_ov5_02200278 = {0x11,0x12,0x13}, ov5_021F134C.c:388)",
+       "code": "ov5_021F1570 spawns the per-object shadow anim manager (ov5_021F134C.c:193); hide/show rules in sub_02063A78 / sub_02063B20 (src/map_object_move.c:385,415) suppress it on tall grass, water, puddle, snow, mud and reflective tiles"
+      },
+      "comparison": "equivalent (richer: 3D quad, tile-aware suppression)",
+      "donor_pixels_add": "no",
+      "class": "reference_only"
+     },
+     "grass": {
+      "emerald": "FldEff_TallGrass/JumpTallGrass/LongGrass/JumpLongGrass/ShortGrass (src/field_effect_helpers.c:291,359,395,468,492)",
+      "platinum": {
+       "renderer": "FIELD_EFFECT_RENDERER_13 = ov5_021F2D20 (field_effect_renderer.c:149); 18 = ov5_021F37A8 (very tall grass); 19 = ov5_021F3A50 (mud-with-grass)",
+       "members": "fldeff.narc 83 'kusaeff' + 84 'e_kusaeff1' with textures 0-3 (ov5_021F2D20.c:103-114); 89 'lgrass_ani1' (ov5_021F37A8.c:66); 90 'ngrass_ani1' (ov5_021F3A50.c:66)",
+       "code": "src/map_object_move.c:316/323 (TallGrass -> ov5_021F2EA4 modes 0/1), 459/466 (VeryTallGrass -> ov5_021F3844), 473/480 (MudWithGrass -> ov5_021F3AEC)"
+      },
+      "comparison": "equivalent (three grass classes -- tall, very tall, mud-with-grass -- each with two trigger modes)",
+      "donor_pixels_add": "no",
+      "class": "reference_only"
+     },
+     "footprints_tracks": {
+      "emerald": "FldEff_SandFootprints/DeepSandFootprints/BikeTireTracks (src/field_effect_helpers.c:554,571,588)",
+      "platinum": {
+       "renderer": "FIELD_EFFECT_RENDERER_0B = ov5_021F1CC8 (field_effect_renderer.c:141)",
+       "members": "fldeff.narc 59-68 (f_mark_u/d/l/r, c_mark_u/l/ul/ur/dl/dr) and 93-102 (nf_*/nc_* variants used for snow), ov5_021F1CC8.c:291-314",
+       "code": "ov5_021F1E8C..1EBC entry points (ov5_021F1CC8.c:150-178) called from sub_02063994 (src/map_object_move.c:327): sand foot/bike marks, shallow snow, deep snow, snow-with-shadows; corner table Unk_ov5_022003C4 gives bike turn marks"
+      },
+      "comparison": "richer (separate foot and cycle sets, directional corner marks, snow variants; Emerald has sand, deep sand and bike only)",
+      "donor_pixels_add": "no",
+      "class": "reference_only"
+     },
+     "splash_ripple": {
+      "emerald": "FldEff_Splash/JumpSmallSplash/JumpBigSplash/Ripple (src/field_effect_helpers.c:642,684,701,780); FeetInFlowingWater L725, WaterSurfacing L892",
+      "platinum": {
+       "renderer": "FIELD_EFFECT_RENDERER_15 = ov5_021F3284 (splash); 11 = ov5_021F2A7C (puddle ripple); 12 = ov5_021F2BD0 (mud ripple)",
+       "members": "fldeff.narc 86 'shibuki' + tex 5 (ov5_021F3284.c:61-63); 15 'ripple' + btp 160 (ov5_021F2A7C.c:56-57); 16 'numa_ripple' + btp 161 (ov5_021F2BD0.c:56-57)",
+       "code": "shallow-water step -> ov5_021F331C (src/map_object_move.c:367); puddle -> ov5_021F2AE4 (L487,494); mud -> ov5_021F2C38 (L501,508)"
+      },
+      "comparison": "equivalent for splash and ripple (Platinum adds a mud ripple); Emerald's flowing-water feet, water-surfacing and jump-splash size variants have no Platinum host: no current/flow tile behavior was found in src or include (grep for flow/current/IsFlowing)",
+      "donor_pixels_add": "no",
+      "class": "reference_only"
+     },
+     "dust": {
+      "emerald": "FldEff_Dust (src/field_effect_helpers.c:1180); ground_impact_dust.png",
+      "platinum": {
+       "renderer": "FIELD_EFFECT_RENDERER_17 = ov5_021F348C (field_effect_renderer.c:153)",
+       "members": "fldeff.narc 88 'hero_kemu' + tex 7 (ov5_021F348C.c:73-75) and directional 157/158/159 hero_kemu_r/u/l (L81-83)",
+       "code": "ov5_021F3638 from sub_02063BB4 (src/map_object_move.c:442): ground dust except on water, shallow water, ice, mud, snow; ov5_021F3678 directional landing dust (src/overlay009/ov9_02249960.c:2891)"
+      },
+      "comparison": "equivalent (tile-aware, directional variants)",
+      "donor_pixels_add": "no",
+      "class": "reference_only"
+     },
+     "sparkle": {
+      "emerald": "FldEff_Sparkle L1417 (scripted reveal glint: Trick House, Magma Hideout 4F, Abandoned Ship hidden rooms, Seafloor Cavern) and FldEff_BerryTreeGrowthSparkle L1288 (src/field_effect_helpers.c)",
+      "platinum": {
+       "renderer": "FIELD_EFFECT_RENDERER_BERRY_PATCH_EFFECT_COUNTER (field_effect_renderer.c:158); FIELD_EFFECT_RENDERER_FOREST_AMBIENCE (L164) reuses it as a position-only ambient sparkle",
+       "members": "fldeff.narc 109 'seed_kira' + tex 14 (src/overlay005/berry_patch_effects.c:229-232)",
+       "code": "sBerryPatchSparkleEffectData billboard anim (berry_patch_effects.c:76); PASS_G_VISUAL_OVERHAUL.md records the position-only helper audit"
+      },
+      "comparison": "equivalent for berry growth sparkle; scripted reveal glint is Hoenn puzzle-specific and Platinum already hosts a position-driven sparkle if ever needed",
+      "donor_pixels_add": "no (billboard sparkle already present; an 8x8 GBA glint adds nothing)",
+      "class": "reference_only"
+     }
+    }
+   },
+   "confidence_note": "Parity is structural (names, loaders, triggers). Visual quality of Platinum effects was not rendered. Mapping of 'nf_/nc_' to snow is inferred from the call sites (cases 2-4 of ov5_021F1DA4 reach those members from snow tile handlers).",
+   "resolved_by": "ne:emerald/env_primitives_platinum_parity (B1.5)"
   }
  ]
 }

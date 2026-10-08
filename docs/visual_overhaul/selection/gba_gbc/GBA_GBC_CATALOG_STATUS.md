@@ -2,7 +2,8 @@
 
 | Batch | Donor | Status | Result |
 |---|---|---|---|
-| B1_emerald_seed_formalization | emerald `a81cfacb…` | complete, awaiting review | 2 reference_only, 1 needs_evidence, 0 promoted |
+| B1_emerald_seed_formalization | emerald `a81cfacb…` | complete (PR #72 merged) | 2 reference_only, 1 needs_evidence, 0 promoted |
+| B1.5_emerald_env_parity_closure | emerald / platinum fldeff.narc | complete | generic env primitives -> reference_only; Emerald needs-evidence queue = 0 |
 | B2_firered_seed_formalization | firered | not started | |
 | B3_pmd_red_status_close | pmd_red | not started | |
 | B4_crystal_primitives | crystal | not started | |
@@ -10,4 +11,4 @@
 | B6_yellow_high_threshold | yellow | not started | |
 | B7_cross_generation_merge | combined | not started | |
 
-B1 note for B5 (Ruby delta): Emerald generic primitive families are pending a Platinum parity map; Ruby comparison should reuse the Emerald evidence file instead of re-extracting.
+Emerald is closed: 3 reference_only records, 0 needs_evidence. B5 (Ruby delta) should reuse `evidence/B1_EMERALD_SYMBOL_EVIDENCE.json` and `evidence/B1_5_PLATINUM_FLDEFF_MEMBER_NAMES.json` instead of re-extracting; any Ruby-only effect that matches a Platinum member already named there is reference_only.
