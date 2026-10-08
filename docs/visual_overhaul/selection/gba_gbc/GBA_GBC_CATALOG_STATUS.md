@@ -13,4 +13,4 @@
 
 Emerald is closed: 3 reference_only records, 0 needs_evidence. B5 (Ruby delta) should reuse `evidence/B1_EMERALD_SYMBOL_EVIDENCE.json` and `evidence/B1_5_PLATINUM_FLDEFF_MEMBER_NAMES.json` instead of re-extracting; any Ruby-only effect that matches a Platinum member already named there is reference_only.
 
-FireRed is closed: 4 reference_only records, 0 needs_evidence. Pool totals: 7 reference_only, every other class 0. FireRed corroborates but does not strengthen `opp:hgss/map_location_preview` (DS pool untouched). B3 (PMD Red) is next;
+FireRed is closed: 4 reference_only records, 0 needs_evidence. Pool totals: 7 reference_only, every other class 0. FireRed corroborates but does not strengthen `opp:hgss/map_location_preview` (DS pool untouched). B3 (PMD Red) is next.
