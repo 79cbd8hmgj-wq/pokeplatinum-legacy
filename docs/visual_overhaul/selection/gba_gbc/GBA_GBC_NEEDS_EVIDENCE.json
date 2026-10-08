@@ -10,5 +10,15 @@
    "finding_id": "opp:emerald/environment_effect_primitives",
    "evidence": "docs/visual_overhaul/selection/gba_gbc/evidence/B1_5_PLATINUM_FLDEFF_MEMBER_NAMES.json"
   }
+ ],
+ "deferred_not_blocking": [
+  {
+   "item_id": "defer:platinum/battle_overlay_oam_palette_headroom",
+   "raised_in": "B3_pmd_red_status_close",
+   "finding_id": "opp:pmd_red/battler_status_overlays",
+   "what": "Measure OAM and sub/main palette headroom in the battle scene (single and double battle, during move animations) before committing to a persistent battler glyph layer.",
+   "why_not_blocking": "Does not change the classification: the opportunity (Platinum has no persistent battler-local indicator) is established from source; headroom only affects cost/risk at implementation planning.",
+   "disposition_rule": "If headroom is insufficient, the record stays novel_detail with higher risk and the design phase picks a reduced glyph set; it does not become reference_only."
+  }
  ]
 }

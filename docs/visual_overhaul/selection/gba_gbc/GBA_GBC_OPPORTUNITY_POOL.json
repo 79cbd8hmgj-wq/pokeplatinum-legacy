@@ -4,13 +4,10 @@
  "note": "Separate from the DS opportunity pool (selection/OPPORTUNITY_POOL.json is untouched). Records follow selection/opportunities/findings.json field conventions plus batch/disposition. Not ranked; combined ranking is B7.",
  "pinned_donors": {
   "emerald": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
-  "firered": "037335f4c725d7c9aecdac87066f2002b4bd7e14"
+  "firered": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+  "pmd_red": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b"
  },
- "batches_complete": [
-  "B1_emerald_seed_formalization",
-  "B1_5_emerald_env_parity_closure",
-  "B2_firered_seed_formalization"
- ],
+ "batches_complete": 4,
  "records": [
   {
    "finding_id": "opp:emerald/field_action_choreography",
@@ -790,6 +787,378 @@
     "interactive_state",
     "location_specific",
     "firered",
+    "split"
+   ]
+  },
+  {
+   "finding_id": "opp:pmd_red/battler_status_overlays",
+   "batch": "B3_pmd_red_status_close",
+   "classification": "novel_detail",
+   "provisional_seed_class": null,
+   "disposition": "novel_detail",
+   "status": "proposed",
+   "subject": "Persistent at-battler condition glyph: a small animated symbol anchored to the battler sprite that stays up while a condition is active, covering conditions that have no display anywhere in Platinum battle (confusion, infatuation, taunt/encore-type, stat drops, protective screens, ...)",
+   "donor": {
+    "game": "pmd_red",
+    "source_id": "pmd_red",
+    "repository": "79cbd8hmgj-wq/pmd-red",
+    "commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+    "locator": "src/dungeon_8041AD0.c UpdateStatusIconFlags; src/dungeon_pokemon_sprites.c sStatusSpritesInfo/DrawStatusSprite; src/dungeon_mon_sprite_render.c UpdateMonsterSprite; graphics/status/",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pmd-red",
+      "commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "path": "include/constants/status.h",
+      "fact": "29 status-sprite bit ids (STATUS_SPRITE_ID_SLEEPLESS=0 .. FROZEN=28, LAST=28); shield bits carry the colour in a comment (BLUE reflect/counter/mini-counter/mist, RED safeguard/mirror-coat, YELLOW light-screen/magic-coat, GREEN protect/mirror-move/vital-throw)"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pmd-red",
+      "commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "path": "src/dungeon_8041AD0.c",
+      "fact": "UpdateStatusIconFlags ORs 13 per-class lookup tables (sStatusSpriteMasks_*) into EntityInfo.statusIcons: 34 logical states map to a bit, 33 table states deliberately map to none (paralysis, yawning, wrap, constriction, bide-class charge states, leech seed, ...); plus grudge, exposed, LOWHP (team member HP < max/4, or identified item holder), STAT_DOWN (any of 10 multiplier/stage checks < default); sleep-class symbol suppressed for monster id 0xb9 when turns == 0x7f. EntityGetStatusSprites returns the field"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pmd-red",
+      "commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "path": "src/dungeon_mon_sprite_render.c",
+      "fact": "UpdateMonsterSprite passes EntityGetStatusSprites(entity) to UpdateDungeonPokemonSprite with a visibility flag, and the animation attachment points (sub_8005700 posArray) to UpdateDungeonPokemonSprite2; dungeon_util.c repeats the status update for non-camera-target monsters with visible=FALSE"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pmd-red",
+      "commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "path": "src/dungeon_pokemon_sprites.c",
+      "fact": "sStatusSpritesInfo maps bit+1 -> {gfx sheet, OBJ palette bank}: 29 bits share 16 sheets (6 sheets reused by 2-6 bits: poisoned x3, whiffer x2, lowhp x3, shield x6, sword x3, eyedrops x2) and 8 distinct palette banks (0,3,4,5,6,7,10,11); sStatusGfxInfo gives frame size and frame count per sheet"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pmd-red",
+      "commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "path": "src/dungeon_pokemon_sprites.c",
+      "fact": "GetNextStatusSymbol + UpdateStatusSprite: two slots per monster. Slot 0 round-robins through bits 0..27 in ascending bit order, wrapping 27 -> 0; slot 1 handles only FROZEN (bit 28). A new glyph is chosen when the slot hold counter is < 1, then the counter is set to 60 and decremented once per FrameUpdateDungeonStatusSprites call, so each glyph is drawn for 61 updates. An empty mask clears both slots immediately"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pmd-red",
+      "commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "path": "src/dungeon_pokemon_sprites.c",
+      "fact": "LoadStatusGraphics: sheet frame = (global frame / 4) % graphicsCount, so every glyph is a looping frame animation at 1 frame per 4 updates, not a static icon. Uploads are staggered over a 4-phase (frame % 4) schedule of 4 sheets each (GBA VRAM streaming)"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pmd-red",
+      "commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "path": "src/dungeon_pokemon_sprites.c",
+      "fact": "DrawStatusSprite: posX = pos.x - w*4 - screen.x + attach.x, posY = pos.y - h*4 - screen.y + attach.y; non-frozen glyphs drawn at posY - 16 (a glyph-height-independent 16 px lift above the attachment point), FROZEN drawn centred (posY, 32x32, covers the body), SLEEP shifted +8 x; OAM priority is the monster sprite priority; culled outside [-32,240) x [-32,160)"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pmd-red",
+      "commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "path": "src/dungeon_vram.c",
+      "fact": "FrameUpdateDungeonStatusSprites is called from the per-frame dungeon update (sub_803E490 via DungeonRunFrameActions)"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pmd-red",
+      "commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "path": "graphics/status/",
+      "fact": "16 indexed 4bpp PNG sheets, frames stacked vertically; PNG dimensions cross-checked against sStatusGfxInfo frame counts/sizes in the evidence script (all 16 match)"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pmd-red",
+      "commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "path": "src/status_checks.c",
+      "fact": "named in the brief but not part of the render path: HasStatusThatPreventsActing and related gameplay predicates only; the bit mapping lives in dungeon_8041AD0.c"
+     }
+    ],
+    "cataloged": false
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "tier": "asset_linked",
+    "refs": [
+     "docs/visual_overhaul/selection/gba_gbc/evidence/B3_PMD_RED_STATUS_OVERLAY_EVIDENCE.json",
+     "docs/visual_overhaul/selection/gba_gbc/evidence/b3_verify_pmd_red.py"
+    ],
+    "summary": "The seed survives and is closed. The render path is a condition-state -> 29-bit mask -> up to 2 glyph slots per monster -> OAM sprite anchored to the animation attachment point, drawn only while the monster is visible. Glyphs loop as 4-14 frame animations. Cycling, timing and geometry are traced in the evidence file."
+   },
+   "platinum_comparison": {
+    "host_system": "battle scene (BattleDisplay/HealthBox ManagedSprite layer) -- candidate host; no battler-local persistent status sprite exists today",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "b1b96dc3 (main at 0fff45ff, PR #74 merge)",
+      "path": "src/battle/healthbox.c",
+      "fact": "healthbox shows one status icon per battler from 6 display states (healthy, paralysis, freeze, sleep, poison, burn; each is a 3-part tile strip); toxic is folded into poison; there is no volatile-condition symbol (0 references to statusVolatile/VOLATILE_CONDITION in healthbox.c + battle_display.c)"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "b1b96dc3 (main at 0fff45ff, PR #74 merge)",
+      "path": "src/battle/battle_lib.c",
+      "fact": "Battler_StatusCondition returns a single value with fixed priority sleep > poison > burn > freeze > paralysis > toxic(poison); used for both initial healthbox data and the SetStatusIcon message (battle_controller.c L540, L1438)"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "b1b96dc3 (main at 0fff45ff, PR #74 merge)",
+      "path": "src/battle_anim/script_funcs_status.c",
+      "fact": "status effect sprites (sleep Zs, freeze, burn flames, confusion orbs) are BattleAnimSystem sprites created at the battler position, with fixed lifetimes (sleep 32 f, burn 16 f per flame, confusion 48 f orbit) and freed at task cleanup; no per-battler persistent status sprite exists"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "b1b96dc3 (main at 0fff45ff, PR #74 merge)",
+      "path": "res/battle/scripts/subscripts/",
+      "fact": "status animation is event driven: PlayBattleAnimation for application (subscript_poison/burn/paralyze/freeze/fall_asleep/confuse), for the per-turn trigger (poison_damage, burn_damage, sleeping, frozen, fully_paralyzed, confused, infatuated, hurt_self_in_confusion) and SetHealthBoxStatusIcon for set/clear (21 scripts clear it with BATTLE_ANIMATION_NONE); no cure animation at the battler"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "b1b96dc3 (main at 0fff45ff, PR #74 merge)",
+      "path": "src/battle/battle_lib.c",
+      "fact": "BattleSystem_ShouldShowStatusEffect already suppresses status effect animations while the battler is behind a Substitute or semi-invulnerable (sEffectsAlwaysShown lists the exceptions), i.e. a visibility-suppression rule an overlay would reuse"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "b1b96dc3 (main at 0fff45ff, PR #74 merge)",
+      "path": "src/battle/indicator.c",
+      "fact": "Indicator is the Catch Tutorial cursor on the bag subscreen (only caller: battle_bag_sprites.c L462), not a battler indicator"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "b1b96dc3 (main at 0fff45ff, PR #74 merge)",
+      "path": "include/battle/healthbox.h",
+      "fact": "HealthBox.mainSprite / arrowSprite are persistent ManagedSprites in the battle SpriteSystem, so persistent non-animation sprites already live in the battle scene (hosting plausibility only; OAM and palette headroom not measured)"
+     }
+    ],
+    "comparison": "Platinum does NOT already have this. It has (a) a healthbox icon for 5 non-volatile conditions, one at a time, (b) transient event-driven animations for sleep/poison/burn/freeze/paralysis/confusion/infatuation, played at application and at the per-turn trigger, and (c) nothing for the other volatile or stat conditions. Nothing stays on the battler between events, and nothing at all is drawn for confusion/infatuation/stat drops once the animation has finished. The healthbox status icon does not make this reference_only: it is on the box, not at the battler, is single-valued, and excludes every volatile condition. For the four major conditions an overlay is additive and partly redundant (icon + overlay); the net-new value is the volatile/stat set."
+   },
+   "target": {
+    "kind": "battle_presentation_layer",
+    "host_system": "battle scene persistent sprite layer next to the healthbox (candidate; not selected)"
+   },
+   "useful": "Gives the player at-a-glance, on-sprite feedback for conditions that today exist only in message text and are forgotten after the animation ends.",
+   "why": "Platinum lacks the capability, the donor has a complete working design for it, and it needs no donor pixels. Kept at novel_detail (not novel_capability): it adds one small presentation layer, not a new subsystem.",
+   "placement_rule_to_take": [
+    "anchor on the battler sprite anchor (Platinum already exposes BATTLE_ANIM_POSITION_MON_X/Y via BattleAnimUtil_GetBattlerPos) and lift above it rather than hard-coding per species",
+    "centre the glyph on the anchor (x - width/2); keep body-covering effects (freeze) centred instead of lifted",
+    "hide while the battler is hidden; reuse the Substitute / semi-invulnerable suppression rule in BattleSystem_ShouldShowStatusEffect"
+   ],
+   "residual_ideas_not_promoted": [
+    "LOWHP glyph for a held item (PMD-specific item-identification mechanic)",
+    "Sure Shot / Whiffer / Long Toss / Grudge / Exposed / Muzzled / Blinker glyphs (PMD-specific mechanics)"
+   ],
+   "constraints": [
+    "redraw as Platinum-native art; do not import PMD pixels (pixel_use none)",
+    "keep glyphs small and non-covering so a persistent overlay never hides the battler for long; for the four conditions that already have a transient animation, decide in design whether a persistent glyph is wanted at all",
+    "hide/relocate during move animations (BattleDisplay_GetAnimHideFlags hides healthboxes/shadows during some animations)",
+    "design selection of WHICH conditions get a glyph is a later design-phase decision; this record only establishes the opportunity"
+   ],
+   "adaptation": [
+    "replace PMD OAM shape/size and VRAM streaming with the Platinum ManagedSprite/cell-animation pipeline",
+    "map Platinum condition sets (status, statusVolatile, stat stages, side/field conditions) to a glyph set instead of PMD ids"
+   ],
+   "cost": null,
+   "risk": "Medium: needs OAM and palette headroom in battle (not measured; see needs-evidence deferred note), and a visual-clutter decision for double battles (4 battlers).",
+   "confidence": "medium",
+   "confidence_note": "Donor facts fully source-verified; Platinum absence verified by search of healthbox.c, battle_display.c, battle_anim script funcs and battle scripts. Hosting budget unmeasured.",
+   "feasibility": null,
+   "pixel_use": "none",
+   "proposed_by": "claude (GBA/GBC B3; not human-approved)",
+   "tags": [
+    "battler_local",
+    "status_overlay",
+    "pmd_red",
+    "persistent_indicator"
+   ]
+  },
+  {
+   "finding_id": "opp:pmd_red/battler_status_overlays/multi_status_cycling",
+   "batch": "B3_pmd_red_status_close",
+   "classification": "technique_donor",
+   "provisional_seed_class": null,
+   "disposition": "technique_donor",
+   "status": "proposed",
+   "subject": "Time-multiplexed display of several simultaneous conditions through one small glyph slot: ascending-bit round-robin over an active-condition mask, fixed hold, a separate slot for the body-covering condition, and many-conditions-to-few-glyphs sharing with palette recolours",
+   "donor": {
+    "game": "pmd_red",
+    "source_id": "pmd_red",
+    "repository": "79cbd8hmgj-wq/pmd-red",
+    "commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+    "locator": "src/dungeon_pokemon_sprites.c GetNextStatusSymbol/UpdateStatusSprite/sStatusSpritesInfo",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pmd-red",
+      "commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "path": "src/dungeon_pokemon_sprites.c",
+      "fact": "sStatusSpritesInfo maps bit+1 -> {gfx sheet, OBJ palette bank}: 29 bits share 16 sheets (6 sheets reused by 2-6 bits: poisoned x3, whiffer x2, lowhp x3, shield x6, sword x3, eyedrops x2) and 8 distinct palette banks (0,3,4,5,6,7,10,11); sStatusGfxInfo gives frame size and frame count per sheet"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pmd-red",
+      "commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "path": "src/dungeon_pokemon_sprites.c",
+      "fact": "GetNextStatusSymbol + UpdateStatusSprite: two slots per monster. Slot 0 round-robins through bits 0..27 in ascending bit order, wrapping 27 -> 0; slot 1 handles only FROZEN (bit 28). A new glyph is chosen when the slot hold counter is < 1, then the counter is set to 60 and decremented once per FrameUpdateDungeonStatusSprites call, so each glyph is drawn for 61 updates. An empty mask clears both slots immediately"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pmd-red",
+      "commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "path": "src/dungeon_pokemon_sprites.c",
+      "fact": "LoadStatusGraphics: sheet frame = (global frame / 4) % graphicsCount, so every glyph is a looping frame animation at 1 frame per 4 updates, not a static icon. Uploads are staggered over a 4-phase (frame % 4) schedule of 4 sheets each (GBA VRAM streaming)"
+     }
+    ],
+    "cataloged": false
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "tier": "asset_linked",
+    "refs": [
+     "docs/visual_overhaul/selection/gba_gbc/evidence/B3_PMD_RED_STATUS_OVERLAY_EVIDENCE.json",
+     "docs/visual_overhaul/selection/gba_gbc/evidence/b3_verify_pmd_red.py"
+    ],
+    "summary": "Behaviour reproduced by a line-for-line port of GetNextStatusSymbol/UpdateStatusSprite and checked on six masks (evidence file simulated_cases)."
+   },
+   "platinum_comparison": {
+    "host_system": "same candidate host as opp:pmd_red/battler_status_overlays",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "b1b96dc3 (main at 0fff45ff, PR #74 merge)",
+      "path": "src/battle/healthbox.c",
+      "fact": "healthbox shows one status icon per battler from 6 display states (healthy, paralysis, freeze, sleep, poison, burn; each is a 3-part tile strip); toxic is folded into poison; there is no volatile-condition symbol (0 references to statusVolatile/VOLATILE_CONDITION in healthbox.c + battle_display.c)"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "b1b96dc3 (main at 0fff45ff, PR #74 merge)",
+      "path": "src/battle/battle_lib.c",
+      "fact": "Battler_StatusCondition returns a single value with fixed priority sleep > poison > burn > freeze > paralysis > toxic(poison); used for both initial healthbox data and the SetStatusIcon message (battle_controller.c L540, L1438)"
+     }
+    ],
+    "comparison": "Platinum has no multi-condition display at all (healthbox shows one value chosen by a fixed priority). The cycling idea only has value if the persistent overlay record is selected; it is not independent of it."
+   },
+   "target": {
+    "kind": "ui_behaviour",
+    "host_system": "depends on opp:pmd_red/battler_status_overlays"
+   },
+   "useful": "A bounded-space rule for showing N conditions without a growing icon row.",
+   "why": "Technique, not art or code: a compact scheduling rule plus a many-to-few glyph/palette table. Conditional on the parent record; downgrade to reference_only if the design phase prefers a static side-by-side icon row (the DS screens have room for one, which may be the better answer).",
+   "behaviour": {
+    "bit_mapping": "29 bits: SLEEPLESS 0, BURNED 1, POISONED 2, BADLY_POISONED 3, CONFUSED 4, COWERING 5, TAUNTED 6, ENCORE 7, SHIELD_BLUE 8, SHIELD_RED 9, SHIELD_YELLOW 10, SHIELD_GREEN 11, ENDURE 12, LOWHP 13, CURSED 14, SNATCH 15, SURE_SHOT 16, WHIFFER 17, SET_DAMAGE 18, FOCUS_ENERGY 19, BLINKER 20, CROSS_EYED 21, EYEDROPS 22, MUZZLED 23, GRUDGE 24, EXPOSED 25, SLEEP 26, STAT_DOWN 27, FROZEN 28",
+    "slots": "2 per monster. Slot 0: bits 0..27. Slot 1: FROZEN only.",
+    "order": "ascending bit index, wrapping 27 -> 0. This is enum order, not severity order. From idle the first pick tests bit 1 first, so the lowest set bit among 1..27 shows first and SLEEPLESS (bit 0) only after a wrap.",
+    "timing": "hold counter 60 -> 0 decremented once per frame-update call, glyph re-picked on the call after it reaches 0: 61 updates per glyph (~1 s if one update per 60 Hz frame; wall-clock inferred, not traced). Per-monster timers are independent (not synchronised across monsters).",
+    "skipping": "bits not in the mask are skipped; a single active bit simply stays (full 28-step loop returns to itself); no weighting, no priority and no dwell proportional to severity.",
+    "clearing": "an empty mask clears both slots immediately. A partially cleared mask does NOT clear the shown glyph until its hold expires (stale glyph up to 60 updates).",
+    "glyph_animation": "every glyph is a looping frame animation, 1 frame per 4 updates (sheets of 4-16 frames); the symbol cycle and the animation are independent.",
+    "sharing": "29 bits -> 16 sheets -> 8 palette banks; 6 sheets are reused with recolours (shield x6, poisoned x3, lowhp x3, sword x3, whiffer x2, eyedrops x2)."
+   },
+   "residual_ideas_not_promoted": [
+    "bit-index order as display priority (arbitrary)",
+    "stale-glyph behaviour (a bug-like artefact, do not copy)",
+    "two-slot hard limit and bit-0-last first pick"
+   ],
+   "constraints": [
+    "conditional on opp:pmd_red/battler_status_overlays being selected",
+    "re-derive priority from Platinum semantics (e.g. major status before volatile before stat) rather than copying bit order",
+    "pixel_use none"
+   ],
+   "adaptation": [
+    "replace the frame counter with a SysTask or sprite-animation timer",
+    "consider side-by-side icons as the alternative before adopting cycling"
+   ],
+   "cost": null,
+   "risk": "Low technique risk; value depends on the parent record.",
+   "confidence": "medium",
+   "confidence_note": "Mechanics source-verified and simulated; usefulness is conditional.",
+   "feasibility": null,
+   "pixel_use": "none",
+   "proposed_by": "claude (GBA/GBC B3; not human-approved)",
+   "tags": [
+    "battler_local",
+    "status_overlay",
+    "pmd_red",
+    "technique",
+    "depends_on_parent"
+   ]
+  },
+  {
+   "finding_id": "opp:pmd_red/battler_status_overlays/gba_engine_and_pixels",
+   "batch": "B3_pmd_red_status_close",
+   "classification": "reference_only",
+   "provisional_seed_class": null,
+   "disposition": "reference_only",
+   "status": "proposed",
+   "subject": "PMD Red GBA-specific implementation (OAM shape/size switch, fixed VRAM tile index 0x32B, 4-phase VRAM upload, 4bpp sheets) and the 16 status sheets themselves",
+   "donor": {
+    "game": "pmd_red",
+    "source_id": "pmd_red",
+    "repository": "79cbd8hmgj-wq/pmd-red",
+    "commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+    "locator": "src/dungeon_pokemon_sprites.c DrawStatusSprite/LoadStatusGraphics/FrameUpdateDungeonStatusSprites; graphics/status/*.png",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pmd-red",
+      "commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "path": "src/dungeon_pokemon_sprites.c",
+      "fact": "DrawStatusSprite: posX = pos.x - w*4 - screen.x + attach.x, posY = pos.y - h*4 - screen.y + attach.y; non-frozen glyphs drawn at posY - 16 (a glyph-height-independent 16 px lift above the attachment point), FROZEN drawn centred (posY, 32x32, covers the body), SLEEP shifted +8 x; OAM priority is the monster sprite priority; culled outside [-32,240) x [-32,160)"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pmd-red",
+      "commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "path": "src/dungeon_pokemon_sprites.c",
+      "fact": "LoadStatusGraphics: sheet frame = (global frame / 4) % graphicsCount, so every glyph is a looping frame animation at 1 frame per 4 updates, not a static icon. Uploads are staggered over a 4-phase (frame % 4) schedule of 4 sheets each (GBA VRAM streaming)"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pmd-red",
+      "commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "path": "graphics/status/",
+      "fact": "16 indexed 4bpp PNG sheets, frames stacked vertically; PNG dimensions cross-checked against sStatusGfxInfo frame counts/sizes in the evidence script (all 16 match)"
+     }
+    ],
+    "cataloged": false
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "tier": "asset_linked",
+    "refs": [
+     "docs/visual_overhaul/selection/gba_gbc/evidence/B3_PMD_RED_STATUS_OVERLAY_EVIDENCE.json",
+     "docs/visual_overhaul/selection/gba_gbc/evidence/b3_verify_pmd_red.py"
+    ],
+    "summary": "Sheet sizes: 8x8 (sleepless, blinker, eyedrops, 14 frames), 8x16 (lowhp), 16x16 (burned 7, poisoned 16, whiffer 9, taunted 8, shield 13, statdown 10, sword 13, cross_eyed 10, muzzled 8, sleep 10), 32x16 (confused 4), 32x32 (frozen 6). Every size is a GBA OAM shape the donor switch maps 1:1."
+   },
+   "platinum_comparison": {
+    "host_system": "none needed",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "b1b96dc3 (main at 0fff45ff, PR #74 merge)",
+      "path": "src/battle_anim/script_funcs_status.c",
+      "fact": "status effect sprites (sleep Zs, freeze, burn flames, confusion orbs) are BattleAnimSystem sprites created at the battler position, with fixed lifetimes (sleep 32 f, burn 16 f per flame, confusion 48 f orbit) and freed at task cleanup; no per-battler persistent status sprite exists"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "b1b96dc3 (main at 0fff45ff, PR #74 merge)",
+      "path": "res/battle/scripts/subscripts/",
+      "fact": "status animation is event driven: PlayBattleAnimation for application (subscript_poison/burn/paralyze/freeze/fall_asleep/confuse), for the per-turn trigger (poison_damage, burn_damage, sleeping, frozen, fully_paralyzed, confused, infatuated, hurt_self_in_confusion) and SetHealthBoxStatusIcon for set/clear (21 scripts clear it with BATTLE_ANIMATION_NONE); no cure animation at the battler"
+     }
+    ],
+    "comparison": "Platinum already has equivalent or richer transient art for sleep, freeze, burn and confusion (script_funcs_status.c) and a different sprite pipeline (ManagedSprite + NCER/NANR cells); the GBA OAM/VRAM mechanics do not transfer and the PMD pixels are 8-32 px symbols that do not match Platinum battler scale or palette conventions."
+   },
+   "target": {
+    "kind": "none",
+    "host_system": "none"
+   },
+   "useful": "Documents what not to carry over.",
+   "why": "Engine-specific mechanics and small donor art; any adopted glyph set should be redrawn Platinum-native. Recorded so later passes do not re-open the PMD status sheets.",
+   "residual_ideas_not_promoted": [
+    "glyph vocabulary as a visual reference only (shield colour = protection family, sword = offence buff, arrow-down = stat drop, hearts/stars/zzz)"
+   ],
+   "constraints": [
+    "do not import PMD pixels",
+    "do not mine other graphics/ directories under this record"
+   ],
+   "adaptation": [],
+   "cost": null,
+   "risk": null,
+   "confidence": "high",
+   "confidence_note": null,
+   "feasibility": null,
+   "pixel_use": "none",
+   "proposed_by": "claude (GBA/GBC B3; not human-approved)",
+   "tags": [
+    "pmd_red",
+    "engine_specific",
     "split"
    ]
   }
