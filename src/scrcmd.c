@@ -570,6 +570,7 @@ static BOOL ScrCmd_CheckLocalDexCompleted(ScriptContext *ctx);
 static BOOL ScrCmd_CheckNationalDexCompleted(ScriptContext *ctx);
 static BOOL ScrCmd_ShowDiplomaSinnoh(ScriptContext *ctx);
 static BOOL ScrCmd_ShowDiplomaNationalDex(ScriptContext *ctx);
+static BOOL ScrCmd_ShowStillCard(ScriptContext *ctx);
 static BOOL ScrCmd_AddTrophyGardenMon(ScriptContext *ctx);
 static BOOL ScrCmd_GetTrophyGardenSlot1Species(ScriptContext *ctx);
 static BOOL ScrCmd_Unused_1EF(ScriptContext *ctx);
@@ -5184,6 +5185,18 @@ static BOOL ScrCmd_ShowDiplomaNationalDex(ScriptContext *ctx)
     void **data = FieldSystem_GetScriptMemberPtr(ctx->fieldSystem, SCRIPT_MANAGER_PARTY_MANAGEMENT_DATA);
 
     *data = FieldSystem_ShowDiploma(ctx->fieldSystem, HEAP_ID_FIELD3, TRUE);
+    ScriptContext_Pause(ctx, sub_02041CC8);
+
+    return TRUE;
+}
+
+static BOOL ScrCmd_ShowStillCard(ScriptContext *ctx)
+{
+    void **data = FieldSystem_GetScriptMemberPtr(ctx->fieldSystem, SCRIPT_MANAGER_PARTY_MANAGEMENT_DATA);
+    u16 cardID = ScriptContext_GetVar(ctx);
+    u16 startState = ScriptContext_GetVar(ctx);
+
+    *data = FieldSystem_ShowStillCard(ctx->fieldSystem, HEAP_ID_FIELD3, cardID, startState);
     ScriptContext_Pause(ctx, sub_02041CC8);
 
     return TRUE;

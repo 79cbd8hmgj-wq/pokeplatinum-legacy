@@ -44,6 +44,7 @@
 #include "applications/pokedex/pokedex_main.h"
 #include "applications/pokemon_summary_screen/main.h"
 #include "applications/signature.h"
+#include "applications/still_card.h"
 #include "applications/town_map/main.h"
 #include "applications/trainer_case/main.h"
 #include "battle/battle_main.h"
@@ -1644,6 +1645,27 @@ void *FieldSystem_ShowDiploma(FieldSystem *fieldSystem, enum HeapID heapID, BOOL
     FieldSystem_StartChildProcess(fieldSystem, &template, diplomaData);
 
     return diplomaData;
+}
+
+void *FieldSystem_ShowStillCard(FieldSystem *fieldSystem, enum HeapID heapID, u16 cardID, u16 startState)
+{
+    FS_EXTERN_OVERLAY(still_card);
+
+    static const ApplicationManagerTemplate template = {
+        StillCard_Init,
+        StillCard_Main,
+        StillCard_Exit,
+        FS_OVERLAY_ID(still_card),
+    };
+    StillCardData *cardData = Heap_Alloc(heapID, sizeof(StillCardData));
+
+    cardData->saveData = fieldSystem->saveData;
+    cardData->cardID = cardID;
+    cardData->startState = startState;
+
+    FieldSystem_StartChildProcess(fieldSystem, &template, cardData);
+
+    return cardData;
 }
 
 void *FieldSystem_OpenBattleFrontierRecord(FieldSystem *fieldSystem, u8 challengeType, u8 facility, u16 species, enum HeapID heapID)

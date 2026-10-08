@@ -918,6 +918,7 @@ pokeplatinum_c = files(
     'overlay101/ov101_021D7E48.c',
     'overlay101/ov101_021D94D8.c',
     'applications/diploma.c',
+    'applications/still_card.c',
     'overlay104/frontier_opponents.c',
     'overlay104/frontier_script_manager.c',
     'overlay104/frontier_script_context.c',
