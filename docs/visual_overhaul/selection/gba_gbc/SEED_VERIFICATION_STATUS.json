@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "note": "Preflight verification status. source_verified means the remembered seed survived targeted source inspection at the pinned donor revision; it is still not active/ranked until a GBA/GBC opportunity record is generated.",
+  "note": "Preflight verification status. source_verified means a remembered seed survived targeted source inspection at the pinned donor revision; source_located means exact entry points are known but classification evidence still needs extraction. Nothing here is active/ranked until a GBA/GBC opportunity record is generated.",
   "seeds": [
     {
       "finding_id": "opp:emerald/field_action_choreography",
@@ -75,7 +75,11 @@
       "status": "source_located",
       "evidence_paths": [
         "data/moves/animations.asm",
-        "engine/battle_anims/*"
+        "engine/battle/effect_commands.asm",
+        "engine/battle/battle_transition.asm",
+        "data/battle_anims/framesets.asm",
+        "data/battle_anims/oam.asm",
+        "data/battle_anims/objects.asm"
       ],
       "next": "extract distinctive sequencing patterns only"
     },
@@ -84,17 +88,39 @@
       "status": "source_located",
       "evidence_paths": [
         "engine/battle/pikachu_entrance_anim.asm",
-        "engine/pikachu/pikachu_pic_animation.asm",
-        "data/pikachu/*",
-        "gfx/pikachu/*"
+        "gfx/pikachu/",
+        "gfx/pikachu.asm",
+        "gfx/surfing_pikachu/",
+        "gfx/surfing_pikachu.asm"
       ],
       "next": "high-threshold review for genuinely distinctive presentation"
     },
     {
       "finding_id": "seed:ruby/delta_only",
-      "status": "pending_semantic_delta",
-      "evidence_paths": [],
-      "next": "compare subsystem semantics after Emerald baseline; do not use raw path differences"
+      "status": "comparison_paths_verified",
+      "evidence_paths": [
+        "src/field_effect.c",
+        "src/field_effect_helpers.c",
+        "src/field_weather.c",
+        "src/field_weather_effects.c",
+        "data/field_effect_scripts.s",
+        "data/field_move_scripts.inc",
+        "data/battle_anim_scripts.s"
+      ],
+      "next": "compare these paths semantically against pinned Emerald equivalents; mine only unique/material differences"
+    },
+    {
+      "finding_id": "seed:yellow/battle_presentation",
+      "status": "source_located",
+      "evidence_paths": [
+        "engine/battle/animations.asm",
+        "engine/battle/battle_transitions.asm",
+        "data/battle_anims/special_effects.asm",
+        "data/battle_anims/special_effect_pointers.asm",
+        "data/battle_anims/subanimations.asm",
+        "data/battle_anims/frame_blocks.asm"
+      ],
+      "next": "high-threshold review for distinctive transition/timing patterns not superseded by Emerald/Crystal/Platinum"
     }
   ]
 }
