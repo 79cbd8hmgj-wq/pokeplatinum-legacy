@@ -1,0 +1,248 @@
+{
+ "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+ "symbols": {
+  "src/map_preview_screen.c::sMapPreviewScreenData\\[MPS_COUNT\\] =": 84,
+  "src/map_preview_screen.c::^static u8 GetMapPreviewScreenIdx": 327,
+  "src/map_preview_screen.c::^bool8 MapHasPreviewScreen\\(": 341,
+  "src/map_preview_screen.c::^bool32 MapHasPreviewScreen_HandleQLState2": 363,
+  "src/map_preview_screen.c::^void MapPreview_LoadGfx": 381,
+  "src/map_preview_screen.c::LoadPalette\\(sMapPreviewScreenData\\[idx\\]\\.palptr, BG_PLTT_ID\\(13\\)": 389,
+  "src/map_preview_screen.c::^void MapPreview_StartForestTransition": 419,
+  "src/map_preview_screen.c::^u16 MapPreview_CreateMapNameWindow": 442,
+  "src/map_preview_screen.c::^static void Task_RunMapPreviewScreenForest": 18,
+  "src/map_preview_screen.c::^const struct MapPreviewScreen \\* GetDungeonMapPreviewScreenInfo": 556,
+  "src/map_preview_screen.c::^u16 MapPreview_GetDuration": 571,
+  "src/map_preview_screen.c::^void MapPreview_SetFlag": 605,
+  "include/map_preview_screen.h::^struct MapPreviewScreen": 41,
+  "include/map_preview_screen.h::#define MPS_TYPE_CAVE": 37,
+  "include/map_preview_screen.h::MPS_COUNT": 34,
+  "src/overworld.c::MapHasPreviewScreen_HandleQLState2\\(gMapHeader\\.regionMapSectionId, MPS_TYPE_FOREST\\)": 1915,
+  "src/fldeff_flash.c::MapHasPreviewScreen_HandleQLState2\\(gMapHeader\\.regionMapSectionId, MPS_TYPE_CAVE\\)": 242,
+  "src/fldeff_flash.c::^static void Task_MapPreviewScreen_0": 39,
+  "src/fldeff_flash.c::JOY_HELD\\(B_BUTTON\\)": 460,
+  "src/field_fadetransition.c::MapHasPreviewScreen\\(header->regionMapSectionId, MPS_TYPE_CAVE\\)": 98,
+  "src/region_map.c::GetDungeonMapPreviewScreenInfo\\(mapsec\\)": 1948,
+  "src/scrcmd.c::MapPreview_SetFlag\\(value\\)": 601,
+  "src/field_specials.c::^static const u16 sEliteFourLightingPalettes": 2081,
+  "src/field_specials.c::^static const u16 sChampionRoomLightingPalettes": 2096,
+  "src/field_specials.c::^static const u8 sEliteFourLightingTimers": 2108,
+  "src/field_specials.c::^static const u8 sChampionRoomLightingTimers": 2122,
+  "src/field_specials.c::^void DoPokemonLeagueLightingEffect": 2133,
+  "src/field_specials.c::^static void Task_RunPokemonLeagueLightingEffect\\(u8 taskId\\)$": 2160,
+  "src/field_specials.c::^static void Task_CancelPokemonLeagueLightingEffect\\(u8 taskId\\)$": 2187,
+  "src/field_specials.c::^void StopPokemonLeagueLightingEffectTask": 2205,
+  "src/field_specials.c::^static const u16 sDeoxysObjectPals": 2319,
+  "src/field_specials.c::^static const u8 sDeoxysCoords": 2333,
+  "src/field_specials.c::^static const u8 sDeoxysStepCaps": 2347,
+  "src/field_specials.c::^void DoDeoxysTriangleInteraction": 2360,
+  "src/field_specials.c::^static void Task_DoDeoxysTriangleInteraction\\(u8 taskId\\)$": 2365,
+  "src/field_specials.c::^static void MoveDeoxysObject\\(u8 num\\)$": 2405,
+  "src/field_specials.c::^void IncrementBirthIslandRockStepCount": 2438,
+  "src/field_specials.c::^void SetDeoxysTrianglePalette": 2451,
+  "src/field_special_scene.c::^void FieldCB_ShowPortholeView": 20,
+  "src/field_effect.c::^u32 FldEff_MoveDeoxysRock": 3722,
+  "src/field_effect.c::^static void Task_MoveDeoxysRock_Step\\(u8 taskId\\)$": 3747,
+  "src/field_effect.c::^u32 FldEff_DestroyDeoxysRock": 3860,
+  "src/field_effect.c::^static void Task_DeoxysRockCameraShake": 3885,
+  "src/field_effect.c::^static void CreateDeoxysRockFragments\\(struct Sprite \\*sprite\\)$": 3975,
+  "data/scripts/pokemon_league.inc::^PokemonLeague_EventScript_DoLightingEffect": 62,
+  "data/scripts/pokemon_league.inc::^PokemonLeague_EventScript_EnterRoom": 10,
+  "data/scripts/pokemon_league.inc::^PokemonLeague_EventScript_OpenDoor": 1,
+  "data/maps/PokemonLeague_ChampionsRoom/scripts.inc::setflag FLAG_TEMP_3": 56,
+  "data/maps/BirthIsland_Exterior/scripts.inc::special SetDeoxysTrianglePalette": 8,
+  "data/maps/BirthIsland_Exterior/scripts.inc::setvar VAR_DEOXYS_INTERACTION_NUM, 0": 15,
+  "data/maps/BirthIsland_Exterior/scripts.inc::special DoDeoxysTriangleInteraction": 46,
+  "data/maps/BirthIsland_Exterior/scripts.inc::dofieldeffect FLDEFF_DESTROY_DEOXYS_ROCK": 73,
+  "data/field_effect_scripts.s::FLDEFF_MOVE_DEOXYS_ROCK": 72,
+  "data/field_effect_scripts.s::FLDEFF_DESTROY_DEOXYS_ROCK": 73,
+  "include/constants/songs.h::#define SE_DEOXYS_MOVE": 259
+ },
+ "map_preview": {
+  "table_entries": 28,
+  "by_type": {
+   "MPS_TYPE_FOREST": 8,
+   "MPS_TYPE_CAVE": 20
+  },
+  "unique_art_sets": 21,
+  "art_dirs": [
+   "altering_cave",
+   "berry_forest",
+   "cerulean_cave",
+   "digletts_cave",
+   "dotted_hole",
+   "icefall_cave",
+   "lost_cave",
+   "monean_chamber",
+   "mt_ember",
+   "mt_moon",
+   "pokemon_mansion",
+   "pokemon_tower",
+   "power_plant",
+   "rock_tunnel",
+   "rocket_hideout",
+   "rocket_warehouse",
+   "safari_zone",
+   "seafoam_islands",
+   "silph_co",
+   "victory_road",
+   "viridian_forest"
+  ],
+  "tilemap_bytes": 1280,
+  "tilemap_entries": 640,
+  "tilemap_layout": "640 u16 entries (one 32x20 screen if row-major 32 wide; width inferred, not decoded)",
+  "palette_slot": "BG_PLTT_ID(13), 3 palettes (48 colors)",
+  "gating": "cave: world-map flag of the mapsec; forest: sHasVisitedMapBefore set by MapPreview_SetFlag; both skipped when mapsec unchanged or quest-log playback",
+  "duration_frames": {
+   "first_visit": 120,
+   "repeat": 40
+  }
+ },
+ "palette_sequences": {
+  "elite_four": {
+   "frames": 12,
+   "colors_per_frame": 16,
+   "animated_color_indices": [
+    3,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "distinct_frames": 12,
+   "timers": [
+    40,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12
+   ],
+   "timer_count": 11,
+   "loop_frames_used": 11,
+   "loop_frames_total_ticks": 160,
+   "final_state_frame": 11
+  },
+  "champion_room": {
+   "frames": 9,
+   "colors_per_frame": 16,
+   "animated_color_indices": [
+    3,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "distinct_frames": 9,
+   "timers": [
+    20,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "timer_count": 8,
+   "loop_frames_used": 8,
+   "loop_frames_total_ticks": 76,
+   "final_state_frame": 8
+  },
+  "destination": "BG palette slot 7 (16 colors) via LoadPalette + ApplyGlobalTintToPaletteSlot(7,1)",
+  "task_priority": 8
+ },
+ "deoxys": {
+  "stages": 11,
+  "palette_frames": 11,
+  "palette_destination": "OBJ_PLTT_ID(10), 4 colors (PLTT_SIZEOF(4))",
+  "animated_color_indices": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "colors_in_pal": 16,
+  "step_caps": [
+   4,
+   8,
+   8,
+   8,
+   4,
+   4,
+   4,
+   6,
+   3,
+   3
+  ],
+  "step_caps_count": 10,
+  "coords": [
+   [
+    15,
+    12
+   ],
+   [
+    11,
+    14
+   ],
+   [
+    15,
+    8
+   ],
+   [
+    19,
+    14
+   ],
+   [
+    12,
+    11
+   ],
+   [
+    18,
+    11
+   ],
+   [
+    15,
+    14
+   ],
+   [
+    11,
+    14
+   ],
+   [
+    19,
+    14
+   ],
+   [
+    15,
+    15
+   ],
+   [
+    15,
+    10
+   ]
+  ],
+  "coord_count": 11,
+  "move_frames_normal": 5,
+  "move_frames_reset": 60,
+  "fragment_pngs": [
+   "graphics/field_effects/pics/deoxys_rock_fragment_top_left.png",
+   "graphics/field_effects/pics/deoxys_rock_fragment_top_right.png",
+   "graphics/field_effects/pics/deoxys_rock_fragment_bottom_left.png",
+   "graphics/field_effects/pics/deoxys_rock_fragment_bottom_right.png"
+  ],
+  "fragment_size": "8x8 x4"
+ }
+}
