@@ -14,7 +14,8 @@ The DS donor database and PR #70 planning artifacts are already complete enough 
 2. `gba_gbc/SOURCE_AVAILABILITY.json`
 3. `gba_gbc/DONOR_PATH_TARGETS.json`
 4. `gba_gbc/SEED_VERIFICATION_STATUS.json`
-5. `gba_gbc/MINING_EXECUTION_PLAN.md`
+5. `gba_gbc/SEED_VERIFICATION_CHECKLIST.json`
+6. `gba_gbc/MINING_EXECUTION_PLAN.md`
 
 Read `OPPORTUNITY_CLASSES.json` only if a taxonomy detail is unclear.
 
@@ -39,7 +40,7 @@ Use only the exact revisions in `SOURCE_AVAILABILITY.json`.
 
 ## First execution tranche
 
-Start with **seed verification**, not bulk inventory.
+Start with **seed verification**, not bulk inventory. Emerald, FireRed, and PMD Red already have targeted source verification in `SEED_VERIFICATION_STATUS.json`; do not rediscover their repository structure.
 
 Order:
 
