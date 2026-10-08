@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "purpose": "Pre-seeded high-value source paths so the mining executor can avoid broad repository archaeology.",
+  "sources": {
+    "emerald": {
+      "revision": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+      "paths": [
+        "data/field_effect_scripts.s",
+        "data/scripts/field_move_scripts.inc",
+        "asm/macros/field_effect_script.inc",
+        "data/battle_anim_scripts.s",
+        "asm/macros/battle_anim_script.inc",
+        "graphics/battle_anims/backgrounds/",
+        "graphics/battle_anims/masks/",
+        "graphics/battle_anims/sprites/",
+        "data/scripts/abnormal_weather.inc"
+      ],
+      "first_questions": [
+        "map field-move scripts to field-effect sequences",
+        "trace graphics referenced by high-value field effects",
+        "extract battle animation choreography before bulk sprite review"
+      ]
+    },
+    "firered": {
+      "revision": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "paths": [
+        "data/field_effect_scripts.s",
+        "data/scripts/field_moves.inc",
+        "asm/macros/field_effect_script.inc",
+        "data/battle_anim_scripts.s"
+      ],
+      "first_questions": [
+        "locate location-preview implementation by source references rather than filename guessing",
+        "locate timed palette animation tables/tasks",
+        "locate Birth Island/Deoxys object-state implementation"
+      ]
+    },
+    "pmd_red": {
+      "revision": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "paths": [
+        "data/dungeon/",
+        "graphics/ax/mon/"
+      ],
+      "first_questions": [
+        "locate dungeon status-condition rendering code",
+        "trace status symbol asset family and multi-status cycling",
+        "avoid generic monster-sprite inventory until status hypothesis is resolved"
+      ],
+      "note": "Tree preflight confirms large decoded sprite resources, but exact status-overlay source paths remain to be located."
+    },
+    "crystal": {
+      "revision": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+      "paths": [
+        "data/battle_anims/",
+        "engine/battle_anims/",
+        "docs/battle_anim_commands.md",
+        "gfx/battle_anims/",
+        "gfx/battle_anims/aeroblast.png",
+        "gfx/battle_anims/angels.png",
+        "gfx/battle_anims/globe.png",
+        "gfx/battle_anims/noise.png",
+        "gfx/battle_anims/reflect.png",
+        "gfx/battle_anims/rope.png",
+        "gfx/battle_anims/shapes.png",
+        "gfx/battle_anims/shine.png",
+        "gfx/battle_anims/wave.png",
+        "gfx/battle_anims/web.png"
+      ],
+      "first_questions": [
+        "map unusual graphics to move animation scripts",
+        "record timing/layering/duplication patterns",
+        "treat engine itself as reference, not a port target"
+      ]
+    },
+    "ruby": {
+      "revision": "5784633ce4ef7ade1a7f2d2d0c288e3d5e6cdd7f",
+      "paths": [
+        "data/field_effect_scripts.s",
+        "data/field_move_scripts.inc",
+        "data/battle_anim_scripts.s",
+        "graphics/battle_anims/"
+      ],
+      "first_questions": [
+        "diff target subsystems against Emerald before any detailed review",
+        "promote only Ruby-unique behavior/assets"
+      ]
+    },
+    "yellow": {
+      "revision": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+      "paths": [
+        "data/battle_anims/",
+        "engine/battle/animations.asm",
+        "engine/battle/pikachu_entrance_anim.asm",
+        "data/pikachu/pikachu_emotions.asm",
+        "data/pikachu/pikachu_pic_animation.asm",
+        "data/pikachu/pikachu_pic_objects.asm",
+        "data/pikachu/pikachu_pic_tilemaps.asm",
+        "engine/pikachu/"
+      ],
+      "first_questions": [
+        "enumerate genuinely unique Pikachu presentation states",
+        "identify battle transition/effect timing not superseded by later donors",
+        "stop early on generic material"
+      ]
+    }
+  },
+  "rule": "Paths are preflight seeds, not exhaustive inventories. Expand only when a verified system reference points to another high-value family."
+}
