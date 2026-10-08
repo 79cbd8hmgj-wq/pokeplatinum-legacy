@@ -1,0 +1,307 @@
+{
+ "schema_version": 1,
+ "phase": "gba_gbc",
+ "note": "Separate from the DS opportunity pool (selection/OPPORTUNITY_POOL.json is untouched). Records follow selection/opportunities/findings.json field conventions plus batch/disposition. Not ranked; combined ranking is B7.",
+ "pinned_donors": {
+  "emerald": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f"
+ },
+ "batches_complete": [
+  "B1_emerald_seed_formalization"
+ ],
+ "records": [
+  {
+   "finding_id": "opp:emerald/field_action_choreography",
+   "batch": "B1_emerald_seed_formalization",
+   "classification": "reference_only",
+   "provisional_seed_class": "technique_donor",
+   "disposition": "reference_only",
+   "status": "proposed",
+   "subject": "Emerald field-move 'show mon' banner and per-move avatar choreography (Surf/Fly/Waterfall/Dive/Teleport)",
+   "donor": {
+    "game": "emerald",
+    "source_id": "emerald",
+    "repository": "79cbd8hmgj-wq/pokeemerald",
+    "commit": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+    "locator": "src/field_effect.c task/state tables; data/field_effect_scripts.s dispatch; field-move invocation via data/scripts/field_move_scripts.inc, src/party_menu.c, src/fldeff_teleport.c, src/fldeff_rocksmash.c",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokeemerald",
+      "commit": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+      "path": "src/field_effect.c",
+      "fact": "FldEff_FieldMoveShowMon (L2570) picks Task_FieldMoveShowMonOutdoors (L2608) or Task_FieldMoveShowMonIndoors (L2776) by IsMapTypeOutdoors(GetCurrentMapType()); outdoor = black bg + thick streaks with WIN0 stretch-in/shrink-out, indoor = blue bg + thin streaks with horizontal slide; mon sprite enters right at x-=20/frame, cry, 30-frame hold, exits left"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeemerald",
+      "commit": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+      "path": "src/field_effect.c",
+      "fact": "FldEff_FieldMoveShowMonInit (L2584) resolves party slot to species/otId/personality and chains FLDEFF_FIELD_MOVE_SHOW_MON; Surf (SurfFieldEffect_FieldMovePose L3018 -> _ShowMon L3030 -> _JumpOnSurfBlob L3042), Fly-out (Task_FlyOut L3182: _ShowMon L3201, _BirdLeaveBall L3212, _BirdSwoopDown L3238, _JumpOnBird L3249), Fly-in (Task_FlyIn L3470, _JumpOffBird L3519 with 18-entry y-arc), Waterfall (WaterfallFieldEffect_ShowMon L1850, _RideUp L1873), Dive (DiveFieldEffect_ShowMon L1924) all call the same show-mon effect between a pose and the action"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeemerald",
+      "commit": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+      "path": "src/field_effect.c",
+      "fact": "Teleport warp-out (Task_TeleportWarpOut L2368, TeleportWarpOutFieldEffect_SpinExit L2402): turn-in-place spin that accelerates the avatar upward until off-screen, then warp fade"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeemerald",
+      "commit": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+      "path": "data/scripts/field_move_scripts.inc",
+      "fact": "only Cut (L22), Rock Smash (L81), Strength (L141), Waterfall (L194), Dive (L251) are driven from this file via dofieldeffect; Surf is invoked from src/party_menu.c:3855 and data/scripts/surf.inc, Fly from src/field_effect.c:1367, Teleport from src/fldeff_teleport.c:27 (provenance correction to TARGET_SOURCE_PATHS.md, which lists this file as the connection for all moves)"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeemerald",
+      "commit": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+      "path": "graphics/field_effects/pics/field_move_streaks.png",
+      "fact": "128x8 4bpp outdoor streak tile; field_move_streaks_indoors.png 32x8; tilemaps field_move_streaks.bin / field_move_streaks_indoors.bin; palette loaded to BG pal 15"
+     }
+    ],
+    "cataloged": false
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "tier": "asset_linked",
+    "refs": [
+     "docs/visual_overhaul/selection/gba_gbc/evidence/B1_EMERALD_SYMBOL_EVIDENCE.json"
+    ],
+    "summary": "Emerald side source-verified and asset-linked (two streak PNG families). Platinum side source-verified: every field move already routes through a dedicated native cut-in system. No render sample was needed to reach reference_only."
+   },
+   "platinum_comparison": {
+    "host_system": "Platinum HM cut-in (src/overlay006/hm_cut_in.c) + field move tasks",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "4c0c75247dd5f7db5f6a892a28d6c3484d607222",
+      "path": "src/overlay006/hm_cut_in.c",
+      "fact": "HMCutIn_StartTask(fieldSystem, isFly, shownPokemon, playerGender) at L1038: dedicated cut-in with separate SysTask_CutIn and SysTask_CutInFly (bird sprite, descent) paths; FieldTask_FlyLanding_InitTask at L2897 for the arrival"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "4c0c75247dd5f7db5f6a892a28d6c3484d607222",
+      "path": "res/field/scripts/scripts_field_moves.s",
+      "fact": "PlayHMCutIn used by Cut (L53/L70), Rock Smash (L154/L171), Strength (L213/L238), Defog (L367/L384), Flash (L399)"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "4c0c75247dd5f7db5f6a892a28d6c3484d607222",
+      "path": "src/field_move_tasks.c",
+      "fact": "FieldMoves_FlyTask L194 starts HMCutIn_StartTask(..., TRUE, ...) in FLY_STATE_START_CUT_IN"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "4c0c75247dd5f7db5f6a892a28d6c3484d607222",
+      "path": "src/overlay005/ov5_021DFB54.c",
+      "fact": "MonRideTask runs NewMonRideCutIn -> HMCutIn_StartTask (L1717) for Surf (FieldTask_StartUseSurf L630), Rock Climb (L1014), Waterfall (L1185)"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "4c0c75247dd5f7db5f6a892a28d6c3484d607222",
+      "path": "src/overlay006/field_warp.c",
+      "fact": "sDigTeleportStates (L61): StartFieldMoveCutIn -> FinishFieldMoveCutIn -> StartWarpOutSpinning -> StartFadeOut -> FinishFadeOut -> ChangeMap; arrival uses SlowDownWarpInSpinning (L320)"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "4c0c75247dd5f7db5f6a892a28d6c3484d607222",
+      "path": "src/overlay006/hm_cut_in.c",
+      "fact": "grep for indoor/outdoor/map-type branching found none: Platinum cut-in has a single presentation regardless of map type"
+     }
+    ]
+   },
+   "target": {
+    "kind": "none",
+    "host_system": "Platinum HM cut-in / field-move task system",
+    "note": "reference_only requires no target"
+   },
+   "useful": "Design understanding only: pose -> show-mon -> action sequencing is already the structure Platinum uses; Emerald's indoor/outdoor banner variant selection is the one idea Platinum lacks.",
+   "why": "Platinum already has a richer dedicated cut-in for every field move (including Fly bird and Fly landing, teleport spin-out and spin-in). Emerald's 2D BG-window streak banner would be a downgrade as a replacement and a redundant technique as an enhancement.",
+   "residual_ideas_not_promoted": [
+    "map-type (indoor/outdoor) variant of the cut-in backdrop: no verified Platinum precedent, but value is a palette/backdrop swap only, below the promotion threshold",
+    "teleport/escape-rope accelerating upward spin: Platinum already spins out (StartWarpOutSpinning); acceleration profile unverified and not worth a record"
+   ],
+   "constraints": [
+    "no donor pixels (GBA 2D BG/OAM art does not match Platinum 3D cut-in)"
+   ],
+   "adaptation": [],
+   "cost": null,
+   "risk": null,
+   "confidence": "medium",
+   "confidence_note": "Both sides source-verified; Platinum cut-in visuals not rendered or runtime-inspected, so the 'richer' judgement is structural, not visual.",
+   "feasibility": null,
+   "pixel_use": "none",
+   "proposed_by": "claude (GBA/GBC B1; not human-approved)",
+   "tags": [
+    "field_move",
+    "show_mon",
+    "superseded_by_platinum_native"
+   ]
+  },
+  {
+   "finding_id": "opp:emerald/environment_effect_primitives/location_specific",
+   "batch": "B1_emerald_seed_formalization",
+   "classification": "reference_only",
+   "provisional_seed_class": "component_donor",
+   "disposition": "reference_only",
+   "status": "proposed",
+   "subject": "Emerald field primitives tied to Hoenn-specific locations or mechanics (carved out of environment_effect_primitives)",
+   "donor": {
+    "game": "emerald",
+    "source_id": "emerald",
+    "repository": "79cbd8hmgj-wq/pokeemerald",
+    "commit": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+    "locator": "src/field_effect_helpers.c, src/field_effect.c, src/fldeff_misc.c",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokeemerald",
+      "commit": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+      "path": "src/field_effect.c",
+      "fact": "FldEff_AshLaunch L2127 / FldEff_AshPuff L2220: Lavaridge Gym warp-pad ash (Task_LavaridgeGymB1FWarp / Task_LavaridgeGym1FWarp), plus trainer pop-out of ash; graphics ash_launch.png, ash_puff.png"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeemerald",
+      "commit": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+      "path": "src/field_effect_helpers.c",
+      "fact": "FldEff_Ash L926 (ash-covered grass reveal, rewrites metatile), FldEff_HotSpringsWater L800 (GroundEffect_HotSprings, inHotSprings objects), FldEff_SandPile L1204 (inSandPile objects), FldEff_Bubbles L1258 (GroundEffect_Seaweed, src/event_object_movement.c:8017: underwater seaweed tiles)"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeemerald",
+      "commit": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+      "path": "src/field_effect.c",
+      "fact": "FldEff_RayquazaSpotlight L3081: one-off BG-layer alpha-blended spotlight (BLDALPHA 14/14, spotlight.png) for a single scripted legendary scene; FldEff_DestroyDeoxysRock L3624 + Task_DeoxysRockCameraShake L3649: Birth Island rock event (FireRed shares it; handled in B2)"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeemerald",
+      "commit": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+      "path": "src/fldeff_misc.c",
+      "fact": "sand pillar break frames (graphics/field_effects/pics/sand_pillar/0-2.png, SpriteCB_SandPillar_BreakTop L1081): triggered by data/scripts/shared_secret_base.inc:176 (FLDEFF_SAND_PILLAR), i.e. Secret Base specific"
+     }
+    ]
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "tier": "asset_linked",
+    "refs": [
+     "docs/visual_overhaul/selection/gba_gbc/evidence/B1_EMERALD_SYMBOL_EVIDENCE.json"
+    ],
+    "summary": "Each family is bound to a Hoenn-only location/mechanic (Lavaridge Gym, hot springs, desert sand piles, underwater seaweed, a single scripted legendary scene, Birth Island, Secret Bases). Platinum has no corresponding host for these mechanics (no Dive/Secret Base-style ground-effect hooks were identified; field move list in src/field_move_tasks.c has no Dive). Secret Base / Underground analogy was not investigated."
+   },
+   "target": {
+    "kind": "none",
+    "host_system": "Platinum field-effect manager (src/overlay005/field_effect_manager.c)"
+   },
+   "useful": "Reference for how Gen III expressed one-shot scripted-scene effects (alpha-blended spotlight, screen shake with decaying amplitude).",
+   "why": "No Platinum mechanic or location needs these; generic reuse of their pixels or timing is already covered by Platinum's billboard system or has no host.",
+   "constraints": [
+    "Deoxys rock family is deferred to B2 (FireRed) to avoid duplicate records"
+   ],
+   "adaptation": [],
+   "cost": null,
+   "risk": null,
+   "confidence": "medium",
+   "feasibility": null,
+   "pixel_use": "none",
+   "proposed_by": "claude (GBA/GBC B1; not human-approved)",
+   "tags": [
+    "location_specific",
+    "env_effects"
+   ]
+  },
+  {
+   "finding_id": "opp:emerald/environment_effect_primitives",
+   "batch": "B1_emerald_seed_formalization",
+   "classification": null,
+   "provisional_seed_class": "component_donor",
+   "provisional_class_if_resolved": "component_donor (Platinum gap) or reference_only (Platinum overlap)",
+   "disposition": "needs_evidence",
+   "status": "needs_evidence",
+   "subject": "Emerald generic ground/water/grass/sparkle primitives (narrowed to generic families after location-specific carve-out)",
+   "donor": {
+    "game": "emerald",
+    "source_id": "emerald",
+    "repository": "79cbd8hmgj-wq/pokeemerald",
+    "commit": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+    "locator": "src/field_effect_helpers.c FldEff_* + data/field_effect_scripts.s dispatch (gFieldEffectScriptPointers L7)",
+    "families": {
+     "shadow": [
+      "FldEff_Shadow L233",
+      "shadow_small/medium/large/extra_large.png"
+     ],
+     "grass": [
+      "FldEff_TallGrass L291",
+      "FldEff_JumpTallGrass L359",
+      "FldEff_LongGrass L395",
+      "FldEff_JumpLongGrass L468",
+      "FldEff_ShortGrass L492",
+      "tall_grass/jump_tall_grass/long_grass/jump_long_grass/short_grass.png"
+     ],
+     "ground_traces": [
+      "FldEff_SandFootprints L554",
+      "FldEff_DeepSandFootprints L571",
+      "FldEff_BikeTireTracks L588"
+     ],
+     "water_contact": [
+      "FldEff_Splash L642",
+      "FldEff_JumpSmallSplash L684",
+      "FldEff_JumpBigSplash L701",
+      "FldEff_FeetInFlowingWater L725",
+      "FldEff_WaterSurfacing L892 (water_surfacing.png)",
+      "FldEff_Ripple L780",
+      "splash/jump_small_splash/jump_big_splash/ripple.png"
+     ],
+     "impact_and_glint": [
+      "FldEff_Dust L1180 (ground_impact_dust.png)",
+      "FldEff_Sparkle L1417 (small_sparkle.png)",
+      "FldEff_BerryTreeGrowthSparkle L1288 (sparkle.png)"
+     ]
+    },
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokeemerald",
+      "commit": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+      "path": "src/field_effect_helpers.c",
+      "fact": "each family above is a discrete FldEff_* creating a short-lived OAM sprite from gFieldEffectObjectTemplatePointers with SetSpritePosToOffsetMapCoords placement; all frames 16x16-32x32 4bpp under graphics/field_effects/pics/"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeemerald",
+      "commit": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+      "path": "data/field_effect_scripts.s",
+      "fact": "gFieldEffectScriptPointers L7: FLDEFF_DUST L18, FLDEFF_SPARKLE L62 and the other families dispatch through field_eff_callnative entries"
+     }
+    ]
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "tier": "asset_linked",
+    "refs": [
+     "docs/visual_overhaul/selection/gba_gbc/evidence/B1_EMERALD_SYMBOL_EVIDENCE.json",
+     "docs/visual_overhaul/PASS_G_VISUAL_OVERHAUL.md"
+    ],
+    "summary": "Donor side complete. Platinum side only partially mapped: fldeff.narc is an opaque prebuilt archive (201 members; PASS_G_VISUAL_OVERHAUL.md L590-650 records only kusaeff/e_kusaeff1-3 and lgrass_ani1/ngrass_ani1 names); src/overlay005 effect renderers are unnamed (ov5_021F*), though a berry SparkleEffect system and Shadow code are visible by name."
+   },
+   "target": {
+    "kind": "system",
+    "host_system": "Platinum field-effect manager + fldeff.narc billboards",
+    "refs": [
+     "src/overlay005/field_effect_manager.c",
+     "src/overlay005/field_effect_renderer.c"
+    ],
+    "note": "target not yet resolvable per family"
+   },
+   "useful": "Possible small Sinnoh-styled redraws of effect shapes where Platinum has no billboard equivalent.",
+   "why": "Cannot choose component_donor vs reference_only without knowing which of these families Platinum already renders; Platinum effects are 3D billboards, so donor pixels would be derived-only at best.",
+   "constraints": [
+    "GBA 2D OAM art is not directly portable to Platinum NSBTX/NSBMD billboards; donor pixel use capped at derived",
+    "new fldeff.narc content needs a resource-pipeline decision (PASS_G L358-360)"
+   ],
+   "adaptation": [],
+   "cost": "medium",
+   "risk": "medium",
+   "confidence": "low",
+   "feasibility": 1,
+   "pixel_use": "derived",
+   "proposed_by": "claude (GBA/GBC B1; not human-approved)",
+   "tags": [
+    "env_effects",
+    "needs_platinum_parity_map"
+   ]
+  }
+ ]
+}

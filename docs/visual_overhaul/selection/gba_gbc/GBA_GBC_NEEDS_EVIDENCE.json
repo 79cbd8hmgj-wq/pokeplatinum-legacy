@@ -1,0 +1,21 @@
+{
+ "schema_version": 1,
+ "note": "GBA/GBC needs-evidence items. Narrow: each names the single piece of missing evidence and the disposition rule once it is supplied.",
+ "items": [
+  {
+   "item_id": "ne:emerald/env_primitives_platinum_parity",
+   "finding_id": "opp:emerald/environment_effect_primitives",
+   "batch": "B1_emerald_seed_formalization",
+   "missing_evidence": "Platinum-side name/semantic map of fldeff.narc members (201 total; only grass members are named in repo docs) and of the unnamed overlay005 renderers, restricted to these Emerald families: shadow, grass variants, sand footprints, bike tracks, splash/ripple/flowing-water, ground dust, sparkle",
+   "why_not_resolved_in_B1": "B1 forbids a full field-effect asset dump; the fldeff.narc export is not committed and the renderers have no semantic names",
+   "resolution_rule": {
+    "platinum_has_equivalent": "reference_only",
+    "platinum_lacks_equivalent": "component_donor or novel_detail, pixel_use derived, host = field-effect manager"
+   },
+   "suggested_closure": "Re-export fldeff.narc member names (existing PASS_G export method) and match per family; no Emerald re-scan required",
+   "blocks": [
+    "opp:emerald/environment_effect_primitives"
+   ]
+  }
+ ]
+}
