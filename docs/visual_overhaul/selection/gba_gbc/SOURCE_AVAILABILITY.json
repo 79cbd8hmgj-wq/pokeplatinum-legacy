@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status_note": "This is a preflight matrix, not proof that each checkout is present in the current executor workspace.",
+  "status_note": "Repositories and pinned revisions were preflighted through the connected GitHub account. A future executor still must confirm its local checkout before filesystem mining.",
   "repo_document_evidence": [
     "docs/visual_overhaul/PASS_G_VISUAL_OVERHAUL.md",
     "docs/visual_overhaul/CROSS_GAME_DONOR_MATRIX.md",
@@ -9,53 +9,74 @@
   "sources": [
     {
       "source_id": "emerald",
-      "documented_in_donor_pool": true,
-      "current_workspace_verified": false,
+      "repository": "79cbd8hmgj-wq/pokeemerald",
+      "branch": "master",
+      "pinned_revision": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+      "repository_verified": true,
+      "executor_checkout_verified": false,
       "expected_value": "high",
-      "preflight_action": "locate checkout and pin commit before mining"
+      "preflight_action": "checkout/fetch pinned revision; begin source-code-first mining"
     },
     {
       "source_id": "firered",
-      "documented_in_donor_pool": true,
-      "current_workspace_verified": false,
+      "repository": "79cbd8hmgj-wq/pokefirered",
+      "branch": "master",
+      "pinned_revision": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "repository_verified": true,
+      "executor_checkout_verified": false,
       "expected_value": "high",
-      "preflight_action": "locate checkout and pin commit before mining"
+      "preflight_action": "checkout/fetch pinned revision; begin preview/palette/event source mining"
     },
     {
       "source_id": "leafgreen",
-      "documented_in_donor_pool": false,
-      "current_workspace_verified": false,
+      "repository": "79cbd8hmgj-wq/pokefirered",
+      "branch": "master",
+      "pinned_revision": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "repository_verified": true,
+      "executor_checkout_verified": false,
       "expected_value": "sibling",
-      "preflight_action": "use FireRed source where shared; record only unique LeafGreen deltas if checkout exists"
+      "preflight_action": "treat as version sibling in pokefirered; record only LeafGreen-unique deltas"
     },
     {
       "source_id": "pmd_red",
-      "documented_in_donor_pool": true,
-      "current_workspace_verified": false,
+      "repository": "79cbd8hmgj-wq/pmd-red",
+      "branch": "master",
+      "pinned_revision": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+      "repository_verified": true,
+      "executor_checkout_verified": false,
       "expected_value": "high targeted",
-      "preflight_action": "locate source/assets and pin commit before mining"
+      "preflight_action": "checkout/fetch pinned revision; target status/effect presentation"
     },
     {
       "source_id": "crystal",
-      "documented_in_donor_pool": true,
-      "current_workspace_verified": false,
+      "repository": "79cbd8hmgj-wq/pokecrystal",
+      "branch": "master",
+      "pinned_revision": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6",
+      "repository_verified": true,
+      "executor_checkout_verified": false,
       "expected_value": "medium-high targeted",
-      "preflight_action": "locate checkout and pin commit before mining"
+      "preflight_action": "checkout/fetch pinned revision; target battle animation data/graphics"
     },
     {
       "source_id": "ruby",
-      "documented_in_donor_pool": true,
-      "current_workspace_verified": false,
+      "repository": "79cbd8hmgj-wq/pokeruby",
+      "branch": "master",
+      "pinned_revision": "5784633ce4ef7ade1a7f2d2d0c288e3d5e6cdd7f",
+      "repository_verified": true,
+      "executor_checkout_verified": false,
       "expected_value": "delta/reference",
-      "preflight_action": "locate checkout; compare against Emerald before decoding"
+      "preflight_action": "checkout/fetch pinned revision; compute target-subsystem deltas against Emerald before decoding"
     },
     {
       "source_id": "yellow",
-      "documented_in_donor_pool": true,
-      "current_workspace_verified": false,
+      "repository": "79cbd8hmgj-wq/pokeyellow",
+      "branch": "master",
+      "pinned_revision": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+      "repository_verified": true,
+      "executor_checkout_verified": false,
       "expected_value": "specialized",
-      "preflight_action": "locate checkout and use high threshold"
+      "preflight_action": "checkout/fetch pinned revision; high-threshold battle/Pikachu pass"
     }
   ],
-  "rule": "A source becomes mineable only after its checkout/repository and exact revision are recorded. Missing sources are blockers for that donor only, not for the entire phase."
+  "rule": "Repository verification plus pinned revision is sufficient for planning. Mining starts only after the executor can read that revision. Missing local checkout blocks only that donor."
 }
