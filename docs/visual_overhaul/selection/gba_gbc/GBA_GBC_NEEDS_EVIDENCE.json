@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "note": "GBA/GBC needs-evidence items. Narrow: each names the single piece of missing evidence and the disposition rule once it is supplied.",
+ "note": "GBA/GBC needs-evidence items (frozen at B7). Narrow: each names the single piece of missing evidence and the disposition rule once it is supplied.",
  "items": [
   {
    "item_id": "ne:crystal/angels_motif_vs_platinum",
@@ -8,7 +8,9 @@
    "finding_id": "opp:crystal/battle_anim_artwork/angels_motif",
    "what": "One side-by-side sheet: Crystal gfx/battle_anims/angels.png frames for the IMP, CHERUB and DESTINY_BOND framesets next to key frames of Platinum lovely_kiss, sweet_kiss, spite, nightmare (Func_Nightmare sprites) and destiny_bond particle/sprite resources (5 moves, key frames only).",
    "why": "Script-level comparison cannot show whether Platinum already has a recurring character-style motif for these moves; that is the only open question.",
-   "disposition_rule": "If no Platinum frame shows a comparable recurring figure, reclassify to novel_detail (redraw Platinum-native, pixel_use none). If Platinum already shows an equal or better figure/motif, reclassify to reference_only. Rendering is limited to these five moves; do not extend to other banks."
+   "disposition_rule": "If no Platinum frame shows a comparable recurring figure, reclassify to novel_detail (redraw Platinum-native, pixel_use none). If Platinum already shows an equal or better figure/motif, reclassify to reference_only. Rendering is limited to these five moves; do not extend to other banks.",
+   "status": "deferred_non_blocking",
+   "decision": "Closure (B4.5) skipped by project decision at B7; not resolved, not blocking, excluded from ranking."
   }
  ],
  "resolved": [
@@ -28,6 +30,15 @@
    "what": "Measure OAM and sub/main palette headroom in the battle scene (single and double battle, during move animations) before committing to a persistent battler glyph layer.",
    "why_not_blocking": "Does not change the classification: the opportunity (Platinum has no persistent battler-local indicator) is established from source; headroom only affects cost/risk at implementation planning.",
    "disposition_rule": "If headroom is insufficient, the record stays novel_detail with higher risk and the design phase picks a reduced glyph set; it does not become reference_only."
+  },
+  {
+   "item_id": "defer:ruby/semantic_delta",
+   "raised_in": "B7_cross_generation_merge",
+   "finding_id": null,
+   "what": "Ruby semantic delta against Emerald (B5) was not run.",
+   "why_not_blocking": "Project decision. Ruby is Emerald's predecessor on the same engine; Emerald is closed with 0 promoted records, so no ranked opportunity depends on it.",
+   "disposition_rule": "If reopened, reuse evidence/B1_EMERALD_SYMBOL_EVIDENCE.json and evidence/B1_5_PLATINUM_FLDEFF_MEMBER_NAMES.json; any Ruby-only effect matching a Platinum member already named there is reference_only."
   }
- ]
+ ],
+ "frozen": true
 }

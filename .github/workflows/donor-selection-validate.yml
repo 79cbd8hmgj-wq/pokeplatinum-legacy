@@ -29,3 +29,4 @@ jobs:
       - run: cd tools/visual_overhaul/selection && python3 test_opportunities.py
       - run: cd tools/visual_overhaul/selection && python3 test_mining.py
       - run: cd tools/visual_overhaul/selection && python3 test_hgss_trainer_decoder.py
+      - run: cd tools/visual_overhaul/selection && python3 test_cross_gen_synthesis.py

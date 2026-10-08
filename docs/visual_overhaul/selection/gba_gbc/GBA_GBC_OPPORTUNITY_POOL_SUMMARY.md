@@ -1,8 +1,21 @@
 # GBA/GBC opportunity pool — summary
 
-Separate from the DS pool (`selection/OPPORTUNITY_POOL.json` is untouched). Not ranked; combined ranking is batch B7.
+Separate from the DS pool (`selection/OPPORTUNITY_POOL.json` is untouched). **Frozen at B7.** This pool is not ranked on its own; the combined cross-generation ranking is `../CROSS_GEN_OPPORTUNITY_RANKING.json` (human-readable: `../CROSS_GEN_IMPLEMENTATION_PLAN.md`).
 
 Machine-readable: `GBA_GBC_OPPORTUNITY_POOL.json`, `GBA_GBC_NEEDS_EVIDENCE.json`.
+
+## Final status (B7 freeze)
+
+| Donor | Status |
+|---|---|
+| Emerald | complete |
+| FireRed | complete |
+| PMD Red | complete |
+| Crystal | reviewed; angels motif (`ne:crystal/angels_motif_vs_platinum`) explicitly deferred, non-blocking, not resolved |
+| Yellow | complete |
+| Ruby | skipped by project decision (B5 not run), non-blocking |
+
+Cross-generation disposition of the two non-reference records: `opp:pmd_red/battler_status_overlays` (novel_detail) and its conditional cycling technique merge into the DS record `opp:pmd_sky/battler_status_indicators` (one ranked opportunity, `IO-STATUS`); neither is ranked separately. FireRed map preview and palette sequences stay reference_only and corroborate `IO-PREVIEW` and `IO-PAL-CYCLE`. Validation (`validate_gba_gbc_pool.py`) passes: no duplicates, pinned commits, canonical taxonomy, 0 replacement_candidate records.
 
 ## Status after B1 + B1.5 + B2 + B3 + B4 (Emerald, FireRed, PMD Red, Crystal and Yellow complete)
 
