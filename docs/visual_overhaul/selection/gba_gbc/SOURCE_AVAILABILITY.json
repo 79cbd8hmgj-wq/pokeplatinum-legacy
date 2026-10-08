@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "status_note": "This is a preflight matrix, not proof that each checkout is present in the current executor workspace.",
+  "repo_document_evidence": [
+    "docs/visual_overhaul/PASS_G_VISUAL_OVERHAUL.md",
+    "docs/visual_overhaul/CROSS_GAME_DONOR_MATRIX.md",
+    "docs/visual_overhaul/G5_DONOR_TECHNIQUE_AUDIT.md"
+  ],
+  "sources": [
+    {
+      "source_id": "emerald",
+      "documented_in_donor_pool": true,
+      "current_workspace_verified": false,
+      "expected_value": "high",
+      "preflight_action": "locate checkout and pin commit before mining"
+    },
+    {
+      "source_id": "firered",
+      "documented_in_donor_pool": true,
+      "current_workspace_verified": false,
+      "expected_value": "high",
+      "preflight_action": "locate checkout and pin commit before mining"
+    },
+    {
+      "source_id": "leafgreen",
+      "documented_in_donor_pool": false,
+      "current_workspace_verified": false,
+      "expected_value": "sibling",
+      "preflight_action": "use FireRed source where shared; record only unique LeafGreen deltas if checkout exists"
+    },
+    {
+      "source_id": "pmd_red",
+      "documented_in_donor_pool": true,
+      "current_workspace_verified": false,
+      "expected_value": "high targeted",
+      "preflight_action": "locate source/assets and pin commit before mining"
+    },
+    {
+      "source_id": "crystal",
+      "documented_in_donor_pool": true,
+      "current_workspace_verified": false,
+      "expected_value": "medium-high targeted",
+      "preflight_action": "locate checkout and pin commit before mining"
+    },
+    {
+      "source_id": "ruby",
+      "documented_in_donor_pool": true,
+      "current_workspace_verified": false,
+      "expected_value": "delta/reference",
+      "preflight_action": "locate checkout; compare against Emerald before decoding"
+    },
+    {
+      "source_id": "yellow",
+      "documented_in_donor_pool": true,
+      "current_workspace_verified": false,
+      "expected_value": "specialized",
+      "preflight_action": "locate checkout and use high threshold"
+    }
+  ],
+  "rule": "A source becomes mineable only after its checkout/repository and exact revision are recorded. Missing sources are blockers for that donor only, not for the entire phase."
+}
