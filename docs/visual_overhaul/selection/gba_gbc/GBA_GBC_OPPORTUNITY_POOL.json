@@ -1,7 +1,7 @@
 {
  "schema_version": 1,
  "phase": "gba_gbc",
- "note": "Separate from the DS opportunity pool (selection/OPPORTUNITY_POOL.json is untouched). Records follow selection/opportunities/findings.json field conventions plus batch/disposition. Not ranked; combined ranking is B7.",
+ "note": "Frozen GBA/GBC pool (B7). Separate from the DS pool (selection/OPPORTUNITY_POOL.json is untouched). Cross-generation ranking and merge decisions live in CROSS_GEN_OPPORTUNITY_RANKING.json; this file keeps per-donor provenance.",
  "pinned_donors": {
   "emerald": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
   "firered": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
@@ -489,7 +489,12 @@
     "area_preview",
     "subsumed",
     "firered"
-   ]
+   ],
+   "merge": {
+    "into": "opp:hgss/map_location_preview",
+    "role": "corroborates",
+    "note": "opp:hgss/map_location_preview"
+   }
   },
   {
    "finding_id": "opp:firered/animated_palette_sequences",
@@ -597,7 +602,12 @@
     "palette_animation",
     "technique",
     "firered"
-   ]
+   ],
+   "merge": {
+    "into": "cross-gen IO palette-cycle service (DS libraries pmd_mapbg_*)",
+    "role": "corroborates_timing_shape_only",
+    "note": "reference_only: Platinum has native equivalents; FireRed only adds timing shape to the PMD Sky technique."
+   }
   },
   {
    "finding_id": "opp:firered/interactive_object_states",
@@ -928,7 +938,7 @@
     "comparison": "Platinum does NOT already have this. It has (a) a healthbox icon for 5 non-volatile conditions, one at a time, (b) transient event-driven animations for sleep/poison/burn/freeze/paralysis/confusion/infatuation, played at application and at the per-turn trigger, and (c) nothing for the other volatile or stat conditions. Nothing stays on the battler between events, and nothing at all is drawn for confusion/infatuation/stat drops once the animation has finished. The healthbox status icon does not make this reference_only: it is on the box, not at the battler, is single-valued, and excludes every volatile condition. For the four major conditions an overlay is additive and partly redundant (icon + overlay); the net-new value is the volatile/stat set."
    },
    "target": {
-    "kind": "battle_presentation_layer",
+    "kind": "none",
     "host_system": "battle scene persistent sprite layer next to the healthbox (candidate; not selected)"
    },
    "useful": "Gives the player at-a-glance, on-sprite feedback for conditions that today exist only in message text and are forgotten after the animation ends.",
@@ -952,11 +962,11 @@
     "replace PMD OAM shape/size and VRAM streaming with the Platinum ManagedSprite/cell-animation pipeline",
     "map Platinum condition sets (status, statusVolatile, stat stages, side/field conditions) to a glyph set instead of PMD ids"
    ],
-   "cost": null,
-   "risk": "Medium: needs OAM and palette headroom in battle (not measured; see needs-evidence deferred note), and a visual-clutter decision for double battles (4 battlers).",
+   "cost": "medium",
+   "risk": "medium",
    "confidence": "medium",
    "confidence_note": "Donor facts fully source-verified; Platinum absence verified by search of healthbox.c, battle_display.c, battle_anim script funcs and battle scripts. Hosting budget unmeasured.",
-   "feasibility": null,
+   "feasibility": 2,
    "pixel_use": "none",
    "proposed_by": "claude (GBA/GBC B3; not human-approved)",
    "tags": [
@@ -964,7 +974,13 @@
     "status_overlay",
     "pmd_red",
     "persistent_indicator"
-   ]
+   ],
+   "risk_note": "Medium: needs OAM and palette headroom in battle (not measured; see needs-evidence deferred note), and a visual-clutter decision for double battles (4 battlers).",
+   "merge": {
+    "into": "opp:pmd_sky/battler_status_indicators",
+    "role": "corroborates_and_strengthens",
+    "note": "Same concept as the DS PMD Sky status-icon record (battler-local, mask-driven status indicator). PMD Red adds traced behaviour and the Platinum comparison; it is not a second opportunity."
+   }
   },
   {
    "finding_id": "opp:pmd_red/battler_status_overlays/multi_status_cycling",
@@ -1030,8 +1046,13 @@
     "comparison": "Platinum has no multi-condition display at all (healthbox shows one value chosen by a fixed priority). The cycling idea only has value if the persistent overlay record is selected; it is not independent of it."
    },
    "target": {
-    "kind": "ui_behaviour",
-    "host_system": "depends on opp:pmd_red/battler_status_overlays"
+    "kind": "system",
+    "system": "battle status-overlay layer (depends on the parent record)",
+    "host_system": "depends on opp:pmd_red/battler_status_overlays",
+    "refs": [
+     "src/battle/healthbox.c",
+     "src/battle/battle_lib.c"
+    ]
    },
    "useful": "A bounded-space rule for showing N conditions without a growing icon row.",
    "why": "Technique, not art or code: a compact scheduling rule plus a many-to-few glyph/palette table. Conditional on the parent record; downgrade to reference_only if the design phase prefers a static side-by-side icon row (the DS screens have room for one, which may be the better answer).",
@@ -1059,11 +1080,11 @@
     "replace the frame counter with a SysTask or sprite-animation timer",
     "consider side-by-side icons as the alternative before adopting cycling"
    ],
-   "cost": null,
-   "risk": "Low technique risk; value depends on the parent record.",
+   "cost": "low",
+   "risk": "low",
    "confidence": "medium",
    "confidence_note": "Mechanics source-verified and simulated; usefulness is conditional.",
-   "feasibility": null,
+   "feasibility": 2,
    "pixel_use": "none",
    "proposed_by": "claude (GBA/GBC B3; not human-approved)",
    "tags": [
@@ -1072,7 +1093,13 @@
     "pmd_red",
     "technique",
     "depends_on_parent"
-   ]
+   ],
+   "risk_note": "Low technique risk; value depends on the parent record.",
+   "merge": {
+    "into": "opp:pmd_sky/battler_status_indicators",
+    "role": "conditional_sub_technique",
+    "note": "Not ranked separately; rides the merged status-overlay opportunity."
+   }
   },
   {
    "finding_id": "opp:pmd_red/battler_status_overlays/gba_engine_and_pixels",
@@ -1359,7 +1386,13 @@
     "needs_evidence"
    ],
    "provisional_if_unresolved": "reference_only",
-   "needs_evidence_item": "ne:crystal/angels_motif_vs_platinum"
+   "needs_evidence_item": "ne:crystal/angels_motif_vs_platinum",
+   "deferral": {
+    "state": "deferred_non_blocking",
+    "decided": "B7 final synthesis (project decision)",
+    "ranked": false,
+    "rule_when_reopened": "see GBA_GBC_NEEDS_EVIDENCE.json disposition_rule"
+   }
   },
   {
    "finding_id": "opp:crystal/battle_anim_artwork/wave_bank_orphan",
@@ -1940,6 +1973,54 @@
     "pikachu",
     "off_scope"
    ]
+  }
+ ],
+ "frozen": true,
+ "frozen_in": "B7_cross_generation_merge",
+ "donor_status": {
+  "emerald": {
+   "status": "complete",
+   "records": "3 reference_only",
+   "needs_evidence": 0
+  },
+  "firered": {
+   "status": "complete",
+   "records": "4 reference_only",
+   "needs_evidence": 0
+  },
+  "pmd_red": {
+   "status": "complete",
+   "records": "1 novel_detail, 1 technique_donor (conditional), 1 reference_only",
+   "needs_evidence": 0
+  },
+  "crystal": {
+   "status": "reviewed",
+   "records": "3 reference_only, 1 reject, 1 needs_evidence",
+   "needs_evidence": 1,
+   "note": "angels motif (ne:crystal/angels_motif_vs_platinum) explicitly deferred, non-blocking, excluded from ranking"
+  },
+  "yellow": {
+   "status": "complete",
+   "records": "3 reference_only, 1 reject",
+   "needs_evidence": 0
+  },
+  "ruby": {
+   "status": "skipped",
+   "records": "none (not mined)",
+   "needs_evidence": 0,
+   "note": "B5 Ruby semantic delta skipped by project decision; not an evidence gap"
+  }
+ },
+ "batches_skipped": [
+  {
+   "batch": "B4_5_crystal_angels_evidence_closure",
+   "reason": "project decision: deferred, non-blocking",
+   "item": "ne:crystal/angels_motif_vs_platinum"
+  },
+  {
+   "batch": "B5_ruby_semantic_delta",
+   "reason": "project decision: Ruby skipped/deferred",
+   "item": null
   }
  ]
 }

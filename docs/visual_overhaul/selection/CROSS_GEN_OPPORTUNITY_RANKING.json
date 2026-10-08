@@ -1,0 +1,2235 @@
+{
+ "baseline_commit": "81168942",
+ "counts": {
+  "ds_queue_items": 94,
+  "gated_excluded_clusters": 7,
+  "gated_excluded_ds_queue_items": 19,
+  "gba_gbc_by_class": {
+   "needs_evidence": 1,
+   "novel_detail": 1,
+   "reference_only": 14,
+   "reject": 2,
+   "technique_donor": 1
+  },
+  "gba_gbc_new_ranked_opportunities": 0,
+  "gba_gbc_records": 19,
+  "gba_gbc_strengthened_ranked_opportunities": 4,
+  "multi_donor_ranked_opportunities": 5,
+  "ranked_immediate": 6,
+  "ranked_implementation_opportunities": 16,
+  "ranked_later": 10,
+  "reference_only_or_reject_findings": 26
+ },
+ "duplicates_subsumed": [
+  {
+   "absorbed": [
+    "opp:firered/map_location_preview",
+    "lib hgss_preview (23 areas) -> explicit opp:hgss/map_location_preview"
+   ],
+   "decision": "One area-preview opportunity. FireRed was already subsumed by the HGSS concept (B2); it stays reference_only and is attached as corroboration (visit-gated hold 120 vs 40 frames, B skips, per-area style, second UI consumer). The mined HGSS preview library is the same 23 areas as the explicit finding.",
+   "id": "D1",
+   "kept": "IO-PREVIEW"
+  },
+  {
+   "absorbed": [
+    "opp:pmd_red/battler_status_overlays",
+    "opp:pmd_red/battler_status_overlays/multi_status_cycling"
+   ],
+   "decision": "PMD Red and PMD Sky are the same concept (battler-local, mask-driven status indicator). One record: the DS finding stays the anchor, PMD Red strengthens it with traced behaviour and the Platinum comparison; the cycling rule is a conditional sub-technique. No duplicate inserted.",
+   "id": "D2",
+   "kept": "IO-STATUS"
+  },
+  {
+   "absorbed": [
+    "opp:firered/animated_palette_sequences",
+    "6 PMD Sky mapbg technique libraries"
+   ],
+   "decision": "FireRed palette sequences are reference_only (Platinum has native hosts); they only corroborate timing shape for the PMD Sky technique. Six mined libraries become one palette-cycle service.",
+   "id": "D3",
+   "kept": "IO-PAL-CYCLE"
+  },
+  {
+   "absorbed": [
+    "4 mined overworld_pokemon libraries (species, form, large, legendary)"
+   ],
+   "decision": "The explicit 572-sheet library finding subsumes the four mined follower-sheet libraries. The follower mechanic stays a separate, dependent opportunity (IO-FOL-MECH).",
+   "id": "D4",
+   "kept": "IO-FOL-SHEETS"
+  },
+  {
+   "absorbed": [
+    "opp:yellow/pikachu_presentation/partner_reaction_table"
+   ],
+   "decision": "Yellow's happiness x mood reaction table informs reaction design only (reference_only); Platinum already has friendship reactions in the Poketch Friendship Checker.",
+   "id": "D5",
+   "kept": "IO-FOL-MECH"
+  },
+  {
+   "absorbed": [
+    "2 PMD Sky pmd_back_s still-card libraries"
+   ],
+   "decision": "Same host (field/title transition and event presentation) and same technique; PMD art is excluded (style mismatch, S3), so they corroborate the Ranger-derived composition rather than compete.",
+   "id": "D6",
+   "kept": "IO-CARD"
+  },
+  {
+   "absorbed": [
+    "opp:trainer/tc_ace_trainer_{male,female}/enhancement",
+    "uc:trainer_battle_sprites/tc_ace_trainer_*/{01,02}",
+    "3 hgss_front/hgss_back component and composite libraries"
+   ],
+   "decision": "One enhancement path: the reviewed Ace Trainer pair is the pilot; library members are scope expansion.",
+   "id": "D7",
+   "kept": "IO-TRN-COMP"
+  },
+  {
+   "absorbed": [
+    "21 model items",
+    "14 texture-set items"
+   ],
+   "decision": "Per-family mined libraries collapse into the two explicit library findings; they are not independent implementation units.",
+   "id": "D8",
+   "kept": "IO-MODELS / IO-TEX-HGSS"
+  },
+  {
+   "absorbed": [
+    "Emerald field_action_choreography",
+    "Emerald/FireRed environment & interactive-object effects",
+    "Crystal move sequencing and battle transitions",
+    "Yellow starter entrance/exit and transitions"
+   ],
+   "decision": "Platinum already supersedes these (HM cut-in with Fly path, fldeff.narc families, 31 encounter effects, per-move anim.s). Kept reference_only, excluded from ranking.",
+   "id": "D9",
+   "kept": "(excluded)"
+  }
+ ],
+ "evidence_gaps": [
+  {
+   "affects": "none ranked",
+   "donor": "crystal",
+   "id": "ne:crystal/angels_motif_vs_platinum",
+   "note": "Closure (B4.5) skipped by project decision. Provisional reference_only; excluded from ranking. If reopened: one five-move key-frame sheet; novel_detail if Platinum lacks a recurring figure.",
+   "status": "deferred_non_blocking"
+  },
+  {
+   "affects": "none ranked",
+   "donor": "ruby",
+   "id": "defer:ruby/semantic_delta",
+   "note": "B5 not run. Emerald closed with 0 promoted records, so no ranked item depends on Ruby.",
+   "status": "skipped_by_project_decision"
+  },
+  {
+   "affects": "IO-STATUS cost/risk",
+   "donor": "pmd_red",
+   "id": "defer:platinum/battle_overlay_oam_palette_headroom",
+   "note": "Becomes the first step of the IO-STATUS spike.",
+   "status": "deferred_non_blocking"
+  },
+  {
+   "affects": "GX-PMD-GROUND",
+   "donor": "pmd_sky",
+   "id": "gap:ds/pmd_wan_decoder",
+   "note": "No GROUND .wan renderer; the pool stays gated.",
+   "status": "open_non_blocking"
+  },
+  {
+   "affects": "IO-STATUS (donor art only)",
+   "donor": "pmd_sky",
+   "id": "gap:ds/pmd_manpu_effect_bin",
+   "note": "manpu_*/effect.bin uncataloged; moot because the glyphs are redrawn Platinum-native (PMD Red already shows the art shape).",
+   "status": "open_non_blocking"
+  },
+  {
+   "affects": "IO-MODELS, IO-TEX-HGSS",
+   "donor": "hgss",
+   "id": "gap:ds/hgss_field_models",
+   "note": "Largest unexamined DS area: map building models not present as discrete files in the decomp checkout.",
+   "status": "open_non_blocking"
+  },
+  {
+   "affects": "IO-TEX-RANGER",
+   "donor": "ranger2",
+   "id": "gap:ds/ranger_ntfp_scope",
+   "note": "905 field ntfp groups unscoped.",
+   "status": "open_non_blocking"
+  },
+  {
+   "affects": "IO-FX-PRIM",
+   "donor": "ranger2",
+   "id": "gap:ds/ranger_per_move_targets",
+   "note": "Per-move Platinum targets not chosen.",
+   "status": "open_non_blocking"
+  }
+ ],
+ "first_slice": {
+  "io_id": "IO-PAL-CYCLE",
+  "slice_ref": "S2"
+ },
+ "gated_excluded": [
+  {
+   "donors": [
+    "hgss"
+   ],
+   "ds_queue_items": [
+    {
+     "ds_queue_rank": 37,
+     "ds_queue_score": 3.796,
+     "id": "lib:hgss/icons/hgss_icons/novel_detail/whole_asset",
+     "records": 4
+    }
+   ],
+   "ds_records": 4,
+   "excluded_from_ranking": true,
+   "gate_id": "GX-ICONS-EXTRA",
+   "reason": "no Platinum target or host system is named for these auto-mined records (the taxonomy requires a host_system for novel_detail); identify what the icons are before ranking",
+   "status": "gated_evidence_gap",
+   "title": "HGSS 'icon_extra' icons (4 auto-mined records)"
+  },
+  {
+   "donors": [
+    "hgss"
+   ],
+   "ds_queue_items": [
+    {
+     "ds_queue_rank": 32,
+     "ds_queue_score": 3.832,
+     "id": "lib:hgss/trainer_sprites/hgss_front/novel_detail/component",
+     "records": 29
+    },
+    {
+     "ds_queue_rank": 83,
+     "ds_queue_score": 3.411,
+     "id": "lib:hgss/trainer_sprites/hgss_back/novel_detail/component",
+     "records": 2
+    }
+   ],
+   "ds_records": 31,
+   "excluded_from_ranking": true,
+   "gate_id": "GX-TRN-NOVEL",
+   "reason": "opp:hgss/npc_trainer_variety_pool (reference_only: no Platinum target)",
+   "status": "gated_reference_only",
+   "title": "HGSS-only trainer classes with no Platinum counterpart"
+  },
+  {
+   "donors": [
+    "hgss"
+   ],
+   "ds_queue_items": [
+    {
+     "ds_queue_rank": 17,
+     "ds_queue_score": 4.051,
+     "id": "lib:hgss/npc_player_sprites/hgss_mmodel/novel_detail/whole_asset",
+     "records": 76
+    }
+   ],
+   "ds_records": 76,
+   "excluded_from_ranking": true,
+   "gate_id": "GX-NPC-NOVEL",
+   "reason": "opp:hgss/npc_trainer_variety_pool (reference_only: no Platinum target)",
+   "status": "gated_reference_only",
+   "title": "HGSS-only NPC models with no Platinum counterpart"
+  },
+  {
+   "donors": [
+    "ranger2"
+   ],
+   "ds_queue_items": [
+    {
+     "ds_queue_rank": 5,
+     "ds_queue_score": 4.251,
+     "id": "lib:ranger2/interface_embellishments/ranger_interface/i/novel_detail/component",
+     "records": 72
+    },
+    {
+     "ds_queue_rank": 9,
+     "ds_queue_score": 4.159,
+     "id": "lib:ranger2/interface_embellishments/ranger_interface/i/technique_donor/technique",
+     "records": 46
+    },
+    {
+     "ds_queue_rank": 72,
+     "ds_queue_score": 3.523,
+     "id": "lib:ranger2/backgrounds/ranger_battle/capbg/component_donor/component",
+     "records": 10
+    },
+    {
+     "ds_queue_rank": 90,
+     "ds_queue_score": 3.351,
+     "id": "lib:ranger2/ui_menus_hud/ranger_menu/um/component_donor/component",
+     "records": 1
+    }
+   ],
+   "ds_records": 129,
+   "excluded_from_ranking": true,
+   "gate_id": "GX-RANGER-UI",
+   "reason": "opp:ranger2/ui_and_story_backgrounds (reference_only) and G7 owns Platinum UI; reopening G7 needs an owner decision",
+   "status": "gated_reference_only",
+   "title": "Ranger 2 interface pulses/glows, menu parts and capture backgrounds"
+  },
+  {
+   "donors": [
+    "ranger2"
+   ],
+   "ds_queue_items": [
+    {
+     "ds_queue_rank": 41,
+     "ds_queue_score": 3.773,
+     "id": "lib:ranger2/pokemon_animation/ranger_poke_a/technique_donor/technique",
+     "records": 96
+    },
+    {
+     "ds_queue_rank": 67,
+     "ds_queue_score": 3.568,
+     "id": "lib:ranger2/pokemon_animation/ranger_poke_w/novel_detail/component",
+     "records": 1
+    }
+   ],
+   "ds_records": 97,
+   "excluded_from_ranking": true,
+   "gate_id": "GX-RANGER-POKE",
+   "reason": "opp:ranger2/pokemon_sprite_frames (reference_only: scale mismatch, Platinum Pokemon presentation)",
+   "status": "gated_reference_only",
+   "title": "Ranger 2 Pokemon animation/frames"
+  },
+  {
+   "donors": [
+    "pmd_sky"
+   ],
+   "ds_queue_items": [
+    {
+     "ds_queue_rank": 44,
+     "ds_queue_score": 3.72,
+     "id": "lib:pmd_sky/backgrounds/pmd_mapbg_d/component_donor/component",
+     "records": 28
+    },
+    {
+     "ds_queue_rank": 46,
+     "ds_queue_score": 3.687,
+     "id": "lib:pmd_sky/backgrounds/pmd_mapbg_v/component_donor/component",
+     "records": 19
+    },
+    {
+     "ds_queue_rank": 52,
+     "ds_queue_score": 3.64,
+     "id": "lib:pmd_sky/backgrounds/pmd_mapbg_s/component_donor/component",
+     "records": 11
+    },
+    {
+     "ds_queue_rank": 73,
+     "ds_queue_score": 3.519,
+     "id": "lib:pmd_sky/backgrounds/pmd_mapbg_p/component_donor/component",
+     "records": 7
+    }
+   ],
+   "ds_records": 65,
+   "excluded_from_ranking": true,
+   "gate_id": "GX-PMD-BG-ART",
+   "reason": "opp:pmd_sky/environment_and_title_backgrounds (reference_only: 2D tilemap art does not map to Platinum 3D; colour/motif reference only)",
+   "status": "gated_reference_only",
+   "title": "PMD Sky 2D map-background art"
+  },
+  {
+   "donors": [
+    "pmd_sky"
+   ],
+   "ds_queue_items": [
+    {
+     "ds_queue_rank": 20,
+     "ds_queue_score": 4.013,
+     "id": "lib:pmd_sky/field_effects/pmd_ground_d/technique_donor/technique",
+     "records": 49
+    },
+    {
+     "ds_queue_rank": 25,
+     "ds_queue_score": 3.955,
+     "id": "lib:pmd_sky/field_effects/pmd_ground_s/technique_donor/technique",
+     "records": 25
+    },
+    {
+     "ds_queue_rank": 26,
+     "ds_queue_score": 3.944,
+     "id": "lib:pmd_sky/field_effects/pmd_ground_v/technique_donor/technique",
+     "records": 22
+    },
+    {
+     "ds_queue_rank": 49,
+     "ds_queue_score": 3.654,
+     "id": "lib:pmd_sky/field_effects/pmd_ground_p/technique_donor/technique",
+     "records": 7
+    },
+    {
+     "ds_queue_rank": 64,
+     "ds_queue_score": 3.581,
+     "id": "lib:pmd_sky/field_effects/pmd_ground_g/technique_donor/technique",
+     "records": 3
+    }
+   ],
+   "ds_records": 106,
+   "excluded_from_ranking": true,
+   "gate_id": "GX-PMD-GROUND",
+   "reason": "opp:pmd_sky/ground_overlay_sprites (reference_only until WAN decoded; no renderer, no visual evidence)",
+   "status": "gated_evidence_gap",
+   "title": "PMD Sky GROUND overlay/object animation"
+  }
+ ],
+ "inputs": {
+  "IMPLEMENTATION_QUEUE.json": "aca211f05c1499ddebc98defb2153c5d87bfa36bf488d9b5d40b9d86655836b1",
+  "OPPORTUNITY_CLASSES.json": "24acd6faefb7f3bb88f8ab7a8d5fd545f0a93ecc045d6b54a2211ccd9f168ee9",
+  "OPPORTUNITY_POOL.json": "cbdc24130f77a35da60d92bb334051dc568d7467aae0561d683d1c65306a6725",
+  "gba_gbc/GBA_GBC_NEEDS_EVIDENCE.json": "ebbe938fa8f61dae7429206694ffd06d9c66184c681ca06811fe163d16dbc073",
+  "gba_gbc/GBA_GBC_OPPORTUNITY_POOL.json": "ae76ca25a93fe4e898f56cf882b1cd55f886a013d9d606c9a0b2f06517b5d0d2",
+  "opportunities/findings.json": "dc375d76d75e3c601c1de45a3a5e0791221fd4f76dffafdf2485760c3fa1ac9c"
+ },
+ "method": {
+  "anchor_rule": "reviewed explicit DS finding scores if present, else strongest mined library (mean of top-5 records per dimension, no size bonus)",
+  "corroboration_rule": "GBA/GBC evidence raises confidence/evidence breadth only; it never changes a score",
+  "inverted": [
+   "cost",
+   "risk"
+  ],
+  "note": "The DS IMPLEMENTATION_QUEUE.json score is a 10-dimension composite with a library-size bonus; this ranking uses only the 7 canonical weights, so DS queue ranks differ and are kept as ds_queue_rank for traceability.",
+  "weights": {
+   "cost": 3,
+   "feasibility": 5,
+   "novelty": 6,
+   "reuse": 4,
+   "risk": 2,
+   "slice": 1,
+   "visual_impact": 7
+  }
+ },
+ "phase": "cross_generation_final_synthesis",
+ "platinum_assets_modified": false,
+ "ranked": [
+  {
+   "best_ds_queue_rank": 8,
+   "bucket": "immediate",
+   "canonical_score": 4.143,
+   "class": "novel_capability",
+   "confidence": "medium",
+   "corroboration": [
+    {
+     "affects_score": false,
+     "classification": "reference_only",
+     "donor": "firered",
+     "generation": "GBA/GBC",
+     "id": "opp:firered/map_location_preview",
+     "pinned_commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+     "role": "corroborates"
+    }
+   ],
+   "cost": "high",
+   "depends_on": [
+    "IO-CARD (soft: shares the still-card host)"
+   ],
+   "donor_count": 1,
+   "donors": [
+    {
+     "generation": "DS",
+     "items": [
+      {
+       "canonical_score": 4.143,
+       "ds_queue_rank": 8,
+       "ds_queue_score": 4.189,
+       "id": "opp:hgss/map_location_preview",
+       "kind": "explicit",
+       "records": 1
+      },
+      {
+       "canonical_score": 3.393,
+       "ds_queue_rank": 39,
+       "ds_queue_score": 3.785,
+       "id": "lib:hgss/location_area/hgss_preview/technique_donor/technique",
+       "kind": "library",
+       "records": 23
+      }
+     ],
+     "role": "primary",
+     "source_id": "hgss"
+    }
+   ],
+   "ds_queue_items": 2,
+   "ds_records": 24,
+   "evidence_donor_count": 2,
+   "execution_order": 4,
+   "human_review": "required: art direction for 2-3 pilot locations before volume art; popup collision check",
+   "io_id": "IO-PREVIEW",
+   "pixel_use": "none",
+   "platinum_files": [
+    "src/overlay005/map_name_popup.c",
+    "res/graphics/map_popups",
+    "src/map_header.c"
+   ],
+   "rank": 1,
+   "reference_only_overlap_note": "One record with multi-donor evidence: HGSS (primary) + FireRed map_location_preview (reference_only, subsumed).",
+   "reuse_later": "all areas; dungeon/region-map consumer (FireRed second-consumer detail)",
+   "risk": "medium",
+   "rollback": "disable the entry trigger; popup path is unchanged",
+   "score_anchor": {
+    "ds_queue_rank": 8,
+    "id": "opp:hgss/map_location_preview",
+    "kind": "explicit"
+   },
+   "score_basis": "reviewed explicit DS finding",
+   "scores": {
+    "cost": 3.0,
+    "feasibility": 4.0,
+    "novelty": 5.0,
+    "reuse": 4.0,
+    "risk": 2.0,
+    "slice": 5.0,
+    "visual_impact": 4.0
+   },
+   "slice_ref": "S4",
+   "spikes_or_gates": [],
+   "summary": "A preview card (new Sinnoh artwork + name, time-of-day variants) shown beside the existing map-name popup. HGSS supplies the module structure and layout; FireRed corroborates and adds visit-gated hold, skip, per-area style and a second UI consumer.",
+   "title": "Area/location preview card on map entry",
+   "wave": 3
+  },
+  {
+   "best_ds_queue_rank": 2,
+   "bucket": "immediate",
+   "canonical_score": 4.0,
+   "class": "novel_detail",
+   "confidence": "high",
+   "corroboration": [],
+   "cost": "medium",
+   "depends_on": [],
+   "donor_count": 1,
+   "donors": [
+    {
+     "generation": "DS",
+     "items": [
+      {
+       "canonical_score": 4.036,
+       "ds_queue_rank": 2,
+       "ds_queue_score": 4.304,
+       "id": "lib:hgss/overworld_pokemon/hgss_follower_legendary/novel_detail/whole_asset",
+       "kind": "library",
+       "records": 46
+      },
+      {
+       "canonical_score": 3.75,
+       "ds_queue_rank": 4,
+       "ds_queue_score": 4.254,
+       "id": "lib:hgss/overworld_pokemon/hgss_follower_species/novel_detail/whole_asset",
+       "kind": "library",
+       "records": 428
+      },
+      {
+       "canonical_score": 3.75,
+       "ds_queue_rank": 14,
+       "ds_queue_score": 4.074,
+       "id": "lib:hgss/overworld_pokemon/hgss_follower_form/novel_detail/whole_asset",
+       "kind": "library",
+       "records": 53
+      },
+      {
+       "canonical_score": 4.0,
+       "ds_queue_rank": 40,
+       "ds_queue_score": 3.784,
+       "id": "opp:hgss/follower_sheet_library",
+       "kind": "explicit",
+       "records": 1
+      },
+      {
+       "canonical_score": 3.5,
+       "ds_queue_rank": 53,
+       "ds_queue_score": 3.636,
+       "id": "lib:hgss/overworld_pokemon/hgss_follower_large/novel_detail/whole_asset",
+       "kind": "library",
+       "records": 3
+      }
+     ],
+     "role": "primary",
+     "source_id": "hgss"
+    }
+   ],
+   "ds_queue_items": 5,
+   "ds_records": 531,
+   "evidence_donor_count": 1,
+   "execution_order": 5,
+   "human_review": "required: species identity and palette fit per sheet",
+   "io_id": "IO-FOL-SHEETS",
+   "pixel_use": "donor_pixels (whole assets)",
+   "platinum_files": [
+    "res/graphics/field_sprites",
+    "src/map_object.c"
+   ],
+   "rank": 2,
+   "reference_only_overlap_note": "Absorbs the four mined follower libraries (species, form, large, legendary).",
+   "reuse_later": "IO-FOL-MECH",
+   "risk": "medium",
+   "rollback": "remove added object sheets",
+   "score_anchor": {
+    "ds_queue_rank": 40,
+    "id": "opp:hgss/follower_sheet_library",
+    "kind": "explicit"
+   },
+   "score_basis": "reviewed explicit DS finding",
+   "scores": {
+    "cost": 2.0,
+    "feasibility": 3.0,
+    "novelty": 5.0,
+    "reuse": 4.0,
+    "risk": 2.0,
+    "slice": 3.0,
+    "visual_impact": 4.0
+   },
+   "slice_ref": null,
+   "spikes_or_gates": [
+    "spike: prove an overworld OBJ palette pipeline for a donor-style Pokemon sheet (unproven per cross-donor plan)"
+   ],
+   "summary": "572 species/form overworld sheets usable for event/cutscene/roaming Pokemon presence without a follower mechanic.",
+   "title": "HGSS overworld Pokemon sheet library (non-follower use, pilot subset first)",
+   "wave": 3
+  },
+  {
+   "best_ds_queue_rank": 18,
+   "bucket": "immediate",
+   "canonical_score": 3.786,
+   "class": "technique_donor",
+   "confidence": "medium (mined library, auto-scored; no human review of the score)",
+   "corroboration": [
+    {
+     "affects_score": false,
+     "classification": "reference_only",
+     "donor": "firered",
+     "generation": "GBA/GBC",
+     "id": "opp:firered/animated_palette_sequences",
+     "pinned_commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+     "role": "corroborates_timing_shape_only"
+    }
+   ],
+   "cost": "medium",
+   "depends_on": [],
+   "donor_count": 1,
+   "donors": [
+    {
+     "generation": "DS",
+     "items": [
+      {
+       "canonical_score": 3.786,
+       "ds_queue_rank": 18,
+       "ds_queue_score": 4.029,
+       "id": "lib:pmd_sky/environmental_effects/pmd_mapbg_d/technique_donor/technique",
+       "kind": "library",
+       "records": 17
+      },
+      {
+       "canonical_score": 3.786,
+       "ds_queue_rank": 19,
+       "ds_queue_score": 4.024,
+       "id": "lib:pmd_sky/environmental_effects/pmd_mapbg_v/technique_donor/technique",
+       "kind": "library",
+       "records": 16
+      },
+      {
+       "canonical_score": 3.786,
+       "ds_queue_rank": 27,
+       "ds_queue_score": 3.918,
+       "id": "lib:pmd_sky/environmental_effects/pmd_mapbg_h/technique_donor/technique",
+       "kind": "library",
+       "records": 12
+      },
+      {
+       "canonical_score": 3.6,
+       "ds_queue_rank": 34,
+       "ds_queue_score": 3.812,
+       "id": "lib:pmd_sky/environmental_effects/pmd_mapbg_p/technique_donor/technique",
+       "kind": "library",
+       "records": 7
+      },
+      {
+       "canonical_score": 3.643,
+       "ds_queue_rank": 59,
+       "ds_queue_score": 3.609,
+       "id": "lib:pmd_sky/environmental_effects/pmd_mapbg_s/technique_donor/technique",
+       "kind": "library",
+       "records": 3
+      },
+      {
+       "canonical_score": 3.643,
+       "ds_queue_rank": 61,
+       "ds_queue_score": 3.595,
+       "id": "lib:pmd_sky/environmental_effects/pmd_mapbg_t/technique_donor/technique",
+       "kind": "library",
+       "records": 1
+      }
+     ],
+     "role": "primary",
+     "source_id": "pmd_sky"
+    }
+   ],
+   "ds_queue_items": 6,
+   "ds_records": 56,
+   "evidence_donor_count": 2,
+   "execution_order": 1,
+   "human_review": "animated capture at game speed (day/evening/night), subtle-vs-busy, photosensitivity check",
+   "io_id": "IO-PAL-CYCLE",
+   "pixel_use": "none",
+   "platinum_files": [
+    "src/battle/terrain.c",
+    "src/unk_0201567C.c",
+    "res/graphics/battle/terrain",
+    "tools/visual_overhaul/generate_battle_terrain.py"
+   ],
+   "rank": 3,
+   "reference_only_overlap_note": "Pool field_environment_art/pmd_sky is also covered by reference_only opp:pmd_sky/environment_and_title_backgrounds; that finding rejects the 2D tilemap art/motifs. Palette/tile animation as a technique was selected separately by the cross-donor slice plan (S2, mining/evidence/pmd_mapbg_bpa.json). Art stays excluded.",
+   "reuse_later": "Distortion World/Giratina arenas, cave and ice terrains, league arenas, title/Hall of Fame 2D layers",
+   "risk": "medium-low",
+   "rollback": "remove the tick call + table; revert the re-authored terrain PNG/PAL",
+   "score_anchor": {
+    "ds_queue_rank": 18,
+    "id": "lib:pmd_sky/environmental_effects/pmd_mapbg_d/technique_donor/technique",
+    "kind": "library"
+   },
+   "score_basis": "mined library (top-5 record mean)",
+   "scores": {
+    "cost": 2.0,
+    "feasibility": 3.0,
+    "novelty": 4.0,
+    "reuse": 4.0,
+    "risk": 2.0,
+    "slice": 3.0,
+    "visual_impact": 4.0
+   },
+   "slice_ref": "S2",
+   "spikes_or_gates": [
+    "spike: confirm OBJ/BG palette slot-7 write path and fade interaction in src/battle/terrain.c"
+   ],
+   "summary": "Data-driven per-terrain palette ramp rotation (table + tick) so static battle platforms gain subtle constant motion; the art is re-indexed Platinum-native, no donor pixels.",
+   "title": "Battle terrain palette/tile-cycle service (water platform first)",
+   "wave": 1
+  },
+  {
+   "best_ds_queue_rank": 47,
+   "bucket": "later",
+   "canonical_score": 3.714,
+   "class": "novel_capability",
+   "confidence": "medium",
+   "corroboration": [
+    {
+     "affects_score": false,
+     "classification": "reference_only",
+     "donor": "yellow",
+     "generation": "GBA/GBC",
+     "id": "opp:yellow/pikachu_presentation/partner_reaction_table",
+     "pinned_commit": "e89ead154b9968aa50eed9328ff2b38b6c194382",
+     "role": "informs_design_only"
+    }
+   ],
+   "cost": "high",
+   "depends_on": [
+    "IO-FOL-SHEETS"
+   ],
+   "donor_count": 1,
+   "donors": [
+    {
+     "generation": "DS",
+     "items": [
+      {
+       "canonical_score": 3.714,
+       "ds_queue_rank": 47,
+       "ds_queue_score": 3.676,
+       "id": "opp:hgss/follower_pokemon",
+       "kind": "explicit",
+       "records": 1
+      }
+     ],
+     "role": "primary",
+     "source_id": "hgss"
+    }
+   ],
+   "ds_queue_items": 1,
+   "ds_records": 1,
+   "evidence_donor_count": 2,
+   "execution_order": 10,
+   "human_review": "required",
+   "io_id": "IO-FOL-MECH",
+   "pixel_use": "donor_pixels (whole assets)",
+   "platinum_files": [
+    "src/map_object.c",
+    "src/map_object_move.c",
+    "src/player_avatar.c"
+   ],
+   "rank": 4,
+   "reference_only_overlap_note": "Yellow partner reaction table (reference_only) informs friendship-keyed reaction design; Platinum already has friendship reactions in the Poketch Friendship Checker. It is not a second opportunity.",
+   "reuse_later": "",
+   "risk": "high",
+   "rollback": "gate behind a flag; remove follower object spawn",
+   "score_anchor": {
+    "ds_queue_rank": 47,
+    "id": "opp:hgss/follower_pokemon",
+    "kind": "explicit"
+   },
+   "score_basis": "reviewed explicit DS finding",
+   "scores": {
+    "cost": 5.0,
+    "feasibility": 2.0,
+    "novelty": 5.0,
+    "reuse": 5.0,
+    "risk": 4.0,
+    "slice": 2.0,
+    "visual_impact": 5.0
+   },
+   "slice_ref": null,
+   "spikes_or_gates": [
+    "spike: prove an overworld OBJ palette pipeline for a donor-style Pokemon sheet (unproven per cross-donor plan)"
+   ],
+   "summary": "Overworld follower object using the map-object system plus follower sheets. Highest visual impact, lowest feasibility.",
+   "title": "Following-Pokemon overworld mechanic",
+   "wave": 5
+  },
+  {
+   "best_ds_queue_rank": 10,
+   "bucket": "immediate",
+   "canonical_score": 3.643,
+   "class": "novel_capability",
+   "confidence": "medium (mined library, auto-scored; no human review of the score)",
+   "corroboration": [],
+   "cost": "medium-high",
+   "depends_on": [],
+   "donor_count": 2,
+   "donors": [
+    {
+     "generation": "DS",
+     "items": [
+      {
+       "canonical_score": 3.607,
+       "ds_queue_rank": 10,
+       "ds_queue_score": 4.105,
+       "id": "lib:ranger2/transitions_presentation/ranger_event/event/technique_donor/technique",
+       "kind": "library",
+       "records": 76
+      },
+      {
+       "canonical_score": 3.643,
+       "ds_queue_rank": 13,
+       "ds_queue_score": 4.09,
+       "id": "lib:ranger2/transitions_presentation/ranger_event/event/novel_capability/technique",
+       "kind": "library",
+       "records": 64
+      }
+     ],
+     "role": "primary",
+     "source_id": "ranger2"
+    },
+    {
+     "generation": "DS",
+     "items": [
+      {
+       "canonical_score": 3.686,
+       "ds_queue_rank": 30,
+       "ds_queue_score": 3.887,
+       "id": "lib:pmd_sky/transitions_presentation/pmd_back_s/novel_capability/technique",
+       "kind": "library",
+       "records": 20
+      },
+      {
+       "canonical_score": 3.4,
+       "ds_queue_rank": 48,
+       "ds_queue_score": 3.666,
+       "id": "lib:pmd_sky/transitions_presentation/pmd_back_s/technique_donor/technique",
+       "kind": "library",
+       "records": 14
+      }
+     ],
+     "role": "supporting",
+     "source_id": "pmd_sky"
+    }
+   ],
+   "ds_queue_items": 4,
+   "ds_records": 174,
+   "evidence_donor_count": 2,
+   "execution_order": 2,
+   "human_review": "art direction before engineering; then in-engine screenshots on both screens and text fit for all four articles",
+   "io_id": "IO-CARD",
+   "pixel_use": "none",
+   "platinum_files": [
+    "res/field/scripts/scripts_solaceon_town_pokemon_news_press.s",
+    "src/bg_window.c",
+    "src/field_task.c"
+   ],
+   "rank": 5,
+   "reference_only_overlap_note": "Pool title_and_presentation/ranger2 is covered by the broad reference_only opp:ranger2/ui_and_story_backgrounds (no concrete element proposed). The later cross-donor slice plan S3 selected the event-card composition technique specifically; art stays excluded. PMD Sky BACK still cards are absorbed as technique corroboration only (S3 rejected them as an art source).",
+   "reuse_later": "story/flashback cards, Team Galactic news, legend lore, Hall-style recaps, area-preview card (IO-PREVIEW)",
+   "risk": "medium",
+   "rollback": "revert the 2-line script edit; new commands/resources become inert",
+   "score_anchor": {
+    "ds_queue_rank": 13,
+    "id": "lib:ranger2/transitions_presentation/ranger_event/event/novel_capability/technique",
+    "kind": "library"
+   },
+   "score_basis": "mined library (top-5 record mean)",
+   "scores": {
+    "cost": 4.0,
+    "feasibility": 2.0,
+    "novelty": 5.0,
+    "reuse": 5.0,
+    "risk": 3.0,
+    "slice": 2.0,
+    "visual_impact": 4.0
+   },
+   "slice_ref": "S3",
+   "spikes_or_gates": [
+    "spike: choose BG layer/VRAM bank for a card while the field is locked (fallback: sub screen)"
+   ],
+   "summary": "A reusable full-screen still card state (masthead, headline, illustration well, tabs) shown over the field script flow; Ranger 2 event bundles supply composition/state-variant structure only.",
+   "title": "Still-scene card presentation (Solaceon News Press front page first)",
+   "wave": 2
+  },
+  {
+   "best_ds_queue_rank": 7,
+   "bucket": "later",
+   "canonical_score": 3.571,
+   "class": "component_donor",
+   "confidence": "medium",
+   "corroboration": [],
+   "cost": "medium",
+   "depends_on": [],
+   "donor_count": 1,
+   "donors": [
+    {
+     "generation": "DS",
+     "items": [
+      {
+       "canonical_score": 3.821,
+       "ds_queue_rank": 7,
+       "ds_queue_score": 4.193,
+       "id": "lib:ranger2/battle_effects/ranger_effect/e/component_donor/component",
+       "kind": "library",
+       "records": 127
+      },
+      {
+       "canonical_score": 3.536,
+       "ds_queue_rank": 22,
+       "ds_queue_score": 3.98,
+       "id": "lib:ranger2/battle_effects/ranger_target/t/component_donor/component",
+       "kind": "library",
+       "records": 219
+      },
+      {
+       "canonical_score": 3.571,
+       "ds_queue_rank": 58,
+       "ds_queue_score": 3.622,
+       "id": "opp:ranger2/effect_primitives",
+       "kind": "explicit",
+       "records": 1
+      }
+     ],
+     "role": "primary",
+     "source_id": "ranger2"
+    }
+   ],
+   "ds_queue_items": 3,
+   "ds_records": 347,
+   "evidence_donor_count": 1,
+   "execution_order": 7,
+   "human_review": "required per move",
+   "io_id": "IO-FX-PRIM",
+   "pixel_use": "derived",
+   "platinum_files": [
+    "res/moves",
+    "src/particle_system.c",
+    "res/graphics/battle"
+   ],
+   "rank": 6,
+   "reference_only_overlap_note": "",
+   "reuse_later": "",
+   "risk": "medium",
+   "rollback": "per-move: restore the move's anim.s/spa",
+   "score_anchor": {
+    "ds_queue_rank": 58,
+    "id": "opp:ranger2/effect_primitives",
+    "kind": "explicit"
+   },
+   "score_basis": "reviewed explicit DS finding",
+   "scores": {
+    "cost": 3.0,
+    "feasibility": 3.0,
+    "novelty": 3.0,
+    "reuse": 5.0,
+    "risk": 3.0,
+    "slice": 4.0,
+    "visual_impact": 4.0
+   },
+   "slice_ref": null,
+   "spikes_or_gates": [
+    "design step: choose per-move Platinum targets (none chosen yet)"
+   ],
+   "summary": "Redraw selected Ranger primitives (fire/tornado/lightning/glow) into Platinum particle resources for specific moves.",
+   "title": "Ranger 2 effect primitives as per-move particle shapes",
+   "wave": 4
+  },
+  {
+   "best_ds_queue_rank": 11,
+   "bucket": "later",
+   "canonical_score": 3.571,
+   "class": "component_donor",
+   "confidence": "medium",
+   "corroboration": [],
+   "cost": "medium",
+   "depends_on": [],
+   "donor_count": 1,
+   "donors": [
+    {
+     "generation": "DS",
+     "items": [
+      {
+       "canonical_score": 3.786,
+       "ds_queue_rank": 11,
+       "ds_queue_score": 4.097,
+       "id": "lib:hgss/textures/hgss_texset_floor_interior/component_donor/component",
+       "kind": "library",
+       "records": 20
+      },
+      {
+       "canonical_score": 3.786,
+       "ds_queue_rank": 12,
+       "ds_queue_score": 4.097,
+       "id": "lib:hgss/textures/hgss_texset_foliage_ground/component_donor/component",
+       "kind": "library",
+       "records": 20
+      },
+      {
+       "canonical_score": 3.686,
+       "ds_queue_rank": 21,
+       "ds_queue_score": 3.997,
+       "id": "lib:hgss/textures/hgss_texset_wall_architecture/component_donor/component",
+       "kind": "library",
+       "records": 15
+      },
+      {
+       "canonical_score": 3.636,
+       "ds_queue_rank": 33,
+       "ds_queue_score": 3.824,
+       "id": "lib:hgss/textures/hgss_texset_mixed/component_donor/component",
+       "kind": "library",
+       "records": 8
+      },
+      {
+       "canonical_score": 3.598,
+       "ds_queue_rank": 38,
+       "ds_queue_score": 3.789,
+       "id": "lib:hgss/textures/hgss_texset_floor_interior/novel_detail/component",
+       "kind": "library",
+       "records": 4
+      },
+      {
+       "canonical_score": 3.643,
+       "ds_queue_rank": 51,
+       "ds_queue_score": 3.649,
+       "id": "lib:hgss/textures/hgss_texset_rock_cliff/component_donor/component",
+       "kind": "library",
+       "records": 1
+      },
+      {
+       "canonical_score": 3.571,
+       "ds_queue_rank": 57,
+       "ds_queue_score": 3.622,
+       "id": "opp:hgss/map_texture_set_library",
+       "kind": "explicit",
+       "records": 1
+      },
+      {
+       "canonical_score": 3.536,
+       "ds_queue_rank": 60,
+       "ds_queue_score": 3.601,
+       "id": "lib:hgss/textures/hgss_texset_mixed/novel_detail/component",
+       "kind": "library",
+       "records": 2
+      },
+      {
+       "canonical_score": 3.411,
+       "ds_queue_rank": 63,
+       "ds_queue_score": 3.587,
+       "id": "lib:hgss/textures/hgss_texset_wall_architecture/novel_detail/component",
+       "kind": "library",
+       "records": 2
+      },
+      {
+       "canonical_score": 3.357,
+       "ds_queue_rank": 69,
+       "ds_queue_score": 3.546,
+       "id": "lib:hgss/textures/hgss_texset_wall_architecture/enhancement_candidate/composite_input",
+       "kind": "library",
+       "records": 2
+      },
+      {
+       "canonical_score": 3.357,
+       "ds_queue_rank": 75,
+       "ds_queue_score": 3.486,
+       "id": "lib:hgss/textures/hgss_texset_foliage_ground/enhancement_candidate/composite_input",
+       "kind": "library",
+       "records": 1
+      },
+      {
+       "canonical_score": 3.393,
+       "ds_queue_rank": 80,
+       "ds_queue_score": 3.459,
+       "id": "lib:hgss/textures/hgss_texset_water/component_donor/component",
+       "kind": "library",
+       "records": 1
+      },
+      {
+       "canonical_score": 3.393,
+       "ds_queue_rank": 82,
+       "ds_queue_score": 3.432,
+       "id": "lib:hgss/textures/hgss_texset_water/novel_detail/component",
+       "kind": "library",
+       "records": 1
+      },
+      {
+       "canonical_score": 3.357,
+       "ds_queue_rank": 86,
+       "ds_queue_score": 3.405,
+       "id": "lib:hgss/textures/hgss_texset_mixed/enhancement_candidate/composite_input",
+       "kind": "library",
+       "records": 1
+      }
+     ],
+     "role": "primary",
+     "source_id": "hgss"
+    }
+   ],
+   "ds_queue_items": 14,
+   "ds_records": 79,
+   "evidence_donor_count": 1,
+   "execution_order": 8,
+   "human_review": "required",
+   "io_id": "IO-TEX-HGSS",
+   "pixel_use": "derived",
+   "platinum_files": [
+    "res/field/area_data",
+    "res/field/props"
+   ],
+   "rank": 7,
+   "reference_only_overlap_note": "Already palette-graded in G4/G7.6; a region transplant is a second, riskier pass over the same assets (cross-donor plan).",
+   "reuse_later": "",
+   "risk": "medium",
+   "rollback": "restore area texture sets",
+   "score_anchor": {
+    "ds_queue_rank": 57,
+    "id": "opp:hgss/map_texture_set_library",
+    "kind": "explicit"
+   },
+   "score_basis": "reviewed explicit DS finding",
+   "scores": {
+    "cost": 3.0,
+    "feasibility": 3.0,
+    "novelty": 3.0,
+    "reuse": 5.0,
+    "risk": 3.0,
+    "slice": 4.0,
+    "visual_impact": 4.0
+   },
+   "slice_ref": null,
+   "spikes_or_gates": [],
+   "summary": "Region-level reuse of HGSS NSBTX materials on Platinum map texture sets.",
+   "title": "HGSS map texture-set regions",
+   "wave": 4
+  },
+  {
+   "best_ds_queue_rank": 84,
+   "bucket": "immediate",
+   "canonical_score": 3.393,
+   "class": "novel_detail",
+   "confidence": "medium",
+   "corroboration": [
+    {
+     "affects_score": false,
+     "classification": "novel_detail",
+     "donor": "pmd_red",
+     "generation": "GBA/GBC",
+     "id": "opp:pmd_red/battler_status_overlays",
+     "pinned_commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+     "role": "corroborates_and_strengthens"
+    },
+    {
+     "affects_score": false,
+     "classification": "technique_donor",
+     "donor": "pmd_red",
+     "generation": "GBA/GBC",
+     "id": "opp:pmd_red/battler_status_overlays/multi_status_cycling",
+     "pinned_commit": "aefe6a46bcc5df13142225ef673a1ee2ac1b760b",
+     "role": "conditional_sub_technique"
+    }
+   ],
+   "cost": "medium",
+   "depends_on": [],
+   "donor_count": 1,
+   "donors": [
+    {
+     "generation": "DS",
+     "items": [
+      {
+       "canonical_score": 3.393,
+       "ds_queue_rank": 84,
+       "ds_queue_score": 3.405,
+       "id": "opp:pmd_sky/battler_status_indicators",
+       "kind": "explicit",
+       "records": 1
+      }
+     ],
+     "role": "primary",
+     "source_id": "pmd_sky"
+    }
+   ],
+   "ds_queue_items": 1,
+   "ds_records": 1,
+   "evidence_donor_count": 2,
+   "execution_order": 3,
+   "human_review": "required: glyph set selection (which conditions), double-battle clutter, in-battle capture",
+   "io_id": "IO-STATUS",
+   "pixel_use": "none (redraw)",
+   "platinum_files": [
+    "src/battle/healthbox.c",
+    "src/battle/battle_lib.c",
+    "src/battle/battle_display.c",
+    "src/battle_anim/script_funcs_status.c"
+   ],
+   "rank": 8,
+   "reference_only_overlap_note": "Merged record: the DS PMD Sky status-icon model and the GBA PMD Red trace are the same concept. PMD Red supplies traced mask/slot/timing behaviour and the Platinum comparison; the multi-status cycling rule is a conditional sub-technique (a static side-by-side row may beat it on DS screens). OAM headroom is unmeasured (cost/risk only).",
+   "reuse_later": "any other battler-local transient indicator",
+   "risk": "medium",
+   "rollback": "remove the overlay task and glyph sheet; healthbox icon path is untouched",
+   "score_anchor": {
+    "ds_queue_rank": 84,
+    "id": "opp:pmd_sky/battler_status_indicators",
+    "kind": "explicit"
+   },
+   "score_basis": "reviewed explicit DS finding",
+   "scores": {
+    "cost": 3.0,
+    "feasibility": 3.0,
+    "novelty": 4.0,
+    "reuse": 4.0,
+    "risk": 3.0,
+    "slice": 4.0,
+    "visual_impact": 3.0
+   },
+   "slice_ref": null,
+   "spikes_or_gates": [
+    "spike: measure battle OAM/palette headroom (GBA_GBC_NEEDS_EVIDENCE defer:platinum/battle_overlay_oam_palette_headroom)"
+   ],
+   "summary": "A small animated glyph anchored to each battler while a condition is active, covering conditions Platinum never shows after the animation ends (confusion, infatuation, taunt-type, stat drops, screens). Redrawn Platinum-native.",
+   "title": "Persistent battler status-glyph overlay (volatile and stat conditions)",
+   "wave": 2
+  },
+  {
+   "best_ds_queue_rank": 28,
+   "bucket": "later",
+   "canonical_score": 3.357,
+   "class": "technique_donor",
+   "confidence": "medium (mined library, auto-scored; no human review of the score)",
+   "corroboration": [],
+   "cost": "high",
+   "depends_on": [],
+   "donor_count": 1,
+   "donors": [
+    {
+     "generation": "DS",
+     "items": [
+      {
+       "canonical_score": 3.357,
+       "ds_queue_rank": 28,
+       "ds_queue_score": 3.911,
+       "id": "lib:ranger2/field_graphics/ranger_field/m/technique_donor/technique",
+       "kind": "library",
+       "records": 72
+      },
+      {
+       "canonical_score": 3.321,
+       "ds_queue_rank": 29,
+       "ds_queue_score": 3.905,
+       "id": "lib:ranger2/textures/ranger_field/m/component_donor/component",
+       "kind": "library",
+       "records": 440
+      },
+      {
+       "canonical_score": 3.357,
+       "ds_queue_rank": 42,
+       "ds_queue_score": 3.741,
+       "id": "lib:ranger2/field_graphics/ranger_field/m/component_donor/component",
+       "kind": "library",
+       "records": 66
+      }
+     ],
+     "role": "primary",
+     "source_id": "ranger2"
+    }
+   ],
+   "ds_queue_items": 3,
+   "ds_records": 578,
+   "evidence_donor_count": 1,
+   "execution_order": 11,
+   "human_review": "required",
+   "io_id": "IO-TEX-RANGER",
+   "pixel_use": "derived",
+   "platinum_files": [
+    "res/field/area_data"
+   ],
+   "rank": 9,
+   "reference_only_overlap_note": "Needs NSBTA/3D material authoring; no pipeline (cross-donor plan).",
+   "reuse_later": "",
+   "risk": "medium",
+   "rollback": "restore area texture sets",
+   "score_anchor": {
+    "ds_queue_rank": 28,
+    "id": "lib:ranger2/field_graphics/ranger_field/m/technique_donor/technique",
+    "kind": "library"
+   },
+   "score_basis": "mined library (top-5 record mean)",
+   "scores": {
+    "cost": 3.0,
+    "feasibility": 3.0,
+    "novelty": 3.0,
+    "reuse": 5.0,
+    "risk": 2.0,
+    "slice": 3.0,
+    "visual_impact": 3.0
+   },
+   "slice_ref": null,
+   "spikes_or_gates": [
+    "scoping: 905 ntfp groups unscoped"
+   ],
+   "summary": "Ranger 2 field texture and material-animation technique/components (905 ntfp groups remain unscoped).",
+   "title": "Ranger 2 field texture/material sets",
+   "wave": 5
+  },
+  {
+   "best_ds_queue_rank": 6,
+   "bucket": "later",
+   "canonical_score": 3.321,
+   "class": "technique_donor",
+   "confidence": "medium",
+   "corroboration": [],
+   "cost": "low",
+   "depends_on": [],
+   "donor_count": 1,
+   "donors": [
+    {
+     "generation": "DS",
+     "items": [
+      {
+       "canonical_score": 3.714,
+       "ds_queue_rank": 6,
+       "ds_queue_score": 4.201,
+       "id": "lib:ranger2/battle_effects/ranger_effect/e/technique_donor/technique",
+       "kind": "library",
+       "records": 55
+      },
+      {
+       "canonical_score": 3.321,
+       "ds_queue_rank": 76,
+       "ds_queue_score": 3.459,
+       "id": "opp:ranger2/effect_sequencing",
+       "kind": "explicit",
+       "records": 1
+      }
+     ],
+     "role": "primary",
+     "source_id": "ranger2"
+    }
+   ],
+   "ds_queue_items": 2,
+   "ds_records": 56,
+   "evidence_donor_count": 1,
+   "execution_order": 9,
+   "human_review": "per move",
+   "io_id": "IO-FX-SEQ",
+   "pixel_use": "none",
+   "platinum_files": [
+    "res/moves"
+   ],
+   "rank": 10,
+   "reference_only_overlap_note": "G5 already applied selective impact staging; low novelty (cross-donor plan).",
+   "reuse_later": "",
+   "risk": "low",
+   "rollback": "restore the move's anim.s",
+   "score_anchor": {
+    "ds_queue_rank": 76,
+    "id": "opp:ranger2/effect_sequencing",
+    "kind": "explicit"
+   },
+   "score_basis": "reviewed explicit DS finding",
+   "scores": {
+    "cost": 2.0,
+    "feasibility": 4.0,
+    "novelty": 2.0,
+    "reuse": 4.0,
+    "risk": 2.0,
+    "slice": 4.0,
+    "visual_impact": 3.0
+   },
+   "slice_ref": null,
+   "spikes_or_gates": [],
+   "summary": "Re-express launch/impact/ember phase structure in anim.s sequencing for selected moves.",
+   "title": "Ranger 2 multi-phase effect sequencing (launch/impact/embers)",
+   "wave": 4
+  },
+  {
+   "best_ds_queue_rank": 66,
+   "bucket": "later",
+   "canonical_score": 3.274,
+   "class": "component_donor",
+   "confidence": "medium (mined library, auto-scored; no human review of the score)",
+   "corroboration": [],
+   "cost": "low",
+   "depends_on": [],
+   "donor_count": 1,
+   "donors": [
+    {
+     "generation": "DS",
+     "items": [
+      {
+       "canonical_score": 3.274,
+       "ds_queue_rank": 66,
+       "ds_queue_score": 3.573,
+       "id": "lib:hgss/npc_player_sprites/hgss_mmodel/component_donor/component",
+       "kind": "library",
+       "records": 3
+      },
+      {
+       "canonical_score": 3.214,
+       "ds_queue_rank": 85,
+       "ds_queue_score": 3.405,
+       "id": "lib:hgss/npc_player_sprites/hgss_mmodel/enhancement_candidate/composite_input",
+       "kind": "library",
+       "records": 1
+      }
+     ],
+     "role": "primary",
+     "source_id": "hgss"
+    }
+   ],
+   "ds_queue_items": 2,
+   "ds_records": 4,
+   "evidence_donor_count": 1,
+   "execution_order": 12,
+   "human_review": "required",
+   "io_id": "IO-NPC-COMP",
+   "pixel_use": "derived",
+   "platinum_files": [
+    "res/graphics/field_sprites"
+   ],
+   "rank": 11,
+   "reference_only_overlap_note": "",
+   "reuse_later": "",
+   "risk": "low",
+   "rollback": "restore sprite files",
+   "score_anchor": {
+    "ds_queue_rank": 66,
+    "id": "lib:hgss/npc_player_sprites/hgss_mmodel/component_donor/component",
+    "kind": "library"
+   },
+   "score_basis": "mined library (top-5 record mean)",
+   "scores": {
+    "cost": 2.0,
+    "feasibility": 3.0,
+    "novelty": 3.0,
+    "reuse": 5.0,
+    "risk": 3.0,
+    "slice": 2.0,
+    "visual_impact": 2.67
+   },
+   "slice_ref": null,
+   "spikes_or_gates": [],
+   "summary": "Small component/enhancement set on existing Platinum NPC sprites.",
+   "title": "HGSS NPC/player model components and enhancements",
+   "wave": 5
+  },
+  {
+   "best_ds_queue_rank": 3,
+   "bucket": "later",
+   "canonical_score": 3.25,
+   "class": "component_donor",
+   "confidence": "medium",
+   "corroboration": [],
+   "cost": "high",
+   "depends_on": [],
+   "donor_count": 1,
+   "donors": [
+    {
+     "generation": "DS",
+     "items": [
+      {
+       "canonical_score": 3.893,
+       "ds_queue_rank": 3,
+       "ds_queue_score": 4.297,
+       "id": "lib:hgss/models/hgss_bm_field_building_exterior/component_donor/component",
+       "kind": "library",
+       "records": 95
+      },
+      {
+       "canonical_score": 3.864,
+       "ds_queue_rank": 16,
+       "ds_queue_score": 4.055,
+       "id": "lib:hgss/models/hgss_bm_room_interior_room_shell/component_donor/component",
+       "kind": "library",
+       "records": 19
+      },
+      {
+       "canonical_score": 3.607,
+       "ds_queue_rank": 24,
+       "ds_queue_score": 3.957,
+       "id": "lib:hgss/models/hgss_bm_field_building_exterior/novel_detail/whole_asset",
+       "kind": "library",
+       "records": 29
+      },
+      {
+       "canonical_score": 3.579,
+       "ds_queue_rank": 43,
+       "ds_queue_score": 3.739,
+       "id": "lib:hgss/models/hgss_bm_room_machinery_terminal/component_donor/component",
+       "kind": "library",
+       "records": 6
+      },
+      {
+       "canonical_score": 3.471,
+       "ds_queue_rank": 45,
+       "ds_queue_score": 3.687,
+       "id": "lib:hgss/models/hgss_bm_field_door_window_panel/novel_detail/whole_asset",
+       "kind": "library",
+       "records": 9
+      },
+      {
+       "canonical_score": 3.714,
+       "ds_queue_rank": 50,
+       "ds_queue_score": 3.649,
+       "id": "lib:hgss/models/hgss_bm_room_furniture_interior/novel_detail/whole_asset",
+       "kind": "library",
+       "records": 1
+      },
+      {
+       "canonical_score": 3.536,
+       "ds_queue_rank": 54,
+       "ds_queue_score": 3.628,
+       "id": "lib:hgss/models/hgss_bm_field_gym_structure/component_donor/component",
+       "kind": "library",
+       "records": 2
+      },
+      {
+       "canonical_score": 3.75,
+       "ds_queue_rank": 55,
+       "ds_queue_score": 3.628,
+       "id": "lib:hgss/models/hgss_bm_field_lighting_prop/component_donor/component",
+       "kind": "library",
+       "records": 2
+      },
+      {
+       "canonical_score": 3.75,
+       "ds_queue_rank": 56,
+       "ds_queue_score": 3.628,
+       "id": "lib:hgss/models/hgss_bm_field_machinery_terminal/component_donor/component",
+       "kind": "library",
+       "records": 2
+      },
+      {
+       "canonical_score": 3.625,
+       "ds_queue_rank": 62,
+       "ds_queue_score": 3.593,
+       "id": "lib:hgss/models/hgss_bm_room_gym_structure/component_donor/component",
+       "kind": "library",
+       "records": 4
+      },
+      {
+       "canonical_score": 3.536,
+       "ds_queue_rank": 68,
+       "ds_queue_score": 3.568,
+       "id": "lib:hgss/models/hgss_bm_room_furniture_interior/component_donor/component",
+       "kind": "library",
+       "records": 1
+      },
+      {
+       "canonical_score": 3.5,
+       "ds_queue_rank": 70,
+       "ds_queue_score": 3.541,
+       "id": "lib:hgss/models/hgss_bm_field_door_window_panel/component_donor/component",
+       "kind": "library",
+       "records": 1
+      },
+      {
+       "canonical_score": 3.583,
+       "ds_queue_rank": 71,
+       "ds_queue_score": 3.536,
+       "id": "lib:hgss/models/hgss_bm_field_foliage_prop/component_donor/component",
+       "kind": "library",
+       "records": 3
+      },
+      {
+       "canonical_score": 3.446,
+       "ds_queue_rank": 74,
+       "ds_queue_score": 3.518,
+       "id": "lib:hgss/models/hgss_bm_field_ground_surface/component_donor/component",
+       "kind": "library",
+       "records": 4
+      },
+      {
+       "canonical_score": 3.607,
+       "ds_queue_rank": 77,
+       "ds_queue_score": 3.459,
+       "id": "lib:hgss/models/hgss_bm_field_sign_info_board/component_donor/component",
+       "kind": "library",
+       "records": 1
+      },
+      {
+       "canonical_score": 3.607,
+       "ds_queue_rank": 78,
+       "ds_queue_score": 3.459,
+       "id": "lib:hgss/models/hgss_bm_field_water_feature/component_donor/component",
+       "kind": "library",
+       "records": 1
+      },
+      {
+       "canonical_score": 3.607,
+       "ds_queue_rank": 79,
+       "ds_queue_score": 3.459,
+       "id": "lib:hgss/models/hgss_bm_room_foliage_prop/component_donor/component",
+       "kind": "library",
+       "records": 1
+      },
+      {
+       "canonical_score": 3.405,
+       "ds_queue_rank": 81,
+       "ds_queue_score": 3.455,
+       "id": "lib:hgss/models/hgss_bm_field_small_prop_misc/component_donor/component",
+       "kind": "library",
+       "records": 3
+      },
+      {
+       "canonical_score": 3.464,
+       "ds_queue_rank": 87,
+       "ds_queue_score": 3.378,
+       "id": "lib:hgss/models/hgss_bm_field_foliage_prop/novel_detail/whole_asset",
+       "kind": "library",
+       "records": 1
+      },
+      {
+       "canonical_score": 3.464,
+       "ds_queue_rank": 88,
+       "ds_queue_score": 3.378,
+       "id": "lib:hgss/models/hgss_bm_field_sign_panel/novel_detail/whole_asset",
+       "kind": "library",
+       "records": 1
+      },
+      {
+       "canonical_score": 3.25,
+       "ds_queue_rank": 89,
+       "ds_queue_score": 3.351,
+       "id": "opp:hgss/field_building_model_library",
+       "kind": "explicit",
+       "records": 1
+      }
+     ],
+     "role": "primary",
+     "source_id": "hgss"
+    }
+   ],
+   "ds_queue_items": 21,
+   "ds_records": 187,
+   "evidence_donor_count": 1,
+   "execution_order": 13,
+   "human_review": "required",
+   "io_id": "IO-MODELS",
+   "pixel_use": "derived",
+   "platinum_files": [
+    "res/field/props",
+    "res/field/area_data"
+   ],
+   "rank": 12,
+   "reference_only_overlap_note": "Absorbs 20 mined model libraries for exterior/interior/prop families.",
+   "reuse_later": "",
+   "risk": "high",
+   "rollback": "restore prop models",
+   "score_anchor": {
+    "ds_queue_rank": 89,
+    "id": "opp:hgss/field_building_model_library",
+    "kind": "explicit"
+   },
+   "score_basis": "reviewed explicit DS finding",
+   "scores": {
+    "cost": 4.0,
+    "feasibility": 2.0,
+    "novelty": 3.0,
+    "reuse": 5.0,
+    "risk": 3.0,
+    "slice": 3.0,
+    "visual_impact": 4.0
+   },
+   "slice_ref": null,
+   "spikes_or_gates": [
+    "spike: NSBMD prop authoring pipeline does not exist (G7.6 records this)"
+   ],
+   "summary": "340 outdoor + 222 interior props as component donors for Platinum field models.",
+   "title": "HGSS building/prop model library",
+   "wave": 5
+  },
+  {
+   "best_ds_queue_rank": 23,
+   "bucket": "later",
+   "canonical_score": 3.179,
+   "class": "component_donor",
+   "confidence": "medium (mined library, auto-scored; no human review of the score)",
+   "corroboration": [],
+   "cost": "high",
+   "depends_on": [
+    "IO-TRN-COMP (review gate proven first)"
+   ],
+   "donor_count": 1,
+   "donors": [
+    {
+     "generation": "DS",
+     "items": [
+      {
+       "canonical_score": 3.107,
+       "ds_queue_rank": 23,
+       "ds_queue_score": 3.961,
+       "id": "lib:hgss/pokemon_sprites/hgss_battle_sprites/component_donor/component",
+       "kind": "library",
+       "records": 329
+      },
+      {
+       "canonical_score": 3.107,
+       "ds_queue_rank": 31,
+       "ds_queue_score": 3.849,
+       "id": "lib:hgss/pokemon_sprites/hgss_battle_sprites/enhancement_candidate/composite_input",
+       "kind": "library",
+       "records": 91
+      },
+      {
+       "canonical_score": 3.179,
+       "ds_queue_rank": 35,
+       "ds_queue_score": 3.805,
+       "id": "lib:hgss/pokemon_sprites/hgss_battle_forms/component_donor/component",
+       "kind": "library",
+       "records": 74
+      },
+      {
+       "canonical_score": 3.179,
+       "ds_queue_rank": 65,
+       "ds_queue_score": 3.574,
+       "id": "lib:hgss/pokemon_sprites/hgss_battle_forms/enhancement_candidate/composite_input",
+       "kind": "library",
+       "records": 2
+      }
+     ],
+     "role": "primary",
+     "source_id": "hgss"
+    }
+   ],
+   "ds_queue_items": 4,
+   "ds_records": 496,
+   "evidence_donor_count": 1,
+   "execution_order": 14,
+   "human_review": "required per sprite",
+   "io_id": "IO-PKM-COMP",
+   "pixel_use": "derived",
+   "platinum_files": [
+    "res/pokemon",
+    "src/pokemon_sprite.c"
+   ],
+   "rank": 13,
+   "reference_only_overlap_note": "",
+   "reuse_later": "",
+   "risk": "medium",
+   "rollback": "restore sprite files",
+   "score_anchor": {
+    "ds_queue_rank": 35,
+    "id": "lib:hgss/pokemon_sprites/hgss_battle_forms/component_donor/component",
+    "kind": "library"
+   },
+   "score_basis": "mined library (top-5 record mean)",
+   "scores": {
+    "cost": 1.0,
+    "feasibility": 4.0,
+    "novelty": 2.0,
+    "reuse": 4.0,
+    "risk": 2.0,
+    "slice": 4.0,
+    "visual_impact": 2.0
+   },
+   "slice_ref": null,
+   "spikes_or_gates": [],
+   "summary": "Component and composite use of HGSS battle sprites on existing Platinum Pokemon sprites.",
+   "title": "HGSS Pokemon battle-sprite components and composites",
+   "wave": 5
+  },
+  {
+   "best_ds_queue_rank": 91,
+   "bucket": "later",
+   "canonical_score": 2.814,
+   "class": "replacement_candidate",
+   "confidence": "medium (mined library, auto-scored; no human review of the score)",
+   "corroboration": [],
+   "cost": "medium",
+   "depends_on": [],
+   "donor_count": 1,
+   "donors": [
+    {
+     "generation": "DS",
+     "items": [
+      {
+       "canonical_score": 2.814,
+       "ds_queue_rank": 91,
+       "ds_queue_score": 3.298,
+       "id": "lib:hgss/pokemon_sprites/hgss_battle_sprites/replacement_candidate/whole_asset",
+       "kind": "library",
+       "records": 26
+      }
+     ],
+     "role": "primary",
+     "source_id": "hgss"
+    }
+   ],
+   "ds_queue_items": 1,
+   "ds_records": 26,
+   "evidence_donor_count": 1,
+   "execution_order": 15,
+   "human_review": "required: runtime QA",
+   "io_id": "IO-PKM-REPL",
+   "pixel_use": "donor_pixels (whole assets)",
+   "platinum_files": [
+    "res/pokemon",
+    "src/pokemon_sprite.c"
+   ],
+   "rank": 14,
+   "reference_only_overlap_note": "Replacement is one outcome among eight, not the primary one.",
+   "reuse_later": "",
+   "risk": "medium",
+   "rollback": "restore sprite files",
+   "score_anchor": {
+    "ds_queue_rank": 91,
+    "id": "lib:hgss/pokemon_sprites/hgss_battle_sprites/replacement_candidate/whole_asset",
+    "kind": "library"
+   },
+   "score_basis": "mined library (top-5 record mean)",
+   "scores": {
+    "cost": 3.0,
+    "feasibility": 4.0,
+    "novelty": 1.0,
+    "reuse": 3.0,
+    "risk": 3.0,
+    "slice": 4.8,
+    "visual_impact": 3.0
+   },
+   "slice_ref": null,
+   "spikes_or_gates": [
+    "gate: runtime QA before any replacement import"
+   ],
+   "summary": "Whole-asset replacements ledgered as preferred; gated by runtime QA.",
+   "title": "HGSS Pokemon battle-sprite whole replacements (26)",
+   "wave": 6
+  },
+  {
+   "best_ds_queue_rank": 1,
+   "bucket": "immediate",
+   "canonical_score": 2.714,
+   "class": "enhancement_candidate",
+   "confidence": "medium",
+   "corroboration": [],
+   "cost": "low",
+   "depends_on": [],
+   "donor_count": 1,
+   "donors": [
+    {
+     "generation": "DS",
+     "items": [
+      {
+       "canonical_score": 3.857,
+       "ds_queue_rank": 1,
+       "ds_queue_score": 4.317,
+       "id": "lib:hgss/trainer_sprites/hgss_front/component_donor/component",
+       "kind": "library",
+       "records": 73
+      },
+      {
+       "canonical_score": 3.629,
+       "ds_queue_rank": 15,
+       "ds_queue_score": 4.062,
+       "id": "lib:hgss/trainer_sprites/hgss_front/enhancement_candidate/composite_input",
+       "kind": "library",
+       "records": 15
+      },
+      {
+       "canonical_score": 3.564,
+       "ds_queue_rank": 36,
+       "ds_queue_score": 3.799,
+       "id": "lib:hgss/trainer_sprites/hgss_back/component_donor/component",
+       "kind": "library",
+       "records": 6
+      },
+      {
+       "canonical_score": 2.714,
+       "ds_queue_rank": 93,
+       "ds_queue_score": 2.811,
+       "id": "opp:trainer/tc_ace_trainer_female/enhancement",
+       "kind": "explicit",
+       "records": 1
+      },
+      {
+       "canonical_score": 2.714,
+       "ds_queue_rank": 94,
+       "ds_queue_score": 2.811,
+       "id": "opp:trainer/tc_ace_trainer_male/enhancement",
+       "kind": "explicit",
+       "records": 1
+      }
+     ],
+     "role": "primary",
+     "source_id": "hgss"
+    }
+   ],
+   "ds_queue_items": 5,
+   "ds_records": 96,
+   "evidence_donor_count": 1,
+   "execution_order": 6,
+   "human_review": "required: final hand-authored sprites (1x/4x, in-battle, M and F); per-component accept/reject",
+   "io_id": "IO-TRN-COMP",
+   "pixel_use": "derived",
+   "platinum_files": [
+    "res/trainers/classes/ace_trainer_male/front.png",
+    "res/trainers/classes/ace_trainer_female/front.png",
+    "tools/visual_overhaul/hgss_trainer_sprite_lib.py",
+    "tools/visual_overhaul/apply_platinum_sprite_pixel_patch.py"
+   ],
+   "rank": 15,
+   "reference_only_overlap_note": "Explicit reviewed findings (the Ace Trainer pair) anchor the score; the 73-record component library and 15 composite inputs are scope expansion after the gate is proven. Canonical score is low (visual impact 2); it is sequenced first-wave for infrastructure and zero risk, not for impact.",
+   "reuse_later": "other hgss_front component records, hgss_back",
+   "risk": "low",
+   "rollback": "restore the two front.png files",
+   "score_anchor": {
+    "ds_queue_rank": 93,
+    "id": "opp:trainer/tc_ace_trainer_female/enhancement",
+    "kind": "explicit"
+   },
+   "score_basis": "reviewed explicit DS finding",
+   "scores": {
+    "cost": 2.0,
+    "feasibility": 4.0,
+    "novelty": 2.0,
+    "reuse": 2.0,
+    "risk": 3.0,
+    "slice": 4.0,
+    "visual_impact": 2.0
+   },
+   "slice_ref": "S1",
+   "spikes_or_gates": [],
+   "summary": "Hand-authored shading/detail on the Platinum Ace Trainer front sprites derived from HGSS components (0 donor pixels), proving a component-transfer + review gate reusable for the 73-record hgss_front library.",
+   "title": "HGSS trainer-sprite component enhancement (Ace Trainer M/F pilot, then component library)",
+   "wave": 3
+  },
+  {
+   "best_ds_queue_rank": 92,
+   "bucket": "later",
+   "canonical_score": 2.679,
+   "class": "replacement_candidate",
+   "confidence": "medium (mined library, auto-scored; no human review of the score)",
+   "corroboration": [],
+   "cost": "low",
+   "depends_on": [],
+   "donor_count": 1,
+   "donors": [
+    {
+     "generation": "DS",
+     "items": [
+      {
+       "canonical_score": 2.679,
+       "ds_queue_rank": 92,
+       "ds_queue_score": 3.02,
+       "id": "lib:hgss/trainer_sprites/hgss_front/replacement_candidate/whole_asset",
+       "kind": "library",
+       "records": 6
+      }
+     ],
+     "role": "primary",
+     "source_id": "hgss"
+    }
+   ],
+   "ds_queue_items": 1,
+   "ds_records": 6,
+   "evidence_donor_count": 1,
+   "execution_order": 16,
+   "human_review": "required: runtime QA",
+   "io_id": "IO-TRN-REPL",
+   "pixel_use": "donor_pixels (whole assets)",
+   "platinum_files": [
+    "res/trainers/classes"
+   ],
+   "rank": 16,
+   "reference_only_overlap_note": "",
+   "reuse_later": "",
+   "risk": "medium",
+   "rollback": "restore sprite files",
+   "score_anchor": {
+    "ds_queue_rank": 92,
+    "id": "lib:hgss/trainer_sprites/hgss_front/replacement_candidate/whole_asset",
+    "kind": "library"
+   },
+   "score_basis": "mined library (top-5 record mean)",
+   "scores": {
+    "cost": 3.0,
+    "feasibility": 4.0,
+    "novelty": 1.0,
+    "reuse": 2.0,
+    "risk": 3.0,
+    "slice": 5.0,
+    "visual_impact": 3.0
+   },
+   "slice_ref": null,
+   "spikes_or_gates": [
+    "gate: runtime QA before any replacement import"
+   ],
+   "summary": "Whole-asset trainer replacements ledgered as preferred; gated by runtime QA.",
+   "title": "HGSS trainer front-sprite whole replacements (6)",
+   "wave": 6
+  }
+ ],
+ "reference_only_register": [
+  {
+   "classification": "reference_only",
+   "donor": "diamond",
+   "generation": "DS",
+   "id": "opp:diamond/control_reference",
+   "merge": null,
+   "subject": "Diamond as Platinum control/reference",
+   "why": "Diamond differs from Platinum only where Platinum is the later revision (489 battle sprites differ, Snover/Rotom icons); control class can never be selected."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "hgss",
+   "generation": "DS",
+   "id": "opp:hgss/camera_viewfinder",
+   "merge": null,
+   "subject": "HGSS photo-camera viewfinder frame",
+   "why": "Used only by src/field_take_photo.c, a gameplay feature Platinum lacks; no visual-overhaul target."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "hgss",
+   "generation": "DS",
+   "id": "opp:hgss/land_data_terrain",
+   "merge": null,
+   "subject": "HGSS land-data terrain models (676 maps, per-map NSBMD)",
+   "why": "Decoded 591 terrain models (median 912 triangles): flat chunked ground specific to Johto layouts; the value is in the texture/building libraries, not the terrain meshes."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "hgss",
+   "generation": "DS",
+   "id": "opp:hgss/npc_trainer_variety_pool",
+   "merge": null,
+   "subject": "HGSS-only NPC/trainer sprites (111 field sheets, 68 trainer classes)",
+   "why": "Whole sprites with no Platinum counterpart; slot names do not prove subject identity (subject_unverified), so they stay a reference pool."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "hgss",
+   "generation": "DS",
+   "id": "opp:hgss/ui_dex_party_reference",
+   "merge": null,
+   "subject": "HGSS Pokedex/party-list UI graphics",
+   "why": "Targeted evidence closure composed the HGSS party-list screens (plist_gra: Pokeball-motif backdrop + slot-tab panels) and the Pokedex screens (zukan_gra: SEARCH/OPEN/QUIT/CRY/DETAILS/SIZE/FORMS/BACK button strips, red header + grid panels, cry dial). Each has a Platinum counterpart already rebuilt natively in G7; no element adds a capability Platinum lacks, so the family is confirmed reference-only."
+  },
+  {
+   "classification": "reject",
+   "donor": "hgss",
+   "generation": "DS",
+   "id": "opp:hgss_diamond/icons_identical",
+   "merge": null,
+   "subject": "HGSS/Diamond Pokemon icons are pixel-identical to Platinum",
+   "why": "Swapping icons yields no visual payoff (G3 icon ruling: direct but reject)."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "pmd_sky",
+   "generation": "DS",
+   "id": "opp:pmd_sky/environment_and_title_backgrounds",
+   "merge": null,
+   "subject": "PMD Sky dungeon/ground backgrounds and title BACK art",
+   "why": "2D tilemap dungeon art does not map onto Platinum's 3D field/battle backgrounds; useful only as colour/motif reference."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "pmd_sky",
+   "generation": "DS",
+   "id": "opp:pmd_sky/ground_overlay_sprites",
+   "merge": null,
+   "subject": "PMD Sky GROUND animated sprites (523 groups)",
+   "why": "WAN containers have no committed renderer, so no visual evidence exists yet; keep as reference until decoded."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "ranger2",
+   "generation": "DS",
+   "id": "opp:ranger2/pokemon_sprite_frames",
+   "merge": null,
+   "subject": "Ranger 2 Pokemon field sprite frames (35k frames, 282 species)",
+   "why": "Field-scale frames (75.8% fit within 40x40) do not match Platinum's 160x80 battle contract; HGSS already supplies field follower sheets for every species."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "ranger2",
+   "generation": "DS",
+   "id": "opp:ranger2/ui_and_story_backgrounds",
+   "merge": null,
+   "subject": "Ranger 2 interface, menu, event and ending art",
+   "why": "Capture-styler specific UI and illustrations in Ranger style; Platinum UI is owned by G7, so no concrete element is proposed."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "crystal",
+   "generation": "GBA/GBC",
+   "id": "opp:crystal/battle_anim_artwork",
+   "merge": null,
+   "subject": "Crystal battle-animation primitive banks aeroblast, globe, noise, reflect, rope, shapes, shine, web, wind (9 of the 11 seed candidates), bound to object ids and move scripts",
+   "why": "Platinum covers every bound move with dedicated richer resources; 8x8 tile sheets in 4 palettes cannot improve DS particle art."
+  },
+  {
+   "classification": "reject",
+   "donor": "crystal",
+   "generation": "GBA/GBC",
+   "id": "opp:crystal/battle_anim_artwork/wave_bank_orphan",
+   "merge": null,
+   "subject": "Crystal wave bank (BATTLE_ANIM_GFX_WAVE, 18 tiles) and the misleadingly named BATTLE_ANIM_OBJ_WAVE",
+   "why": "The seed listed \"wave\" as a candidate; binding shows it is an unreferenced bank, so there is no choreography to learn from and the art never appears in game."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "crystal",
+   "generation": "GBA/GBC",
+   "id": "opp:crystal/battle_anim_choreography/battle_transition",
+   "merge": null,
+   "subject": "Crystal battle transition: four starting points (cave or not x lead level+3 vs enemy) feeding four outros",
+   "why": "Platinum already has the same selection model with far more cases."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "crystal",
+   "generation": "GBA/GBC",
+   "id": "opp:crystal/battle_anim_choreography/move_sequencing",
+   "merge": null,
+   "subject": "Crystal move scripts for the bound primitive moves, per-turn residual animations and the BG/palette effect vocabulary",
+   "why": "The one non-trivial Crystal structure (replaying a short animation every turn for trap, nightmare, love and sandstorm) is already present in Platinum."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "emerald",
+   "generation": "GBA/GBC",
+   "id": "opp:emerald/environment_effect_primitives",
+   "merge": null,
+   "subject": "Emerald generic field primitives (shadow, grass, footprints/tracks, splash/ripple, dust, sparkle): Platinum parity closed in B1.5",
+   "why": "Platinum already renders every generic family as tile-aware 3D billboards, several richer than Emerald (footprint/cycle sets with snow variants, mud ripple, directional dust). Emerald's 2D OAM art would add nothing and would need redrawing for NSBTX/NSBMD."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "emerald",
+   "generation": "GBA/GBC",
+   "id": "opp:emerald/environment_effect_primitives/location_specific",
+   "merge": null,
+   "subject": "Emerald field primitives tied to Hoenn-specific locations or mechanics (carved out of environment_effect_primitives)",
+   "why": "No Platinum mechanic or location needs these; generic reuse of their pixels or timing is already covered by Platinum's billboard system or has no host."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "emerald",
+   "generation": "GBA/GBC",
+   "id": "opp:emerald/field_action_choreography",
+   "merge": null,
+   "subject": "Emerald field-move 'show mon' banner and per-move avatar choreography (Surf/Fly/Waterfall/Dive/Teleport)",
+   "why": "Platinum already has a richer dedicated cut-in for every field move (including Fly bird and Fly landing, teleport spin-out and spin-in). Emerald's 2D BG-window streak banner would be a downgrade as a replacement and a redundant technique as an enhancement."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "firered",
+   "generation": "GBA/GBC",
+   "id": "opp:firered/animated_palette_sequences",
+   "merge": {
+    "into": "cross-gen IO palette-cycle service (DS libraries pmd_mapbg_*)",
+    "note": "reference_only: Platinum has native equivalents; FireRed only adds timing shape to the PMD Sky technique.",
+    "role": "corroborates_timing_shape_only"
+   },
+   "subject": "FireRed Pokemon League timed BG-palette lighting sequences (Elite Four 12 palettes, Champion room 9 palettes)",
+   "why": "FireRed renders this by rewriting one 2D BG palette slot per step, which has no analogue in Platinum's 3D field; Platinum already has native looping/stateful animation and lighting hosts. The donor adds a timing idea and nothing else. The palettes are GBA 15-bit sets for Kanto tilesets, not reusable."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "firered",
+   "generation": "GBA/GBC",
+   "id": "opp:firered/interactive_object_states",
+   "merge": null,
+   "subject": "FireRed Deoxys triangle: variable-driven staged palette feedback on an interactable object (generic half of a split finding)",
+   "why": "The pattern is generic but already how Platinum drives stateful props; the donor supplies no reusable pixels (a Kanto-island rock palette) and no Platinum feature needs it today."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "firered",
+   "generation": "GBA/GBC",
+   "id": "opp:firered/interactive_object_states/location_specific",
+   "merge": null,
+   "subject": "FireRed Birth Island Deoxys triangle puzzle + rock movement/destruction choreography (event-specific half of the split)",
+   "why": "Event-specific content with no Platinum counterpart; the choreography overlaps the Emerald record already closed as reference_only; fragments are generic 8x8 rock debris. Not promoted, per the brief (do not copy the Birth Island event wholesale)."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "firered",
+   "generation": "GBA/GBC",
+   "id": "opp:firered/map_location_preview",
+   "merge": {
+    "into": "opp:hgss/map_location_preview",
+    "note": "opp:hgss/map_location_preview",
+    "role": "corroborates"
+   },
+   "subject": "FireRed dungeon/forest location-preview screens (tiles+tilemap+palette per map section), shown on entry from another map section",
+   "why": "The capability, host gap, pixel policy (layout reference only, never Kanto pixels) and cost are those of the HGSS-backed opportunity. A second record would double-count one Platinum feature. FireRed adds no new Platinum capability and no usable pixels."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "pmd_red",
+   "generation": "GBA/GBC",
+   "id": "opp:pmd_red/battler_status_overlays/gba_engine_and_pixels",
+   "merge": null,
+   "subject": "PMD Red GBA-specific implementation (OAM shape/size switch, fixed VRAM tile index 0x32B, 4-phase VRAM upload, 4bpp sheets) and the 16 status sheets themselves",
+   "why": "Engine-specific mechanics and small donor art; any adopted glyph set should be redrawn Platinum-native. Recorded so later passes do not re-open the PMD status sheets."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "yellow",
+   "generation": "GBA/GBC",
+   "id": "opp:yellow/pikachu_presentation/battle_transitions_special_effects",
+   "merge": null,
+   "subject": "Yellow battle transitions (8 bit-selected entries, 7 distinct routines) and the 24-entry special-effect table (screen flashes, shakes, ball toss/shake, poof)",
+   "why": "Generic Game Boy screen effects; the selection scheme is shared with every earlier game and Platinum exceeds it."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "yellow",
+   "generation": "GBA/GBC",
+   "id": "opp:yellow/pikachu_presentation/partner_reaction_table",
+   "merge": null,
+   "subject": "Pikachu mood x happiness portrait reaction selection (7 happiness bands x 5 mood columns -> 18 of 30 pic-animation scripts), emote bubble, 34 emotion scripts and the gfx/pikachu frame set",
+   "why": "Not battle-related, not a new capability given the Friendship Checker, and its host (a following partner) is a gameplay system outside this overhaul; the 61 frames are single-species Pikachu art."
+  },
+  {
+   "classification": "reference_only",
+   "donor": "yellow",
+   "generation": "GBA/GBC",
+   "id": "opp:yellow/pikachu_presentation/starter_entrance_exit",
+   "merge": null,
+   "subject": "Starter Pikachu battle entrance (column wipe instead of poof and ball send-out), slide-off retreat, and state-dependent Pikachu cries (asleep, faint, Oak battle)",
+   "why": "The distinctive part is that the partner skips the poof/ball ritual; the pixels and the tile-wipe mechanism add nothing. Cry variation is audio, outside the visual overhaul and dependent on Pikachu PCM clips."
+  },
+  {
+   "classification": "reject",
+   "donor": "yellow",
+   "generation": "GBA/GBC",
+   "id": "opp:yellow/pikachu_presentation/surfing_pikachu",
+   "merge": null,
+   "subject": "Surfing Pikachu minigame graphics (gfx/surfing_pikachu/*) and tilemaps",
+   "why": "Single-species minigame art with no Platinum host; the seed listed the directory but it is not battle presentation."
+  }
+ ],
+ "schema_version": 1,
+ "status": "synthesis_proposal_not_human_approved"
+}
