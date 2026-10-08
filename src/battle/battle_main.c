@@ -708,6 +708,8 @@ static void BattleMain_CopyBattleSysToDTOAndFree(ApplicationManager *appMan)
     }
 
     sub_02015760(battleSys->paletteAnimator);
+    Terrain_StopPaletteCycle(&battleSys->terrains[0]);
+    Terrain_StopPaletteCycle(&battleSys->terrains[1]);
     Bag_Copy(battleSys->bag, dto->bag);
     Heap_Free(battleSys->bag);
     Pokedex_Copy(battleSys->pokedex, dto->pokedex);
