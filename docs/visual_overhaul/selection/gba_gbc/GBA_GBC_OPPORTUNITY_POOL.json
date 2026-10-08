@@ -3,11 +3,13 @@
  "phase": "gba_gbc",
  "note": "Separate from the DS opportunity pool (selection/OPPORTUNITY_POOL.json is untouched). Records follow selection/opportunities/findings.json field conventions plus batch/disposition. Not ranked; combined ranking is B7.",
  "pinned_donors": {
-  "emerald": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f"
+  "emerald": "a81cfacbe53bcc229fc4d93cb10b56a58e77a15f",
+  "firered": "037335f4c725d7c9aecdac87066f2002b4bd7e14"
  },
  "batches_complete": [
   "B1_emerald_seed_formalization",
-  "B1_5_emerald_env_parity_closure"
+  "B1_5_emerald_env_parity_closure",
+  "B2_firered_seed_formalization"
  ],
  "records": [
   {
@@ -191,7 +193,7 @@
    "useful": "Reference for how Gen III expressed one-shot scripted-scene effects (alpha-blended spotlight, screen shake with decaying amplitude).",
    "why": "No Platinum mechanic or location needs these; generic reuse of their pixels or timing is already covered by Platinum's billboard system or has no host.",
    "constraints": [
-    "Deoxys rock family is deferred to B2 (FireRed) to avoid duplicate records"
+    "Deoxys rock family was deferred to B2 and is now closed there: see opp:firered/interactive_object_states/location_specific (reference_only; Emerald already has the same destroy/shake choreography and fragment art)"
    ],
    "adaptation": [],
    "cost": null,
@@ -371,6 +373,425 @@
    },
    "confidence_note": "Parity is structural (names, loaders, triggers). Visual quality of Platinum effects was not rendered. Mapping of 'nf_/nc_' to snow is inferred from the call sites (cases 2-4 of ov5_021F1DA4 reach those members from snow tile handlers).",
    "resolved_by": "ne:emerald/env_primitives_platinum_parity (B1.5)"
+  },
+  {
+   "finding_id": "opp:firered/map_location_preview",
+   "batch": "B2_firered_seed_formalization",
+   "classification": "reference_only",
+   "provisional_seed_class": "novel_capability",
+   "disposition": "reference_only",
+   "status": "proposed",
+   "subject": "FireRed dungeon/forest location-preview screens (tiles+tilemap+palette per map section), shown on entry from another map section",
+   "subsumed_by": "opp:hgss/map_location_preview",
+   "donor": {
+    "game": "firered",
+    "source_id": "firered",
+    "repository": "79cbd8hmgj-wq/pokefirered",
+    "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+    "locator": "src/map_preview_screen.c sMapPreviewScreenData; triggers in src/fldeff_flash.c (cave), src/overworld.c (forest); graphics/map_preview/<location>/{tiles.png,tilemap.bin}",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokefirered",
+      "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "path": "src/map_preview_screen.c",
+      "fact": "sMapPreviewScreenData[MPS_COUNT] (L84): 28 entries (20 cave, 8 forest), each {mapsec, type, flagId, tilesptr, tilemapptr, palptr} (struct at include/map_preview_screen.h L41); only 21 distinct art sets: Pattern Bush reuses Viridian Forest art and the Tanoby chambers reuse Monean Chamber art"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokefirered",
+      "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "path": "src/map_preview_screen.c",
+      "fact": "MapPreview_LoadGfx (L381) loads 3 palettes to BG_PLTT_ID(13) (L389), LZ tiles to BG0 and a 1280-byte tilemap (640 entries) to BG0; MapPreview_CreateMapNameWindow (L442) draws the map name in a 13x2 window over it"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokefirered",
+      "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "path": "src/fldeff_flash.c",
+      "fact": "cave trigger: requires GetLastUsedWarpMapSectionId() != current mapsec and MapHasPreviewScreen_HandleQLState2(..., MPS_TYPE_CAVE) (L242); Task_MapPreviewScreen_0 (L39) = black -> fade in over the preview -> hold MapPreview_GetDuration frames (B button skips, L460) -> white fade -> normal cave-entry transition; WarpFadeOutScreen (src/field_fadetransition.c L98) uses fade-to-black for preview maps"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokefirered",
+      "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "path": "src/overworld.c",
+      "fact": "forest trigger at L1915: after map load, if mapsec changed, MapPreview_StartForestTransition replaces ShowMapNamePopup; Task_RunMapPreviewScreenForest (src/map_preview_screen.c L18) is an alpha-blend crossfade (BLDALPHA 16/0 -> 0/16, one step per 3 frames) of BG0 over the live field after the fade-in"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokefirered",
+      "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "path": "src/map_preview_screen.c",
+      "fact": "MapPreview_GetDuration (L571): hold = 120 frames the first time, 40 on repeat; cave uses the mapsec's world-map flag, forest uses sHasVisitedMapBefore set by MapPreview_SetFlag (L605, called from src/scrcmd.c L601)"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokefirered",
+      "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "path": "src/region_map.c",
+      "fact": "second consumer: GetDungeonMapPreviewScreenInfo (call at L1948) reuses the same table for the region-map dungeon preview panel"
+     }
+    ],
+    "cataloged": false
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "tier": "asset_linked",
+    "refs": [
+     "docs/visual_overhaul/selection/gba_gbc/evidence/B2_FIRERED_SYMBOL_EVIDENCE.json"
+    ],
+    "summary": "Source-verified at the pinned commit: 28-entry table, 21 art directories each with tiles.png + tilemap.bin, two trigger paths, first-visit hold gating. Platinum-side host checked. Compared with the already-catalogued HGSS area-preview opportunity: the FireRed capability is the same capability (a full-screen location image on entry, in place of or alongside the map-name popup)."
+   },
+   "platinum_comparison": {
+    "host_system": "src/overlay005/map_name_popup.c (map-name popup only); no preview layer exists",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "20b41eea131093e0322e940eb4702f5c22381bf2",
+      "path": "src/overlay005/map_name_popup.c",
+      "fact": "MapNamePopUp_LoadAreaGfx / MapNamePopUp_CreateWindow / SysTask_MapNamePopUpWindow (declared L33-37): the only map-entry presentation; a banner, no full-screen preview"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "20b41eea131093e0322e940eb4702f5c22381bf2",
+      "path": "src",
+      "fact": "search for MapPreview / map_preview / area_preview in src, include and res returned no hits at this commit"
+     }
+    ],
+    "comparison": "Platinum has no area-preview layer; this is the same gap already recorded for HGSS, not a second gap."
+   },
+   "target": {
+    "kind": "none",
+    "host_system": "Platinum map-name popup path",
+    "note": "reference_only requires no target; the capability is carried by opp:hgss/map_location_preview"
+   },
+   "useful": "Corroborates the area-preview capability and supplies four small design details: first-visit hold 120 vs repeat 40 frames, B-button skip, suppression during quest-log playback, and a second consumer (region-map preview panel).",
+   "why": "The capability, host gap, pixel policy (layout reference only, never Kanto pixels) and cost are those of the HGSS-backed opportunity. A second record would double-count one Platinum feature. FireRed adds no new Platinum capability and no usable pixels.",
+   "residual_ideas_not_promoted": [
+    "first-visit long hold vs repeat short hold, gated by a per-area visited flag",
+    "held-button skip",
+    "two presentation styles (crossfade over live field vs fade-through-black) chosen per area type",
+    "reusing the same art in a map/area UI panel"
+   ],
+   "cross_reference": {
+    "strengthens_existing": false,
+    "corroborates_existing": true,
+    "existing": "opp:hgss/map_location_preview",
+    "action": "DS records untouched in B2. When opp:hgss/map_location_preview is next edited, attach this record as corroborating evidence and consider the visit-gated hold as a design option."
+   },
+   "constraints": [
+    "Kanto artwork is not a Platinum asset: layout/capability only",
+    "no DS opportunity records modified in B2"
+   ],
+   "adaptation": [],
+   "cost": null,
+   "risk": null,
+   "confidence": "medium",
+   "confidence_note": "FireRed side fully source-verified. Whether HGSS already implements visit-gated hold times was not checked (pokeheartgold is outside B2 scope), so the four details are additions to the recorded HGSS opportunity text, not claims about HGSS source.",
+   "feasibility": null,
+   "pixel_use": "none",
+   "proposed_by": "claude (GBA/GBC B2; not human-approved)",
+   "tags": [
+    "area_preview",
+    "subsumed",
+    "firered"
+   ]
+  },
+  {
+   "finding_id": "opp:firered/animated_palette_sequences",
+   "batch": "B2_firered_seed_formalization",
+   "classification": "reference_only",
+   "provisional_seed_class": "technique_donor",
+   "disposition": "reference_only",
+   "status": "proposed",
+   "subject": "FireRed Pokemon League timed BG-palette lighting sequences (Elite Four 12 palettes, Champion room 9 palettes)",
+   "donor": {
+    "game": "firered",
+    "source_id": "firered",
+    "repository": "79cbd8hmgj-wq/pokefirered",
+    "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+    "locator": "src/field_specials.c DoPokemonLeagueLightingEffect / Task_RunPokemonLeagueLightingEffect / Task_CancelPokemonLeagueLightingEffect; graphics/field_specials/{elite_four,champion_room}_lighting_N.pal",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokefirered",
+      "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "path": "src/field_specials.c",
+      "fact": "tables: sEliteFourLightingPalettes (L2081, 12 x 16-colour), sChampionRoomLightingPalettes (L2096, 9 x 16-colour), sEliteFourLightingTimers (L2108) = [40, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12], sChampionRoomLightingTimers (L2122) = [20, 8, 8, 8, 8, 8, 8, 8]"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokefirered",
+      "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "path": "src/field_specials.c",
+      "fact": "step counts: Elite Four loops palettes 0-10 (data[2]=11; 160 ticks per cycle = one 40-tick hold + ten 12-tick steps); Champion room loops palettes 0-7 (data[2]=8; 76 ticks per cycle = one 20-tick hold + seven 8-tick steps). The last palette of each set (E4 #11, Champion #8) has no timer and is never in the loop; it is the settled stop state"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokefirered",
+      "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "path": "src/field_specials.c",
+      "fact": "timer: DoPokemonLeagueLightingEffect (L2133) creates a priority-8 task and loads palette 0; Task_RunPokemonLeagueLightingEffect (L2160) decrements data[0] per frame and at 0 advances data[1] (wrapping), reloads timer and palette. It ticks only while no palette fade is active, FLAG_TEMP_2 (player has entered) is set, FLAG_TEMP_5 (battle running) is clear and the quest-log grayscale tint is off"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokefirered",
+      "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "path": "src/field_specials.c",
+      "fact": "slot/range: LoadPalette(..., BG_PLTT_ID(7), PLTT_SIZE_4BPP) = one 16-colour BG palette, then ApplyGlobalTintToPaletteSlot(7, 1) every step. Across palettes only colour indices [3, 8, 9, 10, 11, 12, 13, 14, 15] change, identical index set in both rooms"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokefirered",
+      "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "path": "src/field_specials.c",
+      "fact": "start/stop/final: started per room from MAP_SCRIPT_ON_RESUME via PokemonLeague_EventScript_DoLightingEffect (data/scripts/pokemon_league.inc L62); if FLAG_TEMP_3 (room cleared) is already set it becomes Task_CancelPokemonLeagueLightingEffect (L2187), which waits for FLAG_TEMP_4 (door open), loads the stop-state palette, re-tints and destroys itself; StopPokemonLeagueLightingEffectTask (L2205) kills the loop task and is called from src/start_menu.c:453 and five sites in src/item_use.c"
+     }
+    ],
+    "cataloged": false
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "tier": "asset_linked",
+    "refs": [
+     "docs/visual_overhaul/selection/gba_gbc/evidence/B2_FIRERED_SYMBOL_EVIDENCE.json"
+    ],
+    "summary": "Tables, timers, step counts, palette slot, changed colour indices and start/stop/final-state flow read from source and the 21 .pal files (JASC, 16 colours each). Platinum-side native mechanisms checked."
+   },
+   "platinum_comparison": {
+    "host_system": "Platinum field is 3D (NNS G3D); BG-palette-slot lighting has no direct counterpart, but timed/looping environmental animation is already native",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "20b41eea131093e0322e940eb4702f5c22381bf2",
+      "path": "src/overlay005/map_prop_animation.c",
+      "fact": "MapPropAnimationManager_New (L83); NNS_G3dAnmObjInit(animationObj, ..., mapPropModel, mapPropTexture) (L54) binds G3D animations to map props with loop count, reverse and pause (MapPropAnimation_SetAnimationPaused L438, AdvanceFrame L487); used by src/overlay008/gym_features.c for state-driven Pastoria Gym props"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "20b41eea131093e0322e940eb4702f5c22381bf2",
+      "path": "src/overlay005/area_light.c",
+      "fact": "AreaLightManager_New (L27) / AreaLightManager_UpdateActiveTemplate (L62): data-driven area light templates applied to area model attributes"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "20b41eea131093e0322e940eb4702f5c22381bf2",
+      "path": "include/palette.h",
+      "fact": "PaletteData_LoadBuffer / PaletteData_CopyBuffer / PaletteData_Blend (L99-114): generic palette-buffer API, so a timer-stepped palette swap needs no new engine mechanism"
+     }
+    ],
+    "comparison": "Equivalent general-purpose environmental animation capability exists (G3D prop animation manager with loop and state control, area light templates, generic palette-buffer writes). Not verified: whether Platinum's own Elite Four / Champion rooms use any of it for lighting; no Platinum scene was compared side by side because no promotion depends on it."
+   },
+   "target": {
+    "kind": "none",
+    "host_system": "Platinum map-prop animation manager / area light"
+   },
+   "useful": "Timing recipe only: a long dwell on the first palette (40/20 ticks) then short equal steps (12/8) through a cyclic ramp, with a separate non-looping rest palette as the settled state when the scene ends; gated on a player-entered flag and suspended during fades/battle.",
+   "why": "FireRed renders this by rewriting one 2D BG palette slot per step, which has no analogue in Platinum's 3D field; Platinum already has native looping/stateful animation and lighting hosts. The donor adds a timing idea and nothing else. The palettes are GBA 15-bit sets for Kanto tilesets, not reusable.",
+   "residual_ideas_not_promoted": [
+    "first-step dwell longer than loop step",
+    "distinct rest/settled palette outside the loop",
+    "suspend on fade/battle, restore settled state on room clear"
+   ],
+   "constraints": [
+    "technique reference only; GBA slot-7 mechanics do not transfer"
+   ],
+   "adaptation": [],
+   "cost": null,
+   "risk": null,
+   "confidence": "medium",
+   "confidence_note": "High on donor facts; medium on Platinum equivalence because it is structural (host capability), not a side-by-side of a Platinum lighting scene.",
+   "feasibility": null,
+   "pixel_use": "none",
+   "proposed_by": "claude (GBA/GBC B2; not human-approved)",
+   "tags": [
+    "palette_animation",
+    "technique",
+    "firered"
+   ]
+  },
+  {
+   "finding_id": "opp:firered/interactive_object_states",
+   "batch": "B2_firered_seed_formalization",
+   "classification": "reference_only",
+   "provisional_seed_class": "technique_donor",
+   "disposition": "reference_only",
+   "status": "proposed",
+   "subject": "FireRed Deoxys triangle: variable-driven staged palette feedback on an interactable object (generic half of a split finding)",
+   "split": {
+    "parts": [
+     "opp:firered/interactive_object_states",
+     "opp:firered/interactive_object_states/location_specific"
+    ],
+    "reason": "the generic idea (progress variable -> palette stage, re-derived on return to field) is separable from the Birth Island puzzle and rock choreography"
+   },
+   "donor": {
+    "game": "firered",
+    "source_id": "firered",
+    "repository": "79cbd8hmgj-wq/pokefirered",
+    "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+    "locator": "src/field_specials.c DoDeoxysTriangleInteraction / MoveDeoxysObject / SetDeoxysTrianglePalette; graphics/field_specials/deoxys_rock_N.pal",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokefirered",
+      "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "path": "src/field_specials.c",
+      "fact": "state: VAR_DEOXYS_INTERACTION_NUM (0-10) is the stage; Task_DoDeoxysTriangleInteraction (L2365) reads it with VAR_DEOXYS_INTERACTION_STEP_COUNTER (incremented by IncrementBirthIslandRockStepCount, L2438, only on the Birth Island map): if steps since last touch exceed sDeoxysStepCaps[stage-1] the stage resets to 0 (result 0); at stage 10 FLAG_SYS_DEOXYS_AWAKENED is set (result 2); otherwise stage+1 (result 1); already awakened returns 3"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokefirered",
+      "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "path": "src/field_specials.c",
+      "fact": "palette-state: sDeoxysObjectPals (L2319, 11 palettes) loaded by MoveDeoxysObject (L2405) into OBJ_PLTT_ID(10), PLTT_SIZEOF(4) = 4 colours, then ApplyGlobalFieldPaletteTint(10). Only colour indices [0, 1, 2, 3] differ: grey -> warm orange glow ramp (stage 0 (139,139,139) -> stage 10 (255,205,156) on index 3)"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokefirered",
+      "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "path": "src/field_specials.c",
+      "fact": "restore: SetDeoxysTrianglePalette (L2451) reloads the palette for the current stage; run by BirthIsland_Exterior MAP_SCRIPT_ON_RETURN_TO_FIELD (data/maps/BirthIsland_Exterior/scripts.inc L8), so battle/menu returns keep the visible stage"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokefirered",
+      "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "path": "data/maps/BirthIsland_Exterior/scripts.inc",
+      "fact": "persistence scope: VAR_DEOXYS_INTERACTION_NUM and the step counter are zeroed in MAP_SCRIPT_ON_TRANSITION (L15) and FLAG_SYS_DEOXYS_AWAKENED is cleared on each visit unless Deoxys already fled: the stage is save-block variable state but scoped to the visit, not long-term progression"
+     }
+    ],
+    "cataloged": false
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "tier": "asset_linked",
+    "refs": [
+     "docs/visual_overhaul/selection/gba_gbc/evidence/B2_FIRERED_SYMBOL_EVIDENCE.json"
+    ],
+    "summary": "Stage variable, reset rule, palette stages and restore hook read from source and the 11 deoxys_rock_N.pal files."
+   },
+   "platinum_comparison": {
+    "host_system": "Platinum map-prop animation manager with externally driven state (src/overlay008/gym_features.c)",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "20b41eea131093e0322e940eb4702f5c22381bf2",
+      "path": "src/overlay008/gym_features.c",
+      "fact": "L499-500: Pastoria Gym looks up MapPropAnimation by button group via MapPropAnimationManager_GetAnimationByPastoriaGymButtonGroup (map_prop_animation.c L399) and drives it from puzzle state; precedent for state-driven prop visuals"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+      "commit": "20b41eea131093e0322e940eb4702f5c22381bf2",
+      "path": "src/overlay005/map_prop_animation.c",
+      "fact": "MapPropAnimation_GoToFirstFrame / GoToLastFrame / SetAnimationPaused (L469-478, L438): discrete stage control of a prop animation"
+     }
+    ],
+    "comparison": "Platinum can express \"stage N of M\" feedback on a prop through animation frame control; no Platinum object currently needs a 4-colour palette ramp."
+   },
+   "target": {
+    "kind": "none",
+    "host_system": "Platinum map-prop animation manager"
+   },
+   "useful": "Pattern: one progress variable drives both gameplay result and visible stage (palette ramp); failure shows as a snap back to stage 0 with a longer, different motion and sound; the visual is re-derived from the variable after any interruption.",
+   "why": "The pattern is generic but already how Platinum drives stateful props; the donor supplies no reusable pixels (a Kanto-island rock palette) and no Platinum feature needs it today.",
+   "residual_ideas_not_promoted": [
+    "derive visible stage from the progress variable on return-to-field instead of caching it",
+    "failure reset uses a distinct slower motion (60 frames vs 5) and different SE"
+   ],
+   "constraints": [
+    "no DS opportunity records modified in B2"
+   ],
+   "adaptation": [],
+   "cost": null,
+   "risk": null,
+   "confidence": "medium",
+   "confidence_note": null,
+   "feasibility": null,
+   "pixel_use": "none",
+   "proposed_by": "claude (GBA/GBC B2; not human-approved)",
+   "tags": [
+    "interactive_state",
+    "technique",
+    "firered",
+    "split"
+   ]
+  },
+  {
+   "finding_id": "opp:firered/interactive_object_states/location_specific",
+   "batch": "B2_firered_seed_formalization",
+   "classification": "reference_only",
+   "provisional_seed_class": "novel_detail",
+   "disposition": "reference_only",
+   "status": "proposed",
+   "subject": "FireRed Birth Island Deoxys triangle puzzle + rock movement/destruction choreography (event-specific half of the split)",
+   "donor": {
+    "game": "firered",
+    "source_id": "firered",
+    "repository": "79cbd8hmgj-wq/pokefirered",
+    "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+    "locator": "src/field_specials.c sDeoxysCoords/sDeoxysStepCaps; src/field_effect.c FldEff_MoveDeoxysRock / FldEff_DestroyDeoxysRock; data/maps/BirthIsland_Exterior/scripts.inc; graphics/field_effects/pics/deoxys_rock_fragment_*.png",
+    "verification": [
+     {
+      "repo": "79cbd8hmgj-wq/pokefirered",
+      "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "path": "src/field_specials.c",
+      "fact": "position: sDeoxysCoords (L2333) = 11 fixed tile coordinates, one per stage; sDeoxysStepCaps (L2347) = [4, 8, 8, 8, 4, 4, 4, 6, 3, 3] (10 caps for 11 stages). MoveDeoxysObject starts FLDEFF_MOVE_DEOXYS_ROCK with 5 frames per hop (60 on reset) and updates the object template coords so the position persists across reloads"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokefirered",
+      "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "path": "src/field_effect.c",
+      "fact": "FldEff_MoveDeoxysRock (L3722) + Task_MoveDeoxysRock_Step (L3747): linear fixed-point tween of the object sprite to the target tile, then snaps and re-registers ground-effect coords"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokefirered",
+      "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "path": "src/field_effect.c",
+      "fact": "sound/effects: SE_DEOXYS_MOVE (include/constants/songs.h L259) per hop, SE_M_CONFUSE_RAY on reset (MoveDeoxysObject); awakened: FldEff_DestroyDeoxysRock (L3860) = SE_THUNDER2 + camera shake (Task_DeoxysRockCameraShake L3885), 120-frame wait, white flash, 4 fragment sprites (CreateDeoxysRockFragments L3975, 8x8 PNGs), SE_THUNDER, decaying shake"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokefirered",
+      "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "path": "data/maps/BirthIsland_Exterior/scripts.inc",
+      "fact": "final awakened state: result-2 branch adds the Deoxys object, runs dofieldeffect FLDEFF_DESTROY_DEOXYS_ROCK (L73), plays MUS_ENCOUNTER_DEOXYS, then approach / cry / wild battle; rock object removed"
+     },
+     {
+      "repo": "79cbd8hmgj-wq/pokefirered",
+      "commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+      "path": "src/field_special_scene.c",
+      "fact": "named as a starting point but contains no Deoxys code (21-line porthole stub, FieldCB_ShowPortholeView L20); all Deoxys logic is in field_specials.c, field_effect.c and the Birth Island map script"
+     }
+    ],
+    "cataloged": false
+   },
+   "evidence": {
+    "basis": "donor_checkout_verification",
+    "tier": "asset_linked",
+    "refs": [
+     "docs/visual_overhaul/selection/gba_gbc/evidence/B2_FIRERED_SYMBOL_EVIDENCE.json",
+     "docs/visual_overhaul/selection/gba_gbc/evidence/B1_EMERALD_SYMBOL_EVIDENCE.json"
+    ],
+    "summary": "Emerald (a81cfacb) already has FldEff_DestroyDeoxysRock, Task_DeoxysRockCameraShake and the same four fragment PNGs (B1 evidence), so the destroy/shake choreography duplicates the closed Emerald location-specific record; the step-capped triangle puzzle (sDeoxysCoords / sDeoxysStepCaps / DoDeoxysTriangleInteraction) is absent from Emerald."
+   },
+   "platinum_comparison": {
+    "host_system": "none (no Deoxys/Birth Island content; Platinum legendary events are scripted per location)",
+    "verification": [],
+    "comparison": "No Platinum event uses a coordinate-hopping object with step-limited stages; no host identified."
+   },
+   "target": {
+    "kind": "none",
+    "host_system": "none"
+   },
+   "useful": "Reference for how a Gen III scripted legendary reveal combines position hops, palette stage, SE and shake.",
+   "why": "Event-specific content with no Platinum counterpart; the choreography overlaps the Emerald record already closed as reference_only; fragments are generic 8x8 rock debris. Not promoted, per the brief (do not copy the Birth Island event wholesale).",
+   "residual_ideas_not_promoted": [
+    "step-count-limited puzzle where waiting too long resets progress",
+    "legendary reveal sequence: shake, white flash, debris sprites, decaying shake"
+   ],
+   "constraints": [
+    "closes the deferral recorded on opp:emerald/environment_effect_primitives/location_specific"
+   ],
+   "adaptation": [],
+   "cost": null,
+   "risk": null,
+   "confidence": "medium",
+   "confidence_note": null,
+   "feasibility": null,
+   "pixel_use": "none",
+   "proposed_by": "claude (GBA/GBC B2; not human-approved)",
+   "tags": [
+    "interactive_state",
+    "location_specific",
+    "firered",
+    "split"
+   ]
   }
  ]
 }
