@@ -16,6 +16,7 @@ The DS donor database and PR #70 planning artifacts are already complete enough 
 4. `gba_gbc/SEED_VERIFICATION_STATUS.json`
 5. `gba_gbc/SEED_VERIFICATION_CHECKLIST.json`
 6. `gba_gbc/MINING_EXECUTION_PLAN.md`
+7. `gba_gbc/MINING_BATCHES.json`
 
 Read `OPPORTUNITY_CLASSES.json` only if a taxonomy detail is unclear.
 
@@ -94,3 +95,7 @@ After Emerald + FireRed + PMD Red seed verification, stop and report:
 - whether Crystal/Ruby/Yellow scope should change
 
 Then continue only if no design blocker exists.
+
+## Batch contract
+
+`MINING_BATCHES.json` is now authoritative for execution order and stop conditions. Do not collapse B1-B6 into one broad donor archaeology pass. Each batch is deliberately bounded so evidence and classification can be committed incrementally without consuming context on unrelated donor systems.
