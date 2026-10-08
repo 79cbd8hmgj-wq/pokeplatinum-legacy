@@ -3717,6 +3717,13 @@
     .short \destVar
     .endm
 
+    // Shows a full-screen still card (see applications/still_card.c); fade out/in and ReturnToField are the caller's job
+    .macro ShowStillCard cardID, startState
+    .short SCRCMD_SHOWSTILLCARD
+    .short \cardID
+    .short \startState
+    .endm
+
     .macro TryGetRandomMassageGirlAccessory destAccessoryID
     .short SCRCMD_TRYGETRANDOMMASSAGEGIRLACCESSORY
     .short \destAccessoryID

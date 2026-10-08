@@ -212,33 +212,65 @@ SolaceonTownPokemonNewsPress_PC:
     GoTo SolaceonTownPokemonNewsPress_PCEnd
     End
 
-SolaceonTownPokemonNewsPress_ArticleDuskBall:
+// IO-CARD pilot: VAR_0x8008 holds the selected article (0 Dusk, 1 Heal, 2 Quick, 3 Dive).
+// The card shows the same article text from this script's text bank and lets the player
+// browse the other three articles before returning to the field.
+SolaceonTownPokemonNewsPress_ShowArticleCard:
+    CloseMessage
+    FadeScreenOut
+    WaitFadeScreen
+    ShowStillCard 0, VAR_0x8008
+    ReturnToField
+    FadeScreenIn
+    WaitFadeScreen
+    ReleaseAll
+    End
+
+// Reversible fallback: the original message-box article flow. To revert the pilot, point
+// SolaceonTownPokemonNewsPress_Article<Ball> at these via GoTo instead of the card routine.
+SolaceonTownPokemonNewsPress_ArticleFallbackDuskBall:
     Message SolaceonTownPokemonNewsPress_Text_ArticleDuskBall
     WaitButton
     CloseMessage
     ReleaseAll
     End
 
-SolaceonTownPokemonNewsPress_ArticleHealBall:
+SolaceonTownPokemonNewsPress_ArticleFallbackHealBall:
     Message SolaceonTownPokemonNewsPress_Text_ArticleHealBall
     WaitButton
     CloseMessage
     ReleaseAll
     End
 
-SolaceonTownPokemonNewsPress_ArticleQuickBall:
+SolaceonTownPokemonNewsPress_ArticleFallbackQuickBall:
     Message SolaceonTownPokemonNewsPress_Text_ArticleQuickBall
     WaitButton
     CloseMessage
     ReleaseAll
     End
 
-SolaceonTownPokemonNewsPress_ArticleDiveBall:
+SolaceonTownPokemonNewsPress_ArticleFallbackDiveBall:
     Message SolaceonTownPokemonNewsPress_Text_ArticleDiveBall
     WaitButton
     CloseMessage
     ReleaseAll
     End
+
+SolaceonTownPokemonNewsPress_ArticleDuskBall:
+    SetVar VAR_0x8008, 0
+    GoTo SolaceonTownPokemonNewsPress_ShowArticleCard
+
+SolaceonTownPokemonNewsPress_ArticleHealBall:
+    SetVar VAR_0x8008, 1
+    GoTo SolaceonTownPokemonNewsPress_ShowArticleCard
+
+SolaceonTownPokemonNewsPress_ArticleQuickBall:
+    SetVar VAR_0x8008, 2
+    GoTo SolaceonTownPokemonNewsPress_ShowArticleCard
+
+SolaceonTownPokemonNewsPress_ArticleDiveBall:
+    SetVar VAR_0x8008, 3
+    GoTo SolaceonTownPokemonNewsPress_ShowArticleCard
 
 SolaceonTownPokemonNewsPress_PCEnd:
     CloseMessage
