@@ -1,0 +1,221 @@
+{
+ "donor": {
+  "repo": "79cbd8hmgj-wq/pokeyellow",
+  "commit": "e89ead154b9968aa50eed9328ff2b38b6c194382"
+ },
+ "platinum_checkout_note": "Platinum anchors are from the repo checkout this file is committed in; they are not donor-pinned.",
+ "entrance": {
+  "routine": "engine/battle/pikachu_entrance_anim.asm:StarterPikachuBattleEntranceAnimation",
+  "lines": 47,
+  "passes": 8,
+  "frames_per_pass": 2,
+  "column_height_tiles": 7,
+  "region_tiles": "7x7 at hlcoord 0,5 sweeping to the right",
+  "behaviour": "8 passes x 2 frames: each pass writes the party-pic tile block into one more column of a 7-row region as a diagonal staircase (tile ids below 7*7 are blanked), so the pic is revealed left to right in ~16 frames with no ball or poof",
+  "call_site": {
+   "path": "engine/battle/core.asm",
+   "line": 1812
+  },
+  "regular_path": {
+   "path": "engine/battle/core.asm",
+   "poof_line": 1802,
+   "send_out_line": 1805
+  },
+  "retreat": {
+   "path": "engine/battle/core.asm",
+   "starter_line": 1865,
+   "regular": "two-stage downscale (CopyDownscaledMonTiles) then clear"
+  },
+  "sleep_aware_cry": {
+   "path": "engine/battle/core.asm",
+   "asleep": 1814,
+   "awake": 1816
+  },
+  "faint_cry": {
+   "path": "engine/battle/core.asm",
+   "line": 1058
+  },
+  "oak_battle_cry": {
+   "path": "engine/battle/common_text.asm",
+   "line": 12
+  }
+ },
+ "pic_animation": {
+  "mood_thresholds": [
+   40,
+   127,
+   128,
+   210,
+   255
+  ],
+  "happiness_bands": [
+   50,
+   100,
+   130,
+   160,
+   200,
+   250,
+   255
+  ],
+  "mood_columns": 5,
+  "distinct_scripts_referenced": 18,
+  "script_labels_defined": 30,
+  "loadgfx_commands": 66,
+  "pikachu_gfx_incbin": 61,
+  "pikachu_png": 61,
+  "emotion_table_entries": 34,
+  "selector": {
+   "path": "engine/pikachu/pikachu_pic_animation.asm",
+   "line": 1
+  },
+  "only_caller": {
+   "path": "engine/pikachu/pikachu_emotions.asm",
+   "line": 251
+  },
+  "emote_bubble": {
+   "path": "engine/pikachu/pikachu_emotions.asm",
+   "line": 112
+  },
+  "context": "overworld talk-to-Pikachu portrait reaction (follower mechanic); not a battle sequence"
+ },
+ "transitions": {
+  "path": "engine/battle/battle_transitions.asm",
+  "table_line": 79,
+  "selector_bits": [
+   "trainer",
+   "enemy >= lead+3 (also sets spiral direction)",
+   "dungeon map"
+  ],
+  "table": [
+   {
+    "bits": "000",
+    "routine": "BattleTransition_DoubleCircle"
+   },
+   {
+    "bits": "001",
+    "routine": "BattleTransition_Spiral"
+   },
+   {
+    "bits": "010",
+    "routine": "BattleTransition_Circle"
+   },
+   {
+    "bits": "011",
+    "routine": "BattleTransition_Spiral"
+   },
+   {
+    "bits": "100",
+    "routine": "BattleTransition_HorizontalStripes"
+   },
+   {
+    "bits": "101",
+    "routine": "BattleTransition_Shrink"
+   },
+   {
+    "bits": "110",
+    "routine": "BattleTransition_VerticalStripes"
+   },
+   {
+    "bits": "111",
+    "routine": "BattleTransition_Split"
+   }
+  ],
+  "distinct": [
+   "BattleTransition_Circle",
+   "BattleTransition_DoubleCircle",
+   "BattleTransition_HorizontalStripes",
+   "BattleTransition_Shrink",
+   "BattleTransition_Spiral",
+   "BattleTransition_Split",
+   "BattleTransition_VerticalStripes"
+  ]
+ },
+ "special_effects": {
+  "path": "data/battle_anims/special_effects.asm",
+  "entries": 24,
+  "routines": [
+   "AnimationFlashScreen",
+   "DoBallShakeSpecialEffects",
+   "DoBallTossSpecialEffects",
+   "DoBlizzardSpecialEffects",
+   "DoExplodeSpecialEffects",
+   "DoGrowlSpecialEffects",
+   "DoPoofSpecialEffects",
+   "DoRockSlideSpecialEffects",
+   "FlashScreenEveryEightFrameBlocks",
+   "FlashScreenEveryFourFrameBlocks",
+   "TailWhipAnimationUnused",
+   "TradeHidePokemon",
+   "TradeJumpPokeball",
+   "TradeShakePokeball"
+  ]
+ },
+ "surfing_pikachu": {
+  "minigame": {
+   "path": "engine/minigame/surfing_pikachu.asm",
+   "line": 13
+  },
+  "gfx_files": [
+   "beach_intro.tilemap",
+   "beach_outro.tilemap",
+   "high_score_1.tilemap",
+   "high_score_2.tilemap",
+   "surfing_pikachu_1a.png",
+   "surfing_pikachu_1b.png",
+   "surfing_pikachu_1c.png",
+   "surfing_pikachu_2.png",
+   "title.tilemap",
+   "to_surf_rad.tilemap",
+   "use_control_pad.tilemap"
+  ],
+  "other_use": {
+   "path": "engine/printer/printer.asm",
+   "line": 634
+  },
+  "context": "stand-alone minigame + Game Boy Printer layouts; no battle or field presentation use"
+ },
+ "platinum_anchors": {
+  "encounter_effects": {
+   "path": "src/overlay005/encounter_effect.c",
+   "table_line": 114,
+   "entries": 31,
+   "enum": "include/enc_effects.h:enum EncEffectCutIn"
+  },
+  "slice_split": {
+   "path": "src/overlay005/encounter_effect.c",
+   "slice": 418,
+   "split": 552
+  },
+  "sendout": {
+   "path": "src/battle/battle_display.c",
+   "quick": 2242,
+   "ball_rotation": 2287
+  },
+  "common_anims": [
+   "happy.s",
+   "infatuation.s",
+   "level_up.s",
+   "shiny.s",
+   "sleep.s",
+   "sub_in.s",
+   "sub_out.s"
+  ],
+  "friendship_checker": {
+   "path": "src/applications/poketch/friendship_checker/graphics.c",
+   "icon_actions_enum": 42,
+   "level_fn": {
+    "path": "src/applications/poketch/friendship_checker/main.c",
+    "line": 40
+   },
+   "actions": [
+    "WANDER",
+    "GATHER",
+    "RUN_AWAY",
+    "SHOW_LIKE",
+    "SHOW_DISLIKE",
+    "JUMP"
+   ]
+  },
+  "overworld_emotes": "include/comm_player_manager.h:enum Emote; include/unk_020655F4.h gMovementActionFuncs_Emote*"
+ }
+}

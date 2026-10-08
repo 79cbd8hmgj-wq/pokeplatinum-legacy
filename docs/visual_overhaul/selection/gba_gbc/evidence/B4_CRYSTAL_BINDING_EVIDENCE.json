@@ -1,0 +1,1530 @@
+{
+ "donor": {
+  "repo": "79cbd8hmgj-wq/pokecrystal",
+  "commit": "3bc8daa4173e96a7f4011dad3922eb6fa5dad5c6"
+ },
+ "counts": {
+  "gfx_banks": 41,
+  "anim_objects": 188,
+  "framesets": 185,
+  "anim_table_entries": 278,
+  "anim_labels": 299
+ },
+ "candidate_binding": {
+  "AEROBLAST": {
+   "gfx_constant": "BATTLE_ANIM_GFX_AEROBLAST",
+   "index": 39,
+   "tiles": 24,
+   "symbol": "AnimObjAeroblastGFX",
+   "png": "gfx/battle_anims/aeroblast.png",
+   "objects": [
+    {
+     "name": "BATTLE_ANIM_OBJ_AEROBLAST",
+     "frameset": "BATTLE_ANIM_FRAMESET_AEROBLAST",
+     "func": "BATTLE_ANIM_FUNC_NULL",
+     "palette": "PAL_BATTLE_OB_YELLOW"
+    }
+   ],
+   "users": [
+    {
+     "table_index": 177,
+     "move": "AEROBLAST",
+     "label": "BattleAnim_Aeroblast",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_AEROBLAST"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW",
+      "BATTLE_BG_EFFECT_SHAKE_SCREEN_X"
+     ]
+    }
+   ],
+   "n_users": 1
+  },
+  "ANGELS": {
+   "gfx_constant": "BATTLE_ANIM_GFX_ANGELS",
+   "index": 37,
+   "tiles": 35,
+   "symbol": "AnimObjAngelsGFX",
+   "png": "gfx/battle_anims/angels.png",
+   "objects": [
+    {
+     "name": "BATTLE_ANIM_OBJ_NIGHTMARE",
+     "frameset": "BATTLE_ANIM_FRAMESET_IMP",
+     "func": "BATTLE_ANIM_FUNC_DIZZY",
+     "palette": "PAL_BATTLE_OB_GRAY"
+    },
+    {
+     "name": "BATTLE_ANIM_OBJ_IN_NIGHTMARE",
+     "frameset": "BATTLE_ANIM_FRAMESET_IMP_FLIPPED",
+     "func": "BATTLE_ANIM_FUNC_FLOAT_UP",
+     "palette": "PAL_BATTLE_OB_GRAY"
+    },
+    {
+     "name": "BATTLE_ANIM_OBJ_LOVELY_KISS",
+     "frameset": "BATTLE_ANIM_FRAMESET_IMP",
+     "func": "BATTLE_ANIM_FUNC_NULL",
+     "palette": "PAL_BATTLE_OB_GRAY"
+    },
+    {
+     "name": "BATTLE_ANIM_OBJ_SWEET_KISS",
+     "frameset": "BATTLE_ANIM_FRAMESET_CHERUB",
+     "func": "BATTLE_ANIM_FUNC_NULL",
+     "palette": "PAL_BATTLE_OB_BLUE"
+    },
+    {
+     "name": "BATTLE_ANIM_OBJ_DESTINY_BOND",
+     "frameset": "BATTLE_ANIM_FRAMESET_DESTINY_BOND",
+     "func": "BATTLE_ANIM_FUNC_USER_TO_TARGET",
+     "palette": "PAL_BATTLE_OB_GRAY"
+    },
+    {
+     "name": "BATTLE_ANIM_OBJ_SPITE",
+     "frameset": "BATTLE_ANIM_FRAMESET_IMP",
+     "func": "BATTLE_ANIM_FUNC_POWDER",
+     "palette": "PAL_BATTLE_OB_GRAY"
+    }
+   ],
+   "users": [
+    {
+     "table_index": 142,
+     "move": "LOVELY_KISS",
+     "label": "BattleAnim_LovelyKiss",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_LOVELY_KISS"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW"
+     ]
+    },
+    {
+     "table_index": 171,
+     "move": "NIGHTMARE",
+     "label": "BattleAnim_Nightmare",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_NIGHTMARE"
+     ],
+     "bg_effects": []
+    },
+    {
+     "table_index": 180,
+     "move": "SPITE",
+     "label": "BattleAnim_Spite",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_SPITE"
+     ],
+     "bg_effects": []
+    },
+    {
+     "table_index": 186,
+     "move": "SWEET_KISS",
+     "label": "BattleAnim_SweetKiss",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_SWEET_KISS"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW"
+     ]
+    },
+    {
+     "table_index": 194,
+     "move": "DESTINY_BOND",
+     "label": "BattleAnim_DestinyBond",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_DESTINY_BOND"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_RETURN_MON"
+     ]
+    },
+    {
+     "table_index": 268,
+     "move": "ANIM_ENEMY_DAMAGE",
+     "label": "BattleAnim_InNightmare",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_IN_NIGHTMARE"
+     ],
+     "bg_effects": []
+    }
+   ],
+   "n_users": 6
+  },
+  "GLOBE": {
+   "gfx_constant": "BATTLE_ANIM_GFX_GLOBE",
+   "index": 33,
+   "tiles": 16,
+   "symbol": "AnimObjGlobeGFX",
+   "png": "gfx/battle_anims/globe.png",
+   "objects": [
+    {
+     "name": "BATTLE_ANIM_OBJ_SEISMIC_TOSS",
+     "frameset": "BATTLE_ANIM_FRAMESET_SEISMIC_TOSS",
+     "func": "BATTLE_ANIM_FUNC_STRENGTH_SEISMIC_TOSS",
+     "palette": "PAL_BATTLE_OB_BLUE"
+    }
+   ],
+   "users": [
+    {
+     "table_index": 69,
+     "move": "SEISMIC_TOSS",
+     "label": "BattleAnim_SeismicToss",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_SEISMIC_TOSS"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_SHAKE_SCREEN_Y"
+     ]
+    }
+   ],
+   "n_users": 1
+  },
+  "NOISE": {
+   "gfx_constant": "BATTLE_ANIM_GFX_NOISE",
+   "index": 14,
+   "tiles": 16,
+   "symbol": "AnimObjNoiseGFX",
+   "png": "gfx/battle_anims/noise.png",
+   "objects": [
+    {
+     "name": "BATTLE_ANIM_OBJ_SING",
+     "frameset": "BATTLE_ANIM_FRAMESET_MUSIC_NOTE_1",
+     "func": "BATTLE_ANIM_FUNC_SING",
+     "palette": "PAL_BATTLE_OB_GRAY"
+    },
+    {
+     "name": "BATTLE_ANIM_OBJ_SOUND",
+     "frameset": "BATTLE_ANIM_FRAMESET_SOUND_1",
+     "func": "BATTLE_ANIM_FUNC_SOUND",
+     "palette": "PAL_BATTLE_OB_GRAY"
+    },
+    {
+     "name": "BATTLE_ANIM_OBJ_HEAL_BELL_NOTE",
+     "frameset": "BATTLE_ANIM_FRAMESET_MUSIC_NOTE_1",
+     "func": "BATTLE_ANIM_FUNC_HEAL_BELL_NOTES",
+     "palette": "PAL_BATTLE_OB_GRAY"
+    },
+    {
+     "name": "BATTLE_ANIM_OBJ_PERISH_SONG",
+     "frameset": "BATTLE_ANIM_FRAMESET_MUSIC_NOTE_1",
+     "func": "BATTLE_ANIM_FUNC_PERISH_SONG",
+     "palette": "PAL_BATTLE_OB_GRAY"
+    },
+    {
+     "name": "BATTLE_ANIM_OBJ_BELLY_DRUM_NOTE",
+     "frameset": "BATTLE_ANIM_FRAMESET_MUSIC_NOTE_1",
+     "func": "BATTLE_ANIM_FUNC_ENCORE_BELLY_DRUM",
+     "palette": "PAL_BATTLE_OB_GRAY"
+    }
+   ],
+   "users": [
+    {
+     "table_index": 45,
+     "move": "GROWL",
+     "label": "BattleAnim_Growl",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_SOUND"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_BATTLEROBJ_1ROW",
+      "BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW",
+      "BATTLE_BG_EFFECT_FADE_MON_TO_BLACK_REPEATING",
+      "BATTLE_BG_EFFECT_SHOW_MON"
+     ]
+    },
+    {
+     "table_index": 46,
+     "move": "ROAR",
+     "label": "BattleAnim_Roar",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_SOUND"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW",
+      "BATTLE_BG_EFFECT_REMOVE_MON"
+     ]
+    },
+    {
+     "table_index": 47,
+     "move": "SING",
+     "label": "BattleAnim_Sing",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_SING"
+     ],
+     "bg_effects": []
+    },
+    {
+     "table_index": 134,
+     "move": "KINESIS",
+     "label": "BattleAnim_Kinesis",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_SOUND"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW"
+     ]
+    },
+    {
+     "table_index": 173,
+     "move": "SNORE",
+     "label": "BattleAnim_Snore",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_SOUND"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_SHAKE_SCREEN_X"
+     ]
+    },
+    {
+     "table_index": 187,
+     "move": "BELLY_DRUM",
+     "label": "BattleAnim_BellyDrum",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_BELLY_DRUM_NOTE"
+     ],
+     "bg_effects": []
+    },
+    {
+     "table_index": 195,
+     "move": "PERISH_SONG",
+     "label": "BattleAnim_PerishSong",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_PERISH_SONG"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_ALTERNATE_HUES",
+      "BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW"
+     ]
+    },
+    {
+     "table_index": 215,
+     "move": "HEAL_BELL",
+     "label": "BattleAnim_HealBell",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_HEAL_BELL_NOTE"
+     ],
+     "bg_effects": []
+    }
+   ],
+   "n_users": 8
+  },
+  "REFLECT": {
+   "gfx_constant": "BATTLE_ANIM_GFX_REFLECT",
+   "index": 24,
+   "tiles": 10,
+   "symbol": "AnimObjReflectGFX",
+   "png": "gfx/battle_anims/reflect.png",
+   "objects": [
+    {
+     "name": "BATTLE_ANIM_OBJ_SCREEN",
+     "frameset": "BATTLE_ANIM_FRAMESET_REFLECT",
+     "func": "BATTLE_ANIM_FUNC_NULL",
+     "palette": "PAL_BATTLE_OB_YELLOW"
+    },
+    {
+     "name": "BATTLE_ANIM_OBJ_HARDEN",
+     "frameset": "BATTLE_ANIM_FRAMESET_REFLECT",
+     "func": "BATTLE_ANIM_FUNC_NULL",
+     "palette": "PAL_BATTLE_OB_GRAY"
+    },
+    {
+     "name": "BATTLE_ANIM_OBJ_WITHDRAW",
+     "frameset": "BATTLE_ANIM_FRAMESET_WITHDRAW_SHELL",
+     "func": "BATTLE_ANIM_FUNC_NULL",
+     "palette": "PAL_BATTLE_OB_GRAY"
+    }
+   ],
+   "users": [
+    {
+     "table_index": 106,
+     "move": "HARDEN",
+     "label": "BattleAnim_Harden",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_HARDEN"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_BATTLEROBJ_1ROW",
+      "BATTLE_BG_EFFECT_FADE_MON_TO_BLACK",
+      "BATTLE_BG_EFFECT_SHOW_MON"
+     ]
+    },
+    {
+     "table_index": 110,
+     "move": "WITHDRAW",
+     "label": "BattleAnim_Withdraw",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_WITHDRAW"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_BATTLEROBJ_2ROW",
+      "BATTLE_BG_EFFECT_SHOW_MON",
+      "BATTLE_BG_EFFECT_WITHDRAW"
+     ]
+    },
+    {
+     "table_index": 112,
+     "move": "BARRIER",
+     "label": "BattleAnim_Barrier",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_SCREEN"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW"
+     ]
+    },
+    {
+     "table_index": 113,
+     "move": "LIGHT_SCREEN",
+     "label": "BattleAnim_LightScreen",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_SCREEN"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW"
+     ]
+    },
+    {
+     "table_index": 115,
+     "move": "REFLECT",
+     "label": "BattleAnim_Reflect",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_SCREEN"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW",
+      "BATTLE_BG_EFFECT_FLASH_INVERTED"
+     ]
+    },
+    {
+     "table_index": 211,
+     "move": "STEEL_WING",
+     "label": "BattleAnim_SteelWing",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_HARDEN"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_BATTLEROBJ_1ROW",
+      "BATTLE_BG_EFFECT_FADE_MON_TO_BLACK",
+      "BATTLE_BG_EFFECT_SHOW_MON"
+     ]
+    },
+    {
+     "table_index": 231,
+     "move": "IRON_TAIL",
+     "label": "BattleAnim_IronTail",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_HARDEN"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_BATTLEROBJ_1ROW",
+      "BATTLE_BG_EFFECT_FADE_MON_TO_BLACK",
+      "BATTLE_BG_EFFECT_SHOW_MON",
+      "BATTLE_BG_EFFECT_WOBBLE_MON"
+     ]
+    },
+    {
+     "table_index": 232,
+     "move": "METAL_CLAW",
+     "label": "BattleAnim_MetalClaw",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_HARDEN"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_BATTLEROBJ_1ROW",
+      "BATTLE_BG_EFFECT_FADE_MON_TO_BLACK",
+      "BATTLE_BG_EFFECT_SHOW_MON"
+     ]
+    },
+    {
+     "table_index": 243,
+     "move": "MIRROR_COAT",
+     "label": "BattleAnim_MirrorCoat",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_SCREEN"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW"
+     ]
+    }
+   ],
+   "n_users": 9
+  },
+  "ROPE": {
+   "gfx_constant": "BATTLE_ANIM_GFX_ROPE",
+   "index": 22,
+   "tiles": 18,
+   "symbol": "AnimObjRopeGFX",
+   "png": "gfx/battle_anims/rope.png",
+   "objects": [
+    {
+     "name": "BATTLE_ANIM_OBJ_BIND1",
+     "frameset": "BATTLE_ANIM_FRAMESET_BIND_1",
+     "func": "BATTLE_ANIM_FUNC_WRAP",
+     "palette": "PAL_BATTLE_OB_GREEN"
+    },
+    {
+     "name": "BATTLE_ANIM_OBJ_BIND2",
+     "frameset": "BATTLE_ANIM_FRAMESET_BIND_3",
+     "func": "BATTLE_ANIM_FUNC_WRAP",
+     "palette": "PAL_BATTLE_OB_GREEN"
+    }
+   ],
+   "users": [
+    {
+     "table_index": 20,
+     "move": "BIND",
+     "label": "BattleAnim_Bind",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_BIND1",
+      "BATTLE_ANIM_OBJ_BIND2"
+     ],
+     "bg_effects": []
+    },
+    {
+     "table_index": 35,
+     "move": "WRAP",
+     "label": "BattleAnim_Wrap",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_BIND1"
+     ],
+     "bg_effects": []
+    },
+    {
+     "table_index": 132,
+     "move": "CONSTRICT",
+     "label": "BattleAnim_Constrict",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_BIND1",
+      "BATTLE_ANIM_OBJ_BIND2"
+     ],
+     "bg_effects": []
+    }
+   ],
+   "n_users": 3
+  },
+  "SHAPES": {
+   "gfx_constant": "BATTLE_ANIM_GFX_SHAPES",
+   "index": 34,
+   "tiles": 48,
+   "symbol": "AnimObjShapesGFX",
+   "png": "gfx/battle_anims/shapes.png",
+   "objects": [
+    {
+     "name": "BATTLE_ANIM_OBJ_SHARPEN",
+     "frameset": "BATTLE_ANIM_FRAMESET_SHARPEN",
+     "func": "BATTLE_ANIM_FUNC_NULL",
+     "palette": "PAL_BATTLE_OB_GRAY"
+    },
+    {
+     "name": "BATTLE_ANIM_OBJ_DEFENSE_CURL",
+     "frameset": "BATTLE_ANIM_FRAMESET_DEFENSE_CURL",
+     "func": "BATTLE_ANIM_FUNC_NULL",
+     "palette": "PAL_BATTLE_OB_GRAY"
+    }
+   ],
+   "users": [
+    {
+     "table_index": 111,
+     "move": "DEFENSE_CURL",
+     "label": "BattleAnim_DefenseCurl",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_DEFENSE_CURL"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_BATTLEROBJ_1ROW",
+      "BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING",
+      "BATTLE_BG_EFFECT_SHOW_MON"
+     ]
+    },
+    {
+     "table_index": 159,
+     "move": "SHARPEN",
+     "label": "BattleAnim_Sharpen",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_SHARPEN"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_BATTLEROBJ_1ROW",
+      "BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING",
+      "BATTLE_BG_EFFECT_SHOW_MON"
+     ]
+    }
+   ],
+   "n_users": 2
+  },
+  "SHINE": {
+   "gfx_constant": "BATTLE_ANIM_GFX_SHINE",
+   "index": 36,
+   "tiles": 38,
+   "symbol": "AnimObjShineGFX",
+   "png": "gfx/battle_anims/shine.png",
+   "objects": [
+    {
+     "name": "BATTLE_ANIM_OBJ_MORNING_SUN",
+     "frameset": "BATTLE_ANIM_FRAMESET_MORNING_SUN",
+     "func": "BATTLE_ANIM_FUNC_SWAGGER_MORNING_SUN",
+     "palette": "PAL_BATTLE_OB_YELLOW"
+    },
+    {
+     "name": "BATTLE_ANIM_OBJ_GLIMMER",
+     "frameset": "BATTLE_ANIM_FRAMESET_GLIMMER",
+     "func": "BATTLE_ANIM_FUNC_NULL",
+     "palette": "PAL_BATTLE_OB_GRAY"
+    },
+    {
+     "name": "BATTLE_ANIM_OBJ_MOONLIGHT",
+     "frameset": "BATTLE_ANIM_FRAMESET_MOONLIGHT",
+     "func": "BATTLE_ANIM_FUNC_NULL",
+     "palette": "PAL_BATTLE_OB_YELLOW"
+    },
+    {
+     "name": "BATTLE_ANIM_OBJ_FORESIGHT",
+     "frameset": "BATTLE_ANIM_FRAMESET_FORESIGHT_SHINE",
+     "func": "BATTLE_ANIM_FUNC_NULL",
+     "palette": "PAL_BATTLE_OB_GRAY"
+    }
+   ],
+   "users": [
+    {
+     "table_index": 179,
+     "move": "REVERSAL",
+     "label": "BattleAnim_Reversal",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_FORESIGHT"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW"
+     ]
+    },
+    {
+     "table_index": 193,
+     "move": "FORESIGHT",
+     "label": "BattleAnim_Foresight",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_FORESIGHT"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_BATTLEROBJ_1ROW",
+      "BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW",
+      "BATTLE_BG_EFFECT_FADE_MON_TO_BLACK_REPEATING",
+      "BATTLE_BG_EFFECT_SHOW_MON"
+     ]
+    },
+    {
+     "table_index": 197,
+     "move": "DETECT",
+     "label": "BattleAnim_Detect",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_FORESIGHT"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW"
+     ]
+    },
+    {
+     "table_index": 202,
+     "move": "GIGA_DRAIN",
+     "label": "BattleAnim_GigaDrain",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_GLIMMER"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_BATTLEROBJ_1ROW",
+      "BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW",
+      "BATTLE_BG_EFFECT_FADE_MONS_TO_BLACK_REPEATING",
+      "BATTLE_BG_EFFECT_SHOW_MON"
+     ]
+    },
+    {
+     "table_index": 206,
+     "move": "FALSE_SWIPE",
+     "label": "BattleAnim_FalseSwipe",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_GLIMMER"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW"
+     ]
+    },
+    {
+     "table_index": 234,
+     "move": "MORNING_SUN",
+     "label": "BattleAnim_MorningSun",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_GLIMMER",
+      "BATTLE_ANIM_OBJ_MORNING_SUN"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW"
+     ]
+    },
+    {
+     "table_index": 235,
+     "move": "SYNTHESIS",
+     "label": "BattleAnim_Synthesis",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_GLIMMER"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_BATTLEROBJ_1ROW",
+      "BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW",
+      "BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING",
+      "BATTLE_BG_EFFECT_SHOW_MON"
+     ]
+    },
+    {
+     "table_index": 236,
+     "move": "MOONLIGHT",
+     "label": "BattleAnim_Moonlight",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_GLIMMER",
+      "BATTLE_ANIM_OBJ_MOONLIGHT"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW"
+     ]
+    }
+   ],
+   "n_users": 8
+  },
+  "WAVE": {
+   "gfx_constant": "BATTLE_ANIM_GFX_WAVE",
+   "index": 38,
+   "tiles": 18,
+   "symbol": "AnimObjWaveGFX",
+   "png": "gfx/battle_anims/wave.png",
+   "objects": [],
+   "users": [],
+   "n_users": 0
+  },
+  "WEB": {
+   "gfx_constant": "BATTLE_ANIM_GFX_WEB",
+   "index": 27,
+   "tiles": 14,
+   "symbol": "AnimObjWebGFX",
+   "png": "gfx/battle_anims/web.png",
+   "objects": [
+    {
+     "name": "BATTLE_ANIM_OBJ_STRING_SHOT",
+     "frameset": "BATTLE_ANIM_FRAMESET_STRING_SHOT_1",
+     "func": "BATTLE_ANIM_FUNC_STRING",
+     "palette": "PAL_BATTLE_OB_GRAY"
+    },
+    {
+     "name": "BATTLE_ANIM_OBJ_SPIDER_WEB",
+     "frameset": "BATTLE_ANIM_FRAMESET_SPIDER_WEB",
+     "func": "BATTLE_ANIM_FUNC_NULL",
+     "palette": "PAL_BATTLE_OB_GRAY"
+    }
+   ],
+   "users": [
+    {
+     "table_index": 81,
+     "move": "STRING_SHOT",
+     "label": "BattleAnim_StringShot",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_STRING_SHOT"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW"
+     ]
+    },
+    {
+     "table_index": 169,
+     "move": "SPIDER_WEB",
+     "label": "BattleAnim_SpiderWeb",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_SPIDER_WEB",
+      "BATTLE_ANIM_OBJ_STRING_SHOT"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW"
+     ]
+    }
+   ],
+   "n_users": 2
+  },
+  "WIND": {
+   "gfx_constant": "BATTLE_ANIM_GFX_WIND",
+   "index": 19,
+   "tiles": 19,
+   "symbol": "AnimObjWindGFX",
+   "png": "gfx/battle_anims/wind.png",
+   "objects": [
+    {
+     "name": "BATTLE_ANIM_OBJ_GUST",
+     "frameset": "BATTLE_ANIM_FRAMESET_GUST",
+     "func": "BATTLE_ANIM_FUNC_GUST",
+     "palette": "PAL_BATTLE_OB_GRAY"
+    },
+    {
+     "name": "BATTLE_ANIM_OBJ_AGILITY",
+     "frameset": "BATTLE_ANIM_FRAMESET_AGILITY",
+     "func": "BATTLE_ANIM_FUNC_AGILITY",
+     "palette": "PAL_BATTLE_OB_BLUE"
+    },
+    {
+     "name": "BATTLE_ANIM_OBJ_RAPID_SPIN",
+     "frameset": "BATTLE_ANIM_FRAMESET_RAPID_SPIN",
+     "func": "BATTLE_ANIM_FUNC_RAPID_SPIN",
+     "palette": "PAL_BATTLE_OB_GRAY"
+    },
+    {
+     "name": "BATTLE_ANIM_OBJ_SWAGGER",
+     "frameset": "BATTLE_ANIM_FRAMESET_SWAGGER",
+     "func": "BATTLE_ANIM_FUNC_SWAGGER_MORNING_SUN",
+     "palette": "PAL_BATTLE_OB_GRAY"
+    }
+   ],
+   "users": [
+    {
+     "table_index": 18,
+     "move": "WHIRLWIND",
+     "label": "BattleAnim_Whirlwind",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_GUST"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_REMOVE_MON"
+     ]
+    },
+    {
+     "table_index": 49,
+     "move": "SONICBOOM",
+     "label": "BattleAnim_Sonicboom",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_GUST"
+     ],
+     "bg_effects": []
+    },
+    {
+     "table_index": 97,
+     "move": "AGILITY",
+     "label": "BattleAnim_Agility",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_AGILITY"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_BATTLEROBJ_1ROW",
+      "BATTLE_BG_EFFECT_FADE_MON_TO_LIGHT_REPEATING",
+      "BATTLE_BG_EFFECT_SHOW_MON"
+     ]
+    },
+    {
+     "table_index": 207,
+     "move": "SWAGGER",
+     "label": "BattleAnim_Swagger",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_SWAGGER"
+     ],
+     "bg_effects": []
+    },
+    {
+     "table_index": 229,
+     "move": "RAPID_SPIN",
+     "label": "BattleAnim_RapidSpin",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_RAPID_SPIN"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_BATTLEROBJ_2ROW",
+      "BATTLE_BG_EFFECT_BODY_SLAM",
+      "BATTLE_BG_EFFECT_SHOW_MON"
+     ]
+    },
+    {
+     "table_index": 239,
+     "move": "TWISTER",
+     "label": "BattleAnim_Twister",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_GUST"
+     ],
+     "bg_effects": []
+    },
+    {
+     "table_index": 248,
+     "move": "FUTURE_SIGHT",
+     "label": "BattleAnim_FutureSight",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_AGILITY"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_ALTERNATE_HUES",
+      "BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW",
+      "BATTLE_BG_EFFECT_PSYCHIC"
+     ]
+    },
+    {
+     "table_index": 250,
+     "move": "WHIRLPOOL",
+     "label": "BattleAnim_Whirlpool",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_GUST"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_WHIRLPOOL"
+     ]
+    },
+    {
+     "table_index": 269,
+     "move": "ANIM_ENEMY_STAT_DOWN",
+     "label": "BattleAnim_InWhirlpool",
+     "loads_bank": true,
+     "objects_used": [
+      "BATTLE_ANIM_OBJ_GUST"
+     ],
+     "bg_effects": [
+      "BATTLE_BG_EFFECT_WHIRLPOOL"
+     ]
+    }
+   ],
+   "n_users": 9
+  }
+ },
+ "all_gfx_bank_users_count": {
+  "BATTLE_ANIM_GFX_HIT": 92,
+  "BATTLE_ANIM_GFX_CUT": 14,
+  "BATTLE_ANIM_GFX_FIRE": 11,
+  "BATTLE_ANIM_GFX_WATER": 5,
+  "BATTLE_ANIM_GFX_LIGHTNING": 9,
+  "BATTLE_ANIM_GFX_PLANT": 2,
+  "BATTLE_ANIM_GFX_SMOKE": 6,
+  "BATTLE_ANIM_GFX_EXPLOSION": 12,
+  "BATTLE_ANIM_GFX_ROCKS": 6,
+  "BATTLE_ANIM_GFX_ICE": 6,
+  "BATTLE_ANIM_GFX_POKE_BALL": 1,
+  "BATTLE_ANIM_GFX_POISON": 5,
+  "BATTLE_ANIM_GFX_BUBBLE": 10,
+  "BATTLE_ANIM_GFX_NOISE": 8,
+  "BATTLE_ANIM_GFX_POWDER": 3,
+  "BATTLE_ANIM_GFX_BEAM": 7,
+  "BATTLE_ANIM_GFX_SPEED": 17,
+  "BATTLE_ANIM_GFX_CHARGE": 7,
+  "BATTLE_ANIM_GFX_WIND": 9,
+  "BATTLE_ANIM_GFX_WHIP": 3,
+  "BATTLE_ANIM_GFX_EGG": 7,
+  "BATTLE_ANIM_GFX_ROPE": 3,
+  "BATTLE_ANIM_GFX_PSYCHIC": 7,
+  "BATTLE_ANIM_GFX_REFLECT": 9,
+  "BATTLE_ANIM_GFX_STATUS": 13,
+  "BATTLE_ANIM_GFX_SAND": 3,
+  "BATTLE_ANIM_GFX_WEB": 2,
+  "BATTLE_ANIM_GFX_HAZE": 6,
+  "BATTLE_ANIM_GFX_HORN": 8,
+  "BATTLE_ANIM_GFX_FLOWER": 3,
+  "BATTLE_ANIM_GFX_MISC": 17,
+  "BATTLE_ANIM_GFX_SKY_ATTACK": 1,
+  "BATTLE_ANIM_GFX_GLOBE": 1,
+  "BATTLE_ANIM_GFX_SHAPES": 2,
+  "BATTLE_ANIM_GFX_OBJECTS": 11,
+  "BATTLE_ANIM_GFX_SHINE": 8,
+  "BATTLE_ANIM_GFX_ANGELS": 6,
+  "BATTLE_ANIM_GFX_WAVE": 0,
+  "BATTLE_ANIM_GFX_AEROBLAST": 1,
+  "BATTLE_ANIM_GFX_PLAYERHEAD": 0,
+  "BATTLE_ANIM_GFX_ENEMYFEET": 0
+ },
+ "platinum_comparison": {
+  "moves": {
+   "AEROBLAST": {
+    "platinum_dir": "aeroblast",
+    "exists": true,
+    "family": "AEROBLAST",
+    "lines": 21,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": true,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "LOVELY_KISS": {
+    "platinum_dir": "lovely_kiss",
+    "exists": true,
+    "family": "ANGELS",
+    "lines": 11,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "NIGHTMARE": {
+    "platinum_dir": "nightmare",
+    "exists": true,
+    "family": "ANGELS",
+    "lines": 23,
+    "particle_system": false,
+    "sprite_manager": false,
+    "bg_switch_or_fade": true,
+    "battler_effects": true,
+    "own_particle_file": false
+   },
+   "SPITE": {
+    "platinum_dir": "spite",
+    "exists": true,
+    "family": "ANGELS",
+    "lines": 21,
+    "particle_system": false,
+    "sprite_manager": false,
+    "bg_switch_or_fade": true,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "SWEET_KISS": {
+    "platinum_dir": "sweet_kiss",
+    "exists": true,
+    "family": "ANGELS",
+    "lines": 13,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "DESTINY_BOND": {
+    "platinum_dir": "destiny_bond",
+    "exists": true,
+    "family": "ANGELS",
+    "lines": 41,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": true,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "SEISMIC_TOSS": {
+    "platinum_dir": "seismic_toss",
+    "exists": true,
+    "family": "GLOBE",
+    "lines": 39,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": true,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "GROWL": {
+    "platinum_dir": "growl",
+    "exists": true,
+    "family": "NOISE",
+    "lines": 15,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "ROAR": {
+    "platinum_dir": "roar",
+    "exists": true,
+    "family": "NOISE",
+    "lines": 21,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "SING": {
+    "platinum_dir": "sing",
+    "exists": true,
+    "family": "NOISE",
+    "lines": 17,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": true,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "KINESIS": {
+    "platinum_dir": "kinesis",
+    "exists": true,
+    "family": "NOISE",
+    "lines": 21,
+    "particle_system": false,
+    "sprite_manager": true,
+    "bg_switch_or_fade": false,
+    "battler_effects": false,
+    "own_particle_file": false
+   },
+   "SNORE": {
+    "platinum_dir": "snore",
+    "exists": true,
+    "family": "NOISE",
+    "lines": 11,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": true,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "BELLY_DRUM": {
+    "platinum_dir": "belly_drum",
+    "exists": true,
+    "family": "NOISE",
+    "lines": 14,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "PERISH_SONG": {
+    "platinum_dir": "perish_song",
+    "exists": true,
+    "family": "NOISE",
+    "lines": 20,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": true,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "HEAL_BELL": {
+    "platinum_dir": "heal_bell",
+    "exists": true,
+    "family": "NOISE",
+    "lines": 30,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": true,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "HARDEN": {
+    "platinum_dir": "harden",
+    "exists": true,
+    "family": "REFLECT",
+    "lines": 20,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "WITHDRAW": {
+    "platinum_dir": "withdraw",
+    "exists": true,
+    "family": "REFLECT",
+    "lines": 13,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": false,
+    "own_particle_file": true
+   },
+   "BARRIER": {
+    "platinum_dir": "barrier",
+    "exists": true,
+    "family": "REFLECT",
+    "lines": 9,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": false,
+    "own_particle_file": true
+   },
+   "LIGHT_SCREEN": {
+    "platinum_dir": "light_screen",
+    "exists": true,
+    "family": "REFLECT",
+    "lines": 9,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": false,
+    "own_particle_file": true
+   },
+   "REFLECT": {
+    "platinum_dir": "reflect",
+    "exists": true,
+    "family": "REFLECT",
+    "lines": 9,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": false,
+    "own_particle_file": true
+   },
+   "STEEL_WING": {
+    "platinum_dir": "steel_wing",
+    "exists": true,
+    "family": "REFLECT",
+    "lines": 23,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "IRON_TAIL": {
+    "platinum_dir": "iron_tail",
+    "exists": true,
+    "family": "REFLECT",
+    "lines": 27,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "METAL_CLAW": {
+    "platinum_dir": "metal_claw",
+    "exists": true,
+    "family": "REFLECT",
+    "lines": 35,
+    "particle_system": false,
+    "sprite_manager": true,
+    "bg_switch_or_fade": false,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "MIRROR_COAT": {
+    "platinum_dir": "mirror_coat",
+    "exists": true,
+    "family": "REFLECT",
+    "lines": 9,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": false,
+    "own_particle_file": true
+   },
+   "BIND": {
+    "platinum_dir": "bind",
+    "exists": true,
+    "family": "ROPE",
+    "lines": 17,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "WRAP": {
+    "platinum_dir": "wrap",
+    "exists": true,
+    "family": "ROPE",
+    "lines": 13,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "CONSTRICT": {
+    "platinum_dir": "constrict",
+    "exists": true,
+    "family": "ROPE",
+    "lines": 19,
+    "particle_system": false,
+    "sprite_manager": true,
+    "bg_switch_or_fade": false,
+    "battler_effects": false,
+    "own_particle_file": true
+   },
+   "DEFENSE_CURL": {
+    "platinum_dir": "defense_curl",
+    "exists": true,
+    "family": "SHAPES",
+    "lines": 10,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": false,
+    "own_particle_file": true
+   },
+   "SHARPEN": {
+    "platinum_dir": "sharpen",
+    "exists": true,
+    "family": "SHAPES",
+    "lines": 9,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": false,
+    "own_particle_file": true
+   },
+   "REVERSAL": {
+    "platinum_dir": "reversal",
+    "exists": true,
+    "family": "SHINE",
+    "lines": 29,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": true,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "FORESIGHT": {
+    "platinum_dir": "foresight",
+    "exists": true,
+    "family": "SHINE",
+    "lines": 18,
+    "particle_system": false,
+    "sprite_manager": true,
+    "bg_switch_or_fade": false,
+    "battler_effects": false,
+    "own_particle_file": true
+   },
+   "DETECT": {
+    "platinum_dir": "detect",
+    "exists": true,
+    "family": "SHINE",
+    "lines": 72,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": true,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "GIGA_DRAIN": {
+    "platinum_dir": "giga_drain",
+    "exists": true,
+    "family": "SHINE",
+    "lines": 15,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "FALSE_SWIPE": {
+    "platinum_dir": "false_swipe",
+    "exists": true,
+    "family": "SHINE",
+    "lines": 12,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "MORNING_SUN": {
+    "platinum_dir": "morning_sun",
+    "exists": true,
+    "family": "SHINE",
+    "lines": 13,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": true,
+    "battler_effects": false,
+    "own_particle_file": true
+   },
+   "SYNTHESIS": {
+    "platinum_dir": "synthesis",
+    "exists": true,
+    "family": "SHINE",
+    "lines": 13,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "MOONLIGHT": {
+    "platinum_dir": "moonlight",
+    "exists": true,
+    "family": "SHINE",
+    "lines": 19,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": true,
+    "battler_effects": false,
+    "own_particle_file": true
+   },
+   "STRING_SHOT": {
+    "platinum_dir": "string_shot",
+    "exists": true,
+    "family": "WEB",
+    "lines": 43,
+    "particle_system": true,
+    "sprite_manager": true,
+    "bg_switch_or_fade": true,
+    "battler_effects": false,
+    "own_particle_file": true
+   },
+   "SPIDER_WEB": {
+    "platinum_dir": "spider_web",
+    "exists": true,
+    "family": "WEB",
+    "lines": 30,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": false,
+    "own_particle_file": true
+   },
+   "WHIRLWIND": {
+    "platinum_dir": "whirlwind",
+    "exists": true,
+    "family": "WIND",
+    "lines": 18,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "SONICBOOM": {
+    "platinum_dir": "sonic_boom",
+    "exists": true,
+    "family": "WIND",
+    "lines": 71,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "AGILITY": {
+    "platinum_dir": "agility",
+    "exists": true,
+    "family": "WIND",
+    "lines": 67,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": true,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "SWAGGER": {
+    "platinum_dir": "swagger",
+    "exists": true,
+    "family": "WIND",
+    "lines": 19,
+    "particle_system": false,
+    "sprite_manager": true,
+    "bg_switch_or_fade": false,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "RAPID_SPIN": {
+    "platinum_dir": "rapid_spin",
+    "exists": true,
+    "family": "WIND",
+    "lines": 12,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "TWISTER": {
+    "platinum_dir": "twister",
+    "exists": true,
+    "family": "WIND",
+    "lines": 14,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": false,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "FUTURE_SIGHT": {
+    "platinum_dir": "future_sight",
+    "exists": true,
+    "family": "WIND",
+    "lines": 43,
+    "particle_system": false,
+    "sprite_manager": false,
+    "bg_switch_or_fade": true,
+    "battler_effects": true,
+    "own_particle_file": true
+   },
+   "WHIRLPOOL": {
+    "platinum_dir": "whirlpool",
+    "exists": true,
+    "family": "WIND",
+    "lines": 25,
+    "particle_system": true,
+    "sprite_manager": false,
+    "bg_switch_or_fade": true,
+    "battler_effects": true,
+    "own_particle_file": true
+   }
+  },
+  "bound_moves": 47,
+  "missing_in_platinum": [],
+  "total_platinum_move_dirs": 492
+ },
+ "wave_bank": {
+  "bank_loaders": [],
+  "objects_using_bank": [],
+  "object_named_wave": [
+   {
+    "name": "BATTLE_ANIM_OBJ_WAVE",
+    "gfx": "BATTLE_ANIM_GFX_PSYCHIC"
+   }
+  ]
+ },
+ "transitions": {
+  "path": "engine/battle/battle_transition.asm",
+  "outros": [
+   "StartTrainerBattle_SineWave",
+   "StartTrainerBattle_SpeckleToBlack",
+   "StartTrainerBattle_SpinToBlack",
+   "StartTrainerBattle_ZoomToBlack"
+  ],
+  "selector": "lead level + 3 vs enemy level (flash count) x cave/dungeon environment -> 4 starting points",
+  "starting_points": [
+   "BATTLETRANSITION_CAVE",
+   "BATTLETRANSITION_CAVE_STRONGER",
+   "BATTLETRANSITION_NO_CAVE",
+   "BATTLETRANSITION_NO_CAVE_STRONGER"
+  ]
+ },
+ "residual_anims": [
+  "BattleAnim_InLove",
+  "BattleAnim_InSandstorm",
+  "BattleAnim_InNightmare",
+  "BattleAnim_InWhirlpool"
+ ]
+}
