@@ -137,39 +137,115 @@ ALIGN_4 static const u16 sTerrainPaletteSource[TERRAIN_MAX][3] = {
 };
 // clang-format on
 
-// IO-PAL-CYCLE (water pilot): subtle shimmer on the water terrain platform.
+// IO-PAL-CYCLE: subtle palette animation on the battle terrain platforms.
 //
-// Only palette entries 4-7 (the lighter mid-tone highlight bands of the water ramp) are
-// animated. Entries 0-3 (transparent / outline / brightest sparkle) and 8-15 (body and
-// shadow tones) are never touched, so the platform keeps its time-of-day identity. Each
-// step moves every animated entry at most one ramp rung (see sWaterCycleShifts), which
-// avoids a visible wrap-around jump.
-#define TERRAIN_OBJ_PALETTE_NONE      0xFF
-#define TERRAIN_BG_PALETTE_SLOT       7
-#define TERRAIN_WATER_CYCLE_FIRST_IDX 4
-#define TERRAIN_WATER_CYCLE_INTERVAL  16 // frames between steps; a full loop is 4 steps (~1.07s)
-#define TERRAIN_WATER_CYCLE_PHASES    4
+// Each animated terrain has one entry in sTerrainCycleConfigs naming the palette entries it
+// may touch. Everything outside [firstIdx, firstIdx + count) is never written, so index 0
+// (transparent), outlines and the body tones keep the time-of-day identity of the platform.
+// Colors are always derived from a snapshot of the palette that was actually loaded
+// (cycleBaseColors), so day/evening/night variants inherit their own look. Terrains without
+// an entry (and any entry that fails the sanity checks in Terrain_FindCycleConfig) stay static.
+//
+//   TERRAIN_CYCLE_RAMP: phase p shows entry i as base[clamp(i + steps[p], 0, count - 1)], i.e.
+//                       it slides by at most one ramp rung per step and never wraps around.
+//   TERRAIN_CYCLE_GLOW: phase p shows entry i as base[i] brightened by steps[p] (5-bit units
+//                       per channel, saturating).
+//
+// steps[0] must be 0 so phase 0 is the authored, static platform. The ranges were chosen per
+// terrain from the real sprite index usage; see docs/.../IO_PAL_CYCLE_S2D_TERRAINS.md.
+#define TERRAIN_OBJ_PALETTE_NONE 0xFF
+#define TERRAIN_BG_PALETTE_SLOT  7
+#define TERRAIN_CYCLE_MAX_PHASES 12
 
-static const s8 sWaterCycleShifts[TERRAIN_WATER_CYCLE_PHASES] = { 0, 1, 0, -1 };
+enum TerrainCycleMode {
+    TERRAIN_CYCLE_RAMP = 0,
+    TERRAIN_CYCLE_GLOW,
+};
+
+struct TerrainCycleConfig {
+    u8 terrainType;
+    u8 mode;
+    u8 firstIdx;
+    u8 count;
+    u8 interval; // frames between steps
+    u8 phases;
+    s8 steps[TERRAIN_CYCLE_MAX_PHASES];
+};
+
+// clang-format off
+static const TerrainCycleConfig sTerrainCycleConfigs[] = {
+    // Water: shimmering highlight bands, 4 steps x 16 frames (~1.07s loop). Unchanged from the pilot.
+    { TERRAIN_WATER,            TERRAIN_CYCLE_RAMP,  4, 4, 16, 4,  { 0, 1, 0, -1 } },
+    // Ice: reflective streaks drift along the pale highlight ramp, 6 steps x 20 frames (2s loop).
+    { TERRAIN_ICE,              TERRAIN_CYCLE_RAMP,  9, 3, 20, 6,  { 0, 1, 1, 0, -1, -1 } },
+    // Distortion World: the crack cores pulse, 8 steps x 10 frames (~1.33s loop), peak +3 units.
+    { TERRAIN_DISTORTION_WORLD, TERRAIN_CYCLE_GLOW, 10, 2, 10, 8,  { 0, 1, 2, 3, 2, 1, 0, 0 } },
+    // Cave: rare, restrained glint on the sparse mineral speckles, 12 steps x 12 frames (2.4s), peak +2 units.
+    { TERRAIN_CAVE,             TERRAIN_CYCLE_GLOW, 10, 1, 12, 12, { 0, 0, 0, 0, 0, 0, 0, 1, 2, 1, 0, 0 } },
+};
+// clang-format on
+
+static const TerrainCycleConfig *Terrain_FindCycleConfig(int terrainType)
+{
+    for (int i = 0; i < NELEMS(sTerrainCycleConfigs); i++) {
+        const TerrainCycleConfig *config = &sTerrainCycleConfigs[i];
+
+        if (config->terrainType != terrainType) {
+            continue;
+        }
+
+        // Static fallback: refuse a malformed entry rather than writing outside the palette.
+        if (config->count == 0 || config->count > TERRAIN_CYCLE_MAX_COLORS
+            || config->firstIdx + config->count > 16
+            || config->phases < 2 || config->phases > TERRAIN_CYCLE_MAX_PHASES
+            || config->interval == 0 || config->steps[0] != 0) {
+            return NULL;
+        }
+
+        return config;
+    }
+
+    return NULL;
+}
+
+static u16 Terrain_GlowColor(u16 color, int delta)
+{
+    int r = (color & 0x1F) + delta;
+    int g = ((color >> 5) & 0x1F) + delta;
+    int b = ((color >> 10) & 0x1F) + delta;
+
+    r = r > 31 ? 31 : (r < 0 ? 0 : r);
+    g = g > 31 ? 31 : (g < 0 ? 0 : g);
+    b = b > 31 ? 31 : (b < 0 ? 0 : b);
+
+    return r | (g << 5) | (b << 10);
+}
 
 static void Terrain_BuildCycleColors(const Terrain *terrain, u32 step, u16 *out)
 {
-    for (int i = 0; i < TERRAIN_WATER_CYCLE_COUNT; i++) {
-        int src = i + sWaterCycleShifts[step];
+    const TerrainCycleConfig *config = terrain->cycleConfig;
+
+    for (int i = 0; i < config->count; i++) {
+        if (config->mode == TERRAIN_CYCLE_GLOW) {
+            out[i] = Terrain_GlowColor(terrain->cycleBaseColors[i], config->steps[step]);
+            continue;
+        }
+
+        int src = i + config->steps[step];
 
         if (src < 0) {
             src = 0;
-        } else if (src > TERRAIN_WATER_CYCLE_COUNT - 1) {
-            src = TERRAIN_WATER_CYCLE_COUNT - 1;
+        } else if (src > config->count - 1) {
+            src = config->count - 1;
         }
 
         out[i] = terrain->cycleBaseColors[src];
     }
 }
 
-static BOOL Terrain_RangeEquals(const u16 *a, const u16 *b)
+static BOOL Terrain_RangeEquals(const u16 *a, const u16 *b, int count)
 {
-    for (int i = 0; i < TERRAIN_WATER_CYCLE_COUNT; i++) {
+    for (int i = 0; i < count; i++) {
         if (a[i] != b[i]) {
             return FALSE;
         }
@@ -181,23 +257,25 @@ static BOOL Terrain_RangeEquals(const u16 *a, const u16 *b)
 // Updates the animated range of one palette in the given PaletteData buffer. The unfaded
 // buffer is the authoritative copy; the faded buffer and hardware palette are only touched
 // when no fade owns them. Returns FALSE (leaving everything untouched) when the range does
-// not currently hold water terrain colors or has been tinted by another effect.
+// not currently hold this terrain's colors or has been tinted by another effect.
 static BOOL Terrain_WriteCycleColors(Terrain *terrain, PaletteData *paletteData, enum PaletteBufferID bufferID, u16 paletteIdx, const u16 *curColors, const u16 *newColors)
 {
-    u32 start = PLTT_DEST(paletteIdx) + TERRAIN_WATER_CYCLE_FIRST_IDX;
+    const TerrainCycleConfig *config = terrain->cycleConfig;
+    int count = config->count;
+    u32 start = PLTT_DEST(paletteIdx) + config->firstIdx;
     u16 *unfaded = PaletteData_GetUnfadedBuffer(paletteData, bufferID) + start;
     u16 *faded = PaletteData_GetFadedBuffer(paletteData, bufferID) + start;
 
-    if (Terrain_RangeEquals(unfaded, curColors) == FALSE && Terrain_RangeEquals(unfaded, terrain->cycleBaseColors) == FALSE) {
+    if (Terrain_RangeEquals(unfaded, curColors, count) == FALSE && Terrain_RangeEquals(unfaded, terrain->cycleBaseColors, count) == FALSE) {
         return FALSE;
     }
 
-    if (Terrain_RangeEquals(faded, unfaded) == FALSE) {
+    if (Terrain_RangeEquals(faded, unfaded, count) == FALSE) {
         return FALSE;
     }
 
-    u32 size = TERRAIN_WATER_CYCLE_COUNT * sizeof(u16);
-    u32 hwOffset = PLTT_OFFSET(paletteIdx) + TERRAIN_WATER_CYCLE_FIRST_IDX * sizeof(u16);
+    u32 size = count * sizeof(u16);
+    u32 hwOffset = PLTT_OFFSET(paletteIdx) + config->firstIdx * sizeof(u16);
 
     MI_CpuCopy16(newColors, unfaded, size);
     MI_CpuCopy16(newColors, faded, size);
@@ -212,7 +290,7 @@ static BOOL Terrain_WriteCycleColors(Terrain *terrain, PaletteData *paletteData,
     return TRUE;
 }
 
-static void SysTask_CycleWaterPalette(SysTask *task, void *param)
+static void SysTask_CycleTerrainPalette(SysTask *task, void *param)
 {
     Terrain *terrain = param;
     BattleSystem *battleSys = terrain->battleSys;
@@ -225,7 +303,7 @@ static void SysTask_CycleWaterPalette(SysTask *task, void *param)
 
     terrain->cycleTimer++;
 
-    if (terrain->cycleTimer < TERRAIN_WATER_CYCLE_INTERVAL) {
+    if (terrain->cycleTimer < terrain->cycleConfig->interval) {
         return;
     }
 
@@ -238,9 +316,9 @@ static void SysTask_CycleWaterPalette(SysTask *task, void *param)
         return;
     }
 
-    u16 curColors[TERRAIN_WATER_CYCLE_COUNT];
-    u16 newColors[TERRAIN_WATER_CYCLE_COUNT];
-    u32 nextStep = (terrain->cycleStep + 1) % TERRAIN_WATER_CYCLE_PHASES;
+    u16 curColors[TERRAIN_CYCLE_MAX_COLORS];
+    u16 newColors[TERRAIN_CYCLE_MAX_COLORS];
+    u32 nextStep = (terrain->cycleStep + 1) % terrain->cycleConfig->phases;
 
     Terrain_BuildCycleColors(terrain, terrain->cycleStep, curColors);
     Terrain_BuildCycleColors(terrain, nextStep, newColors);
@@ -259,17 +337,24 @@ static void Terrain_StartPaletteCycle(Terrain *terrain, PaletteData *paletteData
 {
     // Both terrain sides request resource 20009; only the first load allocates a palette
     // (the second returns TERRAIN_OBJ_PALETTE_NONE), so the cycle is owned by that side.
-    if (terrain->terrainType != TERRAIN_WATER || objPaletteIdx == TERRAIN_OBJ_PALETTE_NONE) {
+    if (terrain->paletteTask != NULL || objPaletteIdx == TERRAIN_OBJ_PALETTE_NONE || objPaletteIdx >= 16) {
         return;
     }
 
-    u16 *unfaded = PaletteData_GetUnfadedBuffer(paletteData, PLTTBUF_MAIN_OBJ) + PLTT_DEST(objPaletteIdx) + TERRAIN_WATER_CYCLE_FIRST_IDX;
+    const TerrainCycleConfig *config = Terrain_FindCycleConfig(terrain->terrainType);
 
-    MI_CpuCopy16(unfaded, terrain->cycleBaseColors, sizeof(terrain->cycleBaseColors));
+    if (config == NULL) {
+        return;
+    }
+
+    u16 *unfaded = PaletteData_GetUnfadedBuffer(paletteData, PLTTBUF_MAIN_OBJ) + PLTT_DEST(objPaletteIdx) + config->firstIdx;
+
+    MI_CpuCopy16(unfaded, terrain->cycleBaseColors, config->count * sizeof(u16));
+    terrain->cycleConfig = config;
     terrain->objPaletteIdx = objPaletteIdx;
     terrain->cycleTimer = 0;
     terrain->cycleStep = 0;
-    terrain->paletteTask = SysTask_Start(SysTask_CycleWaterPalette, terrain, 60001);
+    terrain->paletteTask = SysTask_Start(SysTask_CycleTerrainPalette, terrain, 60001);
 }
 
 void Terrain_StopPaletteCycle(Terrain *terrain)
@@ -285,7 +370,7 @@ void Terrain_StopPaletteCycle(Terrain *terrain)
     PaletteData *paletteData = BattleSystem_GetPaletteData(terrain->battleSys);
 
     if (terrain->cycleStep != 0 && (PaletteData_GetSelectedBuffersMask(paletteData) & (PLTTBUF_MAIN_OBJ_F | PLTTBUF_MAIN_BG_F)) == 0) {
-        u16 curColors[TERRAIN_WATER_CYCLE_COUNT];
+        u16 curColors[TERRAIN_CYCLE_MAX_COLORS];
 
         Terrain_BuildCycleColors(terrain, terrain->cycleStep, curColors);
         Terrain_WriteCycleColors(terrain, paletteData, PLTTBUF_MAIN_OBJ, terrain->objPaletteIdx, curColors, terrain->cycleBaseColors);
