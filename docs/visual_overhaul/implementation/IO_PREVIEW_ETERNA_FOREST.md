@@ -1,7 +1,7 @@
 # IO-PREVIEW — Eterna Forest location card pilot
 
-Baseline: `main` 20aad84f. Status: **source/asset implemented; static gates pass; build and runtime/visual QA pending (not run).**
-No ARM/CodeWarrior toolchain was available in the authoring environment, so the ROM build is verified by CI only. The PNG→NCGR conversion was exercised locally with the repo's own `nitrogfx`.
+Baseline: `main` 20aad84f. Status: **source/asset implemented; static gates and CI ROM build verified (see §6); emulator/runtime QA and art-direction acceptance remain PENDING.**
+No ARM/CodeWarrior toolchain is available in the authoring environment, so the ROM build is verified by CI only. The PNG→NCGR conversion was exercised locally and in CI with the repo's own `nitrogfx`.
 
 Scope: one location (`MAP_HEADER_ETERNA_FOREST`), three time-of-day art variants, no new gameplay, no script, map-header, save or text changes. Reuses the existing cross-generation donor research (`CROSS_GEN_IMPLEMENTATION_PLAN.md` §4 `IO-PREVIEW`); no donor re-discovery was done.
 
@@ -16,6 +16,7 @@ Scope: one location (`MAP_HEADER_ETERNA_FOREST`), three time-of-day art variants
 | G5 Time of day | Area lighting reads `GetTimeOfDay()` (RTC, `ov5_021F134C.c`); 2D BG palettes are never tinted. The popup has no day/night behaviour. | PASS: variants chosen at draw time from the same clock |
 | G6 Teardown | Popup state is reset by `MapNamePopUp_Hide` (`Window_ClearAndCopyToVRAM`, offset 0), destroyed with the field map (`fieldmap.c:352`), and redrawn from `Window_FillTilemap` each show. | PASS: in-window pixels need no teardown of their own |
 | G7 Vanilla preserved | Popup text, art, timing (slide 4 px/frame, 60-frame hold), hide-on-input and building suppression are untouched; the card only adds blits. | PASS |
+| G9 Load failure | `Graphics_GetCharData` returns the buffer, or **NULL without writing `*outCharData`** if the NARC member cannot be loaded or `NNS_G2dGetUnpackedBGCharacterData` fails (`GetCharacterData` frees the buffer first). `Heap_Alloc` failure calls `AllocFail` and returns NULL. | PASS after repair: `charData` is initialised to NULL and the draw returns on `tiles == NULL \|\| charData == NULL` before any dereference (the first revision read an uninitialised pointer on that path) |
 | G8 Asset pipeline | `res/graphics/map_popups/meson.build` builds `area_win_gra.narc` from an order file; the only reader (`MapNamePopUp_LoadAreaGfx`) indexes `windowID*2`, so appended members 18–20 are invisible to it. | PASS |
 
 No blocker was found, so the pilot was implemented.
@@ -56,11 +57,15 @@ Procedural and Platinum-native: `tools/visual_overhaul/io_preview/build_eterna_f
 - `.github/workflows/validate-io-preview.yml` — builds `nitrogfx`, checks the committed PNGs match the generator, runs the static gates, uploads the mockup.
 - This document; ledger row updated.
 
-## 6. Validation performed
+## 6. Validation performed (verified)
 
-- `validate_eterna_forest_card.py --nitrogfx … --mockup …`: all gates pass (geometry, NARC order/indices, style and header checks, hook order, lifecycle, palette identity, index range, NCGR tile stream == PNG tile order, which is what the C blit loop assumes).
-- `clang-format` 19.1.1 clean on `map_name_popup.c`.
-- ROM build: **CI only**.
+Repair commit on PR #86 (SHA and CI run IDs are in the PR description).
+
+- **`validate-io-preview` failure cause (first commit):** the "Card art is reproducible" step died with `ModuleNotFoundError: No module named 'PIL'`. `pip install pillow` had succeeded, but the step ran `python -I`; isolated mode ignores the user site-packages where pip had installed it. This was a workflow bug, not an art/determinism problem. Fixed by dropping `-I` in the workflow (the checked-in tools are trusted repo code). Locally the same generate-then-compare step and all gates were rerun and pass.
+- **Static gates** (`validate_eterna_forest_card.py --nitrogfx … --mockup …`): all pass, including NARC order/indices, style/header checks, hook order, palette identity, index range, the new NULL-handling gates, and NCGR tile stream == PNG tile order (65 tiles, 2080 B per variant).
+- **Load-failure handling:** see G9; covered by two new gates.
+- **`clang-format` 19.1.1:** clean.
+- **ROM build / G7:** results recorded in the PR description from CI on the repaired commit. G7 `validate_g76_atmosphere` fails with `frozen gameplay/geometry data changed: res/field/scripts/scripts_solaceon_town_pokemon_news_press.s`. That check diffs against the pinned pre-G7.6 `BASE_REV` 89657070 and flags any change under `res/field/scripts/`; `main` itself differs from that base in exactly that file (IO-CARD, PR #81), and every g7-visual-validation run since the IO-CARD PR (runs 61–67, including docs-only PR #85) fails. This PR changes nothing under `res/field/`, so the failure is **pre-existing, not a regression**; it is deliberately not fixed here.
 
 ## 7. Runtime/visual QA still required (not run)
 

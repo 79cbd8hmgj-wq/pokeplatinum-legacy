@@ -105,8 +105,13 @@ def main():
           "card is drawn after the popup blit and before Window_CopyToVRAM (single hook)")
     check("Window_FillTilemap(&mapPopUp->window, 0)" in frame, "every redraw starts from Window_FillTilemap (clears any previous card)")
     card_fn = fn_body("MapNamePopUp_DrawAreaCard")
-    check("Heap_Free(tiles)" in card_fn and card_fn.count("Graphics_GetCharData") == 1, "card draw allocates once and frees on every path")
+    check(card_fn.count("Graphics_GetCharData(NARC_INDEX_ARC__AREA_WIN_GRA") == 1, "card draw loads the resource exactly once")
     check("szByte >=" in card_fn, "card draw fails closed on a short resource")
+    check("charData = NULL" in card_fn and re.search(r"tiles == NULL \|\| charData == NULL\)\s*\{\s*return;", card_fn) is not None
+          and card_fn.index("tiles == NULL") < card_fn.index("charData->"),
+          "card draw initialises charData and returns on a NULL load/unpack result before any dereference")
+    check(card_fn.count("Heap_Free(tiles)") == 1 and card_fn.index("Heap_Free(tiles)") > card_fn.index("Window_BlitBitmapRect"),
+          "non-NULL buffer is freed exactly once, after its last use (NULL path needs no free: GetCharacterData frees on unpack failure)")
     check("GetTimeOfDay()" in SRC and "TIMEOFDAY_TWILIGHT" in SRC and "TIMEOFDAY_LATE_NIGHT" in SRC, "time-of-day variant selected from the field lighting clock")
     for fn in ("MapNamePopUp_Hide", "MapNamePopUp_Destroy", "MapNamePopUp_Create"):
         body = fn_body(fn)
@@ -120,7 +125,7 @@ def main():
         img = Image.open(POP / f"card_eterna_forest_{v}.png")
         check(img.mode == "P" and img.size == (card_w * 8, popup_h * 8), f"{v}: indexed {card_w * 8}x{popup_h * 8}")
         check(img.getpalette()[:48] == pal16, f"{v}: first 16 palette entries identical to forest_popup.png (shared palette slot 7)")
-        used = set(img.getdata())
+        used = set(img.tobytes())
         check(max(used) < 16, f"{v}: only palette indices 0-15 used")
         check(0 in used and len(used) > 6, f"{v}: transparent index 0 present, {len(used)} indices used")
         px = img.load()

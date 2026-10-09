@@ -155,7 +155,7 @@ static BOOL MapNamePopUp_GetAreaCardMember(const MapNamePopUp *mapPopUp, u32 *na
 static void MapNamePopUp_DrawAreaCard(MapNamePopUp *mapPopUp)
 {
     u32 narcMember;
-    NNSG2dCharacterData *charData;
+    NNSG2dCharacterData *charData = NULL;
 
     if (!MapNamePopUp_GetAreaCardMember(mapPopUp, &narcMember)) {
         return;
@@ -163,7 +163,13 @@ static void MapNamePopUp_DrawAreaCard(MapNamePopUp *mapPopUp)
 
     void *tiles = Graphics_GetCharData(NARC_INDEX_ARC__AREA_WIN_GRA, narcMember, FALSE, &charData, HEAP_ID_FIELD1);
 
-    // Fail closed: a short or missing resource leaves the vanilla popup untouched.
+    // Graphics_GetCharData returns NULL, without writing charData, when the member could not be
+    // loaded or its NCGR failed to unpack (the buffer is already freed in that case). Fail closed:
+    // the vanilla popup is left untouched. A short resource is treated the same way.
+    if (tiles == NULL || charData == NULL) {
+        return;
+    }
+
     if (charData->szByte >= AREA_CARD_SIZE_TILES * TILE_SIZE_4BPP) {
         for (int i = 0; i < AREA_CARD_SIZE_TILES; i++) {
             Window_BlitBitmapRect(&mapPopUp->window, charData->pRawData, i * 8, 0, 8, 8, (AREA_CARD_TILE_X + (i % AREA_CARD_WIDTH_TILES)) * 8, (i / AREA_CARD_WIDTH_TILES) * 8, 8, 8);

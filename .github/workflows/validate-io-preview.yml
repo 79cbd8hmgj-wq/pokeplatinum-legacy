@@ -29,7 +29,7 @@ jobs:
       - name: Card art is reproducible
         run: |
           cp -r res/graphics/map_popups "$RUNNER_TEMP/committed"
-          python -I tools/visual_overhaul/io_preview/build_eterna_forest_card.py
+          python tools/visual_overhaul/io_preview/build_eterna_forest_card.py
           python - "$RUNNER_TEMP/committed" <<'PY'
           import sys
           from PIL import Image
@@ -41,7 +41,7 @@ jobs:
           PY
 
       - name: Static gates
-        run: python -I tools/visual_overhaul/io_preview/validate_eterna_forest_card.py --nitrogfx "$RUNNER_TEMP/nitrogfx" --mockup "$RUNNER_TEMP/mockup.png"
+        run: python tools/visual_overhaul/io_preview/validate_eterna_forest_card.py --nitrogfx "$RUNNER_TEMP/nitrogfx" --mockup "$RUNNER_TEMP/mockup.png"
 
       - uses: actions/upload-artifact@v4
         with:
