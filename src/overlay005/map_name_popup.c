@@ -36,16 +36,61 @@
 #define AREA_CARD_WIDTH_TILES 13
 #define AREA_CARD_SIZE_TILES  (AREA_CARD_WIDTH_TILES * POPUP_HEIGHT_TILES)
 
-// The map header stores MAP_LABEL_WINDOW_FOREST (5); the popup is handed that value minus one
-// (see FieldSystem_RequestLocationName), which is also the popup style's NARC pair index / 2.
+// The map header stores a MapLabelWindowID (MAP_LABEL_WINDOW_*, 1-based); the popup is handed that
+// value minus one (see FieldSystem_RequestLocationName), which is also the popup style's NARC pair
+// index / 2. validate_area_cards.py checks these against include/data/map_headers.h.
+#define POPUP_STYLE_ROUTE  2
+#define POPUP_STYLE_CAVE   3
 #define POPUP_STYLE_FOREST 4
+#define POPUP_STYLE_LAKE   7
 
 // Extra area_win_gra members, appended after the nine NCGR/NCLR pairs (see map_popup.order).
-// Each shares the forest popup palette (BG palette slot 7), so no palette is loaded for them.
+// Each card shares the palette of the popup style it is gated on (BG palette slot 7), so no
+// palette is loaded for them. Time-of-day cards are a consecutive day/dusk/night triple.
 enum AreaCardNarcMember {
     AREA_CARD_NARC_ETERNA_FOREST_DAY = 18,
     AREA_CARD_NARC_ETERNA_FOREST_DUSK,
     AREA_CARD_NARC_ETERNA_FOREST_NIGHT,
+    AREA_CARD_NARC_ROUTE_217_DAY,
+    AREA_CARD_NARC_ROUTE_217_DUSK,
+    AREA_CARD_NARC_ROUTE_217_NIGHT,
+    AREA_CARD_NARC_MT_CORONET_DAY,
+    AREA_CARD_NARC_MT_CORONET_DUSK,
+    AREA_CARD_NARC_MT_CORONET_NIGHT,
+    AREA_CARD_NARC_LAKE_VERITY_DAY,
+    AREA_CARD_NARC_LAKE_VERITY_DUSK,
+    AREA_CARD_NARC_LAKE_VERITY_NIGHT,
+    AREA_CARD_NARC_LAKE_ACUITY_DAY,
+    AREA_CARD_NARC_LAKE_ACUITY_DUSK,
+    AREA_CARD_NARC_LAKE_ACUITY_NIGHT,
+    AREA_CARD_NARC_DISTORTION_WORLD,
+};
+
+enum AreaCardTimeOfDayVariant {
+    AREA_CARD_VARIANT_DAY,
+    AREA_CARD_VARIANT_DUSK,
+    AREA_CARD_VARIANT_NIGHT,
+};
+
+typedef struct AreaCard {
+    u32 textID;
+    u8 popupStyle;
+    u8 firstNarcMember;
+    BOOL hasTimeOfDayVariants;
+} AreaCard;
+
+// A card is shown only when both the location name and the popup style match: several headers
+// share a name with a different style (e.g. Eterna Forest's outside gate uses the route style),
+// and the style check keeps the card off those. Indoor headers never reach the popup at all
+// (FieldSystem_RequestLocationName skips buildings).
+static const AreaCard sAreaCards[] = {
+    { LocationNames_Text_EternaForest, POPUP_STYLE_FOREST, AREA_CARD_NARC_ETERNA_FOREST_DAY, TRUE },
+    { LocationNames_Text_Route217, POPUP_STYLE_ROUTE, AREA_CARD_NARC_ROUTE_217_DAY, TRUE },
+    { LocationNames_Text_MtCoronet, POPUP_STYLE_CAVE, AREA_CARD_NARC_MT_CORONET_DAY, TRUE },
+    { LocationNames_Text_LakeVerity, POPUP_STYLE_LAKE, AREA_CARD_NARC_LAKE_VERITY_DAY, TRUE },
+    { LocationNames_Text_LakeAcuity, POPUP_STYLE_LAKE, AREA_CARD_NARC_LAKE_ACUITY_DAY, TRUE },
+    // The Distortion World is outside normal time and has no sky, so one card serves every hour.
+    { LocationNames_Text_DistortionWorld, POPUP_STYLE_CAVE, AREA_CARD_NARC_DISTORTION_WORLD, FALSE },
 };
 
 enum MapNamePopUpState {
@@ -127,29 +172,39 @@ static void MapNamePopUp_DrawWindowFrame(MapNamePopUp *mapPopUp, s32 strWidth)
     Heap_Free(mapPopUp->tiles);
 }
 
-static BOOL MapNamePopUp_GetAreaCardMember(const MapNamePopUp *mapPopUp, u32 *narcMember)
+static enum AreaCardTimeOfDayVariant MapNamePopUp_GetAreaCardVariant(void)
 {
-    // Eterna Forest only. Eterna Forest's outside-gate header shares this text ID but uses the
-    // route popup style, so the style check keeps the card off that map.
-    if (mapPopUp->entryID != LocationNames_Text_EternaForest || mapPopUp->windowID != POPUP_STYLE_FOREST) {
-        return FALSE;
-    }
-
     // Same clock the field area lighting uses (ov5_021F134C), so card and scene lighting agree.
     switch (GetTimeOfDay()) {
     case TIMEOFDAY_TWILIGHT:
-        *narcMember = AREA_CARD_NARC_ETERNA_FOREST_DUSK;
-        break;
+        return AREA_CARD_VARIANT_DUSK;
     case TIMEOFDAY_NIGHT:
     case TIMEOFDAY_LATE_NIGHT:
-        *narcMember = AREA_CARD_NARC_ETERNA_FOREST_NIGHT;
-        break;
+        return AREA_CARD_VARIANT_NIGHT;
     default:
-        *narcMember = AREA_CARD_NARC_ETERNA_FOREST_DAY;
-        break;
+        return AREA_CARD_VARIANT_DAY;
+    }
+}
+
+static BOOL MapNamePopUp_GetAreaCardMember(const MapNamePopUp *mapPopUp, u32 *narcMember)
+{
+    for (int i = 0; i < NELEMS(sAreaCards); i++) {
+        const AreaCard *card = &sAreaCards[i];
+
+        if (mapPopUp->entryID != card->textID || mapPopUp->windowID != card->popupStyle) {
+            continue;
+        }
+
+        *narcMember = card->firstNarcMember;
+
+        if (card->hasTimeOfDayVariants) {
+            *narcMember += MapNamePopUp_GetAreaCardVariant();
+        }
+
+        return TRUE;
     }
 
-    return TRUE;
+    return FALSE;
 }
 
 static void MapNamePopUp_DrawAreaCard(MapNamePopUp *mapPopUp)

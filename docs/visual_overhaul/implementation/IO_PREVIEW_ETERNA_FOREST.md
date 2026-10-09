@@ -53,7 +53,7 @@ Procedural and Platinum-native: `tools/visual_overhaul/io_preview/build_eterna_f
 
 - `src/overlay005/map_name_popup.c` — card constants, eligibility/time-of-day selection, `MapNamePopUp_DrawAreaCard`, one call in `MapNamePopUp_DrawWindowFrame`.
 - `res/graphics/map_popups/{meson.build,map_popup.order}` + three card PNGs.
-- `tools/visual_overhaul/io_preview/{build_eterna_forest_card,validate_eterna_forest_card,render_mockup}.py`.
+- `tools/visual_overhaul/io_preview/{build_eterna_forest_card,validate_area_cards,render_mockup}.py` (the validator was renamed and generalised by the Sinnoh expansion; see `IO_PREVIEW_SINNOH_EXPANSION.md`).
 - `.github/workflows/validate-io-preview.yml` — builds `nitrogfx`, checks the committed PNGs match the generator, runs the static gates, uploads the mockup.
 - This document; ledger row updated.
 
@@ -62,7 +62,7 @@ Procedural and Platinum-native: `tools/visual_overhaul/io_preview/build_eterna_f
 Repair commit on PR #86 (SHA and CI run IDs are in the PR description).
 
 - **`validate-io-preview` failure cause (first commit):** the "Card art is reproducible" step died with `ModuleNotFoundError: No module named 'PIL'`. `pip install pillow` had succeeded, but the step ran `python -I`; isolated mode ignores the user site-packages where pip had installed it. This was a workflow bug, not an art/determinism problem. Fixed by dropping `-I` in the workflow (the checked-in tools are trusted repo code). Locally the same generate-then-compare step and all gates were rerun and pass.
-- **Static gates** (`validate_eterna_forest_card.py --nitrogfx … --mockup …`): all pass, including NARC order/indices, style/header checks, hook order, palette identity, index range, the new NULL-handling gates, and NCGR tile stream == PNG tile order (65 tiles, 2080 B per variant).
+- **Static gates** (`validate_eterna_forest_card.py`, since renamed `validate_area_cards.py`, `--nitrogfx … --mockup …`): all pass, including NARC order/indices, style/header checks, hook order, palette identity, index range, the new NULL-handling gates, and NCGR tile stream == PNG tile order (65 tiles, 2080 B per variant).
 - **Load-failure handling:** see G9; covered by two new gates.
 - **`clang-format` 19.1.1:** clean.
 - **ROM build / G7:** results recorded in the PR description from CI on the repaired commit. G7 `validate_g76_atmosphere` fails with `frozen gameplay/geometry data changed: res/field/scripts/scripts_solaceon_town_pokemon_news_press.s`. That check diffs against the pinned pre-G7.6 `BASE_REV` 89657070 and flags any change under `res/field/scripts/`; `main` itself differs from that base in exactly that file (IO-CARD, PR #81), and every g7-visual-validation run since the IO-CARD PR (runs 61–67, including docs-only PR #85) fails. This PR changes nothing under `res/field/`, so the failure is **pre-existing, not a regression**; it is deliberately not fixed here.
@@ -84,5 +84,8 @@ Record build SHA, ROM revision, emulator/version, steps and screenshots/video fo
 Remove the `MapNamePopUp_DrawAreaCard` call (popup path is then byte-for-byte vanilla in behaviour); optionally drop the card members from `map_popup.order`/`meson.build`.
 
 ## 9. Not done / follow-ups
+
+Update: the card table and the further locations are now in `IO_PREVIEW_SINNOH_EXPANSION.md`.
+
 
 Visit-gated hold and skip; other locations; per-area art volume; any change to popup timing; Eterna Forest outside-gate card.
