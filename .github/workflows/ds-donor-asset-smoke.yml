@@ -1,0 +1,134 @@
+name: DS donor asset smoke test
+
+on:
+  pull_request:
+    paths:
+      - 'tools/visual_overhaul/**'
+      - 'docs/visual_overhaul/DS_DONOR_ASSET_PROGRAM.md'
+      - 'docs/visual_overhaul/DDA*.md'
+      - '.github/workflows/ds-donor-asset-smoke.yml'
+  workflow_dispatch:
+
+jobs:
+  donor-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Platinum branch
+        uses: actions/checkout@v4
+        with:
+          path: pokeplatinum-legacy
+
+      - name: Checkout HGSS donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pokeheartgold
+          path: pokeheartgold
+
+      - name: Checkout Diamond donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pokediamond
+          path: pokediamond
+
+      - name: Checkout PMD Sky donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pmd-sky
+          path: pmd-sky
+
+      - name: Checkout Ranger donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pokeranger2
+          path: pokeranger2
+
+      - name: Compile donor tools
+        working-directory: pokeplatinum-legacy
+        run: |
+          python3 -m py_compile \
+            tools/visual_overhaul/inventory_ds_donor_pools.py \
+            tools/visual_overhaul/inspect_ranger_assets.py \
+            tools/visual_overhaul/render_ranger_nitro_preview.py \
+            tools/visual_overhaul/render_ranger_ncer_preview.py \
+            tools/visual_overhaul/render_ranger_pokemon_package.py \
+            tools/visual_overhaul/render_ranger_pokemon_batch.py \
+            tools/visual_overhaul/audit_ranger_render_compatibility.py \
+            tools/visual_overhaul/inspect_pmd_sky_assets.py
+
+      - name: Inventory donor pools
+        working-directory: pokeplatinum-legacy
+        run: |
+          python3 tools/visual_overhaul/inventory_ds_donor_pools.py \
+            --workspace .. \
+            --strict \
+            --write-json /tmp/ds_donor_inventory.json \
+            --write-md /tmp/ds_donor_inventory.md
+
+      - name: Inspect Ranger Pikachu package
+        working-directory: pokeplatinum-legacy
+        run: |
+          python3 tools/visual_overhaul/inspect_ranger_assets.py \
+            --ranger-root ../pokeranger2 \
+            --asset-root poke \
+            --limit 1 \
+            --extract-dir /tmp/ranger_extract \
+            --write-json /tmp/ranger_pilot.json
+
+      - name: Locate extracted Pikachu package
+        id: ranger_package
+        run: |
+          package="$(find /tmp/ranger_extract -type d -name 'p025_00_LZ' -print -quit)"
+          test -n "$package"
+          echo "path=$package" >> "$GITHUB_OUTPUT"
+
+      - name: Render Ranger Pikachu package
+        working-directory: pokeplatinum-legacy
+        run: |
+          python3 tools/visual_overhaul/render_ranger_pokemon_package.py \
+            --package ../pokeranger2/res/prebuilt/data/poke/p025_00_LZ.bin \
+            --output-dir /tmp/ranger_cells
+
+      - name: Render Ranger shape-diverse pilot
+        working-directory: pokeplatinum-legacy
+        run: |
+          python3 tools/visual_overhaul/render_ranger_pokemon_batch.py \
+            --ranger-root ../pokeranger2 \
+            --species 6 \
+            --species 25 \
+            --species 94 \
+            --species 167 \
+            --species 445 \
+            --output-dir /tmp/ranger_shape_pilot \
+            --write-json /tmp/ranger_shape_pilot.json
+
+      - name: Audit Ranger pilot geometry
+        working-directory: pokeplatinum-legacy
+        run: |
+          python3 tools/visual_overhaul/audit_ranger_render_compatibility.py \
+            --render-root /tmp/ranger_shape_pilot \
+            --write-json /tmp/ranger_shape_compatibility.json \
+            --write-md /tmp/ranger_shape_compatibility.md
+
+      - name: Inspect PMD Sky donor
+        working-directory: pokeplatinum-legacy
+        run: |
+          python3 tools/visual_overhaul/inspect_pmd_sky_assets.py \
+            --pmd-root ../pmd-sky \
+            --limit 250 \
+            --write-json /tmp/pmd_sky_pilot.json
+
+      - name: Upload donor smoke artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ds-donor-asset-smoke
+          if-no-files-found: error
+          path: |
+            /tmp/ds_donor_inventory.json
+            /tmp/ds_donor_inventory.md
+            /tmp/ranger_pilot.json
+            /tmp/ranger_cells
+            /tmp/ranger_shape_pilot
+            /tmp/ranger_shape_pilot.json
+            /tmp/ranger_shape_compatibility.json
+            /tmp/ranger_shape_compatibility.md
+            /tmp/pmd_sky_pilot.json
