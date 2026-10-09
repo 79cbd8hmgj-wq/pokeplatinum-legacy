@@ -1,0 +1,1443 @@
+{
+ "source": {
+  "set": "map_texture_set_074",
+  "area_data": "area_data_075",
+  "lighting": "lighting_set_010",
+  "hgss_commit": "9d8b7591f09b65804da2fb2dfd56f320633e0d36"
+ },
+ "bound": [
+  {
+   "name": "beachp",
+   "index": 4,
+   "w": 32,
+   "h": 32,
+   "fmt": 3,
+   "c0": 0,
+   "palette": "beachp",
+   "pal_pairs": {
+    "beachp": 1
+   },
+   "shapes": 1,
+   "tris": 12,
+   "uv_min": [
+    0.0,
+    0.25
+   ],
+   "uv_max": [
+    32.0,
+    31.75
+   ],
+   "windows": [
+    {
+     "uv_min": [
+      0,
+      0
+     ],
+     "uv_max": [
+      16,
+      16
+     ],
+     "world_height": 0.0,
+     "tris": 8
+    },
+    {
+     "uv_min": [
+      0,
+      16
+     ],
+     "uv_max": [
+      32,
+      32
+     ],
+     "world_height": 0.0,
+     "tris": 4
+    }
+   ]
+  },
+  {
+   "name": "conttree_b",
+   "index": 12,
+   "w": 64,
+   "h": 64,
+   "fmt": 3,
+   "c0": 1,
+   "palette": "conttree_b",
+   "pal_pairs": {
+    "conttree_b": 9
+   },
+   "shapes": 9,
+   "tris": 936,
+   "uv_min": [
+    -96.0,
+    0.0
+   ],
+   "uv_max": [
+    160.0,
+    62.0
+   ],
+   "windows": [
+    {
+     "uv_min": [
+      -96,
+      0
+     ],
+     "uv_max": [
+      160,
+      36
+     ],
+     "world_height": 19.5,
+     "tris": 250
+    },
+    {
+     "uv_min": [
+      -96,
+      36
+     ],
+     "uv_max": [
+      160,
+      62
+     ],
+     "world_height": 0.0,
+     "tris": 250
+    },
+    {
+     "uv_min": [
+      0,
+      0
+     ],
+     "uv_max": [
+      64,
+      36
+     ],
+     "world_height": 19.5,
+     "tris": 98
+    },
+    {
+     "uv_min": [
+      0,
+      36
+     ],
+     "uv_max": [
+      64,
+      62
+     ],
+     "world_height": 0.0,
+     "tris": 98
+    },
+    {
+     "uv_min": [
+      -32,
+      0
+     ],
+     "uv_max": [
+      128,
+      36
+     ],
+     "world_height": 19.5,
+     "tris": 96
+    },
+    {
+     "uv_min": [
+      -32,
+      36
+     ],
+     "uv_max": [
+      128,
+      62
+     ],
+     "world_height": 0.0,
+     "tris": 96
+    },
+    {
+     "uv_min": [
+      0,
+      0
+     ],
+     "uv_max": [
+      128,
+      36
+     ],
+     "world_height": 19.5,
+     "tris": 14
+    },
+    {
+     "uv_min": [
+      0,
+      36
+     ],
+     "uv_max": [
+      128,
+      62
+     ],
+     "world_height": 0.0,
+     "tris": 14
+    }
+   ]
+  },
+  {
+   "name": "conttree_t",
+   "index": 13,
+   "w": 64,
+   "h": 64,
+   "fmt": 3,
+   "c0": 1,
+   "palette": "conttree_t",
+   "pal_pairs": {
+    "conttree_t": 9
+   },
+   "shapes": 9,
+   "tris": 936,
+   "uv_min": [
+    -96.0,
+    4.0
+   ],
+   "uv_max": [
+    160.0,
+    62.0
+   ],
+   "windows": [
+    {
+     "uv_min": [
+      -96,
+      4
+     ],
+     "uv_max": [
+      160,
+      26
+     ],
+     "world_height": 12.6,
+     "tris": 250
+    },
+    {
+     "uv_min": [
+      -96,
+      32
+     ],
+     "uv_max": [
+      160,
+      62
+     ],
+     "world_height": 17.2,
+     "tris": 250
+    },
+    {
+     "uv_min": [
+      0,
+      4
+     ],
+     "uv_max": [
+      64,
+      26
+     ],
+     "world_height": 12.6,
+     "tris": 98
+    },
+    {
+     "uv_min": [
+      0,
+      32
+     ],
+     "uv_max": [
+      64,
+      62
+     ],
+     "world_height": 17.2,
+     "tris": 98
+    },
+    {
+     "uv_min": [
+      -32,
+      4
+     ],
+     "uv_max": [
+      128,
+      26
+     ],
+     "world_height": 12.6,
+     "tris": 96
+    },
+    {
+     "uv_min": [
+      -32,
+      32
+     ],
+     "uv_max": [
+      128,
+      62
+     ],
+     "world_height": 17.2,
+     "tris": 96
+    },
+    {
+     "uv_min": [
+      0,
+      4
+     ],
+     "uv_max": [
+      128,
+      26
+     ],
+     "world_height": 12.6,
+     "tris": 14
+    },
+    {
+     "uv_min": [
+      0,
+      32
+     ],
+     "uv_max": [
+      128,
+      62
+     ],
+     "world_height": 17.2,
+     "tris": 14
+    }
+   ]
+  },
+  {
+   "name": "criff",
+   "index": 14,
+   "w": 16,
+   "h": 16,
+   "fmt": 3,
+   "c0": 0,
+   "palette": "criff",
+   "pal_pairs": {
+    "criff": 5
+   },
+   "shapes": 5,
+   "tris": 72,
+   "uv_min": [
+    0.0,
+    0.0
+   ],
+   "uv_max": [
+    16.0,
+    16.0
+   ],
+   "windows": [
+    {
+     "uv_min": [
+      14,
+      0
+     ],
+     "uv_max": [
+      16,
+      16
+     ],
+     "world_height": 0.0,
+     "tris": 24
+    },
+    {
+     "uv_min": [
+      8,
+      8
+     ],
+     "uv_max": [
+      16,
+      16
+     ],
+     "world_height": 0.0,
+     "tris": 24
+    },
+    {
+     "uv_min": [
+      0,
+      14
+     ],
+     "uv_max": [
+      16,
+      16
+     ],
+     "world_height": 0.0,
+     "tris": 24
+    }
+   ]
+  },
+  {
+   "name": "criffp",
+   "index": 15,
+   "w": 32,
+   "h": 32,
+   "fmt": 3,
+   "c0": 0,
+   "palette": "criffp",
+   "pal_pairs": {
+    "criffp": 7
+   },
+   "shapes": 7,
+   "tris": 1592,
+   "uv_min": [
+    -128.0,
+    0.0
+   ],
+   "uv_max": [
+    128.0,
+    32.0
+   ],
+   "windows": [
+    {
+     "uv_min": [
+      0,
+      26
+     ],
+     "uv_max": [
+      32,
+      32
+     ],
+     "world_height": 2.0,
+     "tris": 156
+    },
+    {
+     "uv_min": [
+      -128,
+      26
+     ],
+     "uv_max": [
+      128,
+      32
+     ],
+     "world_height": 2.0,
+     "tris": 140
+    },
+    {
+     "uv_min": [
+      18,
+      26
+     ],
+     "uv_max": [
+      28,
+      32
+     ],
+     "world_height": 2.0,
+     "tris": 96
+    },
+    {
+     "uv_min": [
+      -32,
+      26
+     ],
+     "uv_max": [
+      32,
+      32
+     ],
+     "world_height": 2.0,
+     "tris": 70
+    },
+    {
+     "uv_min": [
+      0,
+      0
+     ],
+     "uv_max": [
+      32,
+      4
+     ],
+     "world_height": 2.0,
+     "tris": 68
+    },
+    {
+     "uv_min": [
+      0,
+      4
+     ],
+     "uv_max": [
+      32,
+      26
+     ],
+     "world_height": 12.0,
+     "tris": 68
+    },
+    {
+     "uv_min": [
+      -128,
+      4
+     ],
+     "uv_max": [
+      128,
+      26
+     ],
+     "world_height": 12.0,
+     "tris": 66
+    },
+    {
+     "uv_min": [
+      -128,
+      0
+     ],
+     "uv_max": [
+      128,
+      4
+     ],
+     "world_height": 2.0,
+     "tris": 66
+    }
+   ]
+  },
+  {
+   "name": "criffp2",
+   "index": 16,
+   "w": 32,
+   "h": 32,
+   "fmt": 3,
+   "c0": 0,
+   "palette": "criff2",
+   "pal_pairs": {
+    "criff2": 7
+   },
+   "shapes": 7,
+   "tris": 746,
+   "uv_min": [
+    -128.0,
+    0.0
+   ],
+   "uv_max": [
+    128.0,
+    26.0
+   ],
+   "windows": [
+    {
+     "uv_min": [
+      0,
+      0
+     ],
+     "uv_max": [
+      32,
+      4
+     ],
+     "world_height": 2.0,
+     "tris": 88
+    },
+    {
+     "uv_min": [
+      0,
+      4
+     ],
+     "uv_max": [
+      32,
+      26
+     ],
+     "world_height": 12.0,
+     "tris": 88
+    },
+    {
+     "uv_min": [
+      -128,
+      0
+     ],
+     "uv_max": [
+      128,
+      4
+     ],
+     "world_height": 2.0,
+     "tris": 74
+    },
+    {
+     "uv_min": [
+      -128,
+      4
+     ],
+     "uv_max": [
+      128,
+      26
+     ],
+     "world_height": 12.0,
+     "tris": 74
+    },
+    {
+     "uv_min": [
+      16,
+      0
+     ],
+     "uv_max": [
+      32,
+      4
+     ],
+     "world_height": 2.0,
+     "tris": 48
+    },
+    {
+     "uv_min": [
+      0,
+      0
+     ],
+     "uv_max": [
+      16,
+      4
+     ],
+     "world_height": 2.0,
+     "tris": 48
+    },
+    {
+     "uv_min": [
+      0,
+      4
+     ],
+     "uv_max": [
+      16,
+      26
+     ],
+     "world_height": 12.0,
+     "tris": 48
+    },
+    {
+     "uv_min": [
+      -32,
+      0
+     ],
+     "uv_max": [
+      32,
+      4
+     ],
+     "world_height": 2.0,
+     "tris": 34
+    }
+   ]
+  },
+  {
+   "name": "fenter",
+   "index": 20,
+   "w": 32,
+   "h": 32,
+   "fmt": 3,
+   "c0": 0,
+   "palette": "fenter",
+   "pal_pairs": {
+    "fenter": 2
+   },
+   "shapes": 2,
+   "tris": 8,
+   "uv_min": [
+    0.5,
+    0.5
+   ],
+   "uv_max": [
+    31.5,
+    31.5
+   ],
+   "windows": [
+    {
+     "uv_min": [
+      0,
+      0
+     ],
+     "uv_max": [
+      32,
+      32
+     ],
+     "world_height": 0.0,
+     "tris": 8
+    }
+   ]
+  },
+  {
+   "name": "imped",
+   "index": 25,
+   "w": 64,
+   "h": 64,
+   "fmt": 3,
+   "c0": 1,
+   "palette": "imped",
+   "pal_pairs": {
+    "imped": 2
+   },
+   "shapes": 2,
+   "tris": 52,
+   "uv_min": [
+    -32.0,
+    0.0
+   ],
+   "uv_max": [
+    96.0,
+    28.0
+   ],
+   "windows": [
+    {
+     "uv_min": [
+      32,
+      0
+     ],
+     "uv_max": [
+      40,
+      16
+     ],
+     "world_height": 11.3,
+     "tris": 16
+    },
+    {
+     "uv_min": [
+      16,
+      20
+     ],
+     "uv_max": [
+      32,
+      28
+     ],
+     "world_height": 0.0,
+     "tris": 12
+    },
+    {
+     "uv_min": [
+      16,
+      20
+     ],
+     "uv_max": [
+      48,
+      28
+     ],
+     "world_height": 0.0,
+     "tris": 4
+    },
+    {
+     "uv_min": [
+      0,
+      20
+     ],
+     "uv_max": [
+      48,
+      28
+     ],
+     "world_height": 0.0,
+     "tris": 4
+    },
+    {
+     "uv_min": [
+      0,
+      0
+     ],
+     "uv_max": [
+      64,
+      16
+     ],
+     "world_height": 11.3,
+     "tris": 4
+    },
+    {
+     "uv_min": [
+      32,
+      0
+     ],
+     "uv_max": [
+      48,
+      16
+     ],
+     "world_height": 11.3,
+     "tris": 4
+    },
+    {
+     "uv_min": [
+      16,
+      0
+     ],
+     "uv_max": [
+      48,
+      16
+     ],
+     "world_height": 11.3,
+     "tris": 4
+    },
+    {
+     "uv_min": [
+      -32,
+      0
+     ],
+     "uv_max": [
+      96,
+      16
+     ],
+     "world_height": 11.3,
+     "tris": 2
+    }
+   ]
+  },
+  {
+   "name": "nectgr",
+   "index": 32,
+   "w": 16,
+   "h": 16,
+   "fmt": 3,
+   "c0": 0,
+   "palette": "nectgrass",
+   "pal_pairs": {
+    "nectgrass": 6
+   },
+   "shapes": 6,
+   "tris": 256,
+   "uv_min": [
+    -64.0,
+    -48.0
+   ],
+   "uv_max": [
+    64.0,
+    80.0
+   ],
+   "windows": [
+    {
+     "uv_min": [
+      -16,
+      0
+     ],
+     "uv_max": [
+      16,
+      32
+     ],
+     "world_height": 0.0,
+     "tris": 90
+    },
+    {
+     "uv_min": [
+      -32,
+      -16
+     ],
+     "uv_max": [
+      32,
+      48
+     ],
+     "world_height": 0.0,
+     "tris": 30
+    },
+    {
+     "uv_min": [
+      0,
+      0
+     ],
+     "uv_max": [
+      16,
+      16
+     ],
+     "world_height": 0.0,
+     "tris": 24
+    },
+    {
+     "uv_min": [
+      0,
+      -16
+     ],
+     "uv_max": [
+      16,
+      16
+     ],
+     "world_height": 0.0,
+     "tris": 24
+    },
+    {
+     "uv_min": [
+      -32,
+      0
+     ],
+     "uv_max": [
+      32,
+      16
+     ],
+     "world_height": 0.0,
+     "tris": 20
+    },
+    {
+     "uv_min": [
+      0,
+      -48
+     ],
+     "uv_max": [
+      16,
+      80
+     ],
+     "world_height": 0.0,
+     "tris": 16
+    },
+    {
+     "uv_min": [
+      0,
+      -16
+     ],
+     "uv_max": [
+      16,
+      48
+     ],
+     "world_height": 0.0,
+     "tris": 14
+    },
+    {
+     "uv_min": [
+      -64,
+      0
+     ],
+     "uv_max": [
+      64,
+      16
+     ],
+     "world_height": 0.0,
+     "tris": 14
+    }
+   ]
+  },
+  {
+   "name": "ngrass",
+   "index": 34,
+   "w": 16,
+   "h": 16,
+   "fmt": 3,
+   "c0": 0,
+   "palette": "grass",
+   "pal_pairs": {
+    "grass": 6
+   },
+   "shapes": 6,
+   "tris": 514,
+   "uv_min": [
+    -64.0,
+    -48.0
+   ],
+   "uv_max": [
+    96.0,
+    80.0
+   ],
+   "windows": [
+    {
+     "uv_min": [
+      -16,
+      0
+     ],
+     "uv_max": [
+      16,
+      32
+     ],
+     "world_height": 0.0,
+     "tris": 144
+    },
+    {
+     "uv_min": [
+      -32,
+      -16
+     ],
+     "uv_max": [
+      32,
+      48
+     ],
+     "world_height": 0.0,
+     "tris": 72
+    },
+    {
+     "uv_min": [
+      -64,
+      0
+     ],
+     "uv_max": [
+      64,
+      16
+     ],
+     "world_height": 0.0,
+     "tris": 36
+    },
+    {
+     "uv_min": [
+      0,
+      0
+     ],
+     "uv_max": [
+      16,
+      16
+     ],
+     "world_height": 0.0,
+     "tris": 34
+    },
+    {
+     "uv_min": [
+      -32,
+      0
+     ],
+     "uv_max": [
+      32,
+      16
+     ],
+     "world_height": 0.0,
+     "tris": 32
+    },
+    {
+     "uv_min": [
+      14,
+      0
+     ],
+     "uv_max": [
+      16,
+      16
+     ],
+     "world_height": 0.0,
+     "tris": 24
+    },
+    {
+     "uv_min": [
+      8,
+      8
+     ],
+     "uv_max": [
+      16,
+      16
+     ],
+     "world_height": 0.0,
+     "tris": 24
+    },
+    {
+     "uv_min": [
+      0,
+      14
+     ],
+     "uv_max": [
+      16,
+      16
+     ],
+     "world_height": 0.0,
+     "tris": 24
+    }
+   ]
+  },
+  {
+   "name": "nsand",
+   "index": 36,
+   "w": 16,
+   "h": 16,
+   "fmt": 3,
+   "c0": 1,
+   "palette": "sandset",
+   "pal_pairs": {
+    "sandset": 3
+   },
+   "shapes": 3,
+   "tris": 16,
+   "uv_min": [
+    -64.0,
+    -16.0
+   ],
+   "uv_max": [
+    64.0,
+    48.0
+   ],
+   "windows": [
+    {
+     "uv_min": [
+      0,
+      -16
+     ],
+     "uv_max": [
+      16,
+      16
+     ],
+     "world_height": 0.0,
+     "tris": 6
+    },
+    {
+     "uv_min": [
+      0,
+      -16
+     ],
+     "uv_max": [
+      16,
+      48
+     ],
+     "world_height": 0.0,
+     "tris": 4
+    },
+    {
+     "uv_min": [
+      -16,
+      0
+     ],
+     "uv_max": [
+      32,
+      16
+     ],
+     "world_height": 0.0,
+     "tris": 2
+    },
+    {
+     "uv_min": [
+      0,
+      0
+     ],
+     "uv_max": [
+      16,
+      16
+     ],
+     "world_height": 0.0,
+     "tris": 2
+    },
+    {
+     "uv_min": [
+      -64,
+      0
+     ],
+     "uv_max": [
+      64,
+      16
+     ],
+     "world_height": 0.0,
+     "tris": 2
+    }
+   ]
+  },
+  {
+   "name": "nsandp",
+   "index": 37,
+   "w": 32,
+   "h": 32,
+   "fmt": 3,
+   "c0": 0,
+   "palette": "nsandp",
+   "pal_pairs": {
+    "nsandp": 4
+   },
+   "shapes": 4,
+   "tris": 138,
+   "uv_min": [
+    -32.0,
+    0.25
+   ],
+   "uv_max": [
+    32.0,
+    31.75
+   ],
+   "windows": [
+    {
+     "uv_min": [
+      0,
+      0
+     ],
+     "uv_max": [
+      16,
+      16
+     ],
+     "world_height": 0.0,
+     "tris": 70
+    },
+    {
+     "uv_min": [
+      16,
+      16
+     ],
+     "uv_max": [
+      32,
+      32
+     ],
+     "world_height": 0.0,
+     "tris": 28
+    },
+    {
+     "uv_min": [
+      -32,
+      16
+     ],
+     "uv_max": [
+      32,
+      32
+     ],
+     "world_height": 0.0,
+     "tris": 16
+    },
+    {
+     "uv_min": [
+      0,
+      16
+     ],
+     "uv_max": [
+      32,
+      32
+     ],
+     "world_height": 0.0,
+     "tris": 14
+    },
+    {
+     "uv_min": [
+      16,
+      0
+     ],
+     "uv_max": [
+      32,
+      16
+     ],
+     "world_height": 0.0,
+     "tris": 6
+    },
+    {
+     "uv_min": [
+      -16,
+      16
+     ],
+     "uv_max": [
+      32,
+      32
+     ],
+     "world_height": 0.0,
+     "tris": 4
+    }
+   ]
+  },
+  {
+   "name": "rhana",
+   "index": 45,
+   "w": 16,
+   "h": 16,
+   "fmt": 3,
+   "c0": 0,
+   "palette": "rhana",
+   "pal_pairs": {
+    "rhana": 2
+   },
+   "shapes": 2,
+   "tris": 8,
+   "uv_min": [
+    -16.0,
+    0.0
+   ],
+   "uv_max": [
+    16.0,
+    32.0
+   ],
+   "windows": [
+    {
+     "uv_min": [
+      -16,
+      0
+     ],
+     "uv_max": [
+      16,
+      32
+     ],
+     "world_height": 0.0,
+     "tris": 8
+    }
+   ]
+  },
+  {
+   "name": "tree01",
+   "index": 53,
+   "w": 64,
+   "h": 64,
+   "fmt": 3,
+   "c0": 1,
+   "palette": "tree01",
+   "pal_pairs": {
+    "tree01": 7
+   },
+   "shapes": 7,
+   "tris": 2104,
+   "uv_min": [
+    0.0,
+    0.0
+   ],
+   "uv_max": [
+    64.0,
+    64.0
+   ],
+   "windows": [
+    {
+     "uv_min": [
+      0,
+      42
+     ],
+     "uv_max": [
+      22,
+      64
+     ],
+     "world_height": 12.6,
+     "tris": 526
+    },
+    {
+     "uv_min": [
+      0,
+      0
+     ],
+     "uv_max": [
+      34,
+      30
+     ],
+     "world_height": 17.2,
+     "tris": 526
+    },
+    {
+     "uv_min": [
+      22,
+      28
+     ],
+     "uv_max": [
+      64,
+      64
+     ],
+     "world_height": 19.5,
+     "tris": 526
+    },
+    {
+     "uv_min": [
+      34,
+      0
+     ],
+     "uv_max": [
+      64,
+      28
+     ],
+     "world_height": 0.0,
+     "tris": 526
+    }
+   ]
+  },
+  {
+   "name": "tshadow",
+   "index": 55,
+   "w": 32,
+   "h": 32,
+   "fmt": 3,
+   "c0": 0,
+   "palette": "tshadow",
+   "pal_pairs": {
+    "tshadow": 9
+   },
+   "shapes": 9,
+   "tris": 470,
+   "uv_min": [
+    -64.0,
+    -32.0
+   ],
+   "uv_max": [
+    64.0,
+    96.0
+   ],
+   "windows": [
+    {
+     "uv_min": [
+      -64,
+      -32
+     ],
+     "uv_max": [
+      64,
+      96
+     ],
+     "world_height": 0.0,
+     "tris": 140
+    },
+    {
+     "uv_min": [
+      0,
+      -32
+     ],
+     "uv_max": [
+      32,
+      96
+     ],
+     "world_height": 0.0,
+     "tris": 78
+    },
+    {
+     "uv_min": [
+      -64,
+      0
+     ],
+     "uv_max": [
+      64,
+      32
+     ],
+     "world_height": 0.0,
+     "tris": 74
+    },
+    {
+     "uv_min": [
+      -32,
+      0
+     ],
+     "uv_max": [
+      32,
+      64
+     ],
+     "world_height": 0.0,
+     "tris": 68
+    },
+    {
+     "uv_min": [
+      0,
+      0
+     ],
+     "uv_max": [
+      32,
+      32
+     ],
+     "world_height": 0.0,
+     "tris": 56
+    },
+    {
+     "uv_min": [
+      0,
+      0
+     ],
+     "uv_max": [
+      32,
+      64
+     ],
+     "world_height": 0.0,
+     "tris": 28
+    },
+    {
+     "uv_min": [
+      -32,
+      0
+     ],
+     "uv_max": [
+      32,
+      32
+     ],
+     "world_height": 0.0,
+     "tris": 26
+    }
+   ]
+  }
+ ],
+ "identity": {
+  "byte_identical": {},
+  "same_texels_other_palette": {
+   "criff": [
+    "gsm_dcliff01"
+   ]
+  }
+ },
+ "slot_ownership": {
+  "conttree_b": {
+   "px_using_rewritten_slots": 288,
+   "outside_stump_window": 0,
+   "palette_users": [
+    "conttree_b"
+   ],
+   "palette_file_offset": "0xa0f4",
+   "palette_block_aliases": [
+    "conttree_b",
+    "tree01"
+   ]
+  },
+  "tree01": {
+   "px_using_rewritten_slots": 144,
+   "outside_stump_window": 0,
+   "palette_users": [
+    "tree01"
+   ],
+   "palette_file_offset": "0xa0f4",
+   "palette_block_aliases": [
+    "conttree_b",
+    "tree01"
+   ]
+  }
+ },
+ "mockup": {
+  "grade_ratio_rgb": [
+   0.877,
+   0.872,
+   0.94
+  ],
+  "new_palette_entries": {
+   "1": "14a6",
+   "10": "216e",
+   "11": "212a",
+   "12": "214b"
+  },
+  "index_range": [
+   0,
+   14
+  ],
+  "opaque_px_before": 800,
+  "opaque_px_after": 1192
+ }
+}

@@ -36,7 +36,7 @@ Evidence snapshot: DS pool contains 9,821 processed candidate groups, 3,185 mine
 | ID | Candidate | Donor/evidence | Intended Opal host/use | Status | Next bounded evidence need |
 |---|---|---|---|---|---|
 | V01 | Forest ambient foliage | Platinum trap-effect leaf/petal resources; HGSS foliage, PMD Sky effects and Ranger timings as reference | Deep-forest dedicated field-renderer path, conservative drifting leaves | **Feasibility done: NO-GO / blocked** (no code changed) | Leaf is 2D OAM; field effects are 3D billboards from opaque prebuilt `fldeff.narc`. See `implementation/V01_FOREST_FOLIAGE_FEASIBILITY.md`; proceed to V02 |
-| V02 | Eterna material composite | HGSS foliage-ground, bark/ground/wall texture regions | Platinum Eterna `map_texture_set_074` | **Targeted comparison** | Exact Platinum texture-region identities, donor subregions and export/conversion contract |
+| V02 | Eterna material composite | HGSS foliage-ground, bark/ground/wall texture regions | Platinum Eterna `map_texture_set_074` | **Comparison done; first candidate V02-A selected** (no assets changed) | Implement V02-A stump decals (`conttree_b` + `tree01` ← HGSS `d05tree01_un`) per the recipe in `implementation/V02_HGSS_FOREST_MATERIAL_AUDIT.md`; V02-B cliff faces and V02-C canopy shading remain conditional/deferred |
 | V03 | Forest prop details | HGSS building/field model components | `prop_model_set_050`, forest map geometry | **Conditional** | Demonstrate a material visual gain; avoid generic model imports |
 | V04 | Other overworld atmospheres | PMD Sky environmental palette/effect techniques; Ranger effects; Emerald weather references | Platinum field weather/fog/particle subsystems in snow, caves, coasts, industrial/Distortion areas | **Candidate** | Exclude Pass G completed lighting/fog before choosing one effect |
 | V05 | Animated field detail | HGSS field sprites/map animations; PMD Sky field effects | Specific water, vegetation, prop or interior host chosen later | **Candidate** | Name one Opal host asset and animation interface |
@@ -81,3 +81,13 @@ Every subsequent visual PR should link an opportunity ID, baseline resource, don
 ## Later evidence correction — G4A baseline and already-present ambience
 
 The earlier Pass G general forest description alone was insufficient: `docs/visual_overhaul/G4A_ETERNA_FOREST.md` documents two implementation batches creating Eterna-only area-data 075 and texture-set 074, while keeping the shared forest 054 unchanged. A source read of `field_effect_renderer.c` independently confirms `ForestAmbienceRenderer` already emits berry sparkle every 90 frames. Therefore V01 is a **refactor/replacement review** for a pre-existing ambient effect, not an empty-slate renderer build. The exact compatibility of the trap-effect leaf graphics with the field resource loader is unverified. A change to the forest renderer list is globally shared; make map-specific behavior deliberate. `docs/visual_overhaul/implementation/IO_PREVIEW_ETERNA_FOREST.md` also confirms an Eterna preview-card pilot is already source-implemented, so V08 cannot duplicate that host without a separate improvement case.
+
+## V02 comparison result (2026-10-09)
+
+Full audit: `docs/visual_overhaul/implementation/V02_HGSS_FOREST_MATERIAL_AUDIT.md` (reproducible via `tools/visual_overhaul/audit_v02_eterna_materials.py`). Key points, all static; no game asset changed:
+
+- Only 15 of the 57 textures in `map_texture_set_074` are drawn by Eterna terrain models; the set has been palette-graded by both G4A and G7.6 (33 palette names differ from set 053), so donor comparisons are against the current graded state.
+- Of the 15, none is byte-identical to any of the 3,659 HGSS map textures; `criff` is a pure recolor of HGSS `gsm_dcliff01`. No HGSS donor exists for the ground/underbrush textures.
+- Top three: **V02-A** stump/bark ground decals ← HGSS `d05tree01_un` (selected: same role, format and hue family, palette slots verified isolated); **V02-B** cliff faces ← `wall01_*` strata (layout and palette re-composite needed); **V02-C** canopy shading ← `d05tree01(_re)` (scale/silhouette mismatch; defer).
+- V01 no-go findings and V03–V11 entries above are unchanged.
+
