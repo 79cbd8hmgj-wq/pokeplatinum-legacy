@@ -1,5 +1,9 @@
 # IO-FOL-SHEETS — Platinum native integration handoff
 
+> **SUPERSEDED AS AN ACTIVE WORK ITEM (2026-10-09):** Pokémon Opal uses Platinum as a foundation and other games as curated donor sources. This earlier document assumed all 572 HGSS follower sheets must be embedded in the ROM. That assumption is no longer valid. PR #93's exporter/catalog is a completed **donor preparation capability**, not an order to import 572 runtime follower graphics. Treat the steps below only as an **optional technical reference** if a chosen Opal feature actually needs specific follower frames in-game. See `docs/visual_overhaul/POKEMON_OPAL_ASSET_DIRECTION.md`. Do not commission this full-library integration in Claude Code.
+
+
+
 This is an **implementation plan for the entire library, not a pilot**. Existing PR #93 has the 572-entry HGSS identity inventory and a passing GitHub Action that exports the 9,152 frames as an artifact. It does **not** yet integrate the graphics into the ROM.
 
 ## Source-backed Platinum integration route
