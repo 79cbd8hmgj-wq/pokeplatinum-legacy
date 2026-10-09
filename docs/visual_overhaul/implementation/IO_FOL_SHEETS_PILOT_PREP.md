@@ -22,7 +22,7 @@ The export directory must not silently become the field engine's active resource
 
 ## Completion gates (all mandatory before closing IO-FOL-SHEETS)
 
-1. **Donor availability/provenance:** prove full raw 572-file HGSS input set and pin donor SHA or hashes. Current environment has the frozen evidence and preview renders, **not verified raw binary source files**.
+1. **Donor availability/provenance:** 572/572 source filenames verified in `79cbd8hmgj-wq/pokeheartgold` via GitHub contents listing; pin donor commit SHA and verify per-file hashes before export. Current environment has the frozen evidence and preview renders, **verified raw binary source files in `79cbd8hmgj-wq/pokeheartgold`**.
 2. **Full export:** generate and hash all 9,152 frame/palette PNGs; rerun the converter and compare its index deterministically.
 3. **Identity/direction map:** derive authoritative species/form associations from HGSS's named constants/tables rather than numeric filename guesses; preserve source texture ordering pending directional verification.
 4. **Platinum format and loader:** select actual field graphics archive/loader, determine palette/VRAM budgets and animation mapping, and provide a library that the game can request by verified identifier. Do not build a follower AI or alter movement systems.
