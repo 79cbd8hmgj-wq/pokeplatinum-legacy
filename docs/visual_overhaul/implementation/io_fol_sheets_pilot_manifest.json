@@ -1,19 +1,14 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "feature": "IO-FOL-SHEETS",
-  "scope": "library_only_no_following_mechanic",
+  "scope": "all_572_catalogued_sheets",
   "evidence": "docs/visual_overhaul/selection/mining/evidence/hgss_follower_sheets.json",
   "donor_root_relative": "files/data/mmodel/mmodel",
+  "source_count": 572,
+  "frames_per_sheet": 8,
+  "palette_variants": 2,
+  "expected_exported_pngs": 9152,
   "species_identity": "unverified_do_not_infer_from_filename",
-  "pilot": [
-    {"source_file":"mmodel_00000201.NSBTX","expected_size":32},
-    {"source_file":"mmodel_00000202.NSBTX","expected_size":32},
-    {"source_file":"mmodel_00000203.NSBTX","expected_size":32},
-    {"source_file":"mmodel_00000204.NSBTX","expected_size":64},
-    {"source_file":"mmodel_00000205.NSBTX","expected_size":64},
-    {"source_file":"mmodel_00000206.NSBTX","expected_size":64}
-  ],
-  "expected_frames_per_sheet": 8,
-  "expected_palette_variants": 2,
-  "output_policy": "deterministic_converted_library_assets_only_no_field_hooks_or_gameplay_changes"
+  "full_library_exporter": "tools/visual_overhaul/selection/export_hgss_follower_library.py",
+  "integration_status": "no_Platform_field_loader_integration_yet"
 }
