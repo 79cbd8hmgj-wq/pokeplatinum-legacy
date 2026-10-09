@@ -21,12 +21,25 @@ map_popup_ncgrs = ncgr_gen.process(
     ]
 )
 
-# IO-PREVIEW area cards: NCGR only. They share the forest popup palette (BG palette slot 7),
-# so no NCLR is generated or loaded for them. Members 18-20 of the NARC (see map_popup.order).
+# IO-PREVIEW area cards: NCGR only. Each shares the palette of the popup style it is gated on
+# (BG palette slot 7), so no NCLR is generated or loaded for them. Members 18+ of the NARC (see map_popup.order).
 map_popup_card_files = files(
     'card_eterna_forest_day.png',
     'card_eterna_forest_dusk.png',
     'card_eterna_forest_night.png',
+    'card_route_217_day.png',
+    'card_route_217_dusk.png',
+    'card_route_217_night.png',
+    'card_mt_coronet_day.png',
+    'card_mt_coronet_dusk.png',
+    'card_mt_coronet_night.png',
+    'card_lake_verity_day.png',
+    'card_lake_verity_dusk.png',
+    'card_lake_verity_night.png',
+    'card_lake_acuity_day.png',
+    'card_lake_acuity_dusk.png',
+    'card_lake_acuity_night.png',
+    'card_distortion_world.png',
 )
 
 map_popup_card_ncgrs = ncgr_gen.process(

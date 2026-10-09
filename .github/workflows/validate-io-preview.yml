@@ -30,18 +30,22 @@ jobs:
         run: |
           cp -r res/graphics/map_popups "$RUNNER_TEMP/committed"
           python tools/visual_overhaul/io_preview/build_eterna_forest_card.py
+          python tools/visual_overhaul/io_preview/build_sinnoh_area_cards.py
           python - "$RUNNER_TEMP/committed" <<'PY'
           import sys
+          from pathlib import Path
           from PIL import Image
-          for v in ("day", "dusk", "night"):
-              n = f"card_eterna_forest_{v}.png"
-              a, b = Image.open(f"res/graphics/map_popups/{n}"), Image.open(f"{sys.argv[1]}/{n}")
-              assert a.tobytes() == b.tobytes() and a.getpalette() == b.getpalette(), f"{n} is stale; rerun the generator"
-          print("card art matches generator output")
+          new = sorted(Path("res/graphics/map_popups").glob("card_*.png"))
+          old = sorted(Path(sys.argv[1]).glob("card_*.png"))
+          assert [p.name for p in new] == [p.name for p in old], "generators wrote a different set of card PNGs than the repo contains"
+          for p in new:
+              a, b = Image.open(p), Image.open(Path(sys.argv[1]) / p.name)
+              assert a.tobytes() == b.tobytes() and a.getpalette() == b.getpalette(), f"{p.name} is stale; rerun the generators"
+          print(f"{len(new)} card PNGs match generator output")
           PY
 
       - name: Static gates
-        run: python tools/visual_overhaul/io_preview/validate_eterna_forest_card.py --nitrogfx "$RUNNER_TEMP/nitrogfx" --mockup "$RUNNER_TEMP/mockup.png"
+        run: python tools/visual_overhaul/io_preview/validate_area_cards.py --nitrogfx "$RUNNER_TEMP/nitrogfx" --mockup "$RUNNER_TEMP/mockup.png"
 
       - uses: actions/upload-artifact@v4
         with:
