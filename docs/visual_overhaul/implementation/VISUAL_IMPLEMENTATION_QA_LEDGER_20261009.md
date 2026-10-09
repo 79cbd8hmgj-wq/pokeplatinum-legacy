@@ -13,7 +13,7 @@ Statuses: Source implemented = code/assets merged; not equivalent to runtime acc
 | IO-CARD | 2 | Source implemented PR #81; runtime untested | Four news states/return/teardown QA |
 | IO-FX-PRIM | 4 | Catalog/research | One move pilot |
 | IO-TEX-HGSS | 4 | Catalog/research | One region |
-| IO-STATUS | 2 | PRs #82–84 preflight only; Gate C blocked, D open | Runtime graphics headroom and glyphs |
+| IO-STATUS | 2 | PRs #82–84 preflight; palette-free 3D path chosen (PR #91); confusion pilot source implemented, both revisions build (IO_STATUS_PILOT_IMPLEMENTATION.md); runtime untested | Owner runtime/art QA; infatuation only after pilot review |
 | IO-TEX-RANGER | 5 | Catalog/research | Select material |
 | IO-FX-SEQ | 4 | Roadmap only | One multiphase animation |
 | IO-NPC-COMP | 5 | Catalog/research | One NPC |

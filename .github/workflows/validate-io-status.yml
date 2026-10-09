@@ -1,0 +1,30 @@
+name: validate-io-status
+
+on:
+  pull_request:
+    paths:
+      - 'src/battle/battle_status_overlay.c'
+      - 'include/battle/battle_status_overlay.h'
+      - 'src/battle/**'
+      - 'src/pokemon_sprite.c'
+      - 'src/unk_0202419C.c'
+      - 'src/overlay011/particle_helper.c'
+      - 'lib/spl/**'
+      - 'src/meson.build'
+      - 'platinum.us/main.lsf'
+      - 'tools/visual_overhaul/io_status/**'
+      - '.github/workflows/validate-io-status.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Confusion overlay renderer-state trace, consumer contract and mutation self-test
+        run: python3 -I tools/visual_overhaul/io_status/validate_confusion_overlay.py
+
+      - name: Overlay sources are clang-formatted
+        run: |
+          python -m pip install clang-format==19.1.1
+          clang-format --dry-run --Werror src/battle/battle_status_overlay.c include/battle/battle_status_overlay.h
