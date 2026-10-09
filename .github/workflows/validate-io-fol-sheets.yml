@@ -6,6 +6,7 @@ on:
       - 'tools/visual_overhaul/selection/validate_io_fol_sheets_pilot.py'
       - 'tools/visual_overhaul/selection/nsbmd_preview.py'
       - 'docs/visual_overhaul/implementation/io_fol_sheets_pilot_manifest.json'
+      - 'docs/visual_overhaul/implementation/io_fol_sheets_hgss_identity.json'
       - '.github/workflows/validate-io-fol-sheets.yml'
   workflow_dispatch:
 jobs:
