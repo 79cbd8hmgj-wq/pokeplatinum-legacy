@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "scope": {
+    "platform": "Nintendo DS",
+    "rule": "Nintendo DS only",
+    "excluded": ["GBA", "Nintendo 64", "GameCube", "Wii", "3DS", "Switch"],
+    "policy": "Inventory and convert selectively; do not bulk-import donor assets without target-contract validation."
+  },
+  "target": {
+    "id": "platinum",
+    "game": "Pokemon Platinum",
+    "repository": "79cbd8hmgj-wq/pokeplatinum-legacy",
+    "local_name": "pokeplatinum-legacy",
+    "role": "target/native pool",
+    "priority": 0,
+    "asset_roots": [
+      {
+        "path": "res/pokemon",
+        "asset_classes": ["pokemon battle sprites", "icons", "palettes", "sprite metadata"],
+        "compatibility": "native"
+      },
+      {
+        "path": "res/graphics",
+        "asset_classes": ["UI", "battle graphics", "field graphics", "effects"],
+        "compatibility": "native"
+      },
+      {
+        "path": "res/field",
+        "asset_classes": ["field resources"],
+        "compatibility": "native"
+      }
+    ]
+  },
+  "donors": [
+    {
+      "id": "hgss",
+      "game": "Pokemon HeartGold/SoulSilver",
+      "repository": "79cbd8hmgj-wq/pokeheartgold",
+      "local_name": "pokeheartgold",
+      "role": "primary direct donor",
+      "priority": 1,
+      "asset_roots": [
+        {
+          "path": "files/poketool/pokegra",
+          "asset_classes": ["pokemon battle sprites", "pokemon graphics"],
+          "compatibility": "direct"
+        },
+        {
+          "path": "files/poketool/icongra",
+          "asset_classes": ["pokemon icons"],
+          "compatibility": "direct"
+        },
+        {
+          "path": "files/graphic",
+          "asset_classes": ["UI", "Pokedex graphics", "fonts"],
+          "compatibility": "direct"
+        },
+        {
+          "path": "files/fielddata",
+          "asset_classes": ["field graphics", "maps", "environment resources"],
+          "compatibility": "direct"
+        }
+      ]
+    },
+    {
+      "id": "diamond",
+      "game": "Pokemon Diamond/Pearl",
+      "repository": "79cbd8hmgj-wq/pokediamond",
+      "local_name": "pokediamond",
+      "role": "control/direct donor",
+      "priority": 2,
+      "asset_roots": [
+        {
+          "path": "files/poketool/pokegra",
+          "asset_classes": ["pokemon battle sprites", "pokemon graphics"],
+          "compatibility": "direct"
+        },
+        {
+          "path": "files/poketool/icongra",
+          "asset_classes": ["pokemon icons"],
+          "compatibility": "direct"
+        },
+        {
+          "path": "files/poketool/trgra",
+          "asset_classes": ["trainer graphics"],
+          "compatibility": "direct"
+        },
+        {
+          "path": "files/poketool/pokeanm",
+          "asset_classes": ["pokemon animation data"],
+          "compatibility": "direct"
+        }
+      ]
+    },
+    {
+      "id": "pmd_sky",
+      "game": "Pokemon Mystery Dungeon: Explorers of Sky",
+      "repository": "79cbd8hmgj-wq/pmd-sky",
+      "local_name": "pmd-sky",
+      "role": "convertible donor",
+      "priority": 3,
+      "asset_roots": [
+        {
+          "path": "files/MONSTER",
+          "asset_classes": ["pokemon sprite container"],
+          "compatibility": "convertible"
+        },
+        {
+          "path": "files/GROUND",
+          "asset_classes": ["animated overworld sprites", "ground actors"],
+          "compatibility": "convertible"
+        },
+        {
+          "path": "files/EFFECT",
+          "asset_classes": ["effects"],
+          "compatibility": "convertible"
+        },
+        {
+          "path": "files/MAP_BG",
+          "asset_classes": ["backgrounds", "tiles", "palettes", "animations"],
+          "compatibility": "convertible"
+        },
+        {
+          "path": "files/BACK",
+          "asset_classes": ["backgrounds"],
+          "compatibility": "convertible"
+        },
+        {
+          "path": "files/TOP",
+          "asset_classes": ["title/UI backgrounds"],
+          "compatibility": "convertible"
+        }
+      ]
+    },
+    {
+      "id": "ranger2",
+      "game": "Pokemon Ranger: Shadows of Almia",
+      "repository": "79cbd8hmgj-wq/pokeranger2",
+      "local_name": "pokeranger2",
+      "role": "convertible donor",
+      "priority": 4,
+      "asset_roots": [
+        {
+          "path": "res/prebuilt/data/poke",
+          "asset_classes": ["pokemon resource binaries"],
+          "compatibility": "convertible"
+        },
+        {
+          "path": "res/prebuilt/data/pokeOBJ",
+          "asset_classes": ["pokemon object resources"],
+          "compatibility": "convertible"
+        },
+        {
+          "path": "res/prebuilt/data/interface",
+          "asset_classes": ["UI"],
+          "compatibility": "convertible"
+        },
+        {
+          "path": "res/prebuilt/data/effect",
+          "asset_classes": ["effects"],
+          "compatibility": "convertible"
+        },
+        {
+          "path": "res/prebuilt/data/menu",
+          "asset_classes": ["menu/UI"],
+          "compatibility": "convertible"
+        },
+        {
+          "path": "res/prebuilt/data/field",
+          "asset_classes": ["field graphics", "effects", "maps"],
+          "compatibility": "convertible"
+        }
+      ]
+    }
+  ]
+}
