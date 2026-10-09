@@ -64,7 +64,7 @@ jobs:
             --write-json /tmp/ds_donor_inventory.json \
             --write-md /tmp/ds_donor_inventory.md
 
-      - name: Inspect Ranger Pikachu package
+      - name: Inspect sampled Ranger package
         working-directory: pokeplatinum-legacy
         run: |
           python3 tools/visual_overhaul/inspect_ranger_assets.py \
@@ -73,13 +73,6 @@ jobs:
             --limit 1 \
             --extract-dir /tmp/ranger_extract \
             --write-json /tmp/ranger_pilot.json
-
-      - name: Locate extracted Pikachu package
-        id: ranger_package
-        run: |
-          package="$(find /tmp/ranger_extract -type d -name 'p025_00_LZ' -print -quit)"
-          test -n "$package"
-          echo "path=$package" >> "$GITHUB_OUTPUT"
 
       - name: Render Ranger Pikachu package
         working-directory: pokeplatinum-legacy
