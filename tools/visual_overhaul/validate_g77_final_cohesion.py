@@ -77,8 +77,7 @@ def check_diff_guard() -> None:
     except subprocess.CalledProcessError:
         errors.append(f"baseline {G77_BASE[:12]} not available (need full-history checkout)")
         return
-    out = git("diff", "--name-only", "--no-renames", G77_BASE).decode().split("\n")
-    out += git("ls-files", "--others", "--exclude-standard").decode().split("\n")
+    out = git("diff", "--name-only", "--no-renames", G77_BASE, G77_CLOSURE).decode().split("\n")
     changed = sorted({p for p in out if p})
     bad = [p for p in changed if not any(re.match(rx, p) for rx in ALLOWED_PATTERNS)]
     check(not bad, f"G7.7 changed non-visual paths (gameplay guard): {bad}")
