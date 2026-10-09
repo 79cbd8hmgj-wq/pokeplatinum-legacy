@@ -1,0 +1,19 @@
+name: validate-io-fol-sheets
+on:
+  pull_request:
+    paths:
+      - 'tools/visual_overhaul/selection/export_hgss_follower_library.py'
+      - 'tools/visual_overhaul/selection/validate_io_fol_sheets_pilot.py'
+      - 'docs/visual_overhaul/implementation/io_fol_sheets_pilot_manifest.json'
+      - 'docs/visual_overhaul/selection/mining/evidence/hgss_follower_sheets.json'
+      - '.github/workflows/validate-io-fol-sheets.yml'
+  workflow_dispatch:
+jobs:
+  catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate all 572 cataloged donor sheets
+        run: python3 tools/visual_overhaul/selection/validate_io_fol_sheets_pilot.py
+      - name: Check Python syntax of complete exporter
+        run: python3 -m py_compile tools/visual_overhaul/selection/export_hgss_follower_library.py
