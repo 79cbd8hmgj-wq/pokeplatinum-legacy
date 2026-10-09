@@ -1,5 +1,8 @@
 # IO-STATUS — confusion overlay pilot (implementation record)
 
+> **CI compatibility note (2026-10-09):** PR #94 corrected the historical G7.6/G7.7 scope guards so unrelated battle-overlay work is not misclassified as a change to completed visual passes. Both US builds and static validators remain mandatory; green checks do not replace in-emulator rendering, animation, and fade QA. No runtime QA is claimed by this note.
+
+
 **Baseline:** `main` `b3a4f8a7` (includes PRs #88–91). **Status: source implemented, both US revisions build; owner runtime and art QA deferred.** Confusion only; infatuation is intentionally not started.
 
 ## What it does
