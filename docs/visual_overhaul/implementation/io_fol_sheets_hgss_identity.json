@@ -3,48 +3,48 @@
   "source_repo": "79cbd8hmgj-wq/pokeheartgold",
   "source_path": "include/constants/mmodel.h",
   "source_commit": "9d8b7591f09b65804da2fb2dfd56f320633e0d36",
-  "identity_note": "Authoritative HGSS model symbolic identity; species/form naming requires matching these names to Platinum species/form identifiers. Unnamed first six reserved, not assumed to be Pokémon species.",
+  "identity_note": "Models 201..206 are HGSS generic follower slots; models 297..862 map to named species/form symbols. Symbols derive from pinned HGSS mmodel.h; no inferred Platinum runtime species ID.",
   "entries": [
     {
       "donor_filename": "mmodel_00000201.NSBTX",
       "model_id": 201,
-      "source_symbol": null,
-      "kind": "unnamed_special",
+      "source_symbol": "MMODEL_FOLLOWER_MON",
+      "kind": "reserved_follower_generic",
       "texture_size": 32
     },
     {
       "donor_filename": "mmodel_00000202.NSBTX",
       "model_id": 202,
       "source_symbol": "MMODEL_FOLLOWER_MON_2",
-      "kind": "named_species_or_form",
+      "kind": "reserved_follower_generic",
       "texture_size": 32
     },
     {
       "donor_filename": "mmodel_00000203.NSBTX",
       "model_id": 203,
       "source_symbol": "MMODEL_FOLLOWER_MON_3",
-      "kind": "named_species_or_form",
+      "kind": "reserved_follower_generic",
       "texture_size": 32
     },
     {
       "donor_filename": "mmodel_00000204.NSBTX",
       "model_id": 204,
       "source_symbol": "MMODEL_FOLLOWER_MON_4",
-      "kind": "named_species_or_form",
+      "kind": "reserved_follower_generic",
       "texture_size": 64
     },
     {
       "donor_filename": "mmodel_00000205.NSBTX",
       "model_id": 205,
       "source_symbol": "MMODEL_FOLLOWER_MON_5",
-      "kind": "named_species_or_form",
+      "kind": "reserved_follower_generic",
       "texture_size": 64
     },
     {
       "donor_filename": "mmodel_00000206.NSBTX",
       "model_id": 206,
       "source_symbol": "MMODEL_FOLLOWER_MON_6",
-      "kind": "named_species_or_form",
+      "kind": "reserved_follower_generic",
       "texture_size": 64
     },
     {
