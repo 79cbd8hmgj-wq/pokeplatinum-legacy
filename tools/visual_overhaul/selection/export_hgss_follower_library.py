@@ -42,6 +42,10 @@ def export(hgss_root: Path, destination: Path, check_only: bool = False) -> None
         print("PASS: all 572 raw source files present")
         return
 
+    # Do not claim a complete export until every donor has passed decoding.
+    # Existing output must be empty to prevent stale frames surviving a re-run.
+    if destination.exists() and any(destination.iterdir()):
+        raise RuntimeError(f"Output directory is not empty: {destination}")
     destination.mkdir(parents=True, exist_ok=True)
     entries = []
     for row in rows:
@@ -59,7 +63,7 @@ def export(hgss_root: Path, destination: Path, check_only: bool = False) -> None
         sheet = destination / name.removesuffix(".NSBTX")
         sheet.mkdir(exist_ok=True)
         files = []
-        for variant, palname in zip(("normal", "shiny"), palettes):
+        for variant, palname in zip(("palette_0", "palette_1"), palettes):
             for index, texname in enumerate(frame_names):
                 pixels = N.decode_tex(blob, t, t["texs"][texname], palname)
                 picture = Image.fromarray(pixels, "RGBA")
@@ -76,7 +80,7 @@ def export(hgss_root: Path, destination: Path, check_only: bool = False) -> None
 
     index = {"schema_version": 1, "source_evidence": str(EVIDENCE.relative_to(ROOT)),
              "sheet_count": len(entries), "output_count": sum(len(x["frames"]) for x in entries),
-             "species_mappings_verified": False, "entries": entries}
+             "species_mappings_verified": False, "palette_variant_roles_verified": False, "entries": entries}
     assert index["sheet_count"] == 572 and index["output_count"] == 9152
     (destination / "index.json").write_text(json.dumps(index, indent=2) + "\n")
     print(f"Exported {len(entries)} sheets and {index['output_count']} PNGs to {destination}")
