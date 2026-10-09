@@ -107,7 +107,7 @@ def dump(exe: Path, nsbtx: Path, out: Path) -> None:
 
 
 def check_scope() -> None:
-    changed = git("diff", "--name-only", BASE, "--").split()
+    changed = git("diff", "--name-only", BASE, G76_CLOSURE, "--").split()
     for path in changed:
         if path.startswith(FROZEN_PREFIXES):
             fail(f"frozen gameplay/geometry data changed: {path}")
