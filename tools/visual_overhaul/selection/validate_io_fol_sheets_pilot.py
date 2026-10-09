@@ -19,6 +19,14 @@ assert all(r["palettes"] == manifest["palette_variants"] == 2 for r in rows)
 assert all(r["shiny_differs"] for r in rows)
 assert all(len(r["tex_names"]) == 8 for r in rows)
 assert manifest["expected_exported_pngs"] == 572 * 8 * 2
+ident = json.loads((ROOT / "docs/visual_overhaul/implementation/io_fol_sheets_hgss_identity.json").read_text())
+assert len(ident["entries"]) == 572
+assert {x["donor_filename"] for x in ident["entries"]} == {r["file"] for r in rows}
+assert len({x["model_id"] for x in ident["entries"]}) == 572
+assert sum(x["kind"] == "reserved_follower_generic" for x in ident["entries"]) == 6
+assert sum(x["kind"] == "named_species_or_form" for x in ident["entries"]) == 566
+assert all(x["source_symbol"] for x in ident["entries"])
+assert all(x["source_symbol"].startswith("MMODEL_FOLLOWER_MON") for x in ident["entries"])
 p = argparse.ArgumentParser()
 p.add_argument("--export-dir", type=Path)
 a = p.parse_args()
