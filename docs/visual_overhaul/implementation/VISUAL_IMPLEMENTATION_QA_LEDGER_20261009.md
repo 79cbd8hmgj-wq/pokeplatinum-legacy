@@ -6,7 +6,7 @@ Statuses: Source implemented = code/assets merged; not equivalent to runtime acc
 
 | Feature | Wave | Current evidence | Next action |
 |---|---:|---|---|
-| IO-PREVIEW | 3 | No verified source implementation | Single-location pilot |
+| IO-PREVIEW | 3 | Eterna Forest pilot source implemented (see IO_PREVIEW_ETERNA_FOREST.md); build/runtime untested | Popup collision, day/dusk/night, re-show, teardown QA |
 | IO-FOL-SHEETS | 3 | Catalog/research | Select subset |
 | IO-PAL-CYCLE | 1 | Source implemented PR #79; runtime untested | Water/doubles/fades/time-of-day QA |
 | IO-FOL-MECH | 5 | Roadmap only | Deferred |

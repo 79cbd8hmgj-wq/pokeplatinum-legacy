@@ -1,0 +1,49 @@
+name: validate-io-preview
+
+on:
+  pull_request:
+    paths:
+      - 'res/graphics/map_popups/**'
+      - 'src/overlay005/map_name_popup.c'
+      - 'include/overlay005/map_name_popup.h'
+      - 'tools/visual_overhaul/io_preview/**'
+      - '.github/workflows/validate-io-preview.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libpng-dev
+          python -m pip install pillow
+
+      - name: Build nitrogfx
+        run: |
+          cd tools/nitrogfx
+          gcc -O1 -w -o "$RUNNER_TEMP/nitrogfx" main.c gfx.c convert_png.c jasc_pal.c lz.c rl.c huff.c json.c cJSON.c util.c font.c -lpng -lm
+
+      - name: Card art is reproducible
+        run: |
+          cp -r res/graphics/map_popups "$RUNNER_TEMP/committed"
+          python -I tools/visual_overhaul/io_preview/build_eterna_forest_card.py
+          python - "$RUNNER_TEMP/committed" <<'PY'
+          import sys
+          from PIL import Image
+          for v in ("day", "dusk", "night"):
+              n = f"card_eterna_forest_{v}.png"
+              a, b = Image.open(f"res/graphics/map_popups/{n}"), Image.open(f"{sys.argv[1]}/{n}")
+              assert a.tobytes() == b.tobytes() and a.getpalette() == b.getpalette(), f"{n} is stale; rerun the generator"
+          print("card art matches generator output")
+          PY
+
+      - name: Static gates
+        run: python -I tools/visual_overhaul/io_preview/validate_eterna_forest_card.py --nitrogfx "$RUNNER_TEMP/nitrogfx" --mockup "$RUNNER_TEMP/mockup.png"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: io-preview-mockup
+          path: ${{ runner.temp }}/mockup.png
