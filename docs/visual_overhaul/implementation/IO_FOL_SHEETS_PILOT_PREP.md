@@ -1,35 +1,32 @@
-# IO-FOL-SHEETS — six-sheet pilot preparation
+# IO-FOL-SHEETS — Full-library delivery track (572 sheets)
 
-This package reduces implementation discovery for the HGSS overworld Pokémon graphics *library*, not the following-Pokémon mechanic. No Platinum field code has been modified.
+**Scope decision:** the six-sheet pilot is cancelled as a milestone. We remain on this section until the entire 572-sheet library is exported, validated, made usable in Platinum and documented. The unrelated following-Pokémon movement mechanic is a separate advanced feature, not part of this library.
 
-## Verified repository evidence
+## Source inventory
 
-- Canonical ranking: `docs/visual_overhaul/selection/CROSS_GEN_IMPLEMENTATION_PLAN.md`, IO-FOL-SHEETS is rank 2, Wave 3; first slice is a non-follower library.
-- Decoded source catalog: `docs/visual_overhaul/selection/mining/evidence/hgss_follower_sheets.json` reports 572 eligible donor NSBTX sheets, 538 at 32-pixel texture width and 34 at 64, each eight textures/frames and two palettes with a shiny difference.
-- Evidence decoder exists: `tools/visual_overhaul/selection/evidence_hgss_followers.py`; it calls `nsbmd_preview.parse_bmd`, `parse_tex0` and `decode_tex` to extract RGBA frames from HGSS NSBTX. The raw donor location is `<hgss-root>/files/data/mmodel/mmodel`.
-- Six evidence-backed source filenames are explicitly pinned in `io_fol_sheets_pilot_manifest.json` (three 32px and three 64px). They are identifiers, **not verified species mappings**.
+Frozen source: `docs/visual_overhaul/selection/mining/evidence/hgss_follower_sheets.json`, 572 HGSS NSBTX entries; 538 32×32 and 34 64×64; eight frame textures and two palettes per sheet. This is catalog evidence, not verified species identities or game-compatible output.
 
-## What is not yet established
+## Full-batch exporter (no Claude discovery)
 
-- HGSS donor raw NSBTX files are not proven to exist in this Platinum repository; the decoder requires a separate HGSS checkout. Catalog/renders do not substitute for the donor binary.
-- No source-backed species/form ↔ donor filename mapping is provided in this preparation package. Never equate numeric donor filenames with National Dex numbers.
-- The intended Platinum map-object graphics provider, its runtime NARC/VRAM budget and direction/animation semantics have not yet been verified. Do not wire these into encounters, events or following-Pokémon behavior during the library phase.
-- Format conversion to Platinum-native graphics is not yet proven; RGBA previews are not themselves loadable DS graphics resources.
-
-## Suggested minimal next implementation slice
-
-1. Verify the raw donor provenance (pinned source commit and exact files) and decode **only the six manifest files** using existing scripts. Preserve both palettes and all eight source frames without inventing direction mappings.
-2. Produce a deterministic, indexed intermediate library format under a dedicated data directory with a conversion script and a frozen manifest of output sizes/hashes. Do not write to Platinum's active map-object NARC.
-3. Validate source dimensions, transparency, 8 frames × 2 palettes, reproducibility, and exact relationship between the manifest IDs and resulting assets. Include a contact sheet for later artistic review.
-4. Investigate a single existing field-object graphics loader and record constraints *only if needed for defining the library format*. Do not implement spawning, pathfinding, follower AI, or change events in this slice.
-5. Build both US revisions if build files change; otherwise validate data tooling independently. Keep owner runtime/artistic QA deferred.
-
-Run metadata guard from repo root:
+`tools/visual_overhaul/selection/export_hgss_follower_library.py` uses the existing `nsbmd_preview.py` decoder, verifies all 572 input files are present, decodes all 8 frames with both palettes, writes **9,152 RGBA PNG files**, and generates a SHA-256 index identifying each original donor filename. It **fails if any of 572 inputs is absent**.
 
 ```sh
 python3 tools/visual_overhaul/selection/validate_io_fol_sheets_pilot.py
+python3 tools/visual_overhaul/selection/export_hgss_follower_library.py \
+  --hgss-root /path/to/hgss-extracted --out /path/to/hgss-followers-export
+python3 tools/visual_overhaul/selection/validate_io_fol_sheets_pilot.py \
+  --export-dir /path/to/hgss-followers-export
 ```
 
-## Claude workload boundary
+The export directory must not silently become the field engine's active resource archive. RGBA PNGs are **intermediate assets**; they are not directly loadable as the Platinum field-object sprite system.
 
-The research inventory, selection and validation guard are prepared. Claude should work **only** on deterministic six-donor conversion after raw NSBTX availability is established, or report that precise artifact blocker. Do not ask Claude to redo global HGSS asset mining, infer species identities or implement following Pokémon. Further integration into Platinum should be a separate bounded change after file formats and loader ownership are confirmed.
+## Completion gates (all mandatory before closing IO-FOL-SHEETS)
+
+1. **Donor availability/provenance:** prove full raw 572-file HGSS input set and pin donor SHA or hashes. Current environment has the frozen evidence and preview renders, **not verified raw binary source files**.
+2. **Full export:** generate and hash all 9,152 frame/palette PNGs; rerun the converter and compare its index deterministically.
+3. **Identity/direction map:** derive authoritative species/form associations from HGSS's named constants/tables rather than numeric filename guesses; preserve source texture ordering pending directional verification.
+4. **Platinum format and loader:** select actual field graphics archive/loader, determine palette/VRAM budgets and animation mapping, and provide a library that the game can request by verified identifier. Do not build a follower AI or alter movement systems.
+5. **Integration and QA:** finish registration/packaging, automated validation, Rev 0/1 builds if active game resources change. Final emulator/artistic testing is owner-deferred, but all feasible static checks must pass.
+6. **Coverage:** confirm no cataloged sheet omitted (572/572) and document any unsupported sizes/forms rather than silently dropping them.
+
+**Current delivery status:** full exporter and coverage validator *authored*, no runtime export yet, no loader integration. This is active incomplete work, not a finished section. No request for Claude implementation should broaden into global research.
