@@ -35,7 +35,7 @@ Evidence snapshot: DS pool contains 9,821 processed candidate groups, 3,185 mine
 
 | ID | Candidate | Donor/evidence | Intended Opal host/use | Status | Next bounded evidence need |
 |---|---|---|---|---|---|
-| V01 | Forest ambient foliage | Platinum trap-effect leaf/petal resources; HGSS foliage, PMD Sky effects and Ranger timings as reference | Deep-forest dedicated field-renderer path, conservative drifting leaves | **First feasibility candidate** | Identify explicit drawable resource and safe loading/lifetime before code |
+| V01 | Forest ambient foliage | Platinum trap-effect leaf/petal resources; HGSS foliage, PMD Sky effects and Ranger timings as reference | Deep-forest dedicated field-renderer path, conservative drifting leaves | **Feasibility done: NO-GO / blocked** (no code changed) | Leaf is 2D OAM; field effects are 3D billboards from opaque prebuilt `fldeff.narc`. See `implementation/V01_FOREST_FOLIAGE_FEASIBILITY.md`; proceed to V02 |
 | V02 | Eterna material composite | HGSS foliage-ground, bark/ground/wall texture regions | Platinum Eterna `map_texture_set_074` | **Targeted comparison** | Exact Platinum texture-region identities, donor subregions and export/conversion contract |
 | V03 | Forest prop details | HGSS building/field model components | `prop_model_set_050`, forest map geometry | **Conditional** | Demonstrate a material visual gain; avoid generic model imports |
 | V04 | Other overworld atmospheres | PMD Sky environmental palette/effect techniques; Ranger effects; Emerald weather references | Platinum field weather/fog/particle subsystems in snow, caves, coasts, industrial/Distortion areas | **Candidate** | Exclude Pass G completed lighting/fog before choosing one effect |
