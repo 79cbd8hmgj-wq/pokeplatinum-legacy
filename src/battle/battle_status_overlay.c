@@ -20,17 +20,23 @@
 // (GX_TEXFMT_NONE), so the shapes use only vertex colours. The overlay therefore owns no OAM
 // entry, no texture/atlas texel and no palette bank.
 //
-// Render-state contract (see docs/visual_overhaul/implementation/IO_STATUS_PILOT_IMPLEMENTATION.md):
+// Render-state contract (audited in docs/visual_overhaul/implementation/IO_STATUS_PILOT_IMPLEMENTATION.md,
+// enforced by tools/visual_overhaul/io_status/validate_confusion_overlay.py):
 //   * Called straight after PokemonSpriteManager_DrawSprites, inside the same frame and before
 //     the buffer swap, from the existing SysTask_DrawSprites. No new task.
-//   * Every command sits inside one PushMtx/PopMtx(1) pair, so the matrix stack and the current
-//     position matrix are left exactly as found.
-//   * The texture image parameter is switched to "none" for the overlay, then re-issued with the
-//     same values PokemonSpriteManager_DrawSprites set for its own pass. Texture palette base,
-//     polygon attributes and vertex colour are write-only registers that every later 3D consumer
-//     (particles, the next frame's mon pass) re-establishes before drawing; the overlay never
-//     writes the material (lighting is masked off, so diffuse/ambient are not consulted).
-//   * Nothing is issued unless at least one battler qualifies.
+//   * Every command sits inside one PushMtx/PopMtx(1) pair (the per-star pairs nest inside it), so
+//     the matrix stack and current matrix are left as found. The matrix mode is never changed.
+//   * Texture image parameter: switched to "none" for the overlay, then re-issued with exactly the
+//     arguments PokemonSpriteManager_DrawSprites used for its own pass.
+//   * Not written at all: texture palette base, texture matrix, material colours.
+//   * Written but write-only in hardware (cannot be read back): polygon attributes and vertex
+//     colour. Every consumer that can run afterwards sets them itself before its first polygon:
+//     the mon pass sets PolygonAttr and material/vertex colour per quad, the SPL particle drawer sets
+//     PolygonAttr and Color per particle, and each mode-0 frame starts with G3X_Reset (which also
+//     resets PolygonAttr, TexImageParam, TexPlttBase and the matrix stack).
+//   * Nothing is issued unless at least one battler qualifies; the overlay is the last geometry
+//     submitted in the frame, so a (hypothetical) polygon/vertex RAM overflow would drop the stars
+//     rather than a battler.
 
 #define MAX_OVERLAY_BATTLERS MAX_BATTLERS
 
