@@ -25,6 +25,9 @@ import generate_g76_atmosphere as gen  # noqa: E402
 
 ROOT = gen.ROOT
 BASE = gen.BASE_REV
+# G7.6's historical scope closes at the merge of PR #59. Later Opal work is
+# not part of that visual pass and must not be treated as a G7.6 scope breach.
+G76_CLOSURE = "76f27a81895d93b6d9c8772a49a4cdec667f649a"
 
 FROZEN_PREFIXES = (
     "res/field/maps/data/",
@@ -104,7 +107,7 @@ def dump(exe: Path, nsbtx: Path, out: Path) -> None:
 
 
 def check_scope() -> None:
-    changed = git("diff", "--name-only", BASE, "--").split()
+    changed = git("diff", "--name-only", BASE, G76_CLOSURE, "--").split()
     for path in changed:
         if path.startswith(FROZEN_PREFIXES):
             fail(f"frozen gameplay/geometry data changed: {path}")
