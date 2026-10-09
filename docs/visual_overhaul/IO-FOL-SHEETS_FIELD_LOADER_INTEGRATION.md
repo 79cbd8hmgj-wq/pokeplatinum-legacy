@@ -44,3 +44,22 @@ These observations make the **existing ID -> archive member -> texture/resource 
 This document is intentionally stored on the **PR #93 branch**, rather than only in a ChatGPT download or chat. Continue refining it with verified source traces. Claude Code should receive a bounded implementation specification after mapping, resource packing, registration IDs and budget constraints are resolved; any implementation must be validated independently in a build and emulator.
 
 Sources in repository: `src/map_object.c`, `src/overlay005/ov5_021ECC20.c`, `src/overlay005/ov5_021ECE40.c`, `src/overlay005/ov5_021ECA70.c`. PR: https://github.com/79cbd8hmgj-wq/pokeplatinum-legacy/pull/93.
+
+
+## Follow-up source trace — billboard resource and animation format (2026-10-09)
+
+Verified in `src/overlay005/ov5_021ECE40.c`:
+- `ov5_021EDA0C` requests all three resource categories for a graphics ID: mappings `ov5_021EDD2C(id)` and `ov5_021EDD38(id)` plus an ID-specific texture request.
+- `ov5_021ED2E8` resolves resource IDs to archive member numbers through table `Unk_ov5_021ED2D0`; an unregistered resource will encounter an assertion, not a graceful automatic fallback. **Any fallback must be explicitly designed and tested.**
+- `ov5_021ED110` reuses an existing `BillboardResources` entry or allocates a free `0xffff` slot and initializes it with `ov5_021EDE3C`; returns NULL if the slots are exhausted.
+- `ov5_021ED184` marks a matching billboard resource slot `0xffff` (free). `ov5_021ED1C8` considers other map objects before release.
+- `ov5_021EDF3C` either queues deferred texture loading or calls `ov5_021EDCF4` and `ov5_021EE0E8` to handle immediately, depending on redraw/budget state.
+- `ov5_021ECF1C` calls `ov5_021EDA0C` to ensure resources and `ov5_021ED110` for billboard registration before creating a billboard.
+
+Verified in `src/billboard_gfx_sequence.c`: `BillboardGfxSequence_SetData` reads an initial 32-bit sequence count, followed by `seqCount` 16-bit start-frame positions, `seqCount` 8-bit texture indices, and `seqCount` 8-bit palette indices. `BillboardGfxSequence_GetTexPlttIndexAt` selects the texture/palette index associated with a frame. This is **one part of the native resource format**, not sufficient proof that converted PNGs alone can render.
+
+Verified `generated/object_events_gfx.txt` is a symbolic graphics-ID list, including dummy slots. **Do not treat dummy IDs as safe to replace without tracing their consumers.**
+
+**Path correction:** `include/overlay005/const_ov5_021FB484.h` and `include/overlay005/const_ov5_021FC9B4.h` are declarations of external mapping arrays, not `.c` definitions; the previously suggested `src/overlay005/const_ov5_021FB484.c` and `src/overlay005/const_ov5_021FC9B4.c` do not exist in the inspected tree. Locate the actual definitions before changing any mapping.
+
+Next source-first blocker: find real definitions/build generation of `Unk_ov5_021FB484`, `Unk_ov5_021FB5BC`, `Unk_ov5_021FC9B4` and determine atlas, sequence, texture packaging, ID allocation, and runtime budgets. No build or emulator test has been performed for the new library.
