@@ -2,11 +2,11 @@
 	"labelEnabled":	true,
 	"uaatEnabled":	false,
 	"sequenceCount":	1,
-	"frameCount":	6,
+	"frameCount":	9,
 	"sequences":	[{
-			"frameCount":	6,
+			"frameCount":	9,
 			"loopStartFrame":	0,
-			"animationElement":	0,
+			"animationElement":	2,
 			"animationType":	1,
 			"playbackMode":	2,
 			"frameData":	[{
@@ -22,33 +22,69 @@
 					"frameDelay":	4,
 					"resultId":	3
 				}, {
-					"frameDelay":	16,
+					"frameDelay":	4,
 					"resultId":	4
 				}, {
-					"frameDelay":	6,
+					"frameDelay":	4,
 					"resultId":	5
+				}, {
+					"frameDelay":	4,
+					"resultId":	6
+				}, {
+					"frameDelay":	4,
+					"resultId":	7
+				}, {
+					"frameDelay":	6,
+					"resultId":	8
 				}]
 		}],
 	"animationResults":	[{
-			"resultType":	0,
-			"index":	0
+			"resultType":	2,
+			"index":	0,
+			"positionX":	0,
+			"positionY":	0
 		}, {
-			"resultType":	0,
-			"index":	1
+			"resultType":	2,
+			"index":	1,
+			"positionX":	0,
+			"positionY":	0
 		}, {
-			"resultType":	0,
-			"index":	2
+			"resultType":	2,
+			"index":	2,
+			"positionX":	0,
+			"positionY":	0
 		}, {
-			"resultType":	0,
-			"index":	3
+			"resultType":	2,
+			"index":	3,
+			"positionX":	0,
+			"positionY":	0
 		}, {
-			"resultType":	0,
-			"index":	4
+			"resultType":	2,
+			"index":	4,
+			"positionX":	0,
+			"positionY":	0
 		}, {
-			"resultType":	0,
-			"index":	5
+			"resultType":	2,
+			"index":	4,
+			"positionX":	0,
+			"positionY":	-1
+		}, {
+			"resultType":	2,
+			"index":	4,
+			"positionX":	0,
+			"positionY":	-2
+		}, {
+			"resultType":	2,
+			"index":	4,
+			"positionX":	0,
+			"positionY":	-1
+		}, {
+			"resultType":	2,
+			"index":	5,
+			"positionX":	0,
+			"positionY":	0
 		}],
-	"resultCount":	6,
+	"resultCount":	9,
 	"labels":	["CellAnime0"],
 	"labelCount":	1
 }

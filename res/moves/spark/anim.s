@@ -1,7 +1,10 @@
 #include "macros/btlanimcmd.inc"
 
+// AV1: after the lunge, a discharge arc fans out from the impact point.
+// Impact arc reuses discharge.spa defender emitter 1.
 L_0:
     LoadParticleResource 0, spark_spa
+    LoadParticleResource 1, discharge_spa
     CreateEmitter 0, 2, EMITTER_CB_SET_POS_TO_ATTACKER
     CreateEmitter 0, 3, EMITTER_CB_SET_POS_TO_ATTACKER
     PlaySoundEffectL SEQ_SE_DP_W209
@@ -22,7 +25,12 @@ L_0:
     Func_MoveBattlerX2 3, 24, BATTLE_ANIM_BATTLER_SPRITE_ATTACKER
     Delay 5
     Func_MoveBattlerX2 3, -24, BATTLE_ANIM_BATTLER_SPRITE_ATTACKER
+    CreateEmitter 1, 1, EMITTER_CB_SET_POS_TO_DEFENDER
+    Func_FadeBg FADE_BG_TYPE_BASE, 0, 0, 6, BATTLE_COLOR_LIGHT_YELLOW2
+    WaitForAnimTasks
+    Func_FadeBg FADE_BG_TYPE_BASE, 0, 6, 0, BATTLE_COLOR_LIGHT_YELLOW2
     WaitForAnimTasks
     WaitForAllEmitters
     UnloadParticleSystem 0
+    UnloadParticleSystem 1
     End
