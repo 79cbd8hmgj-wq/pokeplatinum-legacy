@@ -8,7 +8,7 @@ Frozen source: `docs/visual_overhaul/selection/mining/evidence/hgss_follower_she
 
 ## Full-batch exporter (no Claude discovery)
 
-`tools/visual_overhaul/selection/export_hgss_follower_library.py` uses the existing `nsbmd_preview.py` decoder, verifies all 572 input files are present, decodes all 8 frames with both palettes, writes **9,152 RGBA PNG files**, and generates a SHA-256 index identifying each original donor filename. It **fails if any of 572 inputs is absent**.
+`tools/visual_overhaul/selection/export_hgss_follower_library.py` uses the existing `nsbmd_preview.py` decoder, verifies all 572 input files are present, decodes all 8 frames with both **source-order palette variants** (not yet proven to be normal/shiny in that order), writes **9,152 RGBA PNG files**, and generates a SHA-256 index identifying each original donor filename. It **fails if any of 572 inputs is absent** and rejects nonempty output directories to prevent stale frames from contaminating coverage.
 
 ```sh
 python3 tools/visual_overhaul/selection/validate_io_fol_sheets_pilot.py
