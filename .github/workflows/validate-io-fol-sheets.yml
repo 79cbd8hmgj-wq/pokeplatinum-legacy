@@ -1,0 +1,42 @@
+name: validate-io-fol-sheets
+on:
+  pull_request:
+    paths:
+      - 'tools/visual_overhaul/selection/export_hgss_follower_library.py'
+      - 'tools/visual_overhaul/selection/validate_io_fol_sheets_pilot.py'
+      - 'tools/visual_overhaul/selection/nsbmd_preview.py'
+      - 'docs/visual_overhaul/implementation/io_fol_sheets_pilot_manifest.json'
+      - 'docs/visual_overhaul/implementation/io_fol_sheets_hgss_identity.json'
+      - '.github/workflows/validate-io-fol-sheets.yml'
+  workflow_dispatch:
+jobs:
+  complete-library:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout pinned HGSS donor
+        uses: actions/checkout@v4
+        with:
+          repository: 79cbd8hmgj-wq/pokeheartgold
+          ref: 9d8b7591f09b65804da2fb2dfd56f320633e0d36
+          path: hgss-source
+          persist-credentials: false
+      - name: Install decoder dependencies
+        run: python3 -m pip install 'numpy<3' 'Pillow>=10,<12'
+      - name: Verify full 572-entry source inventory
+        run: python3 tools/visual_overhaul/selection/validate_io_fol_sheets_pilot.py
+      - name: Confirm raw donor availability
+        run: python3 tools/visual_overhaul/selection/export_hgss_follower_library.py --hgss-root hgss-source --out "$RUNNER_TEMP/hgss-followers" --check-only
+      - name: Export all 572 sheets
+        run: python3 tools/visual_overhaul/selection/export_hgss_follower_library.py --hgss-root hgss-source --out "$RUNNER_TEMP/hgss-followers"
+      - name: Validate 9152 exported frames and hashes
+        run: python3 tools/visual_overhaul/selection/validate_io_fol_sheets_pilot.py --export-dir "$RUNNER_TEMP/hgss-followers"
+      - name: Package complete library
+        run: tar -C "$RUNNER_TEMP" -czf "$RUNNER_TEMP/hgss-followers-library.tar.gz" hgss-followers
+      - name: Retain validated complete-library artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hgss-followers-all-572
+          path: ${{ runner.temp }}/hgss-followers-library.tar.gz
+          if-no-files-found: error
+          retention-days: 30

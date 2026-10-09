@@ -1,0 +1,14 @@
+{
+  "schema_version": 2,
+  "feature": "IO-FOL-SHEETS",
+  "scope": "all_572_catalogued_sheets",
+  "evidence": "docs/visual_overhaul/selection/mining/evidence/hgss_follower_sheets.json",
+  "donor_root_relative": "files/data/mmodel/mmodel",
+  "source_count": 572,
+  "frames_per_sheet": 8,
+  "palette_variants": 2,
+  "expected_exported_pngs": 9152,
+  "species_identity": "unverified_do_not_infer_from_filename",
+  "full_library_exporter": "tools/visual_overhaul/selection/export_hgss_follower_library.py",
+  "integration_status": "no_Platform_field_loader_integration_yet"
+}
