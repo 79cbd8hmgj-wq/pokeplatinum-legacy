@@ -1,7 +1,7 @@
 # IO-STATUS — battle condition composite-overlay preflight
 
 **Status:** design and source preflight, not implemented. Gates A, B and E resolved at source level; Gate C partially resolved (static budget known, peak usage needs the runtime measurement in the appendix); Gate D open. Manual runtime/visual acceptance deferred.
-**Verified against:** `main` @ `7f5bfb98` (source-only; no ARM toolchain or emulator was available when this was written).
+**Verified against:** `main` @ `96f63c29` (second-pass findings below; first pass was `7f5bfb98`) (source-only; no ARM toolchain or emulator was available when this was written).
 **Canonical opportunity:** `docs/visual_overhaul/selection/CROSS_GEN_IMPLEMENTATION_PLAN.md`, IO-STATUS (wave 2, rank 8).
 
 ## Objective / composite asset recipe
@@ -110,6 +110,37 @@ Decision: create/update only in mode 0 (hide in 3); never create in 1/2. Also di
 ### Gate D — still open
 No native confusion/infatuation glyph resources were located; no PMD donor pixel assets are present. A new NCGR/NCER/NANR/NCLR set (or a OAM-primitive alternative) and its NARC registration is required and cannot be validated without the build toolchain.
 
+## Second-pass findings (Gates A, B, C, E) — source-level, on `main` @ `96f63c29`
+
+No ARM toolchain/emulator was available; everything below is from reading source.
+
+### Resolved since the first pass
+
+| Item | Result | Evidence |
+|---|---|---|
+| Volatile-status accessor name (Gate B) | `BattleMon_Get(battleCtx, battler, BATTLEMON_VOLATILE_STATUS, NULL)` returns `battleMon->statusVolatile` (u32). Test `& VOLATILE_CONDITION_CONFUSION` (bits 0–2, counter) and `& VOLATILE_CONDITION_ATTRACT` (bits 16–19, counter) for non-zero. | `battle_lib.c:438-439`; `include/constants/battle/condition.h:32-51,65,70` |
+| Mon-sprite screen anchor (Gate A) | The 3D quad is drawn with `NNS_G2dDrawSpriteFast(xCenter - MON_SPRITE_FRAME_WIDTH/2 + drawXOffset + xOffset, yCenter - MON_SPRITE_FRAME_HEIGHT/2 + drawYOffset + yOffset - shadow.height, ...)`, frame = 10×10 tiles = 80×80 px. So the visual frame centre is `(xCenter + xOffset, yCenter + yOffset - shadow.height)` in the same integer pixel space the sprite code uses. An overlay should anchor to that centre plus a per-battler-side offset. Whether this space equals main-OAM screen coordinates 1:1 is still a runtime check (appendix, step 6). | `pokemon_sprite.c:499-500,517-518`; `include/constants/graphics.h:44-47` |
+| Draw skipping conditions (Gate A) | Quad is drawn only while `active && !hide && !hide2` (plus scale/draw-height effects). Matches the visibility predicate in Gate A above. | `pokemon_sprite.c:~469` (loop guard) |
+| Who runs `BattleContext_Main` (Gate B/E) | `BattleMain_ExecuteBattlerCommands` calls `BattleContext_Main` on the local `battleCtx` unconditionally (guarded only by `battleInitialized`) in **both** the link and non-link branches. No host/master check exists in `battle_controller_player.c` or `battle_main.c`. This suggests every link client simulates its own context, but nothing verifies the clients stay in volatile-state lockstep. | `battle_main.c:643-675`; `battle_controller_player.c:194-209` |
+| Display-side volatile reads (Gate B) | Precedent for reading `statusVolatile` from the shared context outside scripts: `battle_controller.c:309,330,347,382,389,396,430,881,894` (transform/substitute). No display code reads it today, so the overlay would be the first reader in `battle_display.c`. | as listed |
+
+### Gate A — final: PASS (source)
+Position/visibility/lifecycle API is fully identified (`BattlerData_GetPokemonSprite` → `PokemonSprite_IsActive` → `PokemonSprite_GetAttribute` for `X_CENTER`, `Y_CENTER`, `X_OFFSET`, `Y_OFFSET`, `HIDE`, `HIDE_2`, `SCALE_X`, `DRAW_HEIGHT`). Poll every frame; never cache the pointer (pooled slots are reused, see hazards above). Remaining unknown is only the pixel-space equivalence with OAM (runtime step 6).
+
+### Gate B — final: PASS with constraints
+Poll-only overlay task at priority number < 60000, destroyed before `BattleContext_Free` (`battle_main.c:748`) and in the capture→naming early-free path before `BattleSystem_FreeGraphics`. The overlay must hold no pointer to `BattleContext` across frames; re-fetch via `BattleSystem_GetBattleContext(battleSys)` each tick and bail if the manager has been marked dead.
+
+### Gate C — final: BLOCKED on runtime measurement (no safe allocation justified)
+Static facts (capacities, reserved slots) are unchanged from the first pass. Peak OAM/palette/char occupancy depends on NARC tile counts and animation-time particle sprites, which are not derivable from `.c` source. **No overlay allocation is introduced by this PR.** The measurement procedure below is the narrowest one that unlocks Gate C; an implementation must (a) request ≤1 palette slot and a fixed char budget, (b) check every allocation result, (c) silently skip creation on failure.
+
+### Gate E — final: PASS (decision unchanged, link rationale sharpened)
+Mode table and the disable list are unchanged. Link stays disabled: although each client runs its own `BattleContext_Main` (above), volatile-state parity across clients is not verifiable from source, and the overlay is purely cosmetic so the cost of disabling is zero gameplay impact.
+
+### Remaining open items
+1. Gate C runtime numbers (appendix).
+2. Gate D glyph resources (out of scope here).
+3. Runtime pixel-space check (appendix step 6).
+
 ## Appendix — minimal runtime measurement procedure (for Gate C)
 
 Goal: peak main-screen OBJ usage in the worst case; no code changes required.
@@ -119,3 +150,4 @@ Goal: peak main-screen OBJ usage in the worst case; no code changes required.
 3. For each: count non-hidden main OAM entries; note OBJ palette slots that are non-zero (confirm 14/15 reserved); in the OBJ tile viewer note the highest used tile index and the largest contiguous free run below tile 2032.
 4. Pass criterion to unlock implementation: ≥1 free OBJ palette slot **and** ≥ (glyph tiles × 2 frames × 4 battlers) contiguous free tiles **and** ≥4 free OAM entries in every scenario above. Record the numbers in this file; if any scenario fails, restrict the overlay to singles.
 5. Optional repeat after a 10-turn battle and after two consecutive battles to check for resource leaks.
+6. Coordinate check: in scenario (a), temporarily note (debugger/memory viewer on the `PokemonSprite` transforms) `xCenter`, `xOffset`, `yCenter`, `yOffset`, `shadow.height` for the player and enemy mon, and compare the on-screen mon centre in pixels (top screen origin) against `(xCenter+xOffset, yCenter+yOffset-shadow.height)`. Record any constant delta; repeat with a doubles battle for all four battlers.
