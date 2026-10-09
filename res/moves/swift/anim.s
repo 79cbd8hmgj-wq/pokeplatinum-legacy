@@ -1,5 +1,7 @@
 #include "macros/btlanimcmd.inc"
 
+// AV1: a second star wave trails the first, and the impact scatters with a
+// brief defender flash before the scene settles.
 L_0:
     LoadParticleResource 0, swift_spa
     Func_FadeBg FADE_BG_TYPE_BASE, 1, 0, 12, BATTLE_COLOR_BLACK
@@ -11,10 +13,15 @@ L_0:
     SetExtraParams 0, 2, 6, 5, 0, 0
     CreateEmitter 0, 0, EMITTER_CB_SET_POS_TO_DEFENDER_SIDE
     Delay 2
-    Delay 18
+    Delay 8
+    CreateEmitter 0, 1, EMITTER_CB_GENERIC
+    SetExtraParams 0, 2, 6, 5, 0, 0
+    Delay 10
     PlayLoopedSoundEffectR SEQ_SE_DP_143, 4, 3
     Func_Shake 2, 0, 1, 2, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
     Func_Shake 2, 0, 1, 2, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER_PARTNER
+    CreateEmitter 0, 0, EMITTER_CB_SET_POS_TO_DEFENDER_SIDE
+    Func_FadeBattlerSprite BATTLE_ANIM_DEFENDER, 0, 1, BATTLE_COLOR_LIGHT_YELLOW2, 10, 6
     WaitForAnimTasks
     WaitForAllEmitters
     UnloadParticleSystem 0
