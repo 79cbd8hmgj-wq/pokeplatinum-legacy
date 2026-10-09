@@ -24,6 +24,7 @@
 #include "battle/battle_io_command.h"
 #include "battle/battle_lib.h"
 #include "battle/battle_main.h"
+#include "battle/battle_status_overlay.h"
 #include "battle/battle_subscreen.h"
 #include "battle/battle_system.h"
 #include "battle/common.h"
@@ -1518,6 +1519,7 @@ static void SysTask_DrawSprites(SysTask *task, void *inBattleSys)
         }
 
         PokemonSpriteManager_DrawSprites(battleSys->monSpriteMan);
+        BattleStatusOverlay_Draw(battleSys);
         SpriteSystem_DrawSprites(battleSys->spriteMan);
         SpriteSystem_UpdateTransfer();
         G3_RequestSwapBuffers(GX_SORTMODE_MANUAL, GX_BUFFERMODE_Z);
