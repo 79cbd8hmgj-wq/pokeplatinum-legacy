@@ -35,6 +35,9 @@ import nsbtx_palettes as nsbtx  # noqa: E402
 ROOT = Path(__file__).resolve().parents[2]
 G76_BASE = "896570704f269ebdf3bb96d4767319f782a1305a"  # pre-G7.6 pinned baseline
 G77_BASE = "76f27a81895d93b6d9c8772a49a4cdec667f649a"  # merge of PR #59 (G7.6)
+# PR #60 closes the original G7.7 visual pass. Post-G7 gameplay and Opal
+# changes must be checked by their own gates, not mistaken for G7.7 changes.
+G77_CLOSURE = "d9b520b3ae00c88339f294be28182ff32e7128a6"
 OWNERSHIP = ROOT / "docs/visual_overhaul/G7_7_RESOURCE_OWNERSHIP.json"
 
 # Paths G7.7 may touch. Everything else is a gameplay / engine / data change.
@@ -74,8 +77,7 @@ def check_diff_guard() -> None:
     except subprocess.CalledProcessError:
         errors.append(f"baseline {G77_BASE[:12]} not available (need full-history checkout)")
         return
-    out = git("diff", "--name-only", "--no-renames", G77_BASE).decode().split("\n")
-    out += git("ls-files", "--others", "--exclude-standard").decode().split("\n")
+    out = git("diff", "--name-only", "--no-renames", G77_BASE, G77_CLOSURE).decode().split("\n")
     changed = sorted({p for p in out if p})
     bad = [p for p in changed if not any(re.match(rx, p) for rx in ALLOWED_PATTERNS)]
     check(not bad, f"G7.7 changed non-visual paths (gameplay guard): {bad}")
