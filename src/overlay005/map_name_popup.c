@@ -3,6 +3,7 @@
 #include <nitro.h>
 
 #include "constants/field_base_tiles.h"
+#include "constants/graphics.h"
 #include "constants/heap.h"
 
 #include "field/field_system.h"
@@ -14,14 +15,38 @@
 #include "map_header.h"
 #include "map_header_util.h"
 #include "message.h"
+#include "rtc.h"
 #include "string_gf.h"
 #include "sys_task.h"
 #include "sys_task_manager.h"
 #include "text.h"
 
+#include "res/text/bank/location_names.h"
+
 #define POPUP_WIDTH_TILES  17
 #define POPUP_HEIGHT_TILES 5
 #define POPUP_SIZE_TILES   (POPUP_WIDTH_TILES * POPUP_HEIGHT_TILES)
+
+// IO-PREVIEW: an optional area card drawn into the otherwise blank right-hand tiles of the
+// 32x5-tile popup window. It reuses the window's pixels, tilemap, BG palette slot and
+// BG3 layer, so it needs no allocation beyond the temporary NARC buffer and is cleared by
+// the same Window_FillTilemap / Window_ClearAndCopyToVRAM calls as the popup itself.
+// Layout: tiles 0-16 popup, tile 17 gap, tiles 18-30 card, tile 31 margin.
+#define AREA_CARD_TILE_X      18
+#define AREA_CARD_WIDTH_TILES 13
+#define AREA_CARD_SIZE_TILES  (AREA_CARD_WIDTH_TILES * POPUP_HEIGHT_TILES)
+
+// The map header stores MAP_LABEL_WINDOW_FOREST (5); the popup is handed that value minus one
+// (see FieldSystem_RequestLocationName), which is also the popup style's NARC pair index / 2.
+#define POPUP_STYLE_FOREST 4
+
+// Extra area_win_gra members, appended after the nine NCGR/NCLR pairs (see map_popup.order).
+// Each shares the forest popup palette (BG palette slot 7), so no palette is loaded for them.
+enum AreaCardNarcMember {
+    AREA_CARD_NARC_ETERNA_FOREST_DAY = 18,
+    AREA_CARD_NARC_ETERNA_FOREST_DUSK,
+    AREA_CARD_NARC_ETERNA_FOREST_NIGHT,
+};
 
 enum MapNamePopUpState {
     MAP_NAME_POPUP_STATE_END,
@@ -38,6 +63,7 @@ static void SysTask_MapNamePopUpWindow(SysTask *task, void *data);
 static void MapNamePopUp_DrawWindowFrame(MapNamePopUp *mapPopUp, s32 strWidth);
 static void MapNamePopUp_StartSlideOut(MapNamePopUp *mapPopUp);
 static void MapNamePopUp_PrintMapName(MapNamePopUp *mapPopUp, const String *string);
+static void MapNamePopUp_DrawAreaCard(MapNamePopUp *mapPopUp);
 
 static void MapNamePopUp_LoadPalette(void *src, u16 size, u16 offset)
 {
@@ -95,8 +121,62 @@ static void MapNamePopUp_DrawWindowFrame(MapNamePopUp *mapPopUp, s32 strWidth)
         Window_BlitBitmapRect(&mapPopUp->window, mapPopUp->charData->pRawData, i * 8, 0, 8, 8, (i % POPUP_WIDTH_TILES) * 8, (i / POPUP_WIDTH_TILES) * 8, 8, 8);
     }
 
+    MapNamePopUp_DrawAreaCard(mapPopUp);
+
     Window_CopyToVRAM(&mapPopUp->window);
     Heap_Free(mapPopUp->tiles);
+}
+
+static BOOL MapNamePopUp_GetAreaCardMember(const MapNamePopUp *mapPopUp, u32 *narcMember)
+{
+    // Eterna Forest only. Eterna Forest's outside-gate header shares this text ID but uses the
+    // route popup style, so the style check keeps the card off that map.
+    if (mapPopUp->entryID != LocationNames_Text_EternaForest || mapPopUp->windowID != POPUP_STYLE_FOREST) {
+        return FALSE;
+    }
+
+    // Same clock the field area lighting uses (ov5_021F134C), so card and scene lighting agree.
+    switch (GetTimeOfDay()) {
+    case TIMEOFDAY_TWILIGHT:
+        *narcMember = AREA_CARD_NARC_ETERNA_FOREST_DUSK;
+        break;
+    case TIMEOFDAY_NIGHT:
+    case TIMEOFDAY_LATE_NIGHT:
+        *narcMember = AREA_CARD_NARC_ETERNA_FOREST_NIGHT;
+        break;
+    default:
+        *narcMember = AREA_CARD_NARC_ETERNA_FOREST_DAY;
+        break;
+    }
+
+    return TRUE;
+}
+
+static void MapNamePopUp_DrawAreaCard(MapNamePopUp *mapPopUp)
+{
+    u32 narcMember;
+    NNSG2dCharacterData *charData = NULL;
+
+    if (!MapNamePopUp_GetAreaCardMember(mapPopUp, &narcMember)) {
+        return;
+    }
+
+    void *tiles = Graphics_GetCharData(NARC_INDEX_ARC__AREA_WIN_GRA, narcMember, FALSE, &charData, HEAP_ID_FIELD1);
+
+    // Graphics_GetCharData returns NULL, without writing charData, when the member could not be
+    // loaded or its NCGR failed to unpack (the buffer is already freed in that case). Fail closed:
+    // the vanilla popup is left untouched. A short resource is treated the same way.
+    if (tiles == NULL || charData == NULL) {
+        return;
+    }
+
+    if (charData->szByte >= AREA_CARD_SIZE_TILES * TILE_SIZE_4BPP) {
+        for (int i = 0; i < AREA_CARD_SIZE_TILES; i++) {
+            Window_BlitBitmapRect(&mapPopUp->window, charData->pRawData, i * 8, 0, 8, 8, (AREA_CARD_TILE_X + (i % AREA_CARD_WIDTH_TILES)) * 8, (i / AREA_CARD_WIDTH_TILES) * 8, 8, 8);
+        }
+    }
+
+    Heap_Free(tiles);
 }
 
 static void MapNamePopUp_Reset(MapNamePopUp *mapPopUp)
