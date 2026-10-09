@@ -1,0 +1,32 @@
+name: validate-io-pal-cycle
+
+on:
+  pull_request:
+    paths:
+      - 'src/battle/terrain.c'
+      - 'include/battle/terrain.h'
+      - 'src/battle/battle_main.c'
+      - 'res/graphics/battle/terrain/**'
+      - 'tools/visual_overhaul/io_pal_cycle/**'
+      - '.github/workflows/validate-io-pal-cycle.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0   # the asset-unchanged check diffs against the pinned baseline commit
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: python -m pip install pillow clang-format==19.1.1
+
+      - name: Terrain palette-cycle configs, palette safety, source contract and mutation self-test
+        run: python3 -I tools/visual_overhaul/io_pal_cycle/validate_terrain_cycle.py
+
+      - name: Terrain sources are clang-formatted
+        run: clang-format --dry-run --Werror src/battle/terrain.c include/battle/terrain.h
