@@ -47,6 +47,11 @@ def export(hgss_root: Path, destination: Path, check_only: bool = False) -> None
     if destination.exists() and any(destination.iterdir()):
         raise RuntimeError(f"Output directory is not empty: {destination}")
     destination.mkdir(parents=True, exist_ok=True)
+    # Named HGSS MMODEL constants are the authoritative identity mapping.
+    constants_text = (hgss_root / "include/constants/mmodel.h").read_text()
+    names_by_id = {}
+    for symbolic, decimal in re.findall(r"^#define\\s+MMODEL_FOLLOWER_MON_([A-Z0-9_]+)\\s+(\\d+)\\s*$", constants_text, re.M):
+        names_by_id.setdefault(int(decimal), []).append(symbolic)
     entries = []
     for row in rows:
         name = row["file"]
@@ -74,13 +79,16 @@ def export(hgss_root: Path, destination: Path, check_only: bool = False) -> None
                 picture.save(file, format="PNG", optimize=False)
                 files.append({"path": relative, "sha256": sha(file.read_bytes()), "frame": texname,
                               "palette_name": palname, "variant": variant, "size": list(picture.size)})
+        numeric_id = int(name[7:15])
+        labels = names_by_id.get(numeric_id, [])
         entries.append({"donor_filename": name, "donor_sha256": sha(blob),
+                        "hgss_symbolic_names": labels, "hgss_mmodel_id": numeric_id,
                         "species_id": None, "form_id": None,
                         "frames": files, "frame_count": 8, "palette_variants": 2})
 
     index = {"schema_version": 1, "source_evidence": str(EVIDENCE.relative_to(ROOT)),
              "sheet_count": len(entries), "output_count": sum(len(x["frames"]) for x in entries),
-             "species_mappings_verified": False, "palette_variant_roles_verified": False, "entries": entries}
+             "species_mappings_verified": False, "hgss_symbolic_mapping_available": True, "palette_variant_roles_verified": False, "entries": entries}
     assert index["sheet_count"] == 572 and index["output_count"] == 9152
     (destination / "index.json").write_text(json.dumps(index, indent=2) + "\n")
     print(f"Exported {len(entries)} sheets and {index['output_count']} PNGs to {destination}")
