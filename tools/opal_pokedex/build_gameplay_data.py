@@ -40,6 +40,7 @@ KIND = {
     "LEGACY": 13,  # post-Hall-of-Fame renewable habitat roll
     "EVENT": 14,  # restored one-time story/event encounter
     "FIXED_TILE": 15,  # Feebas fixed fishing tiles
+    "EGG": 16,  # baby species hatched from an Egg; `name` is the parent species id (aux bit 0x40)
 }
 KIND_NAMES = {v: k for k, v in KIND.items()}
 
@@ -47,6 +48,8 @@ F_MORNING, F_DAY, F_NIGHT = 0x01, 0x02, 0x04
 F_HOF = 0x08  # needs Hall of Fame / game completed
 F_ONCE = 0x10  # one-time (until caught)
 F_BADGES = 0x20  # aux holds the minimum badge count
+AUX_SPECIES = 0x40  # name field is a species id
+AUX_TEXT = 0x80  # name field indexes the pokedex message bank
 NAME_NONE = 0xFFFF
 MAX_RECORDS = 127  # per species; runtime page capacity (OPAL_MAX_ROWS) covers this with group headers
 
@@ -321,6 +324,27 @@ def build_locations():
                          "min": e.get("min", 0), "max": e.get("max", 0), "pct": e.get("pct", 0),
                          "flags": e["flags"], "aux": e["aux"], "provenance": e["provenance"]})
         per_species[sid] = recs
+
+    # Baby species are obtained by breeding (Opal Breeding 2.0 removes the incense requirement).
+    # The source is derived from each species' `offspring` field, never typed in.
+    parents = {}
+    for sid in range(1, gs.MAX_NATIONAL + 1):
+        baby = gs.species_data(sid)["offspring"]
+        if baby != gs.SPECIES[sid] and baby in gs.SPECIES_ID:
+            parents.setdefault(gs.SPECIES_ID[baby], []).append(sid)
+    pre = {}
+    for sid in range(1, gs.MAX_NATIONAL + 1):
+        for edge in gs.species_data(sid)["evolutions"]:
+            pre[gs.SPECIES_ID.get(edge[-1])] = sid
+    for baby, plist in sorted(parents.items()):
+        if any(r["kind"] == "BREEDING" for r in per_species[baby]):
+            continue
+        lowest = sorted(p for p in plist if pre.get(p) not in plist)
+        if not lowest:
+            continue
+        per_species[baby].append({"kind": "EGG", "label": gs.SPECIES[lowest[0]], "name": lowest[0], "name_src": 2,
+                                  "min": 0, "max": 0, "pct": 0, "flags": 0, "aux": 0,
+                                  "provenance": "res/pokemon/*/data.json offspring (BREEDING_SPEC B5)"})
     return per_species, un1 + un2
 
 
@@ -337,9 +361,11 @@ def pack_locations(per_species):
         recs = per_species.get(sid, [])[:MAX_RECORDS]
         b = bytearray([len(recs)])
         for r in recs:
-            aux = r["aux"] & 0x7F
-            if r.get("name_src"):
-                aux |= 0x80
+            aux = r["aux"] & 0x3F
+            if r.get("name_src") == 1:
+                aux |= AUX_TEXT
+            elif r.get("name_src") == 2:
+                aux |= AUX_SPECIES
             b += RECORD.pack(KIND[r["kind"]], r["flags"], r["name"], r["min"] & 0xFF, r["max"] & 0xFF,
                              min(r["pct"], 100), aux)
         blocks.append(bytes(b))

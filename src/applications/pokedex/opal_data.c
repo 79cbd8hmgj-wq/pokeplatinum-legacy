@@ -56,6 +56,7 @@ enum OpalLocationKind {
     OPAL_LOC_LEGACY,
     OPAL_LOC_EVENT,
     OPAL_LOC_FIXED_TILE,
+    OPAL_LOC_EGG,
     OPAL_LOC_KIND_MAX
 };
 
@@ -66,7 +67,8 @@ enum OpalLocationKind {
 #define OPAL_LOCF_HOF     0x08
 #define OPAL_LOCF_ONCE    0x10
 #define OPAL_LOCF_BADGES  0x20
-#define OPAL_LOC_AUX_TEXT 0x80 // `name` indexes the pokedex bank instead of the location names bank
+#define OPAL_LOC_AUX_SPECIES 0x40 // `name` is a species ID (Egg parent)
+#define OPAL_LOC_AUX_TEXT    0x80 // `name` indexes the pokedex bank instead of the location names bank
 #define OPAL_LOC_NAME_NONE 0xFFFF
 
 typedef struct OpalLocationRecord {
@@ -105,6 +107,7 @@ static const u16 sLocationKindLabel[OPAL_LOC_KIND_MAX] = {
     pl_msg_pokedex_opal_lo_legacy,
     pl_msg_pokedex_opal_lo_event,
     pl_msg_pokedex_opal_lo_fixed,
+    pl_msg_pokedex_opal_lo_egg,
 };
 
 static OpalRow *AddRow(BuildContext *ctx, u8 lines);
@@ -778,10 +781,10 @@ static void BuildLearnset(BuildContext *ctx)
     row = AddRow(ctx, 1);
     AddCell(row, OPAL_TEXT_X, OPAL_COLOR_DIM, UiString(ctx, pl_msg_pokedex_opal_ls_h_lv));
     AddCell(row, 34, OPAL_COLOR_DIM, UiString(ctx, pl_msg_pokedex_opal_ls_h_move));
-    AddCell(row, 128, OPAL_COLOR_DIM, UiString(ctx, pl_msg_pokedex_opal_ls_h_type));
-    AddCell(row, 184, OPAL_COLOR_DIM, UiString(ctx, pl_msg_pokedex_opal_ls_h_pow));
-    AddCell(row, 208, OPAL_COLOR_DIM, UiString(ctx, pl_msg_pokedex_opal_ls_h_acc));
-    AddCell(row, 232, OPAL_COLOR_DIM, UiString(ctx, pl_msg_pokedex_opal_ls_h_pp));
+    AddCell(row, 120, OPAL_COLOR_DIM, UiString(ctx, pl_msg_pokedex_opal_ls_h_type));
+    AddCell(row, 170, OPAL_COLOR_DIM, UiString(ctx, pl_msg_pokedex_opal_ls_h_pow));
+    AddCell(row, 196, OPAL_COLOR_DIM, UiString(ctx, pl_msg_pokedex_opal_ls_h_acc));
+    AddCell(row, 222, OPAL_COLOR_DIM, UiString(ctx, pl_msg_pokedex_opal_ls_h_pp));
 
     for (i = 0; moves[i] != LEARNSET_SENTINEL_ENTRY; i++) {
         u16 move = moves[i] & 0x1FF;
@@ -805,17 +808,17 @@ static void BuildLearnset(BuildContext *ctx)
         row = AddRow(ctx, 1);
         AddCell(row, OPAL_TEXT_X, OPAL_COLOR_GOLD, NumberString(ctx, level, 3));
         AddCell(row, 34, color, MoveNameString(ctx, move));
-        AddCell(row, 128, OPAL_COLOR_TEXT, TypeNameString(ctx, type));
+        AddCell(row, 120, OPAL_COLOR_TEXT, TypeNameString(ctx, type));
 
         if (power > 0) {
-            AddCell(row, 184, OPAL_COLOR_TEXT, NumberString(ctx, power, 3));
+            AddCell(row, 170, OPAL_COLOR_TEXT, NumberString(ctx, power, 3));
         }
 
         if (accuracy > 0) {
-            AddCell(row, 208, OPAL_COLOR_TEXT, NumberString(ctx, accuracy, 3));
+            AddCell(row, 196, OPAL_COLOR_TEXT, NumberString(ctx, accuracy, 3));
         }
 
-        AddCell(row, 232, OPAL_COLOR_DIM, NumberString(ctx, pp, 2));
+        AddCell(row, 222, OPAL_COLOR_DIM, NumberString(ctx, pp, 2));
     }
 
     if (!any) {
@@ -987,7 +990,9 @@ static void BuildLocations(BuildContext *ctx)
                 headerAdded = TRUE;
             }
 
-            if (record->aux & OPAL_LOC_AUX_TEXT) {
+            if (record->aux & OPAL_LOC_AUX_SPECIES) {
+                place = SpeciesNameString(ctx, record->name);
+            } else if (record->aux & OPAL_LOC_AUX_TEXT) {
                 place = UiString(ctx, record->name);
             } else {
                 StringTemplate_SetLocationName(ctx->template, 0, record->name);
@@ -1031,7 +1036,7 @@ static void BuildLocations(BuildContext *ctx)
                 }
 
                 if (flags & OPAL_LOCF_BADGES) {
-                    StringTemplate_SetNumber(ctx->template, 0, record->aux & 0x7F, 1, PADDING_MODE_NONE, CHARSET_MODE_EN);
+                    StringTemplate_SetNumber(ctx->template, 0, record->aux & 0x3F, 1, PADDING_MODE_NONE, CHARSET_MODE_EN);
                     AddCell(row, nameX, OPAL_COLOR_GOOD, UiExpanded(ctx, pl_msg_pokedex_opal_lo_badges));
                     nameX += 72;
                 }

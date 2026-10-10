@@ -41,6 +41,11 @@ jobs:
       - name: Build Modded ROM
         run: make rom ROM_REVISION=${{ matrix.revision }}
 
+      - name: Validate Opal Pokedex compiled tables and ROM integration
+        run: |
+          python3 -I tools/opal_pokedex/validate_gameplay_parity.py --build-dir "$BUILD"
+          python3 -I tools/opal_pokedex/validate_opal_integration.py --build-dir "$BUILD"
+
       - name: Record build provenance (D7)
         continue-on-error: true
         run: |

@@ -3,7 +3,7 @@
 
 `sync()` appends these (idempotently) to res/text/pokedex.json after the
 existing messages so existing `pl_msg_pokedex_*` indices never move.
-Placeholders use the game's template syntax: {STRVAR_1 <slot>, 0, 0}.
+Placeholders use the game's template syntax: {STRVAR_1 0, <slot>, 0}.
 
 Keep every line <= ~34 characters (DS system font, 232 px content width).
 """
@@ -18,7 +18,7 @@ PREFIX = "pl_msg_pokedex_opal_"
 
 
 def V(slot):
-    return "{STRVAR_1 %d, 0, 0}" % slot
+    return "{STRVAR_1 0, %d, 0}" % slot
 
 
 # id suffix -> en_US (str, or list of lines for multi-line messages)
@@ -40,7 +40,6 @@ STRINGS = [
     ("title_stats", "BASE STATS"),
     ("title_locations", "LOCATIONS"),
     ("title_forms", "FORMS"),
-    ("entry_button", "OPAL DATA"),
     ("arrow_up", "↑"),
     ("arrow_down", "↓"),
     ("btn_prev", "← Prev"),
@@ -50,29 +49,23 @@ STRINGS = [
     ("sub_hint", "L/R: Pokémon  Up/Down: scroll"),
     # --- shared labels ------------------------------------------------------------
     ("dex_no", "No. " + V(0)),
-    ("name_line", V(0) + "  " + V(1)),
     ("back", "Back"),
     ("page_of", V(0) + "/" + V(1)),
     ("unknown", "???"),
     ("locked_seen", ["Catch this Pokémon to", "unlock its full Opal data."]),
     ("locked_unseen", ["No data recorded yet."]),
-    ("scroll_hint", "Up/Down: scroll"),
-    ("none", "None"),
     ("slot0", V(0)),
     # --- overview ------------------------------------------------------------------
     ("ov_types", "Type"),
-    ("ov_category", "Kind"),
     ("ov_bst", "Base stat total"),
     ("ov_ability", "Ability"),
     ("ov_hint_pages", "Tabs show Opal’s changes."),
     ("ov_form_count", V(0) + " forms"),
-    ("ov_one_form", "1 form"),
     # --- abilities -----------------------------------------------------------------
     ("ab_slot1", "Ability 1"),
     ("ab_slot2", "Ability 2"),
     ("ab_single", "Ability"),
     ("ab_note", ["A Pokémon has one of these.", "Check its Summary for its own."]),
-    ("ab_desc_header", "Effect"),
     # --- stats ---------------------------------------------------------------------
     ("st_note", "BASE stats (species), not your own"),
     ("st_hp", "HP"),
@@ -84,8 +77,6 @@ STRINGS = [
     ("st_total", "Total"),
     # --- evolution -----------------------------------------------------------------
     ("ev_none", "Does not evolve."),
-    ("ev_from", "From " + V(0)),
-    ("ev_into", "Into " + V(0)),
     ("ev_family", "Evolution family"),
     ("ev_m_level", "Lv. " + V(0)),
     ("ev_m_level_day", "Lv. " + V(0) + ", daytime"),
@@ -125,14 +116,8 @@ STRINGS = [
     ("ls_h_pow", "Pow"),
     ("ls_h_acc", "Acc"),
     ("ls_h_pp", "PP"),
-    ("ls_class_phys", "Phys"),
-    ("ls_class_spec", "Spec"),
-    ("ls_class_stat", "Stat"),
     ("ls_empty", "No level-up moves."),
-    ("ls_start", "Lv.1"),
-    ("ls_evolve", "Evo"),
     # --- tm/hm ---------------------------------------------------------------------
-    ("tm_header", "Learns by machine:"),
     ("tm_tm", "TM" + V(0)),
     ("tm_hm", "HM" + V(0)),
     ("tm_none", "Cannot learn any TM or HM."),
@@ -154,9 +139,7 @@ STRINGS = [
     ("lo_legacy", "Rare habitat"),
     ("lo_event", "Event"),
     ("lo_fixed", "Fixed tiles"),
-    ("lo_morning", "Morn"),
-    ("lo_day", "Day"),
-    ("lo_night", "Night"),
+    ("lo_egg", "Egg (breed)"),
     ("lo_hof", "After Hall of Fame"),
     ("lo_once", "One-time"),
     ("lo_badges", V(0) + "+ badges"),
@@ -166,7 +149,6 @@ STRINGS = [
     ("lo_none", ["No source recorded", "for this Pokémon."]),
     ("lo_note", "Odds = slot chance per encounter."),
     ("lo_time_legend", "M=Morning  D=Day  N=Night"),
-    ("lo_unnamed_where", "Special location"),
     # curated "where" strings for acquisitions without a single map header
     ("where_fossil", "Underground fossils (Oreburgh)"),
     ("where_spiritomb", "Hallowed Tower ritual (Odd Keystone)"),
@@ -175,12 +157,7 @@ STRINGS = [
     ("where_feebas", "Fixed fishing tiles"),
     # --- forms ---------------------------------------------------------------------
     ("fo_none", ["This Pokémon has no", "alternate forms."]),
-    ("fo_header", "Form differences"),
     ("fo_base", "Base"),
-    ("fo_types", "Type"),
-    ("fo_abilities", "Ability"),
-    ("fo_stats", "Stats"),
-    ("fo_note", "Shown from live species data."),
     ("fo_cosmetic", ["Alternate forms share this", "species’ data."]),
     ("fo_changed_note", "Gold = differs from base form"),
     ("fo_deoxys_0", "Normal"),
@@ -236,7 +213,7 @@ def message_entries():
     out = []
     for suffix, text in STRINGS:
         entry = {"id": PREFIX + suffix}
-        entry["en_US"] = text
+        entry["en_US"] = [l + "\n" for l in text[:-1]] + [text[-1]] if isinstance(text, list) else text
         out.append(entry)
     return out
 

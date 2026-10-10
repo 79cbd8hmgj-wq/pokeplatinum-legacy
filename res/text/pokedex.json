@@ -590,10 +590,6 @@
       "en_US": "FORMS"
     },
     {
-      "id": "pl_msg_pokedex_opal_entry_button",
-      "en_US": "OPAL DATA"
-    },
-    {
       "id": "pl_msg_pokedex_opal_arrow_up",
       "en_US": "↑"
     },
@@ -626,16 +622,12 @@
       "en_US": "No. {STRVAR_1 0, 0, 0}"
     },
     {
-      "id": "pl_msg_pokedex_opal_name_line",
-      "en_US": "{STRVAR_1 0, 0, 0}  {STRVAR_1 1, 0, 0}"
-    },
-    {
       "id": "pl_msg_pokedex_opal_back",
       "en_US": "Back"
     },
     {
       "id": "pl_msg_pokedex_opal_page_of",
-      "en_US": "{STRVAR_1 0, 0, 0}/{STRVAR_1 1, 0, 0}"
+      "en_US": "{STRVAR_1 0, 0, 0}/{STRVAR_1 0, 1, 0}"
     },
     {
       "id": "pl_msg_pokedex_opal_unknown",
@@ -644,7 +636,7 @@
     {
       "id": "pl_msg_pokedex_opal_locked_seen",
       "en_US": [
-        "Catch this Pokémon to",
+        "Catch this Pokémon to\n",
         "unlock its full Opal data."
       ]
     },
@@ -655,24 +647,12 @@
       ]
     },
     {
-      "id": "pl_msg_pokedex_opal_scroll_hint",
-      "en_US": "Up/Down: scroll"
-    },
-    {
-      "id": "pl_msg_pokedex_opal_none",
-      "en_US": "None"
-    },
-    {
       "id": "pl_msg_pokedex_opal_slot0",
       "en_US": "{STRVAR_1 0, 0, 0}"
     },
     {
       "id": "pl_msg_pokedex_opal_ov_types",
       "en_US": "Type"
-    },
-    {
-      "id": "pl_msg_pokedex_opal_ov_category",
-      "en_US": "Kind"
     },
     {
       "id": "pl_msg_pokedex_opal_ov_bst",
@@ -691,10 +671,6 @@
       "en_US": "{STRVAR_1 0, 0, 0} forms"
     },
     {
-      "id": "pl_msg_pokedex_opal_ov_one_form",
-      "en_US": "1 form"
-    },
-    {
       "id": "pl_msg_pokedex_opal_ab_slot1",
       "en_US": "Ability 1"
     },
@@ -709,13 +685,9 @@
     {
       "id": "pl_msg_pokedex_opal_ab_note",
       "en_US": [
-        "A Pokémon has one of these.",
+        "A Pokémon has one of these.\n",
         "Check its Summary for its own."
       ]
-    },
-    {
-      "id": "pl_msg_pokedex_opal_ab_desc_header",
-      "en_US": "Effect"
     },
     {
       "id": "pl_msg_pokedex_opal_st_note",
@@ -752,14 +724,6 @@
     {
       "id": "pl_msg_pokedex_opal_ev_none",
       "en_US": "Does not evolve."
-    },
-    {
-      "id": "pl_msg_pokedex_opal_ev_from",
-      "en_US": "From {STRVAR_1 0, 0, 0}"
-    },
-    {
-      "id": "pl_msg_pokedex_opal_ev_into",
-      "en_US": "Into {STRVAR_1 0, 0, 0}"
     },
     {
       "id": "pl_msg_pokedex_opal_ev_family",
@@ -914,32 +878,8 @@
       "en_US": "PP"
     },
     {
-      "id": "pl_msg_pokedex_opal_ls_class_phys",
-      "en_US": "Phys"
-    },
-    {
-      "id": "pl_msg_pokedex_opal_ls_class_spec",
-      "en_US": "Spec"
-    },
-    {
-      "id": "pl_msg_pokedex_opal_ls_class_stat",
-      "en_US": "Stat"
-    },
-    {
       "id": "pl_msg_pokedex_opal_ls_empty",
       "en_US": "No level-up moves."
-    },
-    {
-      "id": "pl_msg_pokedex_opal_ls_start",
-      "en_US": "Lv.1"
-    },
-    {
-      "id": "pl_msg_pokedex_opal_ls_evolve",
-      "en_US": "Evo"
-    },
-    {
-      "id": "pl_msg_pokedex_opal_tm_header",
-      "en_US": "Learns by machine:"
     },
     {
       "id": "pl_msg_pokedex_opal_tm_tm",
@@ -955,7 +895,7 @@
     },
     {
       "id": "pl_msg_pokedex_opal_tm_count",
-      "en_US": "{STRVAR_1 0, 0, 0} of {STRVAR_1 1, 0, 0} machines"
+      "en_US": "{STRVAR_1 0, 0, 0} of {STRVAR_1 0, 1, 0} machines"
     },
     {
       "id": "pl_msg_pokedex_opal_lo_land",
@@ -1022,16 +962,8 @@
       "en_US": "Fixed tiles"
     },
     {
-      "id": "pl_msg_pokedex_opal_lo_morning",
-      "en_US": "Morn"
-    },
-    {
-      "id": "pl_msg_pokedex_opal_lo_day",
-      "en_US": "Day"
-    },
-    {
-      "id": "pl_msg_pokedex_opal_lo_night",
-      "en_US": "Night"
+      "id": "pl_msg_pokedex_opal_lo_egg",
+      "en_US": "Egg (breed)"
     },
     {
       "id": "pl_msg_pokedex_opal_lo_hof",
@@ -1055,12 +987,12 @@
     },
     {
       "id": "pl_msg_pokedex_opal_lo_level_range",
-      "en_US": "Lv.{STRVAR_1 0, 0, 0}-{STRVAR_1 1, 0, 0}"
+      "en_US": "Lv.{STRVAR_1 0, 0, 0}-{STRVAR_1 0, 1, 0}"
     },
     {
       "id": "pl_msg_pokedex_opal_lo_none",
       "en_US": [
-        "No source recorded",
+        "No source recorded\n",
         "for this Pokémon."
       ]
     },
@@ -1071,10 +1003,6 @@
     {
       "id": "pl_msg_pokedex_opal_lo_time_legend",
       "en_US": "M=Morning  D=Day  N=Night"
-    },
-    {
-      "id": "pl_msg_pokedex_opal_lo_unnamed_where",
-      "en_US": "Special location"
     },
     {
       "id": "pl_msg_pokedex_opal_where_fossil",
@@ -1099,38 +1027,18 @@
     {
       "id": "pl_msg_pokedex_opal_fo_none",
       "en_US": [
-        "This Pokémon has no",
+        "This Pokémon has no\n",
         "alternate forms."
       ]
-    },
-    {
-      "id": "pl_msg_pokedex_opal_fo_header",
-      "en_US": "Form differences"
     },
     {
       "id": "pl_msg_pokedex_opal_fo_base",
       "en_US": "Base"
     },
     {
-      "id": "pl_msg_pokedex_opal_fo_types",
-      "en_US": "Type"
-    },
-    {
-      "id": "pl_msg_pokedex_opal_fo_abilities",
-      "en_US": "Ability"
-    },
-    {
-      "id": "pl_msg_pokedex_opal_fo_stats",
-      "en_US": "Stats"
-    },
-    {
-      "id": "pl_msg_pokedex_opal_fo_note",
-      "en_US": "Shown from live species data."
-    },
-    {
       "id": "pl_msg_pokedex_opal_fo_cosmetic",
       "en_US": [
-        "Alternate forms share this",
+        "Alternate forms share this\n",
         "species’ data."
       ]
     },
@@ -1208,11 +1116,11 @@
     },
     {
       "id": "pl_msg_pokedex_opal_fo_stat_line1",
-      "en_US": "HP {STRVAR_1 0, 0, 0}  Atk {STRVAR_1 1, 0, 0}  Def {STRVAR_1 2, 0, 0}"
+      "en_US": "HP {STRVAR_1 0, 0, 0}  Atk {STRVAR_1 0, 1, 0}  Def {STRVAR_1 0, 2, 0}"
     },
     {
       "id": "pl_msg_pokedex_opal_fo_stat_line2",
-      "en_US": "SpA {STRVAR_1 0, 0, 0}  SpD {STRVAR_1 1, 0, 0}  Spe {STRVAR_1 2, 0, 0}"
+      "en_US": "SpA {STRVAR_1 0, 0, 0}  SpD {STRVAR_1 0, 1, 0}  Spe {STRVAR_1 0, 2, 0}"
     }
   ]
 }

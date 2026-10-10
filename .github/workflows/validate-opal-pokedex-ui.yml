@@ -5,6 +5,11 @@ on:
     paths:
       - 'res/graphics/pokedex/**'
       - 'tools/opal_pokedex/**'
+      - 'src/applications/pokedex/**'
+      - 'include/applications/pokedex/**'
+      - 'res/text/pokedex.json'
+      - 'platinum.us/main.lsf'
+      - 'docs/opal/generated/**'
       - '.github/workflows/validate-opal-pokedex-ui.yml'
   workflow_dispatch:
 
@@ -16,6 +21,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Verify Opal gameplay data is current and matches source tables
+        run: |
+          python3 tools/opal_pokedex/opal_strings.py --check
+          python3 tools/opal_pokedex/build_gameplay_data.py --check
+          python3 tools/opal_pokedex/validate_gameplay_parity.py --self-test
+          python3 tools/opal_pokedex/validate_gameplay_parity.py
+      - name: Verify Opal screen integration (link script, tables, assets, strings)
+        run: |
+          python3 -m pip install 'Pillow>=10,<12'
+          python3 tools/opal_pokedex/validate_opal_integration.py
       - name: Verify Pokédex layer and asset contracts
         run: python3 tools/opal_pokedex/validate_screen_contract.py
       - name: Verify actual scroll graphics load paths
