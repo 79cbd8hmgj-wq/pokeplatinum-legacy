@@ -54,6 +54,8 @@ pngs = files(
     'unused_34.png',
     'unused_36.png',
     'ranger_fire_bloom.png',
+    'ranger_rock_burst.png',
+    'ranger_ice_bloom.png',
 )
 
 pngs_for_pal = files(
@@ -87,6 +89,8 @@ pngs_for_pal = files(
     'unused_33.png',
     'unused_36.png',
     'ranger_fire_bloom.png',
+    'ranger_rock_burst.png',
+    'ranger_ice_bloom.png',
 )
 
 no_cell_pngs = files(
@@ -141,6 +145,8 @@ cell_jsons = files(
     'unused_35_cell.json',
     'unused_36_cell.json',
     'ranger_fire_bloom_cell.json',
+    'ranger_rock_burst_cell.json',
+    'ranger_ice_bloom_cell.json',
 )
 
 cellanm_jsons = files(
@@ -182,6 +188,8 @@ cellanm_jsons = files(
     'unused_35_anim.json',
     'unused_36_anim.json',
     'ranger_fire_bloom_anim.json',
+    'ranger_rock_burst_anim.json',
+    'ranger_ice_bloom_anim.json',
 )
 
 manual_pal_files = files(
