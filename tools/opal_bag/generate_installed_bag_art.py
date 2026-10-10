@@ -41,16 +41,30 @@ def pixels(which):
         # Existing MAIN BG0 description: x 0..255, y 144..191.
         # Only decorate the underlying MAIN BG1. Avoid implying the list
         # or description has moved to the other LCD.
+        # Opal V3: separated left showcase, legible list rhythm, and
+        # bottom description band. BG2 list text and BG0 description
+        # windows remain above this decorative BG1 composition.
         panel(p,4,12,104,116,4,2)
         panel(p,112,6,139,150,4,1)
         panel(p,4,147,247,35,4,1)
+        # Mineral accent in the showcase and pocket selector footer.
         panel(p,11,19,90,90,7,3)
         fill(p,17,117,94,118,9)
+        fill(p,14,121,88,122,12)
+        # List header sits above the nine 16-pixel rows; BG2 text is
+        # deliberately not overwritten or covered by new windows.
         fill(p,121,9,240,10,9)
-        for y in range(22,152,16):
-            fill(p,120,y,241,y,12)
+        fill(p,121,12,239,13,2)
+        for row in range(9):
+            y=16+row*16
+            fill(p,116,y,246,y+14,1 if row%2==0 else 2)
+            fill(p,118,y+2,119,y+12,3)
+            fill(p,121,y+15,243,y+15,12)
+        # Description area's left item icon and right text gutters.
         fill(p,5,144,252,146,9)
-        fill(p,14,153,20,176,10)
+        fill(p,8,152,42,179,2)
+        fill(p,43,153,44,177,9)
+        fill(p,48,152,238,153,12)
     elif which=="sub":
         p=[0]*(256*192)
         fill(p,0,0,255,8,14)
