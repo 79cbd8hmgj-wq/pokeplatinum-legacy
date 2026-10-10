@@ -11,6 +11,7 @@
 #include "applications/pokedex/funcptr_ov21_021E9B9C.h"
 #include "applications/pokedex/infomain.h"
 #include "applications/pokedex/infomain_foreign.h"
+#include "applications/pokedex/opalref.h"
 #include "applications/pokedex/ov21_021D423C.h"
 #include "applications/pokedex/ov21_021D4340.h"
 #include "applications/pokedex/ov21_021D5AEC.h"
@@ -199,7 +200,7 @@ static BOOL TransitionComplete(PokedexApp **appPtr)
     return IsScreenFadeDone();
 }
 
-const static UnkFuncPtr_ov21_021E9B74 Unk_ov21_021E9B74[10] = {
+const static UnkFuncPtr_ov21_021E9B74 Unk_ov21_021E9B74[11] = {
     ov21_021D5AEC,
     PokedexSearch_TransitionFunctions,
     InfoMain_InitScreen,
@@ -209,10 +210,11 @@ const static UnkFuncPtr_ov21_021E9B74 Unk_ov21_021E9B74[10] = {
     ov21_021DC9BC,
     ov21_021E3FFC,
     ov21_021E6014,
-    ov21_021E737C
+    ov21_021E737C,
+    OpalRef_InitScreen
 };
 
-const static UnkFuncPtr_ov21_021E9B74 Unk_ov21_021E9B34[8] = {
+const static UnkFuncPtr_ov21_021E9B74 Unk_ov21_021E9B34[9] = {
     ov21_021D76B0,
     ov21_021D94BC,
     ov21_021E1924,
@@ -220,10 +222,11 @@ const static UnkFuncPtr_ov21_021E9B74 Unk_ov21_021E9B34[8] = {
     ov21_021DDD2C,
     CrySub_Init,
     ov21_021E68F4,
-    FormSub_Init
+    FormSub_Init,
+    OpalRefSub_InitScreen
 };
 
-const static UnkFuncPtr_ov21_021E9B9C Unk_ov21_021E9B9C[10] = {
+const static UnkFuncPtr_ov21_021E9B9C Unk_ov21_021E9B9C[11] = {
     ov21_021D5B50,
     PokedexSearch_FreeData,
     InfoMain_FreeScreen,
@@ -233,10 +236,11 @@ const static UnkFuncPtr_ov21_021E9B9C Unk_ov21_021E9B9C[10] = {
     ov21_021DCA14,
     ov21_021E4054,
     ov21_021E6074,
-    ov21_021E73D4
+    ov21_021E73D4,
+    OpalRef_FreeScreen
 };
 
-const static UnkFuncPtr_ov21_021E9B9C Unk_ov21_021E9B54[8] = {
+const static UnkFuncPtr_ov21_021E9B9C Unk_ov21_021E9B54[9] = {
     ov21_021D7710,
     ov21_021D951C,
     ov21_021E1984,
@@ -244,7 +248,8 @@ const static UnkFuncPtr_ov21_021E9B9C Unk_ov21_021E9B54[8] = {
     ov21_021DDD8C,
     CrySub_Free,
     ov21_021E6954,
-    FormSub_Free
+    FormSub_Free,
+    OpalRefSub_FreeScreen
 };
 
 PokedexApp *PokedexMain_NewPokedexApp(enum HeapID heapID, const PokedexOverlayArgs *pokedexOverlayArgs)
@@ -281,13 +286,13 @@ PokedexApp *PokedexMain_NewPokedexApp(enum HeapID heapID, const PokedexOverlayAr
     PokedexSort_DefaultPokedexSort(&pokedexApp->sortData, &sortParams, heapID);
     PokedexGraphics_Init(&pokedexApp->graphicData, heapID);
 
-    for (i = 0; i < 10; i++) {
+    for (i = 0; i < 11; i++) {
         if (Unk_ov21_021E9B74[i]) {
             Unk_ov21_021E9B74[i](&pokedexApp->unk_1A94[i], pokedexApp, heapID);
         }
     }
 
-    for (i = 0; i < 8; i++) {
+    for (i = 0; i < 9; i++) {
         if (Unk_ov21_021E9B34[i]) {
             Unk_ov21_021E9B34[i](&pokedexApp->unk_1C24[i], pokedexApp, heapID);
         }
@@ -474,13 +479,13 @@ PokedexGraphicData *PokedexMain_GetGraphicData(PokedexApp *pokedexApp)
 
 PokedexScreenManager *ov21_021D1410(PokedexApp *pokedexApp, int param1)
 {
-    GF_ASSERT(param1 < 10);
+    GF_ASSERT(param1 < 11);
     return &pokedexApp->unk_1A94[param1];
 }
 
 PokedexScreenManager *ov21_021D1430(PokedexApp *pokedexApp, int param1)
 {
-    GF_ASSERT(param1 < 8);
+    GF_ASSERT(param1 < 9);
     return &pokedexApp->unk_1C24[param1];
 }
 
@@ -928,13 +933,13 @@ static void FreePokedexApp(PokedexApp *pokedexApp)
     GF_ASSERT(pokedexApp->unk_1D70);
     Heap_Free(pokedexApp->unk_1D70);
 
-    for (i = 0; i < 10; i++) {
+    for (i = 0; i < 11; i++) {
         if (Unk_ov21_021E9B9C[i]) {
             Unk_ov21_021E9B9C[i](&pokedexApp->unk_1A94[i]);
         }
     }
 
-    for (i = 0; i < 8; i++) {
+    for (i = 0; i < 9; i++) {
         if (Unk_ov21_021E9B54[i]) {
             Unk_ov21_021E9B54[i](&pokedexApp->unk_1C24[i]);
         }

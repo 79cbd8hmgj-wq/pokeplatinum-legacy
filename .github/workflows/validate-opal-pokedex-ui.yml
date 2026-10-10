@@ -1,0 +1,61 @@
+name: validate-opal-pokedex-ui
+
+on:
+  pull_request:
+    paths:
+      - 'res/graphics/pokedex/**'
+      - 'tools/opal_pokedex/**'
+      - 'src/applications/pokedex/**'
+      - 'include/applications/pokedex/**'
+      - 'res/text/pokedex.json'
+      - 'platinum.us/main.lsf'
+      - 'docs/opal/generated/**'
+      - '.github/workflows/validate-opal-pokedex-ui.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  palette-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify Opal gameplay data is current and matches source tables
+        run: |
+          python3 tools/opal_pokedex/opal_strings.py --check
+          python3 tools/opal_pokedex/build_gameplay_data.py --check
+          python3 tools/opal_pokedex/validate_gameplay_parity.py --self-test
+          python3 tools/opal_pokedex/validate_gameplay_parity.py
+      - name: Verify Opal screen integration (link script, tables, assets, strings)
+        run: |
+          python3 -m pip install 'Pillow>=10,<12'
+          python3 tools/opal_pokedex/validate_opal_integration.py
+      - name: Verify Pokédex layer and asset contracts
+        run: python3 tools/opal_pokedex/validate_screen_contract.py
+      - name: Verify actual scroll graphics load paths
+        run: python3 tools/opal_pokedex/validate_scroll_runtime_contract.py
+      - name: Audit installed scroll tilemaps and tile allocation
+        run: python3 tools/opal_pokedex/audit_scroll_tilemaps.py
+      - name: Verify Pokédex indexed palettes
+        run: python3 tools/opal_pokedex/validate_palette_contract.py
+      - name: Generate Pokédex composition previews
+        run: |
+          python3 -m pip install 'Pillow>=10,<12'
+          python3 tools/opal_pokedex/generate_scroll_composition_previews.py --output-dir pokedex-ui-previews
+      - name: Validate installed sub-scroll graphic accents
+        run: python3 tools/opal_pokedex/validate_installed_subscroll_art.py
+      - name: Build safe main-scroll atlas candidate
+        run: python3 tools/opal_pokedex/build_main_scroll_v3_candidate.py --output pokedex-ui-previews/scroll_main_v3_candidate.png
+      - name: Upload Pokédex previews for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: opal-pokedex-scroll-composition-previews
+          path: pokedex-ui-previews/*.png
+      - name: Render tilemap reference diagnostics
+        run: python3 tools/opal_pokedex/render_scroll_tilemap_diagnostics.py --output-dir pokedex-ui-diagnostics
+      - name: Upload tilemap diagnostics
+        uses: actions/upload-artifact@v4
+        with:
+          name: opal-pokedex-scroll-tilemap-diagnostics
+          path: pokedex-ui-diagnostics/*

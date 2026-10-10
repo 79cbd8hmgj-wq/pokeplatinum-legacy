@@ -1,0 +1,39 @@
+diff --git a/src/game_start.c b/src/game_start.c
+index 6197727d..f37f6120 100644
+--- a/src/game_start.c
++++ b/src/game_start.c
+@@ -46,6 +46,8 @@ static void StartNewSave(int unused, SaveData *saveData);
+ 
+ extern const ApplicationManagerTemplate gRowanIntroAppTemplate;
+ 
++extern const ApplicationManagerTemplate gOpalDexQaAppTemplate; /* OPAL_QA_LOCAL */
++
+ const ApplicationManagerTemplate gGameStartRowanIntroAppTemplate = {
+     .init = GameStartRowanIntro_Init,
+     .main = GameStartRowanIntro_Main,
+@@ -130,7 +132,7 @@ static int GameStartRuntimeQANewSave_Main(ApplicationManager *appMan, int *state
+ static int GameStartNewSave_Exit(ApplicationManager *appMan, int *state)
+ {
+     Heap_Destroy(HEAP_ID_GAME_START);
+-    EnqueueApplication(FS_OVERLAY_ID_NONE, &gFieldSystemNewGameTemplate);
++    EnqueueApplication(FS_OVERLAY_ID_NONE, &gOpalDexQaAppTemplate); /* OPAL_QA_LOCAL */
+     return TRUE;
+ }
+ 
+@@ -212,3 +214,4 @@ static void StartNewSave(int unused, SaveData *saveData)
+     TrainerInfo_SetMoney(SaveData_GetTrainerInfo(saveData), 3000);
+     SystemFlag_SetBagAcquired(SaveData_GetVarsFlags(saveData));
+ }
++
+diff --git a/src/meson.build b/src/meson.build
+index 21a3d61d..6eb066f0 100644
+--- a/src/meson.build
++++ b/src/meson.build
+@@ -103,6 +103,7 @@ pokeplatinum_c = files(
+     'battle_regulation.c',
+     'daycare_save.c',
+     'pokedex.c',
++    'opal_qa_harness.c',
+     'savedata_misc.c',
+     'game_options.c',
+     'berry_patches.c',

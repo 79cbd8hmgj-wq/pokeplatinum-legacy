@@ -524,6 +524,603 @@
     {
       "id": "pl_msg_pokedex_nonetype",
       "en_US": "- - - -"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_tab_overview",
+      "en_US": "Overview"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_tab_abilities",
+      "en_US": "Abilities"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_tab_evolution",
+      "en_US": "Evolve"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_tab_learnset",
+      "en_US": "Moves"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_tab_tmhm",
+      "en_US": "TM/HM"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_tab_stats",
+      "en_US": "Stats"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_tab_locations",
+      "en_US": "Where"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_tab_forms",
+      "en_US": "Forms"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_title_overview",
+      "en_US": "OVERVIEW"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_title_abilities",
+      "en_US": "ABILITIES"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_title_evolution",
+      "en_US": "EVOLUTION"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_title_learnset",
+      "en_US": "LEVEL-UP MOVES"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_title_tmhm",
+      "en_US": "TM / HM COMPATIBILITY"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_title_stats",
+      "en_US": "BASE STATS"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_title_locations",
+      "en_US": "LOCATIONS"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_title_forms",
+      "en_US": "FORMS"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_arrow_up",
+      "en_US": "↑"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_arrow_down",
+      "en_US": "↓"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_btn_prev",
+      "en_US": "← Prev"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_btn_next",
+      "en_US": "Next →"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_btn_up",
+      "en_US": "↑ Up"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_btn_down",
+      "en_US": "↓ Down"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_sub_hint",
+      "en_US": "L/R: Pokémon  Up/Down: scroll"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_dex_no",
+      "en_US": "No. {STRVAR_1 0, 0, 0}"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_back",
+      "en_US": "Back"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_page_of",
+      "en_US": "{STRVAR_1 0, 0, 0}/{STRVAR_1 0, 1, 0}"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_unknown",
+      "en_US": "???"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_locked_seen",
+      "en_US": [
+        "Catch this Pokémon to\n",
+        "unlock its full Opal data."
+      ]
+    },
+    {
+      "id": "pl_msg_pokedex_opal_locked_unseen",
+      "en_US": [
+        "No data recorded yet."
+      ]
+    },
+    {
+      "id": "pl_msg_pokedex_opal_slot0",
+      "en_US": "{STRVAR_1 0, 0, 0}"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ov_types",
+      "en_US": "Type"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ov_bst",
+      "en_US": "Base stat total"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ov_ability",
+      "en_US": "Ability"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ov_hint_pages",
+      "en_US": "Tabs show Opal’s changes."
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ov_form_count",
+      "en_US": "{STRVAR_1 0, 0, 0} forms"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ab_slot1",
+      "en_US": "Ability 1"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ab_slot2",
+      "en_US": "Ability 2"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ab_single",
+      "en_US": "Ability"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ab_note",
+      "en_US": [
+        "A Pokémon has one of these.\n",
+        "Check its Summary for its own."
+      ]
+    },
+    {
+      "id": "pl_msg_pokedex_opal_st_note",
+      "en_US": "BASE stats (species), not your own"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_st_hp",
+      "en_US": "HP"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_st_atk",
+      "en_US": "Attack"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_st_def",
+      "en_US": "Defense"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_st_spa",
+      "en_US": "Sp. Atk"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_st_spd",
+      "en_US": "Sp. Def"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_st_spe",
+      "en_US": "Speed"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_st_total",
+      "en_US": "Total"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_none",
+      "en_US": "Does not evolve."
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_family",
+      "en_US": "Evolution family"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_level",
+      "en_US": "Lv. {STRVAR_1 0, 0, 0}"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_level_day",
+      "en_US": "Lv. {STRVAR_1 0, 0, 0}, daytime"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_level_night",
+      "en_US": "Lv. {STRVAR_1 0, 0, 0}, nighttime"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_happy",
+      "en_US": "High friendship"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_happy_day",
+      "en_US": "High friendship, day"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_happy_night",
+      "en_US": "High friendship, night"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_item",
+      "en_US": "Use {STRVAR_1 0, 0, 0}"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_item_male",
+      "en_US": "Use {STRVAR_1 0, 0, 0} (male)"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_item_female",
+      "en_US": "Use {STRVAR_1 0, 0, 0} (female)"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_atk_gt_def",
+      "en_US": "Lv. {STRVAR_1 0, 0, 0}, Atk above Def"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_atk_eq_def",
+      "en_US": "Lv. {STRVAR_1 0, 0, 0}, Atk = Def"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_atk_lt_def",
+      "en_US": "Lv. {STRVAR_1 0, 0, 0}, Atk below Def"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_spa_gt_atk",
+      "en_US": "Lv. {STRVAR_1 0, 0, 0}, SpA above Atk"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_spa_ge_atk",
+      "en_US": "Lv. {STRVAR_1 0, 0, 0}, SpA at least Atk"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_atk_gt_spa",
+      "en_US": "Lv. {STRVAR_1 0, 0, 0}, Atk above SpA"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_spd_gt_def",
+      "en_US": "Lv. {STRVAR_1 0, 0, 0}, SpD above Def"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_pid_low",
+      "en_US": "Lv. {STRVAR_1 0, 0, 0}, personality A"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_pid_high",
+      "en_US": "Lv. {STRVAR_1 0, 0, 0}, personality B"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_ninjask",
+      "en_US": "Lv. {STRVAR_1 0, 0, 0}"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_shedinja",
+      "en_US": "Lv. {STRVAR_1 0, 0, 0}, spare slot + ball"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_beauty",
+      "en_US": "Beauty {STRVAR_1 0, 0, 0}+"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_held_day",
+      "en_US": "Level up holding {STRVAR_1 0, 0, 0} (day)"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_held_night",
+      "en_US": "Level up holding {STRVAR_1 0, 0, 0} (night)"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_know_move",
+      "en_US": "Level up knowing {STRVAR_1 0, 0, 0}"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_party",
+      "en_US": "Level up with {STRVAR_1 0, 0, 0} in party"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_level_male",
+      "en_US": "Lv. {STRVAR_1 0, 0, 0}, male"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_level_female",
+      "en_US": "Lv. {STRVAR_1 0, 0, 0}, female"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_magnetic",
+      "en_US": "Level up in a magnetic field"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_moss",
+      "en_US": "Level up near the moss rock"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_ice",
+      "en_US": "Level up near the ice rock"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ev_m_special",
+      "en_US": "Special condition"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ls_h_lv",
+      "en_US": "Lv"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ls_h_move",
+      "en_US": "Move"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ls_h_type",
+      "en_US": "Type"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ls_h_pow",
+      "en_US": "Pow"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ls_h_acc",
+      "en_US": "Acc"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ls_h_pp",
+      "en_US": "PP"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_ls_empty",
+      "en_US": "No level-up moves."
+    },
+    {
+      "id": "pl_msg_pokedex_opal_tm_tm",
+      "en_US": "TM{STRVAR_1 0, 0, 0}"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_tm_hm",
+      "en_US": "HM{STRVAR_1 0, 0, 0}"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_tm_none",
+      "en_US": "Cannot learn any TM or HM."
+    },
+    {
+      "id": "pl_msg_pokedex_opal_tm_count",
+      "en_US": "{STRVAR_1 0, 0, 0} of {STRVAR_1 0, 1, 0} machines"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_land",
+      "en_US": "Grass"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_surf",
+      "en_US": "Surf"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_old_rod",
+      "en_US": "Old Rod"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_good_rod",
+      "en_US": "Good Rod"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_super_rod",
+      "en_US": "Super Rod"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_radar",
+      "en_US": "Poké Radar"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_swarm",
+      "en_US": "Swarm"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_static",
+      "en_US": "Static"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_gift",
+      "en_US": "Gift"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_fossil",
+      "en_US": "Fossil"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_ritual",
+      "en_US": "Ritual"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_roamer",
+      "en_US": "Roaming"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_breeding",
+      "en_US": "Breeding"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_legacy",
+      "en_US": "Rare habitat"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_event",
+      "en_US": "Event"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_fixed",
+      "en_US": "Fixed tiles"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_egg",
+      "en_US": "Egg (breed)"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_hof",
+      "en_US": "After Hall of Fame"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_once",
+      "en_US": "One-time"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_badges",
+      "en_US": "{STRVAR_1 0, 0, 0}+ badges"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_pct",
+      "en_US": "{STRVAR_1 0, 0, 0}%"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_level",
+      "en_US": "Lv.{STRVAR_1 0, 0, 0}"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_level_range",
+      "en_US": "Lv.{STRVAR_1 0, 0, 0}-{STRVAR_1 0, 1, 0}"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_none",
+      "en_US": [
+        "No source recorded\n",
+        "for this Pokémon."
+      ]
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_note",
+      "en_US": "Odds = slot chance per encounter."
+    },
+    {
+      "id": "pl_msg_pokedex_opal_lo_time_legend",
+      "en_US": "M=Morning  D=Day  N=Night"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_where_fossil",
+      "en_US": "Underground fossils (Oreburgh)"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_where_spiritomb",
+      "en_US": "Hallowed Tower ritual (Odd Keystone)"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_where_roamer",
+      "en_US": "Roams Sinnoh once awakened"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_where_phione",
+      "en_US": "Breed Manaphy with Ditto"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_where_feebas",
+      "en_US": "Fixed fishing tiles"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_none",
+      "en_US": [
+        "This Pokémon has no\n",
+        "alternate forms."
+      ]
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_base",
+      "en_US": "Base"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_cosmetic",
+      "en_US": [
+        "Alternate forms share this\n",
+        "species’ data."
+      ]
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_changed_note",
+      "en_US": "Gold = differs from base form"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_deoxys_0",
+      "en_US": "Normal"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_deoxys_1",
+      "en_US": "Attack"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_deoxys_2",
+      "en_US": "Defense"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_deoxys_3",
+      "en_US": "Speed"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_wormadam_0",
+      "en_US": "Plant Cloak"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_wormadam_1",
+      "en_US": "Sandy Cloak"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_wormadam_2",
+      "en_US": "Trash Cloak"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_giratina_0",
+      "en_US": "Altered"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_giratina_1",
+      "en_US": "Origin"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_shaymin_0",
+      "en_US": "Land"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_shaymin_1",
+      "en_US": "Sky"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_rotom_0",
+      "en_US": "Rotom"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_rotom_1",
+      "en_US": "Heat"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_rotom_2",
+      "en_US": "Wash"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_rotom_3",
+      "en_US": "Frost"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_rotom_4",
+      "en_US": "Fan"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_rotom_5",
+      "en_US": "Mow"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_stat_line1",
+      "en_US": "HP {STRVAR_1 0, 0, 0}  Atk {STRVAR_1 0, 1, 0}  Def {STRVAR_1 0, 2, 0}"
+    },
+    {
+      "id": "pl_msg_pokedex_opal_fo_stat_line2",
+      "en_US": "SpA {STRVAR_1 0, 0, 0}  SpD {STRVAR_1 0, 1, 0}  Spe {STRVAR_1 0, 2, 0}"
     }
   ]
 }
