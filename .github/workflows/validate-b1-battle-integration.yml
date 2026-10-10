@@ -9,6 +9,7 @@ on:
       - 'tools/visual_overhaul/validate_b1_existing_battle_integration.py'
       - 'tools/visual_overhaul/validate_b1_cinematic_pilots.py'
       - 'tools/visual_overhaul/select_b1_battle_donors.py'
+      - 'tools/visual_overhaul/b1_donor_effect_import_preflight.py'
       - 'docs/visual_overhaul/selection/IMPLEMENTATION_QUEUE.json'
       - '.github/workflows/validate-b1-battle-integration.yml'
   workflow_dispatch:
@@ -23,6 +24,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Resolve ranked donor effect candidates from Opal database
         run: python3 tools/visual_overhaul/select_b1_battle_donors.py > /tmp/opal-b1-donors.json
+      - name: Verify ranked Ranger source packages and conversion constraints
+        run: python3 tools/visual_overhaul/b1_donor_effect_import_preflight.py --output /tmp/opal-b1-import-ledger.json
       - name: Verify previously merged battle presentation contracts
         run: python3 tools/visual_overhaul/validate_b1_existing_battle_integration.py
       - name: Validate B1 cinematic pilot animation cleanup
