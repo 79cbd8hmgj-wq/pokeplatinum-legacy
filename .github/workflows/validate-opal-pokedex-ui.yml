@@ -20,3 +20,12 @@ jobs:
         run: python3 tools/opal_pokedex/validate_screen_contract.py
       - name: Verify Pokédex indexed palettes
         run: python3 tools/opal_pokedex/validate_palette_contract.py
+      - name: Generate Pokédex composition previews
+        run: |
+          python3 -m pip install 'Pillow>=10,<12'
+          python3 tools/opal_pokedex/generate_scroll_composition_previews.py --output-dir pokedex-ui-previews
+      - name: Upload Pokédex previews for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: opal-pokedex-scroll-composition-previews
+          path: pokedex-ui-previews/*.png
