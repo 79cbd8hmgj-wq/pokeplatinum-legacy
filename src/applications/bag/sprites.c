@@ -115,8 +115,8 @@ static const SpriteTemplate sBagUISpriteTemplates[] = {
         .vramTransfer = FALSE,
     },
     [BAG_SPRITE_ITEM] = {
-        .x = 22,
-        .y = 172,
+        .x = 24,
+        .y = 168,
         .z = 0,
         .animIdx = 0,
         .priority = 0,
