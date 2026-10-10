@@ -37,11 +37,11 @@ for count in (1,4,7,8):
 # Confirm every supported pocket configuration uses the same physical
 # hitboxes as the eight-pocket master, without intersecting another button.
 def pocket_boxes(count):
-    table = re.search(r"sPocketButtonTouchRectangles_" + str(count) + r"Pockets?\\[\\] = \\{(.*?)\\};", MAIN, re.DOTALL)
+    table = re.search(r"sPocketButtonTouchRectangles_" + str(count) + r"Pockets?\[\] = \{(.*?)\};", MAIN, re.DOTALL)
     assert table is not None, f"missing {count}-pocket touch table"
     result = []
     for top, bottom, left, right in re.findall(
-        r"\\.top\\s*=\\s*(\\d+).*?\\.bottom\\s*=\\s*(\\d+).*?\\.left\\s*=\\s*(\\d+).*?\\.right\\s*=\\s*(\\d+)",
+        r"\.top\s*=\s*(\d+).*?\.bottom\s*=\s*(\d+).*?\.left\s*=\s*(\d+).*?\.right\s*=\s*(\d+)",
         table.group(1),
         re.DOTALL,
     ):
