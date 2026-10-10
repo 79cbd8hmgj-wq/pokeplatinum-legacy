@@ -18,6 +18,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Verify Pokédex layer and asset contracts
         run: python3 tools/opal_pokedex/validate_screen_contract.py
+      - name: Audit installed scroll tilemaps and tile allocation
+        run: python3 tools/opal_pokedex/audit_scroll_tilemaps.py
       - name: Verify Pokédex indexed palettes
         run: python3 tools/opal_pokedex/validate_palette_contract.py
       - name: Generate Pokédex composition previews
