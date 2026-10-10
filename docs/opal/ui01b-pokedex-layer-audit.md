@@ -29,7 +29,7 @@ The code initializes six BG templates with 256×256 screen size. BG0 is assigned
 
 1. Trace the per-state graphics calls in scroll module(s): source NARC member, palette slot, BG layer, tilemap offset, window clipping and OAM position.
 2. Map scrolling/touch geometry separately for stylus and button inputs and compare to the rendered dial.
-3. Decide which ornamental elements can be changed inside existing strip/tile budgets. For elements needing more tiles, prove NSCR and VRAM safety before committing.
+3. Decide which ornamental elements can be changed inside existing strip/tile budgets. The current main atlas contains 256 tiles (256×64 / 8×8); its NSCR highest observed tile index 197 fits within that capacity. The sub atlas contains 96 tiles (256×24 / 8×8) and its indices also fit. For changed artwork, still prove NSCR and VRAM safety before committing.
 4. Implement the resulting art in a coordinated patch, rather than changing an isolated color bank and treating the screen as complete.
 5. Emulator sign-off: compare list/scroll top, middle and bottom and Sinnoh/National transitions on both LCDs.
 
