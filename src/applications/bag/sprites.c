@@ -79,7 +79,7 @@ static const SpriteTemplate sBagUISpriteTemplates[] = {
         .vramTransfer = FALSE,
     },
     [BAG_SPRITE_ITEM_HIGHLIGHT] = {
-        .x = 177,
+        .x = 179,
         .y = 24,
         .z = 0,
         .animIdx = 0,
@@ -91,7 +91,7 @@ static const SpriteTemplate sBagUISpriteTemplates[] = {
         .vramTransfer = FALSE,
     },
     [BAG_SPRITE_MOVING_ITEM_POS_BAR] = {
-        .x = 177,
+        .x = 179,
         .y = 14,
         .z = 0,
         .animIdx = 0,
@@ -289,7 +289,7 @@ static void InitSprites(BagController *interface)
 
     ManagedSprite_SetAnim(interface->sprites[BAG_SPRITE_BAG], interface->bagCtx->accessiblePockets[interface->bagCtx->currPocketIdx].pocketType);
     ManagedSprite_SetPositionXY(interface->sprites[BAG_SPRITE_POCKET_HIGHLIGHT], CalcPocketHighlightXForPocket(interface, interface->bagCtx->currPocketIdx), 97);
-    ManagedSprite_SetPositionXY(interface->sprites[BAG_SPRITE_ITEM_HIGHLIGHT], 177, 24 + (interface->bagCtx->accessiblePockets[interface->bagCtx->currPocketIdx].cursorPos - 1) * 16);
+    ManagedSprite_SetPositionXY(interface->sprites[BAG_SPRITE_ITEM_HIGHLIGHT], 179, 24 + (interface->bagCtx->accessiblePockets[interface->bagCtx->currPocketIdx].cursorPos - 1) * 16);
 
     VecFx32 spriteScale = { FX32_ONE, FX32_ONE, FX32_ONE };
     Sprite_SetAffineScaleEx(interface->sprites[BAG_SPRITE_BAG]->sprite, &spriteScale, AFFINE_OVERWRITE_MODE_DOUBLE);
