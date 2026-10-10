@@ -26,7 +26,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p artifacts/opal-runtime/rom
-          gh run download 38054223811 --repo ${{ github.repository }} --name pokeplatinum-us-rev0-5f47fa511abb454497ecf6bb1399a9dfc9bc4655 --dir artifacts/opal-runtime/rom
+          gh run download 38054223811 --repo ${{ github.repository }} --name pokeplatinum-us-rev0-40df27b4ef300c0c6418856252bbda2ea531f160 --dir artifacts/opal-runtime/rom
           test -s artifacts/opal-runtime/rom/pokeplatinum.us.nds
           sha256sum artifacts/opal-runtime/rom/pokeplatinum.us.nds | tee artifacts/opal-runtime/rom.sha256
       - name: Provision official melonDS
