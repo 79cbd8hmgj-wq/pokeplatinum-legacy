@@ -1,3 +1,5 @@
+> **2026-10-10 correction — DeSmuME integration discovered.** The NDS Toolkit branch `claude/nds-toolkit-runtime-reliability-a19c8a` contains `analysis/orchestration/desmume_backend.py` (managed launch, save states, isolated saves, window input, ARM9 debugger) and `analysis/runtime/desmume.py` (DeSmuME RSP adapter). Prior melonDS-only guidance below applies to the older uploaded toolkit snapshot and remains an alternative, **not the sole supported runtime route**. Prefer verifying the DeSmuME backend CLI and installed bundle from that branch before running tests. DeSmuME backend source is confirmed; the emulator binary is not present in the uploaded ZIP and no live Opal session has yet run. Do not assume DeSmuME ARM7 debugger support: backend currently declares ARM7 debugging false. See toolkit `docs/superpowers/specs/2026-09-02-phase-7h3-runtime-orchestration-design.md`.
+
 # B1 — NDS Toolkit live battle runtime test protocol
 
 **Purpose:** Capture objective runtime evidence from a real Opal ROM in melonDS via the separate NDS Disassembly Toolkit Phase 7H. **Status: protocol only. No live emulator or Opal ROM was available to the author when written.**
