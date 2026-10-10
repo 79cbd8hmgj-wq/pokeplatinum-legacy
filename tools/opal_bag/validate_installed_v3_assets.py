@@ -19,7 +19,7 @@ def validate_png_structure(path):
     """Reject corrupt PNG chunks before handing images to Pillow/nitrogfx."""
     import zlib
     data=path.read_bytes()
-    assert data.startswith(b"\\x89PNG\\r\\n\\x1a\\n"), f"{path}: bad PNG signature"
+    assert data.startswith(b"\x89PNG\r\n\x1a\n"), f"{path}: bad PNG signature"
     pos=8
     chunks=[]
     while pos<len(data):
