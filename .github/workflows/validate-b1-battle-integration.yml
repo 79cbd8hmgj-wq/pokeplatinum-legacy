@@ -8,6 +8,10 @@ on:
       - 'res/moves/**'
       - 'tools/visual_overhaul/validate_b1_existing_battle_integration.py'
       - 'tools/visual_overhaul/validate_b1_cinematic_pilots.py'
+      - 'tools/visual_overhaul/validate_b1_installed_donor_sprites.py'
+      - 'tools/visual_overhaul/build_b1_donor_battle_sprite.py'
+      - 'res/graphics/battle/moves/**'
+      - 'docs/visual_overhaul/b1_installed_donors/**'
       - 'tools/visual_overhaul/select_b1_battle_donors.py'
       - 'tools/visual_overhaul/b1_donor_effect_import_preflight.py'
       - 'tools/visual_overhaul/export_b1_ranger_effect_cells.py'
@@ -39,3 +43,5 @@ jobs:
         run: python3 tools/visual_overhaul/validate_b1_cinematic_pilots.py
       - name: Validate AV1 existing animation composites
         run: python3 tools/visual_overhaul/validate_av1_battle_presentation.py
+      - name: Validate installed donor battle sprites
+        run: python3 tools/visual_overhaul/validate_b1_installed_donor_sprites.py
