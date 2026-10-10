@@ -33,3 +33,10 @@ jobs:
         with:
           name: opal-pokedex-scroll-composition-previews
           path: pokedex-ui-previews/*.png
+      - name: Render tilemap reference diagnostics
+        run: python3 tools/opal_pokedex/render_scroll_tilemap_diagnostics.py --output-dir pokedex-ui-diagnostics
+      - name: Upload tilemap diagnostics
+        uses: actions/upload-artifact@v4
+        with:
+          name: opal-pokedex-scroll-tilemap-diagnostics
+          path: pokedex-ui-diagnostics/*
