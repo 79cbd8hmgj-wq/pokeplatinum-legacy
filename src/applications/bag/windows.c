@@ -36,6 +36,9 @@
 #define OPAL_DESCRIPTION_TILE_X        0
 #define OPAL_DESCRIPTION_TILE_Y        18
 #define OPAL_DESCRIPTION_TEXT_X        44
+#define OPAL_MOVE_STATS_RIGHT_COL_X    104
+#define OPAL_MOVE_STATS_VALUE_OFFSET   64
+#define OPAL_CLOSE_BAG_TEXT_X          4
 #define ITEM_LIST_WINDOW_WIDTH         17
 #define ITEM_LIST_WINDOW_HEIGHT        TEXT_LINES_TILES(BAG_UI_NUM_VISIBLE_ITEMS)
 #define ITEM_DESCRIPTION_WINDOW_WIDTH  (HW_LCD_WIDTH / TILE_WIDTH_PIXELS)
@@ -252,15 +255,15 @@ void BagUI_PrintTMHMMoveStats(BagController *controller, u16 item)
     String_Free(string);
 
     string = MessageLoader_GetNewString(controller->bagStringsLoader, Bag_Text_Category);
-    Text_AddPrinterWithParamsAndColor(window, FONT_SYSTEM, string, 96, 0, TEXT_SPEED_NO_TRANSFER, TEXT_COLOR(15, 14, 0), NULL);
+    Text_AddPrinterWithParamsAndColor(window, FONT_SYSTEM, string, OPAL_MOVE_STATS_RIGHT_COL_X, 0, TEXT_SPEED_NO_TRANSFER, TEXT_COLOR(15, 14, 0), NULL);
     String_Free(string);
 
     string = MessageLoader_GetNewString(controller->bagStringsLoader, Bag_Text_Power);
-    Text_AddPrinterWithParamsAndColor(window, FONT_SYSTEM, string, 96, 16, TEXT_SPEED_NO_TRANSFER, TEXT_COLOR(15, 14, 0), NULL);
+    Text_AddPrinterWithParamsAndColor(window, FONT_SYSTEM, string, OPAL_MOVE_STATS_RIGHT_COL_X, 16, TEXT_SPEED_NO_TRANSFER, TEXT_COLOR(15, 14, 0), NULL);
     String_Free(string);
 
     string = MessageLoader_GetNewString(controller->bagStringsLoader, Bag_Text_Accuracy);
-    Text_AddPrinterWithParamsAndColor(window, FONT_SYSTEM, string, 96, 32, TEXT_SPEED_NO_TRANSFER, TEXT_COLOR(15, 14, 0), NULL);
+    Text_AddPrinterWithParamsAndColor(window, FONT_SYSTEM, string, OPAL_MOVE_STATS_RIGHT_COL_X, 32, TEXT_SPEED_NO_TRANSFER, TEXT_COLOR(15, 14, 0), NULL);
     String_Free(string);
 
     u16 moveStat = MoveTable_CalcMaxPP(move, 0);
@@ -281,7 +284,7 @@ void BagUI_PrintTMHMMoveStats(BagController *controller, u16 item)
     StringTemplate_SetNumber(controller->strTemplate, 0, moveStat, 3, PADDING_MODE_NONE, CHARSET_MODE_EN);
     StringTemplate_Format(controller->strTemplate, controller->stringBuffer, string);
     String_Free(string);
-    Text_AddPrinterWithParamsAndColor(window, FONT_SYSTEM, controller->stringBuffer, 96 + 64, 16, TEXT_SPEED_NO_TRANSFER, TEXT_COLOR(15, 14, 0), NULL);
+    Text_AddPrinterWithParamsAndColor(window, FONT_SYSTEM, controller->stringBuffer, OPAL_MOVE_STATS_RIGHT_COL_X + OPAL_MOVE_STATS_VALUE_OFFSET, 16, TEXT_SPEED_NO_TRANSFER, TEXT_COLOR(15, 14, 0), NULL);
     moveStat = MoveTable_LoadParam(move, MOVEATTRIBUTE_ACCURACY);
 
     if (moveStat == 0) {
@@ -293,7 +296,7 @@ void BagUI_PrintTMHMMoveStats(BagController *controller, u16 item)
     StringTemplate_SetNumber(controller->strTemplate, 0, moveStat, 3, PADDING_MODE_NONE, CHARSET_MODE_EN);
     StringTemplate_Format(controller->strTemplate, controller->stringBuffer, string);
     String_Free(string);
-    Text_AddPrinterWithParamsAndColor(window, FONT_SYSTEM, controller->stringBuffer, 96 + 64, 32, TEXT_SPEED_NO_TRANSFER, TEXT_COLOR(15, 14, 0), NULL);
+    Text_AddPrinterWithParamsAndColor(window, FONT_SYSTEM, controller->stringBuffer, OPAL_MOVE_STATS_RIGHT_COL_X + OPAL_MOVE_STATS_VALUE_OFFSET, 32, TEXT_SPEED_NO_TRANSFER, TEXT_COLOR(15, 14, 0), NULL);
 }
 
 void BagUI_LoadItemCountStrings(BagController *controller)
@@ -369,7 +372,7 @@ void BagUI_PrintCloseBagEntry(BagController *controller, u32 yOffset)
     String *string = MessageLoader_GetNewString(controller->bagStringsLoader, Bag_Text_CloseBag);
 
     Window_FillRectWithColor(&controller->windows[BAG_UI_WINDOW_ITEM_LIST], 0, 0, yOffset, ITEM_LIST_WINDOW_WIDTH * TILE_WIDTH_PIXELS, TEXT_LINES(1));
-    Text_AddPrinterWithParamsAndColor(&controller->windows[BAG_UI_WINDOW_ITEM_LIST], FONT_SYSTEM, string, 0, yOffset, TEXT_SPEED_NO_TRANSFER, TEXT_COLOR(1, 2, 0), NULL);
+    Text_AddPrinterWithParamsAndColor(&controller->windows[BAG_UI_WINDOW_ITEM_LIST], FONT_SYSTEM, string, OPAL_CLOSE_BAG_TEXT_X, yOffset, TEXT_SPEED_NO_TRANSFER, TEXT_COLOR(1, 2, 0), NULL);
     String_Free(string);
 }
 
