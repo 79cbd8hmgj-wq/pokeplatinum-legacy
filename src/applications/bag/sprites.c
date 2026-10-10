@@ -31,9 +31,9 @@ static void StepPocketHighlightMovingAnim(BagController *controller);
 
 // MO1: share one coordinate contract between the sprite template and
 // cursor updates. The 16px pitch is coupled to the nine-row ListMenu.
-#define OPAL_ITEM_HIGHLIGHT_X 177
-#define OPAL_ITEM_HIGHLIGHT_Y 24
-#define OPAL_ITEM_HIGHLIGHT_ROW_PITCH 16
+#define OPAL_ITEM_HIGHLIGHT_X             177
+#define OPAL_ITEM_HIGHLIGHT_Y             24
+#define OPAL_ITEM_HIGHLIGHT_ROW_PITCH     16
 
 static const SpriteTemplate sBagUISpriteTemplates[] = {
     [BAG_SPRITE_BAG] = {
