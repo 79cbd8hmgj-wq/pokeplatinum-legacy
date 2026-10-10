@@ -32,14 +32,19 @@ def inspect(png_name, nscr_name, size):
     entries = [unpack_from("<H", data, 36 + offset)[0] for offset in range(0, payload_len, 2)]
     tile_ids = [entry & 0x3FF for entry in entries]
     palette_banks = sorted({entry >> 12 for entry in entries})
+    atlas_count = size[0] // 8 * (size[1] // 8)
+    unresolved = sorted({tile for tile in tile_ids if tile >= atlas_count})
     return {
         "png": png_name, "nscr": nscr_name,
-        "png_tiles": size[0] // 8 * (size[1] // 8),
+        "png_tiles": atlas_count,
         "screen_entries": len(entries),
         "min_map_tile_id": min(tile_ids),
         "max_map_tile_id": max(tile_ids),
         "unique_map_tiles": len(set(tile_ids)),
         "palette_banks": palette_banks,
+        "unresolved_atlas_tile_ids": unresolved,
+        "unresolved_map_entries": sum(tile >= atlas_count for tile in tile_ids),
+        "self_contained_tilemap": len(unresolved) == 0,
         "requires_runtime_tilebase_trace": True,
     }
 
@@ -48,6 +53,10 @@ def main():
     report = [inspect(*pair) for pair in PAIRS]
     print(json.dumps(report, indent=2))
     assert all(row["screen_entries"] == 768 for row in report)
+    assert report[0]["self_contained_tilemap"] is False, "Main tilemap dependency needs investigation"
+    assert report[1]["self_contained_tilemap"] is True, "Sub-screen atlas should be self-contained"
+    assert report[0]["palette_banks"] == [5]
+    assert report[1]["palette_banks"] == [3]
 
 
 if __name__ == "__main__":
