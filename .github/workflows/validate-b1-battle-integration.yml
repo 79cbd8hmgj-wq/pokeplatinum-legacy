@@ -1,0 +1,24 @@
+name: validate-b1-battle-integration
+
+on:
+  pull_request:
+    paths:
+      - 'src/battle/**'
+      - 'src/battle_anim/**'
+      - 'res/moves/**'
+      - 'tools/visual_overhaul/validate_b1_existing_battle_integration.py'
+      - '.github/workflows/validate-b1-battle-integration.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  battle-compatibility:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify previously merged battle presentation contracts
+        run: python3 tools/visual_overhaul/validate_b1_existing_battle_integration.py
+      - name: Validate AV1 existing animation composites
+        run: python3 tools/visual_overhaul/validate_av1_battle_presentation.py
