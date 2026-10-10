@@ -40,5 +40,9 @@ assert "sDialBtnTouchRect" in MAIN
 assert 'for x,y in ((8,32),(16,80),(40,120),(80,144),' in ART
 assert 'panel(p,112,6,139,150,4,1)' in ART
 assert 'panel(p,4,147,247,35,4,1)' in ART
+assert 'for row in range(9):' in ART
+assert 'fill(p,116,y,246,y+14,1 if row%2==0 else 2)' in ART
+assert 'fill(p,8,152,42,179,2)' in ART
+assert 'fill(p,43,153,44,177,9)' in ART
 print("PASS: native Bag nine-row list, description, sprite and touch geometry unchanged")
 print("PASS: V3 BG art decorates those existing screen positions")
