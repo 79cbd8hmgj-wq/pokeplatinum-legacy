@@ -5,6 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 GRAPHICS = ROOT / "res/graphics/pokedex"
 EXPECTED = {
+    "background_scroll_default.pal": {0: (216, 202, 221), 4: (97, 84, 117), 11: (132, 98, 135)},
     "background_scroll_sinnoh.pal": {0: (216, 202, 221), 6: (166, 121, 165), 11: (86, 62, 100)},
     "background_scroll_national.pal": {0: (216, 202, 221), 5: (243, 225, 196), 11: (91, 65, 94)},
     "background_sub_1.pal": {0: (220, 204, 224), 9: (92, 76, 119), 11: (242, 224, 198)},
@@ -20,4 +21,4 @@ for filename, swatches in EXPECTED.items():
     for index, expected in swatches.items():
         assert palette[index] == expected, (filename, index, palette[index])
 
-print("PASS: Opal Pokédex scroll/sub palettes retain 256 indexed RGB entries")
+print("PASS: Opal Pokédex shared/Sinnoh/National scroll and sub palettes retain 256 indexed RGB entries")
