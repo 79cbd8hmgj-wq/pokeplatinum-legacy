@@ -29,7 +29,7 @@ for name, expected_size in (
     ("scroll_sub_background.png", (256, 24)),
 ):
     data = (GRAPHICS / name).read_bytes()
-    assert data[:8] == b"\\x89PNG\\r\\n\\x1a\\n", name
+    assert data[:8] == b"\x89PNG\r\n\x1a\n", name
     assert struct.unpack_from(">II", data, 16) == expected_size, name
     assert data[24] == 4 and data[25] == 3, f"{name}: expected indexed 4bpp"
 
