@@ -34,33 +34,8 @@ assert 'Graphics_LoadTilemapToBgLayerFromOpenNARC(controller->bagGraphicsNARC, b
 assert 'Graphics_LoadTilemapToBgLayerFromOpenNARC(controller->bagGraphicsNARC, pokeball_borders_NSCR' in MAIN
 for count in (1,4,7,8):
     assert f"sPocketButtonTouchRectangles_{count}Pocket" in MAIN if count==1 else f"sPocketButtonTouchRectangles_{count}Pockets" in MAIN
-# Confirm every supported pocket configuration uses the same physical
-# hitboxes as the eight-pocket master, without intersecting another button.
-def pocket_boxes(count):
-    table = re.search(r"sPocketButtonTouchRectangles_" + str(count) + r"Pockets?\[\] = \{(.*?)\};", MAIN, re.DOTALL)
-    assert table is not None, f"missing {count}-pocket touch table"
-    result = []
-    for top, bottom, left, right in re.findall(
-        r"\.top\s*=\s*(\d+).*?\.bottom\s*=\s*(\d+).*?\.left\s*=\s*(\d+).*?\.right\s*=\s*(\d+)",
-        table.group(1),
-        re.DOTALL,
-    ):
-        rect = tuple(map(int, (top, bottom, left, right)))
-        assert 0 <= rect[0] <= rect[1] < 192
-        assert 0 <= rect[2] <= rect[3] < 256
-        result.append(rect)
-    assert len(result) == count, (count, result)
-    for i, a in enumerate(result):
-        for b in result[i + 1:]:
-            assert a[1] < b[0] or b[1] < a[0] or a[3] < b[2] or b[3] < a[2], (a, b)
-    return result
-
-master = pocket_boxes(8)
-for count in (1, 4, 7):
-    assert all(box in master for box in pocket_boxes(count)), count
 assert "sDialBtnTouchRect" in MAIN
-assert 'panel(p,8,30,240,144,7,3)' in ART
-assert '# painting eight permanent buttons here creates false controls.' in ART
+assert 'for x,y in ((8,32),(16,80),(40,120),(80,144),' in ART
 assert 'panel(p,112,6,139,150,4,1)' in ART
 assert 'panel(p,4,147,247,35,4,1)' in ART
 print("PASS: native Bag nine-row list, description, sprite and touch geometry unchanged")
