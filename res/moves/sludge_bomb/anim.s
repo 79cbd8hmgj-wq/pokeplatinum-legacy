@@ -9,7 +9,9 @@ L_0:
     PlayLoopedSoundEffectR SEQ_SE_DP_W092D, 2, 12
     CreateEmitter 0, 1, EMITTER_CB_SET_POS_TO_DEFENDER
     CreateEmitter 0, 0, EMITTER_CB_SET_POS_TO_DEFENDER
-    Delay 5
+    // B1: delayed toxic splatter echoes the primary detonation.
+    Delay 4
+    CreateEmitter 0, 0, EMITTER_CB_SET_POS_TO_DEFENDER
     Func_FadeBattlerSprite BATTLE_ANIM_DEFENDER, 0, 2, BATTLE_COLOR_PURPLE, 14, 0
     WaitForAllEmitters
     UnloadParticleSystem 0
