@@ -54,5 +54,6 @@ with (root / "emulator.stdout.log").open("w") as log:
         except subprocess.TimeoutExpired: process.kill()
 (root / "runtime-result.json").write_text(json.dumps(output, indent=2))
 print(json.dumps(output, indent=2))
+print("EMULATOR STARTUP LOG:", (root / "emulator.stdout.log").read_text(errors="replace")[-3000:])
 if not all(isinstance(output.get(k), dict) and output[k].get("status") == "connected" for k in ("arm9", "arm7")):
     sys.exit(1)
