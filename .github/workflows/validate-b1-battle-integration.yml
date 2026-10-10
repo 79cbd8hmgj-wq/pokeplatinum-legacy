@@ -16,6 +16,9 @@ on:
       - 'tools/visual_overhaul/b1_donor_effect_import_preflight.py'
       - 'tools/visual_overhaul/export_b1_ranger_effect_cells.py'
       - 'docs/visual_overhaul/selection/IMPLEMENTATION_QUEUE.json'
+      - 'docs/visual_overhaul/B2_B8_PREIMPLEMENTATION_MANIFEST.json'
+      - 'docs/visual_overhaul/B2_B8_IMPLEMENTATION_HANDOFF.md'
+      - 'tools/visual_overhaul/validate_b2_b8_handoff.py'
       - '.github/workflows/validate-b1-battle-integration.yml'
   workflow_dispatch:
 
@@ -43,5 +46,7 @@ jobs:
         run: python3 tools/visual_overhaul/validate_b1_cinematic_pilots.py
       - name: Validate AV1 existing animation composites
         run: python3 tools/visual_overhaul/validate_av1_battle_presentation.py
+      - name: Validate B2-B8 preimplementation handoff provenance
+        run: python3 tools/visual_overhaul/validate_b2_b8_handoff.py
       - name: Validate installed donor battle sprites
         run: python3 tools/visual_overhaul/validate_b1_installed_donor_sprites.py
