@@ -5,6 +5,7 @@
 
 #include "applications/pokedex/infomain.h"
 #include "applications/pokedex/infomain_foreign.h"
+#include "applications/pokedex/opalref.h"
 #include "applications/pokedex/ov21_021D4340.h"
 #include "applications/pokedex/ov21_021E29DC.h"
 #include "applications/pokedex/pokedex_app.h"
@@ -20,6 +21,7 @@
 #include "applications/pokedex/struct_ov21_021E68F4.h"
 
 #include "bg_window.h"
+#include "graphics.h"
 #include "brightness_controller.h"
 #include "heap.h"
 #include "narc.h"
@@ -37,6 +39,16 @@
 
 #include "res/graphics/pokedex/zukan.naix"
 #include "res/text/bank/pokedex.h"
+
+// Opal data entry plate on the Info tab's sub screen (right edge, between the species buttons).
+#define OPAL_ENTRY_TILE_START 480
+#define OPAL_ENTRY_X          216
+#define OPAL_ENTRY_Y          56
+#define OPAL_ENTRY_W          32
+#define OPAL_ENTRY_H          96
+#define OPAL_ENTRY_BANK       13
+#define OPAL_ENTRY_BANK_PRESSED 15
+#define OPAL_ENTRY_BUTTON     8
 
 typedef struct {
     int *unk_00;
@@ -57,7 +69,7 @@ typedef struct {
     TouchScreenHitTable *unk_04;
     UnkStruct_ov21_021E1E8C unk_08;
     int unk_10;
-    int unk_14[8];
+    int unk_14[9];
     int unk_34;
     u32 unk_38;
 } UnkStruct_ov21_021E1E74;
@@ -71,6 +83,7 @@ typedef struct {
     int unk_80[8];
     void *unk_A0[8];
     u32 unk_C0;
+    int opalEntryBank;
 } UnkStruct_ov21_021E2588;
 
 static UnkStruct_ov21_021E1A7C *ov21_021E199C(enum HeapID heapID, PokedexApp *param1);
@@ -112,6 +125,8 @@ static void ov21_021E275C(UnkStruct_ov21_021E1E74 *param0, UnkStruct_ov21_021E1A
 static void ov21_021E27C0(UnkStruct_ov21_021E1E74 *param0, UnkStruct_ov21_021E1A7C *param1, int param2, int param3);
 static void ov21_021E2864(UnkStruct_ov21_021E1E74 *param0, UnkStruct_ov21_021E1A7C *param1);
 static void ov21_021E28A8(UnkStruct_ov21_021E1E74 *param0);
+static void EnterOpalRef(UnkStruct_ov21_021E1E74 *param0, UnkStruct_ov21_021E1A7C *param1);
+static void LoadOpalEntryPlate(PokedexGraphicData **param0, enum HeapID heapID);
 
 static u32 const Unk_ov21_021E9D80[(7 - 2 + 1)] = {
     28 << FX32_SHIFT,
@@ -219,6 +234,7 @@ static UnkStruct_ov21_021D4660 *ov21_021E1A24(enum HeapID heapID, PokedexApp *pa
     ov21_021D4A94(heapID, &v0[0], param1, (1 << 0));
     ov21_021D4BB4(heapID, &v0[1], param1, (1 << 1));
     ov21_021D4AF8(heapID, &v0[2], param1, (1 << 2));
+    PokedexTransition_EnterOpalRef(heapID, &v0[3], param1, (1 << 3));
 
     return v0;
 }
@@ -242,12 +258,13 @@ static void ov21_021E1AA4(UnkStruct_ov21_021D4660 *param0)
     ov21_021D4660(&param0[0]);
     ov21_021D4660(&param0[1]);
     ov21_021D4660(&param0[2]);
+    ov21_021D4660(&param0[3]);
     Heap_Free(param0);
 }
 
 static int ov21_021E1ACC(void)
 {
-    return 3;
+    return 4;
 }
 
 static int ov21_021E1AD0(PokedexDataManager *dataMan, void *data)
@@ -259,7 +276,7 @@ static int ov21_021E1AD0(PokedexDataManager *dataMan, void *data)
     v1 = Heap_Alloc(dataMan->heapID, sizeof(UnkStruct_ov21_021E1E74));
     memset(v1, 0, sizeof(UnkStruct_ov21_021E1E74));
 
-    for (v2 = 0; v2 < 8; v2++) {
+    for (v2 = 0; v2 < 9; v2++) {
         v1->unk_14[v2] = (3 + 1);
     }
 
@@ -290,6 +307,10 @@ static int ov21_021E1B14(PokedexDataManager *dataMan, void *data)
         ov21_021E28A8(v1);
         ov21_021E1E00(v1, v0);
         ov21_021E2864(v1, v0);
+
+        if (gSystem.pressedKeys & PAD_BUTTON_START) {
+            EnterOpalRef(v1, v0);
+        }
     }
 
     return 0;
@@ -321,6 +342,7 @@ static int ov21_021E1B68(void *graphics, PokedexGraphicsManager *graphicsMan, co
         break;
     case 1:
         ov21_021E2014(v3, v2, graphicsMan->heapID);
+        v3->opalEntryBank = OPAL_ENTRY_BANK;
         ov21_021E28D0(v3, v1);
         ov21_021E25F8(v3, v2, v0, 1);
         graphicsMan->state++;
@@ -380,6 +402,17 @@ static int ov21_021E1BFC(void *graphics, PokedexGraphicsManager *graphicsMan, co
         ov21_021E29A4(v3->unk_00[v4], v1->unk_14[v4], v4);
     }
 
+    {
+        // Opal entry plate: pressed bank while the stylus holds it (states 0 = pressed, 2 = held)
+        int bank = (v1->unk_14[OPAL_ENTRY_BUTTON] == TOUCH_BUTTON_PRESSED || v1->unk_14[OPAL_ENTRY_BUTTON] == TOUCH_BUTTON_HELD) ? OPAL_ENTRY_BANK_PRESSED : OPAL_ENTRY_BANK;
+
+        if (bank != v3->opalEntryBank) {
+            Bg_ChangeTilemapRectPalette((*v2)->bgConfig, 6, OPAL_ENTRY_X / 8, OPAL_ENTRY_Y / 8, OPAL_ENTRY_W / 8, OPAL_ENTRY_H / 8, bank);
+            Bg_ScheduleTilemapTransfer((*v2)->bgConfig, 6);
+            v3->opalEntryBank = bank;
+        }
+    }
+
     return 0;
 }
 
@@ -420,7 +453,7 @@ static int ov21_021E1CB8(void *graphics, PokedexGraphicsManager *graphicsMan, co
 
 static void ov21_021E1D40(UnkStruct_ov21_021E1E74 *param0, UnkStruct_ov21_021E1A7C *param1, enum HeapID heapID)
 {
-    param0->unk_04 = Heap_Alloc(heapID, sizeof(TouchScreenHitTable) * 8);
+    param0->unk_04 = Heap_Alloc(heapID, sizeof(TouchScreenHitTable) * 9);
 
     PokedexMain_SetHitTableRect(&param0->unk_04[0], 132 - (40 / 2), 132 + (40 / 2), 128 - (160 / 2), 128 + (160 / 2));
     PokedexMain_SetHitTableRect(&param0->unk_04[1], 76 - (40 / 2), 76 + (40 / 2), 128 - (160 / 2), 128 + (160 / 2));
@@ -430,17 +463,18 @@ static void ov21_021E1D40(UnkStruct_ov21_021E1E74 *param0, UnkStruct_ov21_021E1A
     PokedexMain_SetHitTableRect(&param0->unk_04[5], 176 - (32 / 2), 176 + (32 / 2), 148 - (40 / 2), 148 + (40 / 2));
     PokedexMain_SetHitTableRect(&param0->unk_04[6], 176 - (32 / 2), 176 + (32 / 2), 188 - (40 / 2), 188 + (40 / 2));
     PokedexMain_SetHitTableRect(&param0->unk_04[7], 176 - (32 / 2), 176 + (32 / 2), 228 - (40 / 2), 228 + (40 / 2));
+    PokedexMain_SetHitTableRect(&param0->unk_04[OPAL_ENTRY_BUTTON], OPAL_ENTRY_Y, OPAL_ENTRY_Y + OPAL_ENTRY_H, OPAL_ENTRY_X, OPAL_ENTRY_X + OPAL_ENTRY_W);
 
     param0->unk_08.unk_00 = param1;
     param0->unk_08.unk_04 = param0;
-    param0->unk_00 = TouchScreenActions_RegisterHandler(param0->unk_04, 8, ov21_021E1E8C, &param0->unk_08, heapID);
+    param0->unk_00 = TouchScreenActions_RegisterHandler(param0->unk_04, 9, ov21_021E1E8C, &param0->unk_08, heapID);
 }
 
 static void ov21_021E1E00(UnkStruct_ov21_021E1E74 *param0, UnkStruct_ov21_021E1A7C *param1)
 {
     int v0;
 
-    for (v0 = 0; v0 < 8; v0++) {
+    for (v0 = 0; v0 < 9; v0++) {
         param0->unk_14[v0] = 3;
     }
 
@@ -597,6 +631,9 @@ static void ov21_021E1E8C(u32 param0, enum TouchScreenButtonState param1, void *
                 }
             }
             break;
+        case OPAL_ENTRY_BUTTON:
+            EnterOpalRef(v2, v1);
+            break;
         default:
             break;
         }
@@ -606,9 +643,40 @@ static void ov21_021E1E8C(u32 param0, enum TouchScreenButtonState param1, void *
     }
 }
 
+// Opens the Opal gameplay-reference pages for the current species. The Info tab fades out
+// (like a tab change) and the Opal screen pair takes over both LCDs.
+static void EnterOpalRef(UnkStruct_ov21_021E1E74 *param0, UnkStruct_ov21_021E1A7C *param1)
+{
+    if (param0->unk_10 == 0) {
+        param1->unk_08->animationMode = ANIM_BLEND;
+    } else {
+        InfoMainForeign_SetAnimationMode(param1->unk_10, ANIM_BLEND);
+    }
+
+    *param1->unk_00 |= (1 << 3);
+    Sound_PlayEffect(SEQ_SE_DP_DECIDE);
+}
+
+static void LoadOpalEntryPlate(PokedexGraphicData **param0, enum HeapID heapID)
+{
+    void *tilemapData;
+    NNSG2dScreenData *screenData;
+
+    // Palette banks 12-15 hold the Opal palette (normal art = 13, pressed = 15); tiles follow the
+    // 480 entry_sub tiles on the same layer.
+    PokedexGraphics_LoadGraphicNarcPaletteData(*param0, opal_ref_NCLR, PAL_LOAD_SUB_BG, 12 * 32, 4 * 32, heapID);
+    PokedexGraphics_LoadGraphicNarcCharacterData(*param0, opal_entry_NCGR_lz, (*param0)->bgConfig, 6, OPAL_ENTRY_TILE_START, 0, TRUE, heapID);
+
+    tilemapData = PokedexGraphics_GetGraphicNarcTilemapData(*param0, opal_entry_NSCR_lz, TRUE, &screenData, heapID);
+    Bg_LoadToTilemapRect((*param0)->bgConfig, 6, screenData->rawData, OPAL_ENTRY_X / 8, OPAL_ENTRY_Y / 8, screenData->screenWidth / 8, screenData->screenHeight / 8);
+    Heap_Free(tilemapData);
+    Bg_ScheduleTilemapTransfer((*param0)->bgConfig, 6);
+}
+
 static void ov21_021E2014(UnkStruct_ov21_021E2588 *param0, PokedexGraphicData **param1, enum HeapID heapID)
 {
     ov21_021E20A4(param1, heapID);
+    LoadOpalEntryPlate(param1, heapID);
     ov21_021E2180(param0, param1, heapID);
     ov21_021E22C8(param0, param1, heapID);
     ov21_021E2478(param0, param1, heapID);
@@ -620,6 +688,8 @@ static void ov21_021E2044(UnkStruct_ov21_021E2588 *param0, PokedexGraphicData **
 
     PokedexGraphics_LoadGraphicNarcPaletteData(*param1, background_sub_2_NCLR, 4, 4 * 32, 32, heapID);
     PokedexGraphics_LoadGraphicNarcPaletteData(*param1, background_sub_2_NCLR, 4, 5 * 32, 32, heapID);
+    Bg_FillTilemapRect((*param1)->bgConfig, 6, 0, OPAL_ENTRY_X / 8, OPAL_ENTRY_Y / 8, OPAL_ENTRY_W / 8, OPAL_ENTRY_H / 8, 0);
+    Bg_ScheduleTilemapTransfer((*param1)->bgConfig, 6);
     ov21_021E2458(param0);
     ov21_021E256C(param0, param1);
     ov21_021E226C(param0, param1);

@@ -26,5 +26,6 @@ void ov21_021D4A94(enum HeapID heapID, UnkStruct_ov21_021D4660 *param1, PokedexA
 void ov21_021D4AF8(enum HeapID heapID, UnkStruct_ov21_021D4660 *param1, PokedexApp *param2, int param3);
 void ov21_021D4B50(enum HeapID heapID, UnkStruct_ov21_021D4660 *param1, PokedexApp *param2, int param3);
 void ov21_021D4BB4(enum HeapID heapID, UnkStruct_ov21_021D4660 *param1, PokedexApp *param2, int param3);
+void PokedexTransition_EnterOpalRef(enum HeapID heapID, UnkStruct_ov21_021D4660 *param1, PokedexApp *param2, int param3);
 
 #endif // POKEPLATINUM_OV21_021D4340_H

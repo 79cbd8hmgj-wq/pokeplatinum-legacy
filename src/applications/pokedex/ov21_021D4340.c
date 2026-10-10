@@ -565,3 +565,33 @@ void ov21_021D4BB4(enum HeapID heapID, UnkStruct_ov21_021D4660 *param1, PokedexA
 
     param1->unk_08.unk_08 = v0;
 }
+
+// Leaves the Info tab for the Opal gameplay-reference pages: every updater exits and the
+// Opal main/sub pair (screens 10 / 8) takes the two page slots.
+void PokedexTransition_EnterOpalRef(enum HeapID heapID, UnkStruct_ov21_021D4660 *param1, PokedexApp *param2, int param3)
+{
+    UnkStruct_ov21_021D4434 *v0;
+
+    param1->unk_00 = param3;
+    param1->unk_04 = ov21_021D4434;
+
+    v0 = Heap_Alloc(heapID, sizeof(UnkStruct_ov21_021D4434));
+
+    GF_ASSERT(v0);
+    memset(v0, 0, sizeof(UnkStruct_ov21_021D4434));
+
+    v0->unk_00 = ov21_021D12EC(param2);
+    v0->unk_04 = ov21_021D1300(param2);
+    v0->unk_08 = ov21_021D1314(param2);
+    v0->unk_0C = ov21_021D1328(param2);
+    v0->unk_10 = ov21_021D133C(param2);
+    v0->unk_14 = ov21_021D1350(param2);
+    v0->unk_18 = ov21_021D1364(param2);
+    v0->unk_1C = ov21_021D1378(param2);
+    v0->unk_20 = ov21_021D1410(param2, 10);
+    v0->unk_24 = ov21_021D1430(param2, 8);
+    v0->unk_28 = NULL;
+    v0->unk_2C = NULL;
+
+    param1->unk_08.unk_08 = v0;
+}

@@ -25,8 +25,8 @@ typedef struct PokedexApp {
     UnkStruct_ov21_021D423C *unk_1A78;
     UnkStruct_ov21_021D423C *unk_1A7C;
     UnkStruct_ov21_021D4660 unk_1A80;
-    PokedexScreenManager unk_1A94[10];
-    PokedexScreenManager unk_1C24[8];
+    PokedexScreenManager unk_1A94[11];
+    PokedexScreenManager unk_1C24[9];
     PokedexUpdater *unk_1D64;
     PokedexUpdater *unk_1D68;
     PokedexUpdater *unk_1D6C;
