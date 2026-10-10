@@ -21,9 +21,9 @@ assert "#define OPAL_DESCRIPTION_TILE_Y        18" in WIN
 assert "#define OPAL_DESCRIPTION_TEXT_X        44" in WIN
 assert "Window_Add(controller->bgConfig, &controller->windows[BAG_UI_WINDOW_ITEM_LIST], BG_LAYER_MAIN_2, OPAL_ITEM_LIST_TILE_X, OPAL_ITEM_LIST_TILE_Y, ITEM_LIST_WINDOW_WIDTH, ITEM_LIST_WINDOW_HEIGHT" in WIN
 assert "Window_Add(controller->bgConfig, &controller->windows[BAG_UI_WINDOW_ITEM_DESCRIPTION], BG_LAYER_MAIN_0, OPAL_DESCRIPTION_TILE_X, OPAL_DESCRIPTION_TILE_Y, ITEM_DESCRIPTION_WINDOW_WIDTH, ITEM_DESCRIPTION_WINDOW_HEIGHT" in WIN
-assert "#define OPAL_ITEM_HIGHLIGHT_X 177" in SPR
-assert "#define OPAL_ITEM_HIGHLIGHT_Y 24" in SPR
-assert "#define OPAL_ITEM_HIGHLIGHT_ROW_PITCH 16" in SPR
+for name, value in (("OPAL_ITEM_HIGHLIGHT_X", 177), ("OPAL_ITEM_HIGHLIGHT_Y", 24), ("OPAL_ITEM_HIGHLIGHT_ROW_PITCH", 16)):
+    match = re.search(r"^#define\\s+" + name + r"\\s+(\\d+)\\s*$", SPR, re.MULTILINE)
+    assert match is not None and int(match.group(1)) == value, f"{name}: expected {value}"
 assert "ManagedSprite_SetPositionXY(interface->sprites[BAG_SPRITE_ITEM_HIGHLIGHT], OPAL_ITEM_HIGHLIGHT_X, OPAL_ITEM_HIGHLIGHT_Y +" in SPR
 assert 'Graphics_LoadTilemapToBgLayerFromOpenNARC(controller->bagGraphicsNARC, bag_ui_main_NSCR' in MAIN
 assert 'Graphics_LoadTilemapToBgLayerFromOpenNARC(controller->bagGraphicsNARC, pokeball_borders_NSCR' in MAIN
