@@ -15,6 +15,8 @@ from pathlib import Path
 
 from PIL import Image
 
+from generate_bag_ui import MAIN_PALETTE_OVERRIDES, UI_ELEMENT_OVERRIDES, BORDER_PALETTE_OVERRIDES
+
 ROOT = Path(__file__).resolve().parents[2]
 G = ROOT / "res" / "graphics"
 BASELINE = "d7c1ec09"
@@ -28,8 +30,9 @@ PNGS = [
 PALS = {
     "party_menu/shared.pal": set(),  # banks 0/1 are regenerated, must stay stable
     "pokemon_summary_screen/tiles_main.pal": {b * 16 + o for b in range(10) for o in (2, 15)},
-    "bag/bag_ui_main.pal": {3, 4, 5},
-    "bag/ui_elements.pal": {1, 4},
+    "bag/bag_ui_main.pal": set(MAIN_PALETTE_OVERRIDES),
+    "bag/ui_elements.pal": set(UI_ELEMENT_OVERRIDES),
+    "bag/pokeball_borders.pal": set(BORDER_PALETTE_OVERRIDES),
     "shop_menu/default.pal": {6, 7, 8},
     "shop_menu/frontier.pal": {6, 7, 8},
     "shop_menu/sprites.pal": {1, 4},
@@ -72,6 +75,12 @@ def main():
         check(oh == nh and len(oe) == len(ne), f"{p}: header/count changed")
         for i, (a, b) in enumerate(zip(oe, ne)):
             check(a == b or i in allowed, f"{p}: entry {i} changed unexpectedly ({a} -> {b})")
+            if p == "bag/bag_ui_main.pal" and i in MAIN_PALETTE_OVERRIDES:
+                check(b == " ".join(map(str, MAIN_PALETTE_OVERRIDES[i])), f"{p}: entry {i} differs from MO1 palette contract")
+            if p == "bag/ui_elements.pal" and i in UI_ELEMENT_OVERRIDES:
+                check(b == " ".join(map(str, UI_ELEMENT_OVERRIDES[i])), f"{p}: entry {i} differs from MO1 palette contract")
+            if p == "bag/pokeball_borders.pal" and i in BORDER_PALETTE_OVERRIDES:
+                check(b == " ".join(map(str, BORDER_PALETTE_OVERRIDES[i])), f"{p}: entry {i} differs from MO1 palette contract")
     before = snapshot()
     for g in GENERATORS:
         subprocess.run([sys.executable, str(ROOT / f"tools/visual_overhaul/generate_{g}_ui.py")], check=True)

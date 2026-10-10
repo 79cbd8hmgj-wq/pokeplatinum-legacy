@@ -5,25 +5,90 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 BAG_DIR = ROOT / "res" / "graphics" / "bag"
 
-# Keep the bag layout, tilemaps, sprite geometry, and pocket-specific colors
-# intact. This pass only modernizes the small shared chrome gradient.
+# Opal MO1-1 palette contract. Only these entries may differ from the
+# pre-G7.4 baseline. Keep NCGR pixels, NSCR mappings and pocket hitboxes intact.
 MAIN_PALETTE_OVERRIDES = {
-    1: (248, 252, 255),  # cool white
-    2: (232, 241, 247),  # bright edge
-    3: (176, 198, 216),  # light steel
-    4: (112, 148, 184),  # medium steel-blue (G7.4B: firmer row/pocket separation)
-    5: (44, 68, 98),     # deep rail (G7.4B: stronger pocket rail)
+    1: (250, 246, 244),
+    2: (240, 233, 236),
+    3: (216, 202, 221),
+    4: (132, 98, 135),
+    5: (56, 53, 77),
+    6: (70, 65, 87),
+    7: (102, 91, 117),
+    8: (171, 146, 174),
+    9: (194, 168, 123),
+    10: (142, 165, 165),
+    11: (115, 137, 151),
+    12: (222, 214, 216),
+    13: (238, 221, 192),
+    14: (42, 43, 62),
+    15: (255, 255, 255),
+    16: (238, 232, 241),
+    18: (102, 91, 117),
+    19: (216, 202, 221),
+    20: (142, 165, 165),
+    21: (194, 168, 123),
+    22: (171, 146, 174),
+    23: (238, 221, 192),
+    24: (250, 246, 244),
+    25: (216, 202, 221),
+    27: (194, 168, 123),
+    28: (216, 202, 221),
+    29: (171, 146, 174),
+    30: (132, 98, 135),
+    31: (70, 65, 87),
+    32: (240, 233, 236),
+    33: (240, 233, 236),
+    34: (240, 233, 236),
+    35: (240, 233, 236),
+    36: (240, 233, 236),
+    37: (142, 165, 165),
+    39: (216, 202, 221),
+    41: (142, 165, 165),
+    42: (115, 137, 151),
+    43: (132, 98, 135),
+    44: (171, 146, 174),
+    45: (216, 202, 221),
+    46: (142, 165, 165),
 }
 
-# ui_elements.pal is sparse; entries 2-4 are the existing blue UI accent
-# ramp. Red/black and every unused entry remain untouched.
-# Entry 1 is the item/pocket focus frame (item_highlight, pocket_highlight);
-# G7.4B moves it from retail red to the G7 gold focus accent shared with Party.
 UI_ELEMENT_OVERRIDES = {
+    0: (216, 202, 221),
     1: (246, 172, 57),
-    2: (130, 199, 246),
-    3: (47, 130, 230),
-    4: (28, 64, 150),
+    2: (142, 165, 165),
+    3: (132, 98, 135),
+    4: (56, 53, 77),
+}
+
+BORDER_PALETTE_OVERRIDES = {
+    1: (250, 246, 244),
+    2: (240, 233, 236),
+    3: (216, 202, 221),
+    4: (132, 98, 135),
+    5: (56, 53, 77),
+    6: (70, 65, 87),
+    7: (102, 91, 117),
+    8: (171, 146, 174),
+    9: (194, 168, 123),
+    10: (142, 165, 165),
+    11: (115, 137, 151),
+    12: (222, 214, 216),
+    13: (238, 221, 192),
+    14: (42, 43, 62),
+    16: (142, 165, 165),
+    18: (240, 233, 236),
+    19: (70, 65, 87),
+    20: (216, 202, 221),
+    21: (240, 233, 236),
+    22: (222, 214, 216),
+    23: (171, 146, 174),
+    24: (102, 91, 117),
+    25: (132, 98, 135),
+    26: (194, 168, 123),
+    28: (102, 91, 117),
+    29: (216, 202, 221),
+    30: (171, 146, 174),
+    31: (132, 98, 135),
 }
 
 
@@ -51,6 +116,7 @@ def apply(path: Path, overrides: dict[int, tuple[int, int, int]]) -> None:
 def main() -> None:
     apply(BAG_DIR / "bag_ui_main.pal", MAIN_PALETTE_OVERRIDES)
     apply(BAG_DIR / "ui_elements.pal", UI_ELEMENT_OVERRIDES)
+    apply(BAG_DIR / "pokeball_borders.pal", BORDER_PALETTE_OVERRIDES)
 
 
 if __name__ == "__main__":

@@ -199,6 +199,10 @@ const ApplicationManagerTemplate gBagApplicationTemplate = {
     FS_OVERLAY_ID_NONE
 };
 
+// MO1: retain 9 visible entries and 16-pixel line pitch for sorting/TM numbering.
+// Subtle horizontal inset keeps glyphs away from the Opal panel's edge.
+#define OPAL_LIST_TEXT_INSET 2
+
 static const ListMenuTemplate sItemListMenuTemplate = {
     .choices = NULL,
     .cursorCallback = ItemListMenuCursorCB,
@@ -1074,9 +1078,9 @@ static void CreateItemListMenu(BagController *controller, u16 initialScroll, u16
 
     if (controller->bagCtx->accessiblePockets[controller->bagCtx->currPocketIdx].pocketType == POCKET_TMHMS
         || controller->bagCtx->accessiblePockets[controller->bagCtx->currPocketIdx].pocketType == POCKET_BERRIES) {
-        template.textXOffset = 35; // Space to print the berry/HM/TM number
+        template.textXOffset = 35 + OPAL_LIST_TEXT_INSET; // Space to print the berry/HM/TM number
     } else {
-        template.textXOffset = 0;
+        template.textXOffset = OPAL_LIST_TEXT_INSET;
     }
 
     controller->itemList = ListMenu_New(&template, initialScroll, initialPos, HEAP_ID_BAG);

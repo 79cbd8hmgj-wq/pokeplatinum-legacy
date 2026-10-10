@@ -1,0 +1,58 @@
+name: validate-mo1-bag-v3-assets
+
+on:
+  pull_request:
+    paths:
+      - 'tools/opal_bag/**'
+      - 'res/graphics/bag/**'
+      - '.github/workflows/validate-mo1-bag-v3-assets.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-art:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install source-art dependency
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: Guard native Bag window and touch geometry
+        run: python tools/opal_bag/validate_layout_contract.py
+      - name: Verify reproducible installed BG artwork and tilemaps
+        run: python tools/opal_bag/generate_installed_bag_art.py --check
+      - name: Validate installed Bag graphics and Nitro screen maps
+        run: python tools/opal_bag/validate_installed_v3_assets.py
+      - name: Validate indexed source images and generator reproducibility
+        run: python tools/opal_bag/validate_v3_panels.py
+      - name: Generate panel source and tilemaps
+        run: |
+          python tools/opal_bag/generate_v3_panels.py --output build/mo1_bag
+          python tools/opal_bag/tile_v3_panels.py --input build/mo1_bag
+      - name: Pack Nitro screen maps with existing Bag header contract
+        run: python tools/opal_bag/pack_v3_nscr.py --template res/graphics/bag/bag_ui_main.NSCR --maps build/mo1_bag/tiled --output build/mo1_bag/nscr
+      - name: Verify round-trip image equality
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          folder = Path('build/mo1_bag')
+          for screen in ('main', 'sub'):
+              name = f'opal_v3_{screen}_panel_source'
+              original = Image.open(folder / f'{name}.png')
+              reconstructed = Image.open(folder / 'tiled' / f'{name}_roundtrip.png')
+              assert original.mode == reconstructed.mode == 'P'
+              assert original.size == reconstructed.size == (256, 192)
+              assert original.tobytes() == reconstructed.tobytes()
+              print(screen, 'pixel round-trip PASS')
+          PY
+      - name: Upload generated source-art evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: mo1-v3-indexed-panels-and-tilemaps
+          path: build/mo1_bag/
+          if-no-files-found: error
