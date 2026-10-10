@@ -45,7 +45,9 @@ def transform():
         for dx in range(1, 7):
             out.putpixel((x + dx, y + 6), 9)
         changed.append(tile)
-    assert changed, "No safe flat repeated tiles; inspect atlas before changing it"
+    # The installed atlas may already carry the chosen V3 trim; regeneration must be idempotent.
+    x197, y197 = (197 % 32) * 8, (197 // 32) * 8
+    assert all(out.getpixel((x197 + dx, y197 + 6)) == 9 for dx in range(1, 7)), "Expected installed V3 trim on tile 197"
     # Ensure untouched tile pixels remain bit-identical.
     changed_set = set(changed)
     for tile in range(256):
