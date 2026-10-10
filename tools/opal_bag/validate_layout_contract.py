@@ -29,7 +29,9 @@ assert "#define OPAL_CLOSE_BAG_TEXT_X          4" in WIN
 assert "controller->stringBuffer, OPAL_MOVE_STATS_RIGHT_COL_X + OPAL_MOVE_STATS_VALUE_OFFSET" in WIN
 assert "Window_Add(controller->bgConfig, &controller->windows[BAG_UI_WINDOW_ITEM_LIST], BG_LAYER_MAIN_2, OPAL_ITEM_LIST_TILE_X, OPAL_ITEM_LIST_TILE_Y, ITEM_LIST_WINDOW_WIDTH, ITEM_LIST_WINDOW_HEIGHT" in WIN
 assert "Window_Add(controller->bgConfig, &controller->windows[BAG_UI_WINDOW_ITEM_DESCRIPTION], BG_LAYER_MAIN_0, OPAL_DESCRIPTION_TILE_X, OPAL_DESCRIPTION_TILE_Y, ITEM_DESCRIPTION_WINDOW_WIDTH, ITEM_DESCRIPTION_WINDOW_HEIGHT" in WIN
-assert 'ManagedSprite_SetPositionXY(interface->sprites[BAG_SPRITE_ITEM_HIGHLIGHT], 177, 24 +' in SPR
+assert 'ManagedSprite_SetPositionXY(interface->sprites[BAG_SPRITE_ITEM_HIGHLIGHT], 179, 24 +' in SPR
+for sprite in ("BAG_SPRITE_ITEM_HIGHLIGHT", "BAG_SPRITE_MOVING_ITEM_POS_BAR"):
+    assert re.search(r"\\[" + sprite + r"\\] = \\{\\s*\\.x = 179,", SPR), sprite
 assert 'Graphics_LoadTilemapToBgLayerFromOpenNARC(controller->bagGraphicsNARC, bag_ui_main_NSCR' in MAIN
 assert 'Graphics_LoadTilemapToBgLayerFromOpenNARC(controller->bagGraphicsNARC, pokeball_borders_NSCR' in MAIN
 for count in (1,4,7,8):
