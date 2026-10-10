@@ -19,6 +19,10 @@ assert "template.textXOffset = 35 + OPAL_LIST_TEXT_INSET;" in MAIN
 assert "#define OPAL_ITEM_LIST_TILE_X          14" in WIN
 assert "#define OPAL_DESCRIPTION_TILE_Y        18" in WIN
 assert "#define OPAL_DESCRIPTION_TEXT_X        44" in WIN
+assert "#define OPAL_DESCRIPTION_TEXT_Y        4" in WIN
+assert "OPAL_DESCRIPTION_TEXT_X, OPAL_DESCRIPTION_TEXT_Y, TEXT_SPEED_NO_TRANSFER" in WIN
+assert "[BAG_SPRITE_ITEM] = {" in SPR
+assert ".x = 24,\n        .y = 168," in SPR
 assert "#define OPAL_MOVE_STATS_RIGHT_COL_X    104" in WIN
 assert "#define OPAL_MOVE_STATS_VALUE_OFFSET   64" in WIN
 assert "#define OPAL_CLOSE_BAG_TEXT_X          4" in WIN
