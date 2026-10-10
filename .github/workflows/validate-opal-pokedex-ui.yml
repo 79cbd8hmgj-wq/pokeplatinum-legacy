@@ -30,6 +30,8 @@ jobs:
           python3 tools/opal_pokedex/generate_scroll_composition_previews.py --output-dir pokedex-ui-previews
       - name: Validate installed sub-scroll graphic accents
         run: python3 tools/opal_pokedex/validate_installed_subscroll_art.py
+      - name: Build safe main-scroll atlas candidate
+        run: python3 tools/opal_pokedex/build_main_scroll_v3_candidate.py --output pokedex-ui-previews/scroll_main_v3_candidate.png
       - name: Upload Pokédex previews for review
         uses: actions/upload-artifact@v4
         with:
