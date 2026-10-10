@@ -433,7 +433,8 @@ int BagApplication_Init(ApplicationManager *appMan, int *state)
     controller->bgConfig = BgConfig_New(HEAP_ID_BAG);
     controller->trainerGender = TrainerInfo_Gender(controller->trainerInfo);
 
-    StartScreenFade(FADE_MAIN_THEN_SUB, FADE_TYPE_DOWNWARD_IN, FADE_TYPE_DOWNWARD_IN, COLOR_BLACK, 6, 1, HEAP_ID_BAG);
+    // AV3-C: reveal the touch-driven Bag controls before the main item panel.
+    StartScreenFade(FADE_SUB_THEN_MAIN, FADE_TYPE_DOWNWARD_IN, FADE_TYPE_DOWNWARD_IN, COLOR_BLACK, 6, 1, HEAP_ID_BAG);
     SetAutorepeat(3, 8);
 
     RestoreCursorPosition(controller);

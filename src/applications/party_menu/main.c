@@ -283,7 +283,8 @@ static BOOL PartyMenu_Init(ApplicationManager *appMan, int *state)
     narc = NARC_ctor(NARC_INDEX_GRAPHIC__PL_PLIST_GRA, HEAP_ID_PARTY_MENU);
     application = NewPartyMenuApplication(appMan);
 
-    StartScreenFade(FADE_MAIN_THEN_SUB, FADE_TYPE_DOWNWARD_IN, FADE_TYPE_DOWNWARD_IN, COLOR_BLACK, 6, 1, HEAP_ID_PARTY_MENU);
+    // AV3-C: reveal both party screens together for a unified panel transition.
+    StartScreenFade(FADE_BOTH_SCREENS, FADE_TYPE_DOWNWARD_IN, FADE_TYPE_DOWNWARD_IN, COLOR_BLACK, 6, 1, HEAP_ID_PARTY_MENU);
     CheckCancellableMode(application);
     SetVRAMBanks();
     InitBgs(application->bgConfig);
