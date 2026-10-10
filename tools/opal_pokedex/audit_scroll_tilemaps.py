@@ -45,7 +45,7 @@ def inspect(png_name, nscr_name, size):
         "unresolved_atlas_tile_ids": unresolved,
         "unresolved_map_entries": sum(tile >= atlas_count for tile in tile_ids),
         "self_contained_tilemap": len(unresolved) == 0,
-        "requires_runtime_tilebase_trace": True,
+        "source_atlas_reference_check_only": True,
     }
 
 
@@ -53,8 +53,10 @@ def main():
     report = [inspect(*pair) for pair in PAIRS]
     print(json.dumps(report, indent=2))
     assert all(row["screen_entries"] == 768 for row in report)
-    assert report[0]["self_contained_tilemap"] is False, "Main tilemap dependency needs investigation"
-    assert report[1]["self_contained_tilemap"] is True, "Sub-screen atlas should be self-contained"
+    assert report[0]["png_tiles"] == 256
+    assert report[0]["self_contained_tilemap"] is True, "Main atlas tile IDs must be in range"
+    assert report[1]["png_tiles"] == 96
+    assert report[1]["self_contained_tilemap"] is True, "Sub-screen atlas tile IDs must be in range"
     assert report[0]["palette_banks"] == [5]
     assert report[1]["palette_banks"] == [3]
 
