@@ -21,8 +21,8 @@
 #include "applications/pokedex/struct_ov21_021E68F4.h"
 
 #include "bg_window.h"
-#include "graphics.h"
 #include "brightness_controller.h"
+#include "graphics.h"
 #include "heap.h"
 #include "narc.h"
 #include "pltt_transfer.h"
@@ -41,14 +41,14 @@
 #include "res/text/bank/pokedex.h"
 
 // Opal data entry plate on the Info tab's sub screen (right edge, between the species buttons).
-#define OPAL_ENTRY_TILE_START 480
-#define OPAL_ENTRY_X          216
-#define OPAL_ENTRY_Y          56
-#define OPAL_ENTRY_W          32
-#define OPAL_ENTRY_H          96
-#define OPAL_ENTRY_BANK       13
+#define OPAL_ENTRY_TILE_START   480
+#define OPAL_ENTRY_X            216
+#define OPAL_ENTRY_Y            56
+#define OPAL_ENTRY_W            32
+#define OPAL_ENTRY_H            96
+#define OPAL_ENTRY_BANK         13
 #define OPAL_ENTRY_BANK_PRESSED 15
-#define OPAL_ENTRY_BUTTON     8
+#define OPAL_ENTRY_BUTTON       8
 
 typedef struct {
     int *unk_00;

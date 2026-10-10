@@ -1,5 +1,3 @@
-#include "applications/pokedex/opalref.h"
-
 #include <nitro.h>
 #include <string.h>
 
@@ -7,6 +5,7 @@
 #include "generated/sdat.h"
 
 #include "applications/pokedex/opal_data.h"
+#include "applications/pokedex/opalref.h"
 #include "applications/pokedex/ov21_021D4340.h"
 #include "applications/pokedex/pokedex_data_manager.h"
 #include "applications/pokedex/pokedex_graphics.h"
@@ -52,7 +51,7 @@ enum OpalRefSubButton {
 #define OPALREFSUB_HOLD_DELAY  12 // frames before a held scroll button repeats
 #define OPALREFSUB_HOLD_PERIOD 4
 
-#define OPALREFSUB_EXIT_BIT (1 << 0)
+#define OPALREFSUB_EXIT_BIT      (1 << 0)
 #define OPALREFSUB_PALETTE_BYTES (4 * 32)
 
 typedef struct OpalRefSubData {

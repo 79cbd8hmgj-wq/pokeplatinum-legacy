@@ -60,16 +60,16 @@ enum OpalLocationKind {
     OPAL_LOC_KIND_MAX
 };
 
-#define OPAL_LOCF_MORNING 0x01
-#define OPAL_LOCF_DAY     0x02
-#define OPAL_LOCF_NIGHT   0x04
-#define OPAL_LOCF_ALLTIME (OPAL_LOCF_MORNING | OPAL_LOCF_DAY | OPAL_LOCF_NIGHT)
-#define OPAL_LOCF_HOF     0x08
-#define OPAL_LOCF_ONCE    0x10
-#define OPAL_LOCF_BADGES  0x20
+#define OPAL_LOCF_MORNING    0x01
+#define OPAL_LOCF_DAY        0x02
+#define OPAL_LOCF_NIGHT      0x04
+#define OPAL_LOCF_ALLTIME    (OPAL_LOCF_MORNING | OPAL_LOCF_DAY | OPAL_LOCF_NIGHT)
+#define OPAL_LOCF_HOF        0x08
+#define OPAL_LOCF_ONCE       0x10
+#define OPAL_LOCF_BADGES     0x20
 #define OPAL_LOC_AUX_SPECIES 0x40 // `name` is a species ID (Egg parent)
 #define OPAL_LOC_AUX_TEXT    0x80 // `name` indexes the pokedex bank instead of the location names bank
-#define OPAL_LOC_NAME_NONE 0xFFFF
+#define OPAL_LOC_NAME_NONE   0xFFFF
 
 typedef struct OpalLocationRecord {
     u8 kind;

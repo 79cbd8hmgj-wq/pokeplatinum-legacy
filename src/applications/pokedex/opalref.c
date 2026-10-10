@@ -28,18 +28,18 @@
 #include "res/text/bank/pokedex.h"
 
 #define OPALREF_PALETTE_BYTES (4 * 32)
-#define OPALREF_SPRITE_X 208
-#define OPALREF_SPRITE_Y 80
+#define OPALREF_SPRITE_X      208
+#define OPALREF_SPRITE_Y      80
 
 // Bank-0 palette indices of the text window (see tools/opal_pokedex/build_opal_ref_assets.py).
-#define OPALREF_PAL_TRACK 14
-#define OPALREF_PAL_BAR_LOW 10
-#define OPALREF_PAL_BAR_MID 11
+#define OPALREF_PAL_TRACK    14
+#define OPALREF_PAL_BAR_LOW  10
+#define OPALREF_PAL_BAR_MID  11
 #define OPALREF_PAL_BAR_HIGH 12
-#define OPALREF_PAL_BAR_MAX 13
-#define OPALREF_BAR_X 96
-#define OPALREF_BAR_WIDTH 144
-#define OPALREF_BAR_HEIGHT 8
+#define OPALREF_PAL_BAR_MAX  13
+#define OPALREF_BAR_X        96
+#define OPALREF_BAR_WIDTH    144
+#define OPALREF_BAR_HEIGHT   8
 
 typedef struct OpalRefGraphics {
     u16 savedPalette[OPALREF_PALETTE_BYTES / 2]; // BG palette banks 0-3 as they were before this screen
