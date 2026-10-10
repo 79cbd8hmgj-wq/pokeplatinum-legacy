@@ -34,3 +34,12 @@ assert dragon.count("CreateEmitter 0, 3, EMITTER_CB_GENERIC") == 2
 assert dragon.count("SetExtraParams 0, 2, 26, 20, 0, 0") == 3
 assert dragon.index("WaitForAllEmitters") < dragon.index("UnloadParticleSystem 0")
 assert dragon.count("LoadParticleResource 0, dragon_pulse_spa") == 1
+
+# B1 metallic and lithic composite scripting; Ancient Power has a contest branch.
+for move, minimum in (("flash_cannon", 1), ("ancient_power", 2)):
+    source = (ROOT / "res" / "moves" / move / "anim.s").read_text()
+    assert source.count("B1:") >= minimum
+    assert source.count("WaitForAllEmitters") == source.count("UnloadParticleSystem 0")
+    assert source.count("WaitForAllEmitters") >= minimum
+    assert source.count("CreateEmitter 0, 3, EMITTER_CB_SET_POS_TO_DEFENDER") >= (2 if move == "ancient_power" else 0)
+print("PASS: B1 nine affected move scripts pass basic source and cleanup checks")
