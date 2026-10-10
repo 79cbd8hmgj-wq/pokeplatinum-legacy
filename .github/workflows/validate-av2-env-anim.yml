@@ -1,0 +1,29 @@
+name: validate-av2-env-anim
+
+on:
+  pull_request:
+    paths:
+      - 'res/field/props/animations/**'
+      - 'res/prebuilt/arc/bm_anime_list.narc'
+      - 'res/field/props/models/**'
+      - 'tools/visual_overhaul/av2/**'
+      - 'tools/visual_overhaul/validate_av2_env_anim.py'
+      - '.github/workflows/validate-av2-env-anim.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0   # scope/baseline checks diff against the pinned AV2 baseline commit
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: AV2 generator is a no-op on the committed tree
+        run: python3 -I tools/visual_overhaul/av2/apply_av2_env_anim.py --check
+
+      - name: AV2 animation resources, bindings, slot budget, scope and mutation self-test
+        run: python3 -I tools/visual_overhaul/validate_av2_env_anim.py
