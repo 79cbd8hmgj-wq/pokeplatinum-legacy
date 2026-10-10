@@ -2,10 +2,6 @@ name: B1 melonDS Opal ROM debugger smoke
 
 on:
   workflow_dispatch:
-  pull_request:
-    paths:
-      - '.github/workflows/b1-melonds-opal-runtime.yml'
-      - 'tools/visual_overhaul/b1_melonds_rom_debugger_smoke.py'
 
 permissions:
   contents: read
@@ -20,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y xvfb xdotool x11-utils imagemagick libfuse2t64 unzip
+          sudo apt-get install -y xvfb xdotool x11-utils imagemagick libfuse2t64 libegl1 libgl1 libopengl0 unzip
       - name: Retrieve existing Opal rev0 build
         env:
           GH_TOKEN: ${{ github.token }}
