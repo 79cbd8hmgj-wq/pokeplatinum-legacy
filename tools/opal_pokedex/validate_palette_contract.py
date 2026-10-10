@@ -5,6 +5,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 GRAPHICS = ROOT / "res/graphics/pokedex"
 EXPECTED = {
+    "info.pal": {0: (224, 216, 233), 1: (99, 85, 123), 12: (145, 116, 172)},
+    "search.pal": {0: (225, 214, 234), 3: (79, 57, 105), 11: (228, 192, 213)},
+    "register.pal": {0: (225, 214, 234), 8: (208, 175, 109), 13: (126, 82, 125)},
+    "background_sub_2.pal": {0: (220, 204, 224), 1: (135, 174, 189), 14: (99, 182, 196)},
+    "background_sub_3.pal": {0: (220, 204, 224), 1: (157, 118, 83), 14: (224, 168, 125)},
     "background_scroll_default.pal": {0: (216, 202, 221), 4: (97, 84, 117), 11: (132, 98, 135)},
     "background_scroll_sinnoh.pal": {0: (216, 202, 221), 6: (166, 121, 165), 11: (86, 62, 100)},
     "background_scroll_national.pal": {0: (216, 202, 221), 5: (243, 225, 196), 11: (91, 65, 94)},
