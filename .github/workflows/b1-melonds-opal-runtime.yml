@@ -1,0 +1,50 @@
+name: B1 melonDS Opal ROM debugger smoke
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/b1-melonds-opal-runtime.yml'
+      - 'tools/visual_overhaul/b1_melonds_rom_debugger_smoke.py'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  live-debugger:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y xvfb xdotool x11-utils imagemagick libfuse2t64 unzip
+      - name: Retrieve existing Opal rev0 build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p artifacts/opal-runtime/rom
+          gh run download 38054223811 --repo ${{ github.repository }} --name pokeplatinum-us-rev0-5f47fa511abb454497ecf6bb1399a9dfc9bc4655 --dir artifacts/opal-runtime/rom
+          test -s artifacts/opal-runtime/rom/pokeplatinum.us.nds
+          sha256sum artifacts/opal-runtime/rom/pokeplatinum.us.nds | tee artifacts/opal-runtime/rom.sha256
+      - name: Provision official melonDS
+        run: |
+          bash tools/visual_overhaul/b1_melonds_preflight.sh
+      - name: Install toolkit runtime backend
+        run: |
+          git clone --depth 1 --branch claude/nds-toolkit-runtime-reliability-a19c8a https://github.com/79cbd8hmgj-wq/NDS-Disassembly-Toolkit.git /tmp/nds-toolkit
+          python3 -m pip install --break-system-packages -e /tmp/nds-toolkit
+      - name: ARM9 and ARM7 live debugger smoke
+        run: |
+          Xvfb :99 -screen 0 1024x768x24 -nolisten tcp >artifacts/opal-runtime/xvfb.log 2>&1 &
+          sleep 2
+          DISPLAY=:99 python3 tools/visual_overhaul/b1_melonds_rom_debugger_smoke.py artifacts/opal-runtime/rom/pokeplatinum.us.nds squashfs-root/AppRun artifacts/opal-runtime/live
+      - name: Publish evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: b1-opal-melonds-live-debugger
+          path: artifacts/opal-runtime
+          if-no-files-found: warn
