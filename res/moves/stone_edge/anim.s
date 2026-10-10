@@ -11,6 +11,9 @@ L_0:
     Func_Shake 2, 0, 1, 6, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
     Func_ShakeBg 2, 1, 0, 2, 0, SHAKE_BG_TARGET_BASE
     PlaySoundEffectR SEQ_SE_DP_W082
+    // B1: collapsing stone fragments follow the main rock impact.
+    Delay 4
+    CreateEmitter 0, 0, EMITTER_CB_SET_POS_TO_DEFENDER
     PlayLoopedSoundEffectR SEQ_SE_DP_W088, 6, 3
     WaitForAllEmitters
     UnloadParticleSystem 0
