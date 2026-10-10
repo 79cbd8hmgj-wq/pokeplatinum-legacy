@@ -15,8 +15,31 @@ PAL=((0,0,0),(250,246,244),(240,233,236),(216,202,221),
      (171,146,174),(194,168,123),(142,165,165),(115,137,151),
      (222,214,216),(238,221,192),(42,43,62),(255,255,255))
 
+def validate_png_structure(path):
+    """Reject corrupt PNG chunks before handing images to Pillow/nitrogfx."""
+    import zlib
+    data=path.read_bytes()
+    assert data.startswith(b"\\x89PNG\\r\\n\\x1a\\n"), f"{path}: bad PNG signature"
+    pos=8
+    chunks=[]
+    while pos<len(data):
+        assert pos+12<=len(data), f"{path}: truncated PNG chunk header"
+        size=struct.unpack_from(">I",data,pos)[0]
+        end=pos+12+size
+        assert end<=len(data), f"{path}: invalid PNG chunk size"
+        kind=data[pos+4:pos+8]
+        actual=zlib.crc32(data[pos+4:pos+8+size]) & 0xffffffff
+        stored=struct.unpack_from(">I",data,pos+8+size)[0]
+        assert stored==actual, f"{path}: {kind!r} checksum mismatch"
+        chunks.append(kind)
+        pos=end
+        if kind==b"IEND":
+            break
+    assert pos==len(data) and chunks==[b"IHDR",b"PLTE",b"IDAT",b"IEND"], f"{path}: malformed chunk layout"
+
 def validate(screen,pngname,mapname,palname):
     p=ASSETS/pngname
+    validate_png_structure(p)
     with Image.open(p) as image:
         assert image.mode=="P", f"{p}: expected 4-bit indexed source"
         w,h=image.size
