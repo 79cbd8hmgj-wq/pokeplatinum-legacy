@@ -31,6 +31,12 @@
 #include "res/graphics/bag/bag_graphics.naix"
 #include "res/text/bank/bag.h"
 
+#define OPAL_ITEM_LIST_TILE_X          14
+#define OPAL_ITEM_LIST_TILE_Y          0
+#define OPAL_DESCRIPTION_TILE_X        0
+#define OPAL_DESCRIPTION_TILE_Y        18
+#define OPAL_DESCRIPTION_TEXT_X        44
+#define OPAL_LIST_TEXT_INSET           2
 #define ITEM_LIST_WINDOW_WIDTH         17
 #define ITEM_LIST_WINDOW_HEIGHT        TEXT_LINES_TILES(BAG_UI_NUM_VISIBLE_ITEMS)
 #define ITEM_DESCRIPTION_WINDOW_WIDTH  (HW_LCD_WIDTH / TILE_WIDTH_PIXELS)
@@ -88,8 +94,8 @@ static const WindowTemplate sYesNoMenuTemplate = {
 
 void BagUI_CreateWindows(BagController *controller)
 {
-    Window_Add(controller->bgConfig, &controller->windows[BAG_UI_WINDOW_ITEM_LIST], BG_LAYER_MAIN_2, 14, 0, ITEM_LIST_WINDOW_WIDTH, ITEM_LIST_WINDOW_HEIGHT, 3, BASE_TILE_ITEM_LIST);
-    Window_Add(controller->bgConfig, &controller->windows[BAG_UI_WINDOW_ITEM_DESCRIPTION], BG_LAYER_MAIN_0, 0, 18, ITEM_DESCRIPTION_WINDOW_WIDTH, ITEM_DESCRIPTION_WINDOW_HEIGHT, 3, BASE_TILE_ITEM_DESCRIPTION);
+    Window_Add(controller->bgConfig, &controller->windows[BAG_UI_WINDOW_ITEM_LIST], BG_LAYER_MAIN_2, OPAL_ITEM_LIST_TILE_X, OPAL_ITEM_LIST_TILE_Y, ITEM_LIST_WINDOW_WIDTH, ITEM_LIST_WINDOW_HEIGHT, 3, BASE_TILE_ITEM_LIST);
+    Window_Add(controller->bgConfig, &controller->windows[BAG_UI_WINDOW_ITEM_DESCRIPTION], BG_LAYER_MAIN_0, OPAL_DESCRIPTION_TILE_X, OPAL_DESCRIPTION_TILE_Y, ITEM_DESCRIPTION_WINDOW_WIDTH, ITEM_DESCRIPTION_WINDOW_HEIGHT, 3, BASE_TILE_ITEM_DESCRIPTION);
     Window_Add(controller->bgConfig, &controller->windows[BAG_UI_WINDOW_POCKET_NAMES], BG_LAYER_MAIN_2, 0, 13, POCKET_NAMES_WINDOW_WIDTH, POCKET_NAMES_WINDOW_HEIGHT, 3, BASE_TILE_POCKET_NAMES);
     Window_Add(controller->bgConfig, &controller->windows[BAG_UI_WINDOW_MSG_BOX], BG_LAYER_MAIN_0, 6, 19, MSG_BOX_WINDOW_WIDTH, MSG_BOX_WINDOW_HEIGHT, 11, BASE_TILE_MSG_BOX);
     Window_Add(controller->bgConfig, &controller->windows[BAG_UI_WINDOW_MSG_BOX_NARROW], BG_LAYER_MAIN_0, 6, 19, MSG_BOX_NARROW_WINDOW_WIDTH, MSG_BOX_WINDOW_HEIGHT, 11, BASE_TILE_MSG_BOX_NARROW);
@@ -229,7 +235,7 @@ void BagUI_PrintItemDescription(BagController *controller, u16 item)
         string = MessageLoader_GetNewString(controller->bagStringsLoader, Bag_Text_CloseBagDescription);
     }
 
-    Text_AddPrinterWithParamsAndColor(&controller->windows[BAG_UI_WINDOW_ITEM_DESCRIPTION], FONT_SYSTEM, string, 40, 0, TEXT_SPEED_NO_TRANSFER, TEXT_COLOR(15, 14, 0), NULL);
+    Text_AddPrinterWithParamsAndColor(&controller->windows[BAG_UI_WINDOW_ITEM_DESCRIPTION], FONT_SYSTEM, string, OPAL_DESCRIPTION_TEXT_X, 0, TEXT_SPEED_NO_TRANSFER, TEXT_COLOR(15, 14, 0), NULL);
     String_Free(string);
 }
 
@@ -494,7 +500,7 @@ void BagUI_PrintMovingItemMsg(BagController *controller)
     BufferPocketSlotItemName(controller, controller->movedItemPos - 1, 0);
 
     StringTemplate_Format(controller->strTemplate, formatted, template);
-    Text_AddPrinterWithParamsAndColor(&controller->windows[BAG_UI_WINDOW_ITEM_DESCRIPTION], FONT_SYSTEM, formatted, 40, 0, TEXT_SPEED_NO_TRANSFER, TEXT_COLOR(15, 14, 0), NULL);
+    Text_AddPrinterWithParamsAndColor(&controller->windows[BAG_UI_WINDOW_ITEM_DESCRIPTION], FONT_SYSTEM, formatted, OPAL_DESCRIPTION_TEXT_X, 0, TEXT_SPEED_NO_TRANSFER, TEXT_COLOR(15, 14, 0), NULL);
     Window_ScheduleCopyToVRAM(&controller->windows[BAG_UI_WINDOW_ITEM_DESCRIPTION]);
     String_Free(formatted);
     String_Free(template);
