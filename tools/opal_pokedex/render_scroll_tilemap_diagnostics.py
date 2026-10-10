@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Render Pokédex scroll tilemap reference diagnostics.
 
-The PNG is an indexed tile atlas; map indices can reference other allocations.
+The PNG is an indexed tile atlas; validate map references against all its tiles.
 Out-of-atlas tile references are marked magenta rather than silently wrapped.
 No output from this script is installed in the ROM.
 """
