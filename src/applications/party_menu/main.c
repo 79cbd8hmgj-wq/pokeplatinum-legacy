@@ -473,6 +473,8 @@ static BOOL PartyMenu_Main(ApplicationManager *appMan, int *state)
 
     PartyMenu_UpdateMemberIcons(partyMenu);
     PartyMenu_UpdateTouchButtonEffect(partyMenu);
+    // AV3: advance the selected-member cursor's native NANR focus loop.
+    Sprite_UpdateAnim(partyMenu->sprites[PARTY_MENU_SPRITE_CURSOR_NORMAL], FX32_ONE);
     sub_0207FE1C(partyMenu);
     SpriteSystem_DrawSprites(partyMenu->spriteMan);
 
