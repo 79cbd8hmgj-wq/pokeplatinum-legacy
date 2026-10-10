@@ -35,7 +35,8 @@ assert 'Graphics_LoadTilemapToBgLayerFromOpenNARC(controller->bagGraphicsNARC, p
 for count in (1,4,7,8):
     assert f"sPocketButtonTouchRectangles_{count}Pocket" in MAIN if count==1 else f"sPocketButtonTouchRectangles_{count}Pockets" in MAIN
 assert "sDialBtnTouchRect" in MAIN
-assert 'for x,y in ((8,32),(16,80),(40,120),(80,144),' in ART
+assert 'panel(p,8,30,240,144,7,3)' in ART
+assert '# painting eight permanent buttons here creates false controls.' in ART
 assert 'panel(p,112,6,139,150,4,1)' in ART
 assert 'panel(p,4,147,247,35,4,1)' in ART
 print("PASS: native Bag nine-row list, description, sprite and touch geometry unchanged")
