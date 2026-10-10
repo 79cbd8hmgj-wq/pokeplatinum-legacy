@@ -19,6 +19,10 @@ assert "template.textXOffset = 35 + OPAL_LIST_TEXT_INSET;" in MAIN
 assert "#define OPAL_ITEM_LIST_TILE_X          14" in WIN
 assert "#define OPAL_DESCRIPTION_TILE_Y        18" in WIN
 assert "#define OPAL_DESCRIPTION_TEXT_X        44" in WIN
+assert "#define OPAL_MOVE_STATS_RIGHT_COL_X    104" in WIN
+assert "#define OPAL_MOVE_STATS_VALUE_OFFSET   64" in WIN
+assert "#define OPAL_CLOSE_BAG_TEXT_X          4" in WIN
+assert "controller->stringBuffer, OPAL_MOVE_STATS_RIGHT_COL_X + OPAL_MOVE_STATS_VALUE_OFFSET" in WIN
 assert "Window_Add(controller->bgConfig, &controller->windows[BAG_UI_WINDOW_ITEM_LIST], BG_LAYER_MAIN_2, OPAL_ITEM_LIST_TILE_X, OPAL_ITEM_LIST_TILE_Y, ITEM_LIST_WINDOW_WIDTH, ITEM_LIST_WINDOW_HEIGHT" in WIN
 assert "Window_Add(controller->bgConfig, &controller->windows[BAG_UI_WINDOW_ITEM_DESCRIPTION], BG_LAYER_MAIN_0, OPAL_DESCRIPTION_TILE_X, OPAL_DESCRIPTION_TILE_Y, ITEM_DESCRIPTION_WINDOW_WIDTH, ITEM_DESCRIPTION_WINDOW_HEIGHT" in WIN
 assert 'ManagedSprite_SetPositionXY(interface->sprites[BAG_SPRITE_ITEM_HIGHLIGHT], 177, 24 +' in SPR
