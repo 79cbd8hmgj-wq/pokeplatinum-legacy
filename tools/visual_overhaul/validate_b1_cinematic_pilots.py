@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+"""Regression checks for B1 cinematic-only native move script additions."""
+from pathlib import Path
+import re
+ROOT = Path(__file__).resolve().parents[2]
+for move, resource_id, emitter_id in (("shadow_ball", "0", "3"), ("thunderbolt", "0", "1")):
+    source = (ROOT / "res" / "moves" / move / "anim.s").read_text()
+    assert source.count("B1:") == 1, f"{move}: B1 effect missing"
+    assert len(re.findall(rf"CreateEmitter {resource_id}, {emitter_id}, EMITTER_CB_SET_POS_TO_DEFENDER", source)) >= 2
+    assert source.count("LoadParticleResource 0,") == 1
+    assert source.count("WaitForAllEmitters") == 1
+    assert source.count("UnloadParticleSystem 0") == 1
+    assert source.index("WaitForAllEmitters") < source.index("UnloadParticleSystem 0")
+    assert source.rstrip().endswith("End")
+    assert "Func_FadeBg FADE_BG_TYPE_BASE, 1," in source
+    fades = re.findall(r"Func_FadeBg FADE_BG_TYPE_BASE, 1, (\d+), (\d+),", source)
+    assert fades and fades[-1][1] == "0", f"{move}: scene fade must reset"
+print("PASS: B1 Shadow Ball and Thunderbolt use existing anchored emitters, balanced resources and scene cleanup")
