@@ -15,6 +15,9 @@ L_0:
     CreateEmitter 0, 3, EMITTER_CB_SET_POS_TO_DEFENDER
     PlayDelayedSoundEffectR SEQ_SE_DP_W063B, 50
     Func_Shake 1, 0, 1, 2, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
+    // B1: short-lived secondary branch from an existing defender-anchored emitter.
+    Delay 3
+    CreateEmitter 0, 1, EMITTER_CB_SET_POS_TO_DEFENDER
     WaitForAllEmitters
     UnloadParticleSystem 0
     Func_FadeBg FADE_BG_TYPE_BASE, 1, 12, 0, BATTLE_COLOR_BLACK

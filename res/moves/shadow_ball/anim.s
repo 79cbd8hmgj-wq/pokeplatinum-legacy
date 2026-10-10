@@ -12,6 +12,9 @@ L_0:
     CreateEmitter 0, 2, EMITTER_CB_NONE
     Func_MoveEmitterA2BLinear 0, 0, 0, 0, 8, 255, EMITTER_ANIMATION_MODE_ATK_TO_DEF, SKIP_F(4)
     CreateEmitter 0, 3, EMITTER_CB_SET_POS_TO_DEFENDER
+    // B1: second spectral pulse follows the primary impact using a native emitter.
+    Delay 3
+    CreateEmitter 0, 3, EMITTER_CB_SET_POS_TO_DEFENDER
     Func_Shake 2, 0, 1, 2, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
     Func_FadeBattlerSprite BATTLE_ANIM_DEFENDER, 0, 1, BATTLE_COLOR_DARK_PURPLE, 14, 0
     PlaySoundEffectR SEQ_SE_DP_480
