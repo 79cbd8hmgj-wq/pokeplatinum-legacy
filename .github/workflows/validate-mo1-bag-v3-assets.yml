@@ -26,6 +26,8 @@ jobs:
         run: |
           python tools/opal_bag/generate_v3_panels.py --output build/mo1_bag
           python tools/opal_bag/tile_v3_panels.py --input build/mo1_bag
+      - name: Pack Nitro screen maps with existing Bag header contract
+        run: python tools/opal_bag/pack_v3_nscr.py --template res/graphics/bag/bag_ui_main.NSCR --maps build/mo1_bag/tiled --output build/mo1_bag/nscr
       - name: Verify round-trip image equality
         run: |
           python - <<'PY'
