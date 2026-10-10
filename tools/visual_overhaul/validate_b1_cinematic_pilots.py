@@ -15,4 +15,14 @@ for move, resource_id, emitter_id in (("shadow_ball", "0", "3"), ("thunderbolt",
     assert "Func_FadeBg FADE_BG_TYPE_BASE, 1," in source
     fades = re.findall(r"Func_FadeBg FADE_BG_TYPE_BASE, 1, (\d+), (\d+),", source)
     assert fades and fades[-1][1] == "0", f"{move}: scene fade must reset"
-print("PASS: B1 five cinematic pilots use existing anchored emitters, balanced resources and scene cleanup")
+
+# Additional B1 pilots without global tint: verify effect sequencing and cleanup.
+for move in ("sludge_bomb", "stone_edge"):
+    source = (ROOT / "res" / "moves" / move / "anim.s").read_text()
+    assert source.count("B1:") == 1, f"{move}: B1 impact layer missing"
+    assert source.count("CreateEmitter 0, 0, EMITTER_CB_SET_POS_TO_DEFENDER") >= 2
+    assert "WaitForAllEmitters" in source and "UnloadParticleSystem 0" in source
+    assert source.index("WaitForAllEmitters") < source.index("UnloadParticleSystem 0")
+    assert source.rstrip().endswith("End")
+
+print("PASS: B1 seven cinematic pilots preserve native emitter and cleanup contracts")
