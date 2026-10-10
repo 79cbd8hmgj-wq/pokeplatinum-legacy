@@ -36,6 +36,7 @@
 #define OPAL_DESCRIPTION_TILE_X        0
 #define OPAL_DESCRIPTION_TILE_Y        18
 #define OPAL_DESCRIPTION_TEXT_X        44
+#define OPAL_DESCRIPTION_TEXT_Y        4
 #define OPAL_MOVE_STATS_RIGHT_COL_X    104
 #define OPAL_MOVE_STATS_VALUE_OFFSET   64
 #define OPAL_CLOSE_BAG_TEXT_X          4
@@ -237,7 +238,7 @@ void BagUI_PrintItemDescription(BagController *controller, u16 item)
         string = MessageLoader_GetNewString(controller->bagStringsLoader, Bag_Text_CloseBagDescription);
     }
 
-    Text_AddPrinterWithParamsAndColor(&controller->windows[BAG_UI_WINDOW_ITEM_DESCRIPTION], FONT_SYSTEM, string, OPAL_DESCRIPTION_TEXT_X, 0, TEXT_SPEED_NO_TRANSFER, TEXT_COLOR(15, 14, 0), NULL);
+    Text_AddPrinterWithParamsAndColor(&controller->windows[BAG_UI_WINDOW_ITEM_DESCRIPTION], FONT_SYSTEM, string, OPAL_DESCRIPTION_TEXT_X, OPAL_DESCRIPTION_TEXT_Y, TEXT_SPEED_NO_TRANSFER, TEXT_COLOR(15, 14, 0), NULL);
     String_Free(string);
 }
 
