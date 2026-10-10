@@ -24,7 +24,7 @@ def main():
             "status": "requires_visual_and_format_selection",
         }
         for entry in ranked
-        if entry.get("host", "").startswith("battle move")
+        if (entry.get("host") or "").startswith("battle move")
         or entry.get("subsystem") in {"battle_effects_particles", "battle_backgrounds_hud"}
     ]
     assert candidates, "No ranked battle donors selected"
