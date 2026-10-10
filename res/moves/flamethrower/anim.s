@@ -12,6 +12,9 @@ L_0:
     Func_Shake 2, 0, 1, 14, BATTLE_ANIM_BATTLER_SPRITE_ATTACKER
     Delay 3
     Func_FadeBattlerSprite BATTLE_ANIM_DEFENDER, 0, 1, BATTLE_COLOR_RED, 10, 25
+    // B1: trailing flame bloom uses the existing impact emitter.
+    Delay 3
+    CreateEmitter 0, 0, EMITTER_CB_SET_POS_TO_DEFENDER
     Func_Shake 2, 0, 1, 14, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
     WaitForAllEmitters
     UnloadParticleSystem 0
