@@ -14,8 +14,13 @@ ART=(ROOT/"tools/opal_bag/generate_installed_bag_art.py").read_text()
 assert "#define BAG_UI_NUM_VISIBLE_ITEMS 9" in (ROOT/"include/applications/bag/defs.h").read_text()
 assert ".maxDisplay = BAG_UI_NUM_VISIBLE_ITEMS" in MAIN
 assert ".lineSpacing = 16" in MAIN
-assert "Window_Add(controller->bgConfig, &controller->windows[BAG_UI_WINDOW_ITEM_LIST], BG_LAYER_MAIN_2, 14, 0, ITEM_LIST_WINDOW_WIDTH, ITEM_LIST_WINDOW_HEIGHT" in WIN
-assert "Window_Add(controller->bgConfig, &controller->windows[BAG_UI_WINDOW_ITEM_DESCRIPTION], BG_LAYER_MAIN_0, 0, 18, ITEM_DESCRIPTION_WINDOW_WIDTH, ITEM_DESCRIPTION_WINDOW_HEIGHT" in WIN
+assert "template.textXOffset = OPAL_LIST_TEXT_INSET;" in MAIN
+assert "template.textXOffset = 35 + OPAL_LIST_TEXT_INSET;" in MAIN
+assert "#define OPAL_ITEM_LIST_TILE_X          14" in WIN
+assert "#define OPAL_DESCRIPTION_TILE_Y        18" in WIN
+assert "#define OPAL_DESCRIPTION_TEXT_X        44" in WIN
+assert "Window_Add(controller->bgConfig, &controller->windows[BAG_UI_WINDOW_ITEM_LIST], BG_LAYER_MAIN_2, OPAL_ITEM_LIST_TILE_X, OPAL_ITEM_LIST_TILE_Y, ITEM_LIST_WINDOW_WIDTH, ITEM_LIST_WINDOW_HEIGHT" in WIN
+assert "Window_Add(controller->bgConfig, &controller->windows[BAG_UI_WINDOW_ITEM_DESCRIPTION], BG_LAYER_MAIN_0, OPAL_DESCRIPTION_TILE_X, OPAL_DESCRIPTION_TILE_Y, ITEM_DESCRIPTION_WINDOW_WIDTH, ITEM_DESCRIPTION_WINDOW_HEIGHT" in WIN
 assert 'ManagedSprite_SetPositionXY(interface->sprites[BAG_SPRITE_ITEM_HIGHLIGHT], 177, 24 +' in SPR
 assert 'Graphics_LoadTilemapToBgLayerFromOpenNARC(controller->bagGraphicsNARC, bag_ui_main_NSCR' in MAIN
 assert 'Graphics_LoadTilemapToBgLayerFromOpenNARC(controller->bagGraphicsNARC, pokeball_borders_NSCR' in MAIN
