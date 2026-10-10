@@ -26,3 +26,11 @@ for move in ("sludge_bomb", "stone_edge"):
     assert source.rstrip().endswith("End")
 
 print("PASS: B1 seven cinematic pilots preserve native emitter and cleanup contracts")
+
+# Dragon Pulse uses generic particles requiring their existing native extra parameters.
+dragon = (ROOT / "res/moves/dragon_pulse/anim.s").read_text()
+assert dragon.count("B1:") == 1
+assert dragon.count("CreateEmitter 0, 3, EMITTER_CB_GENERIC") == 2
+assert dragon.count("SetExtraParams 0, 2, 26, 20, 0, 0") == 2
+assert dragon.index("WaitForAllEmitters") < dragon.index("UnloadParticleSystem 0")
+assert dragon.count("LoadParticleResource 0, dragon_pulse_spa") == 1
