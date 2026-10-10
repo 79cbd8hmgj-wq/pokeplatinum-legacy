@@ -3,7 +3,7 @@
 from pathlib import Path
 import re
 ROOT = Path(__file__).resolve().parents[2]
-for move, resource_id, emitter_id in (("shadow_ball", "0", "3"), ("thunderbolt", "0", "1")):
+for move, resource_id, emitter_id in (("shadow_ball", "0", "3"), ("thunderbolt", "0", "1"), ("ice_beam", "0", "0"), ("flamethrower", "0", "0"), ("energy_ball", "0", "2")):
     source = (ROOT / "res" / "moves" / move / "anim.s").read_text()
     assert source.count("B1:") == 1, f"{move}: B1 effect missing"
     assert len(re.findall(rf"CreateEmitter {resource_id}, {emitter_id}, EMITTER_CB_SET_POS_TO_DEFENDER", source)) >= 2
@@ -15,4 +15,4 @@ for move, resource_id, emitter_id in (("shadow_ball", "0", "3"), ("thunderbolt",
     assert "Func_FadeBg FADE_BG_TYPE_BASE, 1," in source
     fades = re.findall(r"Func_FadeBg FADE_BG_TYPE_BASE, 1, (\d+), (\d+),", source)
     assert fades and fades[-1][1] == "0", f"{move}: scene fade must reset"
-print("PASS: B1 Shadow Ball and Thunderbolt use existing anchored emitters, balanced resources and scene cleanup")
+print("PASS: B1 five cinematic pilots use existing anchored emitters, balanced resources and scene cleanup")
