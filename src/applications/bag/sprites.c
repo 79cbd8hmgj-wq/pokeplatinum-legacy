@@ -29,6 +29,12 @@ static void CalcPocketHighlightMovement(BagController *controller);
 static u8 CalcPocketHighlightXForPocket(BagController *controller, u8 pocketIdx);
 static void StepPocketHighlightMovingAnim(BagController *controller);
 
+// MO1: share one coordinate contract between the sprite template and
+// cursor updates. The 16px pitch is coupled to the nine-row ListMenu.
+#define OPAL_ITEM_HIGHLIGHT_X 177
+#define OPAL_ITEM_HIGHLIGHT_Y 24
+#define OPAL_ITEM_HIGHLIGHT_ROW_PITCH 16
+
 static const SpriteTemplate sBagUISpriteTemplates[] = {
     [BAG_SPRITE_BAG] = {
         .x = 48,
@@ -79,8 +85,8 @@ static const SpriteTemplate sBagUISpriteTemplates[] = {
         .vramTransfer = FALSE,
     },
     [BAG_SPRITE_ITEM_HIGHLIGHT] = {
-        .x = 177,
-        .y = 24,
+        .x = OPAL_ITEM_HIGHLIGHT_X,
+        .y = OPAL_ITEM_HIGHLIGHT_Y,
         .z = 0,
         .animIdx = 0,
         .priority = 0,
@@ -289,7 +295,7 @@ static void InitSprites(BagController *interface)
 
     ManagedSprite_SetAnim(interface->sprites[BAG_SPRITE_BAG], interface->bagCtx->accessiblePockets[interface->bagCtx->currPocketIdx].pocketType);
     ManagedSprite_SetPositionXY(interface->sprites[BAG_SPRITE_POCKET_HIGHLIGHT], CalcPocketHighlightXForPocket(interface, interface->bagCtx->currPocketIdx), 97);
-    ManagedSprite_SetPositionXY(interface->sprites[BAG_SPRITE_ITEM_HIGHLIGHT], 177, 24 + (interface->bagCtx->accessiblePockets[interface->bagCtx->currPocketIdx].cursorPos - 1) * 16);
+    ManagedSprite_SetPositionXY(interface->sprites[BAG_SPRITE_ITEM_HIGHLIGHT], OPAL_ITEM_HIGHLIGHT_X, OPAL_ITEM_HIGHLIGHT_Y + (interface->bagCtx->accessiblePockets[interface->bagCtx->currPocketIdx].cursorPos - 1) * OPAL_ITEM_HIGHLIGHT_ROW_PITCH);
 
     VecFx32 spriteScale = { FX32_ONE, FX32_ONE, FX32_ONE };
     Sprite_SetAffineScaleEx(interface->sprites[BAG_SPRITE_BAG]->sprite, &spriteScale, AFFINE_OVERWRITE_MODE_DOUBLE);
