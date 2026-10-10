@@ -58,11 +58,12 @@ def pixels(which):
         panel(p,3,12,250,168,4,2)
         panel(p,16,18,224,27,7,1)
         fill(p,16,49,240,51,9)
-        # Use a neutral ornamental track for all pocket configurations.
-        # Interactive pocket buttons draw separately on SUB BG0/OAM.
-        panel(p,8,30,240,144,7,3)
-        fill(p,15,38,240,39,9)
-        fill(p,15,165,240,166,9)
+        # These positions preserve the original 8-pocket touch distribution.
+        # The corresponding dial sits on SUB BG3 and is actively rotated.
+        for x,y in ((8,32),(16,80),(40,120),(80,144),
+                    (136,144),(176,120),(200,80),(208,32)):
+            panel(p,x,y,40,36,4,3)
+            fill(p,x+6,y+4,x+32,y+5,10)
         fill(p,57,41,198,161,0)
         fill(p,65,34,190,165,0)
         fill(p,24,175,231,177,9)
