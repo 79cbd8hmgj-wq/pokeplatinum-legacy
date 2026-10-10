@@ -23,6 +23,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Validate donor-to-DS 4bpp conversion
+        run: |
+          python3 -m pip install --break-system-packages Pillow
+          python3 tools/visual_overhaul/test_b1_donor_ds4bpp.py
       - name: Resolve ranked donor effect candidates from Opal database
         run: python3 tools/visual_overhaul/select_b1_battle_donors.py > /tmp/opal-b1-donors.json
       - name: Verify ranked Ranger source packages and conversion constraints
