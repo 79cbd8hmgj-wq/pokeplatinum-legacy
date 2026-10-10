@@ -1,0 +1,20 @@
+name: validate-opal-pokedex-ui
+
+on:
+  pull_request:
+    paths:
+      - 'res/graphics/pokedex/**'
+      - 'tools/opal_pokedex/**'
+      - '.github/workflows/validate-opal-pokedex-ui.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  palette-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify Pokédex indexed palettes
+        run: python3 tools/opal_pokedex/validate_palette_contract.py
