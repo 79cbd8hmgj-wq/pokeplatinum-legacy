@@ -62,4 +62,19 @@ Emerald's repo licence/provenance of the PNGs is recorded by path + sha256 only;
 
 ## Validation performed
 
-See the “Results” block at the bottom (filled from the actual runs).
+Source commit for the numbers below: `ce45aeb9` (+ docs-only follow-ups).
+
+| Check | Command | Result |
+|---|---|---|
+| US Rev 1 build (local) | `make configure ROM_REVISION=1 && make rom ROM_REVISION=1` | success, ROM sha256 `6042849653eaae15ff8b4d249b543158bcdd6b4202c70954b8bff573c26fd958` |
+| US Rev 0 build (local) | `BUILD=/var/tmp/pp_rev0 make rom ROM_REVISION=0` | success, ROM sha256 `c659603117f4d1f59e13500012c2e4885268e95df05ca5cb03c3169011c1e6f4` |
+| Reduced-flash + reduced-motion build | same with `OPAL_LOW_FLASH 1`, `OPAL_REDUCED_MOTION 1` | compiles and links (Rev 1) |
+| CI `build (US rev 0/1)` on the first pushed commit (`a6d356b3`) | GitHub Actions | both success |
+| Cue trace, every path of 29 scripts (default / low-flash / low-flash + reduced-motion) | `opal_cue_trace.py` | PASS ×3, baseline identical |
+| Camera/FX math property test | `gcc … test_opal_cinematic_math.c` | PASS, 1,572,385 cases |
+| FX sheet gate (7 sheets, byte-identical rebuild from the Emerald tree) | `validate_opal_assets.py` | PASS (CI runs it without the donor tree: installed-file checks + procedural rebuild) |
+| Evidence files current | `build_opal_b2_b8_reports.py --check` | PASS |
+| B1 / AV1 / G7 contract validators | see workflow | PASS |
+| clang-format | `clang-format --dry-run -Werror` (v18 locally; CI uses v19) | clean locally |
+
+Not run: any emulator, hardware, or the optional melonDS workflows.

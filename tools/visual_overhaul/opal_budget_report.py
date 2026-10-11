@@ -51,10 +51,7 @@ def main():
             if b is None or n is None:
                 continue
             print(f"| {rel} | {b} | {n} | {n - b:+d} |")
-        for rel in ("main.nef",):
-            b, n = size(a.base_build, rel), size(a.build, rel)
-            if b and n:
-                print(f"| {rel} (ARM9 + overlays link output) | {b} | {n} | {n - b:+d} |")
+        print("\n`main.nef` is deliberately not compared: its size is dominated by DWARF line tables that depend on the checkout path.")
         print()
 
 
