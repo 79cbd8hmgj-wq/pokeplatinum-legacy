@@ -56,6 +56,20 @@ def main():
         args.output.write_text(json.dumps({"move_count": len(report), "scripts": report}, indent=2) + "\n")
     counts = {k: sum(v["source_branch_features"][k] for v in report.values()) for k in next(iter(report.values()))["source_branch_features"]}
     print(f"PASS: {len(assignments)} assignments, {len(report)} source scripts, branch feature counts: {counts}")
+    visual = json.loads((ROOT / "docs/visual_overhaul/B2_B8_ELEMENTAL_COVERAGE.json").read_text())
+    entries = visual["types"]
+    expected_types = {"normal", "fire", "water", "electric", "grass", "ice",
+                      "fighting", "poison", "ground", "flying", "psychic",
+                      "bug", "rock", "ghost", "dragon", "dark", "steel"}
+    assert {x["type"] for x in entries} == expected_types, "Missing or duplicate elemental types"
+    assert len(entries) == 17, "Exactly 17 original Gen IV types required"
+    for element in entries:
+        assert len(element["representatives"]) == 2
+        for move, path in zip(element["representatives"], element["script_paths"]):
+            assert path == f"res/moves/{move}/anim.s"
+            assert (ROOT / path).is_file(), f"Missing {element['type']} move: {path}"
+    print("PASS: 17 visual types covered by 34 existing source scripts (design coverage only)")
+
     print("PASS means source path integrity ONLY; timing/VRAM/run-time and candidate imports are not verified.")
 
 if __name__ == "__main__":
