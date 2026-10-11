@@ -124,6 +124,8 @@ no_cell_pngs_for_pal = files(
     'opal_fx_ring_psychic.png',
     'opal_fx_ring_earth.png',
     'opal_fx_ring_solar.png',
+    'opal_fx_ring_steel.png',
+    'opal_fx_ring_opal.png',
 )
 
 cell_jsons = files(

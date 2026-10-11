@@ -28,6 +28,7 @@ OPAL_INC = ROOT / "asm/macros/btlanim_opal.inc"
 PROV = ROOT / "docs/visual_overhaul/opal_installed_fx"
 
 MAX_FX_LIFETIME = 180
+MAX_CONCURRENT_MANAGERS = 2  # OBJ palette slots: every sprite manager owns one palette; keep headroom for healthboxes/battlers
 BATTLER_BITS = {"ATTACKER": 1 << 1, "ATTACKER_PARTNER": 1 << 2, "DEFENDER": 1 << 3, "DEFENDER_PARTNER": 1 << 4}
 
 
@@ -336,6 +337,8 @@ def run_script(stmts, env, funcs, sheets, name):
                 mid = ev(args[0])
                 if mid in st.managers:
                     raise Fail(f"sprite manager {mid} initialised twice")
+                if len(st.managers) >= MAX_CONCURRENT_MANAGERS:
+                    raise Fail(f"{len(st.managers) + 1} concurrent sprite managers (policy max {MAX_CONCURRENT_MANAGERS}: one OBJ palette each)")
                 st.managers[mid] = {"max": ev(args[1]), "res": {}, "live": []}
                 st.log.append(f"t{st.t} manager{mid}+")
             elif cmd in ("LoadCharResObj", "LoadPlttRes", "LoadCellResObj", "LoadAnimResObj"):
@@ -468,16 +471,16 @@ def main():
     sheets = load_sheets()
     paths = []
     if a.moves:
-        paths = [ROOT / "res/moves" / m / "anim.s" for m in a.moves]
+        paths = [ROOT / "res/battle/scripts/common_anims" / (m.split("/")[1] + ".s") if m.startswith("common_anims/") else ROOT / "res/moves" / m / "anim.s" for m in a.moves]
     else:
-        for p in sorted((ROOT / "res/moves").glob("*/anim.s")):
+        for p in sorted(list((ROOT / "res/moves").glob("*/anim.s")) + list((ROOT / "res/battle/scripts/common_anims").glob("*.s"))):
             t = p.read_text()
             if re.search(r"\bOpal\w+|OPAL_", t):
                 paths.append(p)
     report, bad = {}, 0
     for p in paths:
         res, err = check_move(p, sheets)
-        move = p.parent.name
+        move = p.parent.name if p.name == "anim.s" else f"common_anims/{p.stem}"
         if err:
             bad += 1
             print(f"FAIL {move}: {err}")

@@ -36,10 +36,10 @@ L_0:
     AddSpriteWithFunc 0, SPRITE_FUNC_OFFSET_AND_ANIMATE, ranger_ice_bloom_NCGR_lz, ranger_ice_bloom_NCLR, ranger_ice_bloom_cell_NCER_lz, ranger_ice_bloom_anim_NANR_lz, 0, 0, 0, -4
     Func_Shake 1, 0, 1, 2, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
     OpalResidual 1, ICE, OPAL_ICE_SEQ_GLINT, BATTLE_ANIM_DEFENDER, 22, 110, -12, -16
-    OpalWeatherAccent
     WaitForAllEmitters
     WaitForAnimTasks
     FreeSpriteManager 0
+    OpalWeatherAccent
     OpalSheetEnd 1
     OpalWeatherAccentEnd 2
     UnloadParticleSystem 0

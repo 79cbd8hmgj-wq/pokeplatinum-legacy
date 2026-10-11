@@ -44,12 +44,12 @@ L_0:
     Func_FadeBattlerSprite BATTLE_ANIM_DEFENDER, 0, 2, BATTLE_COLOR_RED, 10, 0
     Func_Shake 2, 0, 1, 8, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
     Func_ShakeBg 2, 1, 0, 2, 0, SHAKE_BG_TARGET_BASE
-    OpalWeatherAccent
     WaitForAnimTasks
     OpalResidual 1, FIRE, OPAL_FIRE_SEQ_PLUME, BATTLE_ANIM_DEFENDER, 22, 90, 0, -8
     WaitForAllEmitters
     WaitForAnimTasks
     FreeSpriteManager 0
+    OpalWeatherAccent
     OpalSheetEnd 1
     OpalWeatherAccentEnd 2
     UnloadParticleSystem 0

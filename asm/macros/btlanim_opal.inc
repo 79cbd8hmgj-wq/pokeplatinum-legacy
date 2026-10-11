@@ -187,3 +187,29 @@ Opal_WxHail:
     OpalResidual \mgr, OPAL_RES(opal_fx_ring, opal_fx_ring_ice), OPAL_RING_SEQ_STAR_POP, \targets, 20, 100, 10, -14
     Return
     .endm
+
+// ---------------------------------------------------------------------------------------------
+// B5: battler reactions. `role` is a BATTLE_ANIM_* battler role (DEFENDER, ATTACKER, ...). The move/common-animation
+// script only runs after the engine confirmed the outcome: a missed, immune, Protect-blocked or failed move never reaches
+// its animation, status animations run only from the status-application path, and multi-hit moves replay the script once per
+// real hit. The animation system resolves `role` to the live battler sprite (Substitute draws on its own sprite).
+// ---------------------------------------------------------------------------------------------
+
+// REACT_LIGHT: 2-pixel recoil and one brief white flash
+    .macro OpalReactLight role=BATTLE_ANIM_DEFENDER
+    Func_Shake 1, 0, 1, 2, (\role) | BATTLE_ANIM_BATTLER_SPRITES
+    Func_FadeBattlerSprite \role, 0, 1, BATTLE_COLOR_WHITE, 6, 0
+    .endm
+
+// REACT_HEAVY: stronger 3-pixel recoil, brighter flash, impact ring on the battler plane and a camera punch
+    .macro OpalReactHeavy mgr:req, char:req, pltt:req, cell:req, animres:req, role=BATTLE_ANIM_DEFENDER
+    Func_Shake 3, 0, 1, 4, (\role) | BATTLE_ANIM_BATTLER_SPRITES
+    Func_FadeBattlerSprite \role, 0, 1, BATTLE_COLOR_WHITE, 10, 0
+    OpalImpactBurst \mgr, \char, \pltt, \cell, \animres, OPAL_RING_SEQ_EXPAND, \role, 140, 0, 0, 0, OPAL_FX_FLAG_TRANSLUCENT
+    OpalCamPunchHeavy
+    .endm
+
+// REACT_MAGIC: tinted pulse on the battler, no recoil (special hits flow through the body)
+    .macro OpalReactMagic color:req, role=BATTLE_ANIM_DEFENDER
+    Func_FadeBattlerSprite \role, 0, 2, \color, 8, 2
+    .endm

@@ -1,7 +1,13 @@
 #include "macros/btlanimcmd.inc"
 
+// Opal B3/B5 physical exemplar: FOCUS_ATTACKER during the metal charge, IMPACT_PUNCH + REACT_HEAVY on the confirmed hit.
+// Native emitters, sounds and timing unchanged. Donor: procedural opal_fx_ring (steel palette).
+#define RING OPAL_RES(opal_fx_ring, opal_fx_ring_steel)
+
 L_0:
     LoadParticleResource 0, iron_tail_spa
+    OpalSheetBegin 1, 4, RING
+    OpalCamFocusAttacker
     PlayLoopedSoundEffectL SEQ_SE_DP_W231, 8, 2
     CreateEmitter 0, 1, EMITTER_CB_SET_POS_TO_ATTACKER
     InitPokemonSpriteManager
@@ -22,7 +28,8 @@ L_0:
     CreateEmitter 0, 3, EMITTER_CB_SET_POS_TO_DEFENDER
     CreateEmitter 0, 2, EMITTER_CB_SET_POS_TO_DEFENDER
     CreateEmitter 0, 0, EMITTER_CB_SET_POS_TO_DEFENDER
-    Func_Shake 1, 0, 1, 2, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
+    OpalReactHeavy 1, RING, BATTLE_ANIM_DEFENDER
     WaitForAllEmitters
+    OpalSheetEnd 1
     UnloadParticleSystem 0
     End

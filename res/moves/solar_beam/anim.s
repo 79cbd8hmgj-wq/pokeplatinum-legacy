@@ -38,7 +38,6 @@ L_1:
 
 L_2:
     OpalSheetBegin 1, 8, RING_GOLD
-    OpalSheetBegin 2, 4, RING_SOLAR
     OpalCamFocusAttacker
     OpalDimIn BATTLE_COLOR_DARK_BLUE, 8, 1
     WaitForAnimTasks
@@ -55,7 +54,7 @@ L_2:
     CreateEmitter 0, 11, EMITTER_CB_SET_POS_TO_DEFENDER
     CreateEmitter 0, 1, EMITTER_CB_SET_POS_TO_DEFENDER
     OpalImpactBurst 1, RING_GOLD, OPAL_RING_SEQ_STAR_POP, BATTLE_ANIM_DEFENDER, 300, 0, 0, 0, OPAL_FX_FLAG_TRANSLUCENT
-    OpalImpactBurst 2, RING_SOLAR, OPAL_RING_SEQ_EXPAND, BATTLE_ANIM_DEFENDER, 240, 0, 0, 0, OPAL_FX_FLAG_TRANSLUCENT
+    OpalImpactBurst 1, RING_GOLD, OPAL_RING_SEQ_EXPAND, BATTLE_ANIM_DEFENDER, 240, 0, 0, 0, OPAL_FX_FLAG_TRANSLUCENT
     Delay 5
     Func_FadeBattlerSprite BATTLE_ANIM_DEFENDER, 0, 2, BATTLE_COLOR_LIGHT_YELLOW1, 14, 0
     Func_Shake 4, 0, 1, 12, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
@@ -63,11 +62,10 @@ L_2:
     OpalWeatherAccent
     WaitForAllEmitters
     OpalSheetEnd 1
-    OpalSheetEnd 2
-    OpalWeatherAccentEnd 3
+    OpalWeatherAccentEnd 2
     UnloadParticleSystem 0
     OpalDimOut BATTLE_COLOR_DARK_BLUE, 8, 1
     WaitForAnimTasks
     End
 
-    OpalWeatherAccentSub 3
+    OpalWeatherAccentSub 2
