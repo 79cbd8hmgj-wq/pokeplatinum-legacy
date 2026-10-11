@@ -37,6 +37,16 @@ Existing technical method: export Nitro cells, assemble PNG + cell/animation JSO
 
 **Important:** Family rank means promising opportunity, not compatible graphics. No nonexistent package or named lightning asset is claimed here. Recovered curation overlays override legacy baseline status.
 
+## No-token bulk animation inventory
+
+Instead of individually reading 492 animation directories, first generate a compact machine-readable inventory (only the mapped moves by default):
+
+```bash
+python3 tools/visual_overhaul/audit_b2_b8_move_scripts.py --only-mapped --output /tmp/opal_b2_b8_moves.json
+```
+
+Run without `--only-mapped` if widening scope beyond the mapped effects. The resulting operation counts and flags are **heuristic triage only**, not control-flow proof. Read and adjust individual branching scripts only when flagged or actively implementing them. The scanner does not edit game resources.
+
 ## B2: primary vertical slices
 
 **Thunderbolt — electrical charge and discharge:** attacker-localized anticipation; controlled scene dim; release effect; defender-linked branches and brief light flashes; residual sparks; complete tint and emitter reset. Consult existing `res/moves/thunderbolt/anim.s`, native SHAKE/FADE functions and ranked Ranger effect cells. Preserve the move's existing logic and sounds unless sequencing improves sound sync.
