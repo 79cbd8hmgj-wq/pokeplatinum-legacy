@@ -2,7 +2,7 @@
 
 // Opal B2: LAYERED_FLAME_PILLAR
 //   launch   native fire-blast emitters + small flame tongues at the attacker; camera focus
-//   impact   hotter core tongue, delayed outer plume and embers on the defender; ranger bloom + native BG switch unchanged
+//   impact   hotter core tongue at the hit, embers rising afterwards; ranger bloom + native BG switch unchanged (no extra overlay on top of the bloom)
 // The warm cue is the native effect-BG switch (22); no base-BG fade is layered on top of it (single palette owner).
 // Donors: pokeemerald fire / fire_plume (opal_fire), pokeranger2 e010 (ranger_fire_bloom, B1)
 #define FIRE OPAL_RES(opal_fire, opal_fire)
@@ -31,7 +31,6 @@ L_0:
     SwitchBg 22, BATTLE_BG_SWITCH_MODE_FADE
     StopSoundEffect SEQ_SE_DP_W172
     PlaySoundEffectR SEQ_SE_DP_W172B
-    OpalImpactBurst 1, FIRE, OPAL_FIRE_SEQ_PLUME, BATTLE_ANIM_DEFENDER, 190, 0, 2, 0, OPAL_FX_FLAG_TRANSLUCENT
     Delay 10
     PlaySoundEffectR SEQ_SE_DP_W120
     // Donor sprite: Pokemon Ranger 2 e010 fireball-flare (donor cells, docs/visual_overhaul/b1_installed_donors/ranger_fire_bloom.provenance.json).

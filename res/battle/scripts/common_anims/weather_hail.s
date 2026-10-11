@@ -1,7 +1,7 @@
 #include "macros/btlanimcmd.inc"
 
 // Opal B4 WEATHER_ACCENT (hail): icy flecks pop around every battler. One-shot, bounded, freed here.
-#define RING OPAL_RES(opal_fx_ring, opal_fx_ring_ice)
+#define RING OPAL_RES(opal_fx_wx, opal_fx_wx_ice)
 
 .data
 
@@ -14,9 +14,9 @@ L_0:
     CreateEmitter 0, 1, EMITTER_CB_SET_POS_TO_ATTACKER
     CreateEmitter 0, 2, EMITTER_CB_SET_POS_TO_ATTACKER
     CreateEmitter 0, 0, EMITTER_CB_SET_POS_TO_ATTACKER
-    OpalResidual 1, RING, OPAL_RING_SEQ_STAR_POP, BATTLE_ANIM_ALL_BATTLERS, 22, 90, 10, -14
+    OpalResidual 1, RING, OPAL_WX_SEQ_STAR_POP, BATTLE_ANIM_ALL_BATTLERS, 22, 90, 10, -14
     Delay 12
-    OpalResidual 1, RING, OPAL_RING_SEQ_STAR_POP, BATTLE_ANIM_ALL_BATTLERS, 22, 70, -10, -4
+    OpalResidual 1, RING, OPAL_WX_SEQ_STAR_POP, BATTLE_ANIM_ALL_BATTLERS, 22, 70, -10, -4
     WaitForAllEmitters
     OpalSheetEnd 1
     UnloadParticleSystem 0

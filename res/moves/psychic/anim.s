@@ -2,7 +2,7 @@
 
 // Opal B2: PSYCHIC_LENSING
 //   pulse   translucent pink rings expand around the attacker while it flashes (native), deliberate stagger
-//   strike  paired rings on the defender as the native confusion wobble + BG warp run; rings are battler-plane only (HUD untouched)
+//   strike  REACT_MAGIC pulse + paired rings on the defender as the native confusion wobble + BG warp run; rings are battler-plane only (HUD untouched)
 // The native effect-BG switch (52) and Func_Confusion are unchanged; no base-BG fade is layered on top of them.
 // Donor: procedural opal_fx_ring (psychic palette)
 #define RING OPAL_RES(opal_fx_ring, opal_fx_ring_psychic)
@@ -26,6 +26,7 @@ L_0:
     BtlAnimCmd_082 3, 0, 4
     PlayLoopedSoundEffectR SEQ_SE_DP_480, 4, 2
     Func_Confusion
+    OpalReactMagic 0x725F, BATTLE_ANIM_DEFENDER
     OpalImpactBurst 1, RING, OPAL_RING_SEQ_CONVERGE, BATTLE_ANIM_DEFENDER, 230, 0, 0, 0, OPAL_FX_FLAG_TRANSLUCENT
     Delay 8
     OpalImpactBurst 1, RING, OPAL_RING_SEQ_EXPAND, BATTLE_ANIM_DEFENDER, 190, 0, 0, 0, OPAL_FX_FLAG_TRANSLUCENT

@@ -1,7 +1,7 @@
 #include "macros/btlanimcmd.inc"
 
 // Opal B4 WEATHER_ACCENT (harsh sunlight): gold shimmer stars rise from every battler. One-shot, bounded, freed here.
-#define RING OPAL_RES(opal_fx_ring, opal_fx_ring_gold)
+#define RING OPAL_RES(opal_fx_wx, opal_fx_wx_gold)
 
 .data
 
@@ -13,9 +13,9 @@ L_0:
     CreateEmitter 0, 2, EMITTER_CB_NONE
     CreateEmitter 0, 0, EMITTER_CB_NONE
     PlayPannedSoundEffect SEQ_SE_DP_W080, 0
-    OpalResidual 1, RING, OPAL_RING_SEQ_STAR_POP, BATTLE_ANIM_ALL_BATTLERS, 22, 100, -12, -14
+    OpalResidual 1, RING, OPAL_WX_SEQ_STAR_POP, BATTLE_ANIM_ALL_BATTLERS, 22, 100, -12, -14
     Delay 12
-    OpalResidual 1, RING, OPAL_RING_SEQ_STAR_POP, BATTLE_ANIM_ALL_BATTLERS, 22, 80, 12, -6
+    OpalResidual 1, RING, OPAL_WX_SEQ_STAR_POP, BATTLE_ANIM_ALL_BATTLERS, 22, 80, 12, -6
     WaitForAllEmitters
     OpalSheetEnd 1
     UnloadParticleSystem 0

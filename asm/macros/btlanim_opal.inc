@@ -37,6 +37,8 @@
 #define OPAL_RING_SEQ_FLAT_CONVERGE 3
 #define OPAL_RING_SEQ_STAR_POP      4
 #define OPAL_RING_SEQ_DOT_PULSE     5
+#define OPAL_WX_SEQ_FLAT_EXPAND     0
+#define OPAL_WX_SEQ_STAR_POP        1
 
 // Camera tunables (B3)
 #define OPAL_CAM_FOCUS_DX   (-3)
@@ -168,23 +170,23 @@ Opal_WxNone:
     Return
 
 Opal_WxRain:
-    OpalSheetBegin \mgr, 4, OPAL_RES(opal_fx_ring, opal_fx_ring_water)
-    OpalImpactBurst \mgr, OPAL_RES(opal_fx_ring, opal_fx_ring_water), OPAL_RING_SEQ_FLAT_EXPAND, \targets, 100, 0, 22, 0, OPAL_FX_FLAG_TRANSLUCENT
+    OpalSheetBegin \mgr, 4, OPAL_RES(opal_fx_wx, opal_fx_wx_water)
+    OpalImpactBurst \mgr, OPAL_RES(opal_fx_wx, opal_fx_wx_water), OPAL_WX_SEQ_FLAT_EXPAND, \targets, 100, 0, 22, 0, OPAL_FX_FLAG_TRANSLUCENT
     Return
 
 Opal_WxSand:
-    OpalSheetBegin \mgr, 4, OPAL_RES(opal_fx_ring, opal_fx_ring_earth)
-    OpalImpactBurst \mgr, OPAL_RES(opal_fx_ring, opal_fx_ring_earth), OPAL_RING_SEQ_FLAT_EXPAND, \targets, 130, 0, 22, 0, OPAL_FX_FLAG_TRANSLUCENT
+    OpalSheetBegin \mgr, 4, OPAL_RES(opal_fx_wx, opal_fx_wx_earth)
+    OpalImpactBurst \mgr, OPAL_RES(opal_fx_wx, opal_fx_wx_earth), OPAL_WX_SEQ_FLAT_EXPAND, \targets, 130, 0, 22, 0, OPAL_FX_FLAG_TRANSLUCENT
     Return
 
 Opal_WxSun:
-    OpalSheetBegin \mgr, 4, OPAL_RES(opal_fx_ring, opal_fx_ring_gold)
-    OpalResidual \mgr, OPAL_RES(opal_fx_ring, opal_fx_ring_gold), OPAL_RING_SEQ_STAR_POP, \targets, 20, 100, -10, -12
+    OpalSheetBegin \mgr, 4, OPAL_RES(opal_fx_wx, opal_fx_wx_gold)
+    OpalResidual \mgr, OPAL_RES(opal_fx_wx, opal_fx_wx_gold), OPAL_WX_SEQ_STAR_POP, \targets, 20, 100, -10, -12
     Return
 
 Opal_WxHail:
-    OpalSheetBegin \mgr, 4, OPAL_RES(opal_fx_ring, opal_fx_ring_ice)
-    OpalResidual \mgr, OPAL_RES(opal_fx_ring, opal_fx_ring_ice), OPAL_RING_SEQ_STAR_POP, \targets, 20, 100, 10, -14
+    OpalSheetBegin \mgr, 4, OPAL_RES(opal_fx_wx, opal_fx_wx_ice)
+    OpalResidual \mgr, OPAL_RES(opal_fx_wx, opal_fx_wx_ice), OPAL_WX_SEQ_STAR_POP, \targets, 20, 100, 10, -14
     Return
     .endm
 

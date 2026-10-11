@@ -62,6 +62,7 @@ pngs = files(
     'opal_fire.png',
     'opal_ice.png',
     'opal_fx_ring.png',
+    'opal_fx_wx.png',
 )
 
 pngs_for_pal = files(
@@ -103,6 +104,7 @@ pngs_for_pal = files(
     'opal_fire.png',
     'opal_ice.png',
     'opal_fx_ring.png',
+    'opal_fx_wx.png',
 )
 
 no_cell_pngs = files(
@@ -126,6 +128,10 @@ no_cell_pngs_for_pal = files(
     'opal_fx_ring_solar.png',
     'opal_fx_ring_steel.png',
     'opal_fx_ring_opal.png',
+    'opal_fx_wx_gold.png',
+    'opal_fx_wx_water.png',
+    'opal_fx_wx_ice.png',
+    'opal_fx_wx_earth.png',
 )
 
 cell_jsons = files(
@@ -175,6 +181,7 @@ cell_jsons = files(
     'opal_fire_cell.json',
     'opal_ice_cell.json',
     'opal_fx_ring_cell.json',
+    'opal_fx_wx_cell.json',
 )
 
 cellanm_jsons = files(
@@ -224,6 +231,7 @@ cellanm_jsons = files(
     'opal_fire_anim.json',
     'opal_ice_anim.json',
     'opal_fx_ring_anim.json',
+    'opal_fx_wx_anim.json',
 )
 
 manual_pal_files = files(
