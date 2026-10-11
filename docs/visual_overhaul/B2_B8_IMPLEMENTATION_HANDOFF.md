@@ -1,5 +1,21 @@
 # B2–B8 production handoff — decisions prepared outside Claude Code
 
+## One-pass Claude Code entrypoint (avoid repeat research)
+
+Run from the already checked-out PR #110 branch:
+
+```bash
+python3 tools/visual_overhaul/b2_b8_execution_brief.py --verify
+python3 tools/visual_overhaul/b2_b8_execution_brief.py --phase B2 --output /tmp/opal-b2-brief.json
+python3 tools/visual_overhaul/validate_b2_b8_move_mapping.py --output /tmp/opal-move-branches.json
+```
+
+Read **this handoff**, then **only** `/tmp/opal-b2-brief.json`, `/tmp/opal-move-branches.json`, and the exact source/asset files required for the next change. Do not load the entire 64,841-record catalog. For subsequent phases, change `--phase B2` to `B3` through `B8` and consume the phase-specific brief. Design status is **not** implementation status.
+
+The already committed `.github/workflows/validate-b1-battle-integration.yml` builds `b2-b8-handoff-evidence` (candidate/evidence reports and B2–B8 phase briefs); it is source-only validation, not visual acceptance. Run dual-ROM builds on meaningful implementation batches; owner handles runtime acceptance. Avoid re-running CI solely to regenerate briefs.
+
+**Work split:** These manifests, art direction, 17-type coverage, move mappings, donor provenance and the owner QA matrix are supplied. Claude owns only C/animation/graphic integration, source-level fixes and dual-ROM builds. Prefer shared cinematic helpers over per-move code duplication; never mark a phase complete from prose or planning artifacts.
+
 Read `B2_B8_PREIMPLEMENTATION_MANIFEST.json` first. It fixes the implementation direction without making unsupported asset-compatibility claims. This file contains **design decisions and acceptance criteria**, not a claim that the systems have been implemented.
 
 ## Decision rules
