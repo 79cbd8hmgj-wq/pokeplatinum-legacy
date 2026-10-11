@@ -20,6 +20,7 @@ on:
       - 'docs/visual_overhaul/B2_B8_IMPLEMENTATION_HANDOFF.md'
       - 'tools/visual_overhaul/validate_b2_b8_handoff.py'
       - 'tools/visual_overhaul/audit_b2_b8_move_scripts.py'
+      - 'tools/visual_overhaul/b2_b8_execution_brief.py'
       - 'docs/visual_overhaul/B2_B8_IMPLEMENTATION_MANIFEST.json'
       - 'docs/visual_overhaul/B2_B8_IMPLEMENTATION_SPEC.md'
       - '.github/workflows/validate-b1-battle-integration.yml'
@@ -55,6 +56,12 @@ jobs:
         run: python3 tools/visual_overhaul/validate_b2_b8_handoff.py
       - name: Generate B2-B8 compact move source inventory
         run: python3 tools/visual_overhaul/audit_b2_b8_move_scripts.py --only-mapped --output artifacts/b2-b8-handoff/move-script-inventory.json
+      - name: Verify expanded B2-B8 implementation manifest and produce phase briefs
+        run: |
+          python3 tools/visual_overhaul/b2_b8_execution_brief.py --verify --output artifacts/b2-b8-handoff/manifest-validation.json
+          for phase in B2 B3 B4 B5 B6 B7 B8; do
+            python3 tools/visual_overhaul/b2_b8_execution_brief.py --phase "$phase" --output "artifacts/b2-b8-handoff/${phase}-implementation-brief.json"
+          done
       - name: Upload B2-B8 donor and move evidence for Claude
         uses: actions/upload-artifact@v4
         with:
