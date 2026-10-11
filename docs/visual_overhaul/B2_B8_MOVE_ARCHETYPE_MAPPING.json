@@ -1,0 +1,427 @@
+{
+  "version": "1.0",
+  "kind": "verified_source_paths_and_proposed_visual_archetypes",
+  "verification_basis": "GitHub recursive tree for feat/b1-opal-cinematic-battle-foundation checked 2026-10-11",
+  "not_claiming_implementation": true,
+  "source_invariants": [
+    "Move script must exist before assignment",
+    "Existing game mechanics unchanged",
+    "Proposed archetypes are *not* donor selection evidence",
+    "Retain doubles, contest and friendly-fire variants if present"
+  ],
+  "assignments": [
+    {
+      "move": "shadow_ball",
+      "script": "res/moves/shadow_ball/anim.s",
+      "archetype": "projectile",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "energy_ball",
+      "script": "res/moves/energy_ball/anim.s",
+      "archetype": "projectile",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "water_pulse",
+      "script": "res/moves/water_pulse/anim.s",
+      "archetype": "projectile",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "aura_sphere",
+      "script": "res/moves/aura_sphere/anim.s",
+      "archetype": "projectile",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "sludge_bomb",
+      "script": "res/moves/sludge_bomb/anim.s",
+      "archetype": "projectile",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "dragon_pulse",
+      "script": "res/moves/dragon_pulse/anim.s",
+      "archetype": "projectile",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "thunderbolt",
+      "script": "res/moves/thunderbolt/anim.s",
+      "archetype": "beam",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "ice_beam",
+      "script": "res/moves/ice_beam/anim.s",
+      "archetype": "beam",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "flamethrower",
+      "script": "res/moves/flamethrower/anim.s",
+      "archetype": "beam",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "solar_beam",
+      "script": "res/moves/solar_beam/anim.s",
+      "archetype": "beam",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "flash_cannon",
+      "script": "res/moves/flash_cannon/anim.s",
+      "archetype": "beam",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "charge_beam",
+      "script": "res/moves/charge_beam/anim.s",
+      "archetype": "beam",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "signal_beam",
+      "script": "res/moves/signal_beam/anim.s",
+      "archetype": "beam",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "fire_blast",
+      "script": "res/moves/fire_blast/anim.s",
+      "archetype": "explosion",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "explosion",
+      "script": "res/moves/explosion/anim.s",
+      "archetype": "explosion",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "sludge_bomb",
+      "script": "res/moves/sludge_bomb/anim.s",
+      "archetype": "explosion",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "surf",
+      "script": "res/moves/surf/anim.s",
+      "archetype": "area_surge",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "blizzard",
+      "script": "res/moves/blizzard/anim.s",
+      "archetype": "area_surge",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "earthquake",
+      "script": "res/moves/earthquake/anim.s",
+      "archetype": "area_surge",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "heat_wave",
+      "script": "res/moves/heat_wave/anim.s",
+      "archetype": "area_surge",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "discharge",
+      "script": "res/moves/discharge/anim.s",
+      "archetype": "area_surge",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "rock_slide",
+      "script": "res/moves/rock_slide/anim.s",
+      "archetype": "area_surge",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "close_combat",
+      "script": "res/moves/close_combat/anim.s",
+      "archetype": "melee",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "brick_break",
+      "script": "res/moves/brick_break/anim.s",
+      "archetype": "melee",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "iron_tail",
+      "script": "res/moves/iron_tail/anim.s",
+      "archetype": "melee",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "shadow_claw",
+      "script": "res/moves/shadow_claw/anim.s",
+      "archetype": "melee",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "aerial_ace",
+      "script": "res/moves/aerial_ace/anim.s",
+      "archetype": "melee",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "dragon_claw",
+      "script": "res/moves/dragon_claw/anim.s",
+      "archetype": "melee",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "bullet_seed",
+      "script": "res/moves/bullet_seed/anim.s",
+      "archetype": "multihit",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "rock_blast",
+      "script": "res/moves/rock_blast/anim.s",
+      "archetype": "multihit",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "pin_missile",
+      "script": "res/moves/pin_missile/anim.s",
+      "archetype": "multihit",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "fury_swipes",
+      "script": "res/moves/fury_swipes/anim.s",
+      "archetype": "multihit",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "double_hit",
+      "script": "res/moves/double_hit/anim.s",
+      "archetype": "multihit",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "rain_dance",
+      "script": "res/moves/rain_dance/anim.s",
+      "archetype": "weather",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "sunny_day",
+      "script": "res/moves/sunny_day/anim.s",
+      "archetype": "weather",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "hail",
+      "script": "res/moves/hail/anim.s",
+      "archetype": "weather",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "sandstorm",
+      "script": "res/moves/sandstorm/anim.s",
+      "archetype": "weather",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "will_o_wisp",
+      "script": "res/moves/will_o_wisp/anim.s",
+      "archetype": "status",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "thunder_wave",
+      "script": "res/moves/thunder_wave/anim.s",
+      "archetype": "status",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "hypnosis",
+      "script": "res/moves/hypnosis/anim.s",
+      "archetype": "status",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "toxic",
+      "script": "res/moves/toxic/anim.s",
+      "archetype": "status",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "confuse_ray",
+      "script": "res/moves/confuse_ray/anim.s",
+      "archetype": "status",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "psychic",
+      "script": "res/moves/psychic/anim.s",
+      "archetype": "psychic",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "psybeam",
+      "script": "res/moves/psybeam/anim.s",
+      "archetype": "psychic",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "dark_pulse",
+      "script": "res/moves/dark_pulse/anim.s",
+      "archetype": "psychic",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "confusion",
+      "script": "res/moves/confusion/anim.s",
+      "archetype": "psychic",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "extrasensory",
+      "script": "res/moves/extrasensory/anim.s",
+      "archetype": "psychic",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "earth_power",
+      "script": "res/moves/earth_power/anim.s",
+      "archetype": "ground",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "dig",
+      "script": "res/moves/dig/anim.s",
+      "archetype": "ground",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "magnitude",
+      "script": "res/moves/magnitude/anim.s",
+      "archetype": "ground",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "stone_edge",
+      "script": "res/moves/stone_edge/anim.s",
+      "archetype": "ground",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "ancient_power",
+      "script": "res/moves/ancient_power/anim.s",
+      "archetype": "ground",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "razor_leaf",
+      "script": "res/moves/razor_leaf/anim.s",
+      "archetype": "natural_force",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "leaf_storm",
+      "script": "res/moves/leaf_storm/anim.s",
+      "archetype": "natural_force",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "magical_leaf",
+      "script": "res/moves/magical_leaf/anim.s",
+      "archetype": "natural_force",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "petal_dance",
+      "script": "res/moves/petal_dance/anim.s",
+      "archetype": "natural_force",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    },
+    {
+      "move": "energy_ball",
+      "script": "res/moves/energy_ball/anim.s",
+      "archetype": "natural_force",
+      "assignment_status": "design_only",
+      "verified_path_on_b1_branch": true
+    }
+  ],
+  "shared_archetypes": {
+    "energy_ball": [
+      "projectile",
+      "natural_force"
+    ],
+    "sludge_bomb": [
+      "projectile",
+      "explosion"
+    ]
+  },
+  "excluded_without_expected_path": [
+    "self_destruct"
+  ],
+  "qa": "Run tools/visual_overhaul/validate_b2_b8_move_mapping.py before implementation; a passing map does not prove effect compatibility."
+}
