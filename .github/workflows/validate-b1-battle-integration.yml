@@ -23,6 +23,8 @@ on:
       - 'tools/visual_overhaul/b2_b8_execution_brief.py'
       - 'docs/visual_overhaul/B2_B8_IMPLEMENTATION_MANIFEST.json'
       - 'docs/visual_overhaul/B2_B8_CINEMATIC_DIRECTION.json'
+      - 'docs/visual_overhaul/B2_B8_MOVE_ARCHETYPE_MAPPING.json'
+      - 'tools/visual_overhaul/validate_b2_b8_move_mapping.py'
       - 'docs/visual_overhaul/B2_B8_OWNER_RUNTIME_QA.json'
       - 'docs/visual_overhaul/B2_B8_IMPLEMENTATION_SPEC.md'
       - '.github/workflows/validate-b1-battle-integration.yml'
@@ -56,6 +58,8 @@ jobs:
         run: python3 tools/visual_overhaul/validate_av1_battle_presentation.py
       - name: Validate B2-B8 preimplementation handoff provenance
         run: python3 tools/visual_overhaul/validate_b2_b8_handoff.py
+      - name: Validate 57 B2-B8 cinematic move-to-script assignments
+        run: python3 tools/visual_overhaul/validate_b2_b8_move_mapping.py --output artifacts/b2-b8-handoff/mapped-move-branch-features.json
       - name: Generate B2-B8 compact move source inventory
         run: python3 tools/visual_overhaul/audit_b2_b8_move_scripts.py --only-mapped --output artifacts/b2-b8-handoff/move-script-inventory.json
       - name: Verify expanded B2-B8 implementation manifest and produce phase briefs
