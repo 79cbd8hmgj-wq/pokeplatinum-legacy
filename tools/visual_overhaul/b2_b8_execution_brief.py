@@ -131,7 +131,18 @@ def main() -> None:
     args = parser.parse_args()
     root = args.repo_root.resolve()
     data = json.loads((root / REL).read_text(encoding="utf-8"))
+    direction = json.loads((root / "docs/visual_overhaul/B2_B8_CINEMATIC_DIRECTION.json").read_text(encoding="utf-8"))
+    mapped = {item["id"] for item in data["cinematic_archetypes"]}
+    designed = {item["id"] for item in direction["archetypes"]}
+    if mapped != designed or len(designed) != len(direction["archetypes"]):
+        raise SystemExit("Cinematic-direction archetype IDs do not match the authoritative manifest")
     outcome = verify(root, data) if args.verify else brief(data, args.phase, args.archetype)
+    if args.verify:
+        outcome["cinematic_direction_verified"] = True
+    else:
+        selected = {item["id"] for item in outcome["selected_archetypes"]}
+        outcome["opal_visual_identity"] = direction["art_direction"]
+        outcome["creative_decisions"] = [item for item in direction["archetypes"] if item["id"] in selected]
     serialized = json.dumps(outcome, indent=2) + "\n"
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)
