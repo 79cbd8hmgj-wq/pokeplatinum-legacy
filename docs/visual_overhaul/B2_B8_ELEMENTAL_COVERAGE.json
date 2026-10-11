@@ -1,0 +1,321 @@
+{
+  "kind": "Gen4_17_type_visual_coverage_assignment",
+  "status": "design_only_not_game_implementation",
+  "verification": "34 exact res/moves/<name>/anim.s paths verified on PR110 branch 2026-10-11",
+  "source_policy": [
+    "Each elemental hue must remain identifiable",
+    "Opal framing uses pearl/mineral-violet/restrained gold",
+    "Use any of the six approved creative modes when compatible",
+    "Existing installed Ranger resources are reusable, candidate slots not verified",
+    "Do not alter move effects or damage"
+  ],
+  "types": [
+    {
+      "type": "normal",
+      "representatives": [
+        "hyper_beam",
+        "return"
+      ],
+      "script_paths": [
+        "res/moves/hyper_beam/anim.s",
+        "res/moves/return/anim.s"
+      ],
+      "allowed_archetypes": [
+        "beam",
+        "melee"
+      ],
+      "cinematic_identity": "neutral prism flare; restrained impact outline",
+      "resource_priority": "native",
+      "source_status": "confirmed_move_scripts; visual assignment_proposed"
+    },
+    {
+      "type": "fire",
+      "representatives": [
+        "flamethrower",
+        "fire_blast"
+      ],
+      "script_paths": [
+        "res/moves/flamethrower/anim.s",
+        "res/moves/fire_blast/anim.s"
+      ],
+      "allowed_archetypes": [
+        "beam",
+        "explosion"
+      ],
+      "cinematic_identity": "ember crown and orange/gold combustion",
+      "resource_priority": "ranger_fire_bloom",
+      "source_status": "confirmed_move_scripts; visual assignment_proposed"
+    },
+    {
+      "type": "water",
+      "representatives": [
+        "surf",
+        "hydro_pump"
+      ],
+      "script_paths": [
+        "res/moves/surf/anim.s",
+        "res/moves/hydro_pump/anim.s"
+      ],
+      "allowed_archetypes": [
+        "area_surge",
+        "beam"
+      ],
+      "cinematic_identity": "deep-blue volume, cyan spray and foam",
+      "resource_priority": "candidate_water",
+      "source_status": "confirmed_move_scripts; visual assignment_proposed"
+    },
+    {
+      "type": "electric",
+      "representatives": [
+        "thunderbolt",
+        "discharge"
+      ],
+      "script_paths": [
+        "res/moves/thunderbolt/anim.s",
+        "res/moves/discharge/anim.s"
+      ],
+      "allowed_archetypes": [
+        "beam",
+        "area_surge"
+      ],
+      "cinematic_identity": "electric-yellow forked arcs and white impact flashes",
+      "resource_priority": "candidate_electric",
+      "source_status": "confirmed_move_scripts; visual assignment_proposed"
+    },
+    {
+      "type": "grass",
+      "representatives": [
+        "leaf_storm",
+        "energy_ball"
+      ],
+      "script_paths": [
+        "res/moves/leaf_storm/anim.s",
+        "res/moves/energy_ball/anim.s"
+      ],
+      "allowed_archetypes": [
+        "natural_force",
+        "projectile"
+      ],
+      "cinematic_identity": "leaf silhouette, emerald sweep and natural motion",
+      "resource_priority": "candidate_grass",
+      "source_status": "confirmed_move_scripts; visual assignment_proposed"
+    },
+    {
+      "type": "ice",
+      "representatives": [
+        "ice_beam",
+        "blizzard"
+      ],
+      "script_paths": [
+        "res/moves/ice_beam/anim.s",
+        "res/moves/blizzard/anim.s"
+      ],
+      "allowed_archetypes": [
+        "beam",
+        "area_surge"
+      ],
+      "cinematic_identity": "cyan crystal refraction and frozen afterglow",
+      "resource_priority": "ranger_ice_bloom",
+      "source_status": "confirmed_move_scripts; visual assignment_proposed"
+    },
+    {
+      "type": "fighting",
+      "representatives": [
+        "close_combat",
+        "focus_blast"
+      ],
+      "script_paths": [
+        "res/moves/close_combat/anim.s",
+        "res/moves/focus_blast/anim.s"
+      ],
+      "allowed_archetypes": [
+        "melee",
+        "projectile"
+      ],
+      "cinematic_identity": "precise momentum lines, heavy contact accent",
+      "resource_priority": "candidate_fighting",
+      "source_status": "confirmed_move_scripts; visual assignment_proposed"
+    },
+    {
+      "type": "poison",
+      "representatives": [
+        "sludge_bomb",
+        "gunk_shot"
+      ],
+      "script_paths": [
+        "res/moves/sludge_bomb/anim.s",
+        "res/moves/gunk_shot/anim.s"
+      ],
+      "allowed_archetypes": [
+        "projectile",
+        "explosion"
+      ],
+      "cinematic_identity": "acid-violet splash with contrasting toxic core",
+      "resource_priority": "native_then_donor",
+      "source_status": "confirmed_move_scripts; visual assignment_proposed"
+    },
+    {
+      "type": "ground",
+      "representatives": [
+        "earth_power",
+        "earthquake"
+      ],
+      "script_paths": [
+        "res/moves/earth_power/anim.s",
+        "res/moves/earthquake/anim.s"
+      ],
+      "allowed_archetypes": [
+        "ground",
+        "area_surge"
+      ],
+      "cinematic_identity": "earth-toned fault ripple and collapsing dust",
+      "resource_priority": "native_then_donor",
+      "source_status": "confirmed_move_scripts; visual assignment_proposed"
+    },
+    {
+      "type": "flying",
+      "representatives": [
+        "air_slash",
+        "brave_bird"
+      ],
+      "script_paths": [
+        "res/moves/air_slash/anim.s",
+        "res/moves/brave_bird/anim.s"
+      ],
+      "allowed_archetypes": [
+        "projectile",
+        "melee"
+      ],
+      "cinematic_identity": "translucent wind trails and directional streaks",
+      "resource_priority": "candidate_wind",
+      "source_status": "confirmed_move_scripts; visual assignment_proposed"
+    },
+    {
+      "type": "psychic",
+      "representatives": [
+        "psychic",
+        "psybeam"
+      ],
+      "script_paths": [
+        "res/moves/psychic/anim.s",
+        "res/moves/psybeam/anim.s"
+      ],
+      "allowed_archetypes": [
+        "psychic",
+        "beam"
+      ],
+      "cinematic_identity": "magenta-violet wavefront and controlled distortion",
+      "resource_priority": "candidate_psychic",
+      "source_status": "confirmed_move_scripts; visual assignment_proposed"
+    },
+    {
+      "type": "bug",
+      "representatives": [
+        "bug_buzz",
+        "x_scissor"
+      ],
+      "script_paths": [
+        "res/moves/bug_buzz/anim.s",
+        "res/moves/x_scissor/anim.s"
+      ],
+      "allowed_archetypes": [
+        "beam",
+        "melee"
+      ],
+      "cinematic_identity": "chitin green/teal vibration and clean slash contours",
+      "resource_priority": "native_then_donor",
+      "source_status": "confirmed_move_scripts; visual assignment_proposed"
+    },
+    {
+      "type": "rock",
+      "representatives": [
+        "stone_edge",
+        "rock_slide"
+      ],
+      "script_paths": [
+        "res/moves/stone_edge/anim.s",
+        "res/moves/rock_slide/anim.s"
+      ],
+      "allowed_archetypes": [
+        "ground",
+        "area_surge"
+      ],
+      "cinematic_identity": "stone shards and staggered debris hits",
+      "resource_priority": "ranger_rock_burst",
+      "source_status": "confirmed_move_scripts; visual assignment_proposed"
+    },
+    {
+      "type": "ghost",
+      "representatives": [
+        "shadow_ball",
+        "shadow_claw"
+      ],
+      "script_paths": [
+        "res/moves/shadow_ball/anim.s",
+        "res/moves/shadow_claw/anim.s"
+      ],
+      "allowed_archetypes": [
+        "projectile",
+        "melee"
+      ],
+      "cinematic_identity": "black-violet translucent energy and spectral edge",
+      "resource_priority": "candidate_spectral",
+      "source_status": "confirmed_move_scripts; visual assignment_proposed"
+    },
+    {
+      "type": "dragon",
+      "representatives": [
+        "dragon_pulse",
+        "draco_meteor"
+      ],
+      "script_paths": [
+        "res/moves/dragon_pulse/anim.s",
+        "res/moves/draco_meteor/anim.s"
+      ],
+      "allowed_archetypes": [
+        "projectile",
+        "explosion"
+      ],
+      "cinematic_identity": "deep indigo energy flow and imposing impact rings",
+      "resource_priority": "candidate_dragon",
+      "source_status": "confirmed_move_scripts; visual assignment_proposed"
+    },
+    {
+      "type": "dark",
+      "representatives": [
+        "dark_pulse",
+        "night_slash"
+      ],
+      "script_paths": [
+        "res/moves/dark_pulse/anim.s",
+        "res/moves/night_slash/anim.s"
+      ],
+      "allowed_archetypes": [
+        "psychic",
+        "melee"
+      ],
+      "cinematic_identity": "deep dark gradients with sharp crimson-violet accents",
+      "resource_priority": "candidate_spectral",
+      "source_status": "confirmed_move_scripts; visual assignment_proposed"
+    },
+    {
+      "type": "steel",
+      "representatives": [
+        "flash_cannon",
+        "iron_tail"
+      ],
+      "script_paths": [
+        "res/moves/flash_cannon/anim.s",
+        "res/moves/iron_tail/anim.s"
+      ],
+      "allowed_archetypes": [
+        "beam",
+        "melee"
+      ],
+      "cinematic_identity": "cool metallic specular gleam and hard-edged impacts",
+      "resource_priority": "candidate_metal",
+      "source_status": "confirmed_move_scripts; visual assignment_proposed"
+    }
+  ],
+  "acceptance": "At minimum source implementation and static validation of representative visual style across each type; owner runtime verification deferred. Not a requirement to force donor sprites when native graphics better."
+}
