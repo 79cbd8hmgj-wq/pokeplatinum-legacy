@@ -13,9 +13,9 @@ L_0:
     OpalSheetBegin 0, 8, THUNDER
     OpalCamFocusAttacker
     OpalChargeAura 0, THUNDER, OPAL_THUNDER_SEQ_SPARKS, 14, 140
-    OpalDimIn BATTLE_COLOR_DARK_BLUE, 5, 2
+    OpalDimIn BATTLE_COLOR_DARK_BLUE, 4, 2
     WaitForAnimTasks
-    OpalDimOut BATTLE_COLOR_DARK_BLUE, 5, 1
+    OpalDimOut BATTLE_COLOR_DARK_BLUE, 4, 1
     CreateEmitter 0, 2, EMITTER_CB_SET_POS_TO_DEFENDER
     PlaySoundEffectR SEQ_SE_DP_KAMI
     OpalFx 0, THUNDER, OPAL_THUNDER_SEQ_BOLT, BATTLE_ANIM_DEFENDER, 0, 14, 0, -30, 0, 0, 0, 200, 0

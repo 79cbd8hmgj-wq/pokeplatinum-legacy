@@ -110,9 +110,9 @@
     Func_OpalCamera OPAL_CAM_MODE_PAN, OPAL_CAM_FOCUS_DX, OPAL_CAM_FOCUS_DY, 6, 2, 6
     .endm
 
-// FOLLOW_PROJECTILE: slow backdrop slide toward the defender over the projectile's travel frames
+// FOLLOW_PROJECTILE: slow backdrop slide toward the defender, `frames` long in total (ease-in = frames - 6, 6-frame return)
     .macro OpalCamFollow frames:req
-    Func_OpalCamera OPAL_CAM_MODE_PAN, OPAL_CAM_FOLLOW_DX, 0, \frames, 0, 6
+    Func_OpalCamera OPAL_CAM_MODE_PAN, OPAL_CAM_FOLLOW_DX, 0, (\frames) - 6, 0, 6
     .endm
 
 // IMPACT_PUNCH: one decaying 6-frame shake on confirmed contact (the animation only runs when the move hit)
@@ -140,7 +140,7 @@
 // LIGHT_PULSE: short burst tint of the backdrop that decays back to the original palette (restores itself)
     .macro OpalLightPulse color:req, peak=6
     Func_FadeBg FADE_BG_TYPE_BASE, 1, 0, OPAL_LIGHT_PEAK(\peak), \color
-    Delay OPAL_LIGHT_PEAK(\peak)
+    Delay OPAL_LIGHT_PEAK(\peak) + 1
     Func_FadeBg FADE_BG_TYPE_BASE, 2, OPAL_LIGHT_PEAK(\peak), 0, \color
     .endm
 

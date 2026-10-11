@@ -393,8 +393,8 @@ void BattleAnimScriptFunc_OpalCamera(BattleAnimSystem *system)
 #if OPAL_REDUCED_MOTION
     return;
 #else
-    if (sOpalCameraActive) {
-        return;
+    if (sOpalCameraActive || BattleAnimSystem_IsContest(system)) {
+        return; // one owner at a time; contests keep their stage background fixed
     }
 
     OpalCameraContext *ctx = BattleAnimUtil_Alloc(system, sizeof(OpalCameraContext));

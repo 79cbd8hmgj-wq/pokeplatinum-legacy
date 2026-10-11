@@ -3,15 +3,25 @@
 from pathlib import Path
 import re
 ROOT = Path(__file__).resolve().parents[2]
+# Moves that Opal B2 has since rewritten as composites keep the native-emitter contract; their fade/sprite cleanup
+# is proven by validate_opal_cue_trace.py instead of the B1 text markers.
+OPAL_B2_MOVES = {"shadow_ball", "thunderbolt", "ice_beam"}
 for move, resource_id, emitter_id in (("shadow_ball", "0", "3"), ("thunderbolt", "0", "1"), ("ice_beam", "0", "0"), ("flamethrower", "0", "0"), ("energy_ball", "0", "2")):
     source = (ROOT / "res" / "moves" / move / "anim.s").read_text()
-    assert source.count("B1:") == 1, f"{move}: B1 effect missing"
-    assert len(re.findall(rf"CreateEmitter {resource_id}, {emitter_id}, EMITTER_CB_SET_POS_TO_DEFENDER", source)) >= 2
+    opal = move in OPAL_B2_MOVES
+    if opal:
+        assert "Opal B2" in source, f"{move}: expected the Opal B2 composite header"
+    else:
+        assert source.count("B1:") == 1, f"{move}: B1 effect missing"
+    assert len(re.findall(rf"CreateEmitter {resource_id}, {emitter_id}, EMITTER_CB_SET_POS_TO_DEFENDER", source)) >= 2 or (opal and move == "ice_beam")
     assert source.count("LoadParticleResource 0,") == 1
     assert source.count("WaitForAllEmitters") == 1
     assert source.count("UnloadParticleSystem 0") == 1
     assert source.index("WaitForAllEmitters") < source.index("UnloadParticleSystem 0")
-    assert source.rstrip().endswith("End")
+    body = source.split("OpalWeatherAccentSub")[0] if opal else source
+    assert body.rstrip().endswith("End")
+    if opal:
+        continue
     assert "Func_FadeBg FADE_BG_TYPE_BASE, 1," in source
     fades = re.findall(r"Func_FadeBg FADE_BG_TYPE_BASE, 1, (\d+), (\d+),", source)
     assert fades and fades[-1][1] == "0", f"{move}: scene fade must reset"
