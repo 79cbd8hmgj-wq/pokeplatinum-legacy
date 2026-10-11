@@ -38,9 +38,11 @@ jobs:
           python3 -m pip install --break-system-packages Pillow
           python3 tools/visual_overhaul/test_b1_donor_ds4bpp.py
       - name: Resolve ranked donor effect candidates from Opal database
-        run: python3 tools/visual_overhaul/select_b1_battle_donors.py > /tmp/opal-b1-donors.json
+        run: |
+          mkdir -p artifacts/b2-b8-handoff
+          python3 tools/visual_overhaul/select_b1_battle_donors.py > artifacts/b2-b8-handoff/ranked-donor-candidates.json
       - name: Verify ranked Ranger source packages and conversion constraints
-        run: python3 tools/visual_overhaul/b1_donor_effect_import_preflight.py --output /tmp/opal-b1-import-ledger.json
+        run: python3 tools/visual_overhaul/b1_donor_effect_import_preflight.py --output artifacts/b2-b8-handoff/donor-import-preflight.json
       - name: Validate Ranger effect exporter Python source
         run: python3 -m py_compile tools/visual_overhaul/export_b1_ranger_effect_cells.py
       - name: Verify previously merged battle presentation contracts
@@ -52,12 +54,12 @@ jobs:
       - name: Validate B2-B8 preimplementation handoff provenance
         run: python3 tools/visual_overhaul/validate_b2_b8_handoff.py
       - name: Generate B2-B8 compact move source inventory
-        run: python3 tools/visual_overhaul/audit_b2_b8_move_scripts.py --only-mapped --output artifacts/b2-b8-move-source-inventory.json
-      - name: Upload B2-B8 source inventory for Claude
+        run: python3 tools/visual_overhaul/audit_b2_b8_move_scripts.py --only-mapped --output artifacts/b2-b8-handoff/move-script-inventory.json
+      - name: Upload B2-B8 donor and move evidence for Claude
         uses: actions/upload-artifact@v4
         with:
-          name: b2-b8-move-source-inventory
-          path: artifacts/b2-b8-move-source-inventory.json
+          name: b2-b8-handoff-evidence
+          path: artifacts/b2-b8-handoff/
           if-no-files-found: error
       - name: Validate installed donor battle sprites
         run: python3 tools/visual_overhaul/validate_b1_installed_donor_sprites.py
