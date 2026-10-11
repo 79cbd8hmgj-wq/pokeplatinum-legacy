@@ -1,0 +1,149 @@
+{
+  "schema": "opal.b2_b8.cinematic_direction.v1",
+  "role": "creative_decisions_only_no_game_code_and_no_runtime_claims",
+  "source_manifest": "docs/visual_overhaul/B2_B8_IMPLEMENTATION_MANIFEST.json",
+  "art_direction": "Pearl/off-white, mineral-violet, opalescent, restrained gold define framing and transitions; move elements retain canonical recognizable color identities.",
+  "global_rules": [
+    "Use existing NDS effects and verified B1 donor components before expanding renderer.",
+    "Visible charge/impact is more valuable than long delays for routine moves.",
+    "Every effect must end with original camera/BG/OBJ/fade/palette ownership and battler anchor restored.",
+    "Do not add gameplay mechanics, change battle timing semantics or alter encounter/event progression.",
+    "Keep individual move personality; cinematic archetypes are reusable sequencing scaffolds, not one universal sprite.",
+    "Specific frame durations require existing animation-script analysis and later owner runtime assessment.",
+    "User conducts all emulator/visual QA; Claude implements source and verifies CI ROM builds."
+  ],
+  "archetypes": [
+    {
+      "id": "charged_bolt",
+      "status": "approved_design_not_yet_implemented",
+      "visual_goal": "A contained electrical buildup that breaks into a sharp branched strike.",
+      "anticipation": "Gather fine yellow-white arcs around attacker; tighten before release.",
+      "atmosphere": "Dim arena temporarily; favor one strong strike-driven contrast pulse instead of constant strobing.",
+      "impact_and_aftermath": "Lightning forks converge on defender; a brief rim-lit recoil, then small fading sparks.",
+      "color_identity": "Electric attack yellows and whites remain dominant; Opal violet only in atmospheric shadows.",
+      "sound_direction": "Lock impact sound to bolt arrival, not the initial charge.",
+      "donor_and_native_strategy": "native thunderbolt_spa plus separately verified Ranger lightning cell; do not invent emitter IDs.",
+      "exit_invariant": "Restore native BG grade, fade state and both battler sprite priorities."
+    },
+    {
+      "id": "spectral_projectile",
+      "status": "approved_design_not_yet_implemented",
+      "visual_goal": "Dense moving spectral orb that seems to draw energy out of the surroundings.",
+      "anticipation": "Small gathering motes and an opalescent edge around a dark purple core.",
+      "atmosphere": "Violet/charcoal localized shadow tone; background returns immediately after aftermath.",
+      "impact_and_aftermath": "Travel anchored to native projectile timing; layered circular impact and short energy residue.",
+      "color_identity": "Ghost-purple core with restrained opalescent edges; avoid generic all-violet recolor.",
+      "sound_direction": "Orb launch and arrival have distinct cues; reserve the strongest cue for contact.",
+      "donor_and_native_strategy": "existing shadow_ball_spa plus verified glow/target ring component if render passes selection.",
+      "exit_invariant": "Do not disturb Shadow Force hidden state, keep fade and sprite cleanup ordered."
+    },
+    {
+      "id": "expanding_area_surge",
+      "status": "approved_design_not_yet_implemented",
+      "visual_goal": "A massive wave that crosses the battlefield rather than an isolated point splash.",
+      "anticipation": "Rising crest with foreground foam; water appears to move through the scene.",
+      "atmosphere": "Subtle cyan/light-blue reflections and a scrolling surge layer.",
+      "impact_and_aftermath": "Sweep across enemy-side coverage with distributed spray and visible recession.",
+      "color_identity": "Water colors remain blue/teal; white highlights indicate moving foam.",
+      "sound_direction": "Low water surge rises before collision; hit sounds align with per-target animation events.",
+      "donor_and_native_strategy": "native Surf BG/sprite assets first; donor foam/frame elements only after double-battle review.",
+      "exit_invariant": "Respect friendly-fire, doubles and every Surf branch before modifying stage timing."
+    },
+    {
+      "id": "thermal_burst",
+      "status": "approved_design_not_yet_implemented",
+      "visual_goal": "A layered combustion volume with fast core flash and long drifting embers.",
+      "anticipation": "Brief ignition and tightening flame at source.",
+      "atmosphere": "Warm localized backlight, never globally recolor unaffected HUD.",
+      "impact_and_aftermath": "Install existing Ranger e010 fire bloom as impact accent; keep travel native where appropriate.",
+      "color_identity": "Orange-red core and brighter yellow-white hottest center; no violet flame tint by default.",
+      "sound_direction": "Launch whoosh separated from crackle and explosion impact.",
+      "donor_and_native_strategy": "reuse ranger_fire_bloom (e010), 8 frames, 236 OBJ tiles; source installed.",
+      "exit_invariant": "Avoid overlapping two heavy sprite sheets; free B1 sprite manager before particle unload."
+    },
+    {
+      "id": "cryogenic_beam",
+      "status": "approved_design_not_yet_implemented",
+      "visual_goal": "A crystalline impact with refracted cold light and delayed shard dust.",
+      "anticipation": "Short cold accumulation, then a clean narrow stream.",
+      "atmosphere": "Cool blue ambience and transient pale highlights.",
+      "impact_and_aftermath": "Use installed e009 ice bloom with brittle shard breakup on defender.",
+      "color_identity": "Ice-blue/cyan/white dominate; opalescent accents only as highlights.",
+      "sound_direction": "Crisp glasslike crack at impact; faint decay with dissipating sparkles.",
+      "donor_and_native_strategy": "reuse ranger_ice_bloom (e009), 8 frames, 236 OBJ tiles; source installed.",
+      "exit_invariant": "Blizzard multi-target and alternate branches must remain valid."
+    },
+    {
+      "id": "lithic_impact",
+      "status": "approved_design_not_yet_implemented",
+      "visual_goal": "Sharp rising boulders with a dramatic shatter rather than generic screen shake.",
+      "anticipation": "Ground compression, lift and uneven projectile staging.",
+      "atmosphere": "Warm dust shadows and understated battlefield displacement.",
+      "impact_and_aftermath": "Use Ranger e002 rock burst, then short falling fragments and rapid settle.",
+      "color_identity": "Natural mineral grey, rust and ochre; Opal gold only for restrained specular hits.",
+      "sound_direction": "Rock scrape while preparing; main fracture audio at sprite impact.",
+      "donor_and_native_strategy": "reuse ranger_rock_burst (e002), 9 frames, 219 OBJ tiles; source installed.",
+      "exit_invariant": "Rock Blast repeated hits and Ancient Power Contest branch must not lose resource cleanup."
+    },
+    {
+      "id": "energy_beam",
+      "status": "approved_design_not_yet_implemented",
+      "visual_goal": "A disciplined charge-release beam that keeps each element visually distinct.",
+      "anticipation": "Converging source motes leading to a high-intensity focused shot.",
+      "atmosphere": "Brief tinted background focus only at launch/impact.",
+      "impact_and_aftermath": "Linear beam with a small target shock ring and restrained aftermath.",
+      "color_identity": "Solar Beam green/yellow, Flash Cannon steel-white, Psybeam psychedelic, Aura Sphere blue, Dragon Pulse dragon-colored; never unify all palettes.",
+      "sound_direction": "Rise in pitch while charging, sharp release, arrival sound on contact.",
+      "donor_and_native_strategy": "prefer native beam/travel emitters; new donor ring only after proven cell/format.",
+      "exit_invariant": "Solar Beam charge turn and existing move-specific sequence logic remain untouched."
+    },
+    {
+      "id": "terrain_quake",
+      "status": "approved_design_not_yet_implemented",
+      "visual_goal": "Weight and environmental motion without altering combat terrain or camera logic.",
+      "anticipation": "Small ground-pressure cue ahead of the main shock.",
+      "atmosphere": "Scene-local BG displacement and dust occlusion; no weather state writes.",
+      "impact_and_aftermath": "Multiple staggered shock peaks followed by a controlled stop.",
+      "color_identity": "Earth brown and dust-grey; no persistent palette tint.",
+      "sound_direction": "Low rumble builds, stronger transients on each visual shock.",
+      "donor_and_native_strategy": "reuse existing Func_ShakeBg/quake sprite tasks; source-verified donor debris optional.",
+      "exit_invariant": "Restore BG offsets exactly; keep moves' gameplay terrain effects unchanged."
+    },
+    {
+      "id": "toxic_burst",
+      "status": "approved_design_not_yet_implemented",
+      "visual_goal": "Heavy viscous projectile breaking into corrosive droplets.",
+      "anticipation": "Unstable orb/puddle read distinct from ghost and psychic energy.",
+      "atmosphere": "Subtle dirty-violet exposure, no persistent overlay.",
+      "impact_and_aftermath": "Splash arcs, shrinking droplets and visible decay; avoid blood-like visual treatment.",
+      "color_identity": "Poison purples and moss green accents; not solid Opal violet.",
+      "sound_direction": "Wet splat at hit; secondary low fizz without audible overstimulation.",
+      "donor_and_native_strategy": "existing sludge_bomb_spa plus a proven converted splatter frame if useful.",
+      "exit_invariant": "No status-chance/mechanics edits, particle and sprites must clean up."
+    },
+    {
+      "id": "weather_atmosphere",
+      "status": "approved_design_not_yet_implemented",
+      "visual_goal": "Continuous battlefield atmosphere supporting moves without obscuring HUD or Pokémon.",
+      "anticipation": "Transition in locally from current battlefield lighting.",
+      "atmosphere": "Weather-specific BG/cycling: rain sheen, snow drift, sand dust; differentiate from attack-only overlay.",
+      "impact_and_aftermath": "Slightly intensified on compatible move impacts, then return to persistent baseline weather.",
+      "color_identity": "Weather natural palette; existing S2-D terrain owner remains authority.",
+      "sound_direction": "Looping ambience never starts or stops mechanical weather; respect existing audio owner.",
+      "donor_and_native_strategy": "reuse verified terrain.c visual tasks first; PMD Sky reference only until compatible BG asset selected.",
+      "exit_invariant": "Never override S2-D palette cycles or edit weather rule logic; teardown when weather ends."
+    },
+    {
+      "id": "legendary_signature",
+      "status": "approved_design_not_yet_implemented",
+      "visual_goal": "Distinctive restrained theatrical anticipation, climax and recovery for existing signature attacks and encounters.",
+      "anticipation": "Signature-specific visual motif with brief spotlight and a memorable stage transition.",
+      "atmosphere": "Optional encounter-local backdrop after locating actual source hook; fallback to unique attack scripts.",
+      "impact_and_aftermath": "One powerful climactic impact with measured afterimage, then safe handoff to ordinary battle rendering.",
+      "color_identity": "Dialga temporal blue/steel, Palkia spatial pink-violet, Giratina spectral/distortion; use each move's native element.",
+      "sound_direction": "Dramatic accent matched to actual game trigger, no invented encounter timing.",
+      "donor_and_native_strategy": "Source-verified existing signature scripts and Ranger event timing motifs; do not assume assets or hooks exist.",
+      "exit_invariant": "No event flags, battle logic, AI or generic intro replacements; robust cleanup on skip/interruption."
+    }
+  ]
+}
