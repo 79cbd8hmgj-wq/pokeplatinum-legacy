@@ -9,6 +9,12 @@
 
 Start with `docs/visual_overhaul/b1_installed_donors/README.md`, `docs/visual_overhaul/B1_OPAL_CINEMATIC_BATTLE_ARCHITECTURE.md`, `docs/visual_overhaul/POKEMON_OPAL_ASSET_DIRECTION.md` and this manifest. Only open additional files if a listed integration issue requires them. The already validated B1 converter/installer is preferred over building fresh exporters.
 
+## Reconciliation with existing B2–B8 preparation
+
+The existing `docs/visual_overhaul/B2_B8_PREIMPLEMENTATION_MANIFEST.json` and `tools/visual_overhaul/validate_b2_b8_handoff.py` remain valid as a **baseline**, with their six generic archetypes. This packet is an **additive implementation expansion** with 11 specialized move groups and concrete phase entrypoints, not a replacement or a second competing design authority. Preserve the existing validator; avoid repeating its work.
+
+**Important legacy classification caveat:** `docs/visual_overhaul/selection/ledgers/battle_effects_particles.json` still labels Ranger effect groups `ranger_effect/e000` onwards as `reference_only` / `not_portable`. Those older selection-policy labels do *not* mean their graphics cannot be converted: the later B1 pipeline demonstrably imported e002, e009 and e010 as native Platinum battle sprite assets. Treat new e-series packages as **candidate unverified** until their exact frame/format/conversion has been proved, not as automatically rejected or automatically compatible.
+
 ## Ready now: verified donor imports
 
 | Installed sprite | Ranger 2 package | Frames | OBJ tiles | Palette | Source authority |
