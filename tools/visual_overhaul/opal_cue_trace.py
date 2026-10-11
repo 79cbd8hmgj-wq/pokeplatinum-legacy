@@ -28,6 +28,8 @@ OPAL_INC = ROOT / "asm/macros/btlanim_opal.inc"
 PROV = ROOT / "docs/visual_overhaul/opal_installed_fx"
 
 MAX_FX_LIFETIME = 180
+MAX_OAM_ENTRIES = 40  # of 128 main-OAM entries (battle_main.c sOamTemplate); healthboxes, battlers, terrain and the vanilla effect sprites own the rest
+MAX_OBJ_CHAR_TILES = 400  # measured policy cap per script: 12.5 KiB of the 64 KiB main-OBJ VRAM bank (GX_VRAM_OBJ_64_E, battle_main.c)
 MAX_CONCURRENT_MANAGERS = 2  # OBJ palette slots: every sprite manager owns one palette; keep headroom for healthboxes/battlers
 BATTLER_BITS = {"ATTACKER": 1 << 1, "ATTACKER_PARTNER": 1 << 2, "DEFENDER": 1 << 3, "DEFENDER_PARTNER": 1 << 4}
 
@@ -182,14 +184,18 @@ def expand(stmts, macros, env, funcs, depth=0):
     return out
 
 
+OVERRIDES = {}
+
+
 def load_script(path: Path):
     env, funcs = load_defines(CONSTS.read_text())
+    env.update(OVERRIDES)
     env.setdefault("TRUE", "1")
     env.setdefault("FALSE", "0")
     opal_text = OPAL_INC.read_text()
-    env, funcs = load_defines(opal_text, env) if False else _merge(env, funcs, load_defines(opal_text))
+    env, funcs = _merge(env, funcs, load_defines("\n".join(_keep_defines(opal_text, env))))
     script_text = path.read_text()
-    env, funcs = _merge(env, funcs, load_defines(script_text))
+    env, funcs = _merge(env, funcs, load_defines("\n".join(_keep_defines(script_text, env))))
     # cpp-style OPAL_RES(sheet, pal) -> the four NAIX names (kept symbolic)
     funcs["OPAL_RES"] = (["sheet", "pal"], "sheet##_NCGR_lz, pal##_NCLR, sheet##_cell_NCER_lz, sheet##_anim_NANR_lz")
     inc_lines = strip_cpp(opal_text, env)
@@ -203,6 +209,22 @@ def load_script(path: Path):
     stmts = expand(stmts, macros, env, funcs)
     stmts = [(s[0], s[1], _flatten_res(s[2], env)) if s[0] == "cmd" else s for s in stmts]
     return stmts, env, funcs
+
+
+def _keep_defines(text, env):
+    """Lines of `text` that are live under the current #if/#else/#endif evaluation (keeps #define lines)."""
+    keep, stack = [], []
+    for line in text.splitlines():
+        t = line.strip()
+        if t.startswith("#if "):
+            stack.append(bool(evaluate(t[4:], env, {})))
+        elif t.startswith("#else"):
+            stack[-1] = not stack[-1]
+        elif t.startswith("#endif"):
+            stack.pop()
+        elif all(stack):
+            keep.append(line)
+    return keep
 
 
 def _merge(env, funcs, other):
@@ -277,9 +299,32 @@ class State:
         self.stack = []
         self.log = []
         self.vars = {}
+        self.peak_managers = 0
+        self.peak_fx = 0
+        self.peak_tiles = 0
+        self.peak_oam = 0
 
     def copy(self):
         return copy.deepcopy(self)
+
+
+def sheet_max_oams(res):
+    """Worst-case hardware OAM entries one live sprite of this manager's sheet can occupy (max over its cells)."""
+    sheet = (res.get("LoadCharResObj") or "").replace("_NCGR_lz", "")
+    p = ROOT / "res/graphics/battle/moves" / f"{sheet}_cell.json"
+    if not p.exists():
+        return 0
+    return max(c["oamCount"] for c in json.loads(p.read_text())["cells"])
+
+
+def sheet_tiles(res, sheets):
+    sheet = (res.get("LoadCharResObj") or "").replace("_NCGR_lz", "")
+    if sheet in sheets:
+        return sheets[sheet]["obj_tiles"]
+    b1 = ROOT / "docs/visual_overhaul/b1_installed_donors" / f"{sheet}.provenance.json"
+    if b1.exists():
+        return json.loads(b1.read_text())["obj_tiles"]
+    return 0  # native vanilla sheet: not measured here
 
 
 def run_script(stmts, env, funcs, sheets, name):
@@ -340,6 +385,7 @@ def run_script(stmts, env, funcs, sheets, name):
                 if len(st.managers) >= MAX_CONCURRENT_MANAGERS:
                     raise Fail(f"{len(st.managers) + 1} concurrent sprite managers (policy max {MAX_CONCURRENT_MANAGERS}: one OBJ palette each)")
                 st.managers[mid] = {"max": ev(args[1]), "res": {}, "live": []}
+                st.peak_managers = max(st.peak_managers, len(st.managers))
                 st.log.append(f"t{st.t} manager{mid}+")
             elif cmd in ("LoadCharResObj", "LoadPlttRes", "LoadCellResObj", "LoadAnimResObj"):
                 mid = ev(args[0])
@@ -382,10 +428,14 @@ def run_script(stmts, env, funcs, sheets, name):
                         raise Fail("Opal FX lifetime above hard cap")
                     st.log.append(f"t{st.t} fx {sheet}:{seq} x{count} life{life} anchor{anchor:#x} dest{dest:#x}")
                 m["live"] = [(e, c) for e, c in m["live"] if e > st.t]
+                m["oam"] = sheet_max_oams(m["res"])
                 if sum(c for _, c in m["live"]) + count > m["max"]:
                     raise Fail(f"manager {mid} capacity {m['max']} exceeded by {cmd} ({count} new)")
                 m["live"].append((st.t + life, count))
                 st.busy = max(st.busy, st.t + life)
+                st.peak_fx = max(st.peak_fx, sum(c for mm in st.managers.values() for e, c in mm["live"] if e > st.t))
+                st.peak_oam = max(st.peak_oam, sum(c * mm.get("oam", 0) for mm in st.managers.values() for e, c in mm["live"] if e > st.t))
+                st.peak_tiles = max(st.peak_tiles, sum(sheet_tiles(mm["res"], sheets) for mm in st.managers.values()))
             elif cmd == "FreeSpriteManager":
                 mid = ev(args[0])
                 st.managers.pop(mid, None)
@@ -438,6 +488,10 @@ def run_script(stmts, env, funcs, sheets, name):
     def finish(st):
         if st.stack:
             raise Fail("End reached inside a Call")
+        if st.peak_oam > MAX_OAM_ENTRIES:
+            raise Fail(f"peak {st.peak_oam} concurrent Opal OAM entries exceeds the {MAX_OAM_ENTRIES}-entry policy cap")
+        if st.peak_tiles > MAX_OBJ_CHAR_TILES:
+            raise Fail(f"peak {st.peak_tiles} concurrent OBJ char tiles exceeds the {MAX_OBJ_CHAR_TILES}-tile policy cap")
         if st.managers:
             raise Fail(f"End with live sprite managers {sorted(st.managers)}")
         if st.particles:
@@ -445,7 +499,8 @@ def run_script(stmts, env, funcs, sheets, name):
             st.log.append(f"note: End frees particle system(s) {sorted(st.particles)}")
         if st.base_alpha != 0:
             raise Fail(f"End with base-BG fade alpha {st.base_alpha} (not restored)")
-        results.append({"frames_lower_bound": max(st.t, st.busy), "cue_log": st.log})
+        results.append({"frames_lower_bound": max(st.t, st.busy), "peak_sprite_managers": st.peak_managers, "peak_live_fx_sprites": st.peak_fx,
+                        "peak_obj_char_tiles": st.peak_tiles, "peak_oam_entries_upper_bound": st.peak_oam, "cue_log": st.log})
 
     entry = labels.get("L_0", 0)
     step(State(), entry, set())
@@ -467,7 +522,12 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--moves", nargs="*", help="move directory names under res/moves (default: every script using Opal cues)")
     ap.add_argument("--json", type=Path, help="write the cue log of every path")
+    ap.add_argument("--baseline", type=Path, help="fail if the cue log differs from this committed baseline (drift gate)")
+    ap.add_argument("--define", action="append", default=[], metavar="NAME=VALUE", help="override a constant, e.g. OPAL_LOW_FLASH=1")
     a = ap.parse_args()
+    for d in a.define:
+        k, _, v = d.partition("=")
+        OVERRIDES[k] = v
     sheets = load_sheets()
     paths = []
     if a.moves:
@@ -491,6 +551,13 @@ def main():
         a.json.write_text(json.dumps(report, indent=1) + "\n")
     if bad:
         sys.exit(1)
+    if a.baseline:
+        want = json.loads(a.baseline.read_text())
+        if want != json.loads(json.dumps(report)):
+            diff = sorted(k for k in set(want) | set(report) if want.get(k) != report.get(k))
+            print(f"FAIL: cue trace drifted from {a.baseline} for: {diff}; regenerate with --json after reviewing the change")
+            sys.exit(1)
+        print(f"baseline {a.baseline.name}: identical")
     print(f"PASS: {len(report)} Opal cue scripts: all paths balanced, no overlapping camera/fade owners, nothing live at End")
 
 

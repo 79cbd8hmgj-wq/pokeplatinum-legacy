@@ -7,6 +7,7 @@
 #include "battle_anim/battle_anim_helpers.h"
 #include "battle_anim/battle_anim_system.h"
 #include "battle_anim/battle_anim_util.h"
+#include "battle_anim/opal_cinematic_math.h"
 
 #include "bg_window.h"
 #include "heap.h"
@@ -56,19 +57,6 @@ typedef struct OpalFxContext {
 
 static void BattleAnimTask_OpalFx(SysTask *task, void *param);
 static void OpalFx_ApplyScale(OpalFxContext *ctx, OpalFxInstance *inst);
-
-static inline int OpalFx_ClampAxis(int value, int limit)
-{
-    if (value > limit) {
-        return limit;
-    }
-
-    if (value < -limit) {
-        return -limit;
-    }
-
-    return value;
-}
 
 void BattleAnimSpriteFunc_OpalFx(BattleAnimSystem *system, SpriteSystem *spriteSys, SpriteManager *spriteMan, ManagedSprite *sprite)
 {
@@ -201,23 +189,11 @@ void BattleAnimSpriteFunc_OpalFx(BattleAnimSystem *system, SpriteSystem *spriteS
 
 static void OpalFx_ApplyScale(OpalFxContext *ctx, OpalFxInstance *inst)
 {
-    int pct = ctx->scale * inst->scaleMul / 100;
-    int local = ctx->elapsed - inst->lag;
-
-    if ((ctx->flags & OPAL_FX_FLAG_POP) != 0 && local < ctx->duration / 3) {
-        pct = pct * (40 + 60 * local / (ctx->duration / 3 + 1)) / 100;
-    } else if ((ctx->flags & OPAL_FX_FLAG_SHRINK_OUT) != 0 && local > ctx->duration * 2 / 3) {
-        int remaining = ctx->duration - local;
-        if (remaining < 0) {
-            remaining = 0;
-        }
-
-        pct = pct * (40 + 60 * remaining / (ctx->duration / 3 + 1)) / 100;
-    }
-
-    if (pct < 1) {
-        pct = 1;
-    }
+    int pct = OpalMath_FxScalePercent(ctx->scale * inst->scaleMul / 100,
+        ctx->elapsed - inst->lag,
+        ctx->duration,
+        (ctx->flags & OPAL_FX_FLAG_POP) != 0,
+        (ctx->flags & OPAL_FX_FLAG_SHRINK_OUT) != 0);
 
     f32 scale = (f32)pct / 100.0f;
     ManagedSprite_SetAffineScale(inst->sprite, scale, scale);
@@ -251,9 +227,8 @@ static void BattleAnimTask_OpalFx(SysTask *task, void *param)
                 t = d;
             }
 
-            x = inst->startX + (inst->endX - inst->startX) * t / d;
-            y = inst->startY + (inst->endY - inst->startY) * t / d;
-            y -= ctx->arc * 4 * t * (d - t) / (d * d);
+            x = OpalMath_Lerp(inst->startX, inst->endX, t, d);
+            y = OpalMath_Lerp(inst->startY, inst->endY, t, d) - OpalMath_Arc(ctx->arc, t, d);
         }
 
         if ((ctx->flags & OPAL_FX_FLAG_DRIFT_UP) != 0) {
@@ -341,17 +316,6 @@ void OpalCinematic_ResetState(void)
     sOpalCameraActive = FALSE;
 }
 
-// Smoothstep on 0..256
-static inline int OpalCamera_Ease(int num, int den)
-{
-    if (den <= 0 || num >= den) {
-        return 256;
-    }
-
-    int t = num * 256 / den;
-    return t * t * (768 - 2 * t) / (256 * 256);
-}
-
 static void OpalCamera_Apply(OpalCameraContext *ctx, int offsetX, int offsetY)
 {
     Bg_SetOffset(ctx->bgConfig, BATTLE_BG_BASE, BG_OFFSET_UPDATE_SET_X, ctx->baseX + offsetX);
@@ -371,20 +335,9 @@ static void BattleAnimTask_OpalCamera(SysTask *task, void *param)
         return;
     }
 
-    int weight; // 0..256
-    if (ctx->mode == OPAL_CAM_MODE_PUNCH) {
-        int remaining = total - ctx->frame;
-        int sign = (ctx->frame & 1) ? -1 : 1;
-        weight = sign * 256 * remaining / total;
-    } else if (ctx->frame < ctx->inFrames) {
-        weight = OpalCamera_Ease(ctx->frame + 1, ctx->inFrames);
-    } else if (ctx->frame < ctx->inFrames + ctx->holdFrames) {
-        weight = 256;
-    } else {
-        weight = 256 - OpalCamera_Ease(ctx->frame - ctx->inFrames - ctx->holdFrames + 1, ctx->outFrames);
-    }
+    int weight = OpalMath_CameraWeight(ctx->mode == OPAL_CAM_MODE_PUNCH, ctx->frame, ctx->inFrames, ctx->holdFrames, ctx->outFrames);
 
-    OpalCamera_Apply(ctx, ctx->dx * weight / 256, ctx->dy * weight / 256);
+    OpalCamera_Apply(ctx, ctx->dx * weight / OPAL_MATH_UNIT, ctx->dy * weight / OPAL_MATH_UNIT);
     ctx->frame++;
 }
 
@@ -405,8 +358,8 @@ void BattleAnimScriptFunc_OpalCamera(BattleAnimSystem *system)
     int attacker = BattleAnimSystem_GetAttacker(system);
     int dir = BattleAnimUtil_GetTransformDirectionX(system, attacker);
 
-    ctx->dx = OpalFx_ClampAxis(BattleAnimSystem_GetScriptVar(system, OPAL_CAM_VAR_DX) * dir, OPAL_CAM_MAX_DX);
-    ctx->dy = OpalFx_ClampAxis(BattleAnimSystem_GetScriptVar(system, OPAL_CAM_VAR_DY), OPAL_CAM_MAX_DY);
+    ctx->dx = OpalMath_Clamp(BattleAnimSystem_GetScriptVar(system, OPAL_CAM_VAR_DX) * dir, OPAL_CAM_MAX_DX);
+    ctx->dy = OpalMath_Clamp(BattleAnimSystem_GetScriptVar(system, OPAL_CAM_VAR_DY), OPAL_CAM_MAX_DY);
     ctx->inFrames = BattleAnimSystem_GetScriptVar(system, OPAL_CAM_VAR_IN);
     ctx->holdFrames = BattleAnimSystem_GetScriptVar(system, OPAL_CAM_VAR_HOLD);
     ctx->outFrames = BattleAnimSystem_GetScriptVar(system, OPAL_CAM_VAR_OUT);

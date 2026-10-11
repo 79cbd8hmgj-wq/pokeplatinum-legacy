@@ -2,10 +2,10 @@
 
 #include <nitro.h>
 
+#include "battle_anim/opal_cinematic.h"
 #include "battle_anim/script_func_examples.h"
 #include "battle_anim/script_func_mimic.h"
 #include "battle_anim/script_func_tables.h"
-#include "battle_anim/opal_cinematic.h"
 #include "battle_anim/script_funcs_0.h"
 #include "battle_anim/script_funcs_1.h"
 #include "battle_anim/script_funcs_2.h"
