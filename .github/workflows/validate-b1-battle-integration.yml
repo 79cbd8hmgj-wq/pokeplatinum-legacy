@@ -22,6 +22,8 @@ on:
       - 'tools/visual_overhaul/audit_b2_b8_move_scripts.py'
       - 'tools/visual_overhaul/b2_b8_execution_brief.py'
       - 'docs/visual_overhaul/B2_B8_IMPLEMENTATION_MANIFEST.json'
+      - 'docs/visual_overhaul/B2_B8_CINEMATIC_DIRECTION.json'
+      - 'docs/visual_overhaul/B2_B8_OWNER_RUNTIME_QA.json'
       - 'docs/visual_overhaul/B2_B8_IMPLEMENTATION_SPEC.md'
       - '.github/workflows/validate-b1-battle-integration.yml'
   workflow_dispatch:
