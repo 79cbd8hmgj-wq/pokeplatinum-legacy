@@ -1,0 +1,168 @@
+{
+ "name": "opal_fire",
+ "donor": "pokeemerald",
+ "sources": {
+  "plume": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/fire_plume.png"
+  },
+  "fire": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/fire.png"
+  }
+ },
+ "frames": [
+  {
+   "id": "plume0",
+   "src": "plume",
+   "rect": [
+    0,
+    0,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "plume1",
+   "src": "plume",
+   "rect": [
+    0,
+    32,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "plume2",
+   "src": "plume",
+   "rect": [
+    0,
+    64,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "plume3",
+   "src": "plume",
+   "rect": [
+    0,
+    96,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "plume4",
+   "src": "plume",
+   "rect": [
+    0,
+    128,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "fire0",
+   "src": "fire",
+   "rect": [
+    0,
+    0,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "fire1",
+   "src": "fire",
+   "rect": [
+    0,
+    32,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "fire2",
+   "src": "fire",
+   "rect": [
+    0,
+    64,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "fire3",
+   "src": "fire",
+   "rect": [
+    0,
+    96,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "fire4",
+   "src": "fire",
+   "rect": [
+    0,
+    128,
+    32,
+    32
+   ]
+  }
+ ],
+ "sequences": [
+  {
+   "name": "plume",
+   "frames": [
+    [
+     "plume0",
+     2
+    ],
+    [
+     "plume1",
+     3
+    ],
+    [
+     "plume2",
+     3
+    ],
+    [
+     "plume3",
+     3
+    ],
+    [
+     "plume4",
+     3
+    ]
+   ]
+  },
+  {
+   "name": "tongue",
+   "frames": [
+    [
+     "fire0",
+     2
+    ],
+    [
+     "fire1",
+     2
+    ],
+    [
+     "fire2",
+     2
+    ],
+    [
+     "fire3",
+     2
+    ],
+    [
+     "fire4",
+     3
+    ]
+   ]
+  }
+ ]
+}

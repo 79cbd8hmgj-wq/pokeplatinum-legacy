@@ -5,6 +5,7 @@
 #include "battle_anim/script_func_examples.h"
 #include "battle_anim/script_func_mimic.h"
 #include "battle_anim/script_func_tables.h"
+#include "battle_anim/opal_cinematic.h"
 #include "battle_anim/script_funcs_0.h"
 #include "battle_anim/script_funcs_1.h"
 #include "battle_anim/script_funcs_2.h"
@@ -98,7 +99,8 @@ static const BattleAnimScriptFunc sBattleAnimScriptFuncs[] = {
     BattleAnimScriptFunc_StatChangeUp,
     BattleAnimScriptFunc_StatChangeDown,
     BattleAnimScriptFunc_StatChangeHeal,
-    BattleAnimScriptFunc_StatChangeMetal
+    BattleAnimScriptFunc_StatChangeMetal,
+    BattleAnimScriptFunc_OpalCamera
 };
 
 static const BattleAnimScriptSpriteFunc sBattleAnimSpriteFuncs[] = {
@@ -134,7 +136,8 @@ static const BattleAnimScriptSpriteFunc sBattleAnimSpriteFuncs[] = {
     BattleAnimSpriteFunc_Sleep,
     BattleAnimSpriteFunc_Burn,
     BattleAnimSpriteFunc_Freeze,
-    BattleAnimSpriteFunc_ConfusionStatus
+    BattleAnimSpriteFunc_ConfusionStatus,
+    BattleAnimSpriteFunc_OpalFx
 };
 
 static const BattleAnimScriptSpriteFunc sUnusedSpriteFuncs[] = {

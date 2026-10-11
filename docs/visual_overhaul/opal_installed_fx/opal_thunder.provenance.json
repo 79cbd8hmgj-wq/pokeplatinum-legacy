@@ -1,0 +1,215 @@
+{
+  "name": "opal_thunder",
+  "state": "installed via res/graphics/battle/moves NARC pipeline; drawn by SPRITE_FUNC_OPAL_FX",
+  "donor_sources": {
+    "bolt": {
+      "path": "graphics/battle_anims/sprites/lightning_2.png",
+      "sha256": "cb5e1dfa65772cfc06c2868802ec92055f86a3946f0c82a9d57f92d05e8faa19"
+    },
+    "spark": {
+      "path": "graphics/battle_anims/sprites/electricity.png",
+      "sha256": "47e031374352a8d36214ad7c59c3944bcd8eb8450302131491e9ebfeef62bc6b"
+    },
+    "orb": {
+      "path": "graphics/battle_anims/sprites/electric_orbs.png",
+      "sha256": "48ac380aae38e0f774914490d1637e291f311c7a3771b434d5aee3a8c430e6ea"
+    }
+  },
+  "frames": [
+    {
+      "id": "bolt0",
+      "src": "bolt",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "bolt1",
+      "src": "bolt",
+      "rect": [
+        0,
+        32,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "bolt2",
+      "src": "bolt",
+      "rect": [
+        0,
+        64,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "bolt3",
+      "src": "bolt",
+      "rect": [
+        0,
+        96,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "spark0",
+      "src": "spark",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "spark1",
+      "src": "spark",
+      "rect": [
+        0,
+        32,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "spark2",
+      "src": "spark",
+      "rect": [
+        0,
+        64,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "spark3",
+      "src": "spark",
+      "rect": [
+        0,
+        96,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "orb0",
+      "src": "orb",
+      "rect": [
+        0,
+        0,
+        8,
+        8
+      ],
+      "hflip": false
+    },
+    {
+      "id": "orb1",
+      "src": "orb",
+      "rect": [
+        0,
+        8,
+        8,
+        8
+      ],
+      "hflip": false
+    },
+    {
+      "id": "orb2",
+      "src": "orb",
+      "rect": [
+        0,
+        16,
+        8,
+        8
+      ],
+      "hflip": false
+    }
+  ],
+  "sequences": [
+    {
+      "index": 0,
+      "name": "bolt",
+      "loop": false,
+      "frames": [
+        "bolt0",
+        "bolt1",
+        "bolt2",
+        "bolt3",
+        "bolt2",
+        "bolt0"
+      ],
+      "total_delay": 13
+    },
+    {
+      "index": 1,
+      "name": "sparks",
+      "loop": false,
+      "frames": [
+        "spark0",
+        "spark1",
+        "spark2",
+        "spark3"
+      ],
+      "total_delay": 12
+    },
+    {
+      "index": 2,
+      "name": "orb",
+      "loop": true,
+      "frames": [
+        "orb0",
+        "orb1",
+        "orb2",
+        "orb1"
+      ],
+      "total_delay": 12
+    },
+    {
+      "index": 3,
+      "name": "bolt_fade",
+      "loop": false,
+      "frames": [
+        "bolt3",
+        "bolt2",
+        "bolt0",
+        "bolt0"
+      ],
+      "total_delay": 8
+    }
+  ],
+  "palette_colours_rgb555": [
+    25871,
+    11787,
+    32151,
+    9872,
+    636,
+    6901,
+    32345,
+    4986,
+    32540,
+    1020,
+    3071,
+    10239,
+    17407,
+    24575,
+    32767
+  ],
+  "palette_variants_rgb555": {},
+  "obj_tiles": 107,
+  "tile_budget": 192,
+  "conversion": "indexed donor PNG (index 0 transparent) -> RGBA -> optional luminance ramp recolor -> median-cut fold to one shared <=15 colour RGB555 palette -> 8px-aligned cells covered by hardware-legal OAMs (B1 cover()) -> nitrogfx",
+  "recipe": "opal_thunder.json"
+}

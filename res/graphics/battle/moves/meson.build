@@ -56,6 +56,12 @@ pngs = files(
     'ranger_fire_bloom.png',
     'ranger_rock_burst.png',
     'ranger_ice_bloom.png',
+    'opal_thunder.png',
+    'opal_ghost.png',
+    'opal_water.png',
+    'opal_fire.png',
+    'opal_ice.png',
+    'opal_fx_ring.png',
 )
 
 pngs_for_pal = files(
@@ -91,6 +97,12 @@ pngs_for_pal = files(
     'ranger_fire_bloom.png',
     'ranger_rock_burst.png',
     'ranger_ice_bloom.png',
+    'opal_thunder.png',
+    'opal_ghost.png',
+    'opal_water.png',
+    'opal_fire.png',
+    'opal_ice.png',
+    'opal_fx_ring.png',
 )
 
 no_cell_pngs = files(
@@ -104,6 +116,14 @@ no_cell_pngs_for_pal = files(
     'scary_face.png',
     'fake_out.png',
     'unused_35.png',
+    'opal_fx_ring_gold.png',
+    'opal_fx_ring_ghost.png',
+    'opal_fx_ring_water.png',
+    'opal_fx_ring_fire.png',
+    'opal_fx_ring_ice.png',
+    'opal_fx_ring_psychic.png',
+    'opal_fx_ring_earth.png',
+    'opal_fx_ring_solar.png',
 )
 
 cell_jsons = files(
@@ -147,6 +167,12 @@ cell_jsons = files(
     'ranger_fire_bloom_cell.json',
     'ranger_rock_burst_cell.json',
     'ranger_ice_bloom_cell.json',
+    'opal_thunder_cell.json',
+    'opal_ghost_cell.json',
+    'opal_water_cell.json',
+    'opal_fire_cell.json',
+    'opal_ice_cell.json',
+    'opal_fx_ring_cell.json',
 )
 
 cellanm_jsons = files(
@@ -190,6 +216,12 @@ cellanm_jsons = files(
     'ranger_fire_bloom_anim.json',
     'ranger_rock_burst_anim.json',
     'ranger_ice_bloom_anim.json',
+    'opal_thunder_anim.json',
+    'opal_ghost_anim.json',
+    'opal_water_anim.json',
+    'opal_fire_anim.json',
+    'opal_ice_anim.json',
+    'opal_fx_ring_anim.json',
 )
 
 manual_pal_files = files(

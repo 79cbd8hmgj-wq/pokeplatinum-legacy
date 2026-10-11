@@ -1,0 +1,129 @@
+{
+  "name": "opal_ice",
+  "state": "installed via res/graphics/battle/moves NARC pipeline; drawn by SPRITE_FUNC_OPAL_FX",
+  "donor_sources": {
+    "chunk": {
+      "path": "graphics/battle_anims/sprites/ice_chunk.png",
+      "sha256": "7fcdd6a5377b4c3fbbd5880a8bf4d11afdbbbb21567ac6e76692ad4ec4f88a0c"
+    },
+    "glint": {
+      "path": "graphics/battle_anims/sprites/ice_crystals_0.png",
+      "sha256": "79adc6a4936a0f9c47a50982975dd4e3ef3f27d035469cdce2f9dc5673814d53"
+    }
+  },
+  "frames": [
+    {
+      "id": "chunk0",
+      "src": "chunk",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "chunk1",
+      "src": "chunk",
+      "rect": [
+        0,
+        32,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "chunk2",
+      "src": "chunk",
+      "rect": [
+        0,
+        64,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "chunk3",
+      "src": "chunk",
+      "rect": [
+        0,
+        96,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "glint",
+      "src": "glint",
+      "rect": [
+        0,
+        0,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "glint_f",
+      "src": "glint",
+      "rect": [
+        0,
+        0,
+        16,
+        16
+      ],
+      "hflip": true
+    }
+  ],
+  "sequences": [
+    {
+      "index": 0,
+      "name": "shatter",
+      "loop": false,
+      "frames": [
+        "chunk0",
+        "chunk1",
+        "chunk2",
+        "chunk3"
+      ],
+      "total_delay": 12
+    },
+    {
+      "index": 1,
+      "name": "glint",
+      "loop": false,
+      "frames": [
+        "glint",
+        "glint_f",
+        "glint"
+      ],
+      "total_delay": 9
+    }
+  ],
+  "palette_colours_rgb555": [
+    13345,
+    31777,
+    31969,
+    22851,
+    32161,
+    27143,
+    32353,
+    32545,
+    31435,
+    32737,
+    32743,
+    32627,
+    32755,
+    32761,
+    32763
+  ],
+  "palette_variants_rgb555": {},
+  "obj_tiles": 72,
+  "tile_budget": 192,
+  "conversion": "indexed donor PNG (index 0 transparent) -> RGBA -> optional luminance ramp recolor -> median-cut fold to one shared <=15 colour RGB555 palette -> 8px-aligned cells covered by hardware-legal OAMs (B1 cover()) -> nitrogfx",
+  "recipe": "opal_ice.json"
+}

@@ -1,0 +1,225 @@
+{
+ "name": "opal_thunder",
+ "donor": "pokeemerald",
+ "sources": {
+  "bolt": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/lightning_2.png"
+  },
+  "spark": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/electricity.png"
+  },
+  "orb": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/electric_orbs.png"
+  }
+ },
+ "frames": [
+  {
+   "id": "bolt0",
+   "src": "bolt",
+   "rect": [
+    0,
+    0,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "bolt1",
+   "src": "bolt",
+   "rect": [
+    0,
+    32,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "bolt2",
+   "src": "bolt",
+   "rect": [
+    0,
+    64,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "bolt3",
+   "src": "bolt",
+   "rect": [
+    0,
+    96,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "spark0",
+   "src": "spark",
+   "rect": [
+    0,
+    0,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "spark1",
+   "src": "spark",
+   "rect": [
+    0,
+    32,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "spark2",
+   "src": "spark",
+   "rect": [
+    0,
+    64,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "spark3",
+   "src": "spark",
+   "rect": [
+    0,
+    96,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "orb0",
+   "src": "orb",
+   "rect": [
+    0,
+    0,
+    8,
+    8
+   ]
+  },
+  {
+   "id": "orb1",
+   "src": "orb",
+   "rect": [
+    0,
+    8,
+    8,
+    8
+   ]
+  },
+  {
+   "id": "orb2",
+   "src": "orb",
+   "rect": [
+    0,
+    16,
+    8,
+    8
+   ]
+  }
+ ],
+ "sequences": [
+  {
+   "name": "bolt",
+   "frames": [
+    [
+     "bolt0",
+     2
+    ],
+    [
+     "bolt1",
+     2
+    ],
+    [
+     "bolt2",
+     2
+    ],
+    [
+     "bolt3",
+     3
+    ],
+    [
+     "bolt2",
+     2
+    ],
+    [
+     "bolt0",
+     2
+    ]
+   ]
+  },
+  {
+   "name": "sparks",
+   "frames": [
+    [
+     "spark0",
+     3
+    ],
+    [
+     "spark1",
+     3
+    ],
+    [
+     "spark2",
+     3
+    ],
+    [
+     "spark3",
+     3
+    ]
+   ]
+  },
+  {
+   "name": "orb",
+   "loop": true,
+   "frames": [
+    [
+     "orb0",
+     3
+    ],
+    [
+     "orb1",
+     3
+    ],
+    [
+     "orb2",
+     3
+    ],
+    [
+     "orb1",
+     3
+    ]
+   ]
+  },
+  {
+   "name": "bolt_fade",
+   "frames": [
+    [
+     "bolt3",
+     2
+    ],
+    [
+     "bolt2",
+     2
+    ],
+    [
+     "bolt0",
+     3
+    ],
+    [
+     "bolt0",
+     1
+    ]
+   ]
+  }
+ ]
+}

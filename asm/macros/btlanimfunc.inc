@@ -24,7 +24,7 @@
     .endm
 
     // Calls a function from src/battle_anim/script_func_tables.c
-    // funcID: The function ID to call (0-83, see src/battle_anim/script_func_tables.c)
+    // funcID: The function ID to call (0-84, see src/battle_anim/script_func_tables.c)
     // arg0-arg9: The arguments to pass to the function
     .macro CallFunc funcID:req, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9
     .long 45
@@ -610,4 +610,15 @@
     // mode: The mode of the animation (STAT_CHANGE_MODE_ATTACKER or STAT_CHANGE_MODE_DEFENDER)
     .macro Func_StatChangeMetal mode:req
     CallFunc 83, 3, \mode
+    .endm
+
+    // Opal B3 camera cue (see src/battle_anim/opal_cinematic.c). Scrolls ONLY the battle backdrop; battlers,
+    // healthboxes, text and the touch screen never move. The offset is snapshotted at start and restored exactly.
+    // mode: OPAL_CAM_MODE_PAN (ease to dx/dy, hold, ease back) or OPAL_CAM_MODE_PUNCH (one decaying shake)
+    // dx: X amplitude in pixels, positive = toward the defender, mirrored by attacker side (clamped to OPAL_CAM_MAX_DX)
+    // dy: Y amplitude in pixels (clamped to OPAL_CAM_MAX_DY)
+    // inFrames/holdFrames/outFrames: phase lengths (total capped at 90). PUNCH uses their sum as its length.
+    // A cue requested while another one owns the camera is ignored. Compiled out when OPAL_REDUCED_MOTION is 1.
+    .macro Func_OpalCamera mode:req, dx:req, dy:req, inFrames:req, holdFrames:req, outFrames:req
+    CallFunc 84, \mode, \dx, \dy, \inFrames, \holdFrames, \outFrames
     .endm

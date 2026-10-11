@@ -482,6 +482,43 @@
 #define SPRITE_FUNC_BURN               30
 #define SPRITE_FUNC_FREEZE             31
 #define SPRITE_FUNC_CONFUSION_STATUS   32
+#define SPRITE_FUNC_OPAL_FX            33 //< Opal cinematic FX sprite (anchor / travel / burst), see battle_anim/opal_cinematic.h
+
+// ---------------------------------------------------------------------------
+// Opal cinematic layer (B2-B8)
+// ---------------------------------------------------------------------------
+// Presentation-only knobs, read by both C and the btlanim_opal.inc macros.
+// OPAL_REDUCED_MOTION: 1 compiles out camera pans / punches (B3) and drift/pop motion on FX sprites.
+// OPAL_LOW_FLASH:      1 limits BATTLE_DIM / LIGHT_PULSE (B4) to their dim half and drops white pulses.
+#define OPAL_REDUCED_MOTION 0
+#define OPAL_LOW_FLASH      0
+
+// Opal FX sprite (SPRITE_FUNC_OPAL_FX) script variables, passed as AddSpriteWithFunc arg0..arg9
+#define OPAL_FX_VAR_ANCHOR_MASK  0 //< BATTLE_ANIM_* mask: battler(s) the sprite is anchored to (start for travel)
+#define OPAL_FX_VAR_DEST_MASK    1 //< BATTLE_ANIM_* mask for travel destination(s); 0 = static burst on the anchor(s)
+#define OPAL_FX_VAR_FRAMES       2 //< Travel time / hold time in frames (0 = until the animation ends, capped)
+#define OPAL_FX_VAR_OFFSET_X     3 //< Anchor X offset, mirrored by attacker side (positive = toward the opponent)
+#define OPAL_FX_VAR_OFFSET_Y     4 //< Anchor Y offset
+#define OPAL_FX_VAR_DEST_OFFSET_X 5 //< Destination X offset (same mirroring)
+#define OPAL_FX_VAR_DEST_OFFSET_Y 6 //< Destination Y offset
+#define OPAL_FX_VAR_ARC          7 //< Travel arc height in pixels (0 = straight line)
+#define OPAL_FX_VAR_SCALE        8 //< Sprite scale in percent (0 = 100)
+#define OPAL_FX_VAR_ANIM_FLAGS   9 //< OPAL_FX_ANIM(n) | OPAL_FX_FLAG_*
+
+#define OPAL_FX_ANIM(n)            ((n) & 0xFF) //< Animation sequence index within the sheet
+#define OPAL_FX_FLAG_TRANSLUCENT   (1 << 8) //< Draw in OBJ translucent mode
+#define OPAL_FX_FLAG_MIRROR        (1 << 9) //< Flip horizontally when the attacker is on the enemy side
+#define OPAL_FX_FLAG_DRIFT_UP      (1 << 10) //< Drift upward while alive (disabled by OPAL_REDUCED_MOTION)
+#define OPAL_FX_FLAG_POP           (1 << 11) //< Scale up from 40% during the first third of its life
+#define OPAL_FX_FLAG_SHRINK_OUT    (1 << 12) //< Scale down to 40% during the last third of its life
+#define OPAL_FX_FLAG_HOLD_LAST     (1 << 13) //< Keep drawing the last frame after a play-once animation ends
+#define OPAL_FX_FLAG_TRAIL         (1 << 14) //< Travel only: lead sprite plus two lagging, smaller translucent afterimages
+
+// Opal camera cue (Func_OpalCamera) script variables
+#define OPAL_CAM_MODE_PAN   0 //< Ease the base background by (dx, dy), hold, ease back
+#define OPAL_CAM_MODE_PUNCH 1 //< One decaying shake of amplitude dx/dy
+#define OPAL_CAM_MAX_DX     12 //< Safe viewport clamp, pixels
+#define OPAL_CAM_MAX_DY     8
 
 // clang-format on
 #endif // POKEPLATINUM_CONSTANTS_BATTLE_ANIM_H

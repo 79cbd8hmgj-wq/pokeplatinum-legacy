@@ -1,0 +1,171 @@
+{
+  "name": "opal_fire",
+  "state": "installed via res/graphics/battle/moves NARC pipeline; drawn by SPRITE_FUNC_OPAL_FX",
+  "donor_sources": {
+    "plume": {
+      "path": "graphics/battle_anims/sprites/fire_plume.png",
+      "sha256": "c983a5c0e9f90d8fc0237730b0996114258887ce1aef5dfe293fbd37746cb374"
+    },
+    "fire": {
+      "path": "graphics/battle_anims/sprites/fire.png",
+      "sha256": "6d547fd21ab13be12e64c7a40689dc9941cea28e77ff032238627f0e3dc27e82"
+    }
+  },
+  "frames": [
+    {
+      "id": "plume0",
+      "src": "plume",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "plume1",
+      "src": "plume",
+      "rect": [
+        0,
+        32,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "plume2",
+      "src": "plume",
+      "rect": [
+        0,
+        64,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "plume3",
+      "src": "plume",
+      "rect": [
+        0,
+        96,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "plume4",
+      "src": "plume",
+      "rect": [
+        0,
+        128,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "fire0",
+      "src": "fire",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "fire1",
+      "src": "fire",
+      "rect": [
+        0,
+        32,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "fire2",
+      "src": "fire",
+      "rect": [
+        0,
+        64,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "fire3",
+      "src": "fire",
+      "rect": [
+        0,
+        96,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "fire4",
+      "src": "fire",
+      "rect": [
+        0,
+        128,
+        32,
+        32
+      ],
+      "hflip": false
+    }
+  ],
+  "sequences": [
+    {
+      "index": 0,
+      "name": "plume",
+      "loop": false,
+      "frames": [
+        "plume0",
+        "plume1",
+        "plume2",
+        "plume3",
+        "plume4"
+      ],
+      "total_delay": 14
+    },
+    {
+      "index": 1,
+      "name": "tongue",
+      "loop": false,
+      "frames": [
+        "fire0",
+        "fire1",
+        "fire2",
+        "fire3",
+        "fire4"
+      ],
+      "total_delay": 11
+    }
+  ],
+  "palette_colours_rgb555": [
+    9,
+    20,
+    31,
+    1343,
+    3679,
+    5855,
+    8031,
+    11263,
+    16383,
+    32767
+  ],
+  "palette_variants_rgb555": {},
+  "obj_tiles": 148,
+  "tile_budget": 192,
+  "conversion": "indexed donor PNG (index 0 transparent) -> RGBA -> optional luminance ramp recolor -> median-cut fold to one shared <=15 colour RGB555 palette -> 8px-aligned cells covered by hardware-legal OAMs (B1 cover()) -> nitrogfx",
+  "recipe": "opal_fire.json"
+}

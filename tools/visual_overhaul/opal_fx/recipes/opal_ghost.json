@@ -1,0 +1,85 @@
+{
+ "name": "opal_ghost",
+ "donor": "pokeemerald",
+ "sources": {
+  "ball": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/shadow_ball.png",
+   "ramp": [
+    "#0d0626",
+    "#3b1a78",
+    "#7a45c8",
+    "#c9a5ff"
+   ]
+  },
+  "wisp": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/ghostly_spirit.png",
+   "ramp": [
+    "#2a1650",
+    "#6a4aa8",
+    "#b79ae6",
+    "#f1e8ff"
+   ]
+  }
+ },
+ "frames": [
+  {
+   "id": "ball",
+   "src": "ball",
+   "rect": [
+    0,
+    0,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "wisp",
+   "src": "wisp",
+   "rect": [
+    0,
+    0,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "wisp_f",
+   "src": "wisp",
+   "rect": [
+    0,
+    0,
+    32,
+    32
+   ],
+   "hflip": true
+  }
+ ],
+ "sequences": [
+  {
+   "name": "orb",
+   "loop": true,
+   "frames": [
+    [
+     "ball",
+     4
+    ]
+   ]
+  },
+  {
+   "name": "wisp",
+   "loop": true,
+   "frames": [
+    [
+     "wisp",
+     5
+    ],
+    [
+     "wisp_f",
+     5
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,123 @@
+{
+ "name": "opal_ice",
+ "donor": "pokeemerald",
+ "sources": {
+  "chunk": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/ice_chunk.png"
+  },
+  "glint": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/ice_crystals_0.png",
+   "ramp": [
+    "#1a55b0",
+    "#4aa6ee",
+    "#b5ecff",
+    "#ffffff"
+   ]
+  }
+ },
+ "frames": [
+  {
+   "id": "chunk0",
+   "src": "chunk",
+   "rect": [
+    0,
+    0,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "chunk1",
+   "src": "chunk",
+   "rect": [
+    0,
+    32,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "chunk2",
+   "src": "chunk",
+   "rect": [
+    0,
+    64,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "chunk3",
+   "src": "chunk",
+   "rect": [
+    0,
+    96,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "glint",
+   "src": "glint",
+   "rect": [
+    0,
+    0,
+    16,
+    16
+   ]
+  },
+  {
+   "id": "glint_f",
+   "src": "glint",
+   "rect": [
+    0,
+    0,
+    16,
+    16
+   ],
+   "hflip": true
+  }
+ ],
+ "sequences": [
+  {
+   "name": "shatter",
+   "frames": [
+    [
+     "chunk0",
+     2
+    ],
+    [
+     "chunk1",
+     3
+    ],
+    [
+     "chunk2",
+     3
+    ],
+    [
+     "chunk3",
+     4
+    ]
+   ]
+  },
+  {
+   "name": "glint",
+   "frames": [
+    [
+     "glint",
+     3
+    ],
+    [
+     "glint_f",
+     3
+    ],
+    [
+     "glint",
+     3
+    ]
+   ]
+  }
+ ]
+}

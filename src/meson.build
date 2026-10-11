@@ -504,6 +504,7 @@ pokeplatinum_c = files(
     'battle_anim/script_funcs_1.c',
     'battle_anim/script_funcs_2.c',
     'battle_anim/script_funcs_status.c',
+    'battle_anim/opal_cinematic.c',
     'battle_anim/script_funcs_stat_change.c',
     'battle_anim/battle_anim_util.c',
     'battle_anim/ov12_02235E94.c',

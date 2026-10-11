@@ -21,6 +21,7 @@
 #include "battle_anim/battle_anim_util.h"
 #include "battle_anim/battle_particle_util.h"
 #include "battle_anim/is_form_symmetrical.h"
+#include "battle_anim/opal_cinematic.h"
 #include "battle_anim/ov12_022380BC.h"
 #include "battle_anim/script_func_tables.h"
 #include "battle_anim/struct_ov12_02223764.h"
@@ -405,6 +406,7 @@ BOOL BattleAnimSystem_StartMove(BattleAnimSystem *system, MoveAnimation *moveAni
     int i;
 
     BattleAnimSystem_SetDefaultAlphaBlending();
+    OpalCinematic_ResetState();
 
     if (BattleAnimSystem_IsActive(system) == FALSE) {
         return FALSE;

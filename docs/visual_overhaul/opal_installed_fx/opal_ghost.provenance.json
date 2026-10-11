@@ -1,0 +1,90 @@
+{
+  "name": "opal_ghost",
+  "state": "installed via res/graphics/battle/moves NARC pipeline; drawn by SPRITE_FUNC_OPAL_FX",
+  "donor_sources": {
+    "ball": {
+      "path": "graphics/battle_anims/sprites/shadow_ball.png",
+      "sha256": "c5d6442e40756112517cd87c7741d6d28e45e30313516c573661c2c4caa33c86"
+    },
+    "wisp": {
+      "path": "graphics/battle_anims/sprites/ghostly_spirit.png",
+      "sha256": "3f56a6154466bc866b7b07b9bc9b6bc896976be7bb139a17a8e2d422e09a3ff8"
+    }
+  },
+  "frames": [
+    {
+      "id": "ball",
+      "src": "ball",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "wisp",
+      "src": "wisp",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "wisp_f",
+      "src": "wisp",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "hflip": true
+    }
+  ],
+  "sequences": [
+    {
+      "index": 0,
+      "name": "orb",
+      "loop": true,
+      "frames": [
+        "ball"
+      ],
+      "total_delay": 4
+    },
+    {
+      "index": 1,
+      "name": "wisp",
+      "loop": true,
+      "frames": [
+        "wisp",
+        "wisp_f"
+      ],
+      "total_delay": 10
+    }
+  ],
+  "palette_colours_rgb555": [
+    4097,
+    6178,
+    10309,
+    12357,
+    18602,
+    20683,
+    18667,
+    26960,
+    26098,
+    32409,
+    31481,
+    31547,
+    32702
+  ],
+  "palette_variants_rgb555": {},
+  "obj_tiles": 48,
+  "tile_budget": 192,
+  "conversion": "indexed donor PNG (index 0 transparent) -> RGBA -> optional luminance ramp recolor -> median-cut fold to one shared <=15 colour RGB555 palette -> 8px-aligned cells covered by hardware-legal OAMs (B1 cover()) -> nitrogfx",
+  "recipe": "opal_ghost.json"
+}
