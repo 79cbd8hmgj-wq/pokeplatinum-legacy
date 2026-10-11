@@ -1,0 +1,243 @@
+{
+ "generated_by": "tools/visual_overhaul/build_opal_b2_b8_reports.py",
+ "anchors": [
+  {
+   "role": "move animation scripts",
+   "path": "res/moves/*/anim.s",
+   "note": "one script per move; entry label L_0; run by BattleAnimSystem after the engine decided the move executes",
+   "file_count": 490,
+   "tree_sha256": "d92a2ab8889c2bc91d58a9faf09c1ca09bdc7049e2577bd15a0a838e6daf5043"
+  },
+  {
+   "role": "common (status / weather / encounter) animations",
+   "path": "res/battle/scripts/common_anims/*.s",
+   "note": "played by PlayBattleAnimation from battle subscripts; order in anim_subscripts.order",
+   "file_count": 50,
+   "tree_sha256": "4f8a1ee8f0b32f0548c1440fa40d08e97b08fbc02cc6ebcde658e52b069c96a9"
+  },
+  {
+   "role": "animation command macros",
+   "path": "asm/macros/btlanimcmd.inc",
+   "note": "script command vocabulary; includes btlanim_opal.inc",
+   "symbols": [
+    "AddSpriteWithFunc",
+    "InitSpriteManager",
+    "JumpIfWeather",
+    "CreateEmitter"
+   ],
+   "sha256": "bee3285fff20b972df18b90f3bd40b36840536ee9eb0592ce6b1676fb10d8eac"
+  },
+  {
+   "role": "script function macros (CallFunc table ids)",
+   "path": "asm/macros/btlanimfunc.inc",
+   "note": "CallFunc ids 0-84; id 84 = OpalCamera",
+   "symbols": [
+    "Func_FadeBg",
+    "Func_Shake",
+    "Func_ShakeBg",
+    "Func_OpalCamera"
+   ],
+   "sha256": "ae53d8d86e5ecb4c2212491c28984137af9a9d21b053efc0915402166cf38e70"
+  },
+  {
+   "role": "Opal cue vocabulary",
+   "path": "asm/macros/btlanim_opal.inc",
+   "note": "B2-B5 templates (cpp OPAL_RES pastes NAIX names)",
+   "symbols": [
+    "OpalSheetBegin",
+    "OpalFx",
+    "OpalCamFocusAttacker",
+    "OpalDimIn",
+    "OpalWeatherAccentSub",
+    "OpalReactHeavy"
+   ],
+   "sha256": "6b12d74e5b3f885fba31b8846d75bfdd20129d18837d7fdf6b233971dd1eee54"
+  },
+  {
+   "role": "script interpreter / lifecycle backstop",
+   "path": "src/battle_anim/battle_anim_system.c",
+   "note": "End waits for all anim tasks/emitters, frees managers + particle systems, restores BG priorities/offsets/blend",
+   "symbols": [
+    "BattleAnimSystem_StartMove",
+    "BattleAnimScriptCmd_End",
+    "BattleAnimScriptCmd_AddSpriteWithFunc",
+    "OpalCinematic_ResetState"
+   ],
+   "sha256": "1d937b6ec21b8888f7a81cfad5e31b9a9aa1595fced4af87c234a07edacd99bb"
+  },
+  {
+   "role": "script / sprite function tables",
+   "path": "src/battle_anim/script_func_tables.c",
+   "note": "sprite func 33 = Opal FX; script func 84 = Opal camera",
+   "symbols": [
+    "sBattleAnimScriptFuncs",
+    "sBattleAnimSpriteFuncs",
+    "BattleAnimSpriteFunc_OpalFx",
+    "BattleAnimScriptFunc_OpalCamera"
+   ],
+   "sha256": "26b21e661d05b88a3f752f35e2536643f30b4f67084f4826442ffb16a45a321f"
+  },
+  {
+   "role": "Opal FX sprite + camera implementation",
+   "path": "src/battle_anim/opal_cinematic.c",
+   "note": "battler resolution via BattleAnimUtil_GetBattlerSprites; hard lifetime caps",
+   "symbols": [
+    "BattleAnimSpriteFunc_OpalFx",
+    "BattleAnimScriptFunc_OpalCamera",
+    "OpalCinematic_ResetState"
+   ],
+   "sha256": "eb03a57d13d5d4333f506d7761eaf8921167b10a26f88df446f4eaf09f038b7f"
+  },
+  {
+   "role": "Opal pure math (host-tested)",
+   "path": "include/battle_anim/opal_cinematic_math.h",
+   "note": "tools/visual_overhaul/test_opal_cinematic_math.c",
+   "symbols": [
+    "OpalMath_CameraWeight",
+    "OpalMath_Lerp"
+   ],
+   "sha256": "7ec96cdb9dfafd76a3860c7935dccdef63b1c5b7a92958a428cea56dbc37073c"
+  },
+  {
+   "role": "script constants",
+   "path": "include/constants/battle/battle_anim.h",
+   "note": "compile-time reduced-motion / low-flash switches live here",
+   "symbols": [
+    "SPRITE_FUNC_OPAL_FX",
+    "OPAL_REDUCED_MOTION",
+    "OPAL_LOW_FLASH",
+    "OPAL_FX_FLAG_TRAIL"
+   ],
+   "sha256": "337820786c6dd1e8794c71d03bd262d7f37f5bbaead7fe3e69aa91f164f217d9"
+  },
+  {
+   "role": "battler resolution (targets, doubles, spread)",
+   "path": "src/battle_anim/battle_anim_util.c",
+   "note": "same resolver as Func_Shake / Func_FadeBattlerSprite masks",
+   "symbols": [
+    "BattleAnimUtil_GetBattlerSprites"
+   ],
+   "sha256": "7ccffe1d172970f1bd4b50ecc3f76a91542fa6aa981165a2fa5ff3040361df9a"
+  },
+  {
+   "role": "BG fade / shake owners",
+   "path": "src/battle_anim/script_funcs_3.c",
+   "note": "base-BG palette fades use PLTTBUF_MAIN_BG_F; ShakeBg writes the base BG offset",
+   "symbols": [
+    "BattleAnimScriptFunc_FadeBg",
+    "BattleAnimScriptFunc_ShakeBg",
+    "BattleAnimSpriteFunc_OffsetAndAnimate"
+   ],
+   "sha256": "085be15c129d3491f4cf9900e41b550d6447766df9207b3ca2e75c98b8b02668"
+  },
+  {
+   "role": "battle backdrop layers",
+   "path": "include/battle_anim/battle_anim_system.h",
+   "note": "BG_LAYER_MAIN_2 / MAIN_3; healthboxes are OBJ, text is BG0/BG1 (never touched)",
+   "symbols": [
+    "BATTLE_BG_BASE",
+    "BATTLE_BG_EFFECT"
+   ],
+   "sha256": "f74146272bd0e495b4d7d33469bd3a4f8ccab4f5898ae578555d3726a9520995"
+  },
+  {
+   "role": "move animation hit event",
+   "path": "src/battle/battle_script.c",
+   "note": "SYSCTL_PLAYED_MOVE_ANIMATION: one move animation per move use; Effects-off skips the call",
+   "symbols": [
+    "BtlCmd_PlayMoveAnimation",
+    "BtlCmd_PlayBattleAnimation"
+   ],
+   "sha256": "c035fbcd7bfaab68f68e32edb0b378b5286bad6a3f44a2014f9cd082524653d2"
+  },
+  {
+   "role": "animation on/off + substitute filter",
+   "path": "src/battle/battle_lib.c",
+   "note": "status/common animations are suppressed on Substitute / semi-invulnerable battlers",
+   "symbols": [
+    "BattleSystem_ShouldShowStatusEffect",
+    "sEffectsAlwaysShown"
+   ],
+   "sha256": "3cacca1704e077928edeba531ca955734aa325ff4b024fd65ad7c9abe88ae847"
+  },
+  {
+   "role": "animations-off option",
+   "path": "src/battle/battle_system.c",
+   "note": "player option; skips every Opal cue with the vanilla animation",
+   "symbols": [
+    "BattleSystem_AreAnimationsOn"
+   ],
+   "sha256": "cbccf0ceab6eec85e75b706f302333843fbdebe6d4a0c213e187a92ef7032f1e"
+  },
+  {
+   "role": "status application path",
+   "path": "res/battle/scripts/subscripts/subscript_burn.s",
+   "note": "status animations run only after all immunity / Safeguard / ability checks",
+   "symbols": [
+    "BATTLE_ANIMATION_BURNED"
+   ],
+   "sha256": "3f41b4852ef471ace7fdcea9cceaac82e5f9b5b490d6884cd228ebb01df95dcd"
+  },
+  {
+   "role": "Protect-blocked path",
+   "path": "res/battle/scripts/subscripts/subscript_missed.s",
+   "note": "REACT_BLOCKED hook",
+   "symbols": [
+    "BATTLE_ANIMATION_BLOCKED",
+    "MOVE_STATUS_PROTECTED"
+   ],
+   "sha256": "de0faa5f694fef4d9d3ec4e583e8e201170e587035a79507889d3eef2bb8df90"
+  },
+  {
+   "role": "encounter intro path",
+   "path": "res/battle/scripts/subscripts/subscript_start_encounter.s",
+   "note": "B7 gate (read-only)",
+   "symbols": [
+    "_opal_cue",
+    "BATTLE_STATUS_LEGENDARY",
+    "BATTLE_STATUS_GIRATINA"
+   ],
+   "sha256": "6886e07abfba479fbf30254da7497f2392e84ee39cf2d3881d3459f37c346dc7"
+  },
+  {
+   "role": "encounter entry points",
+   "path": "src/encounter.c",
+   "note": "where the engine sets BATTLE_STATUS_* for story encounters (not modified)",
+   "symbols": [
+    "Encounter_NewVsGiratinaOrigin",
+    "Encounter_NewVsSpeciesAtLevel",
+    "BATTLE_STATUS_DISTORTION"
+   ],
+   "sha256": "70088feae999a17a3f55980d02e471e6f33fa4f45675ab90ff277e70a7531e40"
+  },
+  {
+   "role": "graphics NARC pipeline",
+   "path": "res/graphics/battle/moves/meson.build",
+   "note": "PNG + cell/anim JSON -> NCGR/NCLR/NCER/NANR via nitrogfx",
+   "symbols": [
+    "pngs_for_pal",
+    "no_cell_pngs_for_pal",
+    "cell_jsons",
+    "cellanm_jsons"
+   ],
+   "sha256": "afe9cb4010067798569cc0c371f5ef23d3e131cde445ef88f273a114e3aaab51"
+  },
+  {
+   "role": "sub-animation ids",
+   "path": "generated/battle_sub_animations.txt",
+   "note": "previously-unused slots 23, 24, 41-46 repurposed; ids 1-5 (status icons) untouched",
+   "symbols": [
+    "BATTLE_ANIMATION_BLOCKED",
+    "BATTLE_ANIMATION_ENCOUNTER_GIRATINA",
+    "BATTLE_ANIMATION_ENCOUNTER_LEGEND"
+   ],
+   "sha256": "86b095856e736ed92bf550c211e7790a05627f5803e4fc856330a5735b97ced5"
+  }
+ ],
+ "blocked_anchors": [],
+ "restrictions": [
+  "no battle logic, move data, AI, RNG or save/event flag is read for mutation",
+  "BATTLE_STATUS_* and enemy species are read-only gates in subscript_start_encounter.s",
+  "BG layers touched: BATTLE_BG_BASE offsets/palette fades only (same owners as vanilla scripts)"
+ ]
+}

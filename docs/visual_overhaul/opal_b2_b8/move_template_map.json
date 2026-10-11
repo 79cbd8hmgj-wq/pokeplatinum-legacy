@@ -1,0 +1,714 @@
+{
+ "generated_by": "tools/visual_overhaul/build_opal_b2_b8_reports.py",
+ "moves_and_animations": {
+  "common_anims/blocked": {
+   "script": "res/battle/scripts/common_anims/blocked.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fx_ring",
+     "palette": "opal_fx_ring_opal"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalImpactBurst"
+    ],
+    "camera": [],
+    "light": [],
+    "weather_accent": false,
+    "reactions": []
+   },
+   "native_effects_preserved": [
+    "Func_FadeBattlerSprite"
+   ]
+  },
+  "common_anims/burn": {
+   "script": "res/battle/scripts/common_anims/burn.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fire",
+     "palette": "opal_fire"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalImpactBurst"
+    ],
+    "camera": [],
+    "light": [],
+    "weather_accent": false,
+    "reactions": []
+   },
+   "native_effects_preserved": [
+    "CreateEmitter",
+    "Func_FadeBattlerSprite"
+   ]
+  },
+  "common_anims/encounter_azelf": {
+   "script": "res/battle/scripts/common_anims/encounter_azelf.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fx_ring",
+     "palette": "opal_fx_ring_water"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalChargeAura",
+     "OpalImpactBurst"
+    ],
+    "camera": [],
+    "light": [],
+    "weather_accent": false,
+    "reactions": []
+   },
+   "native_effects_preserved": []
+  },
+  "common_anims/encounter_dialga": {
+   "script": "res/battle/scripts/common_anims/encounter_dialga.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fx_ring",
+     "palette": "opal_fx_ring_steel"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalChargeAura",
+     "OpalImpactBurst"
+    ],
+    "camera": [],
+    "light": [
+     "OpalDimIn",
+     "OpalDimOut",
+     "OpalLightPulse"
+    ],
+    "weather_accent": false,
+    "reactions": []
+   },
+   "native_effects_preserved": []
+  },
+  "common_anims/encounter_giratina": {
+   "script": "res/battle/scripts/common_anims/encounter_giratina.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fx_ring",
+     "palette": "opal_fx_ring_ghost"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalChargeAura",
+     "OpalImpactBurst",
+     "OpalResidual"
+    ],
+    "camera": [
+     "OpalCamFocusAttacker"
+    ],
+    "light": [
+     "OpalDimIn",
+     "OpalDimOut"
+    ],
+    "weather_accent": false,
+    "reactions": []
+   },
+   "native_effects_preserved": []
+  },
+  "common_anims/encounter_legend": {
+   "script": "res/battle/scripts/common_anims/encounter_legend.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fx_ring",
+     "palette": "opal_fx_ring_opal"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalChargeAura",
+     "OpalImpactBurst"
+    ],
+    "camera": [],
+    "light": [
+     "OpalDimIn",
+     "OpalDimOut"
+    ],
+    "weather_accent": false,
+    "reactions": []
+   },
+   "native_effects_preserved": []
+  },
+  "common_anims/encounter_mesprit": {
+   "script": "res/battle/scripts/common_anims/encounter_mesprit.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fx_ring",
+     "palette": "opal_fx_ring_psychic"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalChargeAura",
+     "OpalImpactBurst"
+    ],
+    "camera": [],
+    "light": [],
+    "weather_accent": false,
+    "reactions": []
+   },
+   "native_effects_preserved": []
+  },
+  "common_anims/encounter_palkia": {
+   "script": "res/battle/scripts/common_anims/encounter_palkia.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fx_ring",
+     "palette": "opal_fx_ring_psychic"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalChargeAura",
+     "OpalImpactBurst"
+    ],
+    "camera": [],
+    "light": [
+     "OpalDimIn",
+     "OpalDimOut",
+     "OpalLightPulse"
+    ],
+    "weather_accent": false,
+    "reactions": []
+   },
+   "native_effects_preserved": []
+  },
+  "common_anims/encounter_uxie": {
+   "script": "res/battle/scripts/common_anims/encounter_uxie.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fx_ring",
+     "palette": "opal_fx_ring_gold"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalChargeAura",
+     "OpalImpactBurst"
+    ],
+    "camera": [],
+    "light": [],
+    "weather_accent": false,
+    "reactions": []
+   },
+   "native_effects_preserved": []
+  },
+  "common_anims/freeze": {
+   "script": "res/battle/scripts/common_anims/freeze.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_ice",
+     "palette": "opal_ice"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalImpactBurst"
+    ],
+    "camera": [],
+    "light": [],
+    "weather_accent": false,
+    "reactions": []
+   },
+   "native_effects_preserved": [
+    "CreateEmitter"
+   ]
+  },
+  "common_anims/paralysis": {
+   "script": "res/battle/scripts/common_anims/paralysis.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_thunder",
+     "palette": "opal_thunder"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalImpactBurst"
+    ],
+    "camera": [],
+    "light": [],
+    "weather_accent": false,
+    "reactions": []
+   },
+   "native_effects_preserved": [
+    "CreateEmitter",
+    "Func_FadeBattlerSprite"
+   ]
+  },
+  "common_anims/poison": {
+   "script": "res/battle/scripts/common_anims/poison.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fx_ring",
+     "palette": "opal_fx_ring_ghost"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalResidual"
+    ],
+    "camera": [],
+    "light": [],
+    "weather_accent": false,
+    "reactions": []
+   },
+   "native_effects_preserved": [
+    "CreateEmitter",
+    "Func_FadeBattlerSprite"
+   ]
+  },
+  "common_anims/weather_hail": {
+   "script": "res/battle/scripts/common_anims/weather_hail.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fx_wx",
+     "palette": "opal_fx_wx_ice"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalResidual"
+    ],
+    "camera": [],
+    "light": [],
+    "weather_accent": false,
+    "reactions": []
+   },
+   "native_effects_preserved": [
+    "CreateEmitter"
+   ]
+  },
+  "common_anims/weather_rain": {
+   "script": "res/battle/scripts/common_anims/weather_rain.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fx_wx",
+     "palette": "opal_fx_wx_water"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalImpactBurst"
+    ],
+    "camera": [],
+    "light": [],
+    "weather_accent": false,
+    "reactions": []
+   },
+   "native_effects_preserved": [
+    "CreateEmitter"
+   ]
+  },
+  "common_anims/weather_sandstorm": {
+   "script": "res/battle/scripts/common_anims/weather_sandstorm.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fx_wx",
+     "palette": "opal_fx_wx_earth"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalImpactBurst"
+    ],
+    "camera": [],
+    "light": [],
+    "weather_accent": false,
+    "reactions": []
+   },
+   "native_effects_preserved": [
+    "CreateEmitter"
+   ]
+  },
+  "common_anims/weather_sun": {
+   "script": "res/battle/scripts/common_anims/weather_sun.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fx_wx",
+     "palette": "opal_fx_wx_gold"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalResidual"
+    ],
+    "camera": [],
+    "light": [],
+    "weather_accent": false,
+    "reactions": []
+   },
+   "native_effects_preserved": [
+    "CreateEmitter"
+   ]
+  },
+  "draco_meteor": {
+   "script": "res/moves/draco_meteor/anim.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fire",
+     "palette": "opal_fire"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalImpactBurst"
+    ],
+    "camera": [],
+    "light": [],
+    "weather_accent": false,
+    "reactions": []
+   },
+   "native_effects_preserved": [
+    "CreateEmitter",
+    "Func_Shake",
+    "Func_ShakeBg"
+   ]
+  },
+  "earthquake": {
+   "script": "res/moves/earthquake/anim.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fx_ring",
+     "palette": "opal_fx_ring_earth"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalChargeAura",
+     "OpalImpactBurst",
+     "OpalResidual"
+    ],
+    "camera": [],
+    "light": [],
+    "weather_accent": false,
+    "reactions": []
+   },
+   "native_effects_preserved": [
+    "CreateEmitter",
+    "Func_Earthquake",
+    "Func_ShakeBg"
+   ]
+  },
+  "fire_blast": {
+   "script": "res/moves/fire_blast/anim.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fire",
+     "palette": "opal_fire"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalChargeAura",
+     "OpalImpactBurst",
+     "OpalResidual"
+    ],
+    "camera": [
+     "OpalCamFocusAttacker"
+    ],
+    "light": [],
+    "weather_accent": true,
+    "reactions": []
+   },
+   "native_effects_preserved": [
+    "CreateEmitter",
+    "CreateEmitterEx",
+    "Func_FadeBattlerSprite",
+    "Func_Shake",
+    "Func_ShakeBg",
+    "SwitchBg"
+   ]
+  },
+  "hyper_beam": {
+   "script": "res/moves/hyper_beam/anim.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fx_ring",
+     "palette": "opal_fx_ring_gold"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalChargeAura",
+     "OpalImpactBurst"
+    ],
+    "camera": [],
+    "light": [],
+    "weather_accent": false,
+    "reactions": []
+   },
+   "native_effects_preserved": [
+    "CreateEmitter",
+    "CreateEmitterForFriendlyFire",
+    "CreateEmitterForMove",
+    "Func_Shake",
+    "Func_ShakeBg",
+    "SwitchBg"
+   ]
+  },
+  "ice_beam": {
+   "script": "res/moves/ice_beam/anim.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_ice",
+     "palette": "opal_ice"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalChargeAura",
+     "OpalImpactBurst",
+     "OpalResidual"
+    ],
+    "camera": [
+     "OpalCamFocusAttacker",
+     "OpalCamFollow",
+     "OpalCamPunch"
+    ],
+    "light": [
+     "OpalDimIn",
+     "OpalDimOut"
+    ],
+    "weather_accent": true,
+    "reactions": []
+   },
+   "native_effects_preserved": [
+    "CreateEmitter",
+    "Func_Shake"
+   ]
+  },
+  "iron_tail": {
+   "script": "res/moves/iron_tail/anim.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fx_ring",
+     "palette": "opal_fx_ring_steel"
+    }
+   ],
+   "cues": {
+    "primitives": [],
+    "camera": [
+     "OpalCamFocusAttacker"
+    ],
+    "light": [],
+    "weather_accent": false,
+    "reactions": [
+     "OpalReactHeavy"
+    ]
+   },
+   "native_effects_preserved": [
+    "CreateEmitter"
+   ]
+  },
+  "psychic": {
+   "script": "res/moves/psychic/anim.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fx_ring",
+     "palette": "opal_fx_ring_psychic"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalChargeAura",
+     "OpalImpactBurst"
+    ],
+    "camera": [],
+    "light": [],
+    "weather_accent": false,
+    "reactions": [
+     "OpalReactMagic"
+    ]
+   },
+   "native_effects_preserved": [
+    "Func_Confusion",
+    "Func_FadeBattlerSprite",
+    "Func_Shake",
+    "SwitchBg"
+   ]
+  },
+  "shadow_ball": {
+   "script": "res/moves/shadow_ball/anim.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fx_ring",
+     "palette": "opal_fx_ring_ghost"
+    },
+    {
+     "sheet": "opal_ghost",
+     "palette": "opal_ghost"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalChargeAura",
+     "OpalImpactBurst",
+     "OpalProjectile",
+     "OpalResidual"
+    ],
+    "camera": [
+     "OpalCamFocusAttacker",
+     "OpalCamFollow",
+     "OpalCamPunch"
+    ],
+    "light": [
+     "OpalDimIn",
+     "OpalDimOut"
+    ],
+    "weather_accent": false,
+    "reactions": []
+   },
+   "native_effects_preserved": [
+    "CreateEmitter",
+    "Func_FadeBattlerSprite",
+    "Func_Shake"
+   ]
+  },
+  "shadow_claw": {
+   "script": "res/moves/shadow_claw/anim.s",
+   "sheets_and_palettes": [],
+   "cues": {
+    "primitives": [],
+    "camera": [],
+    "light": [],
+    "weather_accent": false,
+    "reactions": [
+     "OpalReactLight"
+    ]
+   },
+   "native_effects_preserved": [
+    "CreateEmitter"
+   ]
+  },
+  "shadow_force": {
+   "script": "res/moves/shadow_force/anim.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fx_ring",
+     "palette": "opal_fx_ring_ghost"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalImpactBurst"
+    ],
+    "camera": [],
+    "light": [],
+    "weather_accent": false,
+    "reactions": []
+   },
+   "native_effects_preserved": [
+    "CreateEmitter",
+    "Func_Shake"
+   ]
+  },
+  "solar_beam": {
+   "script": "res/moves/solar_beam/anim.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_fx_ring",
+     "palette": "opal_fx_ring_gold"
+    },
+    {
+     "sheet": "opal_fx_ring",
+     "palette": "opal_fx_ring_solar"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalChargeAura",
+     "OpalImpactBurst",
+     "OpalProjectile",
+     "OpalResidual"
+    ],
+    "camera": [
+     "OpalCamFocusAttacker",
+     "OpalCamFollow"
+    ],
+    "light": [
+     "OpalDimIn",
+     "OpalDimOut"
+    ],
+    "weather_accent": true,
+    "reactions": []
+   },
+   "native_effects_preserved": [
+    "CreateEmitter",
+    "Func_FadeBattlerSprite",
+    "Func_Shake",
+    "Func_ShakeBg"
+   ]
+  },
+  "surf": {
+   "script": "res/moves/surf/anim.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_water",
+     "palette": "opal_water"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalChargeAura",
+     "OpalImpactBurst",
+     "OpalResidual"
+    ],
+    "camera": [
+     "OpalCamFocusAttacker",
+     "OpalCamPunch"
+    ],
+    "light": [],
+    "weather_accent": true,
+    "reactions": []
+   },
+   "native_effects_preserved": [
+    "CreateEmitter",
+    "Func_FadeBattlerSprite",
+    "Func_Shake",
+    "Func_Surf"
+   ]
+  },
+  "thunderbolt": {
+   "script": "res/moves/thunderbolt/anim.s",
+   "sheets_and_palettes": [
+    {
+     "sheet": "opal_thunder",
+     "palette": "opal_thunder"
+    }
+   ],
+   "cues": {
+    "primitives": [
+     "OpalChargeAura",
+     "OpalFx",
+     "OpalImpactBurst",
+     "OpalResidual"
+    ],
+    "camera": [
+     "OpalCamFocusAttacker",
+     "OpalCamPunch"
+    ],
+    "light": [
+     "OpalDimIn",
+     "OpalDimOut",
+     "OpalLightPulse"
+    ],
+    "weather_accent": true,
+    "reactions": []
+   },
+   "native_effects_preserved": [
+    "CreateEmitter",
+    "Func_FadeBattlerSprite",
+    "Func_Shake"
+   ]
+  }
+ }
+}

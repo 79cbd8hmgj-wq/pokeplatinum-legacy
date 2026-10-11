@@ -1,0 +1,786 @@
+{
+ "emerald_candidates_not_used": [
+  "EMER_ELECTRIC_ORBS frames beyond 3",
+  "EMER_GHOST_BG",
+  "EMER_WATER_BG",
+  "EMER_PSYCHIC_BG",
+  "EMER_SOLARBEAM_BG",
+  "EMER_IMPACT"
+ ],
+ "not_used_reason": "Emerald .bin/BG/tilemap donors are GBA tile-map backgrounds; Platinum BG ownership (base/effect layers, fade + switch owners) would need a BG converter and a layer budget that the audit did not justify. Their roles are covered by native SwitchBg resources, procedural rings and palette fades; documented variance per handoff rule.",
+ "sheets": [
+  {
+   "sheet": "opal_fire",
+   "origin": {
+    "plume": {
+     "path": "graphics/battle_anims/sprites/fire_plume.png",
+     "sha256": "c983a5c0e9f90d8fc0237730b0996114258887ce1aef5dfe293fbd37746cb374"
+    },
+    "fire": {
+     "path": "graphics/battle_anims/sprites/fire.png",
+     "sha256": "6d547fd21ab13be12e64c7a40689dc9941cea28e77ff032238627f0e3dc27e82"
+    }
+   },
+   "conversion": "indexed donor PNG (index 0 transparent) -> RGBA -> optional luminance ramp recolor -> median-cut fold to one shared <=15 colour RGB555 palette -> 8px-aligned cells covered by hardware-legal OAMs (B1 cover()) -> nitrogfx",
+   "tiles": 148,
+   "obj_char_bytes": 4736,
+   "palette_colours": 10,
+   "palette_variants": [],
+   "animation_sequences": [
+    {
+     "index": 0,
+     "name": "plume",
+     "loop": false,
+     "frames": [
+      "plume0",
+      "plume1",
+      "plume2",
+      "plume3",
+      "plume4"
+     ],
+     "total_delay": 14
+    },
+    {
+     "index": 1,
+     "name": "tongue",
+     "loop": false,
+     "frames": [
+      "fire0",
+      "fire1",
+      "fire2",
+      "fire3",
+      "fire4"
+     ],
+     "total_delay": 11
+    }
+   ],
+   "ownership": "one sprite manager per use (OpalSheetBegin/OpalSheetEnd); palette = NCLR loaded into that manager; freed before UnloadParticleSystem",
+   "outputs": {
+    "png": "res/graphics/battle/moves/opal_fire.png",
+    "cell": "res/graphics/battle/moves/opal_fire_cell.json",
+    "anim": "res/graphics/battle/moves/opal_fire_anim.json",
+    "provenance": "docs/visual_overhaul/opal_installed_fx/opal_fire.provenance.json",
+    "recipe": "tools/visual_overhaul/opal_fx/recipes/opal_fire.json"
+   },
+   "output_sha256": {
+    "png": "9a933ad23552c76af5fa1300b542f529cc5769e42015b201fef0b5669785467e",
+    "cell": "da2a19220d3998af15f69d9b82501dc9af588c4c98056c42888920200b59dd4d",
+    "anim": "aac26d0ac0b59be0c568066bed92436624cff71427b4140542b5ef6b0a64eb3c"
+   }
+  },
+  {
+   "sheet": "opal_fx_ring",
+   "origin": {
+    "r0": {
+     "procedural": "ring",
+     "params": {
+      "w": 24,
+      "h": 24,
+      "rx": 5,
+      "ry": 5,
+      "thickness": 2.2,
+      "ramp": [
+       "#40204a",
+       "#8a60c8",
+       "#d8c0ff",
+       "#ffffff"
+      ]
+     }
+    },
+    "r1": {
+     "procedural": "ring",
+     "params": {
+      "w": 32,
+      "h": 32,
+      "rx": 9,
+      "ry": 9,
+      "thickness": 2.0,
+      "ramp": [
+       "#40204a",
+       "#8a60c8",
+       "#d8c0ff",
+       "#ffffff"
+      ]
+     }
+    },
+    "r2": {
+     "procedural": "ring",
+     "params": {
+      "w": 40,
+      "h": 40,
+      "rx": 13,
+      "ry": 13,
+      "thickness": 1.8,
+      "ramp": [
+       "#40204a",
+       "#8a60c8",
+       "#d8c0ff",
+       "#ffffff"
+      ]
+     }
+    },
+    "r3": {
+     "procedural": "ring",
+     "params": {
+      "w": 48,
+      "h": 48,
+      "rx": 17,
+      "ry": 17,
+      "thickness": 1.5,
+      "ramp": [
+       "#40204a",
+       "#8a60c8",
+       "#d8c0ff",
+       "#ffffff"
+      ]
+     }
+    },
+    "r4": {
+     "procedural": "ring",
+     "params": {
+      "w": 48,
+      "h": 48,
+      "rx": 20,
+      "ry": 20,
+      "thickness": 1.2,
+      "ramp": [
+       "#40204a",
+       "#8a60c8",
+       "#d8c0ff",
+       "#ffffff"
+      ]
+     }
+    },
+    "f0": {
+     "procedural": "ring",
+     "params": {
+      "w": 24,
+      "h": 16,
+      "rx": 8,
+      "ry": 3,
+      "thickness": 1.8,
+      "ramp": [
+       "#40204a",
+       "#8a60c8",
+       "#d8c0ff",
+       "#ffffff"
+      ]
+     }
+    },
+    "f1": {
+     "procedural": "ring",
+     "params": {
+      "w": 40,
+      "h": 16,
+      "rx": 14,
+      "ry": 5,
+      "thickness": 1.6,
+      "ramp": [
+       "#40204a",
+       "#8a60c8",
+       "#d8c0ff",
+       "#ffffff"
+      ]
+     }
+    },
+    "f2": {
+     "procedural": "ring",
+     "params": {
+      "w": 48,
+      "h": 16,
+      "rx": 20,
+      "ry": 7,
+      "thickness": 1.4,
+      "ramp": [
+       "#40204a",
+       "#8a60c8",
+       "#d8c0ff",
+       "#ffffff"
+      ]
+     }
+    },
+    "f3": {
+     "procedural": "ring",
+     "params": {
+      "w": 64,
+      "h": 16,
+      "rx": 25,
+      "ry": 9,
+      "thickness": 1.2,
+      "ramp": [
+       "#40204a",
+       "#8a60c8",
+       "#d8c0ff",
+       "#ffffff"
+      ]
+     }
+    },
+    "s0": {
+     "procedural": "star",
+     "params": {
+      "size": 16,
+      "ramp": [
+       "#40204a",
+       "#8a60c8",
+       "#d8c0ff",
+       "#ffffff"
+      ]
+     }
+    },
+    "s1": {
+     "procedural": "star",
+     "params": {
+      "size": 8,
+      "ramp": [
+       "#40204a",
+       "#8a60c8",
+       "#d8c0ff",
+       "#ffffff"
+      ]
+     }
+    },
+    "d0": {
+     "procedural": "dot",
+     "params": {
+      "size": 16,
+      "ramp": [
+       "#40204a",
+       "#8a60c8",
+       "#d8c0ff",
+       "#ffffff"
+      ]
+     }
+    },
+    "d1": {
+     "procedural": "dot",
+     "params": {
+      "size": 8,
+      "ramp": [
+       "#40204a",
+       "#8a60c8",
+       "#d8c0ff",
+       "#ffffff"
+      ]
+     }
+    }
+   },
+   "conversion": "indexed donor PNG (index 0 transparent) -> RGBA -> optional luminance ramp recolor -> median-cut fold to one shared <=15 colour RGB555 palette -> 8px-aligned cells covered by hardware-legal OAMs (B1 cover()) -> nitrogfx",
+   "tiles": 184,
+   "obj_char_bytes": 5888,
+   "palette_colours": 4,
+   "palette_variants": [
+    "earth",
+    "fire",
+    "ghost",
+    "gold",
+    "ice",
+    "opal",
+    "psychic",
+    "solar",
+    "steel",
+    "water"
+   ],
+   "animation_sequences": [
+    {
+     "index": 0,
+     "name": "ring_expand",
+     "loop": false,
+     "frames": [
+      "ring0",
+      "ring1",
+      "ring2",
+      "ring3",
+      "ring4"
+     ],
+     "total_delay": 10
+    },
+    {
+     "index": 1,
+     "name": "ring_converge",
+     "loop": false,
+     "frames": [
+      "ring4",
+      "ring3",
+      "ring2",
+      "ring1",
+      "ring0"
+     ],
+     "total_delay": 10
+    },
+    {
+     "index": 2,
+     "name": "flat_expand",
+     "loop": false,
+     "frames": [
+      "flat0",
+      "flat1",
+      "flat2",
+      "flat3"
+     ],
+     "total_delay": 12
+    },
+    {
+     "index": 3,
+     "name": "flat_converge",
+     "loop": false,
+     "frames": [
+      "flat3",
+      "flat2",
+      "flat1",
+      "flat0"
+     ],
+     "total_delay": 12
+    },
+    {
+     "index": 4,
+     "name": "star_pop",
+     "loop": false,
+     "frames": [
+      "star1",
+      "star0",
+      "star1"
+     ],
+     "total_delay": 7
+    },
+    {
+     "index": 5,
+     "name": "dot_pulse",
+     "loop": true,
+     "frames": [
+      "dot1",
+      "dot0"
+     ],
+     "total_delay": 6
+    }
+   ],
+   "ownership": "one sprite manager per use (OpalSheetBegin/OpalSheetEnd); palette = NCLR loaded into that manager; freed before UnloadParticleSystem",
+   "outputs": {
+    "png": "res/graphics/battle/moves/opal_fx_ring.png",
+    "cell": "res/graphics/battle/moves/opal_fx_ring_cell.json",
+    "anim": "res/graphics/battle/moves/opal_fx_ring_anim.json",
+    "provenance": "docs/visual_overhaul/opal_installed_fx/opal_fx_ring.provenance.json",
+    "recipe": "tools/visual_overhaul/opal_fx/recipes/opal_fx_ring.json"
+   },
+   "output_sha256": {
+    "png": "5f1febbb24bf230648b626cc414a1ce1107623bb1196de124faf5345152b255d",
+    "cell": "1099583834a0fef758bcf0a7164a8d280be696c5464929ced1eedc0d2b037cd4",
+    "anim": "7dc866b5d4ca7566e5287dac0559ccb8a49ab8e58a01e8c3ffdff5d45550495b"
+   }
+  },
+  {
+   "sheet": "opal_fx_wx",
+   "origin": {
+    "f0": {
+     "procedural": "ring",
+     "params": {
+      "w": 24,
+      "h": 16,
+      "rx": 8,
+      "ry": 3,
+      "thickness": 1.8,
+      "ramp": [
+       "#40204a",
+       "#8a60c8",
+       "#d8c0ff",
+       "#ffffff"
+      ]
+     }
+    },
+    "f1": {
+     "procedural": "ring",
+     "params": {
+      "w": 40,
+      "h": 16,
+      "rx": 14,
+      "ry": 5,
+      "thickness": 1.6,
+      "ramp": [
+       "#40204a",
+       "#8a60c8",
+       "#d8c0ff",
+       "#ffffff"
+      ]
+     }
+    },
+    "f2": {
+     "procedural": "ring",
+     "params": {
+      "w": 48,
+      "h": 16,
+      "rx": 20,
+      "ry": 7,
+      "thickness": 1.4,
+      "ramp": [
+       "#40204a",
+       "#8a60c8",
+       "#d8c0ff",
+       "#ffffff"
+      ]
+     }
+    },
+    "f3": {
+     "procedural": "ring",
+     "params": {
+      "w": 64,
+      "h": 16,
+      "rx": 25,
+      "ry": 9,
+      "thickness": 1.2,
+      "ramp": [
+       "#40204a",
+       "#8a60c8",
+       "#d8c0ff",
+       "#ffffff"
+      ]
+     }
+    },
+    "s0": {
+     "procedural": "star",
+     "params": {
+      "size": 16,
+      "ramp": [
+       "#40204a",
+       "#8a60c8",
+       "#d8c0ff",
+       "#ffffff"
+      ]
+     }
+    },
+    "s1": {
+     "procedural": "star",
+     "params": {
+      "size": 8,
+      "ramp": [
+       "#40204a",
+       "#8a60c8",
+       "#d8c0ff",
+       "#ffffff"
+      ]
+     }
+    }
+   },
+   "conversion": "indexed donor PNG (index 0 transparent) -> RGBA -> optional luminance ramp recolor -> median-cut fold to one shared <=15 colour RGB555 palette -> 8px-aligned cells covered by hardware-legal OAMs (B1 cover()) -> nitrogfx",
+   "tiles": 51,
+   "obj_char_bytes": 1632,
+   "palette_colours": 4,
+   "palette_variants": [
+    "earth",
+    "gold",
+    "ice",
+    "water"
+   ],
+   "animation_sequences": [
+    {
+     "index": 0,
+     "name": "flat_expand",
+     "loop": false,
+     "frames": [
+      "flat0",
+      "flat1",
+      "flat2",
+      "flat3"
+     ],
+     "total_delay": 12
+    },
+    {
+     "index": 1,
+     "name": "star_pop",
+     "loop": false,
+     "frames": [
+      "star1",
+      "star0",
+      "star1"
+     ],
+     "total_delay": 7
+    }
+   ],
+   "ownership": "one sprite manager per use (OpalSheetBegin/OpalSheetEnd); palette = NCLR loaded into that manager; freed before UnloadParticleSystem",
+   "outputs": {
+    "png": "res/graphics/battle/moves/opal_fx_wx.png",
+    "cell": "res/graphics/battle/moves/opal_fx_wx_cell.json",
+    "anim": "res/graphics/battle/moves/opal_fx_wx_anim.json",
+    "provenance": "docs/visual_overhaul/opal_installed_fx/opal_fx_wx.provenance.json",
+    "recipe": "tools/visual_overhaul/opal_fx/recipes/opal_fx_wx.json"
+   },
+   "output_sha256": {
+    "png": "74c12a7a4cdbae63dc004c0a18c44deb93e4f8cfd9ebff134d609ee1e87c004b",
+    "cell": "77c744a6e915f47293f6a0fe69b2638b66f1de49b42a7e0134ac9205f7c3680d",
+    "anim": "be12e81f0357d73dc4282db1e7d3703f82a2c67e0028fe198ce7acc69ee5f9c1"
+   }
+  },
+  {
+   "sheet": "opal_ghost",
+   "origin": {
+    "ball": {
+     "path": "graphics/battle_anims/sprites/shadow_ball.png",
+     "sha256": "c5d6442e40756112517cd87c7741d6d28e45e30313516c573661c2c4caa33c86"
+    },
+    "wisp": {
+     "path": "graphics/battle_anims/sprites/ghostly_spirit.png",
+     "sha256": "3f56a6154466bc866b7b07b9bc9b6bc896976be7bb139a17a8e2d422e09a3ff8"
+    }
+   },
+   "conversion": "indexed donor PNG (index 0 transparent) -> RGBA -> optional luminance ramp recolor -> median-cut fold to one shared <=15 colour RGB555 palette -> 8px-aligned cells covered by hardware-legal OAMs (B1 cover()) -> nitrogfx",
+   "tiles": 48,
+   "obj_char_bytes": 1536,
+   "palette_colours": 13,
+   "palette_variants": [],
+   "animation_sequences": [
+    {
+     "index": 0,
+     "name": "orb",
+     "loop": true,
+     "frames": [
+      "ball"
+     ],
+     "total_delay": 4
+    },
+    {
+     "index": 1,
+     "name": "wisp",
+     "loop": true,
+     "frames": [
+      "wisp",
+      "wisp_f"
+     ],
+     "total_delay": 10
+    }
+   ],
+   "ownership": "one sprite manager per use (OpalSheetBegin/OpalSheetEnd); palette = NCLR loaded into that manager; freed before UnloadParticleSystem",
+   "outputs": {
+    "png": "res/graphics/battle/moves/opal_ghost.png",
+    "cell": "res/graphics/battle/moves/opal_ghost_cell.json",
+    "anim": "res/graphics/battle/moves/opal_ghost_anim.json",
+    "provenance": "docs/visual_overhaul/opal_installed_fx/opal_ghost.provenance.json",
+    "recipe": "tools/visual_overhaul/opal_fx/recipes/opal_ghost.json"
+   },
+   "output_sha256": {
+    "png": "e0814bff0d54804ca9accb83665916769b160218d79b0bd0b198fa5318bd27c3",
+    "cell": "6620106d0c9c56aa25e7fb6186f4c7a1d8c36ca97dd2ed612d312d59be84cefa",
+    "anim": "9d98262202deaa138a4ee32755324247219fd37e632ccf1da99c714f6c3a38d0"
+   }
+  },
+  {
+   "sheet": "opal_ice",
+   "origin": {
+    "chunk": {
+     "path": "graphics/battle_anims/sprites/ice_chunk.png",
+     "sha256": "7fcdd6a5377b4c3fbbd5880a8bf4d11afdbbbb21567ac6e76692ad4ec4f88a0c"
+    },
+    "glint": {
+     "path": "graphics/battle_anims/sprites/ice_crystals_0.png",
+     "sha256": "79adc6a4936a0f9c47a50982975dd4e3ef3f27d035469cdce2f9dc5673814d53"
+    }
+   },
+   "conversion": "indexed donor PNG (index 0 transparent) -> RGBA -> optional luminance ramp recolor -> median-cut fold to one shared <=15 colour RGB555 palette -> 8px-aligned cells covered by hardware-legal OAMs (B1 cover()) -> nitrogfx",
+   "tiles": 72,
+   "obj_char_bytes": 2304,
+   "palette_colours": 15,
+   "palette_variants": [],
+   "animation_sequences": [
+    {
+     "index": 0,
+     "name": "shatter",
+     "loop": false,
+     "frames": [
+      "chunk0",
+      "chunk1",
+      "chunk2",
+      "chunk3"
+     ],
+     "total_delay": 12
+    },
+    {
+     "index": 1,
+     "name": "glint",
+     "loop": false,
+     "frames": [
+      "glint",
+      "glint_f",
+      "glint"
+     ],
+     "total_delay": 9
+    }
+   ],
+   "ownership": "one sprite manager per use (OpalSheetBegin/OpalSheetEnd); palette = NCLR loaded into that manager; freed before UnloadParticleSystem",
+   "outputs": {
+    "png": "res/graphics/battle/moves/opal_ice.png",
+    "cell": "res/graphics/battle/moves/opal_ice_cell.json",
+    "anim": "res/graphics/battle/moves/opal_ice_anim.json",
+    "provenance": "docs/visual_overhaul/opal_installed_fx/opal_ice.provenance.json",
+    "recipe": "tools/visual_overhaul/opal_fx/recipes/opal_ice.json"
+   },
+   "output_sha256": {
+    "png": "6ea6c25223cfbb6e56f054b83461b3c7e030dffe3960b5c9c46144e7c31dd710",
+    "cell": "460d15612ad9313218277181555e0cec449425449720413291a6160397557822",
+    "anim": "31daf1901bb0746183cd85daca0cee8eba65cf58e36afa4dffe04f3e13587057"
+   }
+  },
+  {
+   "sheet": "opal_thunder",
+   "origin": {
+    "bolt": {
+     "path": "graphics/battle_anims/sprites/lightning_2.png",
+     "sha256": "cb5e1dfa65772cfc06c2868802ec92055f86a3946f0c82a9d57f92d05e8faa19"
+    },
+    "spark": {
+     "path": "graphics/battle_anims/sprites/electricity.png",
+     "sha256": "47e031374352a8d36214ad7c59c3944bcd8eb8450302131491e9ebfeef62bc6b"
+    },
+    "orb": {
+     "path": "graphics/battle_anims/sprites/electric_orbs.png",
+     "sha256": "48ac380aae38e0f774914490d1637e291f311c7a3771b434d5aee3a8c430e6ea"
+    }
+   },
+   "conversion": "indexed donor PNG (index 0 transparent) -> RGBA -> optional luminance ramp recolor -> median-cut fold to one shared <=15 colour RGB555 palette -> 8px-aligned cells covered by hardware-legal OAMs (B1 cover()) -> nitrogfx",
+   "tiles": 107,
+   "obj_char_bytes": 3424,
+   "palette_colours": 15,
+   "palette_variants": [],
+   "animation_sequences": [
+    {
+     "index": 0,
+     "name": "bolt",
+     "loop": false,
+     "frames": [
+      "bolt0",
+      "bolt1",
+      "bolt2",
+      "bolt3",
+      "bolt2",
+      "bolt0"
+     ],
+     "total_delay": 13
+    },
+    {
+     "index": 1,
+     "name": "sparks",
+     "loop": false,
+     "frames": [
+      "spark0",
+      "spark1",
+      "spark2",
+      "spark3"
+     ],
+     "total_delay": 12
+    },
+    {
+     "index": 2,
+     "name": "orb",
+     "loop": true,
+     "frames": [
+      "orb0",
+      "orb1",
+      "orb2",
+      "orb1"
+     ],
+     "total_delay": 12
+    },
+    {
+     "index": 3,
+     "name": "bolt_fade",
+     "loop": false,
+     "frames": [
+      "bolt3",
+      "bolt2",
+      "bolt0",
+      "bolt0"
+     ],
+     "total_delay": 8
+    }
+   ],
+   "ownership": "one sprite manager per use (OpalSheetBegin/OpalSheetEnd); palette = NCLR loaded into that manager; freed before UnloadParticleSystem",
+   "outputs": {
+    "png": "res/graphics/battle/moves/opal_thunder.png",
+    "cell": "res/graphics/battle/moves/opal_thunder_cell.json",
+    "anim": "res/graphics/battle/moves/opal_thunder_anim.json",
+    "provenance": "docs/visual_overhaul/opal_installed_fx/opal_thunder.provenance.json",
+    "recipe": "tools/visual_overhaul/opal_fx/recipes/opal_thunder.json"
+   },
+   "output_sha256": {
+    "png": "5434cd0dc776f4c4461bb47f6bfa11bd8f7dfcbffb47f641034a2d8ba587cfb7",
+    "cell": "eff6ec826408d4bc03bed8cd06dd04a2ad147426b2a6fa02327585484509715f",
+    "anim": "a8d098e78d9dafd8addbccaed0a7084064efa84fccae8416d6df95eeb992c302"
+   }
+  },
+  {
+   "sheet": "opal_water",
+   "origin": {
+    "col": {
+     "path": "graphics/battle_anims/sprites/water_column.png",
+     "sha256": "b2d3eeb0c6e52da367070e2ec1cf0be564746afd3d83a602698db1b4be35536a"
+    },
+    "drop": {
+     "path": "graphics/battle_anims/sprites/water_droplet.png",
+     "sha256": "324db9f22a0674e515b306e9a3b2bb148de3111d35fb0548f34c2037b05d4b2d"
+    },
+    "foam": {
+     "path": "graphics/battle_anims/sprites/water_impact.png",
+     "sha256": "6b3c7506300d794a87bbb618c97bcd9de74b00c6c85168ef689afce2eae820af"
+    }
+   },
+   "conversion": "indexed donor PNG (index 0 transparent) -> RGBA -> optional luminance ramp recolor -> median-cut fold to one shared <=15 colour RGB555 palette -> 8px-aligned cells covered by hardware-legal OAMs (B1 cover()) -> nitrogfx",
+   "tiles": 90,
+   "obj_char_bytes": 2880,
+   "palette_colours": 14,
+   "palette_variants": [],
+   "animation_sequences": [
+    {
+     "index": 0,
+     "name": "column",
+     "loop": true,
+     "frames": [
+      "col0",
+      "col1",
+      "col2",
+      "col3"
+     ],
+     "total_delay": 12
+    },
+    {
+     "index": 1,
+     "name": "droplet",
+     "loop": false,
+     "frames": [
+      "drop0",
+      "drop1",
+      "drop2",
+      "drop3",
+      "drop4",
+      "drop5",
+      "drop6",
+      "drop7"
+     ],
+     "total_delay": 24
+    },
+    {
+     "index": 2,
+     "name": "foam",
+     "loop": false,
+     "frames": [
+      "foam"
+     ],
+     "total_delay": 6
+    }
+   ],
+   "ownership": "one sprite manager per use (OpalSheetBegin/OpalSheetEnd); palette = NCLR loaded into that manager; freed before UnloadParticleSystem",
+   "outputs": {
+    "png": "res/graphics/battle/moves/opal_water.png",
+    "cell": "res/graphics/battle/moves/opal_water_cell.json",
+    "anim": "res/graphics/battle/moves/opal_water_anim.json",
+    "provenance": "docs/visual_overhaul/opal_installed_fx/opal_water.provenance.json",
+    "recipe": "tools/visual_overhaul/opal_fx/recipes/opal_water.json"
+   },
+   "output_sha256": {
+    "png": "053f90c160a49d25ffc6b9c22d275cce642d11a94584dc94adb6c6b63e717c95",
+    "cell": "013bc1b305786a6417305232ca52598a7e3d189286961fb8ef1c49b6a46bb1fb",
+    "anim": "acd857f853110aca17fd7d5c1d47032be7277e9d4aa90b66160fe4c56408dc40"
+   }
+  }
+ ],
+ "b1_installed_ranger_donors_reused": [
+  "ranger_fire_bloom.provenance.json",
+  "ranger_ice_bloom.provenance.json",
+  "ranger_rock_burst.provenance.json"
+ ]
+}
