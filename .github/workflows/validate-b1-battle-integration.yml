@@ -19,6 +19,9 @@ on:
       - 'docs/visual_overhaul/B2_B8_PREIMPLEMENTATION_MANIFEST.json'
       - 'docs/visual_overhaul/B2_B8_IMPLEMENTATION_HANDOFF.md'
       - 'tools/visual_overhaul/validate_b2_b8_handoff.py'
+      - 'tools/visual_overhaul/audit_b2_b8_move_scripts.py'
+      - 'docs/visual_overhaul/B2_B8_IMPLEMENTATION_MANIFEST.json'
+      - 'docs/visual_overhaul/B2_B8_IMPLEMENTATION_SPEC.md'
       - '.github/workflows/validate-b1-battle-integration.yml'
   workflow_dispatch:
 
@@ -48,5 +51,13 @@ jobs:
         run: python3 tools/visual_overhaul/validate_av1_battle_presentation.py
       - name: Validate B2-B8 preimplementation handoff provenance
         run: python3 tools/visual_overhaul/validate_b2_b8_handoff.py
+      - name: Generate B2-B8 compact move source inventory
+        run: python3 tools/visual_overhaul/audit_b2_b8_move_scripts.py --only-mapped --output artifacts/b2-b8-move-source-inventory.json
+      - name: Upload B2-B8 source inventory for Claude
+        uses: actions/upload-artifact@v4
+        with:
+          name: b2-b8-move-source-inventory
+          path: artifacts/b2-b8-move-source-inventory.json
+          if-no-files-found: error
       - name: Validate installed donor battle sprites
         run: python3 tools/visual_overhaul/validate_b1_installed_donor_sprites.py
