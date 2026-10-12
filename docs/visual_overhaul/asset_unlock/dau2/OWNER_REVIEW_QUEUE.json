@@ -1,0 +1,3035 @@
+{
+ "decision_vocabulary": [
+  "AWAITING_OWNER_REVIEW",
+  "ACCEPT",
+  "REJECT",
+  "NEEDS_ANOTHER_LOOK"
+ ],
+ "items": [
+  {
+   "board": "boards/P1_headbutt.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/headbutt.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/eye_sparkle.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/gold_stars.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/dizzy_punch.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#125",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/field/effect/ew008_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/horn_hit.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/impact.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/zen_headbutt.spa",
+     "basis": "named_move_particle",
+     "cell": 8,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#253",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/field/effect/ef014_LZ.bin#2",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/gray_smoke.png",
+     "basis": "named_source",
+     "cell": 11,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/mud_unk.png",
+     "basis": "named_source",
+     "cell": 12,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/zen_headbutt.spa",
+     "basis": "named_move_particle",
+     "cell": 13,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#57",
+     "basis": "feature_heuristic",
+     "cell": 14,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e011_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 15,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "aftermath",
+    "impact",
+    "launch",
+    "native_baseline"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Headbutt",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P1_mid_staples"
+  },
+  {
+   "board": "boards/P1_slam.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/slam.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/gray_smoke.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/mud_unk.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/earthquake.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#216",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e103_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/horn_hit.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/impact.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/body_slam.spa",
+     "basis": "named_move_particle",
+     "cell": 8,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#185",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e053_LZ.bin#12",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "aftermath",
+    "impact",
+    "native_baseline"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Slam",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P1_mid_staples"
+  },
+  {
+   "board": "boards/P1_wing_attack.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/wing_attack.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/impact.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/horn_hit_2.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/slash.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#185",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e112_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/air_slash.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/white_feather.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/air_cutter.spa",
+     "basis": "named_move_particle",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/field/effect/ef010_LZ.bin#2",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "diamond:files/wazaeffect/effectclact/wecell/narc_0020.NCER",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "impact",
+    "native_baseline",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Wing Attack",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P1_mid_staples"
+  },
+  {
+   "board": "boards/P1_aerial_ace.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/aerial_ace.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/claw_slash.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/air_slash.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/slash.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e097_LZ.bin#8",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#244",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/blue_lines.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/speed_dust.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/air_cutter.spa",
+     "basis": "named_move_particle",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#262",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/field/effect/ef010_LZ.bin#2",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "impact",
+    "native_baseline",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Aerial Ace",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P1_mid_staples"
+  },
+  {
+   "board": "boards/P1_spark.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/discharge.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/impact.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/horn_hit_2.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/thunder_punch.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#253",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/field/effect/ef014_LZ.bin#2",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/electricity.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/spark_1.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/charge.spa",
+     "basis": "named_move_particle",
+     "cell": 8,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#57",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e011_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "impact",
+    "launch",
+    "native_baseline"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Spark",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P1_mid_staples"
+  },
+  {
+   "board": "boards/P1_flame_wheel.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/flame_wheel.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/small_ember.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/fire_plume.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/ember.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#53",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e129_LZ.bin#8",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/flare_blitz.spa",
+     "basis": "named_move_particle",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/red_particles.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/fire.png",
+     "basis": "named_source",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "diamond:files/wazaeffect/effectclact/wecell/narc_0024.NCER",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#128",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "aftermath",
+    "native_baseline",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Flame Wheel",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P1_mid_staples"
+  },
+  {
+   "board": "boards/P1_aqua_jet.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/aqua_jet.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/water_impact.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/water_pulse.spa",
+     "basis": "named_move_particle",
+     "cell": 2,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "crystal:data/battle_anims/objects.asm#BATTLE_ANIM_OBJ_BUBBLE",
+     "basis": "named_source",
+     "cell": 3,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e052_LZ.bin#12",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#251",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/blue_burst.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/mud_sport.spa",
+     "basis": "named_move_particle",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "crystal:data/battle_anims/objects.asm#BATTLE_ANIM_OBJ_BUBBLE",
+     "basis": "named_source",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#230",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/field/effect/ef012_LZ.bin#2",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "impact",
+    "native_baseline",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Aqua Jet",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P1_mid_staples"
+  },
+  {
+   "board": "boards/P1_bubble_beam.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/bubble_beam.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/water_impact.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/bubble.spa",
+     "basis": "named_move_particle",
+     "cell": 2,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "crystal:data/battle_anims/objects.asm#BATTLE_ANIM_OBJ_BUBBLE",
+     "basis": "named_source",
+     "cell": 3,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e015_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#175",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/water_impact.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/bubble.spa",
+     "basis": "named_move_particle",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "crystal:data/battle_anims/objects.asm#BATTLE_ANIM_OBJ_BUBBLE",
+     "basis": "named_source",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#183",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "diamond:files/wazaeffect/effectclact/wecell/narc_0016.NCER",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "impact",
+    "native_baseline",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "BubbleBeam",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P1_mid_staples"
+  },
+  {
+   "board": "boards/P1_magical_leaf.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/magical_leaf.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/sparkle_1.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/vine.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/aromatherapy.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e026_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#150",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/green_spike.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/leaf_blade.spa",
+     "basis": "named_move_particle",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/razor_leaf.spa",
+     "basis": "named_move_particle",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e079_LZ.bin#12",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#129",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "aftermath",
+    "native_baseline",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Magical Leaf",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P1_mid_staples"
+  },
+  {
+   "board": "boards/P1_metal_claw.png",
+   "candidates": [
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/sparkle_6.png",
+     "basis": "named_source",
+     "cell": 0,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/mirror_shot.spa",
+     "basis": "named_move_particle",
+     "cell": 1,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/blue_star.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e054_LZ.bin#8",
+     "basis": "feature_heuristic",
+     "cell": 3,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#164",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/claw_slash.png",
+     "basis": "named_source",
+     "cell": 5,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/air_slash.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/slash.spa",
+     "basis": "named_move_particle",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#159",
+     "basis": "feature_heuristic",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "diamond:files/wazaeffect/effectclact/wecell/narc_0007.NCER",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "impact",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Metal Claw",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P1_mid_staples"
+  },
+  {
+   "board": "boards/P1_rock_tomb.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/rock_tomb.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/gray_smoke.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/mud_unk.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/rock_slide.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#213",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e103_LZ.bin#12",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/meteor.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/stone_edge.spa",
+     "basis": "named_move_particle",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/brown_triangle.png",
+     "basis": "named_source",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "diamond:files/wazaeffect/effectclact/wecell/narc_0026.NCER",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#11",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "aftermath",
+    "native_baseline",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Rock Tomb",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P1_mid_staples"
+  },
+  {
+   "board": "boards/P1_rock_slide.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/rock_slide.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/gray_smoke.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/mud_unk.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/rock_wrecker.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#125",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e129_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/meteor.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/stone_edge.spa",
+     "basis": "named_move_particle",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/brown_triangle.png",
+     "basis": "named_source",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#135",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e044_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "aftermath",
+    "native_baseline",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Rock Slide",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P1_mid_staples"
+  },
+  {
+   "board": "boards/P1_crunch.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/crunch.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/bite.spa",
+     "basis": "named_move_particle",
+     "cell": 1,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/thunder_fang.spa",
+     "basis": "named_move_particle",
+     "cell": 2,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/teeth.png",
+     "basis": "named_source",
+     "cell": 3,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#51",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e023_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/bite.spa",
+     "basis": "named_move_particle",
+     "cell": 6,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/hyper_fang.spa",
+     "basis": "named_move_particle",
+     "cell": 7,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/teeth.png",
+     "basis": "named_source",
+     "cell": 8,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e020_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "diamond:files/wazaeffect/effectclact/wecell/narc_0014.NCER",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "impact",
+    "launch",
+    "native_baseline"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Crunch",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P1_mid_staples"
+  },
+  {
+   "board": "boards/P1_ice_shard.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/ice_shard.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/hail.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/ice_cube_3.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/ice_beam.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e054_LZ.bin#12",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#251",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/icicle_spear.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/ice_crystals_2.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/icicle_spear.spa",
+     "basis": "named_move_particle",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e124_LZ.bin#12",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#1",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "impact",
+    "native_baseline",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Ice Shard",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P1_mid_staples"
+  },
+  {
+   "board": "boards/P1_icy_wind.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/icy_wind.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/sparkle_4.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/blue_star.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/powder_snow.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e091_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#256",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/ice_crystals_4.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/ice_crystals_2.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/powder_snow.spa",
+     "basis": "named_move_particle",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#230",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/field/effect/ef010_LZ.bin#2",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "aftermath",
+    "native_baseline",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Icy Wind",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P1_mid_staples"
+  },
+  {
+   "board": "boards/P1_mud_shot.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/mud_shot.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/flying_dirt.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/mud_sand_0.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/mud_slap.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#50",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e022_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/dirt_mound.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/mud_slap.spa",
+     "basis": "named_move_particle",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/mud_sand_0.png",
+     "basis": "named_source",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#197",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e036_LZ.bin#8",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "impact",
+    "native_baseline",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Mud Shot",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P1_mid_staples"
+  },
+  {
+   "board": "boards/P1_mud_bomb.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/mud_bomb.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/flying_dirt.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/horn_hit.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/mud_slap.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#169",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e115_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/mud_shot.spa",
+     "basis": "named_move_particle",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/dirt_mound.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/sludge_bomb.spa",
+     "basis": "named_move_particle",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#233",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "diamond:files/wazaeffect/effectclact/wecell/narc_0033.NCER",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "impact",
+    "native_baseline",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Mud Bomb",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P1_mid_staples"
+  },
+  {
+   "board": "boards/P1_psybeam.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/psybeam.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/pink_orb.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/movement_waves.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/psycho_cut.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e033_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#241",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/signal_beam.spa",
+     "basis": "named_move_particle",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/rainbow_rings.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/movement_waves.png",
+     "basis": "named_source",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#69",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e041_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "impact",
+    "native_baseline",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Psybeam",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P1_mid_staples"
+  },
+  {
+   "board": "boards/P1_swift.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/swift.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/sparkle_6.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/yellow_star.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/mirror_shot.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e051_LZ.bin#12",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#169",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "impact",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/sparkle_6.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/yellow_star.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/cosmic_power.spa",
+     "basis": "named_move_particle",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e053_LZ.bin#12",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#185",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "impact",
+    "native_baseline",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Swift",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P1_mid_staples"
+  },
+  {
+   "board": "boards/P2_thunder_wave.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/thunder_wave.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/electricity.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/spark_1.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/spark.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#148",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e028_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/electricity.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/spark_2.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/thunder_shock.spa",
+     "basis": "named_move_particle",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "diamond:files/wazaeffect/effectclact/wecell/narc_0035.NCER",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e017_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "native_baseline",
+    "reaction",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Thunder Wave",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P2_status_utility"
+  },
+  {
+   "board": "boards/P2_hypnosis.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/hypnosis.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/z.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/thought_bubble.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/confuse_ray.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e116_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#256",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/sing.spa",
+     "basis": "named_move_particle",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/rainbow_rings.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/movement_waves.png",
+     "basis": "named_source",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#166",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "diamond:files/wazaeffect/effectclact/wecell/narc_0008.NCER",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "native_baseline",
+    "reaction",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Hypnosis",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P2_status_utility"
+  },
+  {
+   "board": "boards/P2_confuse_ray.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/confuse_ray.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/metal_sound_waves.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/psybeam.spa",
+     "basis": "named_move_particle",
+     "cell": 2,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/gold_ring.png",
+     "basis": "named_source",
+     "cell": 3,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#166",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "diamond:files/wazaeffect/effectclact/wecell/narc_0020.NCER",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/shadow_ball.spa",
+     "basis": "named_move_particle",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/will_o_wisp.spa",
+     "basis": "named_move_particle",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/bluegreen_orb.png",
+     "basis": "named_source",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e118_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#255",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "native_baseline",
+    "reaction",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Confuse Ray",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P2_status_utility"
+  },
+  {
+   "board": "boards/P2_poison_powder.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/poison_powder.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/purple_droplet.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/purple_green_unk.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/toxic.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#266",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e084_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/poison_powder.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/toxic_bubble.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/bide.spa",
+     "basis": "named_move_particle",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e012_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#93",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "native_baseline",
+    "reaction",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Poison Powder",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P2_status_utility"
+  },
+  {
+   "board": "boards/P2_sleep_powder.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/sleep_powder.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/z.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/snore_z.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/snore.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e054_LZ.bin#16",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#217",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/pink_cloud.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/particles.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/sweet_scent.spa",
+     "basis": "named_move_particle",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e116_LZ.bin#8",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#193",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "native_baseline",
+    "reaction",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Sleep Powder",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P2_status_utility"
+  },
+  {
+   "board": "boards/P2_stun_spore.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/stun_spore.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/electricity.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/spark_1.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/thunder_wave.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#189",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e103_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/particles.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/spore.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/poison_powder.png",
+     "basis": "named_source",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#216",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/field/effect/ew008_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "native_baseline",
+    "reaction",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Stun Spore",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P2_status_utility"
+  },
+  {
+   "board": "boards/P2_swords_dance.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/swords_dance.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/blue_star.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/sparkle_4.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/nasty_plot.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e040_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#124",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/nail.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/sword.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/sharpen.spa",
+     "basis": "named_move_particle",
+     "cell": 8,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#173",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e097_LZ.bin#8",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "aftermath",
+    "launch",
+    "native_baseline"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Swords Dance",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P2_status_utility"
+  },
+  {
+   "board": "boards/P2_defense_curl.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/defense_curl.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/eye_sparkle.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/sparkle_3.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/disable.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#213",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e094_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/circle_of_light.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/guard_ring.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/withdraw.spa",
+     "basis": "named_move_particle",
+     "cell": 8,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#108",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "diamond:files/wazaeffect/effectclact/wecell/narc_0004.NCER",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "aftermath",
+    "launch",
+    "native_baseline"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Defense Curl",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P2_status_utility"
+  },
+  {
+   "board": "boards/P2_focus_energy.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/focus_energy.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/eye_sparkle.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/sparkle_3.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/power_trick.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#242",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e040_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/particles.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/spotlight.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/mind_reader.spa",
+     "basis": "named_move_particle",
+     "cell": 8,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "diamond:files/wazaeffect/effectclact/wecell/narc_0006.NCER",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#64",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "aftermath",
+    "launch",
+    "native_baseline"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Focus Energy",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P2_status_utility"
+  },
+  {
+   "board": "boards/P2_sand_attack.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/sand_attack.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/gray_smoke.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/mud_unk.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/smoke_screen.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#84",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e011_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/smokescreen_impact.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/flying_dirt.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/sandstorm.spa",
+     "basis": "named_move_particle",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#57",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "diamond:files/wazaeffect/effectclact/wecell/narc_0011.NCER",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "native_baseline",
+    "reaction",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Sand Attack",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P2_status_utility"
+  },
+  {
+   "board": "boards/P2_string_shot.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/string_shot.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/string.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/string_2.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/aurora_beam.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "diamond:files/wazaeffect/effectclact/wecell/narc_0020.NCER",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e090_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/string_2.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/string.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/aurora_beam.spa",
+     "basis": "named_move_particle",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "diamond:files/wazaeffect/effectclact/wecell/narc_0005.NCER",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#244",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "native_baseline",
+    "reaction",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "String Shot",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P2_status_utility"
+  },
+  {
+   "board": "boards/P2_leech_seed.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/bullet_seed.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/vine.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/vine_2.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/vine_whip.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e191_LZ.bin#8",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#161",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/seed_2.png",
+     "basis": "named_source",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/seed_bomb.spa",
+     "basis": "named_move_particle",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/absorb.spa",
+     "basis": "named_move_particle",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "diamond:files/wazaeffect/effectclact/wecell/narc_0010.NCER",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#145",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "native_baseline",
+    "reaction",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Leech Seed",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P2_status_utility"
+  },
+  {
+   "board": "boards/P2_supersonic.png",
+   "candidates": [
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/supersonic.spa",
+     "basis": "named_move_particle",
+     "cell": 0,
+     "component": "native_baseline",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/teal_alert.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/music_notes.png",
+     "basis": "named_source",
+     "cell": 2,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/sing.spa",
+     "basis": "named_move_particle",
+     "cell": 3,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e054_LZ.bin#16",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#99",
+     "basis": "feature_heuristic",
+     "cell": 5,
+     "component": "reaction",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/metal_sound.spa",
+     "basis": "named_move_particle",
+     "cell": 6,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/rainbow_rings.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/hyper_voice.spa",
+     "basis": "named_move_particle",
+     "cell": 8,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e037_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#152",
+     "basis": "feature_heuristic",
+     "cell": 10,
+     "component": "travel",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "native_baseline",
+    "reaction",
+    "travel"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Supersonic",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P2_status_utility"
+  },
+  {
+   "board": "boards/P2_double_team.png",
+   "candidates": [
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/smoke_2.png",
+     "basis": "named_source",
+     "cell": 0,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/smoke.png",
+     "basis": "named_source",
+     "cell": 1,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/agility.spa",
+     "basis": "named_move_particle",
+     "cell": 2,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#266",
+     "basis": "feature_heuristic",
+     "cell": 3,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "ranger2:res/prebuilt/data/effect/e027_LZ.bin#4",
+     "basis": "feature_heuristic",
+     "cell": 4,
+     "component": "aftermath",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/agility.spa",
+     "basis": "named_move_particle",
+     "cell": 5,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "platinum:res/graphics/battle/particles/extreme_speed.spa",
+     "basis": "named_move_particle",
+     "cell": 6,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "emerald:graphics/battle_anims/sprites/white_shadow.png",
+     "basis": "named_source",
+     "cell": 7,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "diamond:files/wazaeffect/effectclact/wecell/narc_0019.NCER",
+     "basis": "feature_heuristic",
+     "cell": 8,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    },
+    {
+     "asset_id": "pmd_sky:files/EFFECT/effect.bin#237",
+     "basis": "feature_heuristic",
+     "cell": 9,
+     "component": "launch",
+     "decision": "AWAITING_OWNER_REVIEW"
+    }
+   ],
+   "choose_per_component": [
+    "aftermath",
+    "launch"
+   ],
+   "decision": "AWAITING_OWNER_REVIEW",
+   "move": "Double Team",
+   "status": "READY_FOR_OWNER_REVIEW",
+   "tier": "P2_status_utility"
+  }
+ ],
+ "note": "Nothing is approved. The owner fills 'decision' per cell after viewing the local board; model observations are advisory only.",
+ "schema_version": 1
+}

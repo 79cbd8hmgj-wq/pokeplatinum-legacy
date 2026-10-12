@@ -1,0 +1,37 @@
+name: validate-dau2-tools
+
+# Source-only gate for the Opal DAU2 curation / SPL-emitter tooling: host fixture tests (no donor bytes, no ROM), the Platinum-native
+# corpus tests (Platinum's .spa files live in res/), and a consistency check of every committed DAU2 artefact.  Donor-dependent
+# (Diamond / HGSS) tests are reported as skipped.  The check also fails if an image/binary is tracked under the DAU2 paths.
+on:
+  pull_request:
+    paths:
+      - 'tools/visual_overhaul/dau1/**'
+      - 'tools/visual_overhaul/dau2/**'
+      - 'tools/visual_overhaul/dau2_curate.py'
+      - 'tools/visual_overhaul/test_dau2*.py'
+      - 'docs/visual_overhaul/asset_unlock/**'
+      - 'res/moves/*/anim.s'
+      - '.github/workflows/validate-dau2-tools.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Pillow and numpy
+        run: python3 -m pip install --break-system-packages Pillow numpy
+      - name: Host fixture tests (SPL parser/replay, manifest binding, candidate matrix, guards)
+        run: python3 tools/visual_overhaul/test_dau2.py
+      - name: Platinum-native corpus tests (donor-dependent tests skip explicitly)
+        run: python3 tools/visual_overhaul/test_dau2_sources.py
+      - name: Committed DAU2 artefacts are valid, reproducible from the committed catalog, hash-pinned, and contain no images
+        run: python3 tools/visual_overhaul/dau2_curate.py check
+      - name: DAU1 is preserved (tests + committed catalog check)
+        run: |
+          python3 tools/visual_overhaul/test_dau1.py
+          python3 tools/visual_overhaul/dau1_unlock.py check

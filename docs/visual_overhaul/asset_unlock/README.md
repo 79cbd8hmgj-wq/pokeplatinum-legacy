@@ -18,7 +18,7 @@ python3 tools/visual_overhaul/test_dau1_sources.py            # donor-dependent 
 ```
 
 `catalog` takes about a minute, is deterministic (byte-identical output on re-run), and writes `ASSET_CATALOG.json`, `CANDIDATE_MATRIX.{json,md}`,
-`DECODER_COVERAGE.md`, `PROVENANCE.md`, a gallery index and small evidence excerpts under `gallery/`. Full contact-sheet galleries (`--gallery-dir`, default `build/dau1_gallery`) stay out of Git.
+`DECODER_COVERAGE.md`, `PROVENANCE.md`, a gallery index and small evidence excerpts. Full contact-sheet galleries (`--gallery-dir`, default `build/dau1_gallery`) and the excerpts (`--excerpt-dir`, default `build/dau1_excerpts`) are **local-only** and stay out of Git (since DAU2; the previously committed excerpts were removed from version control, history keeps them).
 
 ## Deliverables
 
@@ -29,7 +29,7 @@ python3 tools/visual_overhaul/test_dau1_sources.py            # donor-dependent 
 | `PROVENANCE.md` | generated: pinned commits, licence status, legal release gate, third-party references |
 | `CANDIDATE_MATRIX.{json,md}` | refreshed cross-library candidate matrix (selected / rejected / needs-review with rationales) |
 | `P1_READY.md` | gate checklist before B9 P1/P2 may start |
-| `gallery/*_excerpt.png` | real decoded frames from each priority library (excerpts only; release status: owner review) |
+| `build/dau1_excerpts/*_excerpt.png` (local) | real decoded frames from each priority library; **not committed** |
 
 Code: `tools/visual_overhaul/dau1/` (`common`, `nitro2d`, `bundle`, `nitro_library`, `pmd_effect`, `spl`, `ranger_tex`, `gba`, `gb`, `fx_convert`, `matrix`, `pipeline`, `gallery`, `report`, `catalog`) and `dau1_unlock.py`.
 Existing B1/B2 tools were reused, not replaced: the Ranger renderer (`render_ranger_ncer_preview.py`) is the pixel oracle for the new Nitro cell renderer and `opal_fx/build_opal_fx_sheet.py` (PR #110) is the conversion back end.
@@ -59,3 +59,9 @@ Additional pool found: **pokediamond** (accessible, DP lineage = closest to Plat
 * HGSS and PMD palette semantics that depend on engine code are reported as limits, not guessed (see `DECODER_COVERAGE.md` blockers).
 * The Opal-FX conversion path is demonstrated end-to-end on a decoded PMD sprite (see `P1_READY.md`) and cost-estimated for every decoded unit, but nothing is installed into `res/`.
 * Nothing here is a visual approval; no emulator or hardware run was performed.
+
+## DAU2 (multi-source curation + SPL emitter research)
+
+`dau2/` (tooling: `tools/visual_overhaul/dau2_curate.py`) builds on this catalog without changing it: the original **B9 v2 move manifest** (SHA-256 `419c17818fbdabf20bf65b729ef40bd123c09899398c75fdb0258a8c8561be37`) is imported
+at `dau2/source/`, which resolves the "manifest missing" blocker below; the candidate matrix is now **per move** (`dau2/MOVE_CANDIDATE_MATRIX.*`); SPL **emitter** blocks are parsed and replayed offline (`dau2/EMITTER_RESEARCH.md`). Start at `dau2/README.md` and `dau2/GAP_REPORT.md`.
+DAU2 does not approve any visual and does not start P1/P2.

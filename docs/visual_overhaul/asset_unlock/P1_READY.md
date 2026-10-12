@@ -18,7 +18,7 @@
 
 1. **The B9 everyday-moves manifest** (`pokemon_opal_everyday_moves_b9_manifest_v2`, which names the 19 P1 and 14 P2 moves) - not in the repo or the DAU1 package. Until it is supplied the matrix is keyed by *effect role* (fire, water, ice, ...) instead of by move.
 2. **A visual pass** over the anonymous decoded donors (PMD / HGSS / Ranger / Diamond have no names; only a dominant-hue hint exists). The matrix marks them `needs_visual_review`.
-3. **Licence / release decision** for every donor pool (`PROVENANCE.md`), including whether the committed excerpt PNGs may stay.
+3. **Licence / release decision** for every donor pool (`PROVENANCE.md`), (the committed excerpt PNGs were removed from version control in DAU2 and kept as local copies).
 
 ## Optional follow-ups the evidence now justifies (not required for the gate)
 
@@ -27,3 +27,9 @@
 * PMD run-time palette banks (82 effect sprites) - needs engine-side palette-load semantics.
 * Yellow subanimation tables; Crystal's remaining 33 objects.
 * Base-ROM-extracted HGSS files (72 MISSING) if the owner can legally supply an extraction.
+
+## DAU2 update
+
+Input 1 above (the B9 manifest naming the 19 P1 + 14 P2 moves) is **resolved**: the original manifest is imported unchanged and SHA-pinned in `dau2/source/`, and `dau2/MOVE_CANDIDATE_MATRIX.*` keys candidates per move. Inputs 2 and 3 remain with the owner:
+the visual pass now has indexed boards to work from (`dau2/OWNER_REVIEW_GALLERY.md`, previews generated locally), and licensing is still undecided. SPL emitter decoding (optional follow-up above) is done for field structure and offline replay (`dau2/EMITTER_RESEARCH.md`);
+it is not runtime-validated. P1/P2 still must not start until the owner has made the visual and licensing decisions listed in `dau2/GAP_REPORT.md`.

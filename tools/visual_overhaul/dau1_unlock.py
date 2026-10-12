@@ -8,7 +8,7 @@
 
 Donor checkouts are looked up next to this repository (``--workspace``, default: the parent directory).  Absent sources
 are reported, never invented.  No donor bytes are written to the catalog; full galleries are written outside Git
-(``--gallery-dir``, default ``build/dau1_gallery``) and only a small excerpt is written to the docs directory.
+(``--gallery-dir``, default ``build/dau1_gallery``); the small evidence excerpts are local-only too (``--excerpt-dir``, default ``build/dau1_excerpts``).
 """
 from __future__ import annotations
 
@@ -33,7 +33,7 @@ def cmd_catalog(a) -> int:
     doc["blockers"] = report.blockers(doc)
     out = a.out.resolve()
     gal_full = a.gallery_dir.resolve()
-    index = gallery.build_galleries(doc, sheets, gal_full, out / "gallery" if not a.no_excerpts else None)
+    index = gallery.build_galleries(doc, sheets, gal_full, a.excerpt_dir.resolve() if not a.no_excerpts else None)
     doc["galleries"] = index
     errs = cat.validate_catalog(doc)
     if errs:
@@ -77,9 +77,14 @@ def cmd_check(a) -> int:
     for n in ("README.md", "DECODER_COVERAGE.md", "PROVENANCE.md", "P1_READY.md"):
         if not (a.out / n).exists():
             errs.append(f"missing {n}")
-    for g in doc.get("galleries", []):
-        if g["committed_excerpt"] and not (a.out / "gallery" / g["file"]).exists():
-            errs.append(f"gallery excerpt {g['file']} listed but missing")
+    # Excerpts (``committed_excerpt`` in the index) are LOCAL-ONLY since DAU2: they must not be required, and none may be tracked.
+    gal = a.out / "gallery"
+    if gal.is_dir():
+        import subprocess
+        tracked = subprocess.run(["git", "-C", str(ROOT), "ls-files", "--", str(gal)], capture_output=True, text=True).stdout.split()
+        bad = [t for t in tracked if t.lower().endswith((".png", ".gif", ".jpg"))]
+        if bad:
+            errs.append(f"decoded donor images are tracked (must stay local-only): {bad[:3]}")
     if any(u["status"] == "DECODED" and (u["library"] in ("hgss", "pmd_sky", "ranger2")) for u in doc["units"]) is False:
         errs.append("no DECODED unit for a priority library")
     if errs:
@@ -126,6 +131,7 @@ def main() -> int:
     c = sub.add_parser("catalog")
     c.add_argument("--only", nargs="*", help="restrict to these library ids")
     c.add_argument("--gallery-dir", type=Path, default=ROOT / "build/dau1_gallery")
+    c.add_argument("--excerpt-dir", type=Path, default=ROOT / "build/dau1_excerpts", help="local-only evidence excerpts (never committed)")
     c.add_argument("--no-excerpts", action="store_true")
     c.set_defaults(fn=cmd_catalog)
     sub.add_parser("check").set_defaults(fn=cmd_check)

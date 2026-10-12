@@ -138,8 +138,8 @@ def provenance_markdown(doc: dict) -> str:
          "* **No ROM, base-ROM extraction, donor binary or bulk donor art is committed.** The catalog stores only paths, sha256 hashes, counts and budgets.",
          "* The decomp projects' *source-code* licences (where a licence file exists at all) do not authorise redistribution of Nintendo / Game Freak / Spike Chunsoft / "
          "Creatures artwork. Every pool below is therefore `asset_license: UNVERIFIED`.",
-         "* `docs/visual_overhaul/asset_unlock/gallery/*_excerpt.png` are small (<= 60 cell) evidence excerpts of decoded donor frames, kept for review of the decoders only. "
-         "They are *not* cleared for release; the owner must delete them (or approve them) before any public distribution. Full galleries are written to `build/` (git-ignored).",
+         "* The small (<= 60 cell) evidence excerpts of decoded donor frames (`*_excerpt.png`) are **local-only**: they were removed from version control in DAU2 (owner decision) and are written to `build/dau1_excerpts` by `catalog`. "
+         "They are not cleared for release. Full galleries are also written to `build/` (git-ignored).",
          "* Converted Opal FX sheets produced by `dau1_unlock.py convert` go to `build/` and are not installed into `res/`; installing one needs a separate, reviewed change "
          "(and the same licence decision).", "",
          "## Sources searched", "",
