@@ -1,0 +1,704 @@
+{
+ "generated_by": "tools/visual_overhaul/opal_b9/build_candidate_matrix.py",
+ "pools": [
+  {
+   "id": "native",
+   "pool": "Platinum native (this repo)",
+   "root": ".",
+   "present": true,
+   "searched": "res/graphics/battle/moves/*.png",
+   "files_in_scope": 69,
+   "status": "searched",
+   "note": "61 move sheets (+ native SPL particle archives, reused unchanged by every script). Evaluated: glare, scary_face, claw, vines, angry (see candidates)."
+  },
+  {
+   "id": "opal_b2b8",
+   "pool": "Opal B2-B8 sheets (this repo)",
+   "root": ".",
+   "present": true,
+   "searched": "res/graphics/battle/moves/opal_*.png",
+   "files_in_scope": 29,
+   "status": "searched + reused",
+   "note": "water, ice, thunder, fire, ghost, ring (10 palettes), wx (4 palettes): reused by Water Gun, Powder Snow, Thunder Shock, Pound, Growl, Confusion, Tail Whip."
+  },
+  {
+   "id": "ranger_b1",
+   "pool": "Pokemon Ranger 2 via B1 installs (this repo)",
+   "root": ".",
+   "present": true,
+   "searched": "res/graphics/battle/moves/ranger_*.png",
+   "files_in_scope": 3,
+   "status": "searched + reused",
+   "note": "ranger_rock_burst (Rock Throw impact); fire_bloom already owned by Ember; ice_bloom evaluated."
+  },
+  {
+   "id": "emerald",
+   "pool": "pokeemerald",
+   "root": "pokeemerald",
+   "present": true,
+   "searched": "graphics/battle_anims/sprites/*.png",
+   "files_in_scope": 279,
+   "status": "searched + primary donor",
+   "note": "indexed GBA frame strips, directly convertible with the B2 sheet builder."
+  },
+  {
+   "id": "firered",
+   "pool": "pokefirered",
+   "root": "pokefirered",
+   "present": true,
+   "searched": "graphics/battle_anims/sprites/*.png",
+   "files_in_scope": 279,
+   "status": "searched; byte-identical to pokeemerald for every shared file",
+   "note": "cmp over every shared PNG found no difference (only safari_bait.png is FR-only, irrelevant). Used as a deduplicated alias of the Emerald copies."
+  },
+  {
+   "id": "crystal",
+   "pool": "pokecrystal",
+   "root": "pokecrystal",
+   "present": true,
+   "searched": "gfx/battle_anims/*.png",
+   "files_in_scope": 39,
+   "status": "searched; evaluated, none selected",
+   "note": "2bpp 4-grey tile strips; frame layout lives in anim_obj asm, not in the PNG."
+  },
+  {
+   "id": "yellow",
+   "pool": "pokeyellow",
+   "root": "pokeyellow",
+   "present": true,
+   "searched": "gfx/battle/move_anim_*.png",
+   "files_in_scope": 2,
+   "status": "searched; evaluated, none selected",
+   "note": "128x40, 4 grey levels (L mode) tile sheets, same limits as Crystal."
+  },
+  {
+   "id": "hgss",
+   "pool": "pokeheartgold",
+   "root": "pokeheartgold",
+   "present": true,
+   "searched": "files/**/*.png + *.narc",
+   "files_in_scope": 59,
+   "status": "searched; no decodable move-effect art in tree",
+   "note": "Battle particle archives are not part of the checkout (only the SPL header library). files/pbr/*.narc are opaque NARCs whose frames were not decoded - not inspected, not used."
+  },
+  {
+   "id": "ranger2",
+   "pool": "pokeranger2",
+   "root": "pokeranger2",
+   "present": true,
+   "searched": "res/prebuilt/data/field/effect/*",
+   "files_in_scope": 29,
+   "status": "searched at package level only",
+   "note": "ef*/ew* LZ packages exist but only e002/e009/e010 were decoded in B1 (via tools/visual_overhaul/export_b1_ranger_effect_cells.py). No further packages were decoded for B9."
+  },
+  {
+   "id": "pmd_sky",
+   "pool": "pmd-sky",
+   "root": "pmd-sky",
+   "present": true,
+   "searched": "files/EFFECT/effect.bin",
+   "files_in_scope": 3,
+   "status": "searched at container level only",
+   "note": "effect.bin is a packed container with no extracted frames in the tree; frame-level inspection was not performed."
+  },
+  {
+   "id": "ruby_sapphire",
+   "pool": "pokeruby / Ruby-Sapphire",
+   "root": "pokeruby",
+   "present": false,
+   "searched": null,
+   "files_in_scope": null,
+   "status": "unavailable in this workspace",
+   "note": "no checkout present; Emerald (same engine lineage, same sprite set) was used instead."
+  },
+  {
+   "id": "procedural",
+   "pool": "Opal procedural generators",
+   "root": "tools/visual_overhaul/opal_fx/build_opal_fx_sheet.py",
+   "present": true,
+   "searched": "ring / star / dot generators",
+   "files_in_scope": 3,
+   "status": "reused (opal_fx_ring, opal_fx_wx)",
+   "note": "no new procedural art was needed for B9 P0."
+  }
+ ],
+ "selected": [
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_bubble",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/bubble.png",
+   "exists": true,
+   "sha256": "de27df738f681bcf962f36dd991f95fe4099c07ad9c36dbacfa72b2c847c3900",
+   "frames_used": [
+    "bub0",
+    "bub1"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_bubble",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/small_bubbles.png",
+   "exists": true,
+   "sha256": "26d441082a5bc09ac38b6d37813df5a012464f402dc604d5276d38e8d5f2dfe2",
+   "frames_used": [
+    "sm0",
+    "sm1"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_bubble",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/bubble_burst.png",
+   "exists": true,
+   "sha256": "611b447d91d3b1fc3d4ee3280f710a0a478caae657e08586a01b0bbe55cdd4ff",
+   "frames_used": [
+    "pop1",
+    "pop2",
+    "pop3",
+    "pop4",
+    "pop6"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_bubble",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/bubble_burst_2.png",
+   "exists": true,
+   "sha256": "5479c5016ecde51ef8d7e6429818642452e2124b7cddab35b1be0f1b6ea1295d",
+   "frames_used": [
+    "big0",
+    "big1",
+    "big2",
+    "big3"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_ember",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/small_ember.png",
+   "exists": true,
+   "sha256": "86d8864ee76b1c0e844f6c8de6d1ed689061d2925090d512d5f03a989eb9ed8b",
+   "frames_used": [
+    "emb1",
+    "emb2",
+    "emb3"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_ember",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/spark_h.png",
+   "exists": true,
+   "sha256": "f35405ce576d6f616b57fedd6582ebf807b38e7f38dda8777828019310f328eb",
+   "frames_used": [
+    "spk0",
+    "spk1"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_nature",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/leaf.png",
+   "exists": true,
+   "sha256": "3d5157878012e1a14a75c5c8f9b3c777a2b8c0bd54de39d308708da306c6b7d3",
+   "frames_used": [
+    "leaf0",
+    "leaf1",
+    "leaf3",
+    "leaf5",
+    "leaf8"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_nature",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/razor_leaf.png",
+   "exists": true,
+   "sha256": "be3f0557a9c412e809297b8096aa4adfde9c6ccbef241f7414a6c4d6c01aa391",
+   "frames_used": [
+    "razor"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_nature",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/vine_2.png",
+   "exists": true,
+   "sha256": "9b5a788f8fe783ea5113b8d6756048a4c05800d74de6680066c30ad68e9c5a71",
+   "frames_used": [
+    "vine0",
+    "vine1",
+    "vine2",
+    "vine3",
+    "vine4"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_rock",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/rocks.png",
+   "exists": true,
+   "sha256": "19737d1c20f58c67da01fc637e17e71fc4d7045b8ff49c2e589d44facb460b2e",
+   "frames_used": [
+    "rock0",
+    "rock1",
+    "rock3",
+    "rock4",
+    "rock5"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_rock",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/flat_rock.png",
+   "exists": true,
+   "sha256": "89c4aa0aa52b74c864a8d454e692871f7874a0a8e58565d860eed86c8a0651b5",
+   "frames_used": [
+    "shard0",
+    "shard1",
+    "shard2",
+    "shard3",
+    "shard4"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_rock",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/flying_dirt.png",
+   "exists": true,
+   "sha256": "f80c97253031f42ad734b0da132cd3cb5cd883e2689dd0172bf60113c447ddf2",
+   "frames_used": [
+    "dirt0",
+    "dirt1"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_sense",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/leer.png",
+   "exists": true,
+   "sha256": "0a65b153c97af0fe74c3219e942aaefa251e120349a44c76ac0cb18a365fc040",
+   "frames_used": [
+    "gl0",
+    "gl1",
+    "gl2",
+    "gl3"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_sense",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/movement_waves.png",
+   "exists": true,
+   "sha256": "4ae3e52301b861ae38a50d560b26cebc116ecddfe31032410b336af7ecfca832",
+   "frames_used": [
+    "arc0",
+    "arc1",
+    "arc2"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_sense",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/noise_line.png",
+   "exists": true,
+   "sha256": "3c603edac0b8201e2c12497a5b0c3258ea2f0fe7b28750941e592ad82b7f119b",
+   "frames_used": [
+    "jag0",
+    "jag2"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_strike",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/hit.png",
+   "exists": true,
+   "sha256": "010c3d513af6949065956a285815de26b7df126ad1b4a0990f2c6939cf61e43d",
+   "frames_used": [
+    "hit0",
+    "hit1",
+    "hit2",
+    "hit4"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_strike",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/impact.png",
+   "exists": true,
+   "sha256": "8f2a0eb54120d2cc50d24ccd92e2934d9b5c94c13f008198b6306c193fd8721d",
+   "frames_used": [
+    "star"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_strike",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/fury_swipes.png",
+   "exists": true,
+   "sha256": "75fe392df27936083aad8598880272282258307eddb7f1e3ae35ce85852d5235",
+   "frames_used": [
+    "furyA0",
+    "furyA1",
+    "furyA2",
+    "furyB0",
+    "furyB1",
+    "furyB2"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_strike",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/slash.png",
+   "exists": true,
+   "sha256": "5cfb2406b6e1d564fe87ac205fce48246867003c504c8d6f76becb2a4b3507c3",
+   "frames_used": [
+    "streak1"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_strike",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/fangs.png",
+   "exists": true,
+   "sha256": "e6f72d00cc042407ca731d2bf67f956ffe17d079363ec5366c21ed861b5726db",
+   "frames_used": [
+    "jaw0",
+    "jaw1"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_wind",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/air_wave.png",
+   "exists": true,
+   "sha256": "c08a2ed99d2bb082eef09f79fbf10007b90c04ac05aa8e52da2dc503d3ac287f",
+   "frames_used": [
+    "wave",
+    "wave_f"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_wind",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/air_wave_2.png",
+   "exists": true,
+   "sha256": "2e8e7582fe6c55f49a92169bb2c12277e86619ba6b7080f1592069925217df4e",
+   "frames_used": [
+    "crescent"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_wind",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/whirlwind.png",
+   "exists": true,
+   "sha256": "c4fcf17f516adefb4e0b3e6978780e8fcee10ca9531a32d7f34cb704ad34ac12",
+   "frames_used": [
+    "swirl"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_wind",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/speed_dust.png",
+   "exists": true,
+   "sha256": "9cb76ac29893e3d76e47d9811b3187d1f45d280a1636fae358bc69a94e384451",
+   "frames_used": [
+    "dust0",
+    "dust1",
+    "dust2"
+   ],
+   "variant": "as-is"
+  },
+  {
+   "decision": "selected",
+   "sheet": "opal_b9_wind",
+   "pool": "emerald (== firered)",
+   "path": "pokeemerald/graphics/battle_anims/sprites/snowball.png",
+   "exists": true,
+   "sha256": "a365e452b9f78a561797c61708a14c2a00806577a8912ba1323637685c330761",
+   "frames_used": [
+    "snow0",
+    "snow1",
+    "snow2",
+    "snow3"
+   ],
+   "variant": "as-is"
+  }
+ ],
+ "evaluated": [
+  {
+   "decision": "rejected for Leer",
+   "pool": "native",
+   "path": "res/graphics/battle/moves/glare.png",
+   "exists": true,
+   "sha256": "cfa2502038780cea73c23bf1a363539e1e34dffb89499130b40dd923634d8785",
+   "reason": "Glare's own sprite function and red slit eyes would make Leer read as Glare (spec: Leer must stay distinct and light); the 128px sheet would also cost 2x the OAM of the chosen 32px glint."
+  },
+  {
+   "decision": "rejected for Scratch",
+   "pool": "native",
+   "path": "res/graphics/battle/moves/claw.png",
+   "exists": true,
+   "sha256": "eec6ba6ef4c8bebc378c6a6cfa503ea23e8f7d957ed0ad0c26ad979a1cbdf1a2",
+   "reason": "Native metal-claw sprite drives Dragon Claw / Crush Claw through SPRITE_FUNC_METAL_CLAW; reusing it would make Scratch look like those moves."
+  },
+  {
+   "decision": "rejected for Vine Whip",
+   "pool": "native",
+   "path": "res/graphics/battle/moves/vines.png",
+   "exists": true,
+   "sha256": "6ee742bf1442fc32b0b7206fde9267abbd6bc88bb9b83ffc4734369b9b3ec9ed",
+   "reason": "brown root sprite from the Grass Knot / Constrict family; Emerald vine_2 gives a green curl that animates as a lash."
+  },
+  {
+   "decision": "rejected for Powder Snow",
+   "pool": "ranger_b1",
+   "path": "res/graphics/battle/moves/ranger_ice_bloom.png",
+   "exists": true,
+   "sha256": "d625a63758855854b9251ee4aeb3863f5695315f232dcfc18cf92da380ca0801",
+   "reason": "a bright energy ball (Ice Beam family); Powder Snow needs scattered flecks and a sweeping swirl."
+  },
+  {
+   "decision": "selected for Rock Throw impact",
+   "pool": "ranger_b1",
+   "path": "res/graphics/battle/moves/ranger_rock_burst.png",
+   "exists": true,
+   "sha256": "c15e03f32c5f0bb3e8b801ef59aa6526ace658c8ef735d190c760e701bb1e4e7",
+   "reason": "9-frame grit puff, already installed and budgeted by B1 (219 tiles); driven through OpalFx at 80% scale, translucent."
+  },
+  {
+   "decision": "rejected for Scratch",
+   "pool": "emerald",
+   "path": "pokeemerald/graphics/battle_anims/sprites/scratch.png",
+   "exists": true,
+   "sha256": "7e23319bb67eb8acc6f44a9ac0da7e6c68aea76ebab1f965dbca0aa61104d37d",
+   "reason": "yellow crescent smear: reads as Slash/Cut. fury_swipes gives three distinct claw lines."
+  },
+  {
+   "decision": "rejected for Scratch",
+   "pool": "emerald",
+   "path": "pokeemerald/graphics/battle_anims/sprites/claw_slash_2.png",
+   "exists": true,
+   "sha256": "81a2e1cd9bf4ab8a2f8850eaf5ff4bb329c48bebed570e0f47c508704e476537",
+   "reason": "red droplet projectile frames, no arc."
+  },
+  {
+   "decision": "rejected for Bite",
+   "pool": "emerald",
+   "path": "pokeemerald/graphics/battle_anims/sprites/sharp_teeth.png",
+   "exists": true,
+   "sha256": "82743abdabb1bb8bf1b2861ac44a2f21d4b645bf3be97d9e12b800a77fbe5308",
+   "reason": "64x64 single frame (32 tiles) mostly empty; fangs.png gives two jaws for the same tile cost."
+  },
+  {
+   "decision": "rejected for Leer",
+   "pool": "emerald",
+   "path": "pokeemerald/graphics/battle_anims/sprites/eye.png",
+   "exists": true,
+   "sha256": "73943361aa9dd0a31de3ab8dd2ae14d38194e9f8fcbf46f8c8c441258cd5e04e",
+   "reason": "64x64 magenta eyeball (64 tiles) - too large and wrong colour for a quick repeated move."
+  },
+  {
+   "decision": "rejected for Growl",
+   "pool": "emerald",
+   "path": "pokeemerald/graphics/battle_anims/sprites/metal_sound_waves.png",
+   "exists": true,
+   "sha256": "19849306a887142056183c7e978fd4f3dca630d4ad33cf6c9adb2e48d22fc9b8",
+   "reason": "spiky gold ring - reads as a Metal Sound / Screech effect."
+  },
+  {
+   "decision": "rejected for Gust",
+   "pool": "emerald",
+   "path": "pokeemerald/graphics/battle_anims/sprites/whirlwind_2.png",
+   "exists": true,
+   "sha256": "d410e2e3f714f212c4b4df1e0b9284d03ecf91f7d4a7fa3a4d68958bb6dc6af9",
+   "reason": "grey tornado column (Twister/Whirlwind); whirlwind.png sweep lines read as a gust."
+  },
+  {
+   "decision": "rejected for Powder Snow",
+   "pool": "emerald",
+   "path": "pokeemerald/graphics/battle_anims/sprites/hail.png",
+   "exists": true,
+   "sha256": "9283b640910db270aec40ac72257fc5a43a9a8e58776bbe41c2307a3ed471a91",
+   "reason": "hail stone (Hail weather); snowball.png flecks are softer."
+  },
+  {
+   "decision": "rejected",
+   "pool": "crystal",
+   "path": "pokecrystal/gfx/battle_anims/whip.png",
+   "exists": true,
+   "sha256": "c9cd7c0ea48c572d32ce061c1e80b2d9a67113dded3081f7cc909fc47f99db16",
+   "reason": "16x40, 4 grey levels (pokecrystal gfx/battle_anims/whip.png); Emerald vine_2 is the full-colour equivalent and needs no re-authoring of OAM layouts."
+  },
+  {
+   "decision": "rejected",
+   "pool": "crystal",
+   "path": "pokecrystal/gfx/battle_anims/speed.png",
+   "exists": true,
+   "sha256": "19478e5632d2db572be364b363dcfa08f9ea941ce6153f063352a5200bc59c3b",
+   "reason": "24x24, 3 levels, layout only in anim_obj asm; Emerald speed_dust / air_wave cover the role in colour."
+  },
+  {
+   "decision": "rejected",
+   "pool": "crystal",
+   "path": "pokecrystal/gfx/battle_anims/noise.png",
+   "exists": true,
+   "sha256": "2eb38fc31af85d4a54227ddecca19856ee47e869bb4b6711814cea724658da50",
+   "reason": "24x80, 3 levels; Emerald noise_line / movement_waves cover the role in colour."
+  },
+  {
+   "decision": "rejected",
+   "pool": "yellow",
+   "path": "pokeyellow/gfx/battle/move_anim_0.png",
+   "exists": true,
+   "sha256": "912a5ecc0cae9ac583b4e2390c0da1176942cb84b0340c0c65403b4b11f0193d",
+   "reason": "128x40, 4 grey levels; Gen-1 tile sheet with no frame metadata in the PNG."
+  }
+ ],
+ "per_move": [
+  {
+   "move": "Tackle",
+   "native_kept": "tackle_spa emitters, lunge",
+   "ingredients": "emerald speed_dust -> dig-in dust; emerald hit -> impact flash"
+  },
+  {
+   "move": "Scratch",
+   "native_kept": "scratch_spa emitters",
+   "ingredients": "emerald fury_swipes (+hflip) -> three staggered claw arcs; emerald hit -> contact"
+  },
+  {
+   "move": "Pound",
+   "native_kept": "pound_spa emitters",
+   "ingredients": "emerald hit (large) -> contact; procedural ring (gold) -> pressure ring; B3 camera punch"
+  },
+  {
+   "move": "Quick Attack",
+   "native_kept": "dash task, afterimages",
+   "ingredients": "emerald air_wave -> trailing streak (3-copy trail); speed_dust -> launch dust; slash -> streak star impact"
+  },
+  {
+   "move": "Bite",
+   "native_kept": "bite_spa emitters",
+   "ingredients": "emerald fangs -> closing upper/lower jaw; hit -> snap flash"
+  },
+  {
+   "move": "Ember",
+   "native_kept": "ember_spa, fire_punch_spa, Ranger fire bloom, base-BG tint",
+   "ingredients": "emerald small_ember -> three-ember volley + cinders (Ranger bloom stays the impact)"
+  },
+  {
+   "move": "Water Gun",
+   "native_kept": "water_gun_spa stream",
+   "ingredients": "B2 opal_water (emerald water_droplet / water_impact) -> three droplet pulses + foam splash"
+  },
+  {
+   "move": "Bubble",
+   "native_kept": "bubble_spa",
+   "ingredients": "emerald bubble / small_bubbles / bubble_burst / bubble_burst_2 -> rising bubbles and pops"
+  },
+  {
+   "move": "Vine Whip",
+   "native_kept": "vine_whip_spa, lunge",
+   "ingredients": "emerald vine_2 -> thrown lash + second flick; leaf -> debris"
+  },
+  {
+   "move": "Razor Leaf",
+   "native_kept": "razor_leaf_spa",
+   "ingredients": "emerald leaf -> three-lane leaf fan; razor_leaf -> blade crescents; leaf -> flutter"
+  },
+  {
+   "move": "ThunderShock",
+   "native_kept": "thunder_shock_spa + thunderbolt_spa, base-BG dim",
+   "ingredients": "B2 opal_thunder (emerald electricity / electric_orbs) -> charge + burst; emerald spark_h -> jumping arcs"
+  },
+  {
+   "move": "Powder Snow",
+   "native_kept": "powder_snow_spa, fades",
+   "ingredients": "emerald whirlwind (ice recolour) -> swirl; emerald snowball -> flecks; B2 opal_ice -> frost glints"
+  },
+  {
+   "move": "Gust",
+   "native_kept": "gust_spa, camera projection reset",
+   "ingredients": "emerald air_wave / air_wave_2 -> streaks; whirlwind -> landing swirl; leaf -> debris"
+  },
+  {
+   "move": "Peck",
+   "native_kept": "peck_spa, head tilt",
+   "ingredients": "emerald air_wave -> thrust streak; emerald impact -> pierce star"
+  },
+  {
+   "move": "Rock Throw",
+   "native_kept": "rock_throw_spa",
+   "ingredients": "emerald rocks / flat_rock / flying_dirt -> boulder, shards, dirt; Ranger 2 e002 (B1) -> grit puff; B3 camera punch"
+  },
+  {
+   "move": "Confusion",
+   "native_kept": "SwitchBg 20, mon-sprite warp",
+   "ingredients": "procedural ring (psychic palette) -> concentric ripples; B5 magic pulse"
+  },
+  {
+   "move": "Growl",
+   "native_kept": "growl_spa, cries",
+   "ingredients": "procedural ring (gold) -> sound pulses; emerald movement_waves / noise_line -> sound arcs + roar jag"
+  },
+  {
+   "move": "Leer",
+   "native_kept": "leer_spa, base-BG dim",
+   "ingredients": "emerald leer -> eye glint on user and target"
+  },
+  {
+   "move": "Tail Whip",
+   "native_kept": "revolve task, sounds",
+   "ingredients": "emerald air_wave_2 -> wag crescents; procedural star (wx gold) -> feedback pulse"
+  }
+ ]
+}

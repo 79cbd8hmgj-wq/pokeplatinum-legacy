@@ -298,6 +298,74 @@
    ]
   }
  ],
+ "bite": [
+  {
+   "frames_lower_bound": 20,
+   "peak_sprite_managers": 1,
+   "peak_live_fx_sprites": 2,
+   "peak_obj_char_tiles": 184,
+   "peak_oam_entries_upper_bound": 2,
+   "cue_log": [
+    "t0 manager1+",
+    "t0 fx opal_b9_strike:4 x1 life10 anchor0x8 dest0x8",
+    "t0 fx opal_b9_strike:5 x1 life10 anchor0x8 dest0x8",
+    "t2 Delay",
+    "t10 Delay",
+    "t10 fx opal_b9_strike:0 x1 life10 anchor0x8 dest0x0",
+    "t20 manager1-"
+   ]
+  }
+ ],
+ "bubble": [
+  {
+   "frames_lower_bound": 30,
+   "peak_sprite_managers": 0,
+   "peak_live_fx_sprites": 0,
+   "peak_obj_char_tiles": 0,
+   "peak_oam_entries_upper_bound": 0,
+   "cue_log": [
+    "t10 Delay",
+    "t20 Delay",
+    "t30 Delay"
+   ]
+  },
+  {
+   "frames_lower_bound": 33,
+   "peak_sprite_managers": 1,
+   "peak_live_fx_sprites": 6,
+   "peak_obj_char_tiles": 98,
+   "peak_oam_entries_upper_bound": 6,
+   "cue_log": [
+    "t0 manager1+",
+    "t0 fx opal_b9_bubble:0 x2 life20 anchor0x2 dest0x18",
+    "t5 Delay",
+    "t5 fx opal_b9_bubble:1 x2 life18 anchor0x2 dest0x18",
+    "t10 Delay",
+    "t10 fx opal_b9_bubble:0 x2 life10 anchor0x2 dest0x18",
+    "t20 Delay",
+    "t20 fx opal_b9_bubble:2 x2 life12 anchor0x18 dest0x0",
+    "t20 fx opal_b9_bubble:3 x1 life13 anchor0x8 dest0x0",
+    "t30 Delay",
+    "t33 manager1-"
+   ]
+  }
+ ],
+ "confusion": [
+  {
+   "frames_lower_bound": 20,
+   "peak_sprite_managers": 1,
+   "peak_live_fx_sprites": 2,
+   "peak_obj_char_tiles": 184,
+   "peak_oam_entries_upper_bound": 8,
+   "cue_log": [
+    "t0 manager1+",
+    "t10 Delay",
+    "t10 fx opal_fx_ring:0 x1 life10 anchor0x8 dest0x0",
+    "t10 fx opal_fx_ring:0 x1 life10 anchor0x8 dest0x0",
+    "t20 manager1-"
+   ]
+  }
+ ],
  "draco_meteor": [
   {
    "frames_lower_bound": 136,
@@ -340,6 +408,32 @@
     "t8 fx opal_fx_ring:5 x1 life22 anchor0x8 dest0x0",
     "t8 fx opal_fx_ring:5 x1 life22 anchor0x8 dest0x0",
     "t30 manager1-"
+   ]
+  }
+ ],
+ "ember": [
+  {
+   "frames_lower_bound": 49,
+   "peak_sprite_managers": 2,
+   "peak_live_fx_sprites": 3,
+   "peak_obj_char_tiles": 292,
+   "peak_oam_entries_upper_bound": 3,
+   "cue_log": [
+    "t0 manager1+",
+    "t0 basefade 0->8 dur9",
+    "t0 fx opal_b9_ember:0 x1 life12 anchor0x2 dest0x8",
+    "t2 Delay",
+    "t2 fx opal_b9_ember:0 x1 life12 anchor0x2 dest0x8",
+    "t4 Delay",
+    "t4 fx opal_b9_ember:0 x1 life12 anchor0x2 dest0x8",
+    "t6 Delay",
+    "t14 Delay",
+    "t14 manager0+",
+    "t14 fx opal_b9_ember:2 x1 life22 anchor0x8 dest0x0",
+    "t14 fx opal_b9_ember:2 x1 life26 anchor0x8 dest0x0",
+    "t40 manager0-",
+    "t40 manager1-",
+    "t40 basefade 8->0 dur9"
    ]
   }
  ],
@@ -470,6 +564,52 @@
     "t102 manager1-",
     "t102 manager2-",
     "note: End frees particle system(s) [1]"
+   ]
+  }
+ ],
+ "growl": [
+  {
+   "frames_lower_bound": 24,
+   "peak_sprite_managers": 2,
+   "peak_live_fx_sprites": 8,
+   "peak_obj_char_tiles": 312,
+   "peak_oam_entries_upper_bound": 14,
+   "cue_log": [
+    "t0 manager1+",
+    "t0 manager2+",
+    "t0 fx opal_fx_ring:2 x1 life12 anchor0x2 dest0x0",
+    "t0 fx opal_b9_sense:1 x2 life24 anchor0x2 dest0x18",
+    "t0 fx opal_fx_ring:2 x1 life12 anchor0x2 dest0x0",
+    "t0 fx opal_b9_sense:1 x2 life24 anchor0x2 dest0x18",
+    "t0 fx opal_b9_sense:2 x2 life20 anchor0x2 dest0x18",
+    "t5 Delay",
+    "t24 manager1-",
+    "t24 manager2-"
+   ]
+  }
+ ],
+ "gust": [
+  {
+   "frames_lower_bound": 44,
+   "peak_sprite_managers": 2,
+   "peak_live_fx_sprites": 4,
+   "peak_obj_char_tiles": 184,
+   "peak_oam_entries_upper_bound": 12,
+   "cue_log": [
+    "t0 manager1+",
+    "t0 manager2+",
+    "t0 fx opal_b9_wind:0 x1 life18 anchor0x2 dest0x8",
+    "t2 Delay",
+    "t2 fx opal_b9_wind:0 x1 life18 anchor0x2 dest0x8",
+    "t4 Delay",
+    "t4 fx opal_b9_wind:1 x1 life18 anchor0x2 dest0x8",
+    "t5 Delay",
+    "t20 Delay",
+    "t20 fx opal_b9_wind:2 x1 life22 anchor0x8 dest0x0",
+    "t20 fx opal_b9_nature:3 x1 life24 anchor0x8 dest0x0",
+    "t20 fx opal_b9_nature:3 x1 life20 anchor0x8 dest0x0",
+    "t44 manager1-",
+    "t44 manager2-"
    ]
   }
  ],
@@ -681,6 +821,102 @@
    ]
   }
  ],
+ "leer": [
+  {
+   "frames_lower_bound": 36,
+   "peak_sprite_managers": 0,
+   "peak_live_fx_sprites": 0,
+   "peak_obj_char_tiles": 0,
+   "peak_oam_entries_upper_bound": 0,
+   "cue_log": [
+    "t0 basefade 0->12 dur13",
+    "t23 Delay",
+    "t23 basefade 12->0 dur13"
+   ]
+  },
+  {
+   "frames_lower_bound": 36,
+   "peak_sprite_managers": 1,
+   "peak_live_fx_sprites": 2,
+   "peak_obj_char_tiles": 128,
+   "peak_oam_entries_upper_bound": 2,
+   "cue_log": [
+    "t0 manager1+",
+    "t0 basefade 0->12 dur13",
+    "t0 fx opal_b9_sense:0 x1 life12 anchor0x2 dest0x0",
+    "t23 Delay",
+    "t23 fx opal_b9_sense:0 x2 life12 anchor0x18 dest0x0",
+    "t23 basefade 12->0 dur13",
+    "t36 manager1-"
+   ]
+  }
+ ],
+ "peck": [
+  {
+   "frames_lower_bound": 12,
+   "peak_sprite_managers": 2,
+   "peak_live_fx_sprites": 2,
+   "peak_obj_char_tiles": 262,
+   "peak_oam_entries_upper_bound": 5,
+   "cue_log": [
+    "t0 manager1+",
+    "t0 manager2+",
+    "t0 fx opal_b9_wind:0 x1 life4 anchor0x2 dest0x8",
+    "t2 Delay",
+    "t2 fx opal_b9_strike:1 x1 life10 anchor0x8 dest0x0",
+    "t12 manager1-",
+    "t12 manager2-"
+   ]
+  }
+ ],
+ "pound": [
+  {
+   "frames_lower_bound": 10,
+   "peak_sprite_managers": 2,
+   "peak_live_fx_sprites": 2,
+   "peak_obj_char_tiles": 368,
+   "peak_oam_entries_upper_bound": 5,
+   "cue_log": [
+    "t0 manager1+",
+    "t0 manager2+",
+    "t0 fx opal_b9_strike:0 x1 life10 anchor0x8 dest0x0",
+    "t0 fx opal_fx_ring:0 x1 life10 anchor0x8 dest0x0",
+    "t0 camera mode1 7f",
+    "t10 manager1-",
+    "t10 manager2-"
+   ]
+  }
+ ],
+ "powder_snow": [
+  {
+   "frames_lower_bound": 91,
+   "peak_sprite_managers": 2,
+   "peak_live_fx_sprites": 2,
+   "peak_obj_char_tiles": 150,
+   "peak_oam_entries_upper_bound": 8,
+   "cue_log": [
+    "t0 manager1+",
+    "t0 manager2+",
+    "t0 basefade 0->12 dur13",
+    "t0 fx opal_b9_wind:4 x1 life14 anchor0x2 dest0x0",
+    "t0 fx opal_b9_wind:4 x1 life14 anchor0x2 dest0x0",
+    "t14 fx opal_b9_wind:2 x1 life22 anchor0x2 dest0x8",
+    "t19 Delay",
+    "t19 fx opal_ice:1 x1 life9 anchor0x8 dest0x0",
+    "t33 Delay",
+    "t33 fx opal_b9_wind:4 x1 life14 anchor0x8 dest0x0",
+    "t45 Delay",
+    "t45 fx opal_ice:1 x1 life9 anchor0x8 dest0x0",
+    "t57 Delay",
+    "t57 fx opal_b9_wind:4 x1 life14 anchor0x8 dest0x0",
+    "t69 Delay",
+    "t69 fx opal_ice:1 x1 life9 anchor0x8 dest0x0",
+    "t78 manager1-",
+    "t78 manager2-",
+    "t78 basefade 12->0 dur13"
+   ]
+  }
+ ],
  "psychic": [
   {
    "frames_lower_bound": 28,
@@ -698,6 +934,92 @@
     "t18 Delay",
     "t18 fx opal_fx_ring:0 x1 life10 anchor0x8 dest0x0",
     "t28 manager1-"
+   ]
+  }
+ ],
+ "quick_attack": [
+  {
+   "frames_lower_bound": 27,
+   "peak_sprite_managers": 2,
+   "peak_live_fx_sprites": 4,
+   "peak_obj_char_tiles": 262,
+   "peak_oam_entries_upper_bound": 16,
+   "cue_log": [
+    "t0 manager1+",
+    "t0 manager2+",
+    "t0 fx opal_b9_wind:3 x1 life10 anchor0x2 dest0x0",
+    "t0 fx opal_b9_wind:0 x3 life18 anchor0x2 dest0x8",
+    "t15 Delay",
+    "t15 fx opal_b9_strike:6 x1 life12 anchor0x8 dest0x0",
+    "t27 manager1-",
+    "t27 manager2-"
+   ]
+  }
+ ],
+ "razor_leaf": [
+  {
+   "frames_lower_bound": 108,
+   "peak_sprite_managers": 1,
+   "peak_live_fx_sprites": 6,
+   "peak_obj_char_tiles": 106,
+   "peak_oam_entries_upper_bound": 6,
+   "cue_log": [
+    "t0 manager1+",
+    "t15 Delay",
+    "t40 Delay",
+    "t40 fx opal_b9_nature:0 x1 life34 anchor0x2 dest0x8",
+    "t40 fx opal_b9_nature:0 x1 life34 anchor0x2 dest0x8",
+    "t40 fx opal_b9_nature:0 x1 life34 anchor0x2 dest0x8",
+    "t40 fx opal_b9_nature:1 x3 life40 anchor0x2 dest0x8",
+    "t65 Delay",
+    "t75 Delay",
+    "t75 fx opal_b9_nature:1 x1 life12 anchor0x8 dest0x0",
+    "t82 Delay",
+    "t82 fx opal_b9_nature:3 x1 life26 anchor0x8 dest0x0",
+    "t82 fx opal_b9_nature:3 x1 life22 anchor0x8 dest0x0",
+    "t108 manager1-"
+   ]
+  }
+ ],
+ "rock_throw": [
+  {
+   "frames_lower_bound": 44,
+   "peak_sprite_managers": 2,
+   "peak_live_fx_sprites": 3,
+   "peak_obj_char_tiles": 303,
+   "peak_oam_entries_upper_bound": 5,
+   "cue_log": [
+    "t0 manager1+",
+    "t0 manager2+",
+    "t0 fx opal_b9_rock:0 x1 life20 anchor0x2 dest0x8",
+    "t0 fx opal_b9_rock:2 x1 life20 anchor0x2 dest0x8",
+    "t12 Delay",
+    "t20 Delay",
+    "t20 fx opal_b9_rock:1 x1 life13 anchor0x8 dest0x0",
+    "t20 fx opal_b9_rock:3 x1 life10 anchor0x8 dest0x0",
+    "t20 fx ranger_rock_burst:0 x1 life24 anchor0x8 dest0x0",
+    "t20 camera mode1 7f",
+    "t44 manager1-",
+    "t44 manager2-"
+   ]
+  }
+ ],
+ "scratch": [
+  {
+   "frames_lower_bound": 14,
+   "peak_sprite_managers": 1,
+   "peak_live_fx_sprites": 4,
+   "peak_obj_char_tiles": 184,
+   "peak_oam_entries_upper_bound": 4,
+   "cue_log": [
+    "t0 manager1+",
+    "t0 fx opal_b9_strike:2 x1 life10 anchor0x8 dest0x0",
+    "t2 Delay",
+    "t2 fx opal_b9_strike:3 x1 life10 anchor0x8 dest0x0",
+    "t4 Delay",
+    "t4 fx opal_b9_strike:2 x1 life10 anchor0x8 dest0x0",
+    "t4 fx opal_b9_strike:0 x1 life10 anchor0x8 dest0x0",
+    "t14 manager1-"
    ]
   }
  ],
@@ -1249,6 +1571,68 @@
    ]
   }
  ],
+ "tackle": [
+  {
+   "frames_lower_bound": 20,
+   "peak_sprite_managers": 2,
+   "peak_live_fx_sprites": 1,
+   "peak_obj_char_tiles": 262,
+   "peak_oam_entries_upper_bound": 4,
+   "cue_log": [
+    "t0 manager1+",
+    "t0 manager2+",
+    "t0 fx opal_b9_wind:3 x1 life10 anchor0x2 dest0x0",
+    "t10 fx opal_b9_strike:0 x1 life10 anchor0x8 dest0x0",
+    "t20 manager1-",
+    "t20 manager2-"
+   ]
+  }
+ ],
+ "tail_whip": [
+  {
+   "frames_lower_bound": 24,
+   "peak_sprite_managers": 2,
+   "peak_live_fx_sprites": 3,
+   "peak_obj_char_tiles": 129,
+   "peak_oam_entries_upper_bound": 8,
+   "cue_log": [
+    "t0 manager1+",
+    "t0 manager2+",
+    "t0 fx opal_b9_wind:1 x1 life12 anchor0x2 dest0x0",
+    "t12 fx opal_b9_wind:1 x1 life12 anchor0x2 dest0x0",
+    "t12 fx opal_fx_wx:1 x2 life12 anchor0x18 dest0x0",
+    "t24 manager1-",
+    "t24 manager2-"
+   ]
+  }
+ ],
+ "thunder_shock": [
+  {
+   "frames_lower_bound": 63,
+   "peak_sprite_managers": 2,
+   "peak_live_fx_sprites": 3,
+   "peak_obj_char_tiles": 163,
+   "peak_oam_entries_upper_bound": 3,
+   "cue_log": [
+    "t0 manager1+",
+    "t0 manager2+",
+    "t0 basefade 0->12 dur13",
+    "t0 fx opal_thunder:1 x1 life12 anchor0x2 dest0x0",
+    "t13 fx opal_b9_ember:1 x1 life14 anchor0x8 dest0x0",
+    "t18 Delay",
+    "t18 fx opal_b9_ember:1 x1 life12 anchor0x8 dest0x0",
+    "t22 Delay",
+    "t22 fx opal_b9_ember:1 x1 life10 anchor0x8 dest0x0",
+    "t27 Delay",
+    "t27 fx opal_thunder:1 x1 life12 anchor0x8 dest0x0",
+    "t32 Delay",
+    "t32 fx opal_thunder:1 x1 life18 anchor0x8 dest0x0",
+    "t50 manager1-",
+    "t50 manager2-",
+    "t50 basefade 12->0 dur13"
+   ]
+  }
+ ],
  "thunderbolt": [
   {
    "frames_lower_bound": 51,
@@ -1381,6 +1765,74 @@
     "t27 fx opal_thunder:1 x1 life24 anchor0x8 dest0x0",
     "t51 manager0-",
     "t51 manager1-"
+   ]
+  }
+ ],
+ "vine_whip": [
+  {
+   "frames_lower_bound": 29,
+   "peak_sprite_managers": 1,
+   "peak_live_fx_sprites": 3,
+   "peak_obj_char_tiles": 106,
+   "peak_oam_entries_upper_bound": 3,
+   "cue_log": [
+    "t0 manager1+",
+    "t0 fx opal_b9_nature:2 x1 life5 anchor0x2 dest0x8",
+    "t5 Delay",
+    "t5 fx opal_b9_nature:2 x1 life14 anchor0x8 dest0x0",
+    "t5 fx opal_b9_nature:3 x1 life24 anchor0x8 dest0x0",
+    "t5 fx opal_b9_nature:3 x1 life20 anchor0x8 dest0x0",
+    "t29 manager1-"
+   ]
+  }
+ ],
+ "water_gun": [
+  {
+   "frames_lower_bound": 30,
+   "peak_sprite_managers": 1,
+   "peak_live_fx_sprites": 11,
+   "peak_obj_char_tiles": 90,
+   "peak_oam_entries_upper_bound": 11,
+   "cue_log": [
+    "t0 manager1+",
+    "t0 fx opal_water:1 x3 life16 anchor0x2 dest0x8",
+    "t3 Delay",
+    "t3 fx opal_water:1 x3 life16 anchor0x2 dest0x8",
+    "t6 Delay",
+    "t6 fx opal_water:1 x3 life16 anchor0x2 dest0x8",
+    "t10 Delay",
+    "t10 fx opal_water:2 x1 life6 anchor0x8 dest0x0",
+    "t10 fx opal_water:1 x1 life20 anchor0x8 dest0x0",
+    "t30 manager1-"
+   ]
+  },
+  {
+   "frames_lower_bound": 10,
+   "peak_sprite_managers": 0,
+   "peak_live_fx_sprites": 0,
+   "peak_obj_char_tiles": 0,
+   "peak_oam_entries_upper_bound": 0,
+   "cue_log": [
+    "t10 Delay"
+   ]
+  },
+  {
+   "frames_lower_bound": 30,
+   "peak_sprite_managers": 1,
+   "peak_live_fx_sprites": 11,
+   "peak_obj_char_tiles": 90,
+   "peak_oam_entries_upper_bound": 11,
+   "cue_log": [
+    "t0 manager1+",
+    "t0 fx opal_water:1 x3 life16 anchor0x2 dest0x8",
+    "t3 Delay",
+    "t3 fx opal_water:1 x3 life16 anchor0x2 dest0x8",
+    "t6 Delay",
+    "t6 fx opal_water:1 x3 life16 anchor0x2 dest0x8",
+    "t10 Delay",
+    "t10 fx opal_water:2 x1 life6 anchor0x8 dest0x0",
+    "t10 fx opal_water:1 x1 life20 anchor0x8 dest0x0",
+    "t30 manager1-"
    ]
   }
  ]

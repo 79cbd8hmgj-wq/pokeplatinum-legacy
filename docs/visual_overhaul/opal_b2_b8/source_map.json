@@ -6,7 +6,7 @@
    "path": "res/moves/*/anim.s",
    "note": "one script per move; entry label L_0; run by BattleAnimSystem after the engine decided the move executes",
    "file_count": 490,
-   "tree_sha256": "d92a2ab8889c2bc91d58a9faf09c1ca09bdc7049e2577bd15a0a838e6daf5043"
+   "tree_sha256": "adce9694f6c74069594b2a0cf80761ecf45e2c6524f12cdb96b661935d516926"
   },
   {
    "role": "common (status / weather / encounter) animations",
@@ -51,7 +51,7 @@
     "OpalWeatherAccentSub",
     "OpalReactHeavy"
    ],
-   "sha256": "6b12d74e5b3f885fba31b8846d75bfdd20129d18837d7fdf6b233971dd1eee54"
+   "sha256": "9ba6e43148277a77f8fbf2783e1c025c871f65cb1f2f8866f14ad53d57642e58"
   },
   {
    "role": "script interpreter / lifecycle backstop",
@@ -220,7 +220,7 @@
     "cell_jsons",
     "cellanm_jsons"
    ],
-   "sha256": "afe9cb4010067798569cc0c371f5ef23d3e131cde445ef88f273a114e3aaab51"
+   "sha256": "1da84fc6b08133cc0110daeef599da7c12a73b6d56447452d7b662b7cd568a87"
   },
   {
    "role": "sub-animation ids",
