@@ -1,0 +1,167 @@
+{
+ "name": "opal_b9_sense",
+ "donor": "pokeemerald (FireRed/LeafGreen copies are byte-identical)",
+ "sources": {
+  "leer": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/leer.png"
+  },
+  "waves": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/movement_waves.png"
+  },
+  "noise": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/noise_line.png"
+  }
+ },
+ "frames": [
+  {
+   "id": "gl0",
+   "src": "leer",
+   "rect": [
+    0,
+    0,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "gl1",
+   "src": "leer",
+   "rect": [
+    0,
+    32,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "gl2",
+   "src": "leer",
+   "rect": [
+    0,
+    64,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "gl3",
+   "src": "leer",
+   "rect": [
+    0,
+    96,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "arc0",
+   "src": "waves",
+   "rect": [
+    0,
+    0,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "arc1",
+   "src": "waves",
+   "rect": [
+    0,
+    32,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "arc2",
+   "src": "waves",
+   "rect": [
+    0,
+    64,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "jag0",
+   "src": "noise",
+   "rect": [
+    0,
+    0,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "jag2",
+   "src": "noise",
+   "rect": [
+    0,
+    64,
+    32,
+    32
+   ]
+  }
+ ],
+ "sequences": [
+  {
+   "name": "glint",
+   "frames": [
+    [
+     "gl0",
+     2
+    ],
+    [
+     "gl1",
+     3
+    ],
+    [
+     "gl2",
+     4
+    ],
+    [
+     "gl3",
+     3
+    ]
+   ]
+  },
+  {
+   "name": "sound_arc",
+   "frames": [
+    [
+     "arc0",
+     3
+    ],
+    [
+     "arc1",
+     3
+    ],
+    [
+     "arc2",
+     4
+    ]
+   ]
+  },
+  {
+   "name": "roar_jag",
+   "frames": [
+    [
+     "jag0",
+     3
+    ],
+    [
+     "jag2",
+     3
+    ],
+    [
+     "jag0",
+     3
+    ]
+   ]
+  }
+ ]
+}

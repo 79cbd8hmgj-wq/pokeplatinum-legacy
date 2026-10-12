@@ -412,6 +412,12 @@ def run_script(stmts, env, funcs, sheets, name):
                     plen = 0
                     if sheet in sheets and seq < len(sheets[sheet]["sequences"]):
                         plen = sheets[sheet]["sequences"][seq]["total_delay"]
+                    elif (ROOT / "docs/visual_overhaul/b1_installed_donors" / f"{sheet}.provenance.json").exists():
+                        # B1 Ranger donor sheet reused through OpalFx (one play-once sequence): length from its installed anim json
+                        aj = json.loads((ROOT / "res/graphics/battle/moves" / f"{sheet}_anim.json").read_text())
+                        if seq >= len(aj["sequences"]):
+                            raise Fail(f"unknown sequence {sheet}:{seq}")
+                        plen = sum(fd["frameDelay"] for fd in aj["sequences"][seq]["frameData"])
                     else:
                         raise Fail(f"unknown Opal sheet/sequence {sheet}:{seq}")
                     life = frames if frames > 0 else min(plen, MAX_FX_LIFETIME)

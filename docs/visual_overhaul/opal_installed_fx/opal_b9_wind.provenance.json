@@ -1,0 +1,250 @@
+{
+  "name": "opal_b9_wind",
+  "state": "installed via res/graphics/battle/moves NARC pipeline; drawn by SPRITE_FUNC_OPAL_FX",
+  "donor_sources": {
+    "wave": {
+      "path": "graphics/battle_anims/sprites/air_wave.png",
+      "sha256": "c08a2ed99d2bb082eef09f79fbf10007b90c04ac05aa8e52da2dc503d3ac287f"
+    },
+    "wave2": {
+      "path": "graphics/battle_anims/sprites/air_wave_2.png",
+      "sha256": "2e8e7582fe6c55f49a92169bb2c12277e86619ba6b7080f1592069925217df4e"
+    },
+    "swirl": {
+      "path": "graphics/battle_anims/sprites/whirlwind.png",
+      "sha256": "c4fcf17f516adefb4e0b3e6978780e8fcee10ca9531a32d7f34cb704ad34ac12"
+    },
+    "dust": {
+      "path": "graphics/battle_anims/sprites/speed_dust.png",
+      "sha256": "9cb76ac29893e3d76e47d9811b3187d1f45d280a1636fae358bc69a94e384451"
+    },
+    "snow": {
+      "path": "graphics/battle_anims/sprites/snowball.png",
+      "sha256": "a365e452b9f78a561797c61708a14c2a00806577a8912ba1323637685c330761"
+    }
+  },
+  "frames": [
+    {
+      "id": "wave",
+      "src": "wave",
+      "rect": [
+        0,
+        0,
+        32,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "wave_f",
+      "src": "wave",
+      "rect": [
+        0,
+        0,
+        32,
+        16
+      ],
+      "hflip": true
+    },
+    {
+      "id": "crescent",
+      "src": "wave2",
+      "rect": [
+        0,
+        0,
+        32,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "swirl",
+      "src": "swirl",
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "hflip": false
+    },
+    {
+      "id": "dust0",
+      "src": "dust",
+      "rect": [
+        0,
+        0,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "dust1",
+      "src": "dust",
+      "rect": [
+        0,
+        16,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "dust2",
+      "src": "dust",
+      "rect": [
+        0,
+        32,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "snow0",
+      "src": "snow",
+      "rect": [
+        0,
+        0,
+        8,
+        8
+      ],
+      "hflip": false
+    },
+    {
+      "id": "snow1",
+      "src": "snow",
+      "rect": [
+        0,
+        8,
+        8,
+        8
+      ],
+      "hflip": false
+    },
+    {
+      "id": "snow2",
+      "src": "snow",
+      "rect": [
+        0,
+        16,
+        8,
+        8
+      ],
+      "hflip": false
+    },
+    {
+      "id": "snow3",
+      "src": "snow",
+      "rect": [
+        0,
+        24,
+        8,
+        8
+      ],
+      "hflip": false
+    }
+  ],
+  "sequences": [
+    {
+      "index": 0,
+      "name": "streak",
+      "loop": false,
+      "frames": [
+        "wave"
+      ],
+      "total_delay": 30
+    },
+    {
+      "index": 1,
+      "name": "crescent",
+      "loop": false,
+      "frames": [
+        "crescent"
+      ],
+      "total_delay": 30
+    },
+    {
+      "index": 2,
+      "name": "swirl",
+      "loop": false,
+      "frames": [
+        "swirl"
+      ],
+      "total_delay": 40
+    },
+    {
+      "index": 3,
+      "name": "puff",
+      "loop": false,
+      "frames": [
+        "dust0",
+        "dust1",
+        "dust2"
+      ],
+      "total_delay": 10
+    },
+    {
+      "index": 4,
+      "name": "flecks",
+      "loop": true,
+      "frames": [
+        "snow0",
+        "snow1",
+        "snow2",
+        "snow3"
+      ],
+      "total_delay": 16
+    },
+    {
+      "index": 5,
+      "name": "streak_f",
+      "loop": false,
+      "frames": [
+        "wave_f"
+      ],
+      "total_delay": 30
+    }
+  ],
+  "palette_colours_rgb555": [
+    13537,
+    15685,
+    18857,
+    16912,
+    21037,
+    17969,
+    12916,
+    20083,
+    24210,
+    21239,
+    26390,
+    25368,
+    25401,
+    29563,
+    32767
+  ],
+  "palette_variants_rgb555": {
+    "ice": [
+      22851,
+      23940,
+      26085,
+      28199,
+      29288,
+      30378,
+      31469,
+      31536,
+      32626,
+      32661,
+      32696,
+      32729,
+      32731,
+      32765,
+      32767
+    ]
+  },
+  "obj_tiles": 78,
+  "tile_budget": 192,
+  "conversion": "indexed donor PNG (index 0 transparent) -> RGBA -> optional luminance ramp recolor -> median-cut fold to one shared <=15 colour RGB555 palette -> 8px-aligned cells covered by hardware-legal OAMs (B1 cover()) -> nitrogfx",
+  "recipe": "opal_b9_wind.json"
+}

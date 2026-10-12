@@ -108,11 +108,15 @@ def main():
 
     # every OPAL_RES reference in scripts resolves
     pal_names = set(sheets) | {f"{n}_{v}" for n, p in sheets.items() for v in p["palette_variants_rgb555"]}
+    # B1 Ranger donor sheets (installed, provenance in b1_installed_donors) may be driven through OpalFx as well
+    b1_sheets = {p.name.split(".")[0] for p in (ROOT / "docs/visual_overhaul/b1_installed_donors").glob("*.provenance.json")}
     refs = 0
     for p in list((ROOT / "res/moves").glob("*/anim.s")) + list((ROOT / "res/battle/scripts/common_anims").glob("*.s")) + [ROOT / "asm/macros/btlanim_opal.inc"]:
         text = "\n".join(l for l in p.read_text().splitlines() if not l.lstrip().startswith("#define OPAL_RES"))
         for sheet, pal in re.findall(r"OPAL_RES\((\w+),\s*(\w+)\)", text):
             refs += 1
+            if sheet in b1_sheets and pal == sheet:
+                continue
             if sheet not in sheets or pal not in pal_names:
                 fail(f"{p.relative_to(ROOT)}: OPAL_RES({sheet}, {pal}) names an unregistered sheet/palette")
             if not pal.startswith(sheet):

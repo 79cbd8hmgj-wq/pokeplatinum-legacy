@@ -1,0 +1,226 @@
+{
+ "name": "opal_b9_wind",
+ "donor": "pokeemerald (FireRed/LeafGreen copies are byte-identical)",
+ "sources": {
+  "wave": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/air_wave.png"
+  },
+  "wave2": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/air_wave_2.png"
+  },
+  "swirl": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/whirlwind.png"
+  },
+  "dust": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/speed_dust.png"
+  },
+  "snow": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/snowball.png"
+  }
+ },
+ "frames": [
+  {
+   "id": "wave",
+   "src": "wave",
+   "rect": [
+    0,
+    0,
+    32,
+    16
+   ]
+  },
+  {
+   "id": "wave_f",
+   "src": "wave",
+   "rect": [
+    0,
+    0,
+    32,
+    16
+   ],
+   "hflip": true
+  },
+  {
+   "id": "crescent",
+   "src": "wave2",
+   "rect": [
+    0,
+    0,
+    32,
+    16
+   ]
+  },
+  {
+   "id": "swirl",
+   "src": "swirl",
+   "rect": [
+    0,
+    0,
+    64,
+    64
+   ]
+  },
+  {
+   "id": "dust0",
+   "src": "dust",
+   "rect": [
+    0,
+    0,
+    16,
+    16
+   ]
+  },
+  {
+   "id": "dust1",
+   "src": "dust",
+   "rect": [
+    0,
+    16,
+    16,
+    16
+   ]
+  },
+  {
+   "id": "dust2",
+   "src": "dust",
+   "rect": [
+    0,
+    32,
+    16,
+    16
+   ]
+  },
+  {
+   "id": "snow0",
+   "src": "snow",
+   "rect": [
+    0,
+    0,
+    8,
+    8
+   ]
+  },
+  {
+   "id": "snow1",
+   "src": "snow",
+   "rect": [
+    0,
+    8,
+    8,
+    8
+   ]
+  },
+  {
+   "id": "snow2",
+   "src": "snow",
+   "rect": [
+    0,
+    16,
+    8,
+    8
+   ]
+  },
+  {
+   "id": "snow3",
+   "src": "snow",
+   "rect": [
+    0,
+    24,
+    8,
+    8
+   ]
+  }
+ ],
+ "sequences": [
+  {
+   "name": "streak",
+   "frames": [
+    [
+     "wave",
+     30
+    ]
+   ]
+  },
+  {
+   "name": "crescent",
+   "frames": [
+    [
+     "crescent",
+     30
+    ]
+   ]
+  },
+  {
+   "name": "swirl",
+   "frames": [
+    [
+     "swirl",
+     40
+    ]
+   ]
+  },
+  {
+   "name": "puff",
+   "frames": [
+    [
+     "dust0",
+     3
+    ],
+    [
+     "dust1",
+     3
+    ],
+    [
+     "dust2",
+     4
+    ]
+   ]
+  },
+  {
+   "name": "flecks",
+   "frames": [
+    [
+     "snow0",
+     4
+    ],
+    [
+     "snow1",
+     4
+    ],
+    [
+     "snow2",
+     4
+    ],
+    [
+     "snow3",
+     4
+    ]
+   ],
+   "loop": true
+  },
+  {
+   "name": "streak_f",
+   "frames": [
+    [
+     "wave_f",
+     30
+    ]
+   ]
+  }
+ ],
+ "palette_variants": {
+  "ice": {
+   "ramp": [
+    "#1a55b0",
+    "#4aa6ee",
+    "#b5ecff",
+    "#ffffff"
+   ]
+  }
+ }
+}

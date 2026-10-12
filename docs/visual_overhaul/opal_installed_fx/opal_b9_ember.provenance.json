@@ -1,0 +1,122 @@
+{
+  "name": "opal_b9_ember",
+  "state": "installed via res/graphics/battle/moves NARC pipeline; drawn by SPRITE_FUNC_OPAL_FX",
+  "donor_sources": {
+    "ember": {
+      "path": "graphics/battle_anims/sprites/small_ember.png",
+      "sha256": "86d8864ee76b1c0e844f6c8de6d1ed689061d2925090d512d5f03a989eb9ed8b"
+    },
+    "spark": {
+      "path": "graphics/battle_anims/sprites/spark_h.png",
+      "sha256": "f35405ce576d6f616b57fedd6582ebf807b38e7f38dda8777828019310f328eb"
+    }
+  },
+  "frames": [
+    {
+      "id": "emb1",
+      "src": "ember",
+      "rect": [
+        0,
+        32,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "emb2",
+      "src": "ember",
+      "rect": [
+        0,
+        64,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "emb3",
+      "src": "ember",
+      "rect": [
+        0,
+        96,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "spk0",
+      "src": "spark",
+      "rect": [
+        0,
+        0,
+        32,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "spk1",
+      "src": "spark",
+      "rect": [
+        0,
+        16,
+        32,
+        16
+      ],
+      "hflip": false
+    }
+  ],
+  "sequences": [
+    {
+      "index": 0,
+      "name": "ember",
+      "loop": true,
+      "frames": [
+        "emb1",
+        "emb2",
+        "emb3",
+        "emb2"
+      ],
+      "total_delay": 12
+    },
+    {
+      "index": 1,
+      "name": "spark_arc",
+      "loop": true,
+      "frames": [
+        "spk0",
+        "spk1"
+      ],
+      "total_delay": 4
+    },
+    {
+      "index": 2,
+      "name": "ember_pop",
+      "loop": false,
+      "frames": [
+        "emb1",
+        "emb2",
+        "emb3"
+      ],
+      "total_delay": 8
+    }
+  ],
+  "palette_colours_rgb555": [
+    19,
+    31,
+    2463,
+    3679,
+    4895,
+    5919,
+    16383,
+    21503,
+    32767
+  ],
+  "palette_variants_rgb555": {},
+  "obj_tiles": 56,
+  "tile_budget": 192,
+  "conversion": "indexed donor PNG (index 0 transparent) -> RGBA -> optional luminance ramp recolor -> median-cut fold to one shared <=15 colour RGB555 palette -> 8px-aligned cells covered by hardware-legal OAMs (B1 cover()) -> nitrogfx",
+  "recipe": "opal_b9_ember.json"
+}

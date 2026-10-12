@@ -1,0 +1,177 @@
+{
+  "name": "opal_b9_sense",
+  "state": "installed via res/graphics/battle/moves NARC pipeline; drawn by SPRITE_FUNC_OPAL_FX",
+  "donor_sources": {
+    "leer": {
+      "path": "graphics/battle_anims/sprites/leer.png",
+      "sha256": "0a65b153c97af0fe74c3219e942aaefa251e120349a44c76ac0cb18a365fc040"
+    },
+    "waves": {
+      "path": "graphics/battle_anims/sprites/movement_waves.png",
+      "sha256": "4ae3e52301b861ae38a50d560b26cebc116ecddfe31032410b336af7ecfca832"
+    },
+    "noise": {
+      "path": "graphics/battle_anims/sprites/noise_line.png",
+      "sha256": "3c603edac0b8201e2c12497a5b0c3258ea2f0fe7b28750941e592ad82b7f119b"
+    }
+  },
+  "frames": [
+    {
+      "id": "gl0",
+      "src": "leer",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "gl1",
+      "src": "leer",
+      "rect": [
+        0,
+        32,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "gl2",
+      "src": "leer",
+      "rect": [
+        0,
+        64,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "gl3",
+      "src": "leer",
+      "rect": [
+        0,
+        96,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "arc0",
+      "src": "waves",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "arc1",
+      "src": "waves",
+      "rect": [
+        0,
+        32,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "arc2",
+      "src": "waves",
+      "rect": [
+        0,
+        64,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "jag0",
+      "src": "noise",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "jag2",
+      "src": "noise",
+      "rect": [
+        0,
+        64,
+        32,
+        32
+      ],
+      "hflip": false
+    }
+  ],
+  "sequences": [
+    {
+      "index": 0,
+      "name": "glint",
+      "loop": false,
+      "frames": [
+        "gl0",
+        "gl1",
+        "gl2",
+        "gl3"
+      ],
+      "total_delay": 12
+    },
+    {
+      "index": 1,
+      "name": "sound_arc",
+      "loop": false,
+      "frames": [
+        "arc0",
+        "arc1",
+        "arc2"
+      ],
+      "total_delay": 10
+    },
+    {
+      "index": 2,
+      "name": "roar_jag",
+      "loop": false,
+      "frames": [
+        "jag0",
+        "jag2",
+        "jag0"
+      ],
+      "total_delay": 9
+    }
+  ],
+  "palette_colours_rgb555": [
+    31,
+    16629,
+    1247,
+    20793,
+    2463,
+    24090,
+    3679,
+    27323,
+    4895,
+    6143,
+    11263,
+    16383,
+    32734,
+    26623,
+    32767
+  ],
+  "palette_variants_rgb555": {},
+  "obj_tiles": 128,
+  "tile_budget": 192,
+  "conversion": "indexed donor PNG (index 0 transparent) -> RGBA -> optional luminance ramp recolor -> median-cut fold to one shared <=15 colour RGB555 palette -> 8px-aligned cells covered by hardware-legal OAMs (B1 cover()) -> nitrogfx",
+  "recipe": "opal_b9_sense.json"
+}

@@ -63,6 +63,13 @@ pngs = files(
     'opal_ice.png',
     'opal_fx_ring.png',
     'opal_fx_wx.png',
+    'opal_b9_strike.png',
+    'opal_b9_ember.png',
+    'opal_b9_nature.png',
+    'opal_b9_wind.png',
+    'opal_b9_rock.png',
+    'opal_b9_bubble.png',
+    'opal_b9_sense.png',
 )
 
 pngs_for_pal = files(
@@ -105,6 +112,13 @@ pngs_for_pal = files(
     'opal_ice.png',
     'opal_fx_ring.png',
     'opal_fx_wx.png',
+    'opal_b9_strike.png',
+    'opal_b9_ember.png',
+    'opal_b9_nature.png',
+    'opal_b9_wind.png',
+    'opal_b9_rock.png',
+    'opal_b9_bubble.png',
+    'opal_b9_sense.png',
 )
 
 no_cell_pngs = files(
@@ -132,6 +146,7 @@ no_cell_pngs_for_pal = files(
     'opal_fx_wx_water.png',
     'opal_fx_wx_ice.png',
     'opal_fx_wx_earth.png',
+    'opal_b9_wind_ice.png',
 )
 
 cell_jsons = files(
@@ -182,6 +197,13 @@ cell_jsons = files(
     'opal_ice_cell.json',
     'opal_fx_ring_cell.json',
     'opal_fx_wx_cell.json',
+    'opal_b9_strike_cell.json',
+    'opal_b9_ember_cell.json',
+    'opal_b9_nature_cell.json',
+    'opal_b9_wind_cell.json',
+    'opal_b9_rock_cell.json',
+    'opal_b9_bubble_cell.json',
+    'opal_b9_sense_cell.json',
 )
 
 cellanm_jsons = files(
@@ -232,6 +254,13 @@ cellanm_jsons = files(
     'opal_ice_anim.json',
     'opal_fx_ring_anim.json',
     'opal_fx_wx_anim.json',
+    'opal_b9_strike_anim.json',
+    'opal_b9_ember_anim.json',
+    'opal_b9_nature_anim.json',
+    'opal_b9_wind_anim.json',
+    'opal_b9_rock_anim.json',
+    'opal_b9_bubble_anim.json',
+    'opal_b9_sense_anim.json',
 )
 
 manual_pal_files = files(

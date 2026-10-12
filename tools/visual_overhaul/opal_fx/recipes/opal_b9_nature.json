@@ -1,0 +1,214 @@
+{
+ "name": "opal_b9_nature",
+ "donor": "pokeemerald (FireRed/LeafGreen copies are byte-identical)",
+ "sources": {
+  "leaf": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/leaf.png"
+  },
+  "razor": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/razor_leaf.png"
+  },
+  "vine": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/vine_2.png"
+  }
+ },
+ "frames": [
+  {
+   "id": "leaf0",
+   "src": "leaf",
+   "rect": [
+    0,
+    0,
+    16,
+    16
+   ]
+  },
+  {
+   "id": "leaf1",
+   "src": "leaf",
+   "rect": [
+    0,
+    16,
+    16,
+    16
+   ]
+  },
+  {
+   "id": "leaf3",
+   "src": "leaf",
+   "rect": [
+    0,
+    48,
+    16,
+    16
+   ]
+  },
+  {
+   "id": "leaf5",
+   "src": "leaf",
+   "rect": [
+    0,
+    80,
+    16,
+    16
+   ]
+  },
+  {
+   "id": "leaf8",
+   "src": "leaf",
+   "rect": [
+    0,
+    128,
+    16,
+    16
+   ]
+  },
+  {
+   "id": "razor",
+   "src": "razor",
+   "rect": [
+    0,
+    0,
+    32,
+    16
+   ]
+  },
+  {
+   "id": "vine0",
+   "src": "vine",
+   "rect": [
+    0,
+    0,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "vine1",
+   "src": "vine",
+   "rect": [
+    0,
+    32,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "vine2",
+   "src": "vine",
+   "rect": [
+    0,
+    64,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "vine3",
+   "src": "vine",
+   "rect": [
+    0,
+    96,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "vine4",
+   "src": "vine",
+   "rect": [
+    0,
+    128,
+    32,
+    32
+   ]
+  }
+ ],
+ "sequences": [
+  {
+   "name": "leaf_spin",
+   "frames": [
+    [
+     "leaf0",
+     3
+    ],
+    [
+     "leaf1",
+     3
+    ],
+    [
+     "leaf3",
+     3
+    ],
+    [
+     "leaf5",
+     3
+    ],
+    [
+     "leaf8",
+     3
+    ]
+   ],
+   "loop": true
+  },
+  {
+   "name": "razor_blade",
+   "frames": [
+    [
+     "razor",
+     40
+    ]
+   ]
+  },
+  {
+   "name": "vine_lash",
+   "frames": [
+    [
+     "vine0",
+     2
+    ],
+    [
+     "vine1",
+     2
+    ],
+    [
+     "vine2",
+     3
+    ],
+    [
+     "vine3",
+     3
+    ],
+    [
+     "vine4",
+     4
+    ]
+   ]
+  },
+  {
+   "name": "leaf_flutter",
+   "frames": [
+    [
+     "leaf8",
+     4
+    ],
+    [
+     "leaf5",
+     4
+    ],
+    [
+     "leaf3",
+     4
+    ],
+    [
+     "leaf1",
+     4
+    ]
+   ],
+   "loop": true
+  }
+ ]
+}
