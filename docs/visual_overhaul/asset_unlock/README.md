@@ -59,3 +59,9 @@ Additional pool found: **pokediamond** (accessible, DP lineage = closest to Plat
 * HGSS and PMD palette semantics that depend on engine code are reported as limits, not guessed (see `DECODER_COVERAGE.md` blockers).
 * The Opal-FX conversion path is demonstrated end-to-end on a decoded PMD sprite (see `P1_READY.md`) and cost-estimated for every decoded unit, but nothing is installed into `res/`.
 * Nothing here is a visual approval; no emulator or hardware run was performed.
+
+## DAU2 (multi-source curation + SPL emitter research)
+
+`dau2/` (tooling: `tools/visual_overhaul/dau2_curate.py`) builds on this catalog without changing it: the original **B9 v2 move manifest** (SHA-256 `419c17818fbdabf20bf65b729ef40bd123c09899398c75fdb0258a8c8561be37`) is imported
+at `dau2/source/`, which resolves the "manifest missing" blocker below; the candidate matrix is now **per move** (`dau2/MOVE_CANDIDATE_MATRIX.*`); SPL **emitter** blocks are parsed and replayed offline (`dau2/EMITTER_RESEARCH.md`). Start at `dau2/README.md` and `dau2/GAP_REPORT.md`.
+DAU2 does not approve any visual and does not start P1/P2.

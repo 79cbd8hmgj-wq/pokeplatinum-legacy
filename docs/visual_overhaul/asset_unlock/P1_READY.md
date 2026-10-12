@@ -27,3 +27,9 @@
 * PMD run-time palette banks (82 effect sprites) - needs engine-side palette-load semantics.
 * Yellow subanimation tables; Crystal's remaining 33 objects.
 * Base-ROM-extracted HGSS files (72 MISSING) if the owner can legally supply an extraction.
+
+## DAU2 update
+
+Input 1 above (the B9 manifest naming the 19 P1 + 14 P2 moves) is **resolved**: the original manifest is imported unchanged and SHA-pinned in `dau2/source/`, and `dau2/MOVE_CANDIDATE_MATRIX.*` keys candidates per move. Inputs 2 and 3 remain with the owner:
+the visual pass now has indexed boards to work from (`dau2/OWNER_REVIEW_GALLERY.md`, previews generated locally), and licensing is still undecided. SPL emitter decoding (optional follow-up above) is done for field structure and offline replay (`dau2/EMITTER_RESEARCH.md`);
+it is not runtime-validated. P1/P2 still must not start until the owner has made the visual and licensing decisions listed in `dau2/GAP_REPORT.md`.

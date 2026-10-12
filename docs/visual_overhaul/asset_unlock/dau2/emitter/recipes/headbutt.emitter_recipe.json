@@ -1,0 +1,474 @@
+{
+ "cross_game_agreement": {
+  "diamond": {
+   "differing_blocks": [],
+   "emitter_records_identical_to_platinum": true,
+   "emitters": 2,
+   "sha256": "e3c0a7b9b0bd81ebd99cf92ab13bcf406b9d7a1061b85bcbc33d666c4accd2ec",
+   "textures_identical_by_visual_sha": true,
+   "unit": "diamond:files/wazaeffect/effectdata/waza_particle/narc_0059.bin"
+  },
+  "hgss": {
+   "differing_blocks": [],
+   "emitter_records_identical_to_platinum": true,
+   "emitters": 2,
+   "sha256": "2eaa55fffa2c27604bbf655f20d4bccd82964fb0244b0575cbd8e071a9880770",
+   "textures_identical_by_visual_sha": true,
+   "unit": "hgss:files/a/0/2/9#60"
+  }
+ },
+ "purpose": "declarative description of a decoded SPL effect for later hand-mapping into Opal's existing animation macros; NOT a runtime interpreter",
+ "replay": {
+  "assumptions": [
+   "RNG seed is caller-supplied (the game seeds gSPLRandomState at run time)",
+   "all selected emitters are created at frame 0 at the origin (move-script emitter timing/position is not decoded)",
+   "FX_SinIdx/FX_CosIdx are a rounded math.sin stand-in and VEC_Normalize uses floating point, not the NitroSDK tables/fixed sqrt (affects LSBs of placement, not counts or timing)",
+   "the rotation sign convention of MTX_RotX/Y/Z33 used by the spin behaviour is not verified (direction of spin could be mirrored)",
+   "emitter axis tilt for circle/cylinder/hemisphere emission is not modelled (axes assumed world-aligned, hemisphere up = +Y)",
+   "orthographic front camera; world->pixel scale is chosen per preview (the battle camera is not decoded)",
+   "draw types polygon/directional/view-space are exposed as flags but rendered as billboards"
+  ],
+  "emitters_replayed": [
+   0,
+   1
+  ],
+  "frames": 60,
+  "invariants": {
+   "deterministic": true,
+   "particle_age_within_life": true,
+   "peak_live_particles": 17,
+   "spawn_schedule_matches": true,
+   "within_ds_quad_limit": true
+  },
+  "local_preview_files": [
+   "build/dau2/emitter/headbutt_timeline.png",
+   "build/dau2/emitter/headbutt.gif"
+  ],
+  "per_frame_live_particles": [
+   9,
+   17,
+   17,
+   17,
+   17,
+   17,
+   17,
+   17,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   12,
+   4,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "pixel_scale": 17.501,
+  "preview_frames_sha256": "c898dbaa98cfeb2f89cd8f794fe76058c19788ee5a29665875721860aaacdd65",
+  "seed": 729683222,
+  "spawned_per_emission_step": [
+   [
+    4,
+    4
+   ],
+   [
+    1
+   ]
+  ],
+  "state_sha256": "705230e7c1adebdca0fa4574e7f103367cfb0a18223dd9caf4c5811dadb678cd",
+  "undecoded_texture_indices": []
+ },
+ "resource_estimate": {
+  "claim_limit": "static counts from the replay and file headers; not a performance measurement",
+  "gx_3d": {
+   "ds_vertex_limit": 6144,
+   "palette_vram_bytes": 12,
+   "peak_live_particles": 17,
+   "polygons_per_frame_peak": 17,
+   "texture_vram_bytes": 3072,
+   "texture_vram_note": "bytes from the .spa texture records; VRAM placement not modelled",
+   "textures": 3,
+   "vertices_per_frame_peak": 68
+  },
+  "obj_conversion_if_flattened": {
+   "colours": 1,
+   "convertible": true,
+   "frames_estimated": 3,
+   "hue": "white",
+   "largest_frame": [
+    28,
+    28
+   ],
+   "max_oams_per_cell": 1,
+   "obj_tiles": 48,
+   "translucent_pixels_dropped": 367
+  }
+ },
+ "schema": "emitter_recipe/1",
+ "semantics_source": {
+  "RNG": "lib/spl/include/spl_random.h:SPLRandom_Next",
+  "behaviour record layouts": "lib/spl/include/spl_behavior.h",
+  "billboard size = 2*scale (quad -1..1)": "lib/spl/src/spl_draw.c:SPLDraw_Billboard/SPLUtil_DrawXYPlane",
+  "child particles": "lib/spl/src/spl_emit.c:SPLEmitter_EmitChildren",
+  "emitter start/emit gating, per-frame update order": "lib/spl/src/spl_emitter.c:SPLEmitter_Update, spl_manager.c:SPLManager_Update",
+  "gravity/random/magnet/spin/collision/convergence": "lib/spl/src/spl_behavior.c",
+  "header and flag bit layout": "lib/spl/include/spl_resource.h:SPLResourceHeader/SPLResourceFlags",
+  "resource layout / optional-block order": "lib/spl/src/spl_manager.c:SPLManager_LoadResources",
+  "scale/colour/alpha/texture curves": "lib/spl/src/spl_anim.c",
+  "spawn count (fractional accumulator), emission shapes, initial velocity/scale/life": "lib/spl/src/spl_emit.c:SPLEmitter_EmitParticles"
+ },
+ "source": {
+  "archive_path": "res/graphics/battle/particles/headbutt.spa",
+  "effect_kind": "contact",
+  "game": "Pokemon Platinum (this repository)",
+  "move": "Headbutt (P1 heavy_contact)",
+  "sha256": "2eaa55fffa2c27604bbf655f20d4bccd82964fb0244b0575cbd8e071a9880770",
+  "unit": "platinum:res/graphics/battle/particles/headbutt.spa"
+ },
+ "status": "EMITTER_PREVIEW_VERIFIED_AGAINST_SOURCE_PORT_NOT_RUNTIME_CAPTURED",
+ "unknowns": [
+  "which emitters the move script actually creates, when, and where (battle script / particle-index tables not decoded)",
+  "emitter user-callback behaviour (position/velocity updates driven by the battle engine)",
+  "real battle camera and world->screen scale",
+  "NitroSDK fixed-point sin/cos tables and normalise (rounded math.sin / float stand-ins used); MTX_Rot*33 sign convention of the spin behaviour unverified",
+  "draw-time semantics of polygon / directional / view-space draw types (flags kept, not simulated)",
+  "initial gSPLRandomState (caller seed)"
+ ],
+ "verified_fields": {
+  "emitters": [
+   {
+    "alpha": {
+     "end": 1,
+     "in": 26,
+     "loop": 0,
+     "mid": 25,
+     "out": 81,
+     "random_range": 0,
+     "start": 1
+    },
+    "behaviors": {
+     "gravity": {
+      "magnitude_fx16": [
+       0,
+       -61,
+       0
+      ]
+     }
+    },
+    "child": {
+     "color_bgr555": 32767,
+     "dpol_face_emitter": 0,
+     "draw_type": 0,
+     "emission_count": 1,
+     "emission_delay": 0,
+     "emission_interval": 1,
+     "end_scale_fx16": 0,
+     "flip_s": 0,
+     "flip_t": 0,
+     "follow_emitter": 0,
+     "has_alpha_anim": 1,
+     "has_scale_anim": 0,
+     "life": 1,
+     "polygon_ref_plane": 0,
+     "polygon_rot_axis": 0,
+     "random_init_vel_mag_fx16": 0,
+     "rotation_type": 2,
+     "scale_ratio": 45,
+     "texture": 1,
+     "tile_s": 0,
+     "tile_t": 0,
+     "use_child_color": 1,
+     "uses_behaviors": 0,
+     "velocity_ratio": 0
+    },
+    "color": {
+     "end_bgr555": 223,
+     "in": 31,
+     "interpolate": 1,
+     "loop": 0,
+     "out": 146,
+     "peak": 88,
+     "random_start": 0,
+     "start_bgr555": 991
+    },
+    "flags": {
+     "child_fixed_polygon_id": 0,
+     "circle_axis": 0,
+     "draw_children_first": 0,
+     "draw_type": 0,
+     "emission_type": 2,
+     "fixed_polygon_id": 0,
+     "follow_emitter": 0,
+     "has_alpha_anim": 1,
+     "has_child": 1,
+     "has_collision": 0,
+     "has_color_anim": 1,
+     "has_convergence": 0,
+     "has_gravity": 1,
+     "has_magnet": 0,
+     "has_random": 0,
+     "has_rotation": 1,
+     "has_scale_anim": 1,
+     "has_spin": 0,
+     "has_tex_anim": 0,
+     "hide_parent": 0,
+     "polygon_ref_plane": 0,
+     "polygon_rot_axis": 0,
+     "random_init_angle": 1,
+     "randomize_looped_anim": 0,
+     "self_maintaining": 1,
+     "use_view_space": 0
+    },
+    "header": {
+     "air_resistance": 107,
+     "aspect_fx16": 4096,
+     "axis_fx16": [
+      0,
+      4096,
+      0
+     ],
+     "base_alpha": 31,
+     "base_scale_fx32": 975,
+     "color_bgr555": 415,
+     "dbb_scale": 0,
+     "dpol_face_emitter": 0,
+     "emission_count_fx32": 16384,
+     "emission_interval": 1,
+     "emitter_base_pos_fx32": [
+      0,
+      0,
+      0
+     ],
+     "emitter_life": 2,
+     "flip_s": 0,
+     "flip_t": 0,
+     "init_angle": 0,
+     "init_vel_axis_amp_fx32": 1142,
+     "init_vel_pos_amp_fx32": 914,
+     "length_fx32": 0,
+     "loop_frames": 1,
+     "max_rotation": 0,
+     "min_rotation": 0,
+     "particle_life": 19,
+     "polygon_x_fx16": 0,
+     "polygon_y_fx16": 0,
+     "radius_fx32": 2132,
+     "rand_base_scale": 51,
+     "rand_init_vel": 51,
+     "rand_life": 0,
+     "scale_anim_dir": 0,
+     "start_delay": 0,
+     "texture_index": 2,
+     "tile_s": 0,
+     "tile_t": 0,
+     "user_flags": 0
+    },
+    "index": 0,
+    "offset": 32,
+    "scale": {
+     "end_fx16": 3776,
+     "in": 128,
+     "loop": 0,
+     "mid_fx16": 4994,
+     "out": 128,
+     "start_fx16": 7065
+    },
+    "size": 148,
+    "unknown": {
+     "alpha_reserved": [
+      0,
+      0,
+      12
+     ],
+     "child_reserved": [
+      0,
+      4608
+     ],
+     "color_reserved": [
+      0,
+      0,
+      0
+     ],
+     "misc1_reserved_none": 0,
+     "misc2_reserved": 901272,
+     "rand_reserved": 0,
+     "reserved_0x3A": 0,
+     "scale_reserved": [
+      20864,
+      55
+     ],
+     "user_reserved": 0
+    }
+   },
+   {
+    "alpha": {
+     "end": 1,
+     "in": 26,
+     "loop": 0,
+     "mid": 29,
+     "out": 121,
+     "random_range": 0,
+     "start": 1
+    },
+    "behaviors": {},
+    "color": {
+     "end_bgr555": 2015,
+     "in": 100,
+     "interpolate": 1,
+     "loop": 0,
+     "out": 205,
+     "peak": 152,
+     "random_start": 0,
+     "start_bgr555": 32767
+    },
+    "flags": {
+     "child_fixed_polygon_id": 0,
+     "circle_axis": 0,
+     "draw_children_first": 0,
+     "draw_type": 0,
+     "emission_type": 0,
+     "fixed_polygon_id": 0,
+     "follow_emitter": 0,
+     "has_alpha_anim": 1,
+     "has_child": 0,
+     "has_collision": 0,
+     "has_color_anim": 1,
+     "has_convergence": 0,
+     "has_gravity": 0,
+     "has_magnet": 0,
+     "has_random": 0,
+     "has_rotation": 0,
+     "has_scale_anim": 1,
+     "has_spin": 0,
+     "has_tex_anim": 0,
+     "hide_parent": 0,
+     "polygon_ref_plane": 0,
+     "polygon_rot_axis": 0,
+     "random_init_angle": 1,
+     "randomize_looped_anim": 0,
+     "self_maintaining": 1,
+     "use_view_space": 0
+    },
+    "header": {
+     "air_resistance": 63,
+     "aspect_fx16": 4872,
+     "axis_fx16": [
+      0,
+      -4096,
+      0
+     ],
+     "base_alpha": 31,
+     "base_scale_fx32": 3898,
+     "color_bgr555": 19423,
+     "dbb_scale": 0,
+     "dpol_face_emitter": 0,
+     "emission_count_fx32": 4096,
+     "emission_interval": 1,
+     "emitter_base_pos_fx32": [
+      0,
+      0,
+      0
+     ],
+     "emitter_life": 1,
+     "flip_s": 0,
+     "flip_t": 0,
+     "init_angle": 0,
+     "init_vel_axis_amp_fx32": 0,
+     "init_vel_pos_amp_fx32": 0,
+     "length_fx32": 0,
+     "loop_frames": 1,
+     "max_rotation": 0,
+     "min_rotation": 0,
+     "particle_life": 8,
+     "polygon_x_fx16": 0,
+     "polygon_y_fx16": 0,
+     "radius_fx32": 0,
+     "rand_base_scale": 0,
+     "rand_init_vel": 0,
+     "rand_life": 0,
+     "scale_anim_dir": 0,
+     "start_delay": 0,
+     "texture_index": 0,
+     "tile_s": 1,
+     "tile_t": 1,
+     "user_flags": 0
+    },
+    "index": 1,
+    "offset": 180,
+    "scale": {
+     "end_fx16": 8892,
+     "in": 128,
+     "loop": 0,
+     "mid_fx16": 5725,
+     "out": 128,
+     "start_fx16": 2923
+    },
+    "size": 120,
+    "unknown": {
+     "alpha_reserved": [
+      0,
+      0,
+      55
+     ],
+     "color_reserved": [
+      0,
+      0,
+      0
+     ],
+     "misc1_reserved_none": 0,
+     "misc2_reserved": 0,
+     "rand_reserved": 0,
+     "reserved_0x3A": 3,
+     "scale_reserved": [
+      0,
+      0
+     ],
+     "user_reserved": 0
+    }
+   }
+  ]
+ }
+}

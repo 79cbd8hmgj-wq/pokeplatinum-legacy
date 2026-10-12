@@ -1,0 +1,908 @@
+{
+  "project": "Pokemon Opal",
+  "id": "opal_everyday_moves_phase_b9_v2_unified_assets",
+  "authoritative_inputs": [
+    "PR #110 B2-B8 design package",
+    "Claude Code report for commit 48095e86 (user-supplied; not independently verified)",
+    "User directive 2026-10-12: use all accessible asset libraries together, not one donor pool per batch."
+  ],
+  "state": "prioritized_design_handoff_not_implemented",
+  "branch_policy": "PR #110 has been merged per project owner; branch from current main containing its foundation. Do not resurrect old PR head, overwrite foundation, or modify battle balance.",
+  "focus": "Frequent early and midgame visual upgrades with proportional effects and battle cadence preserved",
+  "scope": {
+    "moves": 52,
+    "by_tier": {
+      "P0_early_frequent": 19,
+      "P1_mid_staples": 19,
+      "P2_status_utility": 14
+    },
+    "no_moveset_or_balance_changes": true
+  },
+  "templates": {
+    "physical_contact": "anticipate -> translate attacker or effect proxy -> impact -> target reaction -> restore",
+    "slash_contact": "blade/wind arc -> short glint -> target cut reaction",
+    "speed_contact": "afterimage -> short dash -> impact -> restore",
+    "heavy_contact": "weight transfer -> compressed impact burst -> recovery",
+    "bite": "approaching dark/jaw overlay -> snap -> impact",
+    "fire_small": "small launch cluster -> ember trail -> spark contact -> fade",
+    "water_jet": "launch -> continuous water stream -> splash -> droplets",
+    "water_bubble": "slow varied bubbles -> collision -> pop/ripples",
+    "vine_lash": "windup -> two-part vine strike -> green debris",
+    "leaf_volley": "fanned leaf launch -> rotating cut motion -> flutter",
+    "leaf_homing": "offset launch -> curved travel -> convergence",
+    "electric_small": "short charge -> jumping arc -> crackle",
+    "electric_contact": "attacker charge -> physical impact -> discharge",
+    "ice_snow": "snow dust buildup -> directed freezing gust -> frost fade",
+    "air_gust": "pressure swirl -> streaks -> brief defender flutter",
+    "pierce_contact": "direct thrust -> sharp star-shaped contact flash",
+    "rock_projectile": "rock cast -> staggered impact -> grit fall",
+    "rock_fall": "telegraph -> staggered fall -> dust settle",
+    "psychic_small": "target-side ring ripple -> soft illumination -> dissolve",
+    "status_sound": "pulsing sound rings -> appropriate target indicator",
+    "status_gaze": "user-eye glint -> target glint -> fade",
+    "status_gesture": "brief gesture -> feedback pulse",
+    "wing_strike": "wing arcs -> displaced air -> impact",
+    "fire_contact": "fire orbit -> forward roll -> cinders",
+    "water_contact": "water cocoon -> charge -> splash",
+    "ice_projectile": "crystalline shards -> sharp burst",
+    "ice_wind": "sweeping haze -> frost sparkles",
+    "mud_projectile": "soil clump -> particulate splash",
+    "psychic_beam": "beam build -> oscillating wave -> impact",
+    "star_volley": "staggered glowing stars -> tracking trails",
+    "status_electric": "arcing target net -> settle; only play successful status when confirmed",
+    "status_sleep": "soft looping spiral -> sleep indication when applied",
+    "status_confusion": "rotating visual cluster -> confusion cue when inflicted",
+    "status_powder": "several drifting small emitters -> gently settle -> confirm effect",
+    "status_buff": "user halo/glint -> absorb; do not play on failed stat raise",
+    "status_debuff": "directional grains or aura -> brief stat-lowering cue",
+    "status_bind": "thread shot -> brief knot -> clear",
+    "seed_bind": "seed launch -> small vine sprout -> withdraw",
+    "evasion": "temporary echo silhouettes -> return to one battler"
+  },
+  "moves": [
+    {
+      "move": "Tackle",
+      "tier": "P0_early_frequent",
+      "template": "physical_contact",
+      "visual_intent": "starter/basic impact",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Scratch",
+      "tier": "P0_early_frequent",
+      "template": "slash_contact",
+      "visual_intent": "light claw arcs",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Pound",
+      "tier": "P0_early_frequent",
+      "template": "physical_contact",
+      "visual_intent": "soft heavy contact",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Quick Attack",
+      "tier": "P0_early_frequent",
+      "template": "speed_contact",
+      "visual_intent": "dash and streak",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Bite",
+      "tier": "P0_early_frequent",
+      "template": "bite",
+      "visual_intent": "snap/jaw hit",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Ember",
+      "tier": "P0_early_frequent",
+      "template": "fire_small",
+      "visual_intent": "ember volley",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Water Gun",
+      "tier": "P0_early_frequent",
+      "template": "water_jet",
+      "visual_intent": "coherent stream/splash",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Bubble",
+      "tier": "P0_early_frequent",
+      "template": "water_bubble",
+      "visual_intent": "individual rising bubbles/pop",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Vine Whip",
+      "tier": "P0_early_frequent",
+      "template": "vine_lash",
+      "visual_intent": "whip anticipation/snap",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Razor Leaf",
+      "tier": "P0_early_frequent",
+      "template": "leaf_volley",
+      "visual_intent": "leaf fan + cuts",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "ThunderShock",
+      "tier": "P0_early_frequent",
+      "template": "electric_small",
+      "visual_intent": "branching sparks",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Powder Snow",
+      "tier": "P0_early_frequent",
+      "template": "ice_snow",
+      "visual_intent": "snow swirls",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Gust",
+      "tier": "P0_early_frequent",
+      "template": "air_gust",
+      "visual_intent": "wind streak/leaf debris",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Peck",
+      "tier": "P0_early_frequent",
+      "template": "pierce_contact",
+      "visual_intent": "single sharp thrust",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Rock Throw",
+      "tier": "P0_early_frequent",
+      "template": "rock_projectile",
+      "visual_intent": "debris and impact",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Confusion",
+      "tier": "P0_early_frequent",
+      "template": "psychic_small",
+      "visual_intent": "subtle distortion rings",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Growl",
+      "tier": "P0_early_frequent",
+      "template": "status_sound",
+      "visual_intent": "wave/pulse from user",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Leer",
+      "tier": "P0_early_frequent",
+      "template": "status_gaze",
+      "visual_intent": "eye flash towards target",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Tail Whip",
+      "tier": "P0_early_frequent",
+      "template": "status_gesture",
+      "visual_intent": "motion and debuff cue",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Headbutt",
+      "tier": "P1_mid_staples",
+      "template": "heavy_contact",
+      "visual_intent": "shoulder/head impact",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Slam",
+      "tier": "P1_mid_staples",
+      "template": "heavy_contact",
+      "visual_intent": "heavier contact",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Wing Attack",
+      "tier": "P1_mid_staples",
+      "template": "wing_strike",
+      "visual_intent": "wing arcs and pressure",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Aerial Ace",
+      "tier": "P1_mid_staples",
+      "template": "speed_contact",
+      "visual_intent": "fast double-cut",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Spark",
+      "tier": "P1_mid_staples",
+      "template": "electric_contact",
+      "visual_intent": "charging aura into impact",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Flame Wheel",
+      "tier": "P1_mid_staples",
+      "template": "fire_contact",
+      "visual_intent": "flaming roll",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Aqua Jet",
+      "tier": "P1_mid_staples",
+      "template": "water_contact",
+      "visual_intent": "water-wrapped dash",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "BubbleBeam",
+      "tier": "P1_mid_staples",
+      "template": "water_bubble",
+      "visual_intent": "dense bubbles and burst",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Magical Leaf",
+      "tier": "P1_mid_staples",
+      "template": "leaf_homing",
+      "visual_intent": "curved leafy projectiles",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Metal Claw",
+      "tier": "P1_mid_staples",
+      "template": "steel_slash",
+      "visual_intent": "metal glint/trailing slash",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Rock Tomb",
+      "tier": "P1_mid_staples",
+      "template": "rock_fall",
+      "visual_intent": "rocks converge",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Rock Slide",
+      "tier": "P1_mid_staples",
+      "template": "rock_fall",
+      "visual_intent": "spread rocks",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Crunch",
+      "tier": "P1_mid_staples",
+      "template": "bite",
+      "visual_intent": "powerful closing impact",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Ice Shard",
+      "tier": "P1_mid_staples",
+      "template": "ice_projectile",
+      "visual_intent": "sharp ice pieces",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Icy Wind",
+      "tier": "P1_mid_staples",
+      "template": "ice_wind",
+      "visual_intent": "chilling current",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Mud Shot",
+      "tier": "P1_mid_staples",
+      "template": "mud_projectile",
+      "visual_intent": "earth splash",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Mud Bomb",
+      "tier": "P1_mid_staples",
+      "template": "mud_projectile",
+      "visual_intent": "heavy earthen orb",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Psybeam",
+      "tier": "P1_mid_staples",
+      "template": "psychic_beam",
+      "visual_intent": "colored psychic pulse",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Swift",
+      "tier": "P1_mid_staples",
+      "template": "star_volley",
+      "visual_intent": "star trails",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Thunder Wave",
+      "tier": "P2_status_utility",
+      "template": "status_electric",
+      "visual_intent": "electric bind/brief paralysis",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Hypnosis",
+      "tier": "P2_status_utility",
+      "template": "status_sleep",
+      "visual_intent": "spiral and drowse",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Confuse Ray",
+      "tier": "P2_status_utility",
+      "template": "status_confusion",
+      "visual_intent": "looping ghost orbs",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Poison Powder",
+      "tier": "P2_status_utility",
+      "template": "status_powder",
+      "visual_intent": "poison pollen",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Sleep Powder",
+      "tier": "P2_status_utility",
+      "template": "status_powder",
+      "visual_intent": "sleep pollen",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Stun Spore",
+      "tier": "P2_status_utility",
+      "template": "status_powder",
+      "visual_intent": "stun pollen",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Swords Dance",
+      "tier": "P2_status_utility",
+      "template": "status_buff",
+      "visual_intent": "orbiting blades",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Defense Curl",
+      "tier": "P2_status_utility",
+      "template": "status_buff",
+      "visual_intent": "defensive curl glint",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Focus Energy",
+      "tier": "P2_status_utility",
+      "template": "status_buff",
+      "visual_intent": "focus tightening",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Sand Attack",
+      "tier": "P2_status_utility",
+      "template": "status_debuff",
+      "visual_intent": "directed grains",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "String Shot",
+      "tier": "P2_status_utility",
+      "template": "status_bind",
+      "visual_intent": "thread arc",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Leech Seed",
+      "tier": "P2_status_utility",
+      "template": "seed_bind",
+      "visual_intent": "seed impact + vine strands",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Supersonic",
+      "tier": "P2_status_utility",
+      "template": "status_sound",
+      "visual_intent": "resonant sound waves",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    },
+    {
+      "move": "Double Team",
+      "tier": "P2_status_utility",
+      "template": "evasion",
+      "visual_intent": "echo silhouettes",
+      "status": "design_proposal_unverified",
+      "source_animation": "locate_in_pr110_head",
+      "runtime_tests": [
+        "single battle",
+        "double battle",
+        "miss/protect/immunity as applicable",
+        "animation speed/interrupt restoration"
+      ],
+      "duration_policy": "no extension to ordinary battle cadence without demonstrated visual payoff"
+    }
+  ],
+  "implementation": {
+    "first_batch": "P0_early_frequent, split into small logical commits (contact, elemental, status)",
+    "preflight": "Use repository source map and existing opal cue macros; verify exact vanilla move scripts and which animations already overlap with B2-B8. Reuse pre-existing effect assets before new imports. Confirm the exact target revision and compile base.",
+    "asset_policy": "Verified existing Platinum and previously imported Emerald parts first. New donor candidates must be documented by filename, hash, license provenance, conversion method, and in-game resource IDs. No assumed asset paths.",
+    "quality": "Animations should be immediately legible, specific to attack, diverse in their effect silhouettes, no more than a minor duration increase; design for repeated viewing, with restrained bright flashes.",
+    "guardrails": [
+      "No battle-mechanics changes, damage/status/probability changes or move distribution changes",
+      "No new script interpreter unless required by evidence",
+      "Never apply hit/blocked/status animations before battle outcome is known",
+      "Respect target selection in doubles, spread attacks, contests and Substitute",
+      "Restore camera/BG palette/OBJ/OAM on successful, miss, blocked, skip, fade, early-exit paths",
+      "Test reduced motion and low-flash configurations",
+      "Preserve current PR #110 B2-B8 content"
+    ],
+    "validation": [
+      "CI rev0/rev1 build",
+      "existing source-gates and cue trace",
+      "asset resource/memory counts",
+      "coverage report maps each enhanced move to verified animation script",
+      "emulator side by side with vanilla for frequent repeated battle turns",
+      "doubles, weather, Substitute, Protect, flinches, faint/interrupt",
+      "performance measurement on emulator and hardware when available"
+    ],
+    "definition_of_done": "Only mark moves tested after screenshots/video or emulator QA; source compilation alone is not visual acceptance.",
+    "prerequisites": [
+      "Confirm main contains merged PR #110 foundation",
+      "Inventory every locally available donor repository and archive",
+      "Build cross-pool candidate table and scoped recipe before changing animations"
+    ]
+  },
+  "asset_strategy": {
+    "policy": "UNIFIED_MULTI_SOURCE_ASSET_DEVELOPMENT",
+    "unrestricted_search": "Search every actually available and authorized donor inventory in parallel or one coordinated index, not sequential one-game passes. Explicitly record what was searched and what was unavailable.",
+    "candidate_sources": [
+      "Platinum native assets",
+      "Emerald",
+      "FireRed/LeafGreen",
+      "Ruby/Sapphire",
+      "HeartGold/SoulSilver",
+      "Pokemon Ranger series",
+      "Pokemon Mystery Dungeon series",
+      "Crystal/other available titles",
+      "original procedural/custom graphics"
+    ],
+    "selection_rule": "Choose best complementary ingredients based on visual fidelity, expressive mechanics, stylistic consistency, palette/OBJ/OAM/VRAM constraints, animation sequencing, and measurable rendering cost. Multiple donors optional, not mandatory.",
+    "asset_recipe_fields": [
+      "move",
+      "host_script_and_resource_verified",
+      "donor_source",
+      "exact_source_path_and_hash",
+      "intended_component",
+      "conversion_pipeline",
+      "visual_role",
+      "palette_and_priority",
+      "budget_estimate",
+      "license_provenance",
+      "fallback",
+      "runtime_QA"
+    ],
+    "no_fake_evidence": "Never invent donor paths, resource IDs, ROM budgets, existing files, or licensing terms. Unknowns are tracked as verification tasks.",
+    "no_default_rejection": "Do not reject assets solely due to format mismatch; attempt feasibility evaluation of conversion, compositing or renderer extension before rejecting. Reject with measured or source-backed reason.",
+    "style_rule": "Finished effects must feel Platinum-native and move-specific. Reuse primitives with distinctive choreography, without generic overlay spam.",
+    "performance": "Keep repeat-use attacks brisk; preserve low-flash/reduced-motion variants; no gameplay changes."
+  }
+}
