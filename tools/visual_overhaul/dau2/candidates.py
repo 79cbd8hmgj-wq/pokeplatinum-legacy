@@ -34,11 +34,12 @@ MIN_FAMILIES = 3            # source families spanned by all candidates (cross-l
 TILE_BUDGET = 192
 
 
-def build_assets(catalog: dict, fdoc: dict) -> dict[str, dict]:
+def build_assets(catalog: dict, fdoc: dict, labels: dict | None = None) -> dict[str, dict]:
     """All convertible DECODED units (+ Platinum-native) with name/alignment, features, and visual-duplicate grouping."""
     units = [u for u in catalog["units"] if u["status"] == "DECODED"] + [u for u in fdoc["platinum_units"] if u["status"] == "DECODED"]
     align = A.spl_alignment(catalog["units"] + fdoc["platinum_units"], fdoc["platinum_order"])
     out = {}
+    lab = {r["container"]: r for r in (labels or {}).get("containers", [])}
     for u in units:
         o = (u.get("extra") or {}).get("opal_fx")
         if not o or not o.get("convertible"):
@@ -56,7 +57,7 @@ def build_assets(catalog: dict, fdoc: dict) -> dict[str, dict]:
             if basis is None:
                 name = None
         feat = fdoc["features"].get(u["id"], {"usable": False})
-        out[u["id"]] = {"unit": u, "name": name, "name_basis": basis, "alignment": align.get(u["id"], {}).get("basis"),
+        out[u["id"]] = {"unit": u, "name": name, "name_basis": basis, "alignment": align.get(u["id"], {}).get("basis"), "hgss_label": lab.get(u["source"]) if lib == "hgss" else None,
                         "features": feat, "family": FAMILIES[lib]}
     # visual duplicate groups: one canonical per rendering (platinum > gba order > diamond > hgss ...)
     groups = defaultdict(list)
@@ -125,6 +126,9 @@ def heuristic_scope(a: dict) -> str | None:
     (HGSS cell banks carry no effect/UI label - they are deliberately not searched by hue/shape.)"""
     u = a["unit"]
     lib, src, t = u["library"], u["source"], u["type"]
+    if lib == "hgss" and t == "nitro_cell_bank":          # only containers identified as an effect category (source/owner-backed) are searched
+        lb = a.get("hgss_label")
+        return f"hgss cell-bank container identified as {lb['category']} ({lb['basis']})" if lb and lb["auto_eligible"] else None
     if lib == "pmd_sky" and t == "pmd_effect_wan":
         return "pmd_sky effect.bin entry"
     if lib == "ranger2" and t == "nitro_cell_bank" and "/effect/" in src:
@@ -140,13 +144,13 @@ def _fit(a: dict, spec: dict) -> float:
     return feature_score(a["features"], spec["feat"], a["unit"]["type"] == "spl_particle_archive") if a["features"].get("usable") else 0.5
 
 
-def _match(a: dict, spec: dict, move_slug: str) -> tuple[str, float, dict] | None:
+def _match(a: dict, spec: dict, move_slug: str, native_spa: str = "") -> tuple[str, float, dict] | None:
     name = a["name"]
     ev = {}
     if a["name_basis"] == "named_move_particle":
         names = a.get("names_all") or [name]                  # files with pixel-identical textures share one canonical rendering
         hit = [n for n in spec["plat"] if n in names]
-        if hit and move_slug not in names:                    # a rendering equal to the same-move file is the native_baseline, not a new candidate
+        if hit and move_slug not in names and native_spa not in names:                    # a rendering equal to the same-move file is the native_baseline, not a new candidate
             fit = _fit(a, spec)
             ev = {"native_same_move": False, "particle_name": hit[0], "shape_hue_fit": round(fit, 2)}
             if len(names) > 1:
@@ -228,17 +232,18 @@ def candidate_record(a: dict, basis: str, score: float, ev: dict, component: str
     }
 
 
-def build_matrix(catalog: dict, fdoc: dict, binding: dict, observations: dict | None = None) -> dict:
-    assets = build_assets(catalog, fdoc)
+def build_matrix(catalog: dict, fdoc: dict, binding: dict, observations: dict | None = None, labels: dict | None = None) -> dict:
+    assets = build_assets(catalog, fdoc, labels)
     src_rev = {s["library"]: s.get("commit") for s in catalog["sources"]}
     src_rev["platinum"] = fdoc.get("platinum_revision")
     canon = {i: a for i, a in assets.items() if "alias_of" not in a}
     plat_by_name = {u["source"].rsplit("/", 1)[-1][:-4]: u for u in fdoc["platinum_units"] if "/pokeballs/" not in u["source"]}
 
-    def native_status(slug_: str) -> dict:
+    def native_status(slug_: str, script: dict | None = None) -> dict:
         u = plat_by_name.get(slug_)
         if u is None:
-            return {"file": None, "status": "NO_PLATINUM_PARTICLE_FILE", "note": "this move has no .spa in res/graphics/battle/particles (its vanilla animation is script/sprite based)"}
+            return {"file": None, "status": "NO_PLATINUM_PARTICLE_FILE", "note": "the native script loads no .spa from res/graphics/battle/particles (script/sprite based)"
+                    + (f"; sprite resources: {sorted(set(script['sprite_resources']))}" if script and script.get("sprite_resources") else "")}
         if u["status"] == "DECODED":
             return {"file": u["source"], "status": "DECODED", "emitters": (u.get("extra") or {}).get("emitters")}
         return {"file": u["source"], "status": "EMPTY_OR_UNDECODABLE", "emitters": (u.get("extra") or {}).get("emitters"),
@@ -250,12 +255,16 @@ def build_matrix(catalog: dict, fdoc: dict, binding: dict, observations: dict | 
             continue
         q = MOVE_QUERIES[row["move"]]
         mslug = row["slug"]
+        nat = (binding.get("native_scripts") or {}).get(mslug) or {}
+        nspa = nat.get("spa") or mslug               # the archive the NATIVE script actually loads (not always the same-name file)
         board = f"boards/{'P1' if row['tier'].startswith('P1') else 'P2'}_{mslug}.png"
         comps, cand_list = {}, []
-        native_id = next((i for i, a in assets.items() if a["name_basis"] == "named_move_particle" and a["name"] == mslug
+        native_id = next((i for i, a in assets.items() if a["name_basis"] == "named_move_particle" and a["name"] == nspa
                           and a["unit"]["library"] == "platinum"), None)     # the exact Platinum file, even when its textures alias another
         if native_id is not None:
-            nev = {"native_same_move": True, "particle_name": mslug}
+            nev = {"native_same_move": True, "particle_name": nspa}
+            if nspa != mslug:
+                nev["note"] = f"the native script loads '{nspa}.spa', not '{mslug}.spa'"
             if "alias_of" in assets[native_id]:
                 nev["textures_identical_to"] = assets[native_id]["alias_of"]
             rec = candidate_record(assets[native_id], "named_move_particle", 1.0, nev,
@@ -266,7 +275,7 @@ def build_matrix(catalog: dict, fdoc: dict, binding: dict, observations: dict | 
         for comp, spec in q.items():
             named, heur = [], []
             for i, a in canon.items():
-                m = _match(a, spec, mslug)
+                m = _match(a, spec, mslug, nspa)
                 if not m:
                     continue
                 basis, sc, ev = m
@@ -304,7 +313,7 @@ def build_matrix(catalog: dict, fdoc: dict, binding: dict, observations: dict | 
             r["board_cell_index"] = n
             ob = (observations or {}).get(row["move"], {}).get(r["asset_id"])
             if ob:
-                r["visual_review"]["model_observation"] = ob
+                r["visual_review"]["model_observation"] = {**{k: v for k, v in ob.items() if k != "board_cell"}, "board_cell": r["board_cell_index"]}
         fam_all = sorted({r["family"] for r in cands})
         fam_verified = sorted({r["family"] for r in cands if r["evidence_basis"] != "feature_heuristic"})
         n_named = len({r["visual_sha256"] for r in cands if r["evidence_basis"] != "feature_heuristic"})
@@ -315,10 +324,10 @@ def build_matrix(catalog: dict, fdoc: dict, binding: dict, observations: dict | 
             reasons.append(f"{n_named} distinct name-backed rendering(s) (need {MIN_NAME_BACKED}) across {len(fam_all)} famil(ies) (need {MIN_FAMILIES}); "
                            f"name-backed families: {', '.join(fam_verified) or 'none'}")
         if not native:
-            reasons.append(f"no usable same-move Platinum particle: {native_status(mslug)['status']}")
+            reasons.append(f"no usable native Platinum particle: {native_status(nspa if nat.get('spa') else '', nat)['status']}")
         moves_out.append({
             "move": row["move"], "tier": row["tier"], "slug": mslug, "template": row["template"], "visual_intent": row["visual_intent"],
-            "anim_script": row["anim_script"], "native_platinum_particle": native_status(mslug), "board": board, "status": status, "status_reasons": reasons,
+            "anim_script": row["anim_script"], "native_platinum_particle": native_status(nspa if nat.get("spa") else "", nat), "native_script": {k: nat.get(k) for k in ("spa", "native_duration_lb_frames", "first_defender_emitter_frame_lb", "emitters", "sprite_resources", "opal_cues")}, "board": board, "status": status, "status_reasons": reasons,
             "families_all": fam_all, "families_name_backed": fam_verified, "name_backed_renderings": n_named, "candidate_count": len(cands),
             "components": comps, "candidates": cands,
             "visual_decision": "AWAITING_OWNER_REVIEW",
@@ -338,5 +347,6 @@ def build_matrix(catalog: dict, fdoc: dict, binding: dict, observations: dict | 
     }
     return {"schema_version": 1, "generated_by": "tools/visual_overhaul/dau2_curate.py matrix",
             "policy": {"min_name_backed_renderings": MIN_NAME_BACKED, "min_families": MIN_FAMILIES, "named_per_component": NAMED_PER_COMPONENT, "heuristic_per_component": HEUR_PER_COMPONENT, "feature_threshold": FEATURE_THRESHOLD,
-                       "heuristics_never_approve": True},
+                       "heuristics_never_approve": True,
+                       "hgss_cell_banks": (labels or {}).get("summary") and {k: labels["summary"][k] for k in ("containers", "identified", "unidentified", "banks_decoded_auto_eligible", "banks_decoded_unidentified")}},
             "summary": summary, "moves": moves_out}

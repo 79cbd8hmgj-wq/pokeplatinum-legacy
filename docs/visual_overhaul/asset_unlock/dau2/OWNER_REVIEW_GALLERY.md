@@ -122,10 +122,10 @@ Board: `build/dau2/boards/P1_spark.png` - status `READY_FOR_OWNER_REVIEW`; nativ
 
 | # | Component | Basis | Library | Asset (immutable id) | Model observation (advisory) | Owner decision |
 |---:|---|---|---|---|---|---|
-| 0 | native_baseline | named move particle | platinum | `platinum:res/graphics/battle/particles/spark.spa` | - | AWAITING_OWNER_REVIEW |
+| 0 | native_baseline | named move particle | platinum | `platinum:res/graphics/battle/particles/discharge.spa` | PLAUSIBLE_ON_SIGHT: thunder_punch masks: jagged bolt silhouettes | AWAITING_OWNER_REVIEW |
 | 1 | impact | named source | emerald | `emerald:graphics/battle_anims/sprites/impact.png` | PLAUSIBLE_ON_SIGHT: yellow starburst impact | AWAITING_OWNER_REVIEW |
 | 2 | impact | named source | emerald | `emerald:graphics/battle_anims/sprites/horn_hit_2.png` | NEEDS_CLOSER_LOOK: orange dart, speed marker | AWAITING_OWNER_REVIEW |
-| 3 | impact | named move particle | platinum | `platinum:res/graphics/battle/particles/discharge.spa` | PLAUSIBLE_ON_SIGHT: thunder_punch masks: jagged bolt silhouettes | AWAITING_OWNER_REVIEW |
+| 3 | impact | named move particle | platinum | `platinum:res/graphics/battle/particles/thunder_punch.spa` | - | AWAITING_OWNER_REVIEW |
 | 4 | impact | feature heuristic | pmd_sky | `pmd_sky:files/EFFECT/effect.bin#253` | PLAUSIBLE_ON_SIGHT: starburst frames | AWAITING_OWNER_REVIEW |
 | 5 | impact | feature heuristic | ranger2 | `ranger2:res/prebuilt/data/field/effect/ef014_LZ.bin#2` | PLAUSIBLE_ON_SIGHT: ring + explosion burst | AWAITING_OWNER_REVIEW |
 | 6 | launch | named source | emerald | `emerald:graphics/battle_anims/sprites/electricity.png` | ILLEGIBLE_OR_TOO_SMALL: tiny sparks strip, judge in animation | AWAITING_OWNER_REVIEW |
@@ -208,7 +208,7 @@ Board: `build/dau2/boards/P1_magical_leaf.png` - status `READY_FOR_OWNER_REVIEW`
 
 ### Metal Claw (P1) - `steel_slash`: metal glint/trailing slash
 
-Board: `build/dau2/boards/P1_metal_claw.png` - status `READY_FOR_OWNER_REVIEW`; native Platinum particle: `EMPTY_OR_UNDECODABLE`.
+Board: `build/dau2/boards/P1_metal_claw.png` - status `READY_FOR_OWNER_REVIEW`; native Platinum particle: `NO_PLATINUM_PARTICLE_FILE`.
 
 | # | Component | Basis | Library | Asset (immutable id) | Model observation (advisory) | Owner decision |
 |---:|---|---|---|---|---|---|
@@ -589,7 +589,7 @@ Board: `build/dau2/boards/P2_leech_seed.png` - status `READY_FOR_OWNER_REVIEW`; 
 
 | # | Component | Basis | Library | Asset (immutable id) | Model observation (advisory) | Owner decision |
 |---:|---|---|---|---|---|---|
-| 0 | native_baseline | named move particle | platinum | `platinum:res/graphics/battle/particles/leech_seed.spa` | - | AWAITING_OWNER_REVIEW |
+| 0 | native_baseline | named move particle | platinum | `platinum:res/graphics/battle/particles/bullet_seed.spa` | NEEDS_CLOSER_LOOK: bullet_seed masks: burst + metallic ball | AWAITING_OWNER_REVIEW |
 | 1 | reaction | named source | emerald | `emerald:graphics/battle_anims/sprites/vine.png` | PLAUSIBLE_ON_SIGHT: green vine strip: strand reaction | AWAITING_OWNER_REVIEW |
 | 2 | reaction | named source | emerald | `emerald:graphics/battle_anims/sprites/vine_2.png` | PLAUSIBLE_ON_SIGHT: green vine strip | AWAITING_OWNER_REVIEW |
 | 3 | reaction | named move particle | platinum | `platinum:res/graphics/battle/particles/vine_whip.spa` | NEEDS_CLOSER_LOOK: vine_whip masks: burst + crescents | AWAITING_OWNER_REVIEW |
@@ -597,7 +597,7 @@ Board: `build/dau2/boards/P2_leech_seed.png` - status `READY_FOR_OWNER_REVIEW`; 
 | 5 | reaction | feature heuristic | pmd_sky | `pmd_sky:files/EFFECT/effect.bin#161` | NEEDS_CLOSER_LOOK: green ring and dots | AWAITING_OWNER_REVIEW |
 | 6 | travel | named source | emerald | `emerald:graphics/battle_anims/sprites/seed_2.png` | PLAUSIBLE_ON_SIGHT: green seed - clear Leech Seed projectile | AWAITING_OWNER_REVIEW |
 | 7 | travel | named move particle | platinum | `platinum:res/graphics/battle/particles/seed_bomb.spa` | NEEDS_CLOSER_LOOK: seed_bomb masks: puffs and metal ball | AWAITING_OWNER_REVIEW |
-| 8 | travel | named move particle | platinum | `platinum:res/graphics/battle/particles/bullet_seed.spa` | NEEDS_CLOSER_LOOK: bullet_seed masks: burst + metallic ball | AWAITING_OWNER_REVIEW |
+| 8 | travel | named move particle | platinum | `platinum:res/graphics/battle/particles/absorb.spa` | - | AWAITING_OWNER_REVIEW |
 | 9 | travel | feature heuristic | diamond | `diamond:files/wazaeffect/effectclact/wecell/narc_0010.NCER` | WRONG_ON_SIGHT: green target icons | AWAITING_OWNER_REVIEW |
 | 10 | travel | feature heuristic | pmd_sky | `pmd_sky:files/EFFECT/effect.bin#145` | PLAUSIBLE_ON_SIGHT: green orbs/spheres read as seeds | AWAITING_OWNER_REVIEW |
 

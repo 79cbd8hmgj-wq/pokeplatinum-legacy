@@ -18,7 +18,7 @@
 
 1. **The B9 everyday-moves manifest** (`pokemon_opal_everyday_moves_b9_manifest_v2`, which names the 19 P1 and 14 P2 moves) - not in the repo or the DAU1 package. Until it is supplied the matrix is keyed by *effect role* (fire, water, ice, ...) instead of by move.
 2. **A visual pass** over the anonymous decoded donors (PMD / HGSS / Ranger / Diamond have no names; only a dominant-hue hint exists). The matrix marks them `needs_visual_review`.
-3. **Licence / release decision** for every donor pool (`PROVENANCE.md`), including whether the committed excerpt PNGs may stay.
+3. **Licence / release decision** for every donor pool (`PROVENANCE.md`), (the committed excerpt PNGs were removed from version control in DAU2 and kept as local copies).
 
 ## Optional follow-ups the evidence now justifies (not required for the gate)
 

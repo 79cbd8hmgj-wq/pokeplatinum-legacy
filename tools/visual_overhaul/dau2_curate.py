@@ -30,7 +30,7 @@ def main() -> int:
     p.add_argument("--build", type=Path, default=ROOT / "build/dau2", help="local, untracked preview output")
     p.add_argument("--manifest", type=Path, help="B9 v2 manifest to import (default: the committed copy)")
     sub = p.add_subparsers(dest="cmd", required=True)
-    for c in ("manifest", "features", "matrix", "sheets", "emitters", "package", "check", "all"):
+    for c in ("manifest", "features", "labels", "matrix", "recipes", "sheets", "emitters", "package", "check", "all"):
         sub.add_parser(c)
     a = p.parse_args()
     return cli.run(a, ROOT)

@@ -32,6 +32,22 @@ def committed_manifest(a) -> Path:
     return a.out / SRC_DIR / MANIFEST_NAME
 
 
+def native_scripts(bound: dict, root: Path) -> dict:
+    """Per bound move: what the native anim.s creates (archive, emitters, callbacks, lower-bound frames) joined with the archive's emitter lifetimes."""
+    from . import native_scripts as N, spl_emitter as E
+    out = {}
+    for r in bound["moves"]:
+        if not r["anim_script"]:
+            continue
+        s0 = N.read_script(root / r["anim_script"])
+        hdr = None
+        spa = root / "res/graphics/battle/particles" / f"{s0['spa']}.spa" if s0["spa"] else None
+        if spa is not None and spa.exists():
+            hdr = {e.index: e.header for e in E.parse_emitters(spa.read_bytes()).emitters}
+        out[r["slug"]] = N.analyse(root, r["slug"], hdr)
+    return out
+
+
 def cmd_manifest(a, root: Path) -> int:
     dst = committed_manifest(a)
     if a.manifest:                                                  # importing: verify SHA BEFORE copying, copy byte-for-byte
@@ -42,6 +58,7 @@ def cmd_manifest(a, root: Path) -> int:
     doc = M.load(dst)
     idx = (dst.parent / "P1_P2_MOVE_INDEX.md")
     bound = M.bind(doc, root, idx.read_text() if idx.exists() else None)
+    bound["native_scripts"] = native_scripts(bound, root)
     bound["manifest"] = {"file": f"docs/visual_overhaul/asset_unlock/dau2/{SRC_DIR}/{MANIFEST_NAME}", "sha256": M.PINNED_SHA256,
                          "id": doc["id"], "state": doc["state"], "scope": doc["scope"]}
     write_json(a.out / "B9_P1_P2_BINDING.json", bound)
@@ -57,7 +74,8 @@ def cmd_features(a, root: Path) -> int:
         return 2
     from . import assets as A
     doc, punits, feats, order, _, _ = A.build_features(a.workspace.resolve(), root)
-    rev = subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
+    # stable pin: the last commit that touched the Platinum particle archives (HEAD would change with every unrelated commit)
+    rev = subprocess.run(["git", "-C", str(root), "log", "-1", "--format=%H", "--", "res/graphics/battle/particles"], capture_output=True, text=True).stdout.strip()
     out = {"schema_version": 1, "generated_by": "tools/visual_overhaul/dau2_curate.py features",
            "platinum_revision": rev, "platinum_order": order, "platinum_units": punits,
            "libraries_present": sorted({u["library"] for u in doc["units"]}),
@@ -74,12 +92,17 @@ def load_features(a) -> dict:
     return d
 
 
+def load_labels(a):
+    p = a.out / "HGSS_CELL_BANK_LABELS.json"
+    return json.loads(p.read_text()) if p.exists() else None
+
+
 def cmd_matrix(a, root: Path) -> int:
     from . import candidates as C
     binding = json.loads((a.out / "B9_P1_P2_BINDING.json").read_text())
     obs_p = a.out / "model_visual_observations.json"
     obs = json.loads(obs_p.read_text())["observations"] if obs_p.exists() else {}
-    m = C.build_matrix(load_catalog(root), load_features(a), binding, obs)
+    m = C.build_matrix(load_catalog(root), load_features(a), binding, obs, load_labels(a))
     dump_json_lines(m, "moves", a.out / "MOVE_CANDIDATE_MATRIX.json")
     from .report import matrix_markdown, review_queue
     (a.out / "MOVE_CANDIDATE_MATRIX.md").write_text(matrix_markdown(m))
@@ -94,7 +117,7 @@ def cmd_matrix(a, root: Path) -> int:
 
 def run(a, root: Path) -> int:
     fn = {"manifest": cmd_manifest, "features": cmd_features, "matrix": cmd_matrix}.get(a.cmd)
-    if a.cmd in ("sheets", "emitters", "check", "all", "package"):
+    if a.cmd in ("sheets", "emitters", "check", "all", "package", "labels", "recipes"):
         from . import cli2
         fn = getattr(cli2, "cmd_" + a.cmd)
     return fn(a, root)

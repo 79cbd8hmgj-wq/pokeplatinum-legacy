@@ -1,0 +1,1813 @@
+{
+ "auto_eligible_categories": [
+  "battle_move_effect",
+  "field_weather_effect"
+ ],
+ "containers": [
+  {
+   "auto_eligible": false,
+   "banks": 17,
+   "banks_decoded": 17,
+   "basis": "SOURCE_REFERENCE",
+   "category": "pokemon_graphic",
+   "container": "files/a/0/0/6",
+   "evidence": "src/pokemon.c; src/pokepic.c",
+   "label": "used by pokemon.c, pokepic.c",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 56,
+   "banks_decoded": 2,
+   "basis": "SOURCE_REFERENCE",
+   "category": "battle_ui",
+   "container": "files/a/0/0/8",
+   "evidence": "src/battle/battle_022378C0.c; src/battle/battle_command.c; src/battle/battle_cursor.c; src/battle/battle_hp_bar.c",
+   "label": "used by battle_022378C0.c, battle_command.c, battle_cursor.c",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 19,
+   "banks_decoded": 11,
+   "basis": "SOURCE_REFERENCE",
+   "category": "menu_ui",
+   "container": "files/a/0/1/4",
+   "evidence": "asm/overlay_27.s; src/naming_screen.c; src/start_menu.c; src/touch_save_app.c",
+   "label": "used by overlay_27.s, naming_screen.c, start_menu.c",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 8,
+   "banks_decoded": 6,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/1/5",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 5,
+   "banks_decoded": 3,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/1/9",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 37,
+   "banks_decoded": 0,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/2/4",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 8,
+   "banks_decoded": 5,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/2/6",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/2/8",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 12,
+   "banks_decoded": 0,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/3/5",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "SOURCE_REFERENCE",
+   "category": "battle_ui",
+   "container": "files/a/0/3/8",
+   "evidence": "src/alph_puzzle.c; src/battle/battle_command.c; src/overlay_44_02231A14.c",
+   "label": "used by alph_puzzle.c, battle_command.c, overlay_44_02231A14.c",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 14,
+   "banks_decoded": 6,
+   "basis": "SOURCE_REFERENCE_NO_CATEGORY",
+   "category": "unidentified",
+   "container": "files/a/0/3/9",
+   "evidence": "src/overlay_44_02231A14.c",
+   "label": "referenced only by overlay_44_02231A14.c (anonymous overlay code)",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 2,
+   "banks_decoded": 2,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/4/5",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "trainer_or_character_sprite",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 13,
+   "banks_decoded": 7,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/4/8",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "unclear",
+    "note": "pink crescent shape; could be a move/animation fragment",
+    "owner_confirmation_requested": true
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 2,
+   "banks_decoded": 2,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/4/9",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/5/1",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 2,
+   "banks_decoded": 2,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/5/2",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "minigame",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 2,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/5/4",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 129,
+   "banks_decoded": 129,
+   "basis": "SOURCE_REFERENCE",
+   "category": "pokemon_graphic",
+   "container": "files/a/0/5/8",
+   "evidence": "src/pokemon.c; src/pokepic.c",
+   "label": "used by pokemon.c, pokepic.c",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 3,
+   "banks_decoded": 3,
+   "basis": "SOURCE_REFERENCE",
+   "category": "menu_ui",
+   "container": "files/a/0/6/0",
+   "evidence": "src/overlay_03/shop_menu.c",
+   "label": "used by shop_menu.c",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 2,
+   "banks_decoded": 2,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/6/2",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 9,
+   "banks_decoded": 9,
+   "basis": "SOURCE_REFERENCE_NO_CATEGORY",
+   "category": "unidentified",
+   "container": "files/a/0/6/3",
+   "evidence": "asm/overlay_01_021EB1E8.s",
+   "label": "referenced only by overlay_01_021EB1E8.s (anonymous overlay code)",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 3,
+   "banks_decoded": 3,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/6/4",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 18,
+   "banks_decoded": 0,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/6/7",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/7/1",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 4,
+   "banks_decoded": 0,
+   "basis": "SOURCE_REFERENCE",
+   "category": "menu_ui",
+   "container": "files/a/0/7/2",
+   "evidence": "src/options_app.c",
+   "label": "used by options_app.c",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 0,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/7/3",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/7/6",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 0,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/7/8",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/8/0",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/8/3",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/8/5",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 9,
+   "banks_decoded": 0,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/8/7",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 3,
+   "banks_decoded": 2,
+   "basis": "SOURCE_REFERENCE_NO_CATEGORY",
+   "category": "unidentified",
+   "container": "files/a/0/8/8",
+   "evidence": "src/overlay_44_0222CDAC.c; src/overlay_44_02231A14.c; src/overlay_44_02235340.c",
+   "label": "referenced only by overlay_44_0222CDAC.c, overlay_44_02231A14.c, overlay_44_02235340.c (anonymous overlay code)",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 2,
+   "banks_decoded": 2,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/8/9",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 0,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/9/1",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 3,
+   "banks_decoded": 3,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/0/9/7",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "pokemon_sprite",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 3,
+   "banks_decoded": 0,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/0/0",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 3,
+   "banks_decoded": 3,
+   "basis": "SOURCE_REFERENCE",
+   "category": "demo",
+   "container": "files/a/1/0/1",
+   "evidence": "src/register_hall_of_fame.c",
+   "label": "used by register_hall_of_fame.c",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/0/4",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "minigame",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 44,
+   "banks_decoded": 42,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/0/9",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "trainer_or_character_sprite",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 4,
+   "banks_decoded": 2,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/1/0",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 6,
+   "banks_decoded": 6,
+   "basis": "SOURCE_REFERENCE",
+   "category": "menu_ui",
+   "container": "files/a/1/1/3",
+   "evidence": "src/application/main_menu/main_menu.c",
+   "label": "used by main_menu.c",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 2,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/1/5",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/1/8",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 5,
+   "banks_decoded": 2,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/2/2",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "trainer_or_character_sprite",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/2/4",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 2,
+   "banks_decoded": 1,
+   "basis": "SOURCE_REFERENCE_NO_CATEGORY",
+   "category": "unidentified",
+   "container": "files/a/1/2/6",
+   "evidence": "src/certificates_app.c",
+   "label": "referenced only by certificates_app.c (anonymous overlay code)",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 2,
+   "banks_decoded": 0,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/2/7",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 4,
+   "banks_decoded": 3,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/4/2",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 4,
+   "banks_decoded": 0,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/4/9",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/5/1",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 12,
+   "banks_decoded": 3,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/5/3",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 5,
+   "banks_decoded": 4,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/5/4",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 7,
+   "banks_decoded": 7,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/5/6",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/5/7",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/5/8",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/5/9",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "minigame",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/6/0",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/6/1",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 6,
+   "banks_decoded": 5,
+   "basis": "SOURCE_REFERENCE_NO_CATEGORY",
+   "category": "unidentified",
+   "container": "files/a/1/6/2",
+   "evidence": "src/certificates_app.c",
+   "label": "referenced only by certificates_app.c (anonymous overlay code)",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "SOURCE_REFERENCE",
+   "category": "battle_ui",
+   "container": "files/a/1/6/4",
+   "evidence": "src/battle/battle_finger.c",
+   "label": "used by battle_finger.c",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 2,
+   "banks_decoded": 2,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/6/6",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 3,
+   "banks_decoded": 3,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/6/7",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/6/8",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "SOURCE_REFERENCE_NO_CATEGORY",
+   "category": "unidentified",
+   "container": "files/a/1/7/1",
+   "evidence": "src/application/view_photo.c",
+   "label": "referenced only by view_photo.c (anonymous overlay code)",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/7/3",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 4,
+   "banks_decoded": 4,
+   "basis": "SOURCE_REFERENCE_NO_CATEGORY",
+   "category": "unidentified",
+   "container": "files/a/1/7/6",
+   "evidence": "src/overlay_mic_test.c",
+   "label": "referenced only by overlay_mic_test.c (anonymous overlay code)",
+   "model_visual_label": {
+    "model_visual_category": "pokemon_sprite",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 7,
+   "banks_decoded": 7,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/7/7",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 2,
+   "banks_decoded": 2,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/7/8",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 6,
+   "banks_decoded": 2,
+   "basis": "SOURCE_REFERENCE_NO_CATEGORY",
+   "category": "unidentified",
+   "container": "files/a/1/7/9",
+   "evidence": "src/overlay_42_02227D30.c",
+   "label": "referenced only by overlay_42_02227D30.c (anonymous overlay code)",
+   "model_visual_label": {
+    "model_visual_category": "trainer_or_character_sprite",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/8/1",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 18,
+   "banks_decoded": 1,
+   "basis": "SOURCE_REFERENCE",
+   "category": "battle_ui",
+   "container": "files/a/1/8/4",
+   "evidence": "src/battle_arcade_game_board.c",
+   "label": "used by battle_arcade_game_board.c",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 16,
+   "banks_decoded": 16,
+   "basis": "SOURCE_REFERENCE_NO_CATEGORY",
+   "category": "unidentified",
+   "container": "files/a/1/8/6",
+   "evidence": "src/overlay_42_02227D30.c",
+   "label": "referenced only by overlay_42_02227D30.c (anonymous overlay code)",
+   "model_visual_label": {
+    "model_visual_category": "trainer_or_character_sprite",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 3,
+   "banks_decoded": 3,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/8/9",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 4,
+   "banks_decoded": 4,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/9/0",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 19,
+   "banks_decoded": 8,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/9/1",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 12,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/9/2",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "pokemon_sprite",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 6,
+   "banks_decoded": 6,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/9/3",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/9/7",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 4,
+   "banks_decoded": 4,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/9/8",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 3,
+   "banks_decoded": 3,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/1/9/9",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 4,
+   "banks_decoded": 4,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/0/5",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 18,
+   "banks_decoded": 3,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/0/7",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 5,
+   "banks_decoded": 5,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/0/8",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 18,
+   "banks_decoded": 4,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/1/3",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "trainer_or_character_sprite",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 4,
+   "banks_decoded": 4,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/1/5",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "trainer_or_character_sprite",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 2,
+   "banks_decoded": 2,
+   "basis": "SOURCE_REFERENCE_NO_CATEGORY",
+   "category": "unidentified",
+   "container": "files/a/2/1/6",
+   "evidence": "src/berry_pots_app.c",
+   "label": "referenced only by berry_pots_app.c (anonymous overlay code)",
+   "model_visual_label": {
+    "model_visual_category": "unclear",
+    "note": "blue/pink blobs; unclear",
+    "owner_confirmation_requested": true
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 3,
+   "banks_decoded": 3,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/1/7",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/1/8",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/1/9",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/2/3",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 2,
+   "banks_decoded": 2,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/2/4",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 3,
+   "banks_decoded": 3,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/2/8",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 3,
+   "banks_decoded": 3,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/3/2",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 2,
+   "banks_decoded": 2,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/3/4",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 3,
+   "banks_decoded": 3,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/3/5",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 2,
+   "banks_decoded": 2,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/3/6",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "SOURCE_REFERENCE",
+   "category": "menu_ui",
+   "container": "files/a/2/3/7",
+   "evidence": "src/oaks_speech_yesnomenu.c",
+   "label": "used by oaks_speech_yesnomenu.c",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/3/9",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 3,
+   "banks_decoded": 3,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/4/0",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "minigame",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/4/1",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/4/2",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/4/5",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "pokemon_sprite",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 2,
+   "banks_decoded": 0,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/4/7",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 4,
+   "banks_decoded": 2,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/4/9",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/5/0",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/5/1",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/5/7",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "UNIDENTIFIED",
+   "category": "unidentified",
+   "container": "files/a/2/5/9",
+   "evidence": "",
+   "label": "no named source reference",
+   "model_visual_label": {
+    "model_visual_category": "ui_element",
+    "note": "",
+    "owner_confirmation_requested": false
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 44,
+   "banks_decoded": 2,
+   "basis": "SOURCE_REFERENCE_NO_CATEGORY",
+   "category": "unidentified",
+   "container": "files/a/2/6/3",
+   "evidence": "src/credits/credits.c",
+   "label": "referenced only by credits.c (anonymous overlay code)",
+   "model_visual_label": {
+    "model_visual_category": "unclear",
+    "note": "magenta blob; could be an effect fragment",
+    "owner_confirmation_requested": true
+   }
+  },
+  {
+   "auto_eligible": false,
+   "banks": 6,
+   "banks_decoded": 2,
+   "basis": "NAMED_CONTAINER",
+   "category": "cutin_ui",
+   "container": "files/data/field_cutin.narc",
+   "evidence": "files/data/field_cutin.narc",
+   "label": "field cut-in",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 17,
+   "banks_decoded": 16,
+   "basis": "NAMED_CONTAINER",
+   "category": "minigame",
+   "container": "files/data/slot.narc",
+   "evidence": "files/data/slot.narc",
+   "label": "slot machine",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 2,
+   "banks_decoded": 2,
+   "basis": "NAMED_CONTAINER",
+   "category": "menu_ui",
+   "container": "files/data/tradelist.narc",
+   "evidence": "files/data/tradelist.narc",
+   "label": "communication menu (tradelist.narc)",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 2,
+   "banks_decoded": 2,
+   "basis": "NAMED_CONTAINER",
+   "category": "underground",
+   "container": "files/data/ug_anim.narc",
+   "evidence": "files/data/ug_anim.narc",
+   "label": "underground feature (ug_anim.narc)",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "NAMED_CONTAINER",
+   "category": "underground",
+   "container": "files/data/ug_radar.narc",
+   "evidence": "files/data/ug_radar.narc",
+   "label": "underground feature (ug_radar.narc)",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 13,
+   "banks_decoded": 7,
+   "basis": "NAMED_CONTAINER",
+   "category": "underground",
+   "container": "files/data/ug_trap.narc",
+   "evidence": "files/data/ug_trap.narc",
+   "label": "underground trap sprites",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 2,
+   "banks_decoded": 2,
+   "basis": "NAMED_CONTAINER",
+   "category": "underground",
+   "container": "files/data/ugeffect_obj_graphic.narc",
+   "evidence": "files/data/ugeffect_obj_graphic.narc",
+   "label": "underground feature (ugeffect_obj_graphic.narc)",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "NAMED_CONTAINER",
+   "category": "underground",
+   "container": "files/data/underg_radar.narc",
+   "evidence": "files/data/underg_radar.narc",
+   "label": "underground feature (underg_radar.narc)",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": true,
+   "banks": 9,
+   "banks_decoded": 9,
+   "basis": "NAMED_CONTAINER",
+   "category": "field_weather_effect",
+   "container": "files/data/weather_sys.narc",
+   "evidence": "files/data/weather_sys.narc",
+   "label": "weather system sprites",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "NAMED_CONTAINER",
+   "category": "menu_ui",
+   "container": "files/data/wifinote.narc",
+   "evidence": "files/data/wifinote.narc",
+   "label": "communication menu (wifinote.narc)",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 3,
+   "banks_decoded": 2,
+   "basis": "NAMED_CONTAINER",
+   "category": "menu_ui",
+   "container": "files/data/wifip2pmatch.narc",
+   "evidence": "files/data/wifip2pmatch.narc",
+   "label": "communication menu (wifip2pmatch.narc)",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "NAMED_CONTAINER",
+   "category": "pbr_interface",
+   "container": "files/pbr/b_plist_gra.narc",
+   "evidence": "files/pbr/b_plist_gra.narc",
+   "label": "Pokemon Battle Revolution interface data (files/pbr)",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 7,
+   "banks_decoded": 5,
+   "basis": "NAMED_CONTAINER",
+   "category": "pbr_interface",
+   "container": "files/pbr/bag_gra.narc",
+   "evidence": "files/pbr/bag_gra.narc",
+   "label": "PBR interface",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 54,
+   "banks_decoded": 2,
+   "basis": "NAMED_CONTAINER",
+   "category": "pbr_interface",
+   "container": "files/pbr/batt_obj.narc",
+   "evidence": "files/pbr/batt_obj.narc",
+   "label": "Pokemon Battle Revolution battle objects",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 4,
+   "banks_decoded": 4,
+   "basis": "NAMED_CONTAINER",
+   "category": "pbr_interface",
+   "container": "files/pbr/plist_gra.narc",
+   "evidence": "files/pbr/plist_gra.narc",
+   "label": "PBR interface",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 3,
+   "banks_decoded": 3,
+   "basis": "NAMED_CONTAINER",
+   "category": "pbr_interface",
+   "container": "files/pbr/poke_icon.narc",
+   "evidence": "files/pbr/poke_icon.narc",
+   "label": "Pokemon Battle Revolution interface data (files/pbr)",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 23,
+   "banks_decoded": 2,
+   "basis": "NAMED_CONTAINER",
+   "category": "pbr_interface",
+   "container": "files/pbr/poketch.narc",
+   "evidence": "files/pbr/poketch.narc",
+   "label": "PBR interface",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 14,
+   "banks_decoded": 6,
+   "basis": "NAMED_CONTAINER",
+   "category": "pbr_interface",
+   "container": "files/pbr/pst_gra.narc",
+   "evidence": "files/pbr/pst_gra.narc",
+   "label": "PBR interface",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 1,
+   "banks_decoded": 1,
+   "basis": "NAMED_CONTAINER",
+   "category": "pbr_interface",
+   "container": "files/pbr/winframe.narc",
+   "evidence": "files/pbr/winframe.narc",
+   "label": "Pokemon Battle Revolution interface data (files/pbr)",
+   "model_visual_label": null
+  },
+  {
+   "auto_eligible": false,
+   "banks": 18,
+   "banks_decoded": 0,
+   "basis": "NAMED_CONTAINER",
+   "category": "pbr_interface",
+   "container": "files/pbr/zukan.narc",
+   "evidence": "files/pbr/zukan.narc",
+   "label": "PBR interface",
+   "model_visual_label": null
+  }
+ ],
+ "generated_by": "tools/visual_overhaul/dau2_curate.py labels",
+ "policy": "UNIDENTIFIED containers are excluded from automatic selection; identification is per container (where it is used), not per bank. model_visual_label is advisory only.",
+ "schema_version": 1,
+ "summary": {
+  "banks_decoded_auto_eligible": 9,
+  "banks_decoded_identified": 244,
+  "banks_decoded_total": 513,
+  "banks_decoded_unidentified": 269,
+  "banks_total": 942,
+  "by_category_decoded": {
+   "battle_ui": 5,
+   "cutin_ui": 2,
+   "demo": 3,
+   "field_weather_effect": 9,
+   "menu_ui": 26,
+   "minigame": 16,
+   "pbr_interface": 24,
+   "pokemon_graphic": 146,
+   "underground": 13,
+   "unidentified": 269
+  },
+  "containers": 130,
+  "identified": 32,
+  "model_visual_effect_like_pending_owner": 3,
+  "unidentified": 98,
+  "unidentified_with_decoded_banks": 87
+ }
+}

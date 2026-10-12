@@ -848,6 +848,2904 @@
    "visual_intent": "echo silhouettes"
   }
  ],
+ "native_scripts": {
+  "aerial_ace": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 25,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 30,
+     "frame_lb": 15,
+     "index": 1,
+     "particle_life": 14,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 39,
+     "frame_lb": 15,
+     "index": 2,
+     "particle_life": 14,
+     "role": "defender",
+     "start_delay": 9
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 4,
+     "ends_frame_lb": 46,
+     "frame_lb": 15,
+     "index": 3,
+     "particle_life": 18,
+     "role": "defender",
+     "start_delay": 9
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 4,
+     "ends_frame_lb": 55,
+     "frame_lb": 15,
+     "index": 0,
+     "particle_life": 19,
+     "role": "defender",
+     "start_delay": 17
+    }
+   ],
+   "fades": 2,
+   "first_defender_emitter_frame_lb": 15,
+   "loops": 0,
+   "native_duration_lb_frames": 55,
+   "opal_cues": [],
+   "script": "res/moves/aerial_ace/anim.s",
+   "shakes": 1,
+   "sounds": 2,
+   "spa": "aerial_ace",
+   "sprite_resources": []
+  },
+  "aqua_jet": {
+   "battler_moves": 3,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 10,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 11,
+     "ends_frame_lb": 39,
+     "extra_id": 0,
+     "frame_lb": 0,
+     "index": 3,
+     "particle_life": 28,
+     "role": "attacker",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 3,
+     "ends_frame_lb": 11,
+     "extra_id": 1,
+     "frame_lb": 0,
+     "index": 4,
+     "particle_life": 8,
+     "role": "attacker",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 3,
+     "ends_frame_lb": 13,
+     "extra_id": 2,
+     "frame_lb": 0,
+     "index": 5,
+     "particle_life": 10,
+     "role": "attacker",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 11,
+     "ends_frame_lb": 44,
+     "extra_id": 3,
+     "frame_lb": 5,
+     "index": 3,
+     "particle_life": 28,
+     "role": "attacker",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 3,
+     "ends_frame_lb": 16,
+     "extra_id": 4,
+     "frame_lb": 5,
+     "index": 4,
+     "particle_life": 8,
+     "role": "attacker",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 3,
+     "ends_frame_lb": 18,
+     "extra_id": 5,
+     "frame_lb": 5,
+     "index": 5,
+     "particle_life": 10,
+     "role": "attacker",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 11,
+     "ends_frame_lb": 49,
+     "extra_id": 6,
+     "frame_lb": 10,
+     "index": 3,
+     "particle_life": 28,
+     "role": "attacker",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 3,
+     "ends_frame_lb": 21,
+     "extra_id": 7,
+     "frame_lb": 10,
+     "index": 4,
+     "particle_life": 8,
+     "role": "attacker",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 3,
+     "ends_frame_lb": 23,
+     "extra_id": 8,
+     "frame_lb": 10,
+     "index": 5,
+     "particle_life": 10,
+     "role": "attacker",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 5,
+     "ends_frame_lb": 31,
+     "frame_lb": 10,
+     "index": 0,
+     "particle_life": 16,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 6,
+     "ends_frame_lb": 35,
+     "frame_lb": 10,
+     "index": 1,
+     "particle_life": 19,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 19,
+     "frame_lb": 10,
+     "index": 2,
+     "particle_life": 8,
+     "role": "defender",
+     "start_delay": 0
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": 10,
+   "loops": 0,
+   "native_duration_lb_frames": 49,
+   "opal_cues": [],
+   "script": "res/moves/aqua_jet/anim.s",
+   "shakes": 1,
+   "sounds": 4,
+   "spa": "aqua_jet",
+   "sprite_resources": []
+  },
+  "bite": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [
+    "Opal B9 (P0, bite): an upper and a lower jaw close on the target over the native 10-frame lead-in and snap exactly where the native",
+    "shake used to start; native emitters, sound and timing unchanged. The script now ends through WaitForAllEmitters /",
+    "UnloadParticleSystem like every other Opal script (End already waited for both).",
+    "Donors: pokeemerald fangs (opal_b9_strike jaw_upper / jaw_lower), hit (opal_b9_strike).",
+    "QA note: if the native bite_spa emitters already draw jaws on the same frames the two read as one doubled bite - see EMULATOR_QA.md."
+   ],
+   "delay_total_lb": 10,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 14,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 8,
+     "role": "defender",
+     "start_delay": 5
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 9,
+     "frame_lb": 0,
+     "index": 3,
+     "particle_life": 8,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 9,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 8,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 24,
+     "frame_lb": 0,
+     "index": 4,
+     "particle_life": 19,
+     "role": "defender",
+     "start_delay": 4
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 24,
+     "frame_lb": 0,
+     "index": 2,
+     "particle_life": 19,
+     "role": "defender",
+     "start_delay": 4
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": 0,
+   "loops": 0,
+   "native_duration_lb_frames": 24,
+   "opal_cues": [
+    "OpalFx",
+    "OpalImpactBurst",
+    "OpalReactLight",
+    "OpalSheetBegin",
+    "OpalSheetEnd"
+   ],
+   "script": "res/moves/bite/anim.s",
+   "shakes": 0,
+   "sounds": 1,
+   "spa": "bite",
+   "sprite_resources": []
+  },
+  "bubble": {
+   "battler_moves": 0,
+   "branches": 1,
+   "comments": [
+    "Opal B9 (P0, water_bubble): individual bubbles of three sizes rise on separate arcs toward every resolved target and pop on arrival",
+    "(small pop per target, one iridescent big pop on the first). The native 10 + 10 frame cadence is kept; launches are carved out of the",
+    "first Delay 10 (5 + 5). Contest branch is left fully native.",
+    "Donors: pokeemerald bubble / small_bubbles / bubble_burst / bubble_burst_2 (opal_b9_bubble)."
+   ],
+   "delay_total_lb": 60,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 20,
+     "ends_frame_lb": 55,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 35,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER_SIDE",
+     "emitter_life": 13,
+     "ends_frame_lb": 43,
+     "frame_lb": 10,
+     "index": 1,
+     "particle_life": 10,
+     "role": "other",
+     "start_delay": 10
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 20,
+     "ends_frame_lb": 85,
+     "frame_lb": 30,
+     "index": 0,
+     "particle_life": 35,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER_SIDE",
+     "emitter_life": 13,
+     "ends_frame_lb": 73,
+     "frame_lb": 40,
+     "index": 1,
+     "particle_life": 10,
+     "role": "other",
+     "start_delay": 10
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 0,
+   "native_duration_lb_frames": 85,
+   "opal_cues": [
+    "OpalFx",
+    "OpalImpactBurst",
+    "OpalSheetBegin",
+    "OpalSheetEnd"
+   ],
+   "script": "res/moves/bubble/anim.s",
+   "shakes": 4,
+   "sounds": 4,
+   "spa": "bubble",
+   "sprite_resources": []
+  },
+  "bubble_beam": {
+   "battler_moves": 3,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 32,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 52,
+     "ends_frame_lb": 111,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 59,
+     "role": "other",
+     "start_delay": 0
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 1,
+   "native_duration_lb_frames": 111,
+   "opal_cues": [],
+   "script": "res/moves/bubble_beam/anim.s",
+   "shakes": 0,
+   "sounds": 3,
+   "spa": "bubble_beam",
+   "sprite_resources": []
+  },
+  "confuse_ray": {
+   "battler_moves": 0,
+   "branches": 1,
+   "comments": [],
+   "delay_total_lb": 12,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 1,
+     "ends_frame_lb": 51,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 50,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 87,
+     "frame_lb": 6,
+     "index": 1,
+     "particle_life": 40,
+     "role": "defender",
+     "start_delay": 40
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 1,
+     "ends_frame_lb": 57,
+     "frame_lb": 6,
+     "index": 0,
+     "particle_life": 50,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 93,
+     "frame_lb": 12,
+     "index": 1,
+     "particle_life": 40,
+     "role": "defender",
+     "start_delay": 40
+    }
+   ],
+   "fades": 4,
+   "first_defender_emitter_frame_lb": 6,
+   "loops": 0,
+   "native_duration_lb_frames": 93,
+   "opal_cues": [],
+   "script": "res/moves/confuse_ray/anim.s",
+   "shakes": 0,
+   "sounds": 4,
+   "spa": "confuse_ray",
+   "sprite_resources": []
+  },
+  "confusion": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [
+    "Opal B9 (P0, psychic_small): two concentric, translucent psychic rings ripple out of the target alongside the native warp",
+    "and a soft magenta pulse dissolves on it. Native background switch, warp task, sounds and timing unchanged; the cues are asynchronous.",
+    "Donors: procedural Opal ring (opal_fx_ring_psychic, B2 sheet)."
+   ],
+   "delay_total_lb": 10,
+   "emitters": [],
+   "fades": 1,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 0,
+   "native_duration_lb_frames": 10,
+   "opal_cues": [
+    "OpalImpactBurst",
+    "OpalReactMagic",
+    "OpalSheetBegin",
+    "OpalSheetEnd"
+   ],
+   "script": "res/moves/confusion/anim.s",
+   "shakes": 1,
+   "sounds": 1,
+   "spa": null,
+   "sprite_resources": []
+  },
+  "crunch": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 10,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 6,
+     "ends_frame_lb": 39,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 23,
+     "role": "defender",
+     "start_delay": 10
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 14,
+     "frame_lb": 0,
+     "index": 3,
+     "particle_life": 13,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 26,
+     "frame_lb": 0,
+     "index": 4,
+     "particle_life": 19,
+     "role": "defender",
+     "start_delay": 6
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 14,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 13,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 26,
+     "frame_lb": 0,
+     "index": 2,
+     "particle_life": 19,
+     "role": "defender",
+     "start_delay": 6
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": 0,
+   "loops": 0,
+   "native_duration_lb_frames": 39,
+   "opal_cues": [],
+   "script": "res/moves/crunch/anim.s",
+   "shakes": 1,
+   "sounds": 2,
+   "spa": "crunch",
+   "sprite_resources": []
+  },
+  "defense_curl": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 0,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 1,
+     "ends_frame_lb": 20,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 19,
+     "role": "attacker",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 1,
+     "ends_frame_lb": 25,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 14,
+     "role": "attacker",
+     "start_delay": 10
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 0,
+   "native_duration_lb_frames": 25,
+   "opal_cues": [],
+   "script": "res/moves/defense_curl/anim.s",
+   "shakes": 0,
+   "sounds": 2,
+   "spa": "defense_curl",
+   "sprite_resources": []
+  },
+  "double_team": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 50,
+   "emitters": [],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 0,
+   "native_duration_lb_frames": 50,
+   "opal_cues": [],
+   "script": "res/moves/double_team/anim.s",
+   "shakes": 0,
+   "sounds": 1,
+   "spa": null,
+   "sprite_resources": []
+  },
+  "ember": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [
+    "AV1: layered fire burst (ember core -> secondary embers -> dissipating glow).",
+    "Secondary embers reuse fire_punch.spa defender emitters 0 and 2.",
+    "Opal B9 (P0, fire_small): a three-ember volley (small flame sprites on separate arcs, launched inside the native 6-frame lead-in) and",
+    "drifting cinders after the Ranger bloom. Native emitters, fades and timing unchanged. Donors: pokeemerald small_ember (opal_b9_ember).",
+    "Donor sprite: Pokemon Ranger 2 e010 fireball-flare (donor cells, docs/visual_overhaul/b1_installed_donors/ranger_fire_bloom.provenance.json)."
+   ],
+   "delay_total_lb": 14,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 9,
+     "ends_frame_lb": 26,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 14,
+     "role": "other",
+     "start_delay": 3
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 9,
+     "ends_frame_lb": 32,
+     "frame_lb": 6,
+     "index": 0,
+     "particle_life": 14,
+     "role": "defender",
+     "start_delay": 3
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 8,
+     "ends_frame_lb": 46,
+     "frame_lb": 14,
+     "index": 2,
+     "particle_life": 10,
+     "role": "defender",
+     "start_delay": 14
+    }
+   ],
+   "fades": 4,
+   "first_defender_emitter_frame_lb": 6,
+   "loops": 0,
+   "native_duration_lb_frames": 46,
+   "opal_cues": [
+    "OpalFx",
+    "OpalResidual",
+    "OpalSheetBegin",
+    "OpalSheetEnd"
+   ],
+   "script": "res/moves/ember/anim.s",
+   "shakes": 1,
+   "sounds": 1,
+   "spa": "fire_punch",
+   "sprite_resources": [
+    "ranger_fire_bloom_NCGR_lz"
+   ]
+  },
+  "flame_wheel": {
+   "battler_moves": 2,
+   "branches": 0,
+   "comments": [
+    "Donor sprite: Pokemon Ranger 2 e010 fireball-flare (donor cells, docs/visual_overhaul/b1_installed_donors/ranger_fire_bloom.provenance.json)."
+   ],
+   "delay_total_lb": 20,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 15,
+     "ends_frame_lb": 65,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 50,
+     "role": "attacker",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 29,
+     "frame_lb": 20,
+     "index": 2,
+     "particle_life": 8,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 7,
+     "ends_frame_lb": 47,
+     "frame_lb": 20,
+     "index": 1,
+     "particle_life": 20,
+     "role": "defender",
+     "start_delay": 0
+    }
+   ],
+   "fades": 2,
+   "first_defender_emitter_frame_lb": 20,
+   "loops": 0,
+   "native_duration_lb_frames": 65,
+   "opal_cues": [],
+   "script": "res/moves/flame_wheel/anim.s",
+   "shakes": 1,
+   "sounds": 2,
+   "spa": "flame_wheel",
+   "sprite_resources": [
+    "ranger_fire_bloom_NCGR_lz"
+   ]
+  },
+  "focus_energy": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 0,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 45,
+     "ends_frame_lb": 50,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 5,
+     "role": "attacker",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 40,
+     "ends_frame_lb": 50,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 10,
+     "role": "attacker",
+     "start_delay": 0
+    }
+   ],
+   "fades": 1,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 0,
+   "native_duration_lb_frames": 50,
+   "opal_cues": [],
+   "script": "res/moves/focus_energy/anim.s",
+   "shakes": 1,
+   "sounds": 1,
+   "spa": "focus_energy",
+   "sprite_resources": []
+  },
+  "growl": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [
+    "Opal B9 (P0, status_sound): a soft sound ring pulses off the user with each cry (small, then a larger one with the louder second",
+    "cry), pale sound arcs and a jagged roar line sweep toward every resolved target. Only commands that do not wait are added, so the",
+    "cry waits, shakes and total length are the native ones. The engine plays this animation only after the Attack drop succeeded",
+    "(subscript_update_stat_stage: ChangeStatStage fails before PlayMoveAnimation), so no cue shows on a blocked / maxed stat.",
+    "Donors: procedural Opal ring (opal_fx_ring_gold), pokeemerald movement_waves / noise_line (opal_b9_sense)."
+   ],
+   "delay_total_lb": 5,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 16,
+     "ends_frame_lb": 35,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 19,
+     "role": "attacker",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 1,
+     "ends_frame_lb": 24,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 23,
+     "role": "attacker",
+     "start_delay": 0
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 0,
+   "native_duration_lb_frames": 35,
+   "opal_cues": [
+    "OpalFx",
+    "OpalImpactBurst",
+    "OpalSheetBegin",
+    "OpalSheetEnd"
+   ],
+   "script": "res/moves/growl/anim.s",
+   "shakes": 2,
+   "sounds": 0,
+   "spa": "growl",
+   "sprite_resources": []
+  },
+  "gust": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [
+    "Opal B9 (P0, air_gust): three wind streaks and a crescent sweep from the user across the target (launched inside the native 5-frame",
+    "lead-in), a translucent swirl on the target as the native gale lands, and leaf debris carried off it. Native emitters, camera",
+    "projection, sound and the 15-frame defender flutter are untouched; no extra delay.",
+    "Donors: pokeemerald air_wave / air_wave_2 / whirlwind (opal_b9_wind), leaf (opal_b9_nature)."
+   ],
+   "delay_total_lb": 20,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 9,
+     "ends_frame_lb": 64,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 37,
+     "role": "other",
+     "start_delay": 18
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 35,
+     "ends_frame_lb": 72,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 19,
+     "role": "other",
+     "start_delay": 18
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 0,
+   "native_duration_lb_frames": 72,
+   "opal_cues": [
+    "OpalFx",
+    "OpalImpactBurst",
+    "OpalResidual",
+    "OpalSheetBegin",
+    "OpalSheetEnd"
+   ],
+   "script": "res/moves/gust/anim.s",
+   "shakes": 1,
+   "sounds": 1,
+   "spa": "gust",
+   "sprite_resources": []
+  },
+  "headbutt": {
+   "battler_moves": 2,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 0,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 9,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 8,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 2,
+     "ends_frame_lb": 21,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 19,
+     "role": "defender",
+     "start_delay": 0
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": 0,
+   "loops": 0,
+   "native_duration_lb_frames": 21,
+   "opal_cues": [],
+   "script": "res/moves/headbutt/anim.s",
+   "shakes": 1,
+   "sounds": 2,
+   "spa": "headbutt",
+   "sprite_resources": []
+  },
+  "hypnosis": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 30,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 33,
+     "ends_frame_lb": 65,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 32,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 33,
+     "ends_frame_lb": 65,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 32,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 50,
+     "frame_lb": 30,
+     "index": 2,
+     "particle_life": 19,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 45,
+     "frame_lb": 30,
+     "index": 3,
+     "particle_life": 14,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 30,
+     "ends_frame_lb": 90,
+     "frame_lb": 30,
+     "index": 4,
+     "particle_life": 30,
+     "role": "defender",
+     "start_delay": 0
+    }
+   ],
+   "fades": 1,
+   "first_defender_emitter_frame_lb": 30,
+   "loops": 0,
+   "native_duration_lb_frames": 90,
+   "opal_cues": [],
+   "script": "res/moves/hypnosis/anim.s",
+   "shakes": 0,
+   "sounds": 3,
+   "spa": "hypnosis",
+   "sprite_resources": []
+  },
+  "ice_shard": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 100,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 6,
+     "ends_frame_lb": 63,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 50,
+     "role": "other",
+     "start_delay": 7
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 32,
+     "ends_frame_lb": 55,
+     "frame_lb": 0,
+     "index": 3,
+     "particle_life": 23,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 15,
+     "ends_frame_lb": 104,
+     "frame_lb": 20,
+     "index": 2,
+     "particle_life": 19,
+     "role": "other",
+     "start_delay": 50
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 43,
+     "ends_frame_lb": 167,
+     "frame_lb": 100,
+     "index": 4,
+     "particle_life": 14,
+     "role": "other",
+     "start_delay": 10
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 12,
+     "ends_frame_lb": 120,
+     "frame_lb": 100,
+     "index": 0,
+     "particle_life": 8,
+     "role": "other",
+     "start_delay": 0
+    }
+   ],
+   "fades": 3,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 0,
+   "native_duration_lb_frames": 167,
+   "opal_cues": [],
+   "script": "res/moves/ice_shard/anim.s",
+   "shakes": 1,
+   "sounds": 6,
+   "spa": "ice_shard",
+   "sprite_resources": []
+  },
+  "icy_wind": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 80,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 40,
+     "ends_frame_lb": 81,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 30,
+     "role": "other",
+     "start_delay": 11
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 43,
+     "ends_frame_lb": 116,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 63,
+     "role": "other",
+     "start_delay": 10
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER_SIDE",
+     "emitter_life": 30,
+     "ends_frame_lb": 80,
+     "frame_lb": 20,
+     "index": 2,
+     "particle_life": 30,
+     "role": "other",
+     "start_delay": 0
+    }
+   ],
+   "fades": 4,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 0,
+   "native_duration_lb_frames": 116,
+   "opal_cues": [],
+   "script": "res/moves/icy_wind/anim.s",
+   "shakes": 2,
+   "sounds": 2,
+   "spa": "icy_wind",
+   "sprite_resources": []
+  },
+  "leech_seed": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 10,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 1,
+     "ends_frame_lb": 15,
+     "extra_id": 0,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 14,
+     "role": "attacker",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 1,
+     "ends_frame_lb": 17,
+     "extra_id": 1,
+     "frame_lb": 2,
+     "index": 0,
+     "particle_life": 14,
+     "role": "attacker",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 1,
+     "ends_frame_lb": 19,
+     "extra_id": 2,
+     "frame_lb": 4,
+     "index": 0,
+     "particle_life": 14,
+     "role": "attacker",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 1,
+     "ends_frame_lb": 21,
+     "frame_lb": 6,
+     "index": 0,
+     "particle_life": 14,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 50,
+     "ends_frame_lb": 70,
+     "frame_lb": 6,
+     "index": 1,
+     "particle_life": 14,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 50,
+     "ends_frame_lb": 66,
+     "frame_lb": 6,
+     "index": 2,
+     "particle_life": 10,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 1,
+     "ends_frame_lb": 23,
+     "frame_lb": 8,
+     "index": 0,
+     "particle_life": 14,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 50,
+     "ends_frame_lb": 72,
+     "frame_lb": 8,
+     "index": 1,
+     "particle_life": 14,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 50,
+     "ends_frame_lb": 68,
+     "frame_lb": 8,
+     "index": 2,
+     "particle_life": 10,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 1,
+     "ends_frame_lb": 25,
+     "frame_lb": 10,
+     "index": 0,
+     "particle_life": 14,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 50,
+     "ends_frame_lb": 74,
+     "frame_lb": 10,
+     "index": 1,
+     "particle_life": 14,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 50,
+     "ends_frame_lb": 70,
+     "frame_lb": 10,
+     "index": 2,
+     "particle_life": 10,
+     "role": "other",
+     "start_delay": 0
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 0,
+   "native_duration_lb_frames": 74,
+   "opal_cues": [],
+   "script": "res/moves/leech_seed/anim.s",
+   "shakes": 0,
+   "sounds": 2,
+   "spa": "bullet_seed",
+   "sprite_resources": []
+  },
+  "leer": {
+   "battler_moves": 0,
+   "branches": 1,
+   "comments": [
+    "Opal B9 (P0, status_gaze): an eye glint flashes at the user's eyes, then a second, larger glint lands on every resolved target",
+    "as the native stare flashes. Cues are asynchronous - native dim, emitters, sounds and timing unchanged. Played only after the",
+    "Defense drop succeeded (subscript_update_stat_stage). Contest branch is left fully native.",
+    "Donors: pokeemerald leer glint (opal_b9_sense)."
+   ],
+   "delay_total_lb": 20,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 1,
+     "ends_frame_lb": 11,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 10,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 1,
+     "ends_frame_lb": 13,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 12,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 1,
+     "ends_frame_lb": 9,
+     "frame_lb": 0,
+     "index": 2,
+     "particle_life": 8,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 1,
+     "ends_frame_lb": 21,
+     "frame_lb": 10,
+     "index": 0,
+     "particle_life": 10,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 1,
+     "ends_frame_lb": 23,
+     "frame_lb": 10,
+     "index": 1,
+     "particle_life": 12,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 1,
+     "ends_frame_lb": 19,
+     "frame_lb": 10,
+     "index": 2,
+     "particle_life": 8,
+     "role": "other",
+     "start_delay": 0
+    }
+   ],
+   "fades": 4,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 0,
+   "native_duration_lb_frames": 23,
+   "opal_cues": [
+    "OpalImpactBurst",
+    "OpalSheetBegin",
+    "OpalSheetEnd"
+   ],
+   "script": "res/moves/leer/anim.s",
+   "shakes": 4,
+   "sounds": 2,
+   "spa": "leer",
+   "sprite_resources": []
+  },
+  "magical_leaf": {
+   "battler_moves": 0,
+   "branches": 1,
+   "comments": [],
+   "delay_total_lb": 160,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 6,
+     "ends_frame_lb": 83,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 77,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 6,
+     "ends_frame_lb": 86,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 10,
+     "role": "other",
+     "start_delay": 70
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 26,
+     "ends_frame_lb": 116,
+     "frame_lb": 80,
+     "index": 2,
+     "particle_life": 10,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 6,
+     "ends_frame_lb": 163,
+     "frame_lb": 80,
+     "index": 1,
+     "particle_life": 77,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 6,
+     "ends_frame_lb": 166,
+     "frame_lb": 80,
+     "index": 0,
+     "particle_life": 10,
+     "role": "other",
+     "start_delay": 70
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 26,
+     "ends_frame_lb": 196,
+     "frame_lb": 160,
+     "index": 2,
+     "particle_life": 10,
+     "role": "other",
+     "start_delay": 0
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 0,
+   "native_duration_lb_frames": 196,
+   "opal_cues": [],
+   "script": "res/moves/magical_leaf/anim.s",
+   "shakes": 2,
+   "sounds": 6,
+   "spa": "magical_leaf",
+   "sprite_resources": []
+  },
+  "metal_claw": {
+   "battler_moves": 2,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 10,
+   "emitters": [],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 1,
+   "native_duration_lb_frames": 10,
+   "opal_cues": [],
+   "script": "res/moves/metal_claw/anim.s",
+   "shakes": 1,
+   "sounds": 2,
+   "spa": null,
+   "sprite_resources": [
+    "claw_NCGR_lz"
+   ]
+  },
+  "mud_bomb": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 24,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 1,
+     "ends_frame_lb": 28,
+     "frame_lb": 1,
+     "index": 0,
+     "particle_life": 26,
+     "role": "attacker",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 4,
+     "ends_frame_lb": 46,
+     "frame_lb": 1,
+     "index": 1,
+     "particle_life": 19,
+     "role": "defender",
+     "start_delay": 22
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 36,
+     "frame_lb": 1,
+     "index": 3,
+     "particle_life": 10,
+     "role": "defender",
+     "start_delay": 24
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 13,
+     "ends_frame_lb": 55,
+     "frame_lb": 1,
+     "index": 2,
+     "particle_life": 19,
+     "role": "defender",
+     "start_delay": 22
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": 1,
+   "loops": 0,
+   "native_duration_lb_frames": 55,
+   "opal_cues": [],
+   "script": "res/moves/mud_bomb/anim.s",
+   "shakes": 1,
+   "sounds": 2,
+   "spa": "mud_bomb",
+   "sprite_resources": []
+  },
+  "mud_shot": {
+   "battler_moves": 0,
+   "branches": 2,
+   "comments": [],
+   "delay_total_lb": 30,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 43,
+     "ends_frame_lb": 67,
+     "frame_lb": 10,
+     "index": 14,
+     "particle_life": 14,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 43,
+     "ends_frame_lb": 77,
+     "frame_lb": 20,
+     "index": 14,
+     "particle_life": 14,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 37,
+     "ends_frame_lb": 80,
+     "frame_lb": 20,
+     "index": 10,
+     "particle_life": 23,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 43,
+     "ends_frame_lb": 87,
+     "frame_lb": 30,
+     "index": 14,
+     "particle_life": 14,
+     "role": "defender",
+     "start_delay": 0
+    }
+   ],
+   "fades": 1,
+   "first_defender_emitter_frame_lb": 10,
+   "loops": 0,
+   "native_duration_lb_frames": 87,
+   "opal_cues": [],
+   "script": "res/moves/mud_shot/anim.s",
+   "shakes": 3,
+   "sounds": 3,
+   "spa": "mud_shot",
+   "sprite_resources": []
+  },
+  "peck": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [
+    "Opal B9 (P0, pierce_contact): a thin thrust streak runs beak-to-target during the native head-tilt, then a sharp eight-point",
+    "pierce flash and a light reaction land with the native emitters. Native rotation, emitters, sound and timing unchanged.",
+    "Donors: pokeemerald air_wave (opal_b9_wind), impact (opal_b9_strike star)."
+   ],
+   "delay_total_lb": 2,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 9,
+     "frame_lb": 2,
+     "index": 1,
+     "particle_life": 6,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 2,
+     "ends_frame_lb": 14,
+     "frame_lb": 2,
+     "index": 0,
+     "particle_life": 10,
+     "role": "defender",
+     "start_delay": 0
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": 2,
+   "loops": 0,
+   "native_duration_lb_frames": 14,
+   "opal_cues": [
+    "OpalFx",
+    "OpalImpactBurst",
+    "OpalReactLight",
+    "OpalSheetBegin",
+    "OpalSheetEnd"
+   ],
+   "script": "res/moves/peck/anim.s",
+   "shakes": 0,
+   "sounds": 1,
+   "spa": "peck",
+   "sprite_resources": []
+  },
+  "poison_powder": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 0,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 39,
+     "ends_frame_lb": 86,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 46,
+     "role": "defender",
+     "start_delay": 1
+    }
+   ],
+   "fades": 1,
+   "first_defender_emitter_frame_lb": 0,
+   "loops": 0,
+   "native_duration_lb_frames": 86,
+   "opal_cues": [],
+   "script": "res/moves/poison_powder/anim.s",
+   "shakes": 0,
+   "sounds": 1,
+   "spa": "poison_powder",
+   "sprite_resources": []
+  },
+  "pound": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [
+    "Opal B9 (P0, physical_contact): soft heavy contact. Larger, slower hit flash + a soft gold pressure ring and a light camera",
+    "punch on the confirmed hit; native emitters, sound and the 1px recoil shake keep their original frames (REACT_LIGHT replaces the shake).",
+    "Donors: pokeemerald hit (opal_b9_strike), procedural Opal ring (opal_fx_ring_gold)."
+   ],
+   "delay_total_lb": 0,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 9,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 8,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 2,
+     "ends_frame_lb": 21,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 19,
+     "role": "defender",
+     "start_delay": 0
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": 0,
+   "loops": 0,
+   "native_duration_lb_frames": 21,
+   "opal_cues": [
+    "OpalCamPunch",
+    "OpalImpactBurst",
+    "OpalReactLight",
+    "OpalSheetBegin",
+    "OpalSheetEnd"
+   ],
+   "script": "res/moves/pound/anim.s",
+   "shakes": 0,
+   "sounds": 1,
+   "spa": "pound",
+   "sprite_resources": []
+  },
+  "powder_snow": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [
+    "Opal B9 (P0, ice_snow): snow flecks gather around the user while the native gust forms, an ice-tinted swirl is driven across to the",
+    "target, then frost glints fade on the target after each native flash. The native 50-frame hold is split 14 + 12 + 12 + 12 around",
+    "the cues (same total). Native emitters, fades, sounds and timing unchanged.",
+    "Donors: pokeemerald whirlwind / snowball (opal_b9_wind, `ice` palette variant), ice_crystals_0 (opal_ice, B2 sheet)."
+   ],
+   "delay_total_lb": 55,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 43,
+     "ends_frame_lb": 106,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 63,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER_SIDE",
+     "emitter_life": 30,
+     "ends_frame_lb": 120,
+     "frame_lb": 5,
+     "index": 1,
+     "particle_life": 30,
+     "role": "other",
+     "start_delay": 55
+    }
+   ],
+   "fades": 6,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 0,
+   "native_duration_lb_frames": 120,
+   "opal_cues": [
+    "OpalFx",
+    "OpalImpactBurst",
+    "OpalSheetBegin",
+    "OpalSheetEnd"
+   ],
+   "script": "res/moves/powder_snow/anim.s",
+   "shakes": 4,
+   "sounds": 2,
+   "spa": "powder_snow",
+   "sprite_resources": []
+  },
+  "psybeam": {
+   "battler_moves": 3,
+   "branches": 0,
+   "comments": [
+    "AV1: the beam is released as three staggered, shrinking pulses with a",
+    "breathing psychic glow, instead of a single constant stream."
+   ],
+   "delay_total_lb": 52,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 46,
+     "ends_frame_lb": 74,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 28,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 46,
+     "ends_frame_lb": 84,
+     "frame_lb": 10,
+     "index": 0,
+     "particle_life": 28,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 46,
+     "ends_frame_lb": 94,
+     "frame_lb": 20,
+     "index": 0,
+     "particle_life": 28,
+     "role": "other",
+     "start_delay": 0
+    }
+   ],
+   "fades": 6,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 1,
+   "native_duration_lb_frames": 94,
+   "opal_cues": [],
+   "script": "res/moves/psybeam/anim.s",
+   "shakes": 0,
+   "sounds": 1,
+   "spa": "psybeam",
+   "sprite_resources": []
+  },
+  "quick_attack": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [
+    "Opal B9 (P0, speed_contact): ground dust at the launch point, a trailing wind streak with two afterimages along the dash and a",
+    "streak-star hit flash on contact. The native dash, sounds, shake and timing are untouched (all additions are asynchronous).",
+    "Donors: pokeemerald speed_dust / air_wave (opal_b9_wind), slash (opal_b9_strike)."
+   ],
+   "delay_total_lb": 15,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 22,
+     "frame_lb": 15,
+     "index": 1,
+     "particle_life": 6,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 3,
+     "ends_frame_lb": 37,
+     "frame_lb": 15,
+     "index": 0,
+     "particle_life": 19,
+     "role": "defender",
+     "start_delay": 0
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": 15,
+   "loops": 0,
+   "native_duration_lb_frames": 37,
+   "opal_cues": [
+    "OpalImpactBurst",
+    "OpalProjectile",
+    "OpalSheetBegin",
+    "OpalSheetEnd"
+   ],
+   "script": "res/moves/quick_attack/anim.s",
+   "shakes": 1,
+   "sounds": 2,
+   "spa": "quick_attack",
+   "sprite_resources": []
+  },
+  "razor_leaf": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [
+    "Opal B9 (P0, leaf_volley): the native gale gathers; a three-lane leaf fan (lead + two curved flyers, each with a razor-blade",
+    "crescent riding the lane) is launched so it lands on the native impact frame (t = 75), followed by leaf flutter. Every native delay is",
+    "preserved: the first 50-frame wait is split 25 + 25 around the fan launch (travel = 34 frames; arrival ~ frame 74-75).",
+    "Donors: pokeemerald leaf / razor_leaf (opal_b9_nature)."
+   ],
+   "delay_total_lb": 82,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 11,
+     "ends_frame_lb": 88,
+     "frame_lb": 0,
+     "index": 2,
+     "particle_life": 77,
+     "role": "attacker",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 19,
+     "ends_frame_lb": 103,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 14,
+     "role": "other",
+     "start_delay": 70
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER_SIDE",
+     "emitter_life": 20,
+     "ends_frame_lb": 105,
+     "frame_lb": 75,
+     "index": 0,
+     "particle_life": 10,
+     "role": "other",
+     "start_delay": 0
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 0,
+   "native_duration_lb_frames": 105,
+   "opal_cues": [
+    "OpalFx",
+    "OpalImpactBurst",
+    "OpalProjectile",
+    "OpalReactLight",
+    "OpalResidual",
+    "OpalSheetBegin",
+    "OpalSheetEnd"
+   ],
+   "script": "res/moves/razor_leaf/anim.s",
+   "shakes": 1,
+   "sounds": 3,
+   "spa": "razor_leaf",
+   "sprite_resources": []
+  },
+  "rock_slide": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 15,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER_SIDE",
+     "emitter_life": 39,
+     "ends_frame_lb": 58,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 19,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER_SIDE",
+     "emitter_life": 39,
+     "ends_frame_lb": 73,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 14,
+     "role": "other",
+     "start_delay": 20
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER_SIDE",
+     "emitter_life": 30,
+     "ends_frame_lb": 70,
+     "frame_lb": 0,
+     "index": 2,
+     "particle_life": 20,
+     "role": "other",
+     "start_delay": 20
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 0,
+   "native_duration_lb_frames": 73,
+   "opal_cues": [],
+   "script": "res/moves/rock_slide/anim.s",
+   "shakes": 2,
+   "sounds": 1,
+   "spa": "rock_slide",
+   "sprite_resources": []
+  },
+  "rock_throw": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [
+    "Opal B9 (P0, rock_projectile): a lobbed boulder with trailing grit crosses on an arc and lands on the native impact frame",
+    "(12 + 8 = 20), where it breaks into fragments, a Ranger dust burst and a light camera punch; the native vertical shake is kept.",
+    "Native emitters, sounds and the 20-frame cadence are unchanged (launch is async, travel = 20 frames).",
+    "Donors: pokeemerald rocks / flat_rock / flying_dirt (opal_b9_rock), Ranger 2 e002 (ranger_rock_burst, B1 install)."
+   ],
+   "delay_total_lb": 20,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 20,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 19,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 35,
+     "frame_lb": 0,
+     "index": 2,
+     "particle_life": 14,
+     "role": "defender",
+     "start_delay": 20
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 2,
+     "ends_frame_lb": 41,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 19,
+     "role": "defender",
+     "start_delay": 20
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": 0,
+   "loops": 0,
+   "native_duration_lb_frames": 41,
+   "opal_cues": [
+    "OpalCamPunch",
+    "OpalFx",
+    "OpalImpactBurst",
+    "OpalSheetBegin",
+    "OpalSheetEnd"
+   ],
+   "script": "res/moves/rock_throw/anim.s",
+   "shakes": 1,
+   "sounds": 2,
+   "spa": "rock_throw",
+   "sprite_resources": []
+  },
+  "rock_tomb": {
+   "battler_moves": 0,
+   "branches": 1,
+   "comments": [],
+   "delay_total_lb": 60,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 74,
+     "ends_frame_lb": 106,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 32,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 1,
+     "ends_frame_lb": 54,
+     "frame_lb": 30,
+     "index": 0,
+     "particle_life": 23,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 1,
+     "ends_frame_lb": 59,
+     "frame_lb": 35,
+     "index": 0,
+     "particle_life": 23,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 1,
+     "ends_frame_lb": 64,
+     "frame_lb": 40,
+     "index": 0,
+     "particle_life": 23,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 1,
+     "ends_frame_lb": 69,
+     "frame_lb": 45,
+     "index": 0,
+     "particle_life": 23,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 1,
+     "ends_frame_lb": 69,
+     "frame_lb": 45,
+     "index": 0,
+     "particle_life": 23,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 1,
+     "ends_frame_lb": 74,
+     "frame_lb": 50,
+     "index": 0,
+     "particle_life": 23,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 1,
+     "ends_frame_lb": 79,
+     "frame_lb": 55,
+     "index": 0,
+     "particle_life": 23,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 1,
+     "ends_frame_lb": 84,
+     "frame_lb": 60,
+     "index": 0,
+     "particle_life": 23,
+     "role": "other",
+     "start_delay": 0
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 0,
+   "native_duration_lb_frames": 106,
+   "opal_cues": [],
+   "script": "res/moves/rock_tomb/anim.s",
+   "shakes": 0,
+   "sounds": 9,
+   "spa": "rock_tomb",
+   "sprite_resources": []
+  },
+  "sand_attack": {
+   "battler_moves": 2,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 9,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 6,
+     "ends_frame_lb": 20,
+     "frame_lb": 0,
+     "index": 2,
+     "particle_life": 14,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 6,
+     "ends_frame_lb": 20,
+     "frame_lb": 0,
+     "index": 3,
+     "particle_life": 14,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 2,
+     "ends_frame_lb": 30,
+     "frame_lb": 9,
+     "index": 0,
+     "particle_life": 19,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 6,
+     "ends_frame_lb": 29,
+     "frame_lb": 9,
+     "index": 1,
+     "particle_life": 14,
+     "role": "defender",
+     "start_delay": 0
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": 9,
+   "loops": 0,
+   "native_duration_lb_frames": 30,
+   "opal_cues": [],
+   "script": "res/moves/sand_attack/anim.s",
+   "shakes": 0,
+   "sounds": 1,
+   "spa": "sand_attack",
+   "sprite_resources": []
+  },
+  "scratch": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [
+    "Opal B9 (P0, slash_contact): three staggered claw arcs (two directions) over the native scratch emitters + light reaction.",
+    "The 2 + 2 frame stagger sits inside the native emitter lifetime, so the animation ends when it did before.",
+    "Donor: pokeemerald fury_swipes (opal_b9_strike claw_a / claw_b), hit (opal_b9_strike)."
+   ],
+   "delay_total_lb": 4,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 9,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 8,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 4,
+     "ends_frame_lb": 23,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 19,
+     "role": "defender",
+     "start_delay": 0
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": 0,
+   "loops": 0,
+   "native_duration_lb_frames": 23,
+   "opal_cues": [
+    "OpalImpactBurst",
+    "OpalReactLight",
+    "OpalSheetBegin",
+    "OpalSheetEnd"
+   ],
+   "script": "res/moves/scratch/anim.s",
+   "shakes": 0,
+   "sounds": 1,
+   "spa": "scratch",
+   "sprite_resources": []
+  },
+  "slam": {
+   "battler_moves": 4,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 1,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 6,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 5,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 2,
+     "ends_frame_lb": 18,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 16,
+     "role": "defender",
+     "start_delay": 0
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": 0,
+   "loops": 0,
+   "native_duration_lb_frames": 18,
+   "opal_cues": [],
+   "script": "res/moves/slam/anim.s",
+   "shakes": 0,
+   "sounds": 1,
+   "spa": "slam",
+   "sprite_resources": []
+  },
+  "sleep_powder": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 0,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 39,
+     "ends_frame_lb": 86,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 46,
+     "role": "defender",
+     "start_delay": 1
+    }
+   ],
+   "fades": 1,
+   "first_defender_emitter_frame_lb": 0,
+   "loops": 0,
+   "native_duration_lb_frames": 86,
+   "opal_cues": [],
+   "script": "res/moves/sleep_powder/anim.s",
+   "shakes": 0,
+   "sounds": 1,
+   "spa": "sleep_powder",
+   "sprite_resources": []
+  },
+  "spark": {
+   "battler_moves": 2,
+   "branches": 0,
+   "comments": [
+    "AV1: after the lunge, a discharge arc fans out from the impact point.",
+    "Impact arc reuses discharge.spa defender emitter 1."
+   ],
+   "delay_total_lb": 11,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 40,
+     "ends_frame_lb": 50,
+     "frame_lb": 0,
+     "index": 2,
+     "particle_life": 10,
+     "role": "attacker",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 15,
+     "ends_frame_lb": 50,
+     "frame_lb": 0,
+     "index": 3,
+     "particle_life": 10,
+     "role": "attacker",
+     "start_delay": 25
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 15,
+     "ends_frame_lb": 30,
+     "frame_lb": 5,
+     "index": 1,
+     "particle_life": 10,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 10,
+     "ends_frame_lb": 65,
+     "frame_lb": 5,
+     "index": 0,
+     "particle_life": 50,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 15,
+     "ends_frame_lb": 36,
+     "frame_lb": 11,
+     "index": 1,
+     "particle_life": 10,
+     "role": "defender",
+     "start_delay": 0
+    }
+   ],
+   "fades": 6,
+   "first_defender_emitter_frame_lb": 5,
+   "loops": 1,
+   "native_duration_lb_frames": 65,
+   "opal_cues": [],
+   "script": "res/moves/spark/anim.s",
+   "shakes": 1,
+   "sounds": 2,
+   "spa": "discharge",
+   "sprite_resources": []
+  },
+  "string_shot": {
+   "battler_moves": 0,
+   "branches": 1,
+   "comments": [],
+   "delay_total_lb": 0,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 13,
+     "ends_frame_lb": 36,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 23,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 13,
+     "ends_frame_lb": 36,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 23,
+     "role": "other",
+     "start_delay": 0
+    }
+   ],
+   "fades": 4,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 0,
+   "native_duration_lb_frames": 36,
+   "opal_cues": [],
+   "script": "res/moves/string_shot/anim.s",
+   "shakes": 0,
+   "sounds": 4,
+   "spa": "string_shot",
+   "sprite_resources": [
+    "string_shot_NCGR_lz",
+    "string_shot_NCGR_lz"
+   ]
+  },
+  "stun_spore": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 0,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 39,
+     "ends_frame_lb": 86,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 46,
+     "role": "defender",
+     "start_delay": 1
+    }
+   ],
+   "fades": 1,
+   "first_defender_emitter_frame_lb": 0,
+   "loops": 0,
+   "native_duration_lb_frames": 86,
+   "opal_cues": [],
+   "script": "res/moves/stun_spore/anim.s",
+   "shakes": 0,
+   "sounds": 1,
+   "spa": "stun_spore",
+   "sprite_resources": []
+  },
+  "supersonic": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 10,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 20,
+     "ends_frame_lb": 57,
+     "extra_id": 1,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 37,
+     "role": "attacker",
+     "start_delay": 0
+    }
+   ],
+   "fades": 2,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 0,
+   "native_duration_lb_frames": 57,
+   "opal_cues": [],
+   "script": "res/moves/supersonic/anim.s",
+   "shakes": 1,
+   "sounds": 1,
+   "spa": "supersonic",
+   "sprite_resources": []
+  },
+  "swift": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [
+    "AV1: a second star wave trails the first, and the impact scatters with a",
+    "brief defender flash before the scene settles."
+   ],
+   "delay_total_lb": 20,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 10,
+     "ends_frame_lb": 25,
+     "frame_lb": 0,
+     "index": 2,
+     "particle_life": 15,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 20,
+     "ends_frame_lb": 60,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 40,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER_SIDE",
+     "emitter_life": 20,
+     "ends_frame_lb": 50,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 15,
+     "role": "other",
+     "start_delay": 15
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 20,
+     "ends_frame_lb": 70,
+     "frame_lb": 10,
+     "index": 1,
+     "particle_life": 40,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER_SIDE",
+     "emitter_life": 20,
+     "ends_frame_lb": 70,
+     "frame_lb": 20,
+     "index": 0,
+     "particle_life": 15,
+     "role": "other",
+     "start_delay": 15
+    }
+   ],
+   "fades": 3,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 0,
+   "native_duration_lb_frames": 70,
+   "opal_cues": [],
+   "script": "res/moves/swift/anim.s",
+   "shakes": 2,
+   "sounds": 2,
+   "spa": "swift",
+   "sprite_resources": []
+  },
+  "swords_dance": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 0,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 1,
+     "ends_frame_lb": 42,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 41,
+     "role": "attacker",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_ATTACKER",
+     "emitter_life": 6,
+     "ends_frame_lb": 29,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 19,
+     "role": "attacker",
+     "start_delay": 4
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 0,
+   "native_duration_lb_frames": 42,
+   "opal_cues": [],
+   "script": "res/moves/swords_dance/anim.s",
+   "shakes": 0,
+   "sounds": 1,
+   "spa": "swords_dance",
+   "sprite_resources": []
+  },
+  "tackle": {
+   "battler_moves": 2,
+   "branches": 0,
+   "comments": [
+    "Opal B9 (P0, physical_contact): dig-in dust -> native lunge -> hit flash + light reaction -> native restore.",
+    "Native emitters, sounds and timing unchanged; the shake is replaced by REACT_LIGHT (same frame, same 2px recoil + one flash).",
+    "Donors: pokeemerald speed_dust (opal_b9_wind), hit (opal_b9_strike); see docs/visual_overhaul/opal_b9/RECIPES.md"
+   ],
+   "delay_total_lb": 0,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 9,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 8,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 2,
+     "ends_frame_lb": 21,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 19,
+     "role": "defender",
+     "start_delay": 0
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": 0,
+   "loops": 0,
+   "native_duration_lb_frames": 21,
+   "opal_cues": [
+    "OpalImpactBurst",
+    "OpalReactLight",
+    "OpalSheetBegin",
+    "OpalSheetEnd"
+   ],
+   "script": "res/moves/tackle/anim.s",
+   "shakes": 0,
+   "sounds": 1,
+   "spa": "tackle",
+   "sprite_resources": []
+  },
+  "tail_whip": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [
+    "Opal B9 (P0, status_gesture): each of the two native wags leaves a soft wind crescent behind the user; during the second wag a",
+    "small gold star pops on every resolved target as the \"less wary\" feedback pulse. The native two-iteration loop is unrolled so the",
+    "pulse can attach to the second wag; sounds, revolve timing and total length are identical. Played only after the Defense drop",
+    "succeeded (subscript_update_stat_stage).",
+    "Donors: pokeemerald air_wave_2 (opal_b9_wind crescent), procedural Opal star (opal_fx_wx_gold)."
+   ],
+   "delay_total_lb": 0,
+   "emitters": [],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": null,
+   "loops": 0,
+   "native_duration_lb_frames": 0,
+   "opal_cues": [
+    "OpalImpactBurst",
+    "OpalSheetBegin",
+    "OpalSheetEnd"
+   ],
+   "script": "res/moves/tail_whip/anim.s",
+   "shakes": 0,
+   "sounds": 2,
+   "spa": null,
+   "sprite_resources": []
+  },
+  "thunder_shock": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [
+    "AV1: branching secondary arcs and a layered defender flash accent.",
+    "Branching arcs reuse thunderbolt.spa defender emitters 0, 1 and 3.",
+    "Opal B9 (P0, electric_small): a short spark charge at the user during the native dim, three horizontal zig-zag arcs that jump",
+    "across the target (offset and staggered inside the native 5 / 4 / 5 frame gaps) and a small spark burst; scaled well below",
+    "Thunderbolt so the two read differently. Native emitters, fades, sounds and timing unchanged.",
+    "Donors: pokeemerald electricity / electric_orbs (opal_thunder, B2 sheet), spark_h (opal_b9_ember)."
+   ],
+   "delay_total_lb": 19,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 50,
+     "ends_frame_lb": 51,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 1,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 50,
+     "ends_frame_lb": 65,
+     "frame_lb": 5,
+     "index": 1,
+     "particle_life": 10,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 50,
+     "ends_frame_lb": 60,
+     "frame_lb": 9,
+     "index": 0,
+     "particle_life": 1,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 50,
+     "ends_frame_lb": 74,
+     "frame_lb": 14,
+     "index": 1,
+     "particle_life": 10,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 15,
+     "ends_frame_lb": 98,
+     "frame_lb": 19,
+     "index": 3,
+     "particle_life": 10,
+     "role": "defender",
+     "start_delay": 54
+    }
+   ],
+   "fades": 5,
+   "first_defender_emitter_frame_lb": 0,
+   "loops": 0,
+   "native_duration_lb_frames": 98,
+   "opal_cues": [
+    "OpalChargeAura",
+    "OpalFx",
+    "OpalImpactBurst",
+    "OpalResidual",
+    "OpalSheetBegin",
+    "OpalSheetEnd"
+   ],
+   "script": "res/moves/thunder_shock/anim.s",
+   "shakes": 2,
+   "sounds": 2,
+   "spa": "thunderbolt",
+   "sprite_resources": []
+  },
+  "thunder_wave": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 52,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 19,
+     "ends_frame_lb": 41,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 19,
+     "role": "defender",
+     "start_delay": 3
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 20,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 19,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 15,
+     "ends_frame_lb": 84,
+     "frame_lb": 5,
+     "index": 2,
+     "particle_life": 10,
+     "role": "defender",
+     "start_delay": 54
+    }
+   ],
+   "fades": 4,
+   "first_defender_emitter_frame_lb": 0,
+   "loops": 0,
+   "native_duration_lb_frames": 84,
+   "opal_cues": [],
+   "script": "res/moves/thunder_wave/anim.s",
+   "shakes": 1,
+   "sounds": 3,
+   "spa": "thunder_wave",
+   "sprite_resources": []
+  },
+  "vine_whip": {
+   "battler_moves": 2,
+   "branches": 0,
+   "comments": [
+    "Opal B9 (P0, vine_lash): native wind-up lunge, then a two-part vine strike - a thrown lash travels from the user to the target, a",
+    "second shorter flick lands on the native shake frame - with leaf debris after the snap. REACT_LIGHT replaces the native 1px shake",
+    "on the same frame. Native emitters / sounds / timing unchanged.",
+    "Donors: pokeemerald vine_2 / leaf (opal_b9_nature)."
+   ],
+   "delay_total_lb": 5,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 4,
+     "ends_frame_lb": 46,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 37,
+     "role": "defender",
+     "start_delay": 5
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 9,
+     "frame_lb": 0,
+     "index": 2,
+     "particle_life": 8,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 1,
+     "ends_frame_lb": 11,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 6,
+     "role": "defender",
+     "start_delay": 4
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": 0,
+   "loops": 0,
+   "native_duration_lb_frames": 46,
+   "opal_cues": [
+    "OpalFx",
+    "OpalImpactBurst",
+    "OpalReactLight",
+    "OpalResidual",
+    "OpalSheetBegin",
+    "OpalSheetEnd"
+   ],
+   "script": "res/moves/vine_whip/anim.s",
+   "shakes": 0,
+   "sounds": 2,
+   "spa": "vine_whip",
+   "sprite_resources": []
+  },
+  "water_gun": {
+   "battler_moves": 0,
+   "branches": 2,
+   "comments": [
+    "Opal B9 (P0, water_jet): a continuous three-pulse droplet stream (lead + two afterimages each) rides the native water jet, a foam",
+    "splash and rebounding droplets mark the impact. The three launches are carved out of the native 10-frame lead-in (3 + 3 + 4), so",
+    "the impact still lands on the original frame. Contest branch is left fully native.",
+    "Donors: pokeemerald water_droplet / water_impact (opal_water, B2 sheet reused)."
+   ],
+   "delay_total_lb": 30,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 43,
+     "ends_frame_lb": 67,
+     "frame_lb": 10,
+     "index": 0,
+     "particle_life": 14,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 43,
+     "ends_frame_lb": 63,
+     "frame_lb": 10,
+     "index": 1,
+     "particle_life": 10,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 43,
+     "ends_frame_lb": 77,
+     "frame_lb": 20,
+     "index": 0,
+     "particle_life": 14,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 43,
+     "ends_frame_lb": 73,
+     "frame_lb": 20,
+     "index": 1,
+     "particle_life": 10,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_GENERIC",
+     "emitter_life": 50,
+     "ends_frame_lb": 89,
+     "frame_lb": 20,
+     "index": 8,
+     "particle_life": 19,
+     "role": "other",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 43,
+     "ends_frame_lb": 87,
+     "frame_lb": 30,
+     "index": 0,
+     "particle_life": 14,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 43,
+     "ends_frame_lb": 83,
+     "frame_lb": 30,
+     "index": 1,
+     "particle_life": 10,
+     "role": "defender",
+     "start_delay": 0
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": 10,
+   "loops": 0,
+   "native_duration_lb_frames": 89,
+   "opal_cues": [
+    "OpalImpactBurst",
+    "OpalProjectile",
+    "OpalResidual",
+    "OpalSheetBegin",
+    "OpalSheetEnd"
+   ],
+   "script": "res/moves/water_gun/anim.s",
+   "shakes": 3,
+   "sounds": 3,
+   "spa": "water_gun",
+   "sprite_resources": []
+  },
+  "wing_attack": {
+   "battler_moves": 0,
+   "branches": 0,
+   "comments": [],
+   "delay_total_lb": 0,
+   "emitters": [
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 3,
+     "ends_frame_lb": 40,
+     "frame_lb": 0,
+     "index": 0,
+     "particle_life": 37,
+     "role": "defender",
+     "start_delay": 0
+    },
+    {
+     "callback": "EMITTER_CB_SET_POS_TO_DEFENDER",
+     "emitter_life": 3,
+     "ends_frame_lb": 8,
+     "frame_lb": 0,
+     "index": 1,
+     "particle_life": 5,
+     "role": "defender",
+     "start_delay": 0
+    }
+   ],
+   "fades": 0,
+   "first_defender_emitter_frame_lb": 0,
+   "loops": 0,
+   "native_duration_lb_frames": 40,
+   "opal_cues": [],
+   "script": "res/moves/wing_attack/anim.s",
+   "shakes": 1,
+   "sounds": 1,
+   "spa": "wing_attack",
+   "sprite_resources": []
+  }
+ },
  "summary": {
   "by_tier": {
    "P0_early_frequent": 19,

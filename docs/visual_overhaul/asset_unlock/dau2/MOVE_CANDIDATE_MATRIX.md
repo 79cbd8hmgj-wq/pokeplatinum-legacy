@@ -2,7 +2,7 @@
 
 Generated from the committed DAU1 catalog + DAU2 feature file by `tools/visual_overhaul/dau2_curate.py matrix`. **No candidate is visually approved.** Heuristic (`feature_heuristic`) rows are search aids; only `named_*` rows carry a source-backed name.
 
-Moves: **33** (P1 19, P2 14). Candidate references: **366** over **263** distinct assets (pool: 1788 canonical renderings; 1978 cross-library duplicates collapsed). Moves with candidates from >= 3 source families: **33/33**; READY (>= 3 distinct name-backed renderings AND >= 3 families): **33/33**.
+Moves: **33** (P1 19, P2 14). Candidate references: **366** over **264** distinct assets (pool: 1788 canonical renderings; 1978 cross-library duplicates collapsed). Moves with candidates from >= 3 source families: **33/33**; READY (>= 3 distinct name-backed renderings AND >= 3 families): **33/33**.
 
 Evidence basis counts: named_move_particle 105, named_source 127, feature_heuristic 134. By family: gb_crystal 4, gba 123, nds_spl 122, pmd_sky 63, ranger2 54.
 
@@ -12,7 +12,7 @@ Evidence basis counts: named_move_particle 105, named_source 127, feature_heuris
 | Slam | P1 | READY_FOR_OWNER_REVIEW | gba, nds_spl / gba, nds_spl, pmd_sky, ranger2 | `slam.spa` | 11 |
 | Wing Attack | P1 | READY_FOR_OWNER_REVIEW | gba, nds_spl / gba, nds_spl, pmd_sky, ranger2 | `wing_attack.spa` | 11 |
 | Aerial Ace | P1 | READY_FOR_OWNER_REVIEW | gba, nds_spl / gba, nds_spl, pmd_sky, ranger2 | `aerial_ace.spa` | 11 |
-| Spark | P1 | READY_FOR_OWNER_REVIEW | gba, nds_spl / gba, nds_spl, pmd_sky, ranger2 | `spark.spa` | 11 |
+| Spark | P1 | READY_FOR_OWNER_REVIEW | gba, nds_spl / gba, nds_spl, pmd_sky, ranger2 | `discharge.spa` | 11 |
 | Flame Wheel | P1 | READY_FOR_OWNER_REVIEW | gba, nds_spl / gba, nds_spl, pmd_sky, ranger2 | `flame_wheel.spa` | 11 |
 | Aqua Jet | P1 | READY_FOR_OWNER_REVIEW | gb_crystal, gba, nds_spl / gb_crystal, gba, nds_spl, pmd_sky, ranger2 | `aqua_jet.spa` | 11 |
 | BubbleBeam | P1 | READY_FOR_OWNER_REVIEW | gb_crystal, gba, nds_spl / gb_crystal, gba, nds_spl, pmd_sky, ranger2 | `bubble_beam.spa` | 11 |
@@ -38,7 +38,7 @@ Evidence basis counts: named_move_particle 105, named_source 127, feature_heuris
 | Focus Energy | P2 | READY_FOR_OWNER_REVIEW | gba, nds_spl / gba, nds_spl, pmd_sky, ranger2 | `focus_energy.spa` | 11 |
 | Sand Attack | P2 | READY_FOR_OWNER_REVIEW | gba, nds_spl / gba, nds_spl, pmd_sky, ranger2 | `sand_attack.spa` | 11 |
 | String Shot | P2 | READY_FOR_OWNER_REVIEW | gba, nds_spl / gba, nds_spl, pmd_sky, ranger2 | `string_shot.spa` | 11 |
-| Leech Seed | P2 | READY_FOR_OWNER_REVIEW | gba, nds_spl / gba, nds_spl, pmd_sky, ranger2 | `leech_seed.spa` | 11 |
+| Leech Seed | P2 | READY_FOR_OWNER_REVIEW | gba, nds_spl / gba, nds_spl, pmd_sky, ranger2 | `bullet_seed.spa` | 11 |
 | Supersonic | P2 | READY_FOR_OWNER_REVIEW | gba, nds_spl / gba, nds_spl, pmd_sky, ranger2 | `supersonic.spa` | 11 |
 | Double Team | P2 | READY_FOR_OWNER_REVIEW | gba, nds_spl / gba, nds_spl, pmd_sky, ranger2 | - | 10 |
 
@@ -127,10 +127,10 @@ Status `READY_FOR_OWNER_REVIEW`. Board (local): `build/dau2/boards/P1_spark.png`
 
 | Cell | Component | Rank | Basis | Score | Library | Asset id | Tiles~ | Colours | Frames | Palette dependency |
 |---:|---|---:|---|---:|---|---|---:|---:|---:|---|
-| 0 | native_baseline | 0 | named_move_particle | 1.0 | platinum | `platinum:res/graphics/battle/particles/spark.spa` | 44 | 1 | 5 | NO (texture palettes are embedded in the |
+| 0 | native_baseline | 0 | named_move_particle | 1.0 | platinum | `platinum:res/graphics/battle/particles/discharge.spa` | 28 | 1 | 4 | NO (texture palettes are embedded in the |
 | 1 | impact | 1 | named_source | 0.76 | emerald | `emerald:graphics/battle_anims/sprites/impact.png` | 16 | 3 | 1 | NO |
 | 2 | impact | 2 | named_source | 0.734 | emerald | `emerald:graphics/battle_anims/sprites/horn_hit_2.png` | 8 | 2 | 1 | NO |
-| 3 | impact | 3 | named_move_particle | 0.677 | platinum | `platinum:res/graphics/battle/particles/discharge.spa` | 28 | 1 | 4 | NO (texture palettes are embedded in the |
+| 3 | impact | 3 | named_move_particle | 0.671 | platinum | `platinum:res/graphics/battle/particles/thunder_punch.spa` | 25 | 4 | 4 | NO (texture palettes are embedded in the |
 | 4 | impact | 4 | feature_heuristic | 0.617 | pmd_sky | `pmd_sky:files/EFFECT/effect.bin#253` | 173 | 6 | 6 | NO |
 | 5 | impact | 5 | feature_heuristic | 0.609 | ranger2 | `ranger2:res/prebuilt/data/field/effect/ef014_LZ.bin#2` | 44 | 8 | 5 | NO |
 | 6 | launch | 1 | named_source | 0.785 | emerald | `emerald:graphics/battle_anims/sprites/electricity.png` | 48 | 8 | 1 | NO |
@@ -213,7 +213,7 @@ Status `READY_FOR_OWNER_REVIEW`. Board (local): `build/dau2/boards/P1_magical_le
 
 ### Metal Claw (P1, `steel_slash`) - metal glint/trailing slash
 
-Status `READY_FOR_OWNER_REVIEW` - no usable same-move Platinum particle: EMPTY_OR_UNDECODABLE. Board (local): `build/dau2/boards/P1_metal_claw.png`. Visual decision: **AWAITING_OWNER_REVIEW**.
+Status `READY_FOR_OWNER_REVIEW` - no usable native Platinum particle: NO_PLATINUM_PARTICLE_FILE. Board (local): `build/dau2/boards/P1_metal_claw.png`. Visual decision: **AWAITING_OWNER_REVIEW**.
 
 | Cell | Component | Rank | Basis | Score | Library | Asset id | Tiles~ | Colours | Frames | Palette dependency |
 |---:|---|---:|---|---:|---|---|---:|---:|---:|---|
@@ -594,7 +594,7 @@ Status `READY_FOR_OWNER_REVIEW`. Board (local): `build/dau2/boards/P2_leech_seed
 
 | Cell | Component | Rank | Basis | Score | Library | Asset id | Tiles~ | Colours | Frames | Palette dependency |
 |---:|---|---:|---|---:|---|---|---:|---:|---:|---|
-| 0 | native_baseline | 0 | named_move_particle | 1.0 | platinum | `platinum:res/graphics/battle/particles/leech_seed.spa` | 17 | 5 | 6 | NO (texture palettes are embedded in the |
+| 0 | native_baseline | 0 | named_move_particle | 1.0 | platinum | `platinum:res/graphics/battle/particles/bullet_seed.spa` | 20 | 23 | 2 | NO (texture palettes are embedded in the |
 | 1 | reaction | 1 | named_source | 0.793 | emerald | `emerald:graphics/battle_anims/sprites/vine.png` | 80 | 5 | 1 | NO |
 | 2 | reaction | 2 | named_source | 0.793 | emerald | `emerald:graphics/battle_anims/sprites/vine_2.png` | 80 | 3 | 1 | NO |
 | 3 | reaction | 3 | named_move_particle | 0.727 | platinum | `platinum:res/graphics/battle/particles/vine_whip.spa` | 64 | 1 | 3 | NO (texture palettes are embedded in the |
@@ -602,7 +602,7 @@ Status `READY_FOR_OWNER_REVIEW`. Board (local): `build/dau2/boards/P2_leech_seed
 | 5 | reaction | 5 | feature_heuristic | 0.434 | pmd_sky | `pmd_sky:files/EFFECT/effect.bin#161` | 271 | 5 | 44 | NO |
 | 6 | travel | 1 | named_source | 0.793 | emerald | `emerald:graphics/battle_anims/sprites/seed_2.png` | 1 | 7 | 1 | NO |
 | 7 | travel | 2 | named_move_particle | 0.753 | platinum | `platinum:res/graphics/battle/particles/seed_bomb.spa` | 24 | 23 | 3 | NO (texture palettes are embedded in the |
-| 8 | travel | 3 | named_move_particle | 0.72 | platinum | `platinum:res/graphics/battle/particles/bullet_seed.spa` | 20 | 23 | 2 | NO (texture palettes are embedded in the |
+| 8 | travel | 3 | named_move_particle | 0.715 | platinum | `platinum:res/graphics/battle/particles/absorb.spa` | 37 | 1 | 4 | NO (texture palettes are embedded in the |
 | 9 | travel | 4 | feature_heuristic | 0.699 | diamond | `diamond:files/wazaeffect/effectclact/wecell/narc_0010.NCER` | 128 | 5 | 6 | NO |
 | 10 | travel | 5 | feature_heuristic | 0.65 | pmd_sky | `pmd_sky:files/EFFECT/effect.bin#145` | 129 | 7 | 19 | NO |
 
@@ -626,7 +626,7 @@ Status `READY_FOR_OWNER_REVIEW`. Board (local): `build/dau2/boards/P2_supersonic
 
 ### Double Team (P2, `evasion`) - echo silhouettes
 
-Status `READY_FOR_OWNER_REVIEW` - no usable same-move Platinum particle: NO_PLATINUM_PARTICLE_FILE. Board (local): `build/dau2/boards/P2_double_team.png`. Visual decision: **AWAITING_OWNER_REVIEW**.
+Status `READY_FOR_OWNER_REVIEW` - no usable native Platinum particle: NO_PLATINUM_PARTICLE_FILE. Board (local): `build/dau2/boards/P2_double_team.png`. Visual decision: **AWAITING_OWNER_REVIEW**.
 
 | Cell | Component | Rank | Basis | Score | Library | Asset id | Tiles~ | Colours | Frames | Palette dependency |
 |---:|---|---:|---|---:|---|---|---:|---:|---:|---|

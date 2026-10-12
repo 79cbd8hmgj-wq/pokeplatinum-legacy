@@ -18,7 +18,7 @@ python3 tools/visual_overhaul/test_dau1_sources.py            # donor-dependent 
 ```
 
 `catalog` takes about a minute, is deterministic (byte-identical output on re-run), and writes `ASSET_CATALOG.json`, `CANDIDATE_MATRIX.{json,md}`,
-`DECODER_COVERAGE.md`, `PROVENANCE.md`, a gallery index and small evidence excerpts under `gallery/`. Full contact-sheet galleries (`--gallery-dir`, default `build/dau1_gallery`) stay out of Git.
+`DECODER_COVERAGE.md`, `PROVENANCE.md`, a gallery index and small evidence excerpts. Full contact-sheet galleries (`--gallery-dir`, default `build/dau1_gallery`) and the excerpts (`--excerpt-dir`, default `build/dau1_excerpts`) are **local-only** and stay out of Git (since DAU2; the previously committed excerpts were removed from version control, history keeps them).
 
 ## Deliverables
 
@@ -29,7 +29,7 @@ python3 tools/visual_overhaul/test_dau1_sources.py            # donor-dependent 
 | `PROVENANCE.md` | generated: pinned commits, licence status, legal release gate, third-party references |
 | `CANDIDATE_MATRIX.{json,md}` | refreshed cross-library candidate matrix (selected / rejected / needs-review with rationales) |
 | `P1_READY.md` | gate checklist before B9 P1/P2 may start |
-| `gallery/*_excerpt.png` | real decoded frames from each priority library (excerpts only; release status: owner review) |
+| `build/dau1_excerpts/*_excerpt.png` (local) | real decoded frames from each priority library; **not committed** |
 
 Code: `tools/visual_overhaul/dau1/` (`common`, `nitro2d`, `bundle`, `nitro_library`, `pmd_effect`, `spl`, `ranger_tex`, `gba`, `gb`, `fx_convert`, `matrix`, `pipeline`, `gallery`, `report`, `catalog`) and `dau1_unlock.py`.
 Existing B1/B2 tools were reused, not replaced: the Ranger renderer (`render_ranger_ncer_preview.py`) is the pixel oracle for the new Nitro cell renderer and `opal_fx/build_opal_fx_sheet.py` (PR #110) is the conversion back end.

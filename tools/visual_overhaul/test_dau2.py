@@ -388,6 +388,110 @@ class Candidates(unittest.TestCase):
         self.assertEqual(C.decode_confidence(nc)[0], "MEDIUM_PALETTE_PAIRING_HEURISTIC")
 
 
+class Recipes(unittest.TestCase):
+    """Recipe validation: budgets, installed-sheet vocabulary, judged-weak donors, native emitter references, HGSS label policy."""
+
+    def ctx(self, obs_by_move=None, sheets=None):
+        from dau2 import recipes as R
+        cat, fd, binding = Candidates()._world()
+        assets = C.build_assets(cat, fd)
+        sh = sheets or {"s1": {"obj_tiles": 150, "variants": ["ice"], "sequences": {"a": 10}, "donor_sources": {}},
+                        "s2": {"obj_tiles": 150, "variants": [], "sequences": {"a": 10}, "donor_sources": {}},
+                        "s3": {"obj_tiles": 150, "variants": [], "sequences": {"a": 10}, "donor_sources": {}}}
+        mv = {"move": "Headbutt", "slug": "headbutt", "candidates": [], "tier": "P1_mid_staples", "template": "t", "visual_intent": "v", "anim_script": "x"}
+        return R, (sh, assets, {}, {"emerald": "abc"}, HERE.parents[1], {}, obs_by_move or {}), mv
+
+    def variant(self, parts):
+        return {"name": "t", "strategy": "native+opal", "summary": "s", "why": "w", "parts": parts}
+
+    A = {"L": 0, "H_lb": 10, "H": 10, "native_lb": 60}
+
+    def test_three_concurrent_sheets_violate_the_manager_cap(self):
+        from dau2.recipes_data import N, S
+        R, ctx, mv = self.ctx()
+        r = R.build_recipe(self.variant([N([]), S("a", "s1", "a", ("L", 0), 20, "m"), S("b", "s2", "a", ("L", 0), 20, "m"), S("c", "s3", "a", ("L", 5), 20, "m")]), "primary", mv, self.A, {}, ctx)
+        self.assertTrue(any("sprite managers" in v for v in r["violations"]), r["violations"])
+        self.assertTrue(any("OBJ tiles" in v for v in r["violations"]))                   # 3 x 150 = 450 tiles > 400 as well
+        r2 = R.build_recipe(self.variant([N([]), S("a", "s1", "a", ("L", 0), 20, "m"), S("b", "s2", "a", ("L", 20), 20, "m"), S("c", "s3", "a", ("L", 40), 20, "m")]), "primary", mv, self.A, {}, ctx)
+        self.assertEqual(r2["violations"], [])                                          # sequencing the same sheets is fine
+        self.assertEqual(r2["cost"]["concurrent_sprite_managers_peak"], 1)
+
+    def test_unknown_sheet_sequence_or_variant_is_rejected(self):
+        from dau2.recipes_data import N, S
+        R, ctx, mv = self.ctx()
+        for part in (S("a", "nope", "a", ("L", 0), 5, "m"), S("a", "s1", "zzz", ("L", 0), 5, "m"), S("a", "s1", "a", ("L", 0), 5, "m", variant="fire")):
+            with self.assertRaises(R.RecipeError):
+                R.build_recipe(self.variant([N([]), part]), "primary", mv, self.A, {}, ctx)
+
+    def test_donor_judged_weak_for_this_move_cannot_be_selected(self):
+        from dau2.recipes_data import D, N
+        R, ctx, mv = self.ctx(obs_by_move={"Headbutt": {"emerald:graphics/battle_anims/sprites/hit.png": {"status": "WRONG_ON_SIGHT", "note": "x"}}})
+        with self.assertRaises(R.RecipeError):
+            R.build_recipe(self.variant([N([]), D("impact", ["emerald:graphics/battle_anims/sprites/hit.png"], ("H", 0), 10, "m")]), "primary", mv, self.A, {}, ctx)
+        R, ctx, mv = self.ctx()
+        r = R.build_recipe(self.variant([N([]), D("impact", ["emerald:graphics/battle_anims/sprites/hit.png"], ("H", 0), 10, "m")]), "primary", mv, self.A, {}, ctx)
+        self.assertEqual(r["cost"]["new_obj_tiles"], 20)
+        self.assertEqual(r["status"], "PROVISIONAL_UNTIL_RUNTIME_VERIFIED")
+
+    def test_new_sheet_tile_cap_and_native_emitter_reference(self):
+        from dau2.recipes_data import D, N
+        R, ctx, mv = self.ctx()
+        sheets, assets = ctx[0], ctx[1]
+        big = [i for i in assets if i.startswith("emerald:")]
+        for i in big:
+            assets[i]["unit"]["extra"]["opal_fx"]["obj_tiles"] = 100
+        r = R.build_recipe(self.variant([N([]), D("impact", big, ("H", 0), 10, "m")]), "primary", mv, self.A, {}, ctx)
+        self.assertTrue(any("new donor sheet" in v for v in r["violations"]), r["violations"])
+        r = R.build_recipe(self.variant([N([7])]), "primary", mv, self.A, {"emitters": [{"index": 0}]}, ctx)
+        self.assertTrue(any("not created by the native script" in v for v in r["violations"]))
+
+    def test_cadence_judgement_only_when_the_native_bound_is_meaningful(self):
+        from dau2.recipes_data import N, S
+        R, ctx, mv = self.ctx()
+        long_part = S("a", "s1", "a", ("L", 0), 100, "m")
+        r = R.build_recipe(self.variant([N([]), long_part]), "primary", mv, {"L": 0, "H_lb": 5, "H": 8, "native_lb": 20}, {}, ctx)
+        self.assertTrue(r["notes"] and r["notes"][0].startswith("cadence unverifiable"))
+        r = R.build_recipe(self.variant([N([]), long_part]), "primary", mv, {"L": 0, "H_lb": 5, "H": 8, "native_lb": 40}, {}, ctx)
+        self.assertTrue(r["notes"] and r["notes"][0].startswith("CADENCE"))
+
+    def test_authored_data_covers_exactly_the_33_moves_with_at_most_two_alternatives(self):
+        from dau2.recipes_data import RECIPES
+        self.assertEqual(set(RECIPES), set(MOVE_QUERIES))
+        for name, r in RECIPES.items():
+            self.assertLessEqual(len(r["alts"]), 2, name)
+            self.assertTrue(r["primary"]["parts"] and r["primary"]["why"], name)
+        self.assertEqual({n for n, r in RECIPES.items() if r["primary"]["strategy"] == "custom_composite"}, {"Double Team", "Hypnosis", "Swords Dance"})
+
+
+class NativeScriptsAndLabels(unittest.TestCase):
+    def test_script_parser_handles_both_emitter_forms_and_task_durations(self):
+        from dau2 import native_scripts as N
+        with tempfile.TemporaryDirectory() as td:
+            p = Path(td) / "anim.s"
+            p.write_text("L_0:\n    LoadParticleResource 0, foo_spa\n    CreateEmitter 0, 2, EMITTER_CB_SET_POS_TO_ATTACKER\n    Delay 10\n"
+                         "    CreateEmitterEx 0, 1, 4, EMITTER_CB_SET_POS_TO_DEFENDER\n    Func_BlinkAttacker 50, 0\n    End\n")
+            s = N.read_script(p)
+        self.assertEqual(s["spa"], "foo")
+        self.assertEqual([(e["index"], e["role"], e["frame_lb"]) for e in s["emitters"]], [(2, "attacker", 0), (4, "defender", 10)])   # Ex: index is the THIRD argument
+        self.assertEqual(s["delay_total_lb"], 60)
+
+    def test_hgss_label_policy(self):
+        from dau2 import hgss_labels as HL
+        self.assertEqual(HL.classify("files/data/weather_sys.narc", [])[:2], ("field_weather_effect", "NAMED_CONTAINER"))
+        self.assertEqual(HL.classify("files/a/0/0/6", ["src/pokepic.c"])[:2], ("pokemon_graphic", "SOURCE_REFERENCE"))
+        self.assertEqual(HL.classify("files/a/0/1/5", [])[0], "unidentified")
+        self.assertEqual(HL.classify("files/a/0/7/7", ["src/overlay_44_0222.c"])[0], "unidentified")          # anonymous overlay code is not an identification
+        self.assertEqual(HL.AUTO_ELIGIBLE, {"battle_move_effect", "field_weather_effect"})
+
+    def test_unidentified_hgss_cell_banks_are_never_auto_selected(self):
+        hg = {"unit": unit("hgss:files/a/0/1/5#2", "hgss", "nitro_cell_bank", "files/a/0/1/5", "v"), "hgss_label": {"category": "unidentified", "basis": "UNIDENTIFIED", "auto_eligible": False}}
+        self.assertIsNone(C.heuristic_scope(hg))
+        hg["hgss_label"] = {"category": "field_weather_effect", "basis": "NAMED_CONTAINER", "auto_eligible": True}
+        self.assertIn("field_weather_effect", C.heuristic_scope(hg))
+        hg["hgss_label"] = None
+        self.assertIsNone(C.heuristic_scope(hg))
+
+
 class Guards(unittest.TestCase):
     def test_check_gate_rejects_a_tampered_artefact(self):
         import argparse

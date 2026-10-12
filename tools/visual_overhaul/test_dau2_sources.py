@@ -115,6 +115,24 @@ class HgssCorpus(unittest.TestCase):
             for lib, c in r["cross_game_agreement"].items():
                 self.assertTrue(c["emitter_records_identical_to_platinum"], f"{p.name}: {lib} differs in {c['differing_blocks']}")
 
+    def test_hgss_labels_reproduce_from_the_checkout_and_gate_the_matrix(self):
+        from dau2 import hgss_labels as HL
+        lab_p, ov_p, ml_p = OUT / "HGSS_CELL_BANK_LABELS.json", OUT / "hgss_cell_bank_label_overrides.json", OUT / "hgss_cell_bank_model_labels.json"
+        if not lab_p.exists():
+            self.skipTest("SKIP: labels not generated")
+        cat = json.loads((ROOT / "docs/visual_overhaul/asset_unlock/ASSET_CATALOG.json").read_text())
+        fresh = HL.build_labels(WS, cat, json.loads(ov_p.read_text()), json.loads(ml_p.read_text()))
+        committed = json.loads(lab_p.read_text())
+        self.assertEqual(fresh["containers"], committed["containers"])
+        self.assertEqual(fresh["summary"]["banks_decoded_auto_eligible"], 9)               # only identified weather-system banks are eligible today
+        mat = json.loads((OUT / "MOVE_CANDIDATE_MATRIX.json").read_text())
+        unident = {r["container"] for r in committed["containers"] if r["category"] == "unidentified"}
+        units = {u["id"]: u for u in cat["units"]}
+        for mv in mat["moves"]:
+            for r in mv["candidates"]:
+                u = units.get(r["asset_id"])
+                self.assertFalse(u and u["library"] == "hgss" and u["source"] in unident, f"{mv['move']}: unidentified HGSS bank selected")
+
     def test_dau1_catalog_hashes_still_reproduce(self):
         cat = {u["id"]: u for u in json.loads((ROOT / "docs/visual_overhaul/asset_unlock/ASSET_CATALOG.json").read_text())["units"]}
         n = 0

@@ -32,7 +32,7 @@ def cmd_sheets(a, root: Path) -> int:
     frames.update(pframes)
     fdoc = K.load_features(a)
     catalog = doc
-    assets = C.build_assets({"units": catalog["units"], "sources": catalog["sources"]}, fdoc)
+    assets = C.build_assets({"units": catalog["units"], "sources": catalog["sources"]}, fdoc, K.load_labels(a))
     canon = sorted((i for i, x in assets.items() if "alias_of" not in x and i in frames),
                    key=lambda i: (C.LIB_RANK[assets[i]["unit"]["library"]], i))
 
@@ -60,6 +60,20 @@ def cmd_sheets(a, root: Path) -> int:
             im, cells = SH.survey_page(page, frames_of, _short, f"{C.GAME[lib]}  page {p // SURVEY_PAGE + 1}  ({len(page)} cells; index -> ASSET_INDEX.json)")
             save_png(im, out / name)
             index["contact_sheets"][name] = {"library": lib, "cells": cells}
+    lab = K.load_labels(a)
+    index["hgss_labeling"] = {}
+    if lab:
+        unident = {r["container"] for r in lab["containers"] if r["category"] == "unidentified"}
+        per = {}
+        for u in doc["units"]:
+            if u["library"] == "hgss" and u["type"] == "nitro_cell_bank" and u["status"] == "DECODED" and u["source"] in unident and u["id"] in frames:
+                per.setdefault(u["source"], []).append(u["id"])
+        for cont, ids in sorted(per.items()):
+            ids.sort()
+            nm = f"hgss_labeling/{cont.replace('/', '_')}.png"
+            im, cells = SH.survey_page(ids[:100], frames_of, _short, f"UNIDENTIFIED HGSS container {cont} ({len(ids)} decoded banks): label it in hgss_cell_bank_label_overrides.json", cols=10)
+            save_png(im, out / nm)
+            index["hgss_labeling"][nm] = {"container": cont, "cells": cells}
     _dump_index(index, a.out / "ASSET_INDEX.json")
     from .report import gallery_markdown
     (a.out / "OWNER_REVIEW_GALLERY.md").write_text(gallery_markdown(matrix, index))
@@ -72,6 +86,7 @@ def _dump_index(index, path):
     import json as j
     lines = ["{"]
     lines.append(f'"boards":{K._enc(index["boards"])},')
+    lines.append(f'"hgss_labeling":{K._enc(index.get("hgss_labeling", {}))},')
     lines.append(f'"note":{j.dumps(index["note"])},')
     lines.append(f'"schema_version":1,')
     lines.append('"contact_sheets":{')
@@ -241,6 +256,8 @@ def cmd_check(a, root: Path) -> int:
           "re-run 'manifest' only after an approved implementation batch)")
     if binding["discrepancies"] != binding_fresh["discrepancies"]:
         e("B9_P1_P2_BINDING.json discrepancy list is stale")
+    if binding.get("native_scripts") != K.native_scripts(binding_fresh, root):
+        e("B9_P1_P2_BINDING.json native_scripts is stale (a native move script or particle archive changed)")
     mpath = a.out / "MOVE_CANDIDATE_MATRIX.json"
     m = json.loads(mpath.read_text())
     names = [x["move"] for x in m["moves"]]
@@ -276,7 +293,7 @@ def cmd_check(a, root: Path) -> int:
                     e(f"{mv['move']}: candidate lacks {k}")
     obs_p = a.out / "model_visual_observations.json"
     obs = json.loads(obs_p.read_text())["observations"] if obs_p.exists() else {}
-    again = C.build_matrix(catalog, fdoc, binding, obs)
+    again = C.build_matrix(catalog, fdoc, binding, obs, K.load_labels(a))
     if again != m:
         e("MOVE_CANDIDATE_MATRIX.json is stale relative to catalog/features/binding/observations (re-run 'matrix')")
     # ASSET_INDEX <-> matrix
@@ -322,7 +339,48 @@ def cmd_check(a, root: Path) -> int:
                 e(f"{p.name}: replay invariants fail")
             if "NOT_RUNTIME_CAPTURED" not in r["status"]:
                 e(f"{p.name}: status must say it is not runtime captured")
-    bad = _tracked_binaries(root, ["docs/visual_overhaul/asset_unlock/dau2", "tools/visual_overhaul/dau2", "tools/visual_overhaul/dau2_curate.py"])
+    # ---- recipes (provisional design shortlist) + HGSS labels
+    rp = a.out / "RECIPES_P1_P2.json"
+    if not rp.exists():
+        e("missing RECIPES_P1_P2.json (run 'recipes')")
+    else:
+        from . import recipes as R
+        rec = json.loads(rp.read_text())
+        if [x["move"] for x in rec["moves"]] != p1 + p2:
+            e("recipes: move names/order do not exactly match manifest P1 + P2")
+        for mv in rec["moves"]:
+            alts = mv["alternatives"]
+            if not 0 <= len(alts) <= 2 or "primary" not in mv:
+                e(f"recipes {mv['move']}: needs one primary and at most two alternatives")
+            for r in [mv["primary"], *alts]:
+                if r["status"] != R.STATUS or r["runtime_verified"] is not False or r["visual_decision"] != "AWAITING_OWNER_REVIEW" or r["violations"]:
+                    e(f"recipes {mv['move']}/{r['key']}: must be provisional, unverified, awaiting review and violation-free")
+                for part in r["parts"]:
+                    for c in part.get("cells", []):
+                        u = units.get(c["asset_id"])
+                        if not u or u["sha256"] != c["sha256"]:
+                            e(f"recipes {mv['move']}/{r['key']}: donor cell {c['asset_id']} is not in the catalog with that hash")
+        try:
+            lab_p = K.load_labels(a)
+            fresh = R.build(root, m, binding, catalog, fdoc, json.loads(obs_p.read_text()), lab_p)
+            if fresh != rec:
+                e("RECIPES_P1_P2.json is stale relative to matrix/binding/data (re-run 'recipes')")
+        except R.RecipeError as ex:
+            e(f"recipes no longer validate: {str(ex)[:300]}")
+    lp = K.load_labels(a)
+    if lp is None:
+        e("missing HGSS_CELL_BANK_LABELS.json (run 'labels')")
+    else:
+        elig = {r["container"] for r in lp["containers"] if r["auto_eligible"]}
+        for mv in m["moves"]:
+            for r in mv["candidates"]:
+                u = units.get(r["asset_id"])
+                if u and u["library"] == "hgss" and u["type"] == "nitro_cell_bank" and u["source"] not in elig:
+                    e(f"{mv['move']}: {r['asset_id']} is an HGSS cell bank from a container that is not labelled auto-eligible")
+    for n in ("DESIGN_SHORTLIST.md", "RECIPES_P1_P2.md"):
+        if not (a.out / n).exists():
+            e(f"missing {n}")
+    bad = _tracked_binaries(root, ["docs/visual_overhaul/asset_unlock", "tools/visual_overhaul/dau2", "tools/visual_overhaul/dau2_curate.py"])
     if bad:
         e(f"image/binary artefacts are tracked under DAU2 paths (previews must stay local): {bad[:5]}")
     for n in ("README.md", "GAP_REPORT.md", "OWNER_REVIEW_GALLERY.md", "EMITTER_RESEARCH.md", "MOVE_CANDIDATE_MATRIX.md", "OWNER_REVIEW_QUEUE.json"):
@@ -338,7 +396,7 @@ def cmd_check(a, root: Path) -> int:
 
 
 def cmd_all(a, root: Path) -> int:
-    for fn in (K.cmd_manifest, K.cmd_features, K.cmd_matrix, cmd_sheets, cmd_emitters):
+    for fn in (K.cmd_manifest, K.cmd_features, cmd_labels, K.cmd_matrix, cmd_recipes, cmd_sheets, cmd_emitters):
         if fn(a, root):
             return 1
     return 0
@@ -359,4 +417,40 @@ def cmd_package(a, root: Path) -> int:
         for n in ("OWNER_REVIEW_GALLERY.md", "OWNER_REVIEW_QUEUE.json", "ASSET_INDEX.json", "MOVE_CANDIDATE_MATRIX.md"):
             z.write(a.out / n, n)
     print(f"{zp} ({zp.stat().st_size // 1024} KiB, {len(files)} images) - LOCAL ONLY: contains decoded game art, do not commit")
+    return 0
+
+
+def cmd_labels(a, root: Path) -> int:
+    """HGSS cell-bank container labels (source-backed + owner overrides) + local labelling worksheets for the unidentified ones."""
+    from . import hgss_labels as HL
+    ov_p = a.out / "hgss_cell_bank_label_overrides.json"
+    if not ov_p.exists():
+        how = ("Under 'labels' add \"files/a/X/Y/Z\": {\"category\": <one of hgss_labels.CATEGORIES>, \"label\": \"...\", \"labeled_by\": \"name\"} after looking at "
+               "build/dau2/hgss_labeling/<container>.png (written by 'labels'); re-run 'labels' then 'matrix'. Only battle_move_effect / field_weather_effect make a container "
+               "eligible for automatic selection.")
+        K.write_json(ov_p, {"schema_version": 1, "how_to": how, "labels": {}})
+    ov = json.loads(ov_p.read_text())
+    ml_p = a.out / "hgss_cell_bank_model_labels.json"
+    doc = HL.build_labels(a.workspace.resolve(), K.load_catalog(root), ov, json.loads(ml_p.read_text()) if ml_p.exists() else None)
+    K.write_json(a.out / "HGSS_CELL_BANK_LABELS.json", doc)
+    s = doc["summary"]
+    print(json.dumps(s, indent=1))
+    return 0
+
+
+def cmd_recipes(a, root: Path) -> int:
+    """Resolve + validate the provisional P1/P2 recipes -> RECIPES_P1_P2.{json,md} + DESIGN_SHORTLIST.md (fails on any budget violation)."""
+    from . import recipes as R
+    from .recipes_report import recipes_markdown, shortlist_markdown
+    obs = json.loads((a.out / "model_visual_observations.json").read_text())
+    try:
+        d = R.build(root, json.loads((a.out / "MOVE_CANDIDATE_MATRIX.json").read_text()), json.loads((a.out / "B9_P1_P2_BINDING.json").read_text()),
+                    K.load_catalog(root), K.load_features(a), obs, K.load_labels(a))
+    except R.RecipeError as e:
+        print("recipe validation FAILED:\n" + str(e), file=sys.stderr)
+        return 1
+    dump_json_lines(d, "moves", a.out / "RECIPES_P1_P2.json")
+    (a.out / "RECIPES_P1_P2.md").write_text(recipes_markdown(d))
+    (a.out / "DESIGN_SHORTLIST.md").write_text(shortlist_markdown(d))
+    print(f"{len(d['moves'])} moves, {sum(1 + len(m['alternatives']) for m in d['moves'])} recipes, all {R.STATUS}")
     return 0

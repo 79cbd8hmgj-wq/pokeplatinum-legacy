@@ -1,0 +1,5 @@
+{
+ "how_to": "Under 'labels' add \"files/a/X/Y/Z\": {\"category\": <one of hgss_labels.CATEGORIES>, \"label\": \"...\", \"labeled_by\": \"name\"} after looking at build/dau2/hgss_labeling/<container>.png (written by 'labels'); re-run 'labels' then 'matrix'. Only battle_move_effect / field_weather_effect make a container eligible for automatic selection.",
+ "labels": {},
+ "schema_version": 1
+}

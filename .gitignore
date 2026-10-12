@@ -125,3 +125,8 @@ compile_commands.json
 # Cheat files
 *.dct
 *.mch
+
+# Opal DAU1/DAU2: decoded donor-art previews are local-only (licence unverified)
+/docs/visual_overhaul/asset_unlock/gallery/*.png
+/docs/visual_overhaul/asset_unlock/dau2/**/*.png
+/docs/visual_overhaul/asset_unlock/dau2/**/*.gif
