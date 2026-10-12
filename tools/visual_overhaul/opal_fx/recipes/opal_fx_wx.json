@@ -1,0 +1,182 @@
+{
+ "name": "opal_fx_wx",
+ "donor": "procedural (Opal B4 weather accents, no external donor)",
+ "sources": {
+  "f0": {
+   "type": "ring",
+   "w": 24,
+   "h": 16,
+   "rx": 8,
+   "ry": 3,
+   "thickness": 1.8,
+   "ramp": [
+    "#40204a",
+    "#8a60c8",
+    "#d8c0ff",
+    "#ffffff"
+   ]
+  },
+  "f1": {
+   "type": "ring",
+   "w": 40,
+   "h": 16,
+   "rx": 14,
+   "ry": 5,
+   "thickness": 1.6,
+   "ramp": [
+    "#40204a",
+    "#8a60c8",
+    "#d8c0ff",
+    "#ffffff"
+   ]
+  },
+  "f2": {
+   "type": "ring",
+   "w": 48,
+   "h": 16,
+   "rx": 20,
+   "ry": 7,
+   "thickness": 1.4,
+   "ramp": [
+    "#40204a",
+    "#8a60c8",
+    "#d8c0ff",
+    "#ffffff"
+   ]
+  },
+  "f3": {
+   "type": "ring",
+   "w": 64,
+   "h": 16,
+   "rx": 25,
+   "ry": 9,
+   "thickness": 1.2,
+   "ramp": [
+    "#40204a",
+    "#8a60c8",
+    "#d8c0ff",
+    "#ffffff"
+   ]
+  },
+  "s0": {
+   "type": "star",
+   "size": 16,
+   "ramp": [
+    "#40204a",
+    "#8a60c8",
+    "#d8c0ff",
+    "#ffffff"
+   ]
+  },
+  "s1": {
+   "type": "star",
+   "size": 8,
+   "ramp": [
+    "#40204a",
+    "#8a60c8",
+    "#d8c0ff",
+    "#ffffff"
+   ]
+  }
+ },
+ "frames": [
+  {
+   "id": "flat0",
+   "src": "f0"
+  },
+  {
+   "id": "flat1",
+   "src": "f1"
+  },
+  {
+   "id": "flat2",
+   "src": "f2"
+  },
+  {
+   "id": "flat3",
+   "src": "f3"
+  },
+  {
+   "id": "star0",
+   "src": "s0"
+  },
+  {
+   "id": "star1",
+   "src": "s1"
+  }
+ ],
+ "sequences": [
+  {
+   "name": "flat_expand",
+   "frames": [
+    [
+     "flat0",
+     3
+    ],
+    [
+     "flat1",
+     3
+    ],
+    [
+     "flat2",
+     3
+    ],
+    [
+     "flat3",
+     3
+    ]
+   ]
+  },
+  {
+   "name": "star_pop",
+   "frames": [
+    [
+     "star1",
+     2
+    ],
+    [
+     "star0",
+     3
+    ],
+    [
+     "star1",
+     2
+    ]
+   ]
+  }
+ ],
+ "palette_variants": {
+  "gold": {
+   "ramp": [
+    "#5a3a00",
+    "#c98a00",
+    "#ffd84a",
+    "#fffbe0"
+   ]
+  },
+  "water": {
+   "ramp": [
+    "#0a2f80",
+    "#2a78e0",
+    "#86d2ff",
+    "#ffffff"
+   ]
+  },
+  "ice": {
+   "ramp": [
+    "#14408c",
+    "#4aa0e6",
+    "#b0ecff",
+    "#ffffff"
+   ]
+  },
+  "earth": {
+   "ramp": [
+    "#3a2410",
+    "#8a5a2a",
+    "#d2a05a",
+    "#f2e0b0"
+   ]
+  }
+ }
+}

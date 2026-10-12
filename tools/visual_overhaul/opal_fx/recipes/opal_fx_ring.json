@@ -1,0 +1,433 @@
+{
+ "name": "opal_fx_ring",
+ "donor": "procedural (Opal B2, no external donor)",
+ "sources": {
+  "r0": {
+   "type": "ring",
+   "w": 24,
+   "h": 24,
+   "rx": 5,
+   "ry": 5,
+   "thickness": 2.2,
+   "ramp": [
+    "#40204a",
+    "#8a60c8",
+    "#d8c0ff",
+    "#ffffff"
+   ]
+  },
+  "r1": {
+   "type": "ring",
+   "w": 32,
+   "h": 32,
+   "rx": 9,
+   "ry": 9,
+   "thickness": 2.0,
+   "ramp": [
+    "#40204a",
+    "#8a60c8",
+    "#d8c0ff",
+    "#ffffff"
+   ]
+  },
+  "r2": {
+   "type": "ring",
+   "w": 40,
+   "h": 40,
+   "rx": 13,
+   "ry": 13,
+   "thickness": 1.8,
+   "ramp": [
+    "#40204a",
+    "#8a60c8",
+    "#d8c0ff",
+    "#ffffff"
+   ]
+  },
+  "r3": {
+   "type": "ring",
+   "w": 48,
+   "h": 48,
+   "rx": 17,
+   "ry": 17,
+   "thickness": 1.5,
+   "ramp": [
+    "#40204a",
+    "#8a60c8",
+    "#d8c0ff",
+    "#ffffff"
+   ]
+  },
+  "r4": {
+   "type": "ring",
+   "w": 48,
+   "h": 48,
+   "rx": 20,
+   "ry": 20,
+   "thickness": 1.2,
+   "ramp": [
+    "#40204a",
+    "#8a60c8",
+    "#d8c0ff",
+    "#ffffff"
+   ]
+  },
+  "f0": {
+   "type": "ring",
+   "w": 24,
+   "h": 16,
+   "rx": 8,
+   "ry": 3,
+   "thickness": 1.8,
+   "ramp": [
+    "#40204a",
+    "#8a60c8",
+    "#d8c0ff",
+    "#ffffff"
+   ]
+  },
+  "f1": {
+   "type": "ring",
+   "w": 40,
+   "h": 16,
+   "rx": 14,
+   "ry": 5,
+   "thickness": 1.6,
+   "ramp": [
+    "#40204a",
+    "#8a60c8",
+    "#d8c0ff",
+    "#ffffff"
+   ]
+  },
+  "f2": {
+   "type": "ring",
+   "w": 48,
+   "h": 16,
+   "rx": 20,
+   "ry": 7,
+   "thickness": 1.4,
+   "ramp": [
+    "#40204a",
+    "#8a60c8",
+    "#d8c0ff",
+    "#ffffff"
+   ]
+  },
+  "f3": {
+   "type": "ring",
+   "w": 64,
+   "h": 16,
+   "rx": 25,
+   "ry": 9,
+   "thickness": 1.2,
+   "ramp": [
+    "#40204a",
+    "#8a60c8",
+    "#d8c0ff",
+    "#ffffff"
+   ]
+  },
+  "s0": {
+   "type": "star",
+   "size": 16,
+   "ramp": [
+    "#40204a",
+    "#8a60c8",
+    "#d8c0ff",
+    "#ffffff"
+   ]
+  },
+  "s1": {
+   "type": "star",
+   "size": 8,
+   "ramp": [
+    "#40204a",
+    "#8a60c8",
+    "#d8c0ff",
+    "#ffffff"
+   ]
+  },
+  "d0": {
+   "type": "dot",
+   "size": 16,
+   "ramp": [
+    "#40204a",
+    "#8a60c8",
+    "#d8c0ff",
+    "#ffffff"
+   ]
+  },
+  "d1": {
+   "type": "dot",
+   "size": 8,
+   "ramp": [
+    "#40204a",
+    "#8a60c8",
+    "#d8c0ff",
+    "#ffffff"
+   ]
+  }
+ },
+ "frames": [
+  {
+   "id": "ring0",
+   "src": "r0"
+  },
+  {
+   "id": "ring1",
+   "src": "r1"
+  },
+  {
+   "id": "ring2",
+   "src": "r2"
+  },
+  {
+   "id": "ring3",
+   "src": "r3"
+  },
+  {
+   "id": "ring4",
+   "src": "r4"
+  },
+  {
+   "id": "flat0",
+   "src": "f0"
+  },
+  {
+   "id": "flat1",
+   "src": "f1"
+  },
+  {
+   "id": "flat2",
+   "src": "f2"
+  },
+  {
+   "id": "flat3",
+   "src": "f3"
+  },
+  {
+   "id": "star0",
+   "src": "s0"
+  },
+  {
+   "id": "star1",
+   "src": "s1"
+  },
+  {
+   "id": "dot0",
+   "src": "d0"
+  },
+  {
+   "id": "dot1",
+   "src": "d1"
+  }
+ ],
+ "sequences": [
+  {
+   "name": "ring_expand",
+   "frames": [
+    [
+     "ring0",
+     2
+    ],
+    [
+     "ring1",
+     2
+    ],
+    [
+     "ring2",
+     2
+    ],
+    [
+     "ring3",
+     2
+    ],
+    [
+     "ring4",
+     2
+    ]
+   ]
+  },
+  {
+   "name": "ring_converge",
+   "frames": [
+    [
+     "ring4",
+     2
+    ],
+    [
+     "ring3",
+     2
+    ],
+    [
+     "ring2",
+     2
+    ],
+    [
+     "ring1",
+     2
+    ],
+    [
+     "ring0",
+     2
+    ]
+   ]
+  },
+  {
+   "name": "flat_expand",
+   "frames": [
+    [
+     "flat0",
+     3
+    ],
+    [
+     "flat1",
+     3
+    ],
+    [
+     "flat2",
+     3
+    ],
+    [
+     "flat3",
+     3
+    ]
+   ]
+  },
+  {
+   "name": "flat_converge",
+   "frames": [
+    [
+     "flat3",
+     3
+    ],
+    [
+     "flat2",
+     3
+    ],
+    [
+     "flat1",
+     3
+    ],
+    [
+     "flat0",
+     3
+    ]
+   ]
+  },
+  {
+   "name": "star_pop",
+   "frames": [
+    [
+     "star1",
+     2
+    ],
+    [
+     "star0",
+     3
+    ],
+    [
+     "star1",
+     2
+    ]
+   ]
+  },
+  {
+   "name": "dot_pulse",
+   "loop": true,
+   "frames": [
+    [
+     "dot1",
+     3
+    ],
+    [
+     "dot0",
+     3
+    ]
+   ]
+  }
+ ],
+ "palette_variants": {
+  "gold": {
+   "ramp": [
+    "#5a3a00",
+    "#c98a00",
+    "#ffd84a",
+    "#fffbe0"
+   ]
+  },
+  "ghost": {
+   "ramp": [
+    "#1a0a3a",
+    "#5a2db0",
+    "#a47aea",
+    "#ecdcff"
+   ]
+  },
+  "water": {
+   "ramp": [
+    "#0a2f80",
+    "#2a78e0",
+    "#86d2ff",
+    "#ffffff"
+   ]
+  },
+  "fire": {
+   "ramp": [
+    "#5a0a00",
+    "#d2380a",
+    "#ff9a2a",
+    "#fff2b0"
+   ]
+  },
+  "ice": {
+   "ramp": [
+    "#14408c",
+    "#4aa0e6",
+    "#b0ecff",
+    "#ffffff"
+   ]
+  },
+  "psychic": {
+   "ramp": [
+    "#5a0a48",
+    "#c83ca8",
+    "#ff9ae0",
+    "#fff0fb"
+   ]
+  },
+  "earth": {
+   "ramp": [
+    "#3a2410",
+    "#8a5a2a",
+    "#d2a05a",
+    "#f2e0b0"
+   ]
+  },
+  "solar": {
+   "ramp": [
+    "#4a5a00",
+    "#a8c820",
+    "#f2ee60",
+    "#ffffff"
+   ]
+  },
+  "steel": {
+   "ramp": [
+    "#222a3a",
+    "#5f7088",
+    "#b9c8de",
+    "#ffffff"
+   ]
+  },
+  "opal": {
+   "ramp": [
+    "#3a2a5a",
+    "#8f7ad0",
+    "#e8d8ff",
+    "#fffaf0"
+   ]
+  }
+ }
+}

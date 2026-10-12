@@ -1,0 +1,223 @@
+{
+  "name": "opal_water",
+  "state": "installed via res/graphics/battle/moves NARC pipeline; drawn by SPRITE_FUNC_OPAL_FX",
+  "donor_sources": {
+    "col": {
+      "path": "graphics/battle_anims/sprites/water_column.png",
+      "sha256": "b2d3eeb0c6e52da367070e2ec1cf0be564746afd3d83a602698db1b4be35536a"
+    },
+    "drop": {
+      "path": "graphics/battle_anims/sprites/water_droplet.png",
+      "sha256": "324db9f22a0674e515b306e9a3b2bb148de3111d35fb0548f34c2037b05d4b2d"
+    },
+    "foam": {
+      "path": "graphics/battle_anims/sprites/water_impact.png",
+      "sha256": "6b3c7506300d794a87bbb618c97bcd9de74b00c6c85168ef689afce2eae820af"
+    }
+  },
+  "frames": [
+    {
+      "id": "col0",
+      "src": "col",
+      "rect": [
+        0,
+        0,
+        16,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "col1",
+      "src": "col",
+      "rect": [
+        0,
+        32,
+        16,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "col2",
+      "src": "col",
+      "rect": [
+        0,
+        64,
+        16,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "col3",
+      "src": "col",
+      "rect": [
+        0,
+        96,
+        16,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "drop0",
+      "src": "drop",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "drop1",
+      "src": "drop",
+      "rect": [
+        0,
+        32,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "drop2",
+      "src": "drop",
+      "rect": [
+        0,
+        64,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "drop3",
+      "src": "drop",
+      "rect": [
+        0,
+        96,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "drop4",
+      "src": "drop",
+      "rect": [
+        0,
+        128,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "drop5",
+      "src": "drop",
+      "rect": [
+        0,
+        160,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "drop6",
+      "src": "drop",
+      "rect": [
+        0,
+        192,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "drop7",
+      "src": "drop",
+      "rect": [
+        0,
+        224,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "foam",
+      "src": "foam",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "hflip": false
+    }
+  ],
+  "sequences": [
+    {
+      "index": 0,
+      "name": "column",
+      "loop": true,
+      "frames": [
+        "col0",
+        "col1",
+        "col2",
+        "col3"
+      ],
+      "total_delay": 12
+    },
+    {
+      "index": 1,
+      "name": "droplet",
+      "loop": false,
+      "frames": [
+        "drop0",
+        "drop1",
+        "drop2",
+        "drop3",
+        "drop4",
+        "drop5",
+        "drop6",
+        "drop7"
+      ],
+      "total_delay": 24
+    },
+    {
+      "index": 2,
+      "name": "foam",
+      "loop": false,
+      "frames": [
+        "foam"
+      ],
+      "total_delay": 6
+    }
+  ],
+  "palette_colours_rgb555": [
+    13345,
+    31777,
+    31969,
+    32161,
+    32353,
+    30313,
+    32545,
+    32737,
+    32527,
+    32749,
+    32755,
+    32697,
+    32761,
+    32767
+  ],
+  "palette_variants_rgb555": {},
+  "obj_tiles": 90,
+  "tile_budget": 192,
+  "conversion": "indexed donor PNG (index 0 transparent) -> RGBA -> optional luminance ramp recolor -> median-cut fold to one shared <=15 colour RGB555 palette -> 8px-aligned cells covered by hardware-legal OAMs (B1 cover()) -> nitrogfx",
+  "recipe": "opal_water.json"
+}

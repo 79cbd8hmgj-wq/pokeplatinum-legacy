@@ -1,0 +1,31 @@
+name: B1 melonDS runtime harness preflight
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/b1-melonds-runtime-preflight.yml'
+      - 'tools/visual_overhaul/b1_melonds_preflight.sh'
+
+permissions:
+  contents: read
+
+jobs:
+  emulator:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install virtual display and input/capture dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb xdotool x11-utils imagemagick libfuse2t64 unzip
+      - name: Fetch official melonDS Linux build and run deterministic preflight
+        run: bash tools/visual_overhaul/b1_melonds_preflight.sh
+      - name: Publish emulator capability evidence
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: b1-melonds-preflight
+          path: artifacts/b1-melonds
+          if-no-files-found: warn

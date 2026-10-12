@@ -1,0 +1,41 @@
+name: B1 Ranger battle cell export
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/b1-ranger-battle-cell-export.yml'
+      - 'tools/visual_overhaul/export_b1_ranger_effect_cells.py'
+      - 'tools/visual_overhaul/b1_donor_effect_import_preflight.py'
+      - 'tools/visual_overhaul/validate_b1_ranger_cell_export.py'
+
+permissions:
+  contents: read
+
+jobs:
+  render-cells:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Pillow and PNG dependencies
+        run: python3 -m pip install --break-system-packages Pillow
+      - name: Fetch source-backed Ranger 2 donor packages
+        run: git clone --depth 1 https://github.com/79cbd8hmgj-wq/pokeranger2.git /tmp/opal-ranger2
+      - name: Export real Ranger effect cells
+        run: |
+          python3 tools/visual_overhaul/export_b1_ranger_effect_cells.py \
+            --donor-root /tmp/opal-ranger2 \
+            --output-dir artifacts/b1-ranger-rendered-cells
+      - name: Validate decoded sprite frames and source provenance
+        run: |
+          python3 tools/visual_overhaul/validate_b1_ranger_cell_export.py \
+            artifacts/b1-ranger-rendered-cells /tmp/opal-ranger2
+      - name: Upload source-derived cell candidates
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: b1-ranger-effect-rendered-cells
+          path: artifacts/b1-ranger-rendered-cells
+          if-no-files-found: warn
+          retention-days: 14

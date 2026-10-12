@@ -1,0 +1,226 @@
+{
+ "name": "opal_water",
+ "donor": "pokeemerald",
+ "sources": {
+  "col": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/water_column.png"
+  },
+  "drop": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/water_droplet.png"
+  },
+  "foam": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/water_impact.png",
+   "ramp": [
+    "#4a9ae8",
+    "#8fd0ff",
+    "#d8f4ff",
+    "#ffffff"
+   ]
+  }
+ },
+ "frames": [
+  {
+   "id": "col0",
+   "src": "col",
+   "rect": [
+    0,
+    0,
+    16,
+    32
+   ]
+  },
+  {
+   "id": "col1",
+   "src": "col",
+   "rect": [
+    0,
+    32,
+    16,
+    32
+   ]
+  },
+  {
+   "id": "col2",
+   "src": "col",
+   "rect": [
+    0,
+    64,
+    16,
+    32
+   ]
+  },
+  {
+   "id": "col3",
+   "src": "col",
+   "rect": [
+    0,
+    96,
+    16,
+    32
+   ]
+  },
+  {
+   "id": "drop0",
+   "src": "drop",
+   "rect": [
+    0,
+    0,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "drop1",
+   "src": "drop",
+   "rect": [
+    0,
+    32,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "drop2",
+   "src": "drop",
+   "rect": [
+    0,
+    64,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "drop3",
+   "src": "drop",
+   "rect": [
+    0,
+    96,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "drop4",
+   "src": "drop",
+   "rect": [
+    0,
+    128,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "drop5",
+   "src": "drop",
+   "rect": [
+    0,
+    160,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "drop6",
+   "src": "drop",
+   "rect": [
+    0,
+    192,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "drop7",
+   "src": "drop",
+   "rect": [
+    0,
+    224,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "foam",
+   "src": "foam",
+   "rect": [
+    0,
+    0,
+    32,
+    32
+   ]
+  }
+ ],
+ "sequences": [
+  {
+   "name": "column",
+   "loop": true,
+   "frames": [
+    [
+     "col0",
+     3
+    ],
+    [
+     "col1",
+     3
+    ],
+    [
+     "col2",
+     3
+    ],
+    [
+     "col3",
+     3
+    ]
+   ]
+  },
+  {
+   "name": "droplet",
+   "frames": [
+    [
+     "drop0",
+     3
+    ],
+    [
+     "drop1",
+     3
+    ],
+    [
+     "drop2",
+     3
+    ],
+    [
+     "drop3",
+     3
+    ],
+    [
+     "drop4",
+     3
+    ],
+    [
+     "drop5",
+     3
+    ],
+    [
+     "drop6",
+     3
+    ],
+    [
+     "drop7",
+     3
+    ]
+   ]
+  },
+  {
+   "name": "foam",
+   "frames": [
+    [
+     "foam",
+     6
+    ]
+   ]
+  }
+ ]
+}

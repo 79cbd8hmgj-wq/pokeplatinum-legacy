@@ -19,6 +19,11 @@ L_0:
     SetExtraParams 0, 2, 26, 20, 0, 0
     Delay 10
     Func_Shake 4, 0, 1, 6, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
+    // B1: Ranger-inspired staged energy surge: smaller trailing impact wave.
+    Delay 4
+    CreateEmitter 0, 3, EMITTER_CB_GENERIC
+    SetExtraParams 0, 2, 26, 20, 0, 0
+    Func_Shake 1, 0, 1, 2, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
     WaitForAllEmitters
     UnloadParticleSystem 0
     Func_FadeBg FADE_BG_TYPE_BASE, 1, 12, 0, BATTLE_COLOR_DARK_PURPLE

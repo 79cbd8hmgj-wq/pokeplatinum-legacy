@@ -831,6 +831,8 @@
     SetExtraParams 0, \x, \y, \z
     .endm
 
+#include "macros/btlanim_opal.inc"
+
     .text
     .global _start
 _start:

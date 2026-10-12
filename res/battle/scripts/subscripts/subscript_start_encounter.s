@@ -9,6 +9,10 @@ _000:
     SetTrainerEncounter BTLSCR_PLAYER
     PlayEncounterAnimation 
     WaitTime 122
+    // Opal B7: presentation-only arrival cue, gated read-only on flags/species the engine already set (see _opal_cue)
+    GoTo _opal_cue
+
+_opal_cue_done:
     HealthBoxSlideInDelay BTLSCR_ENEMY
     Wait 
     CompareVarToValue OPCODE_FLAG_SET, BTLVAR_BATTLE_SYS_STATUS, BATTLE_STATUS_DISTORTION, _073
@@ -154,3 +158,57 @@ _237:
 _258:
     SetBattleBackground 
     End 
+
+// Opal B7 cinematic encounter cues. Reads BATTLE_STATUS_* and the enemy species only; writes nothing. Every path returns to
+// _opal_cue_done, so ordinary wild battles (no LEGENDARY flag) fall straight through with no extra frames.
+_opal_cue:
+    CompareVarToValue OPCODE_FLAG_NOT, BTLVAR_BATTLE_SYS_STATUS, BATTLE_STATUS_LEGENDARY, _opal_cue_done
+    CompareVarToValue OPCODE_FLAG_SET, BTLVAR_BATTLE_SYS_STATUS, BATTLE_STATUS_GIRATINA, _opal_cue_giratina
+    CompareMonDataToValue OPCODE_EQU, BTLSCR_ENEMY, BATTLEMON_SPECIES, SPECIES_DIALGA, _opal_cue_dialga
+    CompareMonDataToValue OPCODE_EQU, BTLSCR_ENEMY, BATTLEMON_SPECIES, SPECIES_PALKIA, _opal_cue_palkia
+    CompareMonDataToValue OPCODE_EQU, BTLSCR_ENEMY, BATTLEMON_SPECIES, SPECIES_UXIE, _opal_cue_uxie
+    CompareMonDataToValue OPCODE_EQU, BTLSCR_ENEMY, BATTLEMON_SPECIES, SPECIES_MESPRIT, _opal_cue_mesprit
+    CompareMonDataToValue OPCODE_EQU, BTLSCR_ENEMY, BATTLEMON_SPECIES, SPECIES_AZELF, _opal_cue_azelf
+    CompareMonDataToValue OPCODE_EQU, BTLSCR_ENEMY, BATTLEMON_SPECIES, SPECIES_GIRATINA, _opal_cue_legend
+    CompareMonDataToValue OPCODE_EQU, BTLSCR_ENEMY, BATTLEMON_SPECIES, SPECIES_DARKRAI, _opal_cue_legend
+    CompareMonDataToValue OPCODE_EQU, BTLSCR_ENEMY, BATTLEMON_SPECIES, SPECIES_SHAYMIN, _opal_cue_legend
+    CompareMonDataToValue OPCODE_EQU, BTLSCR_ENEMY, BATTLEMON_SPECIES, SPECIES_ARCEUS, _opal_cue_legend
+    CompareMonDataToValue OPCODE_EQU, BTLSCR_ENEMY, BATTLEMON_SPECIES, SPECIES_CRESSELIA, _opal_cue_legend
+    CompareMonDataToValue OPCODE_EQU, BTLSCR_ENEMY, BATTLEMON_SPECIES, SPECIES_REGIGIGAS, _opal_cue_legend
+    CompareMonDataToValue OPCODE_EQU, BTLSCR_ENEMY, BATTLEMON_SPECIES, SPECIES_HEATRAN, _opal_cue_legend
+    GoTo _opal_cue_done
+
+_opal_cue_giratina:
+    PlayBattleAnimation BTLSCR_ENEMY, BATTLE_ANIMATION_ENCOUNTER_GIRATINA
+    Wait 
+    GoTo _opal_cue_done
+
+_opal_cue_dialga:
+    PlayBattleAnimation BTLSCR_ENEMY, BATTLE_ANIMATION_ENCOUNTER_DIALGA
+    Wait 
+    GoTo _opal_cue_done
+
+_opal_cue_palkia:
+    PlayBattleAnimation BTLSCR_ENEMY, BATTLE_ANIMATION_ENCOUNTER_PALKIA
+    Wait 
+    GoTo _opal_cue_done
+
+_opal_cue_uxie:
+    PlayBattleAnimation BTLSCR_ENEMY, BATTLE_ANIMATION_ENCOUNTER_UXIE
+    Wait 
+    GoTo _opal_cue_done
+
+_opal_cue_mesprit:
+    PlayBattleAnimation BTLSCR_ENEMY, BATTLE_ANIMATION_ENCOUNTER_MESPRIT
+    Wait 
+    GoTo _opal_cue_done
+
+_opal_cue_azelf:
+    PlayBattleAnimation BTLSCR_ENEMY, BATTLE_ANIMATION_ENCOUNTER_AZELF
+    Wait 
+    GoTo _opal_cue_done
+
+_opal_cue_legend:
+    PlayBattleAnimation BTLSCR_ENEMY, BATTLE_ANIMATION_ENCOUNTER_LEGEND
+    Wait 
+    GoTo _opal_cue_done

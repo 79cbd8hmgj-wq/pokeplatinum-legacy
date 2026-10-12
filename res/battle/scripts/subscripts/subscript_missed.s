@@ -27,6 +27,9 @@ _058:
     CompareVarToValue OPCODE_FLAG_SET, BTLVAR_MOVE_STATUS_FLAGS, MOVE_STATUS_FAILED, _097
 
 _063:
+    // Opal B5 REACT_BLOCKED: presentation-only guard cue on the protecting battler (reached only via MOVE_STATUS_PROTECTED)
+    PlayBattleAnimation BTLSCR_DEFENDER, BATTLE_ANIMATION_BLOCKED
+    Wait 
     // {0} protected itself!
     PrintMessage BattleStrings_Text_PokemonProtectedItself_Ally, TAG_NICKNAME, BTLSCR_DEFENDER
     GoTo _179

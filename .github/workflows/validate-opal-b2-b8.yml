@@ -1,0 +1,58 @@
+name: validate-opal-b2-b8
+
+on:
+  pull_request:
+    paths:
+      - 'res/moves/**'
+      - 'res/battle/scripts/**'
+      - 'res/graphics/battle/moves/**'
+      - 'asm/macros/btlanim*.inc'
+      - 'src/battle_anim/**'
+      - 'include/battle_anim/**'
+      - 'include/constants/battle/battle_anim.h'
+      - 'generated/battle_sub_animations.txt'
+      - 'tools/visual_overhaul/opal_fx/**'
+      - 'tools/visual_overhaul/opal_cue_trace.py'
+      - 'tools/visual_overhaul/validate_opal_assets.py'
+      - 'tools/visual_overhaul/build_opal_b2_b8_reports.py'
+      - 'tools/visual_overhaul/test_opal_cinematic_math.c'
+      - 'docs/visual_overhaul/opal_b2_b8/**'
+      - 'docs/visual_overhaul/opal_installed_fx/**'
+      - '.github/workflows/validate-opal-b2-b8.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Pillow
+        run: python3 -m pip install --break-system-packages Pillow
+      - name: Camera / FX math property test (host)
+        run: |
+          gcc -Wall -Wextra -Werror -I include -o /tmp/test_opal_math tools/visual_overhaul/test_opal_cinematic_math.c
+          /tmp/test_opal_math
+      - name: FX sheet registration, budgets and deterministic rebuild
+        run: python3 tools/visual_overhaul/validate_opal_assets.py
+      - name: Cue trace - every path balanced, nothing live at End (default build)
+        run: python3 tools/visual_overhaul/opal_cue_trace.py --baseline docs/visual_overhaul/opal_b2_b8/cue_trace_baseline.json --json /tmp/opal-cue-trace.json
+      - name: Cue trace - low-flash and reduced-motion variants
+        run: |
+          python3 tools/visual_overhaul/opal_cue_trace.py --define OPAL_LOW_FLASH=1
+          python3 tools/visual_overhaul/opal_cue_trace.py --define OPAL_LOW_FLASH=1 --define OPAL_REDUCED_MOTION=1
+      - name: Generated evidence files are current
+        run: python3 tools/visual_overhaul/build_opal_b2_b8_reports.py --check
+      - name: B1 / AV1 / G7 contracts still hold
+        run: |
+          python3 tools/visual_overhaul/validate_b1_cinematic_pilots.py
+          python3 tools/visual_overhaul/validate_b1_existing_battle_integration.py
+          python3 tools/visual_overhaul/validate_av1_battle_presentation.py
+          python3 tools/visual_overhaul/validate_b1_installed_donor_sprites.py
+      - name: Upload cue traces
+        uses: actions/upload-artifact@v4
+        with:
+          name: opal-cue-trace
+          path: /tmp/opal-cue-trace.json

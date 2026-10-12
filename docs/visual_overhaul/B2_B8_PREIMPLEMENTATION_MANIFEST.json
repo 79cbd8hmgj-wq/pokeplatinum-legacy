@@ -1,0 +1,241 @@
+{
+  "schema": "opal.b2_b8.preimplementation.v1",
+  "purpose": "Implementation decisions and provenance, not proof unbuilt assets are integrated",
+  "authority": [
+    "docs/visual_overhaul/POKEMON_OPAL_ASSET_DIRECTION.md",
+    "docs/visual_overhaul/DONOR_CURATION_HANDOFF.md",
+    "docs/visual_overhaul/selection/ledgers/battle_effects_particles.json",
+    "docs/visual_overhaul/selection/IMPLEMENTATION_QUEUE.json"
+  ],
+  "rules": {
+    "source_only": true,
+    "owner_runtime_qa": true,
+    "mechanics_unchanged": true,
+    "never_import_all_donors": true,
+    "verify_host_ownership_before_modification": true,
+    "no_status_upgrade_without_rom_build": true
+  },
+  "verified_installed": [
+    {
+      "resource": "ranger_fire_bloom",
+      "source": "pokeranger2",
+      "package": "res/prebuilt/data/effect/e010_LZ.bin",
+      "provenance": "docs/visual_overhaul/b1_installed_donors/ranger_fire_bloom.provenance.json",
+      "frames": 8,
+      "obj_tiles": 236,
+      "recipe": "tools/visual_overhaul/b1_recipes/ranger_fire_bloom.json",
+      "use": [
+        "ember",
+        "flamethrower",
+        "fire_blast",
+        "flame_wheel"
+      ]
+    },
+    {
+      "resource": "ranger_ice_bloom",
+      "source": "pokeranger2",
+      "package": "res/prebuilt/data/effect/e009_LZ.bin",
+      "provenance": "docs/visual_overhaul/b1_installed_donors/ranger_ice_bloom.provenance.json",
+      "frames": 8,
+      "obj_tiles": 236,
+      "recipe": "tools/visual_overhaul/b1_recipes/ranger_ice_bloom.json",
+      "use": [
+        "ice_beam",
+        "aurora_beam"
+      ]
+    },
+    {
+      "resource": "ranger_rock_burst",
+      "source": "pokeranger2",
+      "package": "res/prebuilt/data/effect/e002_LZ.bin",
+      "provenance": "docs/visual_overhaul/b1_installed_donors/ranger_rock_burst.provenance.json",
+      "frames": 9,
+      "obj_tiles": 219,
+      "recipe": "tools/visual_overhaul/b1_recipes/ranger_rock_burst.json",
+      "use": [
+        "stone_edge",
+        "rock_blast",
+        "ancient_power"
+      ]
+    }
+  ],
+  "candidate_priorities": [
+    {
+      "source": "ranger2",
+      "group": "ranger_effect/e",
+      "use": "technique and component",
+      "targets": [
+        "thunderbolt",
+        "shadow_ball",
+        "surf"
+      ],
+      "status": "selection_requires_visual_confirmation",
+      "reference": "docs/visual_overhaul/selection/IMPLEMENTATION_QUEUE.json"
+    },
+    {
+      "source": "ranger2",
+      "group": "ranger_target/t",
+      "use": "targeting rings/impact detailing",
+      "targets": [
+        "projectiles",
+        "beam_impacts"
+      ],
+      "status": "selection_requires_visual_confirmation"
+    },
+    {
+      "source": "pmd_sky",
+      "group": "pmd_effect_or_texture_resource",
+      "use": "spectral and environmental component research",
+      "targets": [
+        "shadow_ball",
+        "weather"
+      ],
+      "status": "requires_exact_catalog_member"
+    },
+    {
+      "source": "hgss",
+      "group": "battle and ui visual references",
+      "use": "timing/typography/layer details",
+      "targets": [
+        "hud",
+        "special_encounters"
+      ],
+      "status": "requires_exact_catalog_member"
+    }
+  ],
+  "archetypes": [
+    {
+      "id": "projectile",
+      "phases": [
+        "anticipation",
+        "release",
+        "travel",
+        "impact",
+        "afterglow"
+      ],
+      "representatives": [
+        "shadow_ball",
+        "energy_ball",
+        "sludge_bomb"
+      ],
+      "guard": "No lingering sprites after effect cleanup"
+    },
+    {
+      "id": "beam",
+      "phases": [
+        "charge",
+        "beam_start",
+        "sustain",
+        "defender_impact",
+        "restore"
+      ],
+      "representatives": [
+        "thunderbolt",
+        "ice_beam",
+        "flash_cannon"
+      ],
+      "guard": "Respect doubles and scene fade restoration"
+    },
+    {
+      "id": "area",
+      "phases": [
+        "weather_prepare",
+        "environment_surge",
+        "multitarget_impact",
+        "dissipation",
+        "restore"
+      ],
+      "representatives": [
+        "surf",
+        "blizzard",
+        "earthquake"
+      ],
+      "guard": "Target all applicable battlers; preserve special target branch behavior"
+    },
+    {
+      "id": "contact",
+      "phases": [
+        "windup",
+        "translation",
+        "contact",
+        "recoil",
+        "return"
+      ],
+      "representatives": [
+        "quick_attack",
+        "close_combat"
+      ],
+      "guard": "Attacker must return to correct slot in singles/doubles"
+    },
+    {
+      "id": "status",
+      "phases": [
+        "anticipation",
+        "field_overlay",
+        "target_response",
+        "restore"
+      ],
+      "representatives": [
+        "hypnosis",
+        "will_o_wisp"
+      ],
+      "guard": "No gameplay/status timing alterations"
+    },
+    {
+      "id": "encounter",
+      "phases": [
+        "intro",
+        "subject_reveal",
+        "atmosphere",
+        "battle_handoff"
+      ],
+      "representatives": [],
+      "guard": "No encounter script or battle state changes"
+    }
+  ],
+  "phases": [
+    {
+      "id": "B2",
+      "scope": "donor effects by element",
+      "done_when": "source-installed graphics; script references; completed build"
+    },
+    {
+      "id": "B3",
+      "scope": "reusable camera and shake",
+      "done_when": "real battle renderer code; restore path; constrained branch checks"
+    },
+    {
+      "id": "B4",
+      "scope": "light/weather/atmosphere",
+      "done_when": "palette owner contract and fade cleanup; in-game references"
+    },
+    {
+      "id": "B5",
+      "scope": "Pokemon reactions",
+      "done_when": "battle sprites positions preserved and existing faint routines respected"
+    },
+    {
+      "id": "B6",
+      "scope": "reusable sequence coordinator",
+      "done_when": "multiple scripts use phases with timing and audio integration"
+    },
+    {
+      "id": "B7",
+      "scope": "special introductions",
+      "done_when": "battle-only hooks and safe fallbacks; no gameplay changes"
+    },
+    {
+      "id": "B8",
+      "scope": "integration and optimization",
+      "done_when": "resource budgets, build/revision artifacts, source static suite"
+    }
+  ],
+  "validation": [
+    "No edits to battle power/accuracy/damage/status or AI",
+    "No unbalanced particle or sprite alloc/free paths",
+    "Doubles, contests and friendly-fire branches remain present",
+    "OBJ tiles and palette bank consumption verified per installed resource",
+    "Both rev0 and rev1 ROM artifacts exist before 'build verified' designation",
+    "Runtime quality always marked owner pending"
+  ]
+}

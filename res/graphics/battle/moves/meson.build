@@ -53,6 +53,16 @@ pngs = files(
     'unused_33.png',
     'unused_34.png',
     'unused_36.png',
+    'ranger_fire_bloom.png',
+    'ranger_rock_burst.png',
+    'ranger_ice_bloom.png',
+    'opal_thunder.png',
+    'opal_ghost.png',
+    'opal_water.png',
+    'opal_fire.png',
+    'opal_ice.png',
+    'opal_fx_ring.png',
+    'opal_fx_wx.png',
 )
 
 pngs_for_pal = files(
@@ -85,6 +95,16 @@ pngs_for_pal = files(
     'unused_32.png',
     'unused_33.png',
     'unused_36.png',
+    'ranger_fire_bloom.png',
+    'ranger_rock_burst.png',
+    'ranger_ice_bloom.png',
+    'opal_thunder.png',
+    'opal_ghost.png',
+    'opal_water.png',
+    'opal_fire.png',
+    'opal_ice.png',
+    'opal_fx_ring.png',
+    'opal_fx_wx.png',
 )
 
 no_cell_pngs = files(
@@ -98,6 +118,20 @@ no_cell_pngs_for_pal = files(
     'scary_face.png',
     'fake_out.png',
     'unused_35.png',
+    'opal_fx_ring_gold.png',
+    'opal_fx_ring_ghost.png',
+    'opal_fx_ring_water.png',
+    'opal_fx_ring_fire.png',
+    'opal_fx_ring_ice.png',
+    'opal_fx_ring_psychic.png',
+    'opal_fx_ring_earth.png',
+    'opal_fx_ring_solar.png',
+    'opal_fx_ring_steel.png',
+    'opal_fx_ring_opal.png',
+    'opal_fx_wx_gold.png',
+    'opal_fx_wx_water.png',
+    'opal_fx_wx_ice.png',
+    'opal_fx_wx_earth.png',
 )
 
 cell_jsons = files(
@@ -138,6 +172,16 @@ cell_jsons = files(
     'unused_34_cell.json',
     'unused_35_cell.json',
     'unused_36_cell.json',
+    'ranger_fire_bloom_cell.json',
+    'ranger_rock_burst_cell.json',
+    'ranger_ice_bloom_cell.json',
+    'opal_thunder_cell.json',
+    'opal_ghost_cell.json',
+    'opal_water_cell.json',
+    'opal_fire_cell.json',
+    'opal_ice_cell.json',
+    'opal_fx_ring_cell.json',
+    'opal_fx_wx_cell.json',
 )
 
 cellanm_jsons = files(
@@ -178,6 +222,16 @@ cellanm_jsons = files(
     'unused_34_anim.json',
     'unused_35_anim.json',
     'unused_36_anim.json',
+    'ranger_fire_bloom_anim.json',
+    'ranger_rock_burst_anim.json',
+    'ranger_ice_bloom_anim.json',
+    'opal_thunder_anim.json',
+    'opal_ghost_anim.json',
+    'opal_water_anim.json',
+    'opal_fire_anim.json',
+    'opal_ice_anim.json',
+    'opal_fx_ring_anim.json',
+    'opal_fx_wx_anim.json',
 )
 
 manual_pal_files = files(

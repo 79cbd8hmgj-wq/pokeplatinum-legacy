@@ -1,0 +1,423 @@
+{
+  "name": "opal_fx_ring",
+  "state": "installed via res/graphics/battle/moves NARC pipeline; drawn by SPRITE_FUNC_OPAL_FX",
+  "donor_sources": {
+    "r0": {
+      "procedural": "ring",
+      "params": {
+        "w": 24,
+        "h": 24,
+        "rx": 5,
+        "ry": 5,
+        "thickness": 2.2,
+        "ramp": [
+          "#40204a",
+          "#8a60c8",
+          "#d8c0ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "r1": {
+      "procedural": "ring",
+      "params": {
+        "w": 32,
+        "h": 32,
+        "rx": 9,
+        "ry": 9,
+        "thickness": 2.0,
+        "ramp": [
+          "#40204a",
+          "#8a60c8",
+          "#d8c0ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "r2": {
+      "procedural": "ring",
+      "params": {
+        "w": 40,
+        "h": 40,
+        "rx": 13,
+        "ry": 13,
+        "thickness": 1.8,
+        "ramp": [
+          "#40204a",
+          "#8a60c8",
+          "#d8c0ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "r3": {
+      "procedural": "ring",
+      "params": {
+        "w": 48,
+        "h": 48,
+        "rx": 17,
+        "ry": 17,
+        "thickness": 1.5,
+        "ramp": [
+          "#40204a",
+          "#8a60c8",
+          "#d8c0ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "r4": {
+      "procedural": "ring",
+      "params": {
+        "w": 48,
+        "h": 48,
+        "rx": 20,
+        "ry": 20,
+        "thickness": 1.2,
+        "ramp": [
+          "#40204a",
+          "#8a60c8",
+          "#d8c0ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "f0": {
+      "procedural": "ring",
+      "params": {
+        "w": 24,
+        "h": 16,
+        "rx": 8,
+        "ry": 3,
+        "thickness": 1.8,
+        "ramp": [
+          "#40204a",
+          "#8a60c8",
+          "#d8c0ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "f1": {
+      "procedural": "ring",
+      "params": {
+        "w": 40,
+        "h": 16,
+        "rx": 14,
+        "ry": 5,
+        "thickness": 1.6,
+        "ramp": [
+          "#40204a",
+          "#8a60c8",
+          "#d8c0ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "f2": {
+      "procedural": "ring",
+      "params": {
+        "w": 48,
+        "h": 16,
+        "rx": 20,
+        "ry": 7,
+        "thickness": 1.4,
+        "ramp": [
+          "#40204a",
+          "#8a60c8",
+          "#d8c0ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "f3": {
+      "procedural": "ring",
+      "params": {
+        "w": 64,
+        "h": 16,
+        "rx": 25,
+        "ry": 9,
+        "thickness": 1.2,
+        "ramp": [
+          "#40204a",
+          "#8a60c8",
+          "#d8c0ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "s0": {
+      "procedural": "star",
+      "params": {
+        "size": 16,
+        "ramp": [
+          "#40204a",
+          "#8a60c8",
+          "#d8c0ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "s1": {
+      "procedural": "star",
+      "params": {
+        "size": 8,
+        "ramp": [
+          "#40204a",
+          "#8a60c8",
+          "#d8c0ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "d0": {
+      "procedural": "dot",
+      "params": {
+        "size": 16,
+        "ramp": [
+          "#40204a",
+          "#8a60c8",
+          "#d8c0ff",
+          "#ffffff"
+        ]
+      }
+    },
+    "d1": {
+      "procedural": "dot",
+      "params": {
+        "size": 8,
+        "ramp": [
+          "#40204a",
+          "#8a60c8",
+          "#d8c0ff",
+          "#ffffff"
+        ]
+      }
+    }
+  },
+  "frames": [
+    {
+      "id": "ring0",
+      "src": "r0",
+      "rect": null,
+      "hflip": false
+    },
+    {
+      "id": "ring1",
+      "src": "r1",
+      "rect": null,
+      "hflip": false
+    },
+    {
+      "id": "ring2",
+      "src": "r2",
+      "rect": null,
+      "hflip": false
+    },
+    {
+      "id": "ring3",
+      "src": "r3",
+      "rect": null,
+      "hflip": false
+    },
+    {
+      "id": "ring4",
+      "src": "r4",
+      "rect": null,
+      "hflip": false
+    },
+    {
+      "id": "flat0",
+      "src": "f0",
+      "rect": null,
+      "hflip": false
+    },
+    {
+      "id": "flat1",
+      "src": "f1",
+      "rect": null,
+      "hflip": false
+    },
+    {
+      "id": "flat2",
+      "src": "f2",
+      "rect": null,
+      "hflip": false
+    },
+    {
+      "id": "flat3",
+      "src": "f3",
+      "rect": null,
+      "hflip": false
+    },
+    {
+      "id": "star0",
+      "src": "s0",
+      "rect": null,
+      "hflip": false
+    },
+    {
+      "id": "star1",
+      "src": "s1",
+      "rect": null,
+      "hflip": false
+    },
+    {
+      "id": "dot0",
+      "src": "d0",
+      "rect": null,
+      "hflip": false
+    },
+    {
+      "id": "dot1",
+      "src": "d1",
+      "rect": null,
+      "hflip": false
+    }
+  ],
+  "sequences": [
+    {
+      "index": 0,
+      "name": "ring_expand",
+      "loop": false,
+      "frames": [
+        "ring0",
+        "ring1",
+        "ring2",
+        "ring3",
+        "ring4"
+      ],
+      "total_delay": 10
+    },
+    {
+      "index": 1,
+      "name": "ring_converge",
+      "loop": false,
+      "frames": [
+        "ring4",
+        "ring3",
+        "ring2",
+        "ring1",
+        "ring0"
+      ],
+      "total_delay": 10
+    },
+    {
+      "index": 2,
+      "name": "flat_expand",
+      "loop": false,
+      "frames": [
+        "flat0",
+        "flat1",
+        "flat2",
+        "flat3"
+      ],
+      "total_delay": 12
+    },
+    {
+      "index": 3,
+      "name": "flat_converge",
+      "loop": false,
+      "frames": [
+        "flat3",
+        "flat2",
+        "flat1",
+        "flat0"
+      ],
+      "total_delay": 12
+    },
+    {
+      "index": 4,
+      "name": "star_pop",
+      "loop": false,
+      "frames": [
+        "star1",
+        "star0",
+        "star1"
+      ],
+      "total_delay": 7
+    },
+    {
+      "index": 5,
+      "name": "dot_pulse",
+      "loop": true,
+      "frames": [
+        "dot1",
+        "dot0"
+      ],
+      "total_delay": 6
+    }
+  ],
+  "palette_colours_rgb555": [
+    9352,
+    26001,
+    32539,
+    32767
+  ],
+  "palette_variants_rgb555": {
+    "gold": [
+      235,
+      569,
+      10111,
+      29695
+    ],
+    "ghost": [
+      7203,
+      22699,
+      30196,
+      32637
+    ],
+    "water": [
+      16545,
+      29157,
+      32592,
+      32767
+    ],
+    "fire": [
+      43,
+      1274,
+      5759,
+      23519
+    ],
+    "ice": [
+      17666,
+      29321,
+      32694,
+      32767
+    ],
+    "psychic": [
+      9259,
+      21753,
+      29311,
+      32735
+    ],
+    "earth": [
+      2183,
+      5489,
+      11930,
+      23454
+    ],
+    "solar": [
+      361,
+      4917,
+      13246,
+      32767
+    ],
+    "steel": [
+      7332,
+      17867,
+      28471,
+      32767
+    ],
+    "opal": [
+      11431,
+      27121,
+      32637,
+      31743
+    ]
+  },
+  "obj_tiles": 184,
+  "tile_budget": 192,
+  "conversion": "indexed donor PNG (index 0 transparent) -> RGBA -> optional luminance ramp recolor -> median-cut fold to one shared <=15 colour RGB555 palette -> 8px-aligned cells covered by hardware-legal OAMs (B1 cover()) -> nitrogfx",
+  "recipe": "opal_fx_ring.json"
+}

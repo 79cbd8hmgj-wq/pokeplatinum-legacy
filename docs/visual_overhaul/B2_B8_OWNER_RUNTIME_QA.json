@@ -1,0 +1,267 @@
+{
+  "schema": "opal.b2_b8.owner_runtime_acceptance.v1",
+  "status": "owner_only_deferred_not_a_ci_gate",
+  "authority": [
+    "docs/visual_overhaul/B2_B8_IMPLEMENTATION_MANIFEST.json",
+    "docs/visual_overhaul/B2_B8_CINEMATIC_DIRECTION.json",
+    "docs/visual_overhaul/B1_BATTLE_INTEGRATION_RISK_REGISTER.md"
+  ],
+  "instructions": "Test the build artifact produced after implementation, not an older B1 artifact. Capture main and touch screens before/during/after an effect, record ROM SHA256 and result. Any test needing a source hook not implemented is NOT TESTABLE, not a pass. These tests do not change combat mechanics.",
+  "outcomes": [
+    "PASS",
+    "FAIL",
+    "NOT_TESTABLE",
+    "NOT_RUN"
+  ],
+  "fields_to_record": [
+    "ROM revision and SHA256",
+    "scenario ID",
+    "status",
+    "screenshot or video paths",
+    "observed fault",
+    "reproduction steps",
+    "source commit"
+  ],
+  "cases": [
+    {
+      "id": "B2-FIRE-01",
+      "phase": "B2",
+      "setup": "single",
+      "moves": "Flamethrower, Ember, Fire Blast, Flame Wheel",
+      "expected": "Fire bloom is visible and correctly attached to defender; sprite releases after impact",
+      "evidence": "Capture before hit, impact bloom, and next command menu; watch for missing tiles, palette swaps, double layers.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B2-ICE-01",
+      "phase": "B2",
+      "setup": "single",
+      "moves": "Ice Beam, Aurora Beam",
+      "expected": "Ranger ice bloom visible with correct cyan/blue palette, no pale rectangles",
+      "evidence": "Capture impact and one full subsequent turn.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B2-ROCK-01",
+      "phase": "B2",
+      "setup": "single",
+      "moves": "Stone Edge, Ancient Power",
+      "expected": "Rock burst fragments play, settle and restore with no missing enemy sprite",
+      "evidence": "Inspect background and healthbox after each move.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B2-ELECTRIC-01",
+      "phase": "B2",
+      "setup": "single",
+      "moves": "Thunderbolt, Thunder Shock",
+      "expected": "Charge, discharge, impact and aftermath visibly distinct; arena tint returns",
+      "evidence": "Compare sprites and HUD immediately after action.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B2-GHOST-01",
+      "phase": "B2",
+      "setup": "single",
+      "moves": "Shadow Ball",
+      "expected": "Spectral charge/travel/impact remain coordinated; final palette restores",
+      "evidence": "Run a second different move after Shadow Ball.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B2-SURF-01",
+      "phase": "B2",
+      "setup": "double",
+      "moves": "Surf",
+      "expected": "Wave covers intended battlers without dropping sprite layer or touching healthboxes",
+      "evidence": "Use two Pokémon per side; inspect target/hit sequencing.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B2-SURF-02",
+      "phase": "B2",
+      "setup": "partner",
+      "moves": "Surf",
+      "expected": "Player partner/friendly-fire presentation is correct and no alternate branch skips cleanup",
+      "evidence": "Use a battle mode where Surf visually includes partner and enemy targets.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B2-MULTI-01",
+      "phase": "B2",
+      "setup": "multi-hit",
+      "moves": "Rock Blast",
+      "expected": "Each repeated hit is readable; no leaked hit particles or OAM exhaustion",
+      "evidence": "Continue until move ends and next menu returns.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B2-CONTEST-01",
+      "phase": "B2",
+      "setup": "contest",
+      "moves": "Ancient Power, Rock Blast",
+      "expected": "Contest-specific script path remains graphically intact and returns cleanly",
+      "evidence": "Use Contest context where supported by the test build.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B2-BLOCK-01",
+      "phase": "B2",
+      "setup": "guarded move",
+      "moves": "Protect / immunity / miss cases",
+      "expected": "Presentation does not stall or leave cinematic layers when a normal hit does not occur",
+      "evidence": "Compare attacked and blocked turns; preserve game logic.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B3-CAMERA-01",
+      "phase": "B3",
+      "setup": "single",
+      "moves": "A representative beam and physical contact move",
+      "expected": "Focus/scroll/zoom effect is bounded; baseline battlefield composition exactly returns",
+      "evidence": "Record before/action/after, check battlers and command menu.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B3-CAMERA-02",
+      "phase": "B3",
+      "setup": "double",
+      "moves": "A representative area and projectile move",
+      "expected": "No camera displacement hides either partner, healthbox or controls",
+      "evidence": "Compare all four battler anchors before and after.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B4-PALETTE-01",
+      "phase": "B4",
+      "setup": "weather",
+      "moves": "Thunderbolt with active rain",
+      "expected": "Transient electrical lighting composes correctly with persistent weather grade",
+      "evidence": "Check weather animation still active after strike and unaffected HUD colors.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B4-PALETTE-02",
+      "phase": "B4",
+      "setup": "terrain cycle",
+      "moves": "Ice Beam / Surf on S2-D animated terrain",
+      "expected": "Existing terrain palette cycling continues correctly after scene fade",
+      "evidence": "Use source-supported special animated battlefield, compare before/after palette.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B4-PALETTE-03",
+      "phase": "B4",
+      "setup": "rapid sequence",
+      "moves": "Shadow Ball then Flash Cannon then Thunderbolt",
+      "expected": "No cumulative tint, fade, flash or BG offset after multiple moves",
+      "evidence": "Inspect final scene when command menu returns.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B5-RECOIL-01",
+      "phase": "B5",
+      "setup": "single",
+      "moves": "A physical impact and a projectile",
+      "expected": "Reaction is clear but battler sprites return to exact baseline anchor",
+      "evidence": "Capture anticipation, hit recoil, first idle frame.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B5-SUBSTITUTE-01",
+      "phase": "B5",
+      "setup": "special battler state",
+      "moves": "Substitute and then an impact move",
+      "expected": "Reactions do not reveal hidden original sprite or corrupt Substitute layers",
+      "evidence": "Compare Substitute display pre- and post-impact.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B5-FAINT-01",
+      "phase": "B5",
+      "setup": "faint / switch",
+      "moves": "A powerful move causing a faint, followed by switch",
+      "expected": "Faint, cleanup and replacement are clean with no palette/OAM residue",
+      "evidence": "Run until next Pokémon has entered and HUD has settled.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B6-SYNC-01",
+      "phase": "B6",
+      "setup": "routine attacks",
+      "moves": "Three low-power moves",
+      "expected": "No excessive charge delay; audio impact and visual contact occur together",
+      "evidence": "Observe responsiveness and command return.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B6-SYNC-02",
+      "phase": "B6",
+      "setup": "powerful attacks",
+      "moves": "Solar Beam and a high-power signature attack",
+      "expected": "Distinct charge and release without changing turn/timing mechanics",
+      "evidence": "Use charging and release turns separately.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B7-INTRO-01",
+      "phase": "B7",
+      "setup": "special encounter",
+      "moves": "Source-verified legendary encounter supported by Opal",
+      "expected": "Special intro appears only on intended encounter and restores normal battle state",
+      "evidence": "Compare normal wild encounter vs signature battle.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B7-INTRO-02",
+      "phase": "B7",
+      "setup": "interruption",
+      "moves": "Leave special encounter via defeat, catch or other supported exit",
+      "expected": "No persistent visual task, wrong palette, or corrupted return to field",
+      "evidence": "Verify post-battle overworld graphics.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B8-CONSIST-01",
+      "phase": "B8",
+      "setup": "visual identity",
+      "moves": "Battle HUD, move select, weather, signature effect",
+      "expected": "Opal pearl/mineral-violet/gold framing is coherent while element attacks retain distinct colors",
+      "evidence": "Capture main and touch screens across representative battles.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "B8-RESOURCE-01",
+      "phase": "B8",
+      "setup": "stress",
+      "moves": "Long doubles battle with weather, spread and multi-hit attacks",
+      "expected": "No accumulating sprite corruption, stale particles, palette conflicts or UI regressions",
+      "evidence": "Repeat 10+ animations, inspect both screens after every turn.",
+      "execution": "deferred_to_owner",
+      "result": "NOT_RUN"
+    }
+  ]
+}

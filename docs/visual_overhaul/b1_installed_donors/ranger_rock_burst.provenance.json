@@ -1,0 +1,64 @@
+{
+  "name": "ranger_rock_burst",
+  "donor": "pokeranger2",
+  "donor_package": "res/prebuilt/data/effect/e002_LZ.bin (member e002_a01.NCBR/NCER, palette e002.NCLR)",
+  "donor_commit_source": "79cbd8hmgj-wq/pokeranger2 default branch, depth-1 clone",
+  "palette_colours_rgb555": [
+    1124,
+    4295,
+    7466,
+    10637,
+    15888,
+    21172
+  ],
+  "obj_tiles": 219,
+  "tile_budget": 256,
+  "frames": [
+    {
+      "cell": "cell_000.png",
+      "cell_sha256": "a8caf2fad13fd6be69e2b92528d95182288c9e9e0550cfe8bd6d5217fc6b50cb",
+      "delay": 2
+    },
+    {
+      "cell": "cell_001.png",
+      "cell_sha256": "de5c85532ba7b94a1a5c00bd0c4a976abdc0edf0ad024016665b1ec4b303337d",
+      "delay": 2
+    },
+    {
+      "cell": "cell_002.png",
+      "cell_sha256": "6b60ba6c5323289323d4a65aec3ca281853d5d52bc401783aa6a80ce514204fe",
+      "delay": 2
+    },
+    {
+      "cell": "cell_003.png",
+      "cell_sha256": "e4242ce44cb7aa394a5fe9ee5e129787107141c3fe7de0297d36fa29d62c29fb",
+      "delay": 3
+    },
+    {
+      "cell": "cell_004.png",
+      "cell_sha256": "40036863060d85dcdbd1d71040d19a7bba2a106bfce211684cb537aca09c7151",
+      "delay": 3
+    },
+    {
+      "cell": "cell_005.png",
+      "cell_sha256": "596673214f9a4a14d868fdb38ff07837bcbf3b6c1e72ea6f3182c3a3d7b1e66d",
+      "delay": 3
+    },
+    {
+      "cell": "cell_006.png",
+      "cell_sha256": "7b2aee2f6069ff5e7b23ea678187a42e1260f4890a852b83c463724653c92c2f",
+      "delay": 3
+    },
+    {
+      "cell": "cell_007.png",
+      "cell_sha256": "72ffe22347ef44c1beefd9af3924b439ddb848356768019cb6ecd92f2cfa45d6",
+      "delay": 3
+    },
+    {
+      "cell": "cell_008.png",
+      "cell_sha256": "e486742c50f18555824290d8ee34775f91efe87b9b3a902a970be63e007709d2",
+      "delay": 3
+    }
+  ],
+  "state": "installed_via_res/graphics/battle/moves NARC pipeline; rendered by SPRITE_FUNC_OFFSET_AND_ANIMATE"
+}

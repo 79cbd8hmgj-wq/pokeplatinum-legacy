@@ -1,0 +1,48 @@
+name: B1 Ranger effect extraction
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'tools/visual_overhaul/materialize_b1_ranger_effects.py'
+      - 'tools/visual_overhaul/b1_donor_effect_import_preflight.py'
+      - '.github/workflows/b1-ranger-effect-extraction.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  extract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch Ranger 2 source assets
+        run: |
+          git clone --depth 1 https://github.com/79cbd8hmgj-wq/pokeranger2.git /tmp/opal-ranger2
+      - name: Decode three selected effect resource packages
+        run: |
+          python3 tools/visual_overhaul/materialize_b1_ranger_effects.py --ranger-root /tmp/opal-ranger2 --output artifacts/b1-ranger-effects
+      - name: Verify real Nitro resource extraction
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('artifacts/b1-ranger-effects')
+          data = json.loads((root / 'provenance.json').read_text())
+          assert len(data['packages']) == 3
+          for package in data['packages']:
+              assert package['members'], package['source_unit']
+              for member in package['members']:
+                  candidate = root / member['path']
+                  assert candidate.is_file() and candidate.stat().st_size == member['bytes']
+          print('PASS: extracted source-backed effect members with checksums')
+          PY
+      - name: Publish decoded resources and provenance
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: b1-ranger-extracted-effects
+          path: artifacts/b1-ranger-effects
+          if-no-files-found: warn
+          retention-days: 14

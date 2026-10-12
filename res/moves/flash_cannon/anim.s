@@ -23,6 +23,10 @@ L_0:
     Func_MoveEmitterA2BLinear 0, 0, 0, 0, 10, 64
     Delay 10
     PlaySoundEffectR SEQ_SE_DP_400
+    // B1: staggered metallic impact bloom; native resource, no new VRAM banks.
+    CreateEmitter 0, 1, EMITTER_CB_SET_POS_TO_DEFENDER
+    Delay 4
+    Func_FadeBattlerSprite BATTLE_ANIM_DEFENDER, 0, 1, BATTLE_COLOR_LIGHT_YELLOW1, 8, 0
     Func_Shake 2, 0, 1, 2, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER
     CreateEmitter 0, 1, EMITTER_CB_SET_POS_TO_DEFENDER
     WaitForAllEmitters

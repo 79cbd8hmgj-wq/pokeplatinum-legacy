@@ -1,0 +1,547 @@
+{
+  "schema_version": "1.0",
+  "kind": "design_and_implementation_specification",
+  "as_of": "2026-10-11",
+  "repo": "79cbd8hmgj-wq/pokeplatinum-legacy",
+  "branch": "feat/b1-opal-cinematic-battle-foundation",
+  "pr": 110,
+  "authorities": [
+    "docs/visual_overhaul/B1_OPAL_CINEMATIC_BATTLE_ARCHITECTURE.md",
+    "docs/visual_overhaul/B1_DONOR_ASSET_BATTLE_INTEGRATION.md",
+    "docs/visual_overhaul/DONOR_CURATION_HANDOFF.md",
+    "docs/visual_overhaul/POKEMON_OPAL_ASSET_DIRECTION.md",
+    "docs/visual_overhaul/selection/IMPLEMENTATION_QUEUE.json",
+    "docs/visual_overhaul/b1_installed_donors/README.md"
+  ],
+  "catalog": {
+    "record_count": 64841,
+    "recovered_usable_count": 55157,
+    "unresolved_decode_issues": 106,
+    "ranking_file": "docs/visual_overhaul/selection/IMPLEMENTATION_QUEUE.json",
+    "statuses_are_source_reported": true
+  },
+  "b1_known_constraints": {
+    "max_obj_tiles_per_new_import": 256,
+    "max_opaque_colors_per_new_import": 15,
+    "notes": "Known B1 sprite import contract, not a guarantee of free global sprite VRAM",
+    "pipeline": "Ranger cell export -> B1 sprite build -> B1 install -> nitrogfx",
+    "sprite_func": "SPRITE_FUNC_OFFSET_AND_ANIMATE"
+  },
+  "verified_installed_donors": [
+    {
+      "id": "ranger_fire_bloom",
+      "status": "installed",
+      "source": "ranger2",
+      "donor_package": "res/prebuilt/data/effect/e010_LZ.bin",
+      "frames": 8,
+      "obj_tiles": 236,
+      "opaque_colors": 7,
+      "provenance": "docs/visual_overhaul/b1_installed_donors/ranger_fire_bloom.provenance.json",
+      "recipe": "tools/visual_overhaul/b1_recipes/ranger_fire_bloom.json",
+      "moves": [
+        "flamethrower",
+        "ember",
+        "fire_blast",
+        "flame_wheel"
+      ]
+    },
+    {
+      "id": "ranger_ice_bloom",
+      "status": "installed",
+      "source": "ranger2",
+      "donor_package": "res/prebuilt/data/effect/e009_LZ.bin",
+      "frames": 8,
+      "obj_tiles": 236,
+      "opaque_colors": 7,
+      "provenance": "docs/visual_overhaul/b1_installed_donors/ranger_ice_bloom.provenance.json",
+      "recipe": "tools/visual_overhaul/b1_recipes/ranger_ice_bloom.json",
+      "moves": [
+        "ice_beam",
+        "aurora_beam"
+      ]
+    },
+    {
+      "id": "ranger_rock_burst",
+      "status": "installed",
+      "source": "ranger2",
+      "donor_package": "res/prebuilt/data/effect/e002_LZ.bin",
+      "frames": 9,
+      "obj_tiles": 219,
+      "opaque_colors": 6,
+      "provenance": "docs/visual_overhaul/b1_installed_donors/ranger_rock_burst.provenance.json",
+      "recipe": "tools/visual_overhaul/b1_recipes/ranger_rock_burst.json",
+      "moves": [
+        "stone_edge",
+        "rock_blast",
+        "ancient_power"
+      ]
+    }
+  ],
+  "unverified_candidate_families": [
+    {
+      "rank": 6,
+      "source": "ranger2",
+      "family": "ranger_effect/e",
+      "use": "technique",
+      "status": "candidate_not_verified_for_import",
+      "goal": "multi-phase attack sequencing"
+    },
+    {
+      "rank": 7,
+      "source": "ranger2",
+      "family": "ranger_effect/e",
+      "use": "component",
+      "status": "candidate_not_verified_for_import",
+      "goal": "new sprite frames for lighting, water and spectral effects"
+    },
+    {
+      "rank": 22,
+      "source": "ranger2",
+      "family": "ranger_target/t",
+      "use": "component",
+      "status": "candidate_not_verified_for_import",
+      "goal": "charge/impact framing, never actual targeting changes"
+    },
+    {
+      "rank": 10,
+      "source": "ranger2",
+      "family": "ranger_event/event",
+      "use": "technique",
+      "status": "candidate_not_verified_for_import",
+      "goal": "cinematic transitions"
+    },
+    {
+      "rank": 13,
+      "source": "ranger2",
+      "family": "ranger_event/event",
+      "use": "technique",
+      "status": "candidate_not_verified_for_import",
+      "goal": "intro capabilities"
+    },
+    {
+      "rank": 18,
+      "source": "pmd_sky",
+      "family": "pmd_mapbg_d",
+      "use": "technique",
+      "status": "candidate_not_verified_for_import",
+      "goal": "environmental timing and atmosphere"
+    },
+    {
+      "rank": 19,
+      "source": "pmd_sky",
+      "family": "pmd_mapbg_v",
+      "use": "technique",
+      "status": "candidate_not_verified_for_import",
+      "goal": "environmental timing and atmosphere"
+    },
+    {
+      "rank": 5,
+      "source": "ranger2",
+      "family": "ranger_interface/i",
+      "use": "component",
+      "status": "candidate_not_verified_for_import",
+      "goal": "Opal UI micro accents; verify G7 healthbox banks"
+    },
+    {
+      "rank": 9,
+      "source": "ranger2",
+      "family": "ranger_interface/i",
+      "use": "technique",
+      "status": "candidate_not_verified_for_import",
+      "goal": "UI reveal/motion"
+    }
+  ],
+  "cinematic_archetypes": [
+    {
+      "id": "charged_bolt",
+      "moves": [
+        "thunderbolt",
+        "thunder",
+        "thunder_shock",
+        "spark"
+      ],
+      "stages": [
+        "anticipate",
+        "charge",
+        "release",
+        "impact",
+        "afterglow",
+        "reset"
+      ],
+      "donor_family": [
+        "ranger_effect/e",
+        "ranger_target/t"
+      ],
+      "guards": [
+        "restore light and scene grade",
+        "no new unverified SPA emitter IDs"
+      ],
+      "status": "proposed_not_implemented"
+    },
+    {
+      "id": "spectral_projectile",
+      "moves": [
+        "shadow_ball",
+        "ominous_wind",
+        "shadow_force"
+      ],
+      "stages": [
+        "darken",
+        "gather",
+        "travel",
+        "impact",
+        "linger",
+        "reset"
+      ],
+      "donor_family": [
+        "ranger_effect/e"
+      ],
+      "guards": [
+        "preserve Shadow Force hidden-state choreography"
+      ],
+      "status": "proposed_not_implemented"
+    },
+    {
+      "id": "expanding_area_surge",
+      "moves": [
+        "surf",
+        "hydro_pump",
+        "water_pulse"
+      ],
+      "stages": [
+        "anticipate",
+        "rise",
+        "sweep",
+        "multi_target_hit",
+        "recede",
+        "reset"
+      ],
+      "donor_family": [
+        "ranger_effect/e",
+        "pmd_mapbg_v"
+      ],
+      "guards": [
+        "preserve doubles and friendly-fire branches"
+      ],
+      "status": "proposed_not_implemented"
+    },
+    {
+      "id": "thermal_burst",
+      "moves": [
+        "flamethrower",
+        "fire_blast",
+        "ember",
+        "flame_wheel"
+      ],
+      "stages": [
+        "flare",
+        "launch",
+        "impact",
+        "embers",
+        "reset"
+      ],
+      "donor_family": [
+        "ranger_fire_bloom"
+      ],
+      "guards": [
+        "preserve previous installed B1 resources"
+      ],
+      "status": "proposed_not_implemented"
+    },
+    {
+      "id": "cryogenic_beam",
+      "moves": [
+        "ice_beam",
+        "aurora_beam",
+        "blizzard"
+      ],
+      "stages": [
+        "charge",
+        "beam",
+        "impact",
+        "crystal_bloom",
+        "reset"
+      ],
+      "donor_family": [
+        "ranger_ice_bloom"
+      ],
+      "guards": [
+        "Blizzard multi-target preserved"
+      ],
+      "status": "proposed_not_implemented"
+    },
+    {
+      "id": "lithic_impact",
+      "moves": [
+        "stone_edge",
+        "rock_blast",
+        "ancient_power"
+      ],
+      "stages": [
+        "gather",
+        "launch",
+        "impact",
+        "fracture",
+        "settle"
+      ],
+      "donor_family": [
+        "ranger_rock_burst"
+      ],
+      "guards": [
+        "Ancient Power Contest and Rock Blast repetitions preserved"
+      ],
+      "status": "proposed_not_implemented"
+    },
+    {
+      "id": "energy_beam",
+      "moves": [
+        "solar_beam",
+        "flash_cannon",
+        "psybeam",
+        "aura_sphere",
+        "dragon_pulse"
+      ],
+      "stages": [
+        "charge",
+        "release",
+        "travel",
+        "impact",
+        "restore"
+      ],
+      "donor_family": [
+        "ranger_effect/e"
+      ],
+      "guards": [
+        "Solar Beam charge branch intact"
+      ],
+      "status": "proposed_not_implemented"
+    },
+    {
+      "id": "terrain_quake",
+      "moves": [
+        "earthquake",
+        "earth_power"
+      ],
+      "stages": [
+        "pressure",
+        "shock",
+        "debris",
+        "settle"
+      ],
+      "donor_family": [
+        "ranger_effect/e"
+      ],
+      "guards": [
+        "only visual arena shake, no combat terrain mechanics"
+      ],
+      "status": "proposed_not_implemented"
+    },
+    {
+      "id": "toxic_burst",
+      "moves": [
+        "sludge_bomb"
+      ],
+      "stages": [
+        "launch",
+        "impact",
+        "droplets",
+        "decay"
+      ],
+      "donor_family": [
+        "ranger_effect/e"
+      ],
+      "guards": [
+        "status infliction logic unchanged"
+      ],
+      "status": "proposed_not_implemented"
+    },
+    {
+      "id": "weather_atmosphere",
+      "moves": [
+        "sandstorm",
+        "blizzard",
+        "weather_ball"
+      ],
+      "stages": [
+        "blend_in",
+        "active",
+        "blend_out"
+      ],
+      "donor_family": [
+        "pmd_mapbg_d",
+        "pmd_mapbg_v"
+      ],
+      "guards": [
+        "restore S2-D palette cycles",
+        "weather mechanics unchanged"
+      ],
+      "status": "proposed_not_implemented"
+    },
+    {
+      "id": "legendary_signature",
+      "moves": [
+        "roar_of_time",
+        "spacial_rend",
+        "seed_flare",
+        "judgment",
+        "draco_meteor"
+      ],
+      "stages": [
+        "intro",
+        "anticipate",
+        "focus",
+        "release",
+        "impact",
+        "restore"
+      ],
+      "donor_family": [
+        "ranger_event/event",
+        "ranger_effect/e"
+      ],
+      "guards": [
+        "verify actual Opal encounter hook",
+        "preserve bespoke existing move scripts"
+      ],
+      "status": "proposed_not_implemented"
+    }
+  ],
+  "phases": [
+    {
+      "id": "B2",
+      "status": "not_a_claim_of_completion",
+      "deliverables": [
+        "Actual donor-derived electrical, spectral and water resources, starting Thunderbolt/Shadow Ball/Surf",
+        "Extend archetype mapping after each working vertical slice"
+      ],
+      "source_targets": [
+        "res/graphics/battle/moves/",
+        "res/moves/thunderbolt/anim.s",
+        "res/moves/shadow_ball/anim.s",
+        "res/moves/surf/anim.s"
+      ],
+      "gates": [
+        "valid provenance and NARC order",
+        "all branches cleanup",
+        "ROM Rev0+Rev1"
+      ]
+    },
+    {
+      "id": "B3",
+      "status": "not_a_claim_of_completion",
+      "deliverables": [
+        "Safe directed camera/BG movement and restore",
+        "Zoom simulation or engine extension only after verified source rendering capability"
+      ],
+      "source_targets": [
+        "src/battle_anim/",
+        "res/moves/"
+      ],
+      "gates": [
+        "camera restores",
+        "healthbox & touch hitboxes unaffected"
+      ]
+    },
+    {
+      "id": "B4",
+      "status": "not_a_claim_of_completion",
+      "deliverables": [
+        "Scene-local controlled fades and elemental lights",
+        "Weather presentation overlays only where verified hooks exist"
+      ],
+      "source_targets": [
+        "src/battle/terrain.c",
+        "src/battle/battle_display.c"
+      ],
+      "gates": [
+        "palette ownership with S2-D",
+        "task teardown",
+        "mechanical weather unchanged"
+      ]
+    },
+    {
+      "id": "B5",
+      "status": "not_a_claim_of_completion",
+      "deliverables": [
+        "Visual recoil and recovery using existing battler animation functions",
+        "Faint enhancement only at verified presentation hook"
+      ],
+      "source_targets": [
+        "src/battle_anim/",
+        "src/battle/battle_display.c"
+      ],
+      "gates": [
+        "battler visibility and sprite anchors restored",
+        "doubles/partner considerations"
+      ]
+    },
+    {
+      "id": "B6",
+      "status": "not_a_claim_of_completion",
+      "deliverables": [
+        "Reusable script sequence motifs for wind-up, travel, impact and aftermath",
+        "Sound synchronized to actual impact without lengthy routine attacks"
+      ],
+      "source_targets": [
+        "res/moves/",
+        "asm/macros/btlanimcmd.inc"
+      ],
+      "gates": [
+        "contest/doubles/friendly-fire branches",
+        "all managers and fades cleaned"
+      ]
+    },
+    {
+      "id": "B7",
+      "status": "not_a_claim_of_completion",
+      "deliverables": [
+        "Source-verified encounter intro hooks",
+        "Reusable distinctive special-encounter staging"
+      ],
+      "source_targets": [
+        "src/battle/battle_display.c",
+        "src/battle/"
+      ],
+      "gates": [
+        "no encounter scripts/flags/AI modified",
+        "ordinary flow preserved"
+      ]
+    },
+    {
+      "id": "B8",
+      "status": "not_a_claim_of_completion",
+      "deliverables": [
+        "Coordinated Opal HUD, animation, and lighting cohesion",
+        "Resource optimization and cleanup audits",
+        "Provide exact donor ledger and published artifacts"
+      ],
+      "source_targets": [
+        "src/battle/healthbox.c",
+        "src/battle/battle_subscreen.c",
+        "src/battle/terrain.c"
+      ],
+      "gates": [
+        "no conflicts with G7, AV1 or S2-D",
+        "both revision CI builds and artifacts",
+        "owner runtime testing remains deferred"
+      ]
+    }
+  ],
+  "source_gate": [
+    "Visual/audio presentation only; NO move data, damage, accuracy, abilities, targeting, AI, weather rules or encounter mechanics changes",
+    "Reuse B1 graphics/NARC install pipeline, preserving existing NAIX indices",
+    "All battler sprites, sprite managers, emitters, BG tasks, palette and fades restored on every script branch",
+    "Do not duplicate whole donor databases or claim a candidate compatible without proven exact files",
+    "Respect already merged G7 battle HUD, AV1 move effects and S2-D terrain palette cycling",
+    "ROM revisions 0 and 1 build in CI and ROM artifacts published; optional melonDS runtime not a PR gate"
+  ],
+  "owner_runtime_cases": [
+    "single and double battles",
+    "partner/friendly-fire targets",
+    "Contest script paths",
+    "multi-hit and protected/immune targets",
+    "weather plus S2-D palette cycling",
+    "faint/switch/interruption",
+    "special encounter before and after intro"
+  ],
+  "instruction": "Do not treat design work packets as finished game code; implement in PR #110, do not restart audits, work autonomously to real blockers."
+}
