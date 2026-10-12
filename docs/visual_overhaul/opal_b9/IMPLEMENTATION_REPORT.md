@@ -80,7 +80,7 @@ ROM growth: the seven sheets are small 4bpp NCGR/NCER/NANR/NCLR members of the e
 ## Not implemented / deferred
 
 * **P1 (19 moves) and P2 (14 moves)** — deliberately not started (handoff: stop after P0 for review).
-* HGSS, Ranger (beyond the B1 installs), PMD-Sky and Ruby/Sapphire art: not usable/available in this workspace at frame level (see `CANDIDATE_MATRIX.md` §1). FireRed's sprite set is byte-identical to Emerald's, so it adds nothing beyond the Emerald files.
+* HGSS, Ranger (beyond the B1 installs), PMD-Sky and Ruby/Sapphire art: not usable/available in this workspace at frame level (see `CANDIDATE_MATRIX.md` §1). **Tracked as required follow-up before the next batch: `FOLLOW_UP_ASSET_DECODING.md`.** FireRed's sprite set is byte-identical to Emerald's, so it adds nothing beyond the Emerald files.
 * No frame-time / VBlank-DMA measurement, no hardware test, no screenshots (the sheet previews are static PNG renders only).
 * Donor redistribution/licence terms were **not** verified: all pokeemerald/pokefirered/pokeranger2 art is third-party Nintendo/Game Freak material; provenance is by path + sha256 only.
 

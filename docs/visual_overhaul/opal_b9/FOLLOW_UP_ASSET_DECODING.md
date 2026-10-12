@@ -1,0 +1,19 @@
+# Follow-up (blocking for the next animation batch): expand donor asset-decoding capability
+
+**Status: OPEN. Must be scheduled before B9 P1/P2 or any further everyday-move batch.** B9 P0 could only use art that was already decodable
+(Emerald/FireRed PNG strips, the B2 Opal sheets, three B1 Ranger installs). The limitations below are measured facts from the P0 inventory
+(`CANDIDATE_MATRIX.md` §1), not assumptions; they restrict the "use every accessible pool" policy in practice.
+
+| # | Pool | Limitation found in P0 | Evidence | Needed work | Done when |
+|---|---|---|---|---|---|
+| F1 | **HeartGold/SoulSilver** | No battle move-effect art is decodable in the checkout: the SPL particle *archives* (move particle NARCs) are not in the tree — only the SPL header library (`include/library/spl_particle.h`) and unrelated `files/pbr/*.narc` (batt_obj/batt_bg/…) whose contents were **not inspected**. HGSS is the closest engine/art lineage to Platinum's SPL particles and likely the best donor for contact/elemental effects. | `find pokeheartgold -iname '*.spa'` → none; `files/pbr/batt_obj.narc` opaque | (a) establish whether HGSS move-effect archives can be produced from the repo's build (baserom-dependent?) or must be supplied; (b) write an SPL `.spa`/NCGR/NCLR extractor + contact-sheet renderer; (c) decide import route per move (SPL resource vs. converted OPAL_FX sheet) | a rendered, hashed contact sheet of HGSS effect frames exists in `docs/` and ≥ 1 effect is installed end-to-end through the sheet pipeline |
+| F2 | **Pokemon Mystery Dungeon (pmd-sky)** | Only the packed container `files/EFFECT/effect.bin` (+ `ame.wba`) exists; no extracted frames; evaluated at container level only. | `ls pmd-sky/files/EFFECT` | extend `tools/visual_overhaul/inspect_pmd_sky_assets.py` / `inventory_pmd_sky_visual_assets.py` from header recognition to frame-level WAN/SIR0 decoding with OAM-cell reconstruction and palette extraction; render sheets | frame-level contact sheet + per-effect palette/tile cost table |
+| F3 | **Pokemon Ranger 2 (beyond B1)** | Only `e002`, `e009`, `e010` were decoded (B1). The other `ef*/ew*` LZ packages (`ef001…ef105`, `ew000/004/008`) and `*.ntft/*.ntfp` textures are undecoded; B1 itself noted that package→visual mapping is not one-to-one. | `ls pokeranger2/res/prebuilt/data/field/effect` | run the existing Ranger structural tooling (`export_b1_ranger_effect_cells.py`, `diagnose_ranger_structure.py`, `render_ranger_*`) over all effect packages; curate a catalogue (frame size, colours, tile cost, usable role) | catalogue committed; each package marked usable / unusable with a reason |
+| F4 | **Ruby/Sapphire** | No `pokeruby` checkout in the workspace; Emerald substituted. | `ls /home/user/pokeruby` → absent | add the checkout to the workspace *or* record formally that Emerald supersedes it | decision recorded |
+| F5 | **Crystal / Yellow** | 2–4 grey-level tile strips with layout in asm tables, so each frame needs manual OAM-layout recovery before it is usable; rejected for P0 on cost, not impossibility. | measured sizes/levels in `CANDIDATE_MATRIX.md` | optional: a tile-strip + anim_obj-asm → recipe converter if a specific look requires them | only if needed |
+| F6 | **Licence / provenance** | Redistribution terms of all donor art are unverified (path + sha256 only). | `IMPLEMENTATION_REPORT.md` | owner decision before any public release | decision recorded |
+
+Acceptance for the whole follow-up: `build_candidate_matrix.py` is extended so F1–F3 pools move from "searched at package/container level only" to "decoded, N frames catalogued",
+and the P1 candidate matrix is generated from that wider inventory **before** any P1 script is touched.
+
+Not part of this PR: no decoder was written here and no HGSS/PMD/Ranger asset beyond the three B1 Ranger installs was used.

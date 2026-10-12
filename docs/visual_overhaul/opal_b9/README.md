@@ -23,6 +23,7 @@ Scope delivered: **P0_early_frequent, 19 moves.** P1 (19) and P2 (14) are intent
 | Path | What |
 |---|---|
 | `CANDIDATE_MATRIX.md`, `candidate_matrix.json` | cross-pool asset inventory: pools searched / unavailable, every selected donor file with sha256, every evaluated-and-rejected candidate with a reason, per-move ingredients (generated: `tools/visual_overhaul/opal_b9/build_candidate_matrix.py [--check]`) |
+| `FOLLOW_UP_ASSET_DECODING.md` | **open follow-up work** (HGSS / PMD / Ranger / Ruby-Sapphire decoding limits) that must be scheduled before the next animation batch |
 | `RECIPES.md` | per move: host script, template, native parts kept, cue lifecycle, assets, timing, state gating, fallbacks |
 | `EMULATOR_QA.md` | the emulator checklist you need to run (nothing here was run by the author) |
 | `IMPLEMENTATION_REPORT.md` | validation commands + results, deviations, unimplemented items, risks |
