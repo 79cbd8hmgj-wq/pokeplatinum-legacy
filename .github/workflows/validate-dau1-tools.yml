@@ -1,0 +1,33 @@
+name: validate-dau1-tools
+
+# Source-only gate for the Opal DAU1 donor-asset tooling: host fixture tests (no donor bytes, no ROM) and a schema /
+# consistency check of the committed catalog and candidate matrix.  Donor-dependent tests are not run here.
+on:
+  pull_request:
+    paths:
+      - 'tools/visual_overhaul/dau1/**'
+      - 'tools/visual_overhaul/dau1_unlock.py'
+      - 'tools/visual_overhaul/test_dau1*.py'
+      - 'tools/visual_overhaul/opal_fx/build_opal_fx_sheet.py'
+      - 'tools/visual_overhaul/build_b1_donor_battle_sprite.py'
+      - 'tools/visual_overhaul/nitro_narc.py'
+      - 'docs/visual_overhaul/asset_unlock/**'
+      - '.github/workflows/validate-dau1-tools.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Pillow
+        run: python3 -m pip install --break-system-packages Pillow
+      - name: Host fixture tests (malformed / truncated input, invalid offsets and palette indices, determinism, duplicates, conversion gate)
+        run: python3 tools/visual_overhaul/test_dau1.py
+      - name: Committed catalog and candidate matrix are valid and self-consistent
+        run: python3 tools/visual_overhaul/dau1_unlock.py check
+      - name: Absent donor sources are reported, not fatal
+        run: python3 tools/visual_overhaul/test_dau1_sources.py
