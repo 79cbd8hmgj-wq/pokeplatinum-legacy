@@ -1,0 +1,121 @@
+{
+ "name": "opal_b9_ember",
+ "donor": "pokeemerald (FireRed/LeafGreen copies are byte-identical)",
+ "sources": {
+  "ember": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/small_ember.png"
+  },
+  "spark": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/spark_h.png"
+  }
+ },
+ "frames": [
+  {
+   "id": "emb1",
+   "src": "ember",
+   "rect": [
+    0,
+    32,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "emb2",
+   "src": "ember",
+   "rect": [
+    0,
+    64,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "emb3",
+   "src": "ember",
+   "rect": [
+    0,
+    96,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "spk0",
+   "src": "spark",
+   "rect": [
+    0,
+    0,
+    32,
+    16
+   ]
+  },
+  {
+   "id": "spk1",
+   "src": "spark",
+   "rect": [
+    0,
+    16,
+    32,
+    16
+   ]
+  }
+ ],
+ "sequences": [
+  {
+   "name": "ember",
+   "frames": [
+    [
+     "emb1",
+     3
+    ],
+    [
+     "emb2",
+     3
+    ],
+    [
+     "emb3",
+     3
+    ],
+    [
+     "emb2",
+     3
+    ]
+   ],
+   "loop": true
+  },
+  {
+   "name": "spark_arc",
+   "frames": [
+    [
+     "spk0",
+     2
+    ],
+    [
+     "spk1",
+     2
+    ]
+   ],
+   "loop": true
+  },
+  {
+   "name": "ember_pop",
+   "frames": [
+    [
+     "emb1",
+     2
+    ],
+    [
+     "emb2",
+     3
+    ],
+    [
+     "emb3",
+     3
+    ]
+   ]
+  }
+ ]
+}

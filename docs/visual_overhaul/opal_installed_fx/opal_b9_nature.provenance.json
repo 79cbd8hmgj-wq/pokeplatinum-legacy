@@ -1,0 +1,206 @@
+{
+  "name": "opal_b9_nature",
+  "state": "installed via res/graphics/battle/moves NARC pipeline; drawn by SPRITE_FUNC_OPAL_FX",
+  "donor_sources": {
+    "leaf": {
+      "path": "graphics/battle_anims/sprites/leaf.png",
+      "sha256": "3d5157878012e1a14a75c5c8f9b3c777a2b8c0bd54de39d308708da306c6b7d3"
+    },
+    "razor": {
+      "path": "graphics/battle_anims/sprites/razor_leaf.png",
+      "sha256": "be3f0557a9c412e809297b8096aa4adfde9c6ccbef241f7414a6c4d6c01aa391"
+    },
+    "vine": {
+      "path": "graphics/battle_anims/sprites/vine_2.png",
+      "sha256": "9b5a788f8fe783ea5113b8d6756048a4c05800d74de6680066c30ad68e9c5a71"
+    }
+  },
+  "frames": [
+    {
+      "id": "leaf0",
+      "src": "leaf",
+      "rect": [
+        0,
+        0,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "leaf1",
+      "src": "leaf",
+      "rect": [
+        0,
+        16,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "leaf3",
+      "src": "leaf",
+      "rect": [
+        0,
+        48,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "leaf5",
+      "src": "leaf",
+      "rect": [
+        0,
+        80,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "leaf8",
+      "src": "leaf",
+      "rect": [
+        0,
+        128,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "razor",
+      "src": "razor",
+      "rect": [
+        0,
+        0,
+        32,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "vine0",
+      "src": "vine",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "vine1",
+      "src": "vine",
+      "rect": [
+        0,
+        32,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "vine2",
+      "src": "vine",
+      "rect": [
+        0,
+        64,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "vine3",
+      "src": "vine",
+      "rect": [
+        0,
+        96,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "vine4",
+      "src": "vine",
+      "rect": [
+        0,
+        128,
+        32,
+        32
+      ],
+      "hflip": false
+    }
+  ],
+  "sequences": [
+    {
+      "index": 0,
+      "name": "leaf_spin",
+      "loop": true,
+      "frames": [
+        "leaf0",
+        "leaf1",
+        "leaf3",
+        "leaf5",
+        "leaf8"
+      ],
+      "total_delay": 15
+    },
+    {
+      "index": 1,
+      "name": "razor_blade",
+      "loop": false,
+      "frames": [
+        "razor"
+      ],
+      "total_delay": 40
+    },
+    {
+      "index": 2,
+      "name": "vine_lash",
+      "loop": false,
+      "frames": [
+        "vine0",
+        "vine1",
+        "vine2",
+        "vine3",
+        "vine4"
+      ],
+      "total_delay": 14
+    },
+    {
+      "index": 3,
+      "name": "leaf_flutter",
+      "loop": true,
+      "frames": [
+        "leaf8",
+        "leaf5",
+        "leaf3",
+        "leaf1"
+      ],
+      "total_delay": 16
+    }
+  ],
+  "palette_colours_rgb555": [
+    2473,
+    5644,
+    647,
+    8815,
+    807,
+    11986,
+    10092,
+    15157,
+    18328
+  ],
+  "palette_variants_rgb555": {},
+  "obj_tiles": 106,
+  "tile_budget": 192,
+  "conversion": "indexed donor PNG (index 0 transparent) -> RGBA -> optional luminance ramp recolor -> median-cut fold to one shared <=15 colour RGB555 palette -> 8px-aligned cells covered by hardware-legal OAMs (B1 cover()) -> nitrogfx",
+  "recipe": "opal_b9_nature.json"
+}

@@ -1,0 +1,236 @@
+{
+  "name": "opal_b9_bubble",
+  "state": "installed via res/graphics/battle/moves NARC pipeline; drawn by SPRITE_FUNC_OPAL_FX",
+  "donor_sources": {
+    "bubble": {
+      "path": "graphics/battle_anims/sprites/bubble.png",
+      "sha256": "de27df738f681bcf962f36dd991f95fe4099c07ad9c36dbacfa72b2c847c3900"
+    },
+    "small": {
+      "path": "graphics/battle_anims/sprites/small_bubbles.png",
+      "sha256": "26d441082a5bc09ac38b6d37813df5a012464f402dc604d5276d38e8d5f2dfe2"
+    },
+    "pop": {
+      "path": "graphics/battle_anims/sprites/bubble_burst.png",
+      "sha256": "611b447d91d3b1fc3d4ee3280f710a0a478caae657e08586a01b0bbe55cdd4ff"
+    },
+    "pop2": {
+      "path": "graphics/battle_anims/sprites/bubble_burst_2.png",
+      "sha256": "5479c5016ecde51ef8d7e6429818642452e2124b7cddab35b1be0f1b6ea1295d"
+    }
+  },
+  "frames": [
+    {
+      "id": "bub0",
+      "src": "bubble",
+      "rect": [
+        0,
+        0,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "bub1",
+      "src": "bubble",
+      "rect": [
+        0,
+        16,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "sm0",
+      "src": "small",
+      "rect": [
+        0,
+        0,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "sm1",
+      "src": "small",
+      "rect": [
+        0,
+        16,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "pop1",
+      "src": "pop",
+      "rect": [
+        0,
+        16,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "pop2",
+      "src": "pop",
+      "rect": [
+        0,
+        32,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "pop3",
+      "src": "pop",
+      "rect": [
+        0,
+        48,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "pop4",
+      "src": "pop",
+      "rect": [
+        0,
+        64,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "pop6",
+      "src": "pop",
+      "rect": [
+        0,
+        96,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "big0",
+      "src": "pop2",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "big1",
+      "src": "pop2",
+      "rect": [
+        0,
+        32,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "big2",
+      "src": "pop2",
+      "rect": [
+        0,
+        64,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "big3",
+      "src": "pop2",
+      "rect": [
+        0,
+        96,
+        32,
+        32
+      ],
+      "hflip": false
+    }
+  ],
+  "sequences": [
+    {
+      "index": 0,
+      "name": "bubble",
+      "loop": true,
+      "frames": [
+        "bub0",
+        "bub1"
+      ],
+      "total_delay": 16
+    },
+    {
+      "index": 1,
+      "name": "bubble_small",
+      "loop": true,
+      "frames": [
+        "sm0",
+        "sm1"
+      ],
+      "total_delay": 16
+    },
+    {
+      "index": 2,
+      "name": "pop",
+      "loop": false,
+      "frames": [
+        "pop1",
+        "pop2",
+        "pop3",
+        "pop4",
+        "pop6"
+      ],
+      "total_delay": 12
+    },
+    {
+      "index": 3,
+      "name": "pop_big",
+      "loop": false,
+      "frames": [
+        "big0",
+        "big1",
+        "big2",
+        "big3"
+      ],
+      "total_delay": 13
+    }
+  ],
+  "palette_colours_rgb555": [
+    32086,
+    10591,
+    32210,
+    32273,
+    32334,
+    24362,
+    10815,
+    30386,
+    32589,
+    32470,
+    11007,
+    11255,
+    32668,
+    11263,
+    32767
+  ],
+  "palette_variants_rgb555": {},
+  "obj_tiles": 98,
+  "tile_budget": 192,
+  "conversion": "indexed donor PNG (index 0 transparent) -> RGBA -> optional luminance ramp recolor -> median-cut fold to one shared <=15 colour RGB555 palette -> 8px-aligned cells covered by hardware-legal OAMs (B1 cover()) -> nitrogfx",
+  "recipe": "opal_b9_bubble.json"
+}

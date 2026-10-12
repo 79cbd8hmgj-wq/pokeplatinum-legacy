@@ -12,6 +12,8 @@ on:
       - 'include/constants/battle/battle_anim.h'
       - 'generated/battle_sub_animations.txt'
       - 'tools/visual_overhaul/opal_fx/**'
+      - 'tools/visual_overhaul/opal_b9/**'
+      - 'docs/visual_overhaul/opal_b9/**'
       - 'tools/visual_overhaul/opal_cue_trace.py'
       - 'tools/visual_overhaul/validate_opal_assets.py'
       - 'tools/visual_overhaul/build_opal_b2_b8_reports.py'
@@ -45,6 +47,8 @@ jobs:
           python3 tools/visual_overhaul/opal_cue_trace.py --define OPAL_LOW_FLASH=1 --define OPAL_REDUCED_MOTION=1
       - name: Generated evidence files are current
         run: python3 tools/visual_overhaul/build_opal_b2_b8_reports.py --check
+      - name: B9 candidate matrix consistent with the installed recipes
+        run: python3 tools/visual_overhaul/opal_b9/build_candidate_matrix.py --check
       - name: B1 / AV1 / G7 contracts still hold
         run: |
           python3 tools/visual_overhaul/validate_b1_cinematic_pilots.py

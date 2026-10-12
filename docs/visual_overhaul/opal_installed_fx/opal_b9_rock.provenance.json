@@ -1,0 +1,221 @@
+{
+  "name": "opal_b9_rock",
+  "state": "installed via res/graphics/battle/moves NARC pipeline; drawn by SPRITE_FUNC_OPAL_FX",
+  "donor_sources": {
+    "rocks": {
+      "path": "graphics/battle_anims/sprites/rocks.png",
+      "sha256": "19737d1c20f58c67da01fc637e17e71fc4d7045b8ff49c2e589d44facb460b2e"
+    },
+    "flat": {
+      "path": "graphics/battle_anims/sprites/flat_rock.png",
+      "sha256": "89c4aa0aa52b74c864a8d454e692871f7874a0a8e58565d860eed86c8a0651b5"
+    },
+    "dirt": {
+      "path": "graphics/battle_anims/sprites/flying_dirt.png",
+      "sha256": "f80c97253031f42ad734b0da132cd3cb5cd883e2689dd0172bf60113c447ddf2"
+    }
+  },
+  "frames": [
+    {
+      "id": "rock0",
+      "src": "rocks",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "rock1",
+      "src": "rocks",
+      "rect": [
+        0,
+        32,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "rock3",
+      "src": "rocks",
+      "rect": [
+        0,
+        96,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "rock4",
+      "src": "rocks",
+      "rect": [
+        0,
+        128,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "rock5",
+      "src": "rocks",
+      "rect": [
+        0,
+        160,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "shard0",
+      "src": "flat",
+      "rect": [
+        0,
+        0,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "shard1",
+      "src": "flat",
+      "rect": [
+        0,
+        16,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "shard2",
+      "src": "flat",
+      "rect": [
+        0,
+        32,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "shard3",
+      "src": "flat",
+      "rect": [
+        0,
+        48,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "shard4",
+      "src": "flat",
+      "rect": [
+        0,
+        64,
+        16,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "dirt0",
+      "src": "dirt",
+      "rect": [
+        0,
+        0,
+        32,
+        16
+      ],
+      "hflip": false
+    },
+    {
+      "id": "dirt1",
+      "src": "dirt",
+      "rect": [
+        0,
+        16,
+        32,
+        16
+      ],
+      "hflip": false
+    }
+  ],
+  "sequences": [
+    {
+      "index": 0,
+      "name": "boulder",
+      "loop": true,
+      "frames": [
+        "rock0",
+        "rock1"
+      ],
+      "total_delay": 8
+    },
+    {
+      "index": 1,
+      "name": "break",
+      "loop": false,
+      "frames": [
+        "rock1",
+        "rock3",
+        "rock4",
+        "rock5"
+      ],
+      "total_delay": 13
+    },
+    {
+      "index": 2,
+      "name": "shards",
+      "loop": true,
+      "frames": [
+        "shard0",
+        "shard1",
+        "shard2",
+        "shard3",
+        "shard4"
+      ],
+      "total_delay": 15
+    },
+    {
+      "index": 3,
+      "name": "dirt",
+      "loop": false,
+      "frames": [
+        "dirt0",
+        "dirt1"
+      ],
+      "total_delay": 10
+    }
+  ],
+  "palette_colours_rgb555": [
+    1028,
+    1129,
+    5265,
+    1231,
+    3410,
+    8500,
+    5589,
+    13843,
+    7769,
+    15990,
+    10938,
+    19159,
+    15132,
+    21308,
+    25534
+  ],
+  "palette_variants_rgb555": {},
+  "obj_tiles": 84,
+  "tile_budget": 192,
+  "conversion": "indexed donor PNG (index 0 transparent) -> RGBA -> optional luminance ramp recolor -> median-cut fold to one shared <=15 colour RGB555 palette -> 8px-aligned cells covered by hardware-legal OAMs (B1 cover()) -> nitrogfx",
+  "recipe": "opal_b9_rock.json"
+}

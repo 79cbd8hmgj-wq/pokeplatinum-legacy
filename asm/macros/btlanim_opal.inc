@@ -40,6 +40,39 @@
 #define OPAL_WX_SEQ_FLAT_EXPAND     0
 #define OPAL_WX_SEQ_STAR_POP        1
 
+// B9 (everyday moves) sheets; indices must match tools/visual_overhaul/opal_b9/make_b9_recipes.py
+#define OPAL_B9_STRIKE_SEQ_HIT_SMALL   0
+#define OPAL_B9_STRIKE_SEQ_STAR        1
+#define OPAL_B9_STRIKE_SEQ_CLAW_A      2
+#define OPAL_B9_STRIKE_SEQ_CLAW_B      3
+#define OPAL_B9_STRIKE_SEQ_JAW_UPPER   4
+#define OPAL_B9_STRIKE_SEQ_JAW_LOWER   5
+#define OPAL_B9_STRIKE_SEQ_STREAK      6
+#define OPAL_B9_EMBER_SEQ_EMBER        0
+#define OPAL_B9_EMBER_SEQ_SPARK_ARC    1
+#define OPAL_B9_EMBER_SEQ_EMBER_POP    2
+#define OPAL_B9_NATURE_SEQ_LEAF_SPIN   0
+#define OPAL_B9_NATURE_SEQ_RAZOR       1
+#define OPAL_B9_NATURE_SEQ_VINE_LASH   2
+#define OPAL_B9_NATURE_SEQ_FLUTTER     3
+#define OPAL_B9_WIND_SEQ_STREAK        0
+#define OPAL_B9_WIND_SEQ_CRESCENT      1
+#define OPAL_B9_WIND_SEQ_SWIRL         2
+#define OPAL_B9_WIND_SEQ_PUFF          3
+#define OPAL_B9_WIND_SEQ_FLECKS        4
+#define OPAL_B9_WIND_SEQ_STREAK_FLIP   5
+#define OPAL_B9_ROCK_SEQ_BOULDER       0
+#define OPAL_B9_ROCK_SEQ_BREAK         1
+#define OPAL_B9_ROCK_SEQ_SHARDS        2
+#define OPAL_B9_ROCK_SEQ_DIRT          3
+#define OPAL_B9_BUBBLE_SEQ_BUBBLE      0
+#define OPAL_B9_BUBBLE_SEQ_SMALL       1
+#define OPAL_B9_BUBBLE_SEQ_POP         2
+#define OPAL_B9_BUBBLE_SEQ_POP_BIG     3
+#define OPAL_B9_SENSE_SEQ_GLINT        0
+#define OPAL_B9_SENSE_SEQ_SOUND_ARC    1
+#define OPAL_B9_SENSE_SEQ_ROAR_JAG     2
+
 // Camera tunables (B3)
 #define OPAL_CAM_FOCUS_DX   (-3)
 #define OPAL_CAM_FOCUS_DY   1

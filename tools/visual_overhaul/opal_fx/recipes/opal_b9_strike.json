@@ -1,0 +1,268 @@
+{
+ "name": "opal_b9_strike",
+ "donor": "pokeemerald (FireRed/LeafGreen copies are byte-identical)",
+ "sources": {
+  "hit": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/hit.png"
+  },
+  "impact": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/impact.png"
+  },
+  "fury": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/fury_swipes.png"
+  },
+  "slash": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/slash.png"
+  },
+  "fangs": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/fangs.png"
+  }
+ },
+ "frames": [
+  {
+   "id": "hit0",
+   "src": "hit",
+   "rect": [
+    0,
+    0,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "hit1",
+   "src": "hit",
+   "rect": [
+    0,
+    32,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "hit2",
+   "src": "hit",
+   "rect": [
+    0,
+    64,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "hit4",
+   "src": "hit",
+   "rect": [
+    0,
+    128,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "star",
+   "src": "impact",
+   "rect": [
+    0,
+    0,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "furyA0",
+   "src": "fury",
+   "rect": [
+    0,
+    0,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "furyA1",
+   "src": "fury",
+   "rect": [
+    0,
+    32,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "furyA2",
+   "src": "fury",
+   "rect": [
+    0,
+    64,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "furyB0",
+   "src": "fury",
+   "rect": [
+    0,
+    0,
+    32,
+    32
+   ],
+   "hflip": true
+  },
+  {
+   "id": "furyB1",
+   "src": "fury",
+   "rect": [
+    0,
+    32,
+    32,
+    32
+   ],
+   "hflip": true
+  },
+  {
+   "id": "furyB2",
+   "src": "fury",
+   "rect": [
+    0,
+    64,
+    32,
+    32
+   ],
+   "hflip": true
+  },
+  {
+   "id": "streak1",
+   "src": "slash",
+   "rect": [
+    0,
+    32,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "jaw0",
+   "src": "fangs",
+   "rect": [
+    0,
+    0,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "jaw1",
+   "src": "fangs",
+   "rect": [
+    0,
+    32,
+    32,
+    32
+   ]
+  }
+ ],
+ "sequences": [
+  {
+   "name": "hit_small",
+   "frames": [
+    [
+     "hit0",
+     2
+    ],
+    [
+     "hit1",
+     2
+    ],
+    [
+     "hit2",
+     3
+    ],
+    [
+     "hit4",
+     3
+    ]
+   ]
+  },
+  {
+   "name": "star_pierce",
+   "frames": [
+    [
+     "star",
+     5
+    ],
+    [
+     "star",
+     3
+    ]
+   ]
+  },
+  {
+   "name": "claw_a",
+   "frames": [
+    [
+     "furyA0",
+     2
+    ],
+    [
+     "furyA1",
+     4
+    ],
+    [
+     "furyA2",
+     4
+    ]
+   ]
+  },
+  {
+   "name": "claw_b",
+   "frames": [
+    [
+     "furyB0",
+     2
+    ],
+    [
+     "furyB1",
+     4
+    ],
+    [
+     "furyB2",
+     4
+    ]
+   ]
+  },
+  {
+   "name": "jaw_upper",
+   "frames": [
+    [
+     "jaw0",
+     40
+    ]
+   ]
+  },
+  {
+   "name": "jaw_lower",
+   "frames": [
+    [
+     "jaw1",
+     40
+    ]
+   ]
+  },
+  {
+   "name": "streak",
+   "frames": [
+    [
+     "streak1",
+     12
+    ]
+   ]
+  }
+ ]
+}

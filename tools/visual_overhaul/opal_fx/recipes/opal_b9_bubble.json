@@ -1,0 +1,230 @@
+{
+ "name": "opal_b9_bubble",
+ "donor": "pokeemerald (FireRed/LeafGreen copies are byte-identical)",
+ "sources": {
+  "bubble": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/bubble.png"
+  },
+  "small": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/small_bubbles.png"
+  },
+  "pop": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/bubble_burst.png"
+  },
+  "pop2": {
+   "type": "emerald_png",
+   "path": "graphics/battle_anims/sprites/bubble_burst_2.png"
+  }
+ },
+ "frames": [
+  {
+   "id": "bub0",
+   "src": "bubble",
+   "rect": [
+    0,
+    0,
+    16,
+    16
+   ]
+  },
+  {
+   "id": "bub1",
+   "src": "bubble",
+   "rect": [
+    0,
+    16,
+    16,
+    16
+   ]
+  },
+  {
+   "id": "sm0",
+   "src": "small",
+   "rect": [
+    0,
+    0,
+    16,
+    16
+   ]
+  },
+  {
+   "id": "sm1",
+   "src": "small",
+   "rect": [
+    0,
+    16,
+    16,
+    16
+   ]
+  },
+  {
+   "id": "pop1",
+   "src": "pop",
+   "rect": [
+    0,
+    16,
+    16,
+    16
+   ]
+  },
+  {
+   "id": "pop2",
+   "src": "pop",
+   "rect": [
+    0,
+    32,
+    16,
+    16
+   ]
+  },
+  {
+   "id": "pop3",
+   "src": "pop",
+   "rect": [
+    0,
+    48,
+    16,
+    16
+   ]
+  },
+  {
+   "id": "pop4",
+   "src": "pop",
+   "rect": [
+    0,
+    64,
+    16,
+    16
+   ]
+  },
+  {
+   "id": "pop6",
+   "src": "pop",
+   "rect": [
+    0,
+    96,
+    16,
+    16
+   ]
+  },
+  {
+   "id": "big0",
+   "src": "pop2",
+   "rect": [
+    0,
+    0,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "big1",
+   "src": "pop2",
+   "rect": [
+    0,
+    32,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "big2",
+   "src": "pop2",
+   "rect": [
+    0,
+    64,
+    32,
+    32
+   ]
+  },
+  {
+   "id": "big3",
+   "src": "pop2",
+   "rect": [
+    0,
+    96,
+    32,
+    32
+   ]
+  }
+ ],
+ "sequences": [
+  {
+   "name": "bubble",
+   "frames": [
+    [
+     "bub0",
+     8
+    ],
+    [
+     "bub1",
+     8
+    ]
+   ],
+   "loop": true
+  },
+  {
+   "name": "bubble_small",
+   "frames": [
+    [
+     "sm0",
+     8
+    ],
+    [
+     "sm1",
+     8
+    ]
+   ],
+   "loop": true
+  },
+  {
+   "name": "pop",
+   "frames": [
+    [
+     "pop1",
+     2
+    ],
+    [
+     "pop2",
+     2
+    ],
+    [
+     "pop3",
+     2
+    ],
+    [
+     "pop4",
+     3
+    ],
+    [
+     "pop6",
+     3
+    ]
+   ]
+  },
+  {
+   "name": "pop_big",
+   "frames": [
+    [
+     "big0",
+     3
+    ],
+    [
+     "big1",
+     3
+    ],
+    [
+     "big2",
+     3
+    ],
+    [
+     "big3",
+     4
+    ]
+   ]
+  }
+ ]
+}

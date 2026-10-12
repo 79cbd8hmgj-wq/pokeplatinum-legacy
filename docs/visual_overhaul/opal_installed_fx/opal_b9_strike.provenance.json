@@ -1,0 +1,277 @@
+{
+  "name": "opal_b9_strike",
+  "state": "installed via res/graphics/battle/moves NARC pipeline; drawn by SPRITE_FUNC_OPAL_FX",
+  "donor_sources": {
+    "hit": {
+      "path": "graphics/battle_anims/sprites/hit.png",
+      "sha256": "010c3d513af6949065956a285815de26b7df126ad1b4a0990f2c6939cf61e43d"
+    },
+    "impact": {
+      "path": "graphics/battle_anims/sprites/impact.png",
+      "sha256": "8f2a0eb54120d2cc50d24ccd92e2934d9b5c94c13f008198b6306c193fd8721d"
+    },
+    "fury": {
+      "path": "graphics/battle_anims/sprites/fury_swipes.png",
+      "sha256": "75fe392df27936083aad8598880272282258307eddb7f1e3ae35ce85852d5235"
+    },
+    "slash": {
+      "path": "graphics/battle_anims/sprites/slash.png",
+      "sha256": "5cfb2406b6e1d564fe87ac205fce48246867003c504c8d6f76becb2a4b3507c3"
+    },
+    "fangs": {
+      "path": "graphics/battle_anims/sprites/fangs.png",
+      "sha256": "e6f72d00cc042407ca731d2bf67f956ffe17d079363ec5366c21ed861b5726db"
+    }
+  },
+  "frames": [
+    {
+      "id": "hit0",
+      "src": "hit",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "hit1",
+      "src": "hit",
+      "rect": [
+        0,
+        32,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "hit2",
+      "src": "hit",
+      "rect": [
+        0,
+        64,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "hit4",
+      "src": "hit",
+      "rect": [
+        0,
+        128,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "star",
+      "src": "impact",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "furyA0",
+      "src": "fury",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "furyA1",
+      "src": "fury",
+      "rect": [
+        0,
+        32,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "furyA2",
+      "src": "fury",
+      "rect": [
+        0,
+        64,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "furyB0",
+      "src": "fury",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "hflip": true
+    },
+    {
+      "id": "furyB1",
+      "src": "fury",
+      "rect": [
+        0,
+        32,
+        32,
+        32
+      ],
+      "hflip": true
+    },
+    {
+      "id": "furyB2",
+      "src": "fury",
+      "rect": [
+        0,
+        64,
+        32,
+        32
+      ],
+      "hflip": true
+    },
+    {
+      "id": "streak1",
+      "src": "slash",
+      "rect": [
+        0,
+        32,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "jaw0",
+      "src": "fangs",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "hflip": false
+    },
+    {
+      "id": "jaw1",
+      "src": "fangs",
+      "rect": [
+        0,
+        32,
+        32,
+        32
+      ],
+      "hflip": false
+    }
+  ],
+  "sequences": [
+    {
+      "index": 0,
+      "name": "hit_small",
+      "loop": false,
+      "frames": [
+        "hit0",
+        "hit1",
+        "hit2",
+        "hit4"
+      ],
+      "total_delay": 10
+    },
+    {
+      "index": 1,
+      "name": "star_pierce",
+      "loop": false,
+      "frames": [
+        "star",
+        "star"
+      ],
+      "total_delay": 8
+    },
+    {
+      "index": 2,
+      "name": "claw_a",
+      "loop": false,
+      "frames": [
+        "furyA0",
+        "furyA1",
+        "furyA2"
+      ],
+      "total_delay": 10
+    },
+    {
+      "index": 3,
+      "name": "claw_b",
+      "loop": false,
+      "frames": [
+        "furyB0",
+        "furyB1",
+        "furyB2"
+      ],
+      "total_delay": 10
+    },
+    {
+      "index": 4,
+      "name": "jaw_upper",
+      "loop": false,
+      "frames": [
+        "jaw0"
+      ],
+      "total_delay": 40
+    },
+    {
+      "index": 5,
+      "name": "jaw_lower",
+      "loop": false,
+      "frames": [
+        "jaw1"
+      ],
+      "total_delay": 40
+    },
+    {
+      "index": 6,
+      "name": "streak",
+      "loop": false,
+      "frames": [
+        "streak1"
+      ],
+      "total_delay": 12
+    }
+  ],
+  "palette_colours_rgb555": [
+    19,
+    31,
+    1247,
+    2463,
+    4729,
+    3679,
+    4895,
+    13116,
+    6143,
+    11263,
+    16383,
+    21503,
+    22527,
+    26623,
+    32767
+  ],
+  "palette_variants_rgb555": {},
+  "obj_tiles": 184,
+  "tile_budget": 192,
+  "conversion": "indexed donor PNG (index 0 transparent) -> RGBA -> optional luminance ramp recolor -> median-cut fold to one shared <=15 colour RGB555 palette -> 8px-aligned cells covered by hardware-legal OAMs (B1 cover()) -> nitrogfx",
+  "recipe": "opal_b9_strike.json"
+}
