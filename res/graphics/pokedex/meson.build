@@ -7,6 +7,9 @@ tiles_png_4bpp = files(
     'dummy3.png',
     'entry_main.png',
     'entry_sub.png',
+    'opal_ref_main.png',
+    'opal_ref_sub.png',
+    'opal_entry.png',
 )
 
 tiles_png_8bpp = files(
@@ -78,6 +81,9 @@ tilemaps_nscr = files(
     'weight_check_main.NSCR',
     'height_check_main.NSCR',
     'search_main.NSCR',
+    'opal_ref_main.NSCR',
+    'opal_ref_sub.NSCR',
+    'opal_entry.NSCR',
 )
 
 tilemaps_nscr = lz_gen.process(
@@ -253,6 +259,7 @@ palettes_pal = files(
     'banner_national.pal',
     'background_scroll_national.pal',
     'dummy3.pal',
+    'opal_ref.pal',
     'cry_dials.png',
     'cry_bar.png',
     'cursor.png',
@@ -264,6 +271,8 @@ palettes_nclr = nclr_gen.process(palettes_pal,
         '-bitdepth', '4',
     ],
 )
+
+opal_locations_bin = copy_gen.process(files('opal_locations.bin'))
 
 pokedex_graphics_narc = custom_target('zukan.narc',
     output: [
@@ -282,6 +291,7 @@ pokedex_graphics_narc = custom_target('zukan.narc',
         sprites_ncer,
         sprites_nanr,
         palettes_nclr,
+        opal_locations_bin,
     ],
     command: [
         nitroarc_exe,
