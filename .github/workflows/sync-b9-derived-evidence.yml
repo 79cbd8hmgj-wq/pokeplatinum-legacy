@@ -1,0 +1,38 @@
+name: sync-b9-derived-evidence
+# One-shot branch-only source evidence regeneration. Never modify PR #113 or main.
+on:
+  push:
+    branches:
+      - feat/opal-b9-prototype-gates
+    paths:
+      - '.github/workflows/sync-b9-derived-evidence.yml'
+permissions:
+  contents: write
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install visual tooling
+        run: python3 -m pip install --break-system-packages Pillow numpy
+      - name: Regenerate DAU2 native-script evidence
+        run: python3 tools/visual_overhaul/dau2_curate.py manifest
+      - name: Regenerate B2-B8 source-map evidence
+        run: python3 tools/visual_overhaul/build_opal_b2_b8_reports.py
+      - name: Test and verify generated evidence
+        run: |
+          python3 tools/visual_overhaul/test_b9_prototype.py
+          python3 tools/visual_overhaul/dau2_curate.py check
+          python3 tools/visual_overhaul/build_opal_b2_b8_reports.py --check
+      - name: Commit only generated evidence
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- docs/visual_overhaul/asset_unlock/dau2/B9_P1_P2_BINDING.json docs/visual_overhaul/opal_b2_b8/source_map.json
+          git diff --cached --check
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(opal-b9): resynchronize source evidence for single Metal Claw glint"
+            git push origin HEAD:feat/opal-b9-prototype-gates
+          fi
