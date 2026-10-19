@@ -10,6 +10,7 @@ on:
       - 'tools/visual_overhaul/dau2/**'
       - 'tools/visual_overhaul/dau2_curate.py'
       - 'tools/visual_overhaul/test_dau2*.py'
+      - 'tools/visual_overhaul/test_b9*.py'
       - 'docs/visual_overhaul/asset_unlock/**'
       - 'res/moves/*/anim.s'
       - '.github/workflows/validate-dau2-tools.yml'
