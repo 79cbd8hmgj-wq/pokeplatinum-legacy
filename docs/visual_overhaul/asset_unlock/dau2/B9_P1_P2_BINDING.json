@@ -489,7 +489,7 @@
   },
   {
    "anim_script": "res/moves/metal_claw/anim.s",
-   "anim_script_sha256": "f2b928980923c149bd4e6a2acfb434bd99869cb398c7fc17dccf00d55766af03",
+   "anim_script_sha256": "fd43b8b130b7f19882cc3ff0f3f1b685db3841abc3c12871c694beb57496d6e6",
    "b2_b8_assignment": null,
    "data_json": "res/moves/metal_claw/data.json",
    "manifest_source_animation": "locate_in_pr110_head",
@@ -2218,8 +2218,8 @@
    "battler_moves": 2,
    "branches": 0,
    "comments": [
-    "B9 proof: synchronized steel-white glint on both existing claw-hit beats.",
-    "Six-frame fade fits within eight existing delay frames per loop."
+    "B9 prototype: a single finishing steel-white flash; avoid overlapping fades",
+    "on the defender while both native hit beats and sprite manager 0 are active."
    ],
    "delay_total_lb": 10,
    "emitters": [],
