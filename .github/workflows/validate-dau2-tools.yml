@@ -27,6 +27,8 @@ jobs:
         run: python3 -m pip install --break-system-packages Pillow numpy
       - name: Host fixture tests (SPL parser/replay, manifest binding, candidate matrix, guards)
         run: python3 tools/visual_overhaul/test_dau2.py
+      - name: B9 native-animation regression gates
+        run: python3 tools/visual_overhaul/test_b9_prototype.py
       - name: Platinum-native corpus tests (donor-dependent tests skip explicitly)
         run: python3 tools/visual_overhaul/test_dau2_sources.py
       - name: Committed DAU2 artefacts are valid, reproducible from the committed catalog, hash-pinned, and contain no images
