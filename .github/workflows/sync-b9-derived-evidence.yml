@@ -1,0 +1,39 @@
+name: sync-b9-derived-evidence
+# Branch-scoped, one-shot source-evidence regeneration for the first B9 prototype.
+# Triggered by creation of this workflow; subsequent evidence-only pushes do not match.
+on:
+  push:
+    branches:
+      - feat/opal-b9-prototype-gates
+    paths:
+      - '.github/workflows/sync-b9-derived-evidence.yml'
+permissions:
+  contents: write
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install visual tooling
+        run: python3 -m pip install --break-system-packages Pillow numpy
+      - name: Regenerate DAU2 bound source evidence
+        run: python3 tools/visual_overhaul/dau2_curate.py manifest
+      - name: Regenerate B2-B8 source map evidence
+        run: python3 tools/visual_overhaul/build_opal_b2_b8_reports.py
+      - name: Verify all affected evidence is coherent
+        run: |
+          python3 tools/visual_overhaul/test_b9_prototype.py
+          python3 tools/visual_overhaul/dau2_curate.py check
+          python3 tools/visual_overhaul/build_opal_b2_b8_reports.py --check
+      - name: Commit only generated binding and source-map outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- docs/visual_overhaul/asset_unlock/dau2/B9_P1_P2_BINDING.json docs/visual_overhaul/opal_b2_b8/source_map.json
+          git diff --cached --check
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(opal-b9): synchronize generated source evidence after Metal Claw proof"
+            git push origin HEAD:feat/opal-b9-prototype-gates
+          fi
