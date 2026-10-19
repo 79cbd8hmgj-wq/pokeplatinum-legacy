@@ -489,7 +489,7 @@
   },
   {
    "anim_script": "res/moves/metal_claw/anim.s",
-   "anim_script_sha256": "2216bebccbe03d01a80b4372e7c5392193a92c3576a27a11a6f42bdbb6ee12ec",
+   "anim_script_sha256": "fd43b8b130b7f19882cc3ff0f3f1b685db3841abc3c12871c694beb57496d6e6",
    "b2_b8_assignment": null,
    "data_json": "res/moves/metal_claw/data.json",
    "manifest_source_animation": "locate_in_pr110_head",
@@ -2217,10 +2217,13 @@
   "metal_claw": {
    "battler_moves": 2,
    "branches": 0,
-   "comments": [],
+   "comments": [
+    "B9 prototype: a single finishing steel-white flash; avoid overlapping fades",
+    "on the defender while both native hit beats and sprite manager 0 are active."
+   ],
    "delay_total_lb": 10,
    "emitters": [],
-   "fades": 0,
+   "fades": 1,
    "first_defender_emitter_frame_lb": null,
    "loops": 1,
    "native_duration_lb_frames": 10,

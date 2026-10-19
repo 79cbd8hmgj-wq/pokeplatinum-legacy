@@ -31,6 +31,9 @@ L_0:
     Func_MoveBattlerX2 3, -24, BATTLE_ANIM_BATTLER_SPRITE_ATTACKER
     Delay 4
     EndLoop
+    // B9 prototype: a single finishing steel-white flash; avoid overlapping fades
+    // on the defender while both native hit beats and sprite manager 0 are active.
+    Func_FadeBattlerSprite BATTLE_ANIM_DEFENDER, 0, 1, BATTLE_COLOR_WHITE, 6, 0
     WaitForAnimTasks
     FreeSpriteManager 0
     End
