@@ -33,18 +33,20 @@ class B9MetalClaw(unittest.TestCase):
         self.assertEqual(c[-2:], ["FreeSpriteManager 0", "End"])
         self.assertFalse(any(x.startswith(("LoadParticleResource", "CreateEmitter", "OpalSheetBegin", "OpalSheetEnd")) for x in c))
 
-    def test_two_native_hit_beats_receive_short_restoring_white_glints(self):
+    def test_two_native_hit_beats_receive_one_finishing_glint(self):
         c = self.cmd
         begin = c.index("BeginLoop 2")
         end = c.index("EndLoop", begin)
         loop = c[begin + 1:end]
         self.assertEqual(loop.count("PlaySoundEffectR SEQ_SE_DP_W013"), 1)
         self.assertEqual(loop.count("Func_Shake 1, 0, 1, 2, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER"), 1)
-        fades = [x for x in loop if x.startswith("Func_FadeBattlerSprite")]
-        self.assertEqual(fades, ["Func_FadeBattlerSprite BATTLE_ANIM_DEFENDER, 0, 2, BATTLE_COLOR_WHITE, 6, 0"])
-        self.assertLess(loop.index("Func_Shake 1, 0, 1, 2, BATTLE_ANIM_BATTLER_SPRITE_DEFENDER"), loop.index(fades[0]))
-        # Eight explicit delay frames separate iterations, longer than a six-frame glint.
-        self.assertGreaterEqual(sum(int(m.group(1)) for cmd in loop if (m := re.fullmatch(r"Delay (\d+)", cmd))), 8)
+        self.assertEqual([x for x in loop if x.startswith("Delay ")], ["Delay 2", "Delay 2", "Delay 4"])
+        self.assertFalse(any(x.startswith("Func_FadeBattlerSprite") for x in loop),
+                         "the hit loop must not overlap two fade tasks on the defender")
+        fade = "Func_FadeBattlerSprite BATTLE_ANIM_DEFENDER, 0, 1, BATTLE_COLOR_WHITE, 6, 0"
+        self.assertEqual([x for x in c if x.startswith("Func_FadeBattlerSprite")], [fade])
+        self.assertEqual(c[end + 1], fade)
+        self.assertEqual(c[end + 2], "WaitForAnimTasks")
         self.assertEqual(c.count("BeginLoop 2"), 1)
         self.assertEqual(c.count("EndLoop"), 1)
 
